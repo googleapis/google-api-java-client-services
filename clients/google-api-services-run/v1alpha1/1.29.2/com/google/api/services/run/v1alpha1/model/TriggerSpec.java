@@ -41,13 +41,25 @@ public final class TriggerSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Filter is the filter to apply against all events from the Broker. Only events that pass this
-   * filter will be sent to the Subscriber. If not specified, will default to allowing all events.
-   *
-   * This must be specified in Cloud Run.
+   * filter will be sent to the Subscriber.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TriggerFilter filter;
+
+  /**
+   * Specification of the importers that will provide events to the trigger. Note, for Cloud Run,
+   * the importers will only be used if a filter is not specified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<TriggerImporterSpec> importers;
+
+  static {
+    // hack to force ProGuard to consider TriggerImporterSpec used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(TriggerImporterSpec.class);
+  }
 
   /**
    * Subscriber is the addressable that receives events from the Broker that pass the Filter. It is
@@ -85,9 +97,7 @@ public final class TriggerSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Filter is the filter to apply against all events from the Broker. Only events that pass this
-   * filter will be sent to the Subscriber. If not specified, will default to allowing all events.
-   *
-   * This must be specified in Cloud Run.
+   * filter will be sent to the Subscriber.
    * @return value or {@code null} for none
    */
   public TriggerFilter getFilter() {
@@ -96,13 +106,30 @@ public final class TriggerSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Filter is the filter to apply against all events from the Broker. Only events that pass this
-   * filter will be sent to the Subscriber. If not specified, will default to allowing all events.
-   *
-   * This must be specified in Cloud Run.
+   * filter will be sent to the Subscriber.
    * @param filter filter or {@code null} for none
    */
   public TriggerSpec setFilter(TriggerFilter filter) {
     this.filter = filter;
+    return this;
+  }
+
+  /**
+   * Specification of the importers that will provide events to the trigger. Note, for Cloud Run,
+   * the importers will only be used if a filter is not specified.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<TriggerImporterSpec> getImporters() {
+    return importers;
+  }
+
+  /**
+   * Specification of the importers that will provide events to the trigger. Note, for Cloud Run,
+   * the importers will only be used if a filter is not specified.
+   * @param importers importers or {@code null} for none
+   */
+  public TriggerSpec setImporters(java.util.List<TriggerImporterSpec> importers) {
+    this.importers = importers;
     return this;
   }
 

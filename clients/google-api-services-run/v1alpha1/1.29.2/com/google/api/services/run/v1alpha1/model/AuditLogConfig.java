@@ -20,11 +20,11 @@ package com.google.api.services.run.v1alpha1.model;
  * Provides the configuration for logging a type of permissions. Example:
  *
  *     {       "audit_log_configs": [         {           "log_type": "DATA_READ",
- * "exempted_members": [             "user:foo@gmail.com"           ]         },         {
+ * "exempted_members": [             "user:jose@example.com"           ]         },         {
  * "log_type": "DATA_WRITE",         }       ]     }
  *
- * This enables 'DATA_READ' and 'DATA_WRITE' logging, while exempting foo@gmail.com from DATA_READ
- * logging.
+ * This enables 'DATA_READ' and 'DATA_WRITE' logging, while exempting jose@example.com from
+ * DATA_READ logging.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run API. For a detailed explanation see:

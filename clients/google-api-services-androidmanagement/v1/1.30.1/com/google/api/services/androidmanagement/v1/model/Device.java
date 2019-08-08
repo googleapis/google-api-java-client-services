@@ -237,6 +237,13 @@ public final class Device extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> previousDeviceNames;
 
   /**
+   * Device's security posture value that reflects how secure the device is.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SecurityPosture securityPosture;
+
+  /**
    * Detailed information about the device software. This information is only available if
    * softwareInfoEnabled is true in the device's policy.
    * The value may be {@code null}.
@@ -748,6 +755,23 @@ public final class Device extends com.google.api.client.json.GenericJson {
    */
   public Device setPreviousDeviceNames(java.util.List<java.lang.String> previousDeviceNames) {
     this.previousDeviceNames = previousDeviceNames;
+    return this;
+  }
+
+  /**
+   * Device's security posture value that reflects how secure the device is.
+   * @return value or {@code null} for none
+   */
+  public SecurityPosture getSecurityPosture() {
+    return securityPosture;
+  }
+
+  /**
+   * Device's security posture value that reflects how secure the device is.
+   * @param securityPosture securityPosture or {@code null} for none
+   */
+  public Device setSecurityPosture(SecurityPosture securityPosture) {
+    this.securityPosture = securityPosture;
     return this;
   }
 

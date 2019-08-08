@@ -31,16 +31,16 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class GetPolicyOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The policy format version to be returned. Acceptable values are 0 and 1. If the value
-   * is 0, or the field is omitted, policy format version 1 will be returned.
+   * Optional. The policy format version to be returned. Acceptable values are 0, 1, and 3. If the
+   * value is 0, or the field is omitted, policy format version 1 will be returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer requestedPolicyVersion;
 
   /**
-   * Optional. The policy format version to be returned. Acceptable values are 0 and 1. If the value
-   * is 0, or the field is omitted, policy format version 1 will be returned.
+   * Optional. The policy format version to be returned. Acceptable values are 0, 1, and 3. If the
+   * value is 0, or the field is omitted, policy format version 1 will be returned.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRequestedPolicyVersion() {
@@ -48,8 +48,8 @@ public final class GetPolicyOptions extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The policy format version to be returned. Acceptable values are 0 and 1. If the value
-   * is 0, or the field is omitted, policy format version 1 will be returned.
+   * Optional. The policy format version to be returned. Acceptable values are 0, 1, and 3. If the
+   * value is 0, or the field is omitted, policy format version 1 will be returned.
    * @param requestedPolicyVersion requestedPolicyVersion or {@code null} for none
    */
   public GetPolicyOptions setRequestedPolicyVersion(java.lang.Integer requestedPolicyVersion) {

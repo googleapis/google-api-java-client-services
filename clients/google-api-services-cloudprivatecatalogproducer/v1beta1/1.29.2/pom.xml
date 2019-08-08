@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-cloudprivatecatalogproducer</artifactId>
-  <version>v1beta1-rev20190704-1.29.2</version>
-  <name>Cloud Private Catalog Producer API v1beta1-rev20190704-1.29.2</name>
+  <version>v1beta1-rev20190804-1.29.2</version>
+  <name>Cloud Private Catalog Producer API v1beta1-rev20190804-1.29.2</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

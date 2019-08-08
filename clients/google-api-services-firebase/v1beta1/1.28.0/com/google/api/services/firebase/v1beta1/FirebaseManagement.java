@@ -527,8 +527,6 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
      *
      * This method does not modify any billing account information on the underlying GCP `Project`.
      *
-     * All fields listed in the [request body](#request-body) are required.
-     *
      * To call `AddFirebase`, a member must be an Editor or Owner for the existing GCP `Project`.
      * Service accounts cannot call `AddFirebase`.
      *
@@ -578,8 +576,6 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * is no need to call DeleteOperation.
        *
        * This method does not modify any billing account information on the underlying GCP `Project`.
-       *
-       * All fields listed in the [request body](#request-body) are required.
        *
        * To call `AddFirebase`, a member must be an Editor or Owner for the existing GCP `Project`.
        * Service accounts cannot call `AddFirebase`.

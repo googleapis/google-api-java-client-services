@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-firebase</artifactId>
-      <version>v1beta1-rev20190730-1.30.1</version>
+      <version>v1beta1-rev20190807-1.30.1</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-firebase:v1beta1-rev20190730-1.30.1'
+  compile 'com.google.apis:google-api-services-firebase:v1beta1-rev20190807-1.30.1'
 }
 ```
 

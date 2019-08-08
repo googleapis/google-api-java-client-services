@@ -7110,12 +7110,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
-     * Notifies that item return and refund was handled directly by merchant outside of Google payments
-     * processing (e.g. cash refund done in store). Note: We recommend calling the returnrefundlineitem
-     * method to refund in-store returns. We will issue the refund directly to the customer. This helps
-     * to prevent possible differences arising between merchant and Google transaction records. We also
-     * recommend having the point of sale system communicate with Google to ensure that customers do not
-     * receive a double refund by first refunding via Google then via an in-store return.
+     * Deprecated. Notifies that item return and refund was handled directly by merchant outside of
+     * Google payments processing (e.g. cash refund done in store). Note: We recommend calling the
+     * returnrefundlineitem method to refund in-store returns. We will issue the refund directly to the
+     * customer. This helps to prevent possible differences arising between merchant and Google
+     * transaction records. We also recommend having the point of sale system communicate with Google to
+     * ensure that customers do not receive a double refund by first refunding via Google then via an
+     * in-store return.
      *
      * Create a request for the method "orders.instorerefundlineitem".
      *
@@ -7139,8 +7140,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "{merchantId}/orders/{orderId}/inStoreRefundLineItem";
 
       /**
-       * Notifies that item return and refund was handled directly by merchant outside of Google
-       * payments processing (e.g. cash refund done in store). Note: We recommend calling the
+       * Deprecated. Notifies that item return and refund was handled directly by merchant outside of
+       * Google payments processing (e.g. cash refund done in store). Note: We recommend calling the
        * returnrefundlineitem method to refund in-store returns. We will issue the refund directly to
        * the customer. This helps to prevent possible differences arising between merchant and Google
        * transaction records. We also recommend having the point of sale system communicate with Google

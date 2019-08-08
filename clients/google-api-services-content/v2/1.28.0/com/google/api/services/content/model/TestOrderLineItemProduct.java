@@ -107,8 +107,8 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   private java.lang.String offerId;
 
   /**
-   * The price for the product. Tax is automatically calculated for MFL orders. For non-MFL orders,
-   * tax settings from Merchant Center are applied.
+   * The price for the product. Tax is automatically calculated for orders where marketplace
+   * facilitator tax laws are applicable. Otherwise, tax settings from Merchant Center are applied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -312,8 +312,8 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   }
 
   /**
-   * The price for the product. Tax is automatically calculated for MFL orders. For non-MFL orders,
-   * tax settings from Merchant Center are applied.
+   * The price for the product. Tax is automatically calculated for orders where marketplace
+   * facilitator tax laws are applicable. Otherwise, tax settings from Merchant Center are applied.
    * @return value or {@code null} for none
    */
   public Price getPrice() {
@@ -321,8 +321,8 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   }
 
   /**
-   * The price for the product. Tax is automatically calculated for MFL orders. For non-MFL orders,
-   * tax settings from Merchant Center are applied.
+   * The price for the product. Tax is automatically calculated for orders where marketplace
+   * facilitator tax laws are applicable. Otherwise, tax settings from Merchant Center are applied.
    * @param price price or {@code null} for none
    */
   public TestOrderLineItemProduct setPrice(Price price) {

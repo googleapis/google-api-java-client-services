@@ -37,7 +37,8 @@ public final class OrderShipment extends com.google.api.client.json.GenericJson 
    * "cxt"  - "google"  - "ontrac"  - "emsy"  - "ont"  - "deliv"  - "dynamex"  - "lasership"  -
    * "mpx"  - "uds"  - "efw"
    *
-   * Acceptable values for FR are:   - "colissimo"  - "chronopost"  - "gls"  - "dpd"  - "bpost"
+   * Acceptable values for FR are:   - "colissimo"  - "chronopost"  - "gls"  - "dpd"  - "bpost"  -
+   * "colis priv�"  - "boxtal"  - "geodis"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +94,8 @@ public final class OrderShipment extends com.google.api.client.json.GenericJson 
    * "cxt"  - "google"  - "ontrac"  - "emsy"  - "ont"  - "deliv"  - "dynamex"  - "lasership"  -
    * "mpx"  - "uds"  - "efw"
    *
-   * Acceptable values for FR are:   - "colissimo"  - "chronopost"  - "gls"  - "dpd"  - "bpost"
+   * Acceptable values for FR are:   - "colissimo"  - "chronopost"  - "gls"  - "dpd"  - "bpost"  -
+   * "colis priv�"  - "boxtal"  - "geodis"
    * @return value or {@code null} for none
    */
   public java.lang.String getCarrier() {
@@ -107,7 +109,8 @@ public final class OrderShipment extends com.google.api.client.json.GenericJson 
    * "cxt"  - "google"  - "ontrac"  - "emsy"  - "ont"  - "deliv"  - "dynamex"  - "lasership"  -
    * "mpx"  - "uds"  - "efw"
    *
-   * Acceptable values for FR are:   - "colissimo"  - "chronopost"  - "gls"  - "dpd"  - "bpost"
+   * Acceptable values for FR are:   - "colissimo"  - "chronopost"  - "gls"  - "dpd"  - "bpost"  -
+   * "colis priv�"  - "boxtal"  - "geodis"
    * @param carrier carrier or {@code null} for none
    */
   public OrderShipment setCarrier(java.lang.String carrier) {

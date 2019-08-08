@@ -37,7 +37,8 @@ public final class OrderShipment extends com.google.api.client.json.GenericJson 
    * "cxt"  - "google"  - "ontrac"  - "emsy"  - "ont"  - "deliv"  - "dynamex"  - "lasership"  -
    * "mpx"  - "uds"  - "efw"
    *
-   * Acceptable values for FR are:   - "colissimo"  - "chronopost"  - "gls"  - "dpd"  - "bpost"
+   * Acceptable values for FR are:   - "colissimo"  - "chronopost"  - "gls"  - "dpd"  - "bpost"  -
+   * "colis priv�"  - "boxtal"  - "geodis"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,6 +74,13 @@ public final class OrderShipment extends com.google.api.client.json.GenericJson 
   private java.util.List<OrderShipmentLineItemShipment> lineItems;
 
   /**
+   * The shipment group ID of the shipment. This is set in shiplineitems request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String shipmentGroupId;
+
+  /**
    * The status of the shipment.
    * The value may be {@code null}.
    */
@@ -93,7 +101,8 @@ public final class OrderShipment extends com.google.api.client.json.GenericJson 
    * "cxt"  - "google"  - "ontrac"  - "emsy"  - "ont"  - "deliv"  - "dynamex"  - "lasership"  -
    * "mpx"  - "uds"  - "efw"
    *
-   * Acceptable values for FR are:   - "colissimo"  - "chronopost"  - "gls"  - "dpd"  - "bpost"
+   * Acceptable values for FR are:   - "colissimo"  - "chronopost"  - "gls"  - "dpd"  - "bpost"  -
+   * "colis priv�"  - "boxtal"  - "geodis"
    * @return value or {@code null} for none
    */
   public java.lang.String getCarrier() {
@@ -107,7 +116,8 @@ public final class OrderShipment extends com.google.api.client.json.GenericJson 
    * "cxt"  - "google"  - "ontrac"  - "emsy"  - "ont"  - "deliv"  - "dynamex"  - "lasership"  -
    * "mpx"  - "uds"  - "efw"
    *
-   * Acceptable values for FR are:   - "colissimo"  - "chronopost"  - "gls"  - "dpd"  - "bpost"
+   * Acceptable values for FR are:   - "colissimo"  - "chronopost"  - "gls"  - "dpd"  - "bpost"  -
+   * "colis priv�"  - "boxtal"  - "geodis"
    * @param carrier carrier or {@code null} for none
    */
   public OrderShipment setCarrier(java.lang.String carrier) {
@@ -182,6 +192,23 @@ public final class OrderShipment extends com.google.api.client.json.GenericJson 
    */
   public OrderShipment setLineItems(java.util.List<OrderShipmentLineItemShipment> lineItems) {
     this.lineItems = lineItems;
+    return this;
+  }
+
+  /**
+   * The shipment group ID of the shipment. This is set in shiplineitems request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getShipmentGroupId() {
+    return shipmentGroupId;
+  }
+
+  /**
+   * The shipment group ID of the shipment. This is set in shiplineitems request.
+   * @param shipmentGroupId shipmentGroupId or {@code null} for none
+   */
+  public OrderShipment setShipmentGroupId(java.lang.String shipmentGroupId) {
+    this.shipmentGroupId = shipmentGroupId;
     return this;
   }
 

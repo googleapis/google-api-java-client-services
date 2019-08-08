@@ -93,9 +93,9 @@ public final class TestOrder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The price of shipping for all items. Shipping tax is automatically calculated for MFL orders.
-   * For non-MFL orders, tax settings from Merchant Center are applied. Note that shipping is not
-   * taxed in certain states.
+   * The price of shipping for all items. Shipping tax is automatically calculated for orders where
+   * marketplace facilitator tax laws are applicable. Otherwise, tax settings from Merchant Center
+   * are applied. Note that shipping is not taxed in certain states.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -245,9 +245,9 @@ public final class TestOrder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The price of shipping for all items. Shipping tax is automatically calculated for MFL orders.
-   * For non-MFL orders, tax settings from Merchant Center are applied. Note that shipping is not
-   * taxed in certain states.
+   * The price of shipping for all items. Shipping tax is automatically calculated for orders where
+   * marketplace facilitator tax laws are applicable. Otherwise, tax settings from Merchant Center
+   * are applied. Note that shipping is not taxed in certain states.
    * @return value or {@code null} for none
    */
   public Price getShippingCost() {
@@ -255,9 +255,9 @@ public final class TestOrder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The price of shipping for all items. Shipping tax is automatically calculated for MFL orders.
-   * For non-MFL orders, tax settings from Merchant Center are applied. Note that shipping is not
-   * taxed in certain states.
+   * The price of shipping for all items. Shipping tax is automatically calculated for orders where
+   * marketplace facilitator tax laws are applicable. Otherwise, tax settings from Merchant Center
+   * are applied. Note that shipping is not taxed in certain states.
    * @param shippingCost shippingCost or {@code null} for none
    */
   public TestOrder setShippingCost(Price shippingCost) {

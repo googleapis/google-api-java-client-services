@@ -56,7 +56,7 @@ public final class Paragraph extends com.google.api.client.json.GenericJson {
   private TextProperty property;
 
   /**
-   * List of words in this paragraph.
+   * List of all words in this paragraph.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,7 +124,7 @@ public final class Paragraph extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of words in this paragraph.
+   * List of all words in this paragraph.
    * @return value or {@code null} for none
    */
   public java.util.List<Word> getWords() {
@@ -132,7 +132,7 @@ public final class Paragraph extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of words in this paragraph.
+   * List of all words in this paragraph.
    * @param words words or {@code null} for none
    */
   public Paragraph setWords(java.util.List<Word> words) {

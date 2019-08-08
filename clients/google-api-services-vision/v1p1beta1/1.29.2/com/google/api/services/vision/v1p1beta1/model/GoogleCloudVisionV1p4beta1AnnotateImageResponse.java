@@ -74,6 +74,13 @@ public final class GoogleCloudVisionV1p4beta1AnnotateImageResponse extends com.g
   private GoogleCloudVisionV1p4beta1ImageProperties imagePropertiesAnnotation;
 
   /**
+   * If present, image quality calculation has completed successfully.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudVisionV1p4beta1ImageQuality imageQualityAnnotation;
+
+  /**
    * If present, label detection has completed successfully.
    * The value may be {@code null}.
    */
@@ -108,6 +115,13 @@ public final class GoogleCloudVisionV1p4beta1AnnotateImageResponse extends com.g
    */
   @com.google.api.client.util.Key
   private GoogleCloudVisionV1p4beta1ProductSearchResults productSearchResults;
+
+  /**
+   * If present, image quality optimization has completed successfully.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudVisionV1p4beta1QualityOptimizationResult qualityOptimizationResult;
 
   /**
    * If present, safe-search annotation has completed successfully.
@@ -237,6 +251,23 @@ public final class GoogleCloudVisionV1p4beta1AnnotateImageResponse extends com.g
   }
 
   /**
+   * If present, image quality calculation has completed successfully.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudVisionV1p4beta1ImageQuality getImageQualityAnnotation() {
+    return imageQualityAnnotation;
+  }
+
+  /**
+   * If present, image quality calculation has completed successfully.
+   * @param imageQualityAnnotation imageQualityAnnotation or {@code null} for none
+   */
+  public GoogleCloudVisionV1p4beta1AnnotateImageResponse setImageQualityAnnotation(GoogleCloudVisionV1p4beta1ImageQuality imageQualityAnnotation) {
+    this.imageQualityAnnotation = imageQualityAnnotation;
+    return this;
+  }
+
+  /**
    * If present, label detection has completed successfully.
    * @return value or {@code null} for none
    */
@@ -320,6 +351,23 @@ public final class GoogleCloudVisionV1p4beta1AnnotateImageResponse extends com.g
    */
   public GoogleCloudVisionV1p4beta1AnnotateImageResponse setProductSearchResults(GoogleCloudVisionV1p4beta1ProductSearchResults productSearchResults) {
     this.productSearchResults = productSearchResults;
+    return this;
+  }
+
+  /**
+   * If present, image quality optimization has completed successfully.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudVisionV1p4beta1QualityOptimizationResult getQualityOptimizationResult() {
+    return qualityOptimizationResult;
+  }
+
+  /**
+   * If present, image quality optimization has completed successfully.
+   * @param qualityOptimizationResult qualityOptimizationResult or {@code null} for none
+   */
+  public GoogleCloudVisionV1p4beta1AnnotateImageResponse setQualityOptimizationResult(GoogleCloudVisionV1p4beta1QualityOptimizationResult qualityOptimizationResult) {
+    this.qualityOptimizationResult = qualityOptimizationResult;
     return this;
   }
 

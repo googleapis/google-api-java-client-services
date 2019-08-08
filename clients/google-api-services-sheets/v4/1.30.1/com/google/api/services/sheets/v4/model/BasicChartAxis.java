@@ -58,6 +58,13 @@ public final class BasicChartAxis extends com.google.api.client.json.GenericJson
   private TextPosition titleTextPosition;
 
   /**
+   * The view window options for this axis.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ChartAxisViewWindowOptions viewWindowOptions;
+
+  /**
    * The format of the title. Only valid if the axis is not associated with the domain.
    * @return value or {@code null} for none
    */
@@ -122,6 +129,23 @@ public final class BasicChartAxis extends com.google.api.client.json.GenericJson
    */
   public BasicChartAxis setTitleTextPosition(TextPosition titleTextPosition) {
     this.titleTextPosition = titleTextPosition;
+    return this;
+  }
+
+  /**
+   * The view window options for this axis.
+   * @return value or {@code null} for none
+   */
+  public ChartAxisViewWindowOptions getViewWindowOptions() {
+    return viewWindowOptions;
+  }
+
+  /**
+   * The view window options for this axis.
+   * @param viewWindowOptions viewWindowOptions or {@code null} for none
+   */
+  public BasicChartAxis setViewWindowOptions(ChartAxisViewWindowOptions viewWindowOptions) {
+    this.viewWindowOptions = viewWindowOptions;
     return this;
   }
 

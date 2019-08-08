@@ -767,7 +767,8 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
 
     /**
      * Enable multiple services on a project. The operation is atomic: if enabling any service fails,
-     * then the entire batch fails, and no state changes occur.
+     * then the entire batch fails, and no state changes occur. To enable a single service, use the
+     * `EnableService` method instead.
      *
      * Create a request for the method "services.batchEnable".
      *
@@ -797,7 +798,8 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
 
       /**
        * Enable multiple services on a project. The operation is atomic: if enabling any service fails,
-       * then the entire batch fails, and no state changes occur.
+       * then the entire batch fails, and no state changes occur. To enable a single service, use the
+       * `EnableService` method instead.
        *
        * Create a request for the method "services.batchEnable".
        *

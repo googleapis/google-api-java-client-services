@@ -123,6 +123,2292 @@ public class WebSecurityScanner extends com.google.api.client.googleapis.service
   }
 
   /**
+   * An accessor for creating requests from the Projects collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code WebSecurityScanner websecurityscanner = new WebSecurityScanner(...);}
+   *   {@code WebSecurityScanner.Projects.List request = websecurityscanner.projects().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Projects projects() {
+    return new Projects();
+  }
+
+  /**
+   * The "projects" collection of methods.
+   */
+  public class Projects {
+
+    /**
+     * An accessor for creating requests from the ScanConfigs collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code WebSecurityScanner websecurityscanner = new WebSecurityScanner(...);}
+     *   {@code WebSecurityScanner.ScanConfigs.List request = websecurityscanner.scanConfigs().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public ScanConfigs scanConfigs() {
+      return new ScanConfigs();
+    }
+
+    /**
+     * The "scanConfigs" collection of methods.
+     */
+    public class ScanConfigs {
+
+      /**
+       * Creates a new ScanConfig.
+       *
+       * Create a request for the method "scanConfigs.create".
+       *
+       * This request holds the parameters needed by the websecurityscanner server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent resource name where the scan is created, which should be a
+      project resource
+       *        name in the format 'projects/{projectId}'.
+       * @param content the {@link com.google.api.services.websecurityscanner.v1.model.ScanConfig}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.websecurityscanner.v1.model.ScanConfig content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends WebSecurityScannerRequest<com.google.api.services.websecurityscanner.v1.model.ScanConfig> {
+
+        private static final String REST_PATH = "v1/{+parent}/scanConfigs";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Creates a new ScanConfig.
+         *
+         * Create a request for the method "scanConfigs.create".
+         *
+         * This request holds the parameters needed by the the websecurityscanner server.  After setting
+         * any optional parameters, call the {@link Create#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent resource name where the scan is created, which should be a
+      project resource
+       *        name in the format 'projects/{projectId}'.
+         * @param content the {@link com.google.api.services.websecurityscanner.v1.model.ScanConfig}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.websecurityscanner.v1.model.ScanConfig content) {
+          super(WebSecurityScanner.this, "POST", REST_PATH, content, com.google.api.services.websecurityscanner.v1.model.ScanConfig.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent resource name where the scan is created, which should be a project
+         * resource name in the format 'projects/{projectId}'.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent resource name where the scan is created, which should be a project resource
+       name in the format 'projects/{projectId}'.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The parent resource name where the scan is created, which should be a project
+         * resource name in the format 'projects/{projectId}'.
+         */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes an existing ScanConfig and its child resources.
+       *
+       * Create a request for the method "scanConfigs.delete".
+       *
+       * This request holds the parameters needed by the websecurityscanner server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name of the ScanConfig to be deleted. The name follows the
+      format of
+       *        'projects/{projectId}/scanConfigs/{scanConfigId}'.
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends WebSecurityScannerRequest<com.google.api.services.websecurityscanner.v1.model.Empty> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/scanConfigs/[^/]+$");
+
+        /**
+         * Deletes an existing ScanConfig and its child resources.
+         *
+         * Create a request for the method "scanConfigs.delete".
+         *
+         * This request holds the parameters needed by the the websecurityscanner server.  After setting
+         * any optional parameters, call the {@link Delete#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name of the ScanConfig to be deleted. The name follows the
+      format of
+       *        'projects/{projectId}/scanConfigs/{scanConfigId}'.
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(WebSecurityScanner.this, "DELETE", REST_PATH, null, com.google.api.services.websecurityscanner.v1.model.Empty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/scanConfigs/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the ScanConfig to be deleted. The name follows the format
+         * of 'projects/{projectId}/scanConfigs/{scanConfigId}'.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the ScanConfig to be deleted. The name follows the format of
+       'projects/{projectId}/scanConfigs/{scanConfigId}'.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The resource name of the ScanConfig to be deleted. The name follows the format
+         * of 'projects/{projectId}/scanConfigs/{scanConfigId}'.
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/scanConfigs/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Gets a ScanConfig.
+       *
+       * Create a request for the method "scanConfigs.get".
+       *
+       * This request holds the parameters needed by the websecurityscanner server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name of the ScanConfig to be returned. The name follows the
+      format of
+       *        'projects/{projectId}/scanConfigs/{scanConfigId}'.
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends WebSecurityScannerRequest<com.google.api.services.websecurityscanner.v1.model.ScanConfig> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/scanConfigs/[^/]+$");
+
+        /**
+         * Gets a ScanConfig.
+         *
+         * Create a request for the method "scanConfigs.get".
+         *
+         * This request holds the parameters needed by the the websecurityscanner server.  After setting
+         * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name of the ScanConfig to be returned. The name follows the
+      format of
+       *        'projects/{projectId}/scanConfigs/{scanConfigId}'.
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(WebSecurityScanner.this, "GET", REST_PATH, null, com.google.api.services.websecurityscanner.v1.model.ScanConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/scanConfigs/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the ScanConfig to be returned. The name follows the format
+         * of 'projects/{projectId}/scanConfigs/{scanConfigId}'.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the ScanConfig to be returned. The name follows the format of
+       'projects/{projectId}/scanConfigs/{scanConfigId}'.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The resource name of the ScanConfig to be returned. The name follows the format
+         * of 'projects/{projectId}/scanConfigs/{scanConfigId}'.
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/scanConfigs/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists ScanConfigs under a given project.
+       *
+       * Create a request for the method "scanConfigs.list".
+       *
+       * This request holds the parameters needed by the websecurityscanner server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent resource name, which should be a project resource name in the
+      format
+       *        'projects/{projectId}'.
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends WebSecurityScannerRequest<com.google.api.services.websecurityscanner.v1.model.ListScanConfigsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/scanConfigs";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Lists ScanConfigs under a given project.
+         *
+         * Create a request for the method "scanConfigs.list".
+         *
+         * This request holds the parameters needed by the the websecurityscanner server.  After setting
+         * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent resource name, which should be a project resource name in the
+      format
+       *        'projects/{projectId}'.
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(WebSecurityScanner.this, "GET", REST_PATH, null, com.google.api.services.websecurityscanner.v1.model.ListScanConfigsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent resource name, which should be a project resource name in the format
+         * 'projects/{projectId}'.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent resource name, which should be a project resource name in the format
+       'projects/{projectId}'.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The parent resource name, which should be a project resource name in the format
+         * 'projects/{projectId}'.
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * The maximum number of ScanConfigs to return, can be limited by server. If not specified
+         * or not positive, the implementation will select a reasonable value.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of ScanConfigs to return, can be limited by server. If not specified or not
+       positive, the implementation will select a reasonable value.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The maximum number of ScanConfigs to return, can be limited by server. If not specified
+         * or not positive, the implementation will select a reasonable value.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A token identifying a page of results to be returned. This should be a `next_page_token`
+         * value returned from a previous List request. If unspecified, the first page of results is
+         * returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A token identifying a page of results to be returned. This should be a `next_page_token` value
+       returned from a previous List request. If unspecified, the first page of results is returned.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A token identifying a page of results to be returned. This should be a `next_page_token`
+         * value returned from a previous List request. If unspecified, the first page of results is
+         * returned.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates a ScanConfig. This method support partial update of a ScanConfig.
+       *
+       * Create a request for the method "scanConfigs.patch".
+       *
+       * This request holds the parameters needed by the websecurityscanner server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name The resource name of the ScanConfig. The name follows the format of
+       *        'projects/{projectId}/scanConfigs/{scanConfigId}'. The ScanConfig IDs are
+      generated by the
+       *        system.
+       * @param content the {@link com.google.api.services.websecurityscanner.v1.model.ScanConfig}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.websecurityscanner.v1.model.ScanConfig content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends WebSecurityScannerRequest<com.google.api.services.websecurityscanner.v1.model.ScanConfig> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/scanConfigs/[^/]+$");
+
+        /**
+         * Updates a ScanConfig. This method support partial update of a ScanConfig.
+         *
+         * Create a request for the method "scanConfigs.patch".
+         *
+         * This request holds the parameters needed by the the websecurityscanner server.  After setting
+         * any optional parameters, call the {@link Patch#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The resource name of the ScanConfig. The name follows the format of
+       *        'projects/{projectId}/scanConfigs/{scanConfigId}'. The ScanConfig IDs are
+      generated by the
+       *        system.
+         * @param content the {@link com.google.api.services.websecurityscanner.v1.model.ScanConfig}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.websecurityscanner.v1.model.ScanConfig content) {
+          super(WebSecurityScanner.this, "PATCH", REST_PATH, content, com.google.api.services.websecurityscanner.v1.model.ScanConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/scanConfigs/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The resource name of the ScanConfig. The name follows the format of
+         * 'projects/{projectId}/scanConfigs/{scanConfigId}'. The ScanConfig IDs are generated by
+         * the system.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The resource name of the ScanConfig. The name follows the format of
+       'projects/{projectId}/scanConfigs/{scanConfigId}'. The ScanConfig IDs are generated by the system.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * The resource name of the ScanConfig. The name follows the format of
+         * 'projects/{projectId}/scanConfigs/{scanConfigId}'. The ScanConfig IDs are generated by
+         * the system.
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/scanConfigs/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Required. The update mask applies to the resource. For the `FieldMask` definition, see
+         * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Required. The update mask applies to the resource. For the `FieldMask` definition, see
+       https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * Required. The update mask applies to the resource. For the `FieldMask` definition, see
+         * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+         */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Start a ScanRun according to the given ScanConfig.
+       *
+       * Create a request for the method "scanConfigs.start".
+       *
+       * This request holds the parameters needed by the websecurityscanner server.  After setting any
+       * optional parameters, call the {@link Start#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name of the ScanConfig to be used. The name follows the
+      format of
+       *        'projects/{projectId}/scanConfigs/{scanConfigId}'.
+       * @param content the {@link com.google.api.services.websecurityscanner.v1.model.StartScanRunRequest}
+       * @return the request
+       */
+      public Start start(java.lang.String name, com.google.api.services.websecurityscanner.v1.model.StartScanRunRequest content) throws java.io.IOException {
+        Start result = new Start(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Start extends WebSecurityScannerRequest<com.google.api.services.websecurityscanner.v1.model.ScanRun> {
+
+        private static final String REST_PATH = "v1/{+name}:start";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/scanConfigs/[^/]+$");
+
+        /**
+         * Start a ScanRun according to the given ScanConfig.
+         *
+         * Create a request for the method "scanConfigs.start".
+         *
+         * This request holds the parameters needed by the the websecurityscanner server.  After setting
+         * any optional parameters, call the {@link Start#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Start#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name of the ScanConfig to be used. The name follows the
+      format of
+       *        'projects/{projectId}/scanConfigs/{scanConfigId}'.
+         * @param content the {@link com.google.api.services.websecurityscanner.v1.model.StartScanRunRequest}
+         * @since 1.13
+         */
+        protected Start(java.lang.String name, com.google.api.services.websecurityscanner.v1.model.StartScanRunRequest content) {
+          super(WebSecurityScanner.this, "POST", REST_PATH, content, com.google.api.services.websecurityscanner.v1.model.ScanRun.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/scanConfigs/[^/]+$");
+          }
+        }
+
+        @Override
+        public Start set$Xgafv(java.lang.String $Xgafv) {
+          return (Start) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Start setAccessToken(java.lang.String accessToken) {
+          return (Start) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Start setAlt(java.lang.String alt) {
+          return (Start) super.setAlt(alt);
+        }
+
+        @Override
+        public Start setCallback(java.lang.String callback) {
+          return (Start) super.setCallback(callback);
+        }
+
+        @Override
+        public Start setFields(java.lang.String fields) {
+          return (Start) super.setFields(fields);
+        }
+
+        @Override
+        public Start setKey(java.lang.String key) {
+          return (Start) super.setKey(key);
+        }
+
+        @Override
+        public Start setOauthToken(java.lang.String oauthToken) {
+          return (Start) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Start setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Start) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Start setQuotaUser(java.lang.String quotaUser) {
+          return (Start) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Start setUploadType(java.lang.String uploadType) {
+          return (Start) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Start setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Start) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the ScanConfig to be used. The name follows the format of
+         * 'projects/{projectId}/scanConfigs/{scanConfigId}'.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the ScanConfig to be used. The name follows the format of
+       'projects/{projectId}/scanConfigs/{scanConfigId}'.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The resource name of the ScanConfig to be used. The name follows the format of
+         * 'projects/{projectId}/scanConfigs/{scanConfigId}'.
+         */
+        public Start setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/scanConfigs/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Start set(String parameterName, Object value) {
+          return (Start) super.set(parameterName, value);
+        }
+      }
+
+      /**
+       * An accessor for creating requests from the ScanRuns collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code WebSecurityScanner websecurityscanner = new WebSecurityScanner(...);}
+       *   {@code WebSecurityScanner.ScanRuns.List request = websecurityscanner.scanRuns().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public ScanRuns scanRuns() {
+        return new ScanRuns();
+      }
+
+      /**
+       * The "scanRuns" collection of methods.
+       */
+      public class ScanRuns {
+
+        /**
+         * Gets a ScanRun.
+         *
+         * Create a request for the method "scanRuns.get".
+         *
+         * This request holds the parameters needed by the websecurityscanner server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the ScanRun to be returned. The name follows the
+        format of
+         *        'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends WebSecurityScannerRequest<com.google.api.services.websecurityscanner.v1.model.ScanRun> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/scanConfigs/[^/]+/scanRuns/[^/]+$");
+
+          /**
+           * Gets a ScanRun.
+           *
+           * Create a request for the method "scanRuns.get".
+           *
+           * This request holds the parameters needed by the the websecurityscanner server.  After setting
+           * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the ScanRun to be returned. The name follows the
+        format of
+         *        'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(WebSecurityScanner.this, "GET", REST_PATH, null, com.google.api.services.websecurityscanner.v1.model.ScanRun.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/scanConfigs/[^/]+/scanRuns/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the ScanRun to be returned. The name follows the format
+           * of 'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the ScanRun to be returned. The name follows the format of
+         'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the ScanRun to be returned. The name follows the format
+           * of 'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/scanConfigs/[^/]+/scanRuns/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists ScanRuns under a given ScanConfig, in descending order of ScanRun stop time.
+         *
+         * Create a request for the method "scanRuns.list".
+         *
+         * This request holds the parameters needed by the websecurityscanner server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource name, which should be a scan resource name in the
+        format
+         *        'projects/{projectId}/scanConfigs/{scanConfigId}'.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends WebSecurityScannerRequest<com.google.api.services.websecurityscanner.v1.model.ListScanRunsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/scanRuns";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/scanConfigs/[^/]+$");
+
+          /**
+           * Lists ScanRuns under a given ScanConfig, in descending order of ScanRun stop time.
+           *
+           * Create a request for the method "scanRuns.list".
+           *
+           * This request holds the parameters needed by the the websecurityscanner server.  After setting
+           * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource name, which should be a scan resource name in the
+        format
+         *        'projects/{projectId}/scanConfigs/{scanConfigId}'.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(WebSecurityScanner.this, "GET", REST_PATH, null, com.google.api.services.websecurityscanner.v1.model.ListScanRunsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/scanConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource name, which should be a scan resource name in the format
+           * 'projects/{projectId}/scanConfigs/{scanConfigId}'.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource name, which should be a scan resource name in the format
+         'projects/{projectId}/scanConfigs/{scanConfigId}'.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource name, which should be a scan resource name in the format
+           * 'projects/{projectId}/scanConfigs/{scanConfigId}'.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/scanConfigs/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * The maximum number of ScanRuns to return, can be limited by server. If not specified or
+           * not positive, the implementation will select a reasonable value.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of ScanRuns to return, can be limited by server. If not specified or not
+         positive, the implementation will select a reasonable value.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of ScanRuns to return, can be limited by server. If not specified or
+           * not positive, the implementation will select a reasonable value.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A token identifying a page of results to be returned. This should be a
+           * `next_page_token` value returned from a previous List request. If unspecified, the
+           * first page of results is returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A token identifying a page of results to be returned. This should be a `next_page_token` value
+         returned from a previous List request. If unspecified, the first page of results is returned.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A token identifying a page of results to be returned. This should be a
+           * `next_page_token` value returned from a previous List request. If unspecified, the
+           * first page of results is returned.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Stops a ScanRun. The stopped ScanRun is returned.
+         *
+         * Create a request for the method "scanRuns.stop".
+         *
+         * This request holds the parameters needed by the websecurityscanner server.  After setting any
+         * optional parameters, call the {@link Stop#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the ScanRun to be stopped. The name follows the
+        format of
+         *        'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'.
+         * @param content the {@link com.google.api.services.websecurityscanner.v1.model.StopScanRunRequest}
+         * @return the request
+         */
+        public Stop stop(java.lang.String name, com.google.api.services.websecurityscanner.v1.model.StopScanRunRequest content) throws java.io.IOException {
+          Stop result = new Stop(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Stop extends WebSecurityScannerRequest<com.google.api.services.websecurityscanner.v1.model.ScanRun> {
+
+          private static final String REST_PATH = "v1/{+name}:stop";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/scanConfigs/[^/]+/scanRuns/[^/]+$");
+
+          /**
+           * Stops a ScanRun. The stopped ScanRun is returned.
+           *
+           * Create a request for the method "scanRuns.stop".
+           *
+           * This request holds the parameters needed by the the websecurityscanner server.  After setting
+           * any optional parameters, call the {@link Stop#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Stop#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the ScanRun to be stopped. The name follows the
+        format of
+         *        'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'.
+           * @param content the {@link com.google.api.services.websecurityscanner.v1.model.StopScanRunRequest}
+           * @since 1.13
+           */
+          protected Stop(java.lang.String name, com.google.api.services.websecurityscanner.v1.model.StopScanRunRequest content) {
+            super(WebSecurityScanner.this, "POST", REST_PATH, content, com.google.api.services.websecurityscanner.v1.model.ScanRun.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/scanConfigs/[^/]+/scanRuns/[^/]+$");
+            }
+          }
+
+          @Override
+          public Stop set$Xgafv(java.lang.String $Xgafv) {
+            return (Stop) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Stop setAccessToken(java.lang.String accessToken) {
+            return (Stop) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Stop setAlt(java.lang.String alt) {
+            return (Stop) super.setAlt(alt);
+          }
+
+          @Override
+          public Stop setCallback(java.lang.String callback) {
+            return (Stop) super.setCallback(callback);
+          }
+
+          @Override
+          public Stop setFields(java.lang.String fields) {
+            return (Stop) super.setFields(fields);
+          }
+
+          @Override
+          public Stop setKey(java.lang.String key) {
+            return (Stop) super.setKey(key);
+          }
+
+          @Override
+          public Stop setOauthToken(java.lang.String oauthToken) {
+            return (Stop) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Stop setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Stop) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Stop setQuotaUser(java.lang.String quotaUser) {
+            return (Stop) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Stop setUploadType(java.lang.String uploadType) {
+            return (Stop) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Stop setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Stop) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the ScanRun to be stopped. The name follows the format
+           * of 'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the ScanRun to be stopped. The name follows the format of
+         'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the ScanRun to be stopped. The name follows the format
+           * of 'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'.
+           */
+          public Stop setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/scanConfigs/[^/]+/scanRuns/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Stop set(String parameterName, Object value) {
+            return (Stop) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the CrawledUrls collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code WebSecurityScanner websecurityscanner = new WebSecurityScanner(...);}
+         *   {@code WebSecurityScanner.CrawledUrls.List request = websecurityscanner.crawledUrls().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public CrawledUrls crawledUrls() {
+          return new CrawledUrls();
+        }
+
+        /**
+         * The "crawledUrls" collection of methods.
+         */
+        public class CrawledUrls {
+
+          /**
+           * List CrawledUrls under a given ScanRun.
+           *
+           * Create a request for the method "crawledUrls.list".
+           *
+           * This request holds the parameters needed by the websecurityscanner server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent resource name, which should be a scan run resource name in the
+          format
+           *        'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends WebSecurityScannerRequest<com.google.api.services.websecurityscanner.v1.model.ListCrawledUrlsResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/crawledUrls";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/scanConfigs/[^/]+/scanRuns/[^/]+$");
+
+            /**
+             * List CrawledUrls under a given ScanRun.
+             *
+             * Create a request for the method "crawledUrls.list".
+             *
+             * This request holds the parameters needed by the the websecurityscanner server.  After setting
+             * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent resource name, which should be a scan run resource name in the
+          format
+           *        'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(WebSecurityScanner.this, "GET", REST_PATH, null, com.google.api.services.websecurityscanner.v1.model.ListCrawledUrlsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/scanConfigs/[^/]+/scanRuns/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent resource name, which should be a scan run resource name in the
+             * format 'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent resource name, which should be a scan run resource name in the format
+           'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent resource name, which should be a scan run resource name in the
+             * format 'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/scanConfigs/[^/]+/scanRuns/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * The maximum number of CrawledUrls to return, can be limited by server. If not
+             * specified or not positive, the implementation will select a reasonable value.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** The maximum number of CrawledUrls to return, can be limited by server. If not specified or not
+           positive, the implementation will select a reasonable value.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * The maximum number of CrawledUrls to return, can be limited by server. If not
+             * specified or not positive, the implementation will select a reasonable value.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * A token identifying a page of results to be returned. This should be a
+             * `next_page_token` value returned from a previous List request. If unspecified, the
+             * first page of results is returned.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** A token identifying a page of results to be returned. This should be a `next_page_token` value
+           returned from a previous List request. If unspecified, the first page of results is returned.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * A token identifying a page of results to be returned. This should be a
+             * `next_page_token` value returned from a previous List request. If unspecified, the
+             * first page of results is returned.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the FindingTypeStats collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code WebSecurityScanner websecurityscanner = new WebSecurityScanner(...);}
+         *   {@code WebSecurityScanner.FindingTypeStats.List request = websecurityscanner.findingTypeStats().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public FindingTypeStats findingTypeStats() {
+          return new FindingTypeStats();
+        }
+
+        /**
+         * The "findingTypeStats" collection of methods.
+         */
+        public class FindingTypeStats {
+
+          /**
+           * List all FindingTypeStats under a given ScanRun.
+           *
+           * Create a request for the method "findingTypeStats.list".
+           *
+           * This request holds the parameters needed by the websecurityscanner server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent resource name, which should be a scan run resource name in the
+          format
+           *        'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends WebSecurityScannerRequest<com.google.api.services.websecurityscanner.v1.model.ListFindingTypeStatsResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/findingTypeStats";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/scanConfigs/[^/]+/scanRuns/[^/]+$");
+
+            /**
+             * List all FindingTypeStats under a given ScanRun.
+             *
+             * Create a request for the method "findingTypeStats.list".
+             *
+             * This request holds the parameters needed by the the websecurityscanner server.  After setting
+             * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent resource name, which should be a scan run resource name in the
+          format
+           *        'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(WebSecurityScanner.this, "GET", REST_PATH, null, com.google.api.services.websecurityscanner.v1.model.ListFindingTypeStatsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/scanConfigs/[^/]+/scanRuns/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent resource name, which should be a scan run resource name in the
+             * format 'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent resource name, which should be a scan run resource name in the format
+           'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent resource name, which should be a scan run resource name in the
+             * format 'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/scanConfigs/[^/]+/scanRuns/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the Findings collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code WebSecurityScanner websecurityscanner = new WebSecurityScanner(...);}
+         *   {@code WebSecurityScanner.Findings.List request = websecurityscanner.findings().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Findings findings() {
+          return new Findings();
+        }
+
+        /**
+         * The "findings" collection of methods.
+         */
+        public class Findings {
+
+          /**
+           * Gets a Finding.
+           *
+           * Create a request for the method "findings.get".
+           *
+           * This request holds the parameters needed by the websecurityscanner server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the Finding to be returned. The name follows the
+          format of
+           *        'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}/findings/{findingId}
+           *        '.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends WebSecurityScannerRequest<com.google.api.services.websecurityscanner.v1.model.Finding> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/scanConfigs/[^/]+/scanRuns/[^/]+/findings/[^/]+$");
+
+            /**
+             * Gets a Finding.
+             *
+             * Create a request for the method "findings.get".
+             *
+             * This request holds the parameters needed by the the websecurityscanner server.  After setting
+             * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the Finding to be returned. The name follows the
+          format of
+           *        'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}/findings/{findingId}
+           *        '.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(WebSecurityScanner.this, "GET", REST_PATH, null, com.google.api.services.websecurityscanner.v1.model.Finding.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/scanConfigs/[^/]+/scanRuns/[^/]+/findings/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the Finding to be returned. The name follows the
+             * format of 'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}/findi
+             * ngs/{findingId}'.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the Finding to be returned. The name follows the format of
+           'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}/findings/{findingId}'.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the Finding to be returned. The name follows the
+             * format of 'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}/findi
+             * ngs/{findingId}'.
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/scanConfigs/[^/]+/scanRuns/[^/]+/findings/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * List Findings under a given ScanRun.
+           *
+           * Create a request for the method "findings.list".
+           *
+           * This request holds the parameters needed by the websecurityscanner server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent resource name, which should be a scan run resource name in the
+          format
+           *        'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends WebSecurityScannerRequest<com.google.api.services.websecurityscanner.v1.model.ListFindingsResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/findings";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/scanConfigs/[^/]+/scanRuns/[^/]+$");
+
+            /**
+             * List Findings under a given ScanRun.
+             *
+             * Create a request for the method "findings.list".
+             *
+             * This request holds the parameters needed by the the websecurityscanner server.  After setting
+             * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent resource name, which should be a scan run resource name in the
+          format
+           *        'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(WebSecurityScanner.this, "GET", REST_PATH, null, com.google.api.services.websecurityscanner.v1.model.ListFindingsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/scanConfigs/[^/]+/scanRuns/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent resource name, which should be a scan run resource name in the
+             * format 'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent resource name, which should be a scan run resource name in the format
+           'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent resource name, which should be a scan run resource name in the
+             * format 'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/scanConfigs/[^/]+/scanRuns/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * The filter expression. The expression must be in the format: . Supported field:
+             * 'finding_type'. Supported operator: '='.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** The filter expression. The expression must be in the format: . Supported field: 'finding_type'.
+           Supported operator: '='.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * The filter expression. The expression must be in the format: . Supported field:
+             * 'finding_type'. Supported operator: '='.
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * The maximum number of Findings to return, can be limited by server. If not specified
+             * or not positive, the implementation will select a reasonable value.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** The maximum number of Findings to return, can be limited by server. If not specified or not
+           positive, the implementation will select a reasonable value.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * The maximum number of Findings to return, can be limited by server. If not specified
+             * or not positive, the implementation will select a reasonable value.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * A token identifying a page of results to be returned. This should be a
+             * `next_page_token` value returned from a previous List request. If unspecified, the
+             * first page of results is returned.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** A token identifying a page of results to be returned. This should be a `next_page_token` value
+           returned from a previous List request. If unspecified, the first page of results is returned.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * A token identifying a page of results to be returned. This should be a
+             * `next_page_token` value returned from a previous List request. If unspecified, the
+             * first page of results is returned.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+  /**
    * Builder for {@link WebSecurityScanner}.
    *
    * <p>

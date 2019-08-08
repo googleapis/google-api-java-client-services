@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-websecurityscanner</artifactId>
-  <version>v1-rev20190622-1.28.0</version>
-  <name>Web Security Scanner API v1-rev20190622-1.28.0</name>
+  <version>v1-rev20190805-1.28.0</version>
+  <name>Web Security Scanner API v1-rev20190805-1.28.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

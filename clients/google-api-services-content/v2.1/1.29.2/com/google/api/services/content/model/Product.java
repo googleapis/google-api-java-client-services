@@ -294,8 +294,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of destinations to include for this target (corresponds to checked check boxes in
-   * Merchant Center). Default destinations are always included unless provided in the
-   * excluded_destination field.
+   * Merchant Center). Default destinations are always included unless provided in
+   * excludedDestinations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1198,8 +1198,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of destinations to include for this target (corresponds to checked check boxes in
-   * Merchant Center). Default destinations are always included unless provided in the
-   * excluded_destination field.
+   * Merchant Center). Default destinations are always included unless provided in
+   * excludedDestinations.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getIncludedDestinations() {
@@ -1208,8 +1208,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of destinations to include for this target (corresponds to checked check boxes in
-   * Merchant Center). Default destinations are always included unless provided in the
-   * excluded_destination field.
+   * Merchant Center). Default destinations are always included unless provided in
+   * excludedDestinations.
    * @param includedDestinations includedDestinations or {@code null} for none
    */
   public Product setIncludedDestinations(java.util.List<java.lang.String> includedDestinations) {

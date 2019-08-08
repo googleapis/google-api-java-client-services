@@ -38,6 +38,21 @@ public final class OrderCustomer extends com.google.api.client.json.GenericJson 
   private java.lang.String fullName;
 
   /**
+   * Email address for receiving merchant issued value-added tax or invoice documentation of this
+   * order.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String invoiceReceivingEmail;
+
+  /**
+   * Loyalty program information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OrderCustomerLoyaltyInfo loyaltyInfo;
+
+  /**
    * Customer's marketing preferences. Contains the marketing opt-in information that is current at
    * the time that the merchant call. User preference selections can change from one order to the
    * next so preferences must be checked with every order.
@@ -60,6 +75,42 @@ public final class OrderCustomer extends com.google.api.client.json.GenericJson 
    */
   public OrderCustomer setFullName(java.lang.String fullName) {
     this.fullName = fullName;
+    return this;
+  }
+
+  /**
+   * Email address for receiving merchant issued value-added tax or invoice documentation of this
+   * order.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInvoiceReceivingEmail() {
+    return invoiceReceivingEmail;
+  }
+
+  /**
+   * Email address for receiving merchant issued value-added tax or invoice documentation of this
+   * order.
+   * @param invoiceReceivingEmail invoiceReceivingEmail or {@code null} for none
+   */
+  public OrderCustomer setInvoiceReceivingEmail(java.lang.String invoiceReceivingEmail) {
+    this.invoiceReceivingEmail = invoiceReceivingEmail;
+    return this;
+  }
+
+  /**
+   * Loyalty program information.
+   * @return value or {@code null} for none
+   */
+  public OrderCustomerLoyaltyInfo getLoyaltyInfo() {
+    return loyaltyInfo;
+  }
+
+  /**
+   * Loyalty program information.
+   * @param loyaltyInfo loyaltyInfo or {@code null} for none
+   */
+  public OrderCustomer setLoyaltyInfo(OrderCustomerLoyaltyInfo loyaltyInfo) {
+    this.loyaltyInfo = loyaltyInfo;
     return this;
   }
 

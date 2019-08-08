@@ -30,14 +30,6 @@ package com.google.api.services.healthcare.v1alpha2.model;
 public final class TextConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Experimental de-identification config to use. For internal use only. If not specified, it is
-   * ignored and standard DLP is used.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String experimentalConfig;
-
-  /**
    * The transformations to apply to the detected data.
    * The value may be {@code null}.
    */
@@ -48,25 +40,6 @@ public final class TextConfig extends com.google.api.client.json.GenericJson {
     // hack to force ProGuard to consider InfoTypeTransformation used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(InfoTypeTransformation.class);
-  }
-
-  /**
-   * Experimental de-identification config to use. For internal use only. If not specified, it is
-   * ignored and standard DLP is used.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getExperimentalConfig() {
-    return experimentalConfig;
-  }
-
-  /**
-   * Experimental de-identification config to use. For internal use only. If not specified, it is
-   * ignored and standard DLP is used.
-   * @param experimentalConfig experimentalConfig or {@code null} for none
-   */
-  public TextConfig setExperimentalConfig(java.lang.String experimentalConfig) {
-    this.experimentalConfig = experimentalConfig;
-    return this;
   }
 
   /**

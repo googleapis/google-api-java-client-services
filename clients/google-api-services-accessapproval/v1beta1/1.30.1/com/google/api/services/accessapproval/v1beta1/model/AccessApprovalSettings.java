@@ -30,6 +30,20 @@ package com.google.api.services.accessapproval.v1beta1.model;
 public final class AccessApprovalSettings extends com.google.api.client.json.GenericJson {
 
   /**
+   * A list of Google Cloud Services for which the given resource has Access Approval enrolled.
+   * Access requests for the resource given by name against any of these services contained here
+   * will be required to have explicit approval. If name refers to an organization, enrollment can
+   * be done for individual services. If name refers to a folder or project, enrollment can only be
+   * done on an all or nothing basis.
+   *
+   * If a cloud_product is repeated in this list, the first entry will be honored and all following
+   * entries will be discarded.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<EnrolledService> enrolledServices;
+
+  /**
    * The resource name of the settings. Format is one of:
    *
    *   "projects/{project_id}/accessApprovalSettings"   "folders/{folder_id}/accessApprovalSettings"
@@ -47,6 +61,37 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> notificationEmails;
+
+  /**
+   * A list of Google Cloud Services for which the given resource has Access Approval enrolled.
+   * Access requests for the resource given by name against any of these services contained here
+   * will be required to have explicit approval. If name refers to an organization, enrollment can
+   * be done for individual services. If name refers to a folder or project, enrollment can only be
+   * done on an all or nothing basis.
+   *
+   * If a cloud_product is repeated in this list, the first entry will be honored and all following
+   * entries will be discarded.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<EnrolledService> getEnrolledServices() {
+    return enrolledServices;
+  }
+
+  /**
+   * A list of Google Cloud Services for which the given resource has Access Approval enrolled.
+   * Access requests for the resource given by name against any of these services contained here
+   * will be required to have explicit approval. If name refers to an organization, enrollment can
+   * be done for individual services. If name refers to a folder or project, enrollment can only be
+   * done on an all or nothing basis.
+   *
+   * If a cloud_product is repeated in this list, the first entry will be honored and all following
+   * entries will be discarded.
+   * @param enrolledServices enrolledServices or {@code null} for none
+   */
+  public AccessApprovalSettings setEnrolledServices(java.util.List<EnrolledService> enrolledServices) {
+    this.enrolledServices = enrolledServices;
+    return this;
+  }
 
   /**
    * The resource name of the settings. Format is one of:

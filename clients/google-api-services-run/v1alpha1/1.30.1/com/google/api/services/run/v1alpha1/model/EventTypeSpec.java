@@ -44,6 +44,13 @@ public final class EventTypeSpec extends com.google.api.client.json.GenericJson 
   private java.lang.String description;
 
   /**
+   * The importer that provides this EventType to the eventing mesh.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EventTypeImporter importer;
+
+  /**
    * Schema is a URI with the EventType schema. It may be a JSON schema, a protobuf schema, etc.
    * +optional
    * The value may be {@code null}.
@@ -96,6 +103,23 @@ public final class EventTypeSpec extends com.google.api.client.json.GenericJson 
    */
   public EventTypeSpec setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * The importer that provides this EventType to the eventing mesh.
+   * @return value or {@code null} for none
+   */
+  public EventTypeImporter getImporter() {
+    return importer;
+  }
+
+  /**
+   * The importer that provides this EventType to the eventing mesh.
+   * @param importer importer or {@code null} for none
+   */
+  public EventTypeSpec setImporter(EventTypeImporter importer) {
+    this.importer = importer;
     return this;
   }
 

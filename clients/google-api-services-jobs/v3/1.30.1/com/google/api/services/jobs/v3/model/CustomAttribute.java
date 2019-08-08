@@ -57,7 +57,7 @@ public final class CustomAttribute extends com.google.api.client.json.GenericJso
    *
    * This field is used to perform a string match (`CASE_SENSITIVE_MATCH` or
    * `CASE_INSENSITIVE_MATCH`) search. For filterable `string_value`s, a maximum total number of 200
-   * values is allowed, with each `string_value` has a byte size of no more than 255B. For
+   * values is allowed, with each `string_value` has a byte size of no more than 500B. For
    * unfilterable `string_values`, the maximum total byte size of unfilterable `string_values` is
    * 50KB.
    *
@@ -122,7 +122,7 @@ public final class CustomAttribute extends com.google.api.client.json.GenericJso
    *
    * This field is used to perform a string match (`CASE_SENSITIVE_MATCH` or
    * `CASE_INSENSITIVE_MATCH`) search. For filterable `string_value`s, a maximum total number of 200
-   * values is allowed, with each `string_value` has a byte size of no more than 255B. For
+   * values is allowed, with each `string_value` has a byte size of no more than 500B. For
    * unfilterable `string_values`, the maximum total byte size of unfilterable `string_values` is
    * 50KB.
    *
@@ -138,7 +138,7 @@ public final class CustomAttribute extends com.google.api.client.json.GenericJso
    *
    * This field is used to perform a string match (`CASE_SENSITIVE_MATCH` or
    * `CASE_INSENSITIVE_MATCH`) search. For filterable `string_value`s, a maximum total number of 200
-   * values is allowed, with each `string_value` has a byte size of no more than 255B. For
+   * values is allowed, with each `string_value` has a byte size of no more than 500B. For
    * unfilterable `string_values`, the maximum total byte size of unfilterable `string_values` is
    * 50KB.
    *

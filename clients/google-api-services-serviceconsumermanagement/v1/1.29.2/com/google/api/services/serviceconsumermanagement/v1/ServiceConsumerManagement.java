@@ -1547,7 +1547,9 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
         }
       }
       /**
-       * Creates a tenancy unit with no tenant resources.
+       * Creates a tenancy unit with no tenant resources. If tenancy unit already exists, it will be
+       * returned, however, in this case, returned TenancyUnit does not have tenant_resources field set
+       * and ListTenancyUnit has to be used to get a complete TenancyUnit with all fields populated.
        *
        * Create a request for the method "tenancyUnits.create".
        *
@@ -1580,7 +1582,9 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
             java.util.regex.Pattern.compile("^services/[^/]+/[^/]+/[^/]+$");
 
         /**
-         * Creates a tenancy unit with no tenant resources.
+         * Creates a tenancy unit with no tenant resources. If tenancy unit already exists, it will be
+         * returned, however, in this case, returned TenancyUnit does not have tenant_resources field set
+         * and ListTenancyUnit has to be used to get a complete TenancyUnit with all fields populated.
          *
          * Create a request for the method "tenancyUnits.create".
          *

@@ -30,11 +30,35 @@ package com.google.api.services.people.v1.model;
 public final class ModifyContactGroupMembersResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * The contact people resource names that cannot be removed from their last contact group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> canNotRemoveLastContactGroupResourceNames;
+
+  /**
    * The contact people resource names that were not found.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> notFoundResourceNames;
+
+  /**
+   * The contact people resource names that cannot be removed from their last contact group.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getCanNotRemoveLastContactGroupResourceNames() {
+    return canNotRemoveLastContactGroupResourceNames;
+  }
+
+  /**
+   * The contact people resource names that cannot be removed from their last contact group.
+   * @param canNotRemoveLastContactGroupResourceNames canNotRemoveLastContactGroupResourceNames or {@code null} for none
+   */
+  public ModifyContactGroupMembersResponse setCanNotRemoveLastContactGroupResourceNames(java.util.List<java.lang.String> canNotRemoveLastContactGroupResourceNames) {
+    this.canNotRemoveLastContactGroupResourceNames = canNotRemoveLastContactGroupResourceNames;
+    return this;
+  }
 
   /**
    * The contact people resource names that were not found.

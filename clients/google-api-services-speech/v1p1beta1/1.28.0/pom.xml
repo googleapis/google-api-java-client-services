@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-speech</artifactId>
-  <version>v1p1beta1-rev20190610-1.28.0</version>
-  <name>Cloud Speech-to-Text API v1p1beta1-rev20190610-1.28.0</name>
+  <version>v1p1beta1-rev20190804-1.28.0</version>
+  <name>Cloud Speech-to-Text API v1p1beta1-rev20190804-1.28.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

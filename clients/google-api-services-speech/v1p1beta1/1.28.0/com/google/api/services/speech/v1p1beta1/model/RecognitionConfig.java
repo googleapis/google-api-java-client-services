@@ -69,9 +69,9 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   private SpeakerDiarizationConfig diarizationConfig;
 
   /**
-   * *Optional* If set, specifies the estimated number of speakers in the conversation. If not set,
-   * defaults to '2'. Ignored unless enable_speaker_diarization is set to true." Note: Use
-   * diarization_config instead. This field will be DEPRECATED soon.
+   * *Optional* If set, specifies the estimated number of speakers in the conversation. Defaults to
+   * '2'. Ignored unless enable_speaker_diarization is set to true. Note: Use diarization_config
+   * instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,7 +102,7 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   /**
    * *Optional* If 'true', enables speaker detection for each recognized word in the top alternative
    * of the recognition result using a speaker_tag provided in the WordInfo. Note: Use
-   * diarization_config instead. This field will be DEPRECATED soon.
+   * diarization_config instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -200,7 +200,7 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
 
   /**
    * *Optional* array of SpeechContext. A means to provide context to assist the speech recognition.
-   * For more information, see [Phrase Hints](/speech-to-text/docs/basics#phrase-hints).
+   * For more information, see [speech adaptation](/speech-to-text/docs/context-strength).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -208,15 +208,11 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
 
   /**
    * *Optional* Set to true to use an enhanced model for speech recognition. If `use_enhanced` is
-   * set to true and the `model` field is not set, then an appropriate enhanced model is chosen if:
-   * 1. project is eligible for requesting enhanced models 2. an enhanced model exists for the audio
+   * set to true and the `model` field is not set, then an appropriate enhanced model is chosen if
+   * an enhanced model exists for the audio.
    *
    * If `use_enhanced` is true and an enhanced version of the specified model does not exist, then
    * the speech is recognized using the standard version of the specified model.
-   *
-   * Enhanced speech models require that you opt-in to data logging using instructions in the
-   * [documentation](/speech-to-text/docs/enable-data-logging). If you set `use_enhanced` to true
-   * and you have not enabled audio logging, then you will receive an error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -308,9 +304,9 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * *Optional* If set, specifies the estimated number of speakers in the conversation. If not set,
-   * defaults to '2'. Ignored unless enable_speaker_diarization is set to true." Note: Use
-   * diarization_config instead. This field will be DEPRECATED soon.
+   * *Optional* If set, specifies the estimated number of speakers in the conversation. Defaults to
+   * '2'. Ignored unless enable_speaker_diarization is set to true. Note: Use diarization_config
+   * instead.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDiarizationSpeakerCount() {
@@ -318,9 +314,9 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * *Optional* If set, specifies the estimated number of speakers in the conversation. If not set,
-   * defaults to '2'. Ignored unless enable_speaker_diarization is set to true." Note: Use
-   * diarization_config instead. This field will be DEPRECATED soon.
+   * *Optional* If set, specifies the estimated number of speakers in the conversation. Defaults to
+   * '2'. Ignored unless enable_speaker_diarization is set to true. Note: Use diarization_config
+   * instead.
    * @param diarizationSpeakerCount diarizationSpeakerCount or {@code null} for none
    */
   public RecognitionConfig setDiarizationSpeakerCount(java.lang.Integer diarizationSpeakerCount) {
@@ -381,7 +377,7 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   /**
    * *Optional* If 'true', enables speaker detection for each recognized word in the top alternative
    * of the recognition result using a speaker_tag provided in the WordInfo. Note: Use
-   * diarization_config instead. This field will be DEPRECATED soon.
+   * diarization_config instead.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableSpeakerDiarization() {
@@ -391,7 +387,7 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   /**
    * *Optional* If 'true', enables speaker detection for each recognized word in the top alternative
    * of the recognition result using a speaker_tag provided in the WordInfo. Note: Use
-   * diarization_config instead. This field will be DEPRECATED soon.
+   * diarization_config instead.
    * @param enableSpeakerDiarization enableSpeakerDiarization or {@code null} for none
    */
   public RecognitionConfig setEnableSpeakerDiarization(java.lang.Boolean enableSpeakerDiarization) {
@@ -608,7 +604,7 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
 
   /**
    * *Optional* array of SpeechContext. A means to provide context to assist the speech recognition.
-   * For more information, see [Phrase Hints](/speech-to-text/docs/basics#phrase-hints).
+   * For more information, see [speech adaptation](/speech-to-text/docs/context-strength).
    * @return value or {@code null} for none
    */
   public java.util.List<SpeechContext> getSpeechContexts() {
@@ -617,7 +613,7 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
 
   /**
    * *Optional* array of SpeechContext. A means to provide context to assist the speech recognition.
-   * For more information, see [Phrase Hints](/speech-to-text/docs/basics#phrase-hints).
+   * For more information, see [speech adaptation](/speech-to-text/docs/context-strength).
    * @param speechContexts speechContexts or {@code null} for none
    */
   public RecognitionConfig setSpeechContexts(java.util.List<SpeechContext> speechContexts) {
@@ -627,15 +623,11 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
 
   /**
    * *Optional* Set to true to use an enhanced model for speech recognition. If `use_enhanced` is
-   * set to true and the `model` field is not set, then an appropriate enhanced model is chosen if:
-   * 1. project is eligible for requesting enhanced models 2. an enhanced model exists for the audio
+   * set to true and the `model` field is not set, then an appropriate enhanced model is chosen if
+   * an enhanced model exists for the audio.
    *
    * If `use_enhanced` is true and an enhanced version of the specified model does not exist, then
    * the speech is recognized using the standard version of the specified model.
-   *
-   * Enhanced speech models require that you opt-in to data logging using instructions in the
-   * [documentation](/speech-to-text/docs/enable-data-logging). If you set `use_enhanced` to true
-   * and you have not enabled audio logging, then you will receive an error.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseEnhanced() {
@@ -644,15 +636,11 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
 
   /**
    * *Optional* Set to true to use an enhanced model for speech recognition. If `use_enhanced` is
-   * set to true and the `model` field is not set, then an appropriate enhanced model is chosen if:
-   * 1. project is eligible for requesting enhanced models 2. an enhanced model exists for the audio
+   * set to true and the `model` field is not set, then an appropriate enhanced model is chosen if
+   * an enhanced model exists for the audio.
    *
    * If `use_enhanced` is true and an enhanced version of the specified model does not exist, then
    * the speech is recognized using the standard version of the specified model.
-   *
-   * Enhanced speech models require that you opt-in to data logging using instructions in the
-   * [documentation](/speech-to-text/docs/enable-data-logging). If you set `use_enhanced` to true
-   * and you have not enabled audio logging, then you will receive an error.
    * @param useEnhanced useEnhanced or {@code null} for none
    */
   public RecognitionConfig setUseEnhanced(java.lang.Boolean useEnhanced) {

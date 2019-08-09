@@ -17,7 +17,7 @@
 package com.google.api.services.speech.v1p1beta1.model;
 
 /**
- * Model definition for SpeakerDiarizationConfig.
+ * *Optional* Config to enable speaker diarization.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Speech-to-Text API. For a detailed explanation
@@ -39,18 +39,18 @@ public final class SpeakerDiarizationConfig extends com.google.api.client.json.G
   private java.lang.Boolean enableSpeakerDiarization;
 
   /**
-   * *Optional* Only used if diarization_speaker_count is not set. Maximum number of speakers in the
-   * conversation. This range gives you more flexibility by allowing the system to automatically
-   * determine the correct number of speakers. If not set, the default value is 6.
+   * *Optional* Maximum number of speakers in the conversation. This range gives you more
+   * flexibility by allowing the system to automatically determine the correct number of speakers.
+   * If not set, the default value is 6.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxSpeakerCount;
 
   /**
-   * *Optional* Only used if diarization_speaker_count is not set. Minimum number of speakers in the
-   * conversation. This range gives you more flexibility by allowing the system to automatically
-   * determine the correct number of speakers. If not set, the default value is 2.
+   * *Optional* Minimum number of speakers in the conversation. This range gives you more
+   * flexibility by allowing the system to automatically determine the correct number of speakers.
+   * If not set, the default value is 2.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,9 +76,9 @@ public final class SpeakerDiarizationConfig extends com.google.api.client.json.G
   }
 
   /**
-   * *Optional* Only used if diarization_speaker_count is not set. Maximum number of speakers in the
-   * conversation. This range gives you more flexibility by allowing the system to automatically
-   * determine the correct number of speakers. If not set, the default value is 6.
+   * *Optional* Maximum number of speakers in the conversation. This range gives you more
+   * flexibility by allowing the system to automatically determine the correct number of speakers.
+   * If not set, the default value is 6.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxSpeakerCount() {
@@ -86,9 +86,9 @@ public final class SpeakerDiarizationConfig extends com.google.api.client.json.G
   }
 
   /**
-   * *Optional* Only used if diarization_speaker_count is not set. Maximum number of speakers in the
-   * conversation. This range gives you more flexibility by allowing the system to automatically
-   * determine the correct number of speakers. If not set, the default value is 6.
+   * *Optional* Maximum number of speakers in the conversation. This range gives you more
+   * flexibility by allowing the system to automatically determine the correct number of speakers.
+   * If not set, the default value is 6.
    * @param maxSpeakerCount maxSpeakerCount or {@code null} for none
    */
   public SpeakerDiarizationConfig setMaxSpeakerCount(java.lang.Integer maxSpeakerCount) {
@@ -97,9 +97,9 @@ public final class SpeakerDiarizationConfig extends com.google.api.client.json.G
   }
 
   /**
-   * *Optional* Only used if diarization_speaker_count is not set. Minimum number of speakers in the
-   * conversation. This range gives you more flexibility by allowing the system to automatically
-   * determine the correct number of speakers. If not set, the default value is 2.
+   * *Optional* Minimum number of speakers in the conversation. This range gives you more
+   * flexibility by allowing the system to automatically determine the correct number of speakers.
+   * If not set, the default value is 2.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMinSpeakerCount() {
@@ -107,9 +107,9 @@ public final class SpeakerDiarizationConfig extends com.google.api.client.json.G
   }
 
   /**
-   * *Optional* Only used if diarization_speaker_count is not set. Minimum number of speakers in the
-   * conversation. This range gives you more flexibility by allowing the system to automatically
-   * determine the correct number of speakers. If not set, the default value is 2.
+   * *Optional* Minimum number of speakers in the conversation. This range gives you more
+   * flexibility by allowing the system to automatically determine the correct number of speakers.
+   * If not set, the default value is 2.
    * @param minSpeakerCount minSpeakerCount or {@code null} for none
    */
   public SpeakerDiarizationConfig setMinSpeakerCount(java.lang.Integer minSpeakerCount) {

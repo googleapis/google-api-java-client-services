@@ -40,7 +40,8 @@ package com.google.api.services.file.v1beta1.model;
  * ],   "maintenance_schedules": {     "csa_rollout": {        "start_time": {           "seconds":
  * 1526406431,        },        "end_time": {           "seconds": 1535406431,        },     },
  * "ncsa_rollout": {        "start_time": {           "seconds": 1526406431,        },
- * "end_time": {           "seconds": 1535406431,        },     }   } } ```
+ * "end_time": {           "seconds": 1535406431,        },     }   },   "consumer_defined_name":
+ * "my-sql-instance1", } ```
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Filestore API. For a detailed explanation see:
@@ -51,6 +52,16 @@ package com.google.api.services.file.v1beta1.model;
  */
 @SuppressWarnings("javadoc")
 public final class GoogleCloudSaasacceleratorManagementProvidersV1Instance extends com.google.api.client.json.GenericJson {
+
+  /**
+   * consumer_defined_name is the name that is set by the consumer. On the other hand Name field
+   * represents system-assigned id of an instance so consumers are not necessarily aware of it.
+   * consumer_defined_name is used for notification/UI purposes for consumer to recognize their
+   * instances.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String consumerDefinedName;
 
   /**
    * Output only. Timestamp when the resource was created.
@@ -155,6 +166,29 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1Instance exten
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * consumer_defined_name is the name that is set by the consumer. On the other hand Name field
+   * represents system-assigned id of an instance so consumers are not necessarily aware of it.
+   * consumer_defined_name is used for notification/UI purposes for consumer to recognize their
+   * instances.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConsumerDefinedName() {
+    return consumerDefinedName;
+  }
+
+  /**
+   * consumer_defined_name is the name that is set by the consumer. On the other hand Name field
+   * represents system-assigned id of an instance so consumers are not necessarily aware of it.
+   * consumer_defined_name is used for notification/UI purposes for consumer to recognize their
+   * instances.
+   * @param consumerDefinedName consumerDefinedName or {@code null} for none
+   */
+  public GoogleCloudSaasacceleratorManagementProvidersV1Instance setConsumerDefinedName(java.lang.String consumerDefinedName) {
+    this.consumerDefinedName = consumerDefinedName;
+    return this;
+  }
 
   /**
    * Output only. Timestamp when the resource was created.

@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-bigtableadmin",
+    "version": "v2-rev20190628-1.30.1"
+  }
+}

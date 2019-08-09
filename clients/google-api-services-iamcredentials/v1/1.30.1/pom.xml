@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-iamcredentials</artifactId>
-  <version>v1-rev20190222-1.30.1</version>
-  <name>IAM Service Account Credentials API v1-rev20190222-1.30.1</name>
+  <version>v1-rev20190704-1.30.1</version>
+  <name>IAM Service Account Credentials API v1-rev20190704-1.30.1</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

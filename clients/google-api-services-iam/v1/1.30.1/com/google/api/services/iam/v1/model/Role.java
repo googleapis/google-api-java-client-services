@@ -65,7 +65,7 @@ public final class Role extends com.google.api.client.json.GenericJson {
    * When Role is used in CreateRole, the role name must not be set.
    *
    * When Role is used in output and other input such as UpdateRole, the role name is the complete
-   * path, e.g., roles/logging.viewer for curated roles and
+   * path, e.g., roles/logging.viewer for predefined roles and
    * organizations/{ORGANIZATION_ID}/roles/logging.viewer for custom roles.
    * The value may be {@code null}.
    */
@@ -191,7 +191,7 @@ public final class Role extends com.google.api.client.json.GenericJson {
    * When Role is used in CreateRole, the role name must not be set.
    *
    * When Role is used in output and other input such as UpdateRole, the role name is the complete
-   * path, e.g., roles/logging.viewer for curated roles and
+   * path, e.g., roles/logging.viewer for predefined roles and
    * organizations/{ORGANIZATION_ID}/roles/logging.viewer for custom roles.
    * @return value or {@code null} for none
    */
@@ -205,7 +205,7 @@ public final class Role extends com.google.api.client.json.GenericJson {
    * When Role is used in CreateRole, the role name must not be set.
    *
    * When Role is used in output and other input such as UpdateRole, the role name is the complete
-   * path, e.g., roles/logging.viewer for curated roles and
+   * path, e.g., roles/logging.viewer for predefined roles and
    * organizations/{ORGANIZATION_ID}/roles/logging.viewer for custom roles.
    * @param name name or {@code null} for none
    */

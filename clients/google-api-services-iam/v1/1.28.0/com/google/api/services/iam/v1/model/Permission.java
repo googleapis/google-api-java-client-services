@@ -66,6 +66,14 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean onlyInPredefinedRoles;
 
   /**
+   * The preferred name for this permission. If present, then this permission is an alias of, and
+   * equivalent to, the listed primary_permission.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String primaryPermission;
+
+  /**
    * The current launch stage of the permission.
    * The value may be {@code null}.
    */
@@ -161,6 +169,25 @@ public final class Permission extends com.google.api.client.json.GenericJson {
    */
   public Permission setOnlyInPredefinedRoles(java.lang.Boolean onlyInPredefinedRoles) {
     this.onlyInPredefinedRoles = onlyInPredefinedRoles;
+    return this;
+  }
+
+  /**
+   * The preferred name for this permission. If present, then this permission is an alias of, and
+   * equivalent to, the listed primary_permission.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPrimaryPermission() {
+    return primaryPermission;
+  }
+
+  /**
+   * The preferred name for this permission. If present, then this permission is an alias of, and
+   * equivalent to, the listed primary_permission.
+   * @param primaryPermission primaryPermission or {@code null} for none
+   */
+  public Permission setPrimaryPermission(java.lang.String primaryPermission) {
+    this.primaryPermission = primaryPermission;
     return this;
   }
 

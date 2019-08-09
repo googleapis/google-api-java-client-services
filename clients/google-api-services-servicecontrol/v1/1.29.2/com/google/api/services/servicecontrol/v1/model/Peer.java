@@ -19,7 +19,7 @@ package com.google.api.services.servicecontrol.v1.model;
 /**
  * This message defines attributes for a node that handles a network request. The node can be either
  * a service or an application that sends, forwards, or receives the request. Service peers should
- * fill in the `service`, `principal`, and `labels` as appropriate.
+ * fill in `principal` and `labels` as appropriate.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Control API. For a detailed explanation see:
@@ -68,15 +68,6 @@ public final class Peer extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String regionCode;
-
-  /**
-   * The canonical service name of the peer.
-   *
-   * NOTE: different systems may have different service naming schemes.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String service;
 
   /**
    * The IP address of the peer.
@@ -166,27 +157,6 @@ public final class Peer extends com.google.api.client.json.GenericJson {
    */
   public Peer setRegionCode(java.lang.String regionCode) {
     this.regionCode = regionCode;
-    return this;
-  }
-
-  /**
-   * The canonical service name of the peer.
-   *
-   * NOTE: different systems may have different service naming schemes.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getService() {
-    return service;
-  }
-
-  /**
-   * The canonical service name of the peer.
-   *
-   * NOTE: different systems may have different service naming schemes.
-   * @param service service or {@code null} for none
-   */
-  public Peer setService(java.lang.String service) {
-    this.service = service;
     return this;
   }
 

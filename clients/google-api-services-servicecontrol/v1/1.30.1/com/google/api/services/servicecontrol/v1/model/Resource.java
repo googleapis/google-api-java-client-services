@@ -62,8 +62,10 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   private java.lang.String service;
 
   /**
-   * The type of the resource. The scheme is platform-specific because different platforms define
+   * The type of the resource. The syntax is platform-specific because different platforms define
    * their resources differently.
+   *
+   * For Google APIs, the type format must be "{service}/{kind}".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,8 +143,10 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the resource. The scheme is platform-specific because different platforms define
+   * The type of the resource. The syntax is platform-specific because different platforms define
    * their resources differently.
+   *
+   * For Google APIs, the type format must be "{service}/{kind}".
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -150,8 +154,10 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the resource. The scheme is platform-specific because different platforms define
+   * The type of the resource. The syntax is platform-specific because different platforms define
    * their resources differently.
+   *
+   * For Google APIs, the type format must be "{service}/{kind}".
    * @param type type or {@code null} for none
    */
   public Resource setType(java.lang.String type) {

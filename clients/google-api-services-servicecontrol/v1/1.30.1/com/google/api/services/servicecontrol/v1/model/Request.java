@@ -39,13 +39,6 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private Auth auth;
 
   /**
-   * The HTTP URL fragment. No URL decoding is performed.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String fragment;
-
-  /**
    * The HTTP request headers. If multiple headers share the same key, they must be merged according
    * to the HTTP spec. All header keys must be lowercased, because HTTP header keys are case-
    * insensitive.
@@ -145,23 +138,6 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   public Request setAuth(Auth auth) {
     this.auth = auth;
-    return this;
-  }
-
-  /**
-   * The HTTP URL fragment. No URL decoding is performed.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getFragment() {
-    return fragment;
-  }
-
-  /**
-   * The HTTP URL fragment. No URL decoding is performed.
-   * @param fragment fragment or {@code null} for none
-   */
-  public Request setFragment(java.lang.String fragment) {
-    this.fragment = fragment;
     return this;
   }
 

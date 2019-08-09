@@ -25,7 +25,7 @@ package com.google.api.services.dialogflow.v2beta1;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://cloud.google.com/dialogflow-enterprise/" target="_blank">API Documentation</a>
+ * <a href="https://cloud.google.com/dialogflow/" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>
@@ -142,6 +142,294 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
    */
   public class Projects {
 
+    /**
+     * Creates/updates the specified agent.
+     *
+     * Create a request for the method "projects.agent".
+     *
+     * This request holds the parameters needed by the dialogflow server.  After setting any optional
+     * parameters, call the {@link Agent#execute()} method to invoke the remote operation.
+     *
+     * @param parent Required. The project of this agent.
+    Format: `projects/`.
+     * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Agent}
+     * @return the request
+     */
+    public Agent agent(java.lang.String parent, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Agent content) throws java.io.IOException {
+      Agent result = new Agent(parent, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Agent extends DialogflowRequest<com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Agent> {
+
+      private static final String REST_PATH = "v2beta1/{+parent}/agent";
+
+      private final java.util.regex.Pattern PARENT_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+      /**
+       * Creates/updates the specified agent.
+       *
+       * Create a request for the method "projects.agent".
+       *
+       * This request holds the parameters needed by the the dialogflow server.  After setting any
+       * optional parameters, call the {@link Agent#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Agent#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param parent Required. The project of this agent.
+    Format: `projects/`.
+       * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Agent}
+       * @since 1.13
+       */
+      protected Agent(java.lang.String parent, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Agent content) {
+        super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Agent.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+      }
+
+      @Override
+      public Agent set$Xgafv(java.lang.String $Xgafv) {
+        return (Agent) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Agent setAccessToken(java.lang.String accessToken) {
+        return (Agent) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Agent setAlt(java.lang.String alt) {
+        return (Agent) super.setAlt(alt);
+      }
+
+      @Override
+      public Agent setCallback(java.lang.String callback) {
+        return (Agent) super.setCallback(callback);
+      }
+
+      @Override
+      public Agent setFields(java.lang.String fields) {
+        return (Agent) super.setFields(fields);
+      }
+
+      @Override
+      public Agent setKey(java.lang.String key) {
+        return (Agent) super.setKey(key);
+      }
+
+      @Override
+      public Agent setOauthToken(java.lang.String oauthToken) {
+        return (Agent) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Agent setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Agent) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Agent setQuotaUser(java.lang.String quotaUser) {
+        return (Agent) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Agent setUploadType(java.lang.String uploadType) {
+        return (Agent) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Agent setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Agent) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The project of this agent. Format: `projects/`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Required. The project of this agent. Format: `projects/`.
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /**
+       * Required. The project of this agent. Format: `projects/`.
+       */
+      public Agent setParent(java.lang.String parent) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+        this.parent = parent;
+        return this;
+      }
+
+      /** Optional. The mask to control which fields get updated. */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Optional. The mask to control which fields get updated.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /** Optional. The mask to control which fields get updated. */
+      public Agent setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public Agent set(String parameterName, Object value) {
+        return (Agent) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Deletes the specified agent.
+     *
+     * Create a request for the method "projects.deleteAgent".
+     *
+     * This request holds the parameters needed by the dialogflow server.  After setting any optional
+     * parameters, call the {@link DeleteAgent#execute()} method to invoke the remote operation.
+     *
+     * @param parent Required. The project that the agent to delete is associated with.
+    Format: `projects/`.
+     * @return the request
+     */
+    public DeleteAgent deleteAgent(java.lang.String parent) throws java.io.IOException {
+      DeleteAgent result = new DeleteAgent(parent);
+      initialize(result);
+      return result;
+    }
+
+    public class DeleteAgent extends DialogflowRequest<com.google.api.services.dialogflow.v2beta1.model.GoogleProtobufEmpty> {
+
+      private static final String REST_PATH = "v2beta1/{+parent}/agent";
+
+      private final java.util.regex.Pattern PARENT_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+      /**
+       * Deletes the specified agent.
+       *
+       * Create a request for the method "projects.deleteAgent".
+       *
+       * This request holds the parameters needed by the the dialogflow server.  After setting any
+       * optional parameters, call the {@link DeleteAgent#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * DeleteAgent#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param parent Required. The project that the agent to delete is associated with.
+    Format: `projects/`.
+       * @since 1.13
+       */
+      protected DeleteAgent(java.lang.String parent) {
+        super(Dialogflow.this, "DELETE", REST_PATH, null, com.google.api.services.dialogflow.v2beta1.model.GoogleProtobufEmpty.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+      }
+
+      @Override
+      public DeleteAgent set$Xgafv(java.lang.String $Xgafv) {
+        return (DeleteAgent) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public DeleteAgent setAccessToken(java.lang.String accessToken) {
+        return (DeleteAgent) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public DeleteAgent setAlt(java.lang.String alt) {
+        return (DeleteAgent) super.setAlt(alt);
+      }
+
+      @Override
+      public DeleteAgent setCallback(java.lang.String callback) {
+        return (DeleteAgent) super.setCallback(callback);
+      }
+
+      @Override
+      public DeleteAgent setFields(java.lang.String fields) {
+        return (DeleteAgent) super.setFields(fields);
+      }
+
+      @Override
+      public DeleteAgent setKey(java.lang.String key) {
+        return (DeleteAgent) super.setKey(key);
+      }
+
+      @Override
+      public DeleteAgent setOauthToken(java.lang.String oauthToken) {
+        return (DeleteAgent) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public DeleteAgent setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (DeleteAgent) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public DeleteAgent setQuotaUser(java.lang.String quotaUser) {
+        return (DeleteAgent) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public DeleteAgent setUploadType(java.lang.String uploadType) {
+        return (DeleteAgent) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public DeleteAgent setUploadProtocol(java.lang.String uploadProtocol) {
+        return (DeleteAgent) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The project that the agent to delete is associated with. Format: `projects/`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Required. The project that the agent to delete is associated with. Format: `projects/`.
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /**
+       * Required. The project that the agent to delete is associated with. Format: `projects/`.
+       */
+      public DeleteAgent setParent(java.lang.String parent) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+        this.parent = parent;
+        return this;
+      }
+
+      @Override
+      public DeleteAgent set(String parameterName, Object value) {
+        return (DeleteAgent) super.set(parameterName, value);
+      }
+    }
     /**
      * Retrieves the specified agent.
      *
@@ -1518,17 +1806,17 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Optional. The language of entity synonyms defined in `entity_type`. If not specified,
-           * the agent's default language is used. [Many languages](https://cloud.google.com
-           * /dialogflow-enterprise/docs/reference/language) are supported. Note: languages must be
-           * enabled in the agent before they can be used.
+           * the agent's default language is used. [Many
+           * languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported.
+           * Note: languages must be enabled in the agent before they can be used.
            */
           @com.google.api.client.util.Key
           private java.lang.String languageCode;
 
           /** Optional. The language of entity synonyms defined in `entity_type`. If not specified, the agent's
-         default language is used. [Many languages](https://cloud.google.com/dialogflow-
-         enterprise/docs/reference/language) are supported. Note: languages must be enabled in the agent
-         before they can be used.
+         default language is used. [Many
+         languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported. Note:
+         languages must be enabled in the agent before they can be used.
            */
           public java.lang.String getLanguageCode() {
             return languageCode;
@@ -1536,9 +1824,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Optional. The language of entity synonyms defined in `entity_type`. If not specified,
-           * the agent's default language is used. [Many languages](https://cloud.google.com
-           * /dialogflow-enterprise/docs/reference/language) are supported. Note: languages must be
-           * enabled in the agent before they can be used.
+           * the agent's default language is used. [Many
+           * languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported.
+           * Note: languages must be enabled in the agent before they can be used.
            */
           public Create setLanguageCode(java.lang.String languageCode) {
             this.languageCode = languageCode;
@@ -1828,17 +2116,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Optional. The language to retrieve entity synonyms for. If not specified, the agent's
-           * default language is used. [Many languages](https://cloud.google.com/dialogflow-
-           * enterprise/docs/reference/language) are supported. Note: languages must be enabled in
-           * the agent before they can be used.
+           * default language is used. [Many
+           * languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported.
+           * Note: languages must be enabled in the agent before they can be used.
            */
           @com.google.api.client.util.Key
           private java.lang.String languageCode;
 
           /** Optional. The language to retrieve entity synonyms for. If not specified, the agent's default
-         language is used. [Many languages](https://cloud.google.com/dialogflow-
-         enterprise/docs/reference/language) are supported. Note: languages must be enabled in the agent
-         before they can be used.
+         language is used. [Many languages](https://cloud.google.com/dialogflow/docs/reference/language) are
+         supported. Note: languages must be enabled in the agent before they can be used.
            */
           public java.lang.String getLanguageCode() {
             return languageCode;
@@ -1846,9 +2133,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Optional. The language to retrieve entity synonyms for. If not specified, the agent's
-           * default language is used. [Many languages](https://cloud.google.com/dialogflow-
-           * enterprise/docs/reference/language) are supported. Note: languages must be enabled in
-           * the agent before they can be used.
+           * default language is used. [Many
+           * languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported.
+           * Note: languages must be enabled in the agent before they can be used.
            */
           public Get setLanguageCode(java.lang.String languageCode) {
             this.languageCode = languageCode;
@@ -2001,16 +2288,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Optional. The language to list entity synonyms for. If not specified, the agent's
-           * default language is used. [Many languages](https://cloud.google.com/dialogflow-
-           * enterprise/docs/reference/language) are supported. Note: languages must be enabled in
-           * the agent before they can be used.
+           * default language is used. [Many
+           * languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported.
+           * Note: languages must be enabled in the agent before they can be used.
            */
           @com.google.api.client.util.Key
           private java.lang.String languageCode;
 
           /** Optional. The language to list entity synonyms for. If not specified, the agent's default language
-         is used. [Many languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language)
-         are supported. Note: languages must be enabled in the agent before they can be used.
+         is used. [Many languages](https://cloud.google.com/dialogflow/docs/reference/language) are
+         supported. Note: languages must be enabled in the agent before they can be used.
            */
           public java.lang.String getLanguageCode() {
             return languageCode;
@@ -2018,9 +2305,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Optional. The language to list entity synonyms for. If not specified, the agent's
-           * default language is used. [Many languages](https://cloud.google.com/dialogflow-
-           * enterprise/docs/reference/language) are supported. Note: languages must be enabled in
-           * the agent before they can be used.
+           * default language is used. [Many
+           * languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported.
+           * Note: languages must be enabled in the agent before they can be used.
            */
           public List setLanguageCode(java.lang.String languageCode) {
             this.languageCode = languageCode;
@@ -2211,17 +2498,17 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Optional. The language of entity synonyms defined in `entity_type`. If not specified,
-           * the agent's default language is used. [Many languages](https://cloud.google.com
-           * /dialogflow-enterprise/docs/reference/language) are supported. Note: languages must be
-           * enabled in the agent before they can be used.
+           * the agent's default language is used. [Many
+           * languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported.
+           * Note: languages must be enabled in the agent before they can be used.
            */
           @com.google.api.client.util.Key
           private java.lang.String languageCode;
 
           /** Optional. The language of entity synonyms defined in `entity_type`. If not specified, the agent's
-         default language is used. [Many languages](https://cloud.google.com/dialogflow-
-         enterprise/docs/reference/language) are supported. Note: languages must be enabled in the agent
-         before they can be used.
+         default language is used. [Many
+         languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported. Note:
+         languages must be enabled in the agent before they can be used.
            */
           public java.lang.String getLanguageCode() {
             return languageCode;
@@ -2229,9 +2516,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Optional. The language of entity synonyms defined in `entity_type`. If not specified,
-           * the agent's default language is used. [Many languages](https://cloud.google.com
-           * /dialogflow-enterprise/docs/reference/language) are supported. Note: languages must be
-           * enabled in the agent before they can be used.
+           * the agent's default language is used. [Many
+           * languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported.
+           * Note: languages must be enabled in the agent before they can be used.
            */
           public Patch setLanguageCode(java.lang.String languageCode) {
             this.languageCode = languageCode;
@@ -2945,12 +3232,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              *        `projects//agent/environments//users//sessions/`. If `Environment ID` is not specified, we
              *        assume
             default 'draft' environment. If `User ID` is not specified, we are using
-            "-". It’s
+            "-". It's
              *        up to the API caller to choose an appropriate `Session ID` and
             `User Id`. They can be a
-             *        random numbers or some type of user and session
-            identifiers (preferably hashed). The
-             *        length of the `Session ID` and
+             *        random number or some type of user and session
+            identifiers (preferably hashed). The length
+             *        of the `Session ID` and
             `User ID` must not exceed 36 characters.
              * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1DetectIntentRequest}
              * @return the request
@@ -2986,12 +3273,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              *        `projects//agent/environments//users//sessions/`. If `Environment ID` is not specified, we
              *        assume
             default 'draft' environment. If `User ID` is not specified, we are using
-            "-". It’s
+            "-". It's
              *        up to the API caller to choose an appropriate `Session ID` and
             `User Id`. They can be a
-             *        random numbers or some type of user and session
-            identifiers (preferably hashed). The
-             *        length of the `Session ID` and
+             *        random number or some type of user and session
+            identifiers (preferably hashed). The length
+             *        of the `Session ID` and
             `User ID` must not exceed 36 characters.
                * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1DetectIntentRequest}
                * @since 1.13
@@ -3065,18 +3352,18 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * Required. The name of the session this query is sent to. Format:
                * `projects//agent/sessions/`, or `projects//agent/environments//users//sessions/`.
                * If `Environment ID` is not specified, we assume default 'draft' environment. If
-               * `User ID` is not specified, we are using "-". It’s up to the API caller to choose
-               * an appropriate `Session ID` and `User Id`. They can be a random numbers or some
-               * type of user and session identifiers (preferably hashed). The length of the
-               * `Session ID` and `User ID` must not exceed 36 characters.
+               * `User ID` is not specified, we are using "-". It's up to the API caller to choose
+               * an appropriate `Session ID` and `User Id`. They can be a random number or some type
+               * of user and session identifiers (preferably hashed). The length of the `Session ID`
+               * and `User ID` must not exceed 36 characters.
                */
               @com.google.api.client.util.Key
               private java.lang.String session;
 
               /** Required. The name of the session this query is sent to. Format: `projects//agent/sessions/`, or
              `projects//agent/environments//users//sessions/`. If `Environment ID` is not specified, we assume
-             default 'draft' environment. If `User ID` is not specified, we are using "-". It’s up to the API
-             caller to choose an appropriate `Session ID` and `User Id`. They can be a random numbers or some
+             default 'draft' environment. If `User ID` is not specified, we are using "-". It's up to the API
+             caller to choose an appropriate `Session ID` and `User Id`. They can be a random number or some
              type of user and session identifiers (preferably hashed). The length of the `Session ID` and `User
              ID` must not exceed 36 characters.
                */
@@ -3088,10 +3375,10 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * Required. The name of the session this query is sent to. Format:
                * `projects//agent/sessions/`, or `projects//agent/environments//users//sessions/`.
                * If `Environment ID` is not specified, we assume default 'draft' environment. If
-               * `User ID` is not specified, we are using "-". It’s up to the API caller to choose
-               * an appropriate `Session ID` and `User Id`. They can be a random numbers or some
-               * type of user and session identifiers (preferably hashed). The length of the
-               * `Session ID` and `User ID` must not exceed 36 characters.
+               * `User ID` is not specified, we are using "-". It's up to the API caller to choose
+               * an appropriate `Session ID` and `User Id`. They can be a random number or some type
+               * of user and session identifiers (preferably hashed). The length of the `Session ID`
+               * and `User ID` must not exceed 36 characters.
                */
               public DetectIntent setSession(java.lang.String session) {
                 if (!getSuppressPatternChecks()) {
@@ -5357,16 +5644,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           /**
            * Optional. The language of training phrases, parameters and rich messages defined in
            * `intent`. If not specified, the agent's default language is used. [Many
-           * languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language) are
-           * supported. Note: languages must be enabled in the agent before they can be used.
+           * languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported.
+           * Note: languages must be enabled in the agent before they can be used.
            */
           @com.google.api.client.util.Key
           private java.lang.String languageCode;
 
           /** Optional. The language of training phrases, parameters and rich messages defined in `intent`. If
-         not specified, the agent's default language is used. [Many languages](https://cloud.google.com
-         /dialogflow-enterprise/docs/reference/language) are supported. Note: languages must be enabled in
-         the agent before they can be used.
+         not specified, the agent's default language is used. [Many
+         languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported. Note:
+         languages must be enabled in the agent before they can be used.
            */
           public java.lang.String getLanguageCode() {
             return languageCode;
@@ -5375,8 +5662,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           /**
            * Optional. The language of training phrases, parameters and rich messages defined in
            * `intent`. If not specified, the agent's default language is used. [Many
-           * languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language) are
-           * supported. Note: languages must be enabled in the agent before they can be used.
+           * languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported.
+           * Note: languages must be enabled in the agent before they can be used.
            */
           public Create setLanguageCode(java.lang.String languageCode) {
             this.languageCode = languageCode;
@@ -5694,16 +5981,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           /**
            * Optional. The language to retrieve training phrases, parameters and rich messages for.
            * If not specified, the agent's default language is used. [Many
-           * languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language) are
-           * supported. Note: languages must be enabled in the agent before they can be used.
+           * languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported.
+           * Note: languages must be enabled in the agent before they can be used.
            */
           @com.google.api.client.util.Key
           private java.lang.String languageCode;
 
           /** Optional. The language to retrieve training phrases, parameters and rich messages for. If not
-         specified, the agent's default language is used. [Many languages](https://cloud.google.com
-         /dialogflow-enterprise/docs/reference/language) are supported. Note: languages must be enabled in
-         the agent before they can be used.
+         specified, the agent's default language is used. [Many
+         languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported. Note:
+         languages must be enabled in the agent before they can be used.
            */
           public java.lang.String getLanguageCode() {
             return languageCode;
@@ -5712,8 +5999,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           /**
            * Optional. The language to retrieve training phrases, parameters and rich messages for.
            * If not specified, the agent's default language is used. [Many
-           * languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language) are
-           * supported. Note: languages must be enabled in the agent before they can be used.
+           * languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported.
+           * Note: languages must be enabled in the agent before they can be used.
            */
           public Get setLanguageCode(java.lang.String languageCode) {
             this.languageCode = languageCode;
@@ -5883,16 +6170,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           /**
            * Optional. The language to list training phrases, parameters and rich messages for. If
            * not specified, the agent's default language is used. [Many
-           * languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language) are
-           * supported. Note: languages must be enabled in the agent before they can be used.
+           * languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported.
+           * Note: languages must be enabled in the agent before they can be used.
            */
           @com.google.api.client.util.Key
           private java.lang.String languageCode;
 
           /** Optional. The language to list training phrases, parameters and rich messages for. If not
-         specified, the agent's default language is used. [Many languages](https://cloud.google.com
-         /dialogflow-enterprise/docs/reference/language) are supported. Note: languages must be enabled in
-         the agent before they can be used.
+         specified, the agent's default language is used. [Many
+         languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported. Note:
+         languages must be enabled in the agent before they can be used.
            */
           public java.lang.String getLanguageCode() {
             return languageCode;
@@ -5901,8 +6188,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           /**
            * Optional. The language to list training phrases, parameters and rich messages for. If
            * not specified, the agent's default language is used. [Many
-           * languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language) are
-           * supported. Note: languages must be enabled in the agent before they can be used.
+           * languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported.
+           * Note: languages must be enabled in the agent before they can be used.
            */
           public List setLanguageCode(java.lang.String languageCode) {
             this.languageCode = languageCode;
@@ -6112,16 +6399,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           /**
            * Optional. The language of training phrases, parameters and rich messages defined in
            * `intent`. If not specified, the agent's default language is used. [Many
-           * languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language) are
-           * supported. Note: languages must be enabled in the agent before they can be used.
+           * languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported.
+           * Note: languages must be enabled in the agent before they can be used.
            */
           @com.google.api.client.util.Key
           private java.lang.String languageCode;
 
           /** Optional. The language of training phrases, parameters and rich messages defined in `intent`. If
-         not specified, the agent's default language is used. [Many languages](https://cloud.google.com
-         /dialogflow-enterprise/docs/reference/language) are supported. Note: languages must be enabled in
-         the agent before they can be used.
+         not specified, the agent's default language is used. [Many
+         languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported. Note:
+         languages must be enabled in the agent before they can be used.
            */
           public java.lang.String getLanguageCode() {
             return languageCode;
@@ -6130,8 +6417,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           /**
            * Optional. The language of training phrases, parameters and rich messages defined in
            * `intent`. If not specified, the agent's default language is used. [Many
-           * languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language) are
-           * supported. Note: languages must be enabled in the agent before they can be used.
+           * languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported.
+           * Note: languages must be enabled in the agent before they can be used.
            */
           public Patch setLanguageCode(java.lang.String languageCode) {
             this.languageCode = languageCode;
@@ -8178,12 +8465,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
          *        `projects//agent/environments//users//sessions/`. If `Environment ID` is not specified, we
          *        assume
         default 'draft' environment. If `User ID` is not specified, we are using
-        "-". It’s
+        "-". It's
          *        up to the API caller to choose an appropriate `Session ID` and
         `User Id`. They can be a
-         *        random numbers or some type of user and session
-        identifiers (preferably hashed). The
-         *        length of the `Session ID` and
+         *        random number or some type of user and session
+        identifiers (preferably hashed). The length
+         *        of the `Session ID` and
         `User ID` must not exceed 36 characters.
          * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1DetectIntentRequest}
          * @return the request
@@ -8219,12 +8506,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
          *        `projects//agent/environments//users//sessions/`. If `Environment ID` is not specified, we
          *        assume
         default 'draft' environment. If `User ID` is not specified, we are using
-        "-". It’s
+        "-". It's
          *        up to the API caller to choose an appropriate `Session ID` and
         `User Id`. They can be a
-         *        random numbers or some type of user and session
-        identifiers (preferably hashed). The
-         *        length of the `Session ID` and
+         *        random number or some type of user and session
+        identifiers (preferably hashed). The length
+         *        of the `Session ID` and
         `User ID` must not exceed 36 characters.
            * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1DetectIntentRequest}
            * @since 1.13
@@ -8298,8 +8585,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            * Required. The name of the session this query is sent to. Format:
            * `projects//agent/sessions/`, or `projects//agent/environments//users//sessions/`. If
            * `Environment ID` is not specified, we assume default 'draft' environment. If `User ID`
-           * is not specified, we are using "-". It’s up to the API caller to choose an appropriate
-           * `Session ID` and `User Id`. They can be a random numbers or some type of user and
+           * is not specified, we are using "-". It's up to the API caller to choose an appropriate
+           * `Session ID` and `User Id`. They can be a random number or some type of user and
            * session identifiers (preferably hashed). The length of the `Session ID` and `User ID`
            * must not exceed 36 characters.
            */
@@ -8308,8 +8595,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /** Required. The name of the session this query is sent to. Format: `projects//agent/sessions/`, or
          `projects//agent/environments//users//sessions/`. If `Environment ID` is not specified, we assume
-         default 'draft' environment. If `User ID` is not specified, we are using "-". It’s up to the API
-         caller to choose an appropriate `Session ID` and `User Id`. They can be a random numbers or some
+         default 'draft' environment. If `User ID` is not specified, we are using "-". It's up to the API
+         caller to choose an appropriate `Session ID` and `User Id`. They can be a random number or some
          type of user and session identifiers (preferably hashed). The length of the `Session ID` and `User
          ID` must not exceed 36 characters.
            */
@@ -8321,8 +8608,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            * Required. The name of the session this query is sent to. Format:
            * `projects//agent/sessions/`, or `projects//agent/environments//users//sessions/`. If
            * `Environment ID` is not specified, we assume default 'draft' environment. If `User ID`
-           * is not specified, we are using "-". It’s up to the API caller to choose an appropriate
-           * `Session ID` and `User Id`. They can be a random numbers or some type of user and
+           * is not specified, we are using "-". It's up to the API caller to choose an appropriate
+           * `Session ID` and `User Id`. They can be a random number or some type of user and
            * session identifiers (preferably hashed). The length of the `Session ID` and `User ID`
            * must not exceed 36 characters.
            */
@@ -12117,6 +12404,206 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         @Override
         public Get set(String parameterName, Object value) {
           return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists operations that match the specified filter in the request. If the server doesn't support
+       * this method, it returns `UNIMPLEMENTED`.
+       *
+       * NOTE: the `name` binding allows API services to override the binding to use different resource
+       * name schemes, such as `users/operations`. To override the binding, API services can add a binding
+       * such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
+       * compatibility, the default name includes the operations collection id, however overriding users
+       * must ensure the name binding is the parent resource, without the operations collection id.
+       *
+       * Create a request for the method "operations.list".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param name The name of the operation's parent resource.
+       * @return the request
+       */
+      public List list(java.lang.String name) throws java.io.IOException {
+        List result = new List(name);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends DialogflowRequest<com.google.api.services.dialogflow.v2beta1.model.GoogleLongrunningListOperationsResponse> {
+
+        private static final String REST_PATH = "v2beta1/{+name}/operations";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Lists operations that match the specified filter in the request. If the server doesn't support
+         * this method, it returns `UNIMPLEMENTED`.
+         *
+         * NOTE: the `name` binding allows API services to override the binding to use different resource
+         * name schemes, such as `users/operations`. To override the binding, API services can add a
+         * binding such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
+         * compatibility, the default name includes the operations collection id, however overriding users
+         * must ensure the name binding is the parent resource, without the operations collection id.
+         *
+         * Create a request for the method "operations.list".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The name of the operation's parent resource.
+         * @since 1.13
+         */
+        protected List(java.lang.String name) {
+          super(Dialogflow.this, "GET", REST_PATH, null, com.google.api.services.dialogflow.v2beta1.model.GoogleLongrunningListOperationsResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** The name of the operation's parent resource. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The name of the operation's parent resource.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** The name of the operation's parent resource. */
+        public List setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** The standard list filter. */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** The standard list filter.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /** The standard list filter. */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /** The standard list page size. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The standard list page size.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** The standard list page size. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** The standard list page token. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** The standard list page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** The standard list page token. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
         }
       }
 

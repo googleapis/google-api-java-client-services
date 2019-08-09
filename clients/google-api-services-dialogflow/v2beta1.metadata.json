@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-dialogflow",
-    "version": "v2beta1-rev20190601-1.28.0"
+    "version": "v2beta1-rev20190801-1.30.1"
   }
 }

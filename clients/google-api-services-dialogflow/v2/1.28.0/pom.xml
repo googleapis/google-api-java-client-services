@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-dialogflow</artifactId>
-  <version>v2-rev20190601-1.28.0</version>
-  <name>Dialogflow API v2-rev20190601-1.28.0</name>
+  <version>v2-rev20190801-1.28.0</version>
+  <name>Dialogflow API v2-rev20190801-1.28.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
@@ -62,8 +62,20 @@
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.1.2</version>
+        <configuration>
+          <archive>
+            <manifestEntries>
+              <Automatic-Module-Name>com.google.api.services.dialogflow</Automatic-Module-Name>
+            </manifestEntries>
+          </archive>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
-        <version>2.9.1</version>
+        <version>3.1.0</version>
         <executions>
           <execution>
             <id>attach-javadocs</id>
@@ -73,13 +85,14 @@
           </execution>
         </executions>
         <configuration>
+          <doclint>none</doclint>
           <doctitle>Dialogflow API ${project.version}</doctitle>
           <windowtitle>Dialogflow API ${project.version}</windowtitle>
           <links>
-            <link>http://docs.oracle.com/javase/6/docs/api</link>
-            <link>https://google.github.io/google-http-java-client/releases/1.28.0/javadoc/index.html</link>
-            <link>https://google.github.io/google-oauth-java-client/releases/1.28.0/javadoc/index.html</link>
-            <link>https://google.github.io/google-api-java-client/releases/1.28.0/javadoc/index.html</link>
+            <link>http://docs.oracle.com/javase/7/docs/api</link>
+            <link>https://googleapis.dev/java/google-http-client/1.28.0/</link>
+            <link>https://googleapis.dev/java/google-oauth-client/1.28.0/</link>
+            <link>https://googleapis.dev/java/google-api-client/1.28.0/</link>
           </links>
         </configuration>
       </plugin>

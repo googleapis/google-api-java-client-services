@@ -155,7 +155,7 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   private GoogleCloudMlV1ManualScaling manualScaling;
 
   /**
-   * Required.The name specified for the version when it was created.
+   * Required. The name specified for the version when it was created.
    *
    * The version name must be unique within the model it is created in.
    * The value may be {@code null}.
@@ -569,7 +569,7 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required.The name specified for the version when it was created.
+   * Required. The name specified for the version when it was created.
    *
    * The version name must be unique within the model it is created in.
    * @return value or {@code null} for none
@@ -579,7 +579,7 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required.The name specified for the version when it was created.
+   * Required. The name specified for the version when it was created.
    *
    * The version name must be unique within the model it is created in.
    * @param name name or {@code null} for none

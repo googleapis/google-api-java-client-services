@@ -48,6 +48,22 @@ public final class GoogleCloudMlV1ReplicaConfig extends com.google.api.client.js
   private java.lang.String imageUri;
 
   /**
+   * The AI Platform runtime version that includes a TensorFlow version matching the one used in the
+   * custom container. This field is required if the replica is a TPU worker that uses a custom
+   * container. Otherwise, do not specify this field. This must be a [runtime version that currently
+   * supports training with TPUs](/ml-engine/docs/tensorflow/runtime-version-list#tpu-support).
+   *
+   * Note that the version of TensorFlow included in a runtime version may differ from the numbering
+   * of the runtime version itself, because it may have a different [patch
+   * version](https://www.tensorflow.org/guide/version_compat#semantic_versioning_20). In this
+   * field, you must specify the runtime version (TensorFlow minor version). For example, if your
+   * custom container runs TensorFlow `1.x.y`, specify `1.x`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tpuTfVersion;
+
+  /**
    * Represents the type and number of accelerators used by the replica. [Learn about restrictions
    * on accelerator configurations for training.](/ml-engine/docs/tensorflow/using-gpus#compute-
    * engine-machine-types-with-gpu)
@@ -84,6 +100,41 @@ public final class GoogleCloudMlV1ReplicaConfig extends com.google.api.client.js
    */
   public GoogleCloudMlV1ReplicaConfig setImageUri(java.lang.String imageUri) {
     this.imageUri = imageUri;
+    return this;
+  }
+
+  /**
+   * The AI Platform runtime version that includes a TensorFlow version matching the one used in the
+   * custom container. This field is required if the replica is a TPU worker that uses a custom
+   * container. Otherwise, do not specify this field. This must be a [runtime version that currently
+   * supports training with TPUs](/ml-engine/docs/tensorflow/runtime-version-list#tpu-support).
+   *
+   * Note that the version of TensorFlow included in a runtime version may differ from the numbering
+   * of the runtime version itself, because it may have a different [patch
+   * version](https://www.tensorflow.org/guide/version_compat#semantic_versioning_20). In this
+   * field, you must specify the runtime version (TensorFlow minor version). For example, if your
+   * custom container runs TensorFlow `1.x.y`, specify `1.x`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTpuTfVersion() {
+    return tpuTfVersion;
+  }
+
+  /**
+   * The AI Platform runtime version that includes a TensorFlow version matching the one used in the
+   * custom container. This field is required if the replica is a TPU worker that uses a custom
+   * container. Otherwise, do not specify this field. This must be a [runtime version that currently
+   * supports training with TPUs](/ml-engine/docs/tensorflow/runtime-version-list#tpu-support).
+   *
+   * Note that the version of TensorFlow included in a runtime version may differ from the numbering
+   * of the runtime version itself, because it may have a different [patch
+   * version](https://www.tensorflow.org/guide/version_compat#semantic_versioning_20). In this
+   * field, you must specify the runtime version (TensorFlow minor version). For example, if your
+   * custom container runs TensorFlow `1.x.y`, specify `1.x`.
+   * @param tpuTfVersion tpuTfVersion or {@code null} for none
+   */
+  public GoogleCloudMlV1ReplicaConfig setTpuTfVersion(java.lang.String tpuTfVersion) {
+    this.tpuTfVersion = tpuTfVersion;
     return this;
   }
 

@@ -94,6 +94,13 @@ public final class StatusReportingSettings extends com.google.api.client.json.Ge
   private java.lang.Boolean softwareInfoEnabled;
 
   /**
+   * Whether system properties reporting is enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean systemPropertiesEnabled;
+
+  /**
    * Application reporting settings. Only applicable if application_reports_enabled is true.
    * @return value or {@code null} for none
    */
@@ -243,6 +250,23 @@ public final class StatusReportingSettings extends com.google.api.client.json.Ge
    */
   public StatusReportingSettings setSoftwareInfoEnabled(java.lang.Boolean softwareInfoEnabled) {
     this.softwareInfoEnabled = softwareInfoEnabled;
+    return this;
+  }
+
+  /**
+   * Whether system properties reporting is enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSystemPropertiesEnabled() {
+    return systemPropertiesEnabled;
+  }
+
+  /**
+   * Whether system properties reporting is enabled.
+   * @param systemPropertiesEnabled systemPropertiesEnabled or {@code null} for none
+   */
+  public StatusReportingSettings setSystemPropertiesEnabled(java.lang.Boolean systemPropertiesEnabled) {
+    this.systemPropertiesEnabled = systemPropertiesEnabled;
     return this;
   }
 

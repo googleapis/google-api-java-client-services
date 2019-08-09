@@ -33,16 +33,6 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class SourceCrowdingConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Use a field to control results crowding. For example, if you want to control overly similar
-   * results from Gmail topics, use `thread_id`. For similar pages from Google Sites, you can use
-   * `webspace_id`. When matching query results contain the same field value in `GenericMetadata`,
-   * crowding limits are set on those records.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String field;
-
-  /**
    * Maximum number of results allowed from a source. No limits will be set on results if this value
    * is less than or equal to 0.
    * The value may be {@code null}.
@@ -57,37 +47,6 @@ public final class SourceCrowdingConfig extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.lang.Integer numSuggestions;
-
-  /**
-   * Control results by content source. This option limits the total number of results from a given
-   * source and ignores field-based crowding control.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean source;
-
-  /**
-   * Use a field to control results crowding. For example, if you want to control overly similar
-   * results from Gmail topics, use `thread_id`. For similar pages from Google Sites, you can use
-   * `webspace_id`. When matching query results contain the same field value in `GenericMetadata`,
-   * crowding limits are set on those records.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getField() {
-    return field;
-  }
-
-  /**
-   * Use a field to control results crowding. For example, if you want to control overly similar
-   * results from Gmail topics, use `thread_id`. For similar pages from Google Sites, you can use
-   * `webspace_id`. When matching query results contain the same field value in `GenericMetadata`,
-   * crowding limits are set on those records.
-   * @param field field or {@code null} for none
-   */
-  public SourceCrowdingConfig setField(java.lang.String field) {
-    this.field = field;
-    return this;
-  }
 
   /**
    * Maximum number of results allowed from a source. No limits will be set on results if this value
@@ -124,25 +83,6 @@ public final class SourceCrowdingConfig extends com.google.api.client.json.Gener
    */
   public SourceCrowdingConfig setNumSuggestions(java.lang.Integer numSuggestions) {
     this.numSuggestions = numSuggestions;
-    return this;
-  }
-
-  /**
-   * Control results by content source. This option limits the total number of results from a given
-   * source and ignores field-based crowding control.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getSource() {
-    return source;
-  }
-
-  /**
-   * Control results by content source. This option limits the total number of results from a given
-   * source and ignores field-based crowding control.
-   * @param source source or {@code null} for none
-   */
-  public SourceCrowdingConfig setSource(java.lang.Boolean source) {
-    this.source = source;
     return this;
   }
 

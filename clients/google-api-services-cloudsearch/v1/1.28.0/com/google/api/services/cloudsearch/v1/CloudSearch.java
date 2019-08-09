@@ -3157,8 +3157,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           }
         }
         /**
-         * Creates an upload session for uploading item content. For items smaller than 100 KiB, it's easier
-         * to embed the content inline within update.
+         * Creates an upload session for uploading item content. For items smaller than 100 KB, it's easier
+         * to embed the content inline within an index request.
          *
          * Create a request for the method "items.upload".
          *
@@ -3184,8 +3184,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
               java.util.regex.Pattern.compile("^datasources/[^/]+/items/[^/]+$");
 
           /**
-           * Creates an upload session for uploading item content. For items smaller than 100 KiB, it's
-           * easier to embed the content inline within update.
+           * Creates an upload session for uploading item content. For items smaller than 100 KB, it's
+           * easier to embed the content inline within an index request.
            *
            * Create a request for the method "items.upload".
            *
@@ -3326,10 +3326,15 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
      * Uploads media for indexing.
      *
      * The upload endpoint supports direct and resumable upload protocols and is intended for large
-     * items that can not be inlined during index requests. To index large content:
+     * items that can not be [inlined during index requests](https://developers.google.com/cloud-
+     * search/docs/reference/rest/v1/indexing.datasources.items#itemcontent). To index large content:
      *
-     * 1. Call upload to begin    a session and get the item reference. 1. Upload the content using the
-     * item reference's resource name. 1. Call index with the item    reference as the content.
+     * 1. Call    indexing.datasources.items.upload    with the resource name to begin an upload session
+     * and retrieve the    UploadItemRef. 1. Call media.upload to upload the content using the same
+     * resource name from step 1. 1. Call indexing.datasources.items.index    to index the item.
+     * Populate the    [ItemContent](/cloud-
+     * search/docs/reference/rest/v1/indexing.datasources.items#ItemContent)    with the UploadItemRef
+     * from step 1.
      *
      * For additional information, see [Create a content connector using the REST
      * API](https://developers.google.com/cloud-search/docs/guides/content-connector#rest).
@@ -3354,10 +3359,15 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
      * Uploads media for indexing.
      *
      * The upload endpoint supports direct and resumable upload protocols and is intended for large
-     * items that can not be inlined during index requests. To index large content:
+     * items that can not be [inlined during index requests](https://developers.google.com/cloud-
+     * search/docs/reference/rest/v1/indexing.datasources.items#itemcontent). To index large content:
      *
-     * 1. Call upload to begin    a session and get the item reference. 1. Upload the content using the
-     * item reference's resource name. 1. Call index with the item    reference as the content.
+     * 1. Call    indexing.datasources.items.upload    with the resource name to begin an upload session
+     * and retrieve the    UploadItemRef. 1. Call media.upload to upload the content using the same
+     * resource name from step 1. 1. Call indexing.datasources.items.index    to index the item.
+     * Populate the    [ItemContent](/cloud-
+     * search/docs/reference/rest/v1/indexing.datasources.items#ItemContent)    with the UploadItemRef
+     * from step 1.
      *
      * For additional information, see [Create a content connector using the REST
      * API](https://developers.google.com/cloud-search/docs/guides/content-connector#rest).
@@ -3395,10 +3405,15 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
        * Uploads media for indexing.
        *
        * The upload endpoint supports direct and resumable upload protocols and is intended for large
-       * items that can not be inlined during index requests. To index large content:
+       * items that can not be [inlined during index requests](https://developers.google.com/cloud-
+       * search/docs/reference/rest/v1/indexing.datasources.items#itemcontent). To index large content:
        *
-       * 1. Call upload to begin    a session and get the item reference. 1. Upload the content using
-       * the item reference's resource name. 1. Call index with the item    reference as the content.
+       * 1. Call    indexing.datasources.items.upload    with the resource name to begin an upload
+       * session and retrieve the    UploadItemRef. 1. Call media.upload to upload the content using the
+       * same resource name from step 1. 1. Call indexing.datasources.items.index    to index the item.
+       * Populate the    [ItemContent](/cloud-
+       * search/docs/reference/rest/v1/indexing.datasources.items#ItemContent)    with the UploadItemRef
+       * from step 1.
        *
        * For additional information, see [Create a content connector using the REST
        * API](https://developers.google.com/cloud-search/docs/guides/content-connector#rest).
@@ -3430,10 +3445,15 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
        * Uploads media for indexing.
        *
        * The upload endpoint supports direct and resumable upload protocols and is intended for large
-       * items that can not be inlined during index requests. To index large content:
+       * items that can not be [inlined during index requests](https://developers.google.com/cloud-
+       * search/docs/reference/rest/v1/indexing.datasources.items#itemcontent). To index large content:
        *
-       * 1. Call upload to begin    a session and get the item reference. 1. Upload the content using
-       * the item reference's resource name. 1. Call index with the item    reference as the content.
+       * 1. Call    indexing.datasources.items.upload    with the resource name to begin an upload
+       * session and retrieve the    UploadItemRef. 1. Call media.upload to upload the content using the
+       * same resource name from step 1. 1. Call indexing.datasources.items.index    to index the item.
+       * Populate the    [ItemContent](/cloud-
+       * search/docs/reference/rest/v1/indexing.datasources.items#ItemContent)    with the UploadItemRef
+       * from step 1.
        *
        * For additional information, see [Create a content connector using the REST
        * API](https://developers.google.com/cloud-search/docs/guides/content-connector#rest).

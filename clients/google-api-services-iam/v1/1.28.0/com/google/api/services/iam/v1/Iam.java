@@ -4273,10 +4273,12 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        * parameters, call the {@link Enable#execute()} method to invoke the remote operation.
        *
        * @param name The resource name of the service account in the following format:
-       *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_UNIQUE_ID}'.
-      Using `-` as a wildcard for
-       *        the `PROJECT_ID` will infer the project from
-      the account.
+       *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
+      Using `-` as a wildcard for the
+       *        `PROJECT_ID` will infer the project from
+      the account. The `ACCOUNT` value can be the
+       *        `email` address or the
+      `unique_id` of the service account.
        * @param content the {@link com.google.api.services.iam.v1.model.EnableServiceAccountRequest}
        * @return the request
        */
@@ -4311,10 +4313,12 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name The resource name of the service account in the following format:
-       *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_UNIQUE_ID}'.
-      Using `-` as a wildcard for
-       *        the `PROJECT_ID` will infer the project from
-      the account.
+       *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
+      Using `-` as a wildcard for the
+       *        `PROJECT_ID` will infer the project from
+      the account. The `ACCOUNT` value can be the
+       *        `email` address or the
+      `unique_id` of the service account.
          * @param content the {@link com.google.api.services.iam.v1.model.EnableServiceAccountRequest}
          * @since 1.13
          */
@@ -4385,15 +4389,17 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * The resource name of the service account in the following format:
-         * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_UNIQUE_ID}'. Using `-` as a wildcard for
-         * the `PROJECT_ID` will infer the project from the account.
+         * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
+         * `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
+         * `email` address or the `unique_id` of the service account.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** The resource name of the service account in the following format:
-       `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_UNIQUE_ID}'. Using `-` as a wildcard for the
-       `PROJECT_ID` will infer the project from the account.
+       `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the `PROJECT_ID`
+       will infer the project from the account. The `ACCOUNT` value can be the `email` address or the
+       `unique_id` of the service account.
          */
         public java.lang.String getName() {
           return name;
@@ -4401,8 +4407,9 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * The resource name of the service account in the following format:
-         * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_UNIQUE_ID}'. Using `-` as a wildcard for
-         * the `PROJECT_ID` will infer the project from the account.
+         * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
+         * `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
+         * `email` address or the `unique_id` of the service account.
          */
         public Enable setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -4736,22 +4743,22 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional. The policy format version to be returned. Acceptable values are 0 and 1. If the
-         * value is 0, or the field is omitted, policy format version 1 will be returned.
+         * Optional. The policy format version to be returned. Acceptable values are 0, 1, and 3. If
+         * the value is 0, or the field is omitted, policy format version 1 will be returned.
          */
         @com.google.api.client.util.Key("options.requestedPolicyVersion")
         private java.lang.Integer optionsRequestedPolicyVersion;
 
-        /** Optional. The policy format version to be returned. Acceptable values are 0 and 1. If the value is
-       0, or the field is omitted, policy format version 1 will be returned.
+        /** Optional. The policy format version to be returned. Acceptable values are 0, 1, and 3. If the value
+       is 0, or the field is omitted, policy format version 1 will be returned.
          */
         public java.lang.Integer getOptionsRequestedPolicyVersion() {
           return optionsRequestedPolicyVersion;
         }
 
         /**
-         * Optional. The policy format version to be returned. Acceptable values are 0 and 1. If the
-         * value is 0, or the field is omitted, policy format version 1 will be returned.
+         * Optional. The policy format version to be returned. Acceptable values are 0, 1, and 3. If
+         * the value is 0, or the field is omitted, policy format version 1 will be returned.
          */
         public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
           this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
@@ -5799,7 +5806,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        * parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
        *
        * @param name The resource name of the service account in the following format:
-       *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_UNIQUE_ID}'.
+       *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_UNIQUE_ID}`.
       Using `-` as a wildcard for
        *        the `PROJECT_ID` will infer the project from
       the account.
@@ -5832,7 +5839,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name The resource name of the service account in the following format:
-       *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_UNIQUE_ID}'.
+       *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_UNIQUE_ID}`.
       Using `-` as a wildcard for
        *        the `PROJECT_ID` will infer the project from
       the account.
@@ -5906,14 +5913,14 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * The resource name of the service account in the following format:
-         * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_UNIQUE_ID}'. Using `-` as a wildcard for
+         * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_UNIQUE_ID}`. Using `-` as a wildcard for
          * the `PROJECT_ID` will infer the project from the account.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** The resource name of the service account in the following format:
-       `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_UNIQUE_ID}'. Using `-` as a wildcard for the
+       `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_UNIQUE_ID}`. Using `-` as a wildcard for the
        `PROJECT_ID` will infer the project from the account.
          */
         public java.lang.String getName() {
@@ -5922,7 +5929,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * The resource name of the service account in the following format:
-         * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_UNIQUE_ID}'. Using `-` as a wildcard for
+         * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_UNIQUE_ID}`. Using `-` as a wildcard for
          * the `PROJECT_ID` will infer the project from the account.
          */
         public Undelete setName(java.lang.String name) {

@@ -82,6 +82,13 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   private java.lang.String severity;
 
   /**
+   * Optional. Source code location information associated with the log entry, if any.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LogEntrySourceLocation sourceLocation;
+
+  /**
    * The log entry payload, represented as a structure that is expressed as a JSON object.
    * The value may be {@code null}.
    */
@@ -235,6 +242,23 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
    */
   public LogEntry setSeverity(java.lang.String severity) {
     this.severity = severity;
+    return this;
+  }
+
+  /**
+   * Optional. Source code location information associated with the log entry, if any.
+   * @return value or {@code null} for none
+   */
+  public LogEntrySourceLocation getSourceLocation() {
+    return sourceLocation;
+  }
+
+  /**
+   * Optional. Source code location information associated with the log entry, if any.
+   * @param sourceLocation sourceLocation or {@code null} for none
+   */
+  public LogEntry setSourceLocation(LogEntrySourceLocation sourceLocation) {
+    this.sourceLocation = sourceLocation;
     return this;
   }
 

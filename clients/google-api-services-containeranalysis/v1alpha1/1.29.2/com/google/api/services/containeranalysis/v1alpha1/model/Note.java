@@ -96,7 +96,7 @@ public final class Note extends com.google.api.client.json.GenericJson {
   private java.lang.String longDescription;
 
   /**
-   * The name of the note in the form "providers/{provider_id}/notes/{NOTE_ID}"
+   * The name of the note in the form "projects/{provider_project_id}/notes/{NOTE_ID}"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,6 +130,13 @@ public final class Note extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * A note describing an upgrade.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UpgradeNote upgrade;
 
   /**
    * A package vulnerability type of note.
@@ -296,7 +303,7 @@ public final class Note extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the note in the form "providers/{provider_id}/notes/{NOTE_ID}"
+   * The name of the note in the form "projects/{provider_project_id}/notes/{NOTE_ID}"
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -304,7 +311,7 @@ public final class Note extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the note in the form "providers/{provider_id}/notes/{NOTE_ID}"
+   * The name of the note in the form "projects/{provider_project_id}/notes/{NOTE_ID}"
    * @param name name or {@code null} for none
    */
   public Note setName(java.lang.String name) {
@@ -379,6 +386,23 @@ public final class Note extends com.google.api.client.json.GenericJson {
    */
   public Note setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * A note describing an upgrade.
+   * @return value or {@code null} for none
+   */
+  public UpgradeNote getUpgrade() {
+    return upgrade;
+  }
+
+  /**
+   * A note describing an upgrade.
+   * @param upgrade upgrade or {@code null} for none
+   */
+  public Note setUpgrade(UpgradeNote upgrade) {
+    this.upgrade = upgrade;
     return this;
   }
 

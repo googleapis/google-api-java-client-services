@@ -98,6 +98,14 @@ public final class Detail extends com.google.api.client.json.GenericJson {
   private java.lang.String severityName;
 
   /**
+   * The time this information was last changed at the source. This is an upstream timestamp from
+   * the underlying information source - e.g. Ubuntu security tracker.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String sourceUpdateTime;
+
+  /**
    * Required. The CPE URI in [cpe format](https://cpe.mitre.org/specification/) in which the
    * vulnerability manifests. Examples include distro or storage location for vulnerable jar.
    * @return value or {@code null} for none
@@ -253,6 +261,25 @@ public final class Detail extends com.google.api.client.json.GenericJson {
    */
   public Detail setSeverityName(java.lang.String severityName) {
     this.severityName = severityName;
+    return this;
+  }
+
+  /**
+   * The time this information was last changed at the source. This is an upstream timestamp from
+   * the underlying information source - e.g. Ubuntu security tracker.
+   * @return value or {@code null} for none
+   */
+  public String getSourceUpdateTime() {
+    return sourceUpdateTime;
+  }
+
+  /**
+   * The time this information was last changed at the source. This is an upstream timestamp from
+   * the underlying information source - e.g. Ubuntu security tracker.
+   * @param sourceUpdateTime sourceUpdateTime or {@code null} for none
+   */
+  public Detail setSourceUpdateTime(String sourceUpdateTime) {
+    this.sourceUpdateTime = sourceUpdateTime;
     return this;
   }
 

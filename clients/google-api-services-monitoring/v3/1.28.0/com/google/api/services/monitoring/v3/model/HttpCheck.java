@@ -85,6 +85,14 @@ public final class HttpCheck extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean useSsl;
 
   /**
+   * Boolean specifying whether to validate SSL certificates. Only applies to uptime_url checks. If
+   * use_ssl is false, setting this to true has no effect.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean validateSsl;
+
+  /**
    * The authentication information. Optional when creating an HTTP check; defaults to empty.
    * @return value or {@code null} for none
    */
@@ -207,6 +215,25 @@ public final class HttpCheck extends com.google.api.client.json.GenericJson {
    */
   public HttpCheck setUseSsl(java.lang.Boolean useSsl) {
     this.useSsl = useSsl;
+    return this;
+  }
+
+  /**
+   * Boolean specifying whether to validate SSL certificates. Only applies to uptime_url checks. If
+   * use_ssl is false, setting this to true has no effect.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getValidateSsl() {
+    return validateSsl;
+  }
+
+  /**
+   * Boolean specifying whether to validate SSL certificates. Only applies to uptime_url checks. If
+   * use_ssl is false, setting this to true has no effect.
+   * @param validateSsl validateSsl or {@code null} for none
+   */
+  public HttpCheck setValidateSsl(java.lang.Boolean validateSsl) {
+    this.validateSsl = validateSsl;
     return this;
   }
 

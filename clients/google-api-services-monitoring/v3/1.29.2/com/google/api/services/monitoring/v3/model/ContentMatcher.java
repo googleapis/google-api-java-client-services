@@ -39,6 +39,15 @@ public final class ContentMatcher extends com.google.api.client.json.GenericJson
   private java.lang.String content;
 
   /**
+   * The matcher representing content match options which the check will run with. If the field is
+   * not specified (in previous versions), the option is set to be CONTAINS_STRING which performs
+   * content substring matching.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String matcher;
+
+  /**
    * String or regex content to match (max 1024 bytes)
    * @return value or {@code null} for none
    */
@@ -52,6 +61,27 @@ public final class ContentMatcher extends com.google.api.client.json.GenericJson
    */
   public ContentMatcher setContent(java.lang.String content) {
     this.content = content;
+    return this;
+  }
+
+  /**
+   * The matcher representing content match options which the check will run with. If the field is
+   * not specified (in previous versions), the option is set to be CONTAINS_STRING which performs
+   * content substring matching.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMatcher() {
+    return matcher;
+  }
+
+  /**
+   * The matcher representing content match options which the check will run with. If the field is
+   * not specified (in previous versions), the option is set to be CONTAINS_STRING which performs
+   * content substring matching.
+   * @param matcher matcher or {@code null} for none
+   */
+  public ContentMatcher setMatcher(java.lang.String matcher) {
+    this.matcher = matcher;
     return this;
   }
 

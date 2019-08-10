@@ -31,8 +31,8 @@ package com.google.api.services.logging.v2.model;
 public final class ListLogsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of log names. For example, "projects/my-project/syslog" or
-   * "organizations/123/cloudresourcemanager.googleapis.com%2Factivity".
+   * A list of log names. For example, "projects/my-project/logs/syslog" or
+   * "organizations/123/logs/cloudresourcemanager.googleapis.com%2Factivity".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,8 +48,8 @@ public final class ListLogsResponse extends com.google.api.client.json.GenericJs
   private java.lang.String nextPageToken;
 
   /**
-   * A list of log names. For example, "projects/my-project/syslog" or
-   * "organizations/123/cloudresourcemanager.googleapis.com%2Factivity".
+   * A list of log names. For example, "projects/my-project/logs/syslog" or
+   * "organizations/123/logs/cloudresourcemanager.googleapis.com%2Factivity".
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLogNames() {
@@ -57,8 +57,8 @@ public final class ListLogsResponse extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * A list of log names. For example, "projects/my-project/syslog" or
-   * "organizations/123/cloudresourcemanager.googleapis.com%2Factivity".
+   * A list of log names. For example, "projects/my-project/logs/syslog" or
+   * "organizations/123/logs/cloudresourcemanager.googleapis.com%2Factivity".
    * @param logNames logNames or {@code null} for none
    */
   public ListLogsResponse setLogNames(java.util.List<java.lang.String> logNames) {

@@ -81,7 +81,7 @@ def maven_metadata(pom_file: str):
 
 def generate_service(disco: str):
 
-    m = re.search(r"(.*)\.(v.+)\.json$", disco)
+    m = re.search(r"(.*)\.(.+)\.json$", disco)
     if m is None:
         log.info(f"Skipping {disco}.")
         return
@@ -126,7 +126,7 @@ def generate_service(disco: str):
 
 def all_discoveries():
     discos = []
-    for file in glob.glob(str(discovery / 'discoveries/*.v*.json')):
+    for file in glob.glob(str(discovery / 'discoveries/*.*.json')):
         discos.append(path.basename(file))
 
     return discos
@@ -137,7 +137,7 @@ class Service:
     version: str = None
 
     def __init__(self, discovery_path: str):
-        match = re.match(r'^([^\.]*)\.(v.*)\.json$', path.basename(discovery_path))
+        match = re.match(r'^([^\.]*)\.(.*)\.json$', path.basename(discovery_path))
         if match is not None:
           self.id = match[1]
           self.version = match[2]
@@ -145,11 +145,13 @@ class Service:
           with open(discovery_path, "r") as f:
               data = json.load(f)
               self.title = data["title"]
+        else:
+            print(path.basename(discovery_path))
 
 def all_services():
     services = []
-    for file in glob.glob(str(discovery / 'discoveries/*.v*.json')):
-        match = re.match(r'^([^\.]*)\.(v.*)\.json$', path.basename(file))
+    for file in glob.glob(str(discovery / 'discoveries/*.*.json')):
+        match = re.match(r'^([^\.]*)\.(.*)\.json$', path.basename(file))
         service = Service(file)
         services.append(service)
 
@@ -188,6 +190,9 @@ def generate_service_list():
     services = all_services()
     services_by_name = {}
     for service in services:
+        if service.title is None:
+            print(service.id)
+
         if service.title not in services_by_name:
             services_by_name[service.title] = []
 
@@ -199,6 +204,7 @@ def generate_service_list():
         "| --- | -------- |\n",
     ]
 
+    # print(services_by_name.keys())
     content_rows += [service_row(services_by_name[name])
         for name in sorted(services_by_name.keys())]
 

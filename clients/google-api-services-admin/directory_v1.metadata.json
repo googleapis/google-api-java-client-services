@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-admin-directory",
+    "version": "directory_v1-rev20190708-1.30.1"
+  }
+}

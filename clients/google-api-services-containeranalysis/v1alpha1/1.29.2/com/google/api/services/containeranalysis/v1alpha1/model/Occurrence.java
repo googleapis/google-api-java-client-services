@@ -133,6 +133,13 @@ public final class Occurrence extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
+   * Describes an upgrade.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UpgradeOccurrence upgrade;
+
+  /**
    * Details of a security vulnerability note.
    * The value may be {@code null}.
    */
@@ -382,6 +389,23 @@ public final class Occurrence extends com.google.api.client.json.GenericJson {
    */
   public Occurrence setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Describes an upgrade.
+   * @return value or {@code null} for none
+   */
+  public UpgradeOccurrence getUpgrade() {
+    return upgrade;
+  }
+
+  /**
+   * Describes an upgrade.
+   * @param upgrade upgrade or {@code null} for none
+   */
+  public Occurrence setUpgrade(UpgradeOccurrence upgrade) {
+    this.upgrade = upgrade;
     return this;
   }
 

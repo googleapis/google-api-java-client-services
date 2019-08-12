@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-logging",
-    "version": "v2-rev20190608-1.30.1"
+    "version": "v2-rev20190803-1.30.1"
   }
 }

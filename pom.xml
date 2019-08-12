@@ -8,7 +8,7 @@
   <packaging>pom</packaging>
   <version>0.0.1-SNAPSHOT</version>
   <name>Google APIs Client Library for Java</name>
-  <url>https://github.com/google/google-api-java-client-services</url>
+  <url>https://github.com/googleapis/google-api-java-client-services</url>
   <description>
     Root project for Google APIs Client Library for Java
   </description>
@@ -50,18 +50,9 @@
     </plugins>
   </build>
 
-  <dependencies>
-    <dependency>
-      <groupId>com.google.api-client</groupId>
-      <artifactId>google-api-client</artifactId>
-      <version>${project.google-api-client.version}</version>
-    </dependency>
-  </dependencies>
-
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <project.google-api-client.version>1.25.0-SNAPSHOT</project.google-api-client.version>
   </properties>
 
 </project>

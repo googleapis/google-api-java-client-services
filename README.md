@@ -28,6 +28,9 @@ packages on [Maven Central][maven-search].
 | Ad Experience Report API | [v1](clients/google-api-services-adexperiencereport/v1) |
 | AdSense Host API | [v4.1](clients/google-api-services-adsensehost/v4.1) |
 | AdSense Management API | [v1.4](clients/google-api-services-adsense/v1.4) |
+| Admin Data Transfer API | [datatransfer_v1](clients/google-api-services-admin/datatransfer_v1) |
+| Admin Directory API | [directory_v1](clients/google-api-services-admin/directory_v1) |
+| Admin Reports API | [reports_v1](clients/google-api-services-admin/reports_v1) |
 | Analytics Reporting API | [v4](clients/google-api-services-analyticsreporting/v4) |
 | Android Device Provisioning Partner API | [v1](clients/google-api-services-androiddeviceprovisioning/v1) |
 | Android Management API | [v1](clients/google-api-services-androidmanagement/v1) |
@@ -83,7 +86,7 @@ packages on [Maven Central][maven-search].
 | Cloud Translation API | [v3beta1](clients/google-api-services-translate/v3beta1) |
 | Cloud Video Intelligence API | [v1](clients/google-api-services-videointelligence/v1), [v1beta2](clients/google-api-services-videointelligence/v1beta2), [v1p1beta1](clients/google-api-services-videointelligence/v1p1beta1), [v1p2beta1](clients/google-api-services-videointelligence/v1p2beta1), [v1p3beta1](clients/google-api-services-videointelligence/v1p3beta1) |
 | Cloud Vision API | [v1](clients/google-api-services-vision/v1), [v1p1beta1](clients/google-api-services-vision/v1p1beta1), [v1p2beta1](clients/google-api-services-vision/v1p2beta1) |
-| Compute Engine API | [v1](clients/google-api-services-compute/v1) |
+| Compute Engine API | [alpha](clients/google-api-services-compute/alpha), [beta](clients/google-api-services-compute/beta), [v1](clients/google-api-services-compute/v1) |
 | Container Analysis API | [v1alpha1](clients/google-api-services-containeranalysis/v1alpha1), [v1beta1](clients/google-api-services-containeranalysis/v1beta1) |
 | Content API for Shopping | [v2](clients/google-api-services-content/v2), [v2.1](clients/google-api-services-content/v2.1) |
 | CustomSearch API | [v1](clients/google-api-services-customsearch/v1) |
@@ -116,6 +119,7 @@ packages on [Maven Central][maven-search].
 | Google Cloud DNS API | [v1](clients/google-api-services-dns/v1), [v1beta2](clients/google-api-services-dns/v1beta2), [v2beta1](clients/google-api-services-dns/v2beta1) |
 | Google Cloud Deployment Manager API | [v2](clients/google-api-services-deploymentmanager/v2) |
 | Google Cloud Deployment Manager API V2Beta Methods | [v2beta](clients/google-api-services-deploymentmanager/v2beta) |
+| Google Cloud Deployment Manager Alpha API | [alpha](clients/google-api-services-deploymentmanager/alpha) |
 | Google Cloud Memorystore for Redis API | [v1](clients/google-api-services-redis/v1), [v1beta1](clients/google-api-services-redis/v1beta1) |
 | Google Cloud Translation API | [v2](clients/google-api-services-translate/v2) |
 | Google Docs API | [v1](clients/google-api-services-docs/v1) |

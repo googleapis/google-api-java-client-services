@@ -30,6 +30,19 @@ package com.google.api.services.bigquery.model;
 public final class ClusteringMetrics extends com.google.api.client.json.GenericJson {
 
   /**
+   * [Beta] Information for all clusters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Cluster> clusters;
+
+  static {
+    // hack to force ProGuard to consider Cluster used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Cluster.class);
+  }
+
+  /**
    * Davies-Bouldin index.
    * The value may be {@code null}.
    */
@@ -42,6 +55,23 @@ public final class ClusteringMetrics extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.Double meanSquaredDistance;
+
+  /**
+   * [Beta] Information for all clusters.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Cluster> getClusters() {
+    return clusters;
+  }
+
+  /**
+   * [Beta] Information for all clusters.
+   * @param clusters clusters or {@code null} for none
+   */
+  public ClusteringMetrics setClusters(java.util.List<Cluster> clusters) {
+    this.clusters = clusters;
+    return this;
+  }
 
   /**
    * Davies-Bouldin index.

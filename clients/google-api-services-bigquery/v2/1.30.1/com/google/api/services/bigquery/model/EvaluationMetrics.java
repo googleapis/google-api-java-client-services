@@ -39,7 +39,7 @@ public final class EvaluationMetrics extends com.google.api.client.json.GenericJ
   private BinaryClassificationMetrics binaryClassificationMetrics;
 
   /**
-   * [Beta] Populated for clustering models.
+   * Populated for clustering models.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +77,7 @@ public final class EvaluationMetrics extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Beta] Populated for clustering models.
+   * Populated for clustering models.
    * @return value or {@code null} for none
    */
   public ClusteringMetrics getClusteringMetrics() {
@@ -85,7 +85,7 @@ public final class EvaluationMetrics extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Beta] Populated for clustering models.
+   * Populated for clustering models.
    * @param clusteringMetrics clusteringMetrics or {@code null} for none
    */
   public EvaluationMetrics setClusteringMetrics(ClusteringMetrics clusteringMetrics) {

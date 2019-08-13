@@ -31,6 +31,8 @@ from typing import List
 
 logging.basicConfig(level=logging.DEBUG)
 
+VERSION_REGEX = r"([^\.]*)\.(.+)\.json$"
+
 TEMPLATE_VERSIONS = [
     "1.28.0",
     "1.29.2",
@@ -81,7 +83,7 @@ def maven_metadata(pom_file: str):
 
 def generate_service(disco: str):
 
-    m = re.search(r"(.*)\.(.+)\.json$", disco)
+    m = re.search(VERSION_REGEX, disco)
     if m is None:
         log.info(f"Skipping {disco}.")
         return
@@ -137,7 +139,7 @@ class Service:
     version: str = None
 
     def __init__(self, discovery_path: str):
-        match = re.match(r'^([^\.]*)\.(.*)\.json$', path.basename(discovery_path))
+        match = re.match(VERSION_REGEX, path.basename(discovery_path))
         if match is not None:
           self.id = match[1]
           self.version = match[2]
@@ -151,7 +153,7 @@ class Service:
 def all_services():
     services = []
     for file in glob.glob(str(discovery / 'discoveries/*.*.json')):
-        match = re.match(r'^([^\.]*)\.(.*)\.json$', path.basename(file))
+        match = re.match(VERSION_REGEX, path.basename(file))
         service = Service(file)
         services.append(service)
 

@@ -30,7 +30,7 @@ package com.google.api.services.bigquery.model;
 public final class IterationResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Beta] Information about top clusters for clustering models.
+   * Information about top clusters for clustering models.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,7 +78,7 @@ public final class IterationResult extends com.google.api.client.json.GenericJso
   private java.lang.Double trainingLoss;
 
   /**
-   * [Beta] Information about top clusters for clustering models.
+   * Information about top clusters for clustering models.
    * @return value or {@code null} for none
    */
   public java.util.List<ClusterInfo> getClusterInfos() {
@@ -86,7 +86,7 @@ public final class IterationResult extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Beta] Information about top clusters for clustering models.
+   * Information about top clusters for clustering models.
    * @param clusterInfos clusterInfos or {@code null} for none
    */
   public IterationResult setClusterInfos(java.util.List<ClusterInfo> clusterInfos) {

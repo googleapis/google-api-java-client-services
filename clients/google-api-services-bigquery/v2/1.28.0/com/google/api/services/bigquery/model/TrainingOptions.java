@@ -59,7 +59,7 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.String dataSplitMethod;
 
   /**
-   * [Beta] Distance type for clustering models.
+   * Distance type for clustering models.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,6 +86,21 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> inputLabelColumns;
+
+  /**
+   * The column used to provide the initial centroids for kmeans algorithm when
+   * kmeans_initialization_method is CUSTOM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kmeansInitializationColumn;
+
+  /**
+   * The method used to initialize the centroids for kmeans algorithm.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kmeansInitializationMethod;
 
   /**
    * L1 regularization coefficient.
@@ -154,7 +169,7 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.String modelUri;
 
   /**
-   * [Beta] Number of clusters for clustering models.
+   * Number of clusters for clustering models.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -242,7 +257,7 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Beta] Distance type for clustering models.
+   * Distance type for clustering models.
    * @return value or {@code null} for none
    */
   public java.lang.String getDistanceType() {
@@ -250,7 +265,7 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Beta] Distance type for clustering models.
+   * Distance type for clustering models.
    * @param distanceType distanceType or {@code null} for none
    */
   public TrainingOptions setDistanceType(java.lang.String distanceType) {
@@ -308,6 +323,42 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   public TrainingOptions setInputLabelColumns(java.util.List<java.lang.String> inputLabelColumns) {
     this.inputLabelColumns = inputLabelColumns;
+    return this;
+  }
+
+  /**
+   * The column used to provide the initial centroids for kmeans algorithm when
+   * kmeans_initialization_method is CUSTOM.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKmeansInitializationColumn() {
+    return kmeansInitializationColumn;
+  }
+
+  /**
+   * The column used to provide the initial centroids for kmeans algorithm when
+   * kmeans_initialization_method is CUSTOM.
+   * @param kmeansInitializationColumn kmeansInitializationColumn or {@code null} for none
+   */
+  public TrainingOptions setKmeansInitializationColumn(java.lang.String kmeansInitializationColumn) {
+    this.kmeansInitializationColumn = kmeansInitializationColumn;
+    return this;
+  }
+
+  /**
+   * The method used to initialize the centroids for kmeans algorithm.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKmeansInitializationMethod() {
+    return kmeansInitializationMethod;
+  }
+
+  /**
+   * The method used to initialize the centroids for kmeans algorithm.
+   * @param kmeansInitializationMethod kmeansInitializationMethod or {@code null} for none
+   */
+  public TrainingOptions setKmeansInitializationMethod(java.lang.String kmeansInitializationMethod) {
+    this.kmeansInitializationMethod = kmeansInitializationMethod;
     return this;
   }
 
@@ -471,7 +522,7 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Beta] Number of clusters for clustering models.
+   * Number of clusters for clustering models.
    * @return value or {@code null} for none
    */
   public java.lang.Long getNumClusters() {
@@ -479,7 +530,7 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Beta] Number of clusters for clustering models.
+   * Number of clusters for clustering models.
    * @param numClusters numClusters or {@code null} for none
    */
   public TrainingOptions setNumClusters(java.lang.Long numClusters) {

@@ -46,14 +46,6 @@ public final class GoogleIamV1AuditLogConfig extends com.google.api.client.json.
   private java.util.List<java.lang.String> exemptedMembers;
 
   /**
-   * Specifies whether principals can be exempted for the same LogType in lower-level resource
-   * policies. If true, any lower-level exemptions will be ignored.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean ignoreChildExemptions;
-
-  /**
    * The log type that this config enables.
    * The value may be {@code null}.
    */
@@ -76,25 +68,6 @@ public final class GoogleIamV1AuditLogConfig extends com.google.api.client.json.
    */
   public GoogleIamV1AuditLogConfig setExemptedMembers(java.util.List<java.lang.String> exemptedMembers) {
     this.exemptedMembers = exemptedMembers;
-    return this;
-  }
-
-  /**
-   * Specifies whether principals can be exempted for the same LogType in lower-level resource
-   * policies. If true, any lower-level exemptions will be ignored.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getIgnoreChildExemptions() {
-    return ignoreChildExemptions;
-  }
-
-  /**
-   * Specifies whether principals can be exempted for the same LogType in lower-level resource
-   * policies. If true, any lower-level exemptions will be ignored.
-   * @param ignoreChildExemptions ignoreChildExemptions or {@code null} for none
-   */
-  public GoogleIamV1AuditLogConfig setIgnoreChildExemptions(java.lang.Boolean ignoreChildExemptions) {
-    this.ignoreChildExemptions = ignoreChildExemptions;
     return this;
   }
 

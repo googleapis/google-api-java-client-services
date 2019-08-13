@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-adsensehost",
+    "version": "v4.1-rev20180807-1.30.1"
+  }
+}

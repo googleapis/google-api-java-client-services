@@ -124,6 +124,13 @@ public final class OrderLineItem extends com.google.api.client.json.GenericJson 
   private java.lang.Long quantityShipped;
 
   /**
+   * Number of items undeliverable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Long quantityUndeliverable;
+
+  /**
    * Details of the return policy for the line item.
    * The value may be {@code null}.
    */
@@ -359,6 +366,23 @@ public final class OrderLineItem extends com.google.api.client.json.GenericJson 
    */
   public OrderLineItem setQuantityShipped(java.lang.Long quantityShipped) {
     this.quantityShipped = quantityShipped;
+    return this;
+  }
+
+  /**
+   * Number of items undeliverable.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getQuantityUndeliverable() {
+    return quantityUndeliverable;
+  }
+
+  /**
+   * Number of items undeliverable.
+   * @param quantityUndeliverable quantityUndeliverable or {@code null} for none
+   */
+  public OrderLineItem setQuantityUndeliverable(java.lang.Long quantityUndeliverable) {
+    this.quantityUndeliverable = quantityUndeliverable;
     return this;
   }
 

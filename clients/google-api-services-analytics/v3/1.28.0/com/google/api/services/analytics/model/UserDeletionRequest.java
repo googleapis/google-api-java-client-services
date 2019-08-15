@@ -58,6 +58,13 @@ public final class UserDeletionRequest extends com.google.api.client.json.Generi
   private java.lang.String kind;
 
   /**
+   * Property ID
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String propertyId;
+
+  /**
    * Web property ID of the form UA-XXXXX-YY.
    * The value may be {@code null}.
    */
@@ -129,6 +136,23 @@ public final class UserDeletionRequest extends com.google.api.client.json.Generi
    */
   public UserDeletionRequest setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * Property ID
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPropertyId() {
+    return propertyId;
+  }
+
+  /**
+   * Property ID
+   * @param propertyId propertyId or {@code null} for none
+   */
+  public UserDeletionRequest setPropertyId(java.lang.String propertyId) {
+    this.propertyId = propertyId;
     return this;
   }
 

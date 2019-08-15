@@ -37,14 +37,14 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
   private AwsS3Data awsS3DataSource;
 
   /**
-   * A Google Cloud Storage data sink.
+   * A Cloud Storage data sink.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GcsData gcsDataSink;
 
   /**
-   * A Google Cloud Storage data source.
+   * A Cloud Storage data source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +92,7 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A Google Cloud Storage data sink.
+   * A Cloud Storage data sink.
    * @return value or {@code null} for none
    */
   public GcsData getGcsDataSink() {
@@ -100,7 +100,7 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A Google Cloud Storage data sink.
+   * A Cloud Storage data sink.
    * @param gcsDataSink gcsDataSink or {@code null} for none
    */
   public TransferSpec setGcsDataSink(GcsData gcsDataSink) {
@@ -109,7 +109,7 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A Google Cloud Storage data source.
+   * A Cloud Storage data source.
    * @return value or {@code null} for none
    */
   public GcsData getGcsDataSource() {
@@ -117,7 +117,7 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A Google Cloud Storage data source.
+   * A Cloud Storage data source.
    * @param gcsDataSource gcsDataSource or {@code null} for none
    */
   public TransferSpec setGcsDataSource(GcsData gcsDataSource) {

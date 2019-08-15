@@ -31,8 +31,8 @@ package com.google.api.services.firebasehosting.v1beta1.model;
 public final class Header extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The user-supplied [glob pattern](/docs/hosting/full-config#glob_pattern_matching) to
-   * match against the request URL path.
+   * The user-supplied [glob pattern](/docs/hosting/full-config#glob_pattern_matching) to match
+   * against the request URL path.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,8 +46,15 @@ public final class Header extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> headers;
 
   /**
-   * Required. The user-supplied [glob pattern](/docs/hosting/full-config#glob_pattern_matching) to
-   * match against the request URL path.
+   * The user-supplied RE2 regular expression to match against the request URL path.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String regex;
+
+  /**
+   * The user-supplied [glob pattern](/docs/hosting/full-config#glob_pattern_matching) to match
+   * against the request URL path.
    * @return value or {@code null} for none
    */
   public java.lang.String getGlob() {
@@ -55,8 +62,8 @@ public final class Header extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The user-supplied [glob pattern](/docs/hosting/full-config#glob_pattern_matching) to
-   * match against the request URL path.
+   * The user-supplied [glob pattern](/docs/hosting/full-config#glob_pattern_matching) to match
+   * against the request URL path.
    * @param glob glob or {@code null} for none
    */
   public Header setGlob(java.lang.String glob) {
@@ -78,6 +85,23 @@ public final class Header extends com.google.api.client.json.GenericJson {
    */
   public Header setHeaders(java.util.Map<String, java.lang.String> headers) {
     this.headers = headers;
+    return this;
+  }
+
+  /**
+   * The user-supplied RE2 regular expression to match against the request URL path.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRegex() {
+    return regex;
+  }
+
+  /**
+   * The user-supplied RE2 regular expression to match against the request URL path.
+   * @param regex regex or {@code null} for none
+   */
+  public Header setRegex(java.lang.String regex) {
+    this.regex = regex;
     return this;
   }
 

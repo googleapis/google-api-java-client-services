@@ -19,9 +19,9 @@ package com.google.api.services.sheets.v4.model;
 /**
  * Trims the whitespace (such as spaces, tabs, or new lines) in every cell in the specified range.
  * This request removes all whitespace from the start and end of each cell's text, and reduces any
- * sub-sequence of remaining whitespace characters to a single space. If the resulting trimmed text
- * starts with a '+' or '=' character, the text remains as a string value and is not interpreted as
- * a formula.
+ * subsequence of remaining whitespace characters to a single space. If the resulting trimmed text
+ * starts with a '+' or '=' character, the text remains as a string value and isn't interpreted as a
+ * formula.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Sheets API. For a detailed explanation see:

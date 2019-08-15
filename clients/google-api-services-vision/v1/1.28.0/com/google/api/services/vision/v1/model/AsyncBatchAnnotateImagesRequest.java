@@ -37,6 +37,22 @@ public final class AsyncBatchAnnotateImagesRequest extends com.google.api.client
   private OutputConfig outputConfig;
 
   /**
+   * Optional. Target project and location to make a call.
+   *
+   * Format: `projects/{project-id}/locations/{location-id}`.
+   *
+   * If no parent is specified, a region will be chosen automatically.
+   *
+   * Supported location-ids:     `us`: USA country only,     `asia`: East asia areas, like Japan,
+   * Taiwan,     `eu`: The European Union.
+   *
+   * Example: `projects/project-A/locations/eu`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String parent;
+
+  /**
    * Individual image annotation requests for this batch.
    * The value may be {@code null}.
    */
@@ -63,6 +79,41 @@ public final class AsyncBatchAnnotateImagesRequest extends com.google.api.client
    */
   public AsyncBatchAnnotateImagesRequest setOutputConfig(OutputConfig outputConfig) {
     this.outputConfig = outputConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Target project and location to make a call.
+   *
+   * Format: `projects/{project-id}/locations/{location-id}`.
+   *
+   * If no parent is specified, a region will be chosen automatically.
+   *
+   * Supported location-ids:     `us`: USA country only,     `asia`: East asia areas, like Japan,
+   * Taiwan,     `eu`: The European Union.
+   *
+   * Example: `projects/project-A/locations/eu`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getParent() {
+    return parent;
+  }
+
+  /**
+   * Optional. Target project and location to make a call.
+   *
+   * Format: `projects/{project-id}/locations/{location-id}`.
+   *
+   * If no parent is specified, a region will be chosen automatically.
+   *
+   * Supported location-ids:     `us`: USA country only,     `asia`: East asia areas, like Japan,
+   * Taiwan,     `eu`: The European Union.
+   *
+   * Example: `projects/project-A/locations/eu`.
+   * @param parent parent or {@code null} for none
+   */
+  public AsyncBatchAnnotateImagesRequest setParent(java.lang.String parent) {
+    this.parent = parent;
     return this;
   }
 

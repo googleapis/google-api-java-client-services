@@ -29,6 +29,36 @@ package com.google.api.services.vision.v1p2beta1.model;
 @SuppressWarnings("javadoc")
 public final class GoogleCloudVisionV1p4beta1ImageQuality extends com.google.api.client.json.GenericJson {
 
+  /**
+   * A score representing the aesthetic/technical quality of the image. The score is in range [0,
+   * 1]. Higher value corresponds to more professional looking photos. 0 means the image looks very
+   * bad, 1 means the image with very high quality.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float qualityScore;
+
+  /**
+   * A score representing the aesthetic/technical quality of the image. The score is in range [0,
+   * 1]. Higher value corresponds to more professional looking photos. 0 means the image looks very
+   * bad, 1 means the image with very high quality.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getQualityScore() {
+    return qualityScore;
+  }
+
+  /**
+   * A score representing the aesthetic/technical quality of the image. The score is in range [0,
+   * 1]. Higher value corresponds to more professional looking photos. 0 means the image looks very
+   * bad, 1 means the image with very high quality.
+   * @param qualityScore qualityScore or {@code null} for none
+   */
+  public GoogleCloudVisionV1p4beta1ImageQuality setQualityScore(java.lang.Float qualityScore) {
+    this.qualityScore = qualityScore;
+    return this;
+  }
+
   @Override
   public GoogleCloudVisionV1p4beta1ImageQuality set(String fieldName, Object value) {
     return (GoogleCloudVisionV1p4beta1ImageQuality) super.set(fieldName, value);

@@ -30,6 +30,22 @@ package com.google.api.services.vision.v1.model;
 public final class BatchAnnotateFilesRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Target project and location to make a call.
+   *
+   * Format: `projects/{project-id}/locations/{location-id}`.
+   *
+   * If no parent is specified, a region will be chosen automatically.
+   *
+   * Supported location-ids:     `us`: USA country only,     `asia`: East asia areas, like Japan,
+   * Taiwan,     `eu`: The European Union.
+   *
+   * Example: `projects/project-A/locations/eu`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String parent;
+
+  /**
    * The list of file annotation requests. Right now we support only one AnnotateFileRequest in
    * BatchAnnotateFilesRequest.
    * The value may be {@code null}.
@@ -41,6 +57,41 @@ public final class BatchAnnotateFilesRequest extends com.google.api.client.json.
     // hack to force ProGuard to consider AnnotateFileRequest used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(AnnotateFileRequest.class);
+  }
+
+  /**
+   * Optional. Target project and location to make a call.
+   *
+   * Format: `projects/{project-id}/locations/{location-id}`.
+   *
+   * If no parent is specified, a region will be chosen automatically.
+   *
+   * Supported location-ids:     `us`: USA country only,     `asia`: East asia areas, like Japan,
+   * Taiwan,     `eu`: The European Union.
+   *
+   * Example: `projects/project-A/locations/eu`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getParent() {
+    return parent;
+  }
+
+  /**
+   * Optional. Target project and location to make a call.
+   *
+   * Format: `projects/{project-id}/locations/{location-id}`.
+   *
+   * If no parent is specified, a region will be chosen automatically.
+   *
+   * Supported location-ids:     `us`: USA country only,     `asia`: East asia areas, like Japan,
+   * Taiwan,     `eu`: The European Union.
+   *
+   * Example: `projects/project-A/locations/eu`.
+   * @param parent parent or {@code null} for none
+   */
+  public BatchAnnotateFilesRequest setParent(java.lang.String parent) {
+    this.parent = parent;
+    return this;
   }
 
   /**

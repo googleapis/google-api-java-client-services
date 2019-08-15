@@ -46,8 +46,8 @@ public final class Rewrite extends com.google.api.client.json.GenericJson {
   private java.lang.String function;
 
   /**
-   * Required. The user-supplied [glob pattern](/docs/hosting/full-config#glob_pattern_matching) to
-   * match against the request URL path.
+   * The user-supplied [glob pattern](/docs/hosting/full-config#glob_pattern_matching) to match
+   * against the request URL path.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,6 +59,13 @@ public final class Rewrite extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String path;
+
+  /**
+   * The user-supplied RE2 regular expression to match against the request URL path.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String regex;
 
   /**
    * The request will be forwarded to Cloud Run.
@@ -102,8 +109,8 @@ public final class Rewrite extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The user-supplied [glob pattern](/docs/hosting/full-config#glob_pattern_matching) to
-   * match against the request URL path.
+   * The user-supplied [glob pattern](/docs/hosting/full-config#glob_pattern_matching) to match
+   * against the request URL path.
    * @return value or {@code null} for none
    */
   public java.lang.String getGlob() {
@@ -111,8 +118,8 @@ public final class Rewrite extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The user-supplied [glob pattern](/docs/hosting/full-config#glob_pattern_matching) to
-   * match against the request URL path.
+   * The user-supplied [glob pattern](/docs/hosting/full-config#glob_pattern_matching) to match
+   * against the request URL path.
    * @param glob glob or {@code null} for none
    */
   public Rewrite setGlob(java.lang.String glob) {
@@ -134,6 +141,23 @@ public final class Rewrite extends com.google.api.client.json.GenericJson {
    */
   public Rewrite setPath(java.lang.String path) {
     this.path = path;
+    return this;
+  }
+
+  /**
+   * The user-supplied RE2 regular expression to match against the request URL path.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRegex() {
+    return regex;
+  }
+
+  /**
+   * The user-supplied RE2 regular expression to match against the request URL path.
+   * @param regex regex or {@code null} for none
+   */
+  public Rewrite setRegex(java.lang.String regex) {
+    this.regex = regex;
     return this;
   }
 

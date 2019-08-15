@@ -233,6 +233,13 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   private java.lang.String pythonVersion;
 
   /**
+   * Optional. Configures the request-response pair logging on predictions from this Version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudMlV1RequestLoggingConfig requestLoggingConfig;
+
+  /**
    * Optional. The AI Platform runtime version to use for this deployment. If not set, AI Platform
    * uses the default stable version, 1.0. For more information, see the [runtime version list](/ml-
    * engine/docs/runtime-version-list) and [how to manage runtime versions](/ml-
@@ -733,6 +740,23 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    */
   public GoogleCloudMlV1Version setPythonVersion(java.lang.String pythonVersion) {
     this.pythonVersion = pythonVersion;
+    return this;
+  }
+
+  /**
+   * Optional. Configures the request-response pair logging on predictions from this Version.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudMlV1RequestLoggingConfig getRequestLoggingConfig() {
+    return requestLoggingConfig;
+  }
+
+  /**
+   * Optional. Configures the request-response pair logging on predictions from this Version.
+   * @param requestLoggingConfig requestLoggingConfig or {@code null} for none
+   */
+  public GoogleCloudMlV1Version setRequestLoggingConfig(GoogleCloudMlV1RequestLoggingConfig requestLoggingConfig) {
+    this.requestLoggingConfig = requestLoggingConfig;
     return this;
   }
 

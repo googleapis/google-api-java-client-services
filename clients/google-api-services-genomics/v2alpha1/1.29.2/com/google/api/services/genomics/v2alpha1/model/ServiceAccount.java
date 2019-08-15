@@ -38,8 +38,8 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
   private java.lang.String email;
 
   /**
-   * List of scopes to be enabled for this service account on the VM, in addition to the Cloud
-   * Genomics API scope.
+   * List of scopes to be enabled for this service account on the VM, in addition to the cloud-
+   * platform API scope that will be added by default.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,8 +65,8 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * List of scopes to be enabled for this service account on the VM, in addition to the Cloud
-   * Genomics API scope.
+   * List of scopes to be enabled for this service account on the VM, in addition to the cloud-
+   * platform API scope that will be added by default.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getScopes() {
@@ -74,8 +74,8 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * List of scopes to be enabled for this service account on the VM, in addition to the Cloud
-   * Genomics API scope.
+   * List of scopes to be enabled for this service account on the VM, in addition to the cloud-
+   * platform API scope that will be added by default.
    * @param scopes scopes or {@code null} for none
    */
   public ServiceAccount setScopes(java.util.List<java.lang.String> scopes) {

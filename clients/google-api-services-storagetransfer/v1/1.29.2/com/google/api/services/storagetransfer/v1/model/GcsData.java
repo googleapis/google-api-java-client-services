@@ -17,7 +17,7 @@
 package com.google.api.services.storagetransfer.v1.model;
 
 /**
- * In a GcsData resource, an object's name is the Google Cloud Storage object's name and its
+ * In a GcsData resource, an object's name is the Cloud Storage object's name and its
  * `lastModificationTime` refers to the object's updated time, which changes when the content or the
  * metadata of the object is updated.
  *
@@ -32,7 +32,7 @@ package com.google.api.services.storagetransfer.v1.model;
 public final class GcsData extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Google Cloud Storage bucket name (see [Bucket Name
+   * Required. Cloud Storage bucket name (see [Bucket Name
    * Requirements](https://cloud.google.com/storage/docs/naming#requirements)).
    * The value may be {@code null}.
    */
@@ -40,7 +40,7 @@ public final class GcsData extends com.google.api.client.json.GenericJson {
   private java.lang.String bucketName;
 
   /**
-   * Required. Google Cloud Storage bucket name (see [Bucket Name
+   * Required. Cloud Storage bucket name (see [Bucket Name
    * Requirements](https://cloud.google.com/storage/docs/naming#requirements)).
    * @return value or {@code null} for none
    */
@@ -49,7 +49,7 @@ public final class GcsData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Google Cloud Storage bucket name (see [Bucket Name
+   * Required. Cloud Storage bucket name (see [Bucket Name
    * Requirements](https://cloud.google.com/storage/docs/naming#requirements)).
    * @param bucketName bucketName or {@code null} for none
    */

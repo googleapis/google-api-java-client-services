@@ -9730,6 +9730,372 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
   }
 
   /**
+   * An accessor for creating requests from the Members collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code YouTube youtube = new YouTube(...);}
+   *   {@code YouTube.Members.List request = youtube.members().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Members members() {
+    return new Members();
+  }
+
+  /**
+   * The "members" collection of methods.
+   */
+  public class Members {
+
+    /**
+     * Lists members for a channel.
+     *
+     * Create a request for the method "members.list".
+     *
+     * This request holds the parameters needed by the youtube server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param part The part parameter specifies the member resource parts that the API response will include. Supported
+     *        values are id and snippet.
+     * @return the request
+     */
+    public List list(java.lang.String part) throws java.io.IOException {
+      List result = new List(part);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends YouTubeRequest<com.google.api.services.youtube.model.MemberListResponse> {
+
+      private static final String REST_PATH = "members";
+
+      /**
+       * Lists members for a channel.
+       *
+       * Create a request for the method "members.list".
+       *
+       * This request holds the parameters needed by the the youtube server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param part The part parameter specifies the member resource parts that the API response will include. Supported
+     *        values are id and snippet.
+       * @since 1.13
+       */
+      protected List(java.lang.String part) {
+        super(YouTube.this, "GET", REST_PATH, null, com.google.api.services.youtube.model.MemberListResponse.class);
+        this.part = com.google.api.client.util.Preconditions.checkNotNull(part, "Required parameter part must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUserIp(java.lang.String userIp) {
+        return (List) super.setUserIp(userIp);
+      }
+
+      /**
+       * The part parameter specifies the member resource parts that the API response will include.
+       * Supported values are id and snippet.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String part;
+
+      /** The part parameter specifies the member resource parts that the API response will include.
+     Supported values are id and snippet.
+       */
+      public java.lang.String getPart() {
+        return part;
+      }
+
+      /**
+       * The part parameter specifies the member resource parts that the API response will include.
+       * Supported values are id and snippet.
+       */
+      public List setPart(java.lang.String part) {
+        this.part = part;
+        return this;
+      }
+
+      /**
+       * The hasAccessToLevel parameter specifies, when set, the ID of a pricing level that members
+       * from the results set should have access to. When not set, all members will be considered,
+       * regardless of their active pricing level.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String hasAccessToLevel;
+
+      /** The hasAccessToLevel parameter specifies, when set, the ID of a pricing level that members from the
+     results set should have access to. When not set, all members will be considered, regardless of
+     their active pricing level.
+       */
+      public java.lang.String getHasAccessToLevel() {
+        return hasAccessToLevel;
+      }
+
+      /**
+       * The hasAccessToLevel parameter specifies, when set, the ID of a pricing level that members
+       * from the results set should have access to. When not set, all members will be considered,
+       * regardless of their active pricing level.
+       */
+      public List setHasAccessToLevel(java.lang.String hasAccessToLevel) {
+        this.hasAccessToLevel = hasAccessToLevel;
+        return this;
+      }
+
+      /**
+       * The maxResults parameter specifies the maximum number of items that should be returned in
+       * the result set.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long maxResults;
+
+      /** The maxResults parameter specifies the maximum number of items that should be returned in the
+     result set. [default: 5] [minimum: 0] [maximum: 50]
+       */
+      public java.lang.Long getMaxResults() {
+        return maxResults;
+      }
+
+      /**
+       * The maxResults parameter specifies the maximum number of items that should be returned in
+       * the result set.
+       */
+      public List setMaxResults(java.lang.Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+      }
+
+      /** The mode parameter specifies which channel members to return. */
+      @com.google.api.client.util.Key
+      private java.lang.String mode;
+
+      /** The mode parameter specifies which channel members to return. [default:
+     LIST_MEMBERS_MODE_ALL_CURRENT]
+       */
+      public java.lang.String getMode() {
+        return mode;
+      }
+
+      /** The mode parameter specifies which channel members to return. */
+      public List setMode(java.lang.String mode) {
+        this.mode = mode;
+        return this;
+      }
+
+      /**
+       * The pageToken parameter identifies a specific page in the result set that should be
+       * returned. In an API response, the nextPageToken and prevPageToken properties identify other
+       * pages that could be retrieved.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** The pageToken parameter identifies a specific page in the result set that should be returned. In an
+     API response, the nextPageToken and prevPageToken properties identify other pages that could be
+     retrieved.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * The pageToken parameter identifies a specific page in the result set that should be
+       * returned. In an API response, the nextPageToken and prevPageToken properties identify other
+       * pages that could be retrieved.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
+   * An accessor for creating requests from the MembershipsLevels collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code YouTube youtube = new YouTube(...);}
+   *   {@code YouTube.MembershipsLevels.List request = youtube.membershipsLevels().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public MembershipsLevels membershipsLevels() {
+    return new MembershipsLevels();
+  }
+
+  /**
+   * The "membershipsLevels" collection of methods.
+   */
+  public class MembershipsLevels {
+
+    /**
+     * Lists pricing levels for a channel.
+     *
+     * Create a request for the method "membershipsLevels.list".
+     *
+     * This request holds the parameters needed by the youtube server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param part The part parameter specifies the membershipsLevel resource parts that the API response will include.
+     *        Supported values are id and snippet.
+     * @return the request
+     */
+    public List list(java.lang.String part) throws java.io.IOException {
+      List result = new List(part);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends YouTubeRequest<com.google.api.services.youtube.model.MembershipsLevelListResponse> {
+
+      private static final String REST_PATH = "membershipsLevels";
+
+      /**
+       * Lists pricing levels for a channel.
+       *
+       * Create a request for the method "membershipsLevels.list".
+       *
+       * This request holds the parameters needed by the the youtube server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param part The part parameter specifies the membershipsLevel resource parts that the API response will include.
+     *        Supported values are id and snippet.
+       * @since 1.13
+       */
+      protected List(java.lang.String part) {
+        super(YouTube.this, "GET", REST_PATH, null, com.google.api.services.youtube.model.MembershipsLevelListResponse.class);
+        this.part = com.google.api.client.util.Preconditions.checkNotNull(part, "Required parameter part must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUserIp(java.lang.String userIp) {
+        return (List) super.setUserIp(userIp);
+      }
+
+      /**
+       * The part parameter specifies the membershipsLevel resource parts that the API response will
+       * include. Supported values are id and snippet.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String part;
+
+      /** The part parameter specifies the membershipsLevel resource parts that the API response will
+     include. Supported values are id and snippet.
+       */
+      public java.lang.String getPart() {
+        return part;
+      }
+
+      /**
+       * The part parameter specifies the membershipsLevel resource parts that the API response will
+       * include. Supported values are id and snippet.
+       */
+      public List setPart(java.lang.String part) {
+        this.part = part;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the PlaylistItems collection.
    *
    * <p>The typical use is:</p>

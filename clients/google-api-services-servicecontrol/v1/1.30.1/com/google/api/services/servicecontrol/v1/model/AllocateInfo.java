@@ -32,7 +32,8 @@ public final class AllocateInfo extends com.google.api.client.json.GenericJson {
   /**
    * A list of label keys that were unused by the server in processing the request. Thus, for
    * similar requests repeated in a certain future time window, the caller can choose to ignore
-   * these labels in the requests to achieve better client-side cache hits and quota aggregation.
+   * these labels in the requests to achieve better client-side cache hits and quota aggregation for
+   * rate quota. This field is not populated for allocation quota checks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,7 +42,8 @@ public final class AllocateInfo extends com.google.api.client.json.GenericJson {
   /**
    * A list of label keys that were unused by the server in processing the request. Thus, for
    * similar requests repeated in a certain future time window, the caller can choose to ignore
-   * these labels in the requests to achieve better client-side cache hits and quota aggregation.
+   * these labels in the requests to achieve better client-side cache hits and quota aggregation for
+   * rate quota. This field is not populated for allocation quota checks.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnusedArguments() {
@@ -51,7 +53,8 @@ public final class AllocateInfo extends com.google.api.client.json.GenericJson {
   /**
    * A list of label keys that were unused by the server in processing the request. Thus, for
    * similar requests repeated in a certain future time window, the caller can choose to ignore
-   * these labels in the requests to achieve better client-side cache hits and quota aggregation.
+   * these labels in the requests to achieve better client-side cache hits and quota aggregation for
+   * rate quota. This field is not populated for allocation quota checks.
    * @param unusedArguments unusedArguments or {@code null} for none
    */
   public AllocateInfo setUnusedArguments(java.util.List<java.lang.String> unusedArguments) {

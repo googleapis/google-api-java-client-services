@@ -45,7 +45,8 @@ public final class VoidedPurchase extends com.google.api.client.json.GenericJson
   private java.lang.Long purchaseTimeMillis;
 
   /**
-   * The token that was generated when a purchase was made. This uniquely identifies a purchase.
+   * The token which uniquely identifies a one-time purchase or subscription. To uniquely identify
+   * subscription renewals use order_id (available starting from version 3 of the API).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +95,8 @@ public final class VoidedPurchase extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The token that was generated when a purchase was made. This uniquely identifies a purchase.
+   * The token which uniquely identifies a one-time purchase or subscription. To uniquely identify
+   * subscription renewals use order_id (available starting from version 3 of the API).
    * @return value or {@code null} for none
    */
   public java.lang.String getPurchaseToken() {
@@ -102,7 +104,8 @@ public final class VoidedPurchase extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The token that was generated when a purchase was made. This uniquely identifies a purchase.
+   * The token which uniquely identifies a one-time purchase or subscription. To uniquely identify
+   * subscription renewals use order_id (available starting from version 3 of the API).
    * @param purchaseToken purchaseToken or {@code null} for none
    */
   public VoidedPurchase setPurchaseToken(java.lang.String purchaseToken) {

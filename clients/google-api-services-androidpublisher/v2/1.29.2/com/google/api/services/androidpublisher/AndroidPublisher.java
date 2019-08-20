@@ -8685,31 +8685,31 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         /**
-         * The time, in milliseconds since the Epoch, of the newest voided in-app product purchase
-         * that you want to see in the response. The value of this parameter cannot be greater than
-         * the current time and is ignored if a pagination token is set. Default value is current
-         * time. Note: This filter is applied on the time at which the record is seen as voided by
-         * our systems and not the actual voided time returned in the response.
+         * The time, in milliseconds since the Epoch, of the newest voided purchase that you want to
+         * see in the response. The value of this parameter cannot be greater than the current time
+         * and is ignored if a pagination token is set. Default value is current time. Note: This
+         * filter is applied on the time at which the record is seen as voided by our systems and
+         * not the actual voided time returned in the response.
          */
         @com.google.api.client.util.Key
         private java.lang.Long endTime;
 
-        /** The time, in milliseconds since the Epoch, of the newest voided in-app product purchase that you
-       want to see in the response. The value of this parameter cannot be greater than the current time
-       and is ignored if a pagination token is set. Default value is current time. Note: This filter is
-       applied on the time at which the record is seen as voided by our systems and not the actual voided
-       time returned in the response.
+        /** The time, in milliseconds since the Epoch, of the newest voided purchase that you want to see in
+       the response. The value of this parameter cannot be greater than the current time and is ignored if
+       a pagination token is set. Default value is current time. Note: This filter is applied on the time
+       at which the record is seen as voided by our systems and not the actual voided time returned in the
+       response.
          */
         public java.lang.Long getEndTime() {
           return endTime;
         }
 
         /**
-         * The time, in milliseconds since the Epoch, of the newest voided in-app product purchase
-         * that you want to see in the response. The value of this parameter cannot be greater than
-         * the current time and is ignored if a pagination token is set. Default value is current
-         * time. Note: This filter is applied on the time at which the record is seen as voided by
-         * our systems and not the actual voided time returned in the response.
+         * The time, in milliseconds since the Epoch, of the newest voided purchase that you want to
+         * see in the response. The value of this parameter cannot be greater than the current time
+         * and is ignored if a pagination token is set. Default value is current time. Note: This
+         * filter is applied on the time at which the record is seen as voided by our systems and
+         * not the actual voided time returned in the response.
          */
         public List setEndTime(java.lang.Long endTime) {
           this.endTime = endTime;
@@ -8747,31 +8747,31 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         /**
-         * The time, in milliseconds since the Epoch, of the oldest voided in-app product purchase
-         * that you want to see in the response. The value of this parameter cannot be older than 30
-         * days and is ignored if a pagination token is set. Default value is current time minus 30
-         * days. Note: This filter is applied on the time at which the record is seen as voided by
-         * our systems and not the actual voided time returned in the response.
+         * The time, in milliseconds since the Epoch, of the oldest voided purchase that you want to
+         * see in the response. The value of this parameter cannot be older than 30 days and is
+         * ignored if a pagination token is set. Default value is current time minus 30 days. Note:
+         * This filter is applied on the time at which the record is seen as voided by our systems
+         * and not the actual voided time returned in the response.
          */
         @com.google.api.client.util.Key
         private java.lang.Long startTime;
 
-        /** The time, in milliseconds since the Epoch, of the oldest voided in-app product purchase that you
-       want to see in the response. The value of this parameter cannot be older than 30 days and is
-       ignored if a pagination token is set. Default value is current time minus 30 days. Note: This
-       filter is applied on the time at which the record is seen as voided by our systems and not the
-       actual voided time returned in the response.
+        /** The time, in milliseconds since the Epoch, of the oldest voided purchase that you want to see in
+       the response. The value of this parameter cannot be older than 30 days and is ignored if a
+       pagination token is set. Default value is current time minus 30 days. Note: This filter is applied
+       on the time at which the record is seen as voided by our systems and not the actual voided time
+       returned in the response.
          */
         public java.lang.Long getStartTime() {
           return startTime;
         }
 
         /**
-         * The time, in milliseconds since the Epoch, of the oldest voided in-app product purchase
-         * that you want to see in the response. The value of this parameter cannot be older than 30
-         * days and is ignored if a pagination token is set. Default value is current time minus 30
-         * days. Note: This filter is applied on the time at which the record is seen as voided by
-         * our systems and not the actual voided time returned in the response.
+         * The time, in milliseconds since the Epoch, of the oldest voided purchase that you want to
+         * see in the response. The value of this parameter cannot be older than 30 days and is
+         * ignored if a pagination token is set. Default value is current time minus 30 days. Note:
+         * This filter is applied on the time at which the record is seen as voided by our systems
+         * and not the actual voided time returned in the response.
          */
         public List setStartTime(java.lang.Long startTime) {
           this.startTime = startTime;

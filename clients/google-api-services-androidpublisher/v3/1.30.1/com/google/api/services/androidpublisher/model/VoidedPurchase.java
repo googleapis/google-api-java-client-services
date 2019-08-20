@@ -38,6 +38,14 @@ public final class VoidedPurchase extends com.google.api.client.json.GenericJson
   private java.lang.String kind;
 
   /**
+   * The order id which uniquely identifies a one-time purchase, subscription purchase, or
+   * subscription renewal.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String orderId;
+
+  /**
    * The time at which the purchase was made, in milliseconds since the epoch (Jan 1, 1970).
    * The value may be {@code null}.
    */
@@ -45,11 +53,27 @@ public final class VoidedPurchase extends com.google.api.client.json.GenericJson
   private java.lang.Long purchaseTimeMillis;
 
   /**
-   * The token that was generated when a purchase was made. This uniquely identifies a purchase.
+   * The token which uniquely identifies a one-time purchase or subscription. To uniquely identify
+   * subscription renewals use order_id (available starting from version 3 of the API).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String purchaseToken;
+
+  /**
+   * The reason why the purchase was voided, possible values are: - Other  - Remorse  - Not_received
+   * - Defective  - Accidental_purchase  - Fraud  - Friendly_fraud  - Chargeback
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer voidedReason;
+
+  /**
+   * The initiator of voided purchase, possible values are: - User  - Developer  - Google
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer voidedSource;
 
   /**
    * The time at which the purchase was canceled/refunded/charged-back, in milliseconds since the
@@ -77,6 +101,25 @@ public final class VoidedPurchase extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * The order id which uniquely identifies a one-time purchase, subscription purchase, or
+   * subscription renewal.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOrderId() {
+    return orderId;
+  }
+
+  /**
+   * The order id which uniquely identifies a one-time purchase, subscription purchase, or
+   * subscription renewal.
+   * @param orderId orderId or {@code null} for none
+   */
+  public VoidedPurchase setOrderId(java.lang.String orderId) {
+    this.orderId = orderId;
+    return this;
+  }
+
+  /**
    * The time at which the purchase was made, in milliseconds since the epoch (Jan 1, 1970).
    * @return value or {@code null} for none
    */
@@ -94,7 +137,8 @@ public final class VoidedPurchase extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The token that was generated when a purchase was made. This uniquely identifies a purchase.
+   * The token which uniquely identifies a one-time purchase or subscription. To uniquely identify
+   * subscription renewals use order_id (available starting from version 3 of the API).
    * @return value or {@code null} for none
    */
   public java.lang.String getPurchaseToken() {
@@ -102,11 +146,48 @@ public final class VoidedPurchase extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The token that was generated when a purchase was made. This uniquely identifies a purchase.
+   * The token which uniquely identifies a one-time purchase or subscription. To uniquely identify
+   * subscription renewals use order_id (available starting from version 3 of the API).
    * @param purchaseToken purchaseToken or {@code null} for none
    */
   public VoidedPurchase setPurchaseToken(java.lang.String purchaseToken) {
     this.purchaseToken = purchaseToken;
+    return this;
+  }
+
+  /**
+   * The reason why the purchase was voided, possible values are: - Other  - Remorse  - Not_received
+   * - Defective  - Accidental_purchase  - Fraud  - Friendly_fraud  - Chargeback
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getVoidedReason() {
+    return voidedReason;
+  }
+
+  /**
+   * The reason why the purchase was voided, possible values are: - Other  - Remorse  - Not_received
+   * - Defective  - Accidental_purchase  - Fraud  - Friendly_fraud  - Chargeback
+   * @param voidedReason voidedReason or {@code null} for none
+   */
+  public VoidedPurchase setVoidedReason(java.lang.Integer voidedReason) {
+    this.voidedReason = voidedReason;
+    return this;
+  }
+
+  /**
+   * The initiator of voided purchase, possible values are: - User  - Developer  - Google
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getVoidedSource() {
+    return voidedSource;
+  }
+
+  /**
+   * The initiator of voided purchase, possible values are: - User  - Developer  - Google
+   * @param voidedSource voidedSource or {@code null} for none
+   */
+  public VoidedPurchase setVoidedSource(java.lang.Integer voidedSource) {
+    this.voidedSource = voidedSource;
     return this;
   }
 

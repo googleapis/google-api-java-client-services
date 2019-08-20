@@ -8313,31 +8313,31 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         /**
-         * The time, in milliseconds since the Epoch, of the newest voided in-app product purchase
-         * that you want to see in the response. The value of this parameter cannot be greater than
-         * the current time and is ignored if a pagination token is set. Default value is current
-         * time. Note: This filter is applied on the time at which the record is seen as voided by
-         * our systems and not the actual voided time returned in the response.
+         * The time, in milliseconds since the Epoch, of the newest voided purchase that you want to
+         * see in the response. The value of this parameter cannot be greater than the current time
+         * and is ignored if a pagination token is set. Default value is current time. Note: This
+         * filter is applied on the time at which the record is seen as voided by our systems and
+         * not the actual voided time returned in the response.
          */
         @com.google.api.client.util.Key
         private java.lang.Long endTime;
 
-        /** The time, in milliseconds since the Epoch, of the newest voided in-app product purchase that you
-       want to see in the response. The value of this parameter cannot be greater than the current time
-       and is ignored if a pagination token is set. Default value is current time. Note: This filter is
-       applied on the time at which the record is seen as voided by our systems and not the actual voided
-       time returned in the response.
+        /** The time, in milliseconds since the Epoch, of the newest voided purchase that you want to see in
+       the response. The value of this parameter cannot be greater than the current time and is ignored if
+       a pagination token is set. Default value is current time. Note: This filter is applied on the time
+       at which the record is seen as voided by our systems and not the actual voided time returned in the
+       response.
          */
         public java.lang.Long getEndTime() {
           return endTime;
         }
 
         /**
-         * The time, in milliseconds since the Epoch, of the newest voided in-app product purchase
-         * that you want to see in the response. The value of this parameter cannot be greater than
-         * the current time and is ignored if a pagination token is set. Default value is current
-         * time. Note: This filter is applied on the time at which the record is seen as voided by
-         * our systems and not the actual voided time returned in the response.
+         * The time, in milliseconds since the Epoch, of the newest voided purchase that you want to
+         * see in the response. The value of this parameter cannot be greater than the current time
+         * and is ignored if a pagination token is set. Default value is current time. Note: This
+         * filter is applied on the time at which the record is seen as voided by our systems and
+         * not the actual voided time returned in the response.
          */
         public List setEndTime(java.lang.Long endTime) {
           this.endTime = endTime;
@@ -8375,31 +8375,31 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         /**
-         * The time, in milliseconds since the Epoch, of the oldest voided in-app product purchase
-         * that you want to see in the response. The value of this parameter cannot be older than 30
-         * days and is ignored if a pagination token is set. Default value is current time minus 30
-         * days. Note: This filter is applied on the time at which the record is seen as voided by
-         * our systems and not the actual voided time returned in the response.
+         * The time, in milliseconds since the Epoch, of the oldest voided purchase that you want to
+         * see in the response. The value of this parameter cannot be older than 30 days and is
+         * ignored if a pagination token is set. Default value is current time minus 30 days. Note:
+         * This filter is applied on the time at which the record is seen as voided by our systems
+         * and not the actual voided time returned in the response.
          */
         @com.google.api.client.util.Key
         private java.lang.Long startTime;
 
-        /** The time, in milliseconds since the Epoch, of the oldest voided in-app product purchase that you
-       want to see in the response. The value of this parameter cannot be older than 30 days and is
-       ignored if a pagination token is set. Default value is current time minus 30 days. Note: This
-       filter is applied on the time at which the record is seen as voided by our systems and not the
-       actual voided time returned in the response.
+        /** The time, in milliseconds since the Epoch, of the oldest voided purchase that you want to see in
+       the response. The value of this parameter cannot be older than 30 days and is ignored if a
+       pagination token is set. Default value is current time minus 30 days. Note: This filter is applied
+       on the time at which the record is seen as voided by our systems and not the actual voided time
+       returned in the response.
          */
         public java.lang.Long getStartTime() {
           return startTime;
         }
 
         /**
-         * The time, in milliseconds since the Epoch, of the oldest voided in-app product purchase
-         * that you want to see in the response. The value of this parameter cannot be older than 30
-         * days and is ignored if a pagination token is set. Default value is current time minus 30
-         * days. Note: This filter is applied on the time at which the record is seen as voided by
-         * our systems and not the actual voided time returned in the response.
+         * The time, in milliseconds since the Epoch, of the oldest voided purchase that you want to
+         * see in the response. The value of this parameter cannot be older than 30 days and is
+         * ignored if a pagination token is set. Default value is current time minus 30 days. Note:
+         * This filter is applied on the time at which the record is seen as voided by our systems
+         * and not the actual voided time returned in the response.
          */
         public List setStartTime(java.lang.Long startTime) {
           this.startTime = startTime;
@@ -8418,6 +8418,46 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
         public List setToken(java.lang.String token) {
           this.token = token;
+          return this;
+        }
+
+        /**
+         * The type of voided purchases that you want to see in the response. Possible values are: -
+         * 0: Only voided in-app product purchases will be returned in the response. This is the
+         * default value. - 1: Both voided in-app purchases and voided subscription purchases will
+         * be returned in the response.  Note: Before requesting to receive voided subscription
+         * purchases, you must switch to use orderId in the response which uniquely identifies one-
+         * time purchases and subscriptions. Otherwise, you will receive multiple subscription
+         * orders with the same PurchaseToken, because subscription renewal orders share the same
+         * PurchaseToken.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer type;
+
+        /** The type of voided purchases that you want to see in the response. Possible values are: - 0: Only
+       voided in-app product purchases will be returned in the response. This is the default value. - 1:
+       Both voided in-app purchases and voided subscription purchases will be returned in the response.
+       Note: Before requesting to receive voided subscription purchases, you must switch to use orderId in
+       the response which uniquely identifies one-time purchases and subscriptions. Otherwise, you will
+       receive multiple subscription orders with the same PurchaseToken, because subscription renewal
+       orders share the same PurchaseToken.
+         */
+        public java.lang.Integer getType() {
+          return type;
+        }
+
+        /**
+         * The type of voided purchases that you want to see in the response. Possible values are: -
+         * 0: Only voided in-app product purchases will be returned in the response. This is the
+         * default value. - 1: Both voided in-app purchases and voided subscription purchases will
+         * be returned in the response.  Note: Before requesting to receive voided subscription
+         * purchases, you must switch to use orderId in the response which uniquely identifies one-
+         * time purchases and subscriptions. Otherwise, you will receive multiple subscription
+         * orders with the same PurchaseToken, because subscription renewal orders share the same
+         * PurchaseToken.
+         */
+        public List setType(java.lang.Integer type) {
+          this.type = type;
           return this;
         }
 

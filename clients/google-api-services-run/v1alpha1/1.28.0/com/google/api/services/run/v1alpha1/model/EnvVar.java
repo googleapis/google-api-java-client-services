@@ -48,6 +48,17 @@ public final class EnvVar extends com.google.api.client.json.GenericJson {
   private java.lang.String value;
 
   /**
+   * Cloud Run fully managed: not supported
+   *
+   * Cloud Run on GKE: supported
+   *
+   * Source for the environment variable's value. Cannot be used if value is not empty. +optional
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EnvVarSource valueFrom;
+
+  /**
    * Name of the environment variable. Must be a C_IDENTIFIER.
    * @return value or {@code null} for none
    */
@@ -86,6 +97,31 @@ public final class EnvVar extends com.google.api.client.json.GenericJson {
    */
   public EnvVar setValue(java.lang.String value) {
     this.value = value;
+    return this;
+  }
+
+  /**
+   * Cloud Run fully managed: not supported
+   *
+   * Cloud Run on GKE: supported
+   *
+   * Source for the environment variable's value. Cannot be used if value is not empty. +optional
+   * @return value or {@code null} for none
+   */
+  public EnvVarSource getValueFrom() {
+    return valueFrom;
+  }
+
+  /**
+   * Cloud Run fully managed: not supported
+   *
+   * Cloud Run on GKE: supported
+   *
+   * Source for the environment variable's value. Cannot be used if value is not empty. +optional
+   * @param valueFrom valueFrom or {@code null} for none
+   */
+  public EnvVar setValueFrom(EnvVarSource valueFrom) {
+    this.valueFrom = valueFrom;
     return this;
   }
 

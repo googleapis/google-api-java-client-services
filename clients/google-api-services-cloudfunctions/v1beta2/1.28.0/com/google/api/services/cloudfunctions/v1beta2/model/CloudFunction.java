@@ -110,18 +110,15 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
    *
    * See [the VPC documentation](https://cloud.google.com/compute/docs/vpc) for more information on
    * connecting Cloud projects.
-   *
-   * This feature is currently in alpha, available only for whitelisted users.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String network;
 
   /**
-   * Required. The runtime in which the function is going to run. Choices:
-   *
-   * * `nodejs6`: Node.js 6 * `nodejs8`: Node.js 8 * `nodejs10`: Node.js 10 * `python37`: Python 3.7
-   * * `go111`: Go 1.11
+   * The runtime in which to run the function. Required when deploying a new function, optional when
+   * updating an existing function. For a complete list of possible choices, see the [`gcloud`
+   * command reference](/sdk/gcloud/reference/functions/deploy#--runtime).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,7 +126,7 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
 
   /**
    * The email of the function's service account. If empty, defaults to
-   * {project_id}@appspot.gserviceaccount.com.
+   * `{project_id}@appspot.gserviceaccount.com`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -213,8 +210,6 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
    *
    * See [the VPC documentation](https://cloud.google.com/compute/docs/vpc) for more information on
    * connecting Cloud projects.
-   *
-   * This feature is currently in alpha, available only for whitelisted users.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -395,8 +390,6 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
    *
    * See [the VPC documentation](https://cloud.google.com/compute/docs/vpc) for more information on
    * connecting Cloud projects.
-   *
-   * This feature is currently in alpha, available only for whitelisted users.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -415,8 +408,6 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
    *
    * See [the VPC documentation](https://cloud.google.com/compute/docs/vpc) for more information on
    * connecting Cloud projects.
-   *
-   * This feature is currently in alpha, available only for whitelisted users.
    * @param network network or {@code null} for none
    */
   public CloudFunction setNetwork(java.lang.String network) {
@@ -425,10 +416,9 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. The runtime in which the function is going to run. Choices:
-   *
-   * * `nodejs6`: Node.js 6 * `nodejs8`: Node.js 8 * `nodejs10`: Node.js 10 * `python37`: Python 3.7
-   * * `go111`: Go 1.11
+   * The runtime in which to run the function. Required when deploying a new function, optional when
+   * updating an existing function. For a complete list of possible choices, see the [`gcloud`
+   * command reference](/sdk/gcloud/reference/functions/deploy#--runtime).
    * @return value or {@code null} for none
    */
   public java.lang.String getRuntime() {
@@ -436,10 +426,9 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. The runtime in which the function is going to run. Choices:
-   *
-   * * `nodejs6`: Node.js 6 * `nodejs8`: Node.js 8 * `nodejs10`: Node.js 10 * `python37`: Python 3.7
-   * * `go111`: Go 1.11
+   * The runtime in which to run the function. Required when deploying a new function, optional when
+   * updating an existing function. For a complete list of possible choices, see the [`gcloud`
+   * command reference](/sdk/gcloud/reference/functions/deploy#--runtime).
    * @param runtime runtime or {@code null} for none
    */
   public CloudFunction setRuntime(java.lang.String runtime) {
@@ -449,7 +438,7 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
 
   /**
    * The email of the function's service account. If empty, defaults to
-   * {project_id}@appspot.gserviceaccount.com.
+   * `{project_id}@appspot.gserviceaccount.com`.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -458,7 +447,7 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
 
   /**
    * The email of the function's service account. If empty, defaults to
-   * {project_id}@appspot.gserviceaccount.com.
+   * `{project_id}@appspot.gserviceaccount.com`.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public CloudFunction setServiceAccount(java.lang.String serviceAccount) {
@@ -637,8 +626,6 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
    *
    * See [the VPC documentation](https://cloud.google.com/compute/docs/vpc) for more information on
    * connecting Cloud projects.
-   *
-   * This feature is currently in alpha, available only for whitelisted users.
    * @return value or {@code null} for none
    */
   public java.lang.String getVpcConnector() {
@@ -654,8 +641,6 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
    *
    * See [the VPC documentation](https://cloud.google.com/compute/docs/vpc) for more information on
    * connecting Cloud projects.
-   *
-   * This feature is currently in alpha, available only for whitelisted users.
    * @param vpcConnector vpcConnector or {@code null} for none
    */
   public CloudFunction setVpcConnector(java.lang.String vpcConnector) {

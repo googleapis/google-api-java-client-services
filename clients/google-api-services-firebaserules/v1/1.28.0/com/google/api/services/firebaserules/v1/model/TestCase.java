@@ -58,6 +58,13 @@ public final class TestCase extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Specifies whether paths (such as request.path) are encoded and how.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pathEncoding;
+
+  /**
    * Request context.
    *
    * The exact format of the request context is service-dependent. See the appropriate service
@@ -117,6 +124,23 @@ public final class TestCase extends com.google.api.client.json.GenericJson {
    */
   public TestCase setFunctionMocks(java.util.List<FunctionMock> functionMocks) {
     this.functionMocks = functionMocks;
+    return this;
+  }
+
+  /**
+   * Specifies whether paths (such as request.path) are encoded and how.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPathEncoding() {
+    return pathEncoding;
+  }
+
+  /**
+   * Specifies whether paths (such as request.path) are encoded and how.
+   * @param pathEncoding pathEncoding or {@code null} for none
+   */
+  public TestCase setPathEncoding(java.lang.String pathEncoding) {
+    this.pathEncoding = pathEncoding;
     return this;
   }
 

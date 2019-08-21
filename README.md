@@ -75,7 +75,7 @@ packages on [Maven Central][maven-search].
 | Cloud Shell API | [v1](clients/google-api-services-cloudshell/v1), [v1alpha1](clients/google-api-services-cloudshell/v1alpha1) |
 | Cloud Source Repositories API | [v1](clients/google-api-services-sourcerepo/v1) |
 | Cloud Spanner API | [v1](clients/google-api-services-spanner/v1) |
-| Cloud Speech-to-Text API | [v1](clients/google-api-services-speech/v1), [v1p1beta1](clients/google-api-services-speech/v1p1beta1) |
+| Cloud Speech-to-Text API | [v1](clients/google-api-services-speech/v1), [v1p1beta1](clients/google-api-services-speech/v1p1beta1), [v2beta](clients/google-api-services-speech/v2beta) |
 | Cloud Storage JSON API | [v1](clients/google-api-services-storage/v1), [v1beta1](clients/google-api-services-storage/v1beta1), [v1beta2](clients/google-api-services-storage/v1beta2) |
 | Cloud TPU API | [v1](clients/google-api-services-tpu/v1), [v1alpha1](clients/google-api-services-tpu/v1alpha1) |
 | Cloud Talent Solution API | [v2](clients/google-api-services-jobs/v2), [v3](clients/google-api-services-jobs/v3), [v3p1beta1](clients/google-api-services-jobs/v3p1beta1) |

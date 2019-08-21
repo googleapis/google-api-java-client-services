@@ -1255,22 +1255,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Optional. The policy format version to be returned. Acceptable values are 0 and 1. If
-           * the value is 0, or the field is omitted, policy format version 1 will be returned.
+           * Optional. The policy format version to be returned. Acceptable values are 0, 1, and 3.
+           * If the value is 0, or the field is omitted, policy format version 1 will be returned.
            */
           @com.google.api.client.util.Key("options.requestedPolicyVersion")
           private java.lang.Integer optionsRequestedPolicyVersion;
 
-          /** Optional. The policy format version to be returned. Acceptable values are 0 and 1. If the value is
-         0, or the field is omitted, policy format version 1 will be returned.
+          /** Optional. The policy format version to be returned. Acceptable values are 0, 1, and 3. If the value
+         is 0, or the field is omitted, policy format version 1 will be returned.
            */
           public java.lang.Integer getOptionsRequestedPolicyVersion() {
             return optionsRequestedPolicyVersion;
           }
 
           /**
-           * Optional. The policy format version to be returned. Acceptable values are 0 and 1. If
-           * the value is 0, or the field is omitted, policy format version 1 will be returned.
+           * Optional. The policy format version to be returned. Acceptable values are 0, 1, and 3.
+           * If the value is 0, or the field is omitted, policy format version 1 will be returned.
            */
           public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
@@ -4728,22 +4728,24 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Optional. The policy format version to be returned. Acceptable values are 0 and 1. If
-             * the value is 0, or the field is omitted, policy format version 1 will be returned.
+             * Optional. The policy format version to be returned. Acceptable values are 0, 1, and
+             * 3. If the value is 0, or the field is omitted, policy format version 1 will be
+             * returned.
              */
             @com.google.api.client.util.Key("options.requestedPolicyVersion")
             private java.lang.Integer optionsRequestedPolicyVersion;
 
-            /** Optional. The policy format version to be returned. Acceptable values are 0 and 1. If the value is
-           0, or the field is omitted, policy format version 1 will be returned.
+            /** Optional. The policy format version to be returned. Acceptable values are 0, 1, and 3. If the value
+           is 0, or the field is omitted, policy format version 1 will be returned.
              */
             public java.lang.Integer getOptionsRequestedPolicyVersion() {
               return optionsRequestedPolicyVersion;
             }
 
             /**
-             * Optional. The policy format version to be returned. Acceptable values are 0 and 1. If
-             * the value is 0, or the field is omitted, policy format version 1 will be returned.
+             * Optional. The policy format version to be returned. Acceptable values are 0, 1, and
+             * 3. If the value is 0, or the field is omitted, policy format version 1 will be
+             * returned.
              */
             public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
               this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
@@ -10417,22 +10419,24 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Optional. The policy format version to be returned. Acceptable values are 0 and 1. If
-             * the value is 0, or the field is omitted, policy format version 1 will be returned.
+             * Optional. The policy format version to be returned. Acceptable values are 0, 1, and
+             * 3. If the value is 0, or the field is omitted, policy format version 1 will be
+             * returned.
              */
             @com.google.api.client.util.Key("options.requestedPolicyVersion")
             private java.lang.Integer optionsRequestedPolicyVersion;
 
-            /** Optional. The policy format version to be returned. Acceptable values are 0 and 1. If the value is
-           0, or the field is omitted, policy format version 1 will be returned.
+            /** Optional. The policy format version to be returned. Acceptable values are 0, 1, and 3. If the value
+           is 0, or the field is omitted, policy format version 1 will be returned.
              */
             public java.lang.Integer getOptionsRequestedPolicyVersion() {
               return optionsRequestedPolicyVersion;
             }
 
             /**
-             * Optional. The policy format version to be returned. Acceptable values are 0 and 1. If
-             * the value is 0, or the field is omitted, policy format version 1 will be returned.
+             * Optional. The policy format version to be returned. Acceptable values are 0, 1, and
+             * 3. If the value is 0, or the field is omitted, policy format version 1 will be
+             * returned.
              */
             public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
               this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
@@ -11550,7 +11554,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
             }
             /**
-             * Retrieves all the resources in the patient compartment for a `Patient` resource.
+             * Retrieves all the resources directly referenced by a patient, as well as all of the resources in
+             * the patient compartment.
              *
              * Implements the FHIR extended operation [Patient-
              * everything](http://hl7.org/implement/standards/fhir/STU3/patient-operations.html#everything).
@@ -11583,7 +11588,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/Patient/[^/]+$");
 
               /**
-               * Retrieves all the resources in the patient compartment for a `Patient` resource.
+               * Retrieves all the resources directly referenced by a patient, as well as all of the resources
+               * in the patient compartment.
                *
                * Implements the FHIR extended operation [Patient-
                * everything](http://hl7.org/implement/standards/fhir/STU3/patient-operations.html#everything).
@@ -11701,6 +11707,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return this;
               }
 
+              /** Maximum number of resources in a page. Defaults to 100. */
+              @com.google.api.client.util.Key("_count")
+              private java.lang.Integer count;
+
+              /** Maximum number of resources in a page. Defaults to 100.
+               */
+              public java.lang.Integer getCount() {
+                return count;
+              }
+
+              /** Maximum number of resources in a page. Defaults to 100. */
+              public PatientEverything setCount(java.lang.Integer count) {
+                this.count = count;
+                return this;
+              }
+
               /**
                * The response includes records prior to the end date. If no end date is provided,
                * all records subsequent to the start date are in scope.
@@ -11721,6 +11743,40 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                */
               public PatientEverything setEnd(java.lang.String end) {
                 this.end = end;
+                return this;
+              }
+
+              /**
+               * Used to retrieve the next or previous page of results when using pagination. Value
+               * should be set to the value of page_token set in next or previous page links' url.
+               * Next and previous page are returned in the response bundle's links field, where
+               * `link.relation` is "previous" or "next".
+               *
+               * Omit `page_token` if no previous request has been made.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** Used to retrieve the next or previous page of results when using pagination. Value should be set to
+             the value of page_token set in next or previous page links' url. Next and previous page are
+             returned in the response bundle's links field, where `link.relation` is "previous" or "next".
+
+             Omit `page_token` if no previous request has been made.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /**
+               * Used to retrieve the next or previous page of results when using pagination. Value
+               * should be set to the value of page_token set in next or previous page links' url.
+               * Next and previous page are returned in the response bundle's links field, where
+               * `link.relation` is "previous" or "next".
+               *
+               * Omit `page_token` if no previous request has been made.
+               */
+              public PatientEverything setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
                 return this;
               }
 
@@ -14936,22 +14992,24 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Optional. The policy format version to be returned. Acceptable values are 0 and 1. If
-             * the value is 0, or the field is omitted, policy format version 1 will be returned.
+             * Optional. The policy format version to be returned. Acceptable values are 0, 1, and
+             * 3. If the value is 0, or the field is omitted, policy format version 1 will be
+             * returned.
              */
             @com.google.api.client.util.Key("options.requestedPolicyVersion")
             private java.lang.Integer optionsRequestedPolicyVersion;
 
-            /** Optional. The policy format version to be returned. Acceptable values are 0 and 1. If the value is
-           0, or the field is omitted, policy format version 1 will be returned.
+            /** Optional. The policy format version to be returned. Acceptable values are 0, 1, and 3. If the value
+           is 0, or the field is omitted, policy format version 1 will be returned.
              */
             public java.lang.Integer getOptionsRequestedPolicyVersion() {
               return optionsRequestedPolicyVersion;
             }
 
             /**
-             * Optional. The policy format version to be returned. Acceptable values are 0 and 1. If
-             * the value is 0, or the field is omitted, policy format version 1 will be returned.
+             * Optional. The policy format version to be returned. Acceptable values are 0, 1, and
+             * 3. If the value is 0, or the field is omitted, policy format version 1 will be
+             * returned.
              */
             public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
               this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;

@@ -33,8 +33,7 @@ public final class CryptoHashConfig extends com.google.api.client.json.GenericJs
 
   /**
    * An AES 128/192/256 bit key. Causes the hash to be computed based on this key. A default key is
-   * generated for each DeidentifyDataset operation and is used wherever crypto_key is not
-   * specified.
+   * generated for each Deidentify operation and is used wherever crypto_key is not specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,8 +41,7 @@ public final class CryptoHashConfig extends com.google.api.client.json.GenericJs
 
   /**
    * An AES 128/192/256 bit key. Causes the hash to be computed based on this key. A default key is
-   * generated for each DeidentifyDataset operation and is used wherever crypto_key is not
-   * specified.
+   * generated for each Deidentify operation and is used wherever crypto_key is not specified.
    * @see #decodeCryptoKey()
    * @return value or {@code null} for none
    */
@@ -53,8 +51,7 @@ public final class CryptoHashConfig extends com.google.api.client.json.GenericJs
 
   /**
    * An AES 128/192/256 bit key. Causes the hash to be computed based on this key. A default key is
-   * generated for each DeidentifyDataset operation and is used wherever crypto_key is not
-   * specified.
+   * generated for each Deidentify operation and is used wherever crypto_key is not specified.
    * @see #getCryptoKey()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -66,8 +63,7 @@ public final class CryptoHashConfig extends com.google.api.client.json.GenericJs
 
   /**
    * An AES 128/192/256 bit key. Causes the hash to be computed based on this key. A default key is
-   * generated for each DeidentifyDataset operation and is used wherever crypto_key is not
-   * specified.
+   * generated for each Deidentify operation and is used wherever crypto_key is not specified.
    * @see #encodeCryptoKey()
    * @param cryptoKey cryptoKey or {@code null} for none
    */
@@ -78,8 +74,7 @@ public final class CryptoHashConfig extends com.google.api.client.json.GenericJs
 
   /**
    * An AES 128/192/256 bit key. Causes the hash to be computed based on this key. A default key is
-   * generated for each DeidentifyDataset operation and is used wherever crypto_key is not
-   * specified.
+   * generated for each Deidentify operation and is used wherever crypto_key is not specified.
    * @see #setCryptoKey()
    *
    * <p>

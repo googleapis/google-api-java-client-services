@@ -84,6 +84,47 @@ public final class AndroidNotification extends com.google.api.client.json.Generi
   private java.lang.String color;
 
   /**
+   * If set to true, use the Android framework's default LED light settings for the notification.
+   * Default values are specified in [config.xml](https://android.googlesource.com/platform/framewor
+   * ks/base/+/master/core/res/res/values/config.xml). If `default_light_settings` is set to true
+   * and `light_settings` is also set, the user-specified `light_settings` is used instead of the
+   * default value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean defaultLightSettings;
+
+  /**
+   * If set to true, use the Android framework's default sound for the notification. Default values
+   * are specified in [config.xml](https://android.googlesource.com/platform/frameworks/base/+/maste
+   * r/core/res/res/values/config.xml).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean defaultSound;
+
+  /**
+   * If set to true, use the Android framework's default vibrate pattern for the notification.
+   * Default values are specified in [config.xml](https://android.googlesource.com/platform/framewor
+   * ks/base/+/master/core/res/res/values/config.xml). If `default_vibrate_timings` is set to true
+   * and `vibrate_timings` is also set, the default value is used instead of the user-specified
+   * `vibrate_timings`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean defaultVibrateTimings;
+
+  /**
+   * Set the time that the event in the notification occurred. Notifications in the panel are sorted
+   * by this time. A point in time is represented using
+   * [protobuf.Timestamp](https://developers.google.com/protocol-
+   * buffers/docs/reference/java/com/google/protobuf/Timestamp).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String eventTime;
+
+  /**
    * The notification's icon. Sets the notification icon to myicon for drawable resource myicon. If
    * you don't send this key in the request, FCM displays the launcher icon specified in your app
    * manifest.
@@ -101,12 +142,65 @@ public final class AndroidNotification extends com.google.api.client.json.Generi
   private java.lang.String image;
 
   /**
+   * Settings to control the notification's LED blinking rate and color if LED is available on the
+   * device. The total blinking time is controlled by the OS.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LightSettings lightSettings;
+
+  /**
+   * Set whether or not this notification is relevant only to the current device. Some notifications
+   * can be bridged to other devices for remote display, such as a Wear OS watch. This hint can be
+   * set to recommend this notification not be bridged. See [Wear OS
+   * guides](https://developer.android.com/training/wearables/notifications/bridger#existing-method-
+   * of-preventing-bridging)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean localOnly;
+
+  /**
+   * Sets the number of items this notification represents. May be displayed as a badge count for
+   * launchers that support badging.See [Notification Badge](https://developer.android.com/training
+   * /notify-user/badges). For example, this might be useful if you're using just one notification
+   * to represent multiple new messages but you want the count here to represent the number of total
+   * new messages. If zero or unspecified, systems that support badging use the default, which is to
+   * increment a number displayed on the long-press menu each time a new notification arrives.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer notificationCount;
+
+  /**
+   * Set the relative priority for this notification. Priority is an indication of how much of the
+   * user's attention should be consumed by this notification. Low-priority notifications may be
+   * hidden from the user in certain situations, while the user might be interrupted for a higher-
+   * priority notification. The effect of setting the same priorities may differ slightly on
+   * different platforms. Note this priority differs from `AndroidMessagePriority`. This priority is
+   * processed by the client after the message has been delivered, whereas [AndroidMessagePriority](
+   * https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages#androidmessagepriority
+   * ) is an FCM concept that controls when the message is delivered.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String notificationPriority;
+
+  /**
    * The sound to play when the device receives the notification. Supports "default" or the filename
    * of a sound resource bundled in the app. Sound files must reside in /res/raw/.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sound;
+
+  /**
+   * When set to false or unset, the notification is automatically dismissed when the user clicks it
+   * in the panel. When set to true, the notification persists even when the user clicks it.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean sticky;
 
   /**
    * Identifier used to replace existing notifications in the notification drawer. If not specified,
@@ -116,6 +210,15 @@ public final class AndroidNotification extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private java.lang.String tag;
+
+  /**
+   * Sets the "ticker" text, which is sent to accessibility services. Prior to API level 21
+   * (`Lollipop`), sets the text that is displayed in the status bar when the notification first
+   * arrives.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ticker;
 
   /**
    * The notification's title. If present, it will override
@@ -142,6 +245,28 @@ public final class AndroidNotification extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private java.lang.String titleLocKey;
+
+  /**
+   * Set the vibration pattern to use. Pass in an array of
+   * [protobuf.Duration](https://developers.google.com/protocol-
+   * buffers/docs/reference/google.protobuf#google.protobuf.Duration) to turn on or off the
+   * vibrator. The first value indicates the `Duration` to wait before turning the vibrator on. The
+   * next value indicates the `Duration` to keep the vibrator on. Subsequent values alternate
+   * between `Duration` to turn the vibrator off and to turn the vibrator on. If `vibrate_timings`
+   * is set and `default_vibrate_timings` is set to `true`, the default value is used instead of the
+   * user-specified `vibrate_timings`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<String> vibrateTimings;
+
+  /**
+   * Set the [Notification.visibility](https://developer.android.com/reference/android/app/Notificat
+   * ion.html#visibility) of the notification.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String visibility;
 
   /**
    * The notification's body text. If present, it will override
@@ -268,6 +393,100 @@ public final class AndroidNotification extends com.google.api.client.json.Generi
   }
 
   /**
+   * If set to true, use the Android framework's default LED light settings for the notification.
+   * Default values are specified in [config.xml](https://android.googlesource.com/platform/framewor
+   * ks/base/+/master/core/res/res/values/config.xml). If `default_light_settings` is set to true
+   * and `light_settings` is also set, the user-specified `light_settings` is used instead of the
+   * default value.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDefaultLightSettings() {
+    return defaultLightSettings;
+  }
+
+  /**
+   * If set to true, use the Android framework's default LED light settings for the notification.
+   * Default values are specified in [config.xml](https://android.googlesource.com/platform/framewor
+   * ks/base/+/master/core/res/res/values/config.xml). If `default_light_settings` is set to true
+   * and `light_settings` is also set, the user-specified `light_settings` is used instead of the
+   * default value.
+   * @param defaultLightSettings defaultLightSettings or {@code null} for none
+   */
+  public AndroidNotification setDefaultLightSettings(java.lang.Boolean defaultLightSettings) {
+    this.defaultLightSettings = defaultLightSettings;
+    return this;
+  }
+
+  /**
+   * If set to true, use the Android framework's default sound for the notification. Default values
+   * are specified in [config.xml](https://android.googlesource.com/platform/frameworks/base/+/maste
+   * r/core/res/res/values/config.xml).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDefaultSound() {
+    return defaultSound;
+  }
+
+  /**
+   * If set to true, use the Android framework's default sound for the notification. Default values
+   * are specified in [config.xml](https://android.googlesource.com/platform/frameworks/base/+/maste
+   * r/core/res/res/values/config.xml).
+   * @param defaultSound defaultSound or {@code null} for none
+   */
+  public AndroidNotification setDefaultSound(java.lang.Boolean defaultSound) {
+    this.defaultSound = defaultSound;
+    return this;
+  }
+
+  /**
+   * If set to true, use the Android framework's default vibrate pattern for the notification.
+   * Default values are specified in [config.xml](https://android.googlesource.com/platform/framewor
+   * ks/base/+/master/core/res/res/values/config.xml). If `default_vibrate_timings` is set to true
+   * and `vibrate_timings` is also set, the default value is used instead of the user-specified
+   * `vibrate_timings`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDefaultVibrateTimings() {
+    return defaultVibrateTimings;
+  }
+
+  /**
+   * If set to true, use the Android framework's default vibrate pattern for the notification.
+   * Default values are specified in [config.xml](https://android.googlesource.com/platform/framewor
+   * ks/base/+/master/core/res/res/values/config.xml). If `default_vibrate_timings` is set to true
+   * and `vibrate_timings` is also set, the default value is used instead of the user-specified
+   * `vibrate_timings`.
+   * @param defaultVibrateTimings defaultVibrateTimings or {@code null} for none
+   */
+  public AndroidNotification setDefaultVibrateTimings(java.lang.Boolean defaultVibrateTimings) {
+    this.defaultVibrateTimings = defaultVibrateTimings;
+    return this;
+  }
+
+  /**
+   * Set the time that the event in the notification occurred. Notifications in the panel are sorted
+   * by this time. A point in time is represented using
+   * [protobuf.Timestamp](https://developers.google.com/protocol-
+   * buffers/docs/reference/java/com/google/protobuf/Timestamp).
+   * @return value or {@code null} for none
+   */
+  public String getEventTime() {
+    return eventTime;
+  }
+
+  /**
+   * Set the time that the event in the notification occurred. Notifications in the panel are sorted
+   * by this time. A point in time is represented using
+   * [protobuf.Timestamp](https://developers.google.com/protocol-
+   * buffers/docs/reference/java/com/google/protobuf/Timestamp).
+   * @param eventTime eventTime or {@code null} for none
+   */
+  public AndroidNotification setEventTime(String eventTime) {
+    this.eventTime = eventTime;
+    return this;
+  }
+
+  /**
    * The notification's icon. Sets the notification icon to myicon for drawable resource myicon. If
    * you don't send this key in the request, FCM displays the launcher icon specified in your app
    * manifest.
@@ -308,6 +527,108 @@ public final class AndroidNotification extends com.google.api.client.json.Generi
   }
 
   /**
+   * Settings to control the notification's LED blinking rate and color if LED is available on the
+   * device. The total blinking time is controlled by the OS.
+   * @return value or {@code null} for none
+   */
+  public LightSettings getLightSettings() {
+    return lightSettings;
+  }
+
+  /**
+   * Settings to control the notification's LED blinking rate and color if LED is available on the
+   * device. The total blinking time is controlled by the OS.
+   * @param lightSettings lightSettings or {@code null} for none
+   */
+  public AndroidNotification setLightSettings(LightSettings lightSettings) {
+    this.lightSettings = lightSettings;
+    return this;
+  }
+
+  /**
+   * Set whether or not this notification is relevant only to the current device. Some notifications
+   * can be bridged to other devices for remote display, such as a Wear OS watch. This hint can be
+   * set to recommend this notification not be bridged. See [Wear OS
+   * guides](https://developer.android.com/training/wearables/notifications/bridger#existing-method-
+   * of-preventing-bridging)
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getLocalOnly() {
+    return localOnly;
+  }
+
+  /**
+   * Set whether or not this notification is relevant only to the current device. Some notifications
+   * can be bridged to other devices for remote display, such as a Wear OS watch. This hint can be
+   * set to recommend this notification not be bridged. See [Wear OS
+   * guides](https://developer.android.com/training/wearables/notifications/bridger#existing-method-
+   * of-preventing-bridging)
+   * @param localOnly localOnly or {@code null} for none
+   */
+  public AndroidNotification setLocalOnly(java.lang.Boolean localOnly) {
+    this.localOnly = localOnly;
+    return this;
+  }
+
+  /**
+   * Sets the number of items this notification represents. May be displayed as a badge count for
+   * launchers that support badging.See [Notification Badge](https://developer.android.com/training
+   * /notify-user/badges). For example, this might be useful if you're using just one notification
+   * to represent multiple new messages but you want the count here to represent the number of total
+   * new messages. If zero or unspecified, systems that support badging use the default, which is to
+   * increment a number displayed on the long-press menu each time a new notification arrives.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getNotificationCount() {
+    return notificationCount;
+  }
+
+  /**
+   * Sets the number of items this notification represents. May be displayed as a badge count for
+   * launchers that support badging.See [Notification Badge](https://developer.android.com/training
+   * /notify-user/badges). For example, this might be useful if you're using just one notification
+   * to represent multiple new messages but you want the count here to represent the number of total
+   * new messages. If zero or unspecified, systems that support badging use the default, which is to
+   * increment a number displayed on the long-press menu each time a new notification arrives.
+   * @param notificationCount notificationCount or {@code null} for none
+   */
+  public AndroidNotification setNotificationCount(java.lang.Integer notificationCount) {
+    this.notificationCount = notificationCount;
+    return this;
+  }
+
+  /**
+   * Set the relative priority for this notification. Priority is an indication of how much of the
+   * user's attention should be consumed by this notification. Low-priority notifications may be
+   * hidden from the user in certain situations, while the user might be interrupted for a higher-
+   * priority notification. The effect of setting the same priorities may differ slightly on
+   * different platforms. Note this priority differs from `AndroidMessagePriority`. This priority is
+   * processed by the client after the message has been delivered, whereas [AndroidMessagePriority](
+   * https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages#androidmessagepriority
+   * ) is an FCM concept that controls when the message is delivered.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNotificationPriority() {
+    return notificationPriority;
+  }
+
+  /**
+   * Set the relative priority for this notification. Priority is an indication of how much of the
+   * user's attention should be consumed by this notification. Low-priority notifications may be
+   * hidden from the user in certain situations, while the user might be interrupted for a higher-
+   * priority notification. The effect of setting the same priorities may differ slightly on
+   * different platforms. Note this priority differs from `AndroidMessagePriority`. This priority is
+   * processed by the client after the message has been delivered, whereas [AndroidMessagePriority](
+   * https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages#androidmessagepriority
+   * ) is an FCM concept that controls when the message is delivered.
+   * @param notificationPriority notificationPriority or {@code null} for none
+   */
+  public AndroidNotification setNotificationPriority(java.lang.String notificationPriority) {
+    this.notificationPriority = notificationPriority;
+    return this;
+  }
+
+  /**
    * The sound to play when the device receives the notification. Supports "default" or the filename
    * of a sound resource bundled in the app. Sound files must reside in /res/raw/.
    * @return value or {@code null} for none
@@ -323,6 +644,25 @@ public final class AndroidNotification extends com.google.api.client.json.Generi
    */
   public AndroidNotification setSound(java.lang.String sound) {
     this.sound = sound;
+    return this;
+  }
+
+  /**
+   * When set to false or unset, the notification is automatically dismissed when the user clicks it
+   * in the panel. When set to true, the notification persists even when the user clicks it.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSticky() {
+    return sticky;
+  }
+
+  /**
+   * When set to false or unset, the notification is automatically dismissed when the user clicks it
+   * in the panel. When set to true, the notification persists even when the user clicks it.
+   * @param sticky sticky or {@code null} for none
+   */
+  public AndroidNotification setSticky(java.lang.Boolean sticky) {
+    this.sticky = sticky;
     return this;
   }
 
@@ -344,6 +684,27 @@ public final class AndroidNotification extends com.google.api.client.json.Generi
    */
   public AndroidNotification setTag(java.lang.String tag) {
     this.tag = tag;
+    return this;
+  }
+
+  /**
+   * Sets the "ticker" text, which is sent to accessibility services. Prior to API level 21
+   * (`Lollipop`), sets the text that is displayed in the status bar when the notification first
+   * arrives.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTicker() {
+    return ticker;
+  }
+
+  /**
+   * Sets the "ticker" text, which is sent to accessibility services. Prior to API level 21
+   * (`Lollipop`), sets the text that is displayed in the status bar when the notification first
+   * arrives.
+   * @param ticker ticker or {@code null} for none
+   */
+  public AndroidNotification setTicker(java.lang.String ticker) {
+    this.ticker = ticker;
     return this;
   }
 
@@ -405,6 +766,56 @@ public final class AndroidNotification extends com.google.api.client.json.Generi
    */
   public AndroidNotification setTitleLocKey(java.lang.String titleLocKey) {
     this.titleLocKey = titleLocKey;
+    return this;
+  }
+
+  /**
+   * Set the vibration pattern to use. Pass in an array of
+   * [protobuf.Duration](https://developers.google.com/protocol-
+   * buffers/docs/reference/google.protobuf#google.protobuf.Duration) to turn on or off the
+   * vibrator. The first value indicates the `Duration` to wait before turning the vibrator on. The
+   * next value indicates the `Duration` to keep the vibrator on. Subsequent values alternate
+   * between `Duration` to turn the vibrator off and to turn the vibrator on. If `vibrate_timings`
+   * is set and `default_vibrate_timings` is set to `true`, the default value is used instead of the
+   * user-specified `vibrate_timings`.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<String> getVibrateTimings() {
+    return vibrateTimings;
+  }
+
+  /**
+   * Set the vibration pattern to use. Pass in an array of
+   * [protobuf.Duration](https://developers.google.com/protocol-
+   * buffers/docs/reference/google.protobuf#google.protobuf.Duration) to turn on or off the
+   * vibrator. The first value indicates the `Duration` to wait before turning the vibrator on. The
+   * next value indicates the `Duration` to keep the vibrator on. Subsequent values alternate
+   * between `Duration` to turn the vibrator off and to turn the vibrator on. If `vibrate_timings`
+   * is set and `default_vibrate_timings` is set to `true`, the default value is used instead of the
+   * user-specified `vibrate_timings`.
+   * @param vibrateTimings vibrateTimings or {@code null} for none
+   */
+  public AndroidNotification setVibrateTimings(java.util.List<String> vibrateTimings) {
+    this.vibrateTimings = vibrateTimings;
+    return this;
+  }
+
+  /**
+   * Set the [Notification.visibility](https://developer.android.com/reference/android/app/Notificat
+   * ion.html#visibility) of the notification.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVisibility() {
+    return visibility;
+  }
+
+  /**
+   * Set the [Notification.visibility](https://developer.android.com/reference/android/app/Notificat
+   * ion.html#visibility) of the notification.
+   * @param visibility visibility or {@code null} for none
+   */
+  public AndroidNotification setVisibility(java.lang.String visibility) {
+    this.visibility = visibility;
     return this;
   }
 

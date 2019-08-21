@@ -37,7 +37,7 @@ public final class Annotation extends com.google.api.client.json.GenericJson {
   private AnnotationSource annotationSource;
 
   /**
-   * Annnotations for images, e.g., bounding polygons.
+   * Annotations for images, e.g., bounding polygons.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,7 +84,7 @@ public final class Annotation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Annnotations for images, e.g., bounding polygons.
+   * Annotations for images, e.g., bounding polygons.
    * @return value or {@code null} for none
    */
   public ImageAnnotation getImageAnnotation() {
@@ -92,7 +92,7 @@ public final class Annotation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Annnotations for images, e.g., bounding polygons.
+   * Annotations for images, e.g., bounding polygons.
    * @param imageAnnotation imageAnnotation or {@code null} for none
    */
   public Annotation setImageAnnotation(ImageAnnotation imageAnnotation) {

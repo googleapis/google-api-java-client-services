@@ -31,7 +31,8 @@ package com.google.api.services.dataproc.model;
 public final class InstanceGroupConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The Compute Engine accelerator configuration for these instances.
+   * Optional. The Compute Engine accelerator configuration for these instances.Beta Feature: This
+   * feature is still under development. It may be changed before final release.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,7 +104,8 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
   private java.lang.Integer numInstances;
 
   /**
-   * Optional. The Compute Engine accelerator configuration for these instances.
+   * Optional. The Compute Engine accelerator configuration for these instances.Beta Feature: This
+   * feature is still under development. It may be changed before final release.
    * @return value or {@code null} for none
    */
   public java.util.List<AcceleratorConfig> getAccelerators() {
@@ -111,7 +113,8 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. The Compute Engine accelerator configuration for these instances.
+   * Optional. The Compute Engine accelerator configuration for these instances.Beta Feature: This
+   * feature is still under development. It may be changed before final release.
    * @param accelerators accelerators or {@code null} for none
    */
   public InstanceGroupConfig setAccelerators(java.util.List<AcceleratorConfig> accelerators) {

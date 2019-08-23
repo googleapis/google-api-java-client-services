@@ -30,8 +30,8 @@ package com.google.api.services.pubsub.model;
 public final class PullRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The maximum number of messages returned for this request. The Pub/Sub system may return fewer
-   * than the number specified.
+   * The maximum number of messages to return for this request. Must be a positive integer. The
+   * Pub/Sub system may return fewer than the number specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,8 +47,8 @@ public final class PullRequest extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean returnImmediately;
 
   /**
-   * The maximum number of messages returned for this request. The Pub/Sub system may return fewer
-   * than the number specified.
+   * The maximum number of messages to return for this request. Must be a positive integer. The
+   * Pub/Sub system may return fewer than the number specified.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxMessages() {
@@ -56,8 +56,8 @@ public final class PullRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The maximum number of messages returned for this request. The Pub/Sub system may return fewer
-   * than the number specified.
+   * The maximum number of messages to return for this request. Must be a positive integer. The
+   * Pub/Sub system may return fewer than the number specified.
    * @param maxMessages maxMessages or {@code null} for none
    */
   public PullRequest setMaxMessages(java.lang.Integer maxMessages) {

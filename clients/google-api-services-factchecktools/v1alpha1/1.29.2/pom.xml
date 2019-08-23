@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-factchecktools</artifactId>
-  <version>v1alpha1-rev20190328-1.29.2</version>
-  <name>Fact Check Tools API v1alpha1-rev20190328-1.29.2</name>
+  <version>v1alpha1-rev20190821-1.29.2</version>
+  <name>Fact Check Tools API v1alpha1-rev20190821-1.29.2</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

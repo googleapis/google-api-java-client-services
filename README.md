@@ -38,6 +38,7 @@ packages on [Maven Central][maven-search].
 | Apps Script API | [v1](clients/google-api-services-script/v1) |
 | BigQuery API | [v2](clients/google-api-services-bigquery/v2) |
 | BigQuery Data Transfer API | [v1](clients/google-api-services-bigquerydatatransfer/v1) |
+| BigQuery Reservation API | [v1](clients/google-api-services-bigqueryreservation/v1), [v1alpha2](clients/google-api-services-bigqueryreservation/v1alpha2) |
 | Binary Authorization API | [v1beta1](clients/google-api-services-binaryauthorization/v1beta1) |
 | Blogger API | [v2](clients/google-api-services-blogger/v2), [v3](clients/google-api-services-blogger/v3) |
 | Books API | [v1](clients/google-api-services-books/v1) |

@@ -36,7 +36,8 @@ package com.google.api.services.analyticsreporting.v4.model;
 public final class Activity extends com.google.api.client.json.GenericJson {
 
   /**
-   * Timestamp of the activity.
+   * Timestamp of the activity. If activities for a visit cross midnight and occur in two separate
+   * dates, then two sessions (one per date) share the session identifier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,7 +159,8 @@ public final class Activity extends com.google.api.client.json.GenericJson {
   private java.lang.String source;
 
   /**
-   * Timestamp of the activity.
+   * Timestamp of the activity. If activities for a visit cross midnight and occur in two separate
+   * dates, then two sessions (one per date) share the session identifier.
    * @return value or {@code null} for none
    */
   public String getActivityTime() {
@@ -166,7 +168,8 @@ public final class Activity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Timestamp of the activity.
+   * Timestamp of the activity. If activities for a visit cross midnight and occur in two separate
+   * dates, then two sessions (one per date) share the session identifier.
    * @param activityTime activityTime or {@code null} for none
    */
   public Activity setActivityTime(String activityTime) {

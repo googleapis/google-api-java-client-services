@@ -57,8 +57,8 @@ public final class Action extends com.google.api.client.json.GenericJson {
   private java.lang.String entrypoint;
 
   /**
-   * The environment to pass into the container. This environment is merged with any values
-   * specified in the `Pipeline` message. These values overwrite any in the `Pipeline` message.
+   * The environment to pass into the container. This environment is merged with values specified in
+   * the google.genomics.v2alpha1.Pipeline message, overwriting any duplicate values.
    *
    * In addition to the values passed here, a few other values are automatically injected into the
    * environment. These cannot be hidden or overwritten.
@@ -83,10 +83,19 @@ public final class Action extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> flags;
 
   /**
-   * The URI to pull the container image from. Note that all images referenced by actions in the
-   * pipeline are pulled before the first action runs. If multiple actions reference the same image,
-   * it is only pulled once, ensuring that the same image is used for all actions in a single
+   * Required. The URI to pull the container image from. Note that all images referenced by actions
+   * in the pipeline are pulled before the first action runs. If multiple actions reference the same
+   * image, it is only pulled once, ensuring that the same image is used for all actions in a single
    * pipeline.
+   *
+   * The image URI can be either a complete host and image specification (e.g.,
+   * quay.io/biocontainers/samtools), a library and image name (e.g., google/cloud-sdk) or a bare
+   * image name ('bash') to pull from the default library.  No schema is required in any of these
+   * cases.
+   *
+   * If the specified image is not public, the service account specified for the Virtual Machine
+   * must have access to pull the images from GCR, or appropriate credentials must be specified in
+   * the google.genomics.v2alpha1.Action.credentials field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -222,8 +231,8 @@ public final class Action extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The environment to pass into the container. This environment is merged with any values
-   * specified in the `Pipeline` message. These values overwrite any in the `Pipeline` message.
+   * The environment to pass into the container. This environment is merged with values specified in
+   * the google.genomics.v2alpha1.Pipeline message, overwriting any duplicate values.
    *
    * In addition to the values passed here, a few other values are automatically injected into the
    * environment. These cannot be hidden or overwritten.
@@ -242,8 +251,8 @@ public final class Action extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The environment to pass into the container. This environment is merged with any values
-   * specified in the `Pipeline` message. These values overwrite any in the `Pipeline` message.
+   * The environment to pass into the container. This environment is merged with values specified in
+   * the google.genomics.v2alpha1.Pipeline message, overwriting any duplicate values.
    *
    * In addition to the values passed here, a few other values are automatically injected into the
    * environment. These cannot be hidden or overwritten.
@@ -280,10 +289,19 @@ public final class Action extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URI to pull the container image from. Note that all images referenced by actions in the
-   * pipeline are pulled before the first action runs. If multiple actions reference the same image,
-   * it is only pulled once, ensuring that the same image is used for all actions in a single
+   * Required. The URI to pull the container image from. Note that all images referenced by actions
+   * in the pipeline are pulled before the first action runs. If multiple actions reference the same
+   * image, it is only pulled once, ensuring that the same image is used for all actions in a single
    * pipeline.
+   *
+   * The image URI can be either a complete host and image specification (e.g.,
+   * quay.io/biocontainers/samtools), a library and image name (e.g., google/cloud-sdk) or a bare
+   * image name ('bash') to pull from the default library.  No schema is required in any of these
+   * cases.
+   *
+   * If the specified image is not public, the service account specified for the Virtual Machine
+   * must have access to pull the images from GCR, or appropriate credentials must be specified in
+   * the google.genomics.v2alpha1.Action.credentials field.
    * @return value or {@code null} for none
    */
   public java.lang.String getImageUri() {
@@ -291,10 +309,19 @@ public final class Action extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URI to pull the container image from. Note that all images referenced by actions in the
-   * pipeline are pulled before the first action runs. If multiple actions reference the same image,
-   * it is only pulled once, ensuring that the same image is used for all actions in a single
+   * Required. The URI to pull the container image from. Note that all images referenced by actions
+   * in the pipeline are pulled before the first action runs. If multiple actions reference the same
+   * image, it is only pulled once, ensuring that the same image is used for all actions in a single
    * pipeline.
+   *
+   * The image URI can be either a complete host and image specification (e.g.,
+   * quay.io/biocontainers/samtools), a library and image name (e.g., google/cloud-sdk) or a bare
+   * image name ('bash') to pull from the default library.  No schema is required in any of these
+   * cases.
+   *
+   * If the specified image is not public, the service account specified for the Virtual Machine
+   * must have access to pull the images from GCR, or appropriate credentials must be specified in
+   * the google.genomics.v2alpha1.Action.credentials field.
    * @param imageUri imageUri or {@code null} for none
    */
   public Action setImageUri(java.lang.String imageUri) {

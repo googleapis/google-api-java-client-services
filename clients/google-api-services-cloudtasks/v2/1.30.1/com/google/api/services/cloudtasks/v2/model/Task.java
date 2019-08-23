@@ -131,9 +131,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
   private java.lang.Integer responseCount;
 
   /**
-   * The time when the task is scheduled to be attempted.
-   *
-   * For App Engine queues, this is when the task will be attempted or retried.
+   * The time when the task is scheduled to be attempted or retried.
    *
    * `schedule_time` will be truncated to the nearest microsecond.
    * The value may be {@code null}.
@@ -375,9 +373,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time when the task is scheduled to be attempted.
-   *
-   * For App Engine queues, this is when the task will be attempted or retried.
+   * The time when the task is scheduled to be attempted or retried.
    *
    * `schedule_time` will be truncated to the nearest microsecond.
    * @return value or {@code null} for none
@@ -387,9 +383,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time when the task is scheduled to be attempted.
-   *
-   * For App Engine queues, this is when the task will be attempted or retried.
+   * The time when the task is scheduled to be attempted or retried.
    *
    * `schedule_time` will be truncated to the nearest microsecond.
    * @param scheduleTime scheduleTime or {@code null} for none

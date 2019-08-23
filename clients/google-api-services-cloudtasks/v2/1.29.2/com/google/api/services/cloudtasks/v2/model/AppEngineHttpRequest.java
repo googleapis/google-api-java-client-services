@@ -40,8 +40,8 @@ package com.google.api.services.cloudtasks.v2.model;
  * The AppEngineRouting used to construct the URL that the task is delivered to can be set at the
  * queue-level or task-level:
  *
- * * If set,    app_engine_routing_override    is used for all tasks in the queue, no matter what
- * the setting    is for the    task-level app_engine_routing.
+ * * If app_engine_routing_override is set on the    queue, this value is used for all    tasks in
+ * the queue, no matter what the setting is for the task-level    app_engine_routing.
  *
  * The `url` that the task will be sent to is:
  *
@@ -75,8 +75,8 @@ public final class AppEngineHttpRequest extends com.google.api.client.json.Gener
   /**
    * Task-level setting for App Engine routing.
    *
-   * If set, app_engine_routing_override is used for all tasks in the queue, no matter what the
-   * setting is for the task-level app_engine_routing.
+   * * If app_engine_routing_override is set on the    queue, this value is used for all    tasks in
+   * the queue, no matter what the setting is for the task-level    app_engine_routing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -159,8 +159,8 @@ public final class AppEngineHttpRequest extends com.google.api.client.json.Gener
   /**
    * Task-level setting for App Engine routing.
    *
-   * If set, app_engine_routing_override is used for all tasks in the queue, no matter what the
-   * setting is for the task-level app_engine_routing.
+   * * If app_engine_routing_override is set on the    queue, this value is used for all    tasks in
+   * the queue, no matter what the setting is for the task-level    app_engine_routing.
    * @return value or {@code null} for none
    */
   public AppEngineRouting getAppEngineRouting() {
@@ -170,8 +170,8 @@ public final class AppEngineHttpRequest extends com.google.api.client.json.Gener
   /**
    * Task-level setting for App Engine routing.
    *
-   * If set, app_engine_routing_override is used for all tasks in the queue, no matter what the
-   * setting is for the task-level app_engine_routing.
+   * * If app_engine_routing_override is set on the    queue, this value is used for all    tasks in
+   * the queue, no matter what the setting is for the task-level    app_engine_routing.
    * @param appEngineRouting appEngineRouting or {@code null} for none
    */
   public AppEngineHttpRequest setAppEngineRouting(AppEngineRouting appEngineRouting) {

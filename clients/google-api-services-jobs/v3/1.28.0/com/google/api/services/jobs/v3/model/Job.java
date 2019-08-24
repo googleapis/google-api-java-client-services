@@ -354,7 +354,9 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private java.lang.String title;
 
   /**
-   * Optional. The visibility of the job.
+   * Deprecated. The job is only visible to the owner.
+   *
+   * The visibility of the job.
    *
    * Defaults to Visibility.ACCOUNT_ONLY if not specified.
    * The value may be {@code null}.
@@ -1082,7 +1084,9 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The visibility of the job.
+   * Deprecated. The job is only visible to the owner.
+   *
+   * The visibility of the job.
    *
    * Defaults to Visibility.ACCOUNT_ONLY if not specified.
    * @return value or {@code null} for none
@@ -1092,7 +1096,9 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The visibility of the job.
+   * Deprecated. The job is only visible to the owner.
+   *
+   * The visibility of the job.
    *
    * Defaults to Visibility.ACCOUNT_ONLY if not specified.
    * @param visibility visibility or {@code null} for none

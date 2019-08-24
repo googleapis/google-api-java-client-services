@@ -143,6 +143,204 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
   public class Alerts {
 
     /**
+     * Performs batch delete operation on alerts.
+     *
+     * Create a request for the method "alerts.batchDelete".
+     *
+     * This request holds the parameters needed by the alertcenter server.  After setting any optional
+     * parameters, call the {@link BatchDelete#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.alertcenter.v1beta1.model.BatchDeleteAlertsRequest}
+     * @return the request
+     */
+    public BatchDelete batchDelete(com.google.api.services.alertcenter.v1beta1.model.BatchDeleteAlertsRequest content) throws java.io.IOException {
+      BatchDelete result = new BatchDelete(content);
+      initialize(result);
+      return result;
+    }
+
+    public class BatchDelete extends AlertCenterRequest<com.google.api.services.alertcenter.v1beta1.model.BatchDeleteAlertsResponse> {
+
+      private static final String REST_PATH = "v1beta1/alerts:batchDelete";
+
+      /**
+       * Performs batch delete operation on alerts.
+       *
+       * Create a request for the method "alerts.batchDelete".
+       *
+       * This request holds the parameters needed by the the alertcenter server.  After setting any
+       * optional parameters, call the {@link BatchDelete#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * BatchDelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.alertcenter.v1beta1.model.BatchDeleteAlertsRequest}
+       * @since 1.13
+       */
+      protected BatchDelete(com.google.api.services.alertcenter.v1beta1.model.BatchDeleteAlertsRequest content) {
+        super(AlertCenter.this, "POST", REST_PATH, content, com.google.api.services.alertcenter.v1beta1.model.BatchDeleteAlertsResponse.class);
+      }
+
+      @Override
+      public BatchDelete set$Xgafv(java.lang.String $Xgafv) {
+        return (BatchDelete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public BatchDelete setAccessToken(java.lang.String accessToken) {
+        return (BatchDelete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public BatchDelete setAlt(java.lang.String alt) {
+        return (BatchDelete) super.setAlt(alt);
+      }
+
+      @Override
+      public BatchDelete setCallback(java.lang.String callback) {
+        return (BatchDelete) super.setCallback(callback);
+      }
+
+      @Override
+      public BatchDelete setFields(java.lang.String fields) {
+        return (BatchDelete) super.setFields(fields);
+      }
+
+      @Override
+      public BatchDelete setKey(java.lang.String key) {
+        return (BatchDelete) super.setKey(key);
+      }
+
+      @Override
+      public BatchDelete setOauthToken(java.lang.String oauthToken) {
+        return (BatchDelete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public BatchDelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (BatchDelete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public BatchDelete setQuotaUser(java.lang.String quotaUser) {
+        return (BatchDelete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public BatchDelete setUploadType(java.lang.String uploadType) {
+        return (BatchDelete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public BatchDelete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (BatchDelete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public BatchDelete set(String parameterName, Object value) {
+        return (BatchDelete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Performs batch undelete operation on alerts.
+     *
+     * Create a request for the method "alerts.batchUndelete".
+     *
+     * This request holds the parameters needed by the alertcenter server.  After setting any optional
+     * parameters, call the {@link BatchUndelete#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.alertcenter.v1beta1.model.BatchUndeleteAlertsRequest}
+     * @return the request
+     */
+    public BatchUndelete batchUndelete(com.google.api.services.alertcenter.v1beta1.model.BatchUndeleteAlertsRequest content) throws java.io.IOException {
+      BatchUndelete result = new BatchUndelete(content);
+      initialize(result);
+      return result;
+    }
+
+    public class BatchUndelete extends AlertCenterRequest<com.google.api.services.alertcenter.v1beta1.model.BatchUndeleteAlertsResponse> {
+
+      private static final String REST_PATH = "v1beta1/alerts:batchUndelete";
+
+      /**
+       * Performs batch undelete operation on alerts.
+       *
+       * Create a request for the method "alerts.batchUndelete".
+       *
+       * This request holds the parameters needed by the the alertcenter server.  After setting any
+       * optional parameters, call the {@link BatchUndelete#execute()} method to invoke the remote
+       * operation. <p> {@link BatchUndelete#initialize(com.google.api.client.googleapis.services.Abstra
+       * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+       * the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.alertcenter.v1beta1.model.BatchUndeleteAlertsRequest}
+       * @since 1.13
+       */
+      protected BatchUndelete(com.google.api.services.alertcenter.v1beta1.model.BatchUndeleteAlertsRequest content) {
+        super(AlertCenter.this, "POST", REST_PATH, content, com.google.api.services.alertcenter.v1beta1.model.BatchUndeleteAlertsResponse.class);
+      }
+
+      @Override
+      public BatchUndelete set$Xgafv(java.lang.String $Xgafv) {
+        return (BatchUndelete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public BatchUndelete setAccessToken(java.lang.String accessToken) {
+        return (BatchUndelete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public BatchUndelete setAlt(java.lang.String alt) {
+        return (BatchUndelete) super.setAlt(alt);
+      }
+
+      @Override
+      public BatchUndelete setCallback(java.lang.String callback) {
+        return (BatchUndelete) super.setCallback(callback);
+      }
+
+      @Override
+      public BatchUndelete setFields(java.lang.String fields) {
+        return (BatchUndelete) super.setFields(fields);
+      }
+
+      @Override
+      public BatchUndelete setKey(java.lang.String key) {
+        return (BatchUndelete) super.setKey(key);
+      }
+
+      @Override
+      public BatchUndelete setOauthToken(java.lang.String oauthToken) {
+        return (BatchUndelete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public BatchUndelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (BatchUndelete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public BatchUndelete setQuotaUser(java.lang.String quotaUser) {
+        return (BatchUndelete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public BatchUndelete setUploadType(java.lang.String uploadType) {
+        return (BatchUndelete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public BatchUndelete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (BatchUndelete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public BatchUndelete set(String parameterName, Object value) {
+        return (BatchUndelete) super.set(parameterName, value);
+      }
+    }
+    /**
      * Marks the specified alert for deletion. An alert that has been marked for deletion is removed
      * from Alert Center after 30 days. Marking an alert for deletion has no effect on an alert which
      * has already been marked for deletion. Attempting to mark a nonexistent alert for deletion results
@@ -433,6 +631,157 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
       @Override
       public Get set(String parameterName, Object value) {
         return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Returns the metadata of an alert. Attempting to get metadata for a non-existent alert returns
+     * `NOT_FOUND` error.
+     *
+     * Create a request for the method "alerts.getMetadata".
+     *
+     * This request holds the parameters needed by the alertcenter server.  After setting any optional
+     * parameters, call the {@link GetMetadata#execute()} method to invoke the remote operation.
+     *
+     * @param alertId Required. The identifier of the alert this metadata belongs to.
+     * @return the request
+     */
+    public GetMetadata getMetadata(java.lang.String alertId) throws java.io.IOException {
+      GetMetadata result = new GetMetadata(alertId);
+      initialize(result);
+      return result;
+    }
+
+    public class GetMetadata extends AlertCenterRequest<com.google.api.services.alertcenter.v1beta1.model.AlertMetadata> {
+
+      private static final String REST_PATH = "v1beta1/alerts/{alertId}/metadata";
+
+      /**
+       * Returns the metadata of an alert. Attempting to get metadata for a non-existent alert returns
+       * `NOT_FOUND` error.
+       *
+       * Create a request for the method "alerts.getMetadata".
+       *
+       * This request holds the parameters needed by the the alertcenter server.  After setting any
+       * optional parameters, call the {@link GetMetadata#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * GetMetadata#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param alertId Required. The identifier of the alert this metadata belongs to.
+       * @since 1.13
+       */
+      protected GetMetadata(java.lang.String alertId) {
+        super(AlertCenter.this, "GET", REST_PATH, null, com.google.api.services.alertcenter.v1beta1.model.AlertMetadata.class);
+        this.alertId = com.google.api.client.util.Preconditions.checkNotNull(alertId, "Required parameter alertId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetMetadata set$Xgafv(java.lang.String $Xgafv) {
+        return (GetMetadata) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetMetadata setAccessToken(java.lang.String accessToken) {
+        return (GetMetadata) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetMetadata setAlt(java.lang.String alt) {
+        return (GetMetadata) super.setAlt(alt);
+      }
+
+      @Override
+      public GetMetadata setCallback(java.lang.String callback) {
+        return (GetMetadata) super.setCallback(callback);
+      }
+
+      @Override
+      public GetMetadata setFields(java.lang.String fields) {
+        return (GetMetadata) super.setFields(fields);
+      }
+
+      @Override
+      public GetMetadata setKey(java.lang.String key) {
+        return (GetMetadata) super.setKey(key);
+      }
+
+      @Override
+      public GetMetadata setOauthToken(java.lang.String oauthToken) {
+        return (GetMetadata) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetMetadata setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetMetadata) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetMetadata setQuotaUser(java.lang.String quotaUser) {
+        return (GetMetadata) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetMetadata setUploadType(java.lang.String uploadType) {
+        return (GetMetadata) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetMetadata setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetMetadata) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The identifier of the alert this metadata belongs to. */
+      @com.google.api.client.util.Key
+      private java.lang.String alertId;
+
+      /** Required. The identifier of the alert this metadata belongs to.
+       */
+      public java.lang.String getAlertId() {
+        return alertId;
+      }
+
+      /** Required. The identifier of the alert this metadata belongs to. */
+      public GetMetadata setAlertId(java.lang.String alertId) {
+        this.alertId = alertId;
+        return this;
+      }
+
+      /**
+       * Optional. The unique identifier of the G Suite organization account of the customer the
+       * alert metadata is associated with. Inferred from the caller identity if not provided.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String customerId;
+
+      /** Optional. The unique identifier of the G Suite organization account of the customer the alert
+     metadata is associated with. Inferred from the caller identity if not provided.
+       */
+      public java.lang.String getCustomerId() {
+        return customerId;
+      }
+
+      /**
+       * Optional. The unique identifier of the G Suite organization account of the customer the
+       * alert metadata is associated with. Inferred from the caller identity if not provided.
+       */
+      public GetMetadata setCustomerId(java.lang.String customerId) {
+        this.customerId = customerId;
+        return this;
+      }
+
+      @Override
+      public GetMetadata set(String parameterName, Object value) {
+        return (GetMetadata) super.set(parameterName, value);
       }
     }
     /**
@@ -815,7 +1164,8 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
 
       /**
        * Creates new feedback for an alert. Attempting to create a feedback for a non-existent alert
-       * returns `NOT_FOUND` error.
+       * returns `NOT_FOUND` error. Attempting to create a feedback for an alert that is marked for
+       * deletion returns `FAILED_PRECONDITION' error.
        *
        * Create a request for the method "feedback.create".
        *
@@ -838,7 +1188,8 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
 
         /**
          * Creates new feedback for an alert. Attempting to create a feedback for a non-existent alert
-         * returns `NOT_FOUND` error.
+         * returns `NOT_FOUND` error. Attempting to create a feedback for an alert that is marked for
+         * deletion returns `FAILED_PRECONDITION' error.
          *
          * Create a request for the method "feedback.create".
          *

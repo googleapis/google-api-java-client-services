@@ -1,14 +1,14 @@
-# DoubleClick Search API Client Library for Java
+# Search Ads 360 API Client Library for Java
 
 Reports and modifies your advertising data in DoubleClick Search (for example, campaigns, ad groups, keywords, and conversions).
 
-This page contains information about getting started with the DoubleClick Search API
+This page contains information about getting started with the Search Ads 360 API
 using the Google API Client Library for Java. In addition, you may be interested
 in the following documentation:
 
-* Browse the [Javadoc reference for the DoubleClick Search API][javadoc]
+* Browse the [Javadoc reference for the Search Ads 360 API][javadoc]
 * Read the [Developer's Guide for the Google API Client Library for Java][google-api-client].
-* Interact with this API in your browser using the [APIs Explorer for the DoubleClick Search API][api-explorer]
+* Interact with this API in your browser using the [APIs Explorer for the Search Ads 360 API][api-explorer]
 
 ## Installation
 
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-doubleclicksearch</artifactId>
-      <version>v2-rev20181030-1.30.1</version>
+      <version>v2-rev20190821-1.30.1</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-doubleclicksearch:v2-rev20181030-1.30.1'
+  compile 'com.google.apis:google-api-services-doubleclicksearch:v2-rev20190821-1.30.1'
 }
 ```
 

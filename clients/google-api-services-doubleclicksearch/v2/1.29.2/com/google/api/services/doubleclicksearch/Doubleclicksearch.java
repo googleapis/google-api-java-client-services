@@ -46,7 +46,7 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.29.2 of the DoubleClick Search API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.29.2 of the Search Ads 360 API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**

@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-doubleclicksearch</artifactId>
-  <version>v2-rev20181030-1.28.0</version>
-  <name>DoubleClick Search API v2-rev20181030-1.28.0</name>
+  <version>v2-rev20190821-1.28.0</version>
+  <name>Search Ads 360 API v2-rev20190821-1.28.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
@@ -86,8 +86,8 @@
         </executions>
         <configuration>
           <doclint>none</doclint>
-          <doctitle>DoubleClick Search API ${project.version}</doctitle>
-          <windowtitle>DoubleClick Search API ${project.version}</windowtitle>
+          <doctitle>Search Ads 360 API ${project.version}</doctitle>
+          <windowtitle>Search Ads 360 API ${project.version}</windowtitle>
           <links>
             <link>http://docs.oracle.com/javase/7/docs/api</link>
             <link>https://googleapis.dev/java/google-http-client/1.28.0/</link>

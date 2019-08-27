@@ -30,7 +30,7 @@ package com.google.api.services.cloudbuild.v1.model;
 public final class PushFilter extends com.google.api.client.json.GenericJson {
 
   /**
-   * Regexes of branches to match.
+   * Regexes matching branches to build.
    *
    * The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at
    * https://github.com/google/re2/wiki/Syntax
@@ -40,7 +40,7 @@ public final class PushFilter extends com.google.api.client.json.GenericJson {
   private java.lang.String branch;
 
   /**
-   * Regexes of tags to match.
+   * Regexes matching tags to build.
    *
    * The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at
    * https://github.com/google/re2/wiki/Syntax
@@ -50,7 +50,7 @@ public final class PushFilter extends com.google.api.client.json.GenericJson {
   private java.lang.String tag;
 
   /**
-   * Regexes of branches to match.
+   * Regexes matching branches to build.
    *
    * The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at
    * https://github.com/google/re2/wiki/Syntax
@@ -61,7 +61,7 @@ public final class PushFilter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Regexes of branches to match.
+   * Regexes matching branches to build.
    *
    * The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at
    * https://github.com/google/re2/wiki/Syntax
@@ -73,7 +73,7 @@ public final class PushFilter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Regexes of tags to match.
+   * Regexes matching tags to build.
    *
    * The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at
    * https://github.com/google/re2/wiki/Syntax
@@ -84,7 +84,7 @@ public final class PushFilter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Regexes of tags to match.
+   * Regexes matching tags to build.
    *
    * The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at
    * https://github.com/google/re2/wiki/Syntax

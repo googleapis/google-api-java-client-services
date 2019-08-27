@@ -107,6 +107,13 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> includedFiles;
 
   /**
+   * User assigned name of the trigger. Must be unique within the project.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
+
+  /**
    * Substitutions data for Build resource.
    * The value may be {@code null}.
    */
@@ -308,6 +315,23 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
    */
   public BuildTrigger setIncludedFiles(java.util.List<java.lang.String> includedFiles) {
     this.includedFiles = includedFiles;
+    return this;
+  }
+
+  /**
+   * User assigned name of the trigger. Must be unique within the project.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * User assigned name of the trigger. Must be unique within the project.
+   * @param name name or {@code null} for none
+   */
+  public BuildTrigger setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 

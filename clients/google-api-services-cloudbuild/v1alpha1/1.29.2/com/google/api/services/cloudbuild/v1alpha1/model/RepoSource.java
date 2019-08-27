@@ -30,7 +30,10 @@ package com.google.api.services.cloudbuild.v1alpha1.model;
 public final class RepoSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * Name of the branch to build.
+   * Regex matching branches to build.
+   *
+   * The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at
+   * https://github.com/google/re2/wiki/Syntax
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,14 +72,20 @@ public final class RepoSource extends com.google.api.client.json.GenericJson {
   private java.lang.String repoName;
 
   /**
-   * Name of the tag to build.
+   * Regex matching tags to build.
+   *
+   * The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at
+   * https://github.com/google/re2/wiki/Syntax
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String tagName;
 
   /**
-   * Name of the branch to build.
+   * Regex matching branches to build.
+   *
+   * The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at
+   * https://github.com/google/re2/wiki/Syntax
    * @return value or {@code null} for none
    */
   public java.lang.String getBranchName() {
@@ -84,7 +93,10 @@ public final class RepoSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the branch to build.
+   * Regex matching branches to build.
+   *
+   * The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at
+   * https://github.com/google/re2/wiki/Syntax
    * @param branchName branchName or {@code null} for none
    */
   public RepoSource setBranchName(java.lang.String branchName) {
@@ -169,7 +181,10 @@ public final class RepoSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the tag to build.
+   * Regex matching tags to build.
+   *
+   * The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at
+   * https://github.com/google/re2/wiki/Syntax
    * @return value or {@code null} for none
    */
   public java.lang.String getTagName() {
@@ -177,7 +192,10 @@ public final class RepoSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the tag to build.
+   * Regex matching tags to build.
+   *
+   * The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at
+   * https://github.com/google/re2/wiki/Syntax
    * @param tagName tagName or {@code null} for none
    */
   public RepoSource setTagName(java.lang.String tagName) {

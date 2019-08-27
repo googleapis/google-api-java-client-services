@@ -5685,6 +5685,189 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
             return (Patch) super.set(parameterName, value);
           }
         }
+        /**
+         * Asynchronous API to delete all Products in a ProductSet or all Products that are in no
+         * ProductSet.
+         *
+         * If a Product is a member of the specified ProductSet in addition to other ProductSets, the
+         * Product will still be deleted.
+         *
+         * It is recommended to not delete the specified ProductSet until after this operation has
+         * completed. It is also recommended to not add any of the Products involved in the batch delete to
+         * a new ProductSet while this operation is running because those Products may still end up deleted.
+         *
+         * It's not possible to undo the PurgeProducts operation. Therefore, it is recommended to keep the
+         * csv files used in ImportProductSets (if that was how you originally built the Product Set) before
+         * starting PurgeProducts, in case you need to re-import the data after deletion.
+         *
+         * If the plan is to purge all of the Products from a ProductSet and then re-use the empty
+         * ProductSet to re-import new Products into the empty ProductSet, you must wait until the
+         * PurgeProducts operation has finished for that ProductSet.
+         *
+         * The google.longrunning.Operation API can be used to keep track of the progress and results of the
+         * request. `Operation.metadata` contains `BatchOperationMetadata`. (progress)
+         *
+         * Create a request for the method "products.purge".
+         *
+         * This request holds the parameters needed by the vision server.  After setting any optional
+         * parameters, call the {@link Purge#execute()} method to invoke the remote operation.
+         *
+         * @param parent The project and location in which the Products should be deleted.
+        Format is
+         *        `projects/PROJECT_ID/locations/LOC_ID`.
+         * @param content the {@link com.google.api.services.vision.v1.model.PurgeProductsRequest}
+         * @return the request
+         */
+        public Purge purge(java.lang.String parent, com.google.api.services.vision.v1.model.PurgeProductsRequest content) throws java.io.IOException {
+          Purge result = new Purge(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Purge extends VisionRequest<com.google.api.services.vision.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+parent}/products:purge";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Asynchronous API to delete all Products in a ProductSet or all Products that are in no
+           * ProductSet.
+           *
+           * If a Product is a member of the specified ProductSet in addition to other ProductSets, the
+           * Product will still be deleted.
+           *
+           * It is recommended to not delete the specified ProductSet until after this operation has
+           * completed. It is also recommended to not add any of the Products involved in the batch delete
+           * to a new ProductSet while this operation is running because those Products may still end up
+           * deleted.
+           *
+           * It's not possible to undo the PurgeProducts operation. Therefore, it is recommended to keep the
+           * csv files used in ImportProductSets (if that was how you originally built the Product Set)
+           * before starting PurgeProducts, in case you need to re-import the data after deletion.
+           *
+           * If the plan is to purge all of the Products from a ProductSet and then re-use the empty
+           * ProductSet to re-import new Products into the empty ProductSet, you must wait until the
+           * PurgeProducts operation has finished for that ProductSet.
+           *
+           * The google.longrunning.Operation API can be used to keep track of the progress and results of
+           * the request. `Operation.metadata` contains `BatchOperationMetadata`. (progress)
+           *
+           * Create a request for the method "products.purge".
+           *
+           * This request holds the parameters needed by the the vision server.  After setting any optional
+           * parameters, call the {@link Purge#execute()} method to invoke the remote operation. <p> {@link
+           * Purge#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent The project and location in which the Products should be deleted.
+        Format is
+         *        `projects/PROJECT_ID/locations/LOC_ID`.
+           * @param content the {@link com.google.api.services.vision.v1.model.PurgeProductsRequest}
+           * @since 1.13
+           */
+          protected Purge(java.lang.String parent, com.google.api.services.vision.v1.model.PurgeProductsRequest content) {
+            super(Vision.this, "POST", REST_PATH, content, com.google.api.services.vision.v1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Purge set$Xgafv(java.lang.String $Xgafv) {
+            return (Purge) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Purge setAccessToken(java.lang.String accessToken) {
+            return (Purge) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Purge setAlt(java.lang.String alt) {
+            return (Purge) super.setAlt(alt);
+          }
+
+          @Override
+          public Purge setCallback(java.lang.String callback) {
+            return (Purge) super.setCallback(callback);
+          }
+
+          @Override
+          public Purge setFields(java.lang.String fields) {
+            return (Purge) super.setFields(fields);
+          }
+
+          @Override
+          public Purge setKey(java.lang.String key) {
+            return (Purge) super.setKey(key);
+          }
+
+          @Override
+          public Purge setOauthToken(java.lang.String oauthToken) {
+            return (Purge) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Purge setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Purge) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Purge setQuotaUser(java.lang.String quotaUser) {
+            return (Purge) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Purge setUploadType(java.lang.String uploadType) {
+            return (Purge) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Purge setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Purge) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The project and location in which the Products should be deleted.
+           *
+           * Format is `projects/PROJECT_ID/locations/LOC_ID`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** The project and location in which the Products should be deleted.
+
+         Format is `projects/PROJECT_ID/locations/LOC_ID`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * The project and location in which the Products should be deleted.
+           *
+           * Format is `projects/PROJECT_ID/locations/LOC_ID`.
+           */
+          public Purge setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Purge set(String parameterName, Object value) {
+            return (Purge) super.set(parameterName, value);
+          }
+        }
 
         /**
          * An accessor for creating requests from the ReferenceImages collection.

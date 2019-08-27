@@ -37,6 +37,13 @@ public final class GroupedResult extends com.google.api.client.json.GenericJson 
   private BoundingPoly boundingPoly;
 
   /**
+   * List of generic predictions for the object in the bounding box.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ObjectAnnotation> objectAnnotations;
+
+  /**
    * List of results, one for each product match.
    * The value may be {@code null}.
    */
@@ -57,6 +64,23 @@ public final class GroupedResult extends com.google.api.client.json.GenericJson 
    */
   public GroupedResult setBoundingPoly(BoundingPoly boundingPoly) {
     this.boundingPoly = boundingPoly;
+    return this;
+  }
+
+  /**
+   * List of generic predictions for the object in the bounding box.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ObjectAnnotation> getObjectAnnotations() {
+    return objectAnnotations;
+  }
+
+  /**
+   * List of generic predictions for the object in the bounding box.
+   * @param objectAnnotations objectAnnotations or {@code null} for none
+   */
+  public GroupedResult setObjectAnnotations(java.util.List<ObjectAnnotation> objectAnnotations) {
+    this.objectAnnotations = objectAnnotations;
     return this;
   }
 

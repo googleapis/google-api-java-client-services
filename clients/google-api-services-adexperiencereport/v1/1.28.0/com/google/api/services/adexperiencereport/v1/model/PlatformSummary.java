@@ -38,7 +38,7 @@ public final class PlatformSummary extends com.google.api.client.json.GenericJso
   private java.lang.String betterAdsStatus;
 
   /**
-   * The date on which ad filtering begins.
+   * The time at which ad filtering begins.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,7 +98,7 @@ public final class PlatformSummary extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The date on which ad filtering begins.
+   * The time at which ad filtering begins.
    * @return value or {@code null} for none
    */
   public String getEnforcementTime() {
@@ -106,7 +106,7 @@ public final class PlatformSummary extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The date on which ad filtering begins.
+   * The time at which ad filtering begins.
    * @param enforcementTime enforcementTime or {@code null} for none
    */
   public PlatformSummary setEnforcementTime(String enforcementTime) {

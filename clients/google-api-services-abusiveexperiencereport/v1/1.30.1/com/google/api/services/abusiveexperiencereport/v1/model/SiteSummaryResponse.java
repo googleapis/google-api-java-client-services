@@ -38,7 +38,7 @@ public final class SiteSummaryResponse extends com.google.api.client.json.Generi
   private java.lang.String abusiveStatus;
 
   /**
-   * The date on which enforcement begins.
+   * The time at which enforcement begins.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,7 +97,7 @@ public final class SiteSummaryResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * The date on which enforcement begins.
+   * The time at which enforcement begins.
    * @return value or {@code null} for none
    */
   public String getEnforcementTime() {
@@ -105,7 +105,7 @@ public final class SiteSummaryResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * The date on which enforcement begins.
+   * The time at which enforcement begins.
    * @param enforcementTime enforcementTime or {@code null} for none
    */
   public SiteSummaryResponse setEnforcementTime(String enforcementTime) {

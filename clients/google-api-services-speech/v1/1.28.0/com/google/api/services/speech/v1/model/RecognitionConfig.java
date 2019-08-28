@@ -84,8 +84,9 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
 
   /**
    * *Required* The language of the supplied audio as a [BCP-47](https://www.rfc-
-   * editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US". See [Language Support](/speech-
-   * to-text/docs/languages) for a list of the currently supported language codes.
+   * editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US". See [Language
+   * Support](https://cloud.google.com/speech-to-text/docs/languages) for a list of the currently
+   * supported language codes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -148,7 +149,8 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
 
   /**
    * *Optional* array of SpeechContext. A means to provide context to assist the speech recognition.
-   * For more information, see [speech adaptation](/speech-to-text/docs/context-strength).
+   * For more information, see [speech adaptation](https://cloud.google.com/speech-to-text/docs
+   * /context-strength).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -287,8 +289,9 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
 
   /**
    * *Required* The language of the supplied audio as a [BCP-47](https://www.rfc-
-   * editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US". See [Language Support](/speech-
-   * to-text/docs/languages) for a list of the currently supported language codes.
+   * editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US". See [Language
+   * Support](https://cloud.google.com/speech-to-text/docs/languages) for a list of the currently
+   * supported language codes.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -297,8 +300,9 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
 
   /**
    * *Required* The language of the supplied audio as a [BCP-47](https://www.rfc-
-   * editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US". See [Language Support](/speech-
-   * to-text/docs/languages) for a list of the currently supported language codes.
+   * editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US". See [Language
+   * Support](https://cloud.google.com/speech-to-text/docs/languages) for a list of the currently
+   * supported language codes.
    * @param languageCode languageCode or {@code null} for none
    */
   public RecognitionConfig setLanguageCode(java.lang.String languageCode) {
@@ -433,7 +437,8 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
 
   /**
    * *Optional* array of SpeechContext. A means to provide context to assist the speech recognition.
-   * For more information, see [speech adaptation](/speech-to-text/docs/context-strength).
+   * For more information, see [speech adaptation](https://cloud.google.com/speech-to-text/docs
+   * /context-strength).
    * @return value or {@code null} for none
    */
   public java.util.List<SpeechContext> getSpeechContexts() {
@@ -442,7 +447,8 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
 
   /**
    * *Optional* array of SpeechContext. A means to provide context to assist the speech recognition.
-   * For more information, see [speech adaptation](/speech-to-text/docs/context-strength).
+   * For more information, see [speech adaptation](https://cloud.google.com/speech-to-text/docs
+   * /context-strength).
    * @param speechContexts speechContexts or {@code null} for none
    */
   public RecognitionConfig setSpeechContexts(java.util.List<SpeechContext> speechContexts) {

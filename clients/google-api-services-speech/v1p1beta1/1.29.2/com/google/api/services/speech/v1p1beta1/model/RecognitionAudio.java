@@ -19,7 +19,7 @@ package com.google.api.services.speech.v1p1beta1.model;
 /**
  * Contains audio data in the encoding specified in the `RecognitionConfig`. Either `content` or
  * `uri` must be supplied. Supplying both or neither returns google.rpc.Code.INVALID_ARGUMENT. See
- * [content limits](/speech-to-text/quotas#content).
+ * [content limits](https://cloud.google.com/speech-to-text/quotas#content).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Speech-to-Text API. For a detailed explanation

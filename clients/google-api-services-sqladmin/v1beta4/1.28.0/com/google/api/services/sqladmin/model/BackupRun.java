@@ -37,6 +37,21 @@ public final class BackupRun extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * Disk encryption configuration specific to a backup. Applies only to Second Generation
+   * instances.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DiskEncryptionConfiguration diskEncryptionConfiguration;
+
+  /**
+   * Disk encryption status specific to a backup. Applies only to Second Generation instances.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DiskEncryptionStatus diskEncryptionStatus;
+
+  /**
    * The time the backup operation completed in UTC timezone in RFC 3339 format, for example
    * 2012-11-15T16:19:00.094Z.
    * The value may be {@code null}.
@@ -139,6 +154,42 @@ public final class BackupRun extends com.google.api.client.json.GenericJson {
    */
   public BackupRun setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Disk encryption configuration specific to a backup. Applies only to Second Generation
+   * instances.
+   * @return value or {@code null} for none
+   */
+  public DiskEncryptionConfiguration getDiskEncryptionConfiguration() {
+    return diskEncryptionConfiguration;
+  }
+
+  /**
+   * Disk encryption configuration specific to a backup. Applies only to Second Generation
+   * instances.
+   * @param diskEncryptionConfiguration diskEncryptionConfiguration or {@code null} for none
+   */
+  public BackupRun setDiskEncryptionConfiguration(DiskEncryptionConfiguration diskEncryptionConfiguration) {
+    this.diskEncryptionConfiguration = diskEncryptionConfiguration;
+    return this;
+  }
+
+  /**
+   * Disk encryption status specific to a backup. Applies only to Second Generation instances.
+   * @return value or {@code null} for none
+   */
+  public DiskEncryptionStatus getDiskEncryptionStatus() {
+    return diskEncryptionStatus;
+  }
+
+  /**
+   * Disk encryption status specific to a backup. Applies only to Second Generation instances.
+   * @param diskEncryptionStatus diskEncryptionStatus or {@code null} for none
+   */
+  public BackupRun setDiskEncryptionStatus(DiskEncryptionStatus diskEncryptionStatus) {
+    this.diskEncryptionStatus = diskEncryptionStatus;
     return this;
   }
 

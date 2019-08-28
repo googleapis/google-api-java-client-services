@@ -113,6 +113,15 @@ public final class Span extends com.google.api.client.json.GenericJson {
   private java.lang.String spanId;
 
   /**
+   * Distinguishes between spans generated in a particular context. For example, two spans with the
+   * same name may be distinguished using `CLIENT` (caller) and `SERVER` (callee) to identify an RPC
+   * call.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String spanKind;
+
+  /**
    * Stack trace captured at the start of the span.
    * The value may be {@code null}.
    */
@@ -324,6 +333,27 @@ public final class Span extends com.google.api.client.json.GenericJson {
    */
   public Span setSpanId(java.lang.String spanId) {
     this.spanId = spanId;
+    return this;
+  }
+
+  /**
+   * Distinguishes between spans generated in a particular context. For example, two spans with the
+   * same name may be distinguished using `CLIENT` (caller) and `SERVER` (callee) to identify an RPC
+   * call.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSpanKind() {
+    return spanKind;
+  }
+
+  /**
+   * Distinguishes between spans generated in a particular context. For example, two spans with the
+   * same name may be distinguished using `CLIENT` (caller) and `SERVER` (callee) to identify an RPC
+   * call.
+   * @param spanKind spanKind or {@code null} for none
+   */
+  public Span setSpanKind(java.lang.String spanKind) {
+    this.spanKind = spanKind;
     return this;
   }
 

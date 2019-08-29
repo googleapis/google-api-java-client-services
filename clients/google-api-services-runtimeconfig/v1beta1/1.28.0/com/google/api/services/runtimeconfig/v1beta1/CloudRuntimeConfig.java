@@ -785,22 +785,34 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
         }
 
         /**
-         * Optional. The policy format version to be returned. Acceptable values are 0, 1, and 3. If
-         * the value is 0, or the field is omitted, policy format version 1 will be returned.
+         * Optional. The policy format version to be returned.
+         *
+         * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
+         *
+         * Requests for policies with any conditional bindings must specify version 3. Policies
+         * without any conditional bindings may specify any valid value or leave the field unset.
          */
         @com.google.api.client.util.Key("options.requestedPolicyVersion")
         private java.lang.Integer optionsRequestedPolicyVersion;
 
-        /** Optional. The policy format version to be returned. Acceptable values are 0, 1, and 3. If the value
-       is 0, or the field is omitted, policy format version 1 will be returned.
+        /** Optional. The policy format version to be returned.
+
+       Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
+
+       Requests for policies with any conditional bindings must specify version 3. Policies without any
+       conditional bindings may specify any valid value or leave the field unset.
          */
         public java.lang.Integer getOptionsRequestedPolicyVersion() {
           return optionsRequestedPolicyVersion;
         }
 
         /**
-         * Optional. The policy format version to be returned. Acceptable values are 0, 1, and 3. If
-         * the value is 0, or the field is omitted, policy format version 1 will be returned.
+         * Optional. The policy format version to be returned.
+         *
+         * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
+         *
+         * Requests for policies with any conditional bindings must specify version 3. Policies
+         * without any conditional bindings may specify any valid value or leave the field unset.
          */
         public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
           this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;

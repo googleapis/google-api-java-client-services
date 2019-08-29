@@ -5835,17 +5835,24 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /** Host of the user in the instance. */
+      /**
+       * Host of the user in the instance. For a MySQL instance, it's required; For a PostgreSQL
+       * instance, it's optional.
+       */
       @com.google.api.client.util.Key
       private java.lang.String host;
 
-      /** Host of the user in the instance.
+      /** Host of the user in the instance. For a MySQL instance, it's required; For a PostgreSQL instance,
+     it's optional.
        */
       public java.lang.String getHost() {
         return host;
       }
 
-      /** Host of the user in the instance. */
+      /**
+       * Host of the user in the instance. For a MySQL instance, it's required; For a PostgreSQL
+       * instance, it's optional.
+       */
       public Update setHost(java.lang.String host) {
         this.host = host;
         return this;

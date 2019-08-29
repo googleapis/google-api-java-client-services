@@ -20,8 +20,7 @@ package com.google.api.services.doubleclicksearch.model;
  * The response to a update availability request.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the DoubleClick Search API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Search Ads 360 API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *

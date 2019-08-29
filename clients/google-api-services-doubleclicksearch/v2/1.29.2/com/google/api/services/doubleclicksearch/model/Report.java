@@ -21,8 +21,7 @@ package com.google.api.services.doubleclicksearch.model;
  * as currency code, and the generated report rows or report files.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the DoubleClick Search API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Search Ads 360 API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -33,7 +32,7 @@ public final class Report extends com.google.api.client.json.GenericJson {
 
   /**
    * Asynchronous report only. Contains a list of generated report files once the report has
-   * succesfully completed.
+   * successfully completed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,7 +107,7 @@ public final class Report extends com.google.api.client.json.GenericJson {
 
   /**
    * Asynchronous report only. Contains a list of generated report files once the report has
-   * succesfully completed.
+   * successfully completed.
    * @return value or {@code null} for none
    */
   public java.util.List<Files> getFiles() {
@@ -117,7 +116,7 @@ public final class Report extends com.google.api.client.json.GenericJson {
 
   /**
    * Asynchronous report only. Contains a list of generated report files once the report has
-   * succesfully completed.
+   * successfully completed.
    * @param files files or {@code null} for none
    */
   public Report setFiles(java.util.List<Files> files) {

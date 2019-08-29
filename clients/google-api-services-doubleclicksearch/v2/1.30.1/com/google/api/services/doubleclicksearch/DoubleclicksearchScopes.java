@@ -17,7 +17,7 @@
 package com.google.api.services.doubleclicksearch;
 
 /**
- * Available OAuth 2.0 scopes for use with the DoubleClick Search API.
+ * Available OAuth 2.0 scopes for use with the Search Ads 360 API.
  *
  * @since 1.4
  */

@@ -150,18 +150,18 @@ public class AdExperienceReport extends com.google.api.client.googleapis.service
      * This request holds the parameters needed by the adexperiencereport server.  After setting any
      * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param name The required site name. It should be the site property whose ad experiences
-    may have been reviewed,
-     *        and it should be URL-encoded. For example,
-    sites/https%3A%2F%2Fwww.google.com. The server
-     *        will return an error of
-    BAD_REQUEST if this field is not filled in. Note that if the site
-     *        property
-    is not yet verified in Search Console, the reportUrl field returned by the
-    API
-     *        will lead to the verification page, prompting the user to go through
-    that process before
-     *        they can gain access to the Ad Experience Report.
+     * @param name Required. The site property whose ad experiences
+    may have been reviewed, and it should be URL-
+     *        encoded. For example,
+    sites/https%3A%2F%2Fwww.google.com. The server will return an error
+     *        of
+    BAD_REQUEST if this field is not filled in. Note that if the site property
+    is not yet
+     *        verified in Search Console, the reportUrl field returned by the
+    API will lead to the
+     *        verification page, prompting the user to go through
+    that process before they can gain
+     *        access to the Ad Experience Report.
      * @return the request
      */
     public Get get(java.lang.String name) throws java.io.IOException {
@@ -188,18 +188,18 @@ public class AdExperienceReport extends com.google.api.client.googleapis.service
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name The required site name. It should be the site property whose ad experiences
-    may have been reviewed,
-     *        and it should be URL-encoded. For example,
-    sites/https%3A%2F%2Fwww.google.com. The server
-     *        will return an error of
-    BAD_REQUEST if this field is not filled in. Note that if the site
-     *        property
-    is not yet verified in Search Console, the reportUrl field returned by the
-    API
-     *        will lead to the verification page, prompting the user to go through
-    that process before
-     *        they can gain access to the Ad Experience Report.
+       * @param name Required. The site property whose ad experiences
+    may have been reviewed, and it should be URL-
+     *        encoded. For example,
+    sites/https%3A%2F%2Fwww.google.com. The server will return an error
+     *        of
+    BAD_REQUEST if this field is not filled in. Note that if the site property
+    is not yet
+     *        verified in Search Console, the reportUrl field returned by the
+    API will lead to the
+     *        verification page, prompting the user to go through
+    that process before they can gain
+     *        access to the Ad Experience Report.
        * @since 1.13
        */
       protected Get(java.lang.String name) {
@@ -278,34 +278,34 @@ public class AdExperienceReport extends com.google.api.client.googleapis.service
       }
 
       /**
-       * The required site name. It should be the site property whose ad experiences may have been
-       * reviewed, and it should be URL-encoded. For example, sites/https%3A%2F%2Fwww.google.com.
-       * The server will return an error of BAD_REQUEST if this field is not filled in. Note that if
-       * the site property is not yet verified in Search Console, the reportUrl field returned by
-       * the API will lead to the verification page, prompting the user to go through that process
-       * before they can gain access to the Ad Experience Report.
+       * Required. The site property whose ad experiences may have been reviewed, and it should be
+       * URL-encoded. For example, sites/https%3A%2F%2Fwww.google.com. The server will return an
+       * error of BAD_REQUEST if this field is not filled in. Note that if the site property is not
+       * yet verified in Search Console, the reportUrl field returned by the API will lead to the
+       * verification page, prompting the user to go through that process before they can gain
+       * access to the Ad Experience Report.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The required site name. It should be the site property whose ad experiences may have been reviewed,
-     and it should be URL-encoded. For example, sites/https%3A%2F%2Fwww.google.com. The server will
-     return an error of BAD_REQUEST if this field is not filled in. Note that if the site property is
-     not yet verified in Search Console, the reportUrl field returned by the API will lead to the
-     verification page, prompting the user to go through that process before they can gain access to the
-     Ad Experience Report.
+      /** Required. The site property whose ad experiences may have been reviewed, and it should be URL-
+     encoded. For example, sites/https%3A%2F%2Fwww.google.com. The server will return an error of
+     BAD_REQUEST if this field is not filled in. Note that if the site property is not yet verified in
+     Search Console, the reportUrl field returned by the API will lead to the verification page,
+     prompting the user to go through that process before they can gain access to the Ad Experience
+     Report.
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * The required site name. It should be the site property whose ad experiences may have been
-       * reviewed, and it should be URL-encoded. For example, sites/https%3A%2F%2Fwww.google.com.
-       * The server will return an error of BAD_REQUEST if this field is not filled in. Note that if
-       * the site property is not yet verified in Search Console, the reportUrl field returned by
-       * the API will lead to the verification page, prompting the user to go through that process
-       * before they can gain access to the Ad Experience Report.
+       * Required. The site property whose ad experiences may have been reviewed, and it should be
+       * URL-encoded. For example, sites/https%3A%2F%2Fwww.google.com. The server will return an
+       * error of BAD_REQUEST if this field is not filled in. Note that if the site property is not
+       * yet verified in Search Console, the reportUrl field returned by the API will lead to the
+       * verification page, prompting the user to go through that process before they can gain
+       * access to the Ad Experience Report.
        */
       public Get setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -346,7 +346,7 @@ public class AdExperienceReport extends com.google.api.client.googleapis.service
   public class ViolatingSites {
 
     /**
-     * Lists sites with Ad Experience Report statuses of "Failing" or "Warning".
+     * Lists sites with failing Ad Experience Report statuses.
      *
      * Create a request for the method "violatingSites.list".
      *
@@ -366,7 +366,7 @@ public class AdExperienceReport extends com.google.api.client.googleapis.service
       private static final String REST_PATH = "v1/violatingSites";
 
       /**
-       * Lists sites with Ad Experience Report statuses of "Failing" or "Warning".
+       * Lists sites with failing Ad Experience Report statuses.
        *
        * Create a request for the method "violatingSites.list".
        *

@@ -43,7 +43,7 @@ public final class RunPipelineRequest extends com.google.api.client.json.Generic
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * The description of the pipeline to run.
+   * Required. The description of the pipeline to run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +75,7 @@ public final class RunPipelineRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * The description of the pipeline to run.
+   * Required. The description of the pipeline to run.
    * @return value or {@code null} for none
    */
   public Pipeline getPipeline() {
@@ -83,7 +83,7 @@ public final class RunPipelineRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * The description of the pipeline to run.
+   * Required. The description of the pipeline to run.
    * @param pipeline pipeline or {@code null} for none
    */
   public RunPipelineRequest setPipeline(Pipeline pipeline) {

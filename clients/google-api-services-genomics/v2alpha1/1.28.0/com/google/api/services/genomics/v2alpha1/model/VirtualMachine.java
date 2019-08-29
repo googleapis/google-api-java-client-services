@@ -104,7 +104,8 @@ public final class VirtualMachine extends com.google.api.client.json.GenericJson
 
   /**
    * Optional set of labels to apply to the VM and any attached disk resources. These labels must
-   * adhere to the name and value restrictions on VM labels imposed by Compute Engine.
+   * adhere to the [name and value restrictions](https://cloud.google.com/compute/docs/labeling-
+   * resources) on VM labels imposed by Compute Engine.
    *
    * Labels keys with the prefix 'google-' are reserved for use by Google.
    *
@@ -116,11 +117,12 @@ public final class VirtualMachine extends com.google.api.client.json.GenericJson
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * The machine type of the virtual machine to create. Must be the short name of a standard machine
-   * type (such as "n1-standard-1") or a custom machine type (such as "custom-1-4096", where "1"
-   * indicates the number of vCPUs and "4096" indicates the memory in MB). See [Creating an instance
-   * with a custom machine type](https://cloud.google.com/compute/docs/instances/creating-instance-
-   * with-custom-machine-type#create) for more specifications on creating a custom machine type.
+   * Required. The machine type of the virtual machine to create. Must be the short name of a
+   * standard machine type (such as "n1-standard-1") or a custom machine type (such as
+   * "custom-1-4096", where "1" indicates the number of vCPUs and "4096" indicates the memory in
+   * MB). See [Creating an instance with a custom machine
+   * type](https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-
+   * type#create) for more specifications on creating a custom machine type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -300,7 +302,8 @@ public final class VirtualMachine extends com.google.api.client.json.GenericJson
 
   /**
    * Optional set of labels to apply to the VM and any attached disk resources. These labels must
-   * adhere to the name and value restrictions on VM labels imposed by Compute Engine.
+   * adhere to the [name and value restrictions](https://cloud.google.com/compute/docs/labeling-
+   * resources) on VM labels imposed by Compute Engine.
    *
    * Labels keys with the prefix 'google-' are reserved for use by Google.
    *
@@ -314,7 +317,8 @@ public final class VirtualMachine extends com.google.api.client.json.GenericJson
 
   /**
    * Optional set of labels to apply to the VM and any attached disk resources. These labels must
-   * adhere to the name and value restrictions on VM labels imposed by Compute Engine.
+   * adhere to the [name and value restrictions](https://cloud.google.com/compute/docs/labeling-
+   * resources) on VM labels imposed by Compute Engine.
    *
    * Labels keys with the prefix 'google-' are reserved for use by Google.
    *
@@ -328,11 +332,12 @@ public final class VirtualMachine extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The machine type of the virtual machine to create. Must be the short name of a standard machine
-   * type (such as "n1-standard-1") or a custom machine type (such as "custom-1-4096", where "1"
-   * indicates the number of vCPUs and "4096" indicates the memory in MB). See [Creating an instance
-   * with a custom machine type](https://cloud.google.com/compute/docs/instances/creating-instance-
-   * with-custom-machine-type#create) for more specifications on creating a custom machine type.
+   * Required. The machine type of the virtual machine to create. Must be the short name of a
+   * standard machine type (such as "n1-standard-1") or a custom machine type (such as
+   * "custom-1-4096", where "1" indicates the number of vCPUs and "4096" indicates the memory in
+   * MB). See [Creating an instance with a custom machine
+   * type](https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-
+   * type#create) for more specifications on creating a custom machine type.
    * @return value or {@code null} for none
    */
   public java.lang.String getMachineType() {
@@ -340,11 +345,12 @@ public final class VirtualMachine extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The machine type of the virtual machine to create. Must be the short name of a standard machine
-   * type (such as "n1-standard-1") or a custom machine type (such as "custom-1-4096", where "1"
-   * indicates the number of vCPUs and "4096" indicates the memory in MB). See [Creating an instance
-   * with a custom machine type](https://cloud.google.com/compute/docs/instances/creating-instance-
-   * with-custom-machine-type#create) for more specifications on creating a custom machine type.
+   * Required. The machine type of the virtual machine to create. Must be the short name of a
+   * standard machine type (such as "n1-standard-1") or a custom machine type (such as
+   * "custom-1-4096", where "1" indicates the number of vCPUs and "4096" indicates the memory in
+   * MB). See [Creating an instance with a custom machine
+   * type](https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-
+   * type#create) for more specifications on creating a custom machine type.
    * @param machineType machineType or {@code null} for none
    */
   public VirtualMachine setMachineType(java.lang.String machineType) {

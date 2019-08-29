@@ -6838,6 +6838,163 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             return (List) super.set(parameterName, value);
           }
         }
+        /**
+         * Upload public key for a given service account. This rpc will create a ServiceAccountKey that has
+         * the provided public key and returns it.
+         *
+         * Create a request for the method "keys.upload".
+         *
+         * This request holds the parameters needed by the iam server.  After setting any optional
+         * parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+         *
+         * @param name The resource name of the service account in the following format:
+         *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
+        Using `-` as a wildcard for the
+         *        `PROJECT_ID` will infer the project from
+        the account. The `ACCOUNT` value can be the
+         *        `email` address or the
+        `unique_id` of the service account.
+         * @param content the {@link com.google.api.services.iam.v1.model.UploadServiceAccountKeyRequest}
+         * @return the request
+         */
+        public Upload upload(java.lang.String name, com.google.api.services.iam.v1.model.UploadServiceAccountKeyRequest content) throws java.io.IOException {
+          Upload result = new Upload(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Upload extends IamRequest<com.google.api.services.iam.v1.model.ServiceAccountKey> {
+
+          private static final String REST_PATH = "v1/{+name}/keys:upload";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/serviceAccounts/[^/]+$");
+
+          /**
+           * Upload public key for a given service account. This rpc will create a ServiceAccountKey that
+           * has the provided public key and returns it.
+           *
+           * Create a request for the method "keys.upload".
+           *
+           * This request holds the parameters needed by the the iam server.  After setting any optional
+           * parameters, call the {@link Upload#execute()} method to invoke the remote operation. <p> {@link
+           * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The resource name of the service account in the following format:
+         *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
+        Using `-` as a wildcard for the
+         *        `PROJECT_ID` will infer the project from
+        the account. The `ACCOUNT` value can be the
+         *        `email` address or the
+        `unique_id` of the service account.
+           * @param content the {@link com.google.api.services.iam.v1.model.UploadServiceAccountKeyRequest}
+           * @since 1.13
+           */
+          protected Upload(java.lang.String name, com.google.api.services.iam.v1.model.UploadServiceAccountKeyRequest content) {
+            super(Iam.this, "POST", REST_PATH, content, com.google.api.services.iam.v1.model.ServiceAccountKey.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/serviceAccounts/[^/]+$");
+            }
+          }
+
+          @Override
+          public Upload set$Xgafv(java.lang.String $Xgafv) {
+            return (Upload) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Upload setAccessToken(java.lang.String accessToken) {
+            return (Upload) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Upload setAlt(java.lang.String alt) {
+            return (Upload) super.setAlt(alt);
+          }
+
+          @Override
+          public Upload setCallback(java.lang.String callback) {
+            return (Upload) super.setCallback(callback);
+          }
+
+          @Override
+          public Upload setFields(java.lang.String fields) {
+            return (Upload) super.setFields(fields);
+          }
+
+          @Override
+          public Upload setKey(java.lang.String key) {
+            return (Upload) super.setKey(key);
+          }
+
+          @Override
+          public Upload setOauthToken(java.lang.String oauthToken) {
+            return (Upload) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Upload setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Upload) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Upload setQuotaUser(java.lang.String quotaUser) {
+            return (Upload) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Upload setUploadType(java.lang.String uploadType) {
+            return (Upload) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Upload setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Upload) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The resource name of the service account in the following format:
+           * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
+           * `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
+           * `email` address or the `unique_id` of the service account.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The resource name of the service account in the following format:
+         `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the `PROJECT_ID`
+         will infer the project from the account. The `ACCOUNT` value can be the `email` address or the
+         `unique_id` of the service account.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The resource name of the service account in the following format:
+           * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
+           * `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
+           * `email` address or the `unique_id` of the service account.
+           */
+          public Upload setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/serviceAccounts/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Upload set(String parameterName, Object value) {
+            return (Upload) super.set(parameterName, value);
+          }
+        }
 
       }
     }

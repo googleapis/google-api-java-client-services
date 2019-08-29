@@ -37,6 +37,13 @@ public final class GoogleCloudVisionV1p3beta1ProductSearchResultsGroupedResult e
   private GoogleCloudVisionV1p3beta1BoundingPoly boundingPoly;
 
   /**
+   * List of generic predictions for the object in the bounding box.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudVisionV1p3beta1ProductSearchResultsObjectAnnotation> objectAnnotations;
+
+  /**
    * List of results, one for each product match.
    * The value may be {@code null}.
    */
@@ -57,6 +64,23 @@ public final class GoogleCloudVisionV1p3beta1ProductSearchResultsGroupedResult e
    */
   public GoogleCloudVisionV1p3beta1ProductSearchResultsGroupedResult setBoundingPoly(GoogleCloudVisionV1p3beta1BoundingPoly boundingPoly) {
     this.boundingPoly = boundingPoly;
+    return this;
+  }
+
+  /**
+   * List of generic predictions for the object in the bounding box.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudVisionV1p3beta1ProductSearchResultsObjectAnnotation> getObjectAnnotations() {
+    return objectAnnotations;
+  }
+
+  /**
+   * List of generic predictions for the object in the bounding box.
+   * @param objectAnnotations objectAnnotations or {@code null} for none
+   */
+  public GoogleCloudVisionV1p3beta1ProductSearchResultsGroupedResult setObjectAnnotations(java.util.List<GoogleCloudVisionV1p3beta1ProductSearchResultsObjectAnnotation> objectAnnotations) {
+    this.objectAnnotations = objectAnnotations;
     return this;
   }
 

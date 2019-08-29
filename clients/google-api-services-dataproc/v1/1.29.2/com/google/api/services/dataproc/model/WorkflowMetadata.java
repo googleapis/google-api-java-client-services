@@ -93,7 +93,12 @@ public final class WorkflowMetadata extends com.google.api.client.json.GenericJs
   private java.lang.String state;
 
   /**
-   * Output only. The "resource name" of the template.
+   * Output only. The resource name of the workflow template as described in
+   * https://cloud.google.com/apis/design/resource_names. For projects.regions.workflowTemplates,
+   * the resource name of the  template has the following format:
+   * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
+   * projects.locations.workflowTemplates, the resource name of the  template has the following
+   * format:  projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -260,7 +265,12 @@ public final class WorkflowMetadata extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The "resource name" of the template.
+   * Output only. The resource name of the workflow template as described in
+   * https://cloud.google.com/apis/design/resource_names. For projects.regions.workflowTemplates,
+   * the resource name of the  template has the following format:
+   * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
+   * projects.locations.workflowTemplates, the resource name of the  template has the following
+   * format:  projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
    * @return value or {@code null} for none
    */
   public java.lang.String getTemplate() {
@@ -268,7 +278,12 @@ public final class WorkflowMetadata extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The "resource name" of the template.
+   * Output only. The resource name of the workflow template as described in
+   * https://cloud.google.com/apis/design/resource_names. For projects.regions.workflowTemplates,
+   * the resource name of the  template has the following format:
+   * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
+   * projects.locations.workflowTemplates, the resource name of the  template has the following
+   * format:  projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
    * @param template template or {@code null} for none
    */
   public WorkflowMetadata setTemplate(java.lang.String template) {

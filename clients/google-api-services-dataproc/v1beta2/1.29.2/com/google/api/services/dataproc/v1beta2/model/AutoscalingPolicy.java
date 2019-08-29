@@ -45,9 +45,12 @@ public final class AutoscalingPolicy extends com.google.api.client.json.GenericJ
   private java.lang.String id;
 
   /**
-   * Output only. The "resource name" of the policy, as described in
-   * https://cloud.google.com/apis/design/resource_names of the form
-   * projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id}.
+   * Output only. The "resource name" of the autoscaling policy, as described in
+   * https://cloud.google.com/apis/design/resource_names. For projects.regions.autoscalingPolicies,
+   * the resource name of the  policy has the following format:
+   * projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id} For
+   * projects.locations.autoscalingPolicies, the resource name of the  policy has the following
+   * format:  projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,9 +107,12 @@ public final class AutoscalingPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. The "resource name" of the policy, as described in
-   * https://cloud.google.com/apis/design/resource_names of the form
-   * projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id}.
+   * Output only. The "resource name" of the autoscaling policy, as described in
+   * https://cloud.google.com/apis/design/resource_names. For projects.regions.autoscalingPolicies,
+   * the resource name of the  policy has the following format:
+   * projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id} For
+   * projects.locations.autoscalingPolicies, the resource name of the  policy has the following
+   * format:  projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -114,9 +120,12 @@ public final class AutoscalingPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. The "resource name" of the policy, as described in
-   * https://cloud.google.com/apis/design/resource_names of the form
-   * projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id}.
+   * Output only. The "resource name" of the autoscaling policy, as described in
+   * https://cloud.google.com/apis/design/resource_names. For projects.regions.autoscalingPolicies,
+   * the resource name of the  policy has the following format:
+   * projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id} For
+   * projects.locations.autoscalingPolicies, the resource name of the  policy has the following
+   * format:  projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
    * @param name name or {@code null} for none
    */
   public AutoscalingPolicy setName(java.lang.String name) {

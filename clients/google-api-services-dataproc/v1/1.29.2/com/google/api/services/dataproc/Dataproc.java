@@ -190,9 +190,14 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the dataproc server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The "resource name" of the region, as described in
-         *        https://cloud.google.com/apis/design/resource_names of the form
-         *        projects/{project_id}/regions/{region}
+         * @param parent Required. The resource name of the region or location, as described in
+         *        https://cloud.google.com/apis/design/resource_names.
+        For
+         *        projects.regions.workflowTemplates,create, the resource name of the  region has the
+         *        following format:  projects/{project_id}/regions/{region}
+        For
+         *        projects.locations.workflowTemplates.create, the resource name of  the location has the
+         *        following format:  projects/{project_id}/locations/{location}
          * @param content the {@link com.google.api.services.dataproc.model.WorkflowTemplate}
          * @return the request
          */
@@ -220,9 +225,14 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The "resource name" of the region, as described in
-         *        https://cloud.google.com/apis/design/resource_names of the form
-         *        projects/{project_id}/regions/{region}
+           * @param parent Required. The resource name of the region or location, as described in
+         *        https://cloud.google.com/apis/design/resource_names.
+        For
+         *        projects.regions.workflowTemplates,create, the resource name of the  region has the
+         *        following format:  projects/{project_id}/regions/{region}
+        For
+         *        projects.locations.workflowTemplates.create, the resource name of  the location has the
+         *        following format:  projects/{project_id}/locations/{location}
            * @param content the {@link com.google.api.services.dataproc.model.WorkflowTemplate}
            * @since 1.13
            */
@@ -292,25 +302,33 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Required. The "resource name" of the region, as described in
-           * https://cloud.google.com/apis/design/resource_names of the form
-           * projects/{project_id}/regions/{region}
+           * Required. The resource name of the region or location, as described in
+           * https://cloud.google.com/apis/design/resource_names. For
+           * projects.regions.workflowTemplates,create, the resource name of the  region has the
+           * following format:  projects/{project_id}/regions/{region} For
+           * projects.locations.workflowTemplates.create, the resource name of  the location has the
+           * following format:  projects/{project_id}/locations/{location}
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The "resource name" of the region, as described in
-         https://cloud.google.com/apis/design/resource_names of the form
-         projects/{project_id}/regions/{region}
+          /** Required. The resource name of the region or location, as described in
+         https://cloud.google.com/apis/design/resource_names. For projects.regions.workflowTemplates,create,
+         the resource name of the  region has the following format:  projects/{project_id}/regions/{region}
+         For projects.locations.workflowTemplates.create, the resource name of  the location has the
+         following format:  projects/{project_id}/locations/{location}
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The "resource name" of the region, as described in
-           * https://cloud.google.com/apis/design/resource_names of the form
-           * projects/{project_id}/regions/{region}
+           * Required. The resource name of the region or location, as described in
+           * https://cloud.google.com/apis/design/resource_names. For
+           * projects.regions.workflowTemplates,create, the resource name of the  region has the
+           * following format:  projects/{project_id}/regions/{region} For
+           * projects.locations.workflowTemplates.create, the resource name of  the location has the
+           * following format:  projects/{project_id}/locations/{location}
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -335,9 +353,14 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the dataproc server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The "resource name" of the workflow template, as described in
-         *        https://cloud.google.com/apis/design/resource_names of the form
-         *        projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+         * @param name Required. The resource name of the workflow template, as described in
+         *        https://cloud.google.com/apis/design/resource_names.
+        For
+         *        projects.regions.workflowTemplates.delete, the resource name of the template has the
+         *        following format:  projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+         *        For projects.locations.workflowTemplates.instantiate, the resource name  of the template
+         *        has the following format:
+         *        projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -364,9 +387,14 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The "resource name" of the workflow template, as described in
-         *        https://cloud.google.com/apis/design/resource_names of the form
-         *        projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           * @param name Required. The resource name of the workflow template, as described in
+         *        https://cloud.google.com/apis/design/resource_names.
+        For
+         *        projects.regions.workflowTemplates.delete, the resource name of the template has the
+         *        following format:  projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+         *        For projects.locations.workflowTemplates.instantiate, the resource name  of the template
+         *        has the following format:
+         *        projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -435,25 +463,38 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Required. The "resource name" of the workflow template, as described in
-           * https://cloud.google.com/apis/design/resource_names of the form
-           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           * Required. The resource name of the workflow template, as described in
+           * https://cloud.google.com/apis/design/resource_names. For
+           * projects.regions.workflowTemplates.delete, the resource name of the template has the
+           * following format:
+           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
+           * projects.locations.workflowTemplates.instantiate, the resource name  of the template
+           * has the following format:
+           * projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The "resource name" of the workflow template, as described in
-         https://cloud.google.com/apis/design/resource_names of the form
-         projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+          /** Required. The resource name of the workflow template, as described in
+         https://cloud.google.com/apis/design/resource_names. For projects.regions.workflowTemplates.delete,
+         the resource name of the template has the following format:
+         projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
+         projects.locations.workflowTemplates.instantiate, the resource name  of the template has the
+         following format:  projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. The "resource name" of the workflow template, as described in
-           * https://cloud.google.com/apis/design/resource_names of the form
-           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           * Required. The resource name of the workflow template, as described in
+           * https://cloud.google.com/apis/design/resource_names. For
+           * projects.regions.workflowTemplates.delete, the resource name of the template has the
+           * following format:
+           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
+           * projects.locations.workflowTemplates.instantiate, the resource name  of the template
+           * has the following format:
+           * projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -502,9 +543,14 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the dataproc server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The "resource name" of the workflow template, as described in
-         *        https://cloud.google.com/apis/design/resource_names of the form
-         *        projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+         * @param name Required. The resource name of the workflow template, as described in
+         *        https://cloud.google.com/apis/design/resource_names.
+        For
+         *        projects.regions.workflowTemplates.get, the resource name of the  template has the
+         *        following format:  projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+         *        For projects.locations.workflowTemplates.get, the resource name of the  template has the
+         *        following format:
+         *        projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -531,9 +577,14 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The "resource name" of the workflow template, as described in
-         *        https://cloud.google.com/apis/design/resource_names of the form
-         *        projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           * @param name Required. The resource name of the workflow template, as described in
+         *        https://cloud.google.com/apis/design/resource_names.
+        For
+         *        projects.regions.workflowTemplates.get, the resource name of the  template has the
+         *        following format:  projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+         *        For projects.locations.workflowTemplates.get, the resource name of the  template has the
+         *        following format:
+         *        projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -612,25 +663,38 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Required. The "resource name" of the workflow template, as described in
-           * https://cloud.google.com/apis/design/resource_names of the form
-           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           * Required. The resource name of the workflow template, as described in
+           * https://cloud.google.com/apis/design/resource_names. For
+           * projects.regions.workflowTemplates.get, the resource name of the  template has the
+           * following format:
+           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
+           * projects.locations.workflowTemplates.get, the resource name of the  template has the
+           * following format:
+           * projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The "resource name" of the workflow template, as described in
-         https://cloud.google.com/apis/design/resource_names of the form
-         projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+          /** Required. The resource name of the workflow template, as described in
+         https://cloud.google.com/apis/design/resource_names. For projects.regions.workflowTemplates.get,
+         the resource name of the  template has the following format:
+         projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
+         projects.locations.workflowTemplates.get, the resource name of the  template has the following
+         format:  projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. The "resource name" of the workflow template, as described in
-           * https://cloud.google.com/apis/design/resource_names of the form
-           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           * Required. The resource name of the workflow template, as described in
+           * https://cloud.google.com/apis/design/resource_names. For
+           * projects.regions.workflowTemplates.get, the resource name of the  template has the
+           * following format:
+           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
+           * projects.locations.workflowTemplates.get, the resource name of the  template has the
+           * following format:
+           * projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -643,21 +707,21 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Optional. The version of workflow template to retrieve. Only previously instatiated
+           * Optional. The version of workflow template to retrieve. Only previously instantiated
            * versions can be retrieved.If unspecified, retrieves the current version.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer version;
 
-          /** Optional. The version of workflow template to retrieve. Only previously instatiated versions can be
-         retrieved.If unspecified, retrieves the current version.
+          /** Optional. The version of workflow template to retrieve. Only previously instantiated versions can
+         be retrieved.If unspecified, retrieves the current version.
            */
           public java.lang.Integer getVersion() {
             return version;
           }
 
           /**
-           * Optional. The version of workflow template to retrieve. Only previously instatiated
+           * Optional. The version of workflow template to retrieve. Only previously instantiated
            * versions can be retrieved.If unspecified, retrieves the current version.
            */
           public Get setVersion(java.lang.Integer version) {
@@ -825,9 +889,14 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the dataproc server.  After setting any optional
          * parameters, call the {@link Instantiate#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The "resource name" of the workflow template, as described in
-         *        https://cloud.google.com/apis/design/resource_names of the form
-         *        projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+         * @param name Required. The resource name of the workflow template, as described in
+         *        https://cloud.google.com/apis/design/resource_names.
+        For
+         *        projects.regions.workflowTemplates.instantiate, the resource name of the template has the
+         *        following format:  projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+         *        For projects.locations.workflowTemplates.instantiate, the resource name  of the template
+         *        has the following format:
+         *        projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
          * @param content the {@link com.google.api.services.dataproc.model.InstantiateWorkflowTemplateRequest}
          * @return the request
          */
@@ -860,9 +929,14 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * Instantiate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The "resource name" of the workflow template, as described in
-         *        https://cloud.google.com/apis/design/resource_names of the form
-         *        projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           * @param name Required. The resource name of the workflow template, as described in
+         *        https://cloud.google.com/apis/design/resource_names.
+        For
+         *        projects.regions.workflowTemplates.instantiate, the resource name of the template has the
+         *        following format:  projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+         *        For projects.locations.workflowTemplates.instantiate, the resource name  of the template
+         *        has the following format:
+         *        projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            * @param content the {@link com.google.api.services.dataproc.model.InstantiateWorkflowTemplateRequest}
            * @since 1.13
            */
@@ -932,25 +1006,38 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Required. The "resource name" of the workflow template, as described in
-           * https://cloud.google.com/apis/design/resource_names of the form
-           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           * Required. The resource name of the workflow template, as described in
+           * https://cloud.google.com/apis/design/resource_names. For
+           * projects.regions.workflowTemplates.instantiate, the resource name of the template has
+           * the following format:
+           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
+           * projects.locations.workflowTemplates.instantiate, the resource name  of the template
+           * has the following format:
+           * projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The "resource name" of the workflow template, as described in
-         https://cloud.google.com/apis/design/resource_names of the form
-         projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+          /** Required. The resource name of the workflow template, as described in
+         https://cloud.google.com/apis/design/resource_names. For
+         projects.regions.workflowTemplates.instantiate, the resource name of the template has the following
+         format:  projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
+         projects.locations.workflowTemplates.instantiate, the resource name  of the template has the
+         following format:  projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. The "resource name" of the workflow template, as described in
-           * https://cloud.google.com/apis/design/resource_names of the form
-           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           * Required. The resource name of the workflow template, as described in
+           * https://cloud.google.com/apis/design/resource_names. For
+           * projects.regions.workflowTemplates.instantiate, the resource name of the template has
+           * the following format:
+           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
+           * projects.locations.workflowTemplates.instantiate, the resource name  of the template
+           * has the following format:
+           * projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
           public Instantiate setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -981,9 +1068,14 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the dataproc server.  After setting any optional
          * parameters, call the {@link InstantiateInline#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The "resource name" of the workflow template region, as described in
-         *        https://cloud.google.com/apis/design/resource_names of the form
-         *        projects/{project_id}/regions/{region}
+         * @param parent Required. The resource name of the region or location, as described in
+         *        https://cloud.google.com/apis/design/resource_names.
+        For
+         *        projects.regions.workflowTemplates,instantiateinline, the resource  name of the region has
+         *        the following format:  projects/{project_id}/regions/{region}
+        For
+         *        projects.locations.workflowTemplates.instantiateinline, the  resource name of the location
+         *        has the following format:  projects/{project_id}/locations/{location}
          * @param content the {@link com.google.api.services.dataproc.model.WorkflowTemplate}
          * @return the request
          */
@@ -1017,9 +1109,14 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * stractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param parent Required. The "resource name" of the workflow template region, as described in
-         *        https://cloud.google.com/apis/design/resource_names of the form
-         *        projects/{project_id}/regions/{region}
+           * @param parent Required. The resource name of the region or location, as described in
+         *        https://cloud.google.com/apis/design/resource_names.
+        For
+         *        projects.regions.workflowTemplates,instantiateinline, the resource  name of the region has
+         *        the following format:  projects/{project_id}/regions/{region}
+        For
+         *        projects.locations.workflowTemplates.instantiateinline, the  resource name of the location
+         *        has the following format:  projects/{project_id}/locations/{location}
            * @param content the {@link com.google.api.services.dataproc.model.WorkflowTemplate}
            * @since 1.13
            */
@@ -1089,25 +1186,34 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Required. The "resource name" of the workflow template region, as described in
-           * https://cloud.google.com/apis/design/resource_names of the form
-           * projects/{project_id}/regions/{region}
+           * Required. The resource name of the region or location, as described in
+           * https://cloud.google.com/apis/design/resource_names. For
+           * projects.regions.workflowTemplates,instantiateinline, the resource  name of the region
+           * has the following format:  projects/{project_id}/regions/{region} For
+           * projects.locations.workflowTemplates.instantiateinline, the  resource name of the
+           * location has the following format:  projects/{project_id}/locations/{location}
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The "resource name" of the workflow template region, as described in
-         https://cloud.google.com/apis/design/resource_names of the form
-         projects/{project_id}/regions/{region}
+          /** Required. The resource name of the region or location, as described in
+         https://cloud.google.com/apis/design/resource_names. For
+         projects.regions.workflowTemplates,instantiateinline, the resource  name of the region has the
+         following format:  projects/{project_id}/regions/{region} For
+         projects.locations.workflowTemplates.instantiateinline, the  resource name of the location has the
+         following format:  projects/{project_id}/locations/{location}
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The "resource name" of the workflow template region, as described in
-           * https://cloud.google.com/apis/design/resource_names of the form
-           * projects/{project_id}/regions/{region}
+           * Required. The resource name of the region or location, as described in
+           * https://cloud.google.com/apis/design/resource_names. For
+           * projects.regions.workflowTemplates,instantiateinline, the resource  name of the region
+           * has the following format:  projects/{project_id}/regions/{region} For
+           * projects.locations.workflowTemplates.instantiateinline, the  resource name of the
+           * location has the following format:  projects/{project_id}/locations/{location}
            */
           public InstantiateInline setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -1166,9 +1272,14 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the dataproc server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The "resource name" of the region, as described in
-         *        https://cloud.google.com/apis/design/resource_names of the form
-         *        projects/{project_id}/regions/{region}
+         * @param parent Required. The resource name of the region or location, as described in
+         *        https://cloud.google.com/apis/design/resource_names.
+        For
+         *        projects.regions.workflowTemplates,list, the resource  name of the region has the
+         *        following format:  projects/{project_id}/regions/{region}
+        For
+         *        projects.locations.workflowTemplates.list, the  resource name of the location has the
+         *        following format:  projects/{project_id}/locations/{location}
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1194,9 +1305,14 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The "resource name" of the region, as described in
-         *        https://cloud.google.com/apis/design/resource_names of the form
-         *        projects/{project_id}/regions/{region}
+           * @param parent Required. The resource name of the region or location, as described in
+         *        https://cloud.google.com/apis/design/resource_names.
+        For
+         *        projects.regions.workflowTemplates,list, the resource  name of the region has the
+         *        following format:  projects/{project_id}/regions/{region}
+        For
+         *        projects.locations.workflowTemplates.list, the  resource name of the location has the
+         *        following format:  projects/{project_id}/locations/{location}
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1275,25 +1391,33 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Required. The "resource name" of the region, as described in
-           * https://cloud.google.com/apis/design/resource_names of the form
-           * projects/{project_id}/regions/{region}
+           * Required. The resource name of the region or location, as described in
+           * https://cloud.google.com/apis/design/resource_names. For
+           * projects.regions.workflowTemplates,list, the resource  name of the region has the
+           * following format:  projects/{project_id}/regions/{region} For
+           * projects.locations.workflowTemplates.list, the  resource name of the location has the
+           * following format:  projects/{project_id}/locations/{location}
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The "resource name" of the region, as described in
-         https://cloud.google.com/apis/design/resource_names of the form
-         projects/{project_id}/regions/{region}
+          /** Required. The resource name of the region or location, as described in
+         https://cloud.google.com/apis/design/resource_names. For projects.regions.workflowTemplates,list,
+         the resource  name of the region has the following format:  projects/{project_id}/regions/{region}
+         For projects.locations.workflowTemplates.list, the  resource name of the location has the following
+         format:  projects/{project_id}/locations/{location}
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The "resource name" of the region, as described in
-           * https://cloud.google.com/apis/design/resource_names of the form
-           * projects/{project_id}/regions/{region}
+           * Required. The resource name of the region or location, as described in
+           * https://cloud.google.com/apis/design/resource_names. For
+           * projects.regions.workflowTemplates,list, the resource  name of the region has the
+           * following format:  projects/{project_id}/regions/{region} For
+           * projects.locations.workflowTemplates.list, the  resource name of the location has the
+           * following format:  projects/{project_id}/locations/{location}
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -1643,9 +1767,14 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the dataproc server.  After setting any optional
          * parameters, call the {@link Update#execute()} method to invoke the remote operation.
          *
-         * @param name Output only. The "resource name" of the template, as described in
-         *        https://cloud.google.com/apis/design/resource_names of the form
-         *        projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+         * @param name Output only. The resource name of the workflow template, as described in
+         *        https://cloud.google.com/apis/design/resource_names.
+        For
+         *        projects.regions.workflowTemplates, the resource name of the  template has the following
+         *        format:  projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+        For
+         *        projects.locations.workflowTemplates, the resource name of the  template has the following
+         *        format:  projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
          * @param content the {@link com.google.api.services.dataproc.model.WorkflowTemplate}
          * @return the request
          */
@@ -1674,9 +1803,14 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Output only. The "resource name" of the template, as described in
-         *        https://cloud.google.com/apis/design/resource_names of the form
-         *        projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           * @param name Output only. The resource name of the workflow template, as described in
+         *        https://cloud.google.com/apis/design/resource_names.
+        For
+         *        projects.regions.workflowTemplates, the resource name of the  template has the following
+         *        format:  projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+        For
+         *        projects.locations.workflowTemplates, the resource name of the  template has the following
+         *        format:  projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            * @param content the {@link com.google.api.services.dataproc.model.WorkflowTemplate}
            * @since 1.13
            */
@@ -1746,25 +1880,38 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Output only. The "resource name" of the template, as described in
-           * https://cloud.google.com/apis/design/resource_names of the form
-           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           * Output only. The resource name of the workflow template, as described in
+           * https://cloud.google.com/apis/design/resource_names. For
+           * projects.regions.workflowTemplates, the resource name of the  template has the
+           * following format:
+           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
+           * projects.locations.workflowTemplates, the resource name of the  template has the
+           * following format:
+           * projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. The "resource name" of the template, as described in
-         https://cloud.google.com/apis/design/resource_names of the form
-         projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+          /** Output only. The resource name of the workflow template, as described in
+         https://cloud.google.com/apis/design/resource_names. For projects.regions.workflowTemplates, the
+         resource name of the  template has the following format:
+         projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
+         projects.locations.workflowTemplates, the resource name of the  template has the following format:
+         projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Output only. The "resource name" of the template, as described in
-           * https://cloud.google.com/apis/design/resource_names of the form
-           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           * Output only. The resource name of the workflow template, as described in
+           * https://cloud.google.com/apis/design/resource_names. For
+           * projects.regions.workflowTemplates, the resource name of the  template has the
+           * following format:
+           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
+           * projects.locations.workflowTemplates, the resource name of the  template has the
+           * following format:
+           * projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
           public Update setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -1825,7 +1972,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
       public class Clusters {
 
         /**
-         * Creates a cluster in a project.
+         * Creates a cluster in a project. The returned Operation.metadata will be ClusterOperationMetadata.
          *
          * Create a request for the method "clusters.create".
          *
@@ -1848,7 +1995,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           private static final String REST_PATH = "v1/projects/{projectId}/regions/{region}/clusters";
 
           /**
-           * Creates a cluster in a project.
+           * Creates a cluster in a project. The returned Operation.metadata will be
+           * ClusterOperationMetadata.
            *
            * Create a request for the method "clusters.create".
            *
@@ -1999,7 +2147,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Deletes a cluster in a project.
+         * Deletes a cluster in a project. The returned Operation.metadata will be ClusterOperationMetadata.
          *
          * Create a request for the method "clusters.delete".
          *
@@ -2022,7 +2170,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           private static final String REST_PATH = "v1/projects/{projectId}/regions/{region}/clusters/{clusterName}";
 
           /**
-           * Deletes a cluster in a project.
+           * Deletes a cluster in a project. The returned Operation.metadata will be
+           * ClusterOperationMetadata.
            *
            * Create a request for the method "clusters.delete".
            *
@@ -2213,8 +2362,9 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Gets cluster diagnostic information. After the operation completes, the Operation.response field
-         * contains DiagnoseClusterOutputLocation.
+         * Gets cluster diagnostic information. The returned Operation.metadata will be
+         * ClusterOperationMetadata. After the operation completes, Operation.response contains
+         * DiagnoseClusterResults.
          *
          * Create a request for the method "clusters.diagnose".
          *
@@ -2238,8 +2388,9 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           private static final String REST_PATH = "v1/projects/{projectId}/regions/{region}/clusters/{clusterName}:diagnose";
 
           /**
-           * Gets cluster diagnostic information. After the operation completes, the Operation.response
-           * field contains DiagnoseClusterOutputLocation.
+           * Gets cluster diagnostic information. The returned Operation.metadata will be
+           * ClusterOperationMetadata. After the operation completes, Operation.response contains
+           * DiagnoseClusterResults.
            *
            * Create a request for the method "clusters.diagnose".
            *
@@ -2898,7 +3049,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Updates a cluster in a project.
+         * Updates a cluster in a project. The returned Operation.metadata will be ClusterOperationMetadata.
          *
          * Create a request for the method "clusters.patch".
          *
@@ -2922,7 +3073,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           private static final String REST_PATH = "v1/projects/{projectId}/regions/{region}/clusters/{clusterName}";
 
           /**
-           * Updates a cluster in a project.
+           * Updates a cluster in a project. The returned Operation.metadata will be
+           * ClusterOperationMetadata.
            *
            * Create a request for the method "clusters.patch".
            *
@@ -6061,9 +6213,14 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the dataproc server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The "resource name" of the region, as described in
-         *        https://cloud.google.com/apis/design/resource_names of the form
-         *        projects/{project_id}/regions/{region}
+         * @param parent Required. The resource name of the region or location, as described in
+         *        https://cloud.google.com/apis/design/resource_names.
+        For
+         *        projects.regions.workflowTemplates,create, the resource name of the  region has the
+         *        following format:  projects/{project_id}/regions/{region}
+        For
+         *        projects.locations.workflowTemplates.create, the resource name of  the location has the
+         *        following format:  projects/{project_id}/locations/{location}
          * @param content the {@link com.google.api.services.dataproc.model.WorkflowTemplate}
          * @return the request
          */
@@ -6091,9 +6248,14 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The "resource name" of the region, as described in
-         *        https://cloud.google.com/apis/design/resource_names of the form
-         *        projects/{project_id}/regions/{region}
+           * @param parent Required. The resource name of the region or location, as described in
+         *        https://cloud.google.com/apis/design/resource_names.
+        For
+         *        projects.regions.workflowTemplates,create, the resource name of the  region has the
+         *        following format:  projects/{project_id}/regions/{region}
+        For
+         *        projects.locations.workflowTemplates.create, the resource name of  the location has the
+         *        following format:  projects/{project_id}/locations/{location}
            * @param content the {@link com.google.api.services.dataproc.model.WorkflowTemplate}
            * @since 1.13
            */
@@ -6163,25 +6325,33 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Required. The "resource name" of the region, as described in
-           * https://cloud.google.com/apis/design/resource_names of the form
-           * projects/{project_id}/regions/{region}
+           * Required. The resource name of the region or location, as described in
+           * https://cloud.google.com/apis/design/resource_names. For
+           * projects.regions.workflowTemplates,create, the resource name of the  region has the
+           * following format:  projects/{project_id}/regions/{region} For
+           * projects.locations.workflowTemplates.create, the resource name of  the location has the
+           * following format:  projects/{project_id}/locations/{location}
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The "resource name" of the region, as described in
-         https://cloud.google.com/apis/design/resource_names of the form
-         projects/{project_id}/regions/{region}
+          /** Required. The resource name of the region or location, as described in
+         https://cloud.google.com/apis/design/resource_names. For projects.regions.workflowTemplates,create,
+         the resource name of the  region has the following format:  projects/{project_id}/regions/{region}
+         For projects.locations.workflowTemplates.create, the resource name of  the location has the
+         following format:  projects/{project_id}/locations/{location}
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The "resource name" of the region, as described in
-           * https://cloud.google.com/apis/design/resource_names of the form
-           * projects/{project_id}/regions/{region}
+           * Required. The resource name of the region or location, as described in
+           * https://cloud.google.com/apis/design/resource_names. For
+           * projects.regions.workflowTemplates,create, the resource name of the  region has the
+           * following format:  projects/{project_id}/regions/{region} For
+           * projects.locations.workflowTemplates.create, the resource name of  the location has the
+           * following format:  projects/{project_id}/locations/{location}
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -6206,9 +6376,14 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the dataproc server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The "resource name" of the workflow template, as described in
-         *        https://cloud.google.com/apis/design/resource_names of the form
-         *        projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+         * @param name Required. The resource name of the workflow template, as described in
+         *        https://cloud.google.com/apis/design/resource_names.
+        For
+         *        projects.regions.workflowTemplates.delete, the resource name of the template has the
+         *        following format:  projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+         *        For projects.locations.workflowTemplates.instantiate, the resource name  of the template
+         *        has the following format:
+         *        projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -6235,9 +6410,14 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The "resource name" of the workflow template, as described in
-         *        https://cloud.google.com/apis/design/resource_names of the form
-         *        projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           * @param name Required. The resource name of the workflow template, as described in
+         *        https://cloud.google.com/apis/design/resource_names.
+        For
+         *        projects.regions.workflowTemplates.delete, the resource name of the template has the
+         *        following format:  projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+         *        For projects.locations.workflowTemplates.instantiate, the resource name  of the template
+         *        has the following format:
+         *        projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -6306,25 +6486,38 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Required. The "resource name" of the workflow template, as described in
-           * https://cloud.google.com/apis/design/resource_names of the form
-           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           * Required. The resource name of the workflow template, as described in
+           * https://cloud.google.com/apis/design/resource_names. For
+           * projects.regions.workflowTemplates.delete, the resource name of the template has the
+           * following format:
+           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
+           * projects.locations.workflowTemplates.instantiate, the resource name  of the template
+           * has the following format:
+           * projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The "resource name" of the workflow template, as described in
-         https://cloud.google.com/apis/design/resource_names of the form
-         projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+          /** Required. The resource name of the workflow template, as described in
+         https://cloud.google.com/apis/design/resource_names. For projects.regions.workflowTemplates.delete,
+         the resource name of the template has the following format:
+         projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
+         projects.locations.workflowTemplates.instantiate, the resource name  of the template has the
+         following format:  projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. The "resource name" of the workflow template, as described in
-           * https://cloud.google.com/apis/design/resource_names of the form
-           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           * Required. The resource name of the workflow template, as described in
+           * https://cloud.google.com/apis/design/resource_names. For
+           * projects.regions.workflowTemplates.delete, the resource name of the template has the
+           * following format:
+           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
+           * projects.locations.workflowTemplates.instantiate, the resource name  of the template
+           * has the following format:
+           * projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -6373,9 +6566,14 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the dataproc server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The "resource name" of the workflow template, as described in
-         *        https://cloud.google.com/apis/design/resource_names of the form
-         *        projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+         * @param name Required. The resource name of the workflow template, as described in
+         *        https://cloud.google.com/apis/design/resource_names.
+        For
+         *        projects.regions.workflowTemplates.get, the resource name of the  template has the
+         *        following format:  projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+         *        For projects.locations.workflowTemplates.get, the resource name of the  template has the
+         *        following format:
+         *        projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -6402,9 +6600,14 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The "resource name" of the workflow template, as described in
-         *        https://cloud.google.com/apis/design/resource_names of the form
-         *        projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           * @param name Required. The resource name of the workflow template, as described in
+         *        https://cloud.google.com/apis/design/resource_names.
+        For
+         *        projects.regions.workflowTemplates.get, the resource name of the  template has the
+         *        following format:  projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+         *        For projects.locations.workflowTemplates.get, the resource name of the  template has the
+         *        following format:
+         *        projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -6483,25 +6686,38 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Required. The "resource name" of the workflow template, as described in
-           * https://cloud.google.com/apis/design/resource_names of the form
-           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           * Required. The resource name of the workflow template, as described in
+           * https://cloud.google.com/apis/design/resource_names. For
+           * projects.regions.workflowTemplates.get, the resource name of the  template has the
+           * following format:
+           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
+           * projects.locations.workflowTemplates.get, the resource name of the  template has the
+           * following format:
+           * projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The "resource name" of the workflow template, as described in
-         https://cloud.google.com/apis/design/resource_names of the form
-         projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+          /** Required. The resource name of the workflow template, as described in
+         https://cloud.google.com/apis/design/resource_names. For projects.regions.workflowTemplates.get,
+         the resource name of the  template has the following format:
+         projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
+         projects.locations.workflowTemplates.get, the resource name of the  template has the following
+         format:  projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. The "resource name" of the workflow template, as described in
-           * https://cloud.google.com/apis/design/resource_names of the form
-           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           * Required. The resource name of the workflow template, as described in
+           * https://cloud.google.com/apis/design/resource_names. For
+           * projects.regions.workflowTemplates.get, the resource name of the  template has the
+           * following format:
+           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
+           * projects.locations.workflowTemplates.get, the resource name of the  template has the
+           * following format:
+           * projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -6514,21 +6730,21 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Optional. The version of workflow template to retrieve. Only previously instatiated
+           * Optional. The version of workflow template to retrieve. Only previously instantiated
            * versions can be retrieved.If unspecified, retrieves the current version.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer version;
 
-          /** Optional. The version of workflow template to retrieve. Only previously instatiated versions can be
-         retrieved.If unspecified, retrieves the current version.
+          /** Optional. The version of workflow template to retrieve. Only previously instantiated versions can
+         be retrieved.If unspecified, retrieves the current version.
            */
           public java.lang.Integer getVersion() {
             return version;
           }
 
           /**
-           * Optional. The version of workflow template to retrieve. Only previously instatiated
+           * Optional. The version of workflow template to retrieve. Only previously instantiated
            * versions can be retrieved.If unspecified, retrieves the current version.
            */
           public Get setVersion(java.lang.Integer version) {
@@ -6696,9 +6912,14 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the dataproc server.  After setting any optional
          * parameters, call the {@link Instantiate#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The "resource name" of the workflow template, as described in
-         *        https://cloud.google.com/apis/design/resource_names of the form
-         *        projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+         * @param name Required. The resource name of the workflow template, as described in
+         *        https://cloud.google.com/apis/design/resource_names.
+        For
+         *        projects.regions.workflowTemplates.instantiate, the resource name of the template has the
+         *        following format:  projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+         *        For projects.locations.workflowTemplates.instantiate, the resource name  of the template
+         *        has the following format:
+         *        projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
          * @param content the {@link com.google.api.services.dataproc.model.InstantiateWorkflowTemplateRequest}
          * @return the request
          */
@@ -6731,9 +6952,14 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * Instantiate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The "resource name" of the workflow template, as described in
-         *        https://cloud.google.com/apis/design/resource_names of the form
-         *        projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           * @param name Required. The resource name of the workflow template, as described in
+         *        https://cloud.google.com/apis/design/resource_names.
+        For
+         *        projects.regions.workflowTemplates.instantiate, the resource name of the template has the
+         *        following format:  projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+         *        For projects.locations.workflowTemplates.instantiate, the resource name  of the template
+         *        has the following format:
+         *        projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            * @param content the {@link com.google.api.services.dataproc.model.InstantiateWorkflowTemplateRequest}
            * @since 1.13
            */
@@ -6803,25 +7029,38 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Required. The "resource name" of the workflow template, as described in
-           * https://cloud.google.com/apis/design/resource_names of the form
-           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           * Required. The resource name of the workflow template, as described in
+           * https://cloud.google.com/apis/design/resource_names. For
+           * projects.regions.workflowTemplates.instantiate, the resource name of the template has
+           * the following format:
+           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
+           * projects.locations.workflowTemplates.instantiate, the resource name  of the template
+           * has the following format:
+           * projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The "resource name" of the workflow template, as described in
-         https://cloud.google.com/apis/design/resource_names of the form
-         projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+          /** Required. The resource name of the workflow template, as described in
+         https://cloud.google.com/apis/design/resource_names. For
+         projects.regions.workflowTemplates.instantiate, the resource name of the template has the following
+         format:  projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
+         projects.locations.workflowTemplates.instantiate, the resource name  of the template has the
+         following format:  projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. The "resource name" of the workflow template, as described in
-           * https://cloud.google.com/apis/design/resource_names of the form
-           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           * Required. The resource name of the workflow template, as described in
+           * https://cloud.google.com/apis/design/resource_names. For
+           * projects.regions.workflowTemplates.instantiate, the resource name of the template has
+           * the following format:
+           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
+           * projects.locations.workflowTemplates.instantiate, the resource name  of the template
+           * has the following format:
+           * projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
           public Instantiate setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -6852,9 +7091,14 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the dataproc server.  After setting any optional
          * parameters, call the {@link InstantiateInline#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The "resource name" of the workflow template region, as described in
-         *        https://cloud.google.com/apis/design/resource_names of the form
-         *        projects/{project_id}/regions/{region}
+         * @param parent Required. The resource name of the region or location, as described in
+         *        https://cloud.google.com/apis/design/resource_names.
+        For
+         *        projects.regions.workflowTemplates,instantiateinline, the resource  name of the region has
+         *        the following format:  projects/{project_id}/regions/{region}
+        For
+         *        projects.locations.workflowTemplates.instantiateinline, the  resource name of the location
+         *        has the following format:  projects/{project_id}/locations/{location}
          * @param content the {@link com.google.api.services.dataproc.model.WorkflowTemplate}
          * @return the request
          */
@@ -6888,9 +7132,14 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * stractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param parent Required. The "resource name" of the workflow template region, as described in
-         *        https://cloud.google.com/apis/design/resource_names of the form
-         *        projects/{project_id}/regions/{region}
+           * @param parent Required. The resource name of the region or location, as described in
+         *        https://cloud.google.com/apis/design/resource_names.
+        For
+         *        projects.regions.workflowTemplates,instantiateinline, the resource  name of the region has
+         *        the following format:  projects/{project_id}/regions/{region}
+        For
+         *        projects.locations.workflowTemplates.instantiateinline, the  resource name of the location
+         *        has the following format:  projects/{project_id}/locations/{location}
            * @param content the {@link com.google.api.services.dataproc.model.WorkflowTemplate}
            * @since 1.13
            */
@@ -6960,25 +7209,34 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Required. The "resource name" of the workflow template region, as described in
-           * https://cloud.google.com/apis/design/resource_names of the form
-           * projects/{project_id}/regions/{region}
+           * Required. The resource name of the region or location, as described in
+           * https://cloud.google.com/apis/design/resource_names. For
+           * projects.regions.workflowTemplates,instantiateinline, the resource  name of the region
+           * has the following format:  projects/{project_id}/regions/{region} For
+           * projects.locations.workflowTemplates.instantiateinline, the  resource name of the
+           * location has the following format:  projects/{project_id}/locations/{location}
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The "resource name" of the workflow template region, as described in
-         https://cloud.google.com/apis/design/resource_names of the form
-         projects/{project_id}/regions/{region}
+          /** Required. The resource name of the region or location, as described in
+         https://cloud.google.com/apis/design/resource_names. For
+         projects.regions.workflowTemplates,instantiateinline, the resource  name of the region has the
+         following format:  projects/{project_id}/regions/{region} For
+         projects.locations.workflowTemplates.instantiateinline, the  resource name of the location has the
+         following format:  projects/{project_id}/locations/{location}
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The "resource name" of the workflow template region, as described in
-           * https://cloud.google.com/apis/design/resource_names of the form
-           * projects/{project_id}/regions/{region}
+           * Required. The resource name of the region or location, as described in
+           * https://cloud.google.com/apis/design/resource_names. For
+           * projects.regions.workflowTemplates,instantiateinline, the resource  name of the region
+           * has the following format:  projects/{project_id}/regions/{region} For
+           * projects.locations.workflowTemplates.instantiateinline, the  resource name of the
+           * location has the following format:  projects/{project_id}/locations/{location}
            */
           public InstantiateInline setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -7037,9 +7295,14 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the dataproc server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The "resource name" of the region, as described in
-         *        https://cloud.google.com/apis/design/resource_names of the form
-         *        projects/{project_id}/regions/{region}
+         * @param parent Required. The resource name of the region or location, as described in
+         *        https://cloud.google.com/apis/design/resource_names.
+        For
+         *        projects.regions.workflowTemplates,list, the resource  name of the region has the
+         *        following format:  projects/{project_id}/regions/{region}
+        For
+         *        projects.locations.workflowTemplates.list, the  resource name of the location has the
+         *        following format:  projects/{project_id}/locations/{location}
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -7065,9 +7328,14 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The "resource name" of the region, as described in
-         *        https://cloud.google.com/apis/design/resource_names of the form
-         *        projects/{project_id}/regions/{region}
+           * @param parent Required. The resource name of the region or location, as described in
+         *        https://cloud.google.com/apis/design/resource_names.
+        For
+         *        projects.regions.workflowTemplates,list, the resource  name of the region has the
+         *        following format:  projects/{project_id}/regions/{region}
+        For
+         *        projects.locations.workflowTemplates.list, the  resource name of the location has the
+         *        following format:  projects/{project_id}/locations/{location}
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -7146,25 +7414,33 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Required. The "resource name" of the region, as described in
-           * https://cloud.google.com/apis/design/resource_names of the form
-           * projects/{project_id}/regions/{region}
+           * Required. The resource name of the region or location, as described in
+           * https://cloud.google.com/apis/design/resource_names. For
+           * projects.regions.workflowTemplates,list, the resource  name of the region has the
+           * following format:  projects/{project_id}/regions/{region} For
+           * projects.locations.workflowTemplates.list, the  resource name of the location has the
+           * following format:  projects/{project_id}/locations/{location}
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The "resource name" of the region, as described in
-         https://cloud.google.com/apis/design/resource_names of the form
-         projects/{project_id}/regions/{region}
+          /** Required. The resource name of the region or location, as described in
+         https://cloud.google.com/apis/design/resource_names. For projects.regions.workflowTemplates,list,
+         the resource  name of the region has the following format:  projects/{project_id}/regions/{region}
+         For projects.locations.workflowTemplates.list, the  resource name of the location has the following
+         format:  projects/{project_id}/locations/{location}
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The "resource name" of the region, as described in
-           * https://cloud.google.com/apis/design/resource_names of the form
-           * projects/{project_id}/regions/{region}
+           * Required. The resource name of the region or location, as described in
+           * https://cloud.google.com/apis/design/resource_names. For
+           * projects.regions.workflowTemplates,list, the resource  name of the region has the
+           * following format:  projects/{project_id}/regions/{region} For
+           * projects.locations.workflowTemplates.list, the  resource name of the location has the
+           * following format:  projects/{project_id}/locations/{location}
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -7514,9 +7790,14 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the dataproc server.  After setting any optional
          * parameters, call the {@link Update#execute()} method to invoke the remote operation.
          *
-         * @param name Output only. The "resource name" of the template, as described in
-         *        https://cloud.google.com/apis/design/resource_names of the form
-         *        projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+         * @param name Output only. The resource name of the workflow template, as described in
+         *        https://cloud.google.com/apis/design/resource_names.
+        For
+         *        projects.regions.workflowTemplates, the resource name of the  template has the following
+         *        format:  projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+        For
+         *        projects.locations.workflowTemplates, the resource name of the  template has the following
+         *        format:  projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
          * @param content the {@link com.google.api.services.dataproc.model.WorkflowTemplate}
          * @return the request
          */
@@ -7545,9 +7826,14 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Output only. The "resource name" of the template, as described in
-         *        https://cloud.google.com/apis/design/resource_names of the form
-         *        projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           * @param name Output only. The resource name of the workflow template, as described in
+         *        https://cloud.google.com/apis/design/resource_names.
+        For
+         *        projects.regions.workflowTemplates, the resource name of the  template has the following
+         *        format:  projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+        For
+         *        projects.locations.workflowTemplates, the resource name of the  template has the following
+         *        format:  projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            * @param content the {@link com.google.api.services.dataproc.model.WorkflowTemplate}
            * @since 1.13
            */
@@ -7617,25 +7903,38 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Output only. The "resource name" of the template, as described in
-           * https://cloud.google.com/apis/design/resource_names of the form
-           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           * Output only. The resource name of the workflow template, as described in
+           * https://cloud.google.com/apis/design/resource_names. For
+           * projects.regions.workflowTemplates, the resource name of the  template has the
+           * following format:
+           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
+           * projects.locations.workflowTemplates, the resource name of the  template has the
+           * following format:
+           * projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. The "resource name" of the template, as described in
-         https://cloud.google.com/apis/design/resource_names of the form
-         projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+          /** Output only. The resource name of the workflow template, as described in
+         https://cloud.google.com/apis/design/resource_names. For projects.regions.workflowTemplates, the
+         resource name of the  template has the following format:
+         projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
+         projects.locations.workflowTemplates, the resource name of the  template has the following format:
+         projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Output only. The "resource name" of the template, as described in
-           * https://cloud.google.com/apis/design/resource_names of the form
-           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           * Output only. The resource name of the workflow template, as described in
+           * https://cloud.google.com/apis/design/resource_names. For
+           * projects.regions.workflowTemplates, the resource name of the  template has the
+           * following format:
+           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
+           * projects.locations.workflowTemplates, the resource name of the  template has the
+           * following format:
+           * projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
           public Update setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

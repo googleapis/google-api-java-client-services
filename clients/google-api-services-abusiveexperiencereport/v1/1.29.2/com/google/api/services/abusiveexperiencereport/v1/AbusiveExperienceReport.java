@@ -150,18 +150,18 @@ public class AbusiveExperienceReport extends com.google.api.client.googleapis.se
      * This request holds the parameters needed by the abusiveexperiencereport server.  After setting
      * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param name The required site name. This is the site property whose abusive
-    experiences have been reviewed, and
-     *        it must be URL-encoded. For example,
-    sites/https%3A%2F%2Fwww.google.com. The server will
-     *        return an error of
-    BAD_REQUEST if this field is not filled in. Note that if the site
-     *        property
-    is not yet verified in Search Console, the reportUrl field
-    returned by the API
-     *        will lead to the verification page, prompting the user
-    to go through that process before
-     *        they can gain access to the Abusive
+     * @param name Required. The site property whose abusive
+    experiences have been reviewed, and it must be URL-
+     *        encoded. For example,
+    sites/https%3A%2F%2Fwww.google.com. The server will return an error
+     *        of
+    BAD_REQUEST if this field is not filled in. Note that if the site property
+    is not yet
+     *        verified in Search Console, the reportUrl field
+    returned by the API will lead to the
+     *        verification page, prompting the user
+    to go through that process before they can gain
+     *        access to the Abusive
     Experience Report.
      * @return the request
      */
@@ -189,18 +189,18 @@ public class AbusiveExperienceReport extends com.google.api.client.googleapis.se
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name The required site name. This is the site property whose abusive
-    experiences have been reviewed, and
-     *        it must be URL-encoded. For example,
-    sites/https%3A%2F%2Fwww.google.com. The server will
-     *        return an error of
-    BAD_REQUEST if this field is not filled in. Note that if the site
-     *        property
-    is not yet verified in Search Console, the reportUrl field
-    returned by the API
-     *        will lead to the verification page, prompting the user
-    to go through that process before
-     *        they can gain access to the Abusive
+       * @param name Required. The site property whose abusive
+    experiences have been reviewed, and it must be URL-
+     *        encoded. For example,
+    sites/https%3A%2F%2Fwww.google.com. The server will return an error
+     *        of
+    BAD_REQUEST if this field is not filled in. Note that if the site property
+    is not yet
+     *        verified in Search Console, the reportUrl field
+    returned by the API will lead to the
+     *        verification page, prompting the user
+    to go through that process before they can gain
+     *        access to the Abusive
     Experience Report.
        * @since 1.13
        */
@@ -280,34 +280,34 @@ public class AbusiveExperienceReport extends com.google.api.client.googleapis.se
       }
 
       /**
-       * The required site name. This is the site property whose abusive experiences have been
-       * reviewed, and it must be URL-encoded. For example, sites/https%3A%2F%2Fwww.google.com. The
-       * server will return an error of BAD_REQUEST if this field is not filled in. Note that if the
-       * site property is not yet verified in Search Console, the reportUrl field returned by the
-       * API will lead to the verification page, prompting the user to go through that process
-       * before they can gain access to the Abusive Experience Report.
+       * Required. The site property whose abusive experiences have been reviewed, and it must be
+       * URL-encoded. For example, sites/https%3A%2F%2Fwww.google.com. The server will return an
+       * error of BAD_REQUEST if this field is not filled in. Note that if the site property is not
+       * yet verified in Search Console, the reportUrl field returned by the API will lead to the
+       * verification page, prompting the user to go through that process before they can gain
+       * access to the Abusive Experience Report.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The required site name. This is the site property whose abusive experiences have been reviewed, and
-     it must be URL-encoded. For example, sites/https%3A%2F%2Fwww.google.com. The server will return an
-     error of BAD_REQUEST if this field is not filled in. Note that if the site property is not yet
-     verified in Search Console, the reportUrl field returned by the API will lead to the verification
-     page, prompting the user to go through that process before they can gain access to the Abusive
-     Experience Report.
+      /** Required. The site property whose abusive experiences have been reviewed, and it must be URL-
+     encoded. For example, sites/https%3A%2F%2Fwww.google.com. The server will return an error of
+     BAD_REQUEST if this field is not filled in. Note that if the site property is not yet verified in
+     Search Console, the reportUrl field returned by the API will lead to the verification page,
+     prompting the user to go through that process before they can gain access to the Abusive Experience
+     Report.
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * The required site name. This is the site property whose abusive experiences have been
-       * reviewed, and it must be URL-encoded. For example, sites/https%3A%2F%2Fwww.google.com. The
-       * server will return an error of BAD_REQUEST if this field is not filled in. Note that if the
-       * site property is not yet verified in Search Console, the reportUrl field returned by the
-       * API will lead to the verification page, prompting the user to go through that process
-       * before they can gain access to the Abusive Experience Report.
+       * Required. The site property whose abusive experiences have been reviewed, and it must be
+       * URL-encoded. For example, sites/https%3A%2F%2Fwww.google.com. The server will return an
+       * error of BAD_REQUEST if this field is not filled in. Note that if the site property is not
+       * yet verified in Search Console, the reportUrl field returned by the API will lead to the
+       * verification page, prompting the user to go through that process before they can gain
+       * access to the Abusive Experience Report.
        */
       public Get setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -348,7 +348,7 @@ public class AbusiveExperienceReport extends com.google.api.client.googleapis.se
   public class ViolatingSites {
 
     /**
-     * Lists sites with Abusive Experience Report statuses of "Failing".
+     * Lists sites with failing Abusive Experience Report statuses.
      *
      * Create a request for the method "violatingSites.list".
      *
@@ -368,7 +368,7 @@ public class AbusiveExperienceReport extends com.google.api.client.googleapis.se
       private static final String REST_PATH = "v1/violatingSites";
 
       /**
-       * Lists sites with Abusive Experience Report statuses of "Failing".
+       * Lists sites with failing Abusive Experience Report statuses.
        *
        * Create a request for the method "violatingSites.list".
        *

@@ -114,6 +114,13 @@ public final class PropertyDefinition extends com.google.api.client.json.Generic
   private java.lang.Boolean isSortable;
 
   /**
+   * Indicates that the property can be used for generating query suggestions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isSuggestable;
+
+  /**
    * Indicates that users can perform wildcard search for this property. Only supported for Text
    * properties. IsReturnable must be true to set this option. In a given datasource maximum of 5
    * properties can be marked as is_wildcard_searchable.
@@ -353,6 +360,23 @@ public final class PropertyDefinition extends com.google.api.client.json.Generic
    */
   public PropertyDefinition setIsSortable(java.lang.Boolean isSortable) {
     this.isSortable = isSortable;
+    return this;
+  }
+
+  /**
+   * Indicates that the property can be used for generating query suggestions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsSuggestable() {
+    return isSuggestable;
+  }
+
+  /**
+   * Indicates that the property can be used for generating query suggestions.
+   * @param isSuggestable isSuggestable or {@code null} for none
+   */
+  public PropertyDefinition setIsSuggestable(java.lang.Boolean isSuggestable) {
+    this.isSuggestable = isSuggestable;
     return this;
   }
 

@@ -150,7 +150,7 @@ public class Libraryagent extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the libraryagent server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param name The name of the shelf to retrieve.
+     * @param name Required. The name of the shelf to retrieve.
      * @return the request
      */
     public Get get(java.lang.String name) throws java.io.IOException {
@@ -176,7 +176,7 @@ public class Libraryagent extends com.google.api.client.googleapis.services.json
        * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name The name of the shelf to retrieve.
+       * @param name Required. The name of the shelf to retrieve.
        * @since 1.13
        */
       protected Get(java.lang.String name) {
@@ -254,17 +254,17 @@ public class Libraryagent extends com.google.api.client.googleapis.services.json
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** The name of the shelf to retrieve. */
+      /** Required. The name of the shelf to retrieve. */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The name of the shelf to retrieve.
+      /** Required. The name of the shelf to retrieve.
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /** The name of the shelf to retrieve. */
+      /** Required. The name of the shelf to retrieve. */
       public Get setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -467,7 +467,7 @@ public class Libraryagent extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the libraryagent server.  After setting any optional
        * parameters, call the {@link Borrow#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the book to borrow.
+       * @param name Required. The name of the book to borrow.
        * @return the request
        */
       public Borrow borrow(java.lang.String name) throws java.io.IOException {
@@ -496,7 +496,7 @@ public class Libraryagent extends com.google.api.client.googleapis.services.json
          * Borrow#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the book to borrow.
+         * @param name Required. The name of the book to borrow.
          * @since 1.13
          */
         protected Borrow(java.lang.String name) {
@@ -564,17 +564,17 @@ public class Libraryagent extends com.google.api.client.googleapis.services.json
           return (Borrow) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** The name of the book to borrow. */
+        /** Required. The name of the book to borrow. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the book to borrow.
+        /** Required. The name of the book to borrow.
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** The name of the book to borrow. */
+        /** Required. The name of the book to borrow. */
         public Borrow setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -598,7 +598,7 @@ public class Libraryagent extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the libraryagent server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the book to retrieve.
+       * @param name Required. The name of the book to retrieve.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -624,7 +624,7 @@ public class Libraryagent extends com.google.api.client.googleapis.services.json
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the book to retrieve.
+         * @param name Required. The name of the book to retrieve.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -702,17 +702,17 @@ public class Libraryagent extends com.google.api.client.googleapis.services.json
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** The name of the book to retrieve. */
+        /** Required. The name of the book to retrieve. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the book to retrieve.
+        /** Required. The name of the book to retrieve.
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** The name of the book to retrieve. */
+        /** Required. The name of the book to retrieve. */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -737,7 +737,7 @@ public class Libraryagent extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the libraryagent server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent The name of the shelf whose books we'd like to list.
+       * @param parent Required. The name of the shelf whose books we'd like to list.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -765,7 +765,7 @@ public class Libraryagent extends com.google.api.client.googleapis.services.json
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The name of the shelf whose books we'd like to list.
+         * @param parent Required. The name of the shelf whose books we'd like to list.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -843,17 +843,17 @@ public class Libraryagent extends com.google.api.client.googleapis.services.json
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** The name of the shelf whose books we'd like to list. */
+        /** Required. The name of the shelf whose books we'd like to list. */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The name of the shelf whose books we'd like to list.
+        /** Required. The name of the shelf whose books we'd like to list.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** The name of the shelf whose books we'd like to list. */
+        /** Required. The name of the shelf whose books we'd like to list. */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -926,7 +926,7 @@ public class Libraryagent extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the libraryagent server.  After setting any optional
        * parameters, call the {@link LibraryagentReturn#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the book to return.
+       * @param name Required. The name of the book to return.
        * @return the request
        */
       public LibraryagentReturn libraryagentReturn(java.lang.String name) throws java.io.IOException {
@@ -954,7 +954,7 @@ public class Libraryagent extends com.google.api.client.googleapis.services.json
          * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param name The name of the book to return.
+         * @param name Required. The name of the book to return.
          * @since 1.13
          */
         protected LibraryagentReturn(java.lang.String name) {
@@ -1022,17 +1022,17 @@ public class Libraryagent extends com.google.api.client.googleapis.services.json
           return (LibraryagentReturn) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** The name of the book to return. */
+        /** Required. The name of the book to return. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the book to return.
+        /** Required. The name of the book to return.
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** The name of the book to return. */
+        /** Required. The name of the book to return. */
         public LibraryagentReturn setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

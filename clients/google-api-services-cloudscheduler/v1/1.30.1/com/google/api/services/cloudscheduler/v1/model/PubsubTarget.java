@@ -48,9 +48,7 @@ public final class PubsubTarget extends com.google.api.client.json.GenericJson {
   private java.lang.String data;
 
   /**
-   * Required.
-   *
-   * The name of the Cloud Pub/Sub topic to which messages will be published when a job is
+   * Required. The name of the Cloud Pub/Sub topic to which messages will be published when a job is
    * delivered. The topic name must be in the same format as required by PubSub's [PublishRequest.na
    * me](https://cloud.google.com/pubsub/docs/reference/rpc/google.pubsub.v1#publishrequest), for
    * example `projects/PROJECT_ID/topics/TOPIC_ID`.
@@ -136,9 +134,7 @@ public final class PubsubTarget extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required.
-   *
-   * The name of the Cloud Pub/Sub topic to which messages will be published when a job is
+   * Required. The name of the Cloud Pub/Sub topic to which messages will be published when a job is
    * delivered. The topic name must be in the same format as required by PubSub's [PublishRequest.na
    * me](https://cloud.google.com/pubsub/docs/reference/rpc/google.pubsub.v1#publishrequest), for
    * example `projects/PROJECT_ID/topics/TOPIC_ID`.
@@ -151,9 +147,7 @@ public final class PubsubTarget extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required.
-   *
-   * The name of the Cloud Pub/Sub topic to which messages will be published when a job is
+   * Required. The name of the Cloud Pub/Sub topic to which messages will be published when a job is
    * delivered. The topic name must be in the same format as required by PubSub's [PublishRequest.na
    * me](https://cloud.google.com/pubsub/docs/reference/rpc/google.pubsub.v1#publishrequest), for
    * example `projects/PROJECT_ID/topics/TOPIC_ID`.

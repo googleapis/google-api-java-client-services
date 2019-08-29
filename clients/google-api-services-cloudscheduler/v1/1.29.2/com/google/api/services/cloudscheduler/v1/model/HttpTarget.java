@@ -87,11 +87,9 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
   private OidcToken oidcToken;
 
   /**
-   * Required.
-   *
-   * The full URI path that the request will be sent to. This string must begin with either
-   * "http://" or "https://". Some examples of valid values for uri are: `http://acme.com` and
-   * `https://acme.com/sales:8080`. Cloud Scheduler will encode some characters for safety and
+   * Required. The full URI path that the request will be sent to. This string must begin with
+   * either "http://" or "https://". Some examples of valid values for uri are: `http://acme.com`
+   * and `https://acme.com/sales:8080`. Cloud Scheduler will encode some characters for safety and
    * compatibility. The maximum allowed URL length is 2083 characters after encoding.
    * The value may be {@code null}.
    */
@@ -250,11 +248,9 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required.
-   *
-   * The full URI path that the request will be sent to. This string must begin with either
-   * "http://" or "https://". Some examples of valid values for uri are: `http://acme.com` and
-   * `https://acme.com/sales:8080`. Cloud Scheduler will encode some characters for safety and
+   * Required. The full URI path that the request will be sent to. This string must begin with
+   * either "http://" or "https://". Some examples of valid values for uri are: `http://acme.com`
+   * and `https://acme.com/sales:8080`. Cloud Scheduler will encode some characters for safety and
    * compatibility. The maximum allowed URL length is 2083 characters after encoding.
    * @return value or {@code null} for none
    */
@@ -263,11 +259,9 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required.
-   *
-   * The full URI path that the request will be sent to. This string must begin with either
-   * "http://" or "https://". Some examples of valid values for uri are: `http://acme.com` and
-   * `https://acme.com/sales:8080`. Cloud Scheduler will encode some characters for safety and
+   * Required. The full URI path that the request will be sent to. This string must begin with
+   * either "http://" or "https://". Some examples of valid values for uri are: `http://acme.com`
+   * and `https://acme.com/sales:8080`. Cloud Scheduler will encode some characters for safety and
    * compatibility. The maximum allowed URL length is 2083 characters after encoding.
    * @param uri uri or {@code null} for none
    */

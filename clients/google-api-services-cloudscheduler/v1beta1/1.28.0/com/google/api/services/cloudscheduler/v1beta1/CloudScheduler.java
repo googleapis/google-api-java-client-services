@@ -515,8 +515,7 @@ public class CloudScheduler extends com.google.api.client.googleapis.services.js
          * This request holds the parameters needed by the cloudscheduler server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required.
-        The location name. For example:
+         * @param parent Required. The location name. For example:
         `projects/PROJECT_ID/locations/LOCATION_ID`.
          * @param content the {@link com.google.api.services.cloudscheduler.v1beta1.model.Job}
          * @return the request
@@ -545,8 +544,7 @@ public class CloudScheduler extends com.google.api.client.googleapis.services.js
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required.
-        The location name. For example:
+           * @param parent Required. The location name. For example:
         `projects/PROJECT_ID/locations/LOCATION_ID`.
            * @param content the {@link com.google.api.services.cloudscheduler.v1beta1.model.Job}
            * @since 1.13
@@ -617,25 +615,19 @@ public class CloudScheduler extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * Required.
-           *
-           * The location name. For example: `projects/PROJECT_ID/locations/LOCATION_ID`.
+           * Required. The location name. For example: `projects/PROJECT_ID/locations/LOCATION_ID`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required.
-
-         The location name. For example: `projects/PROJECT_ID/locations/LOCATION_ID`.
+          /** Required. The location name. For example: `projects/PROJECT_ID/locations/LOCATION_ID`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required.
-           *
-           * The location name. For example: `projects/PROJECT_ID/locations/LOCATION_ID`.
+           * Required. The location name. For example: `projects/PROJECT_ID/locations/LOCATION_ID`.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -660,8 +652,7 @@ public class CloudScheduler extends com.google.api.client.googleapis.services.js
          * This request holds the parameters needed by the cloudscheduler server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required.
-        The job name. For example:
+         * @param name Required. The job name. For example:
         `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
          * @return the request
          */
@@ -689,8 +680,7 @@ public class CloudScheduler extends com.google.api.client.googleapis.services.js
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required.
-        The job name. For example:
+           * @param name Required. The job name. For example:
         `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
            * @since 1.13
            */
@@ -760,25 +750,21 @@ public class CloudScheduler extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * Required.
-           *
-           * The job name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
+           * Required. The job name. For example:
+           * `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required.
-
-         The job name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
+          /** Required. The job name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required.
-           *
-           * The job name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
+           * Required. The job name. For example:
+           * `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -803,8 +789,7 @@ public class CloudScheduler extends com.google.api.client.googleapis.services.js
          * This request holds the parameters needed by the cloudscheduler server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required.
-        The job name. For example:
+         * @param name Required. The job name. For example:
         `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
          * @return the request
          */
@@ -831,8 +816,7 @@ public class CloudScheduler extends com.google.api.client.googleapis.services.js
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required.
-        The job name. For example:
+           * @param name Required. The job name. For example:
         `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
            * @since 1.13
            */
@@ -912,25 +896,21 @@ public class CloudScheduler extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * Required.
-           *
-           * The job name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
+           * Required. The job name. For example:
+           * `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required.
-
-         The job name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
+          /** Required. The job name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required.
-           *
-           * The job name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
+           * Required. The job name. For example:
+           * `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -955,8 +935,7 @@ public class CloudScheduler extends com.google.api.client.googleapis.services.js
          * This request holds the parameters needed by the cloudscheduler server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required.
-        The location name. For example:
+         * @param parent Required. The location name. For example:
         `projects/PROJECT_ID/locations/LOCATION_ID`.
          * @return the request
          */
@@ -983,8 +962,7 @@ public class CloudScheduler extends com.google.api.client.googleapis.services.js
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required.
-        The location name. For example:
+           * @param parent Required. The location name. For example:
         `projects/PROJECT_ID/locations/LOCATION_ID`.
            * @since 1.13
            */
@@ -1064,25 +1042,19 @@ public class CloudScheduler extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * Required.
-           *
-           * The location name. For example: `projects/PROJECT_ID/locations/LOCATION_ID`.
+           * Required. The location name. For example: `projects/PROJECT_ID/locations/LOCATION_ID`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required.
-
-         The location name. For example: `projects/PROJECT_ID/locations/LOCATION_ID`.
+          /** Required. The location name. For example: `projects/PROJECT_ID/locations/LOCATION_ID`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required.
-           *
-           * The location name. For example: `projects/PROJECT_ID/locations/LOCATION_ID`.
+           * Required. The location name. For example: `projects/PROJECT_ID/locations/LOCATION_ID`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -1409,8 +1381,7 @@ public class CloudScheduler extends com.google.api.client.googleapis.services.js
          * This request holds the parameters needed by the cloudscheduler server.  After setting any
          * optional parameters, call the {@link Pause#execute()} method to invoke the remote operation.
          *
-         * @param name Required.
-        The job name. For example:
+         * @param name Required. The job name. For example:
         `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
          * @param content the {@link com.google.api.services.cloudscheduler.v1beta1.model.PauseJobRequest}
          * @return the request
@@ -1443,8 +1414,7 @@ public class CloudScheduler extends com.google.api.client.googleapis.services.js
            * Pause#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required.
-        The job name. For example:
+           * @param name Required. The job name. For example:
         `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
            * @param content the {@link com.google.api.services.cloudscheduler.v1beta1.model.PauseJobRequest}
            * @since 1.13
@@ -1515,25 +1485,21 @@ public class CloudScheduler extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * Required.
-           *
-           * The job name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
+           * Required. The job name. For example:
+           * `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required.
-
-         The job name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
+          /** Required. The job name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required.
-           *
-           * The job name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
+           * Required. The job name. For example:
+           * `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
            */
           public Pause setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -1562,8 +1528,7 @@ public class CloudScheduler extends com.google.api.client.googleapis.services.js
          * This request holds the parameters needed by the cloudscheduler server.  After setting any
          * optional parameters, call the {@link Resume#execute()} method to invoke the remote operation.
          *
-         * @param name Required.
-        The job name. For example:
+         * @param name Required. The job name. For example:
         `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
          * @param content the {@link com.google.api.services.cloudscheduler.v1beta1.model.ResumeJobRequest}
          * @return the request
@@ -1596,8 +1561,7 @@ public class CloudScheduler extends com.google.api.client.googleapis.services.js
            * Resume#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required.
-        The job name. For example:
+           * @param name Required. The job name. For example:
         `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
            * @param content the {@link com.google.api.services.cloudscheduler.v1beta1.model.ResumeJobRequest}
            * @since 1.13
@@ -1668,25 +1632,21 @@ public class CloudScheduler extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * Required.
-           *
-           * The job name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
+           * Required. The job name. For example:
+           * `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required.
-
-         The job name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
+          /** Required. The job name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required.
-           *
-           * The job name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
+           * Required. The job name. For example:
+           * `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
            */
           public Resume setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -1714,8 +1674,7 @@ public class CloudScheduler extends com.google.api.client.googleapis.services.js
          * This request holds the parameters needed by the cloudscheduler server.  After setting any
          * optional parameters, call the {@link Run#execute()} method to invoke the remote operation.
          *
-         * @param name Required.
-        The job name. For example:
+         * @param name Required. The job name. For example:
         `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
          * @param content the {@link com.google.api.services.cloudscheduler.v1beta1.model.RunJobRequest}
          * @return the request
@@ -1746,8 +1705,7 @@ public class CloudScheduler extends com.google.api.client.googleapis.services.js
            * {@link Run#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required.
-        The job name. For example:
+           * @param name Required. The job name. For example:
         `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
            * @param content the {@link com.google.api.services.cloudscheduler.v1beta1.model.RunJobRequest}
            * @since 1.13
@@ -1818,25 +1776,21 @@ public class CloudScheduler extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * Required.
-           *
-           * The job name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
+           * Required. The job name. For example:
+           * `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required.
-
-         The job name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
+          /** Required. The job name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required.
-           *
-           * The job name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
+           * Required. The job name. For example:
+           * `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
            */
           public Run setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

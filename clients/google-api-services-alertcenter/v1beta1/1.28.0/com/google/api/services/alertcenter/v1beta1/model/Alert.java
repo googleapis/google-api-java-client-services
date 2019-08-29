@@ -75,6 +75,28 @@ public final class Alert extends com.google.api.client.json.GenericJson {
   private String endTime;
 
   /**
+   * Optional. `etag` is used for optimistic concurrency control as a way to help prevent
+   * simultaneous updates of an alert from overwriting each other. It is strongly suggested that
+   * systems make use of the `etag` in the read-modify-write cycle to perform alert updates in order
+   * to avoid race conditions: An `etag` is returned in the response which contains alerts, and
+   * systems are expected to put that etag in the request to update alert to ensure that their
+   * change will be applied to the same version of the alert.
+   *
+   * If no `etag` is provided in the call to update alert, then the existing alert is overwritten
+   * blindly.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String etag;
+
+  /**
+   * Output only. The metadata associated with this alert.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AlertMetadata metadata;
+
+  /**
    * Output only. An optional [Security Investigation
    * Tool](https://support.google.com/a/answer/7575955) query for this alert.
    * The value may be {@code null}.
@@ -220,6 +242,56 @@ public final class Alert extends com.google.api.client.json.GenericJson {
    */
   public Alert setEndTime(String endTime) {
     this.endTime = endTime;
+    return this;
+  }
+
+  /**
+   * Optional. `etag` is used for optimistic concurrency control as a way to help prevent
+   * simultaneous updates of an alert from overwriting each other. It is strongly suggested that
+   * systems make use of the `etag` in the read-modify-write cycle to perform alert updates in order
+   * to avoid race conditions: An `etag` is returned in the response which contains alerts, and
+   * systems are expected to put that etag in the request to update alert to ensure that their
+   * change will be applied to the same version of the alert.
+   *
+   * If no `etag` is provided in the call to update alert, then the existing alert is overwritten
+   * blindly.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEtag() {
+    return etag;
+  }
+
+  /**
+   * Optional. `etag` is used for optimistic concurrency control as a way to help prevent
+   * simultaneous updates of an alert from overwriting each other. It is strongly suggested that
+   * systems make use of the `etag` in the read-modify-write cycle to perform alert updates in order
+   * to avoid race conditions: An `etag` is returned in the response which contains alerts, and
+   * systems are expected to put that etag in the request to update alert to ensure that their
+   * change will be applied to the same version of the alert.
+   *
+   * If no `etag` is provided in the call to update alert, then the existing alert is overwritten
+   * blindly.
+   * @param etag etag or {@code null} for none
+   */
+  public Alert setEtag(java.lang.String etag) {
+    this.etag = etag;
+    return this;
+  }
+
+  /**
+   * Output only. The metadata associated with this alert.
+   * @return value or {@code null} for none
+   */
+  public AlertMetadata getMetadata() {
+    return metadata;
+  }
+
+  /**
+   * Output only. The metadata associated with this alert.
+   * @param metadata metadata or {@code null} for none
+   */
+  public Alert setMetadata(AlertMetadata metadata) {
+    this.metadata = metadata;
     return this;
   }
 

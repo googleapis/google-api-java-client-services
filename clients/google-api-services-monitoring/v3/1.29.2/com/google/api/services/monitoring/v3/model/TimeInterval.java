@@ -23,8 +23,8 @@ package com.google.api.services.monitoring.v3.model;
  * technically optional; if  no value is specified, the start time defaults to the value of the  end
  * time, and the interval represents a single point in time. Such an  interval is valid only for
  * GAUGE metrics, which are point-in-time  measurements. For DELTA and CUMULATIVE metrics, the start
- * time must be later than  the end time. In all cases, the start time of the next interval must be
- * at least a microsecond after the end time of the previous interval.  Because the interval is
+ * time must be earlier  than the end time. In all cases, the start time of the next interval must
+ * be  at least a microsecond after the end time of the previous interval.  Because the interval is
  * closed, if the start time of a new interval  is the same as the end time of the previous
  * interval, data written  at the new start time could overwrite data written at the previous  end
  * time.

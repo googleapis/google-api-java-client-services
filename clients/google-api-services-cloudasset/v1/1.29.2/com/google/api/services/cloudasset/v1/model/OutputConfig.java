@@ -30,11 +30,41 @@ package com.google.api.services.cloudasset.v1.model;
 public final class OutputConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Destination on BigQuery. The output table stores the fields in asset proto as columns in
+   * BigQuery. The resource/iam_policy field is converted to a record with each field to a column,
+   * except metadata to a single JSON string.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BigQueryDestination bigqueryDestination;
+
+  /**
    * Destination on Cloud Storage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GcsDestination gcsDestination;
+
+  /**
+   * Destination on BigQuery. The output table stores the fields in asset proto as columns in
+   * BigQuery. The resource/iam_policy field is converted to a record with each field to a column,
+   * except metadata to a single JSON string.
+   * @return value or {@code null} for none
+   */
+  public BigQueryDestination getBigqueryDestination() {
+    return bigqueryDestination;
+  }
+
+  /**
+   * Destination on BigQuery. The output table stores the fields in asset proto as columns in
+   * BigQuery. The resource/iam_policy field is converted to a record with each field to a column,
+   * except metadata to a single JSON string.
+   * @param bigqueryDestination bigqueryDestination or {@code null} for none
+   */
+  public OutputConfig setBigqueryDestination(BigQueryDestination bigqueryDestination) {
+    this.bigqueryDestination = bigqueryDestination;
+    return this;
+  }
 
   /**
    * Destination on Cloud Storage.

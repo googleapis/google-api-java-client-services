@@ -29,6 +29,33 @@ package com.google.api.services.cloudtasks.v2.model;
 @SuppressWarnings("javadoc")
 public final class GetIamPolicyRequest extends com.google.api.client.json.GenericJson {
 
+  /**
+   * OPTIONAL: A `GetPolicyOptions` object for specifying options to `GetIamPolicy`. This field is
+   * only used by Cloud IAM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GetPolicyOptions options;
+
+  /**
+   * OPTIONAL: A `GetPolicyOptions` object for specifying options to `GetIamPolicy`. This field is
+   * only used by Cloud IAM.
+   * @return value or {@code null} for none
+   */
+  public GetPolicyOptions getOptions() {
+    return options;
+  }
+
+  /**
+   * OPTIONAL: A `GetPolicyOptions` object for specifying options to `GetIamPolicy`. This field is
+   * only used by Cloud IAM.
+   * @param options options or {@code null} for none
+   */
+  public GetIamPolicyRequest setOptions(GetPolicyOptions options) {
+    this.options = options;
+    return this;
+  }
+
   @Override
   public GetIamPolicyRequest set(String fieldName, Object value) {
     return (GetIamPolicyRequest) super.set(fieldName, value);

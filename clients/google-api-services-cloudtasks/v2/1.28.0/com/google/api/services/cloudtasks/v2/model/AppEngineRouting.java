@@ -29,6 +29,12 @@ package com.google.api.services.cloudtasks.v2.model;
  * [App Engine Flex request routing](https://cloud.google.com/appengine/docs/flexible/python/how-
  * requests-are-routed).
  *
+ * Using AppEngineRouting requires
+ * [`appengine.applications.get`](https://cloud.google.com/appengine/docs/admin-api/access-control)
+ * Google IAM permission for the project and the following scope:
+ *
+ * `https://www.googleapis.com/auth/cloud-platform`
+ *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Tasks API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>

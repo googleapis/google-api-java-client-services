@@ -52,10 +52,10 @@ public final class RateLimits extends com.google.api.client.json.GenericJson {
    * Cloud Tasks will pick the value of `max_burst_size` based on the value of
    * max_dispatches_per_second.
    *
-   * For App Engine queues that were created or updated using `queue.yaml/xml`, `max_burst_size` is
-   * equal to [bucket_size](https://cloud.google.com/appengine/docs/standard/python/config/queueref#
-   * bucket_size). Since `max_burst_size` is output only, if UpdateQueue is called on a queue
-   * created by `queue.yaml/xml`, `max_burst_size` will be reset based on the value of
+   * For queues that were created or updated using `queue.yaml/xml`, `max_burst_size` is equal to [b
+   * ucket_size](https://cloud.google.com/appengine/docs/standard/python/config/queueref#bucket_size
+   * ). Since `max_burst_size` is output only, if UpdateQueue is called on a queue created by
+   * `queue.yaml/xml`, `max_burst_size` will be reset based on the value of
    * max_dispatches_per_second, regardless of whether max_dispatches_per_second is updated.
    * The value may be {@code null}.
    */
@@ -83,7 +83,7 @@ public final class RateLimits extends com.google.api.client.json.GenericJson {
    *
    * If unspecified when the queue is created, Cloud Tasks will pick the default.
    *
-   * * For App Engine queues, the maximum allowed value   is 500.
+   * * The maximum allowed value is 500.
    *
    * This field has the same meaning as [rate in
    * queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#rate).
@@ -109,10 +109,10 @@ public final class RateLimits extends com.google.api.client.json.GenericJson {
    * Cloud Tasks will pick the value of `max_burst_size` based on the value of
    * max_dispatches_per_second.
    *
-   * For App Engine queues that were created or updated using `queue.yaml/xml`, `max_burst_size` is
-   * equal to [bucket_size](https://cloud.google.com/appengine/docs/standard/python/config/queueref#
-   * bucket_size). Since `max_burst_size` is output only, if UpdateQueue is called on a queue
-   * created by `queue.yaml/xml`, `max_burst_size` will be reset based on the value of
+   * For queues that were created or updated using `queue.yaml/xml`, `max_burst_size` is equal to [b
+   * ucket_size](https://cloud.google.com/appengine/docs/standard/python/config/queueref#bucket_size
+   * ). Since `max_burst_size` is output only, if UpdateQueue is called on a queue created by
+   * `queue.yaml/xml`, `max_burst_size` will be reset based on the value of
    * max_dispatches_per_second, regardless of whether max_dispatches_per_second is updated.
    * @return value or {@code null} for none
    */
@@ -137,10 +137,10 @@ public final class RateLimits extends com.google.api.client.json.GenericJson {
    * Cloud Tasks will pick the value of `max_burst_size` based on the value of
    * max_dispatches_per_second.
    *
-   * For App Engine queues that were created or updated using `queue.yaml/xml`, `max_burst_size` is
-   * equal to [bucket_size](https://cloud.google.com/appengine/docs/standard/python/config/queueref#
-   * bucket_size). Since `max_burst_size` is output only, if UpdateQueue is called on a queue
-   * created by `queue.yaml/xml`, `max_burst_size` will be reset based on the value of
+   * For queues that were created or updated using `queue.yaml/xml`, `max_burst_size` is equal to [b
+   * ucket_size](https://cloud.google.com/appengine/docs/standard/python/config/queueref#bucket_size
+   * ). Since `max_burst_size` is output only, if UpdateQueue is called on a queue created by
+   * `queue.yaml/xml`, `max_burst_size` will be reset based on the value of
    * max_dispatches_per_second, regardless of whether max_dispatches_per_second is updated.
    * @param maxBurstSize maxBurstSize or {@code null} for none
    */
@@ -189,7 +189,7 @@ public final class RateLimits extends com.google.api.client.json.GenericJson {
    *
    * If unspecified when the queue is created, Cloud Tasks will pick the default.
    *
-   * * For App Engine queues, the maximum allowed value   is 500.
+   * * The maximum allowed value is 500.
    *
    * This field has the same meaning as [rate in
    * queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#rate).
@@ -204,7 +204,7 @@ public final class RateLimits extends com.google.api.client.json.GenericJson {
    *
    * If unspecified when the queue is created, Cloud Tasks will pick the default.
    *
-   * * For App Engine queues, the maximum allowed value   is 500.
+   * * The maximum allowed value is 500.
    *
    * This field has the same meaning as [rate in
    * queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#rate).

@@ -56,6 +56,13 @@ public final class GooglePrivacyDlpV2InspectContentRequest extends com.google.ap
   private GooglePrivacyDlpV2ContentItem item;
 
   /**
+   * The geographic location to process content inspection. Reserved for future extensions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String location;
+
+  /**
    * Configuration for the inspector. What specified here will override the template referenced by
    * the inspect_template_name argument.
    * @return value or {@code null} for none
@@ -111,6 +118,23 @@ public final class GooglePrivacyDlpV2InspectContentRequest extends com.google.ap
    */
   public GooglePrivacyDlpV2InspectContentRequest setItem(GooglePrivacyDlpV2ContentItem item) {
     this.item = item;
+    return this;
+  }
+
+  /**
+   * The geographic location to process content inspection. Reserved for future extensions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocation() {
+    return location;
+  }
+
+  /**
+   * The geographic location to process content inspection. Reserved for future extensions.
+   * @param location location or {@code null} for none
+   */
+  public GooglePrivacyDlpV2InspectContentRequest setLocation(java.lang.String location) {
+    this.location = location;
     return this;
   }
 

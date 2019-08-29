@@ -291,9 +291,178 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         return this;
       }
 
+      /**
+       * The geographic location to list info types. Reserved for future extensions.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** The geographic location to list info types. Reserved for future extensions.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /**
+       * The geographic location to list info types. Reserved for future extensions.
+       */
+      public List setLocation(java.lang.String location) {
+        this.location = location;
+        return this;
+      }
+
       @Override
       public List set(String parameterName, Object value) {
         return (List) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
+   * An accessor for creating requests from the Locations collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code DLP dlp = new DLP(...);}
+   *   {@code DLP.Locations.List request = dlp.locations().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Locations locations() {
+    return new Locations();
+  }
+
+  /**
+   * The "locations" collection of methods.
+   */
+  public class Locations {
+
+    /**
+     * Returns a list of the sensitive information types that the DLP API supports. See
+     * https://cloud.google.com/dlp/docs/infotypes-reference to learn more.
+     *
+     * Create a request for the method "locations.infoTypes".
+     *
+     * This request holds the parameters needed by the dlp server.  After setting any optional
+     * parameters, call the {@link InfoTypes#execute()} method to invoke the remote operation.
+     *
+     * @param location The geographic location to list info types. Reserved for future
+    extensions.
+     * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListInfoTypesRequest}
+     * @return the request
+     */
+    public InfoTypes infoTypes(java.lang.String location, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListInfoTypesRequest content) throws java.io.IOException {
+      InfoTypes result = new InfoTypes(location, content);
+      initialize(result);
+      return result;
+    }
+
+    public class InfoTypes extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListInfoTypesResponse> {
+
+      private static final String REST_PATH = "v2/locations/{location}/infoTypes";
+
+      /**
+       * Returns a list of the sensitive information types that the DLP API supports. See
+       * https://cloud.google.com/dlp/docs/infotypes-reference to learn more.
+       *
+       * Create a request for the method "locations.infoTypes".
+       *
+       * This request holds the parameters needed by the the dlp server.  After setting any optional
+       * parameters, call the {@link InfoTypes#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * InfoTypes#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param location The geographic location to list info types. Reserved for future
+    extensions.
+       * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListInfoTypesRequest}
+       * @since 1.13
+       */
+      protected InfoTypes(java.lang.String location, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListInfoTypesRequest content) {
+        super(DLP.this, "POST", REST_PATH, content, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListInfoTypesResponse.class);
+        this.location = com.google.api.client.util.Preconditions.checkNotNull(location, "Required parameter location must be specified.");
+      }
+
+      @Override
+      public InfoTypes set$Xgafv(java.lang.String $Xgafv) {
+        return (InfoTypes) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public InfoTypes setAccessToken(java.lang.String accessToken) {
+        return (InfoTypes) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public InfoTypes setAlt(java.lang.String alt) {
+        return (InfoTypes) super.setAlt(alt);
+      }
+
+      @Override
+      public InfoTypes setCallback(java.lang.String callback) {
+        return (InfoTypes) super.setCallback(callback);
+      }
+
+      @Override
+      public InfoTypes setFields(java.lang.String fields) {
+        return (InfoTypes) super.setFields(fields);
+      }
+
+      @Override
+      public InfoTypes setKey(java.lang.String key) {
+        return (InfoTypes) super.setKey(key);
+      }
+
+      @Override
+      public InfoTypes setOauthToken(java.lang.String oauthToken) {
+        return (InfoTypes) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public InfoTypes setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (InfoTypes) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public InfoTypes setQuotaUser(java.lang.String quotaUser) {
+        return (InfoTypes) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public InfoTypes setUploadType(java.lang.String uploadType) {
+        return (InfoTypes) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public InfoTypes setUploadProtocol(java.lang.String uploadProtocol) {
+        return (InfoTypes) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * The geographic location to list info types. Reserved for future extensions.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** The geographic location to list info types. Reserved for future extensions.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /**
+       * The geographic location to list info types. Reserved for future extensions.
+       */
+      public InfoTypes setLocation(java.lang.String location) {
+        this.location = location;
+        return this;
+      }
+
+      @Override
+      public InfoTypes set(String parameterName, Object value) {
+        return (InfoTypes) super.set(parameterName, value);
       }
     }
 
@@ -7364,6 +7533,178 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           @Override
           public Deidentify set(String parameterName, Object value) {
             return (Deidentify) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Finds potentially sensitive info in content. This method has limits on input size, processing
+         * time, and output size.
+         *
+         * When no InfoTypes or CustomInfoTypes are specified in this request, the system will automatically
+         * choose what detectors to run. By default this may be all types, but may change over time as
+         * detectors are updated.
+         *
+         * For how to guides, see https://cloud.google.com/dlp/docs/inspecting-images and
+         * https://cloud.google.com/dlp/docs/inspecting-text,
+         *
+         * Create a request for the method "content.inspect".
+         *
+         * This request holds the parameters needed by the dlp server.  After setting any optional
+         * parameters, call the {@link Inspect#execute()} method to invoke the remote operation.
+         *
+         * @param parent The parent resource name, for example projects/my-project-id.
+         * @param location The geographic location to process content inspection. Reserved for future
+        extensions.
+         * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectContentRequest}
+         * @return the request
+         */
+        public Inspect inspect(java.lang.String parent, java.lang.String location, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectContentRequest content) throws java.io.IOException {
+          Inspect result = new Inspect(parent, location, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Inspect extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectContentResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/locations/{location}/content:inspect";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+          /**
+           * Finds potentially sensitive info in content. This method has limits on input size, processing
+           * time, and output size.
+           *
+           * When no InfoTypes or CustomInfoTypes are specified in this request, the system will
+           * automatically choose what detectors to run. By default this may be all types, but may change
+           * over time as detectors are updated.
+           *
+           * For how to guides, see https://cloud.google.com/dlp/docs/inspecting-images and
+           * https://cloud.google.com/dlp/docs/inspecting-text,
+           *
+           * Create a request for the method "content.inspect".
+           *
+           * This request holds the parameters needed by the the dlp server.  After setting any optional
+           * parameters, call the {@link Inspect#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * Inspect#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent The parent resource name, for example projects/my-project-id.
+           * @param location The geographic location to process content inspection. Reserved for future
+        extensions.
+           * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectContentRequest}
+           * @since 1.13
+           */
+          protected Inspect(java.lang.String parent, java.lang.String location, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectContentRequest content) {
+            super(DLP.this, "POST", REST_PATH, content, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectContentResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+$");
+            }
+            this.location = com.google.api.client.util.Preconditions.checkNotNull(location, "Required parameter location must be specified.");
+          }
+
+          @Override
+          public Inspect set$Xgafv(java.lang.String $Xgafv) {
+            return (Inspect) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Inspect setAccessToken(java.lang.String accessToken) {
+            return (Inspect) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Inspect setAlt(java.lang.String alt) {
+            return (Inspect) super.setAlt(alt);
+          }
+
+          @Override
+          public Inspect setCallback(java.lang.String callback) {
+            return (Inspect) super.setCallback(callback);
+          }
+
+          @Override
+          public Inspect setFields(java.lang.String fields) {
+            return (Inspect) super.setFields(fields);
+          }
+
+          @Override
+          public Inspect setKey(java.lang.String key) {
+            return (Inspect) super.setKey(key);
+          }
+
+          @Override
+          public Inspect setOauthToken(java.lang.String oauthToken) {
+            return (Inspect) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Inspect setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Inspect) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Inspect setQuotaUser(java.lang.String quotaUser) {
+            return (Inspect) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Inspect setUploadType(java.lang.String uploadType) {
+            return (Inspect) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Inspect setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Inspect) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The parent resource name, for example projects/my-project-id. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** The parent resource name, for example projects/my-project-id.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** The parent resource name, for example projects/my-project-id. */
+          public Inspect setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * The geographic location to process content inspection. Reserved for future extensions.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String location;
+
+          /** The geographic location to process content inspection. Reserved for future extensions.
+           */
+          public java.lang.String getLocation() {
+            return location;
+          }
+
+          /**
+           * The geographic location to process content inspection. Reserved for future extensions.
+           */
+          public Inspect setLocation(java.lang.String location) {
+            this.location = location;
+            return this;
+          }
+
+          @Override
+          public Inspect set(String parameterName, Object value) {
+            return (Inspect) super.set(parameterName, value);
           }
         }
 

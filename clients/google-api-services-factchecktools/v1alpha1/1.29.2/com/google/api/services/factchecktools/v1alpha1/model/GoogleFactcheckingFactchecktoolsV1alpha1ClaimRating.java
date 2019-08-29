@@ -45,6 +45,13 @@ public final class GoogleFactcheckingFactchecktoolsV1alpha1ClaimRating extends c
   private java.lang.String imageUrl;
 
   /**
+   * Corresponds to `ClaimReview.reviewRating.ratingExplanation`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ratingExplanation;
+
+  /**
    * A numeric rating of this claim, in the range worstRating — bestRating inclusive. Corresponds to
    * `ClaimReview.reviewRating.ratingValue`.
    * The value may be {@code null}.
@@ -101,6 +108,23 @@ public final class GoogleFactcheckingFactchecktoolsV1alpha1ClaimRating extends c
    */
   public GoogleFactcheckingFactchecktoolsV1alpha1ClaimRating setImageUrl(java.lang.String imageUrl) {
     this.imageUrl = imageUrl;
+    return this;
+  }
+
+  /**
+   * Corresponds to `ClaimReview.reviewRating.ratingExplanation`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRatingExplanation() {
+    return ratingExplanation;
+  }
+
+  /**
+   * Corresponds to `ClaimReview.reviewRating.ratingExplanation`.
+   * @param ratingExplanation ratingExplanation or {@code null} for none
+   */
+  public GoogleFactcheckingFactchecktoolsV1alpha1ClaimRating setRatingExplanation(java.lang.String ratingExplanation) {
+    this.ratingExplanation = ratingExplanation;
     return this;
   }
 

@@ -95,8 +95,8 @@ packages on [Maven Central][maven-search].
 | Dataflow API | [v1b3](clients/google-api-services-dataflow/v1b3) |
 | Dialogflow API | [v2](clients/google-api-services-dialogflow/v2), [v2beta1](clients/google-api-services-dialogflow/v2beta1) |
 | Digital Asset Links API | [v1](clients/google-api-services-digitalassetlinks/v1) |
+| Domains RDAP API | [v1](clients/google-api-services-domainsrdap/v1) |
 | DoubleClick Bid Manager API | [v1](clients/google-api-services-doubleclickbidmanager/v1) |
-| DoubleClick Search API | [v2](clients/google-api-services-doubleclicksearch/v2) |
 | Drive API | [v2](clients/google-api-services-drive/v2), [v3](clients/google-api-services-drive/v3) |
 | Drive Activity API | [v1](clients/google-api-services-appsactivity/v1), [v2](clients/google-api-services-driveactivity/v2) |
 | Enterprise Apps Reseller API | [v1](clients/google-api-services-reseller/v1) |
@@ -143,6 +143,7 @@ packages on [Maven Central][maven-search].
 | Groups Migration API | [v1](clients/google-api-services-groupsmigration/v1) |
 | Groups Settings API | [v1](clients/google-api-services-groupssettings/v1) |
 | Hangouts Chat API | [v1](clients/google-api-services-chat/v1) |
+| HomeGraph API | [v1](clients/google-api-services-homegraph/v1) |
 | IAM Service Account Credentials API | [v1](clients/google-api-services-iamcredentials/v1) |
 | Identity and Access Management (IAM) API | [v1](clients/google-api-services-iam/v1) |
 | Indexing API | [v3](clients/google-api-services-indexing/v3) |
@@ -158,6 +159,7 @@ packages on [Maven Central][maven-search].
 | Remote Build Execution API | [v1](clients/google-api-services-remotebuildexecution/v1), [v1alpha](clients/google-api-services-remotebuildexecution/v1alpha), [v2](clients/google-api-services-remotebuildexecution/v2) |
 | Replica Pool API | [v1beta1](clients/google-api-services-replicapool/v1beta1) |
 | Safe Browsing API | [v4](clients/google-api-services-safebrowsing/v4) |
+| Search Ads 360 API | [v2](clients/google-api-services-doubleclicksearch/v2) |
 | Search Console API | [v3](clients/google-api-services-webmasters/v3) |
 | Service Broker API | [v1](clients/google-api-services-servicebroker/v1), [v1alpha1](clients/google-api-services-servicebroker/v1alpha1), [v1beta1](clients/google-api-services-servicebroker/v1beta1) |
 | Service Consumer Management API | [v1](clients/google-api-services-serviceconsumermanagement/v1) |

@@ -17,7 +17,7 @@
 package com.google.api.services.youtube.model;
 
 /**
- * Ratings schemes. The country-specific ratings are mostly for movies and shows. NEXT_ID: 71
+ * Ratings schemes. The country-specific ratings are mostly for movies and shows. NEXT_ID: 72
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
@@ -451,6 +451,12 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String nkclvRating;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String nmcRating;
 
   /**
    * The video's Office of Film and Literature Classification (OFLC - New Zealand) rating.
@@ -1554,6 +1560,21 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
    */
   public ContentRating setNkclvRating(java.lang.String nkclvRating) {
     this.nkclvRating = nkclvRating;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNmcRating() {
+    return nmcRating;
+  }
+
+  /**
+   * @param nmcRating nmcRating or {@code null} for none
+   */
+  public ContentRating setNmcRating(java.lang.String nmcRating) {
+    this.nmcRating = nmcRating;
     return this;
   }
 

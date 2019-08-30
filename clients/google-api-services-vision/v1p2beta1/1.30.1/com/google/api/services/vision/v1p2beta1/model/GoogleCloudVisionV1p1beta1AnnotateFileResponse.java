@@ -31,6 +31,14 @@ package com.google.api.services.vision.v1p2beta1.model;
 public final class GoogleCloudVisionV1p1beta1AnnotateFileResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * If set, represents the error message for the failed request. The `responses` field will not be
+   * set in this case.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Status error;
+
+  /**
    * Information about the file for which this response is generated.
    * The value may be {@code null}.
    */
@@ -51,6 +59,25 @@ public final class GoogleCloudVisionV1p1beta1AnnotateFileResponse extends com.go
    */
   @com.google.api.client.util.Key
   private java.lang.Integer totalPages;
+
+  /**
+   * If set, represents the error message for the failed request. The `responses` field will not be
+   * set in this case.
+   * @return value or {@code null} for none
+   */
+  public Status getError() {
+    return error;
+  }
+
+  /**
+   * If set, represents the error message for the failed request. The `responses` field will not be
+   * set in this case.
+   * @param error error or {@code null} for none
+   */
+  public GoogleCloudVisionV1p1beta1AnnotateFileResponse setError(Status error) {
+    this.error = error;
+    return this;
+  }
 
   /**
    * Information about the file for which this response is generated.

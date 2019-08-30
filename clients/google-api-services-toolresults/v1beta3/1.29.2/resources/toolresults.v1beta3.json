@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"9eZ1uxVRThTDhLJCZHhqs3eQWz4/QOGGhn1pB9p2yeraVBBXMPa2yK0\"",
+ "etag": "\"9eZ1uxVRThTDhLJCZHhqs3eQWz4/liS07NXsOCVBCnJwdHGeULFk82s\"",
  "discoveryVersion": "v1",
  "id": "toolresults:v1beta3",
  "name": "toolresults",
  "canonicalName": "Tool Results",
  "version": "v1beta3",
- "revision": "20190820",
+ "revision": "20190826",
  "title": "Cloud Tool Results API",
  "description": "Reads and publishes results from Firebase Test Lab.",
  "ownerDomain": "google.com",
@@ -1119,7 +1119,7 @@
   "Step": {
    "id": "Step",
    "type": "object",
-   "description": "A Step represents a single operation performed as part of Execution. A step can be used to represent the execution of a tool ( for example a test runner execution or an execution of a compiler).\n\nSteps can overlap (for instance two steps might have the same start time if some operations are done in parallel).\n\nHere is an example, let's consider that we have a continuous build is executing a test runner for each iteration. The workflow would look like: - user creates a Execution with id 1 - user creates an TestExecutionStep with id 100 for Execution 1 - user update TestExecutionStep with id 100 to add a raw xml log + the service parses the xml logs and returns a TestExecutionStep with updated TestResult(s). - user update the status of TestExecutionStep with id 100 to COMPLETE\n\nA Step can be updated until its state is set to COMPLETE at which points it becomes immutable.",
+   "description": "A Step represents a single operation performed as part of Execution. A step can be used to represent the execution of a tool ( for example a test runner execution or an execution of a compiler).\n\nSteps can overlap (for instance two steps might have the same start time if some operations are done in parallel).\n\nHere is an example, let's consider that we have a continuous build is executing a test runner for each iteration. The workflow would look like: - user creates a Execution with id 1 - user creates an TestExecutionStep with id 100 for Execution 1 - user update TestExecutionStep with id 100 to add a raw xml log + the service parses the xml logs and returns a TestExecutionStep with updated TestResult(s). - user update the status of TestExecutionStep with id 100 to COMPLETE\n\nA Step can be updated until its state is set to COMPLETE at which points it becomes immutable.\n\nNext tag: 23",
    "properties": {
     "completionTime": {
      "$ref": "Timestamp",
@@ -1397,6 +1397,7 @@
      "enum": [
       "anr",
       "availableDeepLinks",
+      "blankScreen",
       "compatibleWithOrchestrator",
       "completeRoboScriptExecution",
       "crashDialogError",
@@ -1413,6 +1414,7 @@
       "nativeCrash",
       "nonSdkApiUsageReport",
       "nonSdkApiUsageViolation",
+      "overlappingUiElements",
       "performedGoogleLogin",
       "performedMonkeyActions",
       "startActivityNotFound",
@@ -1423,6 +1425,8 @@
       "usedRoboIgnoreDirective"
      ],
      "enumDescriptions": [
+      "",
+      "",
       "",
       "",
       "",

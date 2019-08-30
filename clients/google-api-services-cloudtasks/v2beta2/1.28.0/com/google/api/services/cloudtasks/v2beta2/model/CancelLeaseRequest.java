@@ -44,11 +44,9 @@ public final class CancelLeaseRequest extends com.google.api.client.json.Generic
   private java.lang.String responseView;
 
   /**
-   * Required.
-   *
-   * The task's current schedule time, available in the schedule_time returned by LeaseTasks
-   * response or RenewLease response. This restriction is to ensure that your worker currently holds
-   * the lease.
+   * Required. The task's current schedule time, available in the schedule_time returned by
+   * LeaseTasks response or RenewLease response. This restriction is to ensure that your worker
+   * currently holds the lease.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,11 +84,9 @@ public final class CancelLeaseRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required.
-   *
-   * The task's current schedule time, available in the schedule_time returned by LeaseTasks
-   * response or RenewLease response. This restriction is to ensure that your worker currently holds
-   * the lease.
+   * Required. The task's current schedule time, available in the schedule_time returned by
+   * LeaseTasks response or RenewLease response. This restriction is to ensure that your worker
+   * currently holds the lease.
    * @return value or {@code null} for none
    */
   public String getScheduleTime() {
@@ -98,11 +94,9 @@ public final class CancelLeaseRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required.
-   *
-   * The task's current schedule time, available in the schedule_time returned by LeaseTasks
-   * response or RenewLease response. This restriction is to ensure that your worker currently holds
-   * the lease.
+   * Required. The task's current schedule time, available in the schedule_time returned by
+   * LeaseTasks response or RenewLease response. This restriction is to ensure that your worker
+   * currently holds the lease.
    * @param scheduleTime scheduleTime or {@code null} for none
    */
   public CancelLeaseRequest setScheduleTime(String scheduleTime) {

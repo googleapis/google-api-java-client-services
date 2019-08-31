@@ -30,7 +30,7 @@ package com.google.api.services.bigquery.model;
 public final class GoogleSheetsOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Beta] [Optional] Range of a sheet to query from. Only used when non-empty. Typical format:
+   * [Optional] Range of a sheet to query from. Only used when non-empty. Typical format:
    * sheet_name!top_left_cell_id:bottom_right_cell_id For example: sheet1!A1:B20
    * The value may be {@code null}.
    */
@@ -53,7 +53,7 @@ public final class GoogleSheetsOptions extends com.google.api.client.json.Generi
   private java.lang.Long skipLeadingRows;
 
   /**
-   * [Beta] [Optional] Range of a sheet to query from. Only used when non-empty. Typical format:
+   * [Optional] Range of a sheet to query from. Only used when non-empty. Typical format:
    * sheet_name!top_left_cell_id:bottom_right_cell_id For example: sheet1!A1:B20
    * @return value or {@code null} for none
    */
@@ -62,7 +62,7 @@ public final class GoogleSheetsOptions extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Beta] [Optional] Range of a sheet to query from. Only used when non-empty. Typical format:
+   * [Optional] Range of a sheet to query from. Only used when non-empty. Typical format:
    * sheet_name!top_left_cell_id:bottom_right_cell_id For example: sheet1!A1:B20
    * @param range range or {@code null} for none
    */

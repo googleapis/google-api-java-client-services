@@ -44,6 +44,14 @@ public final class Model extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * Custom encryption configuration (e.g., Cloud KMS keys). This shows the encryption configuration
+   * of the model data while stored in BigQuery storage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EncryptionConfiguration encryptionConfiguration;
+
+  /**
    * Output only. A hash of this resource.
    * The value may be {@code null}.
    */
@@ -160,6 +168,25 @@ public final class Model extends com.google.api.client.json.GenericJson {
    */
   public Model setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Custom encryption configuration (e.g., Cloud KMS keys). This shows the encryption configuration
+   * of the model data while stored in BigQuery storage.
+   * @return value or {@code null} for none
+   */
+  public EncryptionConfiguration getEncryptionConfiguration() {
+    return encryptionConfiguration;
+  }
+
+  /**
+   * Custom encryption configuration (e.g., Cloud KMS keys). This shows the encryption configuration
+   * of the model data while stored in BigQuery storage.
+   * @param encryptionConfiguration encryptionConfiguration or {@code null} for none
+   */
+  public Model setEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
+    this.encryptionConfiguration = encryptionConfiguration;
     return this;
   }
 

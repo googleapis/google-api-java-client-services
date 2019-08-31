@@ -48,10 +48,15 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
   private Container container;
 
   /**
+   * (Optional)
+   *
    * ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests per
-   * container of the Revision. Values are: - `0` thread-safe, the system should manage the max
-   * concurrency. This is    the default value. - `1` not-thread-safe. Single concurrency - `2-N`
-   * thread-safe, max concurrency of N
+   * container instance of the Revision.
+   *
+   * Cloud Run fully managed: supported, defaults to 80
+   *
+   * Cloud Run on GKE: supported, defaults to 0, which means concurrency to the application is not
+   * limited, and the system decides the target concurrency for the autoscaler.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -160,10 +165,15 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * (Optional)
+   *
    * ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests per
-   * container of the Revision. Values are: - `0` thread-safe, the system should manage the max
-   * concurrency. This is    the default value. - `1` not-thread-safe. Single concurrency - `2-N`
-   * thread-safe, max concurrency of N
+   * container instance of the Revision.
+   *
+   * Cloud Run fully managed: supported, defaults to 80
+   *
+   * Cloud Run on GKE: supported, defaults to 0, which means concurrency to the application is not
+   * limited, and the system decides the target concurrency for the autoscaler.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getContainerConcurrency() {
@@ -171,10 +181,15 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * (Optional)
+   *
    * ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests per
-   * container of the Revision. Values are: - `0` thread-safe, the system should manage the max
-   * concurrency. This is    the default value. - `1` not-thread-safe. Single concurrency - `2-N`
-   * thread-safe, max concurrency of N
+   * container instance of the Revision.
+   *
+   * Cloud Run fully managed: supported, defaults to 80
+   *
+   * Cloud Run on GKE: supported, defaults to 0, which means concurrency to the application is not
+   * limited, and the system decides the target concurrency for the autoscaler.
    * @param containerConcurrency containerConcurrency or {@code null} for none
    */
   public RevisionSpec setContainerConcurrency(java.lang.Integer containerConcurrency) {

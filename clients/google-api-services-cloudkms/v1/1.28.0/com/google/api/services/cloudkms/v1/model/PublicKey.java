@@ -38,13 +38,6 @@ public final class PublicKey extends com.google.api.client.json.GenericJson {
   private java.lang.String algorithm;
 
   /**
-   * The name of the CryptoKeyVersion public key. Provided here for verification.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String name;
-
-  /**
    * The public key, encoded in PEM format. For more information, see the [RFC
    * 7468](https://tools.ietf.org/html/rfc7468) sections for [General
    * Considerations](https://tools.ietf.org/html/rfc7468#section-2) and [Textual Encoding of Subject
@@ -68,23 +61,6 @@ public final class PublicKey extends com.google.api.client.json.GenericJson {
    */
   public PublicKey setAlgorithm(java.lang.String algorithm) {
     this.algorithm = algorithm;
-    return this;
-  }
-
-  /**
-   * The name of the CryptoKeyVersion public key. Provided here for verification.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getName() {
-    return name;
-  }
-
-  /**
-   * The name of the CryptoKeyVersion public key. Provided here for verification.
-   * @param name name or {@code null} for none
-   */
-  public PublicKey setName(java.lang.String name) {
-    this.name = name;
     return this;
   }
 

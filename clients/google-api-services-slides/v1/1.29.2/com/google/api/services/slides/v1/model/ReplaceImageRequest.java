@@ -46,7 +46,7 @@ public final class ReplaceImageRequest extends com.google.api.client.json.Generi
   private java.lang.String imageReplaceMethod;
 
   /**
-   * The URL of the new image.
+   * The image URL.
    *
    * The image is fetched once at insertion time and a copy is stored for display inside the
    * presentation. Images must be less than 50MB in size, cannot exceed 25 megapixels, and must be
@@ -94,7 +94,7 @@ public final class ReplaceImageRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * The URL of the new image.
+   * The image URL.
    *
    * The image is fetched once at insertion time and a copy is stored for display inside the
    * presentation. Images must be less than 50MB in size, cannot exceed 25 megapixels, and must be
@@ -109,7 +109,7 @@ public final class ReplaceImageRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * The URL of the new image.
+   * The image URL.
    *
    * The image is fetched once at insertion time and a copy is stored for display inside the
    * presentation. Images must be less than 50MB in size, cannot exceed 25 megapixels, and must be

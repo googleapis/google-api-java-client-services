@@ -53,7 +53,7 @@ public final class WordInfo extends com.google.api.client.json.GenericJson {
   /**
    * Output only. A distinct integer value is assigned for every speaker within the audio. This
    * field specifies which one of those speakers was detected to have spoken this word. Value ranges
-   * from '1' to `diarization_speaker_count`. speaker_tag is set if `enable_speaker_diarization` =
+   * from `1` to `diarization_speaker_count`. speaker_tag is set if `enable_speaker_diarization` =
    * `true` and only in the top alternative.
    * The value may be {@code null}.
    */
@@ -125,7 +125,7 @@ public final class WordInfo extends com.google.api.client.json.GenericJson {
   /**
    * Output only. A distinct integer value is assigned for every speaker within the audio. This
    * field specifies which one of those speakers was detected to have spoken this word. Value ranges
-   * from '1' to `diarization_speaker_count`. speaker_tag is set if `enable_speaker_diarization` =
+   * from `1` to `diarization_speaker_count`. speaker_tag is set if `enable_speaker_diarization` =
    * `true` and only in the top alternative.
    * @return value or {@code null} for none
    */
@@ -136,7 +136,7 @@ public final class WordInfo extends com.google.api.client.json.GenericJson {
   /**
    * Output only. A distinct integer value is assigned for every speaker within the audio. This
    * field specifies which one of those speakers was detected to have spoken this word. Value ranges
-   * from '1' to `diarization_speaker_count`. speaker_tag is set if `enable_speaker_diarization` =
+   * from `1` to `diarization_speaker_count`. speaker_tag is set if `enable_speaker_diarization` =
    * `true` and only in the top alternative.
    * @param speakerTag speakerTag or {@code null} for none
    */

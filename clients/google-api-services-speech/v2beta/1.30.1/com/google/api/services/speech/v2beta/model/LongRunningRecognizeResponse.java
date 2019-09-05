@@ -18,7 +18,7 @@ package com.google.api.services.speech.v2beta.model;
 
 /**
  * The only message returned to the client by the `LongRunningRecognize` method. It contains the
- * result as zero or more sequential `SpeechRecognitionResult` messages. It is included in the
+ * result as zero or more sequential SpeechRecognitionResult messages. It is included in the
  * `result.response` field of the `Operation` returned by the `GetOperation` call of the
  * `google::longrunning::Operations` service.
  *

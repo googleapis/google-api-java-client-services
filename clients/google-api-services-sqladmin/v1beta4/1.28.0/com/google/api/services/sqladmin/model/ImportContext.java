@@ -30,6 +30,13 @@ package com.google.api.services.sqladmin.model;
 public final class ImportContext extends com.google.api.client.json.GenericJson {
 
   /**
+   * Import parameters specific to SQL Server .BAK files
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BakImportOptions bakImportOptions;
+
+  /**
    * Options for importing data as CSV.
    * The value may be {@code null}.
    */
@@ -75,6 +82,23 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
+
+  /**
+   * Import parameters specific to SQL Server .BAK files
+   * @return value or {@code null} for none
+   */
+  public BakImportOptions getBakImportOptions() {
+    return bakImportOptions;
+  }
+
+  /**
+   * Import parameters specific to SQL Server .BAK files
+   * @param bakImportOptions bakImportOptions or {@code null} for none
+   */
+  public ImportContext setBakImportOptions(BakImportOptions bakImportOptions) {
+    this.bakImportOptions = bakImportOptions;
+    return this;
+  }
 
   /**
    * Options for importing data as CSV.
@@ -196,6 +220,141 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
   @Override
   public ImportContext clone() {
     return (ImportContext) super.clone();
+  }
+
+  /**
+   * Import parameters specific to SQL Server .BAK files
+   */
+  public static final class BakImportOptions extends com.google.api.client.json.GenericJson {
+
+    /**
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private EncryptionOptions encryptionOptions;
+
+    /**
+     * @return value or {@code null} for none
+     */
+    public EncryptionOptions getEncryptionOptions() {
+      return encryptionOptions;
+    }
+
+    /**
+     * @param encryptionOptions encryptionOptions or {@code null} for none
+     */
+    public BakImportOptions setEncryptionOptions(EncryptionOptions encryptionOptions) {
+      this.encryptionOptions = encryptionOptions;
+      return this;
+    }
+
+    @Override
+    public BakImportOptions set(String fieldName, Object value) {
+      return (BakImportOptions) super.set(fieldName, value);
+    }
+
+    @Override
+    public BakImportOptions clone() {
+      return (BakImportOptions) super.clone();
+    }
+
+    /**
+     * Model definition for ImportContextBakImportOptionsEncryptionOptions.
+     */
+    public static final class EncryptionOptions extends com.google.api.client.json.GenericJson {
+
+      /**
+       * Path to the Certificate (.cer) in Cloud Storage, in the form gs://bucketName/fileName. The
+       * instance must have write permissions to the bucket and read access to the file.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String certPath;
+
+      /**
+       * Password that encrypts the private key
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pvkPassword;
+
+      /**
+       * Path to the Certificate Private Key (.pvk) in Cloud Storage, in the form
+       * gs://bucketName/fileName. The instance must have write permissions to the bucket and read
+       * access to the file.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pvkPath;
+
+      /**
+       * Path to the Certificate (.cer) in Cloud Storage, in the form gs://bucketName/fileName. The
+       * instance must have write permissions to the bucket and read access to the file.
+       * @return value or {@code null} for none
+       */
+      public java.lang.String getCertPath() {
+        return certPath;
+      }
+
+      /**
+       * Path to the Certificate (.cer) in Cloud Storage, in the form gs://bucketName/fileName. The
+       * instance must have write permissions to the bucket and read access to the file.
+       * @param certPath certPath or {@code null} for none
+       */
+      public EncryptionOptions setCertPath(java.lang.String certPath) {
+        this.certPath = certPath;
+        return this;
+      }
+
+      /**
+       * Password that encrypts the private key
+       * @return value or {@code null} for none
+       */
+      public java.lang.String getPvkPassword() {
+        return pvkPassword;
+      }
+
+      /**
+       * Password that encrypts the private key
+       * @param pvkPassword pvkPassword or {@code null} for none
+       */
+      public EncryptionOptions setPvkPassword(java.lang.String pvkPassword) {
+        this.pvkPassword = pvkPassword;
+        return this;
+      }
+
+      /**
+       * Path to the Certificate Private Key (.pvk) in Cloud Storage, in the form
+       * gs://bucketName/fileName. The instance must have write permissions to the bucket and read
+       * access to the file.
+       * @return value or {@code null} for none
+       */
+      public java.lang.String getPvkPath() {
+        return pvkPath;
+      }
+
+      /**
+       * Path to the Certificate Private Key (.pvk) in Cloud Storage, in the form
+       * gs://bucketName/fileName. The instance must have write permissions to the bucket and read
+       * access to the file.
+       * @param pvkPath pvkPath or {@code null} for none
+       */
+      public EncryptionOptions setPvkPath(java.lang.String pvkPath) {
+        this.pvkPath = pvkPath;
+        return this;
+      }
+
+      @Override
+      public EncryptionOptions set(String fieldName, Object value) {
+        return (EncryptionOptions) super.set(fieldName, value);
+      }
+
+      @Override
+      public EncryptionOptions clone() {
+        return (EncryptionOptions) super.clone();
+      }
+
+    }
   }
 
   /**

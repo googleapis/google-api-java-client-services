@@ -1857,7 +1857,8 @@ public final class File extends com.google.api.client.json.GenericJson {
     private java.lang.Boolean canDownload;
 
     /**
-     * Whether the current user can edit this file.
+     * Whether the current user can edit this file. Other factors may limit the type of changes a user
+     * can make to a file. For example, see canChangeCopyRequiresWriterPermission or canModifyContent.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -1870,6 +1871,13 @@ public final class File extends com.google.api.client.json.GenericJson {
      */
     @com.google.api.client.util.Key
     private java.lang.Boolean canListChildren;
+
+    /**
+     * Whether the current user can modify the content of this file.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean canModifyContent;
 
     /**
      * Whether the current user can move children of this folder outside of the shared drive. This is
@@ -2159,7 +2167,8 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can edit this file.
+     * Whether the current user can edit this file. Other factors may limit the type of changes a user
+     * can make to a file. For example, see canChangeCopyRequiresWriterPermission or canModifyContent.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanEdit() {
@@ -2167,7 +2176,8 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can edit this file.
+     * Whether the current user can edit this file. Other factors may limit the type of changes a user
+     * can make to a file. For example, see canChangeCopyRequiresWriterPermission or canModifyContent.
      * @param canEdit canEdit or {@code null} for none
      */
     public Capabilities setCanEdit(java.lang.Boolean canEdit) {
@@ -2191,6 +2201,23 @@ public final class File extends com.google.api.client.json.GenericJson {
      */
     public Capabilities setCanListChildren(java.lang.Boolean canListChildren) {
       this.canListChildren = canListChildren;
+      return this;
+    }
+
+    /**
+     * Whether the current user can modify the content of this file.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getCanModifyContent() {
+      return canModifyContent;
+    }
+
+    /**
+     * Whether the current user can modify the content of this file.
+     * @param canModifyContent canModifyContent or {@code null} for none
+     */
+    public Capabilities setCanModifyContent(java.lang.Boolean canModifyContent) {
+      this.canModifyContent = canModifyContent;
       return this;
     }
 

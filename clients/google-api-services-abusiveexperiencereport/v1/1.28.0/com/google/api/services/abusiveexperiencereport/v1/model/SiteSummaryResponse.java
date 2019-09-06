@@ -31,42 +31,51 @@ package com.google.api.services.abusiveexperiencereport.v1.model;
 public final class SiteSummaryResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The status of the site reviewed for the abusive experiences.
+   * The site's Abusive Experience Report status.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String abusiveStatus;
 
   /**
-   * The time at which enforcement begins.
+   * The time at which [enforcement](https://support.google.com/webtools/answer/7538608) against the
+   * site began or will begin.
+   *
+   * Not set when the filter_status is OFF.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String enforcementTime;
 
   /**
-   * The abusive experience enforcement status of the site.
+   * The site's [enforcement status](https://support.google.com/webtools/answer/7538608).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String filterStatus;
 
   /**
-   * The last time that the site changed status.
+   * The time at which the site's status last changed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String lastChangeTime;
 
   /**
-   * A link that leads to a full abusive experience report.
+   * A link to the full Abusive Experience Report for the site.
+   *
+   * Not set in ViolatingSitesResponse.
+   *
+   * Note that you must complete the [Search Console verification
+   * process](https://support.google.com/webmasters/answer/9008080) for the site before you can
+   * access the full report.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String reportUrl;
 
   /**
-   * The name of the site reviewed.
+   * The name of the reviewed site, e.g. `google.com`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,7 +89,7 @@ public final class SiteSummaryResponse extends com.google.api.client.json.Generi
   private java.lang.Boolean underReview;
 
   /**
-   * The status of the site reviewed for the abusive experiences.
+   * The site's Abusive Experience Report status.
    * @return value or {@code null} for none
    */
   public java.lang.String getAbusiveStatus() {
@@ -88,7 +97,7 @@ public final class SiteSummaryResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * The status of the site reviewed for the abusive experiences.
+   * The site's Abusive Experience Report status.
    * @param abusiveStatus abusiveStatus or {@code null} for none
    */
   public SiteSummaryResponse setAbusiveStatus(java.lang.String abusiveStatus) {
@@ -97,7 +106,10 @@ public final class SiteSummaryResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * The time at which enforcement begins.
+   * The time at which [enforcement](https://support.google.com/webtools/answer/7538608) against the
+   * site began or will begin.
+   *
+   * Not set when the filter_status is OFF.
    * @return value or {@code null} for none
    */
   public String getEnforcementTime() {
@@ -105,7 +117,10 @@ public final class SiteSummaryResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * The time at which enforcement begins.
+   * The time at which [enforcement](https://support.google.com/webtools/answer/7538608) against the
+   * site began or will begin.
+   *
+   * Not set when the filter_status is OFF.
    * @param enforcementTime enforcementTime or {@code null} for none
    */
   public SiteSummaryResponse setEnforcementTime(String enforcementTime) {
@@ -114,7 +129,7 @@ public final class SiteSummaryResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * The abusive experience enforcement status of the site.
+   * The site's [enforcement status](https://support.google.com/webtools/answer/7538608).
    * @return value or {@code null} for none
    */
   public java.lang.String getFilterStatus() {
@@ -122,7 +137,7 @@ public final class SiteSummaryResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * The abusive experience enforcement status of the site.
+   * The site's [enforcement status](https://support.google.com/webtools/answer/7538608).
    * @param filterStatus filterStatus or {@code null} for none
    */
   public SiteSummaryResponse setFilterStatus(java.lang.String filterStatus) {
@@ -131,7 +146,7 @@ public final class SiteSummaryResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * The last time that the site changed status.
+   * The time at which the site's status last changed.
    * @return value or {@code null} for none
    */
   public String getLastChangeTime() {
@@ -139,7 +154,7 @@ public final class SiteSummaryResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * The last time that the site changed status.
+   * The time at which the site's status last changed.
    * @param lastChangeTime lastChangeTime or {@code null} for none
    */
   public SiteSummaryResponse setLastChangeTime(String lastChangeTime) {
@@ -148,7 +163,13 @@ public final class SiteSummaryResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * A link that leads to a full abusive experience report.
+   * A link to the full Abusive Experience Report for the site.
+   *
+   * Not set in ViolatingSitesResponse.
+   *
+   * Note that you must complete the [Search Console verification
+   * process](https://support.google.com/webmasters/answer/9008080) for the site before you can
+   * access the full report.
    * @return value or {@code null} for none
    */
   public java.lang.String getReportUrl() {
@@ -156,7 +177,13 @@ public final class SiteSummaryResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * A link that leads to a full abusive experience report.
+   * A link to the full Abusive Experience Report for the site.
+   *
+   * Not set in ViolatingSitesResponse.
+   *
+   * Note that you must complete the [Search Console verification
+   * process](https://support.google.com/webmasters/answer/9008080) for the site before you can
+   * access the full report.
    * @param reportUrl reportUrl or {@code null} for none
    */
   public SiteSummaryResponse setReportUrl(java.lang.String reportUrl) {
@@ -165,7 +192,7 @@ public final class SiteSummaryResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * The name of the site reviewed.
+   * The name of the reviewed site, e.g. `google.com`.
    * @return value or {@code null} for none
    */
   public java.lang.String getReviewedSite() {
@@ -173,7 +200,7 @@ public final class SiteSummaryResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * The name of the site reviewed.
+   * The name of the reviewed site, e.g. `google.com`.
    * @param reviewedSite reviewedSite or {@code null} for none
    */
   public SiteSummaryResponse setReviewedSite(java.lang.String reviewedSite) {

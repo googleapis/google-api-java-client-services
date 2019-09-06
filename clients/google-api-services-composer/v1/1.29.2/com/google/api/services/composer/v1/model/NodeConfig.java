@@ -68,6 +68,9 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * fields. If exactly one of this field and `nodeConfig.location` is specified, the location
    * information from the specified field will be propagated to the unspecified field.
    *
+   * The `machineTypeId` must not be a [shared-core machine type](/compute/docs/machine-
+   * types#sharedcore).
+   *
    * If this field is unspecified, the `machineTypeId` defaults to "n1-standard-1".
    * The value may be {@code null}.
    */
@@ -195,6 +198,9 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * fields. If exactly one of this field and `nodeConfig.location` is specified, the location
    * information from the specified field will be propagated to the unspecified field.
    *
+   * The `machineTypeId` must not be a [shared-core machine type](/compute/docs/machine-
+   * types#sharedcore).
+   *
    * If this field is unspecified, the `machineTypeId` defaults to "n1-standard-1".
    * @return value or {@code null} for none
    */
@@ -214,6 +220,9 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * Engine region corresponding to the Cloud Composer location, and propagate that choice to both
    * fields. If exactly one of this field and `nodeConfig.location` is specified, the location
    * information from the specified field will be propagated to the unspecified field.
+   *
+   * The `machineTypeId` must not be a [shared-core machine type](/compute/docs/machine-
+   * types#sharedcore).
    *
    * If this field is unspecified, the `machineTypeId` defaults to "n1-standard-1".
    * @param machineType machineType or {@code null} for none

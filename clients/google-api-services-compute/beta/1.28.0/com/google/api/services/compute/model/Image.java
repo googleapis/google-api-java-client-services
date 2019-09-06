@@ -276,7 +276,7 @@ public final class Image extends com.google.api.client.json.GenericJson {
   private java.lang.String status;
 
   /**
-   * GCS bucket storage location of the image (regional or multi-regional).
+   * Cloud Storage bucket storage location of the image (regional or multi-regional).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -881,7 +881,7 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * GCS bucket storage location of the image (regional or multi-regional).
+   * Cloud Storage bucket storage location of the image (regional or multi-regional).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getStorageLocations() {
@@ -889,7 +889,7 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * GCS bucket storage location of the image (regional or multi-regional).
+   * Cloud Storage bucket storage location of the image (regional or multi-regional).
    * @param storageLocations storageLocations or {@code null} for none
    */
   public Image setStorageLocations(java.util.List<java.lang.String> storageLocations) {

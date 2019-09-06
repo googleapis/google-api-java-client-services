@@ -74,6 +74,22 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
   private java.lang.Long advertisedRoutePriority;
 
   /**
+   * BFD configuration for the BGP peering.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RouterBgpPeerBfd bfd;
+
+  /**
+   * The status of the BGP peer connection. If set to FALSE, any active session with the peer is
+   * terminated and all associated routing information is removed. If set to TRUE, the peer
+   * connection can be established with routing information. The default is TRUE.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String enable;
+
+  /**
    * Name of the interface the BGP peer is associated with.
    * The value may be {@code null}.
    */
@@ -99,7 +115,11 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
   private java.lang.String managementType;
 
   /**
-   * Name of this BGP peer. The name must be 1-63 characters long and comply with RFC1035.
+   * Name of this BGP peer. The name must be 1-63 characters long, and comply with RFC1035.
+   * Specifically, the name must be 1-63 characters long and match the regular expression
+   * `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and
+   * all following characters must be a dash, lowercase letter, or digit, except the last character,
+   * which cannot be a dash.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -208,6 +228,44 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * BFD configuration for the BGP peering.
+   * @return value or {@code null} for none
+   */
+  public RouterBgpPeerBfd getBfd() {
+    return bfd;
+  }
+
+  /**
+   * BFD configuration for the BGP peering.
+   * @param bfd bfd or {@code null} for none
+   */
+  public RouterBgpPeer setBfd(RouterBgpPeerBfd bfd) {
+    this.bfd = bfd;
+    return this;
+  }
+
+  /**
+   * The status of the BGP peer connection. If set to FALSE, any active session with the peer is
+   * terminated and all associated routing information is removed. If set to TRUE, the peer
+   * connection can be established with routing information. The default is TRUE.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEnable() {
+    return enable;
+  }
+
+  /**
+   * The status of the BGP peer connection. If set to FALSE, any active session with the peer is
+   * terminated and all associated routing information is removed. If set to TRUE, the peer
+   * connection can be established with routing information. The default is TRUE.
+   * @param enable enable or {@code null} for none
+   */
+  public RouterBgpPeer setEnable(java.lang.String enable) {
+    this.enable = enable;
+    return this;
+  }
+
+  /**
    * Name of the interface the BGP peer is associated with.
    * @return value or {@code null} for none
    */
@@ -267,7 +325,11 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Name of this BGP peer. The name must be 1-63 characters long and comply with RFC1035.
+   * Name of this BGP peer. The name must be 1-63 characters long, and comply with RFC1035.
+   * Specifically, the name must be 1-63 characters long and match the regular expression
+   * `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and
+   * all following characters must be a dash, lowercase letter, or digit, except the last character,
+   * which cannot be a dash.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -275,7 +337,11 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Name of this BGP peer. The name must be 1-63 characters long and comply with RFC1035.
+   * Name of this BGP peer. The name must be 1-63 characters long, and comply with RFC1035.
+   * Specifically, the name must be 1-63 characters long and match the regular expression
+   * `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and
+   * all following characters must be a dash, lowercase letter, or digit, except the last character,
+   * which cannot be a dash.
    * @param name name or {@code null} for none
    */
   public RouterBgpPeer setName(java.lang.String name) {

@@ -48,7 +48,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * mutable for PARTNER_PROVIDER and DEDICATED, and can take one of the following values: -
    * BPS_50M: 50 Mbit/s  - BPS_100M: 100 Mbit/s  - BPS_200M: 200 Mbit/s  - BPS_300M: 300 Mbit/s  -
    * BPS_400M: 400 Mbit/s  - BPS_500M: 500 Mbit/s  - BPS_1G: 1 Gbit/s  - BPS_2G: 2 Gbit/s  - BPS_5G:
-   * 5 Gbit/s  - BPS_10G: 10 Gbit/s
+   * 5 Gbit/s  - BPS_10G: 10 Gbit/s  - BPS_20G: 20 Gbit/s  - BPS_50G: 50 Gbit/s
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -279,7 +279,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * mutable for PARTNER_PROVIDER and DEDICATED, and can take one of the following values: -
    * BPS_50M: 50 Mbit/s  - BPS_100M: 100 Mbit/s  - BPS_200M: 200 Mbit/s  - BPS_300M: 300 Mbit/s  -
    * BPS_400M: 400 Mbit/s  - BPS_500M: 500 Mbit/s  - BPS_1G: 1 Gbit/s  - BPS_2G: 2 Gbit/s  - BPS_5G:
-   * 5 Gbit/s  - BPS_10G: 10 Gbit/s
+   * 5 Gbit/s  - BPS_10G: 10 Gbit/s  - BPS_20G: 20 Gbit/s  - BPS_50G: 50 Gbit/s
    * @return value or {@code null} for none
    */
   public java.lang.String getBandwidth() {
@@ -293,7 +293,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * mutable for PARTNER_PROVIDER and DEDICATED, and can take one of the following values: -
    * BPS_50M: 50 Mbit/s  - BPS_100M: 100 Mbit/s  - BPS_200M: 200 Mbit/s  - BPS_300M: 300 Mbit/s  -
    * BPS_400M: 400 Mbit/s  - BPS_500M: 500 Mbit/s  - BPS_1G: 1 Gbit/s  - BPS_2G: 2 Gbit/s  - BPS_5G:
-   * 5 Gbit/s  - BPS_10G: 10 Gbit/s
+   * 5 Gbit/s  - BPS_10G: 10 Gbit/s  - BPS_20G: 20 Gbit/s  - BPS_50G: 50 Gbit/s
    * @param bandwidth bandwidth or {@code null} for none
    */
   public InterconnectAttachment setBandwidth(java.lang.String bandwidth) {

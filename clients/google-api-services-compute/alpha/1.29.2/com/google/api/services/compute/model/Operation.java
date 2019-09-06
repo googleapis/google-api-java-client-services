@@ -96,7 +96,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.lang.Integer httpErrorStatusCode;
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * [Output Only] The unique identifier for the operation. This identifier is defined by the
+   * server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -117,7 +118,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * [Output Only] Name of the resource.
+   * [Output Only] Name of the operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -360,7 +361,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * [Output Only] The unique identifier for the operation. This identifier is defined by the
+   * server.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -368,7 +370,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * [Output Only] The unique identifier for the operation. This identifier is defined by the
+   * server.
    * @param id id or {@code null} for none
    */
   public Operation setId(java.math.BigInteger id) {
@@ -411,7 +414,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Name of the resource.
+   * [Output Only] Name of the operation.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -419,7 +422,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Name of the resource.
+   * [Output Only] Name of the operation.
    * @param name name or {@code null} for none
    */
   public Operation setName(java.lang.String name) {

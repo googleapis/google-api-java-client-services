@@ -30,12 +30,14 @@ package com.google.api.services.compute.model;
 public final class NodeGroupsDeleteNodesRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Names of the nodes to delete.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> nodes;
 
   /**
+   * Names of the nodes to delete.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getNodes() {
@@ -43,6 +45,7 @@ public final class NodeGroupsDeleteNodesRequest extends com.google.api.client.js
   }
 
   /**
+   * Names of the nodes to delete.
    * @param nodes nodes or {@code null} for none
    */
   public NodeGroupsDeleteNodesRequest setNodes(java.util.List<java.lang.String> nodes) {

@@ -149,6 +149,13 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> storageLocations;
 
   /**
+   * [Output Only] Total size of the storage used by the machine image.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long totalStorageBytes;
+
+  /**
    * [Output Only] The creation timestamp for this machine image in RFC3339 text format.
    * @return value or {@code null} for none
    */
@@ -425,6 +432,23 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
    */
   public MachineImage setStorageLocations(java.util.List<java.lang.String> storageLocations) {
     this.storageLocations = storageLocations;
+    return this;
+  }
+
+  /**
+   * [Output Only] Total size of the storage used by the machine image.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getTotalStorageBytes() {
+    return totalStorageBytes;
+  }
+
+  /**
+   * [Output Only] Total size of the storage used by the machine image.
+   * @param totalStorageBytes totalStorageBytes or {@code null} for none
+   */
+  public MachineImage setTotalStorageBytes(java.lang.Long totalStorageBytes) {
+    this.totalStorageBytes = totalStorageBytes;
     return this;
   }
 

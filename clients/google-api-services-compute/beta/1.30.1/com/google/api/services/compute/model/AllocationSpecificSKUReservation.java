@@ -30,28 +30,28 @@ package com.google.api.services.compute.model;
 public final class AllocationSpecificSKUReservation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Specifies number of resources that are allocated.
+   * Specifies the number of resources that are allocated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long count;
 
   /**
-   * [OutputOnly] Indicates how many resource are in use.
+   * [OutputOnly] Indicates how many instances are in use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long inUseCount;
 
   /**
-   * The instance properties for this specific sku reservation.
+   * The instance properties for the reservation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AllocationSpecificSKUAllocationReservedInstanceProperties instanceProperties;
 
   /**
-   * Specifies number of resources that are allocated.
+   * Specifies the number of resources that are allocated.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCount() {
@@ -59,7 +59,7 @@ public final class AllocationSpecificSKUReservation extends com.google.api.clien
   }
 
   /**
-   * Specifies number of resources that are allocated.
+   * Specifies the number of resources that are allocated.
    * @param count count or {@code null} for none
    */
   public AllocationSpecificSKUReservation setCount(java.lang.Long count) {
@@ -68,7 +68,7 @@ public final class AllocationSpecificSKUReservation extends com.google.api.clien
   }
 
   /**
-   * [OutputOnly] Indicates how many resource are in use.
+   * [OutputOnly] Indicates how many instances are in use.
    * @return value or {@code null} for none
    */
   public java.lang.Long getInUseCount() {
@@ -76,7 +76,7 @@ public final class AllocationSpecificSKUReservation extends com.google.api.clien
   }
 
   /**
-   * [OutputOnly] Indicates how many resource are in use.
+   * [OutputOnly] Indicates how many instances are in use.
    * @param inUseCount inUseCount or {@code null} for none
    */
   public AllocationSpecificSKUReservation setInUseCount(java.lang.Long inUseCount) {
@@ -85,7 +85,7 @@ public final class AllocationSpecificSKUReservation extends com.google.api.clien
   }
 
   /**
-   * The instance properties for this specific sku reservation.
+   * The instance properties for the reservation.
    * @return value or {@code null} for none
    */
   public AllocationSpecificSKUAllocationReservedInstanceProperties getInstanceProperties() {
@@ -93,7 +93,7 @@ public final class AllocationSpecificSKUReservation extends com.google.api.clien
   }
 
   /**
-   * The instance properties for this specific sku reservation.
+   * The instance properties for the reservation.
    * @param instanceProperties instanceProperties or {@code null} for none
    */
   public AllocationSpecificSKUReservation setInstanceProperties(AllocationSpecificSKUAllocationReservedInstanceProperties instanceProperties) {

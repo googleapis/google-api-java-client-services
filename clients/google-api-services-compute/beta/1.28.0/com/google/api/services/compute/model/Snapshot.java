@@ -197,7 +197,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   private java.lang.String storageBytesStatus;
 
   /**
-   * GCS bucket storage location of the snapshot (regional or multi-regional).
+   * Cloud Storage bucket storage location of the snapshot (regional or multi-regional).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -629,7 +629,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * GCS bucket storage location of the snapshot (regional or multi-regional).
+   * Cloud Storage bucket storage location of the snapshot (regional or multi-regional).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getStorageLocations() {
@@ -637,7 +637,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * GCS bucket storage location of the snapshot (regional or multi-regional).
+   * Cloud Storage bucket storage location of the snapshot (regional or multi-regional).
    * @param storageLocations storageLocations or {@code null} for none
    */
   public Snapshot setStorageLocations(java.util.List<java.lang.String> storageLocations) {

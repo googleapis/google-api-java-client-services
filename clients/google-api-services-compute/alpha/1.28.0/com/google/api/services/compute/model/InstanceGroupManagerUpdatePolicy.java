@@ -30,6 +30,9 @@ package com.google.api.services.compute.model;
 public final class InstanceGroupManagerUpdatePolicy extends com.google.api.client.json.GenericJson {
 
   /**
+   * The  instance redistribution policy for regional managed instance groups. Valid values are: -
+   * PROACTIVE (default): The group attempts to maintain an even distribution of VM instances across
+   * zones in the region.  - NONE: For non-autoscaled groups, proactive redistribution is disabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,6 +106,9 @@ public final class InstanceGroupManagerUpdatePolicy extends com.google.api.clien
   private java.lang.String type;
 
   /**
+   * The  instance redistribution policy for regional managed instance groups. Valid values are: -
+   * PROACTIVE (default): The group attempts to maintain an even distribution of VM instances across
+   * zones in the region.  - NONE: For non-autoscaled groups, proactive redistribution is disabled.
    * @return value or {@code null} for none
    */
   public java.lang.String getInstanceRedistributionType() {
@@ -110,6 +116,9 @@ public final class InstanceGroupManagerUpdatePolicy extends com.google.api.clien
   }
 
   /**
+   * The  instance redistribution policy for regional managed instance groups. Valid values are: -
+   * PROACTIVE (default): The group attempts to maintain an even distribution of VM instances across
+   * zones in the region.  - NONE: For non-autoscaled groups, proactive redistribution is disabled.
    * @param instanceRedistributionType instanceRedistributionType or {@code null} for none
    */
   public InstanceGroupManagerUpdatePolicy setInstanceRedistributionType(java.lang.String instanceRedistributionType) {

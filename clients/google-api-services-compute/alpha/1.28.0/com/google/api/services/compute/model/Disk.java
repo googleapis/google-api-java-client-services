@@ -324,7 +324,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceSnapshotId;
 
   /**
-   * [Output Only] The status of disk creation.
+   * [Output Only] The status of disk creation. CREATING: Disk is provisioning. RESTORING: Source
+   * data is being copied into the disk. FAILED: Disk creation failed. READY: Disk is ready for use.
+   * DELETING: Disk is deleting.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1062,7 +1064,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The status of disk creation.
+   * [Output Only] The status of disk creation. CREATING: Disk is provisioning. RESTORING: Source
+   * data is being copied into the disk. FAILED: Disk creation failed. READY: Disk is ready for use.
+   * DELETING: Disk is deleting.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -1070,7 +1074,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The status of disk creation.
+   * [Output Only] The status of disk creation. CREATING: Disk is provisioning. RESTORING: Source
+   * data is being copied into the disk. FAILED: Disk creation failed. READY: Disk is ready for use.
+   * DELETING: Disk is deleting.
    * @param status status or {@code null} for none
    */
   public Disk setStatus(java.lang.String status) {

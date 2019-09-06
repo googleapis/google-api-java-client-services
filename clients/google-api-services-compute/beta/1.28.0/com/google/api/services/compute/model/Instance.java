@@ -105,6 +105,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Specifies the hostname of the instance. The specified hostname must be RFC1035 compliant. If
+   * hostname is not specified, the default hostname is [INSTANCE_NAME].c.[PROJECT_ID].internal when
+   * using the global DNS, and [INSTANCE_NAME].[ZONE].c.[PROJECT_ID].internal when using zonal DNS.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -439,6 +442,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Specifies the hostname of the instance. The specified hostname must be RFC1035 compliant. If
+   * hostname is not specified, the default hostname is [INSTANCE_NAME].c.[PROJECT_ID].internal when
+   * using the global DNS, and [INSTANCE_NAME].[ZONE].c.[PROJECT_ID].internal when using zonal DNS.
    * @return value or {@code null} for none
    */
   public java.lang.String getHostname() {
@@ -446,6 +452,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Specifies the hostname of the instance. The specified hostname must be RFC1035 compliant. If
+   * hostname is not specified, the default hostname is [INSTANCE_NAME].c.[PROJECT_ID].internal when
+   * using the global DNS, and [INSTANCE_NAME].[ZONE].c.[PROJECT_ID].internal when using zonal DNS.
    * @param hostname hostname or {@code null} for none
    */
   public Instance setHostname(java.lang.String hostname) {

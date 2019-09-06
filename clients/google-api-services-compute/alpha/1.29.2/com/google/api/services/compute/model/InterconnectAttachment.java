@@ -48,7 +48,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * mutable for PARTNER_PROVIDER and DEDICATED, and can take one of the following values: -
    * BPS_50M: 50 Mbit/s  - BPS_100M: 100 Mbit/s  - BPS_200M: 200 Mbit/s  - BPS_300M: 300 Mbit/s  -
    * BPS_400M: 400 Mbit/s  - BPS_500M: 500 Mbit/s  - BPS_1G: 1 Gbit/s  - BPS_2G: 2 Gbit/s  - BPS_5G:
-   * 5 Gbit/s  - BPS_10G: 10 Gbit/s
+   * 5 Gbit/s  - BPS_10G: 10 Gbit/s  - BPS_20G: 20 Gbit/s  - BPS_50G: 50 Gbit/s
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,6 +158,14 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
+
+  /**
+   * Maximum Transmission Unit (MTU), in bytes, of packets passing through this interconnect
+   * attachment. Only 1440 and 1500 are allowed. If not specified, the value will default to 1440.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer mtu;
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
@@ -307,7 +315,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * mutable for PARTNER_PROVIDER and DEDICATED, and can take one of the following values: -
    * BPS_50M: 50 Mbit/s  - BPS_100M: 100 Mbit/s  - BPS_200M: 200 Mbit/s  - BPS_300M: 300 Mbit/s  -
    * BPS_400M: 400 Mbit/s  - BPS_500M: 500 Mbit/s  - BPS_1G: 1 Gbit/s  - BPS_2G: 2 Gbit/s  - BPS_5G:
-   * 5 Gbit/s  - BPS_10G: 10 Gbit/s
+   * 5 Gbit/s  - BPS_10G: 10 Gbit/s  - BPS_20G: 20 Gbit/s  - BPS_50G: 50 Gbit/s
    * @return value or {@code null} for none
    */
   public java.lang.String getBandwidth() {
@@ -321,7 +329,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * mutable for PARTNER_PROVIDER and DEDICATED, and can take one of the following values: -
    * BPS_50M: 50 Mbit/s  - BPS_100M: 100 Mbit/s  - BPS_200M: 200 Mbit/s  - BPS_300M: 300 Mbit/s  -
    * BPS_400M: 400 Mbit/s  - BPS_500M: 500 Mbit/s  - BPS_1G: 1 Gbit/s  - BPS_2G: 2 Gbit/s  - BPS_5G:
-   * 5 Gbit/s  - BPS_10G: 10 Gbit/s
+   * 5 Gbit/s  - BPS_10G: 10 Gbit/s  - BPS_20G: 20 Gbit/s  - BPS_50G: 50 Gbit/s
    * @param bandwidth bandwidth or {@code null} for none
    */
   public InterconnectAttachment setBandwidth(java.lang.String bandwidth) {
@@ -612,6 +620,25 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    */
   public InterconnectAttachment setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Maximum Transmission Unit (MTU), in bytes, of packets passing through this interconnect
+   * attachment. Only 1440 and 1500 are allowed. If not specified, the value will default to 1440.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMtu() {
+    return mtu;
+  }
+
+  /**
+   * Maximum Transmission Unit (MTU), in bytes, of packets passing through this interconnect
+   * attachment. Only 1440 and 1500 are allowed. If not specified, the value will default to 1440.
+   * @param mtu mtu or {@code null} for none
+   */
+  public InterconnectAttachment setMtu(java.lang.Integer mtu) {
+    this.mtu = mtu;
     return this;
   }
 

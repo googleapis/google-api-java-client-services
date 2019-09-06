@@ -102,6 +102,14 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
+   * This field denotes the VPC flow logging options for this subnetwork. If logging is enabled,
+   * logs are exported to Stackdriver.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SubnetworkLogConfig logConfig;
+
+  /**
    * The name of the resource, provided by the client when initially creating the resource. The name
    * must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63
    * characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the
@@ -348,6 +356,25 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    */
   public Subnetwork setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * This field denotes the VPC flow logging options for this subnetwork. If logging is enabled,
+   * logs are exported to Stackdriver.
+   * @return value or {@code null} for none
+   */
+  public SubnetworkLogConfig getLogConfig() {
+    return logConfig;
+  }
+
+  /**
+   * This field denotes the VPC flow logging options for this subnetwork. If logging is enabled,
+   * logs are exported to Stackdriver.
+   * @param logConfig logConfig or {@code null} for none
+   */
+  public Subnetwork setLogConfig(SubnetworkLogConfig logConfig) {
+    this.logConfig = logConfig;
     return this;
   }
 

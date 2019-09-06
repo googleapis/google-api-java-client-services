@@ -19,7 +19,7 @@ package com.google.api.services.compute.model;
 /**
  * Represents a reservation resource. A reservation ensures that capacity is held in a specific zone
  * even if the reserved VMs are not running. For more information, read  Reserving zonal resources.
- * (== resource_for beta.reservations ==) (== resource_for v1.reservations ==) (== NextID: 13 ==)
+ * (== resource_for beta.reservations ==) (== resource_for v1.reservations ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -32,8 +32,8 @@ package com.google.api.services.compute.model;
 public final class Reservation extends com.google.api.client.json.GenericJson {
 
   /**
-   * [OutputOnly] Full or partial url for parent commitment for reservations which are tied to a
-   * commitment.
+   * [OutputOnly] Full or partial URL to a parent commitment. This field displays for reservations
+   * that are tied to a commitment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,16 +109,16 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.lang.String status;
 
   /**
-   * Zone in which the reservation resides, must be provided if reservation is created with
-   * commitment creation.
+   * Zone in which the reservation resides. A zone must be provided if the reservation is created
+   * within a commitment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
 
   /**
-   * [OutputOnly] Full or partial url for parent commitment for reservations which are tied to a
-   * commitment.
+   * [OutputOnly] Full or partial URL to a parent commitment. This field displays for reservations
+   * that are tied to a commitment.
    * @return value or {@code null} for none
    */
   public java.lang.String getCommitment() {
@@ -126,8 +126,8 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [OutputOnly] Full or partial url for parent commitment for reservations which are tied to a
-   * commitment.
+   * [OutputOnly] Full or partial URL to a parent commitment. This field displays for reservations
+   * that are tied to a commitment.
    * @param commitment commitment or {@code null} for none
    */
   public Reservation setCommitment(java.lang.String commitment) {
@@ -301,8 +301,8 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Zone in which the reservation resides, must be provided if reservation is created with
-   * commitment creation.
+   * Zone in which the reservation resides. A zone must be provided if the reservation is created
+   * within a commitment.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -310,8 +310,8 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Zone in which the reservation resides, must be provided if reservation is created with
-   * commitment creation.
+   * Zone in which the reservation resides. A zone must be provided if the reservation is created
+   * within a commitment.
    * @param zone zone or {@code null} for none
    */
   public Reservation setZone(java.lang.String zone) {

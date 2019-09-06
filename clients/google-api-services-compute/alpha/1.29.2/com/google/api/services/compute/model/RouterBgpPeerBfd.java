@@ -30,25 +30,20 @@ package com.google.api.services.compute.model;
 public final class RouterBgpPeerBfd extends com.google.api.client.json.GenericJson {
 
   /**
-   * The minimum interval, in milliseconds, between BFD packets received from the peer router. The
-   * actual value is negotiated between the two routers and is equal to the greater of this value
-   * and the transmit interval of the other router. If BFD echo mode is enabled on this router and
-   * the peer router, this value is used to negotiate the interval between BFD echo packets
-   * transmitted by the peer router. Otherwise, it will be used to determine the interval between
-   * BFD control packets. If set, this value must be between 100 and 30000. The default is 300.
+   * The minimum interval, in milliseconds, between BFD control packets received from the peer
+   * router. The actual value is negotiated between the two routers and is equal to the greater of
+   * this value and the transmit interval of the other router. If set, this value must be between
+   * 100 and 30000. The default is 300.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Long minReceiveInterval;
 
   /**
-   * The minimum interval, in milliseconds, between BFD packets transmitted to the peer router. The
-   * actual value is negotiated between the two routers and is equal to the greater of this value
-   * and the corresponding receive interval of the other router. If BFD echo mode is enabled on this
-   * router and the peer router, this value is used to negotiate the interval between BFD echo
-   * packets transmitted by this router. Otherwise, it will be used to determine the interval
-   * between BFD control packets. If set, this value must be between 100 and 30000. The default is
-   * 300.
+   * The minimum interval, in milliseconds, between BFD control packets transmitted to the peer
+   * router. The actual value is negotiated between the two routers and is equal to the greater of
+   * this value and the corresponding receive interval of the other router. If set, this value must
+   * be between 100 and 30000. The default is 300.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,12 +102,10 @@ public final class RouterBgpPeerBfd extends com.google.api.client.json.GenericJs
   private java.lang.Long slowTimerInterval;
 
   /**
-   * The minimum interval, in milliseconds, between BFD packets received from the peer router. The
-   * actual value is negotiated between the two routers and is equal to the greater of this value
-   * and the transmit interval of the other router. If BFD echo mode is enabled on this router and
-   * the peer router, this value is used to negotiate the interval between BFD echo packets
-   * transmitted by the peer router. Otherwise, it will be used to determine the interval between
-   * BFD control packets. If set, this value must be between 100 and 30000. The default is 300.
+   * The minimum interval, in milliseconds, between BFD control packets received from the peer
+   * router. The actual value is negotiated between the two routers and is equal to the greater of
+   * this value and the transmit interval of the other router. If set, this value must be between
+   * 100 and 30000. The default is 300.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMinReceiveInterval() {
@@ -120,12 +113,10 @@ public final class RouterBgpPeerBfd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The minimum interval, in milliseconds, between BFD packets received from the peer router. The
-   * actual value is negotiated between the two routers and is equal to the greater of this value
-   * and the transmit interval of the other router. If BFD echo mode is enabled on this router and
-   * the peer router, this value is used to negotiate the interval between BFD echo packets
-   * transmitted by the peer router. Otherwise, it will be used to determine the interval between
-   * BFD control packets. If set, this value must be between 100 and 30000. The default is 300.
+   * The minimum interval, in milliseconds, between BFD control packets received from the peer
+   * router. The actual value is negotiated between the two routers and is equal to the greater of
+   * this value and the transmit interval of the other router. If set, this value must be between
+   * 100 and 30000. The default is 300.
    * @param minReceiveInterval minReceiveInterval or {@code null} for none
    */
   public RouterBgpPeerBfd setMinReceiveInterval(java.lang.Long minReceiveInterval) {
@@ -134,13 +125,10 @@ public final class RouterBgpPeerBfd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The minimum interval, in milliseconds, between BFD packets transmitted to the peer router. The
-   * actual value is negotiated between the two routers and is equal to the greater of this value
-   * and the corresponding receive interval of the other router. If BFD echo mode is enabled on this
-   * router and the peer router, this value is used to negotiate the interval between BFD echo
-   * packets transmitted by this router. Otherwise, it will be used to determine the interval
-   * between BFD control packets. If set, this value must be between 100 and 30000. The default is
-   * 300.
+   * The minimum interval, in milliseconds, between BFD control packets transmitted to the peer
+   * router. The actual value is negotiated between the two routers and is equal to the greater of
+   * this value and the corresponding receive interval of the other router. If set, this value must
+   * be between 100 and 30000. The default is 300.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMinTransmitInterval() {
@@ -148,13 +136,10 @@ public final class RouterBgpPeerBfd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The minimum interval, in milliseconds, between BFD packets transmitted to the peer router. The
-   * actual value is negotiated between the two routers and is equal to the greater of this value
-   * and the corresponding receive interval of the other router. If BFD echo mode is enabled on this
-   * router and the peer router, this value is used to negotiate the interval between BFD echo
-   * packets transmitted by this router. Otherwise, it will be used to determine the interval
-   * between BFD control packets. If set, this value must be between 100 and 30000. The default is
-   * 300.
+   * The minimum interval, in milliseconds, between BFD control packets transmitted to the peer
+   * router. The actual value is negotiated between the two routers and is equal to the greater of
+   * this value and the corresponding receive interval of the other router. If set, this value must
+   * be between 100 and 30000. The default is 300.
    * @param minTransmitInterval minTransmitInterval or {@code null} for none
    */
   public RouterBgpPeerBfd setMinTransmitInterval(java.lang.Long minTransmitInterval) {

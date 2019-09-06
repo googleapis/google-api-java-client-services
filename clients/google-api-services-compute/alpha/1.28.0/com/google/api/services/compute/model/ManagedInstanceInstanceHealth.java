@@ -44,7 +44,9 @@ public final class ManagedInstanceInstanceHealth extends com.google.api.client.j
   private java.lang.String healthCheck;
 
   /**
-   * [Output Only] The current instance health state.
+   * [Output Only] The current instance health state. This field will not get promoted to beta/GA
+   * and might be removed from alpha APIs after 01/12/2019. Please use detailed_health_state field
+   * instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +87,9 @@ public final class ManagedInstanceInstanceHealth extends com.google.api.client.j
   }
 
   /**
-   * [Output Only] The current instance health state.
+   * [Output Only] The current instance health state. This field will not get promoted to beta/GA
+   * and might be removed from alpha APIs after 01/12/2019. Please use detailed_health_state field
+   * instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getHealthState() {
@@ -93,7 +97,9 @@ public final class ManagedInstanceInstanceHealth extends com.google.api.client.j
   }
 
   /**
-   * [Output Only] The current instance health state.
+   * [Output Only] The current instance health state. This field will not get promoted to beta/GA
+   * and might be removed from alpha APIs after 01/12/2019. Please use detailed_health_state field
+   * instead.
    * @param healthState healthState or {@code null} for none
    */
   public ManagedInstanceInstanceHealth setHealthState(java.lang.String healthState) {

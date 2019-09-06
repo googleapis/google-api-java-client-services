@@ -31,28 +31,28 @@ package com.google.api.services.adexperiencereport.v1.model;
 public final class SiteSummaryResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Summary for the desktop review of the site.
+   * The site's Ad Experience Report summary on desktop.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PlatformSummary desktopSummary;
 
   /**
-   * Summary for the mobile review of the site.
+   * The site's Ad Experience Report summary on mobile.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PlatformSummary mobileSummary;
 
   /**
-   * The name of the site reviewed.
+   * The name of the reviewed site, e.g. `google.com`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String reviewedSite;
 
   /**
-   * Summary for the desktop review of the site.
+   * The site's Ad Experience Report summary on desktop.
    * @return value or {@code null} for none
    */
   public PlatformSummary getDesktopSummary() {
@@ -60,7 +60,7 @@ public final class SiteSummaryResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * Summary for the desktop review of the site.
+   * The site's Ad Experience Report summary on desktop.
    * @param desktopSummary desktopSummary or {@code null} for none
    */
   public SiteSummaryResponse setDesktopSummary(PlatformSummary desktopSummary) {
@@ -69,7 +69,7 @@ public final class SiteSummaryResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * Summary for the mobile review of the site.
+   * The site's Ad Experience Report summary on mobile.
    * @return value or {@code null} for none
    */
   public PlatformSummary getMobileSummary() {
@@ -77,7 +77,7 @@ public final class SiteSummaryResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * Summary for the mobile review of the site.
+   * The site's Ad Experience Report summary on mobile.
    * @param mobileSummary mobileSummary or {@code null} for none
    */
   public SiteSummaryResponse setMobileSummary(PlatformSummary mobileSummary) {
@@ -86,7 +86,7 @@ public final class SiteSummaryResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * The name of the site reviewed.
+   * The name of the reviewed site, e.g. `google.com`.
    * @return value or {@code null} for none
    */
   public java.lang.String getReviewedSite() {
@@ -94,7 +94,7 @@ public final class SiteSummaryResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * The name of the site reviewed.
+   * The name of the reviewed site, e.g. `google.com`.
    * @param reviewedSite reviewedSite or {@code null} for none
    */
   public SiteSummaryResponse setReviewedSite(java.lang.String reviewedSite) {

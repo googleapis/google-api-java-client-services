@@ -17,7 +17,7 @@
 package com.google.api.services.adexperiencereport.v1.model;
 
 /**
- * Summary of the ad experience rating of a site for a specific platform.
+ * A site's Ad Experience Report summary on a single platform.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Ad Experience Report API. For a detailed explanation
@@ -31,57 +31,69 @@ package com.google.api.services.adexperiencereport.v1.model;
 public final class PlatformSummary extends com.google.api.client.json.GenericJson {
 
   /**
-   * The status of the site reviewed for the Better Ads Standards.
+   * The site's Ad Experience Report status on this platform.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String betterAdsStatus;
 
   /**
-   * The time at which ad filtering begins.
+   * The time at which [enforcement](https://support.google.com/webtools/answer/7308033) against the
+   * site began or will begin on this platform.
+   *
+   * Not set when the filter_status is OFF.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String enforcementTime;
 
   /**
-   * The ad filtering status of the site.
+   * The site's [enforcement status](https://support.google.com/webtools/answer/7308033) on this
+   * platform.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String filterStatus;
 
   /**
-   * The last time that the site changed status.
+   * The time at which the site's status last changed on this platform.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String lastChangeTime;
 
   /**
-   * The assigned regions for the site and platform. No longer populated, because there is no longer
-   * any semantic difference between sites in different regions.
+   * The site's regions on this platform.
+   *
+   * No longer populated, because there is no longer any semantic difference between sites in
+   * different regions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> region;
 
   /**
-   * A link that leads to a full ad experience report.
+   * A link to the full Ad Experience Report for the site on this platform..
+   *
+   * Not set in ViolatingSitesResponse.
+   *
+   * Note that you must complete the [Search Console verification
+   * process](https://support.google.com/webmasters/answer/9008080) for the site before you can
+   * access the full report.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String reportUrl;
 
   /**
-   * Whether the site is currently under review.
+   * Whether the site is currently under review on this platform.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean underReview;
 
   /**
-   * The status of the site reviewed for the Better Ads Standards.
+   * The site's Ad Experience Report status on this platform.
    * @return value or {@code null} for none
    */
   public java.lang.String getBetterAdsStatus() {
@@ -89,7 +101,7 @@ public final class PlatformSummary extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The status of the site reviewed for the Better Ads Standards.
+   * The site's Ad Experience Report status on this platform.
    * @param betterAdsStatus betterAdsStatus or {@code null} for none
    */
   public PlatformSummary setBetterAdsStatus(java.lang.String betterAdsStatus) {
@@ -98,7 +110,10 @@ public final class PlatformSummary extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The time at which ad filtering begins.
+   * The time at which [enforcement](https://support.google.com/webtools/answer/7308033) against the
+   * site began or will begin on this platform.
+   *
+   * Not set when the filter_status is OFF.
    * @return value or {@code null} for none
    */
   public String getEnforcementTime() {
@@ -106,7 +121,10 @@ public final class PlatformSummary extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The time at which ad filtering begins.
+   * The time at which [enforcement](https://support.google.com/webtools/answer/7308033) against the
+   * site began or will begin on this platform.
+   *
+   * Not set when the filter_status is OFF.
    * @param enforcementTime enforcementTime or {@code null} for none
    */
   public PlatformSummary setEnforcementTime(String enforcementTime) {
@@ -115,7 +133,8 @@ public final class PlatformSummary extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The ad filtering status of the site.
+   * The site's [enforcement status](https://support.google.com/webtools/answer/7308033) on this
+   * platform.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilterStatus() {
@@ -123,7 +142,8 @@ public final class PlatformSummary extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The ad filtering status of the site.
+   * The site's [enforcement status](https://support.google.com/webtools/answer/7308033) on this
+   * platform.
    * @param filterStatus filterStatus or {@code null} for none
    */
   public PlatformSummary setFilterStatus(java.lang.String filterStatus) {
@@ -132,7 +152,7 @@ public final class PlatformSummary extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The last time that the site changed status.
+   * The time at which the site's status last changed on this platform.
    * @return value or {@code null} for none
    */
   public String getLastChangeTime() {
@@ -140,7 +160,7 @@ public final class PlatformSummary extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The last time that the site changed status.
+   * The time at which the site's status last changed on this platform.
    * @param lastChangeTime lastChangeTime or {@code null} for none
    */
   public PlatformSummary setLastChangeTime(String lastChangeTime) {
@@ -149,8 +169,10 @@ public final class PlatformSummary extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The assigned regions for the site and platform. No longer populated, because there is no longer
-   * any semantic difference between sites in different regions.
+   * The site's regions on this platform.
+   *
+   * No longer populated, because there is no longer any semantic difference between sites in
+   * different regions.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRegion() {
@@ -158,8 +180,10 @@ public final class PlatformSummary extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The assigned regions for the site and platform. No longer populated, because there is no longer
-   * any semantic difference between sites in different regions.
+   * The site's regions on this platform.
+   *
+   * No longer populated, because there is no longer any semantic difference between sites in
+   * different regions.
    * @param region region or {@code null} for none
    */
   public PlatformSummary setRegion(java.util.List<java.lang.String> region) {
@@ -168,7 +192,13 @@ public final class PlatformSummary extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A link that leads to a full ad experience report.
+   * A link to the full Ad Experience Report for the site on this platform..
+   *
+   * Not set in ViolatingSitesResponse.
+   *
+   * Note that you must complete the [Search Console verification
+   * process](https://support.google.com/webmasters/answer/9008080) for the site before you can
+   * access the full report.
    * @return value or {@code null} for none
    */
   public java.lang.String getReportUrl() {
@@ -176,7 +206,13 @@ public final class PlatformSummary extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A link that leads to a full ad experience report.
+   * A link to the full Ad Experience Report for the site on this platform..
+   *
+   * Not set in ViolatingSitesResponse.
+   *
+   * Note that you must complete the [Search Console verification
+   * process](https://support.google.com/webmasters/answer/9008080) for the site before you can
+   * access the full report.
    * @param reportUrl reportUrl or {@code null} for none
    */
   public PlatformSummary setReportUrl(java.lang.String reportUrl) {
@@ -185,7 +221,7 @@ public final class PlatformSummary extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Whether the site is currently under review.
+   * Whether the site is currently under review on this platform.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUnderReview() {
@@ -193,7 +229,7 @@ public final class PlatformSummary extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Whether the site is currently under review.
+   * Whether the site is currently under review on this platform.
    * @param underReview underReview or {@code null} for none
    */
   public PlatformSummary setUnderReview(java.lang.Boolean underReview) {

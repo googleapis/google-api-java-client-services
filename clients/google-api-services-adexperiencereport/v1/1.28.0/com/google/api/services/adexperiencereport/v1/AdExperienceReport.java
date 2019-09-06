@@ -143,25 +143,16 @@ public class AdExperienceReport extends com.google.api.client.googleapis.service
   public class Sites {
 
     /**
-     * Gets a summary of the ad experience rating of a site.
+     * Gets a site's Ad Experience Report summary.
      *
      * Create a request for the method "sites.get".
      *
      * This request holds the parameters needed by the adexperiencereport server.  After setting any
      * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param name Required. The site property whose ad experiences
-    may have been reviewed, and it should be URL-
-     *        encoded. For example,
-    sites/https%3A%2F%2Fwww.google.com. The server will return an error
-     *        of
-    BAD_REQUEST if this field is not filled in. Note that if the site property
-    is not yet
-     *        verified in Search Console, the reportUrl field returned by the
-    API will lead to the
-     *        verification page, prompting the user to go through
-    that process before they can gain
-     *        access to the Ad Experience Report.
+     * @param name Required. The name of the site whose summary to get, e.g.
+    `sites/http%3A%2F%2Fwww.google.com%2F`.
+     *        Format: `sites/{site}`
      * @return the request
      */
     public Get get(java.lang.String name) throws java.io.IOException {
@@ -178,7 +169,7 @@ public class AdExperienceReport extends com.google.api.client.googleapis.service
           java.util.regex.Pattern.compile("^sites/[^/]+$");
 
       /**
-       * Gets a summary of the ad experience rating of a site.
+       * Gets a site's Ad Experience Report summary.
        *
        * Create a request for the method "sites.get".
        *
@@ -188,18 +179,9 @@ public class AdExperienceReport extends com.google.api.client.googleapis.service
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The site property whose ad experiences
-    may have been reviewed, and it should be URL-
-     *        encoded. For example,
-    sites/https%3A%2F%2Fwww.google.com. The server will return an error
-     *        of
-    BAD_REQUEST if this field is not filled in. Note that if the site property
-    is not yet
-     *        verified in Search Console, the reportUrl field returned by the
-    API will lead to the
-     *        verification page, prompting the user to go through
-    that process before they can gain
-     *        access to the Ad Experience Report.
+       * @param name Required. The name of the site whose summary to get, e.g.
+    `sites/http%3A%2F%2Fwww.google.com%2F`.
+     *        Format: `sites/{site}`
        * @since 1.13
        */
       protected Get(java.lang.String name) {
@@ -278,34 +260,27 @@ public class AdExperienceReport extends com.google.api.client.googleapis.service
       }
 
       /**
-       * Required. The site property whose ad experiences may have been reviewed, and it should be
-       * URL-encoded. For example, sites/https%3A%2F%2Fwww.google.com. The server will return an
-       * error of BAD_REQUEST if this field is not filled in. Note that if the site property is not
-       * yet verified in Search Console, the reportUrl field returned by the API will lead to the
-       * verification page, prompting the user to go through that process before they can gain
-       * access to the Ad Experience Report.
+       * Required. The name of the site whose summary to get, e.g.
+       * `sites/http%3A%2F%2Fwww.google.com%2F`.
+       *
+       * Format: `sites/{site}`
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The site property whose ad experiences may have been reviewed, and it should be URL-
-     encoded. For example, sites/https%3A%2F%2Fwww.google.com. The server will return an error of
-     BAD_REQUEST if this field is not filled in. Note that if the site property is not yet verified in
-     Search Console, the reportUrl field returned by the API will lead to the verification page,
-     prompting the user to go through that process before they can gain access to the Ad Experience
-     Report.
+      /** Required. The name of the site whose summary to get, e.g. `sites/http%3A%2F%2Fwww.google.com%2F`.
+
+     Format: `sites/{site}`
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Required. The site property whose ad experiences may have been reviewed, and it should be
-       * URL-encoded. For example, sites/https%3A%2F%2Fwww.google.com. The server will return an
-       * error of BAD_REQUEST if this field is not filled in. Note that if the site property is not
-       * yet verified in Search Console, the reportUrl field returned by the API will lead to the
-       * verification page, prompting the user to go through that process before they can gain
-       * access to the Ad Experience Report.
+       * Required. The name of the site whose summary to get, e.g.
+       * `sites/http%3A%2F%2Fwww.google.com%2F`.
+       *
+       * Format: `sites/{site}`
        */
       public Get setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -346,7 +321,7 @@ public class AdExperienceReport extends com.google.api.client.googleapis.service
   public class ViolatingSites {
 
     /**
-     * Lists sites with failing Ad Experience Report statuses.
+     * Lists sites that are failing in the Ad Experience Report on at least one platform.
      *
      * Create a request for the method "violatingSites.list".
      *
@@ -366,7 +341,7 @@ public class AdExperienceReport extends com.google.api.client.googleapis.service
       private static final String REST_PATH = "v1/violatingSites";
 
       /**
-       * Lists sites with failing Ad Experience Report statuses.
+       * Lists sites that are failing in the Ad Experience Report on at least one platform.
        *
        * Create a request for the method "violatingSites.list".
        *

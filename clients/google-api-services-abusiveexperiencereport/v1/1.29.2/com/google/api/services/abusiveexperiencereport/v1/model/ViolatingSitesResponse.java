@@ -31,7 +31,7 @@ package com.google.api.services.abusiveexperiencereport.v1.model;
 public final class ViolatingSitesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of summaries of violating sites.
+   * The list of violating sites.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class ViolatingSitesResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * A list of summaries of violating sites.
+   * The list of violating sites.
    * @return value or {@code null} for none
    */
   public java.util.List<SiteSummaryResponse> getViolatingSites() {
@@ -52,7 +52,7 @@ public final class ViolatingSitesResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * A list of summaries of violating sites.
+   * The list of violating sites.
    * @param violatingSites violatingSites or {@code null} for none
    */
   public ViolatingSitesResponse setViolatingSites(java.util.List<SiteSummaryResponse> violatingSites) {

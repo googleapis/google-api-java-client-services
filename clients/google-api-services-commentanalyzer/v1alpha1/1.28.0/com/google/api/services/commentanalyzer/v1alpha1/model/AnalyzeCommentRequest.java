@@ -17,7 +17,7 @@
 package com.google.api.services.commentanalyzer.v1alpha1.model;
 
 /**
- * The comment analysis request message.
+ * The comment analysis request message. LINT.IfChange
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Perspective Comment Analyzer API. For a detailed

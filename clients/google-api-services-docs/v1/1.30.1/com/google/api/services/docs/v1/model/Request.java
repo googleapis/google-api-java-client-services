@@ -128,11 +128,32 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private InsertTextRequest insertText;
 
   /**
+   * Merges cells in a table.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MergeTableCellsRequest mergeTableCells;
+
+  /**
    * Replaces all instances of the specified text.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ReplaceAllTextRequest replaceAllText;
+
+  /**
+   * Replaces an image in the document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReplaceImageRequest replaceImage;
+
+  /**
+   * Unmerges cells in a table.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UnmergeTableCellsRequest unmergeTableCells;
 
   /**
    * Updates the style of the document.
@@ -415,6 +436,23 @@ public final class Request extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Merges cells in a table.
+   * @return value or {@code null} for none
+   */
+  public MergeTableCellsRequest getMergeTableCells() {
+    return mergeTableCells;
+  }
+
+  /**
+   * Merges cells in a table.
+   * @param mergeTableCells mergeTableCells or {@code null} for none
+   */
+  public Request setMergeTableCells(MergeTableCellsRequest mergeTableCells) {
+    this.mergeTableCells = mergeTableCells;
+    return this;
+  }
+
+  /**
    * Replaces all instances of the specified text.
    * @return value or {@code null} for none
    */
@@ -428,6 +466,40 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   public Request setReplaceAllText(ReplaceAllTextRequest replaceAllText) {
     this.replaceAllText = replaceAllText;
+    return this;
+  }
+
+  /**
+   * Replaces an image in the document.
+   * @return value or {@code null} for none
+   */
+  public ReplaceImageRequest getReplaceImage() {
+    return replaceImage;
+  }
+
+  /**
+   * Replaces an image in the document.
+   * @param replaceImage replaceImage or {@code null} for none
+   */
+  public Request setReplaceImage(ReplaceImageRequest replaceImage) {
+    this.replaceImage = replaceImage;
+    return this;
+  }
+
+  /**
+   * Unmerges cells in a table.
+   * @return value or {@code null} for none
+   */
+  public UnmergeTableCellsRequest getUnmergeTableCells() {
+    return unmergeTableCells;
+  }
+
+  /**
+   * Unmerges cells in a table.
+   * @param unmergeTableCells unmergeTableCells or {@code null} for none
+   */
+  public Request setUnmergeTableCells(UnmergeTableCellsRequest unmergeTableCells) {
+    this.unmergeTableCells = unmergeTableCells;
     return this;
   }
 

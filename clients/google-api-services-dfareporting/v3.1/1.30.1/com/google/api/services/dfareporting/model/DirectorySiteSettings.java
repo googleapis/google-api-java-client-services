@@ -59,28 +59,6 @@ public final class DirectorySiteSettings extends com.google.api.client.json.Gene
   private java.lang.Boolean interstitialPlacementAccepted;
 
   /**
-   * Whether this directory site has disabled Nielsen OCR reach ratings.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean nielsenOcrOptOut;
-
-  /**
-   * Whether this directory site has disabled generation of Verification ins tags.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean verificationTagOptOut;
-
-  /**
-   * Whether this directory site has disabled active view for in-stream video creatives. This is a
-   * read-only field.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean videoActiveViewOptOut;
-
-  /**
    * Whether this directory site has disabled active view creatives.
    * @return value or {@code null} for none
    */
@@ -145,59 +123,6 @@ public final class DirectorySiteSettings extends com.google.api.client.json.Gene
    */
   public DirectorySiteSettings setInterstitialPlacementAccepted(java.lang.Boolean interstitialPlacementAccepted) {
     this.interstitialPlacementAccepted = interstitialPlacementAccepted;
-    return this;
-  }
-
-  /**
-   * Whether this directory site has disabled Nielsen OCR reach ratings.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getNielsenOcrOptOut() {
-    return nielsenOcrOptOut;
-  }
-
-  /**
-   * Whether this directory site has disabled Nielsen OCR reach ratings.
-   * @param nielsenOcrOptOut nielsenOcrOptOut or {@code null} for none
-   */
-  public DirectorySiteSettings setNielsenOcrOptOut(java.lang.Boolean nielsenOcrOptOut) {
-    this.nielsenOcrOptOut = nielsenOcrOptOut;
-    return this;
-  }
-
-  /**
-   * Whether this directory site has disabled generation of Verification ins tags.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getVerificationTagOptOut() {
-    return verificationTagOptOut;
-  }
-
-  /**
-   * Whether this directory site has disabled generation of Verification ins tags.
-   * @param verificationTagOptOut verificationTagOptOut or {@code null} for none
-   */
-  public DirectorySiteSettings setVerificationTagOptOut(java.lang.Boolean verificationTagOptOut) {
-    this.verificationTagOptOut = verificationTagOptOut;
-    return this;
-  }
-
-  /**
-   * Whether this directory site has disabled active view for in-stream video creatives. This is a
-   * read-only field.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getVideoActiveViewOptOut() {
-    return videoActiveViewOptOut;
-  }
-
-  /**
-   * Whether this directory site has disabled active view for in-stream video creatives. This is a
-   * read-only field.
-   * @param videoActiveViewOptOut videoActiveViewOptOut or {@code null} for none
-   */
-  public DirectorySiteSettings setVideoActiveViewOptOut(java.lang.Boolean videoActiveViewOptOut) {
-    this.videoActiveViewOptOut = videoActiveViewOptOut;
     return this;
   }
 

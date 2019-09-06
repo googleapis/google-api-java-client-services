@@ -47,25 +47,11 @@ public final class SiteSettings extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean adBlockingOptOut;
 
   /**
-   * Site-wide creative settings.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private CreativeSettings creativeSettings;
-
-  /**
    * Whether new cookies are disabled for this site.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean disableNewCookie;
-
-  /**
-   * Lookback window settings for this site.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private LookbackConfiguration lookbackConfiguration;
 
   /**
    * Configuration settings for dynamic and image floodlight tags.
@@ -137,23 +123,6 @@ public final class SiteSettings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Site-wide creative settings.
-   * @return value or {@code null} for none
-   */
-  public CreativeSettings getCreativeSettings() {
-    return creativeSettings;
-  }
-
-  /**
-   * Site-wide creative settings.
-   * @param creativeSettings creativeSettings or {@code null} for none
-   */
-  public SiteSettings setCreativeSettings(CreativeSettings creativeSettings) {
-    this.creativeSettings = creativeSettings;
-    return this;
-  }
-
-  /**
    * Whether new cookies are disabled for this site.
    * @return value or {@code null} for none
    */
@@ -167,23 +136,6 @@ public final class SiteSettings extends com.google.api.client.json.GenericJson {
    */
   public SiteSettings setDisableNewCookie(java.lang.Boolean disableNewCookie) {
     this.disableNewCookie = disableNewCookie;
-    return this;
-  }
-
-  /**
-   * Lookback window settings for this site.
-   * @return value or {@code null} for none
-   */
-  public LookbackConfiguration getLookbackConfiguration() {
-    return lookbackConfiguration;
-  }
-
-  /**
-   * Lookback window settings for this site.
-   * @param lookbackConfiguration lookbackConfiguration or {@code null} for none
-   */
-  public SiteSettings setLookbackConfiguration(LookbackConfiguration lookbackConfiguration) {
-    this.lookbackConfiguration = lookbackConfiguration;
     return this;
   }
 

@@ -44,6 +44,13 @@ public final class ListTensorFlowVersionsResponse extends com.google.api.client.
   private java.util.List<TensorFlowVersion> tensorflowVersions;
 
   /**
+   * Locations that could not be reached.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> unreachable;
+
+  /**
    * The next page token or empty if none.
    * @return value or {@code null} for none
    */
@@ -74,6 +81,23 @@ public final class ListTensorFlowVersionsResponse extends com.google.api.client.
    */
   public ListTensorFlowVersionsResponse setTensorflowVersions(java.util.List<TensorFlowVersion> tensorflowVersions) {
     this.tensorflowVersions = tensorflowVersions;
+    return this;
+  }
+
+  /**
+   * Locations that could not be reached.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUnreachable() {
+    return unreachable;
+  }
+
+  /**
+   * Locations that could not be reached.
+   * @param unreachable unreachable or {@code null} for none
+   */
+  public ListTensorFlowVersionsResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
+    this.unreachable = unreachable;
     return this;
   }
 

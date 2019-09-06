@@ -233,6 +233,14 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.lang.String name;
 
   /**
+   * The URL of the network to which this backend service belongs. This field can only be spcified
+   * when the load balancing scheme is set to INTERNAL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String network;
+
+  /**
    * Settings controlling eviction of unhealthy hosts from the load balancing pool. This field is
    * applicable to either: - A regional backend service with the service_protocol set to HTTP,
    * HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global backend service
@@ -303,7 +311,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * --protocol is UDP.
    *
    * When the loadBalancingScheme is EXTERNAL, possible values are NONE, CLIENT_IP, or
-   * GENERATED_COOKIE. GENERATED_COOKIE is only available if the protocol is HTTP or HTTPS.
+   * GENERATED_COOKIE. You can use GENERATED_COOKIE if the protocol is HTTP or HTTPS.
    *
    * When the loadBalancingScheme is INTERNAL, possible values are NONE, CLIENT_IP, CLIENT_IP_PROTO,
    * or CLIENT_IP_PORT_PROTO.
@@ -796,6 +804,25 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * The URL of the network to which this backend service belongs. This field can only be spcified
+   * when the load balancing scheme is set to INTERNAL.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNetwork() {
+    return network;
+  }
+
+  /**
+   * The URL of the network to which this backend service belongs. This field can only be spcified
+   * when the load balancing scheme is set to INTERNAL.
+   * @param network network or {@code null} for none
+   */
+  public BackendService setNetwork(java.lang.String network) {
+    this.network = network;
+    return this;
+  }
+
+  /**
    * Settings controlling eviction of unhealthy hosts from the load balancing pool. This field is
    * applicable to either: - A regional backend service with the service_protocol set to HTTP,
    * HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global backend service
@@ -953,7 +980,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * --protocol is UDP.
    *
    * When the loadBalancingScheme is EXTERNAL, possible values are NONE, CLIENT_IP, or
-   * GENERATED_COOKIE. GENERATED_COOKIE is only available if the protocol is HTTP or HTTPS.
+   * GENERATED_COOKIE. You can use GENERATED_COOKIE if the protocol is HTTP or HTTPS.
    *
    * When the loadBalancingScheme is INTERNAL, possible values are NONE, CLIENT_IP, CLIENT_IP_PROTO,
    * or CLIENT_IP_PORT_PROTO.
@@ -971,7 +998,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * --protocol is UDP.
    *
    * When the loadBalancingScheme is EXTERNAL, possible values are NONE, CLIENT_IP, or
-   * GENERATED_COOKIE. GENERATED_COOKIE is only available if the protocol is HTTP or HTTPS.
+   * GENERATED_COOKIE. You can use GENERATED_COOKIE if the protocol is HTTP or HTTPS.
    *
    * When the loadBalancingScheme is INTERNAL, possible values are NONE, CLIENT_IP, CLIENT_IP_PROTO,
    * or CLIENT_IP_PORT_PROTO.

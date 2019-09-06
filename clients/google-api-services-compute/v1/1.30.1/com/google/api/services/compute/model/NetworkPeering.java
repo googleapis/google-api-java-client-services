@@ -52,6 +52,20 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   private java.lang.Boolean exchangeSubnetRoutes;
 
   /**
+   * Whether to export the custom routes to peer network.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean exportCustomRoutes;
+
+  /**
+   * Whether to import the custom routes from peer network.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean importCustomRoutes;
+
+  /**
    * Name of this peering. Provided by the client when the peering is created. The name must comply
    * with RFC1035. Specifically, the name must be 1-63 characters long and match regular expression
    * `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all the
@@ -129,6 +143,40 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
    */
   public NetworkPeering setExchangeSubnetRoutes(java.lang.Boolean exchangeSubnetRoutes) {
     this.exchangeSubnetRoutes = exchangeSubnetRoutes;
+    return this;
+  }
+
+  /**
+   * Whether to export the custom routes to peer network.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getExportCustomRoutes() {
+    return exportCustomRoutes;
+  }
+
+  /**
+   * Whether to export the custom routes to peer network.
+   * @param exportCustomRoutes exportCustomRoutes or {@code null} for none
+   */
+  public NetworkPeering setExportCustomRoutes(java.lang.Boolean exportCustomRoutes) {
+    this.exportCustomRoutes = exportCustomRoutes;
+    return this;
+  }
+
+  /**
+   * Whether to import the custom routes from peer network.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getImportCustomRoutes() {
+    return importCustomRoutes;
+  }
+
+  /**
+   * Whether to import the custom routes from peer network.
+   * @param importCustomRoutes importCustomRoutes or {@code null} for none
+   */
+  public NetworkPeering setImportCustomRoutes(java.lang.Boolean importCustomRoutes) {
+    this.importCustomRoutes = importCustomRoutes;
     return this;
   }
 

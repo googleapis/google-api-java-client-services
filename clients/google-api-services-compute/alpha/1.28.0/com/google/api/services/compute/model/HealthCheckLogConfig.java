@@ -39,14 +39,6 @@ public final class HealthCheckLogConfig extends com.google.api.client.json.Gener
   private java.lang.Boolean enable;
 
   /**
-   * Specifies the desired filtering of logs on this health check. If this is unspecified and enable
-   * is true, logs are exported with LOG_TRANSITION filter.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String filter;
-
-  /**
    * Indicates whether or not to export logs. This is false by default, which means no health check
    * logging will be done.
    * @return value or {@code null} for none
@@ -62,25 +54,6 @@ public final class HealthCheckLogConfig extends com.google.api.client.json.Gener
    */
   public HealthCheckLogConfig setEnable(java.lang.Boolean enable) {
     this.enable = enable;
-    return this;
-  }
-
-  /**
-   * Specifies the desired filtering of logs on this health check. If this is unspecified and enable
-   * is true, logs are exported with LOG_TRANSITION filter.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getFilter() {
-    return filter;
-  }
-
-  /**
-   * Specifies the desired filtering of logs on this health check. If this is unspecified and enable
-   * is true, logs are exported with LOG_TRANSITION filter.
-   * @param filter filter or {@code null} for none
-   */
-  public HealthCheckLogConfig setFilter(java.lang.String filter) {
-    this.filter = filter;
     return this;
   }
 

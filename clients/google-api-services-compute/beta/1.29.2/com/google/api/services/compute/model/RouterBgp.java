@@ -73,6 +73,18 @@ public final class RouterBgp extends com.google.api.client.json.GenericJson {
   private java.lang.Long asn;
 
   /**
+   * The interval in seconds between BGP keepalive messages that are sent to the peer. Hold time is
+   * three times the interval at which keepalive messages are sent, and the hold time is the maximum
+   * number of seconds allowed to elapse between successive keepalive messages that BGP receives
+   * from a peer. BGP will use the smaller of either the local hold time value or the peer?s hold
+   * time value as the hold time for the BGP connection between the two peers. If set, this value
+   * must be between 1 and 120. The default is 20.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Long keepaliveInterval;
+
+  /**
    * User-specified flag to indicate which mode to use for advertisement. The options are DEFAULT or
    * CUSTOM.
    * @return value or {@code null} for none
@@ -155,6 +167,33 @@ public final class RouterBgp extends com.google.api.client.json.GenericJson {
    */
   public RouterBgp setAsn(java.lang.Long asn) {
     this.asn = asn;
+    return this;
+  }
+
+  /**
+   * The interval in seconds between BGP keepalive messages that are sent to the peer. Hold time is
+   * three times the interval at which keepalive messages are sent, and the hold time is the maximum
+   * number of seconds allowed to elapse between successive keepalive messages that BGP receives
+   * from a peer. BGP will use the smaller of either the local hold time value or the peer?s hold
+   * time value as the hold time for the BGP connection between the two peers. If set, this value
+   * must be between 1 and 120. The default is 20.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getKeepaliveInterval() {
+    return keepaliveInterval;
+  }
+
+  /**
+   * The interval in seconds between BGP keepalive messages that are sent to the peer. Hold time is
+   * three times the interval at which keepalive messages are sent, and the hold time is the maximum
+   * number of seconds allowed to elapse between successive keepalive messages that BGP receives
+   * from a peer. BGP will use the smaller of either the local hold time value or the peer?s hold
+   * time value as the hold time for the BGP connection between the two peers. If set, this value
+   * must be between 1 and 120. The default is 20.
+   * @param keepaliveInterval keepaliveInterval or {@code null} for none
+   */
+  public RouterBgp setKeepaliveInterval(java.lang.Long keepaliveInterval) {
+    this.keepaliveInterval = keepaliveInterval;
     return this;
   }
 

@@ -41,10 +41,10 @@ public final class NetworkEndpoint extends com.google.api.client.json.GenericJso
   private java.lang.String instance;
 
   /**
-   * Optional IPv4 address of network endpoint. The IP address must belong to a VM in GCE (either
-   * the primary IP or as part of an aliased IP range). If the IP address is not specified, then the
-   * primary IP address for the VM instance in the network that the network endpoint group belongs
-   * to will be used.
+   * Optional IPv4 address of network endpoint. The IP address must belong to a VM in Compute Engine
+   * (either the primary IP or as part of an aliased IP range). If the IP address is not specified,
+   * then the primary IP address for the VM instance in the network that the network endpoint group
+   * belongs to will be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,10 +85,10 @@ public final class NetworkEndpoint extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional IPv4 address of network endpoint. The IP address must belong to a VM in GCE (either
-   * the primary IP or as part of an aliased IP range). If the IP address is not specified, then the
-   * primary IP address for the VM instance in the network that the network endpoint group belongs
-   * to will be used.
+   * Optional IPv4 address of network endpoint. The IP address must belong to a VM in Compute Engine
+   * (either the primary IP or as part of an aliased IP range). If the IP address is not specified,
+   * then the primary IP address for the VM instance in the network that the network endpoint group
+   * belongs to will be used.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpAddress() {
@@ -96,10 +96,10 @@ public final class NetworkEndpoint extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional IPv4 address of network endpoint. The IP address must belong to a VM in GCE (either
-   * the primary IP or as part of an aliased IP range). If the IP address is not specified, then the
-   * primary IP address for the VM instance in the network that the network endpoint group belongs
-   * to will be used.
+   * Optional IPv4 address of network endpoint. The IP address must belong to a VM in Compute Engine
+   * (either the primary IP or as part of an aliased IP range). If the IP address is not specified,
+   * then the primary IP address for the VM instance in the network that the network endpoint group
+   * belongs to will be used.
    * @param ipAddress ipAddress or {@code null} for none
    */
   public NetworkEndpoint setIpAddress(java.lang.String ipAddress) {

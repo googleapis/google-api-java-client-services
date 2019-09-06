@@ -92,8 +92,7 @@ public final class BfdStatus extends com.google.api.client.json.GenericJson {
   private java.lang.String localState;
 
   /**
-   * Negotiated transmit interval for control packets. When echo mode is enabled this will reflect
-   * the negotiated slow timer interval.
+   * Negotiated transmit interval for control packets.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -283,8 +282,7 @@ public final class BfdStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Negotiated transmit interval for control packets. When echo mode is enabled this will reflect
-   * the negotiated slow timer interval.
+   * Negotiated transmit interval for control packets.
    * @return value or {@code null} for none
    */
   public java.lang.Long getNegotiatedLocalControlTxIntervalMs() {
@@ -292,8 +290,7 @@ public final class BfdStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Negotiated transmit interval for control packets. When echo mode is enabled this will reflect
-   * the negotiated slow timer interval.
+   * Negotiated transmit interval for control packets.
    * @param negotiatedLocalControlTxIntervalMs negotiatedLocalControlTxIntervalMs or {@code null} for none
    */
   public BfdStatus setNegotiatedLocalControlTxIntervalMs(java.lang.Long negotiatedLocalControlTxIntervalMs) {

@@ -45,7 +45,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotProperties extend
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * GCS bucket storage location of the auto snapshot (regional or multi-regional).
+   * Cloud Storage bucket storage location of the auto snapshot (regional or multi-regional).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,7 +88,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotProperties extend
   }
 
   /**
-   * GCS bucket storage location of the auto snapshot (regional or multi-regional).
+   * Cloud Storage bucket storage location of the auto snapshot (regional or multi-regional).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getStorageLocations() {
@@ -96,7 +96,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotProperties extend
   }
 
   /**
-   * GCS bucket storage location of the auto snapshot (regional or multi-regional).
+   * Cloud Storage bucket storage location of the auto snapshot (regional or multi-regional).
    * @param storageLocations storageLocations or {@code null} for none
    */
   public ResourcePolicySnapshotSchedulePolicySnapshotProperties setStorageLocations(java.util.List<java.lang.String> storageLocations) {

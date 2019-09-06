@@ -48,6 +48,14 @@ public final class SubnetworkLogConfig extends com.google.api.client.json.Generi
   private java.lang.Boolean enable;
 
   /**
+   * Can only be specified if VPC flow logs for this subnetwork is enabled. Export filter used to
+   * define which VPC flow logs should be logged.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String filterExpr;
+
+  /**
    * Can only be specified if VPC flow logging for this subnetwork is enabled. The value of the
    * field must be in [0, 1]. Set the sampling rate of VPC flow logs within the subnetwork where 1.0
    * means all collected logs are reported and 0.0 means no logs are reported. Default is 0.5, which
@@ -65,6 +73,14 @@ public final class SubnetworkLogConfig extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private java.lang.String metadata;
+
+  /**
+   * Can only be specified if VPC flow logs for this subnetwork is enabled and "metadata" was set to
+   * CUSTOM_METADATA.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> metadataFields;
 
   /**
    * Can only be specified if VPC flow logging for this subnetwork is enabled. Toggles the
@@ -109,6 +125,25 @@ public final class SubnetworkLogConfig extends com.google.api.client.json.Generi
   }
 
   /**
+   * Can only be specified if VPC flow logs for this subnetwork is enabled. Export filter used to
+   * define which VPC flow logs should be logged.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFilterExpr() {
+    return filterExpr;
+  }
+
+  /**
+   * Can only be specified if VPC flow logs for this subnetwork is enabled. Export filter used to
+   * define which VPC flow logs should be logged.
+   * @param filterExpr filterExpr or {@code null} for none
+   */
+  public SubnetworkLogConfig setFilterExpr(java.lang.String filterExpr) {
+    this.filterExpr = filterExpr;
+    return this;
+  }
+
+  /**
    * Can only be specified if VPC flow logging for this subnetwork is enabled. The value of the
    * field must be in [0, 1]. Set the sampling rate of VPC flow logs within the subnetwork where 1.0
    * means all collected logs are reported and 0.0 means no logs are reported. Default is 0.5, which
@@ -149,6 +184,25 @@ public final class SubnetworkLogConfig extends com.google.api.client.json.Generi
    */
   public SubnetworkLogConfig setMetadata(java.lang.String metadata) {
     this.metadata = metadata;
+    return this;
+  }
+
+  /**
+   * Can only be specified if VPC flow logs for this subnetwork is enabled and "metadata" was set to
+   * CUSTOM_METADATA.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getMetadataFields() {
+    return metadataFields;
+  }
+
+  /**
+   * Can only be specified if VPC flow logs for this subnetwork is enabled and "metadata" was set to
+   * CUSTOM_METADATA.
+   * @param metadataFields metadataFields or {@code null} for none
+   */
+  public SubnetworkLogConfig setMetadataFields(java.util.List<java.lang.String> metadataFields) {
+    this.metadataFields = metadataFields;
     return this;
   }
 

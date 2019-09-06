@@ -42,6 +42,12 @@ public final class NodeGroupAutoscalingPolicy extends com.google.api.client.json
   private java.lang.Integer minSize;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String mode;
+
+  /**
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxSize() {
@@ -68,6 +74,21 @@ public final class NodeGroupAutoscalingPolicy extends com.google.api.client.json
    */
   public NodeGroupAutoscalingPolicy setMinSize(java.lang.Integer minSize) {
     this.minSize = minSize;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMode() {
+    return mode;
+  }
+
+  /**
+   * @param mode mode or {@code null} for none
+   */
+  public NodeGroupAutoscalingPolicy setMode(java.lang.String mode) {
+    this.mode = mode;
     return this;
   }
 

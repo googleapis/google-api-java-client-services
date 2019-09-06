@@ -96,6 +96,34 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * URL of the peer side external VPN gateway to which this VPN tunnel is connected. Provided by
+   * the client when the VPN tunnel is created. This field is exclusive with the field
+   * peerGcpGateway.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String peerExternalGateway;
+
+  /**
+   * The interface ID of the external VPN gateway to which this VPN tunnel is connected. Provided by
+   * the client when the VPN tunnel is created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer peerExternalGatewayInterface;
+
+  /**
+   * URL of the peer side HA GCP VPN gateway to which this VPN tunnel is connected. Provided by the
+   * client when the VPN tunnel is created. This field can be used when creating highly available
+   * VPN from VPC network to VPC network, the field is exclusive with the field peerExternalGateway.
+   * If provided, the VPN tunnel will automatically use the same vpnGatewayInterface ID in the peer
+   * GCP VPN gateway.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String peerGcpGateway;
+
+  /**
    * IP address of the peer VPN gateway. Only IPv4 is supported.
    * The value may be {@code null}.
    */
@@ -170,6 +198,22 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String targetVpnGateway;
+
+  /**
+   * URL of the VPN gateway with which this VPN tunnel is associated. Provided by the client when
+   * the VPN tunnel is created. This must be used (instead of target_vpn_gateway) if a High
+   * Availability VPN gateway resource is created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String vpnGateway;
+
+  /**
+   * The interface ID of the VPN gateway with which this VPN tunnel is associated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer vpnGatewayInterface;
 
   /**
    * [Output Only] Creation timestamp in RFC3339 text format.
@@ -318,6 +362,71 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
    */
   public VpnTunnel setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * URL of the peer side external VPN gateway to which this VPN tunnel is connected. Provided by
+   * the client when the VPN tunnel is created. This field is exclusive with the field
+   * peerGcpGateway.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPeerExternalGateway() {
+    return peerExternalGateway;
+  }
+
+  /**
+   * URL of the peer side external VPN gateway to which this VPN tunnel is connected. Provided by
+   * the client when the VPN tunnel is created. This field is exclusive with the field
+   * peerGcpGateway.
+   * @param peerExternalGateway peerExternalGateway or {@code null} for none
+   */
+  public VpnTunnel setPeerExternalGateway(java.lang.String peerExternalGateway) {
+    this.peerExternalGateway = peerExternalGateway;
+    return this;
+  }
+
+  /**
+   * The interface ID of the external VPN gateway to which this VPN tunnel is connected. Provided by
+   * the client when the VPN tunnel is created.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getPeerExternalGatewayInterface() {
+    return peerExternalGatewayInterface;
+  }
+
+  /**
+   * The interface ID of the external VPN gateway to which this VPN tunnel is connected. Provided by
+   * the client when the VPN tunnel is created.
+   * @param peerExternalGatewayInterface peerExternalGatewayInterface or {@code null} for none
+   */
+  public VpnTunnel setPeerExternalGatewayInterface(java.lang.Integer peerExternalGatewayInterface) {
+    this.peerExternalGatewayInterface = peerExternalGatewayInterface;
+    return this;
+  }
+
+  /**
+   * URL of the peer side HA GCP VPN gateway to which this VPN tunnel is connected. Provided by the
+   * client when the VPN tunnel is created. This field can be used when creating highly available
+   * VPN from VPC network to VPC network, the field is exclusive with the field peerExternalGateway.
+   * If provided, the VPN tunnel will automatically use the same vpnGatewayInterface ID in the peer
+   * GCP VPN gateway.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPeerGcpGateway() {
+    return peerGcpGateway;
+  }
+
+  /**
+   * URL of the peer side HA GCP VPN gateway to which this VPN tunnel is connected. Provided by the
+   * client when the VPN tunnel is created. This field can be used when creating highly available
+   * VPN from VPC network to VPC network, the field is exclusive with the field peerExternalGateway.
+   * If provided, the VPN tunnel will automatically use the same vpnGatewayInterface ID in the peer
+   * GCP VPN gateway.
+   * @param peerGcpGateway peerGcpGateway or {@code null} for none
+   */
+  public VpnTunnel setPeerGcpGateway(java.lang.String peerGcpGateway) {
+    this.peerGcpGateway = peerGcpGateway;
     return this;
   }
 
@@ -497,6 +606,44 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
    */
   public VpnTunnel setTargetVpnGateway(java.lang.String targetVpnGateway) {
     this.targetVpnGateway = targetVpnGateway;
+    return this;
+  }
+
+  /**
+   * URL of the VPN gateway with which this VPN tunnel is associated. Provided by the client when
+   * the VPN tunnel is created. This must be used (instead of target_vpn_gateway) if a High
+   * Availability VPN gateway resource is created.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVpnGateway() {
+    return vpnGateway;
+  }
+
+  /**
+   * URL of the VPN gateway with which this VPN tunnel is associated. Provided by the client when
+   * the VPN tunnel is created. This must be used (instead of target_vpn_gateway) if a High
+   * Availability VPN gateway resource is created.
+   * @param vpnGateway vpnGateway or {@code null} for none
+   */
+  public VpnTunnel setVpnGateway(java.lang.String vpnGateway) {
+    this.vpnGateway = vpnGateway;
+    return this;
+  }
+
+  /**
+   * The interface ID of the VPN gateway with which this VPN tunnel is associated.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getVpnGatewayInterface() {
+    return vpnGatewayInterface;
+  }
+
+  /**
+   * The interface ID of the VPN gateway with which this VPN tunnel is associated.
+   * @param vpnGatewayInterface vpnGatewayInterface or {@code null} for none
+   */
+  public VpnTunnel setVpnGatewayInterface(java.lang.Integer vpnGatewayInterface) {
+    this.vpnGatewayInterface = vpnGatewayInterface;
     return this;
   }
 

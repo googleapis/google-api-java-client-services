@@ -51,7 +51,8 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   private java.lang.String diskName;
 
   /**
-   * Specifies the size of the disk in base-2 GB.
+   * Specifies the size of the disk in base-2 GB. If not specified, the disk will be the same size
+   * as the image (usually 10GB). If specified, the size must be equal to or larger than 10GB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -194,7 +195,8 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   }
 
   /**
-   * Specifies the size of the disk in base-2 GB.
+   * Specifies the size of the disk in base-2 GB. If not specified, the disk will be the same size
+   * as the image (usually 10GB). If specified, the size must be equal to or larger than 10GB.
    * @return value or {@code null} for none
    */
   public java.lang.Long getDiskSizeGb() {
@@ -202,7 +204,8 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   }
 
   /**
-   * Specifies the size of the disk in base-2 GB.
+   * Specifies the size of the disk in base-2 GB. If not specified, the disk will be the same size
+   * as the image (usually 10GB). If specified, the size must be equal to or larger than 10GB.
    * @param diskSizeGb diskSizeGb or {@code null} for none
    */
   public AttachedDiskInitializeParams setDiskSizeGb(java.lang.Long diskSizeGb) {

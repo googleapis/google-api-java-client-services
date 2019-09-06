@@ -33,7 +33,7 @@ public final class ConferenceData extends com.google.api.client.json.GenericJson
    * The ID of the conference. Can be used by developers to keep track of conferences, should not be
    * displayed to users. Values for solution types:   - "eventHangout": unset. -
    * "eventNamedHangout": the name of the Hangout. - "hangoutsMeet": the 10-letter meeting code, for
-   * example "aaa-bbbb-ccc".  Optional.
+   * example "aaa-bbbb-ccc". - "addOn": defined by 3P conference provider.  Optional.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,7 +96,7 @@ public final class ConferenceData extends com.google.api.client.json.GenericJson
    * The ID of the conference. Can be used by developers to keep track of conferences, should not be
    * displayed to users. Values for solution types:   - "eventHangout": unset. -
    * "eventNamedHangout": the name of the Hangout. - "hangoutsMeet": the 10-letter meeting code, for
-   * example "aaa-bbbb-ccc".  Optional.
+   * example "aaa-bbbb-ccc". - "addOn": defined by 3P conference provider.  Optional.
    * @return value or {@code null} for none
    */
   public java.lang.String getConferenceId() {
@@ -107,7 +107,7 @@ public final class ConferenceData extends com.google.api.client.json.GenericJson
    * The ID of the conference. Can be used by developers to keep track of conferences, should not be
    * displayed to users. Values for solution types:   - "eventHangout": unset. -
    * "eventNamedHangout": the name of the Hangout. - "hangoutsMeet": the 10-letter meeting code, for
-   * example "aaa-bbbb-ccc".  Optional.
+   * example "aaa-bbbb-ccc". - "addOn": defined by 3P conference provider.  Optional.
    * @param conferenceId conferenceId or {@code null} for none
    */
   public ConferenceData setConferenceId(java.lang.String conferenceId) {

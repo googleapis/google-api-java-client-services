@@ -78,11 +78,27 @@ public final class JobConfigurationExtract extends com.google.api.client.json.Ge
   private java.lang.Boolean printHeader;
 
   /**
-   * [Required] A reference to the table being exported.
+   * A reference to the model being exported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ModelReference sourceModel;
+
+  /**
+   * A reference to the table being exported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TableReference sourceTable;
+
+  /**
+   * [Optional] If destinationFormat is set to "AVRO", this flag indicates whether to enable
+   * extracting applicable column types (such as TIMESTAMP) to their corresponding AVRO logical
+   * types (timestamp-micros), instead of only using their raw types (avro-long).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean useAvroLogicalTypes;
 
   /**
    * [Optional] The compression type to use for exported files. Possible values include GZIP,
@@ -226,7 +242,24 @@ public final class JobConfigurationExtract extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Required] A reference to the table being exported.
+   * A reference to the model being exported.
+   * @return value or {@code null} for none
+   */
+  public ModelReference getSourceModel() {
+    return sourceModel;
+  }
+
+  /**
+   * A reference to the model being exported.
+   * @param sourceModel sourceModel or {@code null} for none
+   */
+  public JobConfigurationExtract setSourceModel(ModelReference sourceModel) {
+    this.sourceModel = sourceModel;
+    return this;
+  }
+
+  /**
+   * A reference to the table being exported.
    * @return value or {@code null} for none
    */
   public TableReference getSourceTable() {
@@ -234,11 +267,32 @@ public final class JobConfigurationExtract extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Required] A reference to the table being exported.
+   * A reference to the table being exported.
    * @param sourceTable sourceTable or {@code null} for none
    */
   public JobConfigurationExtract setSourceTable(TableReference sourceTable) {
     this.sourceTable = sourceTable;
+    return this;
+  }
+
+  /**
+   * [Optional] If destinationFormat is set to "AVRO", this flag indicates whether to enable
+   * extracting applicable column types (such as TIMESTAMP) to their corresponding AVRO logical
+   * types (timestamp-micros), instead of only using their raw types (avro-long).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUseAvroLogicalTypes() {
+    return useAvroLogicalTypes;
+  }
+
+  /**
+   * [Optional] If destinationFormat is set to "AVRO", this flag indicates whether to enable
+   * extracting applicable column types (such as TIMESTAMP) to their corresponding AVRO logical
+   * types (timestamp-micros), instead of only using their raw types (avro-long).
+   * @param useAvroLogicalTypes useAvroLogicalTypes or {@code null} for none
+   */
+  public JobConfigurationExtract setUseAvroLogicalTypes(java.lang.Boolean useAvroLogicalTypes) {
+    this.useAvroLogicalTypes = useAvroLogicalTypes;
     return this;
   }
 

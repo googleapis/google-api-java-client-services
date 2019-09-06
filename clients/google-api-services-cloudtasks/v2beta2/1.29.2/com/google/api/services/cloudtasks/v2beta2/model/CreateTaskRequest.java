@@ -44,9 +44,7 @@ public final class CreateTaskRequest extends com.google.api.client.json.GenericJ
   private java.lang.String responseView;
 
   /**
-   * Required.
-   *
-   * The task to add.
+   * Required. The task to add.
    *
    * Task names have the following format:
    * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`. The user can
@@ -108,9 +106,7 @@ public final class CreateTaskRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required.
-   *
-   * The task to add.
+   * Required. The task to add.
    *
    * Task names have the following format:
    * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`. The user can
@@ -142,9 +138,7 @@ public final class CreateTaskRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required.
-   *
-   * The task to add.
+   * Required. The task to add.
    *
    * Task names have the following format:
    * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`. The user can

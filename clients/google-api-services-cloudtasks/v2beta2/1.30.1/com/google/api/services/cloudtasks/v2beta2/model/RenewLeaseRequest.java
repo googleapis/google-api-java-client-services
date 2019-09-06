@@ -30,9 +30,7 @@ package com.google.api.services.cloudtasks.v2beta2.model;
 public final class RenewLeaseRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required.
-   *
-   * The desired new lease duration, starting from now.
+   * Required. The desired new lease duration, starting from now.
    *
    * The maximum lease duration is 1 week. `lease_duration` will be truncated to the nearest second.
    * The value may be {@code null}.
@@ -55,20 +53,16 @@ public final class RenewLeaseRequest extends com.google.api.client.json.GenericJ
   private java.lang.String responseView;
 
   /**
-   * Required.
-   *
-   * The task's current schedule time, available in the schedule_time returned by LeaseTasks
-   * response or RenewLease response. This restriction is to ensure that your worker currently holds
-   * the lease.
+   * Required. The task's current schedule time, available in the schedule_time returned by
+   * LeaseTasks response or RenewLease response. This restriction is to ensure that your worker
+   * currently holds the lease.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String scheduleTime;
 
   /**
-   * Required.
-   *
-   * The desired new lease duration, starting from now.
+   * Required. The desired new lease duration, starting from now.
    *
    * The maximum lease duration is 1 week. `lease_duration` will be truncated to the nearest second.
    * @return value or {@code null} for none
@@ -78,9 +72,7 @@ public final class RenewLeaseRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required.
-   *
-   * The desired new lease duration, starting from now.
+   * Required. The desired new lease duration, starting from now.
    *
    * The maximum lease duration is 1 week. `lease_duration` will be truncated to the nearest second.
    * @param leaseDuration leaseDuration or {@code null} for none
@@ -122,11 +114,9 @@ public final class RenewLeaseRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required.
-   *
-   * The task's current schedule time, available in the schedule_time returned by LeaseTasks
-   * response or RenewLease response. This restriction is to ensure that your worker currently holds
-   * the lease.
+   * Required. The task's current schedule time, available in the schedule_time returned by
+   * LeaseTasks response or RenewLease response. This restriction is to ensure that your worker
+   * currently holds the lease.
    * @return value or {@code null} for none
    */
   public String getScheduleTime() {
@@ -134,11 +124,9 @@ public final class RenewLeaseRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required.
-   *
-   * The task's current schedule time, available in the schedule_time returned by LeaseTasks
-   * response or RenewLease response. This restriction is to ensure that your worker currently holds
-   * the lease.
+   * Required. The task's current schedule time, available in the schedule_time returned by
+   * LeaseTasks response or RenewLease response. This restriction is to ensure that your worker
+   * currently holds the lease.
    * @param scheduleTime scheduleTime or {@code null} for none
    */
   public RenewLeaseRequest setScheduleTime(String scheduleTime) {

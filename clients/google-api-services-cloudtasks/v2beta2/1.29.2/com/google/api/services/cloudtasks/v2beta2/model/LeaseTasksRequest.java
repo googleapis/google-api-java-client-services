@@ -60,9 +60,7 @@ public final class LeaseTasksRequest extends com.google.api.client.json.GenericJ
   private java.lang.String filter;
 
   /**
-   * Required.
-   *
-   * The duration of the lease.
+   * Required. The duration of the lease.
    *
    * Each task returned in the response will have its schedule_time set to the current time plus the
    * `lease_duration`. The task is leased until its schedule_time; thus, the task will not be
@@ -170,9 +168,7 @@ public final class LeaseTasksRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required.
-   *
-   * The duration of the lease.
+   * Required. The duration of the lease.
    *
    * Each task returned in the response will have its schedule_time set to the current time plus the
    * `lease_duration`. The task is leased until its schedule_time; thus, the task will not be
@@ -190,9 +186,7 @@ public final class LeaseTasksRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required.
-   *
-   * The duration of the lease.
+   * Required. The duration of the lease.
    *
    * Each task returned in the response will have its schedule_time set to the current time plus the
    * `lease_duration`. The task is leased until its schedule_time; thus, the task will not be

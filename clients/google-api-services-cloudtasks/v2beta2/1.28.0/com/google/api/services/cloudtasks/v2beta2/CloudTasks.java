@@ -522,8 +522,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the cloudtasks server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required.
-        The location name in which the queue will be created.
+         * @param parent Required. The location name in which the queue will be created.
         For example:
          *        `projects/PROJECT_ID/locations/LOCATION_ID`
         The list of allowed locations can be obtained
@@ -564,8 +563,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required.
-        The location name in which the queue will be created.
+           * @param parent Required. The location name in which the queue will be created.
         For example:
          *        `projects/PROJECT_ID/locations/LOCATION_ID`
         The list of allowed locations can be obtained
@@ -641,9 +639,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Required.
-           *
-           * The location name in which the queue will be created. For example:
+           * Required. The location name in which the queue will be created. For example:
            * `projects/PROJECT_ID/locations/LOCATION_ID`
            *
            * The list of allowed locations can be obtained by calling Cloud Tasks' implementation of
@@ -652,9 +648,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required.
-
-         The location name in which the queue will be created. For example:
+          /** Required. The location name in which the queue will be created. For example:
          `projects/PROJECT_ID/locations/LOCATION_ID`
 
          The list of allowed locations can be obtained by calling Cloud Tasks' implementation of
@@ -665,9 +659,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Required.
-           *
-           * The location name in which the queue will be created. For example:
+           * Required. The location name in which the queue will be created. For example:
            * `projects/PROJECT_ID/locations/LOCATION_ID`
            *
            * The list of allowed locations can be obtained by calling Cloud Tasks' implementation of
@@ -704,8 +696,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the cloudtasks server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required.
-        The queue name. For example:
+         * @param name Required. The queue name. For example:
         `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
          * @return the request
          */
@@ -741,8 +732,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required.
-        The queue name. For example:
+           * @param name Required. The queue name. For example:
         `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
            * @since 1.13
            */
@@ -812,26 +802,20 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Required.
-           *
-           * The queue name. For example:
+           * Required. The queue name. For example:
            * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required.
-
-         The queue name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+          /** Required. The queue name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required.
-           *
-           * The queue name. For example:
+           * Required. The queue name. For example:
            * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
            */
           public Delete setName(java.lang.String name) {
@@ -857,8 +841,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the cloudtasks server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required.
-        The resource name of the queue. For example:
+         * @param name Required. The resource name of the queue. For example:
          *        `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
          * @return the request
          */
@@ -885,8 +868,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required.
-        The resource name of the queue. For example:
+           * @param name Required. The resource name of the queue. For example:
          *        `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
            * @since 1.13
            */
@@ -966,17 +948,13 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Required.
-           *
-           * The resource name of the queue. For example:
+           * Required. The resource name of the queue. For example:
            * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required.
-
-         The resource name of the queue. For example:
+          /** Required. The resource name of the queue. For example:
          `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
            */
           public java.lang.String getName() {
@@ -984,9 +962,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Required.
-           *
-           * The resource name of the queue. For example:
+           * Required. The resource name of the queue. For example:
            * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
            */
           public Get setName(java.lang.String name) {
@@ -1168,8 +1144,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the cloudtasks server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required.
-        The location name.
+         * @param parent Required. The location name.
         For example: `projects/PROJECT_ID/locations/LOCATION_ID`
          * @return the request
          */
@@ -1198,8 +1173,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required.
-        The location name.
+           * @param parent Required. The location name.
         For example: `projects/PROJECT_ID/locations/LOCATION_ID`
            * @since 1.13
            */
@@ -1279,25 +1253,19 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Required.
-           *
-           * The location name. For example: `projects/PROJECT_ID/locations/LOCATION_ID`
+           * Required. The location name. For example: `projects/PROJECT_ID/locations/LOCATION_ID`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required.
-
-         The location name. For example: `projects/PROJECT_ID/locations/LOCATION_ID`
+          /** Required. The location name. For example: `projects/PROJECT_ID/locations/LOCATION_ID`
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required.
-           *
-           * The location name. For example: `projects/PROJECT_ID/locations/LOCATION_ID`
+           * Required. The location name. For example: `projects/PROJECT_ID/locations/LOCATION_ID`
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -1700,8 +1668,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the cloudtasks server.  After setting any optional
          * parameters, call the {@link Pause#execute()} method to invoke the remote operation.
          *
-         * @param name Required.
-        The queue name. For example:
+         * @param name Required. The queue name. For example:
         `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
          * @param content the {@link com.google.api.services.cloudtasks.v2beta2.model.PauseQueueRequest}
          * @return the request
@@ -1734,8 +1701,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
            * Pause#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required.
-        The queue name. For example:
+           * @param name Required. The queue name. For example:
         `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
            * @param content the {@link com.google.api.services.cloudtasks.v2beta2.model.PauseQueueRequest}
            * @since 1.13
@@ -1806,25 +1772,21 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Required.
-           *
-           * The queue name. For example: `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
+           * Required. The queue name. For example:
+           * `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required.
-
-         The queue name. For example: `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
+          /** Required. The queue name. For example: `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required.
-           *
-           * The queue name. For example: `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
+           * Required. The queue name. For example:
+           * `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
            */
           public Pause setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -1854,8 +1816,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the cloudtasks server.  After setting any optional
          * parameters, call the {@link Purge#execute()} method to invoke the remote operation.
          *
-         * @param name Required.
-        The queue name. For example:
+         * @param name Required. The queue name. For example:
         `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
          * @param content the {@link com.google.api.services.cloudtasks.v2beta2.model.PurgeQueueRequest}
          * @return the request
@@ -1889,8 +1850,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
            * Purge#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required.
-        The queue name. For example:
+           * @param name Required. The queue name. For example:
         `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
            * @param content the {@link com.google.api.services.cloudtasks.v2beta2.model.PurgeQueueRequest}
            * @since 1.13
@@ -1961,25 +1921,21 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Required.
-           *
-           * The queue name. For example: `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
+           * Required. The queue name. For example:
+           * `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required.
-
-         The queue name. For example: `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
+          /** Required. The queue name. For example: `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required.
-           *
-           * The queue name. For example: `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
+           * Required. The queue name. For example:
+           * `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
            */
           public Purge setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2011,8 +1967,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the cloudtasks server.  After setting any optional
          * parameters, call the {@link Resume#execute()} method to invoke the remote operation.
          *
-         * @param name Required.
-        The queue name. For example:
+         * @param name Required. The queue name. For example:
         `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
          * @param content the {@link com.google.api.services.cloudtasks.v2beta2.model.ResumeQueueRequest}
          * @return the request
@@ -2048,8 +2003,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
            * Resume#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required.
-        The queue name. For example:
+           * @param name Required. The queue name. For example:
         `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
            * @param content the {@link com.google.api.services.cloudtasks.v2beta2.model.ResumeQueueRequest}
            * @since 1.13
@@ -2120,25 +2074,21 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Required.
-           *
-           * The queue name. For example: `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
+           * Required. The queue name. For example:
+           * `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required.
-
-         The queue name. For example: `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
+          /** Required. The queue name. For example: `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required.
-           *
-           * The queue name. For example: `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
+           * Required. The queue name. For example:
+           * `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
            */
           public Resume setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2499,8 +2449,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the cloudtasks server.  After setting any optional
            * parameters, call the {@link Acknowledge#execute()} method to invoke the remote operation.
            *
-           * @param name Required.
-          The task name. For example:
+           * @param name Required. The task name. For example:
            *        `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
            * @param content the {@link com.google.api.services.cloudtasks.v2beta2.model.AcknowledgeTaskRequest}
            * @return the request
@@ -2536,8 +2485,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
              * Acknowledge#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required.
-          The task name. For example:
+             * @param name Required. The task name. For example:
            *        `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
              * @param content the {@link com.google.api.services.cloudtasks.v2beta2.model.AcknowledgeTaskRequest}
              * @since 1.13
@@ -2608,17 +2556,13 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * Required.
-             *
-             * The task name. For example:
+             * Required. The task name. For example:
              * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required.
-
-           The task name. For example:
+            /** Required. The task name. For example:
            `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
              */
             public java.lang.String getName() {
@@ -2626,9 +2570,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * Required.
-             *
-             * The task name. For example:
+             * Required. The task name. For example:
              * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
              */
             public Acknowledge setName(java.lang.String name) {
@@ -2657,8 +2599,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the cloudtasks server.  After setting any optional
            * parameters, call the {@link CancelLease#execute()} method to invoke the remote operation.
            *
-           * @param name Required.
-          The task name. For example:
+           * @param name Required. The task name. For example:
            *        `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
            * @param content the {@link com.google.api.services.cloudtasks.v2beta2.model.CancelLeaseRequest}
            * @return the request
@@ -2690,8 +2631,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
              * CancelLease#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required.
-          The task name. For example:
+             * @param name Required. The task name. For example:
            *        `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
              * @param content the {@link com.google.api.services.cloudtasks.v2beta2.model.CancelLeaseRequest}
              * @since 1.13
@@ -2762,17 +2702,13 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * Required.
-             *
-             * The task name. For example:
+             * Required. The task name. For example:
              * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required.
-
-           The task name. For example:
+            /** Required. The task name. For example:
            `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
              */
             public java.lang.String getName() {
@@ -2780,9 +2716,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * Required.
-             *
-             * The task name. For example:
+             * Required. The task name. For example:
              * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
              */
             public CancelLease setName(java.lang.String name) {
@@ -2813,8 +2747,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the cloudtasks server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required.
-          The queue name. For example:
+           * @param parent Required. The queue name. For example:
           `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
            *        The queue must already exist.
            * @param content the {@link com.google.api.services.cloudtasks.v2beta2.model.CreateTaskRequest}
@@ -2849,8 +2782,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required.
-          The queue name. For example:
+             * @param parent Required. The queue name. For example:
           `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
            *        The queue must already exist.
              * @param content the {@link com.google.api.services.cloudtasks.v2beta2.model.CreateTaskRequest}
@@ -2922,9 +2854,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * Required.
-             *
-             * The queue name. For example:
+             * Required. The queue name. For example:
              * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
              *
              * The queue must already exist.
@@ -2932,9 +2862,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required.
-
-           The queue name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+            /** Required. The queue name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
 
            The queue must already exist.
              */
@@ -2943,9 +2871,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * Required.
-             *
-             * The queue name. For example:
+             * Required. The queue name. For example:
              * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
              *
              * The queue must already exist.
@@ -2976,8 +2902,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the cloudtasks server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required.
-          The task name. For example:
+           * @param name Required. The task name. For example:
            *        `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
            * @return the request
            */
@@ -3008,8 +2933,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required.
-          The task name. For example:
+             * @param name Required. The task name. For example:
            *        `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
              * @since 1.13
              */
@@ -3079,17 +3003,13 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * Required.
-             *
-             * The task name. For example:
+             * Required. The task name. For example:
              * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required.
-
-           The task name. For example:
+            /** Required. The task name. For example:
            `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
              */
             public java.lang.String getName() {
@@ -3097,9 +3017,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * Required.
-             *
-             * The task name. For example:
+             * Required. The task name. For example:
              * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
              */
             public Delete setName(java.lang.String name) {
@@ -3125,8 +3043,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the cloudtasks server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required.
-          The task name. For example:
+           * @param name Required. The task name. For example:
            *        `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
            * @return the request
            */
@@ -3153,8 +3070,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required.
-          The task name. For example:
+             * @param name Required. The task name. For example:
            *        `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
              * @since 1.13
              */
@@ -3234,17 +3150,13 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * Required.
-             *
-             * The task name. For example:
+             * Required. The task name. For example:
              * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required.
-
-           The task name. For example:
+            /** Required. The task name. For example:
            `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
              */
             public java.lang.String getName() {
@@ -3252,9 +3164,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * Required.
-             *
-             * The task name. For example:
+             * Required. The task name. For example:
              * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
              */
             public Get setName(java.lang.String name) {
@@ -3331,8 +3241,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the cloudtasks server.  After setting any optional
            * parameters, call the {@link Lease#execute()} method to invoke the remote operation.
            *
-           * @param parent Required.
-          The queue name. For example:
+           * @param parent Required. The queue name. For example:
           `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
            * @param content the {@link com.google.api.services.cloudtasks.v2beta2.model.LeaseTasksRequest}
            * @return the request
@@ -3371,8 +3280,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
              * Lease#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required.
-          The queue name. For example:
+             * @param parent Required. The queue name. For example:
           `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
              * @param content the {@link com.google.api.services.cloudtasks.v2beta2.model.LeaseTasksRequest}
              * @since 1.13
@@ -3443,26 +3351,20 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * Required.
-             *
-             * The queue name. For example:
+             * Required. The queue name. For example:
              * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required.
-
-           The queue name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+            /** Required. The queue name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Required.
-             *
-             * The queue name. For example:
+             * Required. The queue name. For example:
              * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
              */
             public Lease setParent(java.lang.String parent) {
@@ -3493,8 +3395,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the cloudtasks server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required.
-          The queue name. For example:
+           * @param parent Required. The queue name. For example:
           `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
            * @return the request
            */
@@ -3526,8 +3427,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required.
-          The queue name. For example:
+             * @param parent Required. The queue name. For example:
           `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
              * @since 1.13
              */
@@ -3607,26 +3507,20 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * Required.
-             *
-             * The queue name. For example:
+             * Required. The queue name. For example:
              * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required.
-
-           The queue name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+            /** Required. The queue name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Required.
-             *
-             * The queue name. For example:
+             * Required. The queue name. For example:
              * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
              */
             public List setParent(java.lang.String parent) {
@@ -3769,8 +3663,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the cloudtasks server.  After setting any optional
            * parameters, call the {@link RenewLease#execute()} method to invoke the remote operation.
            *
-           * @param name Required.
-          The task name. For example:
+           * @param name Required. The task name. For example:
            *        `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
            * @param content the {@link com.google.api.services.cloudtasks.v2beta2.model.RenewLeaseRequest}
            * @return the request
@@ -3802,8 +3695,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
              * RenewLease#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required.
-          The task name. For example:
+             * @param name Required. The task name. For example:
            *        `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
              * @param content the {@link com.google.api.services.cloudtasks.v2beta2.model.RenewLeaseRequest}
              * @since 1.13
@@ -3874,17 +3766,13 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * Required.
-             *
-             * The task name. For example:
+             * Required. The task name. For example:
              * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required.
-
-           The task name. For example:
+            /** Required. The task name. For example:
            `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
              */
             public java.lang.String getName() {
@@ -3892,9 +3780,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * Required.
-             *
-             * The task name. For example:
+             * Required. The task name. For example:
              * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
              */
             public RenewLease setName(java.lang.String name) {
@@ -3938,8 +3824,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the cloudtasks server.  After setting any optional
            * parameters, call the {@link Run#execute()} method to invoke the remote operation.
            *
-           * @param name Required.
-          The task name. For example:
+           * @param name Required. The task name. For example:
            *        `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
            * @param content the {@link com.google.api.services.cloudtasks.v2beta2.model.RunTaskRequest}
            * @return the request
@@ -3985,8 +3870,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
              * {@link Run#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required.
-          The task name. For example:
+             * @param name Required. The task name. For example:
            *        `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
              * @param content the {@link com.google.api.services.cloudtasks.v2beta2.model.RunTaskRequest}
              * @since 1.13
@@ -4057,17 +3941,13 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * Required.
-             *
-             * The task name. For example:
+             * Required. The task name. For example:
              * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required.
-
-           The task name. For example:
+            /** Required. The task name. For example:
            `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
              */
             public java.lang.String getName() {
@@ -4075,9 +3955,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * Required.
-             *
-             * The task name. For example:
+             * Required. The task name. For example:
              * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
              */
             public Run setName(java.lang.String name) {

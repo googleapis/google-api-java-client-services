@@ -17,7 +17,7 @@
 package com.google.api.services.cloudtasks.v2beta2.model;
 
 /**
- * Request message for acknowledging a task using AcknowledgeTask.
+ * Encapsulates settings provided to GetIamPolicy.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Tasks API. For a detailed explanation see:
@@ -27,46 +27,43 @@ package com.google.api.services.cloudtasks.v2beta2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class AcknowledgeTaskRequest extends com.google.api.client.json.GenericJson {
+public final class GetPolicyOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The task's current schedule time, available in the schedule_time returned by
-   * LeaseTasks response or RenewLease response. This restriction is to ensure that your worker
-   * currently holds the lease.
+   * Optional. The policy format version to be returned. Acceptable values are 0, 1, and 3. If the
+   * value is 0, or the field is omitted, policy format version 1 will be returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private String scheduleTime;
+  private java.lang.Integer requestedPolicyVersion;
 
   /**
-   * Required. The task's current schedule time, available in the schedule_time returned by
-   * LeaseTasks response or RenewLease response. This restriction is to ensure that your worker
-   * currently holds the lease.
+   * Optional. The policy format version to be returned. Acceptable values are 0, 1, and 3. If the
+   * value is 0, or the field is omitted, policy format version 1 will be returned.
    * @return value or {@code null} for none
    */
-  public String getScheduleTime() {
-    return scheduleTime;
+  public java.lang.Integer getRequestedPolicyVersion() {
+    return requestedPolicyVersion;
   }
 
   /**
-   * Required. The task's current schedule time, available in the schedule_time returned by
-   * LeaseTasks response or RenewLease response. This restriction is to ensure that your worker
-   * currently holds the lease.
-   * @param scheduleTime scheduleTime or {@code null} for none
+   * Optional. The policy format version to be returned. Acceptable values are 0, 1, and 3. If the
+   * value is 0, or the field is omitted, policy format version 1 will be returned.
+   * @param requestedPolicyVersion requestedPolicyVersion or {@code null} for none
    */
-  public AcknowledgeTaskRequest setScheduleTime(String scheduleTime) {
-    this.scheduleTime = scheduleTime;
+  public GetPolicyOptions setRequestedPolicyVersion(java.lang.Integer requestedPolicyVersion) {
+    this.requestedPolicyVersion = requestedPolicyVersion;
     return this;
   }
 
   @Override
-  public AcknowledgeTaskRequest set(String fieldName, Object value) {
-    return (AcknowledgeTaskRequest) super.set(fieldName, value);
+  public GetPolicyOptions set(String fieldName, Object value) {
+    return (GetPolicyOptions) super.set(fieldName, value);
   }
 
   @Override
-  public AcknowledgeTaskRequest clone() {
-    return (AcknowledgeTaskRequest) super.clone();
+  public GetPolicyOptions clone() {
+    return (GetPolicyOptions) super.clone();
   }
 
 }

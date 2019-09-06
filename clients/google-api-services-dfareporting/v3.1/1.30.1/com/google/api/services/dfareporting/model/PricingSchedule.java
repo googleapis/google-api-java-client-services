@@ -38,13 +38,6 @@ public final class PricingSchedule extends com.google.api.client.json.GenericJso
   private java.lang.String capCostOption;
 
   /**
-   * Whether cap costs are ignored by ad serving.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean disregardOverdelivery;
-
-  /**
    * Placement end date. This date must be later than, or the same day as, the placement start date,
    * but not later than the campaign end date. If, for example, you set 6/25/2015 as both the start
    * and end dates, the effective placement date is just that day only, 6/25/2015. The hours,
@@ -115,23 +108,6 @@ public final class PricingSchedule extends com.google.api.client.json.GenericJso
    */
   public PricingSchedule setCapCostOption(java.lang.String capCostOption) {
     this.capCostOption = capCostOption;
-    return this;
-  }
-
-  /**
-   * Whether cap costs are ignored by ad serving.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getDisregardOverdelivery() {
-    return disregardOverdelivery;
-  }
-
-  /**
-   * Whether cap costs are ignored by ad serving.
-   * @param disregardOverdelivery disregardOverdelivery or {@code null} for none
-   */
-  public PricingSchedule setDisregardOverdelivery(java.lang.Boolean disregardOverdelivery) {
-    this.disregardOverdelivery = disregardOverdelivery;
     return this;
   }
 

@@ -46,6 +46,14 @@ public final class Placement extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean adBlockingOptOut;
 
   /**
+   * Additional sizes associated with this placement. When inserting or updating a placement, only
+   * the size ID field is used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Size> additionalSizes;
+
+  /**
    * Advertiser ID of this placement. This field can be left blank.
    * The value may be {@code null}.
    */
@@ -376,6 +384,25 @@ public final class Placement extends com.google.api.client.json.GenericJson {
    */
   public Placement setAdBlockingOptOut(java.lang.Boolean adBlockingOptOut) {
     this.adBlockingOptOut = adBlockingOptOut;
+    return this;
+  }
+
+  /**
+   * Additional sizes associated with this placement. When inserting or updating a placement, only
+   * the size ID field is used.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Size> getAdditionalSizes() {
+    return additionalSizes;
+  }
+
+  /**
+   * Additional sizes associated with this placement. When inserting or updating a placement, only
+   * the size ID field is used.
+   * @param additionalSizes additionalSizes or {@code null} for none
+   */
+  public Placement setAdditionalSizes(java.util.List<Size> additionalSizes) {
+    this.additionalSizes = additionalSizes;
     return this;
   }
 

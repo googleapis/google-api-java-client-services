@@ -39,42 +39,6 @@ public final class DirectorySite extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean active;
 
   /**
-   * Directory site contacts.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<DirectorySiteContactAssignment> contactAssignments;
-
-  /**
-   * Country ID of this directory site. This is a read-only field.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long countryId;
-
-  /**
-   * Currency ID of this directory site. This is a read-only field. Possible values are:  - "1" for
-   * USD  - "2" for GBP  - "3" for ESP  - "4" for SEK  - "5" for CAD  - "6" for JPY  - "7" for DEM
-   * - "8" for AUD  - "9" for FRF  - "10" for ITL  - "11" for DKK  - "12" for NOK  - "13" for FIM  -
-   * "14" for ZAR  - "15" for IEP  - "16" for NLG  - "17" for EUR  - "18" for KRW  - "19" for TWD  -
-   * "20" for SGD  - "21" for CNY  - "22" for HKD  - "23" for NZD  - "24" for MYR  - "25" for BRL  -
-   * "26" for PTE  - "27" for MXP  - "28" for CLP  - "29" for TRY  - "30" for ARS  - "31" for PEN  -
-   * "32" for ILS  - "33" for CHF  - "34" for VEF  - "35" for COP  - "36" for GTQ  - "37" for PLN  -
-   * "39" for INR  - "40" for THB  - "41" for IDR  - "42" for CZK  - "43" for RON  - "44" for HUF  -
-   * "45" for RUB  - "46" for AED  - "47" for BGN  - "48" for HRK  - "49" for MXN  - "50" for NGN
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long currencyId;
-
-  /**
-   * Description of this directory site. This is a read-only field.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String description;
-
-  /**
    * ID of this directory site. This is a read-only, auto-generated field.
    * The value may be {@code null}.
    */
@@ -123,13 +87,6 @@ public final class DirectorySite extends com.google.api.client.json.GenericJson 
   private java.lang.String name;
 
   /**
-   * Parent directory site ID.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long parentId;
-
-  /**
    * Directory site settings.
    * The value may be {@code null}.
    */
@@ -157,90 +114,6 @@ public final class DirectorySite extends com.google.api.client.json.GenericJson 
    */
   public DirectorySite setActive(java.lang.Boolean active) {
     this.active = active;
-    return this;
-  }
-
-  /**
-   * Directory site contacts.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<DirectorySiteContactAssignment> getContactAssignments() {
-    return contactAssignments;
-  }
-
-  /**
-   * Directory site contacts.
-   * @param contactAssignments contactAssignments or {@code null} for none
-   */
-  public DirectorySite setContactAssignments(java.util.List<DirectorySiteContactAssignment> contactAssignments) {
-    this.contactAssignments = contactAssignments;
-    return this;
-  }
-
-  /**
-   * Country ID of this directory site. This is a read-only field.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Long getCountryId() {
-    return countryId;
-  }
-
-  /**
-   * Country ID of this directory site. This is a read-only field.
-   * @param countryId countryId or {@code null} for none
-   */
-  public DirectorySite setCountryId(java.lang.Long countryId) {
-    this.countryId = countryId;
-    return this;
-  }
-
-  /**
-   * Currency ID of this directory site. This is a read-only field. Possible values are:  - "1" for
-   * USD  - "2" for GBP  - "3" for ESP  - "4" for SEK  - "5" for CAD  - "6" for JPY  - "7" for DEM
-   * - "8" for AUD  - "9" for FRF  - "10" for ITL  - "11" for DKK  - "12" for NOK  - "13" for FIM  -
-   * "14" for ZAR  - "15" for IEP  - "16" for NLG  - "17" for EUR  - "18" for KRW  - "19" for TWD  -
-   * "20" for SGD  - "21" for CNY  - "22" for HKD  - "23" for NZD  - "24" for MYR  - "25" for BRL  -
-   * "26" for PTE  - "27" for MXP  - "28" for CLP  - "29" for TRY  - "30" for ARS  - "31" for PEN  -
-   * "32" for ILS  - "33" for CHF  - "34" for VEF  - "35" for COP  - "36" for GTQ  - "37" for PLN  -
-   * "39" for INR  - "40" for THB  - "41" for IDR  - "42" for CZK  - "43" for RON  - "44" for HUF  -
-   * "45" for RUB  - "46" for AED  - "47" for BGN  - "48" for HRK  - "49" for MXN  - "50" for NGN
-   * @return value or {@code null} for none
-   */
-  public java.lang.Long getCurrencyId() {
-    return currencyId;
-  }
-
-  /**
-   * Currency ID of this directory site. This is a read-only field. Possible values are:  - "1" for
-   * USD  - "2" for GBP  - "3" for ESP  - "4" for SEK  - "5" for CAD  - "6" for JPY  - "7" for DEM
-   * - "8" for AUD  - "9" for FRF  - "10" for ITL  - "11" for DKK  - "12" for NOK  - "13" for FIM  -
-   * "14" for ZAR  - "15" for IEP  - "16" for NLG  - "17" for EUR  - "18" for KRW  - "19" for TWD  -
-   * "20" for SGD  - "21" for CNY  - "22" for HKD  - "23" for NZD  - "24" for MYR  - "25" for BRL  -
-   * "26" for PTE  - "27" for MXP  - "28" for CLP  - "29" for TRY  - "30" for ARS  - "31" for PEN  -
-   * "32" for ILS  - "33" for CHF  - "34" for VEF  - "35" for COP  - "36" for GTQ  - "37" for PLN  -
-   * "39" for INR  - "40" for THB  - "41" for IDR  - "42" for CZK  - "43" for RON  - "44" for HUF  -
-   * "45" for RUB  - "46" for AED  - "47" for BGN  - "48" for HRK  - "49" for MXN  - "50" for NGN
-   * @param currencyId currencyId or {@code null} for none
-   */
-  public DirectorySite setCurrencyId(java.lang.Long currencyId) {
-    this.currencyId = currencyId;
-    return this;
-  }
-
-  /**
-   * Description of this directory site. This is a read-only field.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getDescription() {
-    return description;
-  }
-
-  /**
-   * Description of this directory site. This is a read-only field.
-   * @param description description or {@code null} for none
-   */
-  public DirectorySite setDescription(java.lang.String description) {
-    this.description = description;
     return this;
   }
 
@@ -355,23 +228,6 @@ public final class DirectorySite extends com.google.api.client.json.GenericJson 
    */
   public DirectorySite setName(java.lang.String name) {
     this.name = name;
-    return this;
-  }
-
-  /**
-   * Parent directory site ID.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Long getParentId() {
-    return parentId;
-  }
-
-  /**
-   * Parent directory site ID.
-   * @param parentId parentId or {@code null} for none
-   */
-  public DirectorySite setParentId(java.lang.Long parentId) {
-    this.parentId = parentId;
     return this;
   }
 

@@ -135,13 +135,6 @@ public final class FloodlightActivity extends com.google.api.client.json.Generic
   private java.lang.String floodlightTagType;
 
   /**
-   * Whether this activity is archived.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean hidden;
-
-  /**
    * ID of this floodlight activity. This is a read-only, auto-generated field.
    * The value may be {@code null}.
    */
@@ -490,23 +483,6 @@ public final class FloodlightActivity extends com.google.api.client.json.Generic
    */
   public FloodlightActivity setFloodlightTagType(java.lang.String floodlightTagType) {
     this.floodlightTagType = floodlightTagType;
-    return this;
-  }
-
-  /**
-   * Whether this activity is archived.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getHidden() {
-    return hidden;
-  }
-
-  /**
-   * Whether this activity is archived.
-   * @param hidden hidden or {@code null} for none
-   */
-  public FloodlightActivity setHidden(java.lang.Boolean hidden) {
-    this.hidden = hidden;
     return this;
   }
 

@@ -64,6 +64,15 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> adTagKeys;
 
   /**
+   * Additional sizes associated with a responsive creative. When inserting or updating a creative
+   * either the size ID field or size width and height fields can be used. Applicable to DISPLAY
+   * creatives when the primary asset type is HTML_IMAGE.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Size> additionalSizes;
+
+  /**
    * Advertiser ID of this creative. This is a required field. Applicable to all creative types.
    * The value may be {@code null}.
    */
@@ -389,13 +398,6 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private java.lang.String overrideCss;
 
   /**
-   * The asset ID of the polite load image asset. Applicable to the creative type: DISPLAY.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long politeLoadAssetId;
-
-  /**
    * Amount of time to play the video before counting a view. Applicable to the following creative
    * types: all INSTREAM_VIDEO.
    * The value may be {@code null}.
@@ -669,6 +671,27 @@ public final class Creative extends com.google.api.client.json.GenericJson {
    */
   public Creative setAdTagKeys(java.util.List<java.lang.String> adTagKeys) {
     this.adTagKeys = adTagKeys;
+    return this;
+  }
+
+  /**
+   * Additional sizes associated with a responsive creative. When inserting or updating a creative
+   * either the size ID field or size width and height fields can be used. Applicable to DISPLAY
+   * creatives when the primary asset type is HTML_IMAGE.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Size> getAdditionalSizes() {
+    return additionalSizes;
+  }
+
+  /**
+   * Additional sizes associated with a responsive creative. When inserting or updating a creative
+   * either the size ID field or size width and height fields can be used. Applicable to DISPLAY
+   * creatives when the primary asset type is HTML_IMAGE.
+   * @param additionalSizes additionalSizes or {@code null} for none
+   */
+  public Creative setAdditionalSizes(java.util.List<Size> additionalSizes) {
+    this.additionalSizes = additionalSizes;
     return this;
   }
 
@@ -1415,23 +1438,6 @@ public final class Creative extends com.google.api.client.json.GenericJson {
    */
   public Creative setOverrideCss(java.lang.String overrideCss) {
     this.overrideCss = overrideCss;
-    return this;
-  }
-
-  /**
-   * The asset ID of the polite load image asset. Applicable to the creative type: DISPLAY.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Long getPoliteLoadAssetId() {
-    return politeLoadAssetId;
-  }
-
-  /**
-   * The asset ID of the polite load image asset. Applicable to the creative type: DISPLAY.
-   * @param politeLoadAssetId politeLoadAssetId or {@code null} for none
-   */
-  public Creative setPoliteLoadAssetId(java.lang.Long politeLoadAssetId) {
-    this.politeLoadAssetId = politeLoadAssetId;
     return this;
   }
 

@@ -31,7 +31,8 @@ package com.google.api.services.dfareporting.model;
 public final class Conversion extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether the conversion was directed toward children.
+   * Whether this particular request may come from a user under the age of 13, under COPPA
+   * compliance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,6 +114,13 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
   private java.lang.String mobileDeviceId;
 
   /**
+   * Whether the conversion was for a non personalized ad.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean nonPersonalizedAd;
+
+  /**
    * The ordinal of the conversion. Use this field to control how conversions of the same user and
    * day are de-duplicated. This is a required field.
    * The value may be {@code null}.
@@ -135,6 +143,14 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
   private java.lang.Long timestampMicros;
 
   /**
+   * Whether this particular request may come from a user under the age of 16 (may differ by
+   * country), under compliance with the European Union's General Data Protection Regulation (GDPR).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean treatmentForUnderage;
+
+  /**
    * The value of the conversion.
    * The value may be {@code null}.
    */
@@ -142,7 +158,8 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
   private java.lang.Double value;
 
   /**
-   * Whether the conversion was directed toward children.
+   * Whether this particular request may come from a user under the age of 13, under COPPA
+   * compliance.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getChildDirectedTreatment() {
@@ -150,7 +167,8 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the conversion was directed toward children.
+   * Whether this particular request may come from a user under the age of 13, under COPPA
+   * compliance.
    * @param childDirectedTreatment childDirectedTreatment or {@code null} for none
    */
   public Conversion setChildDirectedTreatment(java.lang.Boolean childDirectedTreatment) {
@@ -336,6 +354,23 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Whether the conversion was for a non personalized ad.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getNonPersonalizedAd() {
+    return nonPersonalizedAd;
+  }
+
+  /**
+   * Whether the conversion was for a non personalized ad.
+   * @param nonPersonalizedAd nonPersonalizedAd or {@code null} for none
+   */
+  public Conversion setNonPersonalizedAd(java.lang.Boolean nonPersonalizedAd) {
+    this.nonPersonalizedAd = nonPersonalizedAd;
+    return this;
+  }
+
+  /**
    * The ordinal of the conversion. Use this field to control how conversions of the same user and
    * day are de-duplicated. This is a required field.
    * @return value or {@code null} for none
@@ -385,6 +420,25 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
    */
   public Conversion setTimestampMicros(java.lang.Long timestampMicros) {
     this.timestampMicros = timestampMicros;
+    return this;
+  }
+
+  /**
+   * Whether this particular request may come from a user under the age of 16 (may differ by
+   * country), under compliance with the European Union's General Data Protection Regulation (GDPR).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getTreatmentForUnderage() {
+    return treatmentForUnderage;
+  }
+
+  /**
+   * Whether this particular request may come from a user under the age of 16 (may differ by
+   * country), under compliance with the European Union's General Data Protection Regulation (GDPR).
+   * @param treatmentForUnderage treatmentForUnderage or {@code null} for none
+   */
+  public Conversion setTreatmentForUnderage(java.lang.Boolean treatmentForUnderage) {
+    this.treatmentForUnderage = treatmentForUnderage;
     return this;
   }
 

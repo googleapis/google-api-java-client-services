@@ -204,13 +204,6 @@ public final class Campaign extends com.google.api.client.json.GenericJson {
   private LastModifiedInfo lastModifiedInfo;
 
   /**
-   * Lookback window settings for the campaign.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private LookbackConfiguration lookbackConfiguration;
-
-  /**
    * Name of this campaign. This is a required field and must be less than 256 characters long and
    * unique among campaigns of the same advertiser.
    * The value may be {@code null}.
@@ -648,23 +641,6 @@ public final class Campaign extends com.google.api.client.json.GenericJson {
    */
   public Campaign setLastModifiedInfo(LastModifiedInfo lastModifiedInfo) {
     this.lastModifiedInfo = lastModifiedInfo;
-    return this;
-  }
-
-  /**
-   * Lookback window settings for the campaign.
-   * @return value or {@code null} for none
-   */
-  public LookbackConfiguration getLookbackConfiguration() {
-    return lookbackConfiguration;
-  }
-
-  /**
-   * Lookback window settings for the campaign.
-   * @param lookbackConfiguration lookbackConfiguration or {@code null} for none
-   */
-  public Campaign setLookbackConfiguration(LookbackConfiguration lookbackConfiguration) {
-    this.lookbackConfiguration = lookbackConfiguration;
     return this;
   }
 

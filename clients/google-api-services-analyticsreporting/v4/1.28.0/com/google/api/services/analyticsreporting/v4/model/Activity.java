@@ -37,7 +37,9 @@ public final class Activity extends com.google.api.client.json.GenericJson {
 
   /**
    * Timestamp of the activity. If activities for a visit cross midnight and occur in two separate
-   * dates, then two sessions (one per date) share the session identifier.
+   * dates, then two sessions (one per date) share the session identifier. For example, say session
+   * ID 113472 has activity within 2019-08-20, and session ID 243742 has activity within 2019-08-25
+   * and 2019-08-26. Session ID 113472 is one session, and session ID 243742 is two sessions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -160,7 +162,9 @@ public final class Activity extends com.google.api.client.json.GenericJson {
 
   /**
    * Timestamp of the activity. If activities for a visit cross midnight and occur in two separate
-   * dates, then two sessions (one per date) share the session identifier.
+   * dates, then two sessions (one per date) share the session identifier. For example, say session
+   * ID 113472 has activity within 2019-08-20, and session ID 243742 has activity within 2019-08-25
+   * and 2019-08-26. Session ID 113472 is one session, and session ID 243742 is two sessions.
    * @return value or {@code null} for none
    */
   public String getActivityTime() {
@@ -169,7 +173,9 @@ public final class Activity extends com.google.api.client.json.GenericJson {
 
   /**
    * Timestamp of the activity. If activities for a visit cross midnight and occur in two separate
-   * dates, then two sessions (one per date) share the session identifier.
+   * dates, then two sessions (one per date) share the session identifier. For example, say session
+   * ID 113472 has activity within 2019-08-20, and session ID 243742 has activity within 2019-08-25
+   * and 2019-08-26. Session ID 113472 is one session, and session ID 243742 is two sessions.
    * @param activityTime activityTime or {@code null} for none
    */
   public Activity setActivityTime(String activityTime) {

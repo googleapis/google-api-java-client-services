@@ -32,7 +32,7 @@ package com.google.api.services.cloudresourcemanager.model;
 public final class Organization extends com.google.api.client.json.GenericJson {
 
   /**
-   * Timestamp when the Organization was created. Assigned by the server. @OutputOnly
+   * Timestamp when the Organization was created. Assigned by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,21 +41,21 @@ public final class Organization extends com.google.api.client.json.GenericJson {
   /**
    * A human-readable string that refers to the Organization in the GCP Console UI. This string is
    * set by the server and cannot be changed. The string will be set to the primary domain (for
-   * example, "google.com") of the G Suite customer that owns the organization. @OutputOnly
+   * example, "google.com") of the G Suite customer that owns the organization.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * The organization's current lifecycle state. Assigned by the server. @OutputOnly
+   * The organization's current lifecycle state. Assigned by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String lifecycleState;
 
   /**
-   * Output Only. The resource name of the organization. This is the organization's relative path in
+   * Output only. The resource name of the organization. This is the organization's relative path in
    * the API. Its format is "organizations/[organization_id]". For example, "organizations/1234".
    * The value may be {@code null}.
    */
@@ -79,7 +79,7 @@ public final class Organization extends com.google.api.client.json.GenericJson {
   private OrganizationOwner owner;
 
   /**
-   * Timestamp when the Organization was created. Assigned by the server. @OutputOnly
+   * Timestamp when the Organization was created. Assigned by the server.
    * @return value or {@code null} for none
    */
   public String getCreationTime() {
@@ -87,7 +87,7 @@ public final class Organization extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Timestamp when the Organization was created. Assigned by the server. @OutputOnly
+   * Timestamp when the Organization was created. Assigned by the server.
    * @param creationTime creationTime or {@code null} for none
    */
   public Organization setCreationTime(String creationTime) {
@@ -98,7 +98,7 @@ public final class Organization extends com.google.api.client.json.GenericJson {
   /**
    * A human-readable string that refers to the Organization in the GCP Console UI. This string is
    * set by the server and cannot be changed. The string will be set to the primary domain (for
-   * example, "google.com") of the G Suite customer that owns the organization. @OutputOnly
+   * example, "google.com") of the G Suite customer that owns the organization.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -108,7 +108,7 @@ public final class Organization extends com.google.api.client.json.GenericJson {
   /**
    * A human-readable string that refers to the Organization in the GCP Console UI. This string is
    * set by the server and cannot be changed. The string will be set to the primary domain (for
-   * example, "google.com") of the G Suite customer that owns the organization. @OutputOnly
+   * example, "google.com") of the G Suite customer that owns the organization.
    * @param displayName displayName or {@code null} for none
    */
   public Organization setDisplayName(java.lang.String displayName) {
@@ -117,7 +117,7 @@ public final class Organization extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The organization's current lifecycle state. Assigned by the server. @OutputOnly
+   * The organization's current lifecycle state. Assigned by the server.
    * @return value or {@code null} for none
    */
   public java.lang.String getLifecycleState() {
@@ -125,7 +125,7 @@ public final class Organization extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The organization's current lifecycle state. Assigned by the server. @OutputOnly
+   * The organization's current lifecycle state. Assigned by the server.
    * @param lifecycleState lifecycleState or {@code null} for none
    */
   public Organization setLifecycleState(java.lang.String lifecycleState) {
@@ -134,7 +134,7 @@ public final class Organization extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output Only. The resource name of the organization. This is the organization's relative path in
+   * Output only. The resource name of the organization. This is the organization's relative path in
    * the API. Its format is "organizations/[organization_id]". For example, "organizations/1234".
    * @return value or {@code null} for none
    */
@@ -143,7 +143,7 @@ public final class Organization extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output Only. The resource name of the organization. This is the organization's relative path in
+   * Output only. The resource name of the organization. This is the organization's relative path in
    * the API. Its format is "organizations/[organization_id]". For example, "organizations/1234".
    * @param name name or {@code null} for none
    */

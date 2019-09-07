@@ -55,6 +55,13 @@ public final class GooglePrivacyDlpV2ReidentifyContentRequest extends com.google
   private GooglePrivacyDlpV2ContentItem item;
 
   /**
+   * The geographic location to process content reidentification.  Reserved for future extensions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String location;
+
+  /**
    * Configuration for the re-identification of the content item. This field shares the same proto
    * message type that is used for de-identification, however its usage here is for the reversal of
    * the previous de-identification. Re-identification is performed by examining the transformations
@@ -132,6 +139,23 @@ public final class GooglePrivacyDlpV2ReidentifyContentRequest extends com.google
    */
   public GooglePrivacyDlpV2ReidentifyContentRequest setItem(GooglePrivacyDlpV2ContentItem item) {
     this.item = item;
+    return this;
+  }
+
+  /**
+   * The geographic location to process content reidentification.  Reserved for future extensions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocation() {
+    return location;
+  }
+
+  /**
+   * The geographic location to process content reidentification.  Reserved for future extensions.
+   * @param location location or {@code null} for none
+   */
+  public GooglePrivacyDlpV2ReidentifyContentRequest setLocation(java.lang.String location) {
+    this.location = location;
     return this;
   }
 

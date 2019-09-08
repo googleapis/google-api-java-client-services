@@ -1006,7 +1006,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * Required. A nonempty list of fields to change in the existing exclusion. New values for
+         * Required. A non-empty list of fields to change in the existing exclusion. New values for
          * the fields are taken from the corresponding fields in the LogExclusion included in this
          * request. Fields not mentioned in update_mask are not changed and are ignored in the
          * request.For example, to change the filter and description of an exclusion, specify an
@@ -1015,7 +1015,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** Required. A nonempty list of fields to change in the existing exclusion. New values for the fields
+        /** Required. A non-empty list of fields to change in the existing exclusion. New values for the fields
        are taken from the corresponding fields in the LogExclusion included in this request. Fields not
        mentioned in update_mask are not changed and are ignored in the request.For example, to change the
        filter and description of an exclusion, specify an update_mask of "filter,description".
@@ -1025,7 +1025,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * Required. A nonempty list of fields to change in the existing exclusion. New values for
+         * Required. A non-empty list of fields to change in the existing exclusion. New values for
          * the fields are taken from the corresponding fields in the LogExclusion included in this
          * request. Fields not mentioned in update_mask are not changed and are ignored in the
          * request.For example, to change the filter and description of an exclusion, specify an
@@ -1235,11 +1235,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * This request holds the parameters needed by the logging server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The resource name that owns the logs:
-      "projects/[PROJECT_ID]"
-       *        "organizations/[ORGANIZATION_ID]"
-      "billingAccounts/[BILLING_ACCOUNT_ID]"
-       *        "folders/[FOLDER_ID]"
+       * @param parent Required. To be deprecated in Logging Data Model V2.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -1266,11 +1262,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The resource name that owns the logs:
-      "projects/[PROJECT_ID]"
-       *        "organizations/[ORGANIZATION_ID]"
-      "billingAccounts/[BILLING_ACCOUNT_ID]"
-       *        "folders/[FOLDER_ID]"
+         * @param parent Required. To be deprecated in Logging Data Model V2.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -1348,26 +1340,17 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
-         * "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]"
-         * "folders/[FOLDER_ID]"
-         */
+        /** Required. To be deprecated in Logging Data Model V2. */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
-       "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]" "folders/[FOLDER_ID]"
+        /** Required. To be deprecated in Logging Data Model V2.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
-         * "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]"
-         * "folders/[FOLDER_ID]"
-         */
+        /** Required. To be deprecated in Logging Data Model V2. */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1427,6 +1410,31 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
+          return this;
+        }
+
+        /**
+         * Required for Logging Data Model V2. The resource name that owns the logs:
+         * "projects/PROJECT_ID"  "organizations/ORGANIZATION_ID"
+         * "billingAccounts/BILLING_ACCOUNT_ID"  "folders/FOLDER_ID"
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> resourceNames;
+
+        /** Required for Logging Data Model V2. The resource name that owns the logs:  "projects/PROJECT_ID"
+       "organizations/ORGANIZATION_ID"  "billingAccounts/BILLING_ACCOUNT_ID"  "folders/FOLDER_ID"
+         */
+        public java.util.List<java.lang.String> getResourceNames() {
+          return resourceNames;
+        }
+
+        /**
+         * Required for Logging Data Model V2. The resource name that owns the logs:
+         * "projects/PROJECT_ID"  "organizations/ORGANIZATION_ID"
+         * "billingAccounts/BILLING_ACCOUNT_ID"  "folders/FOLDER_ID"
+         */
+        public List setResourceNames(java.util.List<java.lang.String> resourceNames) {
+          this.resourceNames = resourceNames;
           return this;
         }
 
@@ -3751,8 +3759,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
-       * Required. A nonempty list of fields to change in the existing exclusion. New values for the
-       * fields are taken from the corresponding fields in the LogExclusion included in this
+       * Required. A non-empty list of fields to change in the existing exclusion. New values for
+       * the fields are taken from the corresponding fields in the LogExclusion included in this
        * request. Fields not mentioned in update_mask are not changed and are ignored in the
        * request.For example, to change the filter and description of an exclusion, specify an
        * update_mask of "filter,description".
@@ -3760,7 +3768,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** Required. A nonempty list of fields to change in the existing exclusion. New values for the fields
+      /** Required. A non-empty list of fields to change in the existing exclusion. New values for the fields
      are taken from the corresponding fields in the LogExclusion included in this request. Fields not
      mentioned in update_mask are not changed and are ignored in the request.For example, to change the
      filter and description of an exclusion, specify an update_mask of "filter,description".
@@ -3770,8 +3778,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
-       * Required. A nonempty list of fields to change in the existing exclusion. New values for the
-       * fields are taken from the corresponding fields in the LogExclusion included in this
+       * Required. A non-empty list of fields to change in the existing exclusion. New values for
+       * the fields are taken from the corresponding fields in the LogExclusion included in this
        * request. Fields not mentioned in update_mask are not changed and are ignored in the
        * request.For example, to change the filter and description of an exclusion, specify an
        * update_mask of "filter,description".
@@ -4673,7 +4681,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * Required. A nonempty list of fields to change in the existing exclusion. New values for
+         * Required. A non-empty list of fields to change in the existing exclusion. New values for
          * the fields are taken from the corresponding fields in the LogExclusion included in this
          * request. Fields not mentioned in update_mask are not changed and are ignored in the
          * request.For example, to change the filter and description of an exclusion, specify an
@@ -4682,7 +4690,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** Required. A nonempty list of fields to change in the existing exclusion. New values for the fields
+        /** Required. A non-empty list of fields to change in the existing exclusion. New values for the fields
        are taken from the corresponding fields in the LogExclusion included in this request. Fields not
        mentioned in update_mask are not changed and are ignored in the request.For example, to change the
        filter and description of an exclusion, specify an update_mask of "filter,description".
@@ -4692,7 +4700,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * Required. A nonempty list of fields to change in the existing exclusion. New values for
+         * Required. A non-empty list of fields to change in the existing exclusion. New values for
          * the fields are taken from the corresponding fields in the LogExclusion included in this
          * request. Fields not mentioned in update_mask are not changed and are ignored in the
          * request.For example, to change the filter and description of an exclusion, specify an
@@ -4902,11 +4910,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * This request holds the parameters needed by the logging server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The resource name that owns the logs:
-      "projects/[PROJECT_ID]"
-       *        "organizations/[ORGANIZATION_ID]"
-      "billingAccounts/[BILLING_ACCOUNT_ID]"
-       *        "folders/[FOLDER_ID]"
+       * @param parent Required. To be deprecated in Logging Data Model V2.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -4933,11 +4937,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The resource name that owns the logs:
-      "projects/[PROJECT_ID]"
-       *        "organizations/[ORGANIZATION_ID]"
-      "billingAccounts/[BILLING_ACCOUNT_ID]"
-       *        "folders/[FOLDER_ID]"
+         * @param parent Required. To be deprecated in Logging Data Model V2.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -5015,26 +5015,17 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
-         * "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]"
-         * "folders/[FOLDER_ID]"
-         */
+        /** Required. To be deprecated in Logging Data Model V2. */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
-       "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]" "folders/[FOLDER_ID]"
+        /** Required. To be deprecated in Logging Data Model V2.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
-         * "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]"
-         * "folders/[FOLDER_ID]"
-         */
+        /** Required. To be deprecated in Logging Data Model V2. */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -5094,6 +5085,31 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
+          return this;
+        }
+
+        /**
+         * Required for Logging Data Model V2. The resource name that owns the logs:
+         * "projects/PROJECT_ID"  "organizations/ORGANIZATION_ID"
+         * "billingAccounts/BILLING_ACCOUNT_ID"  "folders/FOLDER_ID"
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> resourceNames;
+
+        /** Required for Logging Data Model V2. The resource name that owns the logs:  "projects/PROJECT_ID"
+       "organizations/ORGANIZATION_ID"  "billingAccounts/BILLING_ACCOUNT_ID"  "folders/FOLDER_ID"
+         */
+        public java.util.List<java.lang.String> getResourceNames() {
+          return resourceNames;
+        }
+
+        /**
+         * Required for Logging Data Model V2. The resource name that owns the logs:
+         * "projects/PROJECT_ID"  "organizations/ORGANIZATION_ID"
+         * "billingAccounts/BILLING_ACCOUNT_ID"  "folders/FOLDER_ID"
+         */
+        public List setResourceNames(java.util.List<java.lang.String> resourceNames) {
+          this.resourceNames = resourceNames;
           return this;
         }
 
@@ -6518,11 +6534,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      * This request holds the parameters needed by the logging server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. The resource name that owns the logs:
-    "projects/[PROJECT_ID]"
-     *        "organizations/[ORGANIZATION_ID]"
-    "billingAccounts/[BILLING_ACCOUNT_ID]"
-     *        "folders/[FOLDER_ID]"
+     * @param parent Required. To be deprecated in Logging Data Model V2.
      * @return the request
      */
     public List list(java.lang.String parent) throws java.io.IOException {
@@ -6549,11 +6561,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Required. The resource name that owns the logs:
-    "projects/[PROJECT_ID]"
-     *        "organizations/[ORGANIZATION_ID]"
-    "billingAccounts/[BILLING_ACCOUNT_ID]"
-     *        "folders/[FOLDER_ID]"
+       * @param parent Required. To be deprecated in Logging Data Model V2.
        * @since 1.13
        */
       protected List(java.lang.String parent) {
@@ -6631,26 +6639,17 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
-       * "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]"
-       * "folders/[FOLDER_ID]"
-       */
+      /** Required. To be deprecated in Logging Data Model V2. */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
-     "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]" "folders/[FOLDER_ID]"
+      /** Required. To be deprecated in Logging Data Model V2.
        */
       public java.lang.String getParent() {
         return parent;
       }
 
-      /**
-       * Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
-       * "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]"
-       * "folders/[FOLDER_ID]"
-       */
+      /** Required. To be deprecated in Logging Data Model V2. */
       public List setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -6710,6 +6709,31 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
+        return this;
+      }
+
+      /**
+       * Required for Logging Data Model V2. The resource name that owns the logs:
+       * "projects/PROJECT_ID"  "organizations/ORGANIZATION_ID"
+       * "billingAccounts/BILLING_ACCOUNT_ID"  "folders/FOLDER_ID"
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> resourceNames;
+
+      /** Required for Logging Data Model V2. The resource name that owns the logs:  "projects/PROJECT_ID"
+     "organizations/ORGANIZATION_ID"  "billingAccounts/BILLING_ACCOUNT_ID"  "folders/FOLDER_ID"
+       */
+      public java.util.List<java.lang.String> getResourceNames() {
+        return resourceNames;
+      }
+
+      /**
+       * Required for Logging Data Model V2. The resource name that owns the logs:
+       * "projects/PROJECT_ID"  "organizations/ORGANIZATION_ID"
+       * "billingAccounts/BILLING_ACCOUNT_ID"  "folders/FOLDER_ID"
+       */
+      public List setResourceNames(java.util.List<java.lang.String> resourceNames) {
+        this.resourceNames = resourceNames;
         return this;
       }
 
@@ -7786,7 +7810,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * Required. A nonempty list of fields to change in the existing exclusion. New values for
+         * Required. A non-empty list of fields to change in the existing exclusion. New values for
          * the fields are taken from the corresponding fields in the LogExclusion included in this
          * request. Fields not mentioned in update_mask are not changed and are ignored in the
          * request.For example, to change the filter and description of an exclusion, specify an
@@ -7795,7 +7819,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** Required. A nonempty list of fields to change in the existing exclusion. New values for the fields
+        /** Required. A non-empty list of fields to change in the existing exclusion. New values for the fields
        are taken from the corresponding fields in the LogExclusion included in this request. Fields not
        mentioned in update_mask are not changed and are ignored in the request.For example, to change the
        filter and description of an exclusion, specify an update_mask of "filter,description".
@@ -7805,7 +7829,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * Required. A nonempty list of fields to change in the existing exclusion. New values for
+         * Required. A non-empty list of fields to change in the existing exclusion. New values for
          * the fields are taken from the corresponding fields in the LogExclusion included in this
          * request. Fields not mentioned in update_mask are not changed and are ignored in the
          * request.For example, to change the filter and description of an exclusion, specify an
@@ -8015,11 +8039,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * This request holds the parameters needed by the logging server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The resource name that owns the logs:
-      "projects/[PROJECT_ID]"
-       *        "organizations/[ORGANIZATION_ID]"
-      "billingAccounts/[BILLING_ACCOUNT_ID]"
-       *        "folders/[FOLDER_ID]"
+       * @param parent Required. To be deprecated in Logging Data Model V2.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -8046,11 +8066,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The resource name that owns the logs:
-      "projects/[PROJECT_ID]"
-       *        "organizations/[ORGANIZATION_ID]"
-      "billingAccounts/[BILLING_ACCOUNT_ID]"
-       *        "folders/[FOLDER_ID]"
+         * @param parent Required. To be deprecated in Logging Data Model V2.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -8128,26 +8144,17 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
-         * "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]"
-         * "folders/[FOLDER_ID]"
-         */
+        /** Required. To be deprecated in Logging Data Model V2. */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
-       "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]" "folders/[FOLDER_ID]"
+        /** Required. To be deprecated in Logging Data Model V2.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
-         * "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]"
-         * "folders/[FOLDER_ID]"
-         */
+        /** Required. To be deprecated in Logging Data Model V2. */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -8207,6 +8214,31 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
+          return this;
+        }
+
+        /**
+         * Required for Logging Data Model V2. The resource name that owns the logs:
+         * "projects/PROJECT_ID"  "organizations/ORGANIZATION_ID"
+         * "billingAccounts/BILLING_ACCOUNT_ID"  "folders/FOLDER_ID"
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> resourceNames;
+
+        /** Required for Logging Data Model V2. The resource name that owns the logs:  "projects/PROJECT_ID"
+       "organizations/ORGANIZATION_ID"  "billingAccounts/BILLING_ACCOUNT_ID"  "folders/FOLDER_ID"
+         */
+        public java.util.List<java.lang.String> getResourceNames() {
+          return resourceNames;
+        }
+
+        /**
+         * Required for Logging Data Model V2. The resource name that owns the logs:
+         * "projects/PROJECT_ID"  "organizations/ORGANIZATION_ID"
+         * "billingAccounts/BILLING_ACCOUNT_ID"  "folders/FOLDER_ID"
+         */
+        public List setResourceNames(java.util.List<java.lang.String> resourceNames) {
+          this.resourceNames = resourceNames;
           return this;
         }
 
@@ -10323,7 +10355,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * Required. A nonempty list of fields to change in the existing exclusion. New values for
+         * Required. A non-empty list of fields to change in the existing exclusion. New values for
          * the fields are taken from the corresponding fields in the LogExclusion included in this
          * request. Fields not mentioned in update_mask are not changed and are ignored in the
          * request.For example, to change the filter and description of an exclusion, specify an
@@ -10332,7 +10364,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** Required. A nonempty list of fields to change in the existing exclusion. New values for the fields
+        /** Required. A non-empty list of fields to change in the existing exclusion. New values for the fields
        are taken from the corresponding fields in the LogExclusion included in this request. Fields not
        mentioned in update_mask are not changed and are ignored in the request.For example, to change the
        filter and description of an exclusion, specify an update_mask of "filter,description".
@@ -10342,7 +10374,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * Required. A nonempty list of fields to change in the existing exclusion. New values for
+         * Required. A non-empty list of fields to change in the existing exclusion. New values for
          * the fields are taken from the corresponding fields in the LogExclusion included in this
          * request. Fields not mentioned in update_mask are not changed and are ignored in the
          * request.For example, to change the filter and description of an exclusion, specify an
@@ -10552,11 +10584,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * This request holds the parameters needed by the logging server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The resource name that owns the logs:
-      "projects/[PROJECT_ID]"
-       *        "organizations/[ORGANIZATION_ID]"
-      "billingAccounts/[BILLING_ACCOUNT_ID]"
-       *        "folders/[FOLDER_ID]"
+       * @param parent Required. To be deprecated in Logging Data Model V2.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -10583,11 +10611,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The resource name that owns the logs:
-      "projects/[PROJECT_ID]"
-       *        "organizations/[ORGANIZATION_ID]"
-      "billingAccounts/[BILLING_ACCOUNT_ID]"
-       *        "folders/[FOLDER_ID]"
+         * @param parent Required. To be deprecated in Logging Data Model V2.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -10665,26 +10689,17 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
-         * "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]"
-         * "folders/[FOLDER_ID]"
-         */
+        /** Required. To be deprecated in Logging Data Model V2. */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
-       "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]" "folders/[FOLDER_ID]"
+        /** Required. To be deprecated in Logging Data Model V2.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
-         * "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]"
-         * "folders/[FOLDER_ID]"
-         */
+        /** Required. To be deprecated in Logging Data Model V2. */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -10744,6 +10759,31 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
+          return this;
+        }
+
+        /**
+         * Required for Logging Data Model V2. The resource name that owns the logs:
+         * "projects/PROJECT_ID"  "organizations/ORGANIZATION_ID"
+         * "billingAccounts/BILLING_ACCOUNT_ID"  "folders/FOLDER_ID"
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> resourceNames;
+
+        /** Required for Logging Data Model V2. The resource name that owns the logs:  "projects/PROJECT_ID"
+       "organizations/ORGANIZATION_ID"  "billingAccounts/BILLING_ACCOUNT_ID"  "folders/FOLDER_ID"
+         */
+        public java.util.List<java.lang.String> getResourceNames() {
+          return resourceNames;
+        }
+
+        /**
+         * Required for Logging Data Model V2. The resource name that owns the logs:
+         * "projects/PROJECT_ID"  "organizations/ORGANIZATION_ID"
+         * "billingAccounts/BILLING_ACCOUNT_ID"  "folders/FOLDER_ID"
+         */
+        public List setResourceNames(java.util.List<java.lang.String> resourceNames) {
+          this.resourceNames = resourceNames;
           return this;
         }
 

@@ -31,6 +31,19 @@ package com.google.api.services.androidmanagement.v1.model;
 public final class Application extends com.google.api.client.json.GenericJson {
 
   /**
+   * Application tracks visible to the enterprise.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AppTrackInfo> appTracks;
+
+  static {
+    // hack to force ProGuard to consider AppTrackInfo used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AppTrackInfo.class);
+  }
+
+  /**
    * The set of managed properties available to be pre-configured for the app.
    * The value may be {@code null}.
    */
@@ -57,6 +70,23 @@ public final class Application extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
+
+  /**
+   * Application tracks visible to the enterprise.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AppTrackInfo> getAppTracks() {
+    return appTracks;
+  }
+
+  /**
+   * Application tracks visible to the enterprise.
+   * @param appTracks appTracks or {@code null} for none
+   */
+  public Application setAppTracks(java.util.List<AppTrackInfo> appTracks) {
+    this.appTracks = appTracks;
+    return this;
+  }
 
   /**
    * The set of managed properties available to be pre-configured for the app.

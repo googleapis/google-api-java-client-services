@@ -66,9 +66,7 @@ public final class QuotaLimit extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
-   * Duration of this limit in textual notation. Example: "100s", "24h", "1d". For duration longer
-   * than a day, only multiple of days is supported. We support only "100s" and "1d" for now.
-   * Additional support will be added in the future. "0" indicates indefinite duration.
+   * Duration of this limit in textual notation. Must be "100s" or "1d".
    *
    * Used by group-based quotas only.
    * The value may be {@code null}.
@@ -222,9 +220,7 @@ public final class QuotaLimit extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Duration of this limit in textual notation. Example: "100s", "24h", "1d". For duration longer
-   * than a day, only multiple of days is supported. We support only "100s" and "1d" for now.
-   * Additional support will be added in the future. "0" indicates indefinite duration.
+   * Duration of this limit in textual notation. Must be "100s" or "1d".
    *
    * Used by group-based quotas only.
    * @return value or {@code null} for none
@@ -234,9 +230,7 @@ public final class QuotaLimit extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Duration of this limit in textual notation. Example: "100s", "24h", "1d". For duration longer
-   * than a day, only multiple of days is supported. We support only "100s" and "1d" for now.
-   * Additional support will be added in the future. "0" indicates indefinite duration.
+   * Duration of this limit in textual notation. Must be "100s" or "1d".
    *
    * Used by group-based quotas only.
    * @param duration duration or {@code null} for none

@@ -18,7 +18,7 @@ package com.google.api.services.healthcare.v1alpha2.model;
 
 /**
  * When using the INSPECT_AND_TRANSFORM action, each match is replaced with the name of the
- * info_type. For example, "My name is Jake" becomes "My name is [PERSON_NAME]." The TRANSFORM
+ * `info_type`. For example, "My name is Jake" becomes "My name is [PERSON_NAME]." The TRANSFORM
  * action is equivalent to redacting.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

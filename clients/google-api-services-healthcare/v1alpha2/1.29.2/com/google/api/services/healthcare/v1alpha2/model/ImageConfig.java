@@ -17,7 +17,7 @@
 package com.google.api.services.healthcare.v1alpha2.model;
 
 /**
- * Specifies how de-identification of image pixel should be handled.
+ * Specifies how to handle the de-identification of image pixels.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.healthcare.v1alpha2.model;
 public final class ImageConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Determines how to redact text from image.
+   * Determines how to redact text from images.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String textRedactionMode;
 
   /**
-   * Determines how to redact text from image.
+   * Determines how to redact text from images.
    * @return value or {@code null} for none
    */
   public java.lang.String getTextRedactionMode() {
@@ -45,7 +45,7 @@ public final class ImageConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Determines how to redact text from image.
+   * Determines how to redact text from images.
    * @param textRedactionMode textRedactionMode or {@code null} for none
    */
   public ImageConfig setTextRedactionMode(java.lang.String textRedactionMode) {

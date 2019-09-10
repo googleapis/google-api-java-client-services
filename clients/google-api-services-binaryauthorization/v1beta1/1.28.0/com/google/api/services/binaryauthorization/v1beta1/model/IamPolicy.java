@@ -80,7 +80,12 @@ public final class IamPolicy extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * Deprecated.
+   * Specifies the format of the policy.
+   *
+   * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
+   *
+   * Policies with any conditional bindings must specify version 3. Policies without any conditional
+   * bindings may specify any valid value or leave the field unset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -181,7 +186,12 @@ public final class IamPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deprecated.
+   * Specifies the format of the policy.
+   *
+   * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
+   *
+   * Policies with any conditional bindings must specify version 3. Policies without any conditional
+   * bindings may specify any valid value or leave the field unset.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getVersion() {
@@ -189,7 +199,12 @@ public final class IamPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deprecated.
+   * Specifies the format of the policy.
+   *
+   * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
+   *
+   * Policies with any conditional bindings must specify version 3. Policies without any conditional
+   * bindings may specify any valid value or leave the field unset.
    * @param version version or {@code null} for none
    */
   public IamPolicy setVersion(java.lang.Integer version) {

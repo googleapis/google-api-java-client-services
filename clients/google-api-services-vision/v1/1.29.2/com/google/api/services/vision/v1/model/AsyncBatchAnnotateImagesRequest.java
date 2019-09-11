@@ -53,7 +53,7 @@ public final class AsyncBatchAnnotateImagesRequest extends com.google.api.client
   private java.lang.String parent;
 
   /**
-   * Individual image annotation requests for this batch.
+   * Required. Individual image annotation requests for this batch.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,7 +118,7 @@ public final class AsyncBatchAnnotateImagesRequest extends com.google.api.client
   }
 
   /**
-   * Individual image annotation requests for this batch.
+   * Required. Individual image annotation requests for this batch.
    * @return value or {@code null} for none
    */
   public java.util.List<AnnotateImageRequest> getRequests() {
@@ -126,7 +126,7 @@ public final class AsyncBatchAnnotateImagesRequest extends com.google.api.client
   }
 
   /**
-   * Individual image annotation requests for this batch.
+   * Required. Individual image annotation requests for this batch.
    * @param requests requests or {@code null} for none
    */
   public AsyncBatchAnnotateImagesRequest setRequests(java.util.List<AnnotateImageRequest> requests) {

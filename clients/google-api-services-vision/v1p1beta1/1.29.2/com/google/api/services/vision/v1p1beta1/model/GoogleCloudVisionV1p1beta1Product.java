@@ -56,11 +56,9 @@ public final class GoogleCloudVisionV1p1beta1Product extends com.google.api.clie
   private java.lang.String name;
 
   /**
-   * The category for the product identified by the reference image. This should be either
-   * "homegoods-v2", "apparel-v2", or "toys-v2". The legacy categories "homegoods", "apparel", and
-   * "toys" are still supported, but these should not be used for new products.
-   *
-   * This field is immutable.
+   * Immutable. The category for the product identified by the reference image. This should be
+   * either "homegoods-v2", "apparel-v2", or "toys-v2". The legacy categories "homegoods",
+   * "apparel", and "toys" are still supported, but these should not be used for new products.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,11 +143,9 @@ public final class GoogleCloudVisionV1p1beta1Product extends com.google.api.clie
   }
 
   /**
-   * The category for the product identified by the reference image. This should be either
-   * "homegoods-v2", "apparel-v2", or "toys-v2". The legacy categories "homegoods", "apparel", and
-   * "toys" are still supported, but these should not be used for new products.
-   *
-   * This field is immutable.
+   * Immutable. The category for the product identified by the reference image. This should be
+   * either "homegoods-v2", "apparel-v2", or "toys-v2". The legacy categories "homegoods",
+   * "apparel", and "toys" are still supported, but these should not be used for new products.
    * @return value or {@code null} for none
    */
   public java.lang.String getProductCategory() {
@@ -157,11 +153,9 @@ public final class GoogleCloudVisionV1p1beta1Product extends com.google.api.clie
   }
 
   /**
-   * The category for the product identified by the reference image. This should be either
-   * "homegoods-v2", "apparel-v2", or "toys-v2". The legacy categories "homegoods", "apparel", and
-   * "toys" are still supported, but these should not be used for new products.
-   *
-   * This field is immutable.
+   * Immutable. The category for the product identified by the reference image. This should be
+   * either "homegoods-v2", "apparel-v2", or "toys-v2". The legacy categories "homegoods",
+   * "apparel", and "toys" are still supported, but these should not be used for new products.
    * @param productCategory productCategory or {@code null} for none
    */
   public GoogleCloudVisionV1p1beta1Product setProductCategory(java.lang.String productCategory) {

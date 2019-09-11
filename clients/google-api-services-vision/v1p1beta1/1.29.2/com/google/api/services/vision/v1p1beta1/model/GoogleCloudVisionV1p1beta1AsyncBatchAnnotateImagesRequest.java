@@ -53,7 +53,7 @@ public final class GoogleCloudVisionV1p1beta1AsyncBatchAnnotateImagesRequest ext
   private java.lang.String parent;
 
   /**
-   * Individual image annotation requests for this batch.
+   * Required. Individual image annotation requests for this batch.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,7 +118,7 @@ public final class GoogleCloudVisionV1p1beta1AsyncBatchAnnotateImagesRequest ext
   }
 
   /**
-   * Individual image annotation requests for this batch.
+   * Required. Individual image annotation requests for this batch.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudVisionV1p1beta1AnnotateImageRequest> getRequests() {
@@ -126,7 +126,7 @@ public final class GoogleCloudVisionV1p1beta1AsyncBatchAnnotateImagesRequest ext
   }
 
   /**
-   * Individual image annotation requests for this batch.
+   * Required. Individual image annotation requests for this batch.
    * @param requests requests or {@code null} for none
    */
   public GoogleCloudVisionV1p1beta1AsyncBatchAnnotateImagesRequest setRequests(java.util.List<GoogleCloudVisionV1p1beta1AnnotateImageRequest> requests) {

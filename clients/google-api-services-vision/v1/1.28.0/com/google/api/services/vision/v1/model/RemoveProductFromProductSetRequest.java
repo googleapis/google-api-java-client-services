@@ -30,7 +30,7 @@ package com.google.api.services.vision.v1.model;
 public final class RemoveProductFromProductSetRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The resource name for the Product to be removed from this ProductSet.
+   * Required. The resource name for the Product to be removed from this ProductSet.
    *
    * Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
    * The value may be {@code null}.
@@ -39,7 +39,7 @@ public final class RemoveProductFromProductSetRequest extends com.google.api.cli
   private java.lang.String product;
 
   /**
-   * The resource name for the Product to be removed from this ProductSet.
+   * Required. The resource name for the Product to be removed from this ProductSet.
    *
    * Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
    * @return value or {@code null} for none
@@ -49,7 +49,7 @@ public final class RemoveProductFromProductSetRequest extends com.google.api.cli
   }
 
   /**
-   * The resource name for the Product to be removed from this ProductSet.
+   * Required. The resource name for the Product to be removed from this ProductSet.
    *
    * Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
    * @param product product or {@code null} for none

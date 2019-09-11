@@ -59,7 +59,9 @@ public final class RequestOptions extends com.google.api.client.json.GenericJson
    * Current user's time zone id, such as "America/Los_Angeles" or "Australia/Sydney". These IDs are
    * defined by [Unicode Common Locale Data Repository (CLDR)](http://cldr.unicode.org/) project,
    * and currently available in the file
-   * [timezone.xml](http://unicode.org/repos/cldr/trunk/common/bcp47/timezone.xml)
+   * [timezone.xml](http://unicode.org/repos/cldr/trunk/common/bcp47/timezone.xml). This field is
+   * used to correctly interpret date and time queries. If this field is not specified, the default
+   * time zone (UTC) is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,7 +132,9 @@ public final class RequestOptions extends com.google.api.client.json.GenericJson
    * Current user's time zone id, such as "America/Los_Angeles" or "Australia/Sydney". These IDs are
    * defined by [Unicode Common Locale Data Repository (CLDR)](http://cldr.unicode.org/) project,
    * and currently available in the file
-   * [timezone.xml](http://unicode.org/repos/cldr/trunk/common/bcp47/timezone.xml)
+   * [timezone.xml](http://unicode.org/repos/cldr/trunk/common/bcp47/timezone.xml). This field is
+   * used to correctly interpret date and time queries. If this field is not specified, the default
+   * time zone (UTC) is used.
    * @return value or {@code null} for none
    */
   public java.lang.String getTimeZone() {
@@ -141,7 +145,9 @@ public final class RequestOptions extends com.google.api.client.json.GenericJson
    * Current user's time zone id, such as "America/Los_Angeles" or "Australia/Sydney". These IDs are
    * defined by [Unicode Common Locale Data Repository (CLDR)](http://cldr.unicode.org/) project,
    * and currently available in the file
-   * [timezone.xml](http://unicode.org/repos/cldr/trunk/common/bcp47/timezone.xml)
+   * [timezone.xml](http://unicode.org/repos/cldr/trunk/common/bcp47/timezone.xml). This field is
+   * used to correctly interpret date and time queries. If this field is not specified, the default
+   * time zone (UTC) is used.
    * @param timeZone timeZone or {@code null} for none
    */
   public RequestOptions setTimeZone(java.lang.String timeZone) {

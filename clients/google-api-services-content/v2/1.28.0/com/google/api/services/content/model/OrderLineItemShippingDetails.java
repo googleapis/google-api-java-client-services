@@ -52,6 +52,14 @@ public final class OrderLineItemShippingDetails extends com.google.api.client.js
   private java.lang.String shipByDate;
 
   /**
+   * Type of shipment. Indicates whether deliveryDetails or pickupDetails is applicable for this
+   * shipment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String type;
+
+  /**
    * The delivery by date, in ISO 8601 format.
    * @return value or {@code null} for none
    */
@@ -99,6 +107,25 @@ public final class OrderLineItemShippingDetails extends com.google.api.client.js
    */
   public OrderLineItemShippingDetails setShipByDate(java.lang.String shipByDate) {
     this.shipByDate = shipByDate;
+    return this;
+  }
+
+  /**
+   * Type of shipment. Indicates whether deliveryDetails or pickupDetails is applicable for this
+   * shipment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getType() {
+    return type;
+  }
+
+  /**
+   * Type of shipment. Indicates whether deliveryDetails or pickupDetails is applicable for this
+   * shipment.
+   * @param type type or {@code null} for none
+   */
+  public OrderLineItemShippingDetails setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 

@@ -115,6 +115,13 @@ public final class Order extends com.google.api.client.json.GenericJson {
   private java.lang.String paymentStatus;
 
   /**
+   * Pickup details for shipments of type pickup.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OrderPickupDetails pickupDetails;
+
+  /**
    * The date when the order was placed, in ISO 8601 format.
    * The value may be {@code null}.
    */
@@ -379,6 +386,23 @@ public final class Order extends com.google.api.client.json.GenericJson {
    */
   public Order setPaymentStatus(java.lang.String paymentStatus) {
     this.paymentStatus = paymentStatus;
+    return this;
+  }
+
+  /**
+   * Pickup details for shipments of type pickup.
+   * @return value or {@code null} for none
+   */
+  public OrderPickupDetails getPickupDetails() {
+    return pickupDetails;
+  }
+
+  /**
+   * Pickup details for shipments of type pickup.
+   * @param pickupDetails pickupDetails or {@code null} for none
+   */
+  public Order setPickupDetails(OrderPickupDetails pickupDetails) {
+    this.pickupDetails = pickupDetails;
     return this;
   }
 

@@ -80,6 +80,14 @@ public final class TestOrder extends com.google.api.client.json.GenericJson {
   private java.lang.String predefinedEmail;
 
   /**
+   * Identifier of one of the predefined pickup details. Required for orders containing line items
+   * with shipping type pickup.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String predefinedPickupDetails;
+
+  /**
    * Promotions associated with the order.
    * The value may be {@code null}.
    */
@@ -224,6 +232,25 @@ public final class TestOrder extends com.google.api.client.json.GenericJson {
    */
   public TestOrder setPredefinedEmail(java.lang.String predefinedEmail) {
     this.predefinedEmail = predefinedEmail;
+    return this;
+  }
+
+  /**
+   * Identifier of one of the predefined pickup details. Required for orders containing line items
+   * with shipping type pickup.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPredefinedPickupDetails() {
+    return predefinedPickupDetails;
+  }
+
+  /**
+   * Identifier of one of the predefined pickup details. Required for orders containing line items
+   * with shipping type pickup.
+   * @param predefinedPickupDetails predefinedPickupDetails or {@code null} for none
+   */
+  public TestOrder setPredefinedPickupDetails(java.lang.String predefinedPickupDetails) {
+    this.predefinedPickupDetails = predefinedPickupDetails;
     return this;
   }
 

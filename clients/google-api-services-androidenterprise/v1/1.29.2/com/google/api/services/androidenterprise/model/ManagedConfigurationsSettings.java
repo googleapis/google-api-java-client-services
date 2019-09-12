@@ -48,13 +48,6 @@ public final class ManagedConfigurationsSettings extends com.google.api.client.j
   private java.lang.Long lastUpdatedTimestampMillis;
 
   /**
-   * The set of managed properties for this configuration.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<ManagedProperty> managedProperty;
-
-  /**
    * The ID of the managed configurations settings.
    * The value may be {@code null}.
    */
@@ -103,23 +96,6 @@ public final class ManagedConfigurationsSettings extends com.google.api.client.j
    */
   public ManagedConfigurationsSettings setLastUpdatedTimestampMillis(java.lang.Long lastUpdatedTimestampMillis) {
     this.lastUpdatedTimestampMillis = lastUpdatedTimestampMillis;
-    return this;
-  }
-
-  /**
-   * The set of managed properties for this configuration.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<ManagedProperty> getManagedProperty() {
-    return managedProperty;
-  }
-
-  /**
-   * The set of managed properties for this configuration.
-   * @param managedProperty managedProperty or {@code null} for none
-   */
-  public ManagedConfigurationsSettings setManagedProperty(java.util.List<ManagedProperty> managedProperty) {
-    this.managedProperty = managedProperty;
     return this;
   }
 

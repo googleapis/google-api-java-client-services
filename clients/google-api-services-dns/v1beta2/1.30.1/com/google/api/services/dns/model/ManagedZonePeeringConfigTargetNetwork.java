@@ -30,9 +30,10 @@ package com.google.api.services.dns.model;
 public final class ManagedZonePeeringConfigTargetNetwork extends com.google.api.client.json.GenericJson {
 
   /**
-   * If this zone has been deactivated (possibly because the producer network it targeted was
-   * deleted), the time at which it was deactivated. If the peering connection is still active, this
-   * will be the empty string. This is in RFC3339 text format. Output only.
+   * The time at which the zone was deactivated, in RFC 3339 date-time format. An empty string
+   * indicates that the peering connection is active. The producer network can deactivate a zone.
+   * The zone is automatically deactivated if the producer network that the zone targeted is
+   * deleted. Output only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,9 +56,10 @@ public final class ManagedZonePeeringConfigTargetNetwork extends com.google.api.
   private java.lang.String networkUrl;
 
   /**
-   * If this zone has been deactivated (possibly because the producer network it targeted was
-   * deleted), the time at which it was deactivated. If the peering connection is still active, this
-   * will be the empty string. This is in RFC3339 text format. Output only.
+   * The time at which the zone was deactivated, in RFC 3339 date-time format. An empty string
+   * indicates that the peering connection is active. The producer network can deactivate a zone.
+   * The zone is automatically deactivated if the producer network that the zone targeted is
+   * deleted. Output only.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeactivateTime() {
@@ -65,9 +67,10 @@ public final class ManagedZonePeeringConfigTargetNetwork extends com.google.api.
   }
 
   /**
-   * If this zone has been deactivated (possibly because the producer network it targeted was
-   * deleted), the time at which it was deactivated. If the peering connection is still active, this
-   * will be the empty string. This is in RFC3339 text format. Output only.
+   * The time at which the zone was deactivated, in RFC 3339 date-time format. An empty string
+   * indicates that the peering connection is active. The producer network can deactivate a zone.
+   * The zone is automatically deactivated if the producer network that the zone targeted is
+   * deleted. Output only.
    * @param deactivateTime deactivateTime or {@code null} for none
    */
   public ManagedZonePeeringConfigTargetNetwork setDeactivateTime(java.lang.String deactivateTime) {

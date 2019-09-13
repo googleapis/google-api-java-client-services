@@ -109,6 +109,14 @@ public final class KerberosConfig extends com.google.api.client.json.GenericJson
   private java.lang.String kmsKeyUri;
 
   /**
+   * Optional. The name of the on-cluster Kerberos realm. If not specified, the uppercased domain of
+   * hostnames will be the realm.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String realm;
+
+  /**
    * Required. The Cloud Storage URI of a KMS encrypted file containing the root principal password.
    * The value may be {@code null}.
    */
@@ -324,6 +332,25 @@ public final class KerberosConfig extends com.google.api.client.json.GenericJson
    */
   public KerberosConfig setKmsKeyUri(java.lang.String kmsKeyUri) {
     this.kmsKeyUri = kmsKeyUri;
+    return this;
+  }
+
+  /**
+   * Optional. The name of the on-cluster Kerberos realm. If not specified, the uppercased domain of
+   * hostnames will be the realm.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRealm() {
+    return realm;
+  }
+
+  /**
+   * Optional. The name of the on-cluster Kerberos realm. If not specified, the uppercased domain of
+   * hostnames will be the realm.
+   * @param realm realm or {@code null} for none
+   */
+  public KerberosConfig setRealm(java.lang.String realm) {
+    this.realm = realm;
     return this;
   }
 

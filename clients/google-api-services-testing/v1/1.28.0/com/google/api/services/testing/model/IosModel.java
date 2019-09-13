@@ -17,7 +17,7 @@
 package com.google.api.services.testing.model;
 
 /**
- * A description of an iOS device tests may be run on.
+ * A description of an iOS device tests may be run on. Next tag: 10
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Testing API. For a detailed explanation see:
@@ -58,6 +58,27 @@ public final class IosModel extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Screen density in DPI.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer screenDensity;
+
+  /**
+   * Screen size in the horizontal (X) dimension measured in pixels.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer screenX;
+
+  /**
+   * Screen size in the vertical (Y) dimension measured in pixels.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer screenY;
 
   /**
    * The set of iOS major software versions this device supports.
@@ -142,6 +163,57 @@ public final class IosModel extends com.google.api.client.json.GenericJson {
    */
   public IosModel setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Screen density in DPI.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getScreenDensity() {
+    return screenDensity;
+  }
+
+  /**
+   * Screen density in DPI.
+   * @param screenDensity screenDensity or {@code null} for none
+   */
+  public IosModel setScreenDensity(java.lang.Integer screenDensity) {
+    this.screenDensity = screenDensity;
+    return this;
+  }
+
+  /**
+   * Screen size in the horizontal (X) dimension measured in pixels.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getScreenX() {
+    return screenX;
+  }
+
+  /**
+   * Screen size in the horizontal (X) dimension measured in pixels.
+   * @param screenX screenX or {@code null} for none
+   */
+  public IosModel setScreenX(java.lang.Integer screenX) {
+    this.screenX = screenX;
+    return this;
+  }
+
+  /**
+   * Screen size in the vertical (Y) dimension measured in pixels.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getScreenY() {
+    return screenY;
+  }
+
+  /**
+   * Screen size in the vertical (Y) dimension measured in pixels.
+   * @param screenY screenY or {@code null} for none
+   */
+  public IosModel setScreenY(java.lang.Integer screenY) {
+    this.screenY = screenY;
     return this;
   }
 

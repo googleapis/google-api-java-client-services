@@ -966,7 +966,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
      * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
      *
-     * @param name Output Only. The resource name of the organization. This is the
+     * @param name Output only. The resource name of the organization. This is the
     organization's relative path in the
      *        API. Its format is
     "organizations/[organization_id]". For example, "organizations/1234".
@@ -997,7 +997,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Output Only. The resource name of the organization. This is the
+       * @param name Output only. The resource name of the organization. This is the
     organization's relative path in the
      *        API. Its format is
     "organizations/[organization_id]". For example, "organizations/1234".
@@ -1070,14 +1070,14 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * Output Only. The resource name of the organization. This is the organization's relative
+       * Output only. The resource name of the organization. This is the organization's relative
        * path in the API. Its format is "organizations/[organization_id]". For example,
        * "organizations/1234".
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Output Only. The resource name of the organization. This is the organization's relative path in the
+      /** Output only. The resource name of the organization. This is the organization's relative path in the
      API. Its format is "organizations/[organization_id]". For example, "organizations/1234".
        */
       public java.lang.String getName() {
@@ -1085,7 +1085,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * Output Only. The resource name of the organization. This is the organization's relative
+       * Output only. The resource name of the organization. This is the organization's relative
        * path in the API. Its format is "organizations/[organization_id]". For example,
        * "organizations/1234".
        */
@@ -2128,7 +2128,9 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * + Project does not support `allUsers` and `allAuthenticatedUsers` as `members` in a `Binding` of
      * a `Policy`.
      *
-     * + The owner role can be granted only to `user` and `serviceAccount`.
+     * + The owner role can be granted to a `user`, `serviceAccount`, or a group that is part of an
+     * organization. For example, group@myownpersonaldomain.com could be added as an owner to a project
+     * in the myownpersonaldomain.com organization, but not the examplepetstore.com organization.
      *
      * + Service accounts can be made owners of a project directly without any restrictions. However, to
      * be added as an owner, a user must be invited via Cloud Platform console and must accept the
@@ -2186,7 +2188,10 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * + Project does not support `allUsers` and `allAuthenticatedUsers` as `members` in a `Binding`
        * of a `Policy`.
        *
-       * + The owner role can be granted only to `user` and `serviceAccount`.
+       * + The owner role can be granted to a `user`, `serviceAccount`, or a group that is part of an
+       * organization. For example, group@myownpersonaldomain.com could be added as an owner to a
+       * project in the myownpersonaldomain.com organization, but not the examplepetstore.com
+       * organization.
        *
        * + Service accounts can be made owners of a project directly without any restrictions. However,
        * to be added as an owner, a user must be invited via Cloud Platform console and must accept the

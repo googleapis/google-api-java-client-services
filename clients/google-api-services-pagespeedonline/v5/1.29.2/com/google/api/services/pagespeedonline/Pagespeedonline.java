@@ -166,7 +166,7 @@ public class Pagespeedonline extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "runPagespeed";
 
       private final java.util.regex.Pattern URL_PATTERN =
-          java.util.regex.Pattern.compile("(?i)(site:|origin:)?http(s)?://.*");
+          java.util.regex.Pattern.compile("(?i)(url:|origin:)?http(s)?://.*");
 
       private final java.util.regex.Pattern LOCALE_PATTERN =
           java.util.regex.Pattern.compile("[a-zA-Z]+((_|-)[a-zA-Z]+)?");
@@ -192,7 +192,7 @@ public class Pagespeedonline extends com.google.api.client.googleapis.services.j
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(URL_PATTERN.matcher(url).matches(),
               "Parameter url must conform to the pattern " +
-              "(?i)(site:|origin:)?http(s)?://.*");
+              "(?i)(url:|origin:)?http(s)?://.*");
         }
       }
 
@@ -256,7 +256,7 @@ public class Pagespeedonline extends com.google.api.client.googleapis.services.j
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(URL_PATTERN.matcher(url).matches(),
               "Parameter url must conform to the pattern " +
-              "(?i)(site:|origin:)?http(s)?://.*");
+              "(?i)(url:|origin:)?http(s)?://.*");
         }
         this.url = url;
         return this;

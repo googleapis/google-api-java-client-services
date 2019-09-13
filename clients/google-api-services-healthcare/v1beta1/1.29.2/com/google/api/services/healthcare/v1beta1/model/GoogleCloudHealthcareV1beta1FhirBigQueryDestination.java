@@ -38,6 +38,15 @@ public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestination extends c
   private java.lang.String datasetUri;
 
   /**
+   * If this flag is `TRUE`, all tables will be deleted from the dataset before the new exported
+   * tables are written. If the flag is not set and the destination dataset contains tables, the
+   * export call returns an error.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean force;
+
+  /**
    * The configuration for the exported BigQuery schema.
    * The value may be {@code null}.
    */
@@ -60,6 +69,27 @@ public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestination extends c
    */
   public GoogleCloudHealthcareV1beta1FhirBigQueryDestination setDatasetUri(java.lang.String datasetUri) {
     this.datasetUri = datasetUri;
+    return this;
+  }
+
+  /**
+   * If this flag is `TRUE`, all tables will be deleted from the dataset before the new exported
+   * tables are written. If the flag is not set and the destination dataset contains tables, the
+   * export call returns an error.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getForce() {
+    return force;
+  }
+
+  /**
+   * If this flag is `TRUE`, all tables will be deleted from the dataset before the new exported
+   * tables are written. If the flag is not set and the destination dataset contains tables, the
+   * export call returns an error.
+   * @param force force or {@code null} for none
+   */
+  public GoogleCloudHealthcareV1beta1FhirBigQueryDestination setForce(java.lang.Boolean force) {
+    this.force = force;
     return this;
   }
 

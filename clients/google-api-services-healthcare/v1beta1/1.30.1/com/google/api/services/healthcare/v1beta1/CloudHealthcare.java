@@ -679,7 +679,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
         /**
          * Creates a new dataset containing de-identified data from the source dataset. The metadata field
          * type is OperationMetadata. If the request is successful, the response field type is
-         * DeidentifySummary. If errors occur, details field type is DeidentifyErrorDetails.
+         * DeidentifySummary. If errors occur, details field type is DeidentifyErrorDetails. Errors are also
+         * logged to Stackdriver (see [Viewing logs](/healthcare/docs/how-tos/stackdriver-logging)).
          *
          * Create a request for the method "datasets.deidentify".
          *
@@ -707,7 +708,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           /**
            * Creates a new dataset containing de-identified data from the source dataset. The metadata field
            * type is OperationMetadata. If the request is successful, the response field type is
-           * DeidentifySummary. If errors occur, details field type is DeidentifyErrorDetails.
+           * DeidentifySummary. If errors occur, details field type is DeidentifyErrorDetails. Errors are
+           * also logged to Stackdriver (see [Viewing logs](/healthcare/docs/how-tos/stackdriver-logging)).
            *
            * Create a request for the method "datasets.deidentify".
            *
@@ -7723,9 +7725,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This method returns an Operation that can be used to track the status of the export by calling
            * GetOperation.
            *
-           * Immediate fatal errors appear in the error field. Otherwise, when the operation finishes, a
-           * detailed response of type ExportResourcesResponse is returned in the response field. The metadata
-           * field type for this operation is OperationMetadata.
+           * Immediate fatal errors appear in the error field, errors are also logged to Stackdriver (see
+           * [Viewing logs](/healthcare/docs/how-tos/stackdriver-logging)). Otherwise, when the operation
+           * finishes, a detailed response of type ExportResourcesResponse is returned in the response field.
+           * The metadata field type for this operation is OperationMetadata.
            *
            * Create a request for the method "fhirStores.export".
            *
@@ -7758,9 +7761,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This method returns an Operation that can be used to track the status of the export by calling
              * GetOperation.
              *
-             * Immediate fatal errors appear in the error field. Otherwise, when the operation finishes, a
-             * detailed response of type ExportResourcesResponse is returned in the response field. The
-             * metadata field type for this operation is OperationMetadata.
+             * Immediate fatal errors appear in the error field, errors are also logged to Stackdriver (see
+             * [Viewing logs](/healthcare/docs/how-tos/stackdriver-logging)). Otherwise, when the operation
+             * finishes, a detailed response of type ExportResourcesResponse is returned in the response
+             * field. The metadata field type for this operation is OperationMetadata.
              *
              * Create a request for the method "fhirStores.export".
              *
@@ -8245,9 +8249,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This method returns an Operation that can be used to track the status of the import by calling
            * GetOperation.
            *
-           * Immediate fatal errors appear in the error field. Otherwise, when the operation finishes, a
-           * detailed response of type ImportResourcesResponse is returned in the response field. The metadata
-           * field type for this operation is OperationMetadata.
+           * Immediate fatal errors appear in the error field, errors are also logged to Stackdriver (see
+           * [Viewing logs](/healthcare/docs/how-tos/stackdriver-logging)). Otherwise, when the operation
+           * finishes, a detailed response of type ImportResourcesResponse is returned in the response field.
+           * The metadata field type for this operation is OperationMetadata.
            *
            * Create a request for the method "fhirStores.import".
            *
@@ -8329,9 +8334,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This method returns an Operation that can be used to track the status of the import by calling
              * GetOperation.
              *
-             * Immediate fatal errors appear in the error field. Otherwise, when the operation finishes, a
-             * detailed response of type ImportResourcesResponse is returned in the response field. The
-             * metadata field type for this operation is OperationMetadata.
+             * Immediate fatal errors appear in the error field, errors are also logged to Stackdriver (see
+             * [Viewing logs](/healthcare/docs/how-tos/stackdriver-logging)). Otherwise, when the operation
+             * finishes, a detailed response of type ImportResourcesResponse is returned in the response
+             * field. The metadata field type for this operation is OperationMetadata.
              *
              * Create a request for the method "fhirStores.import".
              *

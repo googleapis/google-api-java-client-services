@@ -17,7 +17,7 @@
 package com.google.api.services.healthcare.v1alpha2.model;
 
 /**
- * Specifies the parameters needed for de-identification of DICOM stores.
+ * Specifies the parameters needed for the de-identification of DICOM stores.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.healthcare.v1alpha2.model;
 public final class DicomConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Tag filtering profile that determines which tags to keep/remove.
+   * Tag filtering profile that determines the tags to keep or remove.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +51,7 @@ public final class DicomConfig extends com.google.api.client.json.GenericJson {
   private TagFilterList removeList;
 
   /**
-   * Tag filtering profile that determines which tags to keep/remove.
+   * Tag filtering profile that determines the tags to keep or remove.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilterProfile() {
@@ -59,7 +59,7 @@ public final class DicomConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Tag filtering profile that determines which tags to keep/remove.
+   * Tag filtering profile that determines the tags to keep or remove.
    * @param filterProfile filterProfile or {@code null} for none
    */
   public DicomConfig setFilterProfile(java.lang.String filterProfile) {

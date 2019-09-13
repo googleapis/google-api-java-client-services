@@ -17,7 +17,7 @@
 package com.google.api.services.healthcare.v1alpha2.model;
 
 /**
- * Shift a date forward or backward in time by a random amount which is consistent for a given
+ * Shifts a date forward or backward in time by a random amount that is consistent for a given
  * patient and crypto key combination.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -32,8 +32,8 @@ public final class DateShiftConfig extends com.google.api.client.json.GenericJso
 
   /**
    * An AES 128/192/256 bit key. Causes the shift to be computed based on this key and the patient
-   * ID. A default key is generated for each Deidentify operation and is used wherever crypto_key is
-   * not specified.
+   * ID. A default key is generated for each de-identification operation and is used when crypto_key
+   * is not specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,8 +41,8 @@ public final class DateShiftConfig extends com.google.api.client.json.GenericJso
 
   /**
    * An AES 128/192/256 bit key. Causes the shift to be computed based on this key and the patient
-   * ID. A default key is generated for each Deidentify operation and is used wherever crypto_key is
-   * not specified.
+   * ID. A default key is generated for each de-identification operation and is used when crypto_key
+   * is not specified.
    * @see #decodeCryptoKey()
    * @return value or {@code null} for none
    */
@@ -52,8 +52,8 @@ public final class DateShiftConfig extends com.google.api.client.json.GenericJso
 
   /**
    * An AES 128/192/256 bit key. Causes the shift to be computed based on this key and the patient
-   * ID. A default key is generated for each Deidentify operation and is used wherever crypto_key is
-   * not specified.
+   * ID. A default key is generated for each de-identification operation and is used when crypto_key
+   * is not specified.
    * @see #getCryptoKey()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -65,8 +65,8 @@ public final class DateShiftConfig extends com.google.api.client.json.GenericJso
 
   /**
    * An AES 128/192/256 bit key. Causes the shift to be computed based on this key and the patient
-   * ID. A default key is generated for each Deidentify operation and is used wherever crypto_key is
-   * not specified.
+   * ID. A default key is generated for each de-identification operation and is used when crypto_key
+   * is not specified.
    * @see #encodeCryptoKey()
    * @param cryptoKey cryptoKey or {@code null} for none
    */
@@ -77,8 +77,8 @@ public final class DateShiftConfig extends com.google.api.client.json.GenericJso
 
   /**
    * An AES 128/192/256 bit key. Causes the shift to be computed based on this key and the patient
-   * ID. A default key is generated for each Deidentify operation and is used wherever crypto_key is
-   * not specified.
+   * ID. A default key is generated for each de-identification operation and is used when crypto_key
+   * is not specified.
    * @see #setCryptoKey()
    *
    * <p>

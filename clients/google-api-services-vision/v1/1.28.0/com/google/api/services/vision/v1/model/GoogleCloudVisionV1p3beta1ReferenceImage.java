@@ -31,7 +31,7 @@ package com.google.api.services.vision.v1.model;
 public final class GoogleCloudVisionV1p3beta1ReferenceImage extends com.google.api.client.json.GenericJson {
 
   /**
-   * Bounding polygons around the areas of interest in the reference image. Optional. If this field
+   * Optional. Bounding polygons around the areas of interest in the reference image. If this field
    * is empty, the system will try to detect regions of interest. At most 10 bounding polygons will
    * be used.
    *
@@ -63,18 +63,16 @@ public final class GoogleCloudVisionV1p3beta1ReferenceImage extends com.google.a
   private java.lang.String name;
 
   /**
-   * The Google Cloud Storage URI of the reference image.
+   * Required. The Google Cloud Storage URI of the reference image.
    *
    * The URI must start with `gs://`.
-   *
-   * Required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
 
   /**
-   * Bounding polygons around the areas of interest in the reference image. Optional. If this field
+   * Optional. Bounding polygons around the areas of interest in the reference image. If this field
    * is empty, the system will try to detect regions of interest. At most 10 bounding polygons will
    * be used.
    *
@@ -88,7 +86,7 @@ public final class GoogleCloudVisionV1p3beta1ReferenceImage extends com.google.a
   }
 
   /**
-   * Bounding polygons around the areas of interest in the reference image. Optional. If this field
+   * Optional. Bounding polygons around the areas of interest in the reference image. If this field
    * is empty, the system will try to detect regions of interest. At most 10 bounding polygons will
    * be used.
    *
@@ -132,11 +130,9 @@ public final class GoogleCloudVisionV1p3beta1ReferenceImage extends com.google.a
   }
 
   /**
-   * The Google Cloud Storage URI of the reference image.
+   * Required. The Google Cloud Storage URI of the reference image.
    *
    * The URI must start with `gs://`.
-   *
-   * Required.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -144,11 +140,9 @@ public final class GoogleCloudVisionV1p3beta1ReferenceImage extends com.google.a
   }
 
   /**
-   * The Google Cloud Storage URI of the reference image.
+   * Required. The Google Cloud Storage URI of the reference image.
    *
    * The URI must start with `gs://`.
-   *
-   * Required.
    * @param uri uri or {@code null} for none
    */
   public GoogleCloudVisionV1p3beta1ReferenceImage setUri(java.lang.String uri) {

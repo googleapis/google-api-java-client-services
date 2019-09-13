@@ -46,7 +46,7 @@ public final class AsyncBatchAnnotateFilesRequest extends com.google.api.client.
   private java.lang.String parent;
 
   /**
-   * Individual async file annotation requests for this batch.
+   * Required. Individual async file annotation requests for this batch.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +94,7 @@ public final class AsyncBatchAnnotateFilesRequest extends com.google.api.client.
   }
 
   /**
-   * Individual async file annotation requests for this batch.
+   * Required. Individual async file annotation requests for this batch.
    * @return value or {@code null} for none
    */
   public java.util.List<AsyncAnnotateFileRequest> getRequests() {
@@ -102,7 +102,7 @@ public final class AsyncBatchAnnotateFilesRequest extends com.google.api.client.
   }
 
   /**
-   * Individual async file annotation requests for this batch.
+   * Required. Individual async file annotation requests for this batch.
    * @param requests requests or {@code null} for none
    */
   public AsyncBatchAnnotateFilesRequest setRequests(java.util.List<AsyncAnnotateFileRequest> requests) {

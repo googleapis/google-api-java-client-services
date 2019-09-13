@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-vision</artifactId>
-      <version>v1p1beta1-rev20190823-1.30.1</version>
+      <version>v1p1beta1-rev20190907-1.30.1</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-vision:v1p1beta1-rev20190823-1.30.1'
+  compile 'com.google.apis:google-api-services-vision:v1p1beta1-rev20190907-1.30.1'
 }
 ```
 

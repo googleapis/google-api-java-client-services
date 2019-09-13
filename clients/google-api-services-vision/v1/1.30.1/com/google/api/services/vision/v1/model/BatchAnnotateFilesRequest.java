@@ -46,8 +46,8 @@ public final class BatchAnnotateFilesRequest extends com.google.api.client.json.
   private java.lang.String parent;
 
   /**
-   * The list of file annotation requests. Right now we support only one AnnotateFileRequest in
-   * BatchAnnotateFilesRequest.
+   * Required. The list of file annotation requests. Right now we support only one
+   * AnnotateFileRequest in BatchAnnotateFilesRequest.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,8 +95,8 @@ public final class BatchAnnotateFilesRequest extends com.google.api.client.json.
   }
 
   /**
-   * The list of file annotation requests. Right now we support only one AnnotateFileRequest in
-   * BatchAnnotateFilesRequest.
+   * Required. The list of file annotation requests. Right now we support only one
+   * AnnotateFileRequest in BatchAnnotateFilesRequest.
    * @return value or {@code null} for none
    */
   public java.util.List<AnnotateFileRequest> getRequests() {
@@ -104,8 +104,8 @@ public final class BatchAnnotateFilesRequest extends com.google.api.client.json.
   }
 
   /**
-   * The list of file annotation requests. Right now we support only one AnnotateFileRequest in
-   * BatchAnnotateFilesRequest.
+   * Required. The list of file annotation requests. Right now we support only one
+   * AnnotateFileRequest in BatchAnnotateFilesRequest.
    * @param requests requests or {@code null} for none
    */
   public BatchAnnotateFilesRequest setRequests(java.util.List<AnnotateFileRequest> requests) {

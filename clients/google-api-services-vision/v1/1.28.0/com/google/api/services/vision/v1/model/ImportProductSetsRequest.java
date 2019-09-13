@@ -30,14 +30,14 @@ package com.google.api.services.vision.v1.model;
 public final class ImportProductSetsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The input content for the list of requests.
+   * Required. The input content for the list of requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ImportProductSetsInputConfig inputConfig;
 
   /**
-   * The input content for the list of requests.
+   * Required. The input content for the list of requests.
    * @return value or {@code null} for none
    */
   public ImportProductSetsInputConfig getInputConfig() {
@@ -45,7 +45,7 @@ public final class ImportProductSetsRequest extends com.google.api.client.json.G
   }
 
   /**
-   * The input content for the list of requests.
+   * Required. The input content for the list of requests.
    * @param inputConfig inputConfig or {@code null} for none
    */
   public ImportProductSetsRequest setInputConfig(ImportProductSetsInputConfig inputConfig) {

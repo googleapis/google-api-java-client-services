@@ -3245,7 +3245,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
          * This request holds the parameters needed by the vision server.  After setting any optional
          * parameters, call the {@link AddProduct#execute()} method to invoke the remote operation.
          *
-         * @param name The resource name for the ProductSet to modify.
+         * @param name Required. The resource name for the ProductSet to modify.
         Format is:
          *        `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
          * @param content the {@link com.google.api.services.vision.v1.model.AddProductToProductSetRequest}
@@ -3282,7 +3282,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            * AddProduct#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The resource name for the ProductSet to modify.
+           * @param name Required. The resource name for the ProductSet to modify.
         Format is:
          *        `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
            * @param content the {@link com.google.api.services.vision.v1.model.AddProductToProductSetRequest}
@@ -3354,14 +3354,14 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * The resource name for the ProductSet to modify.
+           * Required. The resource name for the ProductSet to modify.
            *
            * Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The resource name for the ProductSet to modify.
+          /** Required. The resource name for the ProductSet to modify.
 
          Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
            */
@@ -3370,7 +3370,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * The resource name for the ProductSet to modify.
+           * Required. The resource name for the ProductSet to modify.
            *
            * Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
            */
@@ -3401,7 +3401,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
          * This request holds the parameters needed by the vision server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent The project in which the ProductSet should be created.
+         * @param parent Required. The project in which the ProductSet should be created.
         Format is
          *        `projects/PROJECT_ID/locations/LOC_ID`.
          * @param content the {@link com.google.api.services.vision.v1.model.ProductSet}
@@ -3434,7 +3434,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The project in which the ProductSet should be created.
+           * @param parent Required. The project in which the ProductSet should be created.
         Format is
          *        `projects/PROJECT_ID/locations/LOC_ID`.
            * @param content the {@link com.google.api.services.vision.v1.model.ProductSet}
@@ -3506,14 +3506,14 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * The project in which the ProductSet should be created.
+           * Required. The project in which the ProductSet should be created.
            *
            * Format is `projects/PROJECT_ID/locations/LOC_ID`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The project in which the ProductSet should be created.
+          /** Required. The project in which the ProductSet should be created.
 
          Format is `projects/PROJECT_ID/locations/LOC_ID`.
            */
@@ -3522,7 +3522,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * The project in which the ProductSet should be created.
+           * Required. The project in which the ProductSet should be created.
            *
            * Format is `projects/PROJECT_ID/locations/LOC_ID`.
            */
@@ -3579,7 +3579,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
          * This request holds the parameters needed by the vision server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Resource name of the ProductSet to delete.
+         * @param name Required. Resource name of the ProductSet to delete.
         Format is:
          *        `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
          * @return the request
@@ -3610,7 +3610,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Resource name of the ProductSet to delete.
+           * @param name Required. Resource name of the ProductSet to delete.
         Format is:
          *        `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
            * @since 1.13
@@ -3681,14 +3681,14 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Resource name of the ProductSet to delete.
+           * Required. Resource name of the ProductSet to delete.
            *
            * Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Resource name of the ProductSet to delete.
+          /** Required. Resource name of the ProductSet to delete.
 
          Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
            */
@@ -3697,7 +3697,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Resource name of the ProductSet to delete.
+           * Required. Resource name of the ProductSet to delete.
            *
            * Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
            */
@@ -3728,7 +3728,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
          * This request holds the parameters needed by the vision server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Resource name of the ProductSet to get.
+         * @param name Required. Resource name of the ProductSet to get.
         Format is:
          *        `projects/PROJECT_ID/locations/LOG_ID/productSets/PRODUCT_SET_ID`
          * @return the request
@@ -3760,7 +3760,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Resource name of the ProductSet to get.
+           * @param name Required. Resource name of the ProductSet to get.
         Format is:
          *        `projects/PROJECT_ID/locations/LOG_ID/productSets/PRODUCT_SET_ID`
            * @since 1.13
@@ -3841,14 +3841,14 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Resource name of the ProductSet to get.
+           * Required. Resource name of the ProductSet to get.
            *
            * Format is: `projects/PROJECT_ID/locations/LOG_ID/productSets/PRODUCT_SET_ID`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Resource name of the ProductSet to get.
+          /** Required. Resource name of the ProductSet to get.
 
          Format is: `projects/PROJECT_ID/locations/LOG_ID/productSets/PRODUCT_SET_ID`
            */
@@ -3857,7 +3857,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Resource name of the ProductSet to get.
+           * Required. Resource name of the ProductSet to get.
            *
            * Format is: `projects/PROJECT_ID/locations/LOG_ID/productSets/PRODUCT_SET_ID`
            */
@@ -3892,7 +3892,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
          * This request holds the parameters needed by the vision server.  After setting any optional
          * parameters, call the {@link VisionImport#execute()} method to invoke the remote operation.
          *
-         * @param parent The project in which the ProductSets should be imported.
+         * @param parent Required. The project in which the ProductSets should be imported.
         Format is
          *        `projects/PROJECT_ID/locations/LOC_ID`.
          * @param content the {@link com.google.api.services.vision.v1.model.ImportProductSetsRequest}
@@ -3930,7 +3930,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            * VisionImport#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The project in which the ProductSets should be imported.
+           * @param parent Required. The project in which the ProductSets should be imported.
         Format is
          *        `projects/PROJECT_ID/locations/LOC_ID`.
            * @param content the {@link com.google.api.services.vision.v1.model.ImportProductSetsRequest}
@@ -4002,14 +4002,14 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * The project in which the ProductSets should be imported.
+           * Required. The project in which the ProductSets should be imported.
            *
            * Format is `projects/PROJECT_ID/locations/LOC_ID`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The project in which the ProductSets should be imported.
+          /** Required. The project in which the ProductSets should be imported.
 
          Format is `projects/PROJECT_ID/locations/LOC_ID`.
            */
@@ -4018,7 +4018,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * The project in which the ProductSets should be imported.
+           * Required. The project in which the ProductSets should be imported.
            *
            * Format is `projects/PROJECT_ID/locations/LOC_ID`.
            */
@@ -4049,7 +4049,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
          * This request holds the parameters needed by the vision server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent The project from which ProductSets should be listed.
+         * @param parent Required. The project from which ProductSets should be listed.
         Format is
          *        `projects/PROJECT_ID/locations/LOC_ID`.
          * @return the request
@@ -4081,7 +4081,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The project from which ProductSets should be listed.
+           * @param parent Required. The project from which ProductSets should be listed.
         Format is
          *        `projects/PROJECT_ID/locations/LOC_ID`.
            * @since 1.13
@@ -4162,14 +4162,14 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * The project from which ProductSets should be listed.
+           * Required. The project from which ProductSets should be listed.
            *
            * Format is `projects/PROJECT_ID/locations/LOC_ID`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The project from which ProductSets should be listed.
+          /** Required. The project from which ProductSets should be listed.
 
          Format is `projects/PROJECT_ID/locations/LOC_ID`.
            */
@@ -4178,7 +4178,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * The project from which ProductSets should be listed.
+           * Required. The project from which ProductSets should be listed.
            *
            * Format is `projects/PROJECT_ID/locations/LOC_ID`.
            */
@@ -4425,7 +4425,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
          * This request holds the parameters needed by the vision server.  After setting any optional
          * parameters, call the {@link RemoveProduct#execute()} method to invoke the remote operation.
          *
-         * @param name The resource name for the ProductSet to modify.
+         * @param name Required. The resource name for the ProductSet to modify.
         Format is:
          *        `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
          * @param content the {@link com.google.api.services.vision.v1.model.RemoveProductFromProductSetRequest}
@@ -4455,7 +4455,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            * equest)} must be called to initialize this instance immediately after invoking the constructor.
            * </p>
            *
-           * @param name The resource name for the ProductSet to modify.
+           * @param name Required. The resource name for the ProductSet to modify.
         Format is:
          *        `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
            * @param content the {@link com.google.api.services.vision.v1.model.RemoveProductFromProductSetRequest}
@@ -4527,14 +4527,14 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * The resource name for the ProductSet to modify.
+           * Required. The resource name for the ProductSet to modify.
            *
            * Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The resource name for the ProductSet to modify.
+          /** Required. The resource name for the ProductSet to modify.
 
          Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
            */
@@ -4543,7 +4543,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * The resource name for the ProductSet to modify.
+           * Required. The resource name for the ProductSet to modify.
            *
            * Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
            */
@@ -4596,7 +4596,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            * This request holds the parameters needed by the vision server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param name The ProductSet resource for which to retrieve Products.
+           * @param name Required. The ProductSet resource for which to retrieve Products.
           Format is:
            *        `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
            * @return the request
@@ -4629,7 +4629,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
              * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The ProductSet resource for which to retrieve Products.
+             * @param name Required. The ProductSet resource for which to retrieve Products.
           Format is:
            *        `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
              * @since 1.13
@@ -4710,14 +4710,14 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
             }
 
             /**
-             * The ProductSet resource for which to retrieve Products.
+             * Required. The ProductSet resource for which to retrieve Products.
              *
              * Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The ProductSet resource for which to retrieve Products.
+            /** Required. The ProductSet resource for which to retrieve Products.
 
            Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
              */
@@ -4726,7 +4726,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
             }
 
             /**
-             * The ProductSet resource for which to retrieve Products.
+             * Required. The ProductSet resource for which to retrieve Products.
              *
              * Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
              */
@@ -4814,7 +4814,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
          * This request holds the parameters needed by the vision server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent The project in which the Product should be created.
+         * @param parent Required. The project in which the Product should be created.
         Format is
          *        `projects/PROJECT_ID/locations/LOC_ID`.
          * @param content the {@link com.google.api.services.vision.v1.model.Product}
@@ -4849,7 +4849,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The project in which the Product should be created.
+           * @param parent Required. The project in which the Product should be created.
         Format is
          *        `projects/PROJECT_ID/locations/LOC_ID`.
            * @param content the {@link com.google.api.services.vision.v1.model.Product}
@@ -4921,14 +4921,14 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * The project in which the Product should be created.
+           * Required. The project in which the Product should be created.
            *
            * Format is `projects/PROJECT_ID/locations/LOC_ID`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The project in which the Product should be created.
+          /** Required. The project in which the Product should be created.
 
          Format is `projects/PROJECT_ID/locations/LOC_ID`.
            */
@@ -4937,7 +4937,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * The project in which the Product should be created.
+           * Required. The project in which the Product should be created.
            *
            * Format is `projects/PROJECT_ID/locations/LOC_ID`.
            */
@@ -4995,7 +4995,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
          * This request holds the parameters needed by the vision server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Resource name of product to delete.
+         * @param name Required. Resource name of product to delete.
         Format is:
          *        `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
          * @return the request
@@ -5027,7 +5027,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Resource name of product to delete.
+           * @param name Required. Resource name of product to delete.
         Format is:
          *        `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
            * @since 1.13
@@ -5098,14 +5098,14 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Resource name of product to delete.
+           * Required. Resource name of product to delete.
            *
            * Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Resource name of product to delete.
+          /** Required. Resource name of product to delete.
 
          Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
            */
@@ -5114,7 +5114,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Resource name of product to delete.
+           * Required. Resource name of product to delete.
            *
            * Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
            */
@@ -5145,7 +5145,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
          * This request holds the parameters needed by the vision server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Resource name of the Product to get.
+         * @param name Required. Resource name of the Product to get.
         Format is:
          *        `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
          * @return the request
@@ -5177,7 +5177,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Resource name of the Product to get.
+           * @param name Required. Resource name of the Product to get.
         Format is:
          *        `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
            * @since 1.13
@@ -5258,14 +5258,14 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Resource name of the Product to get.
+           * Required. Resource name of the Product to get.
            *
            * Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Resource name of the Product to get.
+          /** Required. Resource name of the Product to get.
 
          Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
            */
@@ -5274,7 +5274,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Resource name of the Product to get.
+           * Required. Resource name of the Product to get.
            *
            * Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
            */
@@ -5305,7 +5305,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
          * This request holds the parameters needed by the vision server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent The project OR ProductSet from which Products should be listed.
+         * @param parent Required. The project OR ProductSet from which Products should be listed.
         Format:
          *        `projects/PROJECT_ID/locations/LOC_ID`
          * @return the request
@@ -5337,7 +5337,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The project OR ProductSet from which Products should be listed.
+           * @param parent Required. The project OR ProductSet from which Products should be listed.
         Format:
          *        `projects/PROJECT_ID/locations/LOC_ID`
            * @since 1.13
@@ -5418,14 +5418,14 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * The project OR ProductSet from which Products should be listed.
+           * Required. The project OR ProductSet from which Products should be listed.
            *
            * Format: `projects/PROJECT_ID/locations/LOC_ID`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The project OR ProductSet from which Products should be listed.
+          /** Required. The project OR ProductSet from which Products should be listed.
 
          Format: `projects/PROJECT_ID/locations/LOC_ID`
            */
@@ -5434,7 +5434,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * The project OR ProductSet from which Products should be listed.
+           * Required. The project OR ProductSet from which Products should be listed.
            *
            * Format: `projects/PROJECT_ID/locations/LOC_ID`
            */
@@ -5712,7 +5712,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
          * This request holds the parameters needed by the vision server.  After setting any optional
          * parameters, call the {@link Purge#execute()} method to invoke the remote operation.
          *
-         * @param parent The project and location in which the Products should be deleted.
+         * @param parent Required. The project and location in which the Products should be deleted.
         Format is
          *        `projects/PROJECT_ID/locations/LOC_ID`.
          * @param content the {@link com.google.api.services.vision.v1.model.PurgeProductsRequest}
@@ -5761,7 +5761,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            * Purge#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The project and location in which the Products should be deleted.
+           * @param parent Required. The project and location in which the Products should be deleted.
         Format is
          *        `projects/PROJECT_ID/locations/LOC_ID`.
            * @param content the {@link com.google.api.services.vision.v1.model.PurgeProductsRequest}
@@ -5833,14 +5833,14 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * The project and location in which the Products should be deleted.
+           * Required. The project and location in which the Products should be deleted.
            *
            * Format is `projects/PROJECT_ID/locations/LOC_ID`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The project and location in which the Products should be deleted.
+          /** Required. The project and location in which the Products should be deleted.
 
          Format is `projects/PROJECT_ID/locations/LOC_ID`.
            */
@@ -5849,7 +5849,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * The project and location in which the Products should be deleted.
+           * Required. The project and location in which the Products should be deleted.
            *
            * Format is `projects/PROJECT_ID/locations/LOC_ID`.
            */
@@ -5913,7 +5913,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            * This request holds the parameters needed by the vision server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Resource name of the product in which to create the reference image.
+           * @param parent Required. Resource name of the product in which to create the reference image.
           Format is
            *        `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
            * @param content the {@link com.google.api.services.vision.v1.model.ReferenceImage}
@@ -5958,7 +5958,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Resource name of the product in which to create the reference image.
+             * @param parent Required. Resource name of the product in which to create the reference image.
           Format is
            *        `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
              * @param content the {@link com.google.api.services.vision.v1.model.ReferenceImage}
@@ -6030,14 +6030,14 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
             }
 
             /**
-             * Resource name of the product in which to create the reference image.
+             * Required. Resource name of the product in which to create the reference image.
              *
              * Format is `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Resource name of the product in which to create the reference image.
+            /** Required. Resource name of the product in which to create the reference image.
 
            Format is `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
              */
@@ -6046,7 +6046,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
             }
 
             /**
-             * Resource name of the product in which to create the reference image.
+             * Required. Resource name of the product in which to create the reference image.
              *
              * Format is `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
              */
@@ -6106,7 +6106,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            * This request holds the parameters needed by the vision server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name The resource name of the reference image to delete.
+           * @param name Required. The resource name of the reference image to delete.
           Format is:
            *        `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`
            * @return the request
@@ -6139,7 +6139,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The resource name of the reference image to delete.
+             * @param name Required. The resource name of the reference image to delete.
           Format is:
            *        `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`
              * @since 1.13
@@ -6210,7 +6210,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
             }
 
             /**
-             * The resource name of the reference image to delete.
+             * Required. The resource name of the reference image to delete.
              *
              * Format is:
              *
@@ -6219,7 +6219,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The resource name of the reference image to delete.
+            /** Required. The resource name of the reference image to delete.
 
            Format is:
 
@@ -6230,7 +6230,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
             }
 
             /**
-             * The resource name of the reference image to delete.
+             * Required. The resource name of the reference image to delete.
              *
              * Format is:
              *
@@ -6263,7 +6263,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            * This request holds the parameters needed by the vision server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name The resource name of the ReferenceImage to get.
+           * @param name Required. The resource name of the ReferenceImage to get.
           Format is:
            *        `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`.
            * @return the request
@@ -6295,7 +6295,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
              * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The resource name of the ReferenceImage to get.
+             * @param name Required. The resource name of the ReferenceImage to get.
           Format is:
            *        `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`.
              * @since 1.13
@@ -6376,7 +6376,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
             }
 
             /**
-             * The resource name of the ReferenceImage to get.
+             * Required. The resource name of the ReferenceImage to get.
              *
              * Format is:
              *
@@ -6385,7 +6385,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The resource name of the ReferenceImage to get.
+            /** Required. The resource name of the ReferenceImage to get.
 
            Format is:
 
@@ -6396,7 +6396,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
             }
 
             /**
-             * The resource name of the ReferenceImage to get.
+             * Required. The resource name of the ReferenceImage to get.
              *
              * Format is:
              *
@@ -6430,7 +6430,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            * This request holds the parameters needed by the vision server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Resource name of the product containing the reference images.
+           * @param parent Required. Resource name of the product containing the reference images.
           Format is
            *        `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
            * @return the request
@@ -6463,7 +6463,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
              * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Resource name of the product containing the reference images.
+             * @param parent Required. Resource name of the product containing the reference images.
           Format is
            *        `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
              * @since 1.13
@@ -6544,14 +6544,14 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
             }
 
             /**
-             * Resource name of the product containing the reference images.
+             * Required. Resource name of the product containing the reference images.
              *
              * Format is `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Resource name of the product containing the reference images.
+            /** Required. Resource name of the product containing the reference images.
 
            Format is `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
              */
@@ -6560,7 +6560,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
             }
 
             /**
-             * Resource name of the product containing the reference images.
+             * Required. Resource name of the product containing the reference images.
              *
              * Format is `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
              */

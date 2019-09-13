@@ -72,11 +72,7 @@ public final class TargetChange extends com.google.api.client.json.GenericJson {
    *
    * If empty, the change applies to all targets.
    *
-   * For `target_change_type=ADD`, the order of the target IDs matches the order of the requests to
-   * add the targets. This allows clients to unambiguously associate server-assigned target IDs with
-   * added targets.
-   *
-   * For other states, the order of the target IDs is not defined.
+   * The order of the target IDs is not defined.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -209,11 +205,7 @@ public final class TargetChange extends com.google.api.client.json.GenericJson {
    *
    * If empty, the change applies to all targets.
    *
-   * For `target_change_type=ADD`, the order of the target IDs matches the order of the requests to
-   * add the targets. This allows clients to unambiguously associate server-assigned target IDs with
-   * added targets.
-   *
-   * For other states, the order of the target IDs is not defined.
+   * The order of the target IDs is not defined.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Integer> getTargetIds() {
@@ -225,11 +217,7 @@ public final class TargetChange extends com.google.api.client.json.GenericJson {
    *
    * If empty, the change applies to all targets.
    *
-   * For `target_change_type=ADD`, the order of the target IDs matches the order of the requests to
-   * add the targets. This allows clients to unambiguously associate server-assigned target IDs with
-   * added targets.
-   *
-   * For other states, the order of the target IDs is not defined.
+   * The order of the target IDs is not defined.
    * @param targetIds targetIds or {@code null} for none
    */
   public TargetChange setTargetIds(java.util.List<java.lang.Integer> targetIds) {

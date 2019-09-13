@@ -69,13 +69,7 @@ public final class Target extends com.google.api.client.json.GenericJson {
   private java.lang.String resumeToken;
 
   /**
-   * A client provided target ID.
-   *
-   * If not set, the server will assign an ID for the target.
-   *
-   * Used for resuming a target without changing IDs. The IDs can either be client-assigned or be
-   * server-assigned in a previous stream. All targets with client provided IDs must be added before
-   * adding a target that needs a server-assigned id.
+   * The target ID that identifies the target on the stream. Must be a positive number and non-zero.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -207,13 +201,7 @@ public final class Target extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A client provided target ID.
-   *
-   * If not set, the server will assign an ID for the target.
-   *
-   * Used for resuming a target without changing IDs. The IDs can either be client-assigned or be
-   * server-assigned in a previous stream. All targets with client provided IDs must be added before
-   * adding a target that needs a server-assigned id.
+   * The target ID that identifies the target on the stream. Must be a positive number and non-zero.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTargetId() {
@@ -221,13 +209,7 @@ public final class Target extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A client provided target ID.
-   *
-   * If not set, the server will assign an ID for the target.
-   *
-   * Used for resuming a target without changing IDs. The IDs can either be client-assigned or be
-   * server-assigned in a previous stream. All targets with client provided IDs must be added before
-   * adding a target that needs a server-assigned id.
+   * The target ID that identifies the target on the stream. Must be a positive number and non-zero.
    * @param targetId targetId or {@code null} for none
    */
   public Target setTargetId(java.lang.Integer targetId) {

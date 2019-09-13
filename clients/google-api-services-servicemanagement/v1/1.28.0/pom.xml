@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-servicemanagement</artifactId>
-  <version>v1-rev20190809-1.28.0</version>
-  <name>Service Management API v1-rev20190809-1.28.0</name>
+  <version>v1-rev20190903-1.28.0</version>
+  <name>Service Management API v1-rev20190903-1.28.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

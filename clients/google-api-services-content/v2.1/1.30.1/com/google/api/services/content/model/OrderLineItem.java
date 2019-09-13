@@ -110,6 +110,13 @@ public final class OrderLineItem extends com.google.api.client.json.GenericJson 
   private java.lang.Long quantityPending;
 
   /**
+   * Number of items ready for pickup.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Long quantityReadyForPickup;
+
+  /**
    * Number of items returned.
    * The value may be {@code null}.
    */
@@ -332,6 +339,23 @@ public final class OrderLineItem extends com.google.api.client.json.GenericJson 
    */
   public OrderLineItem setQuantityPending(java.lang.Long quantityPending) {
     this.quantityPending = quantityPending;
+    return this;
+  }
+
+  /**
+   * Number of items ready for pickup.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getQuantityReadyForPickup() {
+    return quantityReadyForPickup;
+  }
+
+  /**
+   * Number of items ready for pickup.
+   * @param quantityReadyForPickup quantityReadyForPickup or {@code null} for none
+   */
+  public OrderLineItem setQuantityReadyForPickup(java.lang.Long quantityReadyForPickup) {
+    this.quantityReadyForPickup = quantityReadyForPickup;
     return this;
   }
 

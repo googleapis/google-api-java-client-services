@@ -37,7 +37,7 @@ public final class DriveItemReference extends com.google.api.client.json.Generic
   private DriveFile driveFile;
 
   /**
-   * The Drive item is a folder.
+   * The Drive item is a folder. Includes information about the type of folder.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,7 +89,7 @@ public final class DriveItemReference extends com.google.api.client.json.Generic
   }
 
   /**
-   * The Drive item is a folder.
+   * The Drive item is a folder. Includes information about the type of folder.
    * @return value or {@code null} for none
    */
   public DriveFolder getDriveFolder() {
@@ -97,7 +97,7 @@ public final class DriveItemReference extends com.google.api.client.json.Generic
   }
 
   /**
-   * The Drive item is a folder.
+   * The Drive item is a folder. Includes information about the type of folder.
    * @param driveFolder driveFolder or {@code null} for none
    */
   public DriveItemReference setDriveFolder(DriveFolder driveFolder) {

@@ -100,7 +100,9 @@ public final class ServiceAccountKey extends com.google.api.client.json.GenericJ
   private String validAfterTime;
 
   /**
-   * The key can be used before this timestamp.
+   * The key can be used before this timestamp. For system-managed key pairs, this timestamp is the
+   * end time for the private key signing operation. The public key could still be used for
+   * verification for a few hours after this time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -302,7 +304,9 @@ public final class ServiceAccountKey extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The key can be used before this timestamp.
+   * The key can be used before this timestamp. For system-managed key pairs, this timestamp is the
+   * end time for the private key signing operation. The public key could still be used for
+   * verification for a few hours after this time.
    * @return value or {@code null} for none
    */
   public String getValidBeforeTime() {
@@ -310,7 +314,9 @@ public final class ServiceAccountKey extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The key can be used before this timestamp.
+   * The key can be used before this timestamp. For system-managed key pairs, this timestamp is the
+   * end time for the private key signing operation. The public key could still be used for
+   * verification for a few hours after this time.
    * @param validBeforeTime validBeforeTime or {@code null} for none
    */
   public ServiceAccountKey setValidBeforeTime(String validBeforeTime) {

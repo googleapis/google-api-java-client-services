@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-binaryauthorization",
+    "version": "v1-rev20190906-1.30.1"
+  }
+}

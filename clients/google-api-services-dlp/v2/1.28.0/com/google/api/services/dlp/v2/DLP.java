@@ -7707,6 +7707,168 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             return (Inspect) super.set(parameterName, value);
           }
         }
+        /**
+         * Re-identifies content that has been de-identified. See
+         * https://cloud.google.com/dlp/docs/pseudonymization#re-identification_in_free_text_code_example to
+         * learn more.
+         *
+         * Create a request for the method "content.reidentify".
+         *
+         * This request holds the parameters needed by the dlp server.  After setting any optional
+         * parameters, call the {@link Reidentify#execute()} method to invoke the remote operation.
+         *
+         * @param parent The parent resource name.
+         * @param location The geographic location to process content reidentification.  Reserved for
+        future extensions.
+         * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ReidentifyContentRequest}
+         * @return the request
+         */
+        public Reidentify reidentify(java.lang.String parent, java.lang.String location, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ReidentifyContentRequest content) throws java.io.IOException {
+          Reidentify result = new Reidentify(parent, location, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Reidentify extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ReidentifyContentResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/locations/{location}/content:reidentify";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+          /**
+           * Re-identifies content that has been de-identified. See
+           * https://cloud.google.com/dlp/docs/pseudonymization#re-identification_in_free_text_code_example
+           * to learn more.
+           *
+           * Create a request for the method "content.reidentify".
+           *
+           * This request holds the parameters needed by the the dlp server.  After setting any optional
+           * parameters, call the {@link Reidentify#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * Reidentify#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent The parent resource name.
+           * @param location The geographic location to process content reidentification.  Reserved for
+        future extensions.
+           * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ReidentifyContentRequest}
+           * @since 1.13
+           */
+          protected Reidentify(java.lang.String parent, java.lang.String location, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ReidentifyContentRequest content) {
+            super(DLP.this, "POST", REST_PATH, content, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ReidentifyContentResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+$");
+            }
+            this.location = com.google.api.client.util.Preconditions.checkNotNull(location, "Required parameter location must be specified.");
+          }
+
+          @Override
+          public Reidentify set$Xgafv(java.lang.String $Xgafv) {
+            return (Reidentify) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Reidentify setAccessToken(java.lang.String accessToken) {
+            return (Reidentify) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Reidentify setAlt(java.lang.String alt) {
+            return (Reidentify) super.setAlt(alt);
+          }
+
+          @Override
+          public Reidentify setCallback(java.lang.String callback) {
+            return (Reidentify) super.setCallback(callback);
+          }
+
+          @Override
+          public Reidentify setFields(java.lang.String fields) {
+            return (Reidentify) super.setFields(fields);
+          }
+
+          @Override
+          public Reidentify setKey(java.lang.String key) {
+            return (Reidentify) super.setKey(key);
+          }
+
+          @Override
+          public Reidentify setOauthToken(java.lang.String oauthToken) {
+            return (Reidentify) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Reidentify setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Reidentify) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Reidentify setQuotaUser(java.lang.String quotaUser) {
+            return (Reidentify) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Reidentify setUploadType(java.lang.String uploadType) {
+            return (Reidentify) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Reidentify setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Reidentify) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The parent resource name. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** The parent resource name.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** The parent resource name. */
+          public Reidentify setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * The geographic location to process content reidentification.  Reserved for future
+           * extensions.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String location;
+
+          /** The geographic location to process content reidentification.  Reserved for future extensions.
+           */
+          public java.lang.String getLocation() {
+            return location;
+          }
+
+          /**
+           * The geographic location to process content reidentification.  Reserved for future
+           * extensions.
+           */
+          public Reidentify setLocation(java.lang.String location) {
+            this.location = location;
+            return this;
+          }
+
+          @Override
+          public Reidentify set(String parameterName, Object value) {
+            return (Reidentify) super.set(parameterName, value);
+          }
+        }
 
       }
     }

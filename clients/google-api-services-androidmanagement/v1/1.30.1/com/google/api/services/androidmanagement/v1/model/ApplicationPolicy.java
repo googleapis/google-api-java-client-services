@@ -31,6 +31,16 @@ package com.google.api.services.androidmanagement.v1.model;
 public final class ApplicationPolicy extends com.google.api.client.json.GenericJson {
 
   /**
+   * List of the app’s track IDs that a device belonging to the enterprise can access. If the list
+   * contains multiple track IDs, devices receive the latest version among all accessible tracks. If
+   * the list contains no track IDs, devices only have access to the app’s production track. More
+   * details about each track are available in AppTrackInfo.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> accessibleTrackIds;
+
+  /**
    * The default policy for all permissions requested by the app. If specified, this overrides the
    * policy-level default_permission_policy which applies to all apps. It does not override the
    * permission_grants which applies to all apps.
@@ -112,6 +122,29 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.util.List<PermissionGrant> permissionGrants;
+
+  /**
+   * List of the app’s track IDs that a device belonging to the enterprise can access. If the list
+   * contains multiple track IDs, devices receive the latest version among all accessible tracks. If
+   * the list contains no track IDs, devices only have access to the app’s production track. More
+   * details about each track are available in AppTrackInfo.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAccessibleTrackIds() {
+    return accessibleTrackIds;
+  }
+
+  /**
+   * List of the app’s track IDs that a device belonging to the enterprise can access. If the list
+   * contains multiple track IDs, devices receive the latest version among all accessible tracks. If
+   * the list contains no track IDs, devices only have access to the app’s production track. More
+   * details about each track are available in AppTrackInfo.
+   * @param accessibleTrackIds accessibleTrackIds or {@code null} for none
+   */
+  public ApplicationPolicy setAccessibleTrackIds(java.util.List<java.lang.String> accessibleTrackIds) {
+    this.accessibleTrackIds = accessibleTrackIds;
+    return this;
+  }
 
   /**
    * The default policy for all permissions requested by the app. If specified, this overrides the

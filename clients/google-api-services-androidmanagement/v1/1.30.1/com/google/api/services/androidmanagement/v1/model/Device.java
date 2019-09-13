@@ -261,7 +261,8 @@ public final class Device extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
-   * Map of selected system properties name and value related to the device.
+   * Map of selected system properties name and value related to the device. This information is
+   * only available if systemPropertiesEnabled is true in the device's policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -816,7 +817,8 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Map of selected system properties name and value related to the device.
+   * Map of selected system properties name and value related to the device. This information is
+   * only available if systemPropertiesEnabled is true in the device's policy.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getSystemProperties() {
@@ -824,7 +826,8 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Map of selected system properties name and value related to the device.
+   * Map of selected system properties name and value related to the device. This information is
+   * only available if systemPropertiesEnabled is true in the device's policy.
    * @param systemProperties systemProperties or {@code null} for none
    */
   public Device setSystemProperties(java.util.Map<String, java.lang.String> systemProperties) {

@@ -425,6 +425,16 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Specifies permitted accessibility services. If the field is not set, any accessibility service
+   * can be used. If the field is set, only the accessibility services in this list and the system's
+   * built-in accessibility services can be used. In particular, if the field is set to empty, only
+   * the system's built-in accessibility services can be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PackageNameList permittedAccessibilityServices;
+
+  /**
    * If present, only the input methods provided by packages in this list are permitted. If this
    * field is present, but the list is empty, then only system input methods are permitted.
    * The value may be {@code null}.
@@ -1515,6 +1525,29 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   public Policy setPermissionGrants(java.util.List<PermissionGrant> permissionGrants) {
     this.permissionGrants = permissionGrants;
+    return this;
+  }
+
+  /**
+   * Specifies permitted accessibility services. If the field is not set, any accessibility service
+   * can be used. If the field is set, only the accessibility services in this list and the system's
+   * built-in accessibility services can be used. In particular, if the field is set to empty, only
+   * the system's built-in accessibility services can be used.
+   * @return value or {@code null} for none
+   */
+  public PackageNameList getPermittedAccessibilityServices() {
+    return permittedAccessibilityServices;
+  }
+
+  /**
+   * Specifies permitted accessibility services. If the field is not set, any accessibility service
+   * can be used. If the field is set, only the accessibility services in this list and the system's
+   * built-in accessibility services can be used. In particular, if the field is set to empty, only
+   * the system's built-in accessibility services can be used.
+   * @param permittedAccessibilityServices permittedAccessibilityServices or {@code null} for none
+   */
+  public Policy setPermittedAccessibilityServices(PackageNameList permittedAccessibilityServices) {
+    this.permittedAccessibilityServices = permittedAccessibilityServices;
     return this;
   }
 

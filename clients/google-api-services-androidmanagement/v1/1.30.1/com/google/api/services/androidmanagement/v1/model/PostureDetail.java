@@ -17,7 +17,7 @@
 package com.google.api.services.androidmanagement.v1.model;
 
 /**
- * Detail that provides further information if the device is not in the most secure state.
+ * Additional details regarding the security posture of the device.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Android Management API. For a detailed explanation
@@ -31,21 +31,23 @@ package com.google.api.services.androidmanagement.v1.model;
 public final class PostureDetail extends com.google.api.client.json.GenericJson {
 
   /**
-   * Corresponding pieces of advice to mitigate the security risk.
+   * Corresponding admin-facing advice to mitigate this security risk and improve the security
+   * posture of the device.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<UserFacingMessage> advice;
 
   /**
-   * The risk that makes the device not in the most secure state.
+   * A specific security risk that negatively affects the security posture of the device.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String securityRisk;
 
   /**
-   * Corresponding pieces of advice to mitigate the security risk.
+   * Corresponding admin-facing advice to mitigate this security risk and improve the security
+   * posture of the device.
    * @return value or {@code null} for none
    */
   public java.util.List<UserFacingMessage> getAdvice() {
@@ -53,7 +55,8 @@ public final class PostureDetail extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Corresponding pieces of advice to mitigate the security risk.
+   * Corresponding admin-facing advice to mitigate this security risk and improve the security
+   * posture of the device.
    * @param advice advice or {@code null} for none
    */
   public PostureDetail setAdvice(java.util.List<UserFacingMessage> advice) {
@@ -62,7 +65,7 @@ public final class PostureDetail extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The risk that makes the device not in the most secure state.
+   * A specific security risk that negatively affects the security posture of the device.
    * @return value or {@code null} for none
    */
   public java.lang.String getSecurityRisk() {
@@ -70,7 +73,7 @@ public final class PostureDetail extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The risk that makes the device not in the most secure state.
+   * A specific security risk that negatively affects the security posture of the device.
    * @param securityRisk securityRisk or {@code null} for none
    */
   public PostureDetail setSecurityRisk(java.lang.String securityRisk) {

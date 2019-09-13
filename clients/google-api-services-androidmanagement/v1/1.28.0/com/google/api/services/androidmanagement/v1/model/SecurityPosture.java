@@ -17,7 +17,8 @@
 package com.google.api.services.androidmanagement.v1.model;
 
 /**
- * . Device's security posture value that reflects how secure the device is.
+ * The security posture of the device, as determined by the current device state and the policies
+ * applied.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Android Management API. For a detailed explanation
@@ -38,7 +39,7 @@ public final class SecurityPosture extends com.google.api.client.json.GenericJso
   private java.lang.String devicePosture;
 
   /**
-   * Details that provide further information if the device is not in the most secure state.
+   * Additional details regarding the security posture of the device.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +69,7 @@ public final class SecurityPosture extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Details that provide further information if the device is not in the most secure state.
+   * Additional details regarding the security posture of the device.
    * @return value or {@code null} for none
    */
   public java.util.List<PostureDetail> getPostureDetails() {
@@ -76,7 +77,7 @@ public final class SecurityPosture extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Details that provide further information if the device is not in the most secure state.
+   * Additional details regarding the security posture of the device.
    * @param postureDetails postureDetails or {@code null} for none
    */
   public SecurityPosture setPostureDetails(java.util.List<PostureDetail> postureDetails) {

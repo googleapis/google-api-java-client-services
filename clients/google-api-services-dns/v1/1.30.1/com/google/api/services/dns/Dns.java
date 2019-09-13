@@ -2345,6 +2345,864 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
   }
 
   /**
+   * An accessor for creating requests from the Policies collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Dns dns = new Dns(...);}
+   *   {@code Dns.Policies.List request = dns.policies().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Policies policies() {
+    return new Policies();
+  }
+
+  /**
+   * The "policies" collection of methods.
+   */
+  public class Policies {
+
+    /**
+     * Create a new Policy
+     *
+     * Create a request for the method "policies.create".
+     *
+     * This request holds the parameters needed by the dns server.  After setting any optional
+     * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+     *
+     * @param project Identifies the project addressed by this request.
+     * @param content the {@link com.google.api.services.dns.model.Policy}
+     * @return the request
+     */
+    public Create create(java.lang.String project, com.google.api.services.dns.model.Policy content) throws java.io.IOException {
+      Create result = new Create(project, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Create extends DnsRequest<com.google.api.services.dns.model.Policy> {
+
+      private static final String REST_PATH = "{project}/policies";
+
+      /**
+       * Create a new Policy
+       *
+       * Create a request for the method "policies.create".
+       *
+       * This request holds the parameters needed by the the dns server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+       * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Identifies the project addressed by this request.
+       * @param content the {@link com.google.api.services.dns.model.Policy}
+       * @since 1.13
+       */
+      protected Create(java.lang.String project, com.google.api.services.dns.model.Policy content) {
+        super(Dns.this, "POST", REST_PATH, content, com.google.api.services.dns.model.Policy.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+      }
+
+      @Override
+      public Create setAlt(java.lang.String alt) {
+        return (Create) super.setAlt(alt);
+      }
+
+      @Override
+      public Create setFields(java.lang.String fields) {
+        return (Create) super.setFields(fields);
+      }
+
+      @Override
+      public Create setKey(java.lang.String key) {
+        return (Create) super.setKey(key);
+      }
+
+      @Override
+      public Create setOauthToken(java.lang.String oauthToken) {
+        return (Create) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Create) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Create setQuotaUser(java.lang.String quotaUser) {
+        return (Create) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Create setUserIp(java.lang.String userIp) {
+        return (Create) super.setUserIp(userIp);
+      }
+
+      /** Identifies the project addressed by this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Identifies the project addressed by this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Identifies the project addressed by this request. */
+      public Create setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String clientOperationId;
+
+      /** For mutating operation requests only. An optional identifier specified by the client. Must be
+     unique for operation resources in the Operations collection.
+       */
+      public java.lang.String getClientOperationId() {
+        return clientOperationId;
+      }
+
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
+      public Create setClientOperationId(java.lang.String clientOperationId) {
+        this.clientOperationId = clientOperationId;
+        return this;
+      }
+
+      @Override
+      public Create set(String parameterName, Object value) {
+        return (Create) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Delete a previously created Policy. Will fail if the policy is still being referenced by a
+     * network.
+     *
+     * Create a request for the method "policies.delete".
+     *
+     * This request holds the parameters needed by the dns server.  After setting any optional
+     * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @param project Identifies the project addressed by this request.
+     * @param policy User given friendly name of the policy addressed by this request.
+     * @return the request
+     */
+    public Delete delete(java.lang.String project, java.lang.String policy) throws java.io.IOException {
+      Delete result = new Delete(project, policy);
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends DnsRequest<Void> {
+
+      private static final String REST_PATH = "{project}/policies/{policy}";
+
+      /**
+       * Delete a previously created Policy. Will fail if the policy is still being referenced by a
+       * network.
+       *
+       * Create a request for the method "policies.delete".
+       *
+       * This request holds the parameters needed by the the dns server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Identifies the project addressed by this request.
+       * @param policy User given friendly name of the policy addressed by this request.
+       * @since 1.13
+       */
+      protected Delete(java.lang.String project, java.lang.String policy) {
+        super(Dns.this, "DELETE", REST_PATH, null, Void.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        this.policy = com.google.api.client.util.Preconditions.checkNotNull(policy, "Required parameter policy must be specified.");
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUserIp(java.lang.String userIp) {
+        return (Delete) super.setUserIp(userIp);
+      }
+
+      /** Identifies the project addressed by this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Identifies the project addressed by this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Identifies the project addressed by this request. */
+      public Delete setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      /** User given friendly name of the policy addressed by this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String policy;
+
+      /** User given friendly name of the policy addressed by this request.
+       */
+      public java.lang.String getPolicy() {
+        return policy;
+      }
+
+      /** User given friendly name of the policy addressed by this request. */
+      public Delete setPolicy(java.lang.String policy) {
+        this.policy = policy;
+        return this;
+      }
+
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String clientOperationId;
+
+      /** For mutating operation requests only. An optional identifier specified by the client. Must be
+     unique for operation resources in the Operations collection.
+       */
+      public java.lang.String getClientOperationId() {
+        return clientOperationId;
+      }
+
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
+      public Delete setClientOperationId(java.lang.String clientOperationId) {
+        this.clientOperationId = clientOperationId;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Fetch the representation of an existing Policy.
+     *
+     * Create a request for the method "policies.get".
+     *
+     * This request holds the parameters needed by the dns server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param project Identifies the project addressed by this request.
+     * @param policy User given friendly name of the policy addressed by this request.
+     * @return the request
+     */
+    public Get get(java.lang.String project, java.lang.String policy) throws java.io.IOException {
+      Get result = new Get(project, policy);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends DnsRequest<com.google.api.services.dns.model.Policy> {
+
+      private static final String REST_PATH = "{project}/policies/{policy}";
+
+      /**
+       * Fetch the representation of an existing Policy.
+       *
+       * Create a request for the method "policies.get".
+       *
+       * This request holds the parameters needed by the the dns server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Identifies the project addressed by this request.
+       * @param policy User given friendly name of the policy addressed by this request.
+       * @since 1.13
+       */
+      protected Get(java.lang.String project, java.lang.String policy) {
+        super(Dns.this, "GET", REST_PATH, null, com.google.api.services.dns.model.Policy.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        this.policy = com.google.api.client.util.Preconditions.checkNotNull(policy, "Required parameter policy must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUserIp(java.lang.String userIp) {
+        return (Get) super.setUserIp(userIp);
+      }
+
+      /** Identifies the project addressed by this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Identifies the project addressed by this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Identifies the project addressed by this request. */
+      public Get setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      /** User given friendly name of the policy addressed by this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String policy;
+
+      /** User given friendly name of the policy addressed by this request.
+       */
+      public java.lang.String getPolicy() {
+        return policy;
+      }
+
+      /** User given friendly name of the policy addressed by this request. */
+      public Get setPolicy(java.lang.String policy) {
+        this.policy = policy;
+        return this;
+      }
+
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String clientOperationId;
+
+      /** For mutating operation requests only. An optional identifier specified by the client. Must be
+     unique for operation resources in the Operations collection.
+       */
+      public java.lang.String getClientOperationId() {
+        return clientOperationId;
+      }
+
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
+      public Get setClientOperationId(java.lang.String clientOperationId) {
+        this.clientOperationId = clientOperationId;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Enumerate all Policies associated with a project.
+     *
+     * Create a request for the method "policies.list".
+     *
+     * This request holds the parameters needed by the dns server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param project Identifies the project addressed by this request.
+     * @return the request
+     */
+    public List list(java.lang.String project) throws java.io.IOException {
+      List result = new List(project);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends DnsRequest<com.google.api.services.dns.model.PoliciesListResponse> {
+
+      private static final String REST_PATH = "{project}/policies";
+
+      /**
+       * Enumerate all Policies associated with a project.
+       *
+       * Create a request for the method "policies.list".
+       *
+       * This request holds the parameters needed by the the dns server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Identifies the project addressed by this request.
+       * @since 1.13
+       */
+      protected List(java.lang.String project) {
+        super(Dns.this, "GET", REST_PATH, null, com.google.api.services.dns.model.PoliciesListResponse.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUserIp(java.lang.String userIp) {
+        return (List) super.setUserIp(userIp);
+      }
+
+      /** Identifies the project addressed by this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Identifies the project addressed by this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Identifies the project addressed by this request. */
+      public List setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      /**
+       * Optional. Maximum number of results to be returned. If unspecified, the server will decide
+       * how many results to return.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer maxResults;
+
+      /** Optional. Maximum number of results to be returned. If unspecified, the server will decide how many
+     results to return.
+       */
+      public java.lang.Integer getMaxResults() {
+        return maxResults;
+      }
+
+      /**
+       * Optional. Maximum number of results to be returned. If unspecified, the server will decide
+       * how many results to return.
+       */
+      public List setMaxResults(java.lang.Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+      }
+
+      /**
+       * Optional. A tag returned by a previous list request that was truncated. Use this parameter
+       * to continue a previous list request.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Optional. A tag returned by a previous list request that was truncated. Use this parameter to
+     continue a previous list request.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Optional. A tag returned by a previous list request that was truncated. Use this parameter
+       * to continue a previous list request.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Apply a partial update to an existing Policy.
+     *
+     * Create a request for the method "policies.patch".
+     *
+     * This request holds the parameters needed by the dns server.  After setting any optional
+     * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+     *
+     * @param project Identifies the project addressed by this request.
+     * @param policy User given friendly name of the policy addressed by this request.
+     * @param content the {@link com.google.api.services.dns.model.Policy}
+     * @return the request
+     */
+    public Patch patch(java.lang.String project, java.lang.String policy, com.google.api.services.dns.model.Policy content) throws java.io.IOException {
+      Patch result = new Patch(project, policy, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Patch extends DnsRequest<com.google.api.services.dns.model.PoliciesPatchResponse> {
+
+      private static final String REST_PATH = "{project}/policies/{policy}";
+
+      /**
+       * Apply a partial update to an existing Policy.
+       *
+       * Create a request for the method "policies.patch".
+       *
+       * This request holds the parameters needed by the the dns server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+       * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Identifies the project addressed by this request.
+       * @param policy User given friendly name of the policy addressed by this request.
+       * @param content the {@link com.google.api.services.dns.model.Policy}
+       * @since 1.13
+       */
+      protected Patch(java.lang.String project, java.lang.String policy, com.google.api.services.dns.model.Policy content) {
+        super(Dns.this, "PATCH", REST_PATH, content, com.google.api.services.dns.model.PoliciesPatchResponse.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        this.policy = com.google.api.client.util.Preconditions.checkNotNull(policy, "Required parameter policy must be specified.");
+      }
+
+      @Override
+      public Patch setAlt(java.lang.String alt) {
+        return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setFields(java.lang.String fields) {
+        return (Patch) super.setFields(fields);
+      }
+
+      @Override
+      public Patch setKey(java.lang.String key) {
+        return (Patch) super.setKey(key);
+      }
+
+      @Override
+      public Patch setOauthToken(java.lang.String oauthToken) {
+        return (Patch) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Patch) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Patch setQuotaUser(java.lang.String quotaUser) {
+        return (Patch) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Patch setUserIp(java.lang.String userIp) {
+        return (Patch) super.setUserIp(userIp);
+      }
+
+      /** Identifies the project addressed by this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Identifies the project addressed by this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Identifies the project addressed by this request. */
+      public Patch setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      /** User given friendly name of the policy addressed by this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String policy;
+
+      /** User given friendly name of the policy addressed by this request.
+       */
+      public java.lang.String getPolicy() {
+        return policy;
+      }
+
+      /** User given friendly name of the policy addressed by this request. */
+      public Patch setPolicy(java.lang.String policy) {
+        this.policy = policy;
+        return this;
+      }
+
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String clientOperationId;
+
+      /** For mutating operation requests only. An optional identifier specified by the client. Must be
+     unique for operation resources in the Operations collection.
+       */
+      public java.lang.String getClientOperationId() {
+        return clientOperationId;
+      }
+
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
+      public Patch setClientOperationId(java.lang.String clientOperationId) {
+        this.clientOperationId = clientOperationId;
+        return this;
+      }
+
+      @Override
+      public Patch set(String parameterName, Object value) {
+        return (Patch) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Update an existing Policy.
+     *
+     * Create a request for the method "policies.update".
+     *
+     * This request holds the parameters needed by the dns server.  After setting any optional
+     * parameters, call the {@link Update#execute()} method to invoke the remote operation.
+     *
+     * @param project Identifies the project addressed by this request.
+     * @param policy User given friendly name of the policy addressed by this request.
+     * @param content the {@link com.google.api.services.dns.model.Policy}
+     * @return the request
+     */
+    public Update update(java.lang.String project, java.lang.String policy, com.google.api.services.dns.model.Policy content) throws java.io.IOException {
+      Update result = new Update(project, policy, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Update extends DnsRequest<com.google.api.services.dns.model.PoliciesUpdateResponse> {
+
+      private static final String REST_PATH = "{project}/policies/{policy}";
+
+      /**
+       * Update an existing Policy.
+       *
+       * Create a request for the method "policies.update".
+       *
+       * This request holds the parameters needed by the the dns server.  After setting any optional
+       * parameters, call the {@link Update#execute()} method to invoke the remote operation. <p> {@link
+       * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Identifies the project addressed by this request.
+       * @param policy User given friendly name of the policy addressed by this request.
+       * @param content the {@link com.google.api.services.dns.model.Policy}
+       * @since 1.13
+       */
+      protected Update(java.lang.String project, java.lang.String policy, com.google.api.services.dns.model.Policy content) {
+        super(Dns.this, "PUT", REST_PATH, content, com.google.api.services.dns.model.PoliciesUpdateResponse.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        this.policy = com.google.api.client.util.Preconditions.checkNotNull(policy, "Required parameter policy must be specified.");
+      }
+
+      @Override
+      public Update setAlt(java.lang.String alt) {
+        return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setFields(java.lang.String fields) {
+        return (Update) super.setFields(fields);
+      }
+
+      @Override
+      public Update setKey(java.lang.String key) {
+        return (Update) super.setKey(key);
+      }
+
+      @Override
+      public Update setOauthToken(java.lang.String oauthToken) {
+        return (Update) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Update) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Update setQuotaUser(java.lang.String quotaUser) {
+        return (Update) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Update setUserIp(java.lang.String userIp) {
+        return (Update) super.setUserIp(userIp);
+      }
+
+      /** Identifies the project addressed by this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Identifies the project addressed by this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Identifies the project addressed by this request. */
+      public Update setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      /** User given friendly name of the policy addressed by this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String policy;
+
+      /** User given friendly name of the policy addressed by this request.
+       */
+      public java.lang.String getPolicy() {
+        return policy;
+      }
+
+      /** User given friendly name of the policy addressed by this request. */
+      public Update setPolicy(java.lang.String policy) {
+        this.policy = policy;
+        return this;
+      }
+
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String clientOperationId;
+
+      /** For mutating operation requests only. An optional identifier specified by the client. Must be
+     unique for operation resources in the Operations collection.
+       */
+      public java.lang.String getClientOperationId() {
+        return clientOperationId;
+      }
+
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
+      public Update setClientOperationId(java.lang.String clientOperationId) {
+        this.clientOperationId = clientOperationId;
+        return this;
+      }
+
+      @Override
+      public Update set(String parameterName, Object value) {
+        return (Update) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Projects collection.
    *
    * <p>The typical use is:</p>

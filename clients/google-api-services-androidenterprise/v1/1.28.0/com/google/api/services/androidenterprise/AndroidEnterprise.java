@@ -6210,8 +6210,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
   public class Managedconfigurationssettings {
 
     /**
-     * Lists all the managed configurations settings for the specified app. Only the ID and the name is
-     * set.
+     * Lists all the managed configurations settings for the specified app.
      *
      * Create a request for the method "managedconfigurationssettings.list".
      *
@@ -6233,8 +6232,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       private static final String REST_PATH = "enterprises/{enterpriseId}/products/{productId}/managedConfigurationsSettings";
 
       /**
-       * Lists all the managed configurations settings for the specified app. Only the ID and the name
-       * is set.
+       * Lists all the managed configurations settings for the specified app.
        *
        * Create a request for the method "managedconfigurationssettings.list".
        *

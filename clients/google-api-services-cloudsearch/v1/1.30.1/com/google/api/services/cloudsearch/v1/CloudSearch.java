@@ -4169,7 +4169,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * Current user's time zone id, such as "America/Los_Angeles" or "Australia/Sydney". These
          * IDs are defined by [Unicode Common Locale Data Repository
          * (CLDR)](http://cldr.unicode.org/) project, and currently available in the file
-         * [timezone.xml](http://unicode.org/repos/cldr/trunk/common/bcp47/timezone.xml)
+         * [timezone.xml](http://unicode.org/repos/cldr/trunk/common/bcp47/timezone.xml). This field
+         * is used to correctly interpret date and time queries. If this field is not specified, the
+         * default time zone (UTC) is used.
          */
         @com.google.api.client.util.Key("requestOptions.timeZone")
         private java.lang.String requestOptionsTimeZone;
@@ -4177,7 +4179,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         /** Current user's time zone id, such as "America/Los_Angeles" or "Australia/Sydney". These IDs are
        defined by [Unicode Common Locale Data Repository (CLDR)](http://cldr.unicode.org/) project, and
        currently available in the file
-       [timezone.xml](http://unicode.org/repos/cldr/trunk/common/bcp47/timezone.xml)
+       [timezone.xml](http://unicode.org/repos/cldr/trunk/common/bcp47/timezone.xml). This field is used
+       to correctly interpret date and time queries. If this field is not specified, the default time zone
+       (UTC) is used.
          */
         public java.lang.String getRequestOptionsTimeZone() {
           return requestOptionsTimeZone;
@@ -4187,7 +4191,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * Current user's time zone id, such as "America/Los_Angeles" or "Australia/Sydney". These
          * IDs are defined by [Unicode Common Locale Data Repository
          * (CLDR)](http://cldr.unicode.org/) project, and currently available in the file
-         * [timezone.xml](http://unicode.org/repos/cldr/trunk/common/bcp47/timezone.xml)
+         * [timezone.xml](http://unicode.org/repos/cldr/trunk/common/bcp47/timezone.xml). This field
+         * is used to correctly interpret date and time queries. If this field is not specified, the
+         * default time zone (UTC) is used.
          */
         public List setRequestOptionsTimeZone(java.lang.String requestOptionsTimeZone) {
           this.requestOptionsTimeZone = requestOptionsTimeZone;

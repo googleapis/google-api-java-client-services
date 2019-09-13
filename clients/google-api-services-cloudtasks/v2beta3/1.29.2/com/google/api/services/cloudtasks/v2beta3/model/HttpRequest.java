@@ -31,8 +31,8 @@ package com.google.api.services.cloudtasks.v2beta3.model;
  *
  *  System throttling happens because:
  *
- *   * Cloud Tasks backoffs on all errors. Normally the backoff specified in     rate limits will be
- * used. But if the worker returns     `429` (Too Many Requests), `503` (Service Unavailable), or
+ *   * Cloud Tasks backs off on all errors. Normally the backoff specified in     rate limits will
+ * be used. But if the worker returns     `429` (Too Many Requests), `503` (Service Unavailable), or
  * the rate of     errors is high, Cloud Tasks will use a higher backoff rate. The retry
  * specified in the `Retry-After` HTTP response header is considered.
  *

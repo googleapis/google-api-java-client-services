@@ -248,8 +248,8 @@ public final class Event extends com.google.api.client.json.GenericJson {
   private EventDateTime originalStartTime;
 
   /**
-   * Whether this is a private event copy where changes are not shared with other copies on other
-   * calendars. Optional. Immutable. The default is False.
+   * If set to True, Event propagation is disabled. Note that it is not the same thing as Private
+   * event properties. Optional. Immutable. The default is False.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1076,8 +1076,8 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether this is a private event copy where changes are not shared with other copies on other
-   * calendars. Optional. Immutable. The default is False.
+   * If set to True, Event propagation is disabled. Note that it is not the same thing as Private
+   * event properties. Optional. Immutable. The default is False.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPrivateCopy() {
@@ -1085,8 +1085,8 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether this is a private event copy where changes are not shared with other copies on other
-   * calendars. Optional. Immutable. The default is False.
+   * If set to True, Event propagation is disabled. Note that it is not the same thing as Private
+   * event properties. Optional. Immutable. The default is False.
    * @param privateCopy privateCopy or {@code null} for none
    */
   public Event setPrivateCopy(java.lang.Boolean privateCopy) {
@@ -1111,8 +1111,8 @@ public final class Event extends com.google.api.client.json.GenericJson {
    * </p>
    *
    * <p>
-   * Whether this is a private event copy where changes are not shared with other copies on other
- calendars. Optional. Immutable. The default is False.
+   * If set to True, Event propagation is disabled. Note that it is not the same thing as Private event
+ properties. Optional. Immutable. The default is False.
    * </p>
    */
   public boolean isPrivateCopy() {

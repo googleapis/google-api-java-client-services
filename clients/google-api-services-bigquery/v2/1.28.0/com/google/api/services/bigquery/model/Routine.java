@@ -77,6 +77,13 @@ public final class Routine extends com.google.api.client.json.GenericJson {
   private java.lang.String definitionBody;
 
   /**
+   * Optional. [Experimental] The description of the routine if defined.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String description;
+
+  /**
    * Output only. A hash of this resource.
    * The value may be {@code null}.
    */
@@ -141,7 +148,7 @@ public final class Routine extends com.google.api.client.json.GenericJson {
   private RoutineReference routineReference;
 
   /**
-   * Required.
+   * Required. The type of routine.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -235,6 +242,23 @@ public final class Routine extends com.google.api.client.json.GenericJson {
    */
   public Routine setDefinitionBody(java.lang.String definitionBody) {
     this.definitionBody = definitionBody;
+    return this;
+  }
+
+  /**
+   * Optional. [Experimental] The description of the routine if defined.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  /**
+   * Optional. [Experimental] The description of the routine if defined.
+   * @param description description or {@code null} for none
+   */
+  public Routine setDescription(java.lang.String description) {
+    this.description = description;
     return this;
   }
 
@@ -385,7 +409,7 @@ public final class Routine extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required.
+   * Required. The type of routine.
    * @return value or {@code null} for none
    */
   public java.lang.String getRoutineType() {
@@ -393,7 +417,7 @@ public final class Routine extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required.
+   * Required. The type of routine.
    * @param routineType routineType or {@code null} for none
    */
   public Routine setRoutineType(java.lang.String routineType) {

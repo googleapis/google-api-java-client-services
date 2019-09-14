@@ -30,12 +30,74 @@ package com.google.api.services.run.v1alpha1.model;
 public final class TriggerFilter extends com.google.api.client.json.GenericJson {
 
   /**
+   * Cloud Run fully managed: not supported
+   *
+   * Cloud Run on GKE: supported
+   *
+   * Attributes filters events by exact match on event context attributes. Each key in the map is
+   * compared with the equivalent key in the event context. An event passes the filter if all values
+   * are equal to the specified values.
+   *
+   * Nested context attributes are not supported as keys. Only string values are supported.
+   *
+   * +optional
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> attributes;
+
+  /**
+   * SourceAndType filters events based on exact matches on the CloudEvents type and source
+   * attributes. This field has been replaced by the Attributes field.
+   *
+   * +optional
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TriggerFilterSourceAndType sourceAndType;
 
   /**
+   * Cloud Run fully managed: not supported
+   *
+   * Cloud Run on GKE: supported
+   *
+   * Attributes filters events by exact match on event context attributes. Each key in the map is
+   * compared with the equivalent key in the event context. An event passes the filter if all values
+   * are equal to the specified values.
+   *
+   * Nested context attributes are not supported as keys. Only string values are supported.
+   *
+   * +optional
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getAttributes() {
+    return attributes;
+  }
+
+  /**
+   * Cloud Run fully managed: not supported
+   *
+   * Cloud Run on GKE: supported
+   *
+   * Attributes filters events by exact match on event context attributes. Each key in the map is
+   * compared with the equivalent key in the event context. An event passes the filter if all values
+   * are equal to the specified values.
+   *
+   * Nested context attributes are not supported as keys. Only string values are supported.
+   *
+   * +optional
+   * @param attributes attributes or {@code null} for none
+   */
+  public TriggerFilter setAttributes(java.util.Map<String, java.lang.String> attributes) {
+    this.attributes = attributes;
+    return this;
+  }
+
+  /**
+   * SourceAndType filters events based on exact matches on the CloudEvents type and source
+   * attributes. This field has been replaced by the Attributes field.
+   *
+   * +optional
    * @return value or {@code null} for none
    */
   public TriggerFilterSourceAndType getSourceAndType() {
@@ -43,6 +105,10 @@ public final class TriggerFilter extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * SourceAndType filters events based on exact matches on the CloudEvents type and source
+   * attributes. This field has been replaced by the Attributes field.
+   *
+   * +optional
    * @param sourceAndType sourceAndType or {@code null} for none
    */
   public TriggerFilter setSourceAndType(TriggerFilterSourceAndType sourceAndType) {

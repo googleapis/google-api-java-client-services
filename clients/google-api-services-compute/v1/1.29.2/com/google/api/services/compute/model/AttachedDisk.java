@@ -143,8 +143,8 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies a valid partial or full URL to an existing Persistent Disk resource. When creating a
-   * new instance, one of initializeParams.sourceImage or disks.source is required except for local
-   * SSD.
+   * new instance, one of initializeParams.sourceImage or initializeParams.sourceSnapshot or
+   * disks.source is required except for local SSD.
    *
    * If desired, you can also attach existing non-root persistent disks using this property. This
    * field is only applicable for persistent disks.
@@ -422,8 +422,8 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies a valid partial or full URL to an existing Persistent Disk resource. When creating a
-   * new instance, one of initializeParams.sourceImage or disks.source is required except for local
-   * SSD.
+   * new instance, one of initializeParams.sourceImage or initializeParams.sourceSnapshot or
+   * disks.source is required except for local SSD.
    *
    * If desired, you can also attach existing non-root persistent disks using this property. This
    * field is only applicable for persistent disks.
@@ -437,8 +437,8 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies a valid partial or full URL to an existing Persistent Disk resource. When creating a
-   * new instance, one of initializeParams.sourceImage or disks.source is required except for local
-   * SSD.
+   * new instance, one of initializeParams.sourceImage or initializeParams.sourceSnapshot or
+   * disks.source is required except for local SSD.
    *
    * If desired, you can also attach existing non-root persistent disks using this property. This
    * field is only applicable for persistent disks.

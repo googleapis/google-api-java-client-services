@@ -20,7 +20,7 @@ package com.google.api.services.compute.model;
  * Represents a Target TCP Proxy resource.
  *
  * A target TCP proxy is a component of a TCP Proxy load balancer. Global forwarding rules reference
- * ta target TCP proxy, and the target proxy then references an external backend service. For more
+ * target TCP proxy, and the target proxy then references an external backend service. For more
  * information, read TCP Proxy Load Balancing Concepts. (== resource_for beta.targetTcpProxies ==)
  * (== resource_for v1.targetTcpProxies ==)
  *

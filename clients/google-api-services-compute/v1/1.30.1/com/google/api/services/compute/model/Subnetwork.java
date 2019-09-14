@@ -139,12 +139,33 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean privateIpGoogleAccess;
 
   /**
+   * The purpose of the resource. This field can be either PRIVATE_RFC_1918 or
+   * INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to INTERNAL_HTTPS_LOAD_BALANCER is
+   * a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing. If unspecified,
+   * the purpose defaults to PRIVATE_RFC_1918.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String purpose;
+
+  /**
    * URL of the region where the Subnetwork resides. This field can be set only at resource creation
    * time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String region;
+
+  /**
+   * The role of subnetwork. Currenly, this field is only used when purpose =
+   * INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE or BACKUP. An ACTIVE subnetwork is
+   * one that is currently being used for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is
+   * one that is ready to be promoted to ACTIVE or is currently draining. This field can be updated
+   * with a patch request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String role;
 
   /**
    * An array of configurations for secondary IP ranges for VM instances contained in this
@@ -162,6 +183,17 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
+
+  /**
+   * [Output Only] The state of the subnetwork, which can be one of READY or DRAINING. A subnetwork
+   * that is READY is ready to be used. The state of DRAINING is only applicable to subnetworks that
+   * have the purpose set to INTERNAL_HTTPS_LOAD_BALANCER and indicates that connections to the load
+   * balancer are being drained. A subnetwork that is draining cannot be used or modified until it
+   * reaches a status of READY.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
 
   /**
    * [Output Only] Creation timestamp in RFC3339 text format.
@@ -446,6 +478,29 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The purpose of the resource. This field can be either PRIVATE_RFC_1918 or
+   * INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to INTERNAL_HTTPS_LOAD_BALANCER is
+   * a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing. If unspecified,
+   * the purpose defaults to PRIVATE_RFC_1918.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPurpose() {
+    return purpose;
+  }
+
+  /**
+   * The purpose of the resource. This field can be either PRIVATE_RFC_1918 or
+   * INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to INTERNAL_HTTPS_LOAD_BALANCER is
+   * a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing. If unspecified,
+   * the purpose defaults to PRIVATE_RFC_1918.
+   * @param purpose purpose or {@code null} for none
+   */
+  public Subnetwork setPurpose(java.lang.String purpose) {
+    this.purpose = purpose;
+    return this;
+  }
+
+  /**
    * URL of the region where the Subnetwork resides. This field can be set only at resource creation
    * time.
    * @return value or {@code null} for none
@@ -461,6 +516,31 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    */
   public Subnetwork setRegion(java.lang.String region) {
     this.region = region;
+    return this;
+  }
+
+  /**
+   * The role of subnetwork. Currenly, this field is only used when purpose =
+   * INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE or BACKUP. An ACTIVE subnetwork is
+   * one that is currently being used for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is
+   * one that is ready to be promoted to ACTIVE or is currently draining. This field can be updated
+   * with a patch request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRole() {
+    return role;
+  }
+
+  /**
+   * The role of subnetwork. Currenly, this field is only used when purpose =
+   * INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE or BACKUP. An ACTIVE subnetwork is
+   * one that is currently being used for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is
+   * one that is ready to be promoted to ACTIVE or is currently draining. This field can be updated
+   * with a patch request.
+   * @param role role or {@code null} for none
+   */
+  public Subnetwork setRole(java.lang.String role) {
+    this.role = role;
     return this;
   }
 
@@ -501,6 +581,31 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    */
   public Subnetwork setSelfLink(java.lang.String selfLink) {
     this.selfLink = selfLink;
+    return this;
+  }
+
+  /**
+   * [Output Only] The state of the subnetwork, which can be one of READY or DRAINING. A subnetwork
+   * that is READY is ready to be used. The state of DRAINING is only applicable to subnetworks that
+   * have the purpose set to INTERNAL_HTTPS_LOAD_BALANCER and indicates that connections to the load
+   * balancer are being drained. A subnetwork that is draining cannot be used or modified until it
+   * reaches a status of READY.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * [Output Only] The state of the subnetwork, which can be one of READY or DRAINING. A subnetwork
+   * that is READY is ready to be used. The state of DRAINING is only applicable to subnetworks that
+   * have the purpose set to INTERNAL_HTTPS_LOAD_BALANCER and indicates that connections to the load
+   * balancer are being drained. A subnetwork that is draining cannot be used or modified until it
+   * reaches a status of READY.
+   * @param state state or {@code null} for none
+   */
+  public Subnetwork setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 

@@ -108,6 +108,13 @@ public final class HealthCheck extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * [Output Only] Region where the health check resides. Not applicable to global health checks.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String region;
+
+  /**
    * [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
@@ -322,6 +329,23 @@ public final class HealthCheck extends com.google.api.client.json.GenericJson {
    */
   public HealthCheck setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * [Output Only] Region where the health check resides. Not applicable to global health checks.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRegion() {
+    return region;
+  }
+
+  /**
+   * [Output Only] Region where the health check resides. Not applicable to global health checks.
+   * @param region region or {@code null} for none
+   */
+  public HealthCheck setRegion(java.lang.String region) {
+    this.region = region;
     return this;
   }
 

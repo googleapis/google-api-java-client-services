@@ -126,6 +126,15 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * [Output Only] URL of the region where the regional URL map resides. This field is not
+   * applicable to global URL maps. You must specify this field as part of the HTTP request URL. It
+   * is not settable as a field in the request body.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String region;
+
+  /**
    * [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
@@ -358,6 +367,27 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
    */
   public UrlMap setPathMatchers(java.util.List<PathMatcher> pathMatchers) {
     this.pathMatchers = pathMatchers;
+    return this;
+  }
+
+  /**
+   * [Output Only] URL of the region where the regional URL map resides. This field is not
+   * applicable to global URL maps. You must specify this field as part of the HTTP request URL. It
+   * is not settable as a field in the request body.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRegion() {
+    return region;
+  }
+
+  /**
+   * [Output Only] URL of the region where the regional URL map resides. This field is not
+   * applicable to global URL maps. You must specify this field as part of the HTTP request URL. It
+   * is not settable as a field in the request body.
+   * @param region region or {@code null} for none
+   */
+  public UrlMap setRegion(java.lang.String region) {
+    this.region = region;
     return this;
   }
 

@@ -34,6 +34,13 @@ package com.google.api.services.logging.v2.model;
 public final class LogSink extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Options that affect sinks exporting data to BigQuery.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BigQueryOptions bigqueryOptions;
+
+  /**
    * Output only. The creation timestamp of the sink.This field may not be present for older sinks.
    * The value may be {@code null}.
    */
@@ -112,6 +119,23 @@ public final class LogSink extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String writerIdentity;
+
+  /**
+   * Optional. Options that affect sinks exporting data to BigQuery.
+   * @return value or {@code null} for none
+   */
+  public BigQueryOptions getBigqueryOptions() {
+    return bigqueryOptions;
+  }
+
+  /**
+   * Optional. Options that affect sinks exporting data to BigQuery.
+   * @param bigqueryOptions bigqueryOptions or {@code null} for none
+   */
+  public LogSink setBigqueryOptions(BigQueryOptions bigqueryOptions) {
+    this.bigqueryOptions = bigqueryOptions;
+    return this;
+  }
 
   /**
    * Output only. The creation timestamp of the sink.This field may not be present for older sinks.

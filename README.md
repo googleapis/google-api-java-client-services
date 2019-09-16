@@ -56,7 +56,7 @@ packages on [Maven Central][maven-search].
 | Cloud Filestore API | [v1](clients/google-api-services-file/v1), [v1beta1](clients/google-api-services-file/v1beta1) |
 | Cloud Firestore API | [v1](clients/google-api-services-firestore/v1), [v1beta1](clients/google-api-services-firestore/v1beta1), [v1beta2](clients/google-api-services-firestore/v1beta2) |
 | Cloud Functions API | [v1](clients/google-api-services-cloudfunctions/v1), [v1beta2](clients/google-api-services-cloudfunctions/v1beta2) |
-| Cloud Healthcare API | [v1alpha2](clients/google-api-services-healthcare/v1alpha2), [v1beta1](clients/google-api-services-healthcare/v1beta1) |
+| Cloud Healthcare API | [v1beta1](clients/google-api-services-healthcare/v1beta1) |
 | Cloud Identity API | [v1](clients/google-api-services-cloudidentity/v1), [v1beta1](clients/google-api-services-cloudidentity/v1beta1) |
 | Cloud Identity-Aware Proxy API | [v1](clients/google-api-services-iap/v1), [v1beta1](clients/google-api-services-iap/v1beta1) |
 | Cloud IoT API | [v1](clients/google-api-services-cloudiot/v1) |

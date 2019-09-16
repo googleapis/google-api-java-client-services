@@ -31,16 +31,24 @@ package com.google.api.services.iap.v1.model;
 public final class GetPolicyOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The policy format version to be returned. Acceptable values are 0, 1, and 3. If the
-   * value is 0, or the field is omitted, policy format version 1 will be returned.
+   * Optional. The policy format version to be returned.
+   *
+   * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
+   *
+   * Requests for policies with any conditional bindings must specify version 3. Policies without
+   * any conditional bindings may specify any valid value or leave the field unset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer requestedPolicyVersion;
 
   /**
-   * Optional. The policy format version to be returned. Acceptable values are 0, 1, and 3. If the
-   * value is 0, or the field is omitted, policy format version 1 will be returned.
+   * Optional. The policy format version to be returned.
+   *
+   * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
+   *
+   * Requests for policies with any conditional bindings must specify version 3. Policies without
+   * any conditional bindings may specify any valid value or leave the field unset.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRequestedPolicyVersion() {
@@ -48,8 +56,12 @@ public final class GetPolicyOptions extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The policy format version to be returned. Acceptable values are 0, 1, and 3. If the
-   * value is 0, or the field is omitted, policy format version 1 will be returned.
+   * Optional. The policy format version to be returned.
+   *
+   * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
+   *
+   * Requests for policies with any conditional bindings must specify version 3. Policies without
+   * any conditional bindings may specify any valid value or leave the field unset.
    * @param requestedPolicyVersion requestedPolicyVersion or {@code null} for none
    */
   public GetPolicyOptions setRequestedPolicyVersion(java.lang.Integer requestedPolicyVersion) {

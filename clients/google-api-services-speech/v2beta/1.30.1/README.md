@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-speech</artifactId>
-      <version>v2beta-rev20190830-1.30.1</version>
+      <version>v2beta-rev20190830-1.30.3</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-speech:v2beta-rev20190830-1.30.1'
+  compile 'com.google.apis:google-api-services-speech:v2beta-rev20190830-1.30.3'
 }
 ```
 

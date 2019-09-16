@@ -23,7 +23,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-datastore</artifactId>
-      <version>v1beta3-rev20190421-1.30.1</version>
+      <version>v1beta3-rev20190421-1.30.3</version>
     </dependency>
   </dependencies>
 </project>
@@ -36,7 +36,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-datastore:v1beta3-rev20190421-1.30.1'
+  compile 'com.google.apis:google-api-services-datastore:v1beta3-rev20190421-1.30.3'
 }
 ```
 

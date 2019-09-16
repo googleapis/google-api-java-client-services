@@ -992,17 +992,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return this;
       }
 
-      /** Maximum number of results to return. */
+      /** Maximum number of results to return. Max allowed value is 200. */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 100] [minimum: 1] [maximum: 200]
+      /** Maximum number of results to return. Max allowed value is 200. [default: 100] [minimum: 1]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
       }
 
-      /** Maximum number of results to return. */
+      /** Maximum number of results to return. Max allowed value is 200. */
       public List setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -3199,17 +3199,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return this;
       }
 
-      /** Maximum number of results to return. */
+      /** Maximum number of results to return. Max allowed value is 200. */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 200] [minimum: 1] [maximum: 200]
+      /** Maximum number of results to return. Max allowed value is 200. [default: 200] [minimum: 1]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
       }
 
-      /** Maximum number of results to return. */
+      /** Maximum number of results to return. Max allowed value is 200. */
       public List setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -4469,17 +4469,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return this;
       }
 
-      /** Maximum number of results to return. */
+      /** Maximum number of results to return. Max allowed value is 200. */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 200] [minimum: 1] [maximum: 200]
+      /** Maximum number of results to return. Max allowed value is 200. [default: 200] [minimum: 1]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
       }
 
-      /** Maximum number of results to return. */
+      /** Maximum number of results to return. Max allowed value is 200. */
       public List setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -5247,17 +5247,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return this;
       }
 
-      /** Maximum number of results to return. */
+      /** Maximum number of results to return. Max allowed value is 100. */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 100] [minimum: 1] [maximum: 100]
+      /** Maximum number of results to return. Max allowed value is 100. [default: 100] [minimum: 1]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
       }
 
-      /** Maximum number of results to return. */
+      /** Maximum number of results to return. Max allowed value is 100. */
       public List setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;
         return this;

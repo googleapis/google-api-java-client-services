@@ -276,6 +276,21 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.String primaryEmail;
 
   /**
+   * Recovery email of the user.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String recoveryEmail;
+
+  /**
+   * Recovery phone of the user. The phone number must be in the E.164 format, starting with the
+   * plus sign (+). Example: +16506661212.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String recoveryPhone;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -921,6 +936,42 @@ public final class User extends com.google.api.client.json.GenericJson {
    */
   public User setPrimaryEmail(java.lang.String primaryEmail) {
     this.primaryEmail = primaryEmail;
+    return this;
+  }
+
+  /**
+   * Recovery email of the user.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRecoveryEmail() {
+    return recoveryEmail;
+  }
+
+  /**
+   * Recovery email of the user.
+   * @param recoveryEmail recoveryEmail or {@code null} for none
+   */
+  public User setRecoveryEmail(java.lang.String recoveryEmail) {
+    this.recoveryEmail = recoveryEmail;
+    return this;
+  }
+
+  /**
+   * Recovery phone of the user. The phone number must be in the E.164 format, starting with the
+   * plus sign (+). Example: +16506661212.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRecoveryPhone() {
+    return recoveryPhone;
+  }
+
+  /**
+   * Recovery phone of the user. The phone number must be in the E.164 format, starting with the
+   * plus sign (+). Example: +16506661212.
+   * @param recoveryPhone recoveryPhone or {@code null} for none
+   */
+  public User setRecoveryPhone(java.lang.String recoveryPhone) {
+    this.recoveryPhone = recoveryPhone;
     return this;
   }
 

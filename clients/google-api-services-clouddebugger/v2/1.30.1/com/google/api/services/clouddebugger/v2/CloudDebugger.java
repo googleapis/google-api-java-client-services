@@ -47,7 +47,7 @@ public class CloudDebugger extends com.google.api.client.googleapis.services.jso
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.1 of the Stackdriver Debugger API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.3 of the Stackdriver Debugger API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**

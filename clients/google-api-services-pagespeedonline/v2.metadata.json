@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-pagespeedonline",
-    "version": "v2-rev20180606-1.30.1"
+    "version": "v2-rev20180606-1.30.3"
   }
 }

@@ -46,7 +46,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.1 of the Admin Directory API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.3 of the Admin Directory API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -992,17 +992,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return this;
       }
 
-      /** Maximum number of results to return. */
+      /** Maximum number of results to return. Max allowed value is 200. */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 100] [minimum: 1] [maximum: 200]
+      /** Maximum number of results to return. Max allowed value is 200. [default: 100] [minimum: 1]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
       }
 
-      /** Maximum number of results to return. */
+      /** Maximum number of results to return. Max allowed value is 200. */
       public List setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -3199,17 +3199,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return this;
       }
 
-      /** Maximum number of results to return. */
+      /** Maximum number of results to return. Max allowed value is 200. */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 200] [minimum: 1] [maximum: 200]
+      /** Maximum number of results to return. Max allowed value is 200. [default: 200] [minimum: 1]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
       }
 
-      /** Maximum number of results to return. */
+      /** Maximum number of results to return. Max allowed value is 200. */
       public List setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -4469,17 +4469,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return this;
       }
 
-      /** Maximum number of results to return. */
+      /** Maximum number of results to return. Max allowed value is 200. */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 200] [minimum: 1] [maximum: 200]
+      /** Maximum number of results to return. Max allowed value is 200. [default: 200] [minimum: 1]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
       }
 
-      /** Maximum number of results to return. */
+      /** Maximum number of results to return. Max allowed value is 200. */
       public List setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -5247,17 +5247,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return this;
       }
 
-      /** Maximum number of results to return. */
+      /** Maximum number of results to return. Max allowed value is 100. */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 100] [minimum: 1] [maximum: 100]
+      /** Maximum number of results to return. Max allowed value is 100. [default: 100] [minimum: 1]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
       }
 
-      /** Maximum number of results to return. */
+      /** Maximum number of results to return. Max allowed value is 100. */
       public List setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;
         return this;

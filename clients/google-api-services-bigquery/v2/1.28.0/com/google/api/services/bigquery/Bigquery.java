@@ -2020,9 +2020,9 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the bigquery server.  After setting any optional
      * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
-     * @param projectId Project ID of the model to delete.
-     * @param datasetId Dataset ID of the model to delete.
-     * @param modelId Model ID of the model to delete.
+     * @param projectId Required. Project ID of the model to delete.
+     * @param datasetId Required. Dataset ID of the model to delete.
+     * @param modelId Required. Model ID of the model to delete.
      * @return the request
      */
     public Delete delete(java.lang.String projectId, java.lang.String datasetId, java.lang.String modelId) throws java.io.IOException {
@@ -2055,9 +2055,9 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId Project ID of the model to delete.
-       * @param datasetId Dataset ID of the model to delete.
-       * @param modelId Model ID of the model to delete.
+       * @param projectId Required. Project ID of the model to delete.
+       * @param datasetId Required. Dataset ID of the model to delete.
+       * @param modelId Required. Model ID of the model to delete.
        * @since 1.13
        */
       protected Delete(java.lang.String projectId, java.lang.String datasetId, java.lang.String modelId) {
@@ -2117,17 +2117,17 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
         return (Delete) super.setUserIp(userIp);
       }
 
-      /** Project ID of the model to delete. */
+      /** Required. Project ID of the model to delete. */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** Project ID of the model to delete.
+      /** Required. Project ID of the model to delete.
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** Project ID of the model to delete. */
+      /** Required. Project ID of the model to delete. */
       public Delete setProjectId(java.lang.String projectId) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
@@ -2138,17 +2138,17 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /** Dataset ID of the model to delete. */
+      /** Required. Dataset ID of the model to delete. */
       @com.google.api.client.util.Key
       private java.lang.String datasetId;
 
-      /** Dataset ID of the model to delete.
+      /** Required. Dataset ID of the model to delete.
        */
       public java.lang.String getDatasetId() {
         return datasetId;
       }
 
-      /** Dataset ID of the model to delete. */
+      /** Required. Dataset ID of the model to delete. */
       public Delete setDatasetId(java.lang.String datasetId) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
@@ -2159,17 +2159,17 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /** Model ID of the model to delete. */
+      /** Required. Model ID of the model to delete. */
       @com.google.api.client.util.Key
       private java.lang.String modelId;
 
-      /** Model ID of the model to delete.
+      /** Required. Model ID of the model to delete.
        */
       public java.lang.String getModelId() {
         return modelId;
       }
 
-      /** Model ID of the model to delete. */
+      /** Required. Model ID of the model to delete. */
       public Delete setModelId(java.lang.String modelId) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(MODEL_ID_PATTERN.matcher(modelId).matches(),
@@ -2193,9 +2193,9 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the bigquery server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param projectId Project ID of the requested model.
-     * @param datasetId Dataset ID of the requested model.
-     * @param modelId Model ID of the requested model.
+     * @param projectId Required. Project ID of the requested model.
+     * @param datasetId Required. Dataset ID of the requested model.
+     * @param modelId Required. Model ID of the requested model.
      * @return the request
      */
     public Get get(java.lang.String projectId, java.lang.String datasetId, java.lang.String modelId) throws java.io.IOException {
@@ -2227,9 +2227,9 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId Project ID of the requested model.
-       * @param datasetId Dataset ID of the requested model.
-       * @param modelId Model ID of the requested model.
+       * @param projectId Required. Project ID of the requested model.
+       * @param datasetId Required. Dataset ID of the requested model.
+       * @param modelId Required. Model ID of the requested model.
        * @since 1.13
        */
       protected Get(java.lang.String projectId, java.lang.String datasetId, java.lang.String modelId) {
@@ -2299,17 +2299,17 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
         return (Get) super.setUserIp(userIp);
       }
 
-      /** Project ID of the requested model. */
+      /** Required. Project ID of the requested model. */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** Project ID of the requested model.
+      /** Required. Project ID of the requested model.
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** Project ID of the requested model. */
+      /** Required. Project ID of the requested model. */
       public Get setProjectId(java.lang.String projectId) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
@@ -2320,17 +2320,17 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /** Dataset ID of the requested model. */
+      /** Required. Dataset ID of the requested model. */
       @com.google.api.client.util.Key
       private java.lang.String datasetId;
 
-      /** Dataset ID of the requested model.
+      /** Required. Dataset ID of the requested model.
        */
       public java.lang.String getDatasetId() {
         return datasetId;
       }
 
-      /** Dataset ID of the requested model. */
+      /** Required. Dataset ID of the requested model. */
       public Get setDatasetId(java.lang.String datasetId) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
@@ -2341,17 +2341,17 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /** Model ID of the requested model. */
+      /** Required. Model ID of the requested model. */
       @com.google.api.client.util.Key
       private java.lang.String modelId;
 
-      /** Model ID of the requested model.
+      /** Required. Model ID of the requested model.
        */
       public java.lang.String getModelId() {
         return modelId;
       }
 
-      /** Model ID of the requested model. */
+      /** Required. Model ID of the requested model. */
       public Get setModelId(java.lang.String modelId) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(MODEL_ID_PATTERN.matcher(modelId).matches(),
@@ -2375,8 +2375,8 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the bigquery server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param projectId Project ID of the models to list.
-     * @param datasetId Dataset ID of the models to list.
+     * @param projectId Required. Project ID of the models to list.
+     * @param datasetId Required. Dataset ID of the models to list.
      * @return the request
      */
     public List list(java.lang.String projectId, java.lang.String datasetId) throws java.io.IOException {
@@ -2405,8 +2405,8 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId Project ID of the models to list.
-       * @param datasetId Dataset ID of the models to list.
+       * @param projectId Required. Project ID of the models to list.
+       * @param datasetId Required. Dataset ID of the models to list.
        * @since 1.13
        */
       protected List(java.lang.String projectId, java.lang.String datasetId) {
@@ -2470,17 +2470,17 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
         return (List) super.setUserIp(userIp);
       }
 
-      /** Project ID of the models to list. */
+      /** Required. Project ID of the models to list. */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** Project ID of the models to list.
+      /** Required. Project ID of the models to list.
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** Project ID of the models to list. */
+      /** Required. Project ID of the models to list. */
       public List setProjectId(java.lang.String projectId) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
@@ -2491,17 +2491,17 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /** Dataset ID of the models to list. */
+      /** Required. Dataset ID of the models to list. */
       @com.google.api.client.util.Key
       private java.lang.String datasetId;
 
-      /** Dataset ID of the models to list.
+      /** Required. Dataset ID of the models to list.
        */
       public java.lang.String getDatasetId() {
         return datasetId;
       }
 
-      /** Dataset ID of the models to list. */
+      /** Required. Dataset ID of the models to list. */
       public List setDatasetId(java.lang.String datasetId) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
@@ -2568,9 +2568,9 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the bigquery server.  After setting any optional
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
-     * @param projectId Project ID of the model to patch.
-     * @param datasetId Dataset ID of the model to patch.
-     * @param modelId Model ID of the model to patch.
+     * @param projectId Required. Project ID of the model to patch.
+     * @param datasetId Required. Dataset ID of the model to patch.
+     * @param modelId Required. Model ID of the model to patch.
      * @param content the {@link com.google.api.services.bigquery.model.Model}
      * @return the request
      */
@@ -2604,9 +2604,9 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId Project ID of the model to patch.
-       * @param datasetId Dataset ID of the model to patch.
-       * @param modelId Model ID of the model to patch.
+       * @param projectId Required. Project ID of the model to patch.
+       * @param datasetId Required. Dataset ID of the model to patch.
+       * @param modelId Required. Model ID of the model to patch.
        * @param content the {@link com.google.api.services.bigquery.model.Model}
        * @since 1.13
        */
@@ -2667,17 +2667,17 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
         return (Patch) super.setUserIp(userIp);
       }
 
-      /** Project ID of the model to patch. */
+      /** Required. Project ID of the model to patch. */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** Project ID of the model to patch.
+      /** Required. Project ID of the model to patch.
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** Project ID of the model to patch. */
+      /** Required. Project ID of the model to patch. */
       public Patch setProjectId(java.lang.String projectId) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
@@ -2688,17 +2688,17 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /** Dataset ID of the model to patch. */
+      /** Required. Dataset ID of the model to patch. */
       @com.google.api.client.util.Key
       private java.lang.String datasetId;
 
-      /** Dataset ID of the model to patch.
+      /** Required. Dataset ID of the model to patch.
        */
       public java.lang.String getDatasetId() {
         return datasetId;
       }
 
-      /** Dataset ID of the model to patch. */
+      /** Required. Dataset ID of the model to patch. */
       public Patch setDatasetId(java.lang.String datasetId) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
@@ -2709,17 +2709,17 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /** Model ID of the model to patch. */
+      /** Required. Model ID of the model to patch. */
       @com.google.api.client.util.Key
       private java.lang.String modelId;
 
-      /** Model ID of the model to patch.
+      /** Required. Model ID of the model to patch.
        */
       public java.lang.String getModelId() {
         return modelId;
       }
 
-      /** Model ID of the model to patch. */
+      /** Required. Model ID of the model to patch. */
       public Patch setModelId(java.lang.String modelId) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(MODEL_ID_PATTERN.matcher(modelId).matches(),
@@ -3015,9 +3015,9 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the bigquery server.  After setting any optional
      * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
-     * @param projectId Project ID of the routine to delete
-     * @param datasetId Dataset ID of the routine to delete
-     * @param routineId Routine ID of the routine to delete
+     * @param projectId Required. Project ID of the routine to delete
+     * @param datasetId Required. Dataset ID of the routine to delete
+     * @param routineId Required. Routine ID of the routine to delete
      * @return the request
      */
     public Delete delete(java.lang.String projectId, java.lang.String datasetId, java.lang.String routineId) throws java.io.IOException {
@@ -3050,9 +3050,9 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId Project ID of the routine to delete
-       * @param datasetId Dataset ID of the routine to delete
-       * @param routineId Routine ID of the routine to delete
+       * @param projectId Required. Project ID of the routine to delete
+       * @param datasetId Required. Dataset ID of the routine to delete
+       * @param routineId Required. Routine ID of the routine to delete
        * @since 1.13
        */
       protected Delete(java.lang.String projectId, java.lang.String datasetId, java.lang.String routineId) {
@@ -3112,17 +3112,17 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
         return (Delete) super.setUserIp(userIp);
       }
 
-      /** Project ID of the routine to delete */
+      /** Required. Project ID of the routine to delete */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** Project ID of the routine to delete
+      /** Required. Project ID of the routine to delete
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** Project ID of the routine to delete */
+      /** Required. Project ID of the routine to delete */
       public Delete setProjectId(java.lang.String projectId) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
@@ -3133,17 +3133,17 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /** Dataset ID of the routine to delete */
+      /** Required. Dataset ID of the routine to delete */
       @com.google.api.client.util.Key
       private java.lang.String datasetId;
 
-      /** Dataset ID of the routine to delete
+      /** Required. Dataset ID of the routine to delete
        */
       public java.lang.String getDatasetId() {
         return datasetId;
       }
 
-      /** Dataset ID of the routine to delete */
+      /** Required. Dataset ID of the routine to delete */
       public Delete setDatasetId(java.lang.String datasetId) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
@@ -3154,17 +3154,17 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /** Routine ID of the routine to delete */
+      /** Required. Routine ID of the routine to delete */
       @com.google.api.client.util.Key
       private java.lang.String routineId;
 
-      /** Routine ID of the routine to delete
+      /** Required. Routine ID of the routine to delete
        */
       public java.lang.String getRoutineId() {
         return routineId;
       }
 
-      /** Routine ID of the routine to delete */
+      /** Required. Routine ID of the routine to delete */
       public Delete setRoutineId(java.lang.String routineId) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(ROUTINE_ID_PATTERN.matcher(routineId).matches(),
@@ -3188,9 +3188,9 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the bigquery server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param projectId Project ID of the requested routine
-     * @param datasetId Dataset ID of the requested routine
-     * @param routineId Routine ID of the requested routine
+     * @param projectId Required. Project ID of the requested routine
+     * @param datasetId Required. Dataset ID of the requested routine
+     * @param routineId Required. Routine ID of the requested routine
      * @return the request
      */
     public Get get(java.lang.String projectId, java.lang.String datasetId, java.lang.String routineId) throws java.io.IOException {
@@ -3222,9 +3222,9 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId Project ID of the requested routine
-       * @param datasetId Dataset ID of the requested routine
-       * @param routineId Routine ID of the requested routine
+       * @param projectId Required. Project ID of the requested routine
+       * @param datasetId Required. Dataset ID of the requested routine
+       * @param routineId Required. Routine ID of the requested routine
        * @since 1.13
        */
       protected Get(java.lang.String projectId, java.lang.String datasetId, java.lang.String routineId) {
@@ -3294,17 +3294,17 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
         return (Get) super.setUserIp(userIp);
       }
 
-      /** Project ID of the requested routine */
+      /** Required. Project ID of the requested routine */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** Project ID of the requested routine
+      /** Required. Project ID of the requested routine
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** Project ID of the requested routine */
+      /** Required. Project ID of the requested routine */
       public Get setProjectId(java.lang.String projectId) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
@@ -3315,17 +3315,17 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /** Dataset ID of the requested routine */
+      /** Required. Dataset ID of the requested routine */
       @com.google.api.client.util.Key
       private java.lang.String datasetId;
 
-      /** Dataset ID of the requested routine
+      /** Required. Dataset ID of the requested routine
        */
       public java.lang.String getDatasetId() {
         return datasetId;
       }
 
-      /** Dataset ID of the requested routine */
+      /** Required. Dataset ID of the requested routine */
       public Get setDatasetId(java.lang.String datasetId) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
@@ -3336,17 +3336,17 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /** Routine ID of the requested routine */
+      /** Required. Routine ID of the requested routine */
       @com.google.api.client.util.Key
       private java.lang.String routineId;
 
-      /** Routine ID of the requested routine
+      /** Required. Routine ID of the requested routine
        */
       public java.lang.String getRoutineId() {
         return routineId;
       }
 
-      /** Routine ID of the requested routine */
+      /** Required. Routine ID of the requested routine */
       public Get setRoutineId(java.lang.String routineId) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(ROUTINE_ID_PATTERN.matcher(routineId).matches(),
@@ -3393,8 +3393,8 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the bigquery server.  After setting any optional
      * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
      *
-     * @param projectId Project ID of the new routine
-     * @param datasetId Dataset ID of the new routine
+     * @param projectId Required. Project ID of the new routine
+     * @param datasetId Required. Dataset ID of the new routine
      * @param content the {@link com.google.api.services.bigquery.model.Routine}
      * @return the request
      */
@@ -3425,8 +3425,8 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId Project ID of the new routine
-       * @param datasetId Dataset ID of the new routine
+       * @param projectId Required. Project ID of the new routine
+       * @param datasetId Required. Dataset ID of the new routine
        * @param content the {@link com.google.api.services.bigquery.model.Routine}
        * @since 1.13
        */
@@ -3481,17 +3481,17 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
         return (Insert) super.setUserIp(userIp);
       }
 
-      /** Project ID of the new routine */
+      /** Required. Project ID of the new routine */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** Project ID of the new routine
+      /** Required. Project ID of the new routine
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** Project ID of the new routine */
+      /** Required. Project ID of the new routine */
       public Insert setProjectId(java.lang.String projectId) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
@@ -3502,17 +3502,17 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /** Dataset ID of the new routine */
+      /** Required. Dataset ID of the new routine */
       @com.google.api.client.util.Key
       private java.lang.String datasetId;
 
-      /** Dataset ID of the new routine
+      /** Required. Dataset ID of the new routine
        */
       public java.lang.String getDatasetId() {
         return datasetId;
       }
 
-      /** Dataset ID of the new routine */
+      /** Required. Dataset ID of the new routine */
       public Insert setDatasetId(java.lang.String datasetId) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
@@ -3536,8 +3536,8 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the bigquery server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param projectId Project ID of the routines to list
-     * @param datasetId Dataset ID of the routines to list
+     * @param projectId Required. Project ID of the routines to list
+     * @param datasetId Required. Dataset ID of the routines to list
      * @return the request
      */
     public List list(java.lang.String projectId, java.lang.String datasetId) throws java.io.IOException {
@@ -3566,8 +3566,8 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId Project ID of the routines to list
-       * @param datasetId Dataset ID of the routines to list
+       * @param projectId Required. Project ID of the routines to list
+       * @param datasetId Required. Dataset ID of the routines to list
        * @since 1.13
        */
       protected List(java.lang.String projectId, java.lang.String datasetId) {
@@ -3631,17 +3631,17 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
         return (List) super.setUserIp(userIp);
       }
 
-      /** Project ID of the routines to list */
+      /** Required. Project ID of the routines to list */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** Project ID of the routines to list
+      /** Required. Project ID of the routines to list
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** Project ID of the routines to list */
+      /** Required. Project ID of the routines to list */
       public List setProjectId(java.lang.String projectId) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
@@ -3652,17 +3652,17 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /** Dataset ID of the routines to list */
+      /** Required. Dataset ID of the routines to list */
       @com.google.api.client.util.Key
       private java.lang.String datasetId;
 
-      /** Dataset ID of the routines to list
+      /** Required. Dataset ID of the routines to list
        */
       public java.lang.String getDatasetId() {
         return datasetId;
       }
 
-      /** Dataset ID of the routines to list */
+      /** Required. Dataset ID of the routines to list */
       public List setDatasetId(java.lang.String datasetId) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
@@ -3730,9 +3730,9 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the bigquery server.  After setting any optional
      * parameters, call the {@link Update#execute()} method to invoke the remote operation.
      *
-     * @param projectId Project ID of the routine to update
-     * @param datasetId Dataset ID of the routine to update
-     * @param routineId Routine ID of the routine to update
+     * @param projectId Required. Project ID of the routine to update
+     * @param datasetId Required. Dataset ID of the routine to update
+     * @param routineId Required. Routine ID of the routine to update
      * @param content the {@link com.google.api.services.bigquery.model.Routine}
      * @return the request
      */
@@ -3767,9 +3767,9 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId Project ID of the routine to update
-       * @param datasetId Dataset ID of the routine to update
-       * @param routineId Routine ID of the routine to update
+       * @param projectId Required. Project ID of the routine to update
+       * @param datasetId Required. Dataset ID of the routine to update
+       * @param routineId Required. Routine ID of the routine to update
        * @param content the {@link com.google.api.services.bigquery.model.Routine}
        * @since 1.13
        */
@@ -3830,17 +3830,17 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
         return (Update) super.setUserIp(userIp);
       }
 
-      /** Project ID of the routine to update */
+      /** Required. Project ID of the routine to update */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** Project ID of the routine to update
+      /** Required. Project ID of the routine to update
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** Project ID of the routine to update */
+      /** Required. Project ID of the routine to update */
       public Update setProjectId(java.lang.String projectId) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
@@ -3851,17 +3851,17 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /** Dataset ID of the routine to update */
+      /** Required. Dataset ID of the routine to update */
       @com.google.api.client.util.Key
       private java.lang.String datasetId;
 
-      /** Dataset ID of the routine to update
+      /** Required. Dataset ID of the routine to update
        */
       public java.lang.String getDatasetId() {
         return datasetId;
       }
 
-      /** Dataset ID of the routine to update */
+      /** Required. Dataset ID of the routine to update */
       public Update setDatasetId(java.lang.String datasetId) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
@@ -3872,17 +3872,17 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /** Routine ID of the routine to update */
+      /** Required. Routine ID of the routine to update */
       @com.google.api.client.util.Key
       private java.lang.String routineId;
 
-      /** Routine ID of the routine to update
+      /** Required. Routine ID of the routine to update
        */
       public java.lang.String getRoutineId() {
         return routineId;
       }
 
-      /** Routine ID of the routine to update */
+      /** Required. Routine ID of the routine to update */
       public Update setRoutineId(java.lang.String routineId) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(ROUTINE_ID_PATTERN.matcher(routineId).matches(),

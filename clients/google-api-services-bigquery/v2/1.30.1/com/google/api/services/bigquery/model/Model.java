@@ -37,7 +37,7 @@ public final class Model extends com.google.api.client.json.GenericJson {
   private java.lang.Long creationTime;
 
   /**
-   * [Optional] A user-friendly description of this model.
+   * Optional. A user-friendly description of this model.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +59,7 @@ public final class Model extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * [Optional] The time when this model expires, in milliseconds since the epoch. If not present,
+   * Optional. The time when this model expires, in milliseconds since the epoch. If not present,
    * the model will persist indefinitely. Expired models will be deleted and their storage
    * reclaimed.  The defaultTableExpirationMs property of the encapsulating dataset can be used to
    * set a default expirationTime on newly created models.
@@ -76,7 +76,7 @@ public final class Model extends com.google.api.client.json.GenericJson {
   private java.util.List<StandardSqlField> featureColumns;
 
   /**
-   * [Optional] A descriptive name for this model.
+   * Optional. A descriptive name for this model.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,11 +91,11 @@ public final class Model extends com.google.api.client.json.GenericJson {
   private java.util.List<StandardSqlField> labelColumns;
 
   /**
-   * [Optional] The labels associated with this model. You can use these to organize and group your
-   * models. Label keys and values can be no longer than 63 characters, can only contain lowercase
-   * letters, numeric characters, underscores and dashes. International characters are allowed.
-   * Label values are optional. Label keys must start with a letter and each label in the list must
-   * have a different key.
+   * The labels associated with this model. You can use these to organize and group your models.
+   * Label keys and values can be no longer than 63 characters, can only contain lowercase letters,
+   * numeric characters, underscores and dashes. International characters are allowed. Label values
+   * are optional. Label keys must start with a letter and each label in the list must have a
+   * different key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -155,7 +155,7 @@ public final class Model extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] A user-friendly description of this model.
+   * Optional. A user-friendly description of this model.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -163,7 +163,7 @@ public final class Model extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] A user-friendly description of this model.
+   * Optional. A user-friendly description of this model.
    * @param description description or {@code null} for none
    */
   public Model setDescription(java.lang.String description) {
@@ -208,7 +208,7 @@ public final class Model extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] The time when this model expires, in milliseconds since the epoch. If not present,
+   * Optional. The time when this model expires, in milliseconds since the epoch. If not present,
    * the model will persist indefinitely. Expired models will be deleted and their storage
    * reclaimed.  The defaultTableExpirationMs property of the encapsulating dataset can be used to
    * set a default expirationTime on newly created models.
@@ -219,7 +219,7 @@ public final class Model extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] The time when this model expires, in milliseconds since the epoch. If not present,
+   * Optional. The time when this model expires, in milliseconds since the epoch. If not present,
    * the model will persist indefinitely. Expired models will be deleted and their storage
    * reclaimed.  The defaultTableExpirationMs property of the encapsulating dataset can be used to
    * set a default expirationTime on newly created models.
@@ -248,7 +248,7 @@ public final class Model extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] A descriptive name for this model.
+   * Optional. A descriptive name for this model.
    * @return value or {@code null} for none
    */
   public java.lang.String getFriendlyName() {
@@ -256,7 +256,7 @@ public final class Model extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] A descriptive name for this model.
+   * Optional. A descriptive name for this model.
    * @param friendlyName friendlyName or {@code null} for none
    */
   public Model setFriendlyName(java.lang.String friendlyName) {
@@ -284,11 +284,11 @@ public final class Model extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] The labels associated with this model. You can use these to organize and group your
-   * models. Label keys and values can be no longer than 63 characters, can only contain lowercase
-   * letters, numeric characters, underscores and dashes. International characters are allowed.
-   * Label values are optional. Label keys must start with a letter and each label in the list must
-   * have a different key.
+   * The labels associated with this model. You can use these to organize and group your models.
+   * Label keys and values can be no longer than 63 characters, can only contain lowercase letters,
+   * numeric characters, underscores and dashes. International characters are allowed. Label values
+   * are optional. Label keys must start with a letter and each label in the list must have a
+   * different key.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -296,11 +296,11 @@ public final class Model extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] The labels associated with this model. You can use these to organize and group your
-   * models. Label keys and values can be no longer than 63 characters, can only contain lowercase
-   * letters, numeric characters, underscores and dashes. International characters are allowed.
-   * Label values are optional. Label keys must start with a letter and each label in the list must
-   * have a different key.
+   * The labels associated with this model. You can use these to organize and group your models.
+   * Label keys and values can be no longer than 63 characters, can only contain lowercase letters,
+   * numeric characters, underscores and dashes. International characters are allowed. Label values
+   * are optional. Label keys must start with a letter and each label in the list must have a
+   * different key.
    * @param labels labels or {@code null} for none
    */
   public Model setLabels(java.util.Map<String, java.lang.String> labels) {

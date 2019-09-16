@@ -56,6 +56,18 @@ public final class HealthCheckService extends com.google.api.client.json.Generic
   private java.util.List<java.lang.String> healthChecks;
 
   /**
+   * Optional. Policy for how the results from multiple health checks for the same endpoint are
+   * aggregated. Defaults to NO_AGGREGATION if unspecified. - NO_AGGREGATION. An EndpointHealth
+   * message is returned for each backend in the health check service.  - AND. If any backend's
+   * health check reports UNHEALTHY, then UNHEALTHY is the HealthState of the entire health check
+   * service. If all backend's are healthy, the HealthState of the health check service is HEALTHY.
+   * .
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String healthStatusAggregationPolicy;
+
+  /**
    * Policy for how the results from multiple health checks for the same endpoint are aggregated. -
    * NO_AGGREGATION. An EndpointHealth message is returned for each backend in the health check
    * service.  - AND. If any backend's health check reports UNHEALTHY, then UNHEALTHY is the
@@ -188,6 +200,33 @@ public final class HealthCheckService extends com.google.api.client.json.Generic
    */
   public HealthCheckService setHealthChecks(java.util.List<java.lang.String> healthChecks) {
     this.healthChecks = healthChecks;
+    return this;
+  }
+
+  /**
+   * Optional. Policy for how the results from multiple health checks for the same endpoint are
+   * aggregated. Defaults to NO_AGGREGATION if unspecified. - NO_AGGREGATION. An EndpointHealth
+   * message is returned for each backend in the health check service.  - AND. If any backend's
+   * health check reports UNHEALTHY, then UNHEALTHY is the HealthState of the entire health check
+   * service. If all backend's are healthy, the HealthState of the health check service is HEALTHY.
+   * .
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHealthStatusAggregationPolicy() {
+    return healthStatusAggregationPolicy;
+  }
+
+  /**
+   * Optional. Policy for how the results from multiple health checks for the same endpoint are
+   * aggregated. Defaults to NO_AGGREGATION if unspecified. - NO_AGGREGATION. An EndpointHealth
+   * message is returned for each backend in the health check service.  - AND. If any backend's
+   * health check reports UNHEALTHY, then UNHEALTHY is the HealthState of the entire health check
+   * service. If all backend's are healthy, the HealthState of the health check service is HEALTHY.
+   * .
+   * @param healthStatusAggregationPolicy healthStatusAggregationPolicy or {@code null} for none
+   */
+  public HealthCheckService setHealthStatusAggregationPolicy(java.lang.String healthStatusAggregationPolicy) {
+    this.healthStatusAggregationPolicy = healthStatusAggregationPolicy;
     return this;
   }
 

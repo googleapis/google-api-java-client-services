@@ -88,6 +88,14 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
   private java.lang.String privateKey;
 
   /**
+   * [Output Only] URL of the region where the regional SSL Certificate resides. This field is not
+   * applicable to global SSL Certificate.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String region;
+
+  /**
    * [Output only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
@@ -220,6 +228,25 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
    */
   public SslCertificate setPrivateKey(java.lang.String privateKey) {
     this.privateKey = privateKey;
+    return this;
+  }
+
+  /**
+   * [Output Only] URL of the region where the regional SSL Certificate resides. This field is not
+   * applicable to global SSL Certificate.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRegion() {
+    return region;
+  }
+
+  /**
+   * [Output Only] URL of the region where the regional SSL Certificate resides. This field is not
+   * applicable to global SSL Certificate.
+   * @param region region or {@code null} for none
+   */
+  public SslCertificate setRegion(java.lang.String region) {
+    this.region = region;
     return this;
   }
 

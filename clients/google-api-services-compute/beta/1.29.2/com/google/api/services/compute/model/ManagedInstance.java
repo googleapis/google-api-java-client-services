@@ -67,6 +67,13 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   private java.lang.String instance;
 
   /**
+   * [Output Only] Health state of the instance per health-check.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ManagedInstanceInstanceHealth> instanceHealth;
+
+  /**
    * [Output Only] The status of the instance. This field is empty when the instance does not exist.
    * The value may be {@code null}.
    */
@@ -167,6 +174,23 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
    */
   public ManagedInstance setInstance(java.lang.String instance) {
     this.instance = instance;
+    return this;
+  }
+
+  /**
+   * [Output Only] Health state of the instance per health-check.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ManagedInstanceInstanceHealth> getInstanceHealth() {
+    return instanceHealth;
+  }
+
+  /**
+   * [Output Only] Health state of the instance per health-check.
+   * @param instanceHealth instanceHealth or {@code null} for none
+   */
+  public ManagedInstance setInstanceHealth(java.util.List<ManagedInstanceInstanceHealth> instanceHealth) {
+    this.instanceHealth = instanceHealth;
     return this;
   }
 

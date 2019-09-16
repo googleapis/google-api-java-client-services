@@ -74,6 +74,14 @@ public final class TargetHttpProxy extends com.google.api.client.json.GenericJso
   private java.lang.String name;
 
   /**
+   * [Output Only] URL of the region where the regional Target HTTP Proxy resides. This field is not
+   * applicable to global Target HTTP Proxies.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String region;
+
+  /**
    * [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
@@ -177,6 +185,25 @@ public final class TargetHttpProxy extends com.google.api.client.json.GenericJso
    */
   public TargetHttpProxy setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * [Output Only] URL of the region where the regional Target HTTP Proxy resides. This field is not
+   * applicable to global Target HTTP Proxies.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRegion() {
+    return region;
+  }
+
+  /**
+   * [Output Only] URL of the region where the regional Target HTTP Proxy resides. This field is not
+   * applicable to global Target HTTP Proxies.
+   * @param region region or {@code null} for none
+   */
+  public TargetHttpProxy setRegion(java.lang.String region) {
+    this.region = region;
     return this;
   }
 

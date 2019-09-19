@@ -82,6 +82,17 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig ex
   private java.lang.String minCpuPlatform;
 
   /**
+   * Determines the type of network access granted to workers. Possible values:
+   *
+   * - "public": Workers can connect to the public internet. - "private": Workers can only connect
+   * to Google APIs and services. - "restricted-private": Workers can only connect to Google APIs
+   * that are   reachable through `restricted.googleapis.com` (`199.36.153.4/30`).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String networkAccess;
+
+  /**
    * Determines whether the worker is reserved (equivalent to a Compute Engine on-demand VM and
    * therefore won't be preempted). See [Preemptible VMs](https://cloud.google.com/preemptible-vms/)
    * for more details.
@@ -207,6 +218,31 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig ex
    */
   public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig setMinCpuPlatform(java.lang.String minCpuPlatform) {
     this.minCpuPlatform = minCpuPlatform;
+    return this;
+  }
+
+  /**
+   * Determines the type of network access granted to workers. Possible values:
+   *
+   * - "public": Workers can connect to the public internet. - "private": Workers can only connect
+   * to Google APIs and services. - "restricted-private": Workers can only connect to Google APIs
+   * that are   reachable through `restricted.googleapis.com` (`199.36.153.4/30`).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNetworkAccess() {
+    return networkAccess;
+  }
+
+  /**
+   * Determines the type of network access granted to workers. Possible values:
+   *
+   * - "public": Workers can connect to the public internet. - "private": Workers can only connect
+   * to Google APIs and services. - "restricted-private": Workers can only connect to Google APIs
+   * that are   reachable through `restricted.googleapis.com` (`199.36.153.4/30`).
+   * @param networkAccess networkAccess or {@code null} for none
+   */
+  public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig setNetworkAccess(java.lang.String networkAccess) {
+    this.networkAccess = networkAccess;
     return this;
   }
 

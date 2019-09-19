@@ -31,21 +31,21 @@ package com.google.api.services.remotebuildexecution.v1.model;
 public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The number of the guest accelerator cards exposed to this VM.
+   * The number of guest accelerator cards exposed to each VM.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long acceleratorCount;
 
   /**
-   * The type of accelerator to attach to this VM, e.g. "nvidia-tesla-k80" for nVidia Tesla K80.
+   * The type of accelerator to attach to each VM, e.g. "nvidia-tesla-k80" for nVidia Tesla K80.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String acceleratorType;
 
   /**
-   * The number of the guest accelerator cards exposed to this VM.
+   * The number of guest accelerator cards exposed to each VM.
    * @return value or {@code null} for none
    */
   public java.lang.Long getAcceleratorCount() {
@@ -53,7 +53,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConf
   }
 
   /**
-   * The number of the guest accelerator cards exposed to this VM.
+   * The number of guest accelerator cards exposed to each VM.
    * @param acceleratorCount acceleratorCount or {@code null} for none
    */
   public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfig setAcceleratorCount(java.lang.Long acceleratorCount) {
@@ -62,7 +62,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConf
   }
 
   /**
-   * The type of accelerator to attach to this VM, e.g. "nvidia-tesla-k80" for nVidia Tesla K80.
+   * The type of accelerator to attach to each VM, e.g. "nvidia-tesla-k80" for nVidia Tesla K80.
    * @return value or {@code null} for none
    */
   public java.lang.String getAcceleratorType() {
@@ -70,7 +70,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConf
   }
 
   /**
-   * The type of accelerator to attach to this VM, e.g. "nvidia-tesla-k80" for nVidia Tesla K80.
+   * The type of accelerator to attach to each VM, e.g. "nvidia-tesla-k80" for nVidia Tesla K80.
    * @param acceleratorType acceleratorType or {@code null} for none
    */
   public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfig setAcceleratorType(java.lang.String acceleratorType) {

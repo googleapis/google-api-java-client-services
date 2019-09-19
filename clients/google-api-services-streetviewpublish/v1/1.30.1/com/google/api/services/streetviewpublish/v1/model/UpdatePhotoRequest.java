@@ -38,9 +38,10 @@ public final class UpdatePhotoRequest extends com.google.api.client.json.Generic
   private Photo photo;
 
   /**
-   * Mask that identifies fields on the photo metadata to update. If not present, the old Photo
-   * metadata is entirely replaced with the new Photo metadata in this request. The update fails if
-   * invalid fields are specified. Multiple fields can be specified in a comma-delimited list.
+   * Required. Mask that identifies fields on the photo metadata to update. If not present, the old
+   * Photo metadata is entirely replaced with the new Photo metadata in this request. The update
+   * fails if invalid fields are specified. Multiple fields can be specified in a comma-delimited
+   * list.
    *
    * The following fields are valid:
    *
@@ -73,9 +74,10 @@ public final class UpdatePhotoRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * Mask that identifies fields on the photo metadata to update. If not present, the old Photo
-   * metadata is entirely replaced with the new Photo metadata in this request. The update fails if
-   * invalid fields are specified. Multiple fields can be specified in a comma-delimited list.
+   * Required. Mask that identifies fields on the photo metadata to update. If not present, the old
+   * Photo metadata is entirely replaced with the new Photo metadata in this request. The update
+   * fails if invalid fields are specified. Multiple fields can be specified in a comma-delimited
+   * list.
    *
    * The following fields are valid:
    *
@@ -92,9 +94,10 @@ public final class UpdatePhotoRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * Mask that identifies fields on the photo metadata to update. If not present, the old Photo
-   * metadata is entirely replaced with the new Photo metadata in this request. The update fails if
-   * invalid fields are specified. Multiple fields can be specified in a comma-delimited list.
+   * Required. Mask that identifies fields on the photo metadata to update. If not present, the old
+   * Photo metadata is entirely replaced with the new Photo metadata in this request. The update
+   * fails if invalid fields are specified. Multiple fields can be specified in a comma-delimited
+   * list.
    *
    * The following fields are valid:
    *

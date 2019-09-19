@@ -72,6 +72,13 @@ public final class ListDomainMappingsResponse extends com.google.api.client.json
   private java.util.Map<String, RegionDetails> regionDetails;
 
   /**
+   * Locations that could not be reached.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> unreachable;
+
+  /**
    * The API version for this call such as "domains.cloudrun.com/v1alpha1".
    * @return value or {@code null} for none
    */
@@ -155,6 +162,23 @@ public final class ListDomainMappingsResponse extends com.google.api.client.json
    */
   public ListDomainMappingsResponse setRegionDetails(java.util.Map<String, RegionDetails> regionDetails) {
     this.regionDetails = regionDetails;
+    return this;
+  }
+
+  /**
+   * Locations that could not be reached.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUnreachable() {
+    return unreachable;
+  }
+
+  /**
+   * Locations that could not be reached.
+   * @param unreachable unreachable or {@code null} for none
+   */
+  public ListDomainMappingsResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
+    this.unreachable = unreachable;
     return this;
   }
 

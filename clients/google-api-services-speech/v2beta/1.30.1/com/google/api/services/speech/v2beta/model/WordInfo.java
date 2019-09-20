@@ -48,7 +48,7 @@ public final class WordInfo extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private String endTime;
+  private String endOffset;
 
   /**
    * Output only. A distinct integer value is assigned for every speaker within the audio. This
@@ -67,7 +67,7 @@ public final class WordInfo extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private String startTime;
+  private String startOffset;
 
   /**
    * Output only. The word corresponding to this set of information.
@@ -107,18 +107,18 @@ public final class WordInfo extends com.google.api.client.json.GenericJson {
    * top hypothesis. This is an experimental feature and the accuracy of the time offset can vary.
    * @return value or {@code null} for none
    */
-  public String getEndTime() {
-    return endTime;
+  public String getEndOffset() {
+    return endOffset;
   }
 
   /**
    * Output only. Time offset relative to the beginning of the audio, and corresponding to the end
    * of the spoken word. This field is only set if `enable_word_time_offsets=true` and only in the
    * top hypothesis. This is an experimental feature and the accuracy of the time offset can vary.
-   * @param endTime endTime or {@code null} for none
+   * @param endOffset endOffset or {@code null} for none
    */
-  public WordInfo setEndTime(String endTime) {
-    this.endTime = endTime;
+  public WordInfo setEndOffset(String endOffset) {
+    this.endOffset = endOffset;
     return this;
   }
 
@@ -151,18 +151,18 @@ public final class WordInfo extends com.google.api.client.json.GenericJson {
    * top hypothesis. This is an experimental feature and the accuracy of the time offset can vary.
    * @return value or {@code null} for none
    */
-  public String getStartTime() {
-    return startTime;
+  public String getStartOffset() {
+    return startOffset;
   }
 
   /**
    * Output only. Time offset relative to the beginning of the audio, and corresponding to the start
    * of the spoken word. This field is only set if `enable_word_time_offsets=true` and only in the
    * top hypothesis. This is an experimental feature and the accuracy of the time offset can vary.
-   * @param startTime startTime or {@code null} for none
+   * @param startOffset startOffset or {@code null} for none
    */
-  public WordInfo setStartTime(String startTime) {
-    this.startTime = startTime;
+  public WordInfo setStartOffset(String startOffset) {
+    this.startOffset = startOffset;
     return this;
   }
 

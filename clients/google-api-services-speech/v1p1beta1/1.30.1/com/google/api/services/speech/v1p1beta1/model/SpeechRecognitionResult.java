@@ -31,7 +31,7 @@ package com.google.api.services.speech.v1p1beta1.model;
 public final class SpeechRecognitionResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. May contain one or more recognition hypotheses (up to the maximum specified in
+   * May contain one or more recognition hypotheses (up to the maximum specified in
    * `max_alternatives`). These alternatives are ordered in terms of accuracy, with the top (first)
    * alternative being the most probable, as ranked by the recognizer.
    * The value may be {@code null}.
@@ -55,16 +55,16 @@ public final class SpeechRecognitionResult extends com.google.api.client.json.Ge
   private java.lang.Integer channelTag;
 
   /**
-   * Output only. The [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag of the
-   * language in this result. This language code was detected to have the most likelihood of being
-   * spoken in the audio.
+   * The [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag of the language in this
+   * result. This language code was detected to have the most likelihood of being spoken in the
+   * audio.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String languageCode;
 
   /**
-   * Output only. May contain one or more recognition hypotheses (up to the maximum specified in
+   * May contain one or more recognition hypotheses (up to the maximum specified in
    * `max_alternatives`). These alternatives are ordered in terms of accuracy, with the top (first)
    * alternative being the most probable, as ranked by the recognizer.
    * @return value or {@code null} for none
@@ -74,7 +74,7 @@ public final class SpeechRecognitionResult extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. May contain one or more recognition hypotheses (up to the maximum specified in
+   * May contain one or more recognition hypotheses (up to the maximum specified in
    * `max_alternatives`). These alternatives are ordered in terms of accuracy, with the top (first)
    * alternative being the most probable, as ranked by the recognizer.
    * @param alternatives alternatives or {@code null} for none
@@ -106,9 +106,9 @@ public final class SpeechRecognitionResult extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. The [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag of the
-   * language in this result. This language code was detected to have the most likelihood of being
-   * spoken in the audio.
+   * The [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag of the language in this
+   * result. This language code was detected to have the most likelihood of being spoken in the
+   * audio.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -116,9 +116,9 @@ public final class SpeechRecognitionResult extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. The [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag of the
-   * language in this result. This language code was detected to have the most likelihood of being
-   * spoken in the audio.
+   * The [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag of the language in this
+   * result. This language code was detected to have the most likelihood of being spoken in the
+   * audio.
    * @param languageCode languageCode or {@code null} for none
    */
   public SpeechRecognitionResult setLanguageCode(java.lang.String languageCode) {

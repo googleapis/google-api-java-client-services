@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.speech.v1p1beta1.model;
+package com.google.api.services.speech.v1.model;
 
 /**
  * Config to enable speaker diarization.

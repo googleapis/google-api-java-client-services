@@ -44,10 +44,10 @@ public final class SpeechContext extends com.google.api.client.json.GenericJson 
   private java.lang.Float boost;
 
   /**
-   * *Optional* A list of strings containing words and phrases "hints" so that the speech
-   * recognition is more likely to recognize them. This can be used to improve the accuracy for
-   * specific words and phrases, for example, if specific commands are typically spoken by the user.
-   * This can also be used to add additional words to the vocabulary of the recognizer. See [usage
+   * A list of strings containing words and phrases "hints" so that the speech recognition is more
+   * likely to recognize them. This can be used to improve the accuracy for specific words and
+   * phrases, for example, if specific commands are typically spoken by the user. This can also be
+   * used to add additional words to the vocabulary of the recognizer. See [usage
    * limits](https://cloud.google.com/speech-to-text/quotas#content).
    *
    * List items can also be set to classes for groups of words that represent common concepts that
@@ -89,10 +89,10 @@ public final class SpeechContext extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * *Optional* A list of strings containing words and phrases "hints" so that the speech
-   * recognition is more likely to recognize them. This can be used to improve the accuracy for
-   * specific words and phrases, for example, if specific commands are typically spoken by the user.
-   * This can also be used to add additional words to the vocabulary of the recognizer. See [usage
+   * A list of strings containing words and phrases "hints" so that the speech recognition is more
+   * likely to recognize them. This can be used to improve the accuracy for specific words and
+   * phrases, for example, if specific commands are typically spoken by the user. This can also be
+   * used to add additional words to the vocabulary of the recognizer. See [usage
    * limits](https://cloud.google.com/speech-to-text/quotas#content).
    *
    * List items can also be set to classes for groups of words that represent common concepts that
@@ -106,10 +106,10 @@ public final class SpeechContext extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * *Optional* A list of strings containing words and phrases "hints" so that the speech
-   * recognition is more likely to recognize them. This can be used to improve the accuracy for
-   * specific words and phrases, for example, if specific commands are typically spoken by the user.
-   * This can also be used to add additional words to the vocabulary of the recognizer. See [usage
+   * A list of strings containing words and phrases "hints" so that the speech recognition is more
+   * likely to recognize them. This can be used to improve the accuracy for specific words and
+   * phrases, for example, if specific commands are typically spoken by the user. This can also be
+   * used to add additional words to the vocabulary of the recognizer. See [usage
    * limits](https://cloud.google.com/speech-to-text/quotas#content).
    *
    * List items can also be set to classes for groups of words that represent common concepts that

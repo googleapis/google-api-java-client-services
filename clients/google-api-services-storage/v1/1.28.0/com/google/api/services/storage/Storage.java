@@ -1561,6 +1561,31 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
+       * The IAM policy format version to be returned. If the optionsRequestedPolicyVersion is for
+       * an older version that doesn't support part of the requested IAM policy, the request fails.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer optionsRequestedPolicyVersion;
+
+      /** The IAM policy format version to be returned. If the optionsRequestedPolicyVersion is for an older
+     version that doesn't support part of the requested IAM policy, the request fails.
+
+     [minimum: 1]
+       */
+      public java.lang.Integer getOptionsRequestedPolicyVersion() {
+        return optionsRequestedPolicyVersion;
+      }
+
+      /**
+       * The IAM policy format version to be returned. If the optionsRequestedPolicyVersion is for
+       * an older version that doesn't support part of the requested IAM policy, the request fails.
+       */
+      public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
+        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+        return this;
+      }
+
+      /**
        * The project to be billed for this request if the target bucket is requester-pays bucket.
        */
       @com.google.api.client.util.Key

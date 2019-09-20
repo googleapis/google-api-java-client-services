@@ -1098,7 +1098,7 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
-      private com.google.api.client.util.DateTime lockedTime;
+      private java.lang.String lockedTime;
 
       /**
        * If set, access is controlled only by bucket-level or above IAM policies.
@@ -1123,7 +1123,7 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
        * to false until the locked time, after which the field is immutable.
        * @return value or {@code null} for none
        */
-      public com.google.api.client.util.DateTime getLockedTime() {
+      public java.lang.String getLockedTime() {
         return lockedTime;
       }
 
@@ -1133,7 +1133,7 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
        * to false until the locked time, after which the field is immutable.
        * @param lockedTime lockedTime or {@code null} for none
        */
-      public UniformBucketLevelAccess setLockedTime(com.google.api.client.util.DateTime lockedTime) {
+      public UniformBucketLevelAccess setLockedTime(java.lang.String lockedTime) {
         this.lockedTime = lockedTime;
         return this;
       }

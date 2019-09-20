@@ -17,7 +17,7 @@
 package com.google.api.services.spanner.v1.model;
 
 /**
- * Request message for `GetIamPolicy` method.
+ * The response for BatchCreateSessions.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Spanner API. For a detailed explanation see:
@@ -27,43 +27,40 @@ package com.google.api.services.spanner.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GetIamPolicyRequest extends com.google.api.client.json.GenericJson {
+public final class BatchCreateSessionsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * OPTIONAL: A `GetPolicyOptions` object for specifying options to `GetIamPolicy`. This field is
-   * only used by Cloud IAM.
+   * The freshly created sessions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GetPolicyOptions options;
+  private java.util.List<Session> session;
 
   /**
-   * OPTIONAL: A `GetPolicyOptions` object for specifying options to `GetIamPolicy`. This field is
-   * only used by Cloud IAM.
+   * The freshly created sessions.
    * @return value or {@code null} for none
    */
-  public GetPolicyOptions getOptions() {
-    return options;
+  public java.util.List<Session> getSession() {
+    return session;
   }
 
   /**
-   * OPTIONAL: A `GetPolicyOptions` object for specifying options to `GetIamPolicy`. This field is
-   * only used by Cloud IAM.
-   * @param options options or {@code null} for none
+   * The freshly created sessions.
+   * @param session session or {@code null} for none
    */
-  public GetIamPolicyRequest setOptions(GetPolicyOptions options) {
-    this.options = options;
+  public BatchCreateSessionsResponse setSession(java.util.List<Session> session) {
+    this.session = session;
     return this;
   }
 
   @Override
-  public GetIamPolicyRequest set(String fieldName, Object value) {
-    return (GetIamPolicyRequest) super.set(fieldName, value);
+  public BatchCreateSessionsResponse set(String fieldName, Object value) {
+    return (BatchCreateSessionsResponse) super.set(fieldName, value);
   }
 
   @Override
-  public GetIamPolicyRequest clone() {
-    return (GetIamPolicyRequest) super.clone();
+  public BatchCreateSessionsResponse clone() {
+    return (BatchCreateSessionsResponse) super.clone();
   }
 
 }

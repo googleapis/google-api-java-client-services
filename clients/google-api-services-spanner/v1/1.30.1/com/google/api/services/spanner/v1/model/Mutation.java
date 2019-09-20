@@ -57,6 +57,10 @@ public final class Mutation extends com.google.api.client.json.GenericJson {
    * Like insert, except that if the row already exists, it is deleted, and the column values
    * provided are inserted instead. Unlike insert_or_update, this means any values not explicitly
    * written become `NULL`.
+   *
+   * In an interleaved table, if you create the child table with the `ON DELETE CASCADE` annotation,
+   * then replacing a parent row also deletes the child rows. Otherwise, you must delete the child
+   * rows before you replace the parent row.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,6 +133,10 @@ public final class Mutation extends com.google.api.client.json.GenericJson {
    * Like insert, except that if the row already exists, it is deleted, and the column values
    * provided are inserted instead. Unlike insert_or_update, this means any values not explicitly
    * written become `NULL`.
+   *
+   * In an interleaved table, if you create the child table with the `ON DELETE CASCADE` annotation,
+   * then replacing a parent row also deletes the child rows. Otherwise, you must delete the child
+   * rows before you replace the parent row.
    * @return value or {@code null} for none
    */
   public Write getReplace() {
@@ -139,6 +147,10 @@ public final class Mutation extends com.google.api.client.json.GenericJson {
    * Like insert, except that if the row already exists, it is deleted, and the column values
    * provided are inserted instead. Unlike insert_or_update, this means any values not explicitly
    * written become `NULL`.
+   *
+   * In an interleaved table, if you create the child table with the `ON DELETE CASCADE` annotation,
+   * then replacing a parent row also deletes the child rows. Otherwise, you must delete the child
+   * rows before you replace the parent row.
    * @param replace replace or {@code null} for none
    */
   public Mutation setReplace(Write replace) {

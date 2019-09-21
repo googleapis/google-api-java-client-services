@@ -18,8 +18,8 @@ package com.google.api.services.healthcare.v1beta1.model;
 
 /**
  * Imports data into the specified DICOM store. Returns an error if any of the files to import are
- * not DICOM files. This API will accept duplicate DICOM instances, by simply ignoring the newly
- * pushed instance (it will not overwrite).
+ * not DICOM files. This API accepts duplicate DICOM instances by ignoring the newly-pushed
+ * instance. It does not overwrite.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:

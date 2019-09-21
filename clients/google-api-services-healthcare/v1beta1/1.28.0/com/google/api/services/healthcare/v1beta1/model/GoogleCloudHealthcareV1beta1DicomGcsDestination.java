@@ -17,7 +17,7 @@
 package com.google.api.services.healthcare.v1beta1.model;
 
 /**
- * The Cloud Storage location where the output should be written, and the export configuration.
+ * The Cloud Storage location where the server writes the output and the export configuration.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:
@@ -30,17 +30,17 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class GoogleCloudHealthcareV1beta1DicomGcsDestination extends com.google.api.client.json.GenericJson {
 
   /**
-   * MIME types supported by DICOM spec. Each file will be written in the following format:
+   * MIME types supported by DICOM spec. Each file is written in the following format:
    * `.../{study_id}/{series_id}/{instance_id}[/{frame_number}].{extension}` The frame_number
-   * component will exist only for multi-frame instances.
+   * component exists only for multi-frame instances.
    *
    * Refer to the DICOM conformance statement for permissible MIME types:
    * https://cloud.google.com/healthcare/docs/dicom#wado-rs
    *
-   * The following extensions will be used for output files:   application/dicom -> .dcm
-   * image/jpeg -> .jpg   image/png -> .png
+   * The following extensions are used for output files:   application/dicom -> .dcm   image/jpeg ->
+   * .jpg   image/png -> .png
    *
-   * If unspecified, the instances will be exported in their original DICOM format.
+   * If unspecified, the instances are exported in their original DICOM format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,27 +49,27 @@ public final class GoogleCloudHealthcareV1beta1DicomGcsDestination extends com.g
   /**
    * The Cloud Storage destination to export to.
    *
-   * URI for a Cloud Storage directory where result files should be written (in the format `gs
-   * ://{bucket-id}/{path/to/destination/dir}`). If there is no trailing slash, the service will
-   * append one when composing the object path. The user is responsible for creating the Cloud
-   * Storage bucket referenced in `uri_prefix`.
+   * URI for a Cloud Storage directory where the server writes the result files, in the format `gs
+   * ://{bucket-id}/{path/to/destination/dir}`). If there is no trailing slash, the service appends
+   * one when composing the object path. The user is responsible for creating the Cloud Storage
+   * bucket referenced in `uri_prefix`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uriPrefix;
 
   /**
-   * MIME types supported by DICOM spec. Each file will be written in the following format:
+   * MIME types supported by DICOM spec. Each file is written in the following format:
    * `.../{study_id}/{series_id}/{instance_id}[/{frame_number}].{extension}` The frame_number
-   * component will exist only for multi-frame instances.
+   * component exists only for multi-frame instances.
    *
    * Refer to the DICOM conformance statement for permissible MIME types:
    * https://cloud.google.com/healthcare/docs/dicom#wado-rs
    *
-   * The following extensions will be used for output files:   application/dicom -> .dcm
-   * image/jpeg -> .jpg   image/png -> .png
+   * The following extensions are used for output files:   application/dicom -> .dcm   image/jpeg ->
+   * .jpg   image/png -> .png
    *
-   * If unspecified, the instances will be exported in their original DICOM format.
+   * If unspecified, the instances are exported in their original DICOM format.
    * @return value or {@code null} for none
    */
   public java.lang.String getMimeType() {
@@ -77,17 +77,17 @@ public final class GoogleCloudHealthcareV1beta1DicomGcsDestination extends com.g
   }
 
   /**
-   * MIME types supported by DICOM spec. Each file will be written in the following format:
+   * MIME types supported by DICOM spec. Each file is written in the following format:
    * `.../{study_id}/{series_id}/{instance_id}[/{frame_number}].{extension}` The frame_number
-   * component will exist only for multi-frame instances.
+   * component exists only for multi-frame instances.
    *
    * Refer to the DICOM conformance statement for permissible MIME types:
    * https://cloud.google.com/healthcare/docs/dicom#wado-rs
    *
-   * The following extensions will be used for output files:   application/dicom -> .dcm
-   * image/jpeg -> .jpg   image/png -> .png
+   * The following extensions are used for output files:   application/dicom -> .dcm   image/jpeg ->
+   * .jpg   image/png -> .png
    *
-   * If unspecified, the instances will be exported in their original DICOM format.
+   * If unspecified, the instances are exported in their original DICOM format.
    * @param mimeType mimeType or {@code null} for none
    */
   public GoogleCloudHealthcareV1beta1DicomGcsDestination setMimeType(java.lang.String mimeType) {
@@ -98,10 +98,10 @@ public final class GoogleCloudHealthcareV1beta1DicomGcsDestination extends com.g
   /**
    * The Cloud Storage destination to export to.
    *
-   * URI for a Cloud Storage directory where result files should be written (in the format `gs
-   * ://{bucket-id}/{path/to/destination/dir}`). If there is no trailing slash, the service will
-   * append one when composing the object path. The user is responsible for creating the Cloud
-   * Storage bucket referenced in `uri_prefix`.
+   * URI for a Cloud Storage directory where the server writes the result files, in the format `gs
+   * ://{bucket-id}/{path/to/destination/dir}`). If there is no trailing slash, the service appends
+   * one when composing the object path. The user is responsible for creating the Cloud Storage
+   * bucket referenced in `uri_prefix`.
    * @return value or {@code null} for none
    */
   public java.lang.String getUriPrefix() {
@@ -111,10 +111,10 @@ public final class GoogleCloudHealthcareV1beta1DicomGcsDestination extends com.g
   /**
    * The Cloud Storage destination to export to.
    *
-   * URI for a Cloud Storage directory where result files should be written (in the format `gs
-   * ://{bucket-id}/{path/to/destination/dir}`). If there is no trailing slash, the service will
-   * append one when composing the object path. The user is responsible for creating the Cloud
-   * Storage bucket referenced in `uri_prefix`.
+   * URI for a Cloud Storage directory where the server writes the result files, in the format `gs
+   * ://{bucket-id}/{path/to/destination/dir}`). If there is no trailing slash, the service appends
+   * one when composing the object path. The user is responsible for creating the Cloud Storage
+   * bucket referenced in `uri_prefix`.
    * @param uriPrefix uriPrefix or {@code null} for none
    */
   public GoogleCloudHealthcareV1beta1DicomGcsDestination setUriPrefix(java.lang.String uriPrefix) {

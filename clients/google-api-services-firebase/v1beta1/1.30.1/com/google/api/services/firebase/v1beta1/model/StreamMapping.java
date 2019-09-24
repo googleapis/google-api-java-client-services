@@ -39,6 +39,14 @@ public final class StreamMapping extends com.google.api.client.json.GenericJson 
   private java.lang.String app;
 
   /**
+   * Analytics-provided measurement ID, for use in the gtag.js library. Will only be present for
+   * Firebase Web Apps.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String measurementId;
+
+  /**
    * The unique Google-assigned identifier of the Google Analytics data stream associated with the
    * Firebase App.
    *
@@ -65,6 +73,25 @@ public final class StreamMapping extends com.google.api.client.json.GenericJson 
    */
   public StreamMapping setApp(java.lang.String app) {
     this.app = app;
+    return this;
+  }
+
+  /**
+   * Analytics-provided measurement ID, for use in the gtag.js library. Will only be present for
+   * Firebase Web Apps.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMeasurementId() {
+    return measurementId;
+  }
+
+  /**
+   * Analytics-provided measurement ID, for use in the gtag.js library. Will only be present for
+   * Firebase Web Apps.
+   * @param measurementId measurementId or {@code null} for none
+   */
+  public StreamMapping setMeasurementId(java.lang.String measurementId) {
+    this.measurementId = measurementId;
     return this;
   }
 

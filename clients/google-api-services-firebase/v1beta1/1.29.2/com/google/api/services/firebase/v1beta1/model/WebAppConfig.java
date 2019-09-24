@@ -72,6 +72,14 @@ public final class WebAppConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String locationId;
 
   /**
+   * Analytics-provided measurement ID, for use in the gtag.js library. Will only be present for
+   * Firebase Web Apps.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String measurementId;
+
+  /**
    * The sender ID for use with Firebase Cloud Messaging.
    * The value may be {@code null}.
    */
@@ -186,6 +194,25 @@ public final class WebAppConfig extends com.google.api.client.json.GenericJson {
    */
   public WebAppConfig setLocationId(java.lang.String locationId) {
     this.locationId = locationId;
+    return this;
+  }
+
+  /**
+   * Analytics-provided measurement ID, for use in the gtag.js library. Will only be present for
+   * Firebase Web Apps.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMeasurementId() {
+    return measurementId;
+  }
+
+  /**
+   * Analytics-provided measurement ID, for use in the gtag.js library. Will only be present for
+   * Firebase Web Apps.
+   * @param measurementId measurementId or {@code null} for none
+   */
+  public WebAppConfig setMeasurementId(java.lang.String measurementId) {
+    this.measurementId = measurementId;
     return this;
   }
 

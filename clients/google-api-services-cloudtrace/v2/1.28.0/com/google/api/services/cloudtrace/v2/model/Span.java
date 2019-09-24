@@ -41,7 +41,7 @@ public final class Span extends com.google.api.client.json.GenericJson {
   private Attributes attributes;
 
   /**
-   * An optional number of child spans that were generated while this span was active. If set,
+   * Optional. The number of child spans that were generated while this span was active. If set,
    * allows implementation to detect missing child spans.
    * The value may be {@code null}.
    */
@@ -97,7 +97,7 @@ public final class Span extends com.google.api.client.json.GenericJson {
   private java.lang.String parentSpanId;
 
   /**
-   * (Optional) Set this parameter to indicate whether this span is in the same process as its
+   * Optional. Set this parameter to indicate whether this span is in the same process as its
    * parent. If you do not set this parameter, Stackdriver Trace is unable to take advantage of this
    * helpful information.
    * The value may be {@code null}.
@@ -138,7 +138,7 @@ public final class Span extends com.google.api.client.json.GenericJson {
   private String startTime;
 
   /**
-   * An optional final status for this span.
+   * Optional. The final status for this span.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -169,7 +169,7 @@ public final class Span extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An optional number of child spans that were generated while this span was active. If set,
+   * Optional. The number of child spans that were generated while this span was active. If set,
    * allows implementation to detect missing child spans.
    * @return value or {@code null} for none
    */
@@ -178,7 +178,7 @@ public final class Span extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An optional number of child spans that were generated while this span was active. If set,
+   * Optional. The number of child spans that were generated while this span was active. If set,
    * allows implementation to detect missing child spans.
    * @param childSpanCount childSpanCount or {@code null} for none
    */
@@ -299,7 +299,7 @@ public final class Span extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) Set this parameter to indicate whether this span is in the same process as its
+   * Optional. Set this parameter to indicate whether this span is in the same process as its
    * parent. If you do not set this parameter, Stackdriver Trace is unable to take advantage of this
    * helpful information.
    * @return value or {@code null} for none
@@ -309,7 +309,7 @@ public final class Span extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) Set this parameter to indicate whether this span is in the same process as its
+   * Optional. Set this parameter to indicate whether this span is in the same process as its
    * parent. If you do not set this parameter, Stackdriver Trace is unable to take advantage of this
    * helpful information.
    * @param sameProcessAsParentSpan sameProcessAsParentSpan or {@code null} for none
@@ -396,7 +396,7 @@ public final class Span extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An optional final status for this span.
+   * Optional. The final status for this span.
    * @return value or {@code null} for none
    */
   public Status getStatus() {
@@ -404,7 +404,7 @@ public final class Span extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An optional final status for this span.
+   * Optional. The final status for this span.
    * @param status status or {@code null} for none
    */
   public Span setStatus(Status status) {

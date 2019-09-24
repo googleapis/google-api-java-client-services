@@ -154,7 +154,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
      * This request holds the parameters needed by the cloudtrace server.  After setting any optional
      * parameters, call the {@link PatchTraces#execute()} method to invoke the remote operation.
      *
-     * @param projectId ID of the Cloud project where the trace data is stored.
+     * @param projectId Required. ID of the Cloud project where the trace data is stored.
      * @param content the {@link com.google.api.services.cloudtrace.v1.model.Traces}
      * @return the request
      */
@@ -182,7 +182,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
        * PatchTraces#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId ID of the Cloud project where the trace data is stored.
+       * @param projectId Required. ID of the Cloud project where the trace data is stored.
        * @param content the {@link com.google.api.services.cloudtrace.v1.model.Traces}
        * @since 1.13
        */
@@ -246,17 +246,17 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
         return (PatchTraces) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** ID of the Cloud project where the trace data is stored. */
+      /** Required. ID of the Cloud project where the trace data is stored. */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** ID of the Cloud project where the trace data is stored.
+      /** Required. ID of the Cloud project where the trace data is stored.
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** ID of the Cloud project where the trace data is stored. */
+      /** Required. ID of the Cloud project where the trace data is stored. */
       public PatchTraces setProjectId(java.lang.String projectId) {
         this.projectId = projectId;
         return this;
@@ -296,8 +296,8 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the cloudtrace server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param projectId ID of the Cloud project where the trace data is stored.
-       * @param traceId ID of the trace to return.
+       * @param projectId Required. ID of the Cloud project where the trace data is stored.
+       * @param traceId Required. ID of the trace to return.
        * @return the request
        */
       public Get get(java.lang.String projectId, java.lang.String traceId) throws java.io.IOException {
@@ -320,8 +320,8 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param projectId ID of the Cloud project where the trace data is stored.
-         * @param traceId ID of the trace to return.
+         * @param projectId Required. ID of the Cloud project where the trace data is stored.
+         * @param traceId Required. ID of the trace to return.
          * @since 1.13
          */
         protected Get(java.lang.String projectId, java.lang.String traceId) {
@@ -395,33 +395,33 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** ID of the Cloud project where the trace data is stored. */
+        /** Required. ID of the Cloud project where the trace data is stored. */
         @com.google.api.client.util.Key
         private java.lang.String projectId;
 
-        /** ID of the Cloud project where the trace data is stored.
+        /** Required. ID of the Cloud project where the trace data is stored.
          */
         public java.lang.String getProjectId() {
           return projectId;
         }
 
-        /** ID of the Cloud project where the trace data is stored. */
+        /** Required. ID of the Cloud project where the trace data is stored. */
         public Get setProjectId(java.lang.String projectId) {
           this.projectId = projectId;
           return this;
         }
 
-        /** ID of the trace to return. */
+        /** Required. ID of the trace to return. */
         @com.google.api.client.util.Key
         private java.lang.String traceId;
 
-        /** ID of the trace to return.
+        /** Required. ID of the trace to return.
          */
         public java.lang.String getTraceId() {
           return traceId;
         }
 
-        /** ID of the trace to return. */
+        /** Required. ID of the trace to return. */
         public Get setTraceId(java.lang.String traceId) {
           this.traceId = traceId;
           return this;
@@ -440,7 +440,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the cloudtrace server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param projectId ID of the Cloud project where the trace data is stored.
+       * @param projectId Required. ID of the Cloud project where the trace data is stored.
        * @return the request
        */
       public List list(java.lang.String projectId) throws java.io.IOException {
@@ -463,7 +463,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param projectId ID of the Cloud project where the trace data is stored.
+         * @param projectId Required. ID of the Cloud project where the trace data is stored.
          * @since 1.13
          */
         protected List(java.lang.String projectId) {
@@ -536,17 +536,17 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** ID of the Cloud project where the trace data is stored. */
+        /** Required. ID of the Cloud project where the trace data is stored. */
         @com.google.api.client.util.Key
         private java.lang.String projectId;
 
-        /** ID of the Cloud project where the trace data is stored.
+        /** Required. ID of the Cloud project where the trace data is stored.
          */
         public java.lang.String getProjectId() {
           return projectId;
         }
 
-        /** ID of the Cloud project where the trace data is stored. */
+        /** Required. ID of the Cloud project where the trace data is stored. */
         public List setProjectId(java.lang.String projectId) {
           this.projectId = projectId;
           return this;
@@ -576,7 +576,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * An optional filter against labels for the request.
+         * Optional. A filter against labels for the request.
          *
          * By default, searches use prefix matching. To specify exact match, prepend a plus symbol
          * (`+`) to the search term. Multiple terms are ANDed. Syntax:
@@ -600,7 +600,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** An optional filter against labels for the request.
+        /** Optional. A filter against labels for the request.
 
        By default, searches use prefix matching. To specify exact match, prepend a plus symbol (`+`) to
        the search term. Multiple terms are ANDed. Syntax:
@@ -625,7 +625,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * An optional filter against labels for the request.
+         * Optional. A filter against labels for the request.
          *
          * By default, searches use prefix matching. To specify exact match, prepend a plus symbol
          * (`+`) to the search term. Multiple terms are ANDed. Syntax:
@@ -652,7 +652,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Field used to sort the returned traces. Optional. Can be one of the following:
+         * Optional. Field used to sort the returned traces. Can be one of the following:
          *
          * *   `trace_id` *   `name` (`name` field of root span in the trace) *   `duration`
          * (difference between `end_time` and `start_time` fields of the root span) *   `start`
@@ -666,7 +666,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
-        /** Field used to sort the returned traces. Optional. Can be one of the following:
+        /** Optional. Field used to sort the returned traces. Can be one of the following:
 
        *   `trace_id` *   `name` (`name` field of root span in the trace) *   `duration` (difference
        between `end_time` and `start_time` fields of the root span) *   `start` (`start_time` field of the
@@ -681,7 +681,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Field used to sort the returned traces. Optional. Can be one of the following:
+         * Optional. Field used to sort the returned traces. Can be one of the following:
          *
          * *   `trace_id` *   `name` (`name` field of root span in the trace) *   `duration`
          * (difference between `end_time` and `start_time` fields of the root span) *   `start`
@@ -698,25 +698,24 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Maximum number of traces to return. If not specified or <= 0, the implementation selects
-         * a reasonable value.  The implementation may return fewer traces than the requested page
-         * size. Optional.
+         * Optional. Maximum number of traces to return. If not specified or <= 0, the
+         * implementation selects a reasonable value.  The implementation may return fewer traces
+         * than the requested page size.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** Maximum number of traces to return. If not specified or <= 0, the implementation selects a
-       reasonable value.  The implementation may return fewer traces than the requested page size.
-       Optional.
+        /** Optional. Maximum number of traces to return. If not specified or <= 0, the implementation selects
+       a reasonable value.  The implementation may return fewer traces than the requested page size.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
         /**
-         * Maximum number of traces to return. If not specified or <= 0, the implementation selects
-         * a reasonable value.  The implementation may return fewer traces than the requested page
-         * size. Optional.
+         * Optional. Maximum number of traces to return. If not specified or <= 0, the
+         * implementation selects a reasonable value.  The implementation may return fewer traces
+         * than the requested page size.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -725,13 +724,13 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Token identifying the page of results to return. If provided, use the value of the
-         * `next_page_token` field from a previous request. Optional.
+         * `next_page_token` field from a previous request.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
         /** Token identifying the page of results to return. If provided, use the value of the
-       `next_page_token` field from a previous request. Optional.
+       `next_page_token` field from a previous request.
          */
         public java.lang.String getPageToken() {
           return pageToken;
@@ -739,7 +738,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Token identifying the page of results to return. If provided, use the value of the
-         * `next_page_token` field from a previous request. Optional.
+         * `next_page_token` field from a previous request.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
@@ -770,19 +769,19 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Type of data returned for traces in the list. Optional. Default is `MINIMAL`.
+         * Optional. Type of data returned for traces in the list. Default is `MINIMAL`.
          */
         @com.google.api.client.util.Key
         private java.lang.String view;
 
-        /** Type of data returned for traces in the list. Optional. Default is `MINIMAL`.
+        /** Optional. Type of data returned for traces in the list. Default is `MINIMAL`.
          */
         public java.lang.String getView() {
           return view;
         }
 
         /**
-         * Type of data returned for traces in the list. Optional. Default is `MINIMAL`.
+         * Optional. Type of data returned for traces in the list. Default is `MINIMAL`.
          */
         public List setView(java.lang.String view) {
           this.view = view;

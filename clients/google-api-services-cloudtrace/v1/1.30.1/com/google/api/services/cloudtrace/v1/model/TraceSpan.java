@@ -82,7 +82,7 @@ public final class TraceSpan extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * ID of the parent span, if any. Optional.
+   * Optional. ID of the parent span, if any.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -212,7 +212,7 @@ public final class TraceSpan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * ID of the parent span, if any. Optional.
+   * Optional. ID of the parent span, if any.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getParentSpanId() {
@@ -220,7 +220,7 @@ public final class TraceSpan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * ID of the parent span, if any. Optional.
+   * Optional. ID of the parent span, if any.
    * @param parentSpanId parentSpanId or {@code null} for none
    */
   public TraceSpan setParentSpanId(java.math.BigInteger parentSpanId) {

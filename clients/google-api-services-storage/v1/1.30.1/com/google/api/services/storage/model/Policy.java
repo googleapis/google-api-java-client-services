@@ -71,6 +71,13 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.String resourceId;
 
   /**
+   * The IAM policy format version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer version;
+
+  /**
    * An association between a role, which comes with a set of permissions, and members who may
    * assume that role.
    * @return value or {@code null} for none
@@ -175,6 +182,23 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   public Policy setResourceId(java.lang.String resourceId) {
     this.resourceId = resourceId;
+    return this;
+  }
+
+  /**
+   * The IAM policy format version.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getVersion() {
+    return version;
+  }
+
+  /**
+   * The IAM policy format version.
+   * @param version version or {@code null} for none
+   */
+  public Policy setVersion(java.lang.Integer version) {
+    this.version = version;
     return this;
   }
 

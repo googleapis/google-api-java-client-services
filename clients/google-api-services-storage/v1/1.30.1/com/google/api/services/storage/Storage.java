@@ -46,7 +46,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.1 of the Cloud Storage JSON API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.3 of the Cloud Storage JSON API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -1557,6 +1557,31 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       /** Name of a bucket. */
       public GetIamPolicy setBucket(java.lang.String bucket) {
         this.bucket = bucket;
+        return this;
+      }
+
+      /**
+       * The IAM policy format version to be returned. If the optionsRequestedPolicyVersion is for
+       * an older version that doesn't support part of the requested IAM policy, the request fails.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer optionsRequestedPolicyVersion;
+
+      /** The IAM policy format version to be returned. If the optionsRequestedPolicyVersion is for an older
+     version that doesn't support part of the requested IAM policy, the request fails.
+
+     [minimum: 1]
+       */
+      public java.lang.Integer getOptionsRequestedPolicyVersion() {
+        return optionsRequestedPolicyVersion;
+      }
+
+      /**
+       * The IAM policy format version to be returned. If the optionsRequestedPolicyVersion is for
+       * an older version that doesn't support part of the requested IAM policy, the request fails.
+       */
+      public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
+        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
         return this;
       }
 

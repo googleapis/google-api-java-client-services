@@ -46,6 +46,14 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSch
   private String endTime;
 
   /**
+   * The rollout management policy this maintenance schedule is associated with. When doing
+   * reschedule update request, the reschedule should be against this given policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String rolloutManagementPolicy;
+
+  /**
    * The scheduled start time for the maintenance.
    * The value may be {@code null}.
    */
@@ -85,6 +93,25 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSch
    */
   public GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule setEndTime(String endTime) {
     this.endTime = endTime;
+    return this;
+  }
+
+  /**
+   * The rollout management policy this maintenance schedule is associated with. When doing
+   * reschedule update request, the reschedule should be against this given policy.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRolloutManagementPolicy() {
+    return rolloutManagementPolicy;
+  }
+
+  /**
+   * The rollout management policy this maintenance schedule is associated with. When doing
+   * reschedule update request, the reschedule should be against this given policy.
+   * @param rolloutManagementPolicy rolloutManagementPolicy or {@code null} for none
+   */
+  public GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule setRolloutManagementPolicy(java.lang.String rolloutManagementPolicy) {
+    this.rolloutManagementPolicy = rolloutManagementPolicy;
     return this;
   }
 

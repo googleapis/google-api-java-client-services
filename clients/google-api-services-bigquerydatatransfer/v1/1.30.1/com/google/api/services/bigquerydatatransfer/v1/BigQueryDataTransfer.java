@@ -174,7 +174,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
        * optional parameters, call the {@link CheckValidCreds#execute()} method to invoke the remote
        * operation.
        *
-       * @param name The data source in the form:
+       * @param name Required. The data source in the form:
       `projects/{project_id}/dataSources/{data_source_id}`
        * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.CheckValidCredsRequest}
        * @return the request
@@ -206,7 +206,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
          * the constructor. </p>
          *
-         * @param name The data source in the form:
+         * @param name Required. The data source in the form:
       `projects/{project_id}/dataSources/{data_source_id}`
          * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.CheckValidCredsRequest}
          * @since 1.13
@@ -277,19 +277,21 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * The data source in the form: `projects/{project_id}/dataSources/{data_source_id}`
+         * Required. The data source in the form:
+         * `projects/{project_id}/dataSources/{data_source_id}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The data source in the form: `projects/{project_id}/dataSources/{data_source_id}`
+        /** Required. The data source in the form: `projects/{project_id}/dataSources/{data_source_id}`
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The data source in the form: `projects/{project_id}/dataSources/{data_source_id}`
+         * Required. The data source in the form:
+         * `projects/{project_id}/dataSources/{data_source_id}`
          */
         public CheckValidCreds setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -314,7 +316,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
        * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The field will contain name of the resource requested, for example:
+       * @param name Required. The field will contain name of the resource requested, for example:
        *        `projects/{project_id}/dataSources/{data_source_id}`
        * @return the request
        */
@@ -342,7 +344,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The field will contain name of the resource requested, for example:
+         * @param name Required. The field will contain name of the resource requested, for example:
        *        `projects/{project_id}/dataSources/{data_source_id}`
          * @since 1.13
          */
@@ -422,13 +424,13 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * The field will contain name of the resource requested, for example:
+         * Required. The field will contain name of the resource requested, for example:
          * `projects/{project_id}/dataSources/{data_source_id}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The field will contain name of the resource requested, for example:
+        /** Required. The field will contain name of the resource requested, for example:
        `projects/{project_id}/dataSources/{data_source_id}`
          */
         public java.lang.String getName() {
@@ -436,7 +438,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * The field will contain name of the resource requested, for example:
+         * Required. The field will contain name of the resource requested, for example:
          * `projects/{project_id}/dataSources/{data_source_id}`
          */
         public Get setName(java.lang.String name) {
@@ -462,7 +464,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
        * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent The BigQuery project id for which data sources should be returned.
+       * @param parent Required. The BigQuery project id for which data sources should be returned.
       Must be in the form:
        *        `projects/{project_id}`
        * @return the request
@@ -491,7 +493,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The BigQuery project id for which data sources should be returned.
+         * @param parent Required. The BigQuery project id for which data sources should be returned.
       Must be in the form:
        *        `projects/{project_id}`
          * @since 1.13
@@ -572,13 +574,13 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * The BigQuery project id for which data sources should be returned. Must be in the form:
-         * `projects/{project_id}`
+         * Required. The BigQuery project id for which data sources should be returned. Must be in
+         * the form: `projects/{project_id}`
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The BigQuery project id for which data sources should be returned. Must be in the form:
+        /** Required. The BigQuery project id for which data sources should be returned. Must be in the form:
        `projects/{project_id}`
          */
         public java.lang.String getParent() {
@@ -586,8 +588,8 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * The BigQuery project id for which data sources should be returned. Must be in the form:
-         * `projects/{project_id}`
+         * Required. The BigQuery project id for which data sources should be returned. Must be in
+         * the form: `projects/{project_id}`
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -1029,7 +1031,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * optional parameters, call the {@link CheckValidCreds#execute()} method to invoke the remote
          * operation.
          *
-         * @param name The data source in the form:
+         * @param name Required. The data source in the form:
         `projects/{project_id}/dataSources/{data_source_id}`
          * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.CheckValidCredsRequest}
          * @return the request
@@ -1061,7 +1063,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
            * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
            * the constructor. </p>
            *
-           * @param name The data source in the form:
+           * @param name Required. The data source in the form:
         `projects/{project_id}/dataSources/{data_source_id}`
            * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.CheckValidCredsRequest}
            * @since 1.13
@@ -1132,19 +1134,21 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           }
 
           /**
-           * The data source in the form: `projects/{project_id}/dataSources/{data_source_id}`
+           * Required. The data source in the form:
+           * `projects/{project_id}/dataSources/{data_source_id}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The data source in the form: `projects/{project_id}/dataSources/{data_source_id}`
+          /** Required. The data source in the form: `projects/{project_id}/dataSources/{data_source_id}`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * The data source in the form: `projects/{project_id}/dataSources/{data_source_id}`
+           * Required. The data source in the form:
+           * `projects/{project_id}/dataSources/{data_source_id}`
            */
           public CheckValidCreds setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -1169,7 +1173,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name The field will contain name of the resource requested, for example:
+         * @param name Required. The field will contain name of the resource requested, for example:
          *        `projects/{project_id}/dataSources/{data_source_id}`
          * @return the request
          */
@@ -1197,7 +1201,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The field will contain name of the resource requested, for example:
+           * @param name Required. The field will contain name of the resource requested, for example:
          *        `projects/{project_id}/dataSources/{data_source_id}`
            * @since 1.13
            */
@@ -1277,13 +1281,13 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           }
 
           /**
-           * The field will contain name of the resource requested, for example:
+           * Required. The field will contain name of the resource requested, for example:
            * `projects/{project_id}/dataSources/{data_source_id}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The field will contain name of the resource requested, for example:
+          /** Required. The field will contain name of the resource requested, for example:
          `projects/{project_id}/dataSources/{data_source_id}`
            */
           public java.lang.String getName() {
@@ -1291,7 +1295,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           }
 
           /**
-           * The field will contain name of the resource requested, for example:
+           * Required. The field will contain name of the resource requested, for example:
            * `projects/{project_id}/dataSources/{data_source_id}`
            */
           public Get setName(java.lang.String name) {
@@ -1317,7 +1321,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent The BigQuery project id for which data sources should be returned.
+         * @param parent Required. The BigQuery project id for which data sources should be returned.
         Must be in the form:
          *        `projects/{project_id}`
          * @return the request
@@ -1346,7 +1350,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The BigQuery project id for which data sources should be returned.
+           * @param parent Required. The BigQuery project id for which data sources should be returned.
         Must be in the form:
          *        `projects/{project_id}`
            * @since 1.13
@@ -1427,13 +1431,13 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           }
 
           /**
-           * The BigQuery project id for which data sources should be returned. Must be in the form:
-           * `projects/{project_id}`
+           * Required. The BigQuery project id for which data sources should be returned. Must be in
+           * the form: `projects/{project_id}`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The BigQuery project id for which data sources should be returned. Must be in the form:
+          /** Required. The BigQuery project id for which data sources should be returned. Must be in the form:
          `projects/{project_id}`
            */
           public java.lang.String getParent() {
@@ -1441,8 +1445,8 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           }
 
           /**
-           * The BigQuery project id for which data sources should be returned. Must be in the form:
-           * `projects/{project_id}`
+           * Required. The BigQuery project id for which data sources should be returned. Must be in
+           * the form: `projects/{project_id}`
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -1533,11 +1537,11 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent The BigQuery project id where the transfer configuration should be created.
-        Must be in the format
-         *        projects/{project_id}/locations/{location_id}
-        If specified location and location of the
-         *        destination bigquery dataset
+         * @param parent Required. The BigQuery project id where the transfer configuration should be created.
+        Must be in the
+         *        format projects/{project_id}/locations/{location_id}
+        If specified location and location of
+         *        the destination bigquery dataset
         do not match - the request will fail.
          * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.TransferConfig}
          * @return the request
@@ -1566,11 +1570,11 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The BigQuery project id where the transfer configuration should be created.
-        Must be in the format
-         *        projects/{project_id}/locations/{location_id}
-        If specified location and location of the
-         *        destination bigquery dataset
+           * @param parent Required. The BigQuery project id where the transfer configuration should be created.
+        Must be in the
+         *        format projects/{project_id}/locations/{location_id}
+        If specified location and location of
+         *        the destination bigquery dataset
         do not match - the request will fail.
            * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.TransferConfig}
            * @since 1.13
@@ -1641,25 +1645,27 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           }
 
           /**
-           * The BigQuery project id where the transfer configuration should be created. Must be in
-           * the format projects/{project_id}/locations/{location_id} If specified location and
-           * location of the destination bigquery dataset do not match - the request will fail.
+           * Required. The BigQuery project id where the transfer configuration should be created.
+           * Must be in the format projects/{project_id}/locations/{location_id} If specified
+           * location and location of the destination bigquery dataset do not match - the request
+           * will fail.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The BigQuery project id where the transfer configuration should be created. Must be in the format
-         projects/{project_id}/locations/{location_id} If specified location and location of the destination
-         bigquery dataset do not match - the request will fail.
+          /** Required. The BigQuery project id where the transfer configuration should be created. Must be in
+         the format projects/{project_id}/locations/{location_id} If specified location and location of the
+         destination bigquery dataset do not match - the request will fail.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * The BigQuery project id where the transfer configuration should be created. Must be in
-           * the format projects/{project_id}/locations/{location_id} If specified location and
-           * location of the destination bigquery dataset do not match - the request will fail.
+           * Required. The BigQuery project id where the transfer configuration should be created.
+           * Must be in the format projects/{project_id}/locations/{location_id} If specified
+           * location and location of the destination bigquery dataset do not match - the request
+           * will fail.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -1767,7 +1773,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name The field will contain name of the resource requested, for example:
+         * @param name Required. The field will contain name of the resource requested, for example:
          *        `projects/{project_id}/transferConfigs/{config_id}`
          * @return the request
          */
@@ -1795,7 +1801,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The field will contain name of the resource requested, for example:
+           * @param name Required. The field will contain name of the resource requested, for example:
          *        `projects/{project_id}/transferConfigs/{config_id}`
            * @since 1.13
            */
@@ -1865,13 +1871,13 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           }
 
           /**
-           * The field will contain name of the resource requested, for example:
+           * Required. The field will contain name of the resource requested, for example:
            * `projects/{project_id}/transferConfigs/{config_id}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The field will contain name of the resource requested, for example:
+          /** Required. The field will contain name of the resource requested, for example:
          `projects/{project_id}/transferConfigs/{config_id}`
            */
           public java.lang.String getName() {
@@ -1879,7 +1885,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           }
 
           /**
-           * The field will contain name of the resource requested, for example:
+           * Required. The field will contain name of the resource requested, for example:
            * `projects/{project_id}/transferConfigs/{config_id}`
            */
           public Delete setName(java.lang.String name) {
@@ -1905,7 +1911,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name The field will contain name of the resource requested, for example:
+         * @param name Required. The field will contain name of the resource requested, for example:
          *        `projects/{project_id}/transferConfigs/{config_id}`
          * @return the request
          */
@@ -1933,7 +1939,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The field will contain name of the resource requested, for example:
+           * @param name Required. The field will contain name of the resource requested, for example:
          *        `projects/{project_id}/transferConfigs/{config_id}`
            * @since 1.13
            */
@@ -2013,13 +2019,13 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           }
 
           /**
-           * The field will contain name of the resource requested, for example:
+           * Required. The field will contain name of the resource requested, for example:
            * `projects/{project_id}/transferConfigs/{config_id}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The field will contain name of the resource requested, for example:
+          /** Required. The field will contain name of the resource requested, for example:
          `projects/{project_id}/transferConfigs/{config_id}`
            */
           public java.lang.String getName() {
@@ -2027,7 +2033,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           }
 
           /**
-           * The field will contain name of the resource requested, for example:
+           * Required. The field will contain name of the resource requested, for example:
            * `projects/{project_id}/transferConfigs/{config_id}`
            */
           public Get setName(java.lang.String name) {
@@ -2053,8 +2059,9 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent The BigQuery project id for which data sources
-        should be returned: `projects/{project_id}`.
+         * @param parent Required. The BigQuery project id for which data sources
+        should be returned:
+         *        `projects/{project_id}`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -2081,8 +2088,9 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The BigQuery project id for which data sources
-        should be returned: `projects/{project_id}`.
+           * @param parent Required. The BigQuery project id for which data sources
+        should be returned:
+         *        `projects/{project_id}`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -2161,20 +2169,21 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           }
 
           /**
-           * The BigQuery project id for which data sources should be returned:
+           * Required. The BigQuery project id for which data sources should be returned:
            * `projects/{project_id}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The BigQuery project id for which data sources should be returned: `projects/{project_id}`.
+          /** Required. The BigQuery project id for which data sources should be returned:
+         `projects/{project_id}`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * The BigQuery project id for which data sources should be returned:
+           * Required. The BigQuery project id for which data sources should be returned:
            * `projects/{project_id}`.
            */
           public List setParent(java.lang.String parent) {
@@ -2465,17 +2474,17 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
             return this;
           }
 
-          /** Required list of fields to be updated in this request. */
+          /** Required. Required list of fields to be updated in this request. */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Required list of fields to be updated in this request.
+          /** Required. Required list of fields to be updated in this request.
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
-          /** Required list of fields to be updated in this request. */
+          /** Required. Required list of fields to be updated in this request. */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
             return this;
@@ -2528,8 +2537,8 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * optional parameters, call the {@link ScheduleRuns#execute()} method to invoke the remote
          * operation.
          *
-         * @param parent Transfer configuration name in the form:
-        `projects/{project_id}/transferConfigs/{config_id}`.
+         * @param parent Required. Transfer configuration name in the form:
+         *        `projects/{project_id}/transferConfigs/{config_id}`.
          * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.ScheduleTransferRunsRequest}
          * @return the request
          */
@@ -2560,8 +2569,8 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
            * ScheduleRuns#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Transfer configuration name in the form:
-        `projects/{project_id}/transferConfigs/{config_id}`.
+           * @param parent Required. Transfer configuration name in the form:
+         *        `projects/{project_id}/transferConfigs/{config_id}`.
            * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.ScheduleTransferRunsRequest}
            * @since 1.13
            */
@@ -2631,20 +2640,21 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           }
 
           /**
-           * Transfer configuration name in the form:
+           * Required. Transfer configuration name in the form:
            * `projects/{project_id}/transferConfigs/{config_id}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Transfer configuration name in the form: `projects/{project_id}/transferConfigs/{config_id}`.
+          /** Required. Transfer configuration name in the form:
+         `projects/{project_id}/transferConfigs/{config_id}`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Transfer configuration name in the form:
+           * Required. Transfer configuration name in the form:
            * `projects/{project_id}/transferConfigs/{config_id}`.
            */
           public ScheduleRuns setParent(java.lang.String parent) {
@@ -2835,7 +2845,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
            * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
            * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name The field will contain name of the resource requested, for example:
+           * @param name Required. The field will contain name of the resource requested, for example:
            *        `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
            * @return the request
            */
@@ -2863,7 +2873,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The field will contain name of the resource requested, for example:
+             * @param name Required. The field will contain name of the resource requested, for example:
            *        `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
              * @since 1.13
              */
@@ -2933,13 +2943,13 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
             }
 
             /**
-             * The field will contain name of the resource requested, for example:
+             * Required. The field will contain name of the resource requested, for example:
              * `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The field will contain name of the resource requested, for example:
+            /** Required. The field will contain name of the resource requested, for example:
            `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
              */
             public java.lang.String getName() {
@@ -2947,7 +2957,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
             }
 
             /**
-             * The field will contain name of the resource requested, for example:
+             * Required. The field will contain name of the resource requested, for example:
              * `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
              */
             public Delete setName(java.lang.String name) {
@@ -2973,7 +2983,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
            * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
            * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name The field will contain name of the resource requested, for example:
+           * @param name Required. The field will contain name of the resource requested, for example:
            *        `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
            * @return the request
            */
@@ -3001,7 +3011,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
              * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The field will contain name of the resource requested, for example:
+             * @param name Required. The field will contain name of the resource requested, for example:
            *        `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
              * @since 1.13
              */
@@ -3081,13 +3091,13 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
             }
 
             /**
-             * The field will contain name of the resource requested, for example:
+             * Required. The field will contain name of the resource requested, for example:
              * `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The field will contain name of the resource requested, for example:
+            /** Required. The field will contain name of the resource requested, for example:
            `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
              */
             public java.lang.String getName() {
@@ -3095,7 +3105,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
             }
 
             /**
-             * The field will contain name of the resource requested, for example:
+             * Required. The field will contain name of the resource requested, for example:
              * `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
              */
             public Get setName(java.lang.String name) {
@@ -3121,10 +3131,10 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
            * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Name of transfer configuration for which transfer runs should be retrieved.
-          Format of transfer
-           *        configuration resource name is:
-          `projects/{project_id}/transferConfigs/{config_id}`.
+           * @param parent Required. Name of transfer configuration for which transfer runs should be retrieved.
+          Format of
+           *        transfer configuration resource name is:
+           *        `projects/{project_id}/transferConfigs/{config_id}`.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -3151,10 +3161,10 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
              * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Name of transfer configuration for which transfer runs should be retrieved.
-          Format of transfer
-           *        configuration resource name is:
-          `projects/{project_id}/transferConfigs/{config_id}`.
+             * @param parent Required. Name of transfer configuration for which transfer runs should be retrieved.
+          Format of
+           *        transfer configuration resource name is:
+           *        `projects/{project_id}/transferConfigs/{config_id}`.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -3233,23 +3243,23 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
             }
 
             /**
-             * Name of transfer configuration for which transfer runs should be retrieved. Format of
-             * transfer configuration resource name is:
+             * Required. Name of transfer configuration for which transfer runs should be retrieved.
+             * Format of transfer configuration resource name is:
              * `projects/{project_id}/transferConfigs/{config_id}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Name of transfer configuration for which transfer runs should be retrieved. Format of transfer
-           configuration resource name is: `projects/{project_id}/transferConfigs/{config_id}`.
+            /** Required. Name of transfer configuration for which transfer runs should be retrieved. Format of
+           transfer configuration resource name is: `projects/{project_id}/transferConfigs/{config_id}`.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Name of transfer configuration for which transfer runs should be retrieved. Format of
-             * transfer configuration resource name is:
+             * Required. Name of transfer configuration for which transfer runs should be retrieved.
+             * Format of transfer configuration resource name is:
              * `projects/{project_id}/transferConfigs/{config_id}`.
              */
             public List setParent(java.lang.String parent) {
@@ -3372,8 +3382,8 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
              * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
              * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Transfer run name in the form:
-            `projects/{project_id}/transferConfigs/{config_Id}/runs/{run_id}`.
+             * @param parent Required. Transfer run name in the form:
+             *        `projects/{project_id}/transferConfigs/{config_Id}/runs/{run_id}`.
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -3400,8 +3410,8 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
                * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
                * called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Transfer run name in the form:
-            `projects/{project_id}/transferConfigs/{config_Id}/runs/{run_id}`.
+               * @param parent Required. Transfer run name in the form:
+             *        `projects/{project_id}/transferConfigs/{config_Id}/runs/{run_id}`.
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -3480,20 +3490,21 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
               }
 
               /**
-               * Transfer run name in the form:
+               * Required. Transfer run name in the form:
                * `projects/{project_id}/transferConfigs/{config_Id}/runs/{run_id}`.
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Transfer run name in the form: `projects/{project_id}/transferConfigs/{config_Id}/runs/{run_id}`.
+              /** Required. Transfer run name in the form:
+             `projects/{project_id}/transferConfigs/{config_Id}/runs/{run_id}`.
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * Transfer run name in the form:
+               * Required. Transfer run name in the form:
                * `projects/{project_id}/transferConfigs/{config_Id}/runs/{run_id}`.
                */
               public List setParent(java.lang.String parent) {
@@ -3610,11 +3621,11 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
        * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent The BigQuery project id where the transfer configuration should be created.
-      Must be in the format
-       *        projects/{project_id}/locations/{location_id}
-      If specified location and location of the
-       *        destination bigquery dataset
+       * @param parent Required. The BigQuery project id where the transfer configuration should be created.
+      Must be in the
+       *        format projects/{project_id}/locations/{location_id}
+      If specified location and location of
+       *        the destination bigquery dataset
       do not match - the request will fail.
        * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.TransferConfig}
        * @return the request
@@ -3643,11 +3654,11 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The BigQuery project id where the transfer configuration should be created.
-      Must be in the format
-       *        projects/{project_id}/locations/{location_id}
-      If specified location and location of the
-       *        destination bigquery dataset
+         * @param parent Required. The BigQuery project id where the transfer configuration should be created.
+      Must be in the
+       *        format projects/{project_id}/locations/{location_id}
+      If specified location and location of
+       *        the destination bigquery dataset
       do not match - the request will fail.
          * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.TransferConfig}
          * @since 1.13
@@ -3718,25 +3729,25 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * The BigQuery project id where the transfer configuration should be created. Must be in
-         * the format projects/{project_id}/locations/{location_id} If specified location and
-         * location of the destination bigquery dataset do not match - the request will fail.
+         * Required. The BigQuery project id where the transfer configuration should be created.
+         * Must be in the format projects/{project_id}/locations/{location_id} If specified location
+         * and location of the destination bigquery dataset do not match - the request will fail.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The BigQuery project id where the transfer configuration should be created. Must be in the format
-       projects/{project_id}/locations/{location_id} If specified location and location of the destination
-       bigquery dataset do not match - the request will fail.
+        /** Required. The BigQuery project id where the transfer configuration should be created. Must be in
+       the format projects/{project_id}/locations/{location_id} If specified location and location of the
+       destination bigquery dataset do not match - the request will fail.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The BigQuery project id where the transfer configuration should be created. Must be in
-         * the format projects/{project_id}/locations/{location_id} If specified location and
-         * location of the destination bigquery dataset do not match - the request will fail.
+         * Required. The BigQuery project id where the transfer configuration should be created.
+         * Must be in the format projects/{project_id}/locations/{location_id} If specified location
+         * and location of the destination bigquery dataset do not match - the request will fail.
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -3844,7 +3855,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
        * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name The field will contain name of the resource requested, for example:
+       * @param name Required. The field will contain name of the resource requested, for example:
        *        `projects/{project_id}/transferConfigs/{config_id}`
        * @return the request
        */
@@ -3872,7 +3883,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The field will contain name of the resource requested, for example:
+         * @param name Required. The field will contain name of the resource requested, for example:
        *        `projects/{project_id}/transferConfigs/{config_id}`
          * @since 1.13
          */
@@ -3942,13 +3953,13 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * The field will contain name of the resource requested, for example:
+         * Required. The field will contain name of the resource requested, for example:
          * `projects/{project_id}/transferConfigs/{config_id}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The field will contain name of the resource requested, for example:
+        /** Required. The field will contain name of the resource requested, for example:
        `projects/{project_id}/transferConfigs/{config_id}`
          */
         public java.lang.String getName() {
@@ -3956,7 +3967,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * The field will contain name of the resource requested, for example:
+         * Required. The field will contain name of the resource requested, for example:
          * `projects/{project_id}/transferConfigs/{config_id}`
          */
         public Delete setName(java.lang.String name) {
@@ -3982,7 +3993,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
        * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The field will contain name of the resource requested, for example:
+       * @param name Required. The field will contain name of the resource requested, for example:
        *        `projects/{project_id}/transferConfigs/{config_id}`
        * @return the request
        */
@@ -4010,7 +4021,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The field will contain name of the resource requested, for example:
+         * @param name Required. The field will contain name of the resource requested, for example:
        *        `projects/{project_id}/transferConfigs/{config_id}`
          * @since 1.13
          */
@@ -4090,13 +4101,13 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * The field will contain name of the resource requested, for example:
+         * Required. The field will contain name of the resource requested, for example:
          * `projects/{project_id}/transferConfigs/{config_id}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The field will contain name of the resource requested, for example:
+        /** Required. The field will contain name of the resource requested, for example:
        `projects/{project_id}/transferConfigs/{config_id}`
          */
         public java.lang.String getName() {
@@ -4104,7 +4115,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * The field will contain name of the resource requested, for example:
+         * Required. The field will contain name of the resource requested, for example:
          * `projects/{project_id}/transferConfigs/{config_id}`
          */
         public Get setName(java.lang.String name) {
@@ -4130,8 +4141,9 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
        * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent The BigQuery project id for which data sources
-      should be returned: `projects/{project_id}`.
+       * @param parent Required. The BigQuery project id for which data sources
+      should be returned:
+       *        `projects/{project_id}`.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -4158,8 +4170,9 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The BigQuery project id for which data sources
-      should be returned: `projects/{project_id}`.
+         * @param parent Required. The BigQuery project id for which data sources
+      should be returned:
+       *        `projects/{project_id}`.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -4238,20 +4251,21 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * The BigQuery project id for which data sources should be returned:
+         * Required. The BigQuery project id for which data sources should be returned:
          * `projects/{project_id}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The BigQuery project id for which data sources should be returned: `projects/{project_id}`.
+        /** Required. The BigQuery project id for which data sources should be returned:
+       `projects/{project_id}`.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The BigQuery project id for which data sources should be returned:
+         * Required. The BigQuery project id for which data sources should be returned:
          * `projects/{project_id}`.
          */
         public List setParent(java.lang.String parent) {
@@ -4542,17 +4556,17 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           return this;
         }
 
-        /** Required list of fields to be updated in this request. */
+        /** Required. Required list of fields to be updated in this request. */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** Required list of fields to be updated in this request.
+        /** Required. Required list of fields to be updated in this request.
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
-        /** Required list of fields to be updated in this request. */
+        /** Required. Required list of fields to be updated in this request. */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
           return this;
@@ -4605,8 +4619,8 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
        * optional parameters, call the {@link ScheduleRuns#execute()} method to invoke the remote
        * operation.
        *
-       * @param parent Transfer configuration name in the form:
-      `projects/{project_id}/transferConfigs/{config_id}`.
+       * @param parent Required. Transfer configuration name in the form:
+       *        `projects/{project_id}/transferConfigs/{config_id}`.
        * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.ScheduleTransferRunsRequest}
        * @return the request
        */
@@ -4637,8 +4651,8 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * ScheduleRuns#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Transfer configuration name in the form:
-      `projects/{project_id}/transferConfigs/{config_id}`.
+         * @param parent Required. Transfer configuration name in the form:
+       *        `projects/{project_id}/transferConfigs/{config_id}`.
          * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.ScheduleTransferRunsRequest}
          * @since 1.13
          */
@@ -4708,20 +4722,21 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Transfer configuration name in the form:
+         * Required. Transfer configuration name in the form:
          * `projects/{project_id}/transferConfigs/{config_id}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Transfer configuration name in the form: `projects/{project_id}/transferConfigs/{config_id}`.
+        /** Required. Transfer configuration name in the form:
+       `projects/{project_id}/transferConfigs/{config_id}`.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Transfer configuration name in the form:
+         * Required. Transfer configuration name in the form:
          * `projects/{project_id}/transferConfigs/{config_id}`.
          */
         public ScheduleRuns setParent(java.lang.String parent) {
@@ -4912,7 +4927,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name The field will contain name of the resource requested, for example:
+         * @param name Required. The field will contain name of the resource requested, for example:
          *        `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
          * @return the request
          */
@@ -4940,7 +4955,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The field will contain name of the resource requested, for example:
+           * @param name Required. The field will contain name of the resource requested, for example:
          *        `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
            * @since 1.13
            */
@@ -5010,13 +5025,13 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           }
 
           /**
-           * The field will contain name of the resource requested, for example:
+           * Required. The field will contain name of the resource requested, for example:
            * `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The field will contain name of the resource requested, for example:
+          /** Required. The field will contain name of the resource requested, for example:
          `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
            */
           public java.lang.String getName() {
@@ -5024,7 +5039,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           }
 
           /**
-           * The field will contain name of the resource requested, for example:
+           * Required. The field will contain name of the resource requested, for example:
            * `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
            */
           public Delete setName(java.lang.String name) {
@@ -5050,7 +5065,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name The field will contain name of the resource requested, for example:
+         * @param name Required. The field will contain name of the resource requested, for example:
          *        `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
          * @return the request
          */
@@ -5078,7 +5093,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The field will contain name of the resource requested, for example:
+           * @param name Required. The field will contain name of the resource requested, for example:
          *        `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
            * @since 1.13
            */
@@ -5158,13 +5173,13 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           }
 
           /**
-           * The field will contain name of the resource requested, for example:
+           * Required. The field will contain name of the resource requested, for example:
            * `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The field will contain name of the resource requested, for example:
+          /** Required. The field will contain name of the resource requested, for example:
          `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
            */
           public java.lang.String getName() {
@@ -5172,7 +5187,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           }
 
           /**
-           * The field will contain name of the resource requested, for example:
+           * Required. The field will contain name of the resource requested, for example:
            * `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}`
            */
           public Get setName(java.lang.String name) {
@@ -5198,10 +5213,10 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Name of transfer configuration for which transfer runs should be retrieved.
-        Format of transfer
-         *        configuration resource name is:
-        `projects/{project_id}/transferConfigs/{config_id}`.
+         * @param parent Required. Name of transfer configuration for which transfer runs should be retrieved.
+        Format of
+         *        transfer configuration resource name is:
+         *        `projects/{project_id}/transferConfigs/{config_id}`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -5228,10 +5243,10 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Name of transfer configuration for which transfer runs should be retrieved.
-        Format of transfer
-         *        configuration resource name is:
-        `projects/{project_id}/transferConfigs/{config_id}`.
+           * @param parent Required. Name of transfer configuration for which transfer runs should be retrieved.
+        Format of
+         *        transfer configuration resource name is:
+         *        `projects/{project_id}/transferConfigs/{config_id}`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -5310,23 +5325,23 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           }
 
           /**
-           * Name of transfer configuration for which transfer runs should be retrieved. Format of
-           * transfer configuration resource name is:
+           * Required. Name of transfer configuration for which transfer runs should be retrieved.
+           * Format of transfer configuration resource name is:
            * `projects/{project_id}/transferConfigs/{config_id}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Name of transfer configuration for which transfer runs should be retrieved. Format of transfer
-         configuration resource name is: `projects/{project_id}/transferConfigs/{config_id}`.
+          /** Required. Name of transfer configuration for which transfer runs should be retrieved. Format of
+         transfer configuration resource name is: `projects/{project_id}/transferConfigs/{config_id}`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Name of transfer configuration for which transfer runs should be retrieved. Format of
-           * transfer configuration resource name is:
+           * Required. Name of transfer configuration for which transfer runs should be retrieved.
+           * Format of transfer configuration resource name is:
            * `projects/{project_id}/transferConfigs/{config_id}`.
            */
           public List setParent(java.lang.String parent) {
@@ -5449,8 +5464,8 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
            * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Transfer run name in the form:
-          `projects/{project_id}/transferConfigs/{config_Id}/runs/{run_id}`.
+           * @param parent Required. Transfer run name in the form:
+           *        `projects/{project_id}/transferConfigs/{config_Id}/runs/{run_id}`.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -5477,8 +5492,8 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
              * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Transfer run name in the form:
-          `projects/{project_id}/transferConfigs/{config_Id}/runs/{run_id}`.
+             * @param parent Required. Transfer run name in the form:
+           *        `projects/{project_id}/transferConfigs/{config_Id}/runs/{run_id}`.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -5557,20 +5572,21 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
             }
 
             /**
-             * Transfer run name in the form:
+             * Required. Transfer run name in the form:
              * `projects/{project_id}/transferConfigs/{config_Id}/runs/{run_id}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Transfer run name in the form: `projects/{project_id}/transferConfigs/{config_Id}/runs/{run_id}`.
+            /** Required. Transfer run name in the form:
+           `projects/{project_id}/transferConfigs/{config_Id}/runs/{run_id}`.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Transfer run name in the form:
+             * Required. Transfer run name in the form:
              * `projects/{project_id}/transferConfigs/{config_Id}/runs/{run_id}`.
              */
             public List setParent(java.lang.String parent) {

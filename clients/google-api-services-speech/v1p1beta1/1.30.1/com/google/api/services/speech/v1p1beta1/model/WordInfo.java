@@ -31,57 +31,57 @@ package com.google.api.services.speech.v1p1beta1.model;
 public final class WordInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The confidence estimate between 0.0 and 1.0. A higher number indicates an
-   * estimated greater likelihood that the recognized words are correct. This field is set only for
-   * the top alternative of a non-streaming result or, of a streaming result where `is_final=true`.
-   * This field is not guaranteed to be accurate and users should not rely on it to be always
-   * provided. The default of 0.0 is a sentinel value indicating `confidence` was not set.
+   * The confidence estimate between 0.0 and 1.0. A higher number indicates an estimated greater
+   * likelihood that the recognized words are correct. This field is set only for the top
+   * alternative of a non-streaming result or, of a streaming result where `is_final=true`. This
+   * field is not guaranteed to be accurate and users should not rely on it to be always provided.
+   * The default of 0.0 is a sentinel value indicating `confidence` was not set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float confidence;
 
   /**
-   * Output only. Time offset relative to the beginning of the audio, and corresponding to the end
-   * of the spoken word. This field is only set if `enable_word_time_offsets=true` and only in the
-   * top hypothesis. This is an experimental feature and the accuracy of the time offset can vary.
+   * Time offset relative to the beginning of the audio, and corresponding to the end of the spoken
+   * word. This field is only set if `enable_word_time_offsets=true` and only in the top hypothesis.
+   * This is an experimental feature and the accuracy of the time offset can vary.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String endTime;
 
   /**
-   * Output only. A distinct integer value is assigned for every speaker within the audio. This
-   * field specifies which one of those speakers was detected to have spoken this word. Value ranges
-   * from '1' to diarization_speaker_count. speaker_tag is set if enable_speaker_diarization =
-   * 'true' and only in the top alternative.
+   * A distinct integer value is assigned for every speaker within the audio. This field specifies
+   * which one of those speakers was detected to have spoken this word. Value ranges from '1' to
+   * diarization_speaker_count. speaker_tag is set if enable_speaker_diarization = 'true' and only
+   * in the top alternative.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer speakerTag;
 
   /**
-   * Output only. Time offset relative to the beginning of the audio, and corresponding to the start
-   * of the spoken word. This field is only set if `enable_word_time_offsets=true` and only in the
-   * top hypothesis. This is an experimental feature and the accuracy of the time offset can vary.
+   * Time offset relative to the beginning of the audio, and corresponding to the start of the
+   * spoken word. This field is only set if `enable_word_time_offsets=true` and only in the top
+   * hypothesis. This is an experimental feature and the accuracy of the time offset can vary.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String startTime;
 
   /**
-   * Output only. The word corresponding to this set of information.
+   * The word corresponding to this set of information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String word;
 
   /**
-   * Output only. The confidence estimate between 0.0 and 1.0. A higher number indicates an
-   * estimated greater likelihood that the recognized words are correct. This field is set only for
-   * the top alternative of a non-streaming result or, of a streaming result where `is_final=true`.
-   * This field is not guaranteed to be accurate and users should not rely on it to be always
-   * provided. The default of 0.0 is a sentinel value indicating `confidence` was not set.
+   * The confidence estimate between 0.0 and 1.0. A higher number indicates an estimated greater
+   * likelihood that the recognized words are correct. This field is set only for the top
+   * alternative of a non-streaming result or, of a streaming result where `is_final=true`. This
+   * field is not guaranteed to be accurate and users should not rely on it to be always provided.
+   * The default of 0.0 is a sentinel value indicating `confidence` was not set.
    * @return value or {@code null} for none
    */
   public java.lang.Float getConfidence() {
@@ -89,11 +89,11 @@ public final class WordInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The confidence estimate between 0.0 and 1.0. A higher number indicates an
-   * estimated greater likelihood that the recognized words are correct. This field is set only for
-   * the top alternative of a non-streaming result or, of a streaming result where `is_final=true`.
-   * This field is not guaranteed to be accurate and users should not rely on it to be always
-   * provided. The default of 0.0 is a sentinel value indicating `confidence` was not set.
+   * The confidence estimate between 0.0 and 1.0. A higher number indicates an estimated greater
+   * likelihood that the recognized words are correct. This field is set only for the top
+   * alternative of a non-streaming result or, of a streaming result where `is_final=true`. This
+   * field is not guaranteed to be accurate and users should not rely on it to be always provided.
+   * The default of 0.0 is a sentinel value indicating `confidence` was not set.
    * @param confidence confidence or {@code null} for none
    */
   public WordInfo setConfidence(java.lang.Float confidence) {
@@ -102,9 +102,9 @@ public final class WordInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Time offset relative to the beginning of the audio, and corresponding to the end
-   * of the spoken word. This field is only set if `enable_word_time_offsets=true` and only in the
-   * top hypothesis. This is an experimental feature and the accuracy of the time offset can vary.
+   * Time offset relative to the beginning of the audio, and corresponding to the end of the spoken
+   * word. This field is only set if `enable_word_time_offsets=true` and only in the top hypothesis.
+   * This is an experimental feature and the accuracy of the time offset can vary.
    * @return value or {@code null} for none
    */
   public String getEndTime() {
@@ -112,9 +112,9 @@ public final class WordInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Time offset relative to the beginning of the audio, and corresponding to the end
-   * of the spoken word. This field is only set if `enable_word_time_offsets=true` and only in the
-   * top hypothesis. This is an experimental feature and the accuracy of the time offset can vary.
+   * Time offset relative to the beginning of the audio, and corresponding to the end of the spoken
+   * word. This field is only set if `enable_word_time_offsets=true` and only in the top hypothesis.
+   * This is an experimental feature and the accuracy of the time offset can vary.
    * @param endTime endTime or {@code null} for none
    */
   public WordInfo setEndTime(String endTime) {
@@ -123,10 +123,10 @@ public final class WordInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A distinct integer value is assigned for every speaker within the audio. This
-   * field specifies which one of those speakers was detected to have spoken this word. Value ranges
-   * from '1' to diarization_speaker_count. speaker_tag is set if enable_speaker_diarization =
-   * 'true' and only in the top alternative.
+   * A distinct integer value is assigned for every speaker within the audio. This field specifies
+   * which one of those speakers was detected to have spoken this word. Value ranges from '1' to
+   * diarization_speaker_count. speaker_tag is set if enable_speaker_diarization = 'true' and only
+   * in the top alternative.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSpeakerTag() {
@@ -134,10 +134,10 @@ public final class WordInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A distinct integer value is assigned for every speaker within the audio. This
-   * field specifies which one of those speakers was detected to have spoken this word. Value ranges
-   * from '1' to diarization_speaker_count. speaker_tag is set if enable_speaker_diarization =
-   * 'true' and only in the top alternative.
+   * A distinct integer value is assigned for every speaker within the audio. This field specifies
+   * which one of those speakers was detected to have spoken this word. Value ranges from '1' to
+   * diarization_speaker_count. speaker_tag is set if enable_speaker_diarization = 'true' and only
+   * in the top alternative.
    * @param speakerTag speakerTag or {@code null} for none
    */
   public WordInfo setSpeakerTag(java.lang.Integer speakerTag) {
@@ -146,9 +146,9 @@ public final class WordInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Time offset relative to the beginning of the audio, and corresponding to the start
-   * of the spoken word. This field is only set if `enable_word_time_offsets=true` and only in the
-   * top hypothesis. This is an experimental feature and the accuracy of the time offset can vary.
+   * Time offset relative to the beginning of the audio, and corresponding to the start of the
+   * spoken word. This field is only set if `enable_word_time_offsets=true` and only in the top
+   * hypothesis. This is an experimental feature and the accuracy of the time offset can vary.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -156,9 +156,9 @@ public final class WordInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Time offset relative to the beginning of the audio, and corresponding to the start
-   * of the spoken word. This field is only set if `enable_word_time_offsets=true` and only in the
-   * top hypothesis. This is an experimental feature and the accuracy of the time offset can vary.
+   * Time offset relative to the beginning of the audio, and corresponding to the start of the
+   * spoken word. This field is only set if `enable_word_time_offsets=true` and only in the top
+   * hypothesis. This is an experimental feature and the accuracy of the time offset can vary.
    * @param startTime startTime or {@code null} for none
    */
   public WordInfo setStartTime(String startTime) {
@@ -167,7 +167,7 @@ public final class WordInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The word corresponding to this set of information.
+   * The word corresponding to this set of information.
    * @return value or {@code null} for none
    */
   public java.lang.String getWord() {
@@ -175,7 +175,7 @@ public final class WordInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The word corresponding to this set of information.
+   * The word corresponding to this set of information.
    * @param word word or {@code null} for none
    */
   public WordInfo setWord(java.lang.String word) {

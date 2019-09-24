@@ -31,21 +31,21 @@ package com.google.api.services.speech.v1.model;
 public final class RecognizeRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * *Required* The audio data to be recognized.
+   * Required. The audio data to be recognized.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private RecognitionAudio audio;
 
   /**
-   * *Required* Provides information to the recognizer that specifies how to process the request.
+   * Required. Provides information to the recognizer that specifies how to process the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private RecognitionConfig config;
 
   /**
-   * *Required* The audio data to be recognized.
+   * Required. The audio data to be recognized.
    * @return value or {@code null} for none
    */
   public RecognitionAudio getAudio() {
@@ -53,7 +53,7 @@ public final class RecognizeRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * *Required* The audio data to be recognized.
+   * Required. The audio data to be recognized.
    * @param audio audio or {@code null} for none
    */
   public RecognizeRequest setAudio(RecognitionAudio audio) {
@@ -62,7 +62,7 @@ public final class RecognizeRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * *Required* Provides information to the recognizer that specifies how to process the request.
+   * Required. Provides information to the recognizer that specifies how to process the request.
    * @return value or {@code null} for none
    */
   public RecognitionConfig getConfig() {
@@ -70,7 +70,7 @@ public final class RecognizeRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * *Required* Provides information to the recognizer that specifies how to process the request.
+   * Required. Provides information to the recognizer that specifies how to process the request.
    * @param config config or {@code null} for none
    */
   public RecognizeRequest setConfig(RecognitionConfig config) {

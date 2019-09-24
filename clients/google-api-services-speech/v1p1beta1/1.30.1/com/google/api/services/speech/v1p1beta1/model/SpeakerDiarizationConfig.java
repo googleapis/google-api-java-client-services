@@ -17,7 +17,7 @@
 package com.google.api.services.speech.v1p1beta1.model;
 
 /**
- * *Optional* Config to enable speaker diarization.
+ * Config to enable speaker diarization.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Speech-to-Text API. For a detailed explanation
@@ -31,34 +31,34 @@ package com.google.api.services.speech.v1p1beta1.model;
 public final class SpeakerDiarizationConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * *Optional* If 'true', enables speaker detection for each recognized word in the top alternative
-   * of the recognition result using a speaker_tag provided in the WordInfo.
+   * If 'true', enables speaker detection for each recognized word in the top alternative of the
+   * recognition result using a speaker_tag provided in the WordInfo.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableSpeakerDiarization;
 
   /**
-   * *Optional* Maximum number of speakers in the conversation. This range gives you more
-   * flexibility by allowing the system to automatically determine the correct number of speakers.
-   * If not set, the default value is 6.
+   * Maximum number of speakers in the conversation. This range gives you more flexibility by
+   * allowing the system to automatically determine the correct number of speakers. If not set, the
+   * default value is 6.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxSpeakerCount;
 
   /**
-   * *Optional* Minimum number of speakers in the conversation. This range gives you more
-   * flexibility by allowing the system to automatically determine the correct number of speakers.
-   * If not set, the default value is 2.
+   * Minimum number of speakers in the conversation. This range gives you more flexibility by
+   * allowing the system to automatically determine the correct number of speakers. If not set, the
+   * default value is 2.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer minSpeakerCount;
 
   /**
-   * *Optional* If 'true', enables speaker detection for each recognized word in the top alternative
-   * of the recognition result using a speaker_tag provided in the WordInfo.
+   * If 'true', enables speaker detection for each recognized word in the top alternative of the
+   * recognition result using a speaker_tag provided in the WordInfo.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableSpeakerDiarization() {
@@ -66,8 +66,8 @@ public final class SpeakerDiarizationConfig extends com.google.api.client.json.G
   }
 
   /**
-   * *Optional* If 'true', enables speaker detection for each recognized word in the top alternative
-   * of the recognition result using a speaker_tag provided in the WordInfo.
+   * If 'true', enables speaker detection for each recognized word in the top alternative of the
+   * recognition result using a speaker_tag provided in the WordInfo.
    * @param enableSpeakerDiarization enableSpeakerDiarization or {@code null} for none
    */
   public SpeakerDiarizationConfig setEnableSpeakerDiarization(java.lang.Boolean enableSpeakerDiarization) {
@@ -76,9 +76,9 @@ public final class SpeakerDiarizationConfig extends com.google.api.client.json.G
   }
 
   /**
-   * *Optional* Maximum number of speakers in the conversation. This range gives you more
-   * flexibility by allowing the system to automatically determine the correct number of speakers.
-   * If not set, the default value is 6.
+   * Maximum number of speakers in the conversation. This range gives you more flexibility by
+   * allowing the system to automatically determine the correct number of speakers. If not set, the
+   * default value is 6.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxSpeakerCount() {
@@ -86,9 +86,9 @@ public final class SpeakerDiarizationConfig extends com.google.api.client.json.G
   }
 
   /**
-   * *Optional* Maximum number of speakers in the conversation. This range gives you more
-   * flexibility by allowing the system to automatically determine the correct number of speakers.
-   * If not set, the default value is 6.
+   * Maximum number of speakers in the conversation. This range gives you more flexibility by
+   * allowing the system to automatically determine the correct number of speakers. If not set, the
+   * default value is 6.
    * @param maxSpeakerCount maxSpeakerCount or {@code null} for none
    */
   public SpeakerDiarizationConfig setMaxSpeakerCount(java.lang.Integer maxSpeakerCount) {
@@ -97,9 +97,9 @@ public final class SpeakerDiarizationConfig extends com.google.api.client.json.G
   }
 
   /**
-   * *Optional* Minimum number of speakers in the conversation. This range gives you more
-   * flexibility by allowing the system to automatically determine the correct number of speakers.
-   * If not set, the default value is 2.
+   * Minimum number of speakers in the conversation. This range gives you more flexibility by
+   * allowing the system to automatically determine the correct number of speakers. If not set, the
+   * default value is 2.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMinSpeakerCount() {
@@ -107,9 +107,9 @@ public final class SpeakerDiarizationConfig extends com.google.api.client.json.G
   }
 
   /**
-   * *Optional* Minimum number of speakers in the conversation. This range gives you more
-   * flexibility by allowing the system to automatically determine the correct number of speakers.
-   * If not set, the default value is 2.
+   * Minimum number of speakers in the conversation. This range gives you more flexibility by
+   * allowing the system to automatically determine the correct number of speakers. If not set, the
+   * default value is 2.
    * @param minSpeakerCount minSpeakerCount or {@code null} for none
    */
   public SpeakerDiarizationConfig setMinSpeakerCount(java.lang.Integer minSpeakerCount) {

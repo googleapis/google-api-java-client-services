@@ -31,23 +31,35 @@ package com.google.api.services.speech.v1.model;
 public final class RecognitionConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * *Optional* The number of channels in the input audio data. ONLY set this for MULTI-CHANNEL
-   * recognition. Valid values for LINEAR16 and FLAC are `1`-`8`. Valid values for OGG_OPUS are
-   * '1'-'254'. Valid value for MULAW, AMR, AMR_WB and SPEEX_WITH_HEADER_BYTE is only `1`. If `0` or
-   * omitted, defaults to one channel (mono). Note: We only recognize the first channel by default.
-   * To perform independent recognition on each channel set
-   * `enable_separate_recognition_per_channel` to 'true'.
+   * The number of channels in the input audio data. ONLY set this for MULTI-CHANNEL recognition.
+   * Valid values for LINEAR16 and FLAC are `1`-`8`. Valid values for OGG_OPUS are '1'-'254'. Valid
+   * value for MULAW, AMR, AMR_WB and SPEEX_WITH_HEADER_BYTE is only `1`. If `0` or omitted,
+   * defaults to one channel (mono). Note: We only recognize the first channel by default. To
+   * perform independent recognition on each channel set `enable_separate_recognition_per_channel`
+   * to 'true'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer audioChannelCount;
 
   /**
-   * *Optional* If 'true', adds punctuation to recognition result hypotheses. This feature is only
-   * available in select languages. Setting this for requests in other languages has no effect at
-   * all. The default 'false' value does not add punctuation to result hypotheses. Note: This is
-   * currently offered as an experimental service, complimentary to all users. In the future this
-   * may be exclusively available as a premium feature.
+   * Config to enable speaker diarization and set additional parameters to make diarization better
+   * suited for your application. Note: When this is enabled, we send all the words from the
+   * beginning of the audio for the top alternative in every consecutive STREAMING responses. This
+   * is done in order to improve our speaker tags as our models learn to identify the speakers in
+   * the conversation over time. For non-streaming requests, the diarization results will be
+   * provided only in the top alternative of the FINAL SpeechRecognitionResult.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SpeakerDiarizationConfig diarizationConfig;
+
+  /**
+   * If 'true', adds punctuation to recognition result hypotheses. This feature is only available in
+   * select languages. Setting this for requests in other languages has no effect at all. The
+   * default 'false' value does not add punctuation to result hypotheses. Note: This is currently
+   * offered as an experimental service, complimentary to all users. In the future this may be
+   * exclusively available as a premium feature.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,9 +77,9 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   private java.lang.Boolean enableSeparateRecognitionPerChannel;
 
   /**
-   * *Optional* If `true`, the top result includes a list of words and the start and end time
-   * offsets (timestamps) for those words. If `false`, no word-level time offset information is
-   * returned. The default is `false`.
+   * If `true`, the top result includes a list of words and the start and end time offsets
+   * (timestamps) for those words. If `false`, no word-level time offset information is returned.
+   * The default is `false`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +95,7 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   private java.lang.String encoding;
 
   /**
-   * *Required* The language of the supplied audio as a [BCP-47](https://www.rfc-
+   * Required. The language of the supplied audio as a [BCP-47](https://www.rfc-
    * editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US". See [Language
    * Support](https://cloud.google.com/speech-to-text/docs/languages) for a list of the currently
    * supported language codes.
@@ -93,26 +105,26 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   private java.lang.String languageCode;
 
   /**
-   * *Optional* Maximum number of recognition hypotheses to be returned. Specifically, the maximum
-   * number of `SpeechRecognitionAlternative` messages within each `SpeechRecognitionResult`. The
-   * server may return fewer than `max_alternatives`. Valid values are `0`-`30`. A value of `0` or
-   * `1` will return a maximum of one. If omitted, will return a maximum of one.
+   * Maximum number of recognition hypotheses to be returned. Specifically, the maximum number of
+   * `SpeechRecognitionAlternative` messages within each `SpeechRecognitionResult`. The server may
+   * return fewer than `max_alternatives`. Valid values are `0`-`30`. A value of `0` or `1` will
+   * return a maximum of one. If omitted, will return a maximum of one.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxAlternatives;
 
   /**
-   * *Optional* Metadata regarding this request.
+   * Metadata regarding this request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private RecognitionMetadata metadata;
 
   /**
-   * *Optional* Which model to select for the given request. Select the model best suited to your
-   * domain to get best results. If a model is not explicitly specified, then we auto-select a model
-   * based on the parameters in the RecognitionConfig.
+   * Which model to select for the given request. Select the model best suited to your domain to get
+   * best results. If a model is not explicitly specified, then we auto-select a model based on the
+   * parameters in the RecognitionConfig.
    *
    *        Model     Description           command_and_search     Best for short queries such as
    * voice commands or voice search.           phone_call     Best for audio that originated from a
@@ -128,9 +140,9 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   private java.lang.String model;
 
   /**
-   * *Optional* If set to `true`, the server will attempt to filter out profanities, replacing all
-   * but the initial character in each filtered word with asterisks, e.g. "f***". If set to `false`
-   * or omitted, profanities won't be filtered out.
+   * If set to `true`, the server will attempt to filter out profanities, replacing all but the
+   * initial character in each filtered word with asterisks, e.g. "f***". If set to `false` or
+   * omitted, profanities won't be filtered out.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -148,18 +160,18 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   private java.lang.Integer sampleRateHertz;
 
   /**
-   * *Optional* array of SpeechContext. A means to provide context to assist the speech recognition.
-   * For more information, see [speech adaptation](https://cloud.google.com/speech-to-text/docs
-   * /context-strength).
+   * Array of SpeechContext. A means to provide context to assist the speech recognition. For more
+   * information, see [speech adaptation](https://cloud.google.com/speech-to-text/docs/context-
+   * strength).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<SpeechContext> speechContexts;
 
   /**
-   * *Optional* Set to true to use an enhanced model for speech recognition. If `use_enhanced` is
-   * set to true and the `model` field is not set, then an appropriate enhanced model is chosen if
-   * an enhanced model exists for the audio.
+   * Set to true to use an enhanced model for speech recognition. If `use_enhanced` is set to true
+   * and the `model` field is not set, then an appropriate enhanced model is chosen if an enhanced
+   * model exists for the audio.
    *
    * If `use_enhanced` is true and an enhanced version of the specified model does not exist, then
    * the speech is recognized using the standard version of the specified model.
@@ -169,12 +181,12 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   private java.lang.Boolean useEnhanced;
 
   /**
-   * *Optional* The number of channels in the input audio data. ONLY set this for MULTI-CHANNEL
-   * recognition. Valid values for LINEAR16 and FLAC are `1`-`8`. Valid values for OGG_OPUS are
-   * '1'-'254'. Valid value for MULAW, AMR, AMR_WB and SPEEX_WITH_HEADER_BYTE is only `1`. If `0` or
-   * omitted, defaults to one channel (mono). Note: We only recognize the first channel by default.
-   * To perform independent recognition on each channel set
-   * `enable_separate_recognition_per_channel` to 'true'.
+   * The number of channels in the input audio data. ONLY set this for MULTI-CHANNEL recognition.
+   * Valid values for LINEAR16 and FLAC are `1`-`8`. Valid values for OGG_OPUS are '1'-'254'. Valid
+   * value for MULAW, AMR, AMR_WB and SPEEX_WITH_HEADER_BYTE is only `1`. If `0` or omitted,
+   * defaults to one channel (mono). Note: We only recognize the first channel by default. To
+   * perform independent recognition on each channel set `enable_separate_recognition_per_channel`
+   * to 'true'.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getAudioChannelCount() {
@@ -182,12 +194,12 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * *Optional* The number of channels in the input audio data. ONLY set this for MULTI-CHANNEL
-   * recognition. Valid values for LINEAR16 and FLAC are `1`-`8`. Valid values for OGG_OPUS are
-   * '1'-'254'. Valid value for MULAW, AMR, AMR_WB and SPEEX_WITH_HEADER_BYTE is only `1`. If `0` or
-   * omitted, defaults to one channel (mono). Note: We only recognize the first channel by default.
-   * To perform independent recognition on each channel set
-   * `enable_separate_recognition_per_channel` to 'true'.
+   * The number of channels in the input audio data. ONLY set this for MULTI-CHANNEL recognition.
+   * Valid values for LINEAR16 and FLAC are `1`-`8`. Valid values for OGG_OPUS are '1'-'254'. Valid
+   * value for MULAW, AMR, AMR_WB and SPEEX_WITH_HEADER_BYTE is only `1`. If `0` or omitted,
+   * defaults to one channel (mono). Note: We only recognize the first channel by default. To
+   * perform independent recognition on each channel set `enable_separate_recognition_per_channel`
+   * to 'true'.
    * @param audioChannelCount audioChannelCount or {@code null} for none
    */
   public RecognitionConfig setAudioChannelCount(java.lang.Integer audioChannelCount) {
@@ -196,11 +208,38 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * *Optional* If 'true', adds punctuation to recognition result hypotheses. This feature is only
-   * available in select languages. Setting this for requests in other languages has no effect at
-   * all. The default 'false' value does not add punctuation to result hypotheses. Note: This is
-   * currently offered as an experimental service, complimentary to all users. In the future this
-   * may be exclusively available as a premium feature.
+   * Config to enable speaker diarization and set additional parameters to make diarization better
+   * suited for your application. Note: When this is enabled, we send all the words from the
+   * beginning of the audio for the top alternative in every consecutive STREAMING responses. This
+   * is done in order to improve our speaker tags as our models learn to identify the speakers in
+   * the conversation over time. For non-streaming requests, the diarization results will be
+   * provided only in the top alternative of the FINAL SpeechRecognitionResult.
+   * @return value or {@code null} for none
+   */
+  public SpeakerDiarizationConfig getDiarizationConfig() {
+    return diarizationConfig;
+  }
+
+  /**
+   * Config to enable speaker diarization and set additional parameters to make diarization better
+   * suited for your application. Note: When this is enabled, we send all the words from the
+   * beginning of the audio for the top alternative in every consecutive STREAMING responses. This
+   * is done in order to improve our speaker tags as our models learn to identify the speakers in
+   * the conversation over time. For non-streaming requests, the diarization results will be
+   * provided only in the top alternative of the FINAL SpeechRecognitionResult.
+   * @param diarizationConfig diarizationConfig or {@code null} for none
+   */
+  public RecognitionConfig setDiarizationConfig(SpeakerDiarizationConfig diarizationConfig) {
+    this.diarizationConfig = diarizationConfig;
+    return this;
+  }
+
+  /**
+   * If 'true', adds punctuation to recognition result hypotheses. This feature is only available in
+   * select languages. Setting this for requests in other languages has no effect at all. The
+   * default 'false' value does not add punctuation to result hypotheses. Note: This is currently
+   * offered as an experimental service, complimentary to all users. In the future this may be
+   * exclusively available as a premium feature.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableAutomaticPunctuation() {
@@ -208,11 +247,11 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * *Optional* If 'true', adds punctuation to recognition result hypotheses. This feature is only
-   * available in select languages. Setting this for requests in other languages has no effect at
-   * all. The default 'false' value does not add punctuation to result hypotheses. Note: This is
-   * currently offered as an experimental service, complimentary to all users. In the future this
-   * may be exclusively available as a premium feature.
+   * If 'true', adds punctuation to recognition result hypotheses. This feature is only available in
+   * select languages. Setting this for requests in other languages has no effect at all. The
+   * default 'false' value does not add punctuation to result hypotheses. Note: This is currently
+   * offered as an experimental service, complimentary to all users. In the future this may be
+   * exclusively available as a premium feature.
    * @param enableAutomaticPunctuation enableAutomaticPunctuation or {@code null} for none
    */
   public RecognitionConfig setEnableAutomaticPunctuation(java.lang.Boolean enableAutomaticPunctuation) {
@@ -246,9 +285,9 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * *Optional* If `true`, the top result includes a list of words and the start and end time
-   * offsets (timestamps) for those words. If `false`, no word-level time offset information is
-   * returned. The default is `false`.
+   * If `true`, the top result includes a list of words and the start and end time offsets
+   * (timestamps) for those words. If `false`, no word-level time offset information is returned.
+   * The default is `false`.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableWordTimeOffsets() {
@@ -256,9 +295,9 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * *Optional* If `true`, the top result includes a list of words and the start and end time
-   * offsets (timestamps) for those words. If `false`, no word-level time offset information is
-   * returned. The default is `false`.
+   * If `true`, the top result includes a list of words and the start and end time offsets
+   * (timestamps) for those words. If `false`, no word-level time offset information is returned.
+   * The default is `false`.
    * @param enableWordTimeOffsets enableWordTimeOffsets or {@code null} for none
    */
   public RecognitionConfig setEnableWordTimeOffsets(java.lang.Boolean enableWordTimeOffsets) {
@@ -288,7 +327,7 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * *Required* The language of the supplied audio as a [BCP-47](https://www.rfc-
+   * Required. The language of the supplied audio as a [BCP-47](https://www.rfc-
    * editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US". See [Language
    * Support](https://cloud.google.com/speech-to-text/docs/languages) for a list of the currently
    * supported language codes.
@@ -299,7 +338,7 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * *Required* The language of the supplied audio as a [BCP-47](https://www.rfc-
+   * Required. The language of the supplied audio as a [BCP-47](https://www.rfc-
    * editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US". See [Language
    * Support](https://cloud.google.com/speech-to-text/docs/languages) for a list of the currently
    * supported language codes.
@@ -311,10 +350,10 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * *Optional* Maximum number of recognition hypotheses to be returned. Specifically, the maximum
-   * number of `SpeechRecognitionAlternative` messages within each `SpeechRecognitionResult`. The
-   * server may return fewer than `max_alternatives`. Valid values are `0`-`30`. A value of `0` or
-   * `1` will return a maximum of one. If omitted, will return a maximum of one.
+   * Maximum number of recognition hypotheses to be returned. Specifically, the maximum number of
+   * `SpeechRecognitionAlternative` messages within each `SpeechRecognitionResult`. The server may
+   * return fewer than `max_alternatives`. Valid values are `0`-`30`. A value of `0` or `1` will
+   * return a maximum of one. If omitted, will return a maximum of one.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxAlternatives() {
@@ -322,10 +361,10 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * *Optional* Maximum number of recognition hypotheses to be returned. Specifically, the maximum
-   * number of `SpeechRecognitionAlternative` messages within each `SpeechRecognitionResult`. The
-   * server may return fewer than `max_alternatives`. Valid values are `0`-`30`. A value of `0` or
-   * `1` will return a maximum of one. If omitted, will return a maximum of one.
+   * Maximum number of recognition hypotheses to be returned. Specifically, the maximum number of
+   * `SpeechRecognitionAlternative` messages within each `SpeechRecognitionResult`. The server may
+   * return fewer than `max_alternatives`. Valid values are `0`-`30`. A value of `0` or `1` will
+   * return a maximum of one. If omitted, will return a maximum of one.
    * @param maxAlternatives maxAlternatives or {@code null} for none
    */
   public RecognitionConfig setMaxAlternatives(java.lang.Integer maxAlternatives) {
@@ -334,7 +373,7 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * *Optional* Metadata regarding this request.
+   * Metadata regarding this request.
    * @return value or {@code null} for none
    */
   public RecognitionMetadata getMetadata() {
@@ -342,7 +381,7 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * *Optional* Metadata regarding this request.
+   * Metadata regarding this request.
    * @param metadata metadata or {@code null} for none
    */
   public RecognitionConfig setMetadata(RecognitionMetadata metadata) {
@@ -351,9 +390,9 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * *Optional* Which model to select for the given request. Select the model best suited to your
-   * domain to get best results. If a model is not explicitly specified, then we auto-select a model
-   * based on the parameters in the RecognitionConfig.
+   * Which model to select for the given request. Select the model best suited to your domain to get
+   * best results. If a model is not explicitly specified, then we auto-select a model based on the
+   * parameters in the RecognitionConfig.
    *
    *        Model     Description           command_and_search     Best for short queries such as
    * voice commands or voice search.           phone_call     Best for audio that originated from a
@@ -370,9 +409,9 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * *Optional* Which model to select for the given request. Select the model best suited to your
-   * domain to get best results. If a model is not explicitly specified, then we auto-select a model
-   * based on the parameters in the RecognitionConfig.
+   * Which model to select for the given request. Select the model best suited to your domain to get
+   * best results. If a model is not explicitly specified, then we auto-select a model based on the
+   * parameters in the RecognitionConfig.
    *
    *        Model     Description           command_and_search     Best for short queries such as
    * voice commands or voice search.           phone_call     Best for audio that originated from a
@@ -390,9 +429,9 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * *Optional* If set to `true`, the server will attempt to filter out profanities, replacing all
-   * but the initial character in each filtered word with asterisks, e.g. "f***". If set to `false`
-   * or omitted, profanities won't be filtered out.
+   * If set to `true`, the server will attempt to filter out profanities, replacing all but the
+   * initial character in each filtered word with asterisks, e.g. "f***". If set to `false` or
+   * omitted, profanities won't be filtered out.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getProfanityFilter() {
@@ -400,9 +439,9 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * *Optional* If set to `true`, the server will attempt to filter out profanities, replacing all
-   * but the initial character in each filtered word with asterisks, e.g. "f***". If set to `false`
-   * or omitted, profanities won't be filtered out.
+   * If set to `true`, the server will attempt to filter out profanities, replacing all but the
+   * initial character in each filtered word with asterisks, e.g. "f***". If set to `false` or
+   * omitted, profanities won't be filtered out.
    * @param profanityFilter profanityFilter or {@code null} for none
    */
   public RecognitionConfig setProfanityFilter(java.lang.Boolean profanityFilter) {
@@ -436,9 +475,9 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * *Optional* array of SpeechContext. A means to provide context to assist the speech recognition.
-   * For more information, see [speech adaptation](https://cloud.google.com/speech-to-text/docs
-   * /context-strength).
+   * Array of SpeechContext. A means to provide context to assist the speech recognition. For more
+   * information, see [speech adaptation](https://cloud.google.com/speech-to-text/docs/context-
+   * strength).
    * @return value or {@code null} for none
    */
   public java.util.List<SpeechContext> getSpeechContexts() {
@@ -446,9 +485,9 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * *Optional* array of SpeechContext. A means to provide context to assist the speech recognition.
-   * For more information, see [speech adaptation](https://cloud.google.com/speech-to-text/docs
-   * /context-strength).
+   * Array of SpeechContext. A means to provide context to assist the speech recognition. For more
+   * information, see [speech adaptation](https://cloud.google.com/speech-to-text/docs/context-
+   * strength).
    * @param speechContexts speechContexts or {@code null} for none
    */
   public RecognitionConfig setSpeechContexts(java.util.List<SpeechContext> speechContexts) {
@@ -457,9 +496,9 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * *Optional* Set to true to use an enhanced model for speech recognition. If `use_enhanced` is
-   * set to true and the `model` field is not set, then an appropriate enhanced model is chosen if
-   * an enhanced model exists for the audio.
+   * Set to true to use an enhanced model for speech recognition. If `use_enhanced` is set to true
+   * and the `model` field is not set, then an appropriate enhanced model is chosen if an enhanced
+   * model exists for the audio.
    *
    * If `use_enhanced` is true and an enhanced version of the specified model does not exist, then
    * the speech is recognized using the standard version of the specified model.
@@ -470,9 +509,9 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * *Optional* Set to true to use an enhanced model for speech recognition. If `use_enhanced` is
-   * set to true and the `model` field is not set, then an appropriate enhanced model is chosen if
-   * an enhanced model exists for the audio.
+   * Set to true to use an enhanced model for speech recognition. If `use_enhanced` is set to true
+   * and the `model` field is not set, then an appropriate enhanced model is chosen if an enhanced
+   * model exists for the audio.
    *
    * If `use_enhanced` is true and an enhanced version of the specified model does not exist, then
    * the speech is recognized using the standard version of the specified model.

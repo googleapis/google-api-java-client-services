@@ -31,7 +31,7 @@ package com.google.api.services.speech.v1.model;
 public final class SpeechRecognitionResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. May contain one or more recognition hypotheses (up to the maximum specified in
+   * May contain one or more recognition hypotheses (up to the maximum specified in
    * `max_alternatives`). These alternatives are ordered in terms of accuracy, with the top (first)
    * alternative being the most probable, as ranked by the recognizer.
    * The value may be {@code null}.
@@ -55,7 +55,7 @@ public final class SpeechRecognitionResult extends com.google.api.client.json.Ge
   private java.lang.Integer channelTag;
 
   /**
-   * Output only. May contain one or more recognition hypotheses (up to the maximum specified in
+   * May contain one or more recognition hypotheses (up to the maximum specified in
    * `max_alternatives`). These alternatives are ordered in terms of accuracy, with the top (first)
    * alternative being the most probable, as ranked by the recognizer.
    * @return value or {@code null} for none
@@ -65,7 +65,7 @@ public final class SpeechRecognitionResult extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. May contain one or more recognition hypotheses (up to the maximum specified in
+   * May contain one or more recognition hypotheses (up to the maximum specified in
    * `max_alternatives`). These alternatives are ordered in terms of accuracy, with the top (first)
    * alternative being the most probable, as ranked by the recognizer.
    * @param alternatives alternatives or {@code null} for none

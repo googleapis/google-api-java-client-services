@@ -31,25 +31,25 @@ package com.google.api.services.speech.v1.model;
 public final class SpeechRecognitionAlternative extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The confidence estimate between 0.0 and 1.0. A higher number indicates an
-   * estimated greater likelihood that the recognized words are correct. This field is set only for
-   * the top alternative of a non-streaming result or, of a streaming result where `is_final=true`.
-   * This field is not guaranteed to be accurate and users should not rely on it to be always
-   * provided. The default of 0.0 is a sentinel value indicating `confidence` was not set.
+   * The confidence estimate between 0.0 and 1.0. A higher number indicates an estimated greater
+   * likelihood that the recognized words are correct. This field is set only for the top
+   * alternative of a non-streaming result or, of a streaming result where `is_final=true`. This
+   * field is not guaranteed to be accurate and users should not rely on it to be always provided.
+   * The default of 0.0 is a sentinel value indicating `confidence` was not set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float confidence;
 
   /**
-   * Output only. Transcript text representing the words that the user spoke.
+   * Transcript text representing the words that the user spoke.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String transcript;
 
   /**
-   * Output only. A list of word-specific information for each recognized word. Note: When
+   * A list of word-specific information for each recognized word. Note: When
    * `enable_speaker_diarization` is true, you will see all the words from the beginning of the
    * audio.
    * The value may be {@code null}.
@@ -58,11 +58,11 @@ public final class SpeechRecognitionAlternative extends com.google.api.client.js
   private java.util.List<WordInfo> words;
 
   /**
-   * Output only. The confidence estimate between 0.0 and 1.0. A higher number indicates an
-   * estimated greater likelihood that the recognized words are correct. This field is set only for
-   * the top alternative of a non-streaming result or, of a streaming result where `is_final=true`.
-   * This field is not guaranteed to be accurate and users should not rely on it to be always
-   * provided. The default of 0.0 is a sentinel value indicating `confidence` was not set.
+   * The confidence estimate between 0.0 and 1.0. A higher number indicates an estimated greater
+   * likelihood that the recognized words are correct. This field is set only for the top
+   * alternative of a non-streaming result or, of a streaming result where `is_final=true`. This
+   * field is not guaranteed to be accurate and users should not rely on it to be always provided.
+   * The default of 0.0 is a sentinel value indicating `confidence` was not set.
    * @return value or {@code null} for none
    */
   public java.lang.Float getConfidence() {
@@ -70,11 +70,11 @@ public final class SpeechRecognitionAlternative extends com.google.api.client.js
   }
 
   /**
-   * Output only. The confidence estimate between 0.0 and 1.0. A higher number indicates an
-   * estimated greater likelihood that the recognized words are correct. This field is set only for
-   * the top alternative of a non-streaming result or, of a streaming result where `is_final=true`.
-   * This field is not guaranteed to be accurate and users should not rely on it to be always
-   * provided. The default of 0.0 is a sentinel value indicating `confidence` was not set.
+   * The confidence estimate between 0.0 and 1.0. A higher number indicates an estimated greater
+   * likelihood that the recognized words are correct. This field is set only for the top
+   * alternative of a non-streaming result or, of a streaming result where `is_final=true`. This
+   * field is not guaranteed to be accurate and users should not rely on it to be always provided.
+   * The default of 0.0 is a sentinel value indicating `confidence` was not set.
    * @param confidence confidence or {@code null} for none
    */
   public SpeechRecognitionAlternative setConfidence(java.lang.Float confidence) {
@@ -83,7 +83,7 @@ public final class SpeechRecognitionAlternative extends com.google.api.client.js
   }
 
   /**
-   * Output only. Transcript text representing the words that the user spoke.
+   * Transcript text representing the words that the user spoke.
    * @return value or {@code null} for none
    */
   public java.lang.String getTranscript() {
@@ -91,7 +91,7 @@ public final class SpeechRecognitionAlternative extends com.google.api.client.js
   }
 
   /**
-   * Output only. Transcript text representing the words that the user spoke.
+   * Transcript text representing the words that the user spoke.
    * @param transcript transcript or {@code null} for none
    */
   public SpeechRecognitionAlternative setTranscript(java.lang.String transcript) {
@@ -100,7 +100,7 @@ public final class SpeechRecognitionAlternative extends com.google.api.client.js
   }
 
   /**
-   * Output only. A list of word-specific information for each recognized word. Note: When
+   * A list of word-specific information for each recognized word. Note: When
    * `enable_speaker_diarization` is true, you will see all the words from the beginning of the
    * audio.
    * @return value or {@code null} for none
@@ -110,7 +110,7 @@ public final class SpeechRecognitionAlternative extends com.google.api.client.js
   }
 
   /**
-   * Output only. A list of word-specific information for each recognized word. Note: When
+   * A list of word-specific information for each recognized word. Note: When
    * `enable_speaker_diarization` is true, you will see all the words from the beginning of the
    * audio.
    * @param words words or {@code null} for none

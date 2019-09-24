@@ -31,34 +31,44 @@ package com.google.api.services.speech.v1.model;
 public final class WordInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Time offset relative to the beginning of the audio, and corresponding to the end
-   * of the spoken word. This field is only set if `enable_word_time_offsets=true` and only in the
-   * top hypothesis. This is an experimental feature and the accuracy of the time offset can vary.
+   * Time offset relative to the beginning of the audio, and corresponding to the end of the spoken
+   * word. This field is only set if `enable_word_time_offsets=true` and only in the top hypothesis.
+   * This is an experimental feature and the accuracy of the time offset can vary.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String endTime;
 
   /**
-   * Output only. Time offset relative to the beginning of the audio, and corresponding to the start
-   * of the spoken word. This field is only set if `enable_word_time_offsets=true` and only in the
-   * top hypothesis. This is an experimental feature and the accuracy of the time offset can vary.
+   * A distinct integer value is assigned for every speaker within the audio. This field specifies
+   * which one of those speakers was detected to have spoken this word. Value ranges from '1' to
+   * diarization_speaker_count. speaker_tag is set if enable_speaker_diarization = 'true' and only
+   * in the top alternative.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer speakerTag;
+
+  /**
+   * Time offset relative to the beginning of the audio, and corresponding to the start of the
+   * spoken word. This field is only set if `enable_word_time_offsets=true` and only in the top
+   * hypothesis. This is an experimental feature and the accuracy of the time offset can vary.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String startTime;
 
   /**
-   * Output only. The word corresponding to this set of information.
+   * The word corresponding to this set of information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String word;
 
   /**
-   * Output only. Time offset relative to the beginning of the audio, and corresponding to the end
-   * of the spoken word. This field is only set if `enable_word_time_offsets=true` and only in the
-   * top hypothesis. This is an experimental feature and the accuracy of the time offset can vary.
+   * Time offset relative to the beginning of the audio, and corresponding to the end of the spoken
+   * word. This field is only set if `enable_word_time_offsets=true` and only in the top hypothesis.
+   * This is an experimental feature and the accuracy of the time offset can vary.
    * @return value or {@code null} for none
    */
   public String getEndTime() {
@@ -66,9 +76,9 @@ public final class WordInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Time offset relative to the beginning of the audio, and corresponding to the end
-   * of the spoken word. This field is only set if `enable_word_time_offsets=true` and only in the
-   * top hypothesis. This is an experimental feature and the accuracy of the time offset can vary.
+   * Time offset relative to the beginning of the audio, and corresponding to the end of the spoken
+   * word. This field is only set if `enable_word_time_offsets=true` and only in the top hypothesis.
+   * This is an experimental feature and the accuracy of the time offset can vary.
    * @param endTime endTime or {@code null} for none
    */
   public WordInfo setEndTime(String endTime) {
@@ -77,9 +87,32 @@ public final class WordInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Time offset relative to the beginning of the audio, and corresponding to the start
-   * of the spoken word. This field is only set if `enable_word_time_offsets=true` and only in the
-   * top hypothesis. This is an experimental feature and the accuracy of the time offset can vary.
+   * A distinct integer value is assigned for every speaker within the audio. This field specifies
+   * which one of those speakers was detected to have spoken this word. Value ranges from '1' to
+   * diarization_speaker_count. speaker_tag is set if enable_speaker_diarization = 'true' and only
+   * in the top alternative.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getSpeakerTag() {
+    return speakerTag;
+  }
+
+  /**
+   * A distinct integer value is assigned for every speaker within the audio. This field specifies
+   * which one of those speakers was detected to have spoken this word. Value ranges from '1' to
+   * diarization_speaker_count. speaker_tag is set if enable_speaker_diarization = 'true' and only
+   * in the top alternative.
+   * @param speakerTag speakerTag or {@code null} for none
+   */
+  public WordInfo setSpeakerTag(java.lang.Integer speakerTag) {
+    this.speakerTag = speakerTag;
+    return this;
+  }
+
+  /**
+   * Time offset relative to the beginning of the audio, and corresponding to the start of the
+   * spoken word. This field is only set if `enable_word_time_offsets=true` and only in the top
+   * hypothesis. This is an experimental feature and the accuracy of the time offset can vary.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -87,9 +120,9 @@ public final class WordInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Time offset relative to the beginning of the audio, and corresponding to the start
-   * of the spoken word. This field is only set if `enable_word_time_offsets=true` and only in the
-   * top hypothesis. This is an experimental feature and the accuracy of the time offset can vary.
+   * Time offset relative to the beginning of the audio, and corresponding to the start of the
+   * spoken word. This field is only set if `enable_word_time_offsets=true` and only in the top
+   * hypothesis. This is an experimental feature and the accuracy of the time offset can vary.
    * @param startTime startTime or {@code null} for none
    */
   public WordInfo setStartTime(String startTime) {
@@ -98,7 +131,7 @@ public final class WordInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The word corresponding to this set of information.
+   * The word corresponding to this set of information.
    * @return value or {@code null} for none
    */
   public java.lang.String getWord() {
@@ -106,7 +139,7 @@ public final class WordInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The word corresponding to this set of information.
+   * The word corresponding to this set of information.
    * @param word word or {@code null} for none
    */
   public WordInfo setWord(java.lang.String word) {

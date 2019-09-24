@@ -3946,6 +3946,143 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
         public class Sessions {
 
           /**
+           * Creates multiple new sessions.
+           *
+           * This API can be used to initialize a session cache on the clients. See https://goo.gl/TgSFN2 for
+           * best practices on session cache management.
+           *
+           * Create a request for the method "sessions.batchCreate".
+           *
+           * This request holds the parameters needed by the spanner server.  After setting any optional
+           * parameters, call the {@link BatchCreate#execute()} method to invoke the remote operation.
+           *
+           * @param database Required. The database in which the new sessions are created.
+           * @param content the {@link com.google.api.services.spanner.v1.model.BatchCreateSessionsRequest}
+           * @return the request
+           */
+          public BatchCreate batchCreate(java.lang.String database, com.google.api.services.spanner.v1.model.BatchCreateSessionsRequest content) throws java.io.IOException {
+            BatchCreate result = new BatchCreate(database, content);
+            initialize(result);
+            return result;
+          }
+
+          public class BatchCreate extends SpannerRequest<com.google.api.services.spanner.v1.model.BatchCreateSessionsResponse> {
+
+            private static final String REST_PATH = "v1/{+database}/sessions:batchCreate";
+
+            private final java.util.regex.Pattern DATABASE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/databases/[^/]+$");
+
+            /**
+             * Creates multiple new sessions.
+             *
+             * This API can be used to initialize a session cache on the clients. See https://goo.gl/TgSFN2
+             * for best practices on session cache management.
+             *
+             * Create a request for the method "sessions.batchCreate".
+             *
+             * This request holds the parameters needed by the the spanner server.  After setting any optional
+             * parameters, call the {@link BatchCreate#execute()} method to invoke the remote operation. <p>
+             * {@link
+             * BatchCreate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param database Required. The database in which the new sessions are created.
+             * @param content the {@link com.google.api.services.spanner.v1.model.BatchCreateSessionsRequest}
+             * @since 1.13
+             */
+            protected BatchCreate(java.lang.String database, com.google.api.services.spanner.v1.model.BatchCreateSessionsRequest content) {
+              super(Spanner.this, "POST", REST_PATH, content, com.google.api.services.spanner.v1.model.BatchCreateSessionsResponse.class);
+              this.database = com.google.api.client.util.Preconditions.checkNotNull(database, "Required parameter database must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DATABASE_PATTERN.matcher(database).matches(),
+                    "Parameter database must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/databases/[^/]+$");
+              }
+            }
+
+            @Override
+            public BatchCreate set$Xgafv(java.lang.String $Xgafv) {
+              return (BatchCreate) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public BatchCreate setAccessToken(java.lang.String accessToken) {
+              return (BatchCreate) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public BatchCreate setAlt(java.lang.String alt) {
+              return (BatchCreate) super.setAlt(alt);
+            }
+
+            @Override
+            public BatchCreate setCallback(java.lang.String callback) {
+              return (BatchCreate) super.setCallback(callback);
+            }
+
+            @Override
+            public BatchCreate setFields(java.lang.String fields) {
+              return (BatchCreate) super.setFields(fields);
+            }
+
+            @Override
+            public BatchCreate setKey(java.lang.String key) {
+              return (BatchCreate) super.setKey(key);
+            }
+
+            @Override
+            public BatchCreate setOauthToken(java.lang.String oauthToken) {
+              return (BatchCreate) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public BatchCreate setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (BatchCreate) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public BatchCreate setQuotaUser(java.lang.String quotaUser) {
+              return (BatchCreate) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public BatchCreate setUploadType(java.lang.String uploadType) {
+              return (BatchCreate) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public BatchCreate setUploadProtocol(java.lang.String uploadProtocol) {
+              return (BatchCreate) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The database in which the new sessions are created. */
+            @com.google.api.client.util.Key
+            private java.lang.String database;
+
+            /** Required. The database in which the new sessions are created.
+             */
+            public java.lang.String getDatabase() {
+              return database;
+            }
+
+            /** Required. The database in which the new sessions are created. */
+            public BatchCreate setDatabase(java.lang.String database) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DATABASE_PATTERN.matcher(database).matches(),
+                    "Parameter database must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/databases/[^/]+$");
+              }
+              this.database = database;
+              return this;
+            }
+
+            @Override
+            public BatchCreate set(String parameterName, Object value) {
+              return (BatchCreate) super.set(parameterName, value);
+            }
+          }
+          /**
            * Begins a new transaction. This step can often be skipped: Read, ExecuteSql and Commit can begin a
            * new transaction as a side-effect.
            *

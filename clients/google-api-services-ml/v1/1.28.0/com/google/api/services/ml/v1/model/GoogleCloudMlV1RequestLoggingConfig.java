@@ -17,10 +17,15 @@
 package com.google.api.services.ml.v1.model;
 
 /**
- * Configurations for logging request-response pairs. Currently only BigQuery logging is supported.
- * The request and response will be converted to raw string and stored within the specified BigQuery
- * table. The schema is:   model: STRING   version: STRING   time: Timestamp   raw_data: STRING
- * raw_prediction: STRING   ground_truth: STRING
+ * Configuration for logging request-response pairs to a BigQuery table. Online prediction requests
+ * to a model version and the responses to these requests are converted to raw strings and saved to
+ * the specified BigQuery table. Logging is constrained by [BigQuery quotas and
+ * limits](/bigquery/quotas). If your project exceeds BigQuery quotas or limits, AI Platform
+ * Prediction does not log request-response pairs, but it continues to serve predictions.
+ *
+ * If you are using [continuous evaluation](/ml-engine/docs/continuous-evaluation/), you do not need
+ * to specify this configuration manually. Setting up continuous evaluation automatically enables
+ * logging of request-response pairs.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Machine Learning Engine. For a detailed
@@ -34,24 +39,41 @@ package com.google.api.services.ml.v1.model;
 public final class GoogleCloudMlV1RequestLoggingConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Fully qualified BigQuery table name in the format of
-   * "[project_id].[dataset_name].[table_name]".
+   * Required. Fully qualified BigQuery table name in the following format:
+   * "project_id.dataset_name.table_name"
+   *
+   * The specifcied table must already exist, and the "Cloud ML Service Agent" for your project must
+   * have permission to write to it. The table must have the following
+   * [schema](/bigquery/docs/schemas):
+   *
+   *   Field nameType     Mode   modelSTRINGREQUIRED   model_versionSTRINGREQUIRED
+   * timeTIMESTAMPREQUIRED   raw_dataSTRINGREQUIRED   raw_predictionSTRINGNULLABLE
+   * groundtruthSTRINGNULLABLE
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String bigqueryTableName;
 
   /**
-   * Percentage of the request being logged. The sampling window is the lifetime of the Version.
-   * Defaults to 0.
+   * Percentage of requests to be logged, expressed as a fraction from 0 to 1. For example, if you
+   * want to log 10% of requests, enter `0.1`. The sampling window is the lifetime of the model
+   * version. Defaults to 0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double samplingPercentage;
 
   /**
-   * Fully qualified BigQuery table name in the format of
-   * "[project_id].[dataset_name].[table_name]".
+   * Required. Fully qualified BigQuery table name in the following format:
+   * "project_id.dataset_name.table_name"
+   *
+   * The specifcied table must already exist, and the "Cloud ML Service Agent" for your project must
+   * have permission to write to it. The table must have the following
+   * [schema](/bigquery/docs/schemas):
+   *
+   *   Field nameType     Mode   modelSTRINGREQUIRED   model_versionSTRINGREQUIRED
+   * timeTIMESTAMPREQUIRED   raw_dataSTRINGREQUIRED   raw_predictionSTRINGNULLABLE
+   * groundtruthSTRINGNULLABLE
    * @return value or {@code null} for none
    */
   public java.lang.String getBigqueryTableName() {
@@ -59,8 +81,16 @@ public final class GoogleCloudMlV1RequestLoggingConfig extends com.google.api.cl
   }
 
   /**
-   * Fully qualified BigQuery table name in the format of
-   * "[project_id].[dataset_name].[table_name]".
+   * Required. Fully qualified BigQuery table name in the following format:
+   * "project_id.dataset_name.table_name"
+   *
+   * The specifcied table must already exist, and the "Cloud ML Service Agent" for your project must
+   * have permission to write to it. The table must have the following
+   * [schema](/bigquery/docs/schemas):
+   *
+   *   Field nameType     Mode   modelSTRINGREQUIRED   model_versionSTRINGREQUIRED
+   * timeTIMESTAMPREQUIRED   raw_dataSTRINGREQUIRED   raw_predictionSTRINGNULLABLE
+   * groundtruthSTRINGNULLABLE
    * @param bigqueryTableName bigqueryTableName or {@code null} for none
    */
   public GoogleCloudMlV1RequestLoggingConfig setBigqueryTableName(java.lang.String bigqueryTableName) {
@@ -69,8 +99,9 @@ public final class GoogleCloudMlV1RequestLoggingConfig extends com.google.api.cl
   }
 
   /**
-   * Percentage of the request being logged. The sampling window is the lifetime of the Version.
-   * Defaults to 0.
+   * Percentage of requests to be logged, expressed as a fraction from 0 to 1. For example, if you
+   * want to log 10% of requests, enter `0.1`. The sampling window is the lifetime of the model
+   * version. Defaults to 0.
    * @return value or {@code null} for none
    */
   public java.lang.Double getSamplingPercentage() {
@@ -78,8 +109,9 @@ public final class GoogleCloudMlV1RequestLoggingConfig extends com.google.api.cl
   }
 
   /**
-   * Percentage of the request being logged. The sampling window is the lifetime of the Version.
-   * Defaults to 0.
+   * Percentage of requests to be logged, expressed as a fraction from 0 to 1. For example, if you
+   * want to log 10% of requests, enter `0.1`. The sampling window is the lifetime of the model
+   * version. Defaults to 0.
    * @param samplingPercentage samplingPercentage or {@code null} for none
    */
   public GoogleCloudMlV1RequestLoggingConfig setSamplingPercentage(java.lang.Double samplingPercentage) {

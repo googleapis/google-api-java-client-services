@@ -17,7 +17,7 @@
 package com.google.api.services.healthcare.v1beta1.model;
 
 /**
- * The BigQuery table where the output should be written.
+ * The BigQuery table where the server writes the output.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:
@@ -30,8 +30,8 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestination extends com.google.api.client.json.GenericJson {
 
   /**
-   * If the destination table already exists and this flag is `TRUE`, the table will be overwritten
-   * by the contents of the DICOM store. If the flag is not set and the destination table already
+   * If the destination table already exists and this flag is `TRUE`, the table is overwritten by
+   * the contents of the DICOM store. If the flag is not set and the destination table already
    * exists, the export call returns an error.
    * The value may be {@code null}.
    */
@@ -47,8 +47,8 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestination extends 
   private java.lang.String tableUri;
 
   /**
-   * If the destination table already exists and this flag is `TRUE`, the table will be overwritten
-   * by the contents of the DICOM store. If the flag is not set and the destination table already
+   * If the destination table already exists and this flag is `TRUE`, the table is overwritten by
+   * the contents of the DICOM store. If the flag is not set and the destination table already
    * exists, the export call returns an error.
    * @return value or {@code null} for none
    */
@@ -57,8 +57,8 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestination extends 
   }
 
   /**
-   * If the destination table already exists and this flag is `TRUE`, the table will be overwritten
-   * by the contents of the DICOM store. If the flag is not set and the destination table already
+   * If the destination table already exists and this flag is `TRUE`, the table is overwritten by
+   * the contents of the DICOM store. If the flag is not set and the destination table already
    * exists, the export call returns an error.
    * @param force force or {@code null} for none
    */

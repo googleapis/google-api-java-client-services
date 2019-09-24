@@ -17,10 +17,10 @@
 package com.google.api.services.healthcare.v1beta1.model;
 
 /**
- * Exports data from the specified DICOM store. If a given resource (e.g., a DICOM object with the
- * same SOPInstance UID) already exists in the output, it is overwritten with the version in the
- * source dataset. Exported DICOM data will persist when the DICOM store from which it was exported
- * is deleted.
+ * Exports data from the specified DICOM store. If a given resource, such as a DICOM object with the
+ * same SOPInstance UID, already exists in the output, it is overwritten with the version in the
+ * source dataset. Exported DICOM data persists when the DICOM store from which it was exported is
+ * deleted.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:

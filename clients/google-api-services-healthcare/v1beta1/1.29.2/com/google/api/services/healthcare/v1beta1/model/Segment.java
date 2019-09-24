@@ -35,23 +35,29 @@ public final class Segment extends com.google.api.client.json.GenericJson {
    * used to identify different instances of a repeated field. Regex for key:
    * (\d+)(\[\d+\])?(.\d+)?(.\d+)?
    *
-   * Examples of (key, value) pairs: - (0.1, "foo"): Component 1 of Field 0 has the value "foo". -
-   * (1.1.2, "bar"): Sub-component 2 of Component 1 of field 1 has the value "bar". - (1[2].1,
-   * "baz"): Component 1 of Instance 2 of Field 1, which is repeated, has the value "baz".
+   * Examples of (key, value) pairs:
+   *
+   * * (0.1, "hemoglobin") denotes that the first component of Field 0 has the   value "hemoglobin".
+   *
+   * * (1.1.2, "CBC") denotes that the second sub-component of the first   component of Field 1 has
+   * the value "CBC".
+   *
+   * * (1[0].1, "HbA1c") denotes that the first component of the   first Instance of Field 1, which
+   * is repeated, has the value "HbA1c".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> fields;
 
   /**
-   * A string that indicates the type of segment, e.g., EVN, PID.
+   * A string that indicates the type of segment. For example, EVN or PID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String segmentId;
 
   /**
-   * Set ID for segments that can be in a set. This can be empty if it is missing or it is not
+   * Set ID for segments that can be in a set. This can be empty if it's missing or isn't
    * applicable.
    * The value may be {@code null}.
    */
@@ -64,9 +70,15 @@ public final class Segment extends com.google.api.client.json.GenericJson {
    * used to identify different instances of a repeated field. Regex for key:
    * (\d+)(\[\d+\])?(.\d+)?(.\d+)?
    *
-   * Examples of (key, value) pairs: - (0.1, "foo"): Component 1 of Field 0 has the value "foo". -
-   * (1.1.2, "bar"): Sub-component 2 of Component 1 of field 1 has the value "bar". - (1[2].1,
-   * "baz"): Component 1 of Instance 2 of Field 1, which is repeated, has the value "baz".
+   * Examples of (key, value) pairs:
+   *
+   * * (0.1, "hemoglobin") denotes that the first component of Field 0 has the   value "hemoglobin".
+   *
+   * * (1.1.2, "CBC") denotes that the second sub-component of the first   component of Field 1 has
+   * the value "CBC".
+   *
+   * * (1[0].1, "HbA1c") denotes that the first component of the   first Instance of Field 1, which
+   * is repeated, has the value "HbA1c".
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getFields() {
@@ -79,9 +91,15 @@ public final class Segment extends com.google.api.client.json.GenericJson {
    * used to identify different instances of a repeated field. Regex for key:
    * (\d+)(\[\d+\])?(.\d+)?(.\d+)?
    *
-   * Examples of (key, value) pairs: - (0.1, "foo"): Component 1 of Field 0 has the value "foo". -
-   * (1.1.2, "bar"): Sub-component 2 of Component 1 of field 1 has the value "bar". - (1[2].1,
-   * "baz"): Component 1 of Instance 2 of Field 1, which is repeated, has the value "baz".
+   * Examples of (key, value) pairs:
+   *
+   * * (0.1, "hemoglobin") denotes that the first component of Field 0 has the   value "hemoglobin".
+   *
+   * * (1.1.2, "CBC") denotes that the second sub-component of the first   component of Field 1 has
+   * the value "CBC".
+   *
+   * * (1[0].1, "HbA1c") denotes that the first component of the   first Instance of Field 1, which
+   * is repeated, has the value "HbA1c".
    * @param fields fields or {@code null} for none
    */
   public Segment setFields(java.util.Map<String, java.lang.String> fields) {
@@ -90,7 +108,7 @@ public final class Segment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A string that indicates the type of segment, e.g., EVN, PID.
+   * A string that indicates the type of segment. For example, EVN or PID.
    * @return value or {@code null} for none
    */
   public java.lang.String getSegmentId() {
@@ -98,7 +116,7 @@ public final class Segment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A string that indicates the type of segment, e.g., EVN, PID.
+   * A string that indicates the type of segment. For example, EVN or PID.
    * @param segmentId segmentId or {@code null} for none
    */
   public Segment setSegmentId(java.lang.String segmentId) {
@@ -107,7 +125,7 @@ public final class Segment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Set ID for segments that can be in a set. This can be empty if it is missing or it is not
+   * Set ID for segments that can be in a set. This can be empty if it's missing or isn't
    * applicable.
    * @return value or {@code null} for none
    */
@@ -116,7 +134,7 @@ public final class Segment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Set ID for segments that can be in a set. This can be empty if it is missing or it is not
+   * Set ID for segments that can be in a set. This can be empty if it's missing or isn't
    * applicable.
    * @param setId setId or {@code null} for none
    */

@@ -30,7 +30,7 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class PatientId extends com.google.api.client.json.GenericJson {
 
   /**
-   * ID type, e.g. MRN or NHS.
+   * ID type. For example, MRN or NHS.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class PatientId extends com.google.api.client.json.GenericJson {
   private java.lang.String value;
 
   /**
-   * ID type, e.g. MRN or NHS.
+   * ID type. For example, MRN or NHS.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -52,7 +52,7 @@ public final class PatientId extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * ID type, e.g. MRN or NHS.
+   * ID type. For example, MRN or NHS.
    * @param type type or {@code null} for none
    */
   public PatientId setType(java.lang.String type) {

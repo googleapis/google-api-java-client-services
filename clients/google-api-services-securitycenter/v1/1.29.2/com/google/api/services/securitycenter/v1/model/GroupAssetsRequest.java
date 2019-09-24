@@ -91,7 +91,7 @@ public final class GroupAssetsRequest extends com.google.api.client.json.Generic
    * "create_time = \"2019-06-10T16:07:18-07:00\""     "create_time = 1560208038000"
    *
    * * iam_policy.policy_blob: `=`, `:` * resource_properties: `=`, `:`, `>`, `<`, `>=`, `<=` *
-   * security_marks: `=`, `:` * security_center_properties.resource_name: `=`, `:` *
+   * security_marks.marks: `=`, `:` * security_center_properties.resource_name: `=`, `:` *
    * security_center_properties.resource_type: `=`, `:` *
    * security_center_properties.resource_parent: `=`, `:` *
    * security_center_properties.resource_project: `=`, `:` *
@@ -237,7 +237,7 @@ public final class GroupAssetsRequest extends com.google.api.client.json.Generic
    * "create_time = \"2019-06-10T16:07:18-07:00\""     "create_time = 1560208038000"
    *
    * * iam_policy.policy_blob: `=`, `:` * resource_properties: `=`, `:`, `>`, `<`, `>=`, `<=` *
-   * security_marks: `=`, `:` * security_center_properties.resource_name: `=`, `:` *
+   * security_marks.marks: `=`, `:` * security_center_properties.resource_name: `=`, `:` *
    * security_center_properties.resource_type: `=`, `:` *
    * security_center_properties.resource_parent: `=`, `:` *
    * security_center_properties.resource_project: `=`, `:` *
@@ -284,7 +284,7 @@ public final class GroupAssetsRequest extends com.google.api.client.json.Generic
    * "create_time = \"2019-06-10T16:07:18-07:00\""     "create_time = 1560208038000"
    *
    * * iam_policy.policy_blob: `=`, `:` * resource_properties: `=`, `:`, `>`, `<`, `>=`, `<=` *
-   * security_marks: `=`, `:` * security_center_properties.resource_name: `=`, `:` *
+   * security_marks.marks: `=`, `:` * security_center_properties.resource_name: `=`, `:` *
    * security_center_properties.resource_type: `=`, `:` *
    * security_center_properties.resource_parent: `=`, `:` *
    * security_center_properties.resource_project: `=`, `:` *

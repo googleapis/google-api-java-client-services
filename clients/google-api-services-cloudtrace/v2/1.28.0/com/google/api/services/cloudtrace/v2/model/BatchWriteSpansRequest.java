@@ -31,7 +31,7 @@ package com.google.api.services.cloudtrace.v2.model;
 public final class BatchWriteSpansRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of new spans. The span names must not match existing spans, or the results are
+   * Required. A list of new spans. The span names must not match existing spans, or the results are
    * undefined.
    * The value may be {@code null}.
    */
@@ -39,7 +39,7 @@ public final class BatchWriteSpansRequest extends com.google.api.client.json.Gen
   private java.util.List<Span> spans;
 
   /**
-   * A list of new spans. The span names must not match existing spans, or the results are
+   * Required. A list of new spans. The span names must not match existing spans, or the results are
    * undefined.
    * @return value or {@code null} for none
    */
@@ -48,7 +48,7 @@ public final class BatchWriteSpansRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * A list of new spans. The span names must not match existing spans, or the results are
+   * Required. A list of new spans. The span names must not match existing spans, or the results are
    * undefined.
    * @param spans spans or {@code null} for none
    */

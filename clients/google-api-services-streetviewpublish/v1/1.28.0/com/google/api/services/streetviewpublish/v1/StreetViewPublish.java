@@ -552,19 +552,21 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
       }
 
       /**
-       * Specifies if a download URL for the photo bytes should be returned in the Photo response.
+       * Required. Specifies if a download URL for the photo bytes should be returned in the Photo
+       * response.
        */
       @com.google.api.client.util.Key
       private java.lang.String view;
 
-      /** Specifies if a download URL for the photo bytes should be returned in the Photo response.
+      /** Required. Specifies if a download URL for the photo bytes should be returned in the Photo response.
        */
       public java.lang.String getView() {
         return view;
       }
 
       /**
-       * Specifies if a download URL for the photo bytes should be returned in the Photo response.
+       * Required. Specifies if a download URL for the photo bytes should be returned in the Photo
+       * response.
        */
       public Get setView(java.lang.String view) {
         this.view = view;
@@ -840,10 +842,10 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
       }
 
       /**
-       * Mask that identifies fields on the photo metadata to update. If not present, the old Photo
-       * metadata is entirely replaced with the new Photo metadata in this request. The update fails
-       * if invalid fields are specified. Multiple fields can be specified in a comma-delimited
-       * list.
+       * Required. Mask that identifies fields on the photo metadata to update. If not present, the
+       * old Photo metadata is entirely replaced with the new Photo metadata in this request. The
+       * update fails if invalid fields are specified. Multiple fields can be specified in a comma-
+       * delimited list.
        *
        * The following fields are valid:
        *
@@ -857,9 +859,9 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** Mask that identifies fields on the photo metadata to update. If not present, the old Photo metadata
-     is entirely replaced with the new Photo metadata in this request. The update fails if invalid
-     fields are specified. Multiple fields can be specified in a comma-delimited list.
+      /** Required. Mask that identifies fields on the photo metadata to update. If not present, the old
+     Photo metadata is entirely replaced with the new Photo metadata in this request. The update fails
+     if invalid fields are specified. Multiple fields can be specified in a comma-delimited list.
 
      The following fields are valid:
 
@@ -875,10 +877,10 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
       }
 
       /**
-       * Mask that identifies fields on the photo metadata to update. If not present, the old Photo
-       * metadata is entirely replaced with the new Photo metadata in this request. The update fails
-       * if invalid fields are specified. Multiple fields can be specified in a comma-delimited
-       * list.
+       * Required. Mask that identifies fields on the photo metadata to update. If not present, the
+       * old Photo metadata is entirely replaced with the new Photo metadata in this request. The
+       * update fails if invalid fields are specified. Multiple fields can be specified in a comma-
+       * delimited list.
        *
        * The following fields are valid:
        *
@@ -1196,19 +1198,21 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
       }
 
       /**
-       * Specifies if a download URL for the photo bytes should be returned in the Photo response.
+       * Required. Specifies if a download URL for the photo bytes should be returned in the Photo
+       * response.
        */
       @com.google.api.client.util.Key
       private java.lang.String view;
 
-      /** Specifies if a download URL for the photo bytes should be returned in the Photo response.
+      /** Required. Specifies if a download URL for the photo bytes should be returned in the Photo response.
        */
       public java.lang.String getView() {
         return view;
       }
 
       /**
-       * Specifies if a download URL for the photo bytes should be returned in the Photo response.
+       * Required. Specifies if a download URL for the photo bytes should be returned in the Photo
+       * response.
        */
       public BatchGet setView(java.lang.String view) {
         this.view = view;
@@ -1457,14 +1461,14 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
       }
 
       /**
-       * The filter expression. For example: `placeId=ChIJj61dQgK6j4AR4GeTYWZsKWw`.
+       * Required. The filter expression. For example: `placeId=ChIJj61dQgK6j4AR4GeTYWZsKWw`.
        *
        * The only filter supported at the moment is `placeId`.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** The filter expression. For example: `placeId=ChIJj61dQgK6j4AR4GeTYWZsKWw`.
+      /** Required. The filter expression. For example: `placeId=ChIJj61dQgK6j4AR4GeTYWZsKWw`.
 
      The only filter supported at the moment is `placeId`.
        */
@@ -1473,7 +1477,7 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
       }
 
       /**
-       * The filter expression. For example: `placeId=ChIJj61dQgK6j4AR4GeTYWZsKWw`.
+       * Required. The filter expression. For example: `placeId=ChIJj61dQgK6j4AR4GeTYWZsKWw`.
        *
        * The only filter supported at the moment is `placeId`.
        */
@@ -1558,19 +1562,22 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
       }
 
       /**
-       * Specifies if a download URL for the photos bytes should be returned in the Photos response.
+       * Required. Specifies if a download URL for the photos bytes should be returned in the Photos
+       * response.
        */
       @com.google.api.client.util.Key
       private java.lang.String view;
 
-      /** Specifies if a download URL for the photos bytes should be returned in the Photos response.
+      /** Required. Specifies if a download URL for the photos bytes should be returned in the Photos
+     response.
        */
       public java.lang.String getView() {
         return view;
       }
 
       /**
-       * Specifies if a download URL for the photos bytes should be returned in the Photos response.
+       * Required. Specifies if a download URL for the photos bytes should be returned in the Photos
+       * response.
        */
       public List setView(java.lang.String view) {
         this.view = view;

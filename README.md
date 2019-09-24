@@ -154,6 +154,7 @@ packages on [Maven Central][maven-search].
 | PageSpeed Insights API | [v1](clients/google-api-services-pagespeedonline/v1), [v2](clients/google-api-services-pagespeedonline/v2), [v4](clients/google-api-services-pagespeedonline/v4), [v5](clients/google-api-services-pagespeedonline/v5) |
 | People API | [v1](clients/google-api-services-people/v1) |
 | Perspective Comment Analyzer API | [v1alpha1](clients/google-api-services-commentanalyzer/v1alpha1) |
+| Policy Troubleshooter API | [v1beta](clients/google-api-services-policytroubleshooter/v1beta) |
 | Poly API | [v1](clients/google-api-services-poly/v1) |
 | Proximity Beacon API | [v1beta1](clients/google-api-services-proximitybeacon/v1beta1) |
 | Remote Build Execution API | [v1](clients/google-api-services-remotebuildexecution/v1), [v1alpha](clients/google-api-services-remotebuildexecution/v1alpha), [v2](clients/google-api-services-remotebuildexecution/v2) |

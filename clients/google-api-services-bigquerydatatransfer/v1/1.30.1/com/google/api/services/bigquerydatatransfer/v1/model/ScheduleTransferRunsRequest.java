@@ -31,21 +31,21 @@ package com.google.api.services.bigquerydatatransfer.v1.model;
 public final class ScheduleTransferRunsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * End time of the range of transfer runs. For example, `"2017-05-30T00:00:00+00:00"`.
+   * Required. End time of the range of transfer runs. For example, `"2017-05-30T00:00:00+00:00"`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String endTime;
 
   /**
-   * Start time of the range of transfer runs. For example, `"2017-05-25T00:00:00+00:00"`.
+   * Required. Start time of the range of transfer runs. For example, `"2017-05-25T00:00:00+00:00"`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String startTime;
 
   /**
-   * End time of the range of transfer runs. For example, `"2017-05-30T00:00:00+00:00"`.
+   * Required. End time of the range of transfer runs. For example, `"2017-05-30T00:00:00+00:00"`.
    * @return value or {@code null} for none
    */
   public String getEndTime() {
@@ -53,7 +53,7 @@ public final class ScheduleTransferRunsRequest extends com.google.api.client.jso
   }
 
   /**
-   * End time of the range of transfer runs. For example, `"2017-05-30T00:00:00+00:00"`.
+   * Required. End time of the range of transfer runs. For example, `"2017-05-30T00:00:00+00:00"`.
    * @param endTime endTime or {@code null} for none
    */
   public ScheduleTransferRunsRequest setEndTime(String endTime) {
@@ -62,7 +62,7 @@ public final class ScheduleTransferRunsRequest extends com.google.api.client.jso
   }
 
   /**
-   * Start time of the range of transfer runs. For example, `"2017-05-25T00:00:00+00:00"`.
+   * Required. Start time of the range of transfer runs. For example, `"2017-05-25T00:00:00+00:00"`.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -70,7 +70,7 @@ public final class ScheduleTransferRunsRequest extends com.google.api.client.jso
   }
 
   /**
-   * Start time of the range of transfer runs. For example, `"2017-05-25T00:00:00+00:00"`.
+   * Required. Start time of the range of transfer runs. For example, `"2017-05-25T00:00:00+00:00"`.
    * @param startTime startTime or {@code null} for none
    */
   public ScheduleTransferRunsRequest setStartTime(String startTime) {

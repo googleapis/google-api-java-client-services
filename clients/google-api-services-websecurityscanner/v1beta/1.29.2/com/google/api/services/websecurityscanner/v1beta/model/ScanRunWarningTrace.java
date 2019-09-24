@@ -32,14 +32,14 @@ package com.google.api.services.websecurityscanner.v1beta.model;
 public final class ScanRunWarningTrace extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Indicates the warning code.
+   * Indicates the warning code.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String code;
 
   /**
-   * Output only. Indicates the warning code.
+   * Indicates the warning code.
    * @return value or {@code null} for none
    */
   public java.lang.String getCode() {
@@ -47,7 +47,7 @@ public final class ScanRunWarningTrace extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. Indicates the warning code.
+   * Indicates the warning code.
    * @param code code or {@code null} for none
    */
   public ScanRunWarningTrace setCode(java.lang.String code) {

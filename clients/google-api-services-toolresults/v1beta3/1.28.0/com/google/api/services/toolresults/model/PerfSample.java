@@ -31,7 +31,7 @@ package com.google.api.services.toolresults.model;
 public final class PerfSample extends com.google.api.client.json.GenericJson {
 
   /**
-   * Timestamp of collection
+   * Timestamp of collection.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class PerfSample extends com.google.api.client.json.GenericJson {
   private java.lang.Double value;
 
   /**
-   * Timestamp of collection
+   * Timestamp of collection.
    * @return value or {@code null} for none
    */
   public Timestamp getSampleTime() {
@@ -53,7 +53,7 @@ public final class PerfSample extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Timestamp of collection
+   * Timestamp of collection.
    * @param sampleTime sampleTime or {@code null} for none
    */
   public PerfSample setSampleTime(Timestamp sampleTime) {

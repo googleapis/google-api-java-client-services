@@ -2327,22 +2327,22 @@ public class WebSecurityScanner extends com.google.api.client.googleapis.service
             }
 
             /**
-             * The filter expression. The expression must be in the format: . Supported field:
-             * 'finding_type'. Supported operator: '='.
+             * Required. The filter expression. The expression must be in the format: . Supported
+             * field: 'finding_type'. Supported operator: '='.
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** The filter expression. The expression must be in the format: . Supported field: 'finding_type'.
-           Supported operator: '='.
+            /** Required. The filter expression. The expression must be in the format: . Supported field:
+           'finding_type'. Supported operator: '='.
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
             /**
-             * The filter expression. The expression must be in the format: . Supported field:
-             * 'finding_type'. Supported operator: '='.
+             * Required. The filter expression. The expression must be in the format: . Supported
+             * field: 'finding_type'. Supported operator: '='.
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;

@@ -32,21 +32,21 @@ package com.google.api.services.websecurityscanner.v1beta.model;
 public final class FindingTypeStats extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The count of findings belonging to this finding type.
+   * The count of findings belonging to this finding type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer findingCount;
 
   /**
-   * Output only. The finding type associated with the stats.
+   * The finding type associated with the stats.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String findingType;
 
   /**
-   * Output only. The count of findings belonging to this finding type.
+   * The count of findings belonging to this finding type.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getFindingCount() {
@@ -54,7 +54,7 @@ public final class FindingTypeStats extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The count of findings belonging to this finding type.
+   * The count of findings belonging to this finding type.
    * @param findingCount findingCount or {@code null} for none
    */
   public FindingTypeStats setFindingCount(java.lang.Integer findingCount) {
@@ -63,7 +63,7 @@ public final class FindingTypeStats extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The finding type associated with the stats.
+   * The finding type associated with the stats.
    * @return value or {@code null} for none
    */
   public java.lang.String getFindingType() {
@@ -71,7 +71,7 @@ public final class FindingTypeStats extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The finding type associated with the stats.
+   * The finding type associated with the stats.
    * @param findingType findingType or {@code null} for none
    */
   public FindingTypeStats setFindingType(java.lang.String findingType) {

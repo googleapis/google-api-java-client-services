@@ -33,28 +33,28 @@ package com.google.api.services.websecurityscanner.v1beta.model;
 public final class CrawledUrl extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The body of the request that was used to visit the URL.
+   * The body of the request that was used to visit the URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String body;
 
   /**
-   * Output only. The http method of the request that was used to visit the URL, in uppercase.
+   * The http method of the request that was used to visit the URL, in uppercase.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String httpMethod;
 
   /**
-   * Output only. The URL that was crawled.
+   * The URL that was crawled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String url;
 
   /**
-   * Output only. The body of the request that was used to visit the URL.
+   * The body of the request that was used to visit the URL.
    * @return value or {@code null} for none
    */
   public java.lang.String getBody() {
@@ -62,7 +62,7 @@ public final class CrawledUrl extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The body of the request that was used to visit the URL.
+   * The body of the request that was used to visit the URL.
    * @param body body or {@code null} for none
    */
   public CrawledUrl setBody(java.lang.String body) {
@@ -71,7 +71,7 @@ public final class CrawledUrl extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The http method of the request that was used to visit the URL, in uppercase.
+   * The http method of the request that was used to visit the URL, in uppercase.
    * @return value or {@code null} for none
    */
   public java.lang.String getHttpMethod() {
@@ -79,7 +79,7 @@ public final class CrawledUrl extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The http method of the request that was used to visit the URL, in uppercase.
+   * The http method of the request that was used to visit the URL, in uppercase.
    * @param httpMethod httpMethod or {@code null} for none
    */
   public CrawledUrl setHttpMethod(java.lang.String httpMethod) {
@@ -88,7 +88,7 @@ public final class CrawledUrl extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The URL that was crawled.
+   * The URL that was crawled.
    * @return value or {@code null} for none
    */
   public java.lang.String getUrl() {
@@ -96,7 +96,7 @@ public final class CrawledUrl extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The URL that was crawled.
+   * The URL that was crawled.
    * @param url url or {@code null} for none
    */
   public CrawledUrl setUrl(java.lang.String url) {

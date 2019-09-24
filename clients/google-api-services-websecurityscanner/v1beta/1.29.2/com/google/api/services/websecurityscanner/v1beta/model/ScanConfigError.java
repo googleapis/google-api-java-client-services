@@ -33,23 +33,23 @@ package com.google.api.services.websecurityscanner.v1beta.model;
 public final class ScanConfigError extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Indicates the reason code for a configuration failure.
+   * Indicates the reason code for a configuration failure.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String code;
 
   /**
-   * Output only. Indicates the full name of the ScanConfig field that triggers this error, for
-   * example "scan_config.max_qps". This field is provided for troubleshooting purposes only and its
-   * actual value can change in the future.
+   * Indicates the full name of the ScanConfig field that triggers this error, for example
+   * "scan_config.max_qps". This field is provided for troubleshooting purposes only and its actual
+   * value can change in the future.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fieldName;
 
   /**
-   * Output only. Indicates the reason code for a configuration failure.
+   * Indicates the reason code for a configuration failure.
    * @return value or {@code null} for none
    */
   public java.lang.String getCode() {
@@ -57,7 +57,7 @@ public final class ScanConfigError extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. Indicates the reason code for a configuration failure.
+   * Indicates the reason code for a configuration failure.
    * @param code code or {@code null} for none
    */
   public ScanConfigError setCode(java.lang.String code) {
@@ -66,9 +66,9 @@ public final class ScanConfigError extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. Indicates the full name of the ScanConfig field that triggers this error, for
-   * example "scan_config.max_qps". This field is provided for troubleshooting purposes only and its
-   * actual value can change in the future.
+   * Indicates the full name of the ScanConfig field that triggers this error, for example
+   * "scan_config.max_qps". This field is provided for troubleshooting purposes only and its actual
+   * value can change in the future.
    * @return value or {@code null} for none
    */
   public java.lang.String getFieldName() {
@@ -76,9 +76,9 @@ public final class ScanConfigError extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. Indicates the full name of the ScanConfig field that triggers this error, for
-   * example "scan_config.max_qps". This field is provided for troubleshooting purposes only and its
-   * actual value can change in the future.
+   * Indicates the full name of the ScanConfig field that triggers this error, for example
+   * "scan_config.max_qps". This field is provided for troubleshooting purposes only and its actual
+   * value can change in the future.
    * @param fieldName fieldName or {@code null} for none
    */
   public ScanConfigError setFieldName(java.lang.String fieldName) {

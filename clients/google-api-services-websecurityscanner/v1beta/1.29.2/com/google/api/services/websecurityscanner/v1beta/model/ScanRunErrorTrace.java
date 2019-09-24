@@ -31,31 +31,31 @@ package com.google.api.services.websecurityscanner.v1beta.model;
 public final class ScanRunErrorTrace extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Indicates the error reason code.
+   * Indicates the error reason code.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String code;
 
   /**
-   * Output only. If the scan encounters TOO_MANY_HTTP_ERRORS, this field indicates the most common
-   * HTTP error code, if such is available. For example, if this code is 404, the scan has
-   * encountered too many NOT_FOUND responses.
+   * If the scan encounters TOO_MANY_HTTP_ERRORS, this field indicates the most common HTTP error
+   * code, if such is available. For example, if this code is 404, the scan has encountered too many
+   * NOT_FOUND responses.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer mostCommonHttpErrorCode;
 
   /**
-   * Output only. If the scan encounters SCAN_CONFIG_ISSUE error, this field has the error message
-   * encountered during scan configuration validation that is performed before each scan run.
+   * If the scan encounters SCAN_CONFIG_ISSUE error, this field has the error message encountered
+   * during scan configuration validation that is performed before each scan run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ScanConfigError scanConfigError;
 
   /**
-   * Output only. Indicates the error reason code.
+   * Indicates the error reason code.
    * @return value or {@code null} for none
    */
   public java.lang.String getCode() {
@@ -63,7 +63,7 @@ public final class ScanRunErrorTrace extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. Indicates the error reason code.
+   * Indicates the error reason code.
    * @param code code or {@code null} for none
    */
   public ScanRunErrorTrace setCode(java.lang.String code) {
@@ -72,9 +72,9 @@ public final class ScanRunErrorTrace extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. If the scan encounters TOO_MANY_HTTP_ERRORS, this field indicates the most common
-   * HTTP error code, if such is available. For example, if this code is 404, the scan has
-   * encountered too many NOT_FOUND responses.
+   * If the scan encounters TOO_MANY_HTTP_ERRORS, this field indicates the most common HTTP error
+   * code, if such is available. For example, if this code is 404, the scan has encountered too many
+   * NOT_FOUND responses.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMostCommonHttpErrorCode() {
@@ -82,9 +82,9 @@ public final class ScanRunErrorTrace extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. If the scan encounters TOO_MANY_HTTP_ERRORS, this field indicates the most common
-   * HTTP error code, if such is available. For example, if this code is 404, the scan has
-   * encountered too many NOT_FOUND responses.
+   * If the scan encounters TOO_MANY_HTTP_ERRORS, this field indicates the most common HTTP error
+   * code, if such is available. For example, if this code is 404, the scan has encountered too many
+   * NOT_FOUND responses.
    * @param mostCommonHttpErrorCode mostCommonHttpErrorCode or {@code null} for none
    */
   public ScanRunErrorTrace setMostCommonHttpErrorCode(java.lang.Integer mostCommonHttpErrorCode) {
@@ -93,8 +93,8 @@ public final class ScanRunErrorTrace extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. If the scan encounters SCAN_CONFIG_ISSUE error, this field has the error message
-   * encountered during scan configuration validation that is performed before each scan run.
+   * If the scan encounters SCAN_CONFIG_ISSUE error, this field has the error message encountered
+   * during scan configuration validation that is performed before each scan run.
    * @return value or {@code null} for none
    */
   public ScanConfigError getScanConfigError() {
@@ -102,8 +102,8 @@ public final class ScanRunErrorTrace extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. If the scan encounters SCAN_CONFIG_ISSUE error, this field has the error message
-   * encountered during scan configuration validation that is performed before each scan run.
+   * If the scan encounters SCAN_CONFIG_ISSUE error, this field has the error message encountered
+   * during scan configuration validation that is performed before each scan run.
    * @param scanConfigError scanConfigError or {@code null} for none
    */
   public ScanRunErrorTrace setScanConfigError(ScanConfigError scanConfigError) {

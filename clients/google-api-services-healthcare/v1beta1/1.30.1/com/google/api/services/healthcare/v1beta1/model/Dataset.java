@@ -43,8 +43,8 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
 
   /**
    * The default timezone used by this dataset. Must be a either a valid IANA time zone name such as
-   * "America/New_York" or empty, which defaults to UTC. This is used for parsing times in
-   * resources, such as HL7 messages, where no explicit timezone is specified.
+   * "America/New_York" or empty, which defaults to UTC. This is used for parsing times in resources
+   * (e.g., HL7 messages) where no explicit timezone is specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,8 +71,8 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
 
   /**
    * The default timezone used by this dataset. Must be a either a valid IANA time zone name such as
-   * "America/New_York" or empty, which defaults to UTC. This is used for parsing times in
-   * resources, such as HL7 messages, where no explicit timezone is specified.
+   * "America/New_York" or empty, which defaults to UTC. This is used for parsing times in resources
+   * (e.g., HL7 messages) where no explicit timezone is specified.
    * @return value or {@code null} for none
    */
   public java.lang.String getTimeZone() {
@@ -81,8 +81,8 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
 
   /**
    * The default timezone used by this dataset. Must be a either a valid IANA time zone name such as
-   * "America/New_York" or empty, which defaults to UTC. This is used for parsing times in
-   * resources, such as HL7 messages, where no explicit timezone is specified.
+   * "America/New_York" or empty, which defaults to UTC. This is used for parsing times in resources
+   * (e.g., HL7 messages) where no explicit timezone is specified.
    * @param timeZone timeZone or {@code null} for none
    */
   public Dataset setTimeZone(java.lang.String timeZone) {

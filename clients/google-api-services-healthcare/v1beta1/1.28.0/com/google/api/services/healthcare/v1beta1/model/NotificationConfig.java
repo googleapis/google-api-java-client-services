@@ -17,7 +17,7 @@
 package com.google.api.services.healthcare.v1beta1.model;
 
 /**
- * Specifies where to send notifications upon changes to a data store.
+ * Specifies where notifications should be sent upon changes to a data store.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:
@@ -31,13 +31,13 @@ public final class NotificationConfig extends com.google.api.client.json.Generic
 
   /**
    * The [Cloud Pub/Sub](https://cloud.google.com/pubsub/docs/) topic that notifications of changes
-   * are published on. Supplied by the client. PubsubMessage.Data contains the resource name.
+   * are published on. Supplied by the client. PubsubMessage.Data will contain the resource name.
    * PubsubMessage.MessageId is the ID of this message. It is guaranteed to be unique within the
    * topic. PubsubMessage.PublishTime is the time at which the message was published. Notifications
    * are only sent if the topic is non-empty. [Topic
    * names](https://cloud.google.com/pubsub/docs/overview#names) must be scoped to a project. cloud-
    * healthcare@system.gserviceaccount.com must have publisher permissions on the given Cloud
-   * Pub/Sub topic. Not having adequate permissions causes the calls that send notifications to
+   * Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to
    * fail.
    * The value may be {@code null}.
    */
@@ -46,13 +46,13 @@ public final class NotificationConfig extends com.google.api.client.json.Generic
 
   /**
    * The [Cloud Pub/Sub](https://cloud.google.com/pubsub/docs/) topic that notifications of changes
-   * are published on. Supplied by the client. PubsubMessage.Data contains the resource name.
+   * are published on. Supplied by the client. PubsubMessage.Data will contain the resource name.
    * PubsubMessage.MessageId is the ID of this message. It is guaranteed to be unique within the
    * topic. PubsubMessage.PublishTime is the time at which the message was published. Notifications
    * are only sent if the topic is non-empty. [Topic
    * names](https://cloud.google.com/pubsub/docs/overview#names) must be scoped to a project. cloud-
    * healthcare@system.gserviceaccount.com must have publisher permissions on the given Cloud
-   * Pub/Sub topic. Not having adequate permissions causes the calls that send notifications to
+   * Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to
    * fail.
    * @return value or {@code null} for none
    */
@@ -62,13 +62,13 @@ public final class NotificationConfig extends com.google.api.client.json.Generic
 
   /**
    * The [Cloud Pub/Sub](https://cloud.google.com/pubsub/docs/) topic that notifications of changes
-   * are published on. Supplied by the client. PubsubMessage.Data contains the resource name.
+   * are published on. Supplied by the client. PubsubMessage.Data will contain the resource name.
    * PubsubMessage.MessageId is the ID of this message. It is guaranteed to be unique within the
    * topic. PubsubMessage.PublishTime is the time at which the message was published. Notifications
    * are only sent if the topic is non-empty. [Topic
    * names](https://cloud.google.com/pubsub/docs/overview#names) must be scoped to a project. cloud-
    * healthcare@system.gserviceaccount.com must have publisher permissions on the given Cloud
-   * Pub/Sub topic. Not having adequate permissions causes the calls that send notifications to
+   * Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to
    * fail.
    * @param pubsubTopic pubsubTopic or {@code null} for none
    */

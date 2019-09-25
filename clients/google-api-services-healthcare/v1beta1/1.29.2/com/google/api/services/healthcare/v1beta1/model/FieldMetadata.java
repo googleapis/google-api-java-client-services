@@ -40,9 +40,9 @@ public final class FieldMetadata extends com.google.api.client.json.GenericJson 
    * List of paths to FHIR fields to be redacted. Each path is a period-separated list where each
    * component is either a field name or FHIR type name, for example: Patient, HumanName. For
    * "choice" types (those defined in the FHIR spec with the form: field[x]) we use two separate
-   * components. For example, "deceasedAge.unit" is matched by "Deceased.Age.unit". Supported types
-   * are: AdministrativeGenderCode, Code, Date, DateTime, Decimal, HumanName, Id, LanguageCode,
-   * Markdown, MimeTypeCode, Oid, String, Uri, Uuid, Xhtml.
+   * components. e.g. "deceasedAge.unit" is matched by "Deceased.Age.unit". Supported types are:
+   * AdministrativeGenderCode, Code, Date, DateTime, Decimal, HumanName, Id, LanguageCode, Markdown,
+   * MimeTypeCode, Oid, String, Uri, Uuid, Xhtml.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,9 +69,9 @@ public final class FieldMetadata extends com.google.api.client.json.GenericJson 
    * List of paths to FHIR fields to be redacted. Each path is a period-separated list where each
    * component is either a field name or FHIR type name, for example: Patient, HumanName. For
    * "choice" types (those defined in the FHIR spec with the form: field[x]) we use two separate
-   * components. For example, "deceasedAge.unit" is matched by "Deceased.Age.unit". Supported types
-   * are: AdministrativeGenderCode, Code, Date, DateTime, Decimal, HumanName, Id, LanguageCode,
-   * Markdown, MimeTypeCode, Oid, String, Uri, Uuid, Xhtml.
+   * components. e.g. "deceasedAge.unit" is matched by "Deceased.Age.unit". Supported types are:
+   * AdministrativeGenderCode, Code, Date, DateTime, Decimal, HumanName, Id, LanguageCode, Markdown,
+   * MimeTypeCode, Oid, String, Uri, Uuid, Xhtml.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPaths() {
@@ -82,9 +82,9 @@ public final class FieldMetadata extends com.google.api.client.json.GenericJson 
    * List of paths to FHIR fields to be redacted. Each path is a period-separated list where each
    * component is either a field name or FHIR type name, for example: Patient, HumanName. For
    * "choice" types (those defined in the FHIR spec with the form: field[x]) we use two separate
-   * components. For example, "deceasedAge.unit" is matched by "Deceased.Age.unit". Supported types
-   * are: AdministrativeGenderCode, Code, Date, DateTime, Decimal, HumanName, Id, LanguageCode,
-   * Markdown, MimeTypeCode, Oid, String, Uri, Uuid, Xhtml.
+   * components. e.g. "deceasedAge.unit" is matched by "Deceased.Age.unit". Supported types are:
+   * AdministrativeGenderCode, Code, Date, DateTime, Decimal, HumanName, Id, LanguageCode, Markdown,
+   * MimeTypeCode, Oid, String, Uri, Uuid, Xhtml.
    * @param paths paths or {@code null} for none
    */
   public FieldMetadata setPaths(java.util.List<java.lang.String> paths) {

@@ -17,7 +17,7 @@
 package com.google.api.services.healthcare.v1beta1.model;
 
 /**
- * Specifies how to handle de-identification of a FHIR store.
+ * Specifies how de-identification of a FHIR store should be handled.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:
@@ -31,8 +31,8 @@ public final class FhirConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies FHIR paths to match and how to transform them. Any field that is not matched by a
-   * FieldMetadata is passed through to the output dataset unmodified. All extensions are removed in
-   * the output.
+   * FieldMetadata will be passed through to the output dataset unmodified. All extensions are
+   * removed in the output.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,8 +40,8 @@ public final class FhirConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies FHIR paths to match and how to transform them. Any field that is not matched by a
-   * FieldMetadata is passed through to the output dataset unmodified. All extensions are removed in
-   * the output.
+   * FieldMetadata will be passed through to the output dataset unmodified. All extensions are
+   * removed in the output.
    * @return value or {@code null} for none
    */
   public java.util.List<FieldMetadata> getFieldMetadataList() {
@@ -50,8 +50,8 @@ public final class FhirConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies FHIR paths to match and how to transform them. Any field that is not matched by a
-   * FieldMetadata is passed through to the output dataset unmodified. All extensions are removed in
-   * the output.
+   * FieldMetadata will be passed through to the output dataset unmodified. All extensions are
+   * removed in the output.
    * @param fieldMetadataList fieldMetadataList or {@code null} for none
    */
   public FhirConfig setFieldMetadataList(java.util.List<FieldMetadata> fieldMetadataList) {

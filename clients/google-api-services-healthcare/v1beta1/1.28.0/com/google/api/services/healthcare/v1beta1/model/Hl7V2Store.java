@@ -55,8 +55,8 @@ public final class Hl7V2Store extends com.google.api.client.json.GenericJson {
 
   /**
    * The notification destination all messages (both Ingest & Create) are published on. Only the
-   * message name is sent as part of the notification. If this is unset, no notifications are sent.
-   * Supplied by the client.
+   * message name is sent as part of the notification. If this is unset, no notifications will be
+   * sent. Supplied by the client.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,8 +125,8 @@ public final class Hl7V2Store extends com.google.api.client.json.GenericJson {
 
   /**
    * The notification destination all messages (both Ingest & Create) are published on. Only the
-   * message name is sent as part of the notification. If this is unset, no notifications are sent.
-   * Supplied by the client.
+   * message name is sent as part of the notification. If this is unset, no notifications will be
+   * sent. Supplied by the client.
    * @return value or {@code null} for none
    */
   public NotificationConfig getNotificationConfig() {
@@ -135,8 +135,8 @@ public final class Hl7V2Store extends com.google.api.client.json.GenericJson {
 
   /**
    * The notification destination all messages (both Ingest & Create) are published on. Only the
-   * message name is sent as part of the notification. If this is unset, no notifications are sent.
-   * Supplied by the client.
+   * message name is sent as part of the notification. If this is unset, no notifications will be
+   * sent. Supplied by the client.
    * @param notificationConfig notificationConfig or {@code null} for none
    */
   public Hl7V2Store setNotificationConfig(NotificationConfig notificationConfig) {

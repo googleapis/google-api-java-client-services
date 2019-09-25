@@ -81,12 +81,11 @@ public final class AnalyzeCommentRequest extends com.google.api.client.json.Gene
 
   /**
    * Specification of requested attributes. The AttributeParameters serve as configuration for each
-   * associated attribute. The map keys are attribute names. The following attributes are available:
-   * "ATTACK_ON_AUTHOR" - Attack on author of original article or post. "ATTACK_ON_COMMENTER" -
-   * Attack on fellow commenter. "ATTACK_ON_PUBLISHER" - Attack on publisher of article/post.
-   * "INCOHERENT" - Difficult to understand, nonsensical. "INFLAMMATORY" - Intending to provoke or
-   * inflame. "OBSCENE" - Obscene, such as cursing. "OFF_TOPIC" - Not related to the original topic.
-   * "SPAM" - Commercial/advertising spam content. "UNSUBSTANTIAL" - Trivial.
+   * associated attribute. The map keys are attribute names. The available attributes may be
+   * different on each RFE installation, and can be seen by calling ListAttributes (see above). For
+   * the prod installation, known as Perspective API, at blade:commentanalyzer-esf and
+   * commentanalyzer.googleapis.com, see go/checker-models (internal) and
+   * https://github.com/conversationai/perspectiveapi/blob/master/api_reference.md#models.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -227,12 +226,11 @@ public final class AnalyzeCommentRequest extends com.google.api.client.json.Gene
 
   /**
    * Specification of requested attributes. The AttributeParameters serve as configuration for each
-   * associated attribute. The map keys are attribute names. The following attributes are available:
-   * "ATTACK_ON_AUTHOR" - Attack on author of original article or post. "ATTACK_ON_COMMENTER" -
-   * Attack on fellow commenter. "ATTACK_ON_PUBLISHER" - Attack on publisher of article/post.
-   * "INCOHERENT" - Difficult to understand, nonsensical. "INFLAMMATORY" - Intending to provoke or
-   * inflame. "OBSCENE" - Obscene, such as cursing. "OFF_TOPIC" - Not related to the original topic.
-   * "SPAM" - Commercial/advertising spam content. "UNSUBSTANTIAL" - Trivial.
+   * associated attribute. The map keys are attribute names. The available attributes may be
+   * different on each RFE installation, and can be seen by calling ListAttributes (see above). For
+   * the prod installation, known as Perspective API, at blade:commentanalyzer-esf and
+   * commentanalyzer.googleapis.com, see go/checker-models (internal) and
+   * https://github.com/conversationai/perspectiveapi/blob/master/api_reference.md#models.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, AttributeParameters> getRequestedAttributes() {
@@ -241,12 +239,11 @@ public final class AnalyzeCommentRequest extends com.google.api.client.json.Gene
 
   /**
    * Specification of requested attributes. The AttributeParameters serve as configuration for each
-   * associated attribute. The map keys are attribute names. The following attributes are available:
-   * "ATTACK_ON_AUTHOR" - Attack on author of original article or post. "ATTACK_ON_COMMENTER" -
-   * Attack on fellow commenter. "ATTACK_ON_PUBLISHER" - Attack on publisher of article/post.
-   * "INCOHERENT" - Difficult to understand, nonsensical. "INFLAMMATORY" - Intending to provoke or
-   * inflame. "OBSCENE" - Obscene, such as cursing. "OFF_TOPIC" - Not related to the original topic.
-   * "SPAM" - Commercial/advertising spam content. "UNSUBSTANTIAL" - Trivial.
+   * associated attribute. The map keys are attribute names. The available attributes may be
+   * different on each RFE installation, and can be seen by calling ListAttributes (see above). For
+   * the prod installation, known as Perspective API, at blade:commentanalyzer-esf and
+   * commentanalyzer.googleapis.com, see go/checker-models (internal) and
+   * https://github.com/conversationai/perspectiveapi/blob/master/api_reference.md#models.
    * @param requestedAttributes requestedAttributes or {@code null} for none
    */
   public AnalyzeCommentRequest setRequestedAttributes(java.util.Map<String, AttributeParameters> requestedAttributes) {

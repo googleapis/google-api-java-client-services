@@ -151,7 +151,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
      * optional parameters, call the {@link GetOrganizationSettings#execute()} method to invoke the
      * remote operation.
      *
-     * @param name Name of the organization to get organization settings for. Its format is
+     * @param name Required. Name of the organization to get organization settings for. Its format is
      *        "organizations/[organization_id]/organizationSettings".
      * @return the request
      */
@@ -179,7 +179,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * s.services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
        * after invoking the constructor. </p>
        *
-       * @param name Name of the organization to get organization settings for. Its format is
+       * @param name Required. Name of the organization to get organization settings for. Its format is
      *        "organizations/[organization_id]/organizationSettings".
        * @since 1.13
        */
@@ -259,13 +259,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
 
       /**
-       * Name of the organization to get organization settings for. Its format is
+       * Required. Name of the organization to get organization settings for. Its format is
        * "organizations/[organization_id]/organizationSettings".
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Name of the organization to get organization settings for. Its format is
+      /** Required. Name of the organization to get organization settings for. Its format is
      "organizations/[organization_id]/organizationSettings".
        */
       public java.lang.String getName() {
@@ -273,7 +273,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
 
       /**
-       * Name of the organization to get organization settings for. Its format is
+       * Required. Name of the organization to get organization settings for. Its format is
        * "organizations/[organization_id]/organizationSettings".
        */
       public GetOrganizationSettings setName(java.lang.String name) {
@@ -484,7 +484,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Group#execute()} method to invoke the remote operation.
        *
-       * @param parent Name of the organization to groupBy. Its format is
+       * @param parent Required. Name of the organization to groupBy. Its format is
       "organizations/[organization_id]".
        * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.GroupAssetsRequest}
        * @return the request
@@ -513,7 +513,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Group#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Name of the organization to groupBy. Its format is
+         * @param parent Required. Name of the organization to groupBy. Its format is
       "organizations/[organization_id]".
          * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.GroupAssetsRequest}
          * @since 1.13
@@ -584,19 +584,21 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Name of the organization to groupBy. Its format is "organizations/[organization_id]".
+         * Required. Name of the organization to groupBy. Its format is
+         * "organizations/[organization_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Name of the organization to groupBy. Its format is "organizations/[organization_id]".
+        /** Required. Name of the organization to groupBy. Its format is "organizations/[organization_id]".
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Name of the organization to groupBy. Its format is "organizations/[organization_id]".
+         * Required. Name of the organization to groupBy. Its format is
+         * "organizations/[organization_id]".
          */
         public Group setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -621,8 +623,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Name of the organization assets should belong to. Its format is
-      "organizations/[organization_id]".
+       * @param parent Required. Name of the organization assets should belong to. Its format is
+       *        "organizations/[organization_id]".
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -648,8 +650,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Name of the organization assets should belong to. Its format is
-      "organizations/[organization_id]".
+         * @param parent Required. Name of the organization assets should belong to. Its format is
+       *        "organizations/[organization_id]".
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -728,20 +730,21 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Name of the organization assets should belong to. Its format is
+         * Required. Name of the organization assets should belong to. Its format is
          * "organizations/[organization_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Name of the organization assets should belong to. Its format is "organizations/[organization_id]".
+        /** Required. Name of the organization assets should belong to. Its format is
+       "organizations/[organization_id]".
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Name of the organization assets should belong to. Its format is
+         * Required. Name of the organization assets should belong to. Its format is
          * "organizations/[organization_id]".
          */
         public List setParent(java.lang.String parent) {
@@ -1059,7 +1062,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link RunDiscovery#execute()} method to invoke the remote
        * operation.
        *
-       * @param parent Name of the organization to run asset discovery for. Its format is
+       * @param parent Required. Name of the organization to run asset discovery for. Its format is
        *        "organizations/[organization_id]".
        * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.RunAssetDiscoveryRequest}
        * @return the request
@@ -1091,7 +1094,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * RunDiscovery#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Name of the organization to run asset discovery for. Its format is
+         * @param parent Required. Name of the organization to run asset discovery for. Its format is
        *        "organizations/[organization_id]".
          * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.RunAssetDiscoveryRequest}
          * @since 1.13
@@ -1162,13 +1165,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Name of the organization to run asset discovery for. Its format is
+         * Required. Name of the organization to run asset discovery for. Its format is
          * "organizations/[organization_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Name of the organization to run asset discovery for. Its format is
+        /** Required. Name of the organization to run asset discovery for. Its format is
        "organizations/[organization_id]".
          */
         public java.lang.String getParent() {
@@ -1176,7 +1179,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Name of the organization to run asset discovery for. Its format is
+         * Required. Name of the organization to run asset discovery for. Its format is
          * "organizations/[organization_id]".
          */
         public RunDiscovery setParent(java.lang.String parent) {
@@ -2047,8 +2050,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Resource name of the new source's parent. Its format should be
-      "organizations/[organization_id]".
+       * @param parent Required. Resource name of the new source's parent. Its format should be
+       *        "organizations/[organization_id]".
        * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.Source}
        * @return the request
        */
@@ -2076,8 +2079,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Resource name of the new source's parent. Its format should be
-      "organizations/[organization_id]".
+         * @param parent Required. Resource name of the new source's parent. Its format should be
+       *        "organizations/[organization_id]".
          * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.Source}
          * @since 1.13
          */
@@ -2147,20 +2150,21 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Resource name of the new source's parent. Its format should be
+         * Required. Resource name of the new source's parent. Its format should be
          * "organizations/[organization_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Resource name of the new source's parent. Its format should be "organizations/[organization_id]".
+        /** Required. Resource name of the new source's parent. Its format should be
+       "organizations/[organization_id]".
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Resource name of the new source's parent. Its format should be
+         * Required. Resource name of the new source's parent. Its format should be
          * "organizations/[organization_id]".
          */
         public Create setParent(java.lang.String parent) {
@@ -2186,7 +2190,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Relative resource name of the source. Its format is
+       * @param name Required. Relative resource name of the source. Its format is
        *        "organizations/[organization_id]/source/[source_id]".
        * @return the request
        */
@@ -2213,7 +2217,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Relative resource name of the source. Its format is
+         * @param name Required. Relative resource name of the source. Its format is
        *        "organizations/[organization_id]/source/[source_id]".
          * @since 1.13
          */
@@ -2293,13 +2297,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Relative resource name of the source. Its format is
+         * Required. Relative resource name of the source. Its format is
          * "organizations/[organization_id]/source/[source_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Relative resource name of the source. Its format is
+        /** Required. Relative resource name of the source. Its format is
        "organizations/[organization_id]/source/[source_id]".
          */
         public java.lang.String getName() {
@@ -2307,7 +2311,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Relative resource name of the source. Its format is
+         * Required. Relative resource name of the source. Its format is
          * "organizations/[organization_id]/source/[source_id]".
          */
         public Get setName(java.lang.String name) {
@@ -2476,7 +2480,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Resource name of the parent of sources to list. Its format should be
+       * @param parent Required. Resource name of the parent of sources to list. Its format should be
        *        "organizations/[organization_id]".
        * @return the request
        */
@@ -2503,7 +2507,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Resource name of the parent of sources to list. Its format should be
+         * @param parent Required. Resource name of the parent of sources to list. Its format should be
        *        "organizations/[organization_id]".
          * @since 1.13
          */
@@ -2583,13 +2587,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Resource name of the parent of sources to list. Its format should be
+         * Required. Resource name of the parent of sources to list. Its format should be
          * "organizations/[organization_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Resource name of the parent of sources to list. Its format should be
+        /** Required. Resource name of the parent of sources to list. Its format should be
        "organizations/[organization_id]".
          */
         public java.lang.String getParent() {
@@ -2597,7 +2601,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Resource name of the parent of sources to list. Its format should be
+         * Required. Resource name of the parent of sources to list. Its format should be
          * "organizations/[organization_id]".
          */
         public List setParent(java.lang.String parent) {
@@ -3141,7 +3145,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Resource name of the new finding's parent. Its format should be
+         * @param parent Required. Resource name of the new finding's parent. Its format should be
          *        "organizations/[organization_id]/sources/[source_id]".
          * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.Finding}
          * @return the request
@@ -3170,7 +3174,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Resource name of the new finding's parent. Its format should be
+           * @param parent Required. Resource name of the new finding's parent. Its format should be
          *        "organizations/[organization_id]/sources/[source_id]".
            * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.Finding}
            * @since 1.13
@@ -3241,13 +3245,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
 
           /**
-           * Resource name of the new finding's parent. Its format should be
+           * Required. Resource name of the new finding's parent. Its format should be
            * "organizations/[organization_id]/sources/[source_id]".
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Resource name of the new finding's parent. Its format should be
+          /** Required. Resource name of the new finding's parent. Its format should be
          "organizations/[organization_id]/sources/[source_id]".
            */
           public java.lang.String getParent() {
@@ -3255,7 +3259,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
 
           /**
-           * Resource name of the new finding's parent. Its format should be
+           * Required. Resource name of the new finding's parent. Its format should be
            * "organizations/[organization_id]/sources/[source_id]".
            */
           public Create setParent(java.lang.String parent) {
@@ -3269,22 +3273,22 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
 
           /**
-           * Unique identifier provided by the client within the parent scope. It must be
+           * Required. Unique identifier provided by the client within the parent scope. It must be
            * alphanumeric and less than or equal to 32 characters and greater than 0 characters in
            * length.
            */
           @com.google.api.client.util.Key
           private java.lang.String findingId;
 
-          /** Unique identifier provided by the client within the parent scope. It must be alphanumeric and less
-         than or equal to 32 characters and greater than 0 characters in length.
+          /** Required. Unique identifier provided by the client within the parent scope. It must be alphanumeric
+         and less than or equal to 32 characters and greater than 0 characters in length.
            */
           public java.lang.String getFindingId() {
             return findingId;
           }
 
           /**
-           * Unique identifier provided by the client within the parent scope. It must be
+           * Required. Unique identifier provided by the client within the parent scope. It must be
            * alphanumeric and less than or equal to 32 characters and greater than 0 characters in
            * length.
            */
@@ -3309,11 +3313,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Group#execute()} method to invoke the remote operation.
          *
-         * @param parent Name of the source to groupBy. Its format is
-        "organizations/[organization_id]/sources/[source_id]".
-         *        To groupBy across
-        all sources provide a source_id of `-`. For example:
-         *        organizations/123/sources/-
+         * @param parent Required. Name of the source to groupBy. Its format is
+         *        "organizations/[organization_id]/sources/[source_id]". To groupBy across
+        all sources
+         *        provide a source_id of `-`. For example:
+        organizations/123/sources/-
          * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.GroupFindingsRequest}
          * @return the request
          */
@@ -3344,11 +3348,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Group#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Name of the source to groupBy. Its format is
-        "organizations/[organization_id]/sources/[source_id]".
-         *        To groupBy across
-        all sources provide a source_id of `-`. For example:
-         *        organizations/123/sources/-
+           * @param parent Required. Name of the source to groupBy. Its format is
+         *        "organizations/[organization_id]/sources/[source_id]". To groupBy across
+        all sources
+         *        provide a source_id of `-`. For example:
+        organizations/123/sources/-
            * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.GroupFindingsRequest}
            * @since 1.13
            */
@@ -3418,22 +3422,23 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
 
           /**
-           * Name of the source to groupBy. Its format is
+           * Required. Name of the source to groupBy. Its format is
            * "organizations/[organization_id]/sources/[source_id]". To groupBy across all sources
            * provide a source_id of `-`. For example: organizations/123/sources/-
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Name of the source to groupBy. Its format is "organizations/[organization_id]/sources/[source_id]".
-         To groupBy across all sources provide a source_id of `-`. For example: organizations/123/sources/-
+          /** Required. Name of the source to groupBy. Its format is
+         "organizations/[organization_id]/sources/[source_id]". To groupBy across all sources provide a
+         source_id of `-`. For example: organizations/123/sources/-
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Name of the source to groupBy. Its format is
+           * Required. Name of the source to groupBy. Its format is
            * "organizations/[organization_id]/sources/[source_id]". To groupBy across all sources
            * provide a source_id of `-`. For example: organizations/123/sources/-
            */
@@ -3463,7 +3468,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Name of the source the findings belong to. Its format is
+         * @param parent Required. Name of the source the findings belong to. Its format is
          *        "organizations/[organization_id]/sources/[source_id]". To list across all
         sources provide
          *        a source_id of `-`. For example:
@@ -3496,7 +3501,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Name of the source the findings belong to. Its format is
+           * @param parent Required. Name of the source the findings belong to. Its format is
          *        "organizations/[organization_id]/sources/[source_id]". To list across all
         sources provide
          *        a source_id of `-`. For example:
@@ -3579,14 +3584,14 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
 
           /**
-           * Name of the source the findings belong to. Its format is
+           * Required. Name of the source the findings belong to. Its format is
            * "organizations/[organization_id]/sources/[source_id]". To list across all sources
            * provide a source_id of `-`. For example: organizations/123/sources/-
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Name of the source the findings belong to. Its format is
+          /** Required. Name of the source the findings belong to. Its format is
          "organizations/[organization_id]/sources/[source_id]". To list across all sources provide a
          source_id of `-`. For example: organizations/123/sources/-
            */
@@ -3595,7 +3600,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
 
           /**
-           * Name of the source the findings belong to. Its format is
+           * Required. Name of the source the findings belong to. Its format is
            * "organizations/[organization_id]/sources/[source_id]". To list across all sources
            * provide a source_id of `-`. For example: organizations/123/sources/-
            */
@@ -4006,7 +4011,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link SetState#execute()} method to invoke the remote operation.
          *
-         * @param name The relative resource name of the finding. See:
+         * @param name Required. The relative resource name of the finding. See:
          *        https://cloud.google.com/apis/design/resource_names#relative_resource_name
         Example:
          *        "organizations/123/sources/456/finding/789".
@@ -4037,7 +4042,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * SetState#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The relative resource name of the finding. See:
+           * @param name Required. The relative resource name of the finding. See:
          *        https://cloud.google.com/apis/design/resource_names#relative_resource_name
         Example:
          *        "organizations/123/sources/456/finding/789".
@@ -4110,14 +4115,14 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
 
           /**
-           * The relative resource name of the finding. See:
+           * Required. The relative resource name of the finding. See:
            * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
            * "organizations/123/sources/456/finding/789".
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The relative resource name of the finding. See:
+          /** Required. The relative resource name of the finding. See:
          https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
          "organizations/123/sources/456/finding/789".
            */
@@ -4126,7 +4131,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
 
           /**
-           * The relative resource name of the finding. See:
+           * Required. The relative resource name of the finding. See:
            * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
            * "organizations/123/sources/456/finding/789".
            */

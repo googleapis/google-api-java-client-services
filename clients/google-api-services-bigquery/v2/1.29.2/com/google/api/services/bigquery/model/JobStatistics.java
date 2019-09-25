@@ -117,6 +117,13 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   private java.lang.String reservationId;
 
   /**
+   * [Output-only] Statistics for a child job of a script.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ScriptStatistics scriptStatistics;
+
+  /**
    * [Output-only] Start time of this job, in milliseconds since the epoch. This field will be
    * present when the job transitions from the PENDING state to either RUNNING or DONE.
    * The value may be {@code null}.
@@ -330,6 +337,23 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
    */
   public JobStatistics setReservationId(java.lang.String reservationId) {
     this.reservationId = reservationId;
+    return this;
+  }
+
+  /**
+   * [Output-only] Statistics for a child job of a script.
+   * @return value or {@code null} for none
+   */
+  public ScriptStatistics getScriptStatistics() {
+    return scriptStatistics;
+  }
+
+  /**
+   * [Output-only] Statistics for a child job of a script.
+   * @param scriptStatistics scriptStatistics or {@code null} for none
+   */
+  public JobStatistics setScriptStatistics(ScriptStatistics scriptStatistics) {
+    this.scriptStatistics = scriptStatistics;
     return this;
   }
 

@@ -33,13 +33,29 @@ package com.google.api.services.run.v1alpha1.model;
 public final class ConfigMapEnvSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ConfigMap to select from.
+   * This field should not be used directly as it is meant to be inlined directly into the message.
+   * Use the "name" field instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private LocalObjectReference localObjectReference;
 
   /**
+   * Cloud Run fully managed: not supported
+   *
+   * Cloud Run for Anthos: supported
+   *
+   * The ConfigMap to select from.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
+
+  /**
+   * Cloud Run fully managed: not supported
+   *
+   * Cloud Run for Anthos: supported
+   *
    * Specify whether the ConfigMap must be defined +optional
    * The value may be {@code null}.
    */
@@ -47,7 +63,8 @@ public final class ConfigMapEnvSource extends com.google.api.client.json.Generic
   private java.lang.Boolean optional;
 
   /**
-   * The ConfigMap to select from.
+   * This field should not be used directly as it is meant to be inlined directly into the message.
+   * Use the "name" field instead.
    * @return value or {@code null} for none
    */
   public LocalObjectReference getLocalObjectReference() {
@@ -55,7 +72,8 @@ public final class ConfigMapEnvSource extends com.google.api.client.json.Generic
   }
 
   /**
-   * The ConfigMap to select from.
+   * This field should not be used directly as it is meant to be inlined directly into the message.
+   * Use the "name" field instead.
    * @param localObjectReference localObjectReference or {@code null} for none
    */
   public ConfigMapEnvSource setLocalObjectReference(LocalObjectReference localObjectReference) {
@@ -64,6 +82,35 @@ public final class ConfigMapEnvSource extends com.google.api.client.json.Generic
   }
 
   /**
+   * Cloud Run fully managed: not supported
+   *
+   * Cloud Run for Anthos: supported
+   *
+   * The ConfigMap to select from.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * Cloud Run fully managed: not supported
+   *
+   * Cloud Run for Anthos: supported
+   *
+   * The ConfigMap to select from.
+   * @param name name or {@code null} for none
+   */
+  public ConfigMapEnvSource setName(java.lang.String name) {
+    this.name = name;
+    return this;
+  }
+
+  /**
+   * Cloud Run fully managed: not supported
+   *
+   * Cloud Run for Anthos: supported
+   *
    * Specify whether the ConfigMap must be defined +optional
    * @return value or {@code null} for none
    */
@@ -72,6 +119,10 @@ public final class ConfigMapEnvSource extends com.google.api.client.json.Generic
   }
 
   /**
+   * Cloud Run fully managed: not supported
+   *
+   * Cloud Run for Anthos: supported
+   *
    * Specify whether the ConfigMap must be defined +optional
    * @param optional optional or {@code null} for none
    */

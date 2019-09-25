@@ -45,6 +45,14 @@ public final class ConfigMapKeySelector extends com.google.api.client.json.Gener
   private java.lang.String key;
 
   /**
+   * This field should not be used directly as it is meant to be inlined directly into the message.
+   * Use the "name" field instead.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LocalObjectReference localObjectReference;
+
+  /**
    * Cloud Run fully managed: not supported
    *
    * Cloud Run on GKE: supported
@@ -53,7 +61,7 @@ public final class ConfigMapKeySelector extends com.google.api.client.json.Gener
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private LocalObjectReference localObjectReference;
+  private java.lang.String name;
 
   /**
    * Cloud Run fully managed: not supported
@@ -92,15 +100,22 @@ public final class ConfigMapKeySelector extends com.google.api.client.json.Gener
   }
 
   /**
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run on GKE: supported
-   *
-   * The ConfigMap to select from.
+   * This field should not be used directly as it is meant to be inlined directly into the message.
+   * Use the "name" field instead.
    * @return value or {@code null} for none
    */
   public LocalObjectReference getLocalObjectReference() {
     return localObjectReference;
+  }
+
+  /**
+   * This field should not be used directly as it is meant to be inlined directly into the message.
+   * Use the "name" field instead.
+   * @param localObjectReference localObjectReference or {@code null} for none
+   */
+  public ConfigMapKeySelector setLocalObjectReference(LocalObjectReference localObjectReference) {
+    this.localObjectReference = localObjectReference;
+    return this;
   }
 
   /**
@@ -109,10 +124,22 @@ public final class ConfigMapKeySelector extends com.google.api.client.json.Gener
    * Cloud Run on GKE: supported
    *
    * The ConfigMap to select from.
-   * @param localObjectReference localObjectReference or {@code null} for none
+   * @return value or {@code null} for none
    */
-  public ConfigMapKeySelector setLocalObjectReference(LocalObjectReference localObjectReference) {
-    this.localObjectReference = localObjectReference;
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * Cloud Run fully managed: not supported
+   *
+   * Cloud Run on GKE: supported
+   *
+   * The ConfigMap to select from.
+   * @param name name or {@code null} for none
+   */
+  public ConfigMapKeySelector setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 

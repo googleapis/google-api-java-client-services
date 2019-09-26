@@ -1,6 +1,6 @@
 # Safe Browsing API Client Library for Java
 
-Enables client applications to check web resources (most commonly URLs) against Google-generated lists of unsafe web resources.
+Enables client applications to check web resources (most commonly URLs) against Google-generated lists of unsafe web resources. The Safe Browsing APIs are for non-commercial use only. If you need to use APIs to detect malicious URLs for commercial purposes – meaning “for sale or revenue-generating purposes” – please refer to the Web Risk API.
 
 This page contains information about getting started with the Safe Browsing API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-safebrowsing</artifactId>
-      <version>v4-rev20190520-1.30.3</version>
+      <version>v4-rev20190923-1.30.3</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-safebrowsing:v4-rev20190520-1.30.3'
+  compile 'com.google.apis:google-api-services-safebrowsing:v4-rev20190923-1.30.3'
 }
 ```
 

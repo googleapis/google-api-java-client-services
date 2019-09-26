@@ -366,17 +366,17 @@ public class Texttospeech extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Optional (but recommended) [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language
-       * tag. If specified, the ListVoices call will only return voices that can be used to
-       * synthesize this language_code. E.g. when specifying "en-NZ", you will get supported "en-*"
-       * voices; when specifying "no", you will get supported "no-*" (Norwegian) and "nb-*"
-       * (Norwegian Bokmal) voices; specifying "zh" will also get supported "cmn-*" voices;
-       * specifying "zh-hk" will also get supported "yue-*" voices.
+       * Optional. Recommended. [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag.
+       * If specified, the ListVoices call will only return voices that can be used to synthesize
+       * this language_code. E.g. when specifying "en-NZ", you will get supported "en-*" voices;
+       * when specifying "no", you will get supported "no-*" (Norwegian) and "nb-*" (Norwegian
+       * Bokmal) voices; specifying "zh" will also get supported "cmn-*" voices; specifying "zh-hk"
+       * will also get supported "yue-*" voices.
        */
       @com.google.api.client.util.Key
       private java.lang.String languageCode;
 
-      /** Optional (but recommended) [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. If
+      /** Optional. Recommended. [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. If
      specified, the ListVoices call will only return voices that can be used to synthesize this
      language_code. E.g. when specifying "en-NZ", you will get supported "en-*" voices; when specifying
      "no", you will get supported "no-*" (Norwegian) and "nb-*" (Norwegian Bokmal) voices; specifying
@@ -388,12 +388,12 @@ public class Texttospeech extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Optional (but recommended) [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language
-       * tag. If specified, the ListVoices call will only return voices that can be used to
-       * synthesize this language_code. E.g. when specifying "en-NZ", you will get supported "en-*"
-       * voices; when specifying "no", you will get supported "no-*" (Norwegian) and "nb-*"
-       * (Norwegian Bokmal) voices; specifying "zh" will also get supported "cmn-*" voices;
-       * specifying "zh-hk" will also get supported "yue-*" voices.
+       * Optional. Recommended. [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag.
+       * If specified, the ListVoices call will only return voices that can be used to synthesize
+       * this language_code. E.g. when specifying "en-NZ", you will get supported "en-*" voices;
+       * when specifying "no", you will get supported "no-*" (Norwegian) and "nb-*" (Norwegian
+       * Bokmal) voices; specifying "zh" will also get supported "cmn-*" voices; specifying "zh-hk"
+       * will also get supported "yue-*" voices.
        */
       public List setLanguageCode(java.lang.String languageCode) {
         this.languageCode = languageCode;

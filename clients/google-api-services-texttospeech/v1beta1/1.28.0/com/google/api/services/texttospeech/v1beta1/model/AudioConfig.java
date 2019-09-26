@@ -56,7 +56,7 @@ public final class AudioConfig extends com.google.api.client.json.GenericJson {
   private java.lang.Double pitch;
 
   /**
-   * The synthesis sample rate (in hertz) for this audio. Optional. When this is specified in
+   * Optional. The synthesis sample rate (in hertz) for this audio. When this is specified in
    * SynthesizeSpeechRequest, if this is different from the voice's natural sample rate, then the
    * synthesizer will honor this request by converting to the desired sample rate (which might
    * result in worse audio quality), unless the specified sample rate is not supported for the
@@ -149,7 +149,7 @@ public final class AudioConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The synthesis sample rate (in hertz) for this audio. Optional. When this is specified in
+   * Optional. The synthesis sample rate (in hertz) for this audio. When this is specified in
    * SynthesizeSpeechRequest, if this is different from the voice's natural sample rate, then the
    * synthesizer will honor this request by converting to the desired sample rate (which might
    * result in worse audio quality), unless the specified sample rate is not supported for the
@@ -162,7 +162,7 @@ public final class AudioConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The synthesis sample rate (in hertz) for this audio. Optional. When this is specified in
+   * Optional. The synthesis sample rate (in hertz) for this audio. When this is specified in
    * SynthesizeSpeechRequest, if this is different from the voice's natural sample rate, then the
    * synthesizer will honor this request by converting to the desired sample rate (which might
    * result in worse audio quality), unless the specified sample rate is not supported for the

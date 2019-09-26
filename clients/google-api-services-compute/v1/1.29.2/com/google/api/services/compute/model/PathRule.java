@@ -40,6 +40,17 @@ public final class PathRule extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> paths;
 
   /**
+   * In response to a matching path, the load balancer performs advanced routing actions like URL
+   * rewrites, header transformations, etc. prior to forwarding the request to the selected backend.
+   * If routeAction specifies any  weightedBackendServices, service must not be set. Conversely if
+   * service is set, routeAction cannot contain any  weightedBackendServices. Only one of
+   * routeAction or urlRedirect must be set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HttpRouteAction routeAction;
+
+  /**
    * The full or partial URL of the backend service resource to which traffic is directed if this
    * rule is matched. If routeAction is additionally specified, advanced routing actions like URL
    * Rewrites, etc. take effect prior to sending the request to the backend. However, if service is
@@ -50,6 +61,14 @@ public final class PathRule extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String service;
+
+  /**
+   * When a path pattern is matched, the request is redirected to a URL specified by urlRedirect. If
+   * urlRedirect is specified, service or routeAction must not be set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HttpRedirectAction urlRedirect;
 
   /**
    * The list of path patterns to match. Each must start with / and the only place a * is allowed is
@@ -69,6 +88,31 @@ public final class PathRule extends com.google.api.client.json.GenericJson {
    */
   public PathRule setPaths(java.util.List<java.lang.String> paths) {
     this.paths = paths;
+    return this;
+  }
+
+  /**
+   * In response to a matching path, the load balancer performs advanced routing actions like URL
+   * rewrites, header transformations, etc. prior to forwarding the request to the selected backend.
+   * If routeAction specifies any  weightedBackendServices, service must not be set. Conversely if
+   * service is set, routeAction cannot contain any  weightedBackendServices. Only one of
+   * routeAction or urlRedirect must be set.
+   * @return value or {@code null} for none
+   */
+  public HttpRouteAction getRouteAction() {
+    return routeAction;
+  }
+
+  /**
+   * In response to a matching path, the load balancer performs advanced routing actions like URL
+   * rewrites, header transformations, etc. prior to forwarding the request to the selected backend.
+   * If routeAction specifies any  weightedBackendServices, service must not be set. Conversely if
+   * service is set, routeAction cannot contain any  weightedBackendServices. Only one of
+   * routeAction or urlRedirect must be set.
+   * @param routeAction routeAction or {@code null} for none
+   */
+  public PathRule setRouteAction(HttpRouteAction routeAction) {
+    this.routeAction = routeAction;
     return this;
   }
 
@@ -96,6 +140,25 @@ public final class PathRule extends com.google.api.client.json.GenericJson {
    */
   public PathRule setService(java.lang.String service) {
     this.service = service;
+    return this;
+  }
+
+  /**
+   * When a path pattern is matched, the request is redirected to a URL specified by urlRedirect. If
+   * urlRedirect is specified, service or routeAction must not be set.
+   * @return value or {@code null} for none
+   */
+  public HttpRedirectAction getUrlRedirect() {
+    return urlRedirect;
+  }
+
+  /**
+   * When a path pattern is matched, the request is redirected to a URL specified by urlRedirect. If
+   * urlRedirect is specified, service or routeAction must not be set.
+   * @param urlRedirect urlRedirect or {@code null} for none
+   */
+  public PathRule setUrlRedirect(HttpRedirectAction urlRedirect) {
+    this.urlRedirect = urlRedirect;
     return this;
   }
 

@@ -31,6 +31,18 @@ package com.google.api.services.compute.model;
 public final class PathMatcher extends com.google.api.client.json.GenericJson {
 
   /**
+   * defaultRouteAction takes effect when none of the  pathRules or routeRules match. The load
+   * balancer performs advanced routing actions like URL rewrites, header transformations, etc.
+   * prior to forwarding the request to the selected backend. If defaultRouteAction specifies any
+   * weightedBackendServices, defaultService must not be set. Conversely if defaultService is set,
+   * defaultRouteAction cannot contain any  weightedBackendServices. Only one of defaultRouteAction
+   * or defaultUrlRedirect must be set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HttpRouteAction defaultRouteAction;
+
+  /**
    * The full or partial URL to the BackendService resource. This will be used if none of the
    * pathRules or routeRules defined by this PathMatcher are matched. For example, the following are
    * all valid URLs to a BackendService resource: -
@@ -50,11 +62,29 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
   private java.lang.String defaultService;
 
   /**
+   * When when none of the specified pathRules or routeRules match, the request is redirected to a
+   * URL specified by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
+   * defaultRouteAction must not be set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HttpRedirectAction defaultUrlRedirect;
+
+  /**
    * An optional description of this resource. Provide this property when you create the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
+
+  /**
+   * Specifies changes to request and response headers that need to take effect for the selected
+   * backendService. HeaderAction specified here are applied after the matching HttpRouteRule
+   * HeaderAction and before the HeaderAction in the UrlMap
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HttpHeaderAction headerAction;
 
   /**
    * The name to which this PathMatcher is referred by the HostRule.
@@ -68,11 +98,55 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
    * matching is all that's required. The order by which path rules are specified does not matter.
    * Matches are always done on the longest-path-first basis. For example: a pathRule with a path
    * /a/b/c will match before /a/b irrespective of the order in which those paths appear in this
-   * list. Only one of pathRules or routeRules must be set.
+   * list. Within a given pathMatcher, only one of pathRules or routeRules must be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<PathRule> pathRules;
+
+  /**
+   * The list of ordered HTTP route rules. Use this list instead of pathRules when advanced route
+   * matching and routing actions are desired. The order of specifying routeRules matters: the first
+   * rule that matches will cause its specified routing action to take effect. Within a given
+   * pathMatcher, only one of pathRules or routeRules must be set. routeRules are not supported in
+   * UrlMaps intended for External Load balancers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<HttpRouteRule> routeRules;
+
+  static {
+    // hack to force ProGuard to consider HttpRouteRule used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(HttpRouteRule.class);
+  }
+
+  /**
+   * defaultRouteAction takes effect when none of the  pathRules or routeRules match. The load
+   * balancer performs advanced routing actions like URL rewrites, header transformations, etc.
+   * prior to forwarding the request to the selected backend. If defaultRouteAction specifies any
+   * weightedBackendServices, defaultService must not be set. Conversely if defaultService is set,
+   * defaultRouteAction cannot contain any  weightedBackendServices. Only one of defaultRouteAction
+   * or defaultUrlRedirect must be set.
+   * @return value or {@code null} for none
+   */
+  public HttpRouteAction getDefaultRouteAction() {
+    return defaultRouteAction;
+  }
+
+  /**
+   * defaultRouteAction takes effect when none of the  pathRules or routeRules match. The load
+   * balancer performs advanced routing actions like URL rewrites, header transformations, etc.
+   * prior to forwarding the request to the selected backend. If defaultRouteAction specifies any
+   * weightedBackendServices, defaultService must not be set. Conversely if defaultService is set,
+   * defaultRouteAction cannot contain any  weightedBackendServices. Only one of defaultRouteAction
+   * or defaultUrlRedirect must be set.
+   * @param defaultRouteAction defaultRouteAction or {@code null} for none
+   */
+  public PathMatcher setDefaultRouteAction(HttpRouteAction defaultRouteAction) {
+    this.defaultRouteAction = defaultRouteAction;
+    return this;
+  }
 
   /**
    * The full or partial URL to the BackendService resource. This will be used if none of the
@@ -116,6 +190,27 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * When when none of the specified pathRules or routeRules match, the request is redirected to a
+   * URL specified by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
+   * defaultRouteAction must not be set.
+   * @return value or {@code null} for none
+   */
+  public HttpRedirectAction getDefaultUrlRedirect() {
+    return defaultUrlRedirect;
+  }
+
+  /**
+   * When when none of the specified pathRules or routeRules match, the request is redirected to a
+   * URL specified by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
+   * defaultRouteAction must not be set.
+   * @param defaultUrlRedirect defaultUrlRedirect or {@code null} for none
+   */
+  public PathMatcher setDefaultUrlRedirect(HttpRedirectAction defaultUrlRedirect) {
+    this.defaultUrlRedirect = defaultUrlRedirect;
+    return this;
+  }
+
+  /**
    * An optional description of this resource. Provide this property when you create the resource.
    * @return value or {@code null} for none
    */
@@ -129,6 +224,27 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
    */
   public PathMatcher setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Specifies changes to request and response headers that need to take effect for the selected
+   * backendService. HeaderAction specified here are applied after the matching HttpRouteRule
+   * HeaderAction and before the HeaderAction in the UrlMap
+   * @return value or {@code null} for none
+   */
+  public HttpHeaderAction getHeaderAction() {
+    return headerAction;
+  }
+
+  /**
+   * Specifies changes to request and response headers that need to take effect for the selected
+   * backendService. HeaderAction specified here are applied after the matching HttpRouteRule
+   * HeaderAction and before the HeaderAction in the UrlMap
+   * @param headerAction headerAction or {@code null} for none
+   */
+  public PathMatcher setHeaderAction(HttpHeaderAction headerAction) {
+    this.headerAction = headerAction;
     return this;
   }
 
@@ -154,7 +270,7 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
    * matching is all that's required. The order by which path rules are specified does not matter.
    * Matches are always done on the longest-path-first basis. For example: a pathRule with a path
    * /a/b/c will match before /a/b irrespective of the order in which those paths appear in this
-   * list. Only one of pathRules or routeRules must be set.
+   * list. Within a given pathMatcher, only one of pathRules or routeRules must be set.
    * @return value or {@code null} for none
    */
   public java.util.List<PathRule> getPathRules() {
@@ -166,11 +282,36 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
    * matching is all that's required. The order by which path rules are specified does not matter.
    * Matches are always done on the longest-path-first basis. For example: a pathRule with a path
    * /a/b/c will match before /a/b irrespective of the order in which those paths appear in this
-   * list. Only one of pathRules or routeRules must be set.
+   * list. Within a given pathMatcher, only one of pathRules or routeRules must be set.
    * @param pathRules pathRules or {@code null} for none
    */
   public PathMatcher setPathRules(java.util.List<PathRule> pathRules) {
     this.pathRules = pathRules;
+    return this;
+  }
+
+  /**
+   * The list of ordered HTTP route rules. Use this list instead of pathRules when advanced route
+   * matching and routing actions are desired. The order of specifying routeRules matters: the first
+   * rule that matches will cause its specified routing action to take effect. Within a given
+   * pathMatcher, only one of pathRules or routeRules must be set. routeRules are not supported in
+   * UrlMaps intended for External Load balancers.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<HttpRouteRule> getRouteRules() {
+    return routeRules;
+  }
+
+  /**
+   * The list of ordered HTTP route rules. Use this list instead of pathRules when advanced route
+   * matching and routing actions are desired. The order of specifying routeRules matters: the first
+   * rule that matches will cause its specified routing action to take effect. Within a given
+   * pathMatcher, only one of pathRules or routeRules must be set. routeRules are not supported in
+   * UrlMaps intended for External Load balancers.
+   * @param routeRules routeRules or {@code null} for none
+   */
+  public PathMatcher setRouteRules(java.util.List<HttpRouteRule> routeRules) {
+    this.routeRules = routeRules;
     return this;
   }
 

@@ -59,13 +59,6 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   private java.lang.String fingerprint;
 
   /**
-   * The list of Google announcements that exist for this delegated prefix.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<PublicDelegatedPrefixGoogleAnnouncement> googleAnnouncements;
-
-  /**
    * [Output Only] The unique identifier for the resource type. The server generates this
    * identifier.
    * The value may be {@code null}.
@@ -239,23 +232,6 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
    */
   public PublicDelegatedPrefix encodeFingerprint(byte[] fingerprint) {
     this.fingerprint = com.google.api.client.util.Base64.encodeBase64URLSafeString(fingerprint);
-    return this;
-  }
-
-  /**
-   * The list of Google announcements that exist for this delegated prefix.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<PublicDelegatedPrefixGoogleAnnouncement> getGoogleAnnouncements() {
-    return googleAnnouncements;
-  }
-
-  /**
-   * The list of Google announcements that exist for this delegated prefix.
-   * @param googleAnnouncements googleAnnouncements or {@code null} for none
-   */
-  public PublicDelegatedPrefix setGoogleAnnouncements(java.util.List<PublicDelegatedPrefixGoogleAnnouncement> googleAnnouncements) {
-    this.googleAnnouncements = googleAnnouncements;
     return this;
   }
 

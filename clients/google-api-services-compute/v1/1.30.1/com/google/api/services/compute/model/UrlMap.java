@@ -43,6 +43,18 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
   private java.lang.String creationTimestamp;
 
   /**
+   * defaultRouteAction takes effect when none of the  hostRules match. The load balancer performs
+   * advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding
+   * the request to the selected backend. If defaultRouteAction specifies any
+   * weightedBackendServices, defaultService must not be set. Conversely if defaultService is set,
+   * defaultRouteAction cannot contain any  weightedBackendServices. Only one of defaultRouteAction
+   * or defaultUrlRedirect must be set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HttpRouteAction defaultRouteAction;
+
+  /**
    * The full or partial URL of the defaultService resource to which traffic is directed if none of
    * the hostRules match. If defaultRouteAction is additionally specified, advanced routing actions
    * like URL Rewrites, etc. take effect prior to sending the request to the backend. However, if
@@ -54,6 +66,15 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String defaultService;
+
+  /**
+   * When none of the specified hostRules match, the request is redirected to a URL specified by
+   * defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or defaultRouteAction
+   * must not be set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HttpRedirectAction defaultUrlRedirect;
 
   /**
    * An optional description of this resource. Provide this property when you create the resource.
@@ -73,6 +94,15 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String fingerprint;
+
+  /**
+   * Specifies changes to request and response headers that need to take effect for the selected
+   * backendService. The headerAction specified here take effect after headerAction specified under
+   * pathMatcher.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HttpHeaderAction headerAction;
 
   /**
    * The list of HostRules to use against the URL.
@@ -167,6 +197,33 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * defaultRouteAction takes effect when none of the  hostRules match. The load balancer performs
+   * advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding
+   * the request to the selected backend. If defaultRouteAction specifies any
+   * weightedBackendServices, defaultService must not be set. Conversely if defaultService is set,
+   * defaultRouteAction cannot contain any  weightedBackendServices. Only one of defaultRouteAction
+   * or defaultUrlRedirect must be set.
+   * @return value or {@code null} for none
+   */
+  public HttpRouteAction getDefaultRouteAction() {
+    return defaultRouteAction;
+  }
+
+  /**
+   * defaultRouteAction takes effect when none of the  hostRules match. The load balancer performs
+   * advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding
+   * the request to the selected backend. If defaultRouteAction specifies any
+   * weightedBackendServices, defaultService must not be set. Conversely if defaultService is set,
+   * defaultRouteAction cannot contain any  weightedBackendServices. Only one of defaultRouteAction
+   * or defaultUrlRedirect must be set.
+   * @param defaultRouteAction defaultRouteAction or {@code null} for none
+   */
+  public UrlMap setDefaultRouteAction(HttpRouteAction defaultRouteAction) {
+    this.defaultRouteAction = defaultRouteAction;
+    return this;
+  }
+
+  /**
    * The full or partial URL of the defaultService resource to which traffic is directed if none of
    * the hostRules match. If defaultRouteAction is additionally specified, advanced routing actions
    * like URL Rewrites, etc. take effect prior to sending the request to the backend. However, if
@@ -192,6 +249,27 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
    */
   public UrlMap setDefaultService(java.lang.String defaultService) {
     this.defaultService = defaultService;
+    return this;
+  }
+
+  /**
+   * When none of the specified hostRules match, the request is redirected to a URL specified by
+   * defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or defaultRouteAction
+   * must not be set.
+   * @return value or {@code null} for none
+   */
+  public HttpRedirectAction getDefaultUrlRedirect() {
+    return defaultUrlRedirect;
+  }
+
+  /**
+   * When none of the specified hostRules match, the request is redirected to a URL specified by
+   * defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or defaultRouteAction
+   * must not be set.
+   * @param defaultUrlRedirect defaultUrlRedirect or {@code null} for none
+   */
+  public UrlMap setDefaultUrlRedirect(HttpRedirectAction defaultUrlRedirect) {
+    this.defaultUrlRedirect = defaultUrlRedirect;
     return this;
   }
 
@@ -274,6 +352,27 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
    */
   public UrlMap encodeFingerprint(byte[] fingerprint) {
     this.fingerprint = com.google.api.client.util.Base64.encodeBase64URLSafeString(fingerprint);
+    return this;
+  }
+
+  /**
+   * Specifies changes to request and response headers that need to take effect for the selected
+   * backendService. The headerAction specified here take effect after headerAction specified under
+   * pathMatcher.
+   * @return value or {@code null} for none
+   */
+  public HttpHeaderAction getHeaderAction() {
+    return headerAction;
+  }
+
+  /**
+   * Specifies changes to request and response headers that need to take effect for the selected
+   * backendService. The headerAction specified here take effect after headerAction specified under
+   * pathMatcher.
+   * @param headerAction headerAction or {@code null} for none
+   */
+  public UrlMap setHeaderAction(HttpHeaderAction headerAction) {
+    this.headerAction = headerAction;
     return this;
   }
 

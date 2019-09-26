@@ -44,8 +44,6 @@ public final class AuditLogConfig extends com.google.api.client.json.GenericJson
   private java.util.List<java.lang.String> exemptedMembers;
 
   /**
-   * Specifies whether principals can be exempted for the same LogType in lower-level resource
-   * policies. If true, any lower-level exemptions will be ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,8 +76,6 @@ public final class AuditLogConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Specifies whether principals can be exempted for the same LogType in lower-level resource
-   * policies. If true, any lower-level exemptions will be ignored.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIgnoreChildExemptions() {
@@ -87,8 +83,6 @@ public final class AuditLogConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Specifies whether principals can be exempted for the same LogType in lower-level resource
-   * policies. If true, any lower-level exemptions will be ignored.
    * @param ignoreChildExemptions ignoreChildExemptions or {@code null} for none
    */
   public AuditLogConfig setIgnoreChildExemptions(java.lang.Boolean ignoreChildExemptions) {

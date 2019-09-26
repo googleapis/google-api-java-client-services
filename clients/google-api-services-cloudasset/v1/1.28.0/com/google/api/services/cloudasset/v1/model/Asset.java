@@ -43,6 +43,17 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   private GoogleIdentityAccesscontextmanagerV1AccessPolicy accessPolicy;
 
   /**
+   * Asset's ancestry path in Cloud Resource Manager (CRM) hierarchy, represented as a list of
+   * relative resource names. Ancestry path starts with the closest CRM ancestor and ends at root.
+   * If the asset is a CRM project/folder/organization, this starts from the asset itself.
+   *
+   * Example: ["projects/123456789", "folders/5432", "organizations/1234"]
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> ancestors;
+
+  /**
    * Type of the asset. Example: "compute.googleapis.com/Disk".
    * The value may be {@code null}.
    */
@@ -115,6 +126,31 @@ public final class Asset extends com.google.api.client.json.GenericJson {
    */
   public Asset setAccessPolicy(GoogleIdentityAccesscontextmanagerV1AccessPolicy accessPolicy) {
     this.accessPolicy = accessPolicy;
+    return this;
+  }
+
+  /**
+   * Asset's ancestry path in Cloud Resource Manager (CRM) hierarchy, represented as a list of
+   * relative resource names. Ancestry path starts with the closest CRM ancestor and ends at root.
+   * If the asset is a CRM project/folder/organization, this starts from the asset itself.
+   *
+   * Example: ["projects/123456789", "folders/5432", "organizations/1234"]
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAncestors() {
+    return ancestors;
+  }
+
+  /**
+   * Asset's ancestry path in Cloud Resource Manager (CRM) hierarchy, represented as a list of
+   * relative resource names. Ancestry path starts with the closest CRM ancestor and ends at root.
+   * If the asset is a CRM project/folder/organization, this starts from the asset itself.
+   *
+   * Example: ["projects/123456789", "folders/5432", "organizations/1234"]
+   * @param ancestors ancestors or {@code null} for none
+   */
+  public Asset setAncestors(java.util.List<java.lang.String> ancestors) {
+    this.ancestors = ancestors;
     return this;
   }
 

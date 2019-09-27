@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"9eZ1uxVRThTDhLJCZHhqs3eQWz4/XhL248CuJAgVodtaKb3Fb3fWExg\"",
+ "etag": "\"LYADMvHWYH2ul9D6m9UT9gT77YM/4Yq5W9g85R9I-kkh7qZtD03GlXw\"",
  "discoveryVersion": "v1",
  "id": "drive:v2",
  "name": "drive",
  "version": "v2",
- "revision": "20190822",
+ "revision": "20190919",
  "title": "Drive API",
  "description": "Manages files in Drive including uploading, downloading, searching, detecting changes, and updating sharing permissions.",
  "ownerDomain": "google.com",
@@ -1374,7 +1374,7 @@
     },
     "hasAugmentedPermissions": {
      "type": "boolean",
-     "description": "Whether any users are granted file access directly on this file. This field is only populated for items in shared drives."
+     "description": "Whether there are permissions directly on this file. This field is only populated for items in shared drives."
     },
     "hasThumbnail": {
      "type": "boolean",

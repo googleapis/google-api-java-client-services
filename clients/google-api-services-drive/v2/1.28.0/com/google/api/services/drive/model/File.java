@@ -191,8 +191,8 @@ public final class File extends com.google.api.client.json.GenericJson {
   private java.lang.String fullFileExtension;
 
   /**
-   * Whether any users are granted file access directly on this file. This field is only populated
-   * for items in shared drives.
+   * Whether there are permissions directly on this file. This field is only populated for items in
+   * shared drives.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -931,8 +931,8 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether any users are granted file access directly on this file. This field is only populated
-   * for items in shared drives.
+   * Whether there are permissions directly on this file. This field is only populated for items in
+   * shared drives.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getHasAugmentedPermissions() {
@@ -940,8 +940,8 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether any users are granted file access directly on this file. This field is only populated
-   * for items in shared drives.
+   * Whether there are permissions directly on this file. This field is only populated for items in
+   * shared drives.
    * @param hasAugmentedPermissions hasAugmentedPermissions or {@code null} for none
    */
   public File setHasAugmentedPermissions(java.lang.Boolean hasAugmentedPermissions) {

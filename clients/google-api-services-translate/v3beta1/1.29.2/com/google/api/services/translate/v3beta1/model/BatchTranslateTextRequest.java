@@ -52,7 +52,7 @@ public final class BatchTranslateTextRequest extends com.google.api.client.json.
    * contain lowercase letters, numeric characters, underscores and dashes. International characters
    * are allowed. Label values are optional. Label keys must start with a letter.
    *
-   * See https://goo.gl/xmQnxf for more information on and examples of labels.
+   * See https://cloud.google.com/translate/docs/labels for more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -142,7 +142,7 @@ public final class BatchTranslateTextRequest extends com.google.api.client.json.
    * contain lowercase letters, numeric characters, underscores and dashes. International characters
    * are allowed. Label values are optional. Label keys must start with a letter.
    *
-   * See https://goo.gl/xmQnxf for more information on and examples of labels.
+   * See https://cloud.google.com/translate/docs/labels for more information.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -156,7 +156,7 @@ public final class BatchTranslateTextRequest extends com.google.api.client.json.
    * contain lowercase letters, numeric characters, underscores and dashes. International characters
    * are allowed. Label values are optional. Label keys must start with a letter.
    *
-   * See https://goo.gl/xmQnxf for more information on and examples of labels.
+   * See https://cloud.google.com/translate/docs/labels for more information.
    * @param labels labels or {@code null} for none
    */
   public BatchTranslateTextRequest setLabels(java.util.Map<String, java.lang.String> labels) {

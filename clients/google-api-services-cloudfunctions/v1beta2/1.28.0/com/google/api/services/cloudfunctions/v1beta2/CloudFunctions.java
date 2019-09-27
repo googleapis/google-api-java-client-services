@@ -736,7 +736,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
          * This request holds the parameters needed by the cloudfunctions server.  After setting any
          * optional parameters, call the {@link Call#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the function to be called.
+         * @param name Required. The name of the function to be called.
          * @param content the {@link com.google.api.services.cloudfunctions.v1beta2.model.CallFunctionRequest}
          * @return the request
          */
@@ -765,7 +765,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
            * {@link Call#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the function to be called.
+           * @param name Required. The name of the function to be called.
            * @param content the {@link com.google.api.services.cloudfunctions.v1beta2.model.CallFunctionRequest}
            * @since 1.13
            */
@@ -834,17 +834,17 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
             return (Call) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The name of the function to be called. */
+          /** Required. The name of the function to be called. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name of the function to be called.
+          /** Required. The name of the function to be called.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** The name of the function to be called. */
+          /** Required. The name of the function to be called. */
           public Call setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -869,7 +869,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
          * This request holds the parameters needed by the cloudfunctions server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param location The project and location in which the function should be created, specified
+         * @param location Required. The project and location in which the function should be created, specified
         in the format
          *        `projects/locations`
          * @param content the {@link com.google.api.services.cloudfunctions.v1beta2.model.CloudFunction}
@@ -900,7 +900,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param location The project and location in which the function should be created, specified
+           * @param location Required. The project and location in which the function should be created, specified
         in the format
          *        `projects/locations`
            * @param content the {@link com.google.api.services.cloudfunctions.v1beta2.model.CloudFunction}
@@ -972,13 +972,13 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * The project and location in which the function should be created, specified in the
-           * format `projects/locations`
+           * Required. The project and location in which the function should be created, specified
+           * in the format `projects/locations`
            */
           @com.google.api.client.util.Key
           private java.lang.String location;
 
-          /** The project and location in which the function should be created, specified in the format
+          /** Required. The project and location in which the function should be created, specified in the format
          `projects/locations`
            */
           public java.lang.String getLocation() {
@@ -986,8 +986,8 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * The project and location in which the function should be created, specified in the
-           * format `projects/locations`
+           * Required. The project and location in which the function should be created, specified
+           * in the format `projects/locations`
            */
           public Create setLocation(java.lang.String location) {
             if (!getSuppressPatternChecks()) {
@@ -1013,7 +1013,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
          * This request holds the parameters needed by the cloudfunctions server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the function which should be deleted.
+         * @param name Required. The name of the function which should be deleted.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -1041,7 +1041,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the function which should be deleted.
+           * @param name Required. The name of the function which should be deleted.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -1109,17 +1109,17 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The name of the function which should be deleted. */
+          /** Required. The name of the function which should be deleted. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name of the function which should be deleted.
+          /** Required. The name of the function which should be deleted.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** The name of the function which should be deleted. */
+          /** Required. The name of the function which should be deleted. */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1466,7 +1466,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
          * This request holds the parameters needed by the cloudfunctions server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the function which details should be obtained.
+         * @param name Required. The name of the function which details should be obtained.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -1492,7 +1492,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the function which details should be obtained.
+           * @param name Required. The name of the function which details should be obtained.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -1570,17 +1570,17 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The name of the function which details should be obtained. */
+          /** Required. The name of the function which details should be obtained. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name of the function which details should be obtained.
+          /** Required. The name of the function which details should be obtained.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** The name of the function which details should be obtained. */
+          /** Required. The name of the function which details should be obtained. */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1604,7 +1604,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
          * This request holds the parameters needed by the cloudfunctions server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param location The project and location from which the function should be listed,
+         * @param location Required. The project and location from which the function should be listed,
         specified in the format
          *        `projects/locations`
         If you want to list functions in all locations, use "-" in place of a
@@ -1634,7 +1634,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param location The project and location from which the function should be listed,
+           * @param location Required. The project and location from which the function should be listed,
         specified in the format
          *        `projects/locations`
         If you want to list functions in all locations, use "-" in place of a
@@ -1717,15 +1717,15 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * The project and location from which the function should be listed, specified in the
-           * format `projects/locations` If you want to list functions in all locations, use "-" in
-           * place of a location.
+           * Required. The project and location from which the function should be listed, specified
+           * in the format `projects/locations` If you want to list functions in all locations, use
+           * "-" in place of a location.
            */
           @com.google.api.client.util.Key
           private java.lang.String location;
 
-          /** The project and location from which the function should be listed, specified in the format
-         `projects/locations` If you want to list functions in all locations, use "-" in place of a
+          /** Required. The project and location from which the function should be listed, specified in the
+         format `projects/locations` If you want to list functions in all locations, use "-" in place of a
          location.
            */
           public java.lang.String getLocation() {
@@ -1733,9 +1733,9 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * The project and location from which the function should be listed, specified in the
-           * format `projects/locations` If you want to list functions in all locations, use "-" in
-           * place of a location.
+           * Required. The project and location from which the function should be listed, specified
+           * in the format `projects/locations` If you want to list functions in all locations, use
+           * "-" in place of a location.
            */
           public List setLocation(java.lang.String location) {
             if (!getSuppressPatternChecks()) {
@@ -1801,7 +1801,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
          * This request holds the parameters needed by the cloudfunctions server.  After setting any
          * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the function to be updated.
+         * @param name Required. The name of the function to be updated.
          * @param content the {@link com.google.api.services.cloudfunctions.v1beta2.model.CloudFunction}
          * @return the request
          */
@@ -1829,7 +1829,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
            * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the function to be updated.
+           * @param name Required. The name of the function to be updated.
            * @param content the {@link com.google.api.services.cloudfunctions.v1beta2.model.CloudFunction}
            * @since 1.13
            */
@@ -1898,17 +1898,17 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
             return (Update) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The name of the function to be updated. */
+          /** Required. The name of the function to be updated. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name of the function to be updated.
+          /** Required. The name of the function to be updated.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** The name of the function to be updated. */
+          /** Required. The name of the function to be updated. */
           public Update setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

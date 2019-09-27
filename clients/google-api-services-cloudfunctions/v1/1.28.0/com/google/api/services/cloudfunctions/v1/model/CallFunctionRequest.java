@@ -30,14 +30,14 @@ package com.google.api.services.cloudfunctions.v1.model;
 public final class CallFunctionRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Input to be passed to the function.
+   * Required. Input to be passed to the function.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String data;
 
   /**
-   * Input to be passed to the function.
+   * Required. Input to be passed to the function.
    * @return value or {@code null} for none
    */
   public java.lang.String getData() {
@@ -45,7 +45,7 @@ public final class CallFunctionRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Input to be passed to the function.
+   * Required. Input to be passed to the function.
    * @param data data or {@code null} for none
    */
   public CallFunctionRequest setData(java.lang.String data) {

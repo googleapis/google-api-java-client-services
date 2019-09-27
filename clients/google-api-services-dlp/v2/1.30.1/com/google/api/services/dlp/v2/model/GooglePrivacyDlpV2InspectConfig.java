@@ -76,9 +76,9 @@ public final class GooglePrivacyDlpV2InspectConfig extends com.google.api.client
    * choose what detectors to run. By default this may be all types, but may change over time as
    * detectors are updated.
    *
-   * The special InfoType name "ALL_BASIC" can be used to trigger all detectors, but may change over
-   * time as new InfoTypes are added. If you need precise control and predictability as to what
-   * detectors are run you should specify specific InfoTypes listed in the reference.
+   * If you need precise control and predictability as to what detectors are run you should specify
+   * specific InfoTypes listed in the reference, otherwise a default list will be used, which may
+   * change over time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -195,9 +195,9 @@ public final class GooglePrivacyDlpV2InspectConfig extends com.google.api.client
    * choose what detectors to run. By default this may be all types, but may change over time as
    * detectors are updated.
    *
-   * The special InfoType name "ALL_BASIC" can be used to trigger all detectors, but may change over
-   * time as new InfoTypes are added. If you need precise control and predictability as to what
-   * detectors are run you should specify specific InfoTypes listed in the reference.
+   * If you need precise control and predictability as to what detectors are run you should specify
+   * specific InfoTypes listed in the reference, otherwise a default list will be used, which may
+   * change over time.
    * @return value or {@code null} for none
    */
   public java.util.List<GooglePrivacyDlpV2InfoType> getInfoTypes() {
@@ -212,9 +212,9 @@ public final class GooglePrivacyDlpV2InspectConfig extends com.google.api.client
    * choose what detectors to run. By default this may be all types, but may change over time as
    * detectors are updated.
    *
-   * The special InfoType name "ALL_BASIC" can be used to trigger all detectors, but may change over
-   * time as new InfoTypes are added. If you need precise control and predictability as to what
-   * detectors are run you should specify specific InfoTypes listed in the reference.
+   * If you need precise control and predictability as to what detectors are run you should specify
+   * specific InfoTypes listed in the reference, otherwise a default list will be used, which may
+   * change over time.
    * @param infoTypes infoTypes or {@code null} for none
    */
   public GooglePrivacyDlpV2InspectConfig setInfoTypes(java.util.List<GooglePrivacyDlpV2InfoType> infoTypes) {

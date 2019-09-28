@@ -32,15 +32,20 @@ public final class StreamMapping extends com.google.api.client.json.GenericJson 
 
   /**
    * The fully qualified resource name of the Firebase App associated with the Google Analytics data
-   * stream, in the format: projects/projectId/iosApps/appId or projects/projectId/androidApps/appId
+   * stream, in the format: projects/projectId/androidApps/appId or projects/projectId/iosApps/appId
+   * or projects/projectId/webApps/appId
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String app;
 
   /**
-   * Analytics-provided measurement ID, for use in the gtag.js library. Will only be present for
-   * Firebase Web Apps.
+   * Applicable for Firebase Web Apps only. The unique Google-assigned identifier of the Google
+   * Analytics web stream associated with the Firebase Web App. Firebase SDKs use this ID to
+   * interact with Google Analytics APIs.
+   *
+   * Learn more about this ID and Google Analytics web streams in the [Analytics
+   * documentation](https://support.google.com/analytics/topic/9303475).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +64,8 @@ public final class StreamMapping extends com.google.api.client.json.GenericJson 
 
   /**
    * The fully qualified resource name of the Firebase App associated with the Google Analytics data
-   * stream, in the format: projects/projectId/iosApps/appId or projects/projectId/androidApps/appId
+   * stream, in the format: projects/projectId/androidApps/appId or projects/projectId/iosApps/appId
+   * or projects/projectId/webApps/appId
    * @return value or {@code null} for none
    */
   public java.lang.String getApp() {
@@ -68,7 +74,8 @@ public final class StreamMapping extends com.google.api.client.json.GenericJson 
 
   /**
    * The fully qualified resource name of the Firebase App associated with the Google Analytics data
-   * stream, in the format: projects/projectId/iosApps/appId or projects/projectId/androidApps/appId
+   * stream, in the format: projects/projectId/androidApps/appId or projects/projectId/iosApps/appId
+   * or projects/projectId/webApps/appId
    * @param app app or {@code null} for none
    */
   public StreamMapping setApp(java.lang.String app) {
@@ -77,8 +84,12 @@ public final class StreamMapping extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Analytics-provided measurement ID, for use in the gtag.js library. Will only be present for
-   * Firebase Web Apps.
+   * Applicable for Firebase Web Apps only. The unique Google-assigned identifier of the Google
+   * Analytics web stream associated with the Firebase Web App. Firebase SDKs use this ID to
+   * interact with Google Analytics APIs.
+   *
+   * Learn more about this ID and Google Analytics web streams in the [Analytics
+   * documentation](https://support.google.com/analytics/topic/9303475).
    * @return value or {@code null} for none
    */
   public java.lang.String getMeasurementId() {
@@ -86,8 +97,12 @@ public final class StreamMapping extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Analytics-provided measurement ID, for use in the gtag.js library. Will only be present for
-   * Firebase Web Apps.
+   * Applicable for Firebase Web Apps only. The unique Google-assigned identifier of the Google
+   * Analytics web stream associated with the Firebase Web App. Firebase SDKs use this ID to
+   * interact with Google Analytics APIs.
+   *
+   * Learn more about this ID and Google Analytics web streams in the [Analytics
+   * documentation](https://support.google.com/analytics/topic/9303475).
    * @param measurementId measurementId or {@code null} for none
    */
   public StreamMapping setMeasurementId(java.lang.String measurementId) {

@@ -711,15 +711,20 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
      *
      * Using this call, you can either:
      *
-     * Provision a new Google Analytics property and associate the new property with your
-     * `FirebaseProject`. Associate an existing Google Analytics property with your `FirebaseProject`.
+     * Specify an `analyticsAccountId` to provision a new Google Analytics property within the specified
+     * account and associate the new property with your `FirebaseProject`. Specify an existing
+     * `analyticsPropertyId` to associate the property with your `FirebaseProject`.
      *
      * Note that when you call `AddGoogleAnalytics`:
      *
-     * Any Firebase Apps already in your `FirebaseProject` are automatically provisioned as new data
-     * streams in the Google Analytics property. Any data streams already in the Google Analytics
-     * property are automatically associated with their corresponding Firebase Apps (only applies when
-     * an app's `packageName` or `bundleId` match those for an existing data stream).
+     * The first check determines if any existing data streams in the Google Analytics property
+     * correspond to any existing Firebase Apps in your `FirebaseProject` (based on the `packageName` or
+     * `bundleId` associated with the data stream). Then, as applicable, the data streams and apps are
+     * linked. Note that this auto-linking only applies to Android Apps and iOS Apps. If no
+     * corresponding data streams are found for your Firebase Apps, new data streams are provisioned in
+     * the Google Analytics property for each of your Firebase Apps. Note that a new data stream is
+     * always provisioned for a Web App even if it was previously associated with a data stream in your
+     * Analytics property.
      *
      * Learn more about the hierarchy and structure of Google Analytics accounts in the [Analytics
      * documentation](https://support.google.com/analytics/answer/9303323).
@@ -771,15 +776,20 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        *
        * Using this call, you can either:
        *
-       * Provision a new Google Analytics property and associate the new property with your
-       * `FirebaseProject`. Associate an existing Google Analytics property with your `FirebaseProject`.
+       * Specify an `analyticsAccountId` to provision a new Google Analytics property within the
+       * specified account and associate the new property with your `FirebaseProject`. Specify an
+       * existing `analyticsPropertyId` to associate the property with your `FirebaseProject`.
        *
        * Note that when you call `AddGoogleAnalytics`:
        *
-       * Any Firebase Apps already in your `FirebaseProject` are automatically provisioned as new data
-       * streams in the Google Analytics property. Any data streams already in the Google Analytics
-       * property are automatically associated with their corresponding Firebase Apps (only applies when
-       * an app's `packageName` or `bundleId` match those for an existing data stream).
+       * The first check determines if any existing data streams in the Google Analytics property
+       * correspond to any existing Firebase Apps in your `FirebaseProject` (based on the `packageName`
+       * or `bundleId` associated with the data stream). Then, as applicable, the data streams and apps
+       * are linked. Note that this auto-linking only applies to Android Apps and iOS Apps. If no
+       * corresponding data streams are found for your Firebase Apps, new data streams are provisioned
+       * in the Google Analytics property for each of your Firebase Apps. Note that a new data stream is
+       * always provisioned for a Web App even if it was previously associated with a data stream in
+       * your Analytics property.
        *
        * Learn more about the hierarchy and structure of Google Analytics accounts in the [Analytics
        * documentation](https://support.google.com/analytics/answer/9303323).
@@ -1723,7 +1733,9 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
      *
      * These resources may be re-associated later to the `FirebaseProject` by calling
      * [`AddGoogleAnalytics`](../../v1beta1/projects/addGoogleAnalytics) and specifying the same
-     * `analyticsPropertyId`.
+     * `analyticsPropertyId`. For Android Apps and iOS Apps, this call re-links data streams with their
+     * corresponding apps. However, for Web Apps, this call provisions a new data stream for each Web
+     * App.
      *
      * To call `RemoveAnalytics`, a member must be an Owner for the `FirebaseProject`.
      *
@@ -1760,7 +1772,9 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        *
        * These resources may be re-associated later to the `FirebaseProject` by calling
        * [`AddGoogleAnalytics`](../../v1beta1/projects/addGoogleAnalytics) and specifying the same
-       * `analyticsPropertyId`.
+       * `analyticsPropertyId`. For Android Apps and iOS Apps, this call re-links data streams with
+       * their corresponding apps. However, for Web Apps, this call provisions a new data stream for
+       * each Web App.
        *
        * To call `RemoveAnalytics`, a member must be an Owner for the `FirebaseProject`.
        *

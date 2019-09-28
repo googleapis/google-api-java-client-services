@@ -29,6 +29,9 @@ public class CloudIdentityScopes {
   /** See any Cloud Identity Groups that you can access, including group members and their emails. */
   public static final String CLOUD_IDENTITY_GROUPS_READONLY = "https://www.googleapis.com/auth/cloud-identity.groups.readonly";
 
+  /** View and manage your data across Google Cloud Platform services. */
+  public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
+
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
    *
@@ -38,6 +41,7 @@ public class CloudIdentityScopes {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(CLOUD_IDENTITY_GROUPS);
     set.add(CLOUD_IDENTITY_GROUPS_READONLY);
+    set.add(CLOUD_PLATFORM);
     return java.util.Collections.unmodifiableSet(set);
   }
 

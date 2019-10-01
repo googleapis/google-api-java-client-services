@@ -31,10 +31,10 @@ package com.google.api.services.dataproc.model;
 public final class InstanceGroupAutoscalingPolicyConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Maximum number of instances for this group. Required for primary workers. Note that
+   * Required. Maximum number of instances for this group. Required for primary workers. Note that
    * by default, clusters will not use secondary workers. Required for secondary workers if the
-   * minimum secondary instances is set.Primary workers - Bounds: [min_instances, ). Required.
-   * Secondary workers - Bounds: [min_instances, ). Default: 0.
+   * minimum secondary instances is set.Primary workers - Bounds: [min_instances, ). Secondary
+   * workers - Bounds: [min_instances, ). Default: 0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,10 +66,10 @@ public final class InstanceGroupAutoscalingPolicyConfig extends com.google.api.c
   private java.lang.Integer weight;
 
   /**
-   * Optional. Maximum number of instances for this group. Required for primary workers. Note that
+   * Required. Maximum number of instances for this group. Required for primary workers. Note that
    * by default, clusters will not use secondary workers. Required for secondary workers if the
-   * minimum secondary instances is set.Primary workers - Bounds: [min_instances, ). Required.
-   * Secondary workers - Bounds: [min_instances, ). Default: 0.
+   * minimum secondary instances is set.Primary workers - Bounds: [min_instances, ). Secondary
+   * workers - Bounds: [min_instances, ). Default: 0.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxInstances() {
@@ -77,10 +77,10 @@ public final class InstanceGroupAutoscalingPolicyConfig extends com.google.api.c
   }
 
   /**
-   * Optional. Maximum number of instances for this group. Required for primary workers. Note that
+   * Required. Maximum number of instances for this group. Required for primary workers. Note that
    * by default, clusters will not use secondary workers. Required for secondary workers if the
-   * minimum secondary instances is set.Primary workers - Bounds: [min_instances, ). Required.
-   * Secondary workers - Bounds: [min_instances, ). Default: 0.
+   * minimum secondary instances is set.Primary workers - Bounds: [min_instances, ). Secondary
+   * workers - Bounds: [min_instances, ). Default: 0.
    * @param maxInstances maxInstances or {@code null} for none
    */
   public InstanceGroupAutoscalingPolicyConfig setMaxInstances(java.lang.Integer maxInstances) {

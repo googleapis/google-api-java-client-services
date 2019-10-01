@@ -681,7 +681,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the cloudkms server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the KeyRing to get.
+         * @param name Required. The name of the KeyRing to get.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -707,7 +707,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the KeyRing to get.
+           * @param name Required. The name of the KeyRing to get.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -785,17 +785,17 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The name of the KeyRing to get. */
+          /** Required. The name of the KeyRing to get. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name of the KeyRing to get.
+          /** Required. The name of the KeyRing to get.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** The name of the KeyRing to get. */
+          /** Required. The name of the KeyRing to get. */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1194,15 +1194,16 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Optional limit on the number of KeyRings to include in the response.  Further KeyRings
-           * can subsequently be obtained by including the ListKeyRingsResponse.next_page_token in a
-           * subsequent request.  If unspecified, the server will pick an appropriate default.
+           * Optional. Optional limit on the number of KeyRings to include in the response.  Further
+           * KeyRings can subsequently be obtained by including the
+           * ListKeyRingsResponse.next_page_token in a subsequent request.  If unspecified, the
+           * server will pick an appropriate default.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Optional limit on the number of KeyRings to include in the response.  Further KeyRings can
-         subsequently be obtained by including the ListKeyRingsResponse.next_page_token in a subsequent
+          /** Optional. Optional limit on the number of KeyRings to include in the response.  Further KeyRings
+         can subsequently be obtained by including the ListKeyRingsResponse.next_page_token in a subsequent
          request.  If unspecified, the server will pick an appropriate default.
            */
           public java.lang.Integer getPageSize() {
@@ -1210,9 +1211,10 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Optional limit on the number of KeyRings to include in the response.  Further KeyRings
-           * can subsequently be obtained by including the ListKeyRingsResponse.next_page_token in a
-           * subsequent request.  If unspecified, the server will pick an appropriate default.
+           * Optional. Optional limit on the number of KeyRings to include in the response.  Further
+           * KeyRings can subsequently be obtained by including the
+           * ListKeyRingsResponse.next_page_token in a subsequent request.  If unspecified, the
+           * server will pick an appropriate default.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -1220,19 +1222,21 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Optional pagination token, returned earlier via ListKeyRingsResponse.next_page_token.
+           * Optional. Optional pagination token, returned earlier via
+           * ListKeyRingsResponse.next_page_token.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** Optional pagination token, returned earlier via ListKeyRingsResponse.next_page_token.
+          /** Optional. Optional pagination token, returned earlier via ListKeyRingsResponse.next_page_token.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * Optional pagination token, returned earlier via ListKeyRingsResponse.next_page_token.
+           * Optional. Optional pagination token, returned earlier via
+           * ListKeyRingsResponse.next_page_token.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -2048,7 +2052,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
            * This request holds the parameters needed by the cloudkms server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name The name of the CryptoKey to get.
+           * @param name Required. The name of the CryptoKey to get.
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -2074,7 +2078,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The name of the CryptoKey to get.
+             * @param name Required. The name of the CryptoKey to get.
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -2152,17 +2156,17 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** The name of the CryptoKey to get. */
+            /** Required. The name of the CryptoKey to get. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The name of the CryptoKey to get.
+            /** Required. The name of the CryptoKey to get.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** The name of the CryptoKey to get. */
+            /** Required. The name of the CryptoKey to get. */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2560,25 +2564,25 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * Optional limit on the number of CryptoKeys to include in the response.  Further
-             * CryptoKeys can subsequently be obtained by including the
+             * Optional. Optional limit on the number of CryptoKeys to include in the response.
+             * Further CryptoKeys can subsequently be obtained by including the
              * ListCryptoKeysResponse.next_page_token in a subsequent request.  If unspecified, the
              * server will pick an appropriate default.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** Optional limit on the number of CryptoKeys to include in the response.  Further CryptoKeys can
-           subsequently be obtained by including the ListCryptoKeysResponse.next_page_token in a subsequent
-           request.  If unspecified, the server will pick an appropriate default.
+            /** Optional. Optional limit on the number of CryptoKeys to include in the response.  Further
+           CryptoKeys can subsequently be obtained by including the ListCryptoKeysResponse.next_page_token in
+           a subsequent request.  If unspecified, the server will pick an appropriate default.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
             /**
-             * Optional limit on the number of CryptoKeys to include in the response.  Further
-             * CryptoKeys can subsequently be obtained by including the
+             * Optional. Optional limit on the number of CryptoKeys to include in the response.
+             * Further CryptoKeys can subsequently be obtained by including the
              * ListCryptoKeysResponse.next_page_token in a subsequent request.  If unspecified, the
              * server will pick an appropriate default.
              */
@@ -2588,20 +2592,20 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * Optional pagination token, returned earlier via
+             * Optional. Optional pagination token, returned earlier via
              * ListCryptoKeysResponse.next_page_token.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** Optional pagination token, returned earlier via ListCryptoKeysResponse.next_page_token.
+            /** Optional. Optional pagination token, returned earlier via ListCryptoKeysResponse.next_page_token.
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
             /**
-             * Optional pagination token, returned earlier via
+             * Optional. Optional pagination token, returned earlier via
              * ListCryptoKeysResponse.next_page_token.
              */
             public List setPageToken(java.lang.String pageToken) {
@@ -2765,17 +2769,17 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
               return this;
             }
 
-            /** Required list of fields to be updated in this request. */
+            /** Required. List of fields to be updated in this request. */
             @com.google.api.client.util.Key
             private String updateMask;
 
-            /** Required list of fields to be updated in this request.
+            /** Required. List of fields to be updated in this request.
              */
             public String getUpdateMask() {
               return updateMask;
             }
 
-            /** Required list of fields to be updated in this request. */
+            /** Required. List of fields to be updated in this request. */
             public Patch setUpdateMask(String updateMask) {
               this.updateMask = updateMask;
               return this;
@@ -3089,7 +3093,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
            * parameters, call the {@link UpdatePrimaryVersion#execute()} method to invoke the remote
            * operation.
            *
-           * @param name The resource name of the CryptoKey to update.
+           * @param name Required. The resource name of the CryptoKey to update.
            * @param content the {@link com.google.api.services.cloudkms.v1.model.UpdateCryptoKeyPrimaryVersionRequest}
            * @return the request
            */
@@ -3119,7 +3123,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
              * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
              * after invoking the constructor. </p>
              *
-             * @param name The resource name of the CryptoKey to update.
+             * @param name Required. The resource name of the CryptoKey to update.
              * @param content the {@link com.google.api.services.cloudkms.v1.model.UpdateCryptoKeyPrimaryVersionRequest}
              * @since 1.13
              */
@@ -3188,17 +3192,17 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
               return (UpdatePrimaryVersion) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** The resource name of the CryptoKey to update. */
+            /** Required. The resource name of the CryptoKey to update. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The resource name of the CryptoKey to update.
+            /** Required. The resource name of the CryptoKey to update.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** The resource name of the CryptoKey to update. */
+            /** Required. The resource name of the CryptoKey to update. */
             public UpdatePrimaryVersion setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3662,7 +3666,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
              * This request holds the parameters needed by the cloudkms server.  After setting any optional
              * parameters, call the {@link Destroy#execute()} method to invoke the remote operation.
              *
-             * @param name The resource name of the CryptoKeyVersion to destroy.
+             * @param name Required. The resource name of the CryptoKeyVersion to destroy.
              * @param content the {@link com.google.api.services.cloudkms.v1.model.DestroyCryptoKeyVersionRequest}
              * @return the request
              */
@@ -3697,7 +3701,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
                * Destroy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name The resource name of the CryptoKeyVersion to destroy.
+               * @param name Required. The resource name of the CryptoKeyVersion to destroy.
                * @param content the {@link com.google.api.services.cloudkms.v1.model.DestroyCryptoKeyVersionRequest}
                * @since 1.13
                */
@@ -3766,17 +3770,17 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
                 return (Destroy) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** The resource name of the CryptoKeyVersion to destroy. */
+              /** Required. The resource name of the CryptoKeyVersion to destroy. */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** The resource name of the CryptoKeyVersion to destroy.
+              /** Required. The resource name of the CryptoKeyVersion to destroy.
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /** The resource name of the CryptoKeyVersion to destroy. */
+              /** Required. The resource name of the CryptoKeyVersion to destroy. */
               public Destroy setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3800,7 +3804,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
              * This request holds the parameters needed by the cloudkms server.  After setting any optional
              * parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
-             * @param name The name of the CryptoKeyVersion to get.
+             * @param name Required. The name of the CryptoKeyVersion to get.
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -3826,7 +3830,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
                * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name The name of the CryptoKeyVersion to get.
+               * @param name Required. The name of the CryptoKeyVersion to get.
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -3904,17 +3908,17 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
                 return (Get) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** The name of the CryptoKeyVersion to get. */
+              /** Required. The name of the CryptoKeyVersion to get. */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** The name of the CryptoKeyVersion to get.
+              /** Required. The name of the CryptoKeyVersion to get.
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /** The name of the CryptoKeyVersion to get. */
+              /** Required. The name of the CryptoKeyVersion to get. */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3939,7 +3943,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
              * This request holds the parameters needed by the cloudkms server.  After setting any optional
              * parameters, call the {@link GetPublicKey#execute()} method to invoke the remote operation.
              *
-             * @param name The name of the CryptoKeyVersion public key to
+             * @param name Required. The name of the CryptoKeyVersion public key to
             get.
              * @return the request
              */
@@ -3968,7 +3972,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
                * GetPublicKey#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name The name of the CryptoKeyVersion public key to
+               * @param name Required. The name of the CryptoKeyVersion public key to
             get.
                * @since 1.13
                */
@@ -4048,19 +4052,19 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
               }
 
               /**
-               * The name of the CryptoKeyVersion public key to get.
+               * Required. The name of the CryptoKeyVersion public key to get.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** The name of the CryptoKeyVersion public key to get.
+              /** Required. The name of the CryptoKeyVersion public key to get.
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * The name of the CryptoKeyVersion public key to get.
+               * Required. The name of the CryptoKeyVersion public key to get.
                */
               public GetPublicKey setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -4414,15 +4418,15 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
               }
 
               /**
-               * Optional limit on the number of CryptoKeyVersions to include in the response.
-               * Further CryptoKeyVersions can subsequently be obtained by including the
+               * Optional. Optional limit on the number of CryptoKeyVersions to include in the
+               * response. Further CryptoKeyVersions can subsequently be obtained by including the
                * ListCryptoKeyVersionsResponse.next_page_token in a subsequent request. If
                * unspecified, the server will pick an appropriate default.
                */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
-              /** Optional limit on the number of CryptoKeyVersions to include in the response. Further
+              /** Optional. Optional limit on the number of CryptoKeyVersions to include in the response. Further
              CryptoKeyVersions can subsequently be obtained by including the
              ListCryptoKeyVersionsResponse.next_page_token in a subsequent request. If unspecified, the server
              will pick an appropriate default.
@@ -4432,8 +4436,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
               }
 
               /**
-               * Optional limit on the number of CryptoKeyVersions to include in the response.
-               * Further CryptoKeyVersions can subsequently be obtained by including the
+               * Optional. Optional limit on the number of CryptoKeyVersions to include in the
+               * response. Further CryptoKeyVersions can subsequently be obtained by including the
                * ListCryptoKeyVersionsResponse.next_page_token in a subsequent request. If
                * unspecified, the server will pick an appropriate default.
                */
@@ -4443,20 +4447,21 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
               }
 
               /**
-               * Optional pagination token, returned earlier via
+               * Optional. Optional pagination token, returned earlier via
                * ListCryptoKeyVersionsResponse.next_page_token.
                */
               @com.google.api.client.util.Key
               private java.lang.String pageToken;
 
-              /** Optional pagination token, returned earlier via ListCryptoKeyVersionsResponse.next_page_token.
+              /** Optional. Optional pagination token, returned earlier via
+             ListCryptoKeyVersionsResponse.next_page_token.
                */
               public java.lang.String getPageToken() {
                 return pageToken;
               }
 
               /**
-               * Optional pagination token, returned earlier via
+               * Optional. Optional pagination token, returned earlier via
                * ListCryptoKeyVersionsResponse.next_page_token.
                */
               public List setPageToken(java.lang.String pageToken) {
@@ -4626,17 +4631,17 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
                 return this;
               }
 
-              /** Required list of fields to be updated in this request. */
+              /** Required. List of fields to be updated in this request. */
               @com.google.api.client.util.Key
               private String updateMask;
 
-              /** Required list of fields to be updated in this request.
+              /** Required. List of fields to be updated in this request.
                */
               public String getUpdateMask() {
                 return updateMask;
               }
 
-              /** Required list of fields to be updated in this request. */
+              /** Required. List of fields to be updated in this request. */
               public Patch setUpdateMask(String updateMask) {
                 this.updateMask = updateMask;
                 return this;
@@ -4658,7 +4663,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
              * This request holds the parameters needed by the cloudkms server.  After setting any optional
              * parameters, call the {@link Restore#execute()} method to invoke the remote operation.
              *
-             * @param name The resource name of the CryptoKeyVersion to restore.
+             * @param name Required. The resource name of the CryptoKeyVersion to restore.
              * @param content the {@link com.google.api.services.cloudkms.v1.model.RestoreCryptoKeyVersionRequest}
              * @return the request
              */
@@ -4689,7 +4694,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
                * Restore#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name The resource name of the CryptoKeyVersion to restore.
+               * @param name Required. The resource name of the CryptoKeyVersion to restore.
                * @param content the {@link com.google.api.services.cloudkms.v1.model.RestoreCryptoKeyVersionRequest}
                * @since 1.13
                */
@@ -4758,17 +4763,17 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
                 return (Restore) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** The resource name of the CryptoKeyVersion to restore. */
+              /** Required. The resource name of the CryptoKeyVersion to restore. */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** The resource name of the CryptoKeyVersion to restore.
+              /** Required. The resource name of the CryptoKeyVersion to restore.
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /** The resource name of the CryptoKeyVersion to restore. */
+              /** Required. The resource name of the CryptoKeyVersion to restore. */
               public Restore setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4978,7 +4983,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
            * This request holds the parameters needed by the cloudkms server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name The name of the ImportJob to get.
+           * @param name Required. The name of the ImportJob to get.
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -5004,7 +5009,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The name of the ImportJob to get.
+             * @param name Required. The name of the ImportJob to get.
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -5082,17 +5087,17 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** The name of the ImportJob to get. */
+            /** Required. The name of the ImportJob to get. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The name of the ImportJob to get.
+            /** Required. The name of the ImportJob to get.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** The name of the ImportJob to get. */
+            /** Required. The name of the ImportJob to get. */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -5490,25 +5495,25 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * Optional limit on the number of ImportJobs to include in the response. Further
-             * ImportJobs can subsequently be obtained by including the
+             * Optional. Optional limit on the number of ImportJobs to include in the response.
+             * Further ImportJobs can subsequently be obtained by including the
              * ListImportJobsResponse.next_page_token in a subsequent request. If unspecified, the
              * server will pick an appropriate default.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** Optional limit on the number of ImportJobs to include in the response. Further ImportJobs can
-           subsequently be obtained by including the ListImportJobsResponse.next_page_token in a subsequent
-           request. If unspecified, the server will pick an appropriate default.
+            /** Optional. Optional limit on the number of ImportJobs to include in the response. Further ImportJobs
+           can subsequently be obtained by including the ListImportJobsResponse.next_page_token in a
+           subsequent request. If unspecified, the server will pick an appropriate default.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
             /**
-             * Optional limit on the number of ImportJobs to include in the response. Further
-             * ImportJobs can subsequently be obtained by including the
+             * Optional. Optional limit on the number of ImportJobs to include in the response.
+             * Further ImportJobs can subsequently be obtained by including the
              * ListImportJobsResponse.next_page_token in a subsequent request. If unspecified, the
              * server will pick an appropriate default.
              */
@@ -5518,20 +5523,20 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * Optional pagination token, returned earlier via
+             * Optional. Optional pagination token, returned earlier via
              * ListImportJobsResponse.next_page_token.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** Optional pagination token, returned earlier via ListImportJobsResponse.next_page_token.
+            /** Optional. Optional pagination token, returned earlier via ListImportJobsResponse.next_page_token.
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
             /**
-             * Optional pagination token, returned earlier via
+             * Optional. Optional pagination token, returned earlier via
              * ListImportJobsResponse.next_page_token.
              */
             public List setPageToken(java.lang.String pageToken) {

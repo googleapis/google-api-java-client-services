@@ -88,7 +88,7 @@ public final class ImportJob extends com.google.api.client.json.GenericJson {
   private String generateTime;
 
   /**
-   * Required and immutable. The wrapping method to be used for incoming key material.
+   * Required. Immutable. The wrapping method to be used for incoming key material.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,7 +103,7 @@ public final class ImportJob extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Required and immutable. The protection level of the ImportJob. This must match the
+   * Required. Immutable. The protection level of the ImportJob. This must match the
    * protection_level of the version_template on the CryptoKey you attempt to import into.
    * The value may be {@code null}.
    */
@@ -219,7 +219,7 @@ public final class ImportJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required and immutable. The wrapping method to be used for incoming key material.
+   * Required. Immutable. The wrapping method to be used for incoming key material.
    * @return value or {@code null} for none
    */
   public java.lang.String getImportMethod() {
@@ -227,7 +227,7 @@ public final class ImportJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required and immutable. The wrapping method to be used for incoming key material.
+   * Required. Immutable. The wrapping method to be used for incoming key material.
    * @param importMethod importMethod or {@code null} for none
    */
   public ImportJob setImportMethod(java.lang.String importMethod) {
@@ -255,7 +255,7 @@ public final class ImportJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required and immutable. The protection level of the ImportJob. This must match the
+   * Required. Immutable. The protection level of the ImportJob. This must match the
    * protection_level of the version_template on the CryptoKey you attempt to import into.
    * @return value or {@code null} for none
    */
@@ -264,7 +264,7 @@ public final class ImportJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required and immutable. The protection level of the ImportJob. This must match the
+   * Required. Immutable. The protection level of the ImportJob. This must match the
    * protection_level of the version_template on the CryptoKey you attempt to import into.
    * @param protectionLevel protectionLevel or {@code null} for none
    */

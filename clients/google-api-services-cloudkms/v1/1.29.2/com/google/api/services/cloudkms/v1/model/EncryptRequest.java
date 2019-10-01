@@ -31,7 +31,7 @@ package com.google.api.services.cloudkms.v1.model;
 public final class EncryptRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional data that, if specified, must also be provided during decryption through
+   * Optional. Optional data that, if specified, must also be provided during decryption through
    * DecryptRequest.additional_authenticated_data.
    *
    * The maximum size depends on the key version's protection_level. For SOFTWARE keys, the AAD must
@@ -54,7 +54,7 @@ public final class EncryptRequest extends com.google.api.client.json.GenericJson
   private java.lang.String plaintext;
 
   /**
-   * Optional data that, if specified, must also be provided during decryption through
+   * Optional. Optional data that, if specified, must also be provided during decryption through
    * DecryptRequest.additional_authenticated_data.
    *
    * The maximum size depends on the key version's protection_level. For SOFTWARE keys, the AAD must
@@ -68,7 +68,7 @@ public final class EncryptRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional data that, if specified, must also be provided during decryption through
+   * Optional. Optional data that, if specified, must also be provided during decryption through
    * DecryptRequest.additional_authenticated_data.
    *
    * The maximum size depends on the key version's protection_level. For SOFTWARE keys, the AAD must
@@ -84,7 +84,7 @@ public final class EncryptRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional data that, if specified, must also be provided during decryption through
+   * Optional. Optional data that, if specified, must also be provided during decryption through
    * DecryptRequest.additional_authenticated_data.
    *
    * The maximum size depends on the key version's protection_level. For SOFTWARE keys, the AAD must
@@ -99,7 +99,7 @@ public final class EncryptRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional data that, if specified, must also be provided during decryption through
+   * Optional. Optional data that, if specified, must also be provided during decryption through
    * DecryptRequest.additional_authenticated_data.
    *
    * The maximum size depends on the key version's protection_level. For SOFTWARE keys, the AAD must

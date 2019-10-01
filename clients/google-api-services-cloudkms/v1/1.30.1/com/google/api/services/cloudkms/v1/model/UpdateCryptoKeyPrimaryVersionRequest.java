@@ -31,14 +31,14 @@ package com.google.api.services.cloudkms.v1.model;
 public final class UpdateCryptoKeyPrimaryVersionRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The id of the child CryptoKeyVersion to use as primary.
+   * Required. The id of the child CryptoKeyVersion to use as primary.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cryptoKeyVersionId;
 
   /**
-   * The id of the child CryptoKeyVersion to use as primary.
+   * Required. The id of the child CryptoKeyVersion to use as primary.
    * @return value or {@code null} for none
    */
   public java.lang.String getCryptoKeyVersionId() {
@@ -46,7 +46,7 @@ public final class UpdateCryptoKeyPrimaryVersionRequest extends com.google.api.c
   }
 
   /**
-   * The id of the child CryptoKeyVersion to use as primary.
+   * Required. The id of the child CryptoKeyVersion to use as primary.
    * @param cryptoKeyVersionId cryptoKeyVersionId or {@code null} for none
    */
   public UpdateCryptoKeyPrimaryVersionRequest setCryptoKeyVersionId(java.lang.String cryptoKeyVersionId) {

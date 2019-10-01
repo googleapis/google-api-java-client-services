@@ -51,6 +51,14 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean latencyTolerant;
 
   /**
+   * An opaque location hint used to place the instance close to other resources. This field is for
+   * use by internal tools that use the public API.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String locationHint;
+
+  /**
    * The minimum number of virtual CPUs this instance will consume when running on a sole-tenant
    * node.
    * The value may be {@code null}.
@@ -128,6 +136,25 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
    */
   public Scheduling setLatencyTolerant(java.lang.Boolean latencyTolerant) {
     this.latencyTolerant = latencyTolerant;
+    return this;
+  }
+
+  /**
+   * An opaque location hint used to place the instance close to other resources. This field is for
+   * use by internal tools that use the public API.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocationHint() {
+    return locationHint;
+  }
+
+  /**
+   * An opaque location hint used to place the instance close to other resources. This field is for
+   * use by internal tools that use the public API.
+   * @param locationHint locationHint or {@code null} for none
+   */
+  public Scheduling setLocationHint(java.lang.String locationHint) {
+    this.locationHint = locationHint;
     return this;
   }
 

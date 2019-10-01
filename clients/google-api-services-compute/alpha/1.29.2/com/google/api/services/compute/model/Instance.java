@@ -231,6 +231,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.List<NetworkInterface> networkInterfaces;
 
   /**
+   * Specifies whether this instance will be shut down on key revocation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String postKeyRevocationActionType;
+
+  /**
    * Total amount of preserved state for SUSPENDED instances. Read-only in the api.
    * The value may be {@code null}.
    */
@@ -827,6 +834,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setNetworkInterfaces(java.util.List<NetworkInterface> networkInterfaces) {
     this.networkInterfaces = networkInterfaces;
+    return this;
+  }
+
+  /**
+   * Specifies whether this instance will be shut down on key revocation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPostKeyRevocationActionType() {
+    return postKeyRevocationActionType;
+  }
+
+  /**
+   * Specifies whether this instance will be shut down on key revocation.
+   * @param postKeyRevocationActionType postKeyRevocationActionType or {@code null} for none
+   */
+  public Instance setPostKeyRevocationActionType(java.lang.String postKeyRevocationActionType) {
+    this.postKeyRevocationActionType = postKeyRevocationActionType;
     return this;
   }
 

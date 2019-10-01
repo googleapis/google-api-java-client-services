@@ -68,10 +68,37 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private BackendServiceCdnPolicy cdnPolicy;
 
   /**
+   * Settings controlling the volume of connections to a backend service.
+   *
+   * This field is applicable to either:   - A regional backend service with the service_protocol
+   * set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global
+   * backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CircuitBreakers circuitBreakers;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ConnectionDraining connectionDraining;
+
+  /**
+   * Consistent Hash-based load balancing can be used to provide soft session affinity based on HTTP
+   * headers, cookies or other properties. This load balancing policy is applicable only for HTTP
+   * connections. The affinity to a particular destination host will be lost when one or more hosts
+   * are added/removed from the destination service. This field specifies parameters that control
+   * consistent hashing. This field is only applicable when localityLbPolicy is set to MAGLEV or
+   * RING_HASH.
+   *
+   * This field is applicable to either:   - A regional backend service with the service_protocol
+   * set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global
+   * backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ConsistentHashLoadBalancerSettings consistentHash;
 
   /**
    * [Output Only] Creation timestamp in RFC3339 text format.
@@ -156,6 +183,29 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.lang.String loadBalancingScheme;
 
   /**
+   * The load balancing algorithm used within the scope of the locality. The possible values are: -
+   * ROUND_ROBIN: This is a simple policy in which each healthy backend is selected in round robin
+   * order. This is the default.  - LEAST_REQUEST: An O(1) algorithm which selects two random
+   * healthy hosts and picks the host which has fewer active requests.  - RING_HASH: The ring/modulo
+   * hash load balancer implements consistent hashing to backends. The algorithm has the property
+   * that the addition/removal of a host from a set of N hosts only affects 1/N of the requests.  -
+   * RANDOM: The load balancer selects a random healthy host.  - ORIGINAL_DESTINATION: Backend host
+   * is selected based on the client connection metadata, i.e., connections are opened to the same
+   * address as the destination address of the incoming connection before the connection was
+   * redirected to the load balancer.  - MAGLEV: used as a drop in replacement for the ring hash
+   * load balancer. Maglev is not as stable as ring hash but has faster table lookup build times and
+   * host selection times. For more information about Maglev, refer to
+   * https://ai.google/research/pubs/pub44824
+   *
+   * This field is applicable to either:   - A regional backend service with the service_protocol
+   * set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global
+   * backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String localityLbPolicy;
+
+  /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
    * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
@@ -165,6 +215,16 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Settings controlling eviction of unhealthy hosts from the load balancing pool. This field is
+   * applicable to either: - A regional backend service with the service_protocol set to HTTP,
+   * HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global backend service
+   * with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OutlierDetection outlierDetection;
 
   /**
    * Deprecated in favor of portName. The TCP port to connect on the backend. The default value is
@@ -301,6 +361,31 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Settings controlling the volume of connections to a backend service.
+   *
+   * This field is applicable to either:   - A regional backend service with the service_protocol
+   * set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global
+   * backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+   * @return value or {@code null} for none
+   */
+  public CircuitBreakers getCircuitBreakers() {
+    return circuitBreakers;
+  }
+
+  /**
+   * Settings controlling the volume of connections to a backend service.
+   *
+   * This field is applicable to either:   - A regional backend service with the service_protocol
+   * set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global
+   * backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+   * @param circuitBreakers circuitBreakers or {@code null} for none
+   */
+  public BackendService setCircuitBreakers(CircuitBreakers circuitBreakers) {
+    this.circuitBreakers = circuitBreakers;
+    return this;
+  }
+
+  /**
    * @return value or {@code null} for none
    */
   public ConnectionDraining getConnectionDraining() {
@@ -312,6 +397,41 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    */
   public BackendService setConnectionDraining(ConnectionDraining connectionDraining) {
     this.connectionDraining = connectionDraining;
+    return this;
+  }
+
+  /**
+   * Consistent Hash-based load balancing can be used to provide soft session affinity based on HTTP
+   * headers, cookies or other properties. This load balancing policy is applicable only for HTTP
+   * connections. The affinity to a particular destination host will be lost when one or more hosts
+   * are added/removed from the destination service. This field specifies parameters that control
+   * consistent hashing. This field is only applicable when localityLbPolicy is set to MAGLEV or
+   * RING_HASH.
+   *
+   * This field is applicable to either:   - A regional backend service with the service_protocol
+   * set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global
+   * backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+   * @return value or {@code null} for none
+   */
+  public ConsistentHashLoadBalancerSettings getConsistentHash() {
+    return consistentHash;
+  }
+
+  /**
+   * Consistent Hash-based load balancing can be used to provide soft session affinity based on HTTP
+   * headers, cookies or other properties. This load balancing policy is applicable only for HTTP
+   * connections. The affinity to a particular destination host will be lost when one or more hosts
+   * are added/removed from the destination service. This field specifies parameters that control
+   * consistent hashing. This field is only applicable when localityLbPolicy is set to MAGLEV or
+   * RING_HASH.
+   *
+   * This field is applicable to either:   - A regional backend service with the service_protocol
+   * set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global
+   * backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+   * @param consistentHash consistentHash or {@code null} for none
+   */
+  public BackendService setConsistentHash(ConsistentHashLoadBalancerSettings consistentHash) {
+    this.consistentHash = consistentHash;
     return this;
   }
 
@@ -548,6 +668,55 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * The load balancing algorithm used within the scope of the locality. The possible values are: -
+   * ROUND_ROBIN: This is a simple policy in which each healthy backend is selected in round robin
+   * order. This is the default.  - LEAST_REQUEST: An O(1) algorithm which selects two random
+   * healthy hosts and picks the host which has fewer active requests.  - RING_HASH: The ring/modulo
+   * hash load balancer implements consistent hashing to backends. The algorithm has the property
+   * that the addition/removal of a host from a set of N hosts only affects 1/N of the requests.  -
+   * RANDOM: The load balancer selects a random healthy host.  - ORIGINAL_DESTINATION: Backend host
+   * is selected based on the client connection metadata, i.e., connections are opened to the same
+   * address as the destination address of the incoming connection before the connection was
+   * redirected to the load balancer.  - MAGLEV: used as a drop in replacement for the ring hash
+   * load balancer. Maglev is not as stable as ring hash but has faster table lookup build times and
+   * host selection times. For more information about Maglev, refer to
+   * https://ai.google/research/pubs/pub44824
+   *
+   * This field is applicable to either:   - A regional backend service with the service_protocol
+   * set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global
+   * backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocalityLbPolicy() {
+    return localityLbPolicy;
+  }
+
+  /**
+   * The load balancing algorithm used within the scope of the locality. The possible values are: -
+   * ROUND_ROBIN: This is a simple policy in which each healthy backend is selected in round robin
+   * order. This is the default.  - LEAST_REQUEST: An O(1) algorithm which selects two random
+   * healthy hosts and picks the host which has fewer active requests.  - RING_HASH: The ring/modulo
+   * hash load balancer implements consistent hashing to backends. The algorithm has the property
+   * that the addition/removal of a host from a set of N hosts only affects 1/N of the requests.  -
+   * RANDOM: The load balancer selects a random healthy host.  - ORIGINAL_DESTINATION: Backend host
+   * is selected based on the client connection metadata, i.e., connections are opened to the same
+   * address as the destination address of the incoming connection before the connection was
+   * redirected to the load balancer.  - MAGLEV: used as a drop in replacement for the ring hash
+   * load balancer. Maglev is not as stable as ring hash but has faster table lookup build times and
+   * host selection times. For more information about Maglev, refer to
+   * https://ai.google/research/pubs/pub44824
+   *
+   * This field is applicable to either:   - A regional backend service with the service_protocol
+   * set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global
+   * backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+   * @param localityLbPolicy localityLbPolicy or {@code null} for none
+   */
+  public BackendService setLocalityLbPolicy(java.lang.String localityLbPolicy) {
+    this.localityLbPolicy = localityLbPolicy;
+    return this;
+  }
+
+  /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
    * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
@@ -569,6 +738,29 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    */
   public BackendService setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Settings controlling eviction of unhealthy hosts from the load balancing pool. This field is
+   * applicable to either: - A regional backend service with the service_protocol set to HTTP,
+   * HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global backend service
+   * with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+   * @return value or {@code null} for none
+   */
+  public OutlierDetection getOutlierDetection() {
+    return outlierDetection;
+  }
+
+  /**
+   * Settings controlling eviction of unhealthy hosts from the load balancing pool. This field is
+   * applicable to either: - A regional backend service with the service_protocol set to HTTP,
+   * HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global backend service
+   * with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+   * @param outlierDetection outlierDetection or {@code null} for none
+   */
+  public BackendService setOutlierDetection(OutlierDetection outlierDetection) {
+    this.outlierDetection = outlierDetection;
     return this;
   }
 

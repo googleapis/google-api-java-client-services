@@ -98,7 +98,7 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
    * matching is all that's required. The order by which path rules are specified does not matter.
    * Matches are always done on the longest-path-first basis. For example: a pathRule with a path
    * /a/b/c will match before /a/b irrespective of the order in which those paths appear in this
-   * list. Only one of pathRules or routeRules must be set.
+   * list. Within a given pathMatcher, only one of pathRules or routeRules must be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,8 +107,9 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
   /**
    * The list of ordered HTTP route rules. Use this list instead of pathRules when advanced route
    * matching and routing actions are desired. The order of specifying routeRules matters: the first
-   * rule that matches will cause its specified routing action to take effect. Only one of pathRules
-   * or routeRules must be set.
+   * rule that matches will cause its specified routing action to take effect. Within a given
+   * pathMatcher, only one of pathRules or routeRules must be set. routeRules are not supported in
+   * UrlMaps intended for External Load balancers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -269,7 +270,7 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
    * matching is all that's required. The order by which path rules are specified does not matter.
    * Matches are always done on the longest-path-first basis. For example: a pathRule with a path
    * /a/b/c will match before /a/b irrespective of the order in which those paths appear in this
-   * list. Only one of pathRules or routeRules must be set.
+   * list. Within a given pathMatcher, only one of pathRules or routeRules must be set.
    * @return value or {@code null} for none
    */
   public java.util.List<PathRule> getPathRules() {
@@ -281,7 +282,7 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
    * matching is all that's required. The order by which path rules are specified does not matter.
    * Matches are always done on the longest-path-first basis. For example: a pathRule with a path
    * /a/b/c will match before /a/b irrespective of the order in which those paths appear in this
-   * list. Only one of pathRules or routeRules must be set.
+   * list. Within a given pathMatcher, only one of pathRules or routeRules must be set.
    * @param pathRules pathRules or {@code null} for none
    */
   public PathMatcher setPathRules(java.util.List<PathRule> pathRules) {
@@ -292,8 +293,9 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
   /**
    * The list of ordered HTTP route rules. Use this list instead of pathRules when advanced route
    * matching and routing actions are desired. The order of specifying routeRules matters: the first
-   * rule that matches will cause its specified routing action to take effect. Only one of pathRules
-   * or routeRules must be set.
+   * rule that matches will cause its specified routing action to take effect. Within a given
+   * pathMatcher, only one of pathRules or routeRules must be set. routeRules are not supported in
+   * UrlMaps intended for External Load balancers.
    * @return value or {@code null} for none
    */
   public java.util.List<HttpRouteRule> getRouteRules() {
@@ -303,8 +305,9 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
   /**
    * The list of ordered HTTP route rules. Use this list instead of pathRules when advanced route
    * matching and routing actions are desired. The order of specifying routeRules matters: the first
-   * rule that matches will cause its specified routing action to take effect. Only one of pathRules
-   * or routeRules must be set.
+   * rule that matches will cause its specified routing action to take effect. Within a given
+   * pathMatcher, only one of pathRules or routeRules must be set. routeRules are not supported in
+   * UrlMaps intended for External Load balancers.
    * @param routeRules routeRules or {@code null} for none
    */
   public PathMatcher setRouteRules(java.util.List<HttpRouteRule> routeRules) {

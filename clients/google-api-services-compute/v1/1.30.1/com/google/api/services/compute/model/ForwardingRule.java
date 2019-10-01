@@ -156,6 +156,21 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   private java.lang.String loadBalancingScheme;
 
   /**
+   * Opaque filter criteria used by Loadbalancer to restrict routing configuration to a limited set
+   * xDS compliant clients. In their xDS requests to Loadbalancer, xDS clients present node
+   * metadata. If a match takes place, the relevant routing configuration is made available to those
+   * proxies. For each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY,
+   * at least one of the filterLabels must match the corresponding label provided in the metadata.
+   * If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with
+   * corresponding labels in the provided metadata. metadataFilters specified here can be overridden
+   * by those specified in the UrlMap that this ForwardingRule references. metadataFilters only
+   * applies to Loadbalancers that have their loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<MetadataFilter> metadataFilters;
+
+  /**
    * Name of the resource; provided by the client when the resource is created. The name must be
    * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
@@ -522,6 +537,39 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    */
   public ForwardingRule setLoadBalancingScheme(java.lang.String loadBalancingScheme) {
     this.loadBalancingScheme = loadBalancingScheme;
+    return this;
+  }
+
+  /**
+   * Opaque filter criteria used by Loadbalancer to restrict routing configuration to a limited set
+   * xDS compliant clients. In their xDS requests to Loadbalancer, xDS clients present node
+   * metadata. If a match takes place, the relevant routing configuration is made available to those
+   * proxies. For each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY,
+   * at least one of the filterLabels must match the corresponding label provided in the metadata.
+   * If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with
+   * corresponding labels in the provided metadata. metadataFilters specified here can be overridden
+   * by those specified in the UrlMap that this ForwardingRule references. metadataFilters only
+   * applies to Loadbalancers that have their loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<MetadataFilter> getMetadataFilters() {
+    return metadataFilters;
+  }
+
+  /**
+   * Opaque filter criteria used by Loadbalancer to restrict routing configuration to a limited set
+   * xDS compliant clients. In their xDS requests to Loadbalancer, xDS clients present node
+   * metadata. If a match takes place, the relevant routing configuration is made available to those
+   * proxies. For each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY,
+   * at least one of the filterLabels must match the corresponding label provided in the metadata.
+   * If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with
+   * corresponding labels in the provided metadata. metadataFilters specified here can be overridden
+   * by those specified in the UrlMap that this ForwardingRule references. metadataFilters only
+   * applies to Loadbalancers that have their loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * @param metadataFilters metadataFilters or {@code null} for none
+   */
+  public ForwardingRule setMetadataFilters(java.util.List<MetadataFilter> metadataFilters) {
+    this.metadataFilters = metadataFilters;
     return this;
   }
 

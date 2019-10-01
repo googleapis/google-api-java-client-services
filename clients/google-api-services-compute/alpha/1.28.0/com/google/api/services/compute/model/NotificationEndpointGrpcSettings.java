@@ -53,6 +53,15 @@ public final class NotificationEndpointGrpcSettings extends com.google.api.clien
   private java.lang.String payloadName;
 
   /**
+   * Optional. This field is used to configure how often to send a full update of all non-healthy
+   * backends. If unspecified, full updates are not sent. If specified, must be in the range between
+   * 600 seconds to 3600 seconds. Nanos are disallowed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Duration resendInterval;
+
+  /**
    * How much time (in seconds) is spent attempting notification retries until a successful response
    * is received. Default is 30s. Limit is 20m (1200s). Must be a positive number.
    * The value may be {@code null}.
@@ -110,6 +119,27 @@ public final class NotificationEndpointGrpcSettings extends com.google.api.clien
    */
   public NotificationEndpointGrpcSettings setPayloadName(java.lang.String payloadName) {
     this.payloadName = payloadName;
+    return this;
+  }
+
+  /**
+   * Optional. This field is used to configure how often to send a full update of all non-healthy
+   * backends. If unspecified, full updates are not sent. If specified, must be in the range between
+   * 600 seconds to 3600 seconds. Nanos are disallowed.
+   * @return value or {@code null} for none
+   */
+  public Duration getResendInterval() {
+    return resendInterval;
+  }
+
+  /**
+   * Optional. This field is used to configure how often to send a full update of all non-healthy
+   * backends. If unspecified, full updates are not sent. If specified, must be in the range between
+   * 600 seconds to 3600 seconds. Nanos are disallowed.
+   * @param resendInterval resendInterval or {@code null} for none
+   */
+  public NotificationEndpointGrpcSettings setResendInterval(Duration resendInterval) {
+    this.resendInterval = resendInterval;
     return this;
   }
 

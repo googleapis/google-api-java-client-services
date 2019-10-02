@@ -53,7 +53,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private java.lang.String condition;
 
   /**
-   * Input only. Arbitrary key/value payload.
+   * Input only. Arbitrary key/value payload. The key should not be a reserved word ("from",
+   * "message_type", or any word starting with "google" or "gcm").
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -157,7 +158,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Input only. Arbitrary key/value payload.
+   * Input only. Arbitrary key/value payload. The key should not be a reserved word ("from",
+   * "message_type", or any word starting with "google" or "gcm").
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getData() {
@@ -165,7 +167,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Input only. Arbitrary key/value payload.
+   * Input only. Arbitrary key/value payload. The key should not be a reserved word ("from",
+   * "message_type", or any word starting with "google" or "gcm").
    * @param data data or {@code null} for none
    */
   public Message setData(java.util.Map<String, java.lang.String> data) {

@@ -39,6 +39,15 @@ public final class QueryInterpretationOptions extends com.google.api.client.json
   private java.lang.Boolean disableNlInterpretation;
 
   /**
+   * Enable this flag to turn off all internal optimizations like natural language (NL)
+   * interpretation of queries, supplemental result retrieval, and usage of synonyms including
+   * custom ones. Nl interpretation will be disabled if either one of the two flags is true.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableVerbatimMode;
+
+  /**
    * Flag to disable natural language (NL) interpretation of queries. Default is false, Set to true
    * to disable natural language interpretation. NL interpretation only applies to predefined
    * datasources.
@@ -56,6 +65,27 @@ public final class QueryInterpretationOptions extends com.google.api.client.json
    */
   public QueryInterpretationOptions setDisableNlInterpretation(java.lang.Boolean disableNlInterpretation) {
     this.disableNlInterpretation = disableNlInterpretation;
+    return this;
+  }
+
+  /**
+   * Enable this flag to turn off all internal optimizations like natural language (NL)
+   * interpretation of queries, supplemental result retrieval, and usage of synonyms including
+   * custom ones. Nl interpretation will be disabled if either one of the two flags is true.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableVerbatimMode() {
+    return enableVerbatimMode;
+  }
+
+  /**
+   * Enable this flag to turn off all internal optimizations like natural language (NL)
+   * interpretation of queries, supplemental result retrieval, and usage of synonyms including
+   * custom ones. Nl interpretation will be disabled if either one of the two flags is true.
+   * @param enableVerbatimMode enableVerbatimMode or {@code null} for none
+   */
+  public QueryInterpretationOptions setEnableVerbatimMode(java.lang.Boolean enableVerbatimMode) {
+    this.enableVerbatimMode = enableVerbatimMode;
     return this;
   }
 

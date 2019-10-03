@@ -191,9 +191,9 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the cloudiot server.  After setting any optional
          * parameters, call the {@link BindDeviceToGateway#execute()} method to invoke the remote operation.
          *
-         * @param parent The name of the registry. For example,
-        `projects/example-project/locations/us-central1/registries
-         *        /my-registry`.
+         * @param parent Required. The name of the registry. For example,
+        `projects/example-project/locations/us-
+         *        central1/registries/my-registry`.
          * @param content the {@link com.google.api.services.cloudiot.v1.model.BindDeviceToGatewayRequest}
          * @return the request
          */
@@ -221,9 +221,9 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
            * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param parent The name of the registry. For example,
-        `projects/example-project/locations/us-central1/registries
-         *        /my-registry`.
+           * @param parent Required. The name of the registry. For example,
+        `projects/example-project/locations/us-
+         *        central1/registries/my-registry`.
            * @param content the {@link com.google.api.services.cloudiot.v1.model.BindDeviceToGatewayRequest}
            * @since 1.13
            */
@@ -293,22 +293,22 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The name of the registry. For example, `projects/example-project/locations/us-
-           * central1/registries/my-registry`.
+           * Required. The name of the registry. For example, `projects/example-project/locations
+           * /us-central1/registries/my-registry`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The name of the registry. For example, `projects/example-project/locations/us-central1/registries
-         /my-registry`.
+          /** Required. The name of the registry. For example, `projects/example-project/locations/us-
+         central1/registries/my-registry`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * The name of the registry. For example, `projects/example-project/locations/us-
-           * central1/registries/my-registry`.
+           * Required. The name of the registry. For example, `projects/example-project/locations
+           * /us-central1/registries/my-registry`.
            */
           public BindDeviceToGateway setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -333,9 +333,9 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the cloudiot server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent The project and cloud region where this device registry must be created.
-        For example, `projects
-         *        /example-project/locations/us-central1`.
+         * @param parent Required. The project and cloud region where this device registry must be created.
+        For example,
+         *        `projects/example-project/locations/us-central1`.
          * @param content the {@link com.google.api.services.cloudiot.v1.model.DeviceRegistry}
          * @return the request
          */
@@ -363,9 +363,9 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The project and cloud region where this device registry must be created.
-        For example, `projects
-         *        /example-project/locations/us-central1`.
+           * @param parent Required. The project and cloud region where this device registry must be created.
+        For example,
+         *        `projects/example-project/locations/us-central1`.
            * @param content the {@link com.google.api.services.cloudiot.v1.model.DeviceRegistry}
            * @since 1.13
            */
@@ -435,22 +435,22 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The project and cloud region where this device registry must be created. For example,
-           * `projects/example-project/locations/us-central1`.
+           * Required. The project and cloud region where this device registry must be created. For
+           * example, `projects/example-project/locations/us-central1`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The project and cloud region where this device registry must be created. For example, `projects
-         /example-project/locations/us-central1`.
+          /** Required. The project and cloud region where this device registry must be created. For example,
+         `projects/example-project/locations/us-central1`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * The project and cloud region where this device registry must be created. For example,
-           * `projects/example-project/locations/us-central1`.
+           * Required. The project and cloud region where this device registry must be created. For
+           * example, `projects/example-project/locations/us-central1`.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -475,7 +475,7 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the cloudiot server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the device registry. For example,
+         * @param name Required. The name of the device registry. For example,
         `projects/example-project/locations/us-
          *        central1/registries/my-registry`.
          * @return the request
@@ -504,7 +504,7 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the device registry. For example,
+           * @param name Required. The name of the device registry. For example,
         `projects/example-project/locations/us-
          *        central1/registries/my-registry`.
            * @since 1.13
@@ -575,13 +575,13 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The name of the device registry. For example, `projects/example-project/locations/us-
-           * central1/registries/my-registry`.
+           * Required. The name of the device registry. For example, `projects/example-
+           * project/locations/us-central1/registries/my-registry`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name of the device registry. For example, `projects/example-project/locations/us-
+          /** Required. The name of the device registry. For example, `projects/example-project/locations/us-
          central1/registries/my-registry`.
            */
           public java.lang.String getName() {
@@ -589,8 +589,8 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The name of the device registry. For example, `projects/example-project/locations/us-
-           * central1/registries/my-registry`.
+           * Required. The name of the device registry. For example, `projects/example-
+           * project/locations/us-central1/registries/my-registry`.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -615,7 +615,7 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the cloudiot server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the device registry. For example,
+         * @param name Required. The name of the device registry. For example,
         `projects/example-project/locations/us-
          *        central1/registries/my-registry`.
          * @return the request
@@ -643,7 +643,7 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the device registry. For example,
+           * @param name Required. The name of the device registry. For example,
         `projects/example-project/locations/us-
          *        central1/registries/my-registry`.
            * @since 1.13
@@ -724,13 +724,13 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The name of the device registry. For example, `projects/example-project/locations/us-
-           * central1/registries/my-registry`.
+           * Required. The name of the device registry. For example, `projects/example-
+           * project/locations/us-central1/registries/my-registry`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name of the device registry. For example, `projects/example-project/locations/us-
+          /** Required. The name of the device registry. For example, `projects/example-project/locations/us-
          central1/registries/my-registry`.
            */
           public java.lang.String getName() {
@@ -738,8 +738,8 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The name of the device registry. For example, `projects/example-project/locations/us-
-           * central1/registries/my-registry`.
+           * Required. The name of the device registry. For example, `projects/example-
+           * project/locations/us-central1/registries/my-registry`.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -908,8 +908,9 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the cloudiot server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent The project and cloud region path. For example,
-        `projects/example-project/locations/us-central1`.
+         * @param parent Required. The project and cloud region path. For example,
+        `projects/example-project/locations/us-
+         *        central1`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -935,8 +936,9 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The project and cloud region path. For example,
-        `projects/example-project/locations/us-central1`.
+           * @param parent Required. The project and cloud region path. For example,
+        `projects/example-project/locations/us-
+         *        central1`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1015,21 +1017,22 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The project and cloud region path. For example, `projects/example-project/locations/us-
-           * central1`.
+           * Required. The project and cloud region path. For example, `projects/example-
+           * project/locations/us-central1`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The project and cloud region path. For example, `projects/example-project/locations/us-central1`.
+          /** Required. The project and cloud region path. For example, `projects/example-project/locations/us-
+         central1`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * The project and cloud region path. For example, `projects/example-project/locations/us-
-           * central1`.
+           * Required. The project and cloud region path. For example, `projects/example-
+           * project/locations/us-central1`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -1236,26 +1239,27 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Only updates the `device_registry` fields indicated by this mask. The field mask must
-           * not be empty, and it must not contain fields that are immutable or only set by the
-           * server. Mutable top-level fields: `event_notification_config`, `http_config`,
+           * Required. Only updates the `device_registry` fields indicated by this mask. The field
+           * mask must not be empty, and it must not contain fields that are immutable or only set
+           * by the server. Mutable top-level fields: `event_notification_config`, `http_config`,
            * `mqtt_config`, and `state_notification_config`.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Only updates the `device_registry` fields indicated by this mask. The field mask must not be empty,
-         and it must not contain fields that are immutable or only set by the server. Mutable top-level
-         fields: `event_notification_config`, `http_config`, `mqtt_config`, and `state_notification_config`.
+          /** Required. Only updates the `device_registry` fields indicated by this mask. The field mask must not
+         be empty, and it must not contain fields that are immutable or only set by the server. Mutable top-
+         level fields: `event_notification_config`, `http_config`, `mqtt_config`, and
+         `state_notification_config`.
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
           /**
-           * Only updates the `device_registry` fields indicated by this mask. The field mask must
-           * not be empty, and it must not contain fields that are immutable or only set by the
-           * server. Mutable top-level fields: `event_notification_config`, `http_config`,
+           * Required. Only updates the `device_registry` fields indicated by this mask. The field
+           * mask must not be empty, and it must not contain fields that are immutable or only set
+           * by the server. Mutable top-level fields: `event_notification_config`, `http_config`,
            * `mqtt_config`, and `state_notification_config`.
            */
           public Patch setUpdateMask(String updateMask) {
@@ -1563,9 +1567,9 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link UnbindDeviceFromGateway#execute()} method to invoke the remote
          * operation.
          *
-         * @param parent The name of the registry. For example,
-        `projects/example-project/locations/us-central1/registries
-         *        /my-registry`.
+         * @param parent Required. The name of the registry. For example,
+        `projects/example-project/locations/us-
+         *        central1/registries/my-registry`.
          * @param content the {@link com.google.api.services.cloudiot.v1.model.UnbindDeviceFromGatewayRequest}
          * @return the request
          */
@@ -1593,9 +1597,9 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
            * s.services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
            * after invoking the constructor. </p>
            *
-           * @param parent The name of the registry. For example,
-        `projects/example-project/locations/us-central1/registries
-         *        /my-registry`.
+           * @param parent Required. The name of the registry. For example,
+        `projects/example-project/locations/us-
+         *        central1/registries/my-registry`.
            * @param content the {@link com.google.api.services.cloudiot.v1.model.UnbindDeviceFromGatewayRequest}
            * @since 1.13
            */
@@ -1665,22 +1669,22 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The name of the registry. For example, `projects/example-project/locations/us-
-           * central1/registries/my-registry`.
+           * Required. The name of the registry. For example, `projects/example-project/locations
+           * /us-central1/registries/my-registry`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The name of the registry. For example, `projects/example-project/locations/us-central1/registries
-         /my-registry`.
+          /** Required. The name of the registry. For example, `projects/example-project/locations/us-
+         central1/registries/my-registry`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * The name of the registry. For example, `projects/example-project/locations/us-
-           * central1/registries/my-registry`.
+           * Required. The name of the registry. For example, `projects/example-project/locations
+           * /us-central1/registries/my-registry`.
            */
           public UnbindDeviceFromGateway setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -1726,10 +1730,9 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
            * This request holds the parameters needed by the cloudiot server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent The name of the device registry where this device should be created.
+           * @param parent Required. The name of the device registry where this device should be created.
           For example,
-          `projects/example-
-           *        project/locations/us-central1/registries/my-registry`.
+           *        `projects/example-project/locations/us-central1/registries/my-registry`.
            * @param content the {@link com.google.api.services.cloudiot.v1.model.Device}
            * @return the request
            */
@@ -1757,10 +1760,9 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent The name of the device registry where this device should be created.
+             * @param parent Required. The name of the device registry where this device should be created.
           For example,
-          `projects/example-
-           *        project/locations/us-central1/registries/my-registry`.
+           *        `projects/example-project/locations/us-central1/registries/my-registry`.
              * @param content the {@link com.google.api.services.cloudiot.v1.model.Device}
              * @since 1.13
              */
@@ -1830,22 +1832,22 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * The name of the device registry where this device should be created. For example,
-             * `projects/example-project/locations/us-central1/registries/my-registry`.
+             * Required. The name of the device registry where this device should be created. For
+             * example, `projects/example-project/locations/us-central1/registries/my-registry`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** The name of the device registry where this device should be created. For example, `projects
-           /example-project/locations/us-central1/registries/my-registry`.
+            /** Required. The name of the device registry where this device should be created. For example,
+           `projects/example-project/locations/us-central1/registries/my-registry`.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * The name of the device registry where this device should be created. For example,
-             * `projects/example-project/locations/us-central1/registries/my-registry`.
+             * Required. The name of the device registry where this device should be created. For
+             * example, `projects/example-project/locations/us-central1/registries/my-registry`.
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -1870,7 +1872,7 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
            * This request holds the parameters needed by the cloudiot server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name The name of the device. For example,
+           * @param name Required. The name of the device. For example,
           `projects/p0/locations/us-
            *        central1/registries/registry0/devices/device0` or
           `projects/p0/locations/us-
@@ -1901,7 +1903,7 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The name of the device. For example,
+             * @param name Required. The name of the device. For example,
           `projects/p0/locations/us-
            *        central1/registries/registry0/devices/device0` or
           `projects/p0/locations/us-
@@ -1974,14 +1976,14 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * The name of the device. For example, `projects/p0/locations/us-
+             * Required. The name of the device. For example, `projects/p0/locations/us-
              * central1/registries/registry0/devices/device0` or `projects/p0/locations/us-
              * central1/registries/registry0/devices/{num_id}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The name of the device. For example, `projects/p0/locations/us-
+            /** Required. The name of the device. For example, `projects/p0/locations/us-
            central1/registries/registry0/devices/device0` or `projects/p0/locations/us-
            central1/registries/registry0/devices/{num_id}`.
              */
@@ -1990,7 +1992,7 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * The name of the device. For example, `projects/p0/locations/us-
+             * Required. The name of the device. For example, `projects/p0/locations/us-
              * central1/registries/registry0/devices/device0` or `projects/p0/locations/us-
              * central1/registries/registry0/devices/{num_id}`.
              */
@@ -2017,7 +2019,7 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
            * This request holds the parameters needed by the cloudiot server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name The name of the device. For example,
+           * @param name Required. The name of the device. For example,
           `projects/p0/locations/us-
            *        central1/registries/registry0/devices/device0` or
           `projects/p0/locations/us-
@@ -2047,7 +2049,7 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The name of the device. For example,
+             * @param name Required. The name of the device. For example,
           `projects/p0/locations/us-
            *        central1/registries/registry0/devices/device0` or
           `projects/p0/locations/us-
@@ -2130,14 +2132,14 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * The name of the device. For example, `projects/p0/locations/us-
+             * Required. The name of the device. For example, `projects/p0/locations/us-
              * central1/registries/registry0/devices/device0` or `projects/p0/locations/us-
              * central1/registries/registry0/devices/{num_id}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The name of the device. For example, `projects/p0/locations/us-
+            /** Required. The name of the device. For example, `projects/p0/locations/us-
            central1/registries/registry0/devices/device0` or `projects/p0/locations/us-
            central1/registries/registry0/devices/{num_id}`.
              */
@@ -2146,7 +2148,7 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * The name of the device. For example, `projects/p0/locations/us-
+             * Required. The name of the device. For example, `projects/p0/locations/us-
              * central1/registries/registry0/devices/device0` or `projects/p0/locations/us-
              * central1/registries/registry0/devices/{num_id}`.
              */
@@ -2196,7 +2198,7 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
            * This request holds the parameters needed by the cloudiot server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent The device registry path. Required. For example,
+           * @param parent Required. The device registry path. Required. For example,
           `projects/my-project/locations/us-
            *        central1/registries/my-registry`.
            * @return the request
@@ -2224,7 +2226,7 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent The device registry path. Required. For example,
+             * @param parent Required. The device registry path. Required. For example,
           `projects/my-project/locations/us-
            *        central1/registries/my-registry`.
              * @since 1.13
@@ -2305,13 +2307,13 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * The device registry path. Required. For example, `projects/my-project/locations/us-
-             * central1/registries/my-registry`.
+             * Required. The device registry path. Required. For example, `projects/my-
+             * project/locations/us-central1/registries/my-registry`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** The device registry path. Required. For example, `projects/my-project/locations/us-
+            /** Required. The device registry path. Required. For example, `projects/my-project/locations/us-
            central1/registries/my-registry`.
              */
             public java.lang.String getParent() {
@@ -2319,8 +2321,8 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * The device registry path. Required. For example, `projects/my-project/locations/us-
-             * central1/registries/my-registry`.
+             * Required. The device registry path. Required. For example, `projects/my-
+             * project/locations/us-central1/registries/my-registry`.
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -2543,7 +2545,7 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
            * parameters, call the {@link ModifyCloudToDeviceConfig#execute()} method to invoke the remote
            * operation.
            *
-           * @param name The name of the device. For example,
+           * @param name Required. The name of the device. For example,
           `projects/p0/locations/us-
            *        central1/registries/registry0/devices/device0` or
           `projects/p0/locations/us-
@@ -2576,7 +2578,7 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
              * pis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
              * immediately after invoking the constructor. </p>
              *
-             * @param name The name of the device. For example,
+             * @param name Required. The name of the device. For example,
           `projects/p0/locations/us-
            *        central1/registries/registry0/devices/device0` or
           `projects/p0/locations/us-
@@ -2650,14 +2652,14 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * The name of the device. For example, `projects/p0/locations/us-
+             * Required. The name of the device. For example, `projects/p0/locations/us-
              * central1/registries/registry0/devices/device0` or `projects/p0/locations/us-
              * central1/registries/registry0/devices/{num_id}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The name of the device. For example, `projects/p0/locations/us-
+            /** Required. The name of the device. For example, `projects/p0/locations/us-
            central1/registries/registry0/devices/device0` or `projects/p0/locations/us-
            central1/registries/registry0/devices/{num_id}`.
              */
@@ -2666,7 +2668,7 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * The name of the device. For example, `projects/p0/locations/us-
+             * Required. The name of the device. For example, `projects/p0/locations/us-
              * central1/registries/registry0/devices/device0` or `projects/p0/locations/us-
              * central1/registries/registry0/devices/{num_id}`.
              */
@@ -2839,25 +2841,25 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * Only updates the `device` fields indicated by this mask. The field mask must not be
-             * empty, and it must not contain fields that are immutable or only set by the server.
-             * Mutable top-level fields: `credentials`, `blocked`, and `metadata`
+             * Required. Only updates the `device` fields indicated by this mask. The field mask
+             * must not be empty, and it must not contain fields that are immutable or only set by
+             * the server. Mutable top-level fields: `credentials`, `blocked`, and `metadata`
              */
             @com.google.api.client.util.Key
             private String updateMask;
 
-            /** Only updates the `device` fields indicated by this mask. The field mask must not be empty, and it
-           must not contain fields that are immutable or only set by the server. Mutable top-level fields:
-           `credentials`, `blocked`, and `metadata`
+            /** Required. Only updates the `device` fields indicated by this mask. The field mask must not be
+           empty, and it must not contain fields that are immutable or only set by the server. Mutable top-
+           level fields: `credentials`, `blocked`, and `metadata`
              */
             public String getUpdateMask() {
               return updateMask;
             }
 
             /**
-             * Only updates the `device` fields indicated by this mask. The field mask must not be
-             * empty, and it must not contain fields that are immutable or only set by the server.
-             * Mutable top-level fields: `credentials`, `blocked`, and `metadata`
+             * Required. Only updates the `device` fields indicated by this mask. The field mask
+             * must not be empty, and it must not contain fields that are immutable or only set by
+             * the server. Mutable top-level fields: `credentials`, `blocked`, and `metadata`
              */
             public Patch setUpdateMask(String updateMask) {
               this.updateMask = updateMask;
@@ -2886,7 +2888,7 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
            * This request holds the parameters needed by the cloudiot server.  After setting any optional
            * parameters, call the {@link SendCommandToDevice#execute()} method to invoke the remote operation.
            *
-           * @param name The name of the device. For example,
+           * @param name Required. The name of the device. For example,
           `projects/p0/locations/us-
            *        central1/registries/registry0/devices/device0` or
           `projects/p0/locations/us-
@@ -2927,7 +2929,7 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
              * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
              * invoking the constructor. </p>
              *
-             * @param name The name of the device. For example,
+             * @param name Required. The name of the device. For example,
           `projects/p0/locations/us-
            *        central1/registries/registry0/devices/device0` or
           `projects/p0/locations/us-
@@ -3001,14 +3003,14 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * The name of the device. For example, `projects/p0/locations/us-
+             * Required. The name of the device. For example, `projects/p0/locations/us-
              * central1/registries/registry0/devices/device0` or `projects/p0/locations/us-
              * central1/registries/registry0/devices/{num_id}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The name of the device. For example, `projects/p0/locations/us-
+            /** Required. The name of the device. For example, `projects/p0/locations/us-
            central1/registries/registry0/devices/device0` or `projects/p0/locations/us-
            central1/registries/registry0/devices/{num_id}`.
              */
@@ -3017,7 +3019,7 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * The name of the device. For example, `projects/p0/locations/us-
+             * Required. The name of the device. For example, `projects/p0/locations/us-
              * central1/registries/registry0/devices/device0` or `projects/p0/locations/us-
              * central1/registries/registry0/devices/{num_id}`.
              */
@@ -3065,7 +3067,7 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
              * This request holds the parameters needed by the cloudiot server.  After setting any optional
              * parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param name The name of the device. For example,
+             * @param name Required. The name of the device. For example,
             `projects/p0/locations/us-
              *        central1/registries/registry0/devices/device0` or
             `projects/p0/locations/us-
@@ -3096,7 +3098,7 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name The name of the device. For example,
+               * @param name Required. The name of the device. For example,
             `projects/p0/locations/us-
              *        central1/registries/registry0/devices/device0` or
             `projects/p0/locations/us-
@@ -3179,14 +3181,14 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
               }
 
               /**
-               * The name of the device. For example, `projects/p0/locations/us-
+               * Required. The name of the device. For example, `projects/p0/locations/us-
                * central1/registries/registry0/devices/device0` or `projects/p0/locations/us-
                * central1/registries/registry0/devices/{num_id}`.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** The name of the device. For example, `projects/p0/locations/us-
+              /** Required. The name of the device. For example, `projects/p0/locations/us-
              central1/registries/registry0/devices/device0` or `projects/p0/locations/us-
              central1/registries/registry0/devices/{num_id}`.
                */
@@ -3195,7 +3197,7 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
               }
 
               /**
-               * The name of the device. For example, `projects/p0/locations/us-
+               * Required. The name of the device. For example, `projects/p0/locations/us-
                * central1/registries/registry0/devices/device0` or `projects/p0/locations/us-
                * central1/registries/registry0/devices/{num_id}`.
                */
@@ -3270,7 +3272,7 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
              * This request holds the parameters needed by the cloudiot server.  After setting any optional
              * parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param name The name of the device. For example,
+             * @param name Required. The name of the device. For example,
             `projects/p0/locations/us-
              *        central1/registries/registry0/devices/device0` or
             `projects/p0/locations/us-
@@ -3300,7 +3302,7 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name The name of the device. For example,
+               * @param name Required. The name of the device. For example,
             `projects/p0/locations/us-
              *        central1/registries/registry0/devices/device0` or
             `projects/p0/locations/us-
@@ -3383,14 +3385,14 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
               }
 
               /**
-               * The name of the device. For example, `projects/p0/locations/us-
+               * Required. The name of the device. For example, `projects/p0/locations/us-
                * central1/registries/registry0/devices/device0` or `projects/p0/locations/us-
                * central1/registries/registry0/devices/{num_id}`.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** The name of the device. For example, `projects/p0/locations/us-
+              /** Required. The name of the device. For example, `projects/p0/locations/us-
              central1/registries/registry0/devices/device0` or `projects/p0/locations/us-
              central1/registries/registry0/devices/{num_id}`.
                */
@@ -3399,7 +3401,7 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
               }
 
               /**
-               * The name of the device. For example, `projects/p0/locations/us-
+               * Required. The name of the device. For example, `projects/p0/locations/us-
                * central1/registries/registry0/devices/device0` or `projects/p0/locations/us-
                * central1/registries/registry0/devices/{num_id}`.
                */
@@ -3925,7 +3927,7 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
              * This request holds the parameters needed by the cloudiot server.  After setting any optional
              * parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent The device registry path. Required. For example,
+             * @param parent Required. The device registry path. Required. For example,
             `projects/my-project/locations/us-
              *        central1/registries/my-registry`.
              * @return the request
@@ -3953,7 +3955,7 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent The device registry path. Required. For example,
+               * @param parent Required. The device registry path. Required. For example,
             `projects/my-project/locations/us-
              *        central1/registries/my-registry`.
                * @since 1.13
@@ -4034,13 +4036,13 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
               }
 
               /**
-               * The device registry path. Required. For example, `projects/my-project/locations/us-
-               * central1/registries/my-registry`.
+               * Required. The device registry path. Required. For example, `projects/my-
+               * project/locations/us-central1/registries/my-registry`.
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** The device registry path. Required. For example, `projects/my-project/locations/us-
+              /** Required. The device registry path. Required. For example, `projects/my-project/locations/us-
              central1/registries/my-registry`.
                */
               public java.lang.String getParent() {
@@ -4048,8 +4050,8 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
               }
 
               /**
-               * The device registry path. Required. For example, `projects/my-project/locations/us-
-               * central1/registries/my-registry`.
+               * Required. The device registry path. Required. For example, `projects/my-
+               * project/locations/us-central1/registries/my-registry`.
                */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {

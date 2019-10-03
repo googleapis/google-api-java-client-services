@@ -30,7 +30,7 @@ package com.google.api.services.cloudiot.v1.model;
 public final class ModifyCloudToDeviceConfigRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The configuration data for the device.
+   * Required. The configuration data for the device.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +47,7 @@ public final class ModifyCloudToDeviceConfigRequest extends com.google.api.clien
   private java.lang.Long versionToUpdate;
 
   /**
-   * The configuration data for the device.
+   * Required. The configuration data for the device.
    * @see #decodeBinaryData()
    * @return value or {@code null} for none
    */
@@ -56,7 +56,7 @@ public final class ModifyCloudToDeviceConfigRequest extends com.google.api.clien
   }
 
   /**
-   * The configuration data for the device.
+   * Required. The configuration data for the device.
    * @see #getBinaryData()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -67,7 +67,7 @@ public final class ModifyCloudToDeviceConfigRequest extends com.google.api.clien
   }
 
   /**
-   * The configuration data for the device.
+   * Required. The configuration data for the device.
    * @see #encodeBinaryData()
    * @param binaryData binaryData or {@code null} for none
    */
@@ -77,7 +77,7 @@ public final class ModifyCloudToDeviceConfigRequest extends com.google.api.clien
   }
 
   /**
-   * The configuration data for the device.
+   * Required. The configuration data for the device.
    * @see #setBinaryData()
    *
    * <p>

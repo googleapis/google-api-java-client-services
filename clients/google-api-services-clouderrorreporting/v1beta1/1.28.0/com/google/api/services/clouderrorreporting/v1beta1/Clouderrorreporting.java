@@ -152,7 +152,7 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
      * optional parameters, call the {@link DeleteEvents#execute()} method to invoke the remote
      * operation.
      *
-     * @param projectName [Required] The resource name of the Google Cloud Platform project. Written
+     * @param projectName Required. The resource name of the Google Cloud Platform project. Written
     as `projects/` plus the
      *        [Google Cloud Platform project
     ID](https://support.google.com/cloud/answer/6158840).
@@ -183,7 +183,7 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
        * DeleteEvents#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectName [Required] The resource name of the Google Cloud Platform project. Written
+       * @param projectName Required. The resource name of the Google Cloud Platform project. Written
     as `projects/` plus the
      *        [Google Cloud Platform project
     ID](https://support.google.com/cloud/answer/6158840).
@@ -256,25 +256,23 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
       }
 
       /**
-       * [Required] The resource name of the Google Cloud Platform project. Written as `projects/`
+       * Required. The resource name of the Google Cloud Platform project. Written as `projects/`
        * plus the [Google Cloud Platform project
        * ID](https://support.google.com/cloud/answer/6158840). Example: `projects/my-project-123`.
        */
       @com.google.api.client.util.Key
       private java.lang.String projectName;
 
-      /**[ Required] The resource name of the Google Cloud Platform project. Written as `projects/` plus the
-    [ Google Cloud Platform project ID](https://support.google.com/cloud/answer/6158840). Example:
-    [ `projects/my-project-123`.
-    [
-
+      /** Required. The resource name of the Google Cloud Platform project. Written as `projects/` plus the
+     [Google Cloud Platform project ID](https://support.google.com/cloud/answer/6158840). Example:
+     `projects/my-project-123`.
        */
       public java.lang.String getProjectName() {
         return projectName;
       }
 
       /**
-       * [Required] The resource name of the Google Cloud Platform project. Written as `projects/`
+       * Required. The resource name of the Google Cloud Platform project. Written as `projects/`
        * plus the [Google Cloud Platform project
        * ID](https://support.google.com/cloud/answer/6158840). Example: `projects/my-project-123`.
        */
@@ -322,7 +320,7 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
        * This request holds the parameters needed by the clouderrorreporting server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param projectName [Required] The resource name of the Google Cloud Platform project. Written
+       * @param projectName Required. The resource name of the Google Cloud Platform project. Written
       as `projects/` plus the
        *        [Google Cloud Platform project
       ID](https://support.google.com/cloud/answer/6158840).
@@ -353,7 +351,7 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param projectName [Required] The resource name of the Google Cloud Platform project. Written
+         * @param projectName Required. The resource name of the Google Cloud Platform project. Written
       as `projects/` plus the
        *        [Google Cloud Platform project
       ID](https://support.google.com/cloud/answer/6158840).
@@ -436,25 +434,23 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * [Required] The resource name of the Google Cloud Platform project. Written as `projects/`
+         * Required. The resource name of the Google Cloud Platform project. Written as `projects/`
          * plus the [Google Cloud Platform project
          * ID](https://support.google.com/cloud/answer/6158840). Example: `projects/my-project-123`.
          */
         @com.google.api.client.util.Key
         private java.lang.String projectName;
 
-        /**[ Required] The resource name of the Google Cloud Platform project. Written as `projects/` plus the
-      [ Google Cloud Platform project ID](https://support.google.com/cloud/answer/6158840). Example:
-      [ `projects/my-project-123`.
-      [
-
+        /** Required. The resource name of the Google Cloud Platform project. Written as `projects/` plus the
+       [Google Cloud Platform project ID](https://support.google.com/cloud/answer/6158840). Example:
+       `projects/my-project-123`.
          */
         public java.lang.String getProjectName() {
           return projectName;
         }
 
         /**
-         * [Required] The resource name of the Google Cloud Platform project. Written as `projects/`
+         * Required. The resource name of the Google Cloud Platform project. Written as `projects/`
          * plus the [Google Cloud Platform project
          * ID](https://support.google.com/cloud/answer/6158840). Example: `projects/my-project-123`.
          */
@@ -468,78 +464,70 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
           return this;
         }
 
-        /** [Required] The group for which events shall be returned. */
+        /** Required. The group for which events shall be returned. */
         @com.google.api.client.util.Key
         private java.lang.String groupId;
 
-        /**[ Required] The group for which events shall be returned.
-      [
-
+        /** Required. The group for which events shall be returned.
          */
         public java.lang.String getGroupId() {
           return groupId;
         }
 
-        /** [Required] The group for which events shall be returned. */
+        /** Required. The group for which events shall be returned. */
         public List setGroupId(java.lang.String groupId) {
           this.groupId = groupId;
           return this;
         }
 
-        /** [Optional] The maximum number of results to return per response. */
+        /** Optional. The maximum number of results to return per response. */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /**[ Optional] The maximum number of results to return per response.
-      [
-
+        /** Optional. The maximum number of results to return per response.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /** [Optional] The maximum number of results to return per response. */
+        /** Optional. The maximum number of results to return per response. */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
-        /** [Optional] A `next_page_token` provided by a previous response. */
+        /** Optional. A `next_page_token` provided by a previous response. */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /**[ Optional] A `next_page_token` provided by a previous response.
-      [
-
+        /** Optional. A `next_page_token` provided by a previous response.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /** [Optional] A `next_page_token` provided by a previous response. */
+        /** Optional. A `next_page_token` provided by a previous response. */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
         }
 
         /**
-         * [Optional] The exact value to match against [`ServiceContext.resource_type`](/error-
+         * Optional. The exact value to match against [`ServiceContext.resource_type`](/error-
          * reporting/reference/rest/v1beta1/ServiceContext#FIELDS.resource_type).
          */
         @com.google.api.client.util.Key("serviceFilter.resourceType")
         private java.lang.String serviceFilterResourceType;
 
-        /**[ Optional] The exact value to match against `ServiceContext.resource_type`](/error-
-      [ reporting/reference/rest/v1beta1/ServiceContext#FIELDS.resource_type).
-      [
-
+        /** Optional. The exact value to match against [`ServiceContext.resource_type`](/error-
+       reporting/reference/rest/v1beta1/ServiceContext#FIELDS.resource_type).
          */
         public java.lang.String getServiceFilterResourceType() {
           return serviceFilterResourceType;
         }
 
         /**
-         * [Optional] The exact value to match against [`ServiceContext.resource_type`](/error-
+         * Optional. The exact value to match against [`ServiceContext.resource_type`](/error-
          * reporting/reference/rest/v1beta1/ServiceContext#FIELDS.resource_type).
          */
         public List setServiceFilterResourceType(java.lang.String serviceFilterResourceType) {
@@ -548,23 +536,21 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * [Optional] The exact value to match against [`ServiceContext.service`](/error-
+         * Optional. The exact value to match against [`ServiceContext.service`](/error-
          * reporting/reference/rest/v1beta1/ServiceContext#FIELDS.service).
          */
         @com.google.api.client.util.Key("serviceFilter.service")
         private java.lang.String serviceFilterService;
 
-        /**[ Optional] The exact value to match against `ServiceContext.service`](/error-
-      [ reporting/reference/rest/v1beta1/ServiceContext#FIELDS.service).
-      [
-
+        /** Optional. The exact value to match against [`ServiceContext.service`](/error-
+       reporting/reference/rest/v1beta1/ServiceContext#FIELDS.service).
          */
         public java.lang.String getServiceFilterService() {
           return serviceFilterService;
         }
 
         /**
-         * [Optional] The exact value to match against [`ServiceContext.service`](/error-
+         * Optional. The exact value to match against [`ServiceContext.service`](/error-
          * reporting/reference/rest/v1beta1/ServiceContext#FIELDS.service).
          */
         public List setServiceFilterService(java.lang.String serviceFilterService) {
@@ -573,23 +559,21 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * [Optional] The exact value to match against [`ServiceContext.version`](/error-
+         * Optional. The exact value to match against [`ServiceContext.version`](/error-
          * reporting/reference/rest/v1beta1/ServiceContext#FIELDS.version).
          */
         @com.google.api.client.util.Key("serviceFilter.version")
         private java.lang.String serviceFilterVersion;
 
-        /**[ Optional] The exact value to match against `ServiceContext.version`](/error-
-      [ reporting/reference/rest/v1beta1/ServiceContext#FIELDS.version).
-      [
-
+        /** Optional. The exact value to match against [`ServiceContext.version`](/error-
+       reporting/reference/rest/v1beta1/ServiceContext#FIELDS.version).
          */
         public java.lang.String getServiceFilterVersion() {
           return serviceFilterVersion;
         }
 
         /**
-         * [Optional] The exact value to match against [`ServiceContext.version`](/error-
+         * Optional. The exact value to match against [`ServiceContext.version`](/error-
          * reporting/reference/rest/v1beta1/ServiceContext#FIELDS.version).
          */
         public List setServiceFilterVersion(java.lang.String serviceFilterVersion) {
@@ -633,7 +617,7 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
        * This request holds the parameters needed by the clouderrorreporting server.  After setting any
        * optional parameters, call the {@link Report#execute()} method to invoke the remote operation.
        *
-       * @param projectName [Required] The resource name of the Google Cloud Platform project. Written
+       * @param projectName Required. The resource name of the Google Cloud Platform project. Written
       as `projects/` plus the
        *        [Google Cloud Platform project
       ID](https://support.google.com/cloud/answer/6158840).
@@ -673,7 +657,7 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
          * Report#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param projectName [Required] The resource name of the Google Cloud Platform project. Written
+         * @param projectName Required. The resource name of the Google Cloud Platform project. Written
       as `projects/` plus the
        *        [Google Cloud Platform project
       ID](https://support.google.com/cloud/answer/6158840).
@@ -748,25 +732,23 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * [Required] The resource name of the Google Cloud Platform project. Written as `projects/`
+         * Required. The resource name of the Google Cloud Platform project. Written as `projects/`
          * plus the [Google Cloud Platform project
          * ID](https://support.google.com/cloud/answer/6158840). Example: `projects/my-project-123`.
          */
         @com.google.api.client.util.Key
         private java.lang.String projectName;
 
-        /**[ Required] The resource name of the Google Cloud Platform project. Written as `projects/` plus the
-      [ Google Cloud Platform project ID](https://support.google.com/cloud/answer/6158840). Example:
-      [ `projects/my-project-123`.
-      [
-
+        /** Required. The resource name of the Google Cloud Platform project. Written as `projects/` plus the
+       [Google Cloud Platform project ID](https://support.google.com/cloud/answer/6158840). Example:
+       `projects/my-project-123`.
          */
         public java.lang.String getProjectName() {
           return projectName;
         }
 
         /**
-         * [Required] The resource name of the Google Cloud Platform project. Written as `projects/`
+         * Required. The resource name of the Google Cloud Platform project. Written as `projects/`
          * plus the [Google Cloud Platform project
          * ID](https://support.google.com/cloud/answer/6158840). Example: `projects/my-project-123`.
          */
@@ -815,7 +797,7 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
        * This request holds the parameters needed by the clouderrorreporting server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param projectName [Required] The resource name of the Google Cloud Platform project. Written
+       * @param projectName Required. The resource name of the Google Cloud Platform project. Written
       as projects/ plus the
        *        Google Cloud
       Platform project ID.
@@ -846,7 +828,7 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param projectName [Required] The resource name of the Google Cloud Platform project. Written
+         * @param projectName Required. The resource name of the Google Cloud Platform project. Written
       as projects/ plus the
        *        Google Cloud
       Platform project ID.
@@ -929,7 +911,7 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * [Required] The resource name of the Google Cloud Platform project. Written as projects/
+         * Required. The resource name of the Google Cloud Platform project. Written as projects/
          * plus the Google Cloud Platform project ID.
          *
          * Example: projects/my-project-123.
@@ -937,19 +919,17 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
         @com.google.api.client.util.Key
         private java.lang.String projectName;
 
-        /**[ Required] The resource name of the Google Cloud Platform project. Written as projects/ plus the
-      [ Google Cloud Platform project ID.
-      [
-      [ Example: projects/my-project-123.
-      [
+        /** Required. The resource name of the Google Cloud Platform project. Written as projects/ plus the
+       Google Cloud Platform project ID.
 
+       Example: projects/my-project-123.
          */
         public java.lang.String getProjectName() {
           return projectName;
         }
 
         /**
-         * [Required] The resource name of the Google Cloud Platform project. Written as projects/
+         * Required. The resource name of the Google Cloud Platform project. Written as projects/
          * plus the Google Cloud Platform project ID.
          *
          * Example: projects/my-project-123.
@@ -965,22 +945,20 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * [Optional] The alignment of the timed counts to be returned. Default is
+         * Optional. The alignment of the timed counts to be returned. Default is
          * `ALIGNMENT_EQUAL_AT_END`.
          */
         @com.google.api.client.util.Key
         private java.lang.String alignment;
 
-        /**[ Optional] The alignment of the timed counts to be returned. Default is `ALIGNMENT_EQUAL_AT_END`.
-      [
-
+        /** Optional. The alignment of the timed counts to be returned. Default is `ALIGNMENT_EQUAL_AT_END`.
          */
         public java.lang.String getAlignment() {
           return alignment;
         }
 
         /**
-         * [Optional] The alignment of the timed counts to be returned. Default is
+         * Optional. The alignment of the timed counts to be returned. Default is
          * `ALIGNMENT_EQUAL_AT_END`.
          */
         public List setAlignment(java.lang.String alignment) {
@@ -989,23 +967,21 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * [Optional] Time where the timed counts shall be aligned if rounded alignment is chosen.
+         * Optional. Time where the timed counts shall be aligned if rounded alignment is chosen.
          * Default is 00:00 UTC.
          */
         @com.google.api.client.util.Key
         private String alignmentTime;
 
-        /**[ Optional] Time where the timed counts shall be aligned if rounded alignment is chosen. Default is
-      [ 00:00 UTC.
-      [
-
+        /** Optional. Time where the timed counts shall be aligned if rounded alignment is chosen. Default is
+       00:00 UTC.
          */
         public String getAlignmentTime() {
           return alignmentTime;
         }
 
         /**
-         * [Optional] Time where the timed counts shall be aligned if rounded alignment is chosen.
+         * Optional. Time where the timed counts shall be aligned if rounded alignment is chosen.
          * Default is 00:00 UTC.
          */
         public List setAlignmentTime(String alignmentTime) {
@@ -1013,40 +989,36 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
           return this;
         }
 
-        /** [Optional] List all ErrorGroupStats with these IDs. */
+        /** Optional. List all ErrorGroupStats with these IDs. */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> groupId;
 
-        /**[ Optional] List all ErrorGroupStats with these IDs.
-      [
-
+        /** Optional. List all ErrorGroupStats with these IDs.
          */
         public java.util.List<java.lang.String> getGroupId() {
           return groupId;
         }
 
-        /** [Optional] List all ErrorGroupStats with these IDs. */
+        /** Optional. List all ErrorGroupStats with these IDs. */
         public List setGroupId(java.util.List<java.lang.String> groupId) {
           this.groupId = groupId;
           return this;
         }
 
         /**
-         * [Optional] The sort order in which the results are returned. Default is `COUNT_DESC`.
+         * Optional. The sort order in which the results are returned. Default is `COUNT_DESC`.
          */
         @com.google.api.client.util.Key
         private java.lang.String order;
 
-        /**[ Optional] The sort order in which the results are returned. Default is `COUNT_DESC`.
-      [
-
+        /** Optional. The sort order in which the results are returned. Default is `COUNT_DESC`.
          */
         public java.lang.String getOrder() {
           return order;
         }
 
         /**
-         * [Optional] The sort order in which the results are returned. Default is `COUNT_DESC`.
+         * Optional. The sort order in which the results are returned. Default is `COUNT_DESC`.
          */
         public List setOrder(java.lang.String order) {
           this.order = order;
@@ -1054,21 +1026,19 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * [Optional] The maximum number of results to return per response. Default is 20.
+         * Optional. The maximum number of results to return per response. Default is 20.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /**[ Optional] The maximum number of results to return per response. Default is 20.
-      [
-
+        /** Optional. The maximum number of results to return per response. Default is 20.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
         /**
-         * [Optional] The maximum number of results to return per response. Default is 20.
+         * Optional. The maximum number of results to return per response. Default is 20.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -1076,23 +1046,21 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * [Optional] A `next_page_token` provided by a previous response. To view additional
+         * Optional. A `next_page_token` provided by a previous response. To view additional
          * results, pass this token along with the identical query parameters as the first request.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /**[ Optional] A `next_page_token` provided by a previous response. To view additional results, pass
-      [ this token along with the identical query parameters as the first request.
-      [
-
+        /** Optional. A `next_page_token` provided by a previous response. To view additional results, pass
+       this token along with the identical query parameters as the first request.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
         /**
-         * [Optional] A `next_page_token` provided by a previous response. To view additional
+         * Optional. A `next_page_token` provided by a previous response. To view additional
          * results, pass this token along with the identical query parameters as the first request.
          */
         public List setPageToken(java.lang.String pageToken) {
@@ -1101,23 +1069,21 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * [Optional] The exact value to match against [`ServiceContext.resource_type`](/error-
+         * Optional. The exact value to match against [`ServiceContext.resource_type`](/error-
          * reporting/reference/rest/v1beta1/ServiceContext#FIELDS.resource_type).
          */
         @com.google.api.client.util.Key("serviceFilter.resourceType")
         private java.lang.String serviceFilterResourceType;
 
-        /**[ Optional] The exact value to match against `ServiceContext.resource_type`](/error-
-      [ reporting/reference/rest/v1beta1/ServiceContext#FIELDS.resource_type).
-      [
-
+        /** Optional. The exact value to match against [`ServiceContext.resource_type`](/error-
+       reporting/reference/rest/v1beta1/ServiceContext#FIELDS.resource_type).
          */
         public java.lang.String getServiceFilterResourceType() {
           return serviceFilterResourceType;
         }
 
         /**
-         * [Optional] The exact value to match against [`ServiceContext.resource_type`](/error-
+         * Optional. The exact value to match against [`ServiceContext.resource_type`](/error-
          * reporting/reference/rest/v1beta1/ServiceContext#FIELDS.resource_type).
          */
         public List setServiceFilterResourceType(java.lang.String serviceFilterResourceType) {
@@ -1126,23 +1092,21 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * [Optional] The exact value to match against [`ServiceContext.service`](/error-
+         * Optional. The exact value to match against [`ServiceContext.service`](/error-
          * reporting/reference/rest/v1beta1/ServiceContext#FIELDS.service).
          */
         @com.google.api.client.util.Key("serviceFilter.service")
         private java.lang.String serviceFilterService;
 
-        /**[ Optional] The exact value to match against `ServiceContext.service`](/error-
-      [ reporting/reference/rest/v1beta1/ServiceContext#FIELDS.service).
-      [
-
+        /** Optional. The exact value to match against [`ServiceContext.service`](/error-
+       reporting/reference/rest/v1beta1/ServiceContext#FIELDS.service).
          */
         public java.lang.String getServiceFilterService() {
           return serviceFilterService;
         }
 
         /**
-         * [Optional] The exact value to match against [`ServiceContext.service`](/error-
+         * Optional. The exact value to match against [`ServiceContext.service`](/error-
          * reporting/reference/rest/v1beta1/ServiceContext#FIELDS.service).
          */
         public List setServiceFilterService(java.lang.String serviceFilterService) {
@@ -1151,23 +1115,21 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * [Optional] The exact value to match against [`ServiceContext.version`](/error-
+         * Optional. The exact value to match against [`ServiceContext.version`](/error-
          * reporting/reference/rest/v1beta1/ServiceContext#FIELDS.version).
          */
         @com.google.api.client.util.Key("serviceFilter.version")
         private java.lang.String serviceFilterVersion;
 
-        /**[ Optional] The exact value to match against `ServiceContext.version`](/error-
-      [ reporting/reference/rest/v1beta1/ServiceContext#FIELDS.version).
-      [
-
+        /** Optional. The exact value to match against [`ServiceContext.version`](/error-
+       reporting/reference/rest/v1beta1/ServiceContext#FIELDS.version).
          */
         public java.lang.String getServiceFilterVersion() {
           return serviceFilterVersion;
         }
 
         /**
-         * [Optional] The exact value to match against [`ServiceContext.version`](/error-
+         * Optional. The exact value to match against [`ServiceContext.version`](/error-
          * reporting/reference/rest/v1beta1/ServiceContext#FIELDS.version).
          */
         public List setServiceFilterVersion(java.lang.String serviceFilterVersion) {
@@ -1192,24 +1154,22 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * [Optional] The preferred duration for a single returned `TimedCount`. If not set, no
-         * timed counts are returned.
+         * Optional. The preferred duration for a single returned `TimedCount`. If not set, no timed
+         * counts are returned.
          */
         @com.google.api.client.util.Key
         private String timedCountDuration;
 
-        /**[ Optional] The preferred duration for a single returned `TimedCount`. If not set, no timed counts
-      [ are returned.
-      [
-
+        /** Optional. The preferred duration for a single returned `TimedCount`. If not set, no timed counts
+       are returned.
          */
         public String getTimedCountDuration() {
           return timedCountDuration;
         }
 
         /**
-         * [Optional] The preferred duration for a single returned `TimedCount`. If not set, no
-         * timed counts are returned.
+         * Optional. The preferred duration for a single returned `TimedCount`. If not set, no timed
+         * counts are returned.
          */
         public List setTimedCountDuration(String timedCountDuration) {
           this.timedCountDuration = timedCountDuration;
@@ -1251,7 +1211,7 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
        * This request holds the parameters needed by the clouderrorreporting server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param groupName [Required] The group resource name. Written as
+       * @param groupName Required. The group resource name. Written as
       projects/projectID/groups/group_name.
       Call
        *        groupStats.list to return a list of groups belonging to
@@ -1284,7 +1244,7 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param groupName [Required] The group resource name. Written as
+         * @param groupName Required. The group resource name. Written as
       projects/projectID/groups/group_name.
       Call
        *        groupStats.list to return a list of groups belonging to
@@ -1369,7 +1329,7 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * [Required] The group resource name. Written as projects/projectID/groups/group_name. Call
+         * Required. The group resource name. Written as projects/projectID/groups/group_name. Call
          *
          * groupStats.list to return a list of groups belonging to this project.
          *
@@ -1378,20 +1338,18 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
         @com.google.api.client.util.Key
         private java.lang.String groupName;
 
-        /**[ Required] The group resource name. Written as projects/projectID/groups/group_name. Call
-      [
-      [ groupStats.list to return a list of groups belonging to this project.
-      [
-      [ Example: projects/my-project-123/groups/my-group
-      [
+        /** Required. The group resource name. Written as projects/projectID/groups/group_name. Call
 
+       groupStats.list to return a list of groups belonging to this project.
+
+       Example: projects/my-project-123/groups/my-group
          */
         public java.lang.String getGroupName() {
           return groupName;
         }
 
         /**
-         * [Required] The group resource name. Written as projects/projectID/groups/group_name. Call
+         * Required. The group resource name. Written as projects/projectID/groups/group_name. Call
          *
          * groupStats.list to return a list of groups belonging to this project.
          *

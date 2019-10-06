@@ -5879,7 +5879,11 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
             }
           }
           /**
-           * Stops a running instance.
+           * Stops a running instance.The instance will be automatically recreated based on the scaling
+           * settings of the version. If you want to stop all instances without re-creation (e.g. to avoid
+           * getting billed) use the apps.services.versions.patch (https://cloud.google.com/appengine/docs
+           * /admin-api/reference/rest/v1beta/apps.services.versions/patch) method and change the serving
+           * status of the version to STOPPED.
            *
            * Create a request for the method "instances.delete".
            *
@@ -5904,7 +5908,11 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
             private static final String REST_PATH = "v1beta/apps/{appsId}/services/{servicesId}/versions/{versionsId}/instances/{instancesId}";
 
             /**
-             * Stops a running instance.
+             * Stops a running instance.The instance will be automatically recreated based on the scaling
+             * settings of the version. If you want to stop all instances without re-creation (e.g. to avoid
+             * getting billed) use the apps.services.versions.patch (https://cloud.google.com/appengine/docs
+             * /admin-api/reference/rest/v1beta/apps.services.versions/patch) method and change the serving
+             * status of the version to STOPPED.
              *
              * Create a request for the method "instances.delete".
              *

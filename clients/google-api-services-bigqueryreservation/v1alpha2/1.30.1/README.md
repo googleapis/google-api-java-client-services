@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-bigqueryreservation</artifactId>
-      <version>v1alpha2-rev20190816-1.30.3</version>
+      <version>v1alpha2-rev20190920-1.30.3</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-bigqueryreservation:v1alpha2-rev20190816-1.30.3'
+  compile 'com.google.apis:google-api-services-bigqueryreservation:v1alpha2-rev20190920-1.30.3'
 }
 ```
 

@@ -85,7 +85,7 @@ public final class CryptoKey extends com.google.api.client.json.GenericJson {
   private CryptoKeyVersion primary;
 
   /**
-   * The immutable purpose of this CryptoKey.
+   * Immutable. The immutable purpose of this CryptoKey.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -231,7 +231,7 @@ public final class CryptoKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The immutable purpose of this CryptoKey.
+   * Immutable. The immutable purpose of this CryptoKey.
    * @return value or {@code null} for none
    */
   public java.lang.String getPurpose() {
@@ -239,7 +239,7 @@ public final class CryptoKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The immutable purpose of this CryptoKey.
+   * Immutable. The immutable purpose of this CryptoKey.
    * @param purpose purpose or {@code null} for none
    */
   public CryptoKey setPurpose(java.lang.String purpose) {

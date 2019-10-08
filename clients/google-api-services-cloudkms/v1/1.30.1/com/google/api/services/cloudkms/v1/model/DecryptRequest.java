@@ -31,7 +31,7 @@ package com.google.api.services.cloudkms.v1.model;
 public final class DecryptRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional data that must match the data originally supplied in
+   * Optional. Optional data that must match the data originally supplied in
    * EncryptRequest.additional_authenticated_data.
    * The value may be {@code null}.
    */
@@ -46,7 +46,7 @@ public final class DecryptRequest extends com.google.api.client.json.GenericJson
   private java.lang.String ciphertext;
 
   /**
-   * Optional data that must match the data originally supplied in
+   * Optional. Optional data that must match the data originally supplied in
    * EncryptRequest.additional_authenticated_data.
    * @see #decodeAdditionalAuthenticatedData()
    * @return value or {@code null} for none
@@ -56,7 +56,7 @@ public final class DecryptRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional data that must match the data originally supplied in
+   * Optional. Optional data that must match the data originally supplied in
    * EncryptRequest.additional_authenticated_data.
    * @see #getAdditionalAuthenticatedData()
    * @return Base64 decoded value or {@code null} for none
@@ -68,7 +68,7 @@ public final class DecryptRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional data that must match the data originally supplied in
+   * Optional. Optional data that must match the data originally supplied in
    * EncryptRequest.additional_authenticated_data.
    * @see #encodeAdditionalAuthenticatedData()
    * @param additionalAuthenticatedData additionalAuthenticatedData or {@code null} for none
@@ -79,7 +79,7 @@ public final class DecryptRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional data that must match the data originally supplied in
+   * Optional. Optional data that must match the data originally supplied in
    * EncryptRequest.additional_authenticated_data.
    * @see #setAdditionalAuthenticatedData()
    *

@@ -44,7 +44,9 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Name of the network in the customer project with which the Tenant Project will be peered for
-   * executing pipelines.
+   * executing pipelines. In case of shared VPC where the network resides in another host project
+   * the network should specified in the form of projects/{host-project-
+   * id}/global/networks/{network}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +73,9 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Name of the network in the customer project with which the Tenant Project will be peered for
-   * executing pipelines.
+   * executing pipelines. In case of shared VPC where the network resides in another host project
+   * the network should specified in the form of projects/{host-project-
+   * id}/global/networks/{network}
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -80,7 +84,9 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Name of the network in the customer project with which the Tenant Project will be peered for
-   * executing pipelines.
+   * executing pipelines. In case of shared VPC where the network resides in another host project
+   * the network should specified in the form of projects/{host-project-
+   * id}/global/networks/{network}
    * @param network network or {@code null} for none
    */
   public NetworkConfig setNetwork(java.lang.String network) {

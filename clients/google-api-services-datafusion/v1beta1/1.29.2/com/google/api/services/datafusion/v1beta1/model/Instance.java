@@ -31,6 +31,20 @@ package com.google.api.services.datafusion.v1beta1.model;
 public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Endpoint on which the REST APIs is accessible.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String apiEndpoint;
+
+  /**
+   * Available versions that the instance can be upgraded to using UpdateInstanceRequest.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Version> availableVersion;
+
+  /**
    * Output only. The time the instance was created.
    * The value may be {@code null}.
    */
@@ -112,7 +126,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String serviceAccount;
 
   /**
-   * Output only. Endpoint on which the Data Fusion UI and REST APIs are accessible.
+   * Output only. Endpoint on which the Data Fusion UI is accessible.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -148,7 +162,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
-   * Output only. Current version of the Data Fusion.
+   * Current version of the Data Fusion. Only specifiable in Update.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -160,6 +174,40 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
+
+  /**
+   * Output only. Endpoint on which the REST APIs is accessible.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getApiEndpoint() {
+    return apiEndpoint;
+  }
+
+  /**
+   * Output only. Endpoint on which the REST APIs is accessible.
+   * @param apiEndpoint apiEndpoint or {@code null} for none
+   */
+  public Instance setApiEndpoint(java.lang.String apiEndpoint) {
+    this.apiEndpoint = apiEndpoint;
+    return this;
+  }
+
+  /**
+   * Available versions that the instance can be upgraded to using UpdateInstanceRequest.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Version> getAvailableVersion() {
+    return availableVersion;
+  }
+
+  /**
+   * Available versions that the instance can be upgraded to using UpdateInstanceRequest.
+   * @param availableVersion availableVersion or {@code null} for none
+   */
+  public Instance setAvailableVersion(java.util.List<Version> availableVersion) {
+    this.availableVersion = availableVersion;
+    return this;
+  }
 
   /**
    * Output only. The time the instance was created.
@@ -357,7 +405,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Endpoint on which the Data Fusion UI and REST APIs are accessible.
+   * Output only. Endpoint on which the Data Fusion UI is accessible.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceEndpoint() {
@@ -365,7 +413,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Endpoint on which the Data Fusion UI and REST APIs are accessible.
+   * Output only. Endpoint on which the Data Fusion UI is accessible.
    * @param serviceEndpoint serviceEndpoint or {@code null} for none
    */
   public Instance setServiceEndpoint(java.lang.String serviceEndpoint) {
@@ -444,7 +492,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Current version of the Data Fusion.
+   * Current version of the Data Fusion. Only specifiable in Update.
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -452,7 +500,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Current version of the Data Fusion.
+   * Current version of the Data Fusion. Only specifiable in Update.
    * @param version version or {@code null} for none
    */
   public Instance setVersion(java.lang.String version) {

@@ -1235,7 +1235,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * This request holds the parameters needed by the logging server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. To be deprecated in Logging Data Model V2.
+       * @param parent Required. The resource name that owns the logs:
+      "projects/[PROJECT_ID]"
+       *        "organizations/[ORGANIZATION_ID]"
+      "billingAccounts/[BILLING_ACCOUNT_ID]"
+       *        "folders/[FOLDER_ID]"
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -1262,7 +1266,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. To be deprecated in Logging Data Model V2.
+         * @param parent Required. The resource name that owns the logs:
+      "projects/[PROJECT_ID]"
+       *        "organizations/[ORGANIZATION_ID]"
+      "billingAccounts/[BILLING_ACCOUNT_ID]"
+       *        "folders/[FOLDER_ID]"
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -1340,17 +1348,26 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. To be deprecated in Logging Data Model V2. */
+        /**
+         * Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
+         * "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]"
+         * "folders/[FOLDER_ID]"
+         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. To be deprecated in Logging Data Model V2.
+        /** Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
+       "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]" "folders/[FOLDER_ID]"
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** Required. To be deprecated in Logging Data Model V2. */
+        /**
+         * Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
+         * "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]"
+         * "folders/[FOLDER_ID]"
+         */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1410,31 +1427,6 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
-          return this;
-        }
-
-        /**
-         * Required for Logging Data Model V2. The resource name that owns the logs:
-         * "projects/PROJECT_ID"  "organizations/ORGANIZATION_ID"
-         * "billingAccounts/BILLING_ACCOUNT_ID"  "folders/FOLDER_ID"
-         */
-        @com.google.api.client.util.Key
-        private java.util.List<java.lang.String> resourceNames;
-
-        /** Required for Logging Data Model V2. The resource name that owns the logs:  "projects/PROJECT_ID"
-       "organizations/ORGANIZATION_ID"  "billingAccounts/BILLING_ACCOUNT_ID"  "folders/FOLDER_ID"
-         */
-        public java.util.List<java.lang.String> getResourceNames() {
-          return resourceNames;
-        }
-
-        /**
-         * Required for Logging Data Model V2. The resource name that owns the logs:
-         * "projects/PROJECT_ID"  "organizations/ORGANIZATION_ID"
-         * "billingAccounts/BILLING_ACCOUNT_ID"  "folders/FOLDER_ID"
-         */
-        public List setResourceNames(java.util.List<java.lang.String> resourceNames) {
-          this.resourceNames = resourceNames;
           return this;
         }
 
@@ -4910,7 +4902,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * This request holds the parameters needed by the logging server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. To be deprecated in Logging Data Model V2.
+       * @param parent Required. The resource name that owns the logs:
+      "projects/[PROJECT_ID]"
+       *        "organizations/[ORGANIZATION_ID]"
+      "billingAccounts/[BILLING_ACCOUNT_ID]"
+       *        "folders/[FOLDER_ID]"
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -4937,7 +4933,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. To be deprecated in Logging Data Model V2.
+         * @param parent Required. The resource name that owns the logs:
+      "projects/[PROJECT_ID]"
+       *        "organizations/[ORGANIZATION_ID]"
+      "billingAccounts/[BILLING_ACCOUNT_ID]"
+       *        "folders/[FOLDER_ID]"
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -5015,17 +5015,26 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. To be deprecated in Logging Data Model V2. */
+        /**
+         * Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
+         * "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]"
+         * "folders/[FOLDER_ID]"
+         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. To be deprecated in Logging Data Model V2.
+        /** Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
+       "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]" "folders/[FOLDER_ID]"
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** Required. To be deprecated in Logging Data Model V2. */
+        /**
+         * Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
+         * "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]"
+         * "folders/[FOLDER_ID]"
+         */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -5085,31 +5094,6 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
-          return this;
-        }
-
-        /**
-         * Required for Logging Data Model V2. The resource name that owns the logs:
-         * "projects/PROJECT_ID"  "organizations/ORGANIZATION_ID"
-         * "billingAccounts/BILLING_ACCOUNT_ID"  "folders/FOLDER_ID"
-         */
-        @com.google.api.client.util.Key
-        private java.util.List<java.lang.String> resourceNames;
-
-        /** Required for Logging Data Model V2. The resource name that owns the logs:  "projects/PROJECT_ID"
-       "organizations/ORGANIZATION_ID"  "billingAccounts/BILLING_ACCOUNT_ID"  "folders/FOLDER_ID"
-         */
-        public java.util.List<java.lang.String> getResourceNames() {
-          return resourceNames;
-        }
-
-        /**
-         * Required for Logging Data Model V2. The resource name that owns the logs:
-         * "projects/PROJECT_ID"  "organizations/ORGANIZATION_ID"
-         * "billingAccounts/BILLING_ACCOUNT_ID"  "folders/FOLDER_ID"
-         */
-        public List setResourceNames(java.util.List<java.lang.String> resourceNames) {
-          this.resourceNames = resourceNames;
           return this;
         }
 
@@ -6534,7 +6518,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      * This request holds the parameters needed by the logging server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. To be deprecated in Logging Data Model V2.
+     * @param parent Required. The resource name that owns the logs:
+    "projects/[PROJECT_ID]"
+     *        "organizations/[ORGANIZATION_ID]"
+    "billingAccounts/[BILLING_ACCOUNT_ID]"
+     *        "folders/[FOLDER_ID]"
      * @return the request
      */
     public List list(java.lang.String parent) throws java.io.IOException {
@@ -6561,7 +6549,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Required. To be deprecated in Logging Data Model V2.
+       * @param parent Required. The resource name that owns the logs:
+    "projects/[PROJECT_ID]"
+     *        "organizations/[ORGANIZATION_ID]"
+    "billingAccounts/[BILLING_ACCOUNT_ID]"
+     *        "folders/[FOLDER_ID]"
        * @since 1.13
        */
       protected List(java.lang.String parent) {
@@ -6639,17 +6631,26 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. To be deprecated in Logging Data Model V2. */
+      /**
+       * Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
+       * "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]"
+       * "folders/[FOLDER_ID]"
+       */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Required. To be deprecated in Logging Data Model V2.
+      /** Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
+     "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]" "folders/[FOLDER_ID]"
        */
       public java.lang.String getParent() {
         return parent;
       }
 
-      /** Required. To be deprecated in Logging Data Model V2. */
+      /**
+       * Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
+       * "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]"
+       * "folders/[FOLDER_ID]"
+       */
       public List setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -6709,31 +6710,6 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
-        return this;
-      }
-
-      /**
-       * Required for Logging Data Model V2. The resource name that owns the logs:
-       * "projects/PROJECT_ID"  "organizations/ORGANIZATION_ID"
-       * "billingAccounts/BILLING_ACCOUNT_ID"  "folders/FOLDER_ID"
-       */
-      @com.google.api.client.util.Key
-      private java.util.List<java.lang.String> resourceNames;
-
-      /** Required for Logging Data Model V2. The resource name that owns the logs:  "projects/PROJECT_ID"
-     "organizations/ORGANIZATION_ID"  "billingAccounts/BILLING_ACCOUNT_ID"  "folders/FOLDER_ID"
-       */
-      public java.util.List<java.lang.String> getResourceNames() {
-        return resourceNames;
-      }
-
-      /**
-       * Required for Logging Data Model V2. The resource name that owns the logs:
-       * "projects/PROJECT_ID"  "organizations/ORGANIZATION_ID"
-       * "billingAccounts/BILLING_ACCOUNT_ID"  "folders/FOLDER_ID"
-       */
-      public List setResourceNames(java.util.List<java.lang.String> resourceNames) {
-        this.resourceNames = resourceNames;
         return this;
       }
 
@@ -8039,7 +8015,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * This request holds the parameters needed by the logging server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. To be deprecated in Logging Data Model V2.
+       * @param parent Required. The resource name that owns the logs:
+      "projects/[PROJECT_ID]"
+       *        "organizations/[ORGANIZATION_ID]"
+      "billingAccounts/[BILLING_ACCOUNT_ID]"
+       *        "folders/[FOLDER_ID]"
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -8066,7 +8046,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. To be deprecated in Logging Data Model V2.
+         * @param parent Required. The resource name that owns the logs:
+      "projects/[PROJECT_ID]"
+       *        "organizations/[ORGANIZATION_ID]"
+      "billingAccounts/[BILLING_ACCOUNT_ID]"
+       *        "folders/[FOLDER_ID]"
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -8144,17 +8128,26 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. To be deprecated in Logging Data Model V2. */
+        /**
+         * Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
+         * "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]"
+         * "folders/[FOLDER_ID]"
+         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. To be deprecated in Logging Data Model V2.
+        /** Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
+       "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]" "folders/[FOLDER_ID]"
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** Required. To be deprecated in Logging Data Model V2. */
+        /**
+         * Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
+         * "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]"
+         * "folders/[FOLDER_ID]"
+         */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -8214,31 +8207,6 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
-          return this;
-        }
-
-        /**
-         * Required for Logging Data Model V2. The resource name that owns the logs:
-         * "projects/PROJECT_ID"  "organizations/ORGANIZATION_ID"
-         * "billingAccounts/BILLING_ACCOUNT_ID"  "folders/FOLDER_ID"
-         */
-        @com.google.api.client.util.Key
-        private java.util.List<java.lang.String> resourceNames;
-
-        /** Required for Logging Data Model V2. The resource name that owns the logs:  "projects/PROJECT_ID"
-       "organizations/ORGANIZATION_ID"  "billingAccounts/BILLING_ACCOUNT_ID"  "folders/FOLDER_ID"
-         */
-        public java.util.List<java.lang.String> getResourceNames() {
-          return resourceNames;
-        }
-
-        /**
-         * Required for Logging Data Model V2. The resource name that owns the logs:
-         * "projects/PROJECT_ID"  "organizations/ORGANIZATION_ID"
-         * "billingAccounts/BILLING_ACCOUNT_ID"  "folders/FOLDER_ID"
-         */
-        public List setResourceNames(java.util.List<java.lang.String> resourceNames) {
-          this.resourceNames = resourceNames;
           return this;
         }
 
@@ -10584,7 +10552,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * This request holds the parameters needed by the logging server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. To be deprecated in Logging Data Model V2.
+       * @param parent Required. The resource name that owns the logs:
+      "projects/[PROJECT_ID]"
+       *        "organizations/[ORGANIZATION_ID]"
+      "billingAccounts/[BILLING_ACCOUNT_ID]"
+       *        "folders/[FOLDER_ID]"
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -10611,7 +10583,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. To be deprecated in Logging Data Model V2.
+         * @param parent Required. The resource name that owns the logs:
+      "projects/[PROJECT_ID]"
+       *        "organizations/[ORGANIZATION_ID]"
+      "billingAccounts/[BILLING_ACCOUNT_ID]"
+       *        "folders/[FOLDER_ID]"
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -10689,17 +10665,26 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. To be deprecated in Logging Data Model V2. */
+        /**
+         * Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
+         * "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]"
+         * "folders/[FOLDER_ID]"
+         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. To be deprecated in Logging Data Model V2.
+        /** Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
+       "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]" "folders/[FOLDER_ID]"
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** Required. To be deprecated in Logging Data Model V2. */
+        /**
+         * Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
+         * "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]"
+         * "folders/[FOLDER_ID]"
+         */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -10759,31 +10744,6 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
-          return this;
-        }
-
-        /**
-         * Required for Logging Data Model V2. The resource name that owns the logs:
-         * "projects/PROJECT_ID"  "organizations/ORGANIZATION_ID"
-         * "billingAccounts/BILLING_ACCOUNT_ID"  "folders/FOLDER_ID"
-         */
-        @com.google.api.client.util.Key
-        private java.util.List<java.lang.String> resourceNames;
-
-        /** Required for Logging Data Model V2. The resource name that owns the logs:  "projects/PROJECT_ID"
-       "organizations/ORGANIZATION_ID"  "billingAccounts/BILLING_ACCOUNT_ID"  "folders/FOLDER_ID"
-         */
-        public java.util.List<java.lang.String> getResourceNames() {
-          return resourceNames;
-        }
-
-        /**
-         * Required for Logging Data Model V2. The resource name that owns the logs:
-         * "projects/PROJECT_ID"  "organizations/ORGANIZATION_ID"
-         * "billingAccounts/BILLING_ACCOUNT_ID"  "folders/FOLDER_ID"
-         */
-        public List setResourceNames(java.util.List<java.lang.String> resourceNames) {
-          this.resourceNames = resourceNames;
           return this;
         }
 

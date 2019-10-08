@@ -17,7 +17,8 @@
 package com.google.api.services.ml.v1.model;
 
 /**
- * Represents a hardware accelerator request config.
+ * Represents a hardware accelerator request config. Note that the AcceleratorConfig could be used
+ * in both Jobs and Versions.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Machine Learning Engine. For a detailed

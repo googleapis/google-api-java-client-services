@@ -135,6 +135,25 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   private java.util.List<WorkerPool> workerPools;
 
   /**
+   * The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones/regions-zones)
+   * in which worker processing should occur, e.g. "us-west1". Mutually exclusive with worker_zone.
+   * If neither worker_region nor worker_zone is specified, default to the control plane's region.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String workerRegion;
+
+  /**
+   * The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in
+   * which worker processing should occur, e.g. "us-west1-a". Mutually exclusive with worker_region.
+   * If neither worker_region nor worker_zone is specified, a zone in the control plane's region is
+   * chosen based on available capacity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String workerZone;
+
+  /**
    * The type of cluster manager API to use.  If unknown or unspecified, the service will attempt to
    * choose a reasonable default.  This should be in the form of the API service name, e.g.
    * "compute.googleapis.com".
@@ -377,6 +396,50 @@ public final class Environment extends com.google.api.client.json.GenericJson {
    */
   public Environment setWorkerPools(java.util.List<WorkerPool> workerPools) {
     this.workerPools = workerPools;
+    return this;
+  }
+
+  /**
+   * The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones/regions-zones)
+   * in which worker processing should occur, e.g. "us-west1". Mutually exclusive with worker_zone.
+   * If neither worker_region nor worker_zone is specified, default to the control plane's region.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWorkerRegion() {
+    return workerRegion;
+  }
+
+  /**
+   * The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones/regions-zones)
+   * in which worker processing should occur, e.g. "us-west1". Mutually exclusive with worker_zone.
+   * If neither worker_region nor worker_zone is specified, default to the control plane's region.
+   * @param workerRegion workerRegion or {@code null} for none
+   */
+  public Environment setWorkerRegion(java.lang.String workerRegion) {
+    this.workerRegion = workerRegion;
+    return this;
+  }
+
+  /**
+   * The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in
+   * which worker processing should occur, e.g. "us-west1-a". Mutually exclusive with worker_region.
+   * If neither worker_region nor worker_zone is specified, a zone in the control plane's region is
+   * chosen based on available capacity.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWorkerZone() {
+    return workerZone;
+  }
+
+  /**
+   * The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in
+   * which worker processing should occur, e.g. "us-west1-a". Mutually exclusive with worker_region.
+   * If neither worker_region nor worker_zone is specified, a zone in the control plane's region is
+   * chosen based on available capacity.
+   * @param workerZone workerZone or {@code null} for none
+   */
+  public Environment setWorkerZone(java.lang.String workerZone) {
+    this.workerZone = workerZone;
     return this;
   }
 

@@ -1,7 +1,0 @@
-{
-  "maven": {
-    "groupId": "com.google.apis",
-    "artifactId": "google-api-services-healthcare",
-    "version": "v1alpha2-rev20190901-1.30.1"
-  }
-}

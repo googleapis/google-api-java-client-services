@@ -58,6 +58,13 @@ public final class PosixAccount extends com.google.api.client.json.GenericJson {
   private java.lang.String homeDirectory;
 
   /**
+   * Output only. The canonical resource name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
+
+  /**
    * The operating system type where this account applies.
    * The value may be {@code null}.
    */
@@ -165,6 +172,23 @@ public final class PosixAccount extends com.google.api.client.json.GenericJson {
    */
   public PosixAccount setHomeDirectory(java.lang.String homeDirectory) {
     this.homeDirectory = homeDirectory;
+    return this;
+  }
+
+  /**
+   * Output only. The canonical resource name.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * Output only. The canonical resource name.
+   * @param name name or {@code null} for none
+   */
+  public PosixAccount setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 

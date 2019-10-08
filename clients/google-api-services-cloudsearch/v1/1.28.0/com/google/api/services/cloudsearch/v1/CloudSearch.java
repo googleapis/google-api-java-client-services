@@ -1747,7 +1747,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       public class Items {
 
         /**
-         * Deletes Item resource for the specified resource name.
+         * Deletes Item resource for the specified resource name. This API requires an admin or service
+         * account to execute. The service account used is the one whitelisted in the corresponding data
+         * source.
          *
          * Create a request for the method "items.delete".
          *
@@ -1772,7 +1774,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
               java.util.regex.Pattern.compile("^datasources/[^/]+/items/[^/]+$");
 
           /**
-           * Deletes Item resource for the specified resource name.
+           * Deletes Item resource for the specified resource name. This API requires an admin or service
+           * account to execute. The service account used is the one whitelisted in the corresponding data
+           * source.
            *
            * Create a request for the method "items.delete".
            *
@@ -1979,6 +1983,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         /**
          * Deletes all items in a queue. This method is useful for deleting stale items.
          *
+         * This API requires an admin or service account to execute. The service account used is the one
+         * whitelisted in the corresponding data source.
+         *
          * Create a request for the method "items.deleteQueueItems".
          *
          * This request holds the parameters needed by the cloudsearch server.  After setting any optional
@@ -2004,6 +2011,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
           /**
            * Deletes all items in a queue. This method is useful for deleting stale items.
+           *
+           * This API requires an admin or service account to execute. The service account used is the one
+           * whitelisted in the corresponding data source.
            *
            * Create a request for the method "items.deleteQueueItems".
            *
@@ -2116,6 +2126,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         /**
          * Gets Item resource by item name.
          *
+         * This API requires an admin or service account to execute.  The service account used is the one
+         * whitelisted in the corresponding data source.
+         *
          * Create a request for the method "items.get".
          *
          * This request holds the parameters needed by the cloudsearch server.  After setting any optional
@@ -2140,6 +2153,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
           /**
            * Gets Item resource by item name.
+           *
+           * This API requires an admin or service account to execute.  The service account used is the one
+           * whitelisted in the corresponding data source.
            *
            * Create a request for the method "items.get".
            *
@@ -2304,6 +2320,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * method does not support partial updates.  Fields with no provided values are cleared out in the
          * Cloud Search index.
          *
+         * This API requires an admin or service account to execute. The service account used is the one
+         * whitelisted in the corresponding data source.
+         *
          * Create a request for the method "items.index".
          *
          * This request holds the parameters needed by the cloudsearch server.  After setting any optional
@@ -2334,6 +2353,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
            * Updates Item ACL, metadata, and content. It will insert the Item if it does not exist. This
            * method does not support partial updates.  Fields with no provided values are cleared out in the
            * Cloud Search index.
+           *
+           * This API requires an admin or service account to execute. The service account used is the one
+           * whitelisted in the corresponding data source.
            *
            * Create a request for the method "items.index".
            *
@@ -2452,6 +2474,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         /**
          * Lists all or a subset of Item resources.
          *
+         * This API requires an admin or service account to execute. The service account used is the one
+         * whitelisted in the corresponding data source.
+         *
          * Create a request for the method "items.list".
          *
          * This request holds the parameters needed by the cloudsearch server.  After setting any optional
@@ -2476,6 +2501,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
           /**
            * Lists all or a subset of Item resources.
+           *
+           * This API requires an admin or service account to execute. The service account used is the one
+           * whitelisted in the corresponding data source.
            *
            * Create a request for the method "items.list".
            *
@@ -2590,15 +2618,21 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
           /**
            * When set to true, the indexing system only populates the following fields: name,
-           * version, metadata.hash, structured_data.hash, content.hash. If this value is false,
-           * then all the fields are populated in Item.
+           * version, queue. metadata.hash, metadata.title, metadata.sourceRepositoryURL,
+           * metadata.objectType, metadata.createTime, metadata.updateTime,
+           * metadata.contentLanguage, metadata.mimeType, structured_data.hash, content.hash,
+           * itemType, itemStatus.code, itemStatus.processingError.code,
+           * itemStatus.repositoryError.type, If this value is false, then all the fields are
+           * populated in Item.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean brief;
 
-          /** When set to true, the indexing system only populates the following fields: name, version,
-         metadata.hash, structured_data.hash, content.hash. If this value is false, then all the fields are
-         populated in Item.
+          /** When set to true, the indexing system only populates the following fields: name, version, queue.
+         metadata.hash, metadata.title, metadata.sourceRepositoryURL, metadata.objectType,
+         metadata.createTime, metadata.updateTime, metadata.contentLanguage, metadata.mimeType,
+         structured_data.hash, content.hash, itemType, itemStatus.code, itemStatus.processingError.code,
+         itemStatus.repositoryError.type, If this value is false, then all the fields are populated in Item.
            */
           public java.lang.Boolean getBrief() {
             return brief;
@@ -2606,8 +2640,12 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
           /**
            * When set to true, the indexing system only populates the following fields: name,
-           * version, metadata.hash, structured_data.hash, content.hash. If this value is false,
-           * then all the fields are populated in Item.
+           * version, queue. metadata.hash, metadata.title, metadata.sourceRepositoryURL,
+           * metadata.objectType, metadata.createTime, metadata.updateTime,
+           * metadata.contentLanguage, metadata.mimeType, structured_data.hash, content.hash,
+           * itemType, itemStatus.code, itemStatus.processingError.code,
+           * itemStatus.repositoryError.type, If this value is false, then all the fields are
+           * populated in Item.
            */
           public List setBrief(java.lang.Boolean brief) {
             this.brief = brief;
@@ -2719,6 +2757,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * Items automatically become available (unreserved) after 4 hours even if no update or push method
          * is called.
          *
+         * This API requires an admin or service account to execute. The service account used is the one
+         * whitelisted in the corresponding data source.
+         *
          * Create a request for the method "items.poll".
          *
          * This request holds the parameters needed by the cloudsearch server.  After setting any optional
@@ -2760,6 +2801,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
            *
            * Items automatically become available (unreserved) after 4 hours even if no update or push
            * method is called.
+           *
+           * This API requires an admin or service account to execute. The service account used is the one
+           * whitelisted in the corresponding data source.
            *
            * Create a request for the method "items.poll".
            *
@@ -2871,6 +2915,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         /**
          * Pushes an item onto a queue for later polling and updating.
          *
+         * This API requires an admin or service account to execute. The service account used is the one
+         * whitelisted in the corresponding data source.
+         *
          * Create a request for the method "items.push".
          *
          * This request holds the parameters needed by the cloudsearch server.  After setting any optional
@@ -2900,6 +2947,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
           /**
            * Pushes an item onto a queue for later polling and updating.
+           *
+           * This API requires an admin or service account to execute. The service account used is the one
+           * whitelisted in the corresponding data source.
            *
            * Create a request for the method "items.push".
            *
@@ -3021,6 +3071,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * Unreserves all items from a queue, making them all eligible to be polled.  This method is useful
          * for resetting the indexing queue after a connector has been restarted.
          *
+         * This API requires an admin or service account to execute. The service account used is the one
+         * whitelisted in the corresponding data source.
+         *
          * Create a request for the method "items.unreserve".
          *
          * This request holds the parameters needed by the cloudsearch server.  After setting any optional
@@ -3047,6 +3100,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           /**
            * Unreserves all items from a queue, making them all eligible to be polled.  This method is
            * useful for resetting the indexing queue after a connector has been restarted.
+           *
+           * This API requires an admin or service account to execute. The service account used is the one
+           * whitelisted in the corresponding data source.
            *
            * Create a request for the method "items.unreserve".
            *
@@ -3160,6 +3216,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * Creates an upload session for uploading item content. For items smaller than 100 KB, it's easier
          * to embed the content inline within an index request.
          *
+         * This API requires an admin or service account to execute. The service account used is the one
+         * whitelisted in the corresponding data source.
+         *
          * Create a request for the method "items.upload".
          *
          * This request holds the parameters needed by the cloudsearch server.  After setting any optional
@@ -3186,6 +3245,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           /**
            * Creates an upload session for uploading item content. For items smaller than 100 KB, it's
            * easier to embed the content inline within an index request.
+           *
+           * This API requires an admin or service account to execute. The service account used is the one
+           * whitelisted in the corresponding data source.
            *
            * Create a request for the method "items.upload".
            *
@@ -6094,6 +6156,615 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         return (GetIndex) super.set(parameterName, value);
       }
     }
+    /**
+     * Get the query statistics for customer
+     *
+     * Create a request for the method "stats.getQuery".
+     *
+     * This request holds the parameters needed by the cloudsearch server.  After setting any optional
+     * parameters, call the {@link GetQuery#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public GetQuery getQuery() throws java.io.IOException {
+      GetQuery result = new GetQuery();
+      initialize(result);
+      return result;
+    }
+
+    public class GetQuery extends CloudSearchRequest<com.google.api.services.cloudsearch.v1.model.GetCustomerQueryStatsResponse> {
+
+      private static final String REST_PATH = "v1/stats/query";
+
+      /**
+       * Get the query statistics for customer
+       *
+       * Create a request for the method "stats.getQuery".
+       *
+       * This request holds the parameters needed by the the cloudsearch server.  After setting any
+       * optional parameters, call the {@link GetQuery#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * GetQuery#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected GetQuery() {
+        super(CloudSearch.this, "GET", REST_PATH, null, com.google.api.services.cloudsearch.v1.model.GetCustomerQueryStatsResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetQuery set$Xgafv(java.lang.String $Xgafv) {
+        return (GetQuery) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetQuery setAccessToken(java.lang.String accessToken) {
+        return (GetQuery) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetQuery setAlt(java.lang.String alt) {
+        return (GetQuery) super.setAlt(alt);
+      }
+
+      @Override
+      public GetQuery setCallback(java.lang.String callback) {
+        return (GetQuery) super.setCallback(callback);
+      }
+
+      @Override
+      public GetQuery setFields(java.lang.String fields) {
+        return (GetQuery) super.setFields(fields);
+      }
+
+      @Override
+      public GetQuery setKey(java.lang.String key) {
+        return (GetQuery) super.setKey(key);
+      }
+
+      @Override
+      public GetQuery setOauthToken(java.lang.String oauthToken) {
+        return (GetQuery) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetQuery setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetQuery) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetQuery setQuotaUser(java.lang.String quotaUser) {
+        return (GetQuery) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetQuery setUploadType(java.lang.String uploadType) {
+        return (GetQuery) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetQuery setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetQuery) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Day of month. Must be from 1 to 31 and valid for the year and month. */
+      @com.google.api.client.util.Key("fromDate.day")
+      private java.lang.Integer fromDateDay;
+
+      /** Day of month. Must be from 1 to 31 and valid for the year and month.
+       */
+      public java.lang.Integer getFromDateDay() {
+        return fromDateDay;
+      }
+
+      /** Day of month. Must be from 1 to 31 and valid for the year and month. */
+      public GetQuery setFromDateDay(java.lang.Integer fromDateDay) {
+        this.fromDateDay = fromDateDay;
+        return this;
+      }
+
+      /** Month of date. Must be from 1 to 12. */
+      @com.google.api.client.util.Key("fromDate.month")
+      private java.lang.Integer fromDateMonth;
+
+      /** Month of date. Must be from 1 to 12.
+       */
+      public java.lang.Integer getFromDateMonth() {
+        return fromDateMonth;
+      }
+
+      /** Month of date. Must be from 1 to 12. */
+      public GetQuery setFromDateMonth(java.lang.Integer fromDateMonth) {
+        this.fromDateMonth = fromDateMonth;
+        return this;
+      }
+
+      /** Year of date. Must be from 1 to 9999. */
+      @com.google.api.client.util.Key("fromDate.year")
+      private java.lang.Integer fromDateYear;
+
+      /** Year of date. Must be from 1 to 9999.
+       */
+      public java.lang.Integer getFromDateYear() {
+        return fromDateYear;
+      }
+
+      /** Year of date. Must be from 1 to 9999. */
+      public GetQuery setFromDateYear(java.lang.Integer fromDateYear) {
+        this.fromDateYear = fromDateYear;
+        return this;
+      }
+
+      /** Day of month. Must be from 1 to 31 and valid for the year and month. */
+      @com.google.api.client.util.Key("toDate.day")
+      private java.lang.Integer toDateDay;
+
+      /** Day of month. Must be from 1 to 31 and valid for the year and month.
+       */
+      public java.lang.Integer getToDateDay() {
+        return toDateDay;
+      }
+
+      /** Day of month. Must be from 1 to 31 and valid for the year and month. */
+      public GetQuery setToDateDay(java.lang.Integer toDateDay) {
+        this.toDateDay = toDateDay;
+        return this;
+      }
+
+      /** Month of date. Must be from 1 to 12. */
+      @com.google.api.client.util.Key("toDate.month")
+      private java.lang.Integer toDateMonth;
+
+      /** Month of date. Must be from 1 to 12.
+       */
+      public java.lang.Integer getToDateMonth() {
+        return toDateMonth;
+      }
+
+      /** Month of date. Must be from 1 to 12. */
+      public GetQuery setToDateMonth(java.lang.Integer toDateMonth) {
+        this.toDateMonth = toDateMonth;
+        return this;
+      }
+
+      /** Year of date. Must be from 1 to 9999. */
+      @com.google.api.client.util.Key("toDate.year")
+      private java.lang.Integer toDateYear;
+
+      /** Year of date. Must be from 1 to 9999.
+       */
+      public java.lang.Integer getToDateYear() {
+        return toDateYear;
+      }
+
+      /** Year of date. Must be from 1 to 9999. */
+      public GetQuery setToDateYear(java.lang.Integer toDateYear) {
+        this.toDateYear = toDateYear;
+        return this;
+      }
+
+      @Override
+      public GetQuery set(String parameterName, Object value) {
+        return (GetQuery) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Get the # of search sessions for the customer
+     *
+     * Create a request for the method "stats.getSession".
+     *
+     * This request holds the parameters needed by the cloudsearch server.  After setting any optional
+     * parameters, call the {@link GetSession#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public GetSession getSession() throws java.io.IOException {
+      GetSession result = new GetSession();
+      initialize(result);
+      return result;
+    }
+
+    public class GetSession extends CloudSearchRequest<com.google.api.services.cloudsearch.v1.model.GetCustomerSessionStatsResponse> {
+
+      private static final String REST_PATH = "v1/stats/session";
+
+      /**
+       * Get the # of search sessions for the customer
+       *
+       * Create a request for the method "stats.getSession".
+       *
+       * This request holds the parameters needed by the the cloudsearch server.  After setting any
+       * optional parameters, call the {@link GetSession#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * GetSession#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected GetSession() {
+        super(CloudSearch.this, "GET", REST_PATH, null, com.google.api.services.cloudsearch.v1.model.GetCustomerSessionStatsResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetSession set$Xgafv(java.lang.String $Xgafv) {
+        return (GetSession) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetSession setAccessToken(java.lang.String accessToken) {
+        return (GetSession) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetSession setAlt(java.lang.String alt) {
+        return (GetSession) super.setAlt(alt);
+      }
+
+      @Override
+      public GetSession setCallback(java.lang.String callback) {
+        return (GetSession) super.setCallback(callback);
+      }
+
+      @Override
+      public GetSession setFields(java.lang.String fields) {
+        return (GetSession) super.setFields(fields);
+      }
+
+      @Override
+      public GetSession setKey(java.lang.String key) {
+        return (GetSession) super.setKey(key);
+      }
+
+      @Override
+      public GetSession setOauthToken(java.lang.String oauthToken) {
+        return (GetSession) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetSession setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetSession) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetSession setQuotaUser(java.lang.String quotaUser) {
+        return (GetSession) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetSession setUploadType(java.lang.String uploadType) {
+        return (GetSession) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetSession setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetSession) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Day of month. Must be from 1 to 31 and valid for the year and month. */
+      @com.google.api.client.util.Key("fromDate.day")
+      private java.lang.Integer fromDateDay;
+
+      /** Day of month. Must be from 1 to 31 and valid for the year and month.
+       */
+      public java.lang.Integer getFromDateDay() {
+        return fromDateDay;
+      }
+
+      /** Day of month. Must be from 1 to 31 and valid for the year and month. */
+      public GetSession setFromDateDay(java.lang.Integer fromDateDay) {
+        this.fromDateDay = fromDateDay;
+        return this;
+      }
+
+      /** Month of date. Must be from 1 to 12. */
+      @com.google.api.client.util.Key("fromDate.month")
+      private java.lang.Integer fromDateMonth;
+
+      /** Month of date. Must be from 1 to 12.
+       */
+      public java.lang.Integer getFromDateMonth() {
+        return fromDateMonth;
+      }
+
+      /** Month of date. Must be from 1 to 12. */
+      public GetSession setFromDateMonth(java.lang.Integer fromDateMonth) {
+        this.fromDateMonth = fromDateMonth;
+        return this;
+      }
+
+      /** Year of date. Must be from 1 to 9999. */
+      @com.google.api.client.util.Key("fromDate.year")
+      private java.lang.Integer fromDateYear;
+
+      /** Year of date. Must be from 1 to 9999.
+       */
+      public java.lang.Integer getFromDateYear() {
+        return fromDateYear;
+      }
+
+      /** Year of date. Must be from 1 to 9999. */
+      public GetSession setFromDateYear(java.lang.Integer fromDateYear) {
+        this.fromDateYear = fromDateYear;
+        return this;
+      }
+
+      /** Day of month. Must be from 1 to 31 and valid for the year and month. */
+      @com.google.api.client.util.Key("toDate.day")
+      private java.lang.Integer toDateDay;
+
+      /** Day of month. Must be from 1 to 31 and valid for the year and month.
+       */
+      public java.lang.Integer getToDateDay() {
+        return toDateDay;
+      }
+
+      /** Day of month. Must be from 1 to 31 and valid for the year and month. */
+      public GetSession setToDateDay(java.lang.Integer toDateDay) {
+        this.toDateDay = toDateDay;
+        return this;
+      }
+
+      /** Month of date. Must be from 1 to 12. */
+      @com.google.api.client.util.Key("toDate.month")
+      private java.lang.Integer toDateMonth;
+
+      /** Month of date. Must be from 1 to 12.
+       */
+      public java.lang.Integer getToDateMonth() {
+        return toDateMonth;
+      }
+
+      /** Month of date. Must be from 1 to 12. */
+      public GetSession setToDateMonth(java.lang.Integer toDateMonth) {
+        this.toDateMonth = toDateMonth;
+        return this;
+      }
+
+      /** Year of date. Must be from 1 to 9999. */
+      @com.google.api.client.util.Key("toDate.year")
+      private java.lang.Integer toDateYear;
+
+      /** Year of date. Must be from 1 to 9999.
+       */
+      public java.lang.Integer getToDateYear() {
+        return toDateYear;
+      }
+
+      /** Year of date. Must be from 1 to 9999. */
+      public GetSession setToDateYear(java.lang.Integer toDateYear) {
+        this.toDateYear = toDateYear;
+        return this;
+      }
+
+      @Override
+      public GetSession set(String parameterName, Object value) {
+        return (GetSession) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Get the users statistics for customer
+     *
+     * Create a request for the method "stats.getUser".
+     *
+     * This request holds the parameters needed by the cloudsearch server.  After setting any optional
+     * parameters, call the {@link GetUser#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public GetUser getUser() throws java.io.IOException {
+      GetUser result = new GetUser();
+      initialize(result);
+      return result;
+    }
+
+    public class GetUser extends CloudSearchRequest<com.google.api.services.cloudsearch.v1.model.GetCustomerUserStatsResponse> {
+
+      private static final String REST_PATH = "v1/stats/user";
+
+      /**
+       * Get the users statistics for customer
+       *
+       * Create a request for the method "stats.getUser".
+       *
+       * This request holds the parameters needed by the the cloudsearch server.  After setting any
+       * optional parameters, call the {@link GetUser#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * GetUser#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected GetUser() {
+        super(CloudSearch.this, "GET", REST_PATH, null, com.google.api.services.cloudsearch.v1.model.GetCustomerUserStatsResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetUser set$Xgafv(java.lang.String $Xgafv) {
+        return (GetUser) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetUser setAccessToken(java.lang.String accessToken) {
+        return (GetUser) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetUser setAlt(java.lang.String alt) {
+        return (GetUser) super.setAlt(alt);
+      }
+
+      @Override
+      public GetUser setCallback(java.lang.String callback) {
+        return (GetUser) super.setCallback(callback);
+      }
+
+      @Override
+      public GetUser setFields(java.lang.String fields) {
+        return (GetUser) super.setFields(fields);
+      }
+
+      @Override
+      public GetUser setKey(java.lang.String key) {
+        return (GetUser) super.setKey(key);
+      }
+
+      @Override
+      public GetUser setOauthToken(java.lang.String oauthToken) {
+        return (GetUser) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetUser setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetUser) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetUser setQuotaUser(java.lang.String quotaUser) {
+        return (GetUser) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetUser setUploadType(java.lang.String uploadType) {
+        return (GetUser) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetUser setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetUser) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Day of month. Must be from 1 to 31 and valid for the year and month. */
+      @com.google.api.client.util.Key("fromDate.day")
+      private java.lang.Integer fromDateDay;
+
+      /** Day of month. Must be from 1 to 31 and valid for the year and month.
+       */
+      public java.lang.Integer getFromDateDay() {
+        return fromDateDay;
+      }
+
+      /** Day of month. Must be from 1 to 31 and valid for the year and month. */
+      public GetUser setFromDateDay(java.lang.Integer fromDateDay) {
+        this.fromDateDay = fromDateDay;
+        return this;
+      }
+
+      /** Month of date. Must be from 1 to 12. */
+      @com.google.api.client.util.Key("fromDate.month")
+      private java.lang.Integer fromDateMonth;
+
+      /** Month of date. Must be from 1 to 12.
+       */
+      public java.lang.Integer getFromDateMonth() {
+        return fromDateMonth;
+      }
+
+      /** Month of date. Must be from 1 to 12. */
+      public GetUser setFromDateMonth(java.lang.Integer fromDateMonth) {
+        this.fromDateMonth = fromDateMonth;
+        return this;
+      }
+
+      /** Year of date. Must be from 1 to 9999. */
+      @com.google.api.client.util.Key("fromDate.year")
+      private java.lang.Integer fromDateYear;
+
+      /** Year of date. Must be from 1 to 9999.
+       */
+      public java.lang.Integer getFromDateYear() {
+        return fromDateYear;
+      }
+
+      /** Year of date. Must be from 1 to 9999. */
+      public GetUser setFromDateYear(java.lang.Integer fromDateYear) {
+        this.fromDateYear = fromDateYear;
+        return this;
+      }
+
+      /** Day of month. Must be from 1 to 31 and valid for the year and month. */
+      @com.google.api.client.util.Key("toDate.day")
+      private java.lang.Integer toDateDay;
+
+      /** Day of month. Must be from 1 to 31 and valid for the year and month.
+       */
+      public java.lang.Integer getToDateDay() {
+        return toDateDay;
+      }
+
+      /** Day of month. Must be from 1 to 31 and valid for the year and month. */
+      public GetUser setToDateDay(java.lang.Integer toDateDay) {
+        this.toDateDay = toDateDay;
+        return this;
+      }
+
+      /** Month of date. Must be from 1 to 12. */
+      @com.google.api.client.util.Key("toDate.month")
+      private java.lang.Integer toDateMonth;
+
+      /** Month of date. Must be from 1 to 12.
+       */
+      public java.lang.Integer getToDateMonth() {
+        return toDateMonth;
+      }
+
+      /** Month of date. Must be from 1 to 12. */
+      public GetUser setToDateMonth(java.lang.Integer toDateMonth) {
+        this.toDateMonth = toDateMonth;
+        return this;
+      }
+
+      /** Year of date. Must be from 1 to 9999. */
+      @com.google.api.client.util.Key("toDate.year")
+      private java.lang.Integer toDateYear;
+
+      /** Year of date. Must be from 1 to 9999.
+       */
+      public java.lang.Integer getToDateYear() {
+        return toDateYear;
+      }
+
+      /** Year of date. Must be from 1 to 9999. */
+      public GetUser setToDateYear(java.lang.Integer toDateYear) {
+        this.toDateYear = toDateYear;
+        return this;
+      }
+
+      @Override
+      public GetUser set(String parameterName, Object value) {
+        return (GetUser) super.set(parameterName, value);
+      }
+    }
 
     /**
      * An accessor for creating requests from the Index collection.
@@ -6274,6 +6945,870 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                   "Parameter name must conform to the pattern " +
                   "^datasources/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Day of month. Must be from 1 to 31 and valid for the year and month. */
+          @com.google.api.client.util.Key("fromDate.day")
+          private java.lang.Integer fromDateDay;
+
+          /** Day of month. Must be from 1 to 31 and valid for the year and month.
+           */
+          public java.lang.Integer getFromDateDay() {
+            return fromDateDay;
+          }
+
+          /** Day of month. Must be from 1 to 31 and valid for the year and month. */
+          public Get setFromDateDay(java.lang.Integer fromDateDay) {
+            this.fromDateDay = fromDateDay;
+            return this;
+          }
+
+          /** Month of date. Must be from 1 to 12. */
+          @com.google.api.client.util.Key("fromDate.month")
+          private java.lang.Integer fromDateMonth;
+
+          /** Month of date. Must be from 1 to 12.
+           */
+          public java.lang.Integer getFromDateMonth() {
+            return fromDateMonth;
+          }
+
+          /** Month of date. Must be from 1 to 12. */
+          public Get setFromDateMonth(java.lang.Integer fromDateMonth) {
+            this.fromDateMonth = fromDateMonth;
+            return this;
+          }
+
+          /** Year of date. Must be from 1 to 9999. */
+          @com.google.api.client.util.Key("fromDate.year")
+          private java.lang.Integer fromDateYear;
+
+          /** Year of date. Must be from 1 to 9999.
+           */
+          public java.lang.Integer getFromDateYear() {
+            return fromDateYear;
+          }
+
+          /** Year of date. Must be from 1 to 9999. */
+          public Get setFromDateYear(java.lang.Integer fromDateYear) {
+            this.fromDateYear = fromDateYear;
+            return this;
+          }
+
+          /** Day of month. Must be from 1 to 31 and valid for the year and month. */
+          @com.google.api.client.util.Key("toDate.day")
+          private java.lang.Integer toDateDay;
+
+          /** Day of month. Must be from 1 to 31 and valid for the year and month.
+           */
+          public java.lang.Integer getToDateDay() {
+            return toDateDay;
+          }
+
+          /** Day of month. Must be from 1 to 31 and valid for the year and month. */
+          public Get setToDateDay(java.lang.Integer toDateDay) {
+            this.toDateDay = toDateDay;
+            return this;
+          }
+
+          /** Month of date. Must be from 1 to 12. */
+          @com.google.api.client.util.Key("toDate.month")
+          private java.lang.Integer toDateMonth;
+
+          /** Month of date. Must be from 1 to 12.
+           */
+          public java.lang.Integer getToDateMonth() {
+            return toDateMonth;
+          }
+
+          /** Month of date. Must be from 1 to 12. */
+          public Get setToDateMonth(java.lang.Integer toDateMonth) {
+            this.toDateMonth = toDateMonth;
+            return this;
+          }
+
+          /** Year of date. Must be from 1 to 9999. */
+          @com.google.api.client.util.Key("toDate.year")
+          private java.lang.Integer toDateYear;
+
+          /** Year of date. Must be from 1 to 9999.
+           */
+          public java.lang.Integer getToDateYear() {
+            return toDateYear;
+          }
+
+          /** Year of date. Must be from 1 to 9999. */
+          public Get setToDateYear(java.lang.Integer toDateYear) {
+            this.toDateYear = toDateYear;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+    /**
+     * An accessor for creating requests from the Query collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code CloudSearch cloudsearch = new CloudSearch(...);}
+     *   {@code CloudSearch.Query.List request = cloudsearch.query().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Query query() {
+      return new Query();
+    }
+
+    /**
+     * The "query" collection of methods.
+     */
+    public class Query {
+
+      /**
+       * An accessor for creating requests from the Searchapplications collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudSearch cloudsearch = new CloudSearch(...);}
+       *   {@code CloudSearch.Searchapplications.List request = cloudsearch.searchapplications().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Searchapplications searchapplications() {
+        return new Searchapplications();
+      }
+
+      /**
+       * The "searchapplications" collection of methods.
+       */
+      public class Searchapplications {
+
+        /**
+         * Get the query statistics for search application
+         *
+         * Create a request for the method "searchapplications.get".
+         *
+         * This request holds the parameters needed by the cloudsearch server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name The resource id of the search application query stats, in the following
+        format:
+         *        searchapplications/{application_id}
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends CloudSearchRequest<com.google.api.services.cloudsearch.v1.model.GetSearchApplicationQueryStatsResponse> {
+
+          private static final String REST_PATH = "v1/stats/query/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^searchapplications/[^/]+$");
+
+          /**
+           * Get the query statistics for search application
+           *
+           * Create a request for the method "searchapplications.get".
+           *
+           * This request holds the parameters needed by the the cloudsearch server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The resource id of the search application query stats, in the following
+        format:
+         *        searchapplications/{application_id}
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(CloudSearch.this, "GET", REST_PATH, null, com.google.api.services.cloudsearch.v1.model.GetSearchApplicationQueryStatsResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^searchapplications/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The resource id of the search application query stats, in the following format:
+           * searchapplications/{application_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The resource id of the search application query stats, in the following format:
+         searchapplications/{application_id}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The resource id of the search application query stats, in the following format:
+           * searchapplications/{application_id}
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^searchapplications/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Day of month. Must be from 1 to 31 and valid for the year and month. */
+          @com.google.api.client.util.Key("fromDate.day")
+          private java.lang.Integer fromDateDay;
+
+          /** Day of month. Must be from 1 to 31 and valid for the year and month.
+           */
+          public java.lang.Integer getFromDateDay() {
+            return fromDateDay;
+          }
+
+          /** Day of month. Must be from 1 to 31 and valid for the year and month. */
+          public Get setFromDateDay(java.lang.Integer fromDateDay) {
+            this.fromDateDay = fromDateDay;
+            return this;
+          }
+
+          /** Month of date. Must be from 1 to 12. */
+          @com.google.api.client.util.Key("fromDate.month")
+          private java.lang.Integer fromDateMonth;
+
+          /** Month of date. Must be from 1 to 12.
+           */
+          public java.lang.Integer getFromDateMonth() {
+            return fromDateMonth;
+          }
+
+          /** Month of date. Must be from 1 to 12. */
+          public Get setFromDateMonth(java.lang.Integer fromDateMonth) {
+            this.fromDateMonth = fromDateMonth;
+            return this;
+          }
+
+          /** Year of date. Must be from 1 to 9999. */
+          @com.google.api.client.util.Key("fromDate.year")
+          private java.lang.Integer fromDateYear;
+
+          /** Year of date. Must be from 1 to 9999.
+           */
+          public java.lang.Integer getFromDateYear() {
+            return fromDateYear;
+          }
+
+          /** Year of date. Must be from 1 to 9999. */
+          public Get setFromDateYear(java.lang.Integer fromDateYear) {
+            this.fromDateYear = fromDateYear;
+            return this;
+          }
+
+          /** Day of month. Must be from 1 to 31 and valid for the year and month. */
+          @com.google.api.client.util.Key("toDate.day")
+          private java.lang.Integer toDateDay;
+
+          /** Day of month. Must be from 1 to 31 and valid for the year and month.
+           */
+          public java.lang.Integer getToDateDay() {
+            return toDateDay;
+          }
+
+          /** Day of month. Must be from 1 to 31 and valid for the year and month. */
+          public Get setToDateDay(java.lang.Integer toDateDay) {
+            this.toDateDay = toDateDay;
+            return this;
+          }
+
+          /** Month of date. Must be from 1 to 12. */
+          @com.google.api.client.util.Key("toDate.month")
+          private java.lang.Integer toDateMonth;
+
+          /** Month of date. Must be from 1 to 12.
+           */
+          public java.lang.Integer getToDateMonth() {
+            return toDateMonth;
+          }
+
+          /** Month of date. Must be from 1 to 12. */
+          public Get setToDateMonth(java.lang.Integer toDateMonth) {
+            this.toDateMonth = toDateMonth;
+            return this;
+          }
+
+          /** Year of date. Must be from 1 to 9999. */
+          @com.google.api.client.util.Key("toDate.year")
+          private java.lang.Integer toDateYear;
+
+          /** Year of date. Must be from 1 to 9999.
+           */
+          public java.lang.Integer getToDateYear() {
+            return toDateYear;
+          }
+
+          /** Year of date. Must be from 1 to 9999. */
+          public Get setToDateYear(java.lang.Integer toDateYear) {
+            this.toDateYear = toDateYear;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+    /**
+     * An accessor for creating requests from the Session collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code CloudSearch cloudsearch = new CloudSearch(...);}
+     *   {@code CloudSearch.Session.List request = cloudsearch.session().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Session session() {
+      return new Session();
+    }
+
+    /**
+     * The "session" collection of methods.
+     */
+    public class Session {
+
+      /**
+       * An accessor for creating requests from the Searchapplications collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudSearch cloudsearch = new CloudSearch(...);}
+       *   {@code CloudSearch.Searchapplications.List request = cloudsearch.searchapplications().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Searchapplications searchapplications() {
+        return new Searchapplications();
+      }
+
+      /**
+       * The "searchapplications" collection of methods.
+       */
+      public class Searchapplications {
+
+        /**
+         * Get the # of search sessions for the search application
+         *
+         * Create a request for the method "searchapplications.get".
+         *
+         * This request holds the parameters needed by the cloudsearch server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name The resource id of the search application session stats, in the following
+        format:
+         *        searchapplications/{application_id}
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends CloudSearchRequest<com.google.api.services.cloudsearch.v1.model.GetSearchApplicationSessionStatsResponse> {
+
+          private static final String REST_PATH = "v1/stats/session/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^searchapplications/[^/]+$");
+
+          /**
+           * Get the # of search sessions for the search application
+           *
+           * Create a request for the method "searchapplications.get".
+           *
+           * This request holds the parameters needed by the the cloudsearch server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The resource id of the search application session stats, in the following
+        format:
+         *        searchapplications/{application_id}
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(CloudSearch.this, "GET", REST_PATH, null, com.google.api.services.cloudsearch.v1.model.GetSearchApplicationSessionStatsResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^searchapplications/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The resource id of the search application session stats, in the following format:
+           * searchapplications/{application_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The resource id of the search application session stats, in the following format:
+         searchapplications/{application_id}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The resource id of the search application session stats, in the following format:
+           * searchapplications/{application_id}
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^searchapplications/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Day of month. Must be from 1 to 31 and valid for the year and month. */
+          @com.google.api.client.util.Key("fromDate.day")
+          private java.lang.Integer fromDateDay;
+
+          /** Day of month. Must be from 1 to 31 and valid for the year and month.
+           */
+          public java.lang.Integer getFromDateDay() {
+            return fromDateDay;
+          }
+
+          /** Day of month. Must be from 1 to 31 and valid for the year and month. */
+          public Get setFromDateDay(java.lang.Integer fromDateDay) {
+            this.fromDateDay = fromDateDay;
+            return this;
+          }
+
+          /** Month of date. Must be from 1 to 12. */
+          @com.google.api.client.util.Key("fromDate.month")
+          private java.lang.Integer fromDateMonth;
+
+          /** Month of date. Must be from 1 to 12.
+           */
+          public java.lang.Integer getFromDateMonth() {
+            return fromDateMonth;
+          }
+
+          /** Month of date. Must be from 1 to 12. */
+          public Get setFromDateMonth(java.lang.Integer fromDateMonth) {
+            this.fromDateMonth = fromDateMonth;
+            return this;
+          }
+
+          /** Year of date. Must be from 1 to 9999. */
+          @com.google.api.client.util.Key("fromDate.year")
+          private java.lang.Integer fromDateYear;
+
+          /** Year of date. Must be from 1 to 9999.
+           */
+          public java.lang.Integer getFromDateYear() {
+            return fromDateYear;
+          }
+
+          /** Year of date. Must be from 1 to 9999. */
+          public Get setFromDateYear(java.lang.Integer fromDateYear) {
+            this.fromDateYear = fromDateYear;
+            return this;
+          }
+
+          /** Day of month. Must be from 1 to 31 and valid for the year and month. */
+          @com.google.api.client.util.Key("toDate.day")
+          private java.lang.Integer toDateDay;
+
+          /** Day of month. Must be from 1 to 31 and valid for the year and month.
+           */
+          public java.lang.Integer getToDateDay() {
+            return toDateDay;
+          }
+
+          /** Day of month. Must be from 1 to 31 and valid for the year and month. */
+          public Get setToDateDay(java.lang.Integer toDateDay) {
+            this.toDateDay = toDateDay;
+            return this;
+          }
+
+          /** Month of date. Must be from 1 to 12. */
+          @com.google.api.client.util.Key("toDate.month")
+          private java.lang.Integer toDateMonth;
+
+          /** Month of date. Must be from 1 to 12.
+           */
+          public java.lang.Integer getToDateMonth() {
+            return toDateMonth;
+          }
+
+          /** Month of date. Must be from 1 to 12. */
+          public Get setToDateMonth(java.lang.Integer toDateMonth) {
+            this.toDateMonth = toDateMonth;
+            return this;
+          }
+
+          /** Year of date. Must be from 1 to 9999. */
+          @com.google.api.client.util.Key("toDate.year")
+          private java.lang.Integer toDateYear;
+
+          /** Year of date. Must be from 1 to 9999.
+           */
+          public java.lang.Integer getToDateYear() {
+            return toDateYear;
+          }
+
+          /** Year of date. Must be from 1 to 9999. */
+          public Get setToDateYear(java.lang.Integer toDateYear) {
+            this.toDateYear = toDateYear;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+    /**
+     * An accessor for creating requests from the User collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code CloudSearch cloudsearch = new CloudSearch(...);}
+     *   {@code CloudSearch.User.List request = cloudsearch.user().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public User user() {
+      return new User();
+    }
+
+    /**
+     * The "user" collection of methods.
+     */
+    public class User {
+
+      /**
+       * An accessor for creating requests from the Searchapplications collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudSearch cloudsearch = new CloudSearch(...);}
+       *   {@code CloudSearch.Searchapplications.List request = cloudsearch.searchapplications().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Searchapplications searchapplications() {
+        return new Searchapplications();
+      }
+
+      /**
+       * The "searchapplications" collection of methods.
+       */
+      public class Searchapplications {
+
+        /**
+         * Get the users statistics for search application
+         *
+         * Create a request for the method "searchapplications.get".
+         *
+         * This request holds the parameters needed by the cloudsearch server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name The resource id of the search application session stats, in the following
+        format:
+         *        searchapplications/{application_id}
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends CloudSearchRequest<com.google.api.services.cloudsearch.v1.model.GetSearchApplicationUserStatsResponse> {
+
+          private static final String REST_PATH = "v1/stats/user/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^searchapplications/[^/]+$");
+
+          /**
+           * Get the users statistics for search application
+           *
+           * Create a request for the method "searchapplications.get".
+           *
+           * This request holds the parameters needed by the the cloudsearch server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The resource id of the search application session stats, in the following
+        format:
+         *        searchapplications/{application_id}
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(CloudSearch.this, "GET", REST_PATH, null, com.google.api.services.cloudsearch.v1.model.GetSearchApplicationUserStatsResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^searchapplications/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The resource id of the search application session stats, in the following format:
+           * searchapplications/{application_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The resource id of the search application session stats, in the following format:
+         searchapplications/{application_id}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The resource id of the search application session stats, in the following format:
+           * searchapplications/{application_id}
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^searchapplications/[^/]+$");
             }
             this.name = name;
             return this;

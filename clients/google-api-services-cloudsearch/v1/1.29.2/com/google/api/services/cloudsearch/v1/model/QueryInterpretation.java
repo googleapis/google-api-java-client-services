@@ -45,6 +45,14 @@ public final class QueryInterpretation extends com.google.api.client.json.Generi
   private java.lang.String interpretedQuery;
 
   /**
+   * The reason for interpretation of the query. This field will not be UNSPECIFIED if the
+   * interpretation type is not NONE.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String reason;
+
+  /**
    * @return value or {@code null} for none
    */
   public java.lang.String getInterpretationType() {
@@ -77,6 +85,25 @@ public final class QueryInterpretation extends com.google.api.client.json.Generi
    */
   public QueryInterpretation setInterpretedQuery(java.lang.String interpretedQuery) {
     this.interpretedQuery = interpretedQuery;
+    return this;
+  }
+
+  /**
+   * The reason for interpretation of the query. This field will not be UNSPECIFIED if the
+   * interpretation type is not NONE.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReason() {
+    return reason;
+  }
+
+  /**
+   * The reason for interpretation of the query. This field will not be UNSPECIFIED if the
+   * interpretation type is not NONE.
+   * @param reason reason or {@code null} for none
+   */
+  public QueryInterpretation setReason(java.lang.String reason) {
+    this.reason = reason;
     return this;
   }
 

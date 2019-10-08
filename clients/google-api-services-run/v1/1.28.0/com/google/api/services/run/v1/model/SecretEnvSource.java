@@ -37,6 +37,14 @@ package com.google.api.services.run.v1.model;
 public final class SecretEnvSource extends com.google.api.client.json.GenericJson {
 
   /**
+   * This field should not be used directly as it is meant to be inlined directly into the message.
+   * Use the "name" field instead.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LocalObjectReference localObjectReference;
+
+  /**
    * Cloud Run fully managed: not supported
    *
    * Cloud Run for Anthos: supported
@@ -45,7 +53,7 @@ public final class SecretEnvSource extends com.google.api.client.json.GenericJso
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private LocalObjectReference localObjectReference;
+  private java.lang.String name;
 
   /**
    * (Optional)
@@ -61,15 +69,22 @@ public final class SecretEnvSource extends com.google.api.client.json.GenericJso
   private java.lang.Boolean optional;
 
   /**
-   * Cloud Run fully managed: not supported
-   *
-   * Cloud Run for Anthos: supported
-   *
-   * The Secret to select from.
+   * This field should not be used directly as it is meant to be inlined directly into the message.
+   * Use the "name" field instead.
    * @return value or {@code null} for none
    */
   public LocalObjectReference getLocalObjectReference() {
     return localObjectReference;
+  }
+
+  /**
+   * This field should not be used directly as it is meant to be inlined directly into the message.
+   * Use the "name" field instead.
+   * @param localObjectReference localObjectReference or {@code null} for none
+   */
+  public SecretEnvSource setLocalObjectReference(LocalObjectReference localObjectReference) {
+    this.localObjectReference = localObjectReference;
+    return this;
   }
 
   /**
@@ -78,10 +93,22 @@ public final class SecretEnvSource extends com.google.api.client.json.GenericJso
    * Cloud Run for Anthos: supported
    *
    * The Secret to select from.
-   * @param localObjectReference localObjectReference or {@code null} for none
+   * @return value or {@code null} for none
    */
-  public SecretEnvSource setLocalObjectReference(LocalObjectReference localObjectReference) {
-    this.localObjectReference = localObjectReference;
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * Cloud Run fully managed: not supported
+   *
+   * Cloud Run for Anthos: supported
+   *
+   * The Secret to select from.
+   * @param name name or {@code null} for none
+   */
+  public SecretEnvSource setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 

@@ -3509,13 +3509,15 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Whether to set the 'keepForever' field in the new head revision. This is only applicable to
-       * files with binary content in Google Drive.
+       * files with binary content in Google Drive. Only 200 revisions for the file can be kept
+       * forever. If the limit is reached, try deleting pinned revisions.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean keepRevisionForever;
 
       /** Whether to set the 'keepForever' field in the new head revision. This is only applicable to files
-     with binary content in Google Drive. [default: false]
+     with binary content in Google Drive. Only 200 revisions for the file can be kept forever. If the
+     limit is reached, try deleting pinned revisions. [default: false]
        */
       public java.lang.Boolean getKeepRevisionForever() {
         return keepRevisionForever;
@@ -3523,7 +3525,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Whether to set the 'keepForever' field in the new head revision. This is only applicable to
-       * files with binary content in Google Drive.
+       * files with binary content in Google Drive. Only 200 revisions for the file can be kept
+       * forever. If the limit is reached, try deleting pinned revisions.
        */
       public Copy setKeepRevisionForever(java.lang.Boolean keepRevisionForever) {
         this.keepRevisionForever = keepRevisionForever;
@@ -3548,7 +3551,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        *
        * <p>
        * Whether to set the 'keepForever' field in the new head revision. This is only applicable to files
-     with binary content in Google Drive.
+     with binary content in Google Drive. Only 200 revisions for the file can be kept forever. If the
+     limit is reached, try deleting pinned revisions.
        * </p>
        */
       public boolean isKeepRevisionForever() {
@@ -3859,13 +3863,15 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Whether to set the 'keepForever' field in the new head revision. This is only applicable to
-       * files with binary content in Google Drive.
+       * files with binary content in Google Drive. Only 200 revisions for the file can be kept
+       * forever. If the limit is reached, try deleting pinned revisions.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean keepRevisionForever;
 
       /** Whether to set the 'keepForever' field in the new head revision. This is only applicable to files
-     with binary content in Google Drive. [default: false]
+     with binary content in Google Drive. Only 200 revisions for the file can be kept forever. If the
+     limit is reached, try deleting pinned revisions. [default: false]
        */
       public java.lang.Boolean getKeepRevisionForever() {
         return keepRevisionForever;
@@ -3873,7 +3879,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Whether to set the 'keepForever' field in the new head revision. This is only applicable to
-       * files with binary content in Google Drive.
+       * files with binary content in Google Drive. Only 200 revisions for the file can be kept
+       * forever. If the limit is reached, try deleting pinned revisions.
        */
       public Create setKeepRevisionForever(java.lang.Boolean keepRevisionForever) {
         this.keepRevisionForever = keepRevisionForever;
@@ -3898,7 +3905,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        *
        * <p>
        * Whether to set the 'keepForever' field in the new head revision. This is only applicable to files
-     with binary content in Google Drive.
+     with binary content in Google Drive. Only 200 revisions for the file can be kept forever. If the
+     limit is reached, try deleting pinned revisions.
        * </p>
        */
       public boolean isKeepRevisionForever() {
@@ -5528,13 +5536,15 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Whether to set the 'keepForever' field in the new head revision. This is only applicable to
-       * files with binary content in Google Drive.
+       * files with binary content in Google Drive. Only 200 revisions for the file can be kept
+       * forever. If the limit is reached, try deleting pinned revisions.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean keepRevisionForever;
 
       /** Whether to set the 'keepForever' field in the new head revision. This is only applicable to files
-     with binary content in Google Drive. [default: false]
+     with binary content in Google Drive. Only 200 revisions for the file can be kept forever. If the
+     limit is reached, try deleting pinned revisions. [default: false]
        */
       public java.lang.Boolean getKeepRevisionForever() {
         return keepRevisionForever;
@@ -5542,7 +5552,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Whether to set the 'keepForever' field in the new head revision. This is only applicable to
-       * files with binary content in Google Drive.
+       * files with binary content in Google Drive. Only 200 revisions for the file can be kept
+       * forever. If the limit is reached, try deleting pinned revisions.
        */
       public Update setKeepRevisionForever(java.lang.Boolean keepRevisionForever) {
         this.keepRevisionForever = keepRevisionForever;
@@ -5567,7 +5578,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        *
        * <p>
        * Whether to set the 'keepForever' field in the new head revision. This is only applicable to files
-     with binary content in Google Drive.
+     with binary content in Google Drive. Only 200 revisions for the file can be kept forever. If the
+     limit is reached, try deleting pinned revisions.
        * </p>
        */
       public boolean isKeepRevisionForever() {

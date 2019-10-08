@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-appengine</artifactId>
-  <version>v1beta-rev20190531-1.30.3</version>
-  <name>App Engine Admin API v1beta-rev20190531-1.30.3</name>
+  <version>v1beta-rev20190926-1.30.3</version>
+  <name>App Engine Admin API v1beta-rev20190926-1.30.3</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

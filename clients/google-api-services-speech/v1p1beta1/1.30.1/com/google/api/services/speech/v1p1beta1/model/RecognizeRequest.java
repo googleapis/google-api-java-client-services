@@ -45,7 +45,7 @@ public final class RecognizeRequest extends com.google.api.client.json.GenericJs
   private RecognitionConfig config;
 
   /**
-   * The name of the model to use for recognition.
+   * Use `model` field in RecognitionConfig instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +86,7 @@ public final class RecognizeRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The name of the model to use for recognition.
+   * Use `model` field in RecognitionConfig instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -94,7 +94,7 @@ public final class RecognizeRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The name of the model to use for recognition.
+   * Use `model` field in RecognitionConfig instead.
    * @param name name or {@code null} for none
    */
   public RecognizeRequest setName(java.lang.String name) {

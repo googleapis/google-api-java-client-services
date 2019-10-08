@@ -32,37 +32,37 @@ package com.google.api.services.dataproc.v1beta2.model;
 public final class YarnApplication extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The application name.
+   * Output only. The application name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Required. The numerical progress of the application, from 1 to 100.
+   * Output only. The numerical progress of the application, from 1 to 100.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float progress;
 
   /**
-   * Required. The application state.
+   * Output only. The application state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Optional. The HTTP URL of the ApplicationMaster, HistoryServer, or TimelineServer that provides
-   * application-specific information. The URL uses the internal hostname, and requires a proxy
-   * server for resolution and, possibly, access.
+   * Optional. Output only. The HTTP URL of the ApplicationMaster, HistoryServer, or TimelineServer
+   * that provides application-specific information. The URL uses the internal hostname, and
+   * requires a proxy server for resolution and, possibly, access.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String trackingUrl;
 
   /**
-   * Required. The application name.
+   * Output only. The application name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -70,7 +70,7 @@ public final class YarnApplication extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. The application name.
+   * Output only. The application name.
    * @param name name or {@code null} for none
    */
   public YarnApplication setName(java.lang.String name) {
@@ -79,7 +79,7 @@ public final class YarnApplication extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. The numerical progress of the application, from 1 to 100.
+   * Output only. The numerical progress of the application, from 1 to 100.
    * @return value or {@code null} for none
    */
   public java.lang.Float getProgress() {
@@ -87,7 +87,7 @@ public final class YarnApplication extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. The numerical progress of the application, from 1 to 100.
+   * Output only. The numerical progress of the application, from 1 to 100.
    * @param progress progress or {@code null} for none
    */
   public YarnApplication setProgress(java.lang.Float progress) {
@@ -96,7 +96,7 @@ public final class YarnApplication extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. The application state.
+   * Output only. The application state.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -104,7 +104,7 @@ public final class YarnApplication extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. The application state.
+   * Output only. The application state.
    * @param state state or {@code null} for none
    */
   public YarnApplication setState(java.lang.String state) {
@@ -113,9 +113,9 @@ public final class YarnApplication extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The HTTP URL of the ApplicationMaster, HistoryServer, or TimelineServer that provides
-   * application-specific information. The URL uses the internal hostname, and requires a proxy
-   * server for resolution and, possibly, access.
+   * Optional. Output only. The HTTP URL of the ApplicationMaster, HistoryServer, or TimelineServer
+   * that provides application-specific information. The URL uses the internal hostname, and
+   * requires a proxy server for resolution and, possibly, access.
    * @return value or {@code null} for none
    */
   public java.lang.String getTrackingUrl() {
@@ -123,9 +123,9 @@ public final class YarnApplication extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The HTTP URL of the ApplicationMaster, HistoryServer, or TimelineServer that provides
-   * application-specific information. The URL uses the internal hostname, and requires a proxy
-   * server for resolution and, possibly, access.
+   * Optional. Output only. The HTTP URL of the ApplicationMaster, HistoryServer, or TimelineServer
+   * that provides application-specific information. The URL uses the internal hostname, and
+   * requires a proxy server for resolution and, possibly, access.
    * @param trackingUrl trackingUrl or {@code null} for none
    */
   public YarnApplication setTrackingUrl(java.lang.String trackingUrl) {

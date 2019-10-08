@@ -39,7 +39,7 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
   private java.lang.String imageVersion;
 
   /**
-   * The set of optional components to activate on the cluster.
+   * Optional. The set of components to activate on the cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,7 +79,7 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The set of optional components to activate on the cluster.
+   * Optional. The set of components to activate on the cluster.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getOptionalComponents() {
@@ -87,7 +87,7 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The set of optional components to activate on the cluster.
+   * Optional. The set of components to activate on the cluster.
    * @param optionalComponents optionalComponents or {@code null} for none
    */
   public SoftwareConfig setOptionalComponents(java.util.List<java.lang.String> optionalComponents) {

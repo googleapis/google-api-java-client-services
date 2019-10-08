@@ -17,8 +17,8 @@
 package com.google.api.services.dataproc.v1beta2.model;
 
 /**
- * Optional. The config settings for Compute Engine resources in an instance group, such as a master
- * or worker group.
+ * The config settings for Compute Engine resources in an instance group, such as a master or worker
+ * group.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataproc API. For a detailed explanation see:
@@ -96,8 +96,8 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
   private ManagedGroupConfig managedGroupConfig;
 
   /**
-   * Optional. Specifies the minimum cpu platform for the Instance Group. See Cloud DataprocMinimum
-   * CPU Platform.
+   * Specifies the minimum cpu platform for the Instance Group. See Cloud DataprocMinimum CPU
+   * Platform.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -251,8 +251,8 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. Specifies the minimum cpu platform for the Instance Group. See Cloud DataprocMinimum
-   * CPU Platform.
+   * Specifies the minimum cpu platform for the Instance Group. See Cloud DataprocMinimum CPU
+   * Platform.
    * @return value or {@code null} for none
    */
   public java.lang.String getMinCpuPlatform() {
@@ -260,8 +260,8 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. Specifies the minimum cpu platform for the Instance Group. See Cloud DataprocMinimum
-   * CPU Platform.
+   * Specifies the minimum cpu platform for the Instance Group. See Cloud DataprocMinimum CPU
+   * Platform.
    * @param minCpuPlatform minCpuPlatform or {@code null} for none
    */
   public InstanceGroupConfig setMinCpuPlatform(java.lang.String minCpuPlatform) {

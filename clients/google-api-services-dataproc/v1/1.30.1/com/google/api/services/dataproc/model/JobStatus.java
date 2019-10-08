@@ -30,7 +30,7 @@ package com.google.api.services.dataproc.model;
 public final class JobStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Optional job state details, such as an error description if the state is ERROR.
+   * Optional. Output only. Job state details, such as an error description if the state is ERROR.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class JobStatus extends com.google.api.client.json.GenericJson {
   private java.lang.String substate;
 
   /**
-   * Output only. Optional job state details, such as an error description if the state is ERROR.
+   * Optional. Output only. Job state details, such as an error description if the state is ERROR.
    * @return value or {@code null} for none
    */
   public java.lang.String getDetails() {
@@ -66,7 +66,7 @@ public final class JobStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Optional job state details, such as an error description if the state is ERROR.
+   * Optional. Output only. Job state details, such as an error description if the state is ERROR.
    * @param details details or {@code null} for none
    */
   public JobStatus setDetails(java.lang.String details) {

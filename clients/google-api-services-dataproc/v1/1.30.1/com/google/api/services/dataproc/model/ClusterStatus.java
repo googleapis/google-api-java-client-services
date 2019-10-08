@@ -30,7 +30,7 @@ package com.google.api.services.dataproc.model;
 public final class ClusterStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Optional details of cluster's state.
+   * Optional. Output only. Details of cluster's state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class ClusterStatus extends com.google.api.client.json.GenericJson 
   private java.lang.String substate;
 
   /**
-   * Output only. Optional details of cluster's state.
+   * Optional. Output only. Details of cluster's state.
    * @return value or {@code null} for none
    */
   public java.lang.String getDetail() {
@@ -66,7 +66,7 @@ public final class ClusterStatus extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Optional details of cluster's state.
+   * Optional. Output only. Details of cluster's state.
    * @param detail detail or {@code null} for none
    */
   public ClusterStatus setDetail(java.lang.String detail) {

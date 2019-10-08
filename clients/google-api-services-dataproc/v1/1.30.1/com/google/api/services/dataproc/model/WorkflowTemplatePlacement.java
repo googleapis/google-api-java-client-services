@@ -38,7 +38,7 @@ public final class WorkflowTemplatePlacement extends com.google.api.client.json.
   private ClusterSelector clusterSelector;
 
   /**
-   * Optional. A cluster that is managed by the workflow.
+   * A cluster that is managed by the workflow.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class WorkflowTemplatePlacement extends com.google.api.client.json.
   }
 
   /**
-   * Optional. A cluster that is managed by the workflow.
+   * A cluster that is managed by the workflow.
    * @return value or {@code null} for none
    */
   public ManagedCluster getManagedCluster() {
@@ -72,7 +72,7 @@ public final class WorkflowTemplatePlacement extends com.google.api.client.json.
   }
 
   /**
-   * Optional. A cluster that is managed by the workflow.
+   * A cluster that is managed by the workflow.
    * @param managedCluster managedCluster or {@code null} for none
    */
   public WorkflowTemplatePlacement setManagedCluster(ManagedCluster managedCluster) {

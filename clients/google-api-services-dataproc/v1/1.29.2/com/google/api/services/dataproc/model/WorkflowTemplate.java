@@ -37,9 +37,6 @@ public final class WorkflowTemplate extends com.google.api.client.json.GenericJs
   private String createTime;
 
   /**
-   * Required. The template id.The id must contain only letters (a-z, A-Z), numbers (0-9),
-   * underscores (_), and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist
-   * of between 3 and 50 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +80,7 @@ public final class WorkflowTemplate extends com.google.api.client.json.GenericJs
   private java.lang.String name;
 
   /**
-   * Optional. Template parameters whose values are substituted into the template. Values for
+   * Optional. emplate parameters whose values are substituted into the template. Values for
    * parameters must be provided when the template is instantiated.
    * The value may be {@code null}.
    */
@@ -140,9 +137,6 @@ public final class WorkflowTemplate extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. The template id.The id must contain only letters (a-z, A-Z), numbers (0-9),
-   * underscores (_), and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist
-   * of between 3 and 50 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -150,9 +144,6 @@ public final class WorkflowTemplate extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. The template id.The id must contain only letters (a-z, A-Z), numbers (0-9),
-   * underscores (_), and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist
-   * of between 3 and 50 characters.
    * @param id id or {@code null} for none
    */
   public WorkflowTemplate setId(java.lang.String id) {
@@ -232,7 +223,7 @@ public final class WorkflowTemplate extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Template parameters whose values are substituted into the template. Values for
+   * Optional. emplate parameters whose values are substituted into the template. Values for
    * parameters must be provided when the template is instantiated.
    * @return value or {@code null} for none
    */
@@ -241,7 +232,7 @@ public final class WorkflowTemplate extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Template parameters whose values are substituted into the template. Values for
+   * Optional. emplate parameters whose values are substituted into the template. Values for
    * parameters must be provided when the template is instantiated.
    * @param parameters parameters or {@code null} for none
    */

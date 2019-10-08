@@ -5168,8 +5168,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
         }
         /**
          * Gets cluster diagnostic information. The returned Operation.metadata will be
-         * ClusterOperationMetadata. After the operation completes, Operation.response contains
-         * DiagnoseClusterResults.
+         * ClusterOperationMetadata. After the operation completes, Operation.response contains Empty.
          *
          * Create a request for the method "clusters.diagnose".
          *
@@ -5194,8 +5193,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Gets cluster diagnostic information. The returned Operation.metadata will be
-           * ClusterOperationMetadata. After the operation completes, Operation.response contains
-           * DiagnoseClusterResults.
+           * ClusterOperationMetadata. After the operation completes, Operation.response contains Empty.
            *
            * Create a request for the method "clusters.diagnose".
            *

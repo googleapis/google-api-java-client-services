@@ -5966,7 +5966,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * "numInstances":"5" } } } Note: Currently, only the following fields can be updated:
            * Mask  Purpose      labels  Update labels      config.worker_config.num_instances
            * Resize primary worker group      config.secondary_worker_config.num_instances  Resize
-           * secondary worker group
+           * secondary worker group      config.autoscaling_config.policy_uriUse, stop using, or
+           * change autoscaling policies
            */
           @com.google.api.client.util.Key
           private String updateMask;
@@ -5981,6 +5982,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          fields can be updated:      Mask  Purpose      labels  Update labels
          config.worker_config.num_instances  Resize primary worker group
          config.secondary_worker_config.num_instances  Resize secondary worker group
+         config.autoscaling_config.policy_uriUse, stop using, or  change autoscaling policies
            */
           public String getUpdateMask() {
             return updateMask;
@@ -5997,7 +5999,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * "numInstances":"5" } } } Note: Currently, only the following fields can be updated:
            * Mask  Purpose      labels  Update labels      config.worker_config.num_instances
            * Resize primary worker group      config.secondary_worker_config.num_instances  Resize
-           * secondary worker group
+           * secondary worker group      config.autoscaling_config.policy_uriUse, stop using, or
+           * change autoscaling policies
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;

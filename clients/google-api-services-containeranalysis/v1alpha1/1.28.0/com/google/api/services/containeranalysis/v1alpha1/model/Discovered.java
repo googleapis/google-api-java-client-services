@@ -53,6 +53,13 @@ public final class Discovered extends com.google.api.client.json.GenericJson {
   private java.lang.String continuousAnalysis;
 
   /**
+   * The CPE of the resource being scanned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cpe;
+
+  /**
    * Output only. An operation that indicates the status of the current scan. This field is
    * deprecated, do not use.
    * The value may be {@code null}.
@@ -110,6 +117,23 @@ public final class Discovered extends com.google.api.client.json.GenericJson {
    */
   public Discovered setContinuousAnalysis(java.lang.String continuousAnalysis) {
     this.continuousAnalysis = continuousAnalysis;
+    return this;
+  }
+
+  /**
+   * The CPE of the resource being scanned.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCpe() {
+    return cpe;
+  }
+
+  /**
+   * The CPE of the resource being scanned.
+   * @param cpe cpe or {@code null} for none
+   */
+  public Discovered setCpe(java.lang.String cpe) {
+    this.cpe = cpe;
     return this;
   }
 

@@ -38,8 +38,10 @@ public final class ApnsConfig extends com.google.api.client.json.GenericJson {
   private ApnsFcmOptions fcmOptions;
 
   /**
-   * HTTP request headers defined in Apple Push Notification Service. Refer to [APNs request
-   * headers](https://goo.gl/C6Yhia) for supported headers, e.g. "apns-priority": "10".
+   * HTTP request headers defined in Apple Push Notification Service. Refer to [APNs request headers
+   * ](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_
+   * server/sending_notification_requests_to_apns) for supported headers, e.g. "apns-priority":
+   * "10".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +49,8 @@ public final class ApnsConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * APNs payload as a JSON object, including both `aps` dictionary and custom payload. See [Payload
-   * Key Reference](https://goo.gl/32Pl5W). If present, it overrides
+   * Key Reference](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_
+   * notification_server/generating_a_remote_notification). If present, it overrides
    * google.firebase.fcm.v1.Notification.title and google.firebase.fcm.v1.Notification.body.
    * The value may be {@code null}.
    */
@@ -72,8 +75,10 @@ public final class ApnsConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * HTTP request headers defined in Apple Push Notification Service. Refer to [APNs request
-   * headers](https://goo.gl/C6Yhia) for supported headers, e.g. "apns-priority": "10".
+   * HTTP request headers defined in Apple Push Notification Service. Refer to [APNs request headers
+   * ](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_
+   * server/sending_notification_requests_to_apns) for supported headers, e.g. "apns-priority":
+   * "10".
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getHeaders() {
@@ -81,8 +86,10 @@ public final class ApnsConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * HTTP request headers defined in Apple Push Notification Service. Refer to [APNs request
-   * headers](https://goo.gl/C6Yhia) for supported headers, e.g. "apns-priority": "10".
+   * HTTP request headers defined in Apple Push Notification Service. Refer to [APNs request headers
+   * ](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_
+   * server/sending_notification_requests_to_apns) for supported headers, e.g. "apns-priority":
+   * "10".
    * @param headers headers or {@code null} for none
    */
   public ApnsConfig setHeaders(java.util.Map<String, java.lang.String> headers) {
@@ -92,7 +99,8 @@ public final class ApnsConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * APNs payload as a JSON object, including both `aps` dictionary and custom payload. See [Payload
-   * Key Reference](https://goo.gl/32Pl5W). If present, it overrides
+   * Key Reference](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_
+   * notification_server/generating_a_remote_notification). If present, it overrides
    * google.firebase.fcm.v1.Notification.title and google.firebase.fcm.v1.Notification.body.
    * @return value or {@code null} for none
    */
@@ -102,7 +110,8 @@ public final class ApnsConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * APNs payload as a JSON object, including both `aps` dictionary and custom payload. See [Payload
-   * Key Reference](https://goo.gl/32Pl5W). If present, it overrides
+   * Key Reference](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_
+   * notification_server/generating_a_remote_notification). If present, it overrides
    * google.firebase.fcm.v1.Notification.title and google.firebase.fcm.v1.Notification.body.
    * @param payload payload or {@code null} for none
    */

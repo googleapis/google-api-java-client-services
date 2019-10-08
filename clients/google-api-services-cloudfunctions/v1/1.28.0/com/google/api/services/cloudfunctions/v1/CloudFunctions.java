@@ -736,7 +736,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
          * This request holds the parameters needed by the cloudfunctions server.  After setting any
          * optional parameters, call the {@link Call#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the function to be called.
+         * @param name Required. The name of the function to be called.
          * @param content the {@link com.google.api.services.cloudfunctions.v1.model.CallFunctionRequest}
          * @return the request
          */
@@ -765,7 +765,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
            * {@link Call#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the function to be called.
+           * @param name Required. The name of the function to be called.
            * @param content the {@link com.google.api.services.cloudfunctions.v1.model.CallFunctionRequest}
            * @since 1.13
            */
@@ -834,17 +834,17 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
             return (Call) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The name of the function to be called. */
+          /** Required. The name of the function to be called. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name of the function to be called.
+          /** Required. The name of the function to be called.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** The name of the function to be called. */
+          /** Required. The name of the function to be called. */
           public Call setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -869,7 +869,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
          * This request holds the parameters needed by the cloudfunctions server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param location The project and location in which the function should be created, specified
+         * @param location Required. The project and location in which the function should be created, specified
         in the format
          *        `projects/locations`
          * @param content the {@link com.google.api.services.cloudfunctions.v1.model.CloudFunction}
@@ -900,7 +900,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param location The project and location in which the function should be created, specified
+           * @param location Required. The project and location in which the function should be created, specified
         in the format
          *        `projects/locations`
            * @param content the {@link com.google.api.services.cloudfunctions.v1.model.CloudFunction}
@@ -972,13 +972,13 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * The project and location in which the function should be created, specified in the
-           * format `projects/locations`
+           * Required. The project and location in which the function should be created, specified
+           * in the format `projects/locations`
            */
           @com.google.api.client.util.Key
           private java.lang.String location;
 
-          /** The project and location in which the function should be created, specified in the format
+          /** Required. The project and location in which the function should be created, specified in the format
          `projects/locations`
            */
           public java.lang.String getLocation() {
@@ -986,8 +986,8 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * The project and location in which the function should be created, specified in the
-           * format `projects/locations`
+           * Required. The project and location in which the function should be created, specified
+           * in the format `projects/locations`
            */
           public Create setLocation(java.lang.String location) {
             if (!getSuppressPatternChecks()) {
@@ -1013,7 +1013,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
          * This request holds the parameters needed by the cloudfunctions server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the function which should be deleted.
+         * @param name Required. The name of the function which should be deleted.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -1041,7 +1041,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the function which should be deleted.
+           * @param name Required. The name of the function which should be deleted.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -1109,17 +1109,17 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The name of the function which should be deleted. */
+          /** Required. The name of the function which should be deleted. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name of the function which should be deleted.
+          /** Required. The name of the function which should be deleted.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** The name of the function which should be deleted. */
+          /** Required. The name of the function which should be deleted. */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1466,7 +1466,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
          * This request holds the parameters needed by the cloudfunctions server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the function which details should be obtained.
+         * @param name Required. The name of the function which details should be obtained.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -1492,7 +1492,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the function which details should be obtained.
+           * @param name Required. The name of the function which details should be obtained.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -1570,17 +1570,17 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The name of the function which details should be obtained. */
+          /** Required. The name of the function which details should be obtained. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name of the function which details should be obtained.
+          /** Required. The name of the function which details should be obtained.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** The name of the function which details should be obtained. */
+          /** Required. The name of the function which details should be obtained. */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1745,22 +1745,34 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * Optional. The policy format version to be returned. Acceptable values are 0, 1, and 3.
-           * If the value is 0, or the field is omitted, policy format version 1 will be returned.
+           * Optional. The policy format version to be returned.
+           *
+           * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
+           *
+           * Requests for policies with any conditional bindings must specify version 3. Policies
+           * without any conditional bindings may specify any valid value or leave the field unset.
            */
           @com.google.api.client.util.Key("options.requestedPolicyVersion")
           private java.lang.Integer optionsRequestedPolicyVersion;
 
-          /** Optional. The policy format version to be returned. Acceptable values are 0, 1, and 3. If the value
-         is 0, or the field is omitted, policy format version 1 will be returned.
+          /** Optional. The policy format version to be returned.
+
+         Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
+
+         Requests for policies with any conditional bindings must specify version 3. Policies without any
+         conditional bindings may specify any valid value or leave the field unset.
            */
           public java.lang.Integer getOptionsRequestedPolicyVersion() {
             return optionsRequestedPolicyVersion;
           }
 
           /**
-           * Optional. The policy format version to be returned. Acceptable values are 0, 1, and 3.
-           * If the value is 0, or the field is omitted, policy format version 1 will be returned.
+           * Optional. The policy format version to be returned.
+           *
+           * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
+           *
+           * Requests for policies with any conditional bindings must specify version 3. Policies
+           * without any conditional bindings may specify any valid value or leave the field unset.
            */
           public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;

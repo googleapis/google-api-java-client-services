@@ -56,6 +56,14 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean enableInboundForwarding;
 
   /**
+   * Controls whether logging is enabled for the networks bound to this policy. Defaults to no
+   * logging if not set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableLogging;
+
+  /**
    * Unique identifier for the resource; defined by the server (output only).
    * The value may be {@code null}.
    */
@@ -141,6 +149,25 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   public Policy setEnableInboundForwarding(java.lang.Boolean enableInboundForwarding) {
     this.enableInboundForwarding = enableInboundForwarding;
+    return this;
+  }
+
+  /**
+   * Controls whether logging is enabled for the networks bound to this policy. Defaults to no
+   * logging if not set.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableLogging() {
+    return enableLogging;
+  }
+
+  /**
+   * Controls whether logging is enabled for the networks bound to this policy. Defaults to no
+   * logging if not set.
+   * @param enableLogging enableLogging or {@code null} for none
+   */
+  public Policy setEnableLogging(java.lang.Boolean enableLogging) {
+    this.enableLogging = enableLogging;
     return this;
   }
 

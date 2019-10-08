@@ -31,14 +31,14 @@ package com.google.api.services.clouderrorreporting.v1beta1.model;
 public final class ReportedErrorEvent extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Optional] A description of the context in which the error occurred.
+   * Optional. A description of the context in which the error occurred.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ErrorContext context;
 
   /**
-   * [Optional] Time when the event occurred. If not provided, the time when the event was received
+   * Optional. Time when the event occurred. If not provided, the time when the event was received
    * by the Error Reporting system will be used.
    * The value may be {@code null}.
    */
@@ -46,7 +46,7 @@ public final class ReportedErrorEvent extends com.google.api.client.json.Generic
   private String eventTime;
 
   /**
-   * [Required] The error message. If no `context.reportLocation` is provided, the message must
+   * Required. The error message. If no `context.reportLocation` is provided, the message must
    * contain a header (typically consisting of the exception type name and an error message) and an
    * exception stack trace in one of the supported programming languages and formats. Supported
    * languages are Java, Python, JavaScript, Ruby, C#, PHP, and Go. Supported stack trace formats
@@ -70,14 +70,14 @@ public final class ReportedErrorEvent extends com.google.api.client.json.Generic
   private java.lang.String message;
 
   /**
-   * [Required] The service context in which this error has occurred.
+   * Required. The service context in which this error has occurred.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ServiceContext serviceContext;
 
   /**
-   * [Optional] A description of the context in which the error occurred.
+   * Optional. A description of the context in which the error occurred.
    * @return value or {@code null} for none
    */
   public ErrorContext getContext() {
@@ -85,7 +85,7 @@ public final class ReportedErrorEvent extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Optional] A description of the context in which the error occurred.
+   * Optional. A description of the context in which the error occurred.
    * @param context context or {@code null} for none
    */
   public ReportedErrorEvent setContext(ErrorContext context) {
@@ -94,7 +94,7 @@ public final class ReportedErrorEvent extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Optional] Time when the event occurred. If not provided, the time when the event was received
+   * Optional. Time when the event occurred. If not provided, the time when the event was received
    * by the Error Reporting system will be used.
    * @return value or {@code null} for none
    */
@@ -103,7 +103,7 @@ public final class ReportedErrorEvent extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Optional] Time when the event occurred. If not provided, the time when the event was received
+   * Optional. Time when the event occurred. If not provided, the time when the event was received
    * by the Error Reporting system will be used.
    * @param eventTime eventTime or {@code null} for none
    */
@@ -113,7 +113,7 @@ public final class ReportedErrorEvent extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Required] The error message. If no `context.reportLocation` is provided, the message must
+   * Required. The error message. If no `context.reportLocation` is provided, the message must
    * contain a header (typically consisting of the exception type name and an error message) and an
    * exception stack trace in one of the supported programming languages and formats. Supported
    * languages are Java, Python, JavaScript, Ruby, C#, PHP, and Go. Supported stack trace formats
@@ -138,7 +138,7 @@ public final class ReportedErrorEvent extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Required] The error message. If no `context.reportLocation` is provided, the message must
+   * Required. The error message. If no `context.reportLocation` is provided, the message must
    * contain a header (typically consisting of the exception type name and an error message) and an
    * exception stack trace in one of the supported programming languages and formats. Supported
    * languages are Java, Python, JavaScript, Ruby, C#, PHP, and Go. Supported stack trace formats
@@ -164,7 +164,7 @@ public final class ReportedErrorEvent extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Required] The service context in which this error has occurred.
+   * Required. The service context in which this error has occurred.
    * @return value or {@code null} for none
    */
   public ServiceContext getServiceContext() {
@@ -172,7 +172,7 @@ public final class ReportedErrorEvent extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Required] The service context in which this error has occurred.
+   * Required. The service context in which this error has occurred.
    * @param serviceContext serviceContext or {@code null} for none
    */
   public ReportedErrorEvent setServiceContext(ServiceContext serviceContext) {

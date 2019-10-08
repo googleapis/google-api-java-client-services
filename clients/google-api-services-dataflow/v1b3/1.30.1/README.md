@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-dataflow</artifactId>
-      <version>v1b3-rev20190628-1.30.1</version>
+      <version>v1b3-rev20190813-1.30.1</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-dataflow:v1b3-rev20190628-1.30.1'
+  compile 'com.google.apis:google-api-services-dataflow:v1b3-rev20190813-1.30.1'
 }
 ```
 

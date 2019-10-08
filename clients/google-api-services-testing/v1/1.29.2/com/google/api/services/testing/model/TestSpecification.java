@@ -65,6 +65,13 @@ public final class TestSpecification extends com.google.api.client.json.GenericJ
   private java.lang.Boolean disableVideoRecording;
 
   /**
+   * An iOS application with a test loop.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IosTestLoop iosTestLoop;
+
+  /**
    * Test setup requirements for iOS.
    * The value may be {@code null}.
    */
@@ -175,6 +182,23 @@ public final class TestSpecification extends com.google.api.client.json.GenericJ
    */
   public TestSpecification setDisableVideoRecording(java.lang.Boolean disableVideoRecording) {
     this.disableVideoRecording = disableVideoRecording;
+    return this;
+  }
+
+  /**
+   * An iOS application with a test loop.
+   * @return value or {@code null} for none
+   */
+  public IosTestLoop getIosTestLoop() {
+    return iosTestLoop;
+  }
+
+  /**
+   * An iOS application with a test loop.
+   * @param iosTestLoop iosTestLoop or {@code null} for none
+   */
+  public TestSpecification setIosTestLoop(IosTestLoop iosTestLoop) {
+    this.iosTestLoop = iosTestLoop;
     return this;
   }
 

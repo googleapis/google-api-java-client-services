@@ -38,6 +38,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private AddonsConfig addonsConfig;
 
   /**
+   * Configuration for Binary Authorization.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BinaryAuthorization binaryAuthorization;
+
+  /**
    * The IP address range of the container pods in this cluster, in
    * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
    * `10.96.0.0/14`). Leave blank to have one automatically chosen or specify a `/14` block in
@@ -86,6 +93,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String currentNodeVersion;
+
+  /**
+   * Configuration of etcd encryption.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DatabaseEncryption databaseEncryption;
 
   /**
    * The default constraint on the maximum number of pods that can be run simultaneously on a node
@@ -419,6 +433,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Configuration for Binary Authorization.
+   * @return value or {@code null} for none
+   */
+  public BinaryAuthorization getBinaryAuthorization() {
+    return binaryAuthorization;
+  }
+
+  /**
+   * Configuration for Binary Authorization.
+   * @param binaryAuthorization binaryAuthorization or {@code null} for none
+   */
+  public Cluster setBinaryAuthorization(BinaryAuthorization binaryAuthorization) {
+    this.binaryAuthorization = binaryAuthorization;
+    return this;
+  }
+
+  /**
    * The IP address range of the container pods in this cluster, in
    * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
    * `10.96.0.0/14`). Leave blank to have one automatically chosen or specify a `/14` block in
@@ -533,6 +564,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setCurrentNodeVersion(java.lang.String currentNodeVersion) {
     this.currentNodeVersion = currentNodeVersion;
+    return this;
+  }
+
+  /**
+   * Configuration of etcd encryption.
+   * @return value or {@code null} for none
+   */
+  public DatabaseEncryption getDatabaseEncryption() {
+    return databaseEncryption;
+  }
+
+  /**
+   * Configuration of etcd encryption.
+   * @param databaseEncryption databaseEncryption or {@code null} for none
+   */
+  public Cluster setDatabaseEncryption(DatabaseEncryption databaseEncryption) {
+    this.databaseEncryption = databaseEncryption;
     return this;
   }
 

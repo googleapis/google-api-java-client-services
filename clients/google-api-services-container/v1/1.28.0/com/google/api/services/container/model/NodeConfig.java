@@ -86,9 +86,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   /**
    * The number of local SSD disks to be attached to the node.
    *
-   * The limit for this value is dependant upon the maximum number of disks available on a machine
-   * per zone. See: https://cloud.google.com/compute/docs/disks/local-ssd#local_ssd_limits for more
-   * information.
+   * The limit for this value is dependent upon the maximum number of disks available on a machine
+   * per zone. See: https://cloud.google.com/compute/docs/disks/local-ssd for more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -170,6 +169,13 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String serviceAccount;
+
+  /**
+   * Shielded Instance options.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ShieldedInstanceConfig shieldedInstanceConfig;
 
   /**
    * The list of instance tags applied to all nodes. Tags are used to identify valid sources or
@@ -302,9 +308,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   /**
    * The number of local SSD disks to be attached to the node.
    *
-   * The limit for this value is dependant upon the maximum number of disks available on a machine
-   * per zone. See: https://cloud.google.com/compute/docs/disks/local-ssd#local_ssd_limits for more
-   * information.
+   * The limit for this value is dependent upon the maximum number of disks available on a machine
+   * per zone. See: https://cloud.google.com/compute/docs/disks/local-ssd for more information.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getLocalSsdCount() {
@@ -314,9 +319,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   /**
    * The number of local SSD disks to be attached to the node.
    *
-   * The limit for this value is dependant upon the maximum number of disks available on a machine
-   * per zone. See: https://cloud.google.com/compute/docs/disks/local-ssd#local_ssd_limits for more
-   * information.
+   * The limit for this value is dependent upon the maximum number of disks available on a machine
+   * per zone. See: https://cloud.google.com/compute/docs/disks/local-ssd for more information.
    * @param localSsdCount localSsdCount or {@code null} for none
    */
   public NodeConfig setLocalSsdCount(java.lang.Integer localSsdCount) {
@@ -493,6 +497,23 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setServiceAccount(java.lang.String serviceAccount) {
     this.serviceAccount = serviceAccount;
+    return this;
+  }
+
+  /**
+   * Shielded Instance options.
+   * @return value or {@code null} for none
+   */
+  public ShieldedInstanceConfig getShieldedInstanceConfig() {
+    return shieldedInstanceConfig;
+  }
+
+  /**
+   * Shielded Instance options.
+   * @param shieldedInstanceConfig shieldedInstanceConfig or {@code null} for none
+   */
+  public NodeConfig setShieldedInstanceConfig(ShieldedInstanceConfig shieldedInstanceConfig) {
+    this.shieldedInstanceConfig = shieldedInstanceConfig;
     return this;
   }
 

@@ -31,6 +31,14 @@ package com.google.api.services.container.model;
 public final class NetworkConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod
+   * traffic visible for VPC network.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableIntraNodeVisibility;
+
+  /**
    * Output only. The relative name of the Google Compute Engine network(/compute/docs/networks-and-
    * firewalls#networks) to which the cluster is connected. Example: projects/my-
    * project/global/networks/my-network
@@ -47,6 +55,25 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String subnetwork;
+
+  /**
+   * Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod
+   * traffic visible for VPC network.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableIntraNodeVisibility() {
+    return enableIntraNodeVisibility;
+  }
+
+  /**
+   * Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod
+   * traffic visible for VPC network.
+   * @param enableIntraNodeVisibility enableIntraNodeVisibility or {@code null} for none
+   */
+  public NetworkConfig setEnableIntraNodeVisibility(java.lang.Boolean enableIntraNodeVisibility) {
+    this.enableIntraNodeVisibility = enableIntraNodeVisibility;
+    return this;
+  }
 
   /**
    * Output only. The relative name of the Google Compute Engine network(/compute/docs/networks-and-

@@ -32,8 +32,9 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class SecurityCenterProperties extends com.google.api.client.json.GenericJson {
 
   /**
-   * The full resource name of the GCP resource this asset represents. This field is immutable after
-   * create time. See: https://cloud.google.com/apis/design/resource_names#full_resource_name
+   * Immutable. The full resource name of the GCP resource this asset represents. This field is
+   * immutable after create time. See:
+   * https://cloud.google.com/apis/design/resource_names#full_resource_name
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,8 +73,9 @@ public final class SecurityCenterProperties extends com.google.api.client.json.G
   private java.lang.String resourceType;
 
   /**
-   * The full resource name of the GCP resource this asset represents. This field is immutable after
-   * create time. See: https://cloud.google.com/apis/design/resource_names#full_resource_name
+   * Immutable. The full resource name of the GCP resource this asset represents. This field is
+   * immutable after create time. See:
+   * https://cloud.google.com/apis/design/resource_names#full_resource_name
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceName() {
@@ -81,8 +83,9 @@ public final class SecurityCenterProperties extends com.google.api.client.json.G
   }
 
   /**
-   * The full resource name of the GCP resource this asset represents. This field is immutable after
-   * create time. See: https://cloud.google.com/apis/design/resource_names#full_resource_name
+   * Immutable. The full resource name of the GCP resource this asset represents. This field is
+   * immutable after create time. See:
+   * https://cloud.google.com/apis/design/resource_names#full_resource_name
    * @param resourceName resourceName or {@code null} for none
    */
   public SecurityCenterProperties setResourceName(java.lang.String resourceName) {

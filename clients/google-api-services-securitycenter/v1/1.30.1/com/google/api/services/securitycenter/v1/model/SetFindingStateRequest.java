@@ -31,21 +31,21 @@ package com.google.api.services.securitycenter.v1.model;
 public final class SetFindingStateRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The time at which the updated state takes effect.
+   * Required. The time at which the updated state takes effect.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String startTime;
 
   /**
-   * The desired State of the finding.
+   * Required. The desired State of the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * The time at which the updated state takes effect.
+   * Required. The time at which the updated state takes effect.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -53,7 +53,7 @@ public final class SetFindingStateRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The time at which the updated state takes effect.
+   * Required. The time at which the updated state takes effect.
    * @param startTime startTime or {@code null} for none
    */
   public SetFindingStateRequest setStartTime(String startTime) {
@@ -62,7 +62,7 @@ public final class SetFindingStateRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The desired State of the finding.
+   * Required. The desired State of the finding.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -70,7 +70,7 @@ public final class SetFindingStateRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The desired State of the finding.
+   * Required. The desired State of the finding.
    * @param state state or {@code null} for none
    */
   public SetFindingStateRequest setState(java.lang.String state) {

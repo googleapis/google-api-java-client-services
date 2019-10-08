@@ -104,8 +104,8 @@ public final class GroupAssetsRequest extends com.google.api.client.json.Generic
   private java.lang.String filter;
 
   /**
-   * Expression that defines what assets fields to use for grouping. The string value should follow
-   * SQL syntax: comma separated list of fields. For example:
+   * Required. Expression that defines what assets fields to use for grouping. The string value
+   * should follow SQL syntax: comma separated list of fields. For example:
    * "security_center_properties.resource_project,security_center_properties.project".
    *
    * The following fields are supported when compare_duration is not set:
@@ -299,8 +299,8 @@ public final class GroupAssetsRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * Expression that defines what assets fields to use for grouping. The string value should follow
-   * SQL syntax: comma separated list of fields. For example:
+   * Required. Expression that defines what assets fields to use for grouping. The string value
+   * should follow SQL syntax: comma separated list of fields. For example:
    * "security_center_properties.resource_project,security_center_properties.project".
    *
    * The following fields are supported when compare_duration is not set:
@@ -318,8 +318,8 @@ public final class GroupAssetsRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * Expression that defines what assets fields to use for grouping. The string value should follow
-   * SQL syntax: comma separated list of fields. For example:
+   * Required. Expression that defines what assets fields to use for grouping. The string value
+   * should follow SQL syntax: comma separated list of fields. For example:
    * "security_center_properties.resource_project,security_center_properties.project".
    *
    * The following fields are supported when compare_duration is not set:

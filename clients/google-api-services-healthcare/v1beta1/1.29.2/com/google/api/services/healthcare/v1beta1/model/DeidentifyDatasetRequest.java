@@ -37,7 +37,7 @@ public final class DeidentifyDatasetRequest extends com.google.api.client.json.G
   private DeidentifyConfig config;
 
   /**
-   * The name of the dataset resource to create and write the redacted data to (e.g.,
+   * The name of the dataset resource to create and write the redacted data to.
    *
    *  * The destination dataset must not exist.  * The destination dataset must be in the same
    * project as the source    dataset. De-identifying data across multiple projects is not
@@ -65,7 +65,7 @@ public final class DeidentifyDatasetRequest extends com.google.api.client.json.G
   }
 
   /**
-   * The name of the dataset resource to create and write the redacted data to (e.g.,
+   * The name of the dataset resource to create and write the redacted data to.
    *
    *  * The destination dataset must not exist.  * The destination dataset must be in the same
    * project as the source    dataset. De-identifying data across multiple projects is not
@@ -77,7 +77,7 @@ public final class DeidentifyDatasetRequest extends com.google.api.client.json.G
   }
 
   /**
-   * The name of the dataset resource to create and write the redacted data to (e.g.,
+   * The name of the dataset resource to create and write the redacted data to.
    *
    *  * The destination dataset must not exist.  * The destination dataset must be in the same
    * project as the source    dataset. De-identifying data across multiple projects is not

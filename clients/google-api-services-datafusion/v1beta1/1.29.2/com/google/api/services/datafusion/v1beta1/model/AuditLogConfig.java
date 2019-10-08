@@ -20,11 +20,11 @@ package com.google.api.services.datafusion.v1beta1.model;
  * Provides the configuration for logging a type of permissions. Example:
  *
  *     {       "audit_log_configs": [         {           "log_type": "DATA_READ",
- * "exempted_members": [             "user:foo@gmail.com"           ]         },         {
+ * "exempted_members": [             "user:jose@example.com"           ]         },         {
  * "log_type": "DATA_WRITE",         }       ]     }
  *
- * This enables 'DATA_READ' and 'DATA_WRITE' logging, while exempting foo@gmail.com from DATA_READ
- * logging.
+ * This enables 'DATA_READ' and 'DATA_WRITE' logging, while exempting jose@example.com from
+ * DATA_READ logging.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Data Fusion API. For a detailed explanation
@@ -44,6 +44,12 @@ public final class AuditLogConfig extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> exemptedMembers;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean ignoreChildExemptions;
 
   /**
    * The log type that this config enables.
@@ -68,6 +74,21 @@ public final class AuditLogConfig extends com.google.api.client.json.GenericJson
    */
   public AuditLogConfig setExemptedMembers(java.util.List<java.lang.String> exemptedMembers) {
     this.exemptedMembers = exemptedMembers;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIgnoreChildExemptions() {
+    return ignoreChildExemptions;
+  }
+
+  /**
+   * @param ignoreChildExemptions ignoreChildExemptions or {@code null} for none
+   */
+  public AuditLogConfig setIgnoreChildExemptions(java.lang.Boolean ignoreChildExemptions) {
+    this.ignoreChildExemptions = ignoreChildExemptions;
     return this;
   }
 

@@ -32,10 +32,8 @@ package com.google.api.services.datafusion.v1beta1.model;
  * string), resulting in a counter with no fields.
  *
  * Examples:   counter { metric: "/debug_access_count"  field: "iam_principal" }   ==> increment
- * counter /iam/policy/backend_debug_access_count                         {iam_principal=[value of
+ * counter /iam/policy/debug_access_count                         {iam_principal=[value of
  * IAMContext.principal]}
- *
- * At this time we do not support multiple field names (though this may be supported in the future).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Data Fusion API. For a detailed explanation
@@ -47,6 +45,13 @@ package com.google.api.services.datafusion.v1beta1.model;
  */
 @SuppressWarnings("javadoc")
 public final class CounterOptions extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Custom fields.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<CustomField> customFields;
 
   /**
    * The field value to attribute.
@@ -61,6 +66,23 @@ public final class CounterOptions extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String metric;
+
+  /**
+   * Custom fields.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<CustomField> getCustomFields() {
+    return customFields;
+  }
+
+  /**
+   * Custom fields.
+   * @param customFields customFields or {@code null} for none
+   */
+  public CounterOptions setCustomFields(java.util.List<CustomField> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
 
   /**
    * The field value to attribute.

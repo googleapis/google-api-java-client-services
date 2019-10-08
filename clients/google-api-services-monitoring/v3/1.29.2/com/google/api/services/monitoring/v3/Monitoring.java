@@ -143,141 +143,6 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
   public class Projects {
 
     /**
-     * Validates a new uptime check configuration, and also executes the Uptime check. The results of
-     * the Uptime check are returned, but not stored.
-     *
-     * Create a request for the method "projects.validateUptimeCheckConfig".
-     *
-     * This request holds the parameters needed by the monitoring server.  After setting any optional
-     * parameters, call the {@link ValidateUptimeCheckConfig#execute()} method to invoke the remote
-     * operation.
-     *
-     * @param parent The project for the uptime check. The format is projects/[PROJECT_ID].
-     * @param content the {@link com.google.api.services.monitoring.v3.model.UptimeCheckConfig}
-     * @return the request
-     */
-    public ValidateUptimeCheckConfig validateUptimeCheckConfig(java.lang.String parent, com.google.api.services.monitoring.v3.model.UptimeCheckConfig content) throws java.io.IOException {
-      ValidateUptimeCheckConfig result = new ValidateUptimeCheckConfig(parent, content);
-      initialize(result);
-      return result;
-    }
-
-    public class ValidateUptimeCheckConfig extends MonitoringRequest<com.google.api.services.monitoring.v3.model.ValidateUptimeCheckConfigResponse> {
-
-      private static final String REST_PATH = "v3/{+parent}:validateUptimeCheckConfig";
-
-      private final java.util.regex.Pattern PARENT_PATTERN =
-          java.util.regex.Pattern.compile("^projects/[^/]+$");
-
-      /**
-       * Validates a new uptime check configuration, and also executes the Uptime check. The results of
-       * the Uptime check are returned, but not stored.
-       *
-       * Create a request for the method "projects.validateUptimeCheckConfig".
-       *
-       * This request holds the parameters needed by the the monitoring server.  After setting any
-       * optional parameters, call the {@link ValidateUptimeCheckConfig#execute()} method to invoke the
-       * remote operation. <p> {@link ValidateUptimeCheckConfig#initialize(com.google.api.client.googlea
-       * pis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
-       * immediately after invoking the constructor. </p>
-       *
-       * @param parent The project for the uptime check. The format is projects/[PROJECT_ID].
-       * @param content the {@link com.google.api.services.monitoring.v3.model.UptimeCheckConfig}
-       * @since 1.13
-       */
-      protected ValidateUptimeCheckConfig(java.lang.String parent, com.google.api.services.monitoring.v3.model.UptimeCheckConfig content) {
-        super(Monitoring.this, "POST", REST_PATH, content, com.google.api.services.monitoring.v3.model.ValidateUptimeCheckConfigResponse.class);
-        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-              "Parameter parent must conform to the pattern " +
-              "^projects/[^/]+$");
-        }
-      }
-
-      @Override
-      public ValidateUptimeCheckConfig set$Xgafv(java.lang.String $Xgafv) {
-        return (ValidateUptimeCheckConfig) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public ValidateUptimeCheckConfig setAccessToken(java.lang.String accessToken) {
-        return (ValidateUptimeCheckConfig) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public ValidateUptimeCheckConfig setAlt(java.lang.String alt) {
-        return (ValidateUptimeCheckConfig) super.setAlt(alt);
-      }
-
-      @Override
-      public ValidateUptimeCheckConfig setCallback(java.lang.String callback) {
-        return (ValidateUptimeCheckConfig) super.setCallback(callback);
-      }
-
-      @Override
-      public ValidateUptimeCheckConfig setFields(java.lang.String fields) {
-        return (ValidateUptimeCheckConfig) super.setFields(fields);
-      }
-
-      @Override
-      public ValidateUptimeCheckConfig setKey(java.lang.String key) {
-        return (ValidateUptimeCheckConfig) super.setKey(key);
-      }
-
-      @Override
-      public ValidateUptimeCheckConfig setOauthToken(java.lang.String oauthToken) {
-        return (ValidateUptimeCheckConfig) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public ValidateUptimeCheckConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (ValidateUptimeCheckConfig) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public ValidateUptimeCheckConfig setQuotaUser(java.lang.String quotaUser) {
-        return (ValidateUptimeCheckConfig) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public ValidateUptimeCheckConfig setUploadType(java.lang.String uploadType) {
-        return (ValidateUptimeCheckConfig) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public ValidateUptimeCheckConfig setUploadProtocol(java.lang.String uploadProtocol) {
-        return (ValidateUptimeCheckConfig) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /** The project for the uptime check. The format is projects/[PROJECT_ID]. */
-      @com.google.api.client.util.Key
-      private java.lang.String parent;
-
-      /** The project for the uptime check. The format is projects/[PROJECT_ID].
-       */
-      public java.lang.String getParent() {
-        return parent;
-      }
-
-      /** The project for the uptime check. The format is projects/[PROJECT_ID]. */
-      public ValidateUptimeCheckConfig setParent(java.lang.String parent) {
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-              "Parameter parent must conform to the pattern " +
-              "^projects/[^/]+$");
-        }
-        this.parent = parent;
-        return this;
-      }
-
-      @Override
-      public ValidateUptimeCheckConfig set(String parameterName, Object value) {
-        return (ValidateUptimeCheckConfig) super.set(parameterName, value);
-      }
-    }
-
-    /**
      * An accessor for creating requests from the AlertPolicies collection.
      *
      * <p>The typical use is:</p>
@@ -5986,14 +5851,14 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
     public class UptimeCheckConfigs {
 
       /**
-       * Creates a new uptime check configuration.
+       * Creates a new Uptime check configuration.
        *
        * Create a request for the method "uptimeCheckConfigs.create".
        *
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent The project in which to create the uptime check. The format  is projects/[PROJECT_ID].
+       * @param parent The project in which to create the Uptime check. The format  is projects/[PROJECT_ID].
        * @param content the {@link com.google.api.services.monitoring.v3.model.UptimeCheckConfig}
        * @return the request
        */
@@ -6011,7 +5876,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Creates a new uptime check configuration.
+         * Creates a new Uptime check configuration.
          *
          * Create a request for the method "uptimeCheckConfigs.create".
          *
@@ -6021,7 +5886,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The project in which to create the uptime check. The format  is projects/[PROJECT_ID].
+         * @param parent The project in which to create the Uptime check. The format  is projects/[PROJECT_ID].
          * @param content the {@link com.google.api.services.monitoring.v3.model.UptimeCheckConfig}
          * @since 1.13
          */
@@ -6091,19 +5956,19 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * The project in which to create the uptime check. The format  is projects/[PROJECT_ID].
+         * The project in which to create the Uptime check. The format  is projects/[PROJECT_ID].
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The project in which to create the uptime check. The format  is projects/[PROJECT_ID].
+        /** The project in which to create the Uptime check. The format  is projects/[PROJECT_ID].
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The project in which to create the uptime check. The format  is projects/[PROJECT_ID].
+         * The project in which to create the Uptime check. The format  is projects/[PROJECT_ID].
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -6121,7 +5986,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Deletes an uptime check configuration. Note that this method will fail if the uptime check
+       * Deletes an Uptime check configuration. Note that this method will fail if the Uptime check
        * configuration is referenced by an alert policy or other dependent configs that would be rendered
        * invalid by the deletion.
        *
@@ -6130,7 +5995,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name The uptime check configuration to delete. The format  is
+       * @param name The Uptime check configuration to delete. The format  is
        *        projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].
        * @return the request
        */
@@ -6148,7 +6013,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+/uptimeCheckConfigs/[^/]+$");
 
         /**
-         * Deletes an uptime check configuration. Note that this method will fail if the uptime check
+         * Deletes an Uptime check configuration. Note that this method will fail if the Uptime check
          * configuration is referenced by an alert policy or other dependent configs that would be
          * rendered invalid by the deletion.
          *
@@ -6160,7 +6025,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The uptime check configuration to delete. The format  is
+         * @param name The Uptime check configuration to delete. The format  is
        *        projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].
          * @since 1.13
          */
@@ -6230,13 +6095,13 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * The uptime check configuration to delete. The format  is
+         * The Uptime check configuration to delete. The format  is
          * projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The uptime check configuration to delete. The format  is
+        /** The Uptime check configuration to delete. The format  is
        projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].
          */
         public java.lang.String getName() {
@@ -6244,7 +6109,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * The uptime check configuration to delete. The format  is
+         * The Uptime check configuration to delete. The format  is
          * projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].
          */
         public Delete setName(java.lang.String name) {
@@ -6263,14 +6128,14 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Gets a single uptime check configuration.
+       * Gets a single Uptime check configuration.
        *
        * Create a request for the method "uptimeCheckConfigs.get".
        *
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The uptime check configuration to retrieve. The format  is
+       * @param name The Uptime check configuration to retrieve. The format  is
        *        projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].
        * @return the request
        */
@@ -6288,7 +6153,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+/uptimeCheckConfigs/[^/]+$");
 
         /**
-         * Gets a single uptime check configuration.
+         * Gets a single Uptime check configuration.
          *
          * Create a request for the method "uptimeCheckConfigs.get".
          *
@@ -6297,7 +6162,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The uptime check configuration to retrieve. The format  is
+         * @param name The Uptime check configuration to retrieve. The format  is
        *        projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].
          * @since 1.13
          */
@@ -6377,13 +6242,13 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * The uptime check configuration to retrieve. The format  is
+         * The Uptime check configuration to retrieve. The format  is
          * projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The uptime check configuration to retrieve. The format  is
+        /** The Uptime check configuration to retrieve. The format  is
        projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].
          */
         public java.lang.String getName() {
@@ -6391,7 +6256,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * The uptime check configuration to retrieve. The format  is
+         * The Uptime check configuration to retrieve. The format  is
          * projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].
          */
         public Get setName(java.lang.String name) {
@@ -6410,15 +6275,15 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Lists the existing valid uptime check configurations for the project, leaving out any invalid
-       * configurations.
+       * Lists the existing valid Uptime check configurations for the project (leaving out any invalid
+       * configurations).
        *
        * Create a request for the method "uptimeCheckConfigs.list".
        *
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent The project whose uptime check configurations are listed. The format  is projects/[PROJECT_ID].
+       * @param parent The project whose Uptime check configurations are listed. The format  is projects/[PROJECT_ID].
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -6435,8 +6300,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists the existing valid uptime check configurations for the project, leaving out any invalid
-         * configurations.
+         * Lists the existing valid Uptime check configurations for the project (leaving out any invalid
+         * configurations).
          *
          * Create a request for the method "uptimeCheckConfigs.list".
          *
@@ -6445,7 +6310,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The project whose uptime check configurations are listed. The format  is projects/[PROJECT_ID].
+         * @param parent The project whose Uptime check configurations are listed. The format  is projects/[PROJECT_ID].
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -6524,20 +6389,20 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * The project whose uptime check configurations are listed. The format  is
+         * The project whose Uptime check configurations are listed. The format  is
          * projects/[PROJECT_ID].
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The project whose uptime check configurations are listed. The format  is projects/[PROJECT_ID].
+        /** The project whose Uptime check configurations are listed. The format  is projects/[PROJECT_ID].
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The project whose uptime check configurations are listed. The format  is
+         * The project whose Uptime check configurations are listed. The format  is
          * projects/[PROJECT_ID].
          */
         public List setParent(java.lang.String parent) {
@@ -6608,18 +6473,18 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Updates an uptime check configuration. You can either replace the entire configuration with a new
+       * Updates an Uptime check configuration. You can either replace the entire configuration with a new
        * one or replace only certain fields in the current configuration by specifying the fields to be
-       * updated via "updateMask". Returns the updated configuration.
+       * updated via updateMask. Returns the updated configuration.
        *
        * Create a request for the method "uptimeCheckConfigs.patch".
        *
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name A unique resource name for this UptimeCheckConfig. The format
+       * @param name A unique resource name for this Uptime check configuration. The format
        *        is:projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].This field should be omitted
-       *        when creating the uptime check configuration; on create, the resource name is assigned by
+       *        when creating the Uptime check configuration; on create, the resource name is assigned by
        *        the server and included in the response.
        * @param content the {@link com.google.api.services.monitoring.v3.model.UptimeCheckConfig}
        * @return the request
@@ -6638,9 +6503,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+/uptimeCheckConfigs/[^/]+$");
 
         /**
-         * Updates an uptime check configuration. You can either replace the entire configuration with a
+         * Updates an Uptime check configuration. You can either replace the entire configuration with a
          * new one or replace only certain fields in the current configuration by specifying the fields to
-         * be updated via "updateMask". Returns the updated configuration.
+         * be updated via updateMask. Returns the updated configuration.
          *
          * Create a request for the method "uptimeCheckConfigs.patch".
          *
@@ -6650,9 +6515,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name A unique resource name for this UptimeCheckConfig. The format
+         * @param name A unique resource name for this Uptime check configuration. The format
        *        is:projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].This field should be omitted
-       *        when creating the uptime check configuration; on create, the resource name is assigned by
+       *        when creating the Uptime check configuration; on create, the resource name is assigned by
        *        the server and included in the response.
          * @param content the {@link com.google.api.services.monitoring.v3.model.UptimeCheckConfig}
          * @since 1.13
@@ -6723,17 +6588,17 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * A unique resource name for this UptimeCheckConfig. The format
+         * A unique resource name for this Uptime check configuration. The format
          * is:projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].This field should be
-         * omitted when creating the uptime check configuration; on create, the resource name is
+         * omitted when creating the Uptime check configuration; on create, the resource name is
          * assigned by the server and included in the response.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** A unique resource name for this UptimeCheckConfig. The format
+        /** A unique resource name for this Uptime check configuration. The format
        is:projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].This field should be omitted when
-       creating the uptime check configuration; on create, the resource name is assigned by the server and
+       creating the Uptime check configuration; on create, the resource name is assigned by the server and
        included in the response.
          */
         public java.lang.String getName() {
@@ -6741,9 +6606,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * A unique resource name for this UptimeCheckConfig. The format
+         * A unique resource name for this Uptime check configuration. The format
          * is:projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].This field should be
-         * omitted when creating the uptime check configuration; on create, the resource name is
+         * omitted when creating the Uptime check configuration; on create, the resource name is
          * assigned by the server and included in the response.
          */
         public Patch setName(java.lang.String name) {
@@ -6757,14 +6622,14 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Optional. If present, only the listed fields in the current uptime check configuration
+         * Optional. If present, only the listed fields in the current Uptime check configuration
          * are updated with values from the new configuration. If this field is empty, then the
          * current configuration is completely replaced with the new configuration.
          */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** Optional. If present, only the listed fields in the current uptime check configuration are updated
+        /** Optional. If present, only the listed fields in the current Uptime check configuration are updated
        with values from the new configuration. If this field is empty, then the current configuration is
        completely replaced with the new configuration.
          */
@@ -6773,7 +6638,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Optional. If present, only the listed fields in the current uptime check configuration
+         * Optional. If present, only the listed fields in the current Uptime check configuration
          * are updated with values from the new configuration. If this field is empty, then the
          * current configuration is completely replaced with the new configuration.
          */
@@ -6812,7 +6677,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
   public class UptimeCheckIps {
 
     /**
-     * Returns the list of IPs that checkers run from
+     * Returns the list of IP addresses that checkers run from
      *
      * Create a request for the method "uptimeCheckIps.list".
      *
@@ -6832,7 +6697,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
       private static final String REST_PATH = "v3/uptimeCheckIps";
 
       /**
-       * Returns the list of IPs that checkers run from
+       * Returns the list of IP addresses that checkers run from
        *
        * Create a request for the method "uptimeCheckIps.list".
        *

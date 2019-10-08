@@ -31,10 +31,10 @@ package com.google.api.services.monitoring.v3.model;
 public final class UptimeCheckConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The expected content on the page the check is run against. Currently, only the first entry in
-   * the list is supported, and other entries will be ignored. The server will look for an exact
-   * match of the string in the page response's content. This field is optional and should only be
-   * specified if a content match is required.
+   * The content that is expected to appear in the data returned by the target server against which
+   * the check is run. Currently, only the first entry in the content_matchers list is supported,
+   * and additional entries will be ignored. This field is optional and should only be specified if
+   * a content match is required as part of the/ Uptime check.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +47,7 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * A human-friendly name for the uptime check configuration. The display name should be unique
+   * A human-friendly name for the Uptime check configuration. The display name should be unique
    * within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is
    * not enforced. Required.
    * The value may be {@code null}.
@@ -65,7 +65,7 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
   /**
    * The internal checkers that this check will egress from. If is_internal is true and this list is
    * empty, the check will egress from all the InternalCheckers configured for the project that owns
-   * this CheckConfig.
+   * this UptimeCheckConfig.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,17 +79,17 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
 
   /**
    * The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the
-   * configuration. The following monitored resource types are supported for uptime checks:
-   * uptime_url  gce_instance  gae_app  aws_ec2_instance  aws_elb_load_balancer
+   * configuration. The following monitored resource types are supported for Uptime checks:
+   * uptime_url,  gce_instance,  gae_app,  aws_ec2_instance,  aws_elb_load_balancer
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private MonitoredResource monitoredResource;
 
   /**
-   * A unique resource name for this UptimeCheckConfig. The format
+   * A unique resource name for this Uptime check configuration. The format
    * is:projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].This field should be omitted when
-   * creating the uptime check configuration; on create, the resource name is assigned by the server
+   * creating the Uptime check configuration; on create, the resource name is assigned by the server
    * and included in the response.
    * The value may be {@code null}.
    */
@@ -97,7 +97,7 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
   private java.lang.String name;
 
   /**
-   * How often, in seconds, the uptime check is performed. Currently, the only supported values are
+   * How often, in seconds, the Uptime check is performed. Currently, the only supported values are
    * 60s (1 minute), 300s (5 minutes), 600s (10 minutes), and 900s (15 minutes). Optional, defaults
    * to 60s.
    * The value may be {@code null}.
@@ -114,9 +114,9 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
 
   /**
    * The list of regions from which the check will be run. Some regions contain one location, and
-   * others contain more than one. If this field is specified, enough regions to include a minimum
-   * of 3 locations must be provided, or an error message is returned. Not specifying this field
-   * will result in uptime checks running from all regions.
+   * others contain more than one. If this field is specified, enough regions must be provided to
+   * include a minimum of 3 locations. Not specifying this field will result in Uptime checks
+   * running from all available regions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,10 +138,10 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
   private String timeout;
 
   /**
-   * The expected content on the page the check is run against. Currently, only the first entry in
-   * the list is supported, and other entries will be ignored. The server will look for an exact
-   * match of the string in the page response's content. This field is optional and should only be
-   * specified if a content match is required.
+   * The content that is expected to appear in the data returned by the target server against which
+   * the check is run. Currently, only the first entry in the content_matchers list is supported,
+   * and additional entries will be ignored. This field is optional and should only be specified if
+   * a content match is required as part of the/ Uptime check.
    * @return value or {@code null} for none
    */
   public java.util.List<ContentMatcher> getContentMatchers() {
@@ -149,10 +149,10 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The expected content on the page the check is run against. Currently, only the first entry in
-   * the list is supported, and other entries will be ignored. The server will look for an exact
-   * match of the string in the page response's content. This field is optional and should only be
-   * specified if a content match is required.
+   * The content that is expected to appear in the data returned by the target server against which
+   * the check is run. Currently, only the first entry in the content_matchers list is supported,
+   * and additional entries will be ignored. This field is optional and should only be specified if
+   * a content match is required as part of the/ Uptime check.
    * @param contentMatchers contentMatchers or {@code null} for none
    */
   public UptimeCheckConfig setContentMatchers(java.util.List<ContentMatcher> contentMatchers) {
@@ -161,7 +161,7 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * A human-friendly name for the uptime check configuration. The display name should be unique
+   * A human-friendly name for the Uptime check configuration. The display name should be unique
    * within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is
    * not enforced. Required.
    * @return value or {@code null} for none
@@ -171,7 +171,7 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * A human-friendly name for the uptime check configuration. The display name should be unique
+   * A human-friendly name for the Uptime check configuration. The display name should be unique
    * within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is
    * not enforced. Required.
    * @param displayName displayName or {@code null} for none
@@ -201,7 +201,7 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
   /**
    * The internal checkers that this check will egress from. If is_internal is true and this list is
    * empty, the check will egress from all the InternalCheckers configured for the project that owns
-   * this CheckConfig.
+   * this UptimeCheckConfig.
    * @return value or {@code null} for none
    */
   public java.util.List<InternalChecker> getInternalCheckers() {
@@ -211,7 +211,7 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
   /**
    * The internal checkers that this check will egress from. If is_internal is true and this list is
    * empty, the check will egress from all the InternalCheckers configured for the project that owns
-   * this CheckConfig.
+   * this UptimeCheckConfig.
    * @param internalCheckers internalCheckers or {@code null} for none
    */
   public UptimeCheckConfig setInternalCheckers(java.util.List<InternalChecker> internalCheckers) {
@@ -221,8 +221,8 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
 
   /**
    * The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the
-   * configuration. The following monitored resource types are supported for uptime checks:
-   * uptime_url  gce_instance  gae_app  aws_ec2_instance  aws_elb_load_balancer
+   * configuration. The following monitored resource types are supported for Uptime checks:
+   * uptime_url,  gce_instance,  gae_app,  aws_ec2_instance,  aws_elb_load_balancer
    * @return value or {@code null} for none
    */
   public MonitoredResource getMonitoredResource() {
@@ -231,8 +231,8 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
 
   /**
    * The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the
-   * configuration. The following monitored resource types are supported for uptime checks:
-   * uptime_url  gce_instance  gae_app  aws_ec2_instance  aws_elb_load_balancer
+   * configuration. The following monitored resource types are supported for Uptime checks:
+   * uptime_url,  gce_instance,  gae_app,  aws_ec2_instance,  aws_elb_load_balancer
    * @param monitoredResource monitoredResource or {@code null} for none
    */
   public UptimeCheckConfig setMonitoredResource(MonitoredResource monitoredResource) {
@@ -241,9 +241,9 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * A unique resource name for this UptimeCheckConfig. The format
+   * A unique resource name for this Uptime check configuration. The format
    * is:projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].This field should be omitted when
-   * creating the uptime check configuration; on create, the resource name is assigned by the server
+   * creating the Uptime check configuration; on create, the resource name is assigned by the server
    * and included in the response.
    * @return value or {@code null} for none
    */
@@ -252,9 +252,9 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * A unique resource name for this UptimeCheckConfig. The format
+   * A unique resource name for this Uptime check configuration. The format
    * is:projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].This field should be omitted when
-   * creating the uptime check configuration; on create, the resource name is assigned by the server
+   * creating the Uptime check configuration; on create, the resource name is assigned by the server
    * and included in the response.
    * @param name name or {@code null} for none
    */
@@ -264,7 +264,7 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * How often, in seconds, the uptime check is performed. Currently, the only supported values are
+   * How often, in seconds, the Uptime check is performed. Currently, the only supported values are
    * 60s (1 minute), 300s (5 minutes), 600s (10 minutes), and 900s (15 minutes). Optional, defaults
    * to 60s.
    * @return value or {@code null} for none
@@ -274,7 +274,7 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * How often, in seconds, the uptime check is performed. Currently, the only supported values are
+   * How often, in seconds, the Uptime check is performed. Currently, the only supported values are
    * 60s (1 minute), 300s (5 minutes), 600s (10 minutes), and 900s (15 minutes). Optional, defaults
    * to 60s.
    * @param period period or {@code null} for none
@@ -303,9 +303,9 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
 
   /**
    * The list of regions from which the check will be run. Some regions contain one location, and
-   * others contain more than one. If this field is specified, enough regions to include a minimum
-   * of 3 locations must be provided, or an error message is returned. Not specifying this field
-   * will result in uptime checks running from all regions.
+   * others contain more than one. If this field is specified, enough regions must be provided to
+   * include a minimum of 3 locations. Not specifying this field will result in Uptime checks
+   * running from all available regions.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSelectedRegions() {
@@ -314,9 +314,9 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
 
   /**
    * The list of regions from which the check will be run. Some regions contain one location, and
-   * others contain more than one. If this field is specified, enough regions to include a minimum
-   * of 3 locations must be provided, or an error message is returned. Not specifying this field
-   * will result in uptime checks running from all regions.
+   * others contain more than one. If this field is specified, enough regions must be provided to
+   * include a minimum of 3 locations. Not specifying this field will result in Uptime checks
+   * running from all available regions.
    * @param selectedRegions selectedRegions or {@code null} for none
    */
   public UptimeCheckConfig setSelectedRegions(java.util.List<java.lang.String> selectedRegions) {

@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-monitoring</artifactId>
-  <version>v3-rev20190824-1.29.2</version>
-  <name>Stackdriver Monitoring API v3-rev20190824-1.29.2</name>
+  <version>v3-rev20190929-1.29.2</version>
+  <name>Stackdriver Monitoring API v3-rev20190929-1.29.2</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

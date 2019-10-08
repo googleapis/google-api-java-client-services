@@ -17,7 +17,7 @@
 package com.google.api.services.monitoring.v3.model;
 
 /**
- * Information involved in an HTTP/HTTPS uptime check request.
+ * Information involved in an HTTP/HTTPS Uptime check request.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Stackdriver Monitoring API. For a detailed
@@ -38,7 +38,7 @@ public final class HttpCheck extends com.google.api.client.json.GenericJson {
   private BasicAuthentication authInfo;
 
   /**
-   * The list of headers to send as part of the uptime check request. If two headers have the same
+   * The list of headers to send as part of the Uptime check request. If two headers have the same
    * key and different values, they should be entered as a single header, with the value being a
    * comma-separated list of all the desired values as described at
    * https://www.w3.org/Protocols/rfc2616/rfc2616.txt (page 31). Entering two separate headers with
@@ -53,25 +53,25 @@ public final class HttpCheck extends com.google.api.client.json.GenericJson {
    * Boolean specifiying whether to encrypt the header information. Encryption should be specified
    * for any headers related to authentication that you do not wish to be seen when retrieving the
    * configuration. The server will be responsible for encrypting the headers. On Get/List calls, if
-   * mask_headers is set to True then the headers will be obscured with ******.
+   * mask_headers is set to true then the headers will be obscured with ******.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean maskHeaders;
 
   /**
-   * The path to the page to run the check against. Will be combined with the host (specified within
-   * the MonitoredResource) and port to construct the full URL. Optional (defaults to "/"). If the
-   * provided path does not begin with "/", it will be prepended automatically.
+   * Optional (defaults to "/"). The path to the page against which to run the check. Will be
+   * combined with the host (specified within the monitored_resource) and port to construct the full
+   * URL. If the provided path does not begin with "/", a "/" will be prepended automatically.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String path;
 
   /**
-   * The port to the page to run the check against. Will be combined with host (specified within the
-   * MonitoredResource) and path to construct the full URL. Optional (defaults to 80 without SSL, or
-   * 443 with SSL).
+   * Optional (defaults to 80 when use_ssl is false, and 443 when use_ssl is true). The TCP port on
+   * the HTTP server against which to run the check. Will be combined with host (specified within
+   * the monitored_resource) and path to construct the full URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,8 +85,9 @@ public final class HttpCheck extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean useSsl;
 
   /**
-   * Boolean specifying whether to validate SSL certificates. Only applies to uptime_url checks. If
-   * use_ssl is false, setting this to true has no effect.
+   * Boolean specifying whether to include SSL certificate validation as a part of the Uptime check.
+   * Only applies to checks where monitored_resource is set to uptime_url. If use_ssl is false,
+   * setting validate_ssl to true has no effect.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,7 +111,7 @@ public final class HttpCheck extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of headers to send as part of the uptime check request. If two headers have the same
+   * The list of headers to send as part of the Uptime check request. If two headers have the same
    * key and different values, they should be entered as a single header, with the value being a
    * comma-separated list of all the desired values as described at
    * https://www.w3.org/Protocols/rfc2616/rfc2616.txt (page 31). Entering two separate headers with
@@ -123,7 +124,7 @@ public final class HttpCheck extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of headers to send as part of the uptime check request. If two headers have the same
+   * The list of headers to send as part of the Uptime check request. If two headers have the same
    * key and different values, they should be entered as a single header, with the value being a
    * comma-separated list of all the desired values as described at
    * https://www.w3.org/Protocols/rfc2616/rfc2616.txt (page 31). Entering two separate headers with
@@ -140,7 +141,7 @@ public final class HttpCheck extends com.google.api.client.json.GenericJson {
    * Boolean specifiying whether to encrypt the header information. Encryption should be specified
    * for any headers related to authentication that you do not wish to be seen when retrieving the
    * configuration. The server will be responsible for encrypting the headers. On Get/List calls, if
-   * mask_headers is set to True then the headers will be obscured with ******.
+   * mask_headers is set to true then the headers will be obscured with ******.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getMaskHeaders() {
@@ -151,7 +152,7 @@ public final class HttpCheck extends com.google.api.client.json.GenericJson {
    * Boolean specifiying whether to encrypt the header information. Encryption should be specified
    * for any headers related to authentication that you do not wish to be seen when retrieving the
    * configuration. The server will be responsible for encrypting the headers. On Get/List calls, if
-   * mask_headers is set to True then the headers will be obscured with ******.
+   * mask_headers is set to true then the headers will be obscured with ******.
    * @param maskHeaders maskHeaders or {@code null} for none
    */
   public HttpCheck setMaskHeaders(java.lang.Boolean maskHeaders) {
@@ -160,9 +161,9 @@ public final class HttpCheck extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The path to the page to run the check against. Will be combined with the host (specified within
-   * the MonitoredResource) and port to construct the full URL. Optional (defaults to "/"). If the
-   * provided path does not begin with "/", it will be prepended automatically.
+   * Optional (defaults to "/"). The path to the page against which to run the check. Will be
+   * combined with the host (specified within the monitored_resource) and port to construct the full
+   * URL. If the provided path does not begin with "/", a "/" will be prepended automatically.
    * @return value or {@code null} for none
    */
   public java.lang.String getPath() {
@@ -170,9 +171,9 @@ public final class HttpCheck extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The path to the page to run the check against. Will be combined with the host (specified within
-   * the MonitoredResource) and port to construct the full URL. Optional (defaults to "/"). If the
-   * provided path does not begin with "/", it will be prepended automatically.
+   * Optional (defaults to "/"). The path to the page against which to run the check. Will be
+   * combined with the host (specified within the monitored_resource) and port to construct the full
+   * URL. If the provided path does not begin with "/", a "/" will be prepended automatically.
    * @param path path or {@code null} for none
    */
   public HttpCheck setPath(java.lang.String path) {
@@ -181,9 +182,9 @@ public final class HttpCheck extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The port to the page to run the check against. Will be combined with host (specified within the
-   * MonitoredResource) and path to construct the full URL. Optional (defaults to 80 without SSL, or
-   * 443 with SSL).
+   * Optional (defaults to 80 when use_ssl is false, and 443 when use_ssl is true). The TCP port on
+   * the HTTP server against which to run the check. Will be combined with host (specified within
+   * the monitored_resource) and path to construct the full URL.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPort() {
@@ -191,9 +192,9 @@ public final class HttpCheck extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The port to the page to run the check against. Will be combined with host (specified within the
-   * MonitoredResource) and path to construct the full URL. Optional (defaults to 80 without SSL, or
-   * 443 with SSL).
+   * Optional (defaults to 80 when use_ssl is false, and 443 when use_ssl is true). The TCP port on
+   * the HTTP server against which to run the check. Will be combined with host (specified within
+   * the monitored_resource) and path to construct the full URL.
    * @param port port or {@code null} for none
    */
   public HttpCheck setPort(java.lang.Integer port) {
@@ -219,8 +220,9 @@ public final class HttpCheck extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Boolean specifying whether to validate SSL certificates. Only applies to uptime_url checks. If
-   * use_ssl is false, setting this to true has no effect.
+   * Boolean specifying whether to include SSL certificate validation as a part of the Uptime check.
+   * Only applies to checks where monitored_resource is set to uptime_url. If use_ssl is false,
+   * setting validate_ssl to true has no effect.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getValidateSsl() {
@@ -228,8 +230,9 @@ public final class HttpCheck extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Boolean specifying whether to validate SSL certificates. Only applies to uptime_url checks. If
-   * use_ssl is false, setting this to true has no effect.
+   * Boolean specifying whether to include SSL certificate validation as a part of the Uptime check.
+   * Only applies to checks where monitored_resource is set to uptime_url. If use_ssl is false,
+   * setting validate_ssl to true has no effect.
    * @param validateSsl validateSsl or {@code null} for none
    */
   public HttpCheck setValidateSsl(java.lang.Boolean validateSsl) {

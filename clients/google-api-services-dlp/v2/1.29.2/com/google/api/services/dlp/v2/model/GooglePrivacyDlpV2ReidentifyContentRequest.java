@@ -68,7 +68,7 @@ public final class GooglePrivacyDlpV2ReidentifyContentRequest extends com.google
    * used to de-identify the items and executing the reverse. This requires that only reversible
    * transformations be provided here. The reversible transformations are:
    *
-   *  - `CryptoReplaceFfxFpeConfig`
+   *  - `CryptoDeterministicConfig`  - `CryptoReplaceFfxFpeConfig`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -166,7 +166,7 @@ public final class GooglePrivacyDlpV2ReidentifyContentRequest extends com.google
    * used to de-identify the items and executing the reverse. This requires that only reversible
    * transformations be provided here. The reversible transformations are:
    *
-   *  - `CryptoReplaceFfxFpeConfig`
+   *  - `CryptoDeterministicConfig`  - `CryptoReplaceFfxFpeConfig`
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2DeidentifyConfig getReidentifyConfig() {
@@ -180,7 +180,7 @@ public final class GooglePrivacyDlpV2ReidentifyContentRequest extends com.google
    * used to de-identify the items and executing the reverse. This requires that only reversible
    * transformations be provided here. The reversible transformations are:
    *
-   *  - `CryptoReplaceFfxFpeConfig`
+   *  - `CryptoDeterministicConfig`  - `CryptoReplaceFfxFpeConfig`
    * @param reidentifyConfig reidentifyConfig or {@code null} for none
    */
   public GooglePrivacyDlpV2ReidentifyContentRequest setReidentifyConfig(GooglePrivacyDlpV2DeidentifyConfig reidentifyConfig) {

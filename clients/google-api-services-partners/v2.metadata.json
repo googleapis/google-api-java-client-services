@@ -1,7 +1,0 @@
-{
-  "maven": {
-    "groupId": "com.google.apis",
-    "artifactId": "google-api-services-partners",
-    "version": "v2-rev20180925-1.28.0"
-  }
-}

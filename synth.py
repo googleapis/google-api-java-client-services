@@ -19,7 +19,7 @@ from synthtool.__main__ import extra_args
 from synthtool import log, shell
 from synthtool.sources import git
 import logging
-from os import path
+from os import path, remove
 from pathlib import Path
 import glob
 import json
@@ -188,8 +188,7 @@ def replace_content_in_readme(content_rows: List[str]) -> None:
         for line in newlines:
             f.write(line)
 
-def generate_service_list():
-    services = all_services()
+def generate_service_list(services: List[Service]) -> None:
     services_by_name = {}
     for service in services:
         if service.title is None:
@@ -212,6 +211,28 @@ def generate_service_list():
 
     replace_content_in_readme(content_rows)
 
+def remove_unused_services(services: List[Service]) -> None:
+    print("removing unused service versions")
+    services_by_id = {}
+    for service in services:
+        client_name = f"google-api-services-{service.id}"
+        if client_name not in services_by_id:
+            services_by_id[client_name] = []
+
+        services_by_id[client_name].append(service.version)
+
+    existing_clients = glob.glob("clients/google-api-services-*/*.metadata.json")
+    for existing_client in existing_clients:
+        version = path.basename(existing_client).replace(".metadata.json", "")
+        client_name = existing_client.split("/")[1]
+        if client_name not in services_by_id:
+            print(f"deleting entire service: {client_name}")
+            shutil.rmtree(f"clients/{client_name}")
+        elif version not in services_by_id[client_name]:
+            print(f"deleting {version} of {client_name}")
+            shutil.rmtree(f"clients/{client_name}/{version}")
+            remove(f"clients/{client_name}/{version}.metadata.json")
+
 def generate_services(services):
     for service in services:
         generate_service(service)
@@ -219,7 +240,9 @@ def generate_services(services):
 if extra_args():
     api_name = extra_args()[0]
     if api_name == "README":
-        generate_service_list()
+        services = all_services()
+        generate_service_list(services)
+        remove_unused_services(services)
     else:
         discoveries = all_discoveries()
         discoveries = [discovery for discovery in discoveries if discovery.startswith(api_name)]

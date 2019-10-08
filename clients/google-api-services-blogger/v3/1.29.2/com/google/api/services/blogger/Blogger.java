@@ -150,8 +150,8 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
      * This request holds the parameters needed by the blogger server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param userId ID of the user whose blogs are to be fetched. Either the word 'self' (sans quote marks) or the
-     *        user's profile identifier.
+     * @param userId ID of the user whose blogs are to be fetched. Either the word 'self' or the user's profile
+     *        identifier.
      * @param blogId The ID of the blog to get.
      * @return the request
      */
@@ -175,8 +175,8 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param userId ID of the user whose blogs are to be fetched. Either the word 'self' (sans quote marks) or the
-     *        user's profile identifier.
+       * @param userId ID of the user whose blogs are to be fetched. Either the word 'self' or the user's profile
+     *        identifier.
        * @param blogId The ID of the blog to get.
        * @since 1.13
        */
@@ -232,22 +232,22 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
-       * ID of the user whose blogs are to be fetched. Either the word 'self' (sans quote marks) or
-       * the user's profile identifier.
+       * ID of the user whose blogs are to be fetched. Either the word 'self' or the user's profile
+       * identifier.
        */
       @com.google.api.client.util.Key
       private java.lang.String userId;
 
-      /** ID of the user whose blogs are to be fetched. Either the word 'self' (sans quote marks) or the
-     user's profile identifier.
+      /** ID of the user whose blogs are to be fetched. Either the word 'self' or the user's profile
+     identifier.
        */
       public java.lang.String getUserId() {
         return userId;
       }
 
       /**
-       * ID of the user whose blogs are to be fetched. Either the word 'self' (sans quote marks) or
-       * the user's profile identifier.
+       * ID of the user whose blogs are to be fetched. Either the word 'self' or the user's profile
+       * identifier.
        */
       public Get setUserId(java.lang.String userId) {
         this.userId = userId;
@@ -589,8 +589,8 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
      * This request holds the parameters needed by the blogger server.  After setting any optional
      * parameters, call the {@link ListByUser#execute()} method to invoke the remote operation.
      *
-     * @param userId ID of the user whose blogs are to be fetched. Either the word 'self' (sans quote marks) or the
-     *        user's profile identifier.
+     * @param userId ID of the user whose blogs are to be fetched. Either the word 'self' or the user's profile
+     *        identifier.
      * @return the request
      */
     public ListByUser listByUser(java.lang.String userId) throws java.io.IOException {
@@ -614,8 +614,8 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
        * ListByUser#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param userId ID of the user whose blogs are to be fetched. Either the word 'self' (sans quote marks) or the
-     *        user's profile identifier.
+       * @param userId ID of the user whose blogs are to be fetched. Either the word 'self' or the user's profile
+     *        identifier.
        * @since 1.13
        */
       protected ListByUser(java.lang.String userId) {
@@ -669,22 +669,22 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
-       * ID of the user whose blogs are to be fetched. Either the word 'self' (sans quote marks) or
-       * the user's profile identifier.
+       * ID of the user whose blogs are to be fetched. Either the word 'self' or the user's profile
+       * identifier.
        */
       @com.google.api.client.util.Key
       private java.lang.String userId;
 
-      /** ID of the user whose blogs are to be fetched. Either the word 'self' (sans quote marks) or the
-     user's profile identifier.
+      /** ID of the user whose blogs are to be fetched. Either the word 'self' or the user's profile
+     identifier.
        */
       public java.lang.String getUserId() {
         return userId;
       }
 
       /**
-       * ID of the user whose blogs are to be fetched. Either the word 'self' (sans quote marks) or
-       * the user's profile identifier.
+       * ID of the user whose blogs are to be fetched. Either the word 'self' or the user's profile
+       * identifier.
        */
       public ListByUser setUserId(java.lang.String userId) {
         this.userId = userId;
@@ -3240,8 +3240,8 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
      * This request holds the parameters needed by the blogger server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param userId ID of the user for the per-user information to be fetched. Either the word 'self' (sans quote marks)
-     *        or the user's profile identifier.
+     * @param userId ID of the user for the per-user information to be fetched. Either the word 'self' or the user's
+     *        profile identifier.
      * @param blogId The ID of the blog.
      * @param postId The ID of the post to get.
      * @return the request
@@ -3267,8 +3267,8 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param userId ID of the user for the per-user information to be fetched. Either the word 'self' (sans quote marks)
-     *        or the user's profile identifier.
+       * @param userId ID of the user for the per-user information to be fetched. Either the word 'self' or the user's
+     *        profile identifier.
        * @param blogId The ID of the blog.
        * @param postId The ID of the post to get.
        * @since 1.13
@@ -3326,22 +3326,22 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
-       * ID of the user for the per-user information to be fetched. Either the word 'self' (sans
-       * quote marks) or the user's profile identifier.
+       * ID of the user for the per-user information to be fetched. Either the word 'self' or the
+       * user's profile identifier.
        */
       @com.google.api.client.util.Key
       private java.lang.String userId;
 
-      /** ID of the user for the per-user information to be fetched. Either the word 'self' (sans quote
-     marks) or the user's profile identifier.
+      /** ID of the user for the per-user information to be fetched. Either the word 'self' or the user's
+     profile identifier.
        */
       public java.lang.String getUserId() {
         return userId;
       }
 
       /**
-       * ID of the user for the per-user information to be fetched. Either the word 'self' (sans
-       * quote marks) or the user's profile identifier.
+       * ID of the user for the per-user information to be fetched. Either the word 'self' or the
+       * user's profile identifier.
        */
       public Get setUserId(java.lang.String userId) {
         this.userId = userId;
@@ -3410,8 +3410,8 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
      * This request holds the parameters needed by the blogger server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param userId ID of the user for the per-user information to be fetched. Either the word 'self' (sans quote marks)
-     *        or the user's profile identifier.
+     * @param userId ID of the user for the per-user information to be fetched. Either the word 'self' or the user's
+     *        profile identifier.
      * @param blogId ID of the blog to fetch posts from.
      * @return the request
      */
@@ -3436,8 +3436,8 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
        * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param userId ID of the user for the per-user information to be fetched. Either the word 'self' (sans quote marks)
-     *        or the user's profile identifier.
+       * @param userId ID of the user for the per-user information to be fetched. Either the word 'self' or the user's
+     *        profile identifier.
        * @param blogId ID of the blog to fetch posts from.
        * @since 1.13
        */
@@ -3493,22 +3493,22 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
-       * ID of the user for the per-user information to be fetched. Either the word 'self' (sans
-       * quote marks) or the user's profile identifier.
+       * ID of the user for the per-user information to be fetched. Either the word 'self' or the
+       * user's profile identifier.
        */
       @com.google.api.client.util.Key
       private java.lang.String userId;
 
-      /** ID of the user for the per-user information to be fetched. Either the word 'self' (sans quote
-     marks) or the user's profile identifier.
+      /** ID of the user for the per-user information to be fetched. Either the word 'self' or the user's
+     profile identifier.
        */
       public java.lang.String getUserId() {
         return userId;
       }
 
       /**
-       * ID of the user for the per-user information to be fetched. Either the word 'self' (sans
-       * quote marks) or the user's profile identifier.
+       * ID of the user for the per-user information to be fetched. Either the word 'self' or the
+       * user's profile identifier.
        */
       public List setUserId(java.lang.String userId) {
         this.userId = userId;

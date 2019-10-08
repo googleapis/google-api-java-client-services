@@ -25,7 +25,7 @@ package com.google.api.services.dialogflow.v2;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://cloud.google.com/dialogflow-enterprise/" target="_blank">API Documentation</a>
+ * <a href="https://cloud.google.com/dialogflow/" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>
@@ -142,6 +142,294 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
    */
   public class Projects {
 
+    /**
+     * Creates/updates the specified agent.
+     *
+     * Create a request for the method "projects.agent".
+     *
+     * This request holds the parameters needed by the dialogflow server.  After setting any optional
+     * parameters, call the {@link Agent#execute()} method to invoke the remote operation.
+     *
+     * @param parent Required. The project of this agent.
+    Format: `projects/`.
+     * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2Agent}
+     * @return the request
+     */
+    public Agent agent(java.lang.String parent, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2Agent content) throws java.io.IOException {
+      Agent result = new Agent(parent, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Agent extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2Agent> {
+
+      private static final String REST_PATH = "v2/{+parent}/agent";
+
+      private final java.util.regex.Pattern PARENT_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+      /**
+       * Creates/updates the specified agent.
+       *
+       * Create a request for the method "projects.agent".
+       *
+       * This request holds the parameters needed by the the dialogflow server.  After setting any
+       * optional parameters, call the {@link Agent#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Agent#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param parent Required. The project of this agent.
+    Format: `projects/`.
+       * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2Agent}
+       * @since 1.13
+       */
+      protected Agent(java.lang.String parent, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2Agent content) {
+        super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2Agent.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+      }
+
+      @Override
+      public Agent set$Xgafv(java.lang.String $Xgafv) {
+        return (Agent) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Agent setAccessToken(java.lang.String accessToken) {
+        return (Agent) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Agent setAlt(java.lang.String alt) {
+        return (Agent) super.setAlt(alt);
+      }
+
+      @Override
+      public Agent setCallback(java.lang.String callback) {
+        return (Agent) super.setCallback(callback);
+      }
+
+      @Override
+      public Agent setFields(java.lang.String fields) {
+        return (Agent) super.setFields(fields);
+      }
+
+      @Override
+      public Agent setKey(java.lang.String key) {
+        return (Agent) super.setKey(key);
+      }
+
+      @Override
+      public Agent setOauthToken(java.lang.String oauthToken) {
+        return (Agent) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Agent setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Agent) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Agent setQuotaUser(java.lang.String quotaUser) {
+        return (Agent) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Agent setUploadType(java.lang.String uploadType) {
+        return (Agent) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Agent setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Agent) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The project of this agent. Format: `projects/`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Required. The project of this agent. Format: `projects/`.
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /**
+       * Required. The project of this agent. Format: `projects/`.
+       */
+      public Agent setParent(java.lang.String parent) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+        this.parent = parent;
+        return this;
+      }
+
+      /** Optional. The mask to control which fields get updated. */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Optional. The mask to control which fields get updated.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /** Optional. The mask to control which fields get updated. */
+      public Agent setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public Agent set(String parameterName, Object value) {
+        return (Agent) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Deletes the specified agent.
+     *
+     * Create a request for the method "projects.deleteAgent".
+     *
+     * This request holds the parameters needed by the dialogflow server.  After setting any optional
+     * parameters, call the {@link DeleteAgent#execute()} method to invoke the remote operation.
+     *
+     * @param parent Required. The project that the agent to delete is associated with.
+    Format: `projects/`.
+     * @return the request
+     */
+    public DeleteAgent deleteAgent(java.lang.String parent) throws java.io.IOException {
+      DeleteAgent result = new DeleteAgent(parent);
+      initialize(result);
+      return result;
+    }
+
+    public class DeleteAgent extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleProtobufEmpty> {
+
+      private static final String REST_PATH = "v2/{+parent}/agent";
+
+      private final java.util.regex.Pattern PARENT_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+      /**
+       * Deletes the specified agent.
+       *
+       * Create a request for the method "projects.deleteAgent".
+       *
+       * This request holds the parameters needed by the the dialogflow server.  After setting any
+       * optional parameters, call the {@link DeleteAgent#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * DeleteAgent#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param parent Required. The project that the agent to delete is associated with.
+    Format: `projects/`.
+       * @since 1.13
+       */
+      protected DeleteAgent(java.lang.String parent) {
+        super(Dialogflow.this, "DELETE", REST_PATH, null, com.google.api.services.dialogflow.v2.model.GoogleProtobufEmpty.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+      }
+
+      @Override
+      public DeleteAgent set$Xgafv(java.lang.String $Xgafv) {
+        return (DeleteAgent) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public DeleteAgent setAccessToken(java.lang.String accessToken) {
+        return (DeleteAgent) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public DeleteAgent setAlt(java.lang.String alt) {
+        return (DeleteAgent) super.setAlt(alt);
+      }
+
+      @Override
+      public DeleteAgent setCallback(java.lang.String callback) {
+        return (DeleteAgent) super.setCallback(callback);
+      }
+
+      @Override
+      public DeleteAgent setFields(java.lang.String fields) {
+        return (DeleteAgent) super.setFields(fields);
+      }
+
+      @Override
+      public DeleteAgent setKey(java.lang.String key) {
+        return (DeleteAgent) super.setKey(key);
+      }
+
+      @Override
+      public DeleteAgent setOauthToken(java.lang.String oauthToken) {
+        return (DeleteAgent) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public DeleteAgent setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (DeleteAgent) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public DeleteAgent setQuotaUser(java.lang.String quotaUser) {
+        return (DeleteAgent) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public DeleteAgent setUploadType(java.lang.String uploadType) {
+        return (DeleteAgent) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public DeleteAgent setUploadProtocol(java.lang.String uploadProtocol) {
+        return (DeleteAgent) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The project that the agent to delete is associated with. Format: `projects/`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Required. The project that the agent to delete is associated with. Format: `projects/`.
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /**
+       * Required. The project that the agent to delete is associated with. Format: `projects/`.
+       */
+      public DeleteAgent setParent(java.lang.String parent) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+        this.parent = parent;
+        return this;
+      }
+
+      @Override
+      public DeleteAgent set(String parameterName, Object value) {
+        return (DeleteAgent) super.set(parameterName, value);
+      }
+    }
     /**
      * Retrieves the specified agent.
      *
@@ -915,17 +1203,17 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           return this;
         }
 
-        /** Optional. The next_page_token value returned from a previous list request. */
+        /** The next_page_token value returned from a previous list request. */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** Optional. The next_page_token value returned from a previous list request.
+        /** The next_page_token value returned from a previous list request.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /** Optional. The next_page_token value returned from a previous list request. */
+        /** The next_page_token value returned from a previous list request. */
         public Search setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
@@ -1518,17 +1806,17 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Optional. The language of entity synonyms defined in `entity_type`. If not specified,
-           * the agent's default language is used. [Many languages](https://cloud.google.com
-           * /dialogflow-enterprise/docs/reference/language) are supported. Note: languages must be
-           * enabled in the agent before they can be used.
+           * the agent's default language is used. [Many
+           * languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported.
+           * Note: languages must be enabled in the agent before they can be used.
            */
           @com.google.api.client.util.Key
           private java.lang.String languageCode;
 
           /** Optional. The language of entity synonyms defined in `entity_type`. If not specified, the agent's
-         default language is used. [Many languages](https://cloud.google.com/dialogflow-
-         enterprise/docs/reference/language) are supported. Note: languages must be enabled in the agent
-         before they can be used.
+         default language is used. [Many
+         languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported. Note:
+         languages must be enabled in the agent before they can be used.
            */
           public java.lang.String getLanguageCode() {
             return languageCode;
@@ -1536,9 +1824,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Optional. The language of entity synonyms defined in `entity_type`. If not specified,
-           * the agent's default language is used. [Many languages](https://cloud.google.com
-           * /dialogflow-enterprise/docs/reference/language) are supported. Note: languages must be
-           * enabled in the agent before they can be used.
+           * the agent's default language is used. [Many
+           * languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported.
+           * Note: languages must be enabled in the agent before they can be used.
            */
           public Create setLanguageCode(java.lang.String languageCode) {
             this.languageCode = languageCode;
@@ -1828,17 +2116,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Optional. The language to retrieve entity synonyms for. If not specified, the agent's
-           * default language is used. [Many languages](https://cloud.google.com/dialogflow-
-           * enterprise/docs/reference/language) are supported. Note: languages must be enabled in
-           * the agent before they can be used.
+           * default language is used. [Many
+           * languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported.
+           * Note: languages must be enabled in the agent before they can be used.
            */
           @com.google.api.client.util.Key
           private java.lang.String languageCode;
 
           /** Optional. The language to retrieve entity synonyms for. If not specified, the agent's default
-         language is used. [Many languages](https://cloud.google.com/dialogflow-
-         enterprise/docs/reference/language) are supported. Note: languages must be enabled in the agent
-         before they can be used.
+         language is used. [Many languages](https://cloud.google.com/dialogflow/docs/reference/language) are
+         supported. Note: languages must be enabled in the agent before they can be used.
            */
           public java.lang.String getLanguageCode() {
             return languageCode;
@@ -1846,9 +2133,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Optional. The language to retrieve entity synonyms for. If not specified, the agent's
-           * default language is used. [Many languages](https://cloud.google.com/dialogflow-
-           * enterprise/docs/reference/language) are supported. Note: languages must be enabled in
-           * the agent before they can be used.
+           * default language is used. [Many
+           * languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported.
+           * Note: languages must be enabled in the agent before they can be used.
            */
           public Get setLanguageCode(java.lang.String languageCode) {
             this.languageCode = languageCode;
@@ -2001,16 +2288,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Optional. The language to list entity synonyms for. If not specified, the agent's
-           * default language is used. [Many languages](https://cloud.google.com/dialogflow-
-           * enterprise/docs/reference/language) are supported. Note: languages must be enabled in
-           * the agent before they can be used.
+           * default language is used. [Many
+           * languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported.
+           * Note: languages must be enabled in the agent before they can be used.
            */
           @com.google.api.client.util.Key
           private java.lang.String languageCode;
 
           /** Optional. The language to list entity synonyms for. If not specified, the agent's default language
-         is used. [Many languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language)
-         are supported. Note: languages must be enabled in the agent before they can be used.
+         is used. [Many languages](https://cloud.google.com/dialogflow/docs/reference/language) are
+         supported. Note: languages must be enabled in the agent before they can be used.
            */
           public java.lang.String getLanguageCode() {
             return languageCode;
@@ -2018,9 +2305,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Optional. The language to list entity synonyms for. If not specified, the agent's
-           * default language is used. [Many languages](https://cloud.google.com/dialogflow-
-           * enterprise/docs/reference/language) are supported. Note: languages must be enabled in
-           * the agent before they can be used.
+           * default language is used. [Many
+           * languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported.
+           * Note: languages must be enabled in the agent before they can be used.
            */
           public List setLanguageCode(java.lang.String languageCode) {
             this.languageCode = languageCode;
@@ -2211,17 +2498,17 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Optional. The language of entity synonyms defined in `entity_type`. If not specified,
-           * the agent's default language is used. [Many languages](https://cloud.google.com
-           * /dialogflow-enterprise/docs/reference/language) are supported. Note: languages must be
-           * enabled in the agent before they can be used.
+           * the agent's default language is used. [Many
+           * languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported.
+           * Note: languages must be enabled in the agent before they can be used.
            */
           @com.google.api.client.util.Key
           private java.lang.String languageCode;
 
           /** Optional. The language of entity synonyms defined in `entity_type`. If not specified, the agent's
-         default language is used. [Many languages](https://cloud.google.com/dialogflow-
-         enterprise/docs/reference/language) are supported. Note: languages must be enabled in the agent
-         before they can be used.
+         default language is used. [Many
+         languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported. Note:
+         languages must be enabled in the agent before they can be used.
            */
           public java.lang.String getLanguageCode() {
             return languageCode;
@@ -2229,9 +2516,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Optional. The language of entity synonyms defined in `entity_type`. If not specified,
-           * the agent's default language is used. [Many languages](https://cloud.google.com
-           * /dialogflow-enterprise/docs/reference/language) are supported. Note: languages must be
-           * enabled in the agent before they can be used.
+           * the agent's default language is used. [Many
+           * languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported.
+           * Note: languages must be enabled in the agent before they can be used.
            */
           public Patch setLanguageCode(java.lang.String languageCode) {
             this.languageCode = languageCode;
@@ -3176,16 +3463,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           /**
            * Optional. The language of training phrases, parameters and rich messages defined in
            * `intent`. If not specified, the agent's default language is used. [Many
-           * languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language) are
-           * supported. Note: languages must be enabled in the agent before they can be used.
+           * languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported.
+           * Note: languages must be enabled in the agent before they can be used.
            */
           @com.google.api.client.util.Key
           private java.lang.String languageCode;
 
           /** Optional. The language of training phrases, parameters and rich messages defined in `intent`. If
-         not specified, the agent's default language is used. [Many languages](https://cloud.google.com
-         /dialogflow-enterprise/docs/reference/language) are supported. Note: languages must be enabled in
-         the agent before they can be used.
+         not specified, the agent's default language is used. [Many
+         languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported. Note:
+         languages must be enabled in the agent before they can be used.
            */
           public java.lang.String getLanguageCode() {
             return languageCode;
@@ -3194,8 +3481,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           /**
            * Optional. The language of training phrases, parameters and rich messages defined in
            * `intent`. If not specified, the agent's default language is used. [Many
-           * languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language) are
-           * supported. Note: languages must be enabled in the agent before they can be used.
+           * languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported.
+           * Note: languages must be enabled in the agent before they can be used.
            */
           public Create setLanguageCode(java.lang.String languageCode) {
             this.languageCode = languageCode;
@@ -3507,16 +3794,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           /**
            * Optional. The language to retrieve training phrases, parameters and rich messages for.
            * If not specified, the agent's default language is used. [Many
-           * languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language) are
-           * supported. Note: languages must be enabled in the agent before they can be used.
+           * languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported.
+           * Note: languages must be enabled in the agent before they can be used.
            */
           @com.google.api.client.util.Key
           private java.lang.String languageCode;
 
           /** Optional. The language to retrieve training phrases, parameters and rich messages for. If not
-         specified, the agent's default language is used. [Many languages](https://cloud.google.com
-         /dialogflow-enterprise/docs/reference/language) are supported. Note: languages must be enabled in
-         the agent before they can be used.
+         specified, the agent's default language is used. [Many
+         languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported. Note:
+         languages must be enabled in the agent before they can be used.
            */
           public java.lang.String getLanguageCode() {
             return languageCode;
@@ -3525,8 +3812,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           /**
            * Optional. The language to retrieve training phrases, parameters and rich messages for.
            * If not specified, the agent's default language is used. [Many
-           * languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language) are
-           * supported. Note: languages must be enabled in the agent before they can be used.
+           * languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported.
+           * Note: languages must be enabled in the agent before they can be used.
            */
           public Get setLanguageCode(java.lang.String languageCode) {
             this.languageCode = languageCode;
@@ -3696,16 +3983,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           /**
            * Optional. The language to list training phrases, parameters and rich messages for. If
            * not specified, the agent's default language is used. [Many
-           * languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language) are
-           * supported. Note: languages must be enabled in the agent before they can be used.
+           * languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported.
+           * Note: languages must be enabled in the agent before they can be used.
            */
           @com.google.api.client.util.Key
           private java.lang.String languageCode;
 
           /** Optional. The language to list training phrases, parameters and rich messages for. If not
-         specified, the agent's default language is used. [Many languages](https://cloud.google.com
-         /dialogflow-enterprise/docs/reference/language) are supported. Note: languages must be enabled in
-         the agent before they can be used.
+         specified, the agent's default language is used. [Many
+         languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported. Note:
+         languages must be enabled in the agent before they can be used.
            */
           public java.lang.String getLanguageCode() {
             return languageCode;
@@ -3714,8 +4001,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           /**
            * Optional. The language to list training phrases, parameters and rich messages for. If
            * not specified, the agent's default language is used. [Many
-           * languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language) are
-           * supported. Note: languages must be enabled in the agent before they can be used.
+           * languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported.
+           * Note: languages must be enabled in the agent before they can be used.
            */
           public List setLanguageCode(java.lang.String languageCode) {
             this.languageCode = languageCode;
@@ -3925,16 +4212,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           /**
            * Optional. The language of training phrases, parameters and rich messages defined in
            * `intent`. If not specified, the agent's default language is used. [Many
-           * languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language) are
-           * supported. Note: languages must be enabled in the agent before they can be used.
+           * languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported.
+           * Note: languages must be enabled in the agent before they can be used.
            */
           @com.google.api.client.util.Key
           private java.lang.String languageCode;
 
           /** Optional. The language of training phrases, parameters and rich messages defined in `intent`. If
-         not specified, the agent's default language is used. [Many languages](https://cloud.google.com
-         /dialogflow-enterprise/docs/reference/language) are supported. Note: languages must be enabled in
-         the agent before they can be used.
+         not specified, the agent's default language is used. [Many
+         languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported. Note:
+         languages must be enabled in the agent before they can be used.
            */
           public java.lang.String getLanguageCode() {
             return languageCode;
@@ -3943,8 +4230,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           /**
            * Optional. The language of training phrases, parameters and rich messages defined in
            * `intent`. If not specified, the agent's default language is used. [Many
-           * languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language) are
-           * supported. Note: languages must be enabled in the agent before they can be used.
+           * languages](https://cloud.google.com/dialogflow/docs/reference/language) are supported.
+           * Note: languages must be enabled in the agent before they can be used.
            */
           public Patch setLanguageCode(java.lang.String languageCode) {
             this.languageCode = languageCode;
@@ -5114,6 +5401,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            *
            * If the specified session entity type already exists, overrides the session entity type.
            *
+           * This method doesn't work with Google Assistant integration. Contact Dialogflow support if you
+           * need to use session entities with Google Assistant integration.
+           *
            * Create a request for the method "entityTypes.create".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
@@ -5141,6 +5431,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * Creates a session entity type.
              *
              * If the specified session entity type already exists, overrides the session entity type.
+             *
+             * This method doesn't work with Google Assistant integration. Contact Dialogflow support if you
+             * need to use session entities with Google Assistant integration.
              *
              * Create a request for the method "entityTypes.create".
              *
@@ -5255,6 +5548,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           /**
            * Deletes the specified session entity type.
            *
+           * This method doesn't work with Google Assistant integration. Contact Dialogflow support if you
+           * need to use session entities with Google Assistant integration.
+           *
            * Create a request for the method "entityTypes.delete".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
@@ -5279,6 +5575,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
             /**
              * Deletes the specified session entity type.
+             *
+             * This method doesn't work with Google Assistant integration. Contact Dialogflow support if you
+             * need to use session entities with Google Assistant integration.
              *
              * Create a request for the method "entityTypes.delete".
              *
@@ -5392,6 +5691,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           /**
            * Retrieves the specified session entity type.
            *
+           * This method doesn't work with Google Assistant integration. Contact Dialogflow support if you
+           * need to use session entities with Google Assistant integration.
+           *
            * Create a request for the method "entityTypes.get".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
@@ -5416,6 +5718,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
             /**
              * Retrieves the specified session entity type.
+             *
+             * This method doesn't work with Google Assistant integration. Contact Dialogflow support if you
+             * need to use session entities with Google Assistant integration.
              *
              * Create a request for the method "entityTypes.get".
              *
@@ -5538,6 +5843,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           /**
            * Returns the list of all session entity types in the specified session.
            *
+           * This method doesn't work with Google Assistant integration. Contact Dialogflow support if you
+           * need to use session entities with Google Assistant integration.
+           *
            * Create a request for the method "entityTypes.list".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
@@ -5562,6 +5870,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
             /**
              * Returns the list of all session entity types in the specified session.
+             *
+             * This method doesn't work with Google Assistant integration. Contact Dialogflow support if you
+             * need to use session entities with Google Assistant integration.
              *
              * Create a request for the method "entityTypes.list".
              *
@@ -5722,6 +6033,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           /**
            * Updates the specified session entity type.
            *
+           * This method doesn't work with Google Assistant integration. Contact Dialogflow support if you
+           * need to use session entities with Google Assistant integration.
+           *
            * Create a request for the method "entityTypes.patch".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
@@ -5750,6 +6064,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
             /**
              * Updates the specified session entity type.
+             *
+             * This method doesn't work with Google Assistant integration. Contact Dialogflow support if you
+             * need to use session entities with Google Assistant integration.
              *
              * Create a request for the method "entityTypes.patch".
              *
@@ -5895,6 +6212,530 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
       }
     }
     /**
+     * An accessor for creating requests from the Locations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Dialogflow dialogflow = new Dialogflow(...);}
+     *   {@code Dialogflow.Locations.List request = dialogflow.locations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Locations locations() {
+      return new Locations();
+    }
+
+    /**
+     * The "locations" collection of methods.
+     */
+    public class Locations {
+
+      /**
+       * An accessor for creating requests from the Operations collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Dialogflow dialogflow = new Dialogflow(...);}
+       *   {@code Dialogflow.Operations.List request = dialogflow.operations().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Operations operations() {
+        return new Operations();
+      }
+
+      /**
+       * The "operations" collection of methods.
+       */
+      public class Operations {
+
+        /**
+         * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort to
+         * cancel the operation, but success is not guaranteed.  If the server doesn't support this method,
+         * it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or other
+         * methods to check whether the cancellation succeeded or whether the operation completed despite
+         * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+         * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+         * `Code.CANCELLED`.
+         *
+         * Create a request for the method "operations.cancel".
+         *
+         * This request holds the parameters needed by the dialogflow server.  After setting any optional
+         * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the operation resource to be cancelled.
+         * @return the request
+         */
+        public Cancel cancel(java.lang.String name) throws java.io.IOException {
+          Cancel result = new Cancel(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Cancel extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleProtobufEmpty> {
+
+          private static final String REST_PATH = "v2/{+name}:cancel";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+
+          /**
+           * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort
+           * to cancel the operation, but success is not guaranteed.  If the server doesn't support this
+           * method, it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or
+           * other methods to check whether the cancellation succeeded or whether the operation completed
+           * despite cancellation. On successful cancellation, the operation is not deleted; instead, it
+           * becomes an operation with an Operation.error value with a google.rpc.Status.code of 1,
+           * corresponding to `Code.CANCELLED`.
+           *
+           * Create a request for the method "operations.cancel".
+           *
+           * This request holds the parameters needed by the the dialogflow server.  After setting any
+           * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the operation resource to be cancelled.
+           * @since 1.13
+           */
+          protected Cancel(java.lang.String name) {
+            super(Dialogflow.this, "POST", REST_PATH, null, com.google.api.services.dialogflow.v2.model.GoogleProtobufEmpty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Cancel set$Xgafv(java.lang.String $Xgafv) {
+            return (Cancel) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Cancel setAccessToken(java.lang.String accessToken) {
+            return (Cancel) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Cancel setAlt(java.lang.String alt) {
+            return (Cancel) super.setAlt(alt);
+          }
+
+          @Override
+          public Cancel setCallback(java.lang.String callback) {
+            return (Cancel) super.setCallback(callback);
+          }
+
+          @Override
+          public Cancel setFields(java.lang.String fields) {
+            return (Cancel) super.setFields(fields);
+          }
+
+          @Override
+          public Cancel setKey(java.lang.String key) {
+            return (Cancel) super.setKey(key);
+          }
+
+          @Override
+          public Cancel setOauthToken(java.lang.String oauthToken) {
+            return (Cancel) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Cancel) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Cancel setQuotaUser(java.lang.String quotaUser) {
+            return (Cancel) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Cancel setUploadType(java.lang.String uploadType) {
+            return (Cancel) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Cancel) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The name of the operation resource to be cancelled. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the operation resource to be cancelled.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** The name of the operation resource to be cancelled. */
+          public Cancel setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Cancel set(String parameterName, Object value) {
+            return (Cancel) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+         * operation result at intervals as recommended by the API service.
+         *
+         * Create a request for the method "operations.get".
+         *
+         * This request holds the parameters needed by the dialogflow server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the operation resource.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+
+          /**
+           * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+           * operation result at intervals as recommended by the API service.
+           *
+           * Create a request for the method "operations.get".
+           *
+           * This request holds the parameters needed by the the dialogflow server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the operation resource.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Dialogflow.this, "GET", REST_PATH, null, com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The name of the operation resource. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the operation resource.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** The name of the operation resource. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists operations that match the specified filter in the request. If the server doesn't support
+         * this method, it returns `UNIMPLEMENTED`.
+         *
+         * NOTE: the `name` binding allows API services to override the binding to use different resource
+         * name schemes, such as `users/operations`. To override the binding, API services can add a binding
+         * such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
+         * compatibility, the default name includes the operations collection id, however overriding users
+         * must ensure the name binding is the parent resource, without the operations collection id.
+         *
+         * Create a request for the method "operations.list".
+         *
+         * This request holds the parameters needed by the dialogflow server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the operation's parent resource.
+         * @return the request
+         */
+        public List list(java.lang.String name) throws java.io.IOException {
+          List result = new List(name);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleLongrunningListOperationsResponse> {
+
+          private static final String REST_PATH = "v2/{+name}/operations";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists operations that match the specified filter in the request. If the server doesn't support
+           * this method, it returns `UNIMPLEMENTED`.
+           *
+           * NOTE: the `name` binding allows API services to override the binding to use different resource
+           * name schemes, such as `users/operations`. To override the binding, API services can add a
+           * binding such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
+           * compatibility, the default name includes the operations collection id, however overriding users
+           * must ensure the name binding is the parent resource, without the operations collection id.
+           *
+           * Create a request for the method "operations.list".
+           *
+           * This request holds the parameters needed by the the dialogflow server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the operation's parent resource.
+           * @since 1.13
+           */
+          protected List(java.lang.String name) {
+            super(Dialogflow.this, "GET", REST_PATH, null, com.google.api.services.dialogflow.v2.model.GoogleLongrunningListOperationsResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The name of the operation's parent resource. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the operation's parent resource.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** The name of the operation's parent resource. */
+          public List setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** The standard list filter. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** The standard list filter.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** The standard list filter. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** The standard list page size. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The standard list page size.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** The standard list page size. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** The standard list page token. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The standard list page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** The standard list page token. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+    /**
      * An accessor for creating requests from the Operations collection.
      *
      * <p>The typical use is:</p>
@@ -5914,6 +6755,147 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
      */
     public class Operations {
 
+      /**
+       * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort to
+       * cancel the operation, but success is not guaranteed.  If the server doesn't support this method,
+       * it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or other
+       * methods to check whether the cancellation succeeded or whether the operation completed despite
+       * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+       * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+       * `Code.CANCELLED`.
+       *
+       * Create a request for the method "operations.cancel".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+       *
+       * @param name The name of the operation resource to be cancelled.
+       * @return the request
+       */
+      public Cancel cancel(java.lang.String name) throws java.io.IOException {
+        Cancel result = new Cancel(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Cancel extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleProtobufEmpty> {
+
+        private static final String REST_PATH = "v2/{+name}:cancel";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/operations/[^/]+$");
+
+        /**
+         * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort
+         * to cancel the operation, but success is not guaranteed.  If the server doesn't support this
+         * method, it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or
+         * other methods to check whether the cancellation succeeded or whether the operation completed
+         * despite cancellation. On successful cancellation, the operation is not deleted; instead, it
+         * becomes an operation with an Operation.error value with a google.rpc.Status.code of 1,
+         * corresponding to `Code.CANCELLED`.
+         *
+         * Create a request for the method "operations.cancel".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The name of the operation resource to be cancelled.
+         * @since 1.13
+         */
+        protected Cancel(java.lang.String name) {
+          super(Dialogflow.this, "POST", REST_PATH, null, com.google.api.services.dialogflow.v2.model.GoogleProtobufEmpty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/operations/[^/]+$");
+          }
+        }
+
+        @Override
+        public Cancel set$Xgafv(java.lang.String $Xgafv) {
+          return (Cancel) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Cancel setAccessToken(java.lang.String accessToken) {
+          return (Cancel) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Cancel setAlt(java.lang.String alt) {
+          return (Cancel) super.setAlt(alt);
+        }
+
+        @Override
+        public Cancel setCallback(java.lang.String callback) {
+          return (Cancel) super.setCallback(callback);
+        }
+
+        @Override
+        public Cancel setFields(java.lang.String fields) {
+          return (Cancel) super.setFields(fields);
+        }
+
+        @Override
+        public Cancel setKey(java.lang.String key) {
+          return (Cancel) super.setKey(key);
+        }
+
+        @Override
+        public Cancel setOauthToken(java.lang.String oauthToken) {
+          return (Cancel) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Cancel) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Cancel setQuotaUser(java.lang.String quotaUser) {
+          return (Cancel) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Cancel setUploadType(java.lang.String uploadType) {
+          return (Cancel) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Cancel) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** The name of the operation resource to be cancelled. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The name of the operation resource to be cancelled.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** The name of the operation resource to be cancelled. */
+        public Cancel setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/operations/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Cancel set(String parameterName, Object value) {
+          return (Cancel) super.set(parameterName, value);
+        }
+      }
       /**
        * Gets the latest state of a long-running operation.  Clients can use this method to poll the
        * operation result at intervals as recommended by the API service.
@@ -6052,6 +7034,206 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         @Override
         public Get set(String parameterName, Object value) {
           return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists operations that match the specified filter in the request. If the server doesn't support
+       * this method, it returns `UNIMPLEMENTED`.
+       *
+       * NOTE: the `name` binding allows API services to override the binding to use different resource
+       * name schemes, such as `users/operations`. To override the binding, API services can add a binding
+       * such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
+       * compatibility, the default name includes the operations collection id, however overriding users
+       * must ensure the name binding is the parent resource, without the operations collection id.
+       *
+       * Create a request for the method "operations.list".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param name The name of the operation's parent resource.
+       * @return the request
+       */
+      public List list(java.lang.String name) throws java.io.IOException {
+        List result = new List(name);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleLongrunningListOperationsResponse> {
+
+        private static final String REST_PATH = "v2/{+name}/operations";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Lists operations that match the specified filter in the request. If the server doesn't support
+         * this method, it returns `UNIMPLEMENTED`.
+         *
+         * NOTE: the `name` binding allows API services to override the binding to use different resource
+         * name schemes, such as `users/operations`. To override the binding, API services can add a
+         * binding such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
+         * compatibility, the default name includes the operations collection id, however overriding users
+         * must ensure the name binding is the parent resource, without the operations collection id.
+         *
+         * Create a request for the method "operations.list".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The name of the operation's parent resource.
+         * @since 1.13
+         */
+        protected List(java.lang.String name) {
+          super(Dialogflow.this, "GET", REST_PATH, null, com.google.api.services.dialogflow.v2.model.GoogleLongrunningListOperationsResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** The name of the operation's parent resource. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The name of the operation's parent resource.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** The name of the operation's parent resource. */
+        public List setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** The standard list filter. */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** The standard list filter.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /** The standard list filter. */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /** The standard list page size. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The standard list page size.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** The standard list page size. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** The standard list page token. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** The standard list page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** The standard list page token. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
         }
       }
 

@@ -340,132 +340,206 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
   public class Locations {
 
     /**
-     * Returns a list of the sensitive information types that the DLP API supports. See
-     * https://cloud.google.com/dlp/docs/infotypes-reference to learn more.
+     * An accessor for creating requests from the InfoTypes collection.
      *
-     * Create a request for the method "locations.infoTypes".
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code DLP dlp = new DLP(...);}
+     *   {@code DLP.InfoTypes.List request = dlp.infoTypes().list(parameters ...)}
+     * </pre>
      *
-     * This request holds the parameters needed by the dlp server.  After setting any optional
-     * parameters, call the {@link InfoTypes#execute()} method to invoke the remote operation.
-     *
-     * @param location The geographic location to list info types. Reserved for future
-    extensions.
-     * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListInfoTypesRequest}
-     * @return the request
+     * @return the resource collection
      */
-    public InfoTypes infoTypes(java.lang.String location, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListInfoTypesRequest content) throws java.io.IOException {
-      InfoTypes result = new InfoTypes(location, content);
-      initialize(result);
-      return result;
+    public InfoTypes infoTypes() {
+      return new InfoTypes();
     }
 
-    public class InfoTypes extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListInfoTypesResponse> {
-
-      private static final String REST_PATH = "v2/locations/{location}/infoTypes";
+    /**
+     * The "infoTypes" collection of methods.
+     */
+    public class InfoTypes {
 
       /**
        * Returns a list of the sensitive information types that the DLP API supports. See
        * https://cloud.google.com/dlp/docs/infotypes-reference to learn more.
        *
-       * Create a request for the method "locations.infoTypes".
+       * Create a request for the method "infoTypes.list".
        *
-       * This request holds the parameters needed by the the dlp server.  After setting any optional
-       * parameters, call the {@link InfoTypes#execute()} method to invoke the remote operation. <p>
-       * {@link
-       * InfoTypes#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       * This request holds the parameters needed by the dlp server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param location The geographic location to list info types. Reserved for future
-    extensions.
-       * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListInfoTypesRequest}
-       * @since 1.13
+      extensions.
+       * @return the request
        */
-      protected InfoTypes(java.lang.String location, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListInfoTypesRequest content) {
-        super(DLP.this, "POST", REST_PATH, content, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListInfoTypesResponse.class);
-        this.location = com.google.api.client.util.Preconditions.checkNotNull(location, "Required parameter location must be specified.");
+      public List list(java.lang.String location) throws java.io.IOException {
+        List result = new List(location);
+        initialize(result);
+        return result;
       }
 
-      @Override
-      public InfoTypes set$Xgafv(java.lang.String $Xgafv) {
-        return (InfoTypes) super.set$Xgafv($Xgafv);
+      public class List extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListInfoTypesResponse> {
+
+        private static final String REST_PATH = "v2/locations/{location}/infoTypes";
+
+        /**
+         * Returns a list of the sensitive information types that the DLP API supports. See
+         * https://cloud.google.com/dlp/docs/infotypes-reference to learn more.
+         *
+         * Create a request for the method "infoTypes.list".
+         *
+         * This request holds the parameters needed by the the dlp server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param location The geographic location to list info types. Reserved for future
+      extensions.
+         * @since 1.13
+         */
+        protected List(java.lang.String location) {
+          super(DLP.this, "GET", REST_PATH, null, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListInfoTypesResponse.class);
+          this.location = com.google.api.client.util.Preconditions.checkNotNull(location, "Required parameter location must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The geographic location to list info types. Reserved for future extensions.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String location;
+
+        /** The geographic location to list info types. Reserved for future extensions.
+         */
+        public java.lang.String getLocation() {
+          return location;
+        }
+
+        /**
+         * The geographic location to list info types. Reserved for future extensions.
+         */
+        public List setLocation(java.lang.String location) {
+          this.location = location;
+          return this;
+        }
+
+        /**
+         * Optional filter to only return infoTypes supported by certain parts of the API. Defaults
+         * to supported_by=INSPECT.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Optional filter to only return infoTypes supported by certain parts of the API. Defaults to
+       supported_by=INSPECT.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Optional filter to only return infoTypes supported by certain parts of the API. Defaults
+         * to supported_by=INSPECT.
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Optional BCP-47 language code for localized infoType friendly names. If omitted, or if
+         * localized strings are not available, en-US strings will be returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String languageCode;
+
+        /** Optional BCP-47 language code for localized infoType friendly names. If omitted, or if localized
+       strings are not available, en-US strings will be returned.
+         */
+        public java.lang.String getLanguageCode() {
+          return languageCode;
+        }
+
+        /**
+         * Optional BCP-47 language code for localized infoType friendly names. If omitted, or if
+         * localized strings are not available, en-US strings will be returned.
+         */
+        public List setLanguageCode(java.lang.String languageCode) {
+          this.languageCode = languageCode;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
       }
 
-      @Override
-      public InfoTypes setAccessToken(java.lang.String accessToken) {
-        return (InfoTypes) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public InfoTypes setAlt(java.lang.String alt) {
-        return (InfoTypes) super.setAlt(alt);
-      }
-
-      @Override
-      public InfoTypes setCallback(java.lang.String callback) {
-        return (InfoTypes) super.setCallback(callback);
-      }
-
-      @Override
-      public InfoTypes setFields(java.lang.String fields) {
-        return (InfoTypes) super.setFields(fields);
-      }
-
-      @Override
-      public InfoTypes setKey(java.lang.String key) {
-        return (InfoTypes) super.setKey(key);
-      }
-
-      @Override
-      public InfoTypes setOauthToken(java.lang.String oauthToken) {
-        return (InfoTypes) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public InfoTypes setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (InfoTypes) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public InfoTypes setQuotaUser(java.lang.String quotaUser) {
-        return (InfoTypes) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public InfoTypes setUploadType(java.lang.String uploadType) {
-        return (InfoTypes) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public InfoTypes setUploadProtocol(java.lang.String uploadProtocol) {
-        return (InfoTypes) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /**
-       * The geographic location to list info types. Reserved for future extensions.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String location;
-
-      /** The geographic location to list info types. Reserved for future extensions.
-       */
-      public java.lang.String getLocation() {
-        return location;
-      }
-
-      /**
-       * The geographic location to list info types. Reserved for future extensions.
-       */
-      public InfoTypes setLocation(java.lang.String location) {
-        this.location = location;
-        return this;
-      }
-
-      @Override
-      public InfoTypes set(String parameterName, Object value) {
-        return (InfoTypes) super.set(parameterName, value);
-      }
     }
-
   }
 
   /**

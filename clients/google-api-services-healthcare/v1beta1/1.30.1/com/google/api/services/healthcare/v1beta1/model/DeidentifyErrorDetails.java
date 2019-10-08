@@ -30,14 +30,14 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class DeidentifyErrorDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Number of resources that failed to process.
+   * Number of resources failed to process.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long failureResourceCount;
 
   /**
-   * Number of stores that failed to process.
+   * Number of stores failed to process.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -58,7 +58,7 @@ public final class DeidentifyErrorDetails extends com.google.api.client.json.Gen
   private java.lang.Long successStoreCount;
 
   /**
-   * Number of resources that failed to process.
+   * Number of resources failed to process.
    * @return value or {@code null} for none
    */
   public java.lang.Long getFailureResourceCount() {
@@ -66,7 +66,7 @@ public final class DeidentifyErrorDetails extends com.google.api.client.json.Gen
   }
 
   /**
-   * Number of resources that failed to process.
+   * Number of resources failed to process.
    * @param failureResourceCount failureResourceCount or {@code null} for none
    */
   public DeidentifyErrorDetails setFailureResourceCount(java.lang.Long failureResourceCount) {
@@ -75,7 +75,7 @@ public final class DeidentifyErrorDetails extends com.google.api.client.json.Gen
   }
 
   /**
-   * Number of stores that failed to process.
+   * Number of stores failed to process.
    * @return value or {@code null} for none
    */
   public java.lang.Long getFailureStoreCount() {
@@ -83,7 +83,7 @@ public final class DeidentifyErrorDetails extends com.google.api.client.json.Gen
   }
 
   /**
-   * Number of stores that failed to process.
+   * Number of stores failed to process.
    * @param failureStoreCount failureStoreCount or {@code null} for none
    */
   public DeidentifyErrorDetails setFailureStoreCount(java.lang.Long failureStoreCount) {

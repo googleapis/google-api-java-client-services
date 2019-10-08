@@ -17,7 +17,7 @@
 package com.google.api.services.androidmanagement.v1.model;
 
 /**
- * A policy resources represents a group settings that govern the behavior of a managed device and
+ * A policy resource represents a group of settings that govern the behavior of a managed device and
  * the apps installed on it.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

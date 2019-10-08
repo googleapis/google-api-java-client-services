@@ -30,7 +30,7 @@ package com.google.api.services.cloudiot.v1.model;
 public final class SendCommandToDeviceRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The command data to send to the device.
+   * Required. The command data to send to the device.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +48,7 @@ public final class SendCommandToDeviceRequest extends com.google.api.client.json
   private java.lang.String subfolder;
 
   /**
-   * The command data to send to the device.
+   * Required. The command data to send to the device.
    * @see #decodeBinaryData()
    * @return value or {@code null} for none
    */
@@ -57,7 +57,7 @@ public final class SendCommandToDeviceRequest extends com.google.api.client.json
   }
 
   /**
-   * The command data to send to the device.
+   * Required. The command data to send to the device.
    * @see #getBinaryData()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -68,7 +68,7 @@ public final class SendCommandToDeviceRequest extends com.google.api.client.json
   }
 
   /**
-   * The command data to send to the device.
+   * Required. The command data to send to the device.
    * @see #encodeBinaryData()
    * @param binaryData binaryData or {@code null} for none
    */
@@ -78,7 +78,7 @@ public final class SendCommandToDeviceRequest extends com.google.api.client.json
   }
 
   /**
-   * The command data to send to the device.
+   * Required. The command data to send to the device.
    * @see #setBinaryData()
    *
    * <p>

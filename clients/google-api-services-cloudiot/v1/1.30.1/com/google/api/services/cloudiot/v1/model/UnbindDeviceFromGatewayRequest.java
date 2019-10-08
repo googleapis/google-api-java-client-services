@@ -30,24 +30,24 @@ package com.google.api.services.cloudiot.v1.model;
 public final class UnbindDeviceFromGatewayRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The device to disassociate from the specified gateway. The value of `device_id` can be either
-   * the device numeric ID or the user-defined device identifier.
+   * Required. The device to disassociate from the specified gateway. The value of `device_id` can
+   * be either the device numeric ID or the user-defined device identifier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String deviceId;
 
   /**
-   * The value of `gateway_id` can be either the device numeric ID or the user-defined device
-   * identifier.
+   * Required. The value of `gateway_id` can be either the device numeric ID or the user-defined
+   * device identifier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String gatewayId;
 
   /**
-   * The device to disassociate from the specified gateway. The value of `device_id` can be either
-   * the device numeric ID or the user-defined device identifier.
+   * Required. The device to disassociate from the specified gateway. The value of `device_id` can
+   * be either the device numeric ID or the user-defined device identifier.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeviceId() {
@@ -55,8 +55,8 @@ public final class UnbindDeviceFromGatewayRequest extends com.google.api.client.
   }
 
   /**
-   * The device to disassociate from the specified gateway. The value of `device_id` can be either
-   * the device numeric ID or the user-defined device identifier.
+   * Required. The device to disassociate from the specified gateway. The value of `device_id` can
+   * be either the device numeric ID or the user-defined device identifier.
    * @param deviceId deviceId or {@code null} for none
    */
   public UnbindDeviceFromGatewayRequest setDeviceId(java.lang.String deviceId) {
@@ -65,8 +65,8 @@ public final class UnbindDeviceFromGatewayRequest extends com.google.api.client.
   }
 
   /**
-   * The value of `gateway_id` can be either the device numeric ID or the user-defined device
-   * identifier.
+   * Required. The value of `gateway_id` can be either the device numeric ID or the user-defined
+   * device identifier.
    * @return value or {@code null} for none
    */
   public java.lang.String getGatewayId() {
@@ -74,8 +74,8 @@ public final class UnbindDeviceFromGatewayRequest extends com.google.api.client.
   }
 
   /**
-   * The value of `gateway_id` can be either the device numeric ID or the user-defined device
-   * identifier.
+   * Required. The value of `gateway_id` can be either the device numeric ID or the user-defined
+   * device identifier.
    * @param gatewayId gatewayId or {@code null} for none
    */
   public UnbindDeviceFromGatewayRequest setGatewayId(java.lang.String gatewayId) {

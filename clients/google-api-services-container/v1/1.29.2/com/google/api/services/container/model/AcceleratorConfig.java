@@ -38,8 +38,7 @@ public final class AcceleratorConfig extends com.google.api.client.json.GenericJ
   private java.lang.Long acceleratorCount;
 
   /**
-   * The accelerator type resource name. List of supported accelerators
-   * [here](/compute/docs/gpus/#Introduction)
+   * The accelerator type resource name. List of supported accelerators [here](/compute/docs/gpus)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,8 +62,7 @@ public final class AcceleratorConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The accelerator type resource name. List of supported accelerators
-   * [here](/compute/docs/gpus/#Introduction)
+   * The accelerator type resource name. List of supported accelerators [here](/compute/docs/gpus)
    * @return value or {@code null} for none
    */
   public java.lang.String getAcceleratorType() {
@@ -72,8 +70,7 @@ public final class AcceleratorConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The accelerator type resource name. List of supported accelerators
-   * [here](/compute/docs/gpus/#Introduction)
+   * The accelerator type resource name. List of supported accelerators [here](/compute/docs/gpus)
    * @param acceleratorType acceleratorType or {@code null} for none
    */
   public AcceleratorConfig setAcceleratorType(java.lang.String acceleratorType) {

@@ -62,6 +62,13 @@ public final class PrivateClusterConfig extends com.google.api.client.json.Gener
   private java.lang.String masterIpv4CidrBlock;
 
   /**
+   * Output only. The peering name in the customer VPC used by this cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String peeringName;
+
+  /**
    * Output only. The internal IP address of this cluster's master endpoint.
    * The value may be {@code null}.
    */
@@ -146,6 +153,23 @@ public final class PrivateClusterConfig extends com.google.api.client.json.Gener
    */
   public PrivateClusterConfig setMasterIpv4CidrBlock(java.lang.String masterIpv4CidrBlock) {
     this.masterIpv4CidrBlock = masterIpv4CidrBlock;
+    return this;
+  }
+
+  /**
+   * Output only. The peering name in the customer VPC used by this cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPeeringName() {
+    return peeringName;
+  }
+
+  /**
+   * Output only. The peering name in the customer VPC used by this cluster.
+   * @param peeringName peeringName or {@code null} for none
+   */
+  public PrivateClusterConfig setPeeringName(java.lang.String peeringName) {
+    this.peeringName = peeringName;
     return this;
   }
 

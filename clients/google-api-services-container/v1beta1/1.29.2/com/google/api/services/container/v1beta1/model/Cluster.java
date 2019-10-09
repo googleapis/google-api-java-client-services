@@ -383,6 +383,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private PrivateClusterConfig privateClusterConfig;
 
   /**
+   * Release channel configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReleaseChannel releaseChannel;
+
+  /**
    * The resource labels for the cluster to use to annotate any related Google Compute Engine
    * resources.
    * The value may be {@code null}.
@@ -1305,6 +1312,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setPrivateClusterConfig(PrivateClusterConfig privateClusterConfig) {
     this.privateClusterConfig = privateClusterConfig;
+    return this;
+  }
+
+  /**
+   * Release channel configuration.
+   * @return value or {@code null} for none
+   */
+  public ReleaseChannel getReleaseChannel() {
+    return releaseChannel;
+  }
+
+  /**
+   * Release channel configuration.
+   * @param releaseChannel releaseChannel or {@code null} for none
+   */
+  public Cluster setReleaseChannel(ReleaseChannel releaseChannel) {
+    this.releaseChannel = releaseChannel;
     return this;
   }
 

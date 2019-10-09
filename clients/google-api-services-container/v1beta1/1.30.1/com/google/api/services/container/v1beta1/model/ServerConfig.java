@@ -31,6 +31,19 @@ package com.google.api.services.container.v1beta1.model;
 public final class ServerConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * List of release channel configurations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ReleaseChannelConfig> channels;
+
+  static {
+    // hack to force ProGuard to consider ReleaseChannelConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ReleaseChannelConfig.class);
+  }
+
+  /**
    * Version of Kubernetes the service deploys by default.
    * The value may be {@code null}.
    */
@@ -43,6 +56,13 @@ public final class ServerConfig extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String defaultImageType;
+
+  /**
+   * Premium configuration for service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PremiumConfig premiumConfig;
 
   /**
    * List of valid image types.
@@ -64,6 +84,23 @@ public final class ServerConfig extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> validNodeVersions;
+
+  /**
+   * List of release channel configurations.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ReleaseChannelConfig> getChannels() {
+    return channels;
+  }
+
+  /**
+   * List of release channel configurations.
+   * @param channels channels or {@code null} for none
+   */
+  public ServerConfig setChannels(java.util.List<ReleaseChannelConfig> channels) {
+    this.channels = channels;
+    return this;
+  }
 
   /**
    * Version of Kubernetes the service deploys by default.
@@ -96,6 +133,23 @@ public final class ServerConfig extends com.google.api.client.json.GenericJson {
    */
   public ServerConfig setDefaultImageType(java.lang.String defaultImageType) {
     this.defaultImageType = defaultImageType;
+    return this;
+  }
+
+  /**
+   * Premium configuration for service.
+   * @return value or {@code null} for none
+   */
+  public PremiumConfig getPremiumConfig() {
+    return premiumConfig;
+  }
+
+  /**
+   * Premium configuration for service.
+   * @param premiumConfig premiumConfig or {@code null} for none
+   */
+  public ServerConfig setPremiumConfig(PremiumConfig premiumConfig) {
+    this.premiumConfig = premiumConfig;
     return this;
   }
 

@@ -39,11 +39,32 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private AddonsConfig desiredAddonsConfig;
 
   /**
+   * The desired configuration options for the Binary Authorization feature.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BinaryAuthorization desiredBinaryAuthorization;
+
+  /**
+   * Configuration of etcd encryption.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DatabaseEncryption desiredDatabaseEncryption;
+
+  /**
    * The desired image type for the node pool. NOTE: Set the "desired_node_pool" field as well.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String desiredImageType;
+
+  /**
+   * The desired config of Intra-node visibility.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IntraNodeVisibilityConfig desiredIntraNodeVisibilityConfig;
 
   /**
    * The desired list of Google Compute Engine [zones](/compute/docs/zones#available) in which the
@@ -159,6 +180,40 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * The desired configuration options for the Binary Authorization feature.
+   * @return value or {@code null} for none
+   */
+  public BinaryAuthorization getDesiredBinaryAuthorization() {
+    return desiredBinaryAuthorization;
+  }
+
+  /**
+   * The desired configuration options for the Binary Authorization feature.
+   * @param desiredBinaryAuthorization desiredBinaryAuthorization or {@code null} for none
+   */
+  public ClusterUpdate setDesiredBinaryAuthorization(BinaryAuthorization desiredBinaryAuthorization) {
+    this.desiredBinaryAuthorization = desiredBinaryAuthorization;
+    return this;
+  }
+
+  /**
+   * Configuration of etcd encryption.
+   * @return value or {@code null} for none
+   */
+  public DatabaseEncryption getDesiredDatabaseEncryption() {
+    return desiredDatabaseEncryption;
+  }
+
+  /**
+   * Configuration of etcd encryption.
+   * @param desiredDatabaseEncryption desiredDatabaseEncryption or {@code null} for none
+   */
+  public ClusterUpdate setDesiredDatabaseEncryption(DatabaseEncryption desiredDatabaseEncryption) {
+    this.desiredDatabaseEncryption = desiredDatabaseEncryption;
+    return this;
+  }
+
+  /**
    * The desired image type for the node pool. NOTE: Set the "desired_node_pool" field as well.
    * @return value or {@code null} for none
    */
@@ -172,6 +227,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredImageType(java.lang.String desiredImageType) {
     this.desiredImageType = desiredImageType;
+    return this;
+  }
+
+  /**
+   * The desired config of Intra-node visibility.
+   * @return value or {@code null} for none
+   */
+  public IntraNodeVisibilityConfig getDesiredIntraNodeVisibilityConfig() {
+    return desiredIntraNodeVisibilityConfig;
+  }
+
+  /**
+   * The desired config of Intra-node visibility.
+   * @param desiredIntraNodeVisibilityConfig desiredIntraNodeVisibilityConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredIntraNodeVisibilityConfig(IntraNodeVisibilityConfig desiredIntraNodeVisibilityConfig) {
+    this.desiredIntraNodeVisibilityConfig = desiredIntraNodeVisibilityConfig;
     return this;
   }
 

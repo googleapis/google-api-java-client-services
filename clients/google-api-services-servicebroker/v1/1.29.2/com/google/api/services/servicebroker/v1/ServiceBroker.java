@@ -335,6 +335,8 @@ public class ServiceBroker extends com.google.api.client.googleapis.services.jso
     /**
      * Sets the access control policy on the specified resource. Replaces any existing policy.
      *
+     * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+     *
      * Create a request for the method "v1.setIamPolicy".
      *
      * This request holds the parameters needed by the servicebroker server.  After setting any optional
@@ -361,6 +363,8 @@ public class ServiceBroker extends com.google.api.client.googleapis.services.jso
 
       /**
        * Sets the access control policy on the specified resource. Replaces any existing policy.
+       *
+       * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
        *
        * Create a request for the method "v1.setIamPolicy".
        *

@@ -31,11 +31,11 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR
-   * store creation. The default value is false, meaning that the API will enforce referential
-   * integrity and fail the requests that will result in inconsistent state in the FHIR store. When
-   * this field is set to true, the API will skip referential integrity check. Consequently,
-   * operations that rely on references, such as GetPatientEverything, will not return all the
-   * results if broken references exist.
+   * store creation. The default value is false, meaning that the API enforces referential integrity
+   * and fails the requests that result in inconsistent state in the FHIR store. When this field is
+   * set to true, the API skips referential integrity checks. Consequently, operations that rely on
+   * references, such as GetPatientEverything, do not return all the results if broken references
+   * exist.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,34 +44,23 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   /**
    * Whether to disable resource versioning for this FHIR store. This field can not be changed after
    * the creation of FHIR store. If set to false, which is the default behavior, all write
-   * operations will cause historical versions to be recorded automatically. The historical versions
-   * can be fetched through the history APIs, but cannot be updated. If set to true, no historical
-   * versions will be kept. The server will send back errors for attempts to read the historical
-   * versions.
+   * operations cause historical versions to be recorded automatically. The historical versions can
+   * be fetched through the history APIs, but cannot be updated. If set to true, no historical
+   * versions are kept. The server sends errors for attempts to read the historical versions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean disableResourceVersioning;
 
   /**
-   * Whether to allow the bulk import API to accept history bundles and directly insert historical
-   * resource versions into the FHIR store. Importing resource histories creates resource
-   * interactions that appear to have occurred in the past, which clients may not want to allow. If
-   * set to false, history bundles within an import will fail with an error.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean enableHistoryImport;
-
-  /**
    * Whether this FHIR store has the [updateCreate capability](https://www.hl7.org/fhir
    * /capabilitystatement-definitions.html#CapabilityStatement.rest.resource.updateCreate). This
    * determines if the client can use an Update operation to create a new resource with a client-
    * specified ID. If false, all IDs are server-assigned through the Create operation and attempts
-   * to Update a non-existent resource will return errors. Please treat the audit logs with
-   * appropriate levels of care if client-specified resource IDs contain sensitive data such as
-   * patient identifiers, those IDs will be part of the FHIR resource path recorded in Cloud audit
-   * logs and Cloud Pub/Sub notifications.
+   * to update a non-existent resource return errors. Please treat the audit logs with appropriate
+   * levels of care if client-specified resource IDs contain sensitive data such as patient
+   * identifiers, those IDs are part of the FHIR resource path recorded in Cloud audit logs and
+   * Cloud Pub/Sub notifications.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,8 +92,8 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
 
   /**
    * If non-empty, publish all resource modifications of this FHIR store to this destination. The
-   * Cloud Pub/Sub message attributes will contain a map with a string describing the action that
-   * has triggered the notification, e.g. "action":"CreateResource".
+   * Cloud Pub/Sub message attributes contain a map with a string describing the action that has
+   * triggered the notification. For example, "action":"CreateResource".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,11 +101,11 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR
-   * store creation. The default value is false, meaning that the API will enforce referential
-   * integrity and fail the requests that will result in inconsistent state in the FHIR store. When
-   * this field is set to true, the API will skip referential integrity check. Consequently,
-   * operations that rely on references, such as GetPatientEverything, will not return all the
-   * results if broken references exist.
+   * store creation. The default value is false, meaning that the API enforces referential integrity
+   * and fails the requests that result in inconsistent state in the FHIR store. When this field is
+   * set to true, the API skips referential integrity checks. Consequently, operations that rely on
+   * references, such as GetPatientEverything, do not return all the results if broken references
+   * exist.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisableReferentialIntegrity() {
@@ -125,11 +114,11 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR
-   * store creation. The default value is false, meaning that the API will enforce referential
-   * integrity and fail the requests that will result in inconsistent state in the FHIR store. When
-   * this field is set to true, the API will skip referential integrity check. Consequently,
-   * operations that rely on references, such as GetPatientEverything, will not return all the
-   * results if broken references exist.
+   * store creation. The default value is false, meaning that the API enforces referential integrity
+   * and fails the requests that result in inconsistent state in the FHIR store. When this field is
+   * set to true, the API skips referential integrity checks. Consequently, operations that rely on
+   * references, such as GetPatientEverything, do not return all the results if broken references
+   * exist.
    * @param disableReferentialIntegrity disableReferentialIntegrity or {@code null} for none
    */
   public FhirStore setDisableReferentialIntegrity(java.lang.Boolean disableReferentialIntegrity) {
@@ -140,10 +129,9 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   /**
    * Whether to disable resource versioning for this FHIR store. This field can not be changed after
    * the creation of FHIR store. If set to false, which is the default behavior, all write
-   * operations will cause historical versions to be recorded automatically. The historical versions
-   * can be fetched through the history APIs, but cannot be updated. If set to true, no historical
-   * versions will be kept. The server will send back errors for attempts to read the historical
-   * versions.
+   * operations cause historical versions to be recorded automatically. The historical versions can
+   * be fetched through the history APIs, but cannot be updated. If set to true, no historical
+   * versions are kept. The server sends errors for attempts to read the historical versions.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisableResourceVersioning() {
@@ -153,10 +141,9 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   /**
    * Whether to disable resource versioning for this FHIR store. This field can not be changed after
    * the creation of FHIR store. If set to false, which is the default behavior, all write
-   * operations will cause historical versions to be recorded automatically. The historical versions
-   * can be fetched through the history APIs, but cannot be updated. If set to true, no historical
-   * versions will be kept. The server will send back errors for attempts to read the historical
-   * versions.
+   * operations cause historical versions to be recorded automatically. The historical versions can
+   * be fetched through the history APIs, but cannot be updated. If set to true, no historical
+   * versions are kept. The server sends errors for attempts to read the historical versions.
    * @param disableResourceVersioning disableResourceVersioning or {@code null} for none
    */
   public FhirStore setDisableResourceVersioning(java.lang.Boolean disableResourceVersioning) {
@@ -165,37 +152,14 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether to allow the bulk import API to accept history bundles and directly insert historical
-   * resource versions into the FHIR store. Importing resource histories creates resource
-   * interactions that appear to have occurred in the past, which clients may not want to allow. If
-   * set to false, history bundles within an import will fail with an error.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getEnableHistoryImport() {
-    return enableHistoryImport;
-  }
-
-  /**
-   * Whether to allow the bulk import API to accept history bundles and directly insert historical
-   * resource versions into the FHIR store. Importing resource histories creates resource
-   * interactions that appear to have occurred in the past, which clients may not want to allow. If
-   * set to false, history bundles within an import will fail with an error.
-   * @param enableHistoryImport enableHistoryImport or {@code null} for none
-   */
-  public FhirStore setEnableHistoryImport(java.lang.Boolean enableHistoryImport) {
-    this.enableHistoryImport = enableHistoryImport;
-    return this;
-  }
-
-  /**
    * Whether this FHIR store has the [updateCreate capability](https://www.hl7.org/fhir
    * /capabilitystatement-definitions.html#CapabilityStatement.rest.resource.updateCreate). This
    * determines if the client can use an Update operation to create a new resource with a client-
    * specified ID. If false, all IDs are server-assigned through the Create operation and attempts
-   * to Update a non-existent resource will return errors. Please treat the audit logs with
-   * appropriate levels of care if client-specified resource IDs contain sensitive data such as
-   * patient identifiers, those IDs will be part of the FHIR resource path recorded in Cloud audit
-   * logs and Cloud Pub/Sub notifications.
+   * to update a non-existent resource return errors. Please treat the audit logs with appropriate
+   * levels of care if client-specified resource IDs contain sensitive data such as patient
+   * identifiers, those IDs are part of the FHIR resource path recorded in Cloud audit logs and
+   * Cloud Pub/Sub notifications.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableUpdateCreate() {
@@ -207,10 +171,10 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
    * /capabilitystatement-definitions.html#CapabilityStatement.rest.resource.updateCreate). This
    * determines if the client can use an Update operation to create a new resource with a client-
    * specified ID. If false, all IDs are server-assigned through the Create operation and attempts
-   * to Update a non-existent resource will return errors. Please treat the audit logs with
-   * appropriate levels of care if client-specified resource IDs contain sensitive data such as
-   * patient identifiers, those IDs will be part of the FHIR resource path recorded in Cloud audit
-   * logs and Cloud Pub/Sub notifications.
+   * to update a non-existent resource return errors. Please treat the audit logs with appropriate
+   * levels of care if client-specified resource IDs contain sensitive data such as patient
+   * identifiers, those IDs are part of the FHIR resource path recorded in Cloud audit logs and
+   * Cloud Pub/Sub notifications.
    * @param enableUpdateCreate enableUpdateCreate or {@code null} for none
    */
   public FhirStore setEnableUpdateCreate(java.lang.Boolean enableUpdateCreate) {
@@ -274,8 +238,8 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
 
   /**
    * If non-empty, publish all resource modifications of this FHIR store to this destination. The
-   * Cloud Pub/Sub message attributes will contain a map with a string describing the action that
-   * has triggered the notification, e.g. "action":"CreateResource".
+   * Cloud Pub/Sub message attributes contain a map with a string describing the action that has
+   * triggered the notification. For example, "action":"CreateResource".
    * @return value or {@code null} for none
    */
   public NotificationConfig getNotificationConfig() {
@@ -284,8 +248,8 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
 
   /**
    * If non-empty, publish all resource modifications of this FHIR store to this destination. The
-   * Cloud Pub/Sub message attributes will contain a map with a string describing the action that
-   * has triggered the notification, e.g. "action":"CreateResource".
+   * Cloud Pub/Sub message attributes contain a map with a string describing the action that has
+   * triggered the notification. For example, "action":"CreateResource".
    * @param notificationConfig notificationConfig or {@code null} for none
    */
   public FhirStore setNotificationConfig(NotificationConfig notificationConfig) {

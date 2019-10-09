@@ -28,7 +28,7 @@ package com.google.api.services.securitycenter.v1.model;
  *
  * **JSON Example**
  *
- *     {       "bindings": [         {           "role": "role/resourcemanager.organizationAdmin",
+ *     {       "bindings": [         {           "role": "roles/resourcemanager.organizationAdmin",
  * "members": [             "user:mike@example.com",             "group:admins@example.com",
  * "domain:google.com",             "serviceAccount:my-project-id@appspot.gserviceaccount.com"
  * ]         },         {           "role": "roles/resourcemanager.organizationViewer",

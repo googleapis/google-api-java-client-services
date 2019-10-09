@@ -37,7 +37,8 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
    * done on an all or nothing basis.
    *
    * If a cloud_product is repeated in this list, the first entry will be honored and all following
-   * entries will be discarded.
+   * entries will be discarded. A maximum of 10 enrolled services will be enforced, to be expanded
+   * as the set of supported services is expanded.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,7 +57,7 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
   /**
    * A list of email addresses to which notifications relating to approval requests should be sent.
    * Notifications relating to a resource will be sent to all emails in the settings of ancestor
-   * resources of that resource.
+   * resources of that resource. A maximum of 50 email addresses are allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +71,8 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
    * done on an all or nothing basis.
    *
    * If a cloud_product is repeated in this list, the first entry will be honored and all following
-   * entries will be discarded.
+   * entries will be discarded. A maximum of 10 enrolled services will be enforced, to be expanded
+   * as the set of supported services is expanded.
    * @return value or {@code null} for none
    */
   public java.util.List<EnrolledService> getEnrolledServices() {
@@ -85,7 +87,8 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
    * done on an all or nothing basis.
    *
    * If a cloud_product is repeated in this list, the first entry will be honored and all following
-   * entries will be discarded.
+   * entries will be discarded. A maximum of 10 enrolled services will be enforced, to be expanded
+   * as the set of supported services is expanded.
    * @param enrolledServices enrolledServices or {@code null} for none
    */
   public AccessApprovalSettings setEnrolledServices(java.util.List<EnrolledService> enrolledServices) {
@@ -119,7 +122,7 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
   /**
    * A list of email addresses to which notifications relating to approval requests should be sent.
    * Notifications relating to a resource will be sent to all emails in the settings of ancestor
-   * resources of that resource.
+   * resources of that resource. A maximum of 50 email addresses are allowed.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getNotificationEmails() {
@@ -129,7 +132,7 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
   /**
    * A list of email addresses to which notifications relating to approval requests should be sent.
    * Notifications relating to a resource will be sent to all emails in the settings of ancestor
-   * resources of that resource.
+   * resources of that resource. A maximum of 50 email addresses are allowed.
    * @param notificationEmails notificationEmails or {@code null} for none
    */
   public AccessApprovalSettings setNotificationEmails(java.util.List<java.lang.String> notificationEmails) {

@@ -110,6 +110,13 @@ public final class ChartSpec extends com.google.api.client.json.GenericJson {
   private PieChartSpec pieChart;
 
   /**
+   * A scorecard chart specification.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ScorecardChartSpec scorecardChart;
+
+  /**
    * The subtitle of the chart.
    * The value may be {@code null}.
    */
@@ -355,6 +362,23 @@ public final class ChartSpec extends com.google.api.client.json.GenericJson {
    */
   public ChartSpec setPieChart(PieChartSpec pieChart) {
     this.pieChart = pieChart;
+    return this;
+  }
+
+  /**
+   * A scorecard chart specification.
+   * @return value or {@code null} for none
+   */
+  public ScorecardChartSpec getScorecardChart() {
+    return scorecardChart;
+  }
+
+  /**
+   * A scorecard chart specification.
+   * @param scorecardChart scorecardChart or {@code null} for none
+   */
+  public ChartSpec setScorecardChart(ScorecardChartSpec scorecardChart) {
+    this.scorecardChart = scorecardChart;
     return this;
   }
 

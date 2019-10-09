@@ -39,8 +39,7 @@ public final class BindingDelta extends com.google.api.client.json.GenericJson {
   private java.lang.String action;
 
   /**
-   * The condition that is associated with this binding. This field is logged only for Cloud Audit
-   * Logging.
+   * The condition that is associated with this binding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,8 +79,7 @@ public final class BindingDelta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The condition that is associated with this binding. This field is logged only for Cloud Audit
-   * Logging.
+   * The condition that is associated with this binding.
    * @return value or {@code null} for none
    */
   public Expr getCondition() {
@@ -89,8 +87,7 @@ public final class BindingDelta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The condition that is associated with this binding. This field is logged only for Cloud Audit
-   * Logging.
+   * The condition that is associated with this binding.
    * @param condition condition or {@code null} for none
    */
   public BindingDelta setCondition(Expr condition) {

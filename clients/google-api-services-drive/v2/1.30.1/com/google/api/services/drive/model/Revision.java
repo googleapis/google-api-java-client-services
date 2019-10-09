@@ -121,7 +121,8 @@ public final class Revision extends com.google.api.client.json.GenericJson {
    * Whether this revision is pinned to prevent automatic purging. This will only be populated and
    * can only be modified on files with content stored in Drive which are not Google Docs. Revisions
    * can also be pinned when they are created through the drive.files.insert/update/copy by using
-   * the pinned query parameter.
+   * the pinned query parameter. Pinned revisions are stored indefinitely using additional storage
+   * quota, up to a maximum of 200 revisions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -381,7 +382,8 @@ public final class Revision extends com.google.api.client.json.GenericJson {
    * Whether this revision is pinned to prevent automatic purging. This will only be populated and
    * can only be modified on files with content stored in Drive which are not Google Docs. Revisions
    * can also be pinned when they are created through the drive.files.insert/update/copy by using
-   * the pinned query parameter.
+   * the pinned query parameter. Pinned revisions are stored indefinitely using additional storage
+   * quota, up to a maximum of 200 revisions.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPinned() {
@@ -392,7 +394,8 @@ public final class Revision extends com.google.api.client.json.GenericJson {
    * Whether this revision is pinned to prevent automatic purging. This will only be populated and
    * can only be modified on files with content stored in Drive which are not Google Docs. Revisions
    * can also be pinned when they are created through the drive.files.insert/update/copy by using
-   * the pinned query parameter.
+   * the pinned query parameter. Pinned revisions are stored indefinitely using additional storage
+   * quota, up to a maximum of 200 revisions.
    * @param pinned pinned or {@code null} for none
    */
   public Revision setPinned(java.lang.Boolean pinned) {

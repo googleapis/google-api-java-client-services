@@ -431,25 +431,25 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
       }
 
       /**
-       * The update mask applies to the settings. For the `FieldMask` definition, see
-       * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask If
-       * this field is left unset, only the notification_emails field will be updated.
+       * For the `FieldMask` definition, see https://developers.google.com/protocol-
+       * buffers/docs/reference/google.protobuf#fieldmask If this field is left unset, only the
+       * notification_emails field will be updated.
        */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** The update mask applies to the settings. For the `FieldMask` definition, see
-     https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask If this
-     field is left unset, only the notification_emails field will be updated.
+      /** For the `FieldMask` definition, see https://developers.google.com/protocol-
+     buffers/docs/reference/google.protobuf#fieldmask If this field is left unset, only the
+     notification_emails field will be updated.
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
       /**
-       * The update mask applies to the settings. For the `FieldMask` definition, see
-       * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask If
-       * this field is left unset, only the notification_emails field will be updated.
+       * For the `FieldMask` definition, see https://developers.google.com/protocol-
+       * buffers/docs/reference/google.protobuf#fieldmask If this field is left unset, only the
+       * notification_emails field will be updated.
        */
       public UpdateAccessApprovalSettings setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
@@ -1432,25 +1432,25 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
       }
 
       /**
-       * The update mask applies to the settings. For the `FieldMask` definition, see
-       * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask If
-       * this field is left unset, only the notification_emails field will be updated.
+       * For the `FieldMask` definition, see https://developers.google.com/protocol-
+       * buffers/docs/reference/google.protobuf#fieldmask If this field is left unset, only the
+       * notification_emails field will be updated.
        */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** The update mask applies to the settings. For the `FieldMask` definition, see
-     https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask If this
-     field is left unset, only the notification_emails field will be updated.
+      /** For the `FieldMask` definition, see https://developers.google.com/protocol-
+     buffers/docs/reference/google.protobuf#fieldmask If this field is left unset, only the
+     notification_emails field will be updated.
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
       /**
-       * The update mask applies to the settings. For the `FieldMask` definition, see
-       * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask If
-       * this field is left unset, only the notification_emails field will be updated.
+       * For the `FieldMask` definition, see https://developers.google.com/protocol-
+       * buffers/docs/reference/google.protobuf#fieldmask If this field is left unset, only the
+       * notification_emails field will be updated.
        */
       public UpdateAccessApprovalSettings setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
@@ -2433,25 +2433,25 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
       }
 
       /**
-       * The update mask applies to the settings. For the `FieldMask` definition, see
-       * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask If
-       * this field is left unset, only the notification_emails field will be updated.
+       * For the `FieldMask` definition, see https://developers.google.com/protocol-
+       * buffers/docs/reference/google.protobuf#fieldmask If this field is left unset, only the
+       * notification_emails field will be updated.
        */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** The update mask applies to the settings. For the `FieldMask` definition, see
-     https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask If this
-     field is left unset, only the notification_emails field will be updated.
+      /** For the `FieldMask` definition, see https://developers.google.com/protocol-
+     buffers/docs/reference/google.protobuf#fieldmask If this field is left unset, only the
+     notification_emails field will be updated.
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
       /**
-       * The update mask applies to the settings. For the `FieldMask` definition, see
-       * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask If
-       * this field is left unset, only the notification_emails field will be updated.
+       * For the `FieldMask` definition, see https://developers.google.com/protocol-
+       * buffers/docs/reference/google.protobuf#fieldmask If this field is left unset, only the
+       * notification_emails field will be updated.
        */
       public UpdateAccessApprovalSettings setUpdateMask(String updateMask) {
         this.updateMask = updateMask;

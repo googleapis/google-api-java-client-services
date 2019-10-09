@@ -36,6 +36,13 @@ package com.google.api.services.ml.v1.model;
 public final class GoogleCloudMlV1Version extends com.google.api.client.json.GenericJson {
 
   /**
+   * Accelerator config for GPU serving.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudMlV1AcceleratorConfig acceleratorConfig;
+
+  /**
    * Automatically scale the number of nodes used to serve the model in response to increases and
    * decreases in traffic. Care should be taken to ramp up traffic according to the model's ability
    * to scale or you will start seeing increases in latency and 429 response codes.
@@ -262,6 +269,23 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * Accelerator config for GPU serving.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudMlV1AcceleratorConfig getAcceleratorConfig() {
+    return acceleratorConfig;
+  }
+
+  /**
+   * Accelerator config for GPU serving.
+   * @param acceleratorConfig acceleratorConfig or {@code null} for none
+   */
+  public GoogleCloudMlV1Version setAcceleratorConfig(GoogleCloudMlV1AcceleratorConfig acceleratorConfig) {
+    this.acceleratorConfig = acceleratorConfig;
+    return this;
+  }
 
   /**
    * Automatically scale the number of nodes used to serve the model in response to increases and

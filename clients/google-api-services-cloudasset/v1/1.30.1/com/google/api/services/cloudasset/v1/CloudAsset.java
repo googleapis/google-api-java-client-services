@@ -507,17 +507,17 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
         return this;
       }
 
-      /** Required. The content type. */
+      /** Optional. The content type. */
       @com.google.api.client.util.Key
       private java.lang.String contentType;
 
-      /** Required. The content type.
+      /** Optional. The content type.
        */
       public java.lang.String getContentType() {
         return contentType;
       }
 
-      /** Required. The content type. */
+      /** Optional. The content type. */
       public BatchGetAssetsHistory setContentType(java.lang.String contentType) {
         this.contentType = contentType;
         return this;

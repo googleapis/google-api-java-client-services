@@ -55,7 +55,7 @@ public final class Route extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private K8sIoApimachineryPkgApisMetaV1ObjectMeta metadata;
+  private ObjectMeta metadata;
 
   /**
    * Spec holds the desired state of the Route (from the client).
@@ -109,7 +109,7 @@ public final class Route extends com.google.api.client.json.GenericJson {
    * Metadata associated with this Route, including name, namespace, labels, and annotations.
    * @return value or {@code null} for none
    */
-  public K8sIoApimachineryPkgApisMetaV1ObjectMeta getMetadata() {
+  public ObjectMeta getMetadata() {
     return metadata;
   }
 
@@ -117,7 +117,7 @@ public final class Route extends com.google.api.client.json.GenericJson {
    * Metadata associated with this Route, including name, namespace, labels, and annotations.
    * @param metadata metadata or {@code null} for none
    */
-  public Route setMetadata(K8sIoApimachineryPkgApisMetaV1ObjectMeta metadata) {
+  public Route setMetadata(ObjectMeta metadata) {
     this.metadata = metadata;
     return this;
   }

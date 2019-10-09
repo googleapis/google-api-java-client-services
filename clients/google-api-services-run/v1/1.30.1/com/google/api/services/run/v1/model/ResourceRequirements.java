@@ -32,7 +32,8 @@ public final class ResourceRequirements extends com.google.api.client.json.Gener
   /**
    * (Optional)
    *
-   * Cloud Run fully managed: Only memory is supported
+   * Cloud Run fully managed: Only memory and CPU are supported. Note: The only supported value for
+   * CPU is '1'.
    *
    * Cloud Run for Anthos: supported
    *
@@ -47,7 +48,8 @@ public final class ResourceRequirements extends com.google.api.client.json.Gener
   /**
    * (Optional)
    *
-   * Cloud Run fully managed: not supported
+   * Cloud Run fully managed: Only memory and CPU are supported. Note: The only supported value for
+   * CPU is '1'.
    *
    * Cloud Run for Anthos: supported
    *
@@ -64,7 +66,8 @@ public final class ResourceRequirements extends com.google.api.client.json.Gener
   /**
    * (Optional)
    *
-   * Cloud Run fully managed: Only memory is supported
+   * Cloud Run fully managed: Only memory and CPU are supported. Note: The only supported value for
+   * CPU is '1'.
    *
    * Cloud Run for Anthos: supported
    *
@@ -80,7 +83,8 @@ public final class ResourceRequirements extends com.google.api.client.json.Gener
   /**
    * (Optional)
    *
-   * Cloud Run fully managed: Only memory is supported
+   * Cloud Run fully managed: Only memory and CPU are supported. Note: The only supported value for
+   * CPU is '1'.
    *
    * Cloud Run for Anthos: supported
    *
@@ -97,7 +101,8 @@ public final class ResourceRequirements extends com.google.api.client.json.Gener
   /**
    * (Optional)
    *
-   * Cloud Run fully managed: not supported
+   * Cloud Run fully managed: Only memory and CPU are supported. Note: The only supported value for
+   * CPU is '1'.
    *
    * Cloud Run for Anthos: supported
    *
@@ -115,7 +120,8 @@ public final class ResourceRequirements extends com.google.api.client.json.Gener
   /**
    * (Optional)
    *
-   * Cloud Run fully managed: not supported
+   * Cloud Run fully managed: Only memory and CPU are supported. Note: The only supported value for
+   * CPU is '1'.
    *
    * Cloud Run for Anthos: supported
    *

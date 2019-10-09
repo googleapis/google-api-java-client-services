@@ -509,7 +509,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         return result;
       }
 
-      public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status> {
+      public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.Status> {
 
         private static final String REST_PATH = "apis/domains.cloudrun.com/v1/{+name}";
 
@@ -532,7 +532,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
-          super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status.class);
+          super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.Status.class);
           this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1452,7 +1452,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         return result;
       }
 
-      public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status> {
+      public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.Status> {
 
         private static final String REST_PATH = "apis/serving.knative.dev/v1/{+name}";
 
@@ -1476,7 +1476,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
-          super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status.class);
+          super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.Status.class);
           this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2393,7 +2393,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         return result;
       }
 
-      public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status> {
+      public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.Status> {
 
         private static final String REST_PATH = "apis/domains.cloudrun.com/v1/{+name}";
 
@@ -2415,7 +2415,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
-          super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status.class);
+          super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.Status.class);
           this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3197,7 +3197,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         return result;
       }
 
-      public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status> {
+      public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.Status> {
 
         private static final String REST_PATH = "apis/serving.knative.dev/v1/{+name}";
 
@@ -3219,7 +3219,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
-          super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status.class);
+          super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.Status.class);
           this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3966,7 +3966,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         return result;
       }
 
-      public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status> {
+      public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.Status> {
 
         private static final String REST_PATH = "apis/serving.knative.dev/v1/{+name}";
 
@@ -3988,7 +3988,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
-          super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status.class);
+          super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.Status.class);
           this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4887,7 +4887,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         return result;
       }
 
-      public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status> {
+      public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.Status> {
 
         private static final String REST_PATH = "apis/serving.knative.dev/v1/{+name}";
 
@@ -4910,7 +4910,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
-          super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status.class);
+          super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.Status.class);
           this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -6374,7 +6374,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return result;
         }
 
-        public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status> {
+        public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.Status> {
 
           private static final String REST_PATH = "v1/{+name}";
 
@@ -6397,7 +6397,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
-            super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status.class);
+            super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.Status.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -7319,7 +7319,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return result;
         }
 
-        public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status> {
+        public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.Status> {
 
           private static final String REST_PATH = "v1/{+name}";
 
@@ -7343,7 +7343,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
-            super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status.class);
+            super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.Status.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -8262,7 +8262,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return result;
         }
 
-        public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status> {
+        public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.Status> {
 
           private static final String REST_PATH = "v1/{+name}";
 
@@ -8284,7 +8284,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
-            super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status.class);
+            super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.Status.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -9068,7 +9068,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return result;
         }
 
-        public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status> {
+        public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.Status> {
 
           private static final String REST_PATH = "v1/{+name}";
 
@@ -9090,7 +9090,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
-            super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status.class);
+            super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.Status.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -9839,7 +9839,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return result;
         }
 
-        public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status> {
+        public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.Status> {
 
           private static final String REST_PATH = "v1/{+name}";
 
@@ -9861,7 +9861,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
-            super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status.class);
+            super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.Status.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -10762,7 +10762,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return result;
         }
 
-        public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status> {
+        public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.Status> {
 
           private static final String REST_PATH = "v1/{+name}";
 
@@ -10785,7 +10785,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
-            super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status.class);
+            super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.Status.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

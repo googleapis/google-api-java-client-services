@@ -39,7 +39,7 @@ public final class RevisionTemplate extends com.google.api.client.json.GenericJs
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private K8sIoApimachineryPkgApisMetaV1ObjectMeta metadata;
+  private ObjectMeta metadata;
 
   /**
    * RevisionSpec holds the desired state of the Revision (from the client).
@@ -56,7 +56,7 @@ public final class RevisionTemplate extends com.google.api.client.json.GenericJs
    * revision, use the "run.googleapis.com/cloudsql-instances" annotation key.
    * @return value or {@code null} for none
    */
-  public K8sIoApimachineryPkgApisMetaV1ObjectMeta getMetadata() {
+  public ObjectMeta getMetadata() {
     return metadata;
   }
 
@@ -68,7 +68,7 @@ public final class RevisionTemplate extends com.google.api.client.json.GenericJs
    * revision, use the "run.googleapis.com/cloudsql-instances" annotation key.
    * @param metadata metadata or {@code null} for none
    */
-  public RevisionTemplate setMetadata(K8sIoApimachineryPkgApisMetaV1ObjectMeta metadata) {
+  public RevisionTemplate setMetadata(ObjectMeta metadata) {
     this.metadata = metadata;
     return this;
   }

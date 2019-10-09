@@ -47,10 +47,7 @@ public final class TriggerFilter extends com.google.api.client.json.GenericJson 
   private java.util.Map<String, java.lang.String> attributes;
 
   /**
-   * SourceAndType filters events based on exact matches on the CloudEvents type and source
-   * attributes. This field has been replaced by the Attributes field.
-   *
-   * +optional
+   * SourceAndType is DEPRECATED and replaced by the Attributes field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,10 +91,7 @@ public final class TriggerFilter extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * SourceAndType filters events based on exact matches on the CloudEvents type and source
-   * attributes. This field has been replaced by the Attributes field.
-   *
-   * +optional
+   * SourceAndType is DEPRECATED and replaced by the Attributes field.
    * @return value or {@code null} for none
    */
   public TriggerFilterSourceAndType getSourceAndType() {
@@ -105,10 +99,7 @@ public final class TriggerFilter extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * SourceAndType filters events based on exact matches on the CloudEvents type and source
-   * attributes. This field has been replaced by the Attributes field.
-   *
-   * +optional
+   * SourceAndType is DEPRECATED and replaced by the Attributes field.
    * @param sourceAndType sourceAndType or {@code null} for none
    */
   public TriggerFilter setSourceAndType(TriggerFilterSourceAndType sourceAndType) {

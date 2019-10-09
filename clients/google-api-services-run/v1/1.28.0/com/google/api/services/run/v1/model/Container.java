@@ -34,7 +34,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   /**
    * (Optional)
    *
-   * Cloud Run fully managed: not supported
+   * Cloud Run fully managed: supported
    *
    * Cloud Run for Anthos: supported
    *
@@ -261,7 +261,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   /**
    * (Optional)
    *
-   * Cloud Run fully managed: not supported
+   * Cloud Run fully managed: supported
    *
    * Cloud Run for Anthos: supported
    *
@@ -281,7 +281,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   /**
    * (Optional)
    *
-   * Cloud Run fully managed: not supported
+   * Cloud Run fully managed: supported
    *
    * Cloud Run for Anthos: supported
    *

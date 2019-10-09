@@ -123,6 +123,486 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
   }
 
   /**
+   * An accessor for creating requests from the Customresourcedefinitions collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code CloudRun run = new CloudRun(...);}
+   *   {@code CloudRun.Customresourcedefinitions.List request = run.customresourcedefinitions().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Customresourcedefinitions customresourcedefinitions() {
+    return new Customresourcedefinitions();
+  }
+
+  /**
+   * The "customresourcedefinitions" collection of methods.
+   */
+  public class Customresourcedefinitions {
+
+    /**
+     * Rpc to list custom resource definitions.
+     *
+     * Create a request for the method "customresourcedefinitions.list".
+     *
+     * This request holds the parameters needed by the run server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public List list() throws java.io.IOException {
+      List result = new List();
+      initialize(result);
+      return result;
+    }
+
+    public class List extends CloudRunRequest<com.google.api.services.run.v1beta1.model.ListCustomResourceDefinitionsResponse> {
+
+      private static final String REST_PATH = "apis/apiextensions.k8s.io/v1beta1/customresourcedefinitions";
+
+      /**
+       * Rpc to list custom resource definitions.
+       *
+       * Create a request for the method "customresourcedefinitions.list".
+       *
+       * This request holds the parameters needed by the the run server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected List() {
+        super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v1beta1.model.ListCustomResourceDefinitionsResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Optional encoded string to continue paging. */
+      @com.google.api.client.util.Key("continue")
+      private java.lang.String continue__;
+
+      /** Optional encoded string to continue paging.
+       */
+      public java.lang.String getContinue() {
+        return continue__;
+      }
+
+      /** Optional encoded string to continue paging. */
+      public List setContinue(java.lang.String continue__) {
+        this.continue__ = continue__;
+        return this;
+      }
+
+      /**
+       * Allows to filter resources based on a specific value for a field name. Send this in a query
+       * string format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String fieldSelector;
+
+      /** Allows to filter resources based on a specific value for a field name. Send this in a query string
+     format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
+       */
+      public java.lang.String getFieldSelector() {
+        return fieldSelector;
+      }
+
+      /**
+       * Allows to filter resources based on a specific value for a field name. Send this in a query
+       * string format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
+       */
+      public List setFieldSelector(java.lang.String fieldSelector) {
+        this.fieldSelector = fieldSelector;
+        return this;
+      }
+
+      /** Not currently used by Cloud Run. */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean includeUninitialized;
+
+      /** Not currently used by Cloud Run.
+       */
+      public java.lang.Boolean getIncludeUninitialized() {
+        return includeUninitialized;
+      }
+
+      /** Not currently used by Cloud Run. */
+      public List setIncludeUninitialized(java.lang.Boolean includeUninitialized) {
+        this.includeUninitialized = includeUninitialized;
+        return this;
+      }
+
+      /**
+       * Allows to filter resources based on a label. Supported operations are =, !=, exists, in,
+       * and notIn.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String labelSelector;
+
+      /** Allows to filter resources based on a label. Supported operations are =, !=, exists, in, and notIn.
+       */
+      public java.lang.String getLabelSelector() {
+        return labelSelector;
+      }
+
+      /**
+       * Allows to filter resources based on a label. Supported operations are =, !=, exists, in,
+       * and notIn.
+       */
+      public List setLabelSelector(java.lang.String labelSelector) {
+        this.labelSelector = labelSelector;
+        return this;
+      }
+
+      @com.google.api.client.util.Key
+      private java.lang.Integer limit;
+
+      /**
+
+       */
+      public java.lang.Integer getLimit() {
+        return limit;
+      }
+
+      public List setLimit(java.lang.Integer limit) {
+        this.limit = limit;
+        return this;
+      }
+
+      /**
+       * The project ID or project number from which the storages should be listed.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** The project ID or project number from which the storages should be listed.
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /**
+       * The project ID or project number from which the storages should be listed.
+       */
+      public List setParent(java.lang.String parent) {
+        this.parent = parent;
+        return this;
+      }
+
+      /**
+       * The baseline resource version from which the list or watch operation should start. Not
+       * currently used by Cloud Run.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String resourceVersion;
+
+      /** The baseline resource version from which the list or watch operation should start. Not currently
+     used by Cloud Run.
+       */
+      public java.lang.String getResourceVersion() {
+        return resourceVersion;
+      }
+
+      /**
+       * The baseline resource version from which the list or watch operation should start. Not
+       * currently used by Cloud Run.
+       */
+      public List setResourceVersion(java.lang.String resourceVersion) {
+        this.resourceVersion = resourceVersion;
+        return this;
+      }
+
+      /**
+       * Flag that indicates that the client expects to watch this resource as well. Not currently
+       * used by Cloud Run.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean watch;
+
+      /** Flag that indicates that the client expects to watch this resource as well. Not currently used by
+     Cloud Run.
+       */
+      public java.lang.Boolean getWatch() {
+        return watch;
+      }
+
+      /**
+       * Flag that indicates that the client expects to watch this resource as well. Not currently
+       * used by Cloud Run.
+       */
+      public List setWatch(java.lang.Boolean watch) {
+        this.watch = watch;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
+   * An accessor for creating requests from the Namespaces collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code CloudRun run = new CloudRun(...);}
+   *   {@code CloudRun.Namespaces.List request = run.namespaces().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Namespaces namespaces() {
+    return new Namespaces();
+  }
+
+  /**
+   * The "namespaces" collection of methods.
+   */
+  public class Namespaces {
+
+    /**
+     * An accessor for creating requests from the Customresourcedefinitions collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code CloudRun run = new CloudRun(...);}
+     *   {@code CloudRun.Customresourcedefinitions.List request = run.customresourcedefinitions().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Customresourcedefinitions customresourcedefinitions() {
+      return new Customresourcedefinitions();
+    }
+
+    /**
+     * The "customresourcedefinitions" collection of methods.
+     */
+    public class Customresourcedefinitions {
+
+      /**
+       * Rpc to get information about a CustomResourceDefinition.
+       *
+       * Create a request for the method "customresourcedefinitions.get".
+       *
+       * This request holds the parameters needed by the run server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name The name of the CustomResourceDefinition being retrieved. If needed,
+      replace {namespace_id} with the
+       *        project ID.
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends CloudRunRequest<com.google.api.services.run.v1beta1.model.CustomResourceDefinition> {
+
+        private static final String REST_PATH = "apis/apiextensions.k8s.io/v1beta1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^namespaces/[^/]+/customresourcedefinitions/[^/]+$");
+
+        /**
+         * Rpc to get information about a CustomResourceDefinition.
+         *
+         * Create a request for the method "customresourcedefinitions.get".
+         *
+         * This request holds the parameters needed by the the run server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The name of the CustomResourceDefinition being retrieved. If needed,
+      replace {namespace_id} with the
+       *        project ID.
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v1beta1.model.CustomResourceDefinition.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^namespaces/[^/]+/customresourcedefinitions/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The name of the CustomResourceDefinition being retrieved. If needed, replace
+         * {namespace_id} with the project ID.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The name of the CustomResourceDefinition being retrieved. If needed, replace {namespace_id} with
+       the project ID.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * The name of the CustomResourceDefinition being retrieved. If needed, replace
+         * {namespace_id} with the project ID.
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^namespaces/[^/]+/customresourcedefinitions/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+
+    }
+  }
+
+  /**
    * An accessor for creating requests from the Projects collection.
    *
    * <p>The typical use is:</p>
@@ -163,192 +643,458 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
     public class Locations {
 
       /**
-       * Lists information about the supported locations for this service.
+       * An accessor for creating requests from the Customresourcedefinitions collection.
        *
-       * Create a request for the method "locations.list".
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudRun run = new CloudRun(...);}
+       *   {@code CloudRun.Customresourcedefinitions.List request = run.customresourcedefinitions().list(parameters ...)}
+       * </pre>
        *
-       * This request holds the parameters needed by the run server.  After setting any optional
-       * parameters, call the {@link List#execute()} method to invoke the remote operation.
-       *
-       * @param name The resource that owns the locations collection, if applicable.
-       * @return the request
+       * @return the resource collection
        */
-      public List list(java.lang.String name) throws java.io.IOException {
-        List result = new List(name);
-        initialize(result);
-        return result;
+      public Customresourcedefinitions customresourcedefinitions() {
+        return new Customresourcedefinitions();
       }
 
-      public class List extends CloudRunRequest<com.google.api.services.run.v1beta1.model.ListLocationsResponse> {
-
-        private static final String REST_PATH = "v1beta1/{+name}/locations";
-
-        private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^projects/[^/]+$");
+      /**
+       * The "customresourcedefinitions" collection of methods.
+       */
+      public class Customresourcedefinitions {
 
         /**
-         * Lists information about the supported locations for this service.
+         * Rpc to get information about a CustomResourceDefinition.
          *
-         * Create a request for the method "locations.list".
+         * Create a request for the method "customresourcedefinitions.get".
          *
-         * This request holds the parameters needed by the the run server.  After setting any optional
-         * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
-         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
-         * called to initialize this instance immediately after invoking the constructor. </p>
+         * This request holds the parameters needed by the run server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name The resource that owns the locations collection, if applicable.
-         * @since 1.13
+         * @param name The name of the CustomResourceDefinition being retrieved. If needed,
+        replace {namespace_id} with the
+         *        project ID.
+         * @return the request
          */
-        protected List(java.lang.String name) {
-          super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v1beta1.model.ListLocationsResponse.class);
-          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^projects/[^/]+$");
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends CloudRunRequest<com.google.api.services.run.v1beta1.model.CustomResourceDefinition> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/customresourcedefinitions/[^/]+$");
+
+          /**
+           * Rpc to get information about a CustomResourceDefinition.
+           *
+           * Create a request for the method "customresourcedefinitions.get".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the CustomResourceDefinition being retrieved. If needed,
+        replace {namespace_id} with the
+         *        project ID.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v1beta1.model.CustomResourceDefinition.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/customresourcedefinitions/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The name of the CustomResourceDefinition being retrieved. If needed, replace
+           * {namespace_id} with the project ID.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the CustomResourceDefinition being retrieved. If needed, replace {namespace_id} with
+         the project ID.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The name of the CustomResourceDefinition being retrieved. If needed, replace
+           * {namespace_id} with the project ID.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/customresourcedefinitions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Rpc to list custom resource definitions.
+         *
+         * Create a request for the method "customresourcedefinitions.list".
+         *
+         * This request holds the parameters needed by the run server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent The project ID or project number from which the storages should
+        be listed.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends CloudRunRequest<com.google.api.services.run.v1beta1.model.ListCustomResourceDefinitionsResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/customresourcedefinitions";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Rpc to list custom resource definitions.
+           *
+           * Create a request for the method "customresourcedefinitions.list".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent The project ID or project number from which the storages should
+        be listed.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v1beta1.model.ListCustomResourceDefinitionsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The project ID or project number from which the storages should be listed.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** The project ID or project number from which the storages should be listed.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * The project ID or project number from which the storages should be listed.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional encoded string to continue paging. */
+          @com.google.api.client.util.Key("continue")
+          private java.lang.String continue__;
+
+          /** Optional encoded string to continue paging.
+           */
+          public java.lang.String getContinue() {
+            return continue__;
+          }
+
+          /** Optional encoded string to continue paging. */
+          public List setContinue(java.lang.String continue__) {
+            this.continue__ = continue__;
+            return this;
+          }
+
+          /**
+           * Allows to filter resources based on a specific value for a field name. Send this in a
+           * query string format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String fieldSelector;
+
+          /** Allows to filter resources based on a specific value for a field name. Send this in a query string
+         format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
+           */
+          public java.lang.String getFieldSelector() {
+            return fieldSelector;
+          }
+
+          /**
+           * Allows to filter resources based on a specific value for a field name. Send this in a
+           * query string format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
+           */
+          public List setFieldSelector(java.lang.String fieldSelector) {
+            this.fieldSelector = fieldSelector;
+            return this;
+          }
+
+          /** Not currently used by Cloud Run. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean includeUninitialized;
+
+          /** Not currently used by Cloud Run.
+           */
+          public java.lang.Boolean getIncludeUninitialized() {
+            return includeUninitialized;
+          }
+
+          /** Not currently used by Cloud Run. */
+          public List setIncludeUninitialized(java.lang.Boolean includeUninitialized) {
+            this.includeUninitialized = includeUninitialized;
+            return this;
+          }
+
+          /**
+           * Allows to filter resources based on a label. Supported operations are =, !=, exists,
+           * in, and notIn.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String labelSelector;
+
+          /** Allows to filter resources based on a label. Supported operations are =, !=, exists, in, and notIn.
+           */
+          public java.lang.String getLabelSelector() {
+            return labelSelector;
+          }
+
+          /**
+           * Allows to filter resources based on a label. Supported operations are =, !=, exists,
+           * in, and notIn.
+           */
+          public List setLabelSelector(java.lang.String labelSelector) {
+            this.labelSelector = labelSelector;
+            return this;
+          }
+
+          @com.google.api.client.util.Key
+          private java.lang.Integer limit;
+
+          /**
+
+           */
+          public java.lang.Integer getLimit() {
+            return limit;
+          }
+
+          public List setLimit(java.lang.Integer limit) {
+            this.limit = limit;
+            return this;
+          }
+
+          /**
+           * The baseline resource version from which the list or watch operation should start. Not
+           * currently used by Cloud Run.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resourceVersion;
+
+          /** The baseline resource version from which the list or watch operation should start. Not currently
+         used by Cloud Run.
+           */
+          public java.lang.String getResourceVersion() {
+            return resourceVersion;
+          }
+
+          /**
+           * The baseline resource version from which the list or watch operation should start. Not
+           * currently used by Cloud Run.
+           */
+          public List setResourceVersion(java.lang.String resourceVersion) {
+            this.resourceVersion = resourceVersion;
+            return this;
+          }
+
+          /**
+           * Flag that indicates that the client expects to watch this resource as well. Not
+           * currently used by Cloud Run.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean watch;
+
+          /** Flag that indicates that the client expects to watch this resource as well. Not currently used by
+         Cloud Run.
+           */
+          public java.lang.Boolean getWatch() {
+            return watch;
+          }
+
+          /**
+           * Flag that indicates that the client expects to watch this resource as well. Not
+           * currently used by Cloud Run.
+           */
+          public List setWatch(java.lang.Boolean watch) {
+            this.watch = watch;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
           }
         }
 
-        @Override
-        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-          return super.executeUsingHead();
-        }
-
-        @Override
-        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-          return super.buildHttpRequestUsingHead();
-        }
-
-        @Override
-        public List set$Xgafv(java.lang.String $Xgafv) {
-          return (List) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public List setAccessToken(java.lang.String accessToken) {
-          return (List) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public List setAlt(java.lang.String alt) {
-          return (List) super.setAlt(alt);
-        }
-
-        @Override
-        public List setCallback(java.lang.String callback) {
-          return (List) super.setCallback(callback);
-        }
-
-        @Override
-        public List setFields(java.lang.String fields) {
-          return (List) super.setFields(fields);
-        }
-
-        @Override
-        public List setKey(java.lang.String key) {
-          return (List) super.setKey(key);
-        }
-
-        @Override
-        public List setOauthToken(java.lang.String oauthToken) {
-          return (List) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (List) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public List setQuotaUser(java.lang.String quotaUser) {
-          return (List) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public List setUploadType(java.lang.String uploadType) {
-          return (List) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public List setUploadProtocol(java.lang.String uploadProtocol) {
-          return (List) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /** The resource that owns the locations collection, if applicable. */
-        @com.google.api.client.util.Key
-        private java.lang.String name;
-
-        /** The resource that owns the locations collection, if applicable.
-         */
-        public java.lang.String getName() {
-          return name;
-        }
-
-        /** The resource that owns the locations collection, if applicable. */
-        public List setName(java.lang.String name) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^projects/[^/]+$");
-          }
-          this.name = name;
-          return this;
-        }
-
-        /** The standard list filter. */
-        @com.google.api.client.util.Key
-        private java.lang.String filter;
-
-        /** The standard list filter.
-         */
-        public java.lang.String getFilter() {
-          return filter;
-        }
-
-        /** The standard list filter. */
-        public List setFilter(java.lang.String filter) {
-          this.filter = filter;
-          return this;
-        }
-
-        /** The standard list page size. */
-        @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
-
-        /** The standard list page size.
-         */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
-        }
-
-        /** The standard list page size. */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
-          return this;
-        }
-
-        /** The standard list page token. */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** The standard list page token.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /** The standard list page token. */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
-        @Override
-        public List set(String parameterName, Object value) {
-          return (List) super.set(parameterName, value);
-        }
       }
-
     }
   }
 

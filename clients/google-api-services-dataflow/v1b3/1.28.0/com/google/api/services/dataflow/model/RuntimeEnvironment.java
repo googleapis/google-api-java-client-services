@@ -53,6 +53,13 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   private java.lang.Boolean bypassTempDirValidation;
 
   /**
+   * Configuration for VM IPs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipConfiguration;
+
+  /**
    * Optional. Name for the Cloud KMS key for the job. Key format is:
    * projects//locations//keyRings//cryptoKeys/
    * The value may be {@code null}.
@@ -114,8 +121,29 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   private java.lang.String tempLocation;
 
   /**
+   * The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones/regions-zones)
+   * in which worker processing should occur, e.g. "us-west1". Mutually exclusive with worker_zone.
+   * If neither worker_region nor worker_zone is specified, default to the control plane's region.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String workerRegion;
+
+  /**
+   * The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in
+   * which worker processing should occur, e.g. "us-west1-a". Mutually exclusive with worker_region.
+   * If neither worker_region nor worker_zone is specified, a zone in the control plane's region is
+   * chosen based on available capacity. If both `worker_zone` and `zone` are set, `worker_zone`
+   * takes precedence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String workerZone;
+
+  /**
    * The Compute Engine [availability zone](https://cloud.google.com/compute/docs/regions-zones
-   * /regions-zones) for launching worker instances to run your pipeline.
+   * /regions-zones) for launching worker instances to run your pipeline. In the future, worker_zone
+   * will take precedence.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -173,6 +201,23 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
    */
   public RuntimeEnvironment setBypassTempDirValidation(java.lang.Boolean bypassTempDirValidation) {
     this.bypassTempDirValidation = bypassTempDirValidation;
+    return this;
+  }
+
+  /**
+   * Configuration for VM IPs.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpConfiguration() {
+    return ipConfiguration;
+  }
+
+  /**
+   * Configuration for VM IPs.
+   * @param ipConfiguration ipConfiguration or {@code null} for none
+   */
+  public RuntimeEnvironment setIpConfiguration(java.lang.String ipConfiguration) {
+    this.ipConfiguration = ipConfiguration;
     return this;
   }
 
@@ -323,8 +368,55 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   }
 
   /**
+   * The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones/regions-zones)
+   * in which worker processing should occur, e.g. "us-west1". Mutually exclusive with worker_zone.
+   * If neither worker_region nor worker_zone is specified, default to the control plane's region.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWorkerRegion() {
+    return workerRegion;
+  }
+
+  /**
+   * The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones/regions-zones)
+   * in which worker processing should occur, e.g. "us-west1". Mutually exclusive with worker_zone.
+   * If neither worker_region nor worker_zone is specified, default to the control plane's region.
+   * @param workerRegion workerRegion or {@code null} for none
+   */
+  public RuntimeEnvironment setWorkerRegion(java.lang.String workerRegion) {
+    this.workerRegion = workerRegion;
+    return this;
+  }
+
+  /**
+   * The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in
+   * which worker processing should occur, e.g. "us-west1-a". Mutually exclusive with worker_region.
+   * If neither worker_region nor worker_zone is specified, a zone in the control plane's region is
+   * chosen based on available capacity. If both `worker_zone` and `zone` are set, `worker_zone`
+   * takes precedence.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWorkerZone() {
+    return workerZone;
+  }
+
+  /**
+   * The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in
+   * which worker processing should occur, e.g. "us-west1-a". Mutually exclusive with worker_region.
+   * If neither worker_region nor worker_zone is specified, a zone in the control plane's region is
+   * chosen based on available capacity. If both `worker_zone` and `zone` are set, `worker_zone`
+   * takes precedence.
+   * @param workerZone workerZone or {@code null} for none
+   */
+  public RuntimeEnvironment setWorkerZone(java.lang.String workerZone) {
+    this.workerZone = workerZone;
+    return this;
+  }
+
+  /**
    * The Compute Engine [availability zone](https://cloud.google.com/compute/docs/regions-zones
-   * /regions-zones) for launching worker instances to run your pipeline.
+   * /regions-zones) for launching worker instances to run your pipeline. In the future, worker_zone
+   * will take precedence.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -333,7 +425,8 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
 
   /**
    * The Compute Engine [availability zone](https://cloud.google.com/compute/docs/regions-zones
-   * /regions-zones) for launching worker instances to run your pipeline.
+   * /regions-zones) for launching worker instances to run your pipeline. In the future, worker_zone
+   * will take precedence.
    * @param zone zone or {@code null} for none
    */
   public RuntimeEnvironment setZone(java.lang.String zone) {

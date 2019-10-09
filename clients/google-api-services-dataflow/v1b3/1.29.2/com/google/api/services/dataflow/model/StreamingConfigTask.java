@@ -30,6 +30,20 @@ package com.google.api.services.dataflow.model;
 public final class StreamingConfigTask extends com.google.api.client.json.GenericJson {
 
   /**
+   * Chunk size for commit streams from the harness to windmill.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long commitStreamChunkSizeBytes;
+
+  /**
+   * Chunk size for get data streams from the harness to windmill.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long getDataStreamChunkSizeBytes;
+
+  /**
    * Maximum size for work item commit supported windmill storage layer.
    * The value may be {@code null}.
    */
@@ -71,6 +85,40 @@ public final class StreamingConfigTask extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long windmillServicePort;
+
+  /**
+   * Chunk size for commit streams from the harness to windmill.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getCommitStreamChunkSizeBytes() {
+    return commitStreamChunkSizeBytes;
+  }
+
+  /**
+   * Chunk size for commit streams from the harness to windmill.
+   * @param commitStreamChunkSizeBytes commitStreamChunkSizeBytes or {@code null} for none
+   */
+  public StreamingConfigTask setCommitStreamChunkSizeBytes(java.lang.Long commitStreamChunkSizeBytes) {
+    this.commitStreamChunkSizeBytes = commitStreamChunkSizeBytes;
+    return this;
+  }
+
+  /**
+   * Chunk size for get data streams from the harness to windmill.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getGetDataStreamChunkSizeBytes() {
+    return getDataStreamChunkSizeBytes;
+  }
+
+  /**
+   * Chunk size for get data streams from the harness to windmill.
+   * @param getDataStreamChunkSizeBytes getDataStreamChunkSizeBytes or {@code null} for none
+   */
+  public StreamingConfigTask setGetDataStreamChunkSizeBytes(java.lang.Long getDataStreamChunkSizeBytes) {
+    this.getDataStreamChunkSizeBytes = getDataStreamChunkSizeBytes;
+    return this;
+  }
 
   /**
    * Maximum size for work item commit supported windmill storage layer.

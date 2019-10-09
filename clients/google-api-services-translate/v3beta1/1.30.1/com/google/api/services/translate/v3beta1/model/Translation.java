@@ -47,8 +47,12 @@ public final class Translation extends com.google.api.client.json.GenericJson {
   private TranslateTextGlossaryConfig glossaryConfig;
 
   /**
-   * Only present when `model` is present in the request. This is same as `model` provided in the
-   * request.
+   * Only present when `model` is present in the request. `model` here is normalized to have project
+   * number.
+   *
+   * For example: If the `model` requested in TranslationTextRequest is `projects/{project-
+   * id}/locations/{location-id}/models/general/nmt` then `model` here would be normalized to
+   * `projects/{project-number}/locations/{location-id}/models/general/nmt`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,8 +104,12 @@ public final class Translation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Only present when `model` is present in the request. This is same as `model` provided in the
-   * request.
+   * Only present when `model` is present in the request. `model` here is normalized to have project
+   * number.
+   *
+   * For example: If the `model` requested in TranslationTextRequest is `projects/{project-
+   * id}/locations/{location-id}/models/general/nmt` then `model` here would be normalized to
+   * `projects/{project-number}/locations/{location-id}/models/general/nmt`.
    * @return value or {@code null} for none
    */
   public java.lang.String getModel() {
@@ -109,8 +117,12 @@ public final class Translation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Only present when `model` is present in the request. This is same as `model` provided in the
-   * request.
+   * Only present when `model` is present in the request. `model` here is normalized to have project
+   * number.
+   *
+   * For example: If the `model` requested in TranslationTextRequest is `projects/{project-
+   * id}/locations/{location-id}/models/general/nmt` then `model` here would be normalized to
+   * `projects/{project-number}/locations/{location-id}/models/general/nmt`.
    * @param model model or {@code null} for none
    */
   public Translation setModel(java.lang.String model) {

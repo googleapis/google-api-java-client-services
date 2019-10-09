@@ -61,10 +61,11 @@ public final class DetectLanguageRequest extends com.google.api.client.json.Gene
   /**
    * Optional. The language detection model to be used.
    *
-   * Format: `projects/{project-id}/locations/{location-id}/models/language-detection/{model-id}`
+   * Format: `projects/{project-number-or-id}/locations/{location-id}/models/language-detection
+   * /{model-id}`
    *
-   * Only one language detection model is currently supported: `projects/{project-id}/locations
-   * /{location-id}/models/language-detection/default`.
+   * Only one language detection model is currently supported: `projects/{project-number-or-
+   * id}/locations/{location-id}/models/language-detection/default`.
    *
    * If not specified, the default model is used.
    * The value may be {@code null}.
@@ -140,10 +141,11 @@ public final class DetectLanguageRequest extends com.google.api.client.json.Gene
   /**
    * Optional. The language detection model to be used.
    *
-   * Format: `projects/{project-id}/locations/{location-id}/models/language-detection/{model-id}`
+   * Format: `projects/{project-number-or-id}/locations/{location-id}/models/language-detection
+   * /{model-id}`
    *
-   * Only one language detection model is currently supported: `projects/{project-id}/locations
-   * /{location-id}/models/language-detection/default`.
+   * Only one language detection model is currently supported: `projects/{project-number-or-
+   * id}/locations/{location-id}/models/language-detection/default`.
    *
    * If not specified, the default model is used.
    * @return value or {@code null} for none
@@ -155,10 +157,11 @@ public final class DetectLanguageRequest extends com.google.api.client.json.Gene
   /**
    * Optional. The language detection model to be used.
    *
-   * Format: `projects/{project-id}/locations/{location-id}/models/language-detection/{model-id}`
+   * Format: `projects/{project-number-or-id}/locations/{location-id}/models/language-detection
+   * /{model-id}`
    *
-   * Only one language detection model is currently supported: `projects/{project-id}/locations
-   * /{location-id}/models/language-detection/default`.
+   * Only one language detection model is currently supported: `projects/{project-number-or-
+   * id}/locations/{location-id}/models/language-detection/default`.
    *
    * If not specified, the default model is used.
    * @param model model or {@code null} for none

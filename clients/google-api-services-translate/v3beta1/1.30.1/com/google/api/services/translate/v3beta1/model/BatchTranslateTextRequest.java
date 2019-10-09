@@ -64,11 +64,12 @@ public final class BatchTranslateTextRequest extends com.google.api.client.json.
    *
    * The value format depends on model type:
    *
-   * - AutoML Translation models:   `projects/{project-id}/locations/{location-id}/models/{model-
-   * id}`
+   * - AutoML Translation models:   `projects/{project-number-or-id}/locations/{location-id}/models
+   * /{model-id}`
    *
-   * - General (built-in) models:   `projects/{project-id}/locations/{location-
-   * id}/models/general/nmt`,   `projects/{project-id}/locations/{location-id}/models/general/base`
+   * - General (built-in) models:   `projects/{project-number-or-id}/locations/{location-
+   * id}/models/general/nmt`,   `projects/{project-number-or-id}/locations/{location-
+   * id}/models/general/base`
    *
    * If the map is empty or a specific model is not requested for a language pair, then default
    * google model (nmt) is used.
@@ -170,11 +171,12 @@ public final class BatchTranslateTextRequest extends com.google.api.client.json.
    *
    * The value format depends on model type:
    *
-   * - AutoML Translation models:   `projects/{project-id}/locations/{location-id}/models/{model-
-   * id}`
+   * - AutoML Translation models:   `projects/{project-number-or-id}/locations/{location-id}/models
+   * /{model-id}`
    *
-   * - General (built-in) models:   `projects/{project-id}/locations/{location-
-   * id}/models/general/nmt`,   `projects/{project-id}/locations/{location-id}/models/general/base`
+   * - General (built-in) models:   `projects/{project-number-or-id}/locations/{location-
+   * id}/models/general/nmt`,   `projects/{project-number-or-id}/locations/{location-
+   * id}/models/general/base`
    *
    * If the map is empty or a specific model is not requested for a language pair, then default
    * google model (nmt) is used.
@@ -190,11 +192,12 @@ public final class BatchTranslateTextRequest extends com.google.api.client.json.
    *
    * The value format depends on model type:
    *
-   * - AutoML Translation models:   `projects/{project-id}/locations/{location-id}/models/{model-
-   * id}`
+   * - AutoML Translation models:   `projects/{project-number-or-id}/locations/{location-id}/models
+   * /{model-id}`
    *
-   * - General (built-in) models:   `projects/{project-id}/locations/{location-
-   * id}/models/general/nmt`,   `projects/{project-id}/locations/{location-id}/models/general/base`
+   * - General (built-in) models:   `projects/{project-number-or-id}/locations/{location-
+   * id}/models/general/nmt`,   `projects/{project-number-or-id}/locations/{location-
+   * id}/models/general/base`
    *
    * If the map is empty or a specific model is not requested for a language pair, then default
    * google model (nmt) is used.

@@ -79,6 +79,7 @@ public final class GoogleCloudPolicytroubleshooterV1betaBindingExplanation exten
   private java.lang.String rolePermission;
 
   /**
+   * The relevance of this permission with respect to the BindingExplanation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -199,6 +200,7 @@ public final class GoogleCloudPolicytroubleshooterV1betaBindingExplanation exten
   }
 
   /**
+   * The relevance of this permission with respect to the BindingExplanation.
    * @return value or {@code null} for none
    */
   public java.lang.String getRolePermissionRelevance() {
@@ -206,6 +208,7 @@ public final class GoogleCloudPolicytroubleshooterV1betaBindingExplanation exten
   }
 
   /**
+   * The relevance of this permission with respect to the BindingExplanation.
    * @param rolePermissionRelevance rolePermissionRelevance or {@code null} for none
    */
   public GoogleCloudPolicytroubleshooterV1betaBindingExplanation setRolePermissionRelevance(java.lang.String rolePermissionRelevance) {

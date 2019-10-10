@@ -39,14 +39,22 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
   private java.util.List<OrderPromotionItem> applicableItems;
 
   /**
-   * Items which this promotion have been applied to.
+   * Items which this promotion have been applied to. Do not provide for orders.createtestorder.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<OrderPromotionItem> appliedItems;
 
   /**
-   * The party funding the promotion.
+   * Promotion end time in ISO 8601 format. Date, time, and offset required, e.g.,
+   * "2020-01-02T09:00:00+01:00" or "2020-01-02T09:00:00Z".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String endTime;
+
+  /**
+   * The party funding the promotion. Only merchant is supported for orders.createtestorder.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,21 +76,31 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
   private Price priceValue;
 
   /**
-   * A short title of the promotion to be shown on the checkout page.
+   * A short title of the promotion to be shown on the checkout page. Do not provide for
+   * orders.createtestorder.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String shortTitle;
 
   /**
-   * The category of the promotion.
+   * Promotion start time in ISO 8601 format. Date, time, and offset required, e.g.,
+   * "2020-01-02T09:00:00+01:00" or "2020-01-02T09:00:00Z".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String startTime;
+
+  /**
+   * The category of the promotion. Only moneyOff is supported for orders.createtestorder.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String subtype;
 
   /**
-   * Estimated discount applied to tax (if allowed by law).
+   * Estimated discount applied to tax (if allowed by law). Do not provide for
+   * orders.createtestorder.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,7 +114,7 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
   private java.lang.String title;
 
   /**
-   * The scope of the promotion.
+   * The scope of the promotion. Only product is supported for orders.createtestorder.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,7 +140,7 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Items which this promotion have been applied to.
+   * Items which this promotion have been applied to. Do not provide for orders.createtestorder.
    * @return value or {@code null} for none
    */
   public java.util.List<OrderPromotionItem> getAppliedItems() {
@@ -130,7 +148,7 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Items which this promotion have been applied to.
+   * Items which this promotion have been applied to. Do not provide for orders.createtestorder.
    * @param appliedItems appliedItems or {@code null} for none
    */
   public OrderPromotion setAppliedItems(java.util.List<OrderPromotionItem> appliedItems) {
@@ -139,7 +157,26 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The party funding the promotion.
+   * Promotion end time in ISO 8601 format. Date, time, and offset required, e.g.,
+   * "2020-01-02T09:00:00+01:00" or "2020-01-02T09:00:00Z".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEndTime() {
+    return endTime;
+  }
+
+  /**
+   * Promotion end time in ISO 8601 format. Date, time, and offset required, e.g.,
+   * "2020-01-02T09:00:00+01:00" or "2020-01-02T09:00:00Z".
+   * @param endTime endTime or {@code null} for none
+   */
+  public OrderPromotion setEndTime(java.lang.String endTime) {
+    this.endTime = endTime;
+    return this;
+  }
+
+  /**
+   * The party funding the promotion. Only merchant is supported for orders.createtestorder.
    * @return value or {@code null} for none
    */
   public java.lang.String getFunder() {
@@ -147,7 +184,7 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The party funding the promotion.
+   * The party funding the promotion. Only merchant is supported for orders.createtestorder.
    * @param funder funder or {@code null} for none
    */
   public OrderPromotion setFunder(java.lang.String funder) {
@@ -192,7 +229,8 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A short title of the promotion to be shown on the checkout page.
+   * A short title of the promotion to be shown on the checkout page. Do not provide for
+   * orders.createtestorder.
    * @return value or {@code null} for none
    */
   public java.lang.String getShortTitle() {
@@ -200,7 +238,8 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A short title of the promotion to be shown on the checkout page.
+   * A short title of the promotion to be shown on the checkout page. Do not provide for
+   * orders.createtestorder.
    * @param shortTitle shortTitle or {@code null} for none
    */
   public OrderPromotion setShortTitle(java.lang.String shortTitle) {
@@ -209,7 +248,26 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The category of the promotion.
+   * Promotion start time in ISO 8601 format. Date, time, and offset required, e.g.,
+   * "2020-01-02T09:00:00+01:00" or "2020-01-02T09:00:00Z".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStartTime() {
+    return startTime;
+  }
+
+  /**
+   * Promotion start time in ISO 8601 format. Date, time, and offset required, e.g.,
+   * "2020-01-02T09:00:00+01:00" or "2020-01-02T09:00:00Z".
+   * @param startTime startTime or {@code null} for none
+   */
+  public OrderPromotion setStartTime(java.lang.String startTime) {
+    this.startTime = startTime;
+    return this;
+  }
+
+  /**
+   * The category of the promotion. Only moneyOff is supported for orders.createtestorder.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubtype() {
@@ -217,7 +275,7 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The category of the promotion.
+   * The category of the promotion. Only moneyOff is supported for orders.createtestorder.
    * @param subtype subtype or {@code null} for none
    */
   public OrderPromotion setSubtype(java.lang.String subtype) {
@@ -226,7 +284,8 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Estimated discount applied to tax (if allowed by law).
+   * Estimated discount applied to tax (if allowed by law). Do not provide for
+   * orders.createtestorder.
    * @return value or {@code null} for none
    */
   public Price getTaxValue() {
@@ -234,7 +293,8 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Estimated discount applied to tax (if allowed by law).
+   * Estimated discount applied to tax (if allowed by law). Do not provide for
+   * orders.createtestorder.
    * @param taxValue taxValue or {@code null} for none
    */
   public OrderPromotion setTaxValue(Price taxValue) {
@@ -260,7 +320,7 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The scope of the promotion.
+   * The scope of the promotion. Only product is supported for orders.createtestorder.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -268,7 +328,7 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The scope of the promotion.
+   * The scope of the promotion. Only product is supported for orders.createtestorder.
    * @param type type or {@code null} for none
    */
   public OrderPromotion setType(java.lang.String type) {

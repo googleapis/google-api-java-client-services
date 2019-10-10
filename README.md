@@ -180,7 +180,6 @@ packages on [Maven Central][maven-search].
 | Surveys API | [v2](clients/google-api-services-surveys/v2) |
 | Tag Manager API | [v1](clients/google-api-services-tagmanager/v1), [v2](clients/google-api-services-tagmanager/v2) |
 | Tasks API | [v1](clients/google-api-services-tasks/v1) |
-| URL Shortener API | [v1](clients/google-api-services-urlshortener/v1) |
 | Verified Access API | [v1](clients/google-api-services-verifiedaccess/v1) |
 | Web Security Scanner API | [v1](clients/google-api-services-websecurityscanner/v1), [v1alpha](clients/google-api-services-websecurityscanner/v1alpha), [v1beta](clients/google-api-services-websecurityscanner/v1beta) |
 | YouTube Analytics API | [v1](clients/google-api-services-youtubeAnalytics/v1), [v2](clients/google-api-services-youtubeAnalytics/v2) |

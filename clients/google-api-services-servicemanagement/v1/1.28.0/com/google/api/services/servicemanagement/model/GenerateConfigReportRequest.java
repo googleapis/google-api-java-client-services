@@ -31,8 +31,8 @@ package com.google.api.services.servicemanagement.model;
 public final class GenerateConfigReportRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Service configuration for which we want to generate the report. For this version of API, the
-   * supported types are google.api.servicemanagement.v1.ConfigRef,
+   * Required. Service configuration for which we want to generate the report. For this version of
+   * API, the supported types are google.api.servicemanagement.v1.ConfigRef,
    * google.api.servicemanagement.v1.ConfigSource, and google.api.Service
    * The value may be {@code null}.
    */
@@ -40,8 +40,8 @@ public final class GenerateConfigReportRequest extends com.google.api.client.jso
   private java.util.Map<String, java.lang.Object> newConfig;
 
   /**
-   * Service configuration against which the comparison will be done. For this version of API, the
-   * supported types are google.api.servicemanagement.v1.ConfigRef,
+   * Optional. Service configuration against which the comparison will be done. For this version of
+   * API, the supported types are google.api.servicemanagement.v1.ConfigRef,
    * google.api.servicemanagement.v1.ConfigSource, and google.api.Service
    * The value may be {@code null}.
    */
@@ -49,8 +49,8 @@ public final class GenerateConfigReportRequest extends com.google.api.client.jso
   private java.util.Map<String, java.lang.Object> oldConfig;
 
   /**
-   * Service configuration for which we want to generate the report. For this version of API, the
-   * supported types are google.api.servicemanagement.v1.ConfigRef,
+   * Required. Service configuration for which we want to generate the report. For this version of
+   * API, the supported types are google.api.servicemanagement.v1.ConfigRef,
    * google.api.servicemanagement.v1.ConfigSource, and google.api.Service
    * @return value or {@code null} for none
    */
@@ -59,8 +59,8 @@ public final class GenerateConfigReportRequest extends com.google.api.client.jso
   }
 
   /**
-   * Service configuration for which we want to generate the report. For this version of API, the
-   * supported types are google.api.servicemanagement.v1.ConfigRef,
+   * Required. Service configuration for which we want to generate the report. For this version of
+   * API, the supported types are google.api.servicemanagement.v1.ConfigRef,
    * google.api.servicemanagement.v1.ConfigSource, and google.api.Service
    * @param newConfig newConfig or {@code null} for none
    */
@@ -70,8 +70,8 @@ public final class GenerateConfigReportRequest extends com.google.api.client.jso
   }
 
   /**
-   * Service configuration against which the comparison will be done. For this version of API, the
-   * supported types are google.api.servicemanagement.v1.ConfigRef,
+   * Optional. Service configuration against which the comparison will be done. For this version of
+   * API, the supported types are google.api.servicemanagement.v1.ConfigRef,
    * google.api.servicemanagement.v1.ConfigSource, and google.api.Service
    * @return value or {@code null} for none
    */
@@ -80,8 +80,8 @@ public final class GenerateConfigReportRequest extends com.google.api.client.jso
   }
 
   /**
-   * Service configuration against which the comparison will be done. For this version of API, the
-   * supported types are google.api.servicemanagement.v1.ConfigRef,
+   * Optional. Service configuration against which the comparison will be done. For this version of
+   * API, the supported types are google.api.servicemanagement.v1.ConfigRef,
    * google.api.servicemanagement.v1.ConfigSource, and google.api.Service
    * @param oldConfig oldConfig or {@code null} for none
    */

@@ -31,7 +31,7 @@ package com.google.api.services.servicemanagement.model;
 public final class SubmitConfigSourceRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The source configuration for the service.
+   * Required. The source configuration for the service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +47,7 @@ public final class SubmitConfigSourceRequest extends com.google.api.client.json.
   private java.lang.Boolean validateOnly;
 
   /**
-   * The source configuration for the service.
+   * Required. The source configuration for the service.
    * @return value or {@code null} for none
    */
   public ConfigSource getConfigSource() {
@@ -55,7 +55,7 @@ public final class SubmitConfigSourceRequest extends com.google.api.client.json.
   }
 
   /**
-   * The source configuration for the service.
+   * Required. The source configuration for the service.
    * @param configSource configSource or {@code null} for none
    */
   public SubmitConfigSourceRequest setConfigSource(ConfigSource configSource) {

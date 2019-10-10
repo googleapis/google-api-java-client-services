@@ -54,7 +54,7 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   private DeleteServiceStrategy deleteServiceStrategy;
 
   /**
-   * Optional unique identifier of this Rollout. Only lower case letters, digits  and '-' are
+   * Optional. Unique identifier of this Rollout. Only lower case letters, digits  and '-' are
    * allowed.
    *
    * If not specified by client, the server will generate one. The generated id will have the form
@@ -140,7 +140,7 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional unique identifier of this Rollout. Only lower case letters, digits  and '-' are
+   * Optional. Unique identifier of this Rollout. Only lower case letters, digits  and '-' are
    * allowed.
    *
    * If not specified by client, the server will generate one. The generated id will have the form
@@ -154,7 +154,7 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional unique identifier of this Rollout. Only lower case letters, digits  and '-' are
+   * Optional. Unique identifier of this Rollout. Only lower case letters, digits  and '-' are
    * allowed.
    *
    * If not specified by client, the server will generate one. The generated id will have the form

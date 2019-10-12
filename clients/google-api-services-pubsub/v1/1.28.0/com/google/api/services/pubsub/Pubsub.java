@@ -1151,6 +1151,8 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
       /**
        * Sets the access control policy on the specified resource. Replaces any existing policy.
        *
+       * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+       *
        * Create a request for the method "snapshots.setIamPolicy".
        *
        * This request holds the parameters needed by the pubsub server.  After setting any optional
@@ -1177,6 +1179,8 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * Sets the access control policy on the specified resource. Replaces any existing policy.
+         *
+         * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
          *
          * Create a request for the method "snapshots.setIamPolicy".
          *
@@ -3188,6 +3192,8 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
       /**
        * Sets the access control policy on the specified resource. Replaces any existing policy.
        *
+       * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+       *
        * Create a request for the method "subscriptions.setIamPolicy".
        *
        * This request holds the parameters needed by the pubsub server.  After setting any optional
@@ -3214,6 +3220,8 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * Sets the access control policy on the specified resource. Replaces any existing policy.
+         *
+         * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
          *
          * Create a request for the method "subscriptions.setIamPolicy".
          *
@@ -4626,6 +4634,8 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
       /**
        * Sets the access control policy on the specified resource. Replaces any existing policy.
        *
+       * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+       *
        * Create a request for the method "topics.setIamPolicy".
        *
        * This request holds the parameters needed by the pubsub server.  After setting any optional
@@ -4652,6 +4662,8 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * Sets the access control policy on the specified resource. Replaces any existing policy.
+         *
+         * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
          *
          * Create a request for the method "topics.setIamPolicy".
          *

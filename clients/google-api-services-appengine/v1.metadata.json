@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-appengine",
-    "version": "v1-rev20190926-1.30.3"
+    "version": "v1-rev20191003-1.30.3"
   }
 }

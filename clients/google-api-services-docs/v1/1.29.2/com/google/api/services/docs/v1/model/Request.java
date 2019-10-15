@@ -149,6 +149,13 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private ReplaceImageRequest replaceImage;
 
   /**
+   * Replaces the content in a named range.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReplaceNamedRangeContentRequest replaceNamedRangeContent;
+
+  /**
    * Unmerges cells in a table.
    * The value may be {@code null}.
    */
@@ -483,6 +490,23 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   public Request setReplaceImage(ReplaceImageRequest replaceImage) {
     this.replaceImage = replaceImage;
+    return this;
+  }
+
+  /**
+   * Replaces the content in a named range.
+   * @return value or {@code null} for none
+   */
+  public ReplaceNamedRangeContentRequest getReplaceNamedRangeContent() {
+    return replaceNamedRangeContent;
+  }
+
+  /**
+   * Replaces the content in a named range.
+   * @param replaceNamedRangeContent replaceNamedRangeContent or {@code null} for none
+   */
+  public Request setReplaceNamedRangeContent(ReplaceNamedRangeContentRequest replaceNamedRangeContent) {
+    this.replaceNamedRangeContent = replaceNamedRangeContent;
     return this;
   }
 

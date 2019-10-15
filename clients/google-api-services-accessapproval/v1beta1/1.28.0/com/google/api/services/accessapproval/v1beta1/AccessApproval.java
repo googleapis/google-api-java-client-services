@@ -143,6 +143,144 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
   public class Folders {
 
     /**
+     * Deletes the settings associated with a project, folder, or organization. This will have the
+     * effect of disabling Access Approval for the project, folder, or organization, but only if all
+     * ancestors also have Access Approval disabled. If Access Approval is enabled at a higher level of
+     * the hierarchy, then Access Approval will still be enabled at this level as the settings are
+     * inherited.
+     *
+     * Create a request for the method "folders.deleteAccessApprovalSettings".
+     *
+     * This request holds the parameters needed by the accessapproval server.  After setting any
+     * optional parameters, call the {@link DeleteAccessApprovalSettings#execute()} method to invoke the
+     * remote operation.
+     *
+     * @param name Name of the AccessApprovalSettings to delete.
+     * @return the request
+     */
+    public DeleteAccessApprovalSettings deleteAccessApprovalSettings(java.lang.String name) throws java.io.IOException {
+      DeleteAccessApprovalSettings result = new DeleteAccessApprovalSettings(name);
+      initialize(result);
+      return result;
+    }
+
+    public class DeleteAccessApprovalSettings extends AccessApprovalRequest<com.google.api.services.accessapproval.v1beta1.model.Empty> {
+
+      private static final String REST_PATH = "v1beta1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^folders/[^/]+/accessApprovalSettings$");
+
+      /**
+       * Deletes the settings associated with a project, folder, or organization. This will have the
+       * effect of disabling Access Approval for the project, folder, or organization, but only if all
+       * ancestors also have Access Approval disabled. If Access Approval is enabled at a higher level
+       * of the hierarchy, then Access Approval will still be enabled at this level as the settings are
+       * inherited.
+       *
+       * Create a request for the method "folders.deleteAccessApprovalSettings".
+       *
+       * This request holds the parameters needed by the the accessapproval server.  After setting any
+       * optional parameters, call the {@link DeleteAccessApprovalSettings#execute()} method to invoke
+       * the remote operation. <p> {@link DeleteAccessApprovalSettings#initialize(com.google.api.client.
+       * googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @param name Name of the AccessApprovalSettings to delete.
+       * @since 1.13
+       */
+      protected DeleteAccessApprovalSettings(java.lang.String name) {
+        super(AccessApproval.this, "DELETE", REST_PATH, null, com.google.api.services.accessapproval.v1beta1.model.Empty.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^folders/[^/]+/accessApprovalSettings$");
+        }
+      }
+
+      @Override
+      public DeleteAccessApprovalSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (DeleteAccessApprovalSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public DeleteAccessApprovalSettings setAccessToken(java.lang.String accessToken) {
+        return (DeleteAccessApprovalSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public DeleteAccessApprovalSettings setAlt(java.lang.String alt) {
+        return (DeleteAccessApprovalSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public DeleteAccessApprovalSettings setCallback(java.lang.String callback) {
+        return (DeleteAccessApprovalSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public DeleteAccessApprovalSettings setFields(java.lang.String fields) {
+        return (DeleteAccessApprovalSettings) super.setFields(fields);
+      }
+
+      @Override
+      public DeleteAccessApprovalSettings setKey(java.lang.String key) {
+        return (DeleteAccessApprovalSettings) super.setKey(key);
+      }
+
+      @Override
+      public DeleteAccessApprovalSettings setOauthToken(java.lang.String oauthToken) {
+        return (DeleteAccessApprovalSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public DeleteAccessApprovalSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (DeleteAccessApprovalSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public DeleteAccessApprovalSettings setQuotaUser(java.lang.String quotaUser) {
+        return (DeleteAccessApprovalSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public DeleteAccessApprovalSettings setUploadType(java.lang.String uploadType) {
+        return (DeleteAccessApprovalSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public DeleteAccessApprovalSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (DeleteAccessApprovalSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Name of the AccessApprovalSettings to delete. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Name of the AccessApprovalSettings to delete.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Name of the AccessApprovalSettings to delete. */
+      public DeleteAccessApprovalSettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^folders/[^/]+/accessApprovalSettings$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public DeleteAccessApprovalSettings set(String parameterName, Object value) {
+        return (DeleteAccessApprovalSettings) super.set(parameterName, value);
+      }
+    }
+    /**
      * Gets the settings associated with a project, folder, or organization.
      *
      * Create a request for the method "folders.getAccessApprovalSettings".
@@ -1144,6 +1282,144 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
   public class Organizations {
 
     /**
+     * Deletes the settings associated with a project, folder, or organization. This will have the
+     * effect of disabling Access Approval for the project, folder, or organization, but only if all
+     * ancestors also have Access Approval disabled. If Access Approval is enabled at a higher level of
+     * the hierarchy, then Access Approval will still be enabled at this level as the settings are
+     * inherited.
+     *
+     * Create a request for the method "organizations.deleteAccessApprovalSettings".
+     *
+     * This request holds the parameters needed by the accessapproval server.  After setting any
+     * optional parameters, call the {@link DeleteAccessApprovalSettings#execute()} method to invoke the
+     * remote operation.
+     *
+     * @param name Name of the AccessApprovalSettings to delete.
+     * @return the request
+     */
+    public DeleteAccessApprovalSettings deleteAccessApprovalSettings(java.lang.String name) throws java.io.IOException {
+      DeleteAccessApprovalSettings result = new DeleteAccessApprovalSettings(name);
+      initialize(result);
+      return result;
+    }
+
+    public class DeleteAccessApprovalSettings extends AccessApprovalRequest<com.google.api.services.accessapproval.v1beta1.model.Empty> {
+
+      private static final String REST_PATH = "v1beta1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^organizations/[^/]+/accessApprovalSettings$");
+
+      /**
+       * Deletes the settings associated with a project, folder, or organization. This will have the
+       * effect of disabling Access Approval for the project, folder, or organization, but only if all
+       * ancestors also have Access Approval disabled. If Access Approval is enabled at a higher level
+       * of the hierarchy, then Access Approval will still be enabled at this level as the settings are
+       * inherited.
+       *
+       * Create a request for the method "organizations.deleteAccessApprovalSettings".
+       *
+       * This request holds the parameters needed by the the accessapproval server.  After setting any
+       * optional parameters, call the {@link DeleteAccessApprovalSettings#execute()} method to invoke
+       * the remote operation. <p> {@link DeleteAccessApprovalSettings#initialize(com.google.api.client.
+       * googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @param name Name of the AccessApprovalSettings to delete.
+       * @since 1.13
+       */
+      protected DeleteAccessApprovalSettings(java.lang.String name) {
+        super(AccessApproval.this, "DELETE", REST_PATH, null, com.google.api.services.accessapproval.v1beta1.model.Empty.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+/accessApprovalSettings$");
+        }
+      }
+
+      @Override
+      public DeleteAccessApprovalSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (DeleteAccessApprovalSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public DeleteAccessApprovalSettings setAccessToken(java.lang.String accessToken) {
+        return (DeleteAccessApprovalSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public DeleteAccessApprovalSettings setAlt(java.lang.String alt) {
+        return (DeleteAccessApprovalSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public DeleteAccessApprovalSettings setCallback(java.lang.String callback) {
+        return (DeleteAccessApprovalSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public DeleteAccessApprovalSettings setFields(java.lang.String fields) {
+        return (DeleteAccessApprovalSettings) super.setFields(fields);
+      }
+
+      @Override
+      public DeleteAccessApprovalSettings setKey(java.lang.String key) {
+        return (DeleteAccessApprovalSettings) super.setKey(key);
+      }
+
+      @Override
+      public DeleteAccessApprovalSettings setOauthToken(java.lang.String oauthToken) {
+        return (DeleteAccessApprovalSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public DeleteAccessApprovalSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (DeleteAccessApprovalSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public DeleteAccessApprovalSettings setQuotaUser(java.lang.String quotaUser) {
+        return (DeleteAccessApprovalSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public DeleteAccessApprovalSettings setUploadType(java.lang.String uploadType) {
+        return (DeleteAccessApprovalSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public DeleteAccessApprovalSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (DeleteAccessApprovalSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Name of the AccessApprovalSettings to delete. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Name of the AccessApprovalSettings to delete.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Name of the AccessApprovalSettings to delete. */
+      public DeleteAccessApprovalSettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+/accessApprovalSettings$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public DeleteAccessApprovalSettings set(String parameterName, Object value) {
+        return (DeleteAccessApprovalSettings) super.set(parameterName, value);
+      }
+    }
+    /**
      * Gets the settings associated with a project, folder, or organization.
      *
      * Create a request for the method "organizations.getAccessApprovalSettings".
@@ -2144,6 +2420,144 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
    */
   public class Projects {
 
+    /**
+     * Deletes the settings associated with a project, folder, or organization. This will have the
+     * effect of disabling Access Approval for the project, folder, or organization, but only if all
+     * ancestors also have Access Approval disabled. If Access Approval is enabled at a higher level of
+     * the hierarchy, then Access Approval will still be enabled at this level as the settings are
+     * inherited.
+     *
+     * Create a request for the method "projects.deleteAccessApprovalSettings".
+     *
+     * This request holds the parameters needed by the accessapproval server.  After setting any
+     * optional parameters, call the {@link DeleteAccessApprovalSettings#execute()} method to invoke the
+     * remote operation.
+     *
+     * @param name Name of the AccessApprovalSettings to delete.
+     * @return the request
+     */
+    public DeleteAccessApprovalSettings deleteAccessApprovalSettings(java.lang.String name) throws java.io.IOException {
+      DeleteAccessApprovalSettings result = new DeleteAccessApprovalSettings(name);
+      initialize(result);
+      return result;
+    }
+
+    public class DeleteAccessApprovalSettings extends AccessApprovalRequest<com.google.api.services.accessapproval.v1beta1.model.Empty> {
+
+      private static final String REST_PATH = "v1beta1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/accessApprovalSettings$");
+
+      /**
+       * Deletes the settings associated with a project, folder, or organization. This will have the
+       * effect of disabling Access Approval for the project, folder, or organization, but only if all
+       * ancestors also have Access Approval disabled. If Access Approval is enabled at a higher level
+       * of the hierarchy, then Access Approval will still be enabled at this level as the settings are
+       * inherited.
+       *
+       * Create a request for the method "projects.deleteAccessApprovalSettings".
+       *
+       * This request holds the parameters needed by the the accessapproval server.  After setting any
+       * optional parameters, call the {@link DeleteAccessApprovalSettings#execute()} method to invoke
+       * the remote operation. <p> {@link DeleteAccessApprovalSettings#initialize(com.google.api.client.
+       * googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @param name Name of the AccessApprovalSettings to delete.
+       * @since 1.13
+       */
+      protected DeleteAccessApprovalSettings(java.lang.String name) {
+        super(AccessApproval.this, "DELETE", REST_PATH, null, com.google.api.services.accessapproval.v1beta1.model.Empty.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/accessApprovalSettings$");
+        }
+      }
+
+      @Override
+      public DeleteAccessApprovalSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (DeleteAccessApprovalSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public DeleteAccessApprovalSettings setAccessToken(java.lang.String accessToken) {
+        return (DeleteAccessApprovalSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public DeleteAccessApprovalSettings setAlt(java.lang.String alt) {
+        return (DeleteAccessApprovalSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public DeleteAccessApprovalSettings setCallback(java.lang.String callback) {
+        return (DeleteAccessApprovalSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public DeleteAccessApprovalSettings setFields(java.lang.String fields) {
+        return (DeleteAccessApprovalSettings) super.setFields(fields);
+      }
+
+      @Override
+      public DeleteAccessApprovalSettings setKey(java.lang.String key) {
+        return (DeleteAccessApprovalSettings) super.setKey(key);
+      }
+
+      @Override
+      public DeleteAccessApprovalSettings setOauthToken(java.lang.String oauthToken) {
+        return (DeleteAccessApprovalSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public DeleteAccessApprovalSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (DeleteAccessApprovalSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public DeleteAccessApprovalSettings setQuotaUser(java.lang.String quotaUser) {
+        return (DeleteAccessApprovalSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public DeleteAccessApprovalSettings setUploadType(java.lang.String uploadType) {
+        return (DeleteAccessApprovalSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public DeleteAccessApprovalSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (DeleteAccessApprovalSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Name of the AccessApprovalSettings to delete. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Name of the AccessApprovalSettings to delete.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Name of the AccessApprovalSettings to delete. */
+      public DeleteAccessApprovalSettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/accessApprovalSettings$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public DeleteAccessApprovalSettings set(String parameterName, Object value) {
+        return (DeleteAccessApprovalSettings) super.set(parameterName, value);
+      }
+    }
     /**
      * Gets the settings associated with a project, folder, or organization.
      *

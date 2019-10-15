@@ -33,6 +33,14 @@ package com.google.api.services.compute.model;
 public final class RouterNat extends com.google.api.client.json.GenericJson {
 
   /**
+   * A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs
+   * that have been assigned to the NAT. These IPs should be used for updating/patching a NAT only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> drainNatIps;
+
+  /**
    * Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.
    * The value may be {@code null}.
    */
@@ -123,6 +131,25 @@ public final class RouterNat extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Integer udpIdleTimeoutSec;
+
+  /**
+   * A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs
+   * that have been assigned to the NAT. These IPs should be used for updating/patching a NAT only.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDrainNatIps() {
+    return drainNatIps;
+  }
+
+  /**
+   * A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs
+   * that have been assigned to the NAT. These IPs should be used for updating/patching a NAT only.
+   * @param drainNatIps drainNatIps or {@code null} for none
+   */
+  public RouterNat setDrainNatIps(java.util.List<java.lang.String> drainNatIps) {
+    this.drainNatIps = drainNatIps;
+    return this;
+  }
 
   /**
    * Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.

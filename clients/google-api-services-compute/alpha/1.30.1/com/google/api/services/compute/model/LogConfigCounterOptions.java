@@ -47,6 +47,13 @@ package com.google.api.services.compute.model;
 public final class LogConfigCounterOptions extends com.google.api.client.json.GenericJson {
 
   /**
+   * Custom fields.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<LogConfigCounterOptionsCustomField> customFields;
+
+  /**
    * The field value to attribute.
    * The value may be {@code null}.
    */
@@ -59,6 +66,23 @@ public final class LogConfigCounterOptions extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private java.lang.String metric;
+
+  /**
+   * Custom fields.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<LogConfigCounterOptionsCustomField> getCustomFields() {
+    return customFields;
+  }
+
+  /**
+   * Custom fields.
+   * @param customFields customFields or {@code null} for none
+   */
+  public LogConfigCounterOptions setCustomFields(java.util.List<LogConfigCounterOptionsCustomField> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
 
   /**
    * The field value to attribute.

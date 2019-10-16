@@ -30,7 +30,7 @@ package com.google.api.services.cloudidentity.v1.model;
 public final class Group extends com.google.api.client.json.GenericJson {
 
   /**
-   * The time when the Group was created. Output only.
+   * Output only. The time when the Group was created. Output only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +53,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
-   * EntityKey of the Group.
+   * Required. Immutable. EntityKey of the Group.
    *
    * Must be set when creating a Group, read-only afterwards.
    * The value may be {@code null}.
@@ -62,16 +62,16 @@ public final class Group extends com.google.api.client.json.GenericJson {
   private EntityKey groupKey;
 
   /**
-   * `Required`. Labels for Group resource. For creating Groups under a namespace, set label key to
-   * 'labels/system/groups/external' and label value as empty.
+   * Required. `Required`. Labels for Group resource. For creating Groups under a namespace, set
+   * label key to 'labels/system/groups/external' and label value as empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group in the
-   * format: `groups/{group_id}`, where group_id is the unique ID assigned to the Group.
+   * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group
+   * in the format: `groups/{group_id}`, where group_id is the unique ID assigned to the Group.
    *
    * Must be left blank while creating a Group.
    * The value may be {@code null}.
@@ -80,8 +80,8 @@ public final class Group extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The entity under which this Group resides in Cloud Identity resource hierarchy. Must be set
-   * when creating a Group, read-only afterwards.
+   * Required. Immutable. The entity under which this Group resides in Cloud Identity resource
+   * hierarchy. Must be set when creating a Group, read-only afterwards.
    *
    * Currently allowed types: `identitysources`.
    * The value may be {@code null}.
@@ -90,14 +90,14 @@ public final class Group extends com.google.api.client.json.GenericJson {
   private java.lang.String parent;
 
   /**
-   * The time when the Group was last updated. Output only.
+   * Output only. The time when the Group was last updated. Output only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * The time when the Group was created. Output only.
+   * Output only. The time when the Group was created. Output only.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -105,7 +105,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time when the Group was created. Output only.
+   * Output only. The time when the Group was created. Output only.
    * @param createTime createTime or {@code null} for none
    */
   public Group setCreateTime(String createTime) {
@@ -152,7 +152,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * EntityKey of the Group.
+   * Required. Immutable. EntityKey of the Group.
    *
    * Must be set when creating a Group, read-only afterwards.
    * @return value or {@code null} for none
@@ -162,7 +162,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * EntityKey of the Group.
+   * Required. Immutable. EntityKey of the Group.
    *
    * Must be set when creating a Group, read-only afterwards.
    * @param groupKey groupKey or {@code null} for none
@@ -173,8 +173,8 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * `Required`. Labels for Group resource. For creating Groups under a namespace, set label key to
-   * 'labels/system/groups/external' and label value as empty.
+   * Required. `Required`. Labels for Group resource. For creating Groups under a namespace, set
+   * label key to 'labels/system/groups/external' and label value as empty.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -182,8 +182,8 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * `Required`. Labels for Group resource. For creating Groups under a namespace, set label key to
-   * 'labels/system/groups/external' and label value as empty.
+   * Required. `Required`. Labels for Group resource. For creating Groups under a namespace, set
+   * label key to 'labels/system/groups/external' and label value as empty.
    * @param labels labels or {@code null} for none
    */
   public Group setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -192,8 +192,8 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group in the
-   * format: `groups/{group_id}`, where group_id is the unique ID assigned to the Group.
+   * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group
+   * in the format: `groups/{group_id}`, where group_id is the unique ID assigned to the Group.
    *
    * Must be left blank while creating a Group.
    * @return value or {@code null} for none
@@ -203,8 +203,8 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group in the
-   * format: `groups/{group_id}`, where group_id is the unique ID assigned to the Group.
+   * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group
+   * in the format: `groups/{group_id}`, where group_id is the unique ID assigned to the Group.
    *
    * Must be left blank while creating a Group.
    * @param name name or {@code null} for none
@@ -215,8 +215,8 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The entity under which this Group resides in Cloud Identity resource hierarchy. Must be set
-   * when creating a Group, read-only afterwards.
+   * Required. Immutable. The entity under which this Group resides in Cloud Identity resource
+   * hierarchy. Must be set when creating a Group, read-only afterwards.
    *
    * Currently allowed types: `identitysources`.
    * @return value or {@code null} for none
@@ -226,8 +226,8 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The entity under which this Group resides in Cloud Identity resource hierarchy. Must be set
-   * when creating a Group, read-only afterwards.
+   * Required. Immutable. The entity under which this Group resides in Cloud Identity resource
+   * hierarchy. Must be set when creating a Group, read-only afterwards.
    *
    * Currently allowed types: `identitysources`.
    * @param parent parent or {@code null} for none
@@ -238,7 +238,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time when the Group was last updated. Output only.
+   * Output only. The time when the Group was last updated. Output only.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -246,7 +246,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time when the Group was last updated. Output only.
+   * Output only. The time when the Group was last updated. Output only.
    * @param updateTime updateTime or {@code null} for none
    */
   public Group setUpdateTime(String updateTime) {

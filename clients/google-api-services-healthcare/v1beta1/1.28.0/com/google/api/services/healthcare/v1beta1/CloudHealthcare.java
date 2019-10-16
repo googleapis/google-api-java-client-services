@@ -681,9 +681,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
         /**
          * Creates a new dataset containing de-identified data from the source dataset. The metadata field
          * type is OperationMetadata. If the request is successful, the response field type is
-         * DeidentifySummary. If errors occur, details field type is DeidentifyErrorDetails. Errors are also
-         * logged to Stackdriver Logging. For more information, see [Viewing logs](/healthcare/docs/how-tos
-         * /stackdriver-logging).
+         * DeidentifySummary. If errors occur, error details field type is DeidentifyErrorDetails. Errors
+         * are also logged to Stackdriver Logging. For more information, see [Viewing logs](/healthcare/docs
+         * /how-tos/stackdriver-logging).
          *
          * Create a request for the method "datasets.deidentify".
          *
@@ -711,9 +711,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           /**
            * Creates a new dataset containing de-identified data from the source dataset. The metadata field
            * type is OperationMetadata. If the request is successful, the response field type is
-           * DeidentifySummary. If errors occur, details field type is DeidentifyErrorDetails. Errors are
-           * also logged to Stackdriver Logging. For more information, see [Viewing logs](/healthcare/docs
-           * /how-tos/stackdriver-logging).
+           * DeidentifySummary. If errors occur, error details field type is DeidentifyErrorDetails. Errors
+           * are also logged to Stackdriver Logging. For more information, see [Viewing
+           * logs](/healthcare/docs/how-tos/stackdriver-logging).
            *
            * Create a request for the method "datasets.deidentify".
            *
@@ -2114,6 +2114,156 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             @Override
             public Create set(String parameterName, Object value) {
               return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Creates a new DICOM store containing de-identified data from the source store. The metadata field
+           * type is OperationMetadata. If the request is successful, the response field type is
+           * DeidentifyDicomStoreSummary. If errors occur, error details field type is DeidentifyErrorDetails.
+           * Errors are also logged to Stackdriver (see [Viewing logs](/healthcare/docs/how-tos/stackdriver-
+           * logging)).
+           *
+           * Create a request for the method "dicomStores.deidentify".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link Deidentify#execute()} method to invoke the remote operation.
+           *
+           * @param sourceStore Source DICOM store resource name. For example,
+           *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
+           *        ore_id}`.
+           * @param content the {@link com.google.api.services.healthcare.v1beta1.model.DeidentifyDicomStoreRequest}
+           * @return the request
+           */
+          public Deidentify deidentify(java.lang.String sourceStore, com.google.api.services.healthcare.v1beta1.model.DeidentifyDicomStoreRequest content) throws java.io.IOException {
+            Deidentify result = new Deidentify(sourceStore, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Deidentify extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Operation> {
+
+            private static final String REST_PATH = "v1beta1/{+sourceStore}:deidentify";
+
+            private final java.util.regex.Pattern SOURCE_STORE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+$");
+
+            /**
+             * Creates a new DICOM store containing de-identified data from the source store. The metadata
+             * field type is OperationMetadata. If the request is successful, the response field type is
+             * DeidentifyDicomStoreSummary. If errors occur, error details field type is
+             * DeidentifyErrorDetails. Errors are also logged to Stackdriver (see [Viewing
+             * logs](/healthcare/docs/how-tos/stackdriver-logging)).
+             *
+             * Create a request for the method "dicomStores.deidentify".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link Deidentify#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * Deidentify#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param sourceStore Source DICOM store resource name. For example,
+           *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
+           *        ore_id}`.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.DeidentifyDicomStoreRequest}
+             * @since 1.13
+             */
+            protected Deidentify(java.lang.String sourceStore, com.google.api.services.healthcare.v1beta1.model.DeidentifyDicomStoreRequest content) {
+              super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.Operation.class);
+              this.sourceStore = com.google.api.client.util.Preconditions.checkNotNull(sourceStore, "Required parameter sourceStore must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(SOURCE_STORE_PATTERN.matcher(sourceStore).matches(),
+                    "Parameter sourceStore must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public Deidentify set$Xgafv(java.lang.String $Xgafv) {
+              return (Deidentify) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Deidentify setAccessToken(java.lang.String accessToken) {
+              return (Deidentify) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Deidentify setAlt(java.lang.String alt) {
+              return (Deidentify) super.setAlt(alt);
+            }
+
+            @Override
+            public Deidentify setCallback(java.lang.String callback) {
+              return (Deidentify) super.setCallback(callback);
+            }
+
+            @Override
+            public Deidentify setFields(java.lang.String fields) {
+              return (Deidentify) super.setFields(fields);
+            }
+
+            @Override
+            public Deidentify setKey(java.lang.String key) {
+              return (Deidentify) super.setKey(key);
+            }
+
+            @Override
+            public Deidentify setOauthToken(java.lang.String oauthToken) {
+              return (Deidentify) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Deidentify setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Deidentify) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Deidentify setQuotaUser(java.lang.String quotaUser) {
+              return (Deidentify) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Deidentify setUploadType(java.lang.String uploadType) {
+              return (Deidentify) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Deidentify setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Deidentify) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Source DICOM store resource name. For example, `projects/{project_id}/locations/{loca
+             * tion_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String sourceStore;
+
+            /** Source DICOM store resource name. For example,
+           `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
+             */
+            public java.lang.String getSourceStore() {
+              return sourceStore;
+            }
+
+            /**
+             * Source DICOM store resource name. For example, `projects/{project_id}/locations/{loca
+             * tion_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
+             */
+            public Deidentify setSourceStore(java.lang.String sourceStore) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(SOURCE_STORE_PATTERN.matcher(sourceStore).matches(),
+                    "Parameter sourceStore must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+$");
+              }
+              this.sourceStore = sourceStore;
+              return this;
+            }
+
+            @Override
+            public Deidentify set(String parameterName, Object value) {
+              return (Deidentify) super.set(parameterName, value);
             }
           }
           /**
@@ -7649,6 +7799,156 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
+           * Creates a new FHIR store containing de-identified data from the source store. The metadata field
+           * type is OperationMetadata. If the request is successful, the response field type is
+           * DeidentifyFhirStoreSummary. If errors occur, error details field type is DeidentifyErrorDetails.
+           * Errors are also logged to Stackdriver (see [Viewing logs](/healthcare/docs/how-tos/stackdriver-
+           * logging)).
+           *
+           * Create a request for the method "fhirStores.deidentify".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link Deidentify#execute()} method to invoke the remote operation.
+           *
+           * @param sourceStore Source FHIR store resource name. For example,
+           *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_stor
+           *        e_id}`.
+           * @param content the {@link com.google.api.services.healthcare.v1beta1.model.DeidentifyFhirStoreRequest}
+           * @return the request
+           */
+          public Deidentify deidentify(java.lang.String sourceStore, com.google.api.services.healthcare.v1beta1.model.DeidentifyFhirStoreRequest content) throws java.io.IOException {
+            Deidentify result = new Deidentify(sourceStore, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Deidentify extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Operation> {
+
+            private static final String REST_PATH = "v1beta1/{+sourceStore}:deidentify";
+
+            private final java.util.regex.Pattern SOURCE_STORE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+
+            /**
+             * Creates a new FHIR store containing de-identified data from the source store. The metadata
+             * field type is OperationMetadata. If the request is successful, the response field type is
+             * DeidentifyFhirStoreSummary. If errors occur, error details field type is
+             * DeidentifyErrorDetails. Errors are also logged to Stackdriver (see [Viewing
+             * logs](/healthcare/docs/how-tos/stackdriver-logging)).
+             *
+             * Create a request for the method "fhirStores.deidentify".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link Deidentify#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * Deidentify#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param sourceStore Source FHIR store resource name. For example,
+           *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_stor
+           *        e_id}`.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.DeidentifyFhirStoreRequest}
+             * @since 1.13
+             */
+            protected Deidentify(java.lang.String sourceStore, com.google.api.services.healthcare.v1beta1.model.DeidentifyFhirStoreRequest content) {
+              super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.Operation.class);
+              this.sourceStore = com.google.api.client.util.Preconditions.checkNotNull(sourceStore, "Required parameter sourceStore must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(SOURCE_STORE_PATTERN.matcher(sourceStore).matches(),
+                    "Parameter sourceStore must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public Deidentify set$Xgafv(java.lang.String $Xgafv) {
+              return (Deidentify) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Deidentify setAccessToken(java.lang.String accessToken) {
+              return (Deidentify) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Deidentify setAlt(java.lang.String alt) {
+              return (Deidentify) super.setAlt(alt);
+            }
+
+            @Override
+            public Deidentify setCallback(java.lang.String callback) {
+              return (Deidentify) super.setCallback(callback);
+            }
+
+            @Override
+            public Deidentify setFields(java.lang.String fields) {
+              return (Deidentify) super.setFields(fields);
+            }
+
+            @Override
+            public Deidentify setKey(java.lang.String key) {
+              return (Deidentify) super.setKey(key);
+            }
+
+            @Override
+            public Deidentify setOauthToken(java.lang.String oauthToken) {
+              return (Deidentify) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Deidentify setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Deidentify) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Deidentify setQuotaUser(java.lang.String quotaUser) {
+              return (Deidentify) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Deidentify setUploadType(java.lang.String uploadType) {
+              return (Deidentify) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Deidentify setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Deidentify) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Source FHIR store resource name. For example, `projects/{project_id}/locations/{locat
+             * ion_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String sourceStore;
+
+            /** Source FHIR store resource name. For example,
+           `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+             */
+            public java.lang.String getSourceStore() {
+              return sourceStore;
+            }
+
+            /**
+             * Source FHIR store resource name. For example, `projects/{project_id}/locations/{locat
+             * ion_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+             */
+            public Deidentify setSourceStore(java.lang.String sourceStore) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(SOURCE_STORE_PATTERN.matcher(sourceStore).matches(),
+                    "Parameter sourceStore must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+              }
+              this.sourceStore = sourceStore;
+              return this;
+            }
+
+            @Override
+            public Deidentify set(String parameterName, Object value) {
+              return (Deidentify) super.set(parameterName, value);
+            }
+          }
+          /**
            * Deletes the specified FHIR store and removes all resources within it.
            *
            * Create a request for the method "fhirStores.delete".
@@ -9197,8 +9497,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * lastn](http://hl7.org/implement/standards/fhir/STU3/observation-operations.html#lastn).
              *
              * Search terms are provided as query parameters following the same pattern as the search method.
-             * This operation accepts an additional query parameter `max`, which specifies N, the maximum number
-             * of Observations to return from each group, with a default of 1.
+             * The following search parameters must be provided     - `subject` or `patient` to specify a
+             * subject for the Observation.     - `code`, `category` or any of the composite parameters that
+             * include       `code`. Any other valid Observation search parameters can also be provided. This
+             * operation accepts an additional query parameter `max`, which specifies N, the maximum number of
+             * Observations to return from each group, with a default of 1.
              *
              * On success, the response body will contain a JSON-encoded representation of a `Bundle` resource
              * of type `searchset`, containing the results of the operation. Errors generated by the FHIR store
@@ -9236,8 +9539,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * lastn](http://hl7.org/implement/standards/fhir/STU3/observation-operations.html#lastn).
                *
                * Search terms are provided as query parameters following the same pattern as the search method.
-               * This operation accepts an additional query parameter `max`, which specifies N, the maximum
-               * number of Observations to return from each group, with a default of 1.
+               * The following search parameters must be provided     - `subject` or `patient` to specify a
+               * subject for the Observation.     - `code`, `category` or any of the composite parameters that
+               * include       `code`. Any other valid Observation search parameters can also be provided. This
+               * operation accepts an additional query parameter `max`, which specifies N, the maximum number of
+               * Observations to return from each group, with a default of 1.
                *
                * On success, the response body will contain a JSON-encoded representation of a `Bundle` resource
                * of type `searchset`, containing the results of the operation. Errors generated by the FHIR

@@ -31,12 +31,16 @@ package com.google.api.services.policytroubleshooter.v1beta.model;
 public final class GoogleCloudPolicytroubleshooterV1betaTroubleshootIamPolicyRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Collection of attributes for example user, permission, resource that define troubleshooter's
+   * input.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudPolicytroubleshooterV1betaAccessTuple accessTuple;
 
   /**
+   * Collection of attributes for example user, permission, resource that define troubleshooter's
+   * input.
    * @return value or {@code null} for none
    */
   public GoogleCloudPolicytroubleshooterV1betaAccessTuple getAccessTuple() {
@@ -44,6 +48,8 @@ public final class GoogleCloudPolicytroubleshooterV1betaTroubleshootIamPolicyReq
   }
 
   /**
+   * Collection of attributes for example user, permission, resource that define troubleshooter's
+   * input.
    * @param accessTuple accessTuple or {@code null} for none
    */
   public GoogleCloudPolicytroubleshooterV1betaTroubleshootIamPolicyRequest setAccessTuple(GoogleCloudPolicytroubleshooterV1betaAccessTuple accessTuple) {

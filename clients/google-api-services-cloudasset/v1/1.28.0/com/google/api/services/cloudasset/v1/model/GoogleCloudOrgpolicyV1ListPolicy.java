@@ -25,8 +25,8 @@ package com.google.api.services.cloudasset.v1.model;
  * `is:` prefixes. The `under:` prefix is used to denote resource subtree values. The `is:` prefix
  * is used to denote specific values, and is required only if the value contains a ":". Values
  * prefixed with "is:" are treated the same as values with no prefix. Ancestry subtrees must be in
- * one of the following formats:     - “projects/”, e.g. “projects/tokyo-rain-123”     - “folders/”,
- * e.g. “folders/1234”     - “organizations/”, e.g. “organizations/1234” The `supports_under` field
+ * one of the following formats:     - "projects/", e.g. "projects/tokyo-rain-123"     - "folders/",
+ * e.g. "folders/1234"     - "organizations/", e.g. "organizations/1234" The `supports_under` field
  * of the associated `Constraint`  defines whether ancestry prefixes can be used. You can set
  * `allowed_values` and `denied_values` in the same `Policy` if `all_values` is
  * `ALL_VALUES_UNSPECIFIED`. `ALLOW` or `DENY` are used to allow or deny all values. If `all_values`
@@ -90,13 +90,13 @@ public final class GoogleCloudOrgpolicyV1ListPolicy extends com.google.api.clien
    * `organizations/foo`:
    *
    * Example 1 (no inherited values):   `organizations/foo` has a `Policy` with values:
-   * {allowed_values: “E1” allowed_values:”E2”}   `projects/bar` has `inherit_from_parent` `false`
+   * {allowed_values: "E1" allowed_values:"E2"}   `projects/bar` has `inherit_from_parent` `false`
    * and values:     {allowed_values: "E3" allowed_values: "E4"} The accepted values at
    * `organizations/foo` are `E1`, `E2`. The accepted values at `projects/bar` are `E3`, and `E4`.
    *
    * Example 2 (inherited values):   `organizations/foo` has a `Policy` with values:
-   * {allowed_values: “E1” allowed_values:”E2”}   `projects/bar` has a `Policy` with values:
-   * {value: “E3” value: ”E4” inherit_from_parent: true} The accepted values at `organizations/foo`
+   * {allowed_values: "E1" allowed_values:"E2"}   `projects/bar` has a `Policy` with values:
+   * {value: "E3" value: "E4" inherit_from_parent: true} The accepted values at `organizations/foo`
    * are `E1`, `E2`. The accepted values at `projects/bar` are `E1`, `E2`, `E3`, and `E4`.
    *
    * Example 3 (inheriting both allowed and denied values):   `organizations/foo` has a `Policy`
@@ -105,7 +105,7 @@ public final class GoogleCloudOrgpolicyV1ListPolicy extends com.google.api.clien
    * value accepted at `projects/bar` is `E2`.
    *
    * Example 4 (RestoreDefault):   `organizations/foo` has a `Policy` with values:
-   * {allowed_values: “E1” allowed_values:”E2”}   `projects/bar` has a `Policy` with values:
+   * {allowed_values: "E1" allowed_values:"E2"}   `projects/bar` has a `Policy` with values:
    * {RestoreDefault: {}} The accepted values at `organizations/foo` are `E1`, `E2`. The accepted
    * values at `projects/bar` are either all or none depending on the value of `constraint_default`
    * (if `ALLOW`, all; if `DENY`, none).
@@ -115,12 +115,12 @@ public final class GoogleCloudOrgpolicyV1ListPolicy extends com.google.api.clien
    * depending on the value of `constraint_default` (if `ALLOW`, all; if `DENY`, none).
    *
    * Example 6 (ListConstraint allowing all):   `organizations/foo` has a `Policy` with values:
-   * {allowed_values: “E1” allowed_values: ”E2”}   `projects/bar` has a `Policy` with:     {all:
+   * {allowed_values: "E1" allowed_values: "E2"}   `projects/bar` has a `Policy` with:     {all:
    * ALLOW} The accepted values at `organizations/foo` are `E1`, E2`. Any value is accepted at
    * `projects/bar`.
    *
    * Example 7 (ListConstraint allowing none):   `organizations/foo` has a `Policy` with values:
-   * {allowed_values: “E1” allowed_values: ”E2”}   `projects/bar` has a `Policy` with:     {all:
+   * {allowed_values: "E1" allowed_values: "E2"}   `projects/bar` has a `Policy` with:     {all:
    * DENY} The accepted values at `organizations/foo` are `E1`, E2`. No value is accepted at
    * `projects/bar`.
    *
@@ -225,13 +225,13 @@ public final class GoogleCloudOrgpolicyV1ListPolicy extends com.google.api.clien
    * `organizations/foo`:
    *
    * Example 1 (no inherited values):   `organizations/foo` has a `Policy` with values:
-   * {allowed_values: “E1” allowed_values:”E2”}   `projects/bar` has `inherit_from_parent` `false`
+   * {allowed_values: "E1" allowed_values:"E2"}   `projects/bar` has `inherit_from_parent` `false`
    * and values:     {allowed_values: "E3" allowed_values: "E4"} The accepted values at
    * `organizations/foo` are `E1`, `E2`. The accepted values at `projects/bar` are `E3`, and `E4`.
    *
    * Example 2 (inherited values):   `organizations/foo` has a `Policy` with values:
-   * {allowed_values: “E1” allowed_values:”E2”}   `projects/bar` has a `Policy` with values:
-   * {value: “E3” value: ”E4” inherit_from_parent: true} The accepted values at `organizations/foo`
+   * {allowed_values: "E1" allowed_values:"E2"}   `projects/bar` has a `Policy` with values:
+   * {value: "E3" value: "E4" inherit_from_parent: true} The accepted values at `organizations/foo`
    * are `E1`, `E2`. The accepted values at `projects/bar` are `E1`, `E2`, `E3`, and `E4`.
    *
    * Example 3 (inheriting both allowed and denied values):   `organizations/foo` has a `Policy`
@@ -240,7 +240,7 @@ public final class GoogleCloudOrgpolicyV1ListPolicy extends com.google.api.clien
    * value accepted at `projects/bar` is `E2`.
    *
    * Example 4 (RestoreDefault):   `organizations/foo` has a `Policy` with values:
-   * {allowed_values: “E1” allowed_values:”E2”}   `projects/bar` has a `Policy` with values:
+   * {allowed_values: "E1" allowed_values:"E2"}   `projects/bar` has a `Policy` with values:
    * {RestoreDefault: {}} The accepted values at `organizations/foo` are `E1`, `E2`. The accepted
    * values at `projects/bar` are either all or none depending on the value of `constraint_default`
    * (if `ALLOW`, all; if `DENY`, none).
@@ -250,12 +250,12 @@ public final class GoogleCloudOrgpolicyV1ListPolicy extends com.google.api.clien
    * depending on the value of `constraint_default` (if `ALLOW`, all; if `DENY`, none).
    *
    * Example 6 (ListConstraint allowing all):   `organizations/foo` has a `Policy` with values:
-   * {allowed_values: “E1” allowed_values: ”E2”}   `projects/bar` has a `Policy` with:     {all:
+   * {allowed_values: "E1" allowed_values: "E2"}   `projects/bar` has a `Policy` with:     {all:
    * ALLOW} The accepted values at `organizations/foo` are `E1`, E2`. Any value is accepted at
    * `projects/bar`.
    *
    * Example 7 (ListConstraint allowing none):   `organizations/foo` has a `Policy` with values:
-   * {allowed_values: “E1” allowed_values: ”E2”}   `projects/bar` has a `Policy` with:     {all:
+   * {allowed_values: "E1" allowed_values: "E2"}   `projects/bar` has a `Policy` with:     {all:
    * DENY} The accepted values at `organizations/foo` are `E1`, E2`. No value is accepted at
    * `projects/bar`.
    *
@@ -297,13 +297,13 @@ public final class GoogleCloudOrgpolicyV1ListPolicy extends com.google.api.clien
    * `organizations/foo`:
    *
    * Example 1 (no inherited values):   `organizations/foo` has a `Policy` with values:
-   * {allowed_values: “E1” allowed_values:”E2”}   `projects/bar` has `inherit_from_parent` `false`
+   * {allowed_values: "E1" allowed_values:"E2"}   `projects/bar` has `inherit_from_parent` `false`
    * and values:     {allowed_values: "E3" allowed_values: "E4"} The accepted values at
    * `organizations/foo` are `E1`, `E2`. The accepted values at `projects/bar` are `E3`, and `E4`.
    *
    * Example 2 (inherited values):   `organizations/foo` has a `Policy` with values:
-   * {allowed_values: “E1” allowed_values:”E2”}   `projects/bar` has a `Policy` with values:
-   * {value: “E3” value: ”E4” inherit_from_parent: true} The accepted values at `organizations/foo`
+   * {allowed_values: "E1" allowed_values:"E2"}   `projects/bar` has a `Policy` with values:
+   * {value: "E3" value: "E4" inherit_from_parent: true} The accepted values at `organizations/foo`
    * are `E1`, `E2`. The accepted values at `projects/bar` are `E1`, `E2`, `E3`, and `E4`.
    *
    * Example 3 (inheriting both allowed and denied values):   `organizations/foo` has a `Policy`
@@ -312,7 +312,7 @@ public final class GoogleCloudOrgpolicyV1ListPolicy extends com.google.api.clien
    * value accepted at `projects/bar` is `E2`.
    *
    * Example 4 (RestoreDefault):   `organizations/foo` has a `Policy` with values:
-   * {allowed_values: “E1” allowed_values:”E2”}   `projects/bar` has a `Policy` with values:
+   * {allowed_values: "E1" allowed_values:"E2"}   `projects/bar` has a `Policy` with values:
    * {RestoreDefault: {}} The accepted values at `organizations/foo` are `E1`, `E2`. The accepted
    * values at `projects/bar` are either all or none depending on the value of `constraint_default`
    * (if `ALLOW`, all; if `DENY`, none).
@@ -322,12 +322,12 @@ public final class GoogleCloudOrgpolicyV1ListPolicy extends com.google.api.clien
    * depending on the value of `constraint_default` (if `ALLOW`, all; if `DENY`, none).
    *
    * Example 6 (ListConstraint allowing all):   `organizations/foo` has a `Policy` with values:
-   * {allowed_values: “E1” allowed_values: ”E2”}   `projects/bar` has a `Policy` with:     {all:
+   * {allowed_values: "E1" allowed_values: "E2"}   `projects/bar` has a `Policy` with:     {all:
    * ALLOW} The accepted values at `organizations/foo` are `E1`, E2`. Any value is accepted at
    * `projects/bar`.
    *
    * Example 7 (ListConstraint allowing none):   `organizations/foo` has a `Policy` with values:
-   * {allowed_values: “E1” allowed_values: ”E2”}   `projects/bar` has a `Policy` with:     {all:
+   * {allowed_values: "E1" allowed_values: "E2"}   `projects/bar` has a `Policy` with:     {all:
    * DENY} The accepted values at `organizations/foo` are `E1`, E2`. No value is accepted at
    * `projects/bar`.
    *

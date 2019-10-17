@@ -31,16 +31,16 @@ package com.google.api.services.clouddebugger.v2.model;
 public final class UpdateActiveBreakpointRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Updated breakpoint information. The field `id` must be set. The agent must echo all Breakpoint
-   * specification fields in the update.
+   * Required. Updated breakpoint information. The field `id` must be set. The agent must echo all
+   * Breakpoint specification fields in the update.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Breakpoint breakpoint;
 
   /**
-   * Updated breakpoint information. The field `id` must be set. The agent must echo all Breakpoint
-   * specification fields in the update.
+   * Required. Updated breakpoint information. The field `id` must be set. The agent must echo all
+   * Breakpoint specification fields in the update.
    * @return value or {@code null} for none
    */
   public Breakpoint getBreakpoint() {
@@ -48,8 +48,8 @@ public final class UpdateActiveBreakpointRequest extends com.google.api.client.j
   }
 
   /**
-   * Updated breakpoint information. The field `id` must be set. The agent must echo all Breakpoint
-   * specification fields in the update.
+   * Required. Updated breakpoint information. The field `id` must be set. The agent must echo all
+   * Breakpoint specification fields in the update.
    * @param breakpoint breakpoint or {@code null} for none
    */
   public UpdateActiveBreakpointRequest setBreakpoint(Breakpoint breakpoint) {

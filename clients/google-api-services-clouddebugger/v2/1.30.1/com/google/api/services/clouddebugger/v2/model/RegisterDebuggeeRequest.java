@@ -31,16 +31,16 @@ package com.google.api.services.clouddebugger.v2.model;
 public final class RegisterDebuggeeRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Debuggee information to register. The fields `project`, `uniquifier`, `description` and
-   * `agent_version` of the debuggee must be set.
+   * Required. Debuggee information to register. The fields `project`, `uniquifier`, `description`
+   * and `agent_version` of the debuggee must be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Debuggee debuggee;
 
   /**
-   * Debuggee information to register. The fields `project`, `uniquifier`, `description` and
-   * `agent_version` of the debuggee must be set.
+   * Required. Debuggee information to register. The fields `project`, `uniquifier`, `description`
+   * and `agent_version` of the debuggee must be set.
    * @return value or {@code null} for none
    */
   public Debuggee getDebuggee() {
@@ -48,8 +48,8 @@ public final class RegisterDebuggeeRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * Debuggee information to register. The fields `project`, `uniquifier`, `description` and
-   * `agent_version` of the debuggee must be set.
+   * Required. Debuggee information to register. The fields `project`, `uniquifier`, `description`
+   * and `agent_version` of the debuggee must be set.
    * @param debuggee debuggee or {@code null} for none
    */
   public RegisterDebuggeeRequest setDebuggee(Debuggee debuggee) {

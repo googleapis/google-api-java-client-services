@@ -1284,6 +1284,8 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
       /**
        * Sets the access control policy on the specified resource. Replaces any existing policy.
        *
+       * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+       *
        * Create a request for the method "attestors.setIamPolicy".
        *
        * This request holds the parameters needed by the binaryauthorization server.  After setting any
@@ -1311,6 +1313,8 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
 
         /**
          * Sets the access control policy on the specified resource. Replaces any existing policy.
+         *
+         * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
          *
          * Create a request for the method "attestors.setIamPolicy".
          *
@@ -1927,6 +1931,8 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
       /**
        * Sets the access control policy on the specified resource. Replaces any existing policy.
        *
+       * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+       *
        * Create a request for the method "policy.setIamPolicy".
        *
        * This request holds the parameters needed by the binaryauthorization server.  After setting any
@@ -1954,6 +1960,8 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
 
         /**
          * Sets the access control policy on the specified resource. Replaces any existing policy.
+         *
+         * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
          *
          * Create a request for the method "policy.setIamPolicy".
          *

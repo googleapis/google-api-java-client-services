@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-adexchangebuyer2</artifactId>
-  <version>v2beta1-rev20190802-1.30.3</version>
-  <name>Ad Exchange Buyer API II v2beta1-rev20190802-1.30.3</name>
+  <version>v2beta1-rev20191017-1.30.3</version>
+  <name>Ad Exchange Buyer API II v2beta1-rev20191017-1.30.3</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

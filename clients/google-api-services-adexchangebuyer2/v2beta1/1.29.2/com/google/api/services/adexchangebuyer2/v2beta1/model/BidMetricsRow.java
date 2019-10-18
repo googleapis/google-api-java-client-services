@@ -53,7 +53,7 @@ public final class BidMetricsRow extends com.google.api.client.json.GenericJson 
   private MetricValue billedImpressions;
 
   /**
-   * The number of bids that won an impression.
+   * The number of bids that won the auction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,7 +134,7 @@ public final class BidMetricsRow extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The number of bids that won an impression.
+   * The number of bids that won the auction.
    * @return value or {@code null} for none
    */
   public MetricValue getImpressionsWon() {
@@ -142,7 +142,7 @@ public final class BidMetricsRow extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The number of bids that won an impression.
+   * The number of bids that won the auction.
    * @param impressionsWon impressionsWon or {@code null} for none
    */
   public BidMetricsRow setImpressionsWon(MetricValue impressionsWon) {

@@ -1108,6 +1108,8 @@ public class BigQueryConnectionService extends com.google.api.client.googleapis.
         /**
          * Sets the access control policy on the specified resource. Replaces any existing policy.
          *
+         * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+         *
          * Create a request for the method "connections.setIamPolicy".
          *
          * This request holds the parameters needed by the bigqueryconnection server.  After setting any
@@ -1135,6 +1137,8 @@ public class BigQueryConnectionService extends com.google.api.client.googleapis.
 
           /**
            * Sets the access control policy on the specified resource. Replaces any existing policy.
+           *
+           * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
            *
            * Create a request for the method "connections.setIamPolicy".
            *

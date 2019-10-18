@@ -1251,6 +1251,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
         /**
          * Sets the access control policy on the specified resource. Replaces any existing policy.
          *
+         * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+         *
          * Create a request for the method "keyRings.setIamPolicy".
          *
          * This request holds the parameters needed by the cloudkms server.  After setting any optional
@@ -1277,6 +1279,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Sets the access control policy on the specified resource. Replaces any existing policy.
+           *
+           * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
            *
            * Create a request for the method "keyRings.setIamPolicy".
            *
@@ -2793,6 +2797,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Sets the access control policy on the specified resource. Replaces any existing policy.
            *
+           * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+           *
            * Create a request for the method "cryptoKeys.setIamPolicy".
            *
            * This request holds the parameters needed by the cloudkms server.  After setting any optional
@@ -2819,6 +2825,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
 
             /**
              * Sets the access control policy on the specified resource. Replaces any existing policy.
+             *
+             * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
              *
              * Create a request for the method "cryptoKeys.setIamPolicy".
              *
@@ -5552,6 +5560,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Sets the access control policy on the specified resource. Replaces any existing policy.
            *
+           * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+           *
            * Create a request for the method "importJobs.setIamPolicy".
            *
            * This request holds the parameters needed by the cloudkms server.  After setting any optional
@@ -5578,6 +5588,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
 
             /**
              * Sets the access control policy on the specified resource. Replaces any existing policy.
+             *
+             * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
              *
              * Create a request for the method "importJobs.setIamPolicy".
              *

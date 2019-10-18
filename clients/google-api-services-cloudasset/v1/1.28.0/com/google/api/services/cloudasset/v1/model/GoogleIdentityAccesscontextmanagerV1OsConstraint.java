@@ -46,8 +46,8 @@ public final class GoogleIdentityAccesscontextmanagerV1OsConstraint extends com.
 
   /**
    * Only allows requests from devices with a verified Chrome OS. Verifications includes
-   * requirements that the device is enterprise-managed, conformant to Dasher domain policies, and
-   * the caller has permission to call the API targeted by the request.
+   * requirements that the device is enterprise-managed, conformant to domain policies, and the
+   * caller has permission to call the API targeted by the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,8 +91,8 @@ public final class GoogleIdentityAccesscontextmanagerV1OsConstraint extends com.
 
   /**
    * Only allows requests from devices with a verified Chrome OS. Verifications includes
-   * requirements that the device is enterprise-managed, conformant to Dasher domain policies, and
-   * the caller has permission to call the API targeted by the request.
+   * requirements that the device is enterprise-managed, conformant to domain policies, and the
+   * caller has permission to call the API targeted by the request.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getRequireVerifiedChromeOs() {
@@ -101,8 +101,8 @@ public final class GoogleIdentityAccesscontextmanagerV1OsConstraint extends com.
 
   /**
    * Only allows requests from devices with a verified Chrome OS. Verifications includes
-   * requirements that the device is enterprise-managed, conformant to Dasher domain policies, and
-   * the caller has permission to call the API targeted by the request.
+   * requirements that the device is enterprise-managed, conformant to domain policies, and the
+   * caller has permission to call the API targeted by the request.
    * @param requireVerifiedChromeOs requireVerifiedChromeOs or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1OsConstraint setRequireVerifiedChromeOs(java.lang.Boolean requireVerifiedChromeOs) {

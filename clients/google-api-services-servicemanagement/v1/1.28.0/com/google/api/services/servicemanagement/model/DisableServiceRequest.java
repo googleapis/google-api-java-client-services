@@ -31,7 +31,7 @@ package com.google.api.services.servicemanagement.model;
 public final class DisableServiceRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The identity of consumer resource which service disablement will be applied to.
+   * Required. The identity of consumer resource which service disablement will be applied to.
    *
    * The Google Service Management implementation accepts the following forms: - "project:"
    *
@@ -42,7 +42,7 @@ public final class DisableServiceRequest extends com.google.api.client.json.Gene
   private java.lang.String consumerId;
 
   /**
-   * The identity of consumer resource which service disablement will be applied to.
+   * Required. The identity of consumer resource which service disablement will be applied to.
    *
    * The Google Service Management implementation accepts the following forms: - "project:"
    *
@@ -54,7 +54,7 @@ public final class DisableServiceRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * The identity of consumer resource which service disablement will be applied to.
+   * Required. The identity of consumer resource which service disablement will be applied to.
    *
    * The Google Service Management implementation accepts the following forms: - "project:"
    *

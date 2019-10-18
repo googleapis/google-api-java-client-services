@@ -4181,8 +4181,13 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see
          * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. For translations.
          *
+         * Set this field using the language set in browser or for the page. In the event that the
+         * user's language preference is known, set this field to the known user language.
+         *
          * When specified, the documents in search results are biased towards the specified
-         * language. Suggest API does not use this parameter. It autocompletes only based on
+         * language.
+         *
+         * The suggest API does not use this parameter. Instead, suggest autocompletes only based on
          * characters in the query.
          */
         @com.google.api.client.util.Key("requestOptions.languageCode")
@@ -4191,8 +4196,13 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         /** The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see
        http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. For translations.
 
-       When specified, the documents in search results are biased towards the specified language. Suggest
-       API does not use this parameter. It autocompletes only based on characters in the query.
+       Set this field using the language set in browser or for the page. In the event that the user's
+       language preference is known, set this field to the known user language.
+
+       When specified, the documents in search results are biased towards the specified language.
+
+       The suggest API does not use this parameter. Instead, suggest autocompletes only based on
+       characters in the query.
          */
         public java.lang.String getRequestOptionsLanguageCode() {
           return requestOptionsLanguageCode;
@@ -4202,8 +4212,13 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see
          * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. For translations.
          *
+         * Set this field using the language set in browser or for the page. In the event that the
+         * user's language preference is known, set this field to the known user language.
+         *
          * When specified, the documents in search results are biased towards the specified
-         * language. Suggest API does not use this parameter. It autocompletes only based on
+         * language.
+         *
+         * The suggest API does not use this parameter. Instead, suggest autocompletes only based on
          * characters in the query.
          */
         public List setRequestOptionsLanguageCode(java.lang.String requestOptionsLanguageCode) {

@@ -67,6 +67,14 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   private java.util.List<PublicKey> publicKeys;
 
   /**
+   * Indicates the size of the backing VM running the environment.  If set to something other than
+   * DEFAULT, it will be reverted to the default VM size after vm_size_expire_time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String size;
+
+  /**
    * Output only. Host to which clients can connect to initiate SSH sessions with the environment.
    * The value may be {@code null}.
    */
@@ -94,6 +102,13 @@ public final class Environment extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * Output only. The time when the Environment will expire back to the default VM size.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String vmSizeExpireTime;
 
   /**
    * Output only. Host to which clients can connect to initiate HTTPS or WSS connections with the
@@ -186,6 +201,25 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Indicates the size of the backing VM running the environment.  If set to something other than
+   * DEFAULT, it will be reverted to the default VM size after vm_size_expire_time.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSize() {
+    return size;
+  }
+
+  /**
+   * Indicates the size of the backing VM running the environment.  If set to something other than
+   * DEFAULT, it will be reverted to the default VM size after vm_size_expire_time.
+   * @param size size or {@code null} for none
+   */
+  public Environment setSize(java.lang.String size) {
+    this.size = size;
+    return this;
+  }
+
+  /**
    * Output only. Host to which clients can connect to initiate SSH sessions with the environment.
    * @return value or {@code null} for none
    */
@@ -252,6 +286,23 @@ public final class Environment extends com.google.api.client.json.GenericJson {
    */
   public Environment setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Output only. The time when the Environment will expire back to the default VM size.
+   * @return value or {@code null} for none
+   */
+  public String getVmSizeExpireTime() {
+    return vmSizeExpireTime;
+  }
+
+  /**
+   * Output only. The time when the Environment will expire back to the default VM size.
+   * @param vmSizeExpireTime vmSizeExpireTime or {@code null} for none
+   */
+  public Environment setVmSizeExpireTime(String vmSizeExpireTime) {
+    this.vmSizeExpireTime = vmSizeExpireTime;
     return this;
   }
 

@@ -399,14 +399,14 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
 
       /**
        * Required. A filter for matching the requested operations. The supported formats of filter
-       * are: To query for specific function: project:*,location:*,function:* To query for all of
+       * are: To query for a specific function: project:*,location:*,function:* To query for all of
        * the latest operations for a project: project:*,latest:true
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
       /** Required. A filter for matching the requested operations. The supported formats of filter are: To
-     query for specific function: project:*,location:*,function:* To query for all of the latest
+     query for a specific function: project:*,location:*,function:* To query for all of the latest
      operations for a project: project:*,latest:true
        */
       public java.lang.String getFilter() {
@@ -415,7 +415,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
 
       /**
        * Required. A filter for matching the requested operations. The supported formats of filter
-       * are: To query for specific function: project:*,location:*,function:* To query for all of
+       * are: To query for a specific function: project:*,location:*,function:* To query for all of
        * the latest operations for a project: project:*,latest:true
        */
       public List setFilter(java.lang.String filter) {
@@ -439,33 +439,50 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
         return this;
       }
 
-      /** The standard list page size. */
+      /**
+       * The maximum number of records that should be returned. Requested page size cannot exceed
+       * 100. If not set, the default page size is 100. Pagination is only supported when querying
+       * for a specific function.
+       */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** The standard list page size.
+      /** The maximum number of records that should be returned. Requested page size cannot exceed 100. If
+     not set, the default page size is 100. Pagination is only supported when querying for a specific
+     function.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
-      /** The standard list page size. */
+      /**
+       * The maximum number of records that should be returned. Requested page size cannot exceed
+       * 100. If not set, the default page size is 100. Pagination is only supported when querying
+       * for a specific function.
+       */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
         return this;
       }
 
-      /** The standard list page token. */
+      /**
+       * Token identifying which result to start with, which is returned by a previous list call.
+       * Pagination is only supported when querying for a specific function.
+       */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** The standard list page token.
+      /** Token identifying which result to start with, which is returned by a previous list call. Pagination
+     is only supported when querying for a specific function.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
-      /** The standard list page token. */
+      /**
+       * Token identifying which result to start with, which is returned by a previous list call.
+       * Pagination is only supported when querying for a specific function.
+       */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
         return this;

@@ -399,14 +399,14 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
 
       /**
        * Required. A filter for matching the requested operations. The supported formats of filter
-       * are: To query for specific function: project:*,location:*,function:* To query for all of
+       * are: To query for a specific function: project:*,location:*,function:* To query for all of
        * the latest operations for a project: project:*,latest:true
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
       /** Required. A filter for matching the requested operations. The supported formats of filter are: To
-     query for specific function: project:*,location:*,function:* To query for all of the latest
+     query for a specific function: project:*,location:*,function:* To query for all of the latest
      operations for a project: project:*,latest:true
        */
       public java.lang.String getFilter() {
@@ -415,7 +415,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
 
       /**
        * Required. A filter for matching the requested operations. The supported formats of filter
-       * are: To query for specific function: project:*,location:*,function:* To query for all of
+       * are: To query for a specific function: project:*,location:*,function:* To query for all of
        * the latest operations for a project: project:*,latest:true
        */
       public List setFilter(java.lang.String filter) {
@@ -439,33 +439,50 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
         return this;
       }
 
-      /** The standard list page size. */
+      /**
+       * The maximum number of records that should be returned. Requested page size cannot exceed
+       * 100. If not set, the default page size is 100. Pagination is only supported when querying
+       * for a specific function.
+       */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** The standard list page size.
+      /** The maximum number of records that should be returned. Requested page size cannot exceed 100. If
+     not set, the default page size is 100. Pagination is only supported when querying for a specific
+     function.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
-      /** The standard list page size. */
+      /**
+       * The maximum number of records that should be returned. Requested page size cannot exceed
+       * 100. If not set, the default page size is 100. Pagination is only supported when querying
+       * for a specific function.
+       */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
         return this;
       }
 
-      /** The standard list page token. */
+      /**
+       * Token identifying which result to start with, which is returned by a previous list call.
+       * Pagination is only supported when querying for a specific function.
+       */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** The standard list page token.
+      /** Token identifying which result to start with, which is returned by a previous list call. Pagination
+     is only supported when querying for a specific function.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
-      /** The standard list page token. */
+      /**
+       * Token identifying which result to start with, which is returned by a previous list call.
+       * Pagination is only supported when querying for a specific function.
+       */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -1608,7 +1625,11 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
         specified in the format
          *        `projects/locations`
         If you want to list functions in all locations, use "-" in place of a
-         *        location.
+         *        location. When listing functions in all locations, if one or more
+        location(s) are
+         *        unreachable, the response will contain functions from all
+        reachable locations along with
+         *        the names of any unreachable locations.
          * @return the request
          */
         public List list(java.lang.String location) throws java.io.IOException {
@@ -1638,7 +1659,11 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
         specified in the format
          *        `projects/locations`
         If you want to list functions in all locations, use "-" in place of a
-         *        location.
+         *        location. When listing functions in all locations, if one or more
+        location(s) are
+         *        unreachable, the response will contain functions from all
+        reachable locations along with
+         *        the names of any unreachable locations.
            * @since 1.13
            */
           protected List(java.lang.String location) {
@@ -1719,14 +1744,18 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
           /**
            * Required. The project and location from which the function should be listed, specified
            * in the format `projects/locations` If you want to list functions in all locations, use
-           * "-" in place of a location.
+           * "-" in place of a location. When listing functions in all locations, if one or more
+           * location(s) are unreachable, the response will contain functions from all reachable
+           * locations along with the names of any unreachable locations.
            */
           @com.google.api.client.util.Key
           private java.lang.String location;
 
           /** Required. The project and location from which the function should be listed, specified in the
          format `projects/locations` If you want to list functions in all locations, use "-" in place of a
-         location.
+         location. When listing functions in all locations, if one or more location(s) are unreachable, the
+         response will contain functions from all reachable locations along with the names of any
+         unreachable locations.
            */
           public java.lang.String getLocation() {
             return location;
@@ -1735,7 +1764,9 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
           /**
            * Required. The project and location from which the function should be listed, specified
            * in the format `projects/locations` If you want to list functions in all locations, use
-           * "-" in place of a location.
+           * "-" in place of a location. When listing functions in all locations, if one or more
+           * location(s) are unreachable, the response will contain functions from all reachable
+           * locations along with the names of any unreachable locations.
            */
           public List setLocation(java.lang.String location) {
             if (!getSuppressPatternChecks()) {

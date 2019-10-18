@@ -893,12 +893,11 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
      * This request holds the parameters needed by the cloudidentity server.  After setting any optional
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
-     * @param name [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-    Group in the format:
-     *        `groups/{group_id}`, where group_id is the unique ID
+     * @param name Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+    Group in
+     *        the format: `groups/{group_id}`, where group_id is the unique ID
     assigned to the Group.
-    Must be left
-     *        blank while creating a Group.
+     *        Must be left blank while creating a Group.
      * @param content the {@link com.google.api.services.cloudidentity.v1.model.Group}
      * @return the request
      */
@@ -926,12 +925,11 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-    Group in the format:
-     *        `groups/{group_id}`, where group_id is the unique ID
+       * @param name Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+    Group in
+     *        the format: `groups/{group_id}`, where group_id is the unique ID
     assigned to the Group.
-    Must be left
-     *        blank while creating a Group.
+     *        Must be left blank while creating a Group.
        * @param content the {@link com.google.api.services.cloudidentity.v1.model.Group}
        * @since 1.13
        */
@@ -1001,28 +999,28 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group in the
-       * format: `groups/{group_id}`, where group_id is the unique ID assigned to the Group.
+       * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * Group in the format: `groups/{group_id}`, where group_id is the unique ID assigned to the
+       * Group.
        *
        * Must be left blank while creating a Group.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /**[ Resource name](https://cloud.google.com/apis/design/resource_names) of the Group in the format:
-    [ `groups/{group_id}`, where group_id is the unique ID assigned to the Group.
-    [
-    [ Must be left blank while creating a Group.
-    [
+      /** Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group in
+     the format: `groups/{group_id}`, where group_id is the unique ID assigned to the Group.
 
+     Must be left blank while creating a Group.
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group in the
-       * format: `groups/{group_id}`, where group_id is the unique ID assigned to the Group.
+       * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * Group in the format: `groups/{group_id}`, where group_id is the unique ID assigned to the
+       * Group.
        *
        * Must be left blank while creating a Group.
        */

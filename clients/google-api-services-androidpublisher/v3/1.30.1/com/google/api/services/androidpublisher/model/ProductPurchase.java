@@ -82,6 +82,13 @@ public final class ProductPurchase extends com.google.api.client.json.GenericJso
   private java.lang.Long purchaseTimeMillis;
 
   /**
+   * The purchase token generated to identify this purchase.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String purchaseToken;
+
+  /**
    * The type of purchase of the inapp product. This field is only set if this purchase was not made
    * using the standard in-app billing flow. Possible values are: - Test (i.e. purchased from a
    * license testing account)  - Promo (i.e. purchased using a promo code)  - Rewarded (i.e. from
@@ -211,6 +218,23 @@ public final class ProductPurchase extends com.google.api.client.json.GenericJso
    */
   public ProductPurchase setPurchaseTimeMillis(java.lang.Long purchaseTimeMillis) {
     this.purchaseTimeMillis = purchaseTimeMillis;
+    return this;
+  }
+
+  /**
+   * The purchase token generated to identify this purchase.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPurchaseToken() {
+    return purchaseToken;
+  }
+
+  /**
+   * The purchase token generated to identify this purchase.
+   * @param purchaseToken purchaseToken or {@code null} for none
+   */
+  public ProductPurchase setPurchaseToken(java.lang.String purchaseToken) {
+    this.purchaseToken = purchaseToken;
     return this;
   }
 

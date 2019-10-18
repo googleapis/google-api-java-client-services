@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-lifesciences",
+    "version": "v2beta-rev20191007-1.30.3"
+  }
+}

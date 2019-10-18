@@ -87,7 +87,7 @@ public final class LintResult extends com.google.api.client.json.GenericJson {
   private java.lang.String severity;
 
   /**
-   * The validation unit name, for instance “lintValidationUnits/ConditionComplexityCheck”.
+   * The validation unit name, for instance "lintValidationUnits/ConditionComplexityCheck".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -224,7 +224,7 @@ public final class LintResult extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The validation unit name, for instance “lintValidationUnits/ConditionComplexityCheck”.
+   * The validation unit name, for instance "lintValidationUnits/ConditionComplexityCheck".
    * @return value or {@code null} for none
    */
   public java.lang.String getValidationUnitName() {
@@ -232,7 +232,7 @@ public final class LintResult extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The validation unit name, for instance “lintValidationUnits/ConditionComplexityCheck”.
+   * The validation unit name, for instance "lintValidationUnits/ConditionComplexityCheck".
    * @param validationUnitName validationUnitName or {@code null} for none
    */
   public LintResult setValidationUnitName(java.lang.String validationUnitName) {

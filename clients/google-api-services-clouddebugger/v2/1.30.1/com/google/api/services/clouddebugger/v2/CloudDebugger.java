@@ -317,7 +317,7 @@ public class CloudDebugger extends com.google.api.client.googleapis.services.jso
          * This request holds the parameters needed by the clouddebugger server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param debuggeeId Identifies the debuggee.
+         * @param debuggeeId Required. Identifies the debuggee.
          * @return the request
          */
         public List list(java.lang.String debuggeeId) throws java.io.IOException {
@@ -350,7 +350,7 @@ public class CloudDebugger extends com.google.api.client.googleapis.services.jso
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param debuggeeId Identifies the debuggee.
+           * @param debuggeeId Required. Identifies the debuggee.
            * @since 1.13
            */
           protected List(java.lang.String debuggeeId) {
@@ -423,17 +423,17 @@ public class CloudDebugger extends com.google.api.client.googleapis.services.jso
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Identifies the debuggee. */
+          /** Required. Identifies the debuggee. */
           @com.google.api.client.util.Key
           private java.lang.String debuggeeId;
 
-          /** Identifies the debuggee.
+          /** Required. Identifies the debuggee.
            */
           public java.lang.String getDebuggeeId() {
             return debuggeeId;
           }
 
-          /** Identifies the debuggee. */
+          /** Required. Identifies the debuggee. */
           public List setDebuggeeId(java.lang.String debuggeeId) {
             this.debuggeeId = debuggeeId;
             return this;
@@ -518,7 +518,7 @@ public class CloudDebugger extends com.google.api.client.googleapis.services.jso
          * This request holds the parameters needed by the clouddebugger server.  After setting any optional
          * parameters, call the {@link Update#execute()} method to invoke the remote operation.
          *
-         * @param debuggeeId Identifies the debuggee being debugged.
+         * @param debuggeeId Required. Identifies the debuggee being debugged.
          * @param id Breakpoint identifier, unique in the scope of the debuggee.
          * @param content the {@link com.google.api.services.clouddebugger.v2.model.UpdateActiveBreakpointRequest}
          * @return the request
@@ -550,7 +550,7 @@ public class CloudDebugger extends com.google.api.client.googleapis.services.jso
            * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param debuggeeId Identifies the debuggee being debugged.
+           * @param debuggeeId Required. Identifies the debuggee being debugged.
            * @param id Breakpoint identifier, unique in the scope of the debuggee.
            * @param content the {@link com.google.api.services.clouddebugger.v2.model.UpdateActiveBreakpointRequest}
            * @since 1.13
@@ -616,17 +616,17 @@ public class CloudDebugger extends com.google.api.client.googleapis.services.jso
             return (Update) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Identifies the debuggee being debugged. */
+          /** Required. Identifies the debuggee being debugged. */
           @com.google.api.client.util.Key
           private java.lang.String debuggeeId;
 
-          /** Identifies the debuggee being debugged.
+          /** Required. Identifies the debuggee being debugged.
            */
           public java.lang.String getDebuggeeId() {
             return debuggeeId;
           }
 
-          /** Identifies the debuggee being debugged. */
+          /** Required. Identifies the debuggee being debugged. */
           public Update setDebuggeeId(java.lang.String debuggeeId) {
             this.debuggeeId = debuggeeId;
             return this;
@@ -800,20 +800,21 @@ public class CloudDebugger extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * The client version making the call. Schema: `domain/type/version` (e.g.,
+         * Required. The client version making the call. Schema: `domain/type/version` (e.g.,
          * `google.com/intellij/v1`).
          */
         @com.google.api.client.util.Key
         private java.lang.String clientVersion;
 
-        /** The client version making the call. Schema: `domain/type/version` (e.g., `google.com/intellij/v1`).
+        /** Required. The client version making the call. Schema: `domain/type/version` (e.g.,
+       `google.com/intellij/v1`).
          */
         public java.lang.String getClientVersion() {
           return clientVersion;
         }
 
         /**
-         * The client version making the call. Schema: `domain/type/version` (e.g.,
+         * Required. The client version making the call. Schema: `domain/type/version` (e.g.,
          * `google.com/intellij/v1`).
          */
         public List setClientVersion(java.lang.String clientVersion) {
@@ -844,17 +845,17 @@ public class CloudDebugger extends com.google.api.client.googleapis.services.jso
           return this;
         }
 
-        /** Project number of a Google Cloud project whose debuggees to list. */
+        /** Required. Project number of a Google Cloud project whose debuggees to list. */
         @com.google.api.client.util.Key
         private java.lang.String project;
 
-        /** Project number of a Google Cloud project whose debuggees to list.
+        /** Required. Project number of a Google Cloud project whose debuggees to list.
          */
         public java.lang.String getProject() {
           return project;
         }
 
-        /** Project number of a Google Cloud project whose debuggees to list. */
+        /** Required. Project number of a Google Cloud project whose debuggees to list. */
         public List setProject(java.lang.String project) {
           this.project = project;
           return this;
@@ -894,8 +895,8 @@ public class CloudDebugger extends com.google.api.client.googleapis.services.jso
          * This request holds the parameters needed by the clouddebugger server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param debuggeeId ID of the debuggee whose breakpoint to delete.
-         * @param breakpointId ID of the breakpoint to delete.
+         * @param debuggeeId Required. ID of the debuggee whose breakpoint to delete.
+         * @param breakpointId Required. ID of the breakpoint to delete.
          * @return the request
          */
         public Delete delete(java.lang.String debuggeeId, java.lang.String breakpointId) throws java.io.IOException {
@@ -919,8 +920,8 @@ public class CloudDebugger extends com.google.api.client.googleapis.services.jso
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param debuggeeId ID of the debuggee whose breakpoint to delete.
-           * @param breakpointId ID of the breakpoint to delete.
+           * @param debuggeeId Required. ID of the debuggee whose breakpoint to delete.
+           * @param breakpointId Required. ID of the breakpoint to delete.
            * @since 1.13
            */
           protected Delete(java.lang.String debuggeeId, java.lang.String breakpointId) {
@@ -984,53 +985,54 @@ public class CloudDebugger extends com.google.api.client.googleapis.services.jso
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** ID of the debuggee whose breakpoint to delete. */
+          /** Required. ID of the debuggee whose breakpoint to delete. */
           @com.google.api.client.util.Key
           private java.lang.String debuggeeId;
 
-          /** ID of the debuggee whose breakpoint to delete.
+          /** Required. ID of the debuggee whose breakpoint to delete.
            */
           public java.lang.String getDebuggeeId() {
             return debuggeeId;
           }
 
-          /** ID of the debuggee whose breakpoint to delete. */
+          /** Required. ID of the debuggee whose breakpoint to delete. */
           public Delete setDebuggeeId(java.lang.String debuggeeId) {
             this.debuggeeId = debuggeeId;
             return this;
           }
 
-          /** ID of the breakpoint to delete. */
+          /** Required. ID of the breakpoint to delete. */
           @com.google.api.client.util.Key
           private java.lang.String breakpointId;
 
-          /** ID of the breakpoint to delete.
+          /** Required. ID of the breakpoint to delete.
            */
           public java.lang.String getBreakpointId() {
             return breakpointId;
           }
 
-          /** ID of the breakpoint to delete. */
+          /** Required. ID of the breakpoint to delete. */
           public Delete setBreakpointId(java.lang.String breakpointId) {
             this.breakpointId = breakpointId;
             return this;
           }
 
           /**
-           * The client version making the call. Schema: `domain/type/version` (e.g.,
+           * Required. The client version making the call. Schema: `domain/type/version` (e.g.,
            * `google.com/intellij/v1`).
            */
           @com.google.api.client.util.Key
           private java.lang.String clientVersion;
 
-          /** The client version making the call. Schema: `domain/type/version` (e.g., `google.com/intellij/v1`).
+          /** Required. The client version making the call. Schema: `domain/type/version` (e.g.,
+         `google.com/intellij/v1`).
            */
           public java.lang.String getClientVersion() {
             return clientVersion;
           }
 
           /**
-           * The client version making the call. Schema: `domain/type/version` (e.g.,
+           * Required. The client version making the call. Schema: `domain/type/version` (e.g.,
            * `google.com/intellij/v1`).
            */
           public Delete setClientVersion(java.lang.String clientVersion) {
@@ -1051,8 +1053,8 @@ public class CloudDebugger extends com.google.api.client.googleapis.services.jso
          * This request holds the parameters needed by the clouddebugger server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param debuggeeId ID of the debuggee whose breakpoint to get.
-         * @param breakpointId ID of the breakpoint to get.
+         * @param debuggeeId Required. ID of the debuggee whose breakpoint to get.
+         * @param breakpointId Required. ID of the breakpoint to get.
          * @return the request
          */
         public Get get(java.lang.String debuggeeId, java.lang.String breakpointId) throws java.io.IOException {
@@ -1075,8 +1077,8 @@ public class CloudDebugger extends com.google.api.client.googleapis.services.jso
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param debuggeeId ID of the debuggee whose breakpoint to get.
-           * @param breakpointId ID of the breakpoint to get.
+           * @param debuggeeId Required. ID of the debuggee whose breakpoint to get.
+           * @param breakpointId Required. ID of the breakpoint to get.
            * @since 1.13
            */
           protected Get(java.lang.String debuggeeId, java.lang.String breakpointId) {
@@ -1150,53 +1152,54 @@ public class CloudDebugger extends com.google.api.client.googleapis.services.jso
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** ID of the debuggee whose breakpoint to get. */
+          /** Required. ID of the debuggee whose breakpoint to get. */
           @com.google.api.client.util.Key
           private java.lang.String debuggeeId;
 
-          /** ID of the debuggee whose breakpoint to get.
+          /** Required. ID of the debuggee whose breakpoint to get.
            */
           public java.lang.String getDebuggeeId() {
             return debuggeeId;
           }
 
-          /** ID of the debuggee whose breakpoint to get. */
+          /** Required. ID of the debuggee whose breakpoint to get. */
           public Get setDebuggeeId(java.lang.String debuggeeId) {
             this.debuggeeId = debuggeeId;
             return this;
           }
 
-          /** ID of the breakpoint to get. */
+          /** Required. ID of the breakpoint to get. */
           @com.google.api.client.util.Key
           private java.lang.String breakpointId;
 
-          /** ID of the breakpoint to get.
+          /** Required. ID of the breakpoint to get.
            */
           public java.lang.String getBreakpointId() {
             return breakpointId;
           }
 
-          /** ID of the breakpoint to get. */
+          /** Required. ID of the breakpoint to get. */
           public Get setBreakpointId(java.lang.String breakpointId) {
             this.breakpointId = breakpointId;
             return this;
           }
 
           /**
-           * The client version making the call. Schema: `domain/type/version` (e.g.,
+           * Required. The client version making the call. Schema: `domain/type/version` (e.g.,
            * `google.com/intellij/v1`).
            */
           @com.google.api.client.util.Key
           private java.lang.String clientVersion;
 
-          /** The client version making the call. Schema: `domain/type/version` (e.g., `google.com/intellij/v1`).
+          /** Required. The client version making the call. Schema: `domain/type/version` (e.g.,
+         `google.com/intellij/v1`).
            */
           public java.lang.String getClientVersion() {
             return clientVersion;
           }
 
           /**
-           * The client version making the call. Schema: `domain/type/version` (e.g.,
+           * Required. The client version making the call. Schema: `domain/type/version` (e.g.,
            * `google.com/intellij/v1`).
            */
           public Get setClientVersion(java.lang.String clientVersion) {
@@ -1217,7 +1220,7 @@ public class CloudDebugger extends com.google.api.client.googleapis.services.jso
          * This request holds the parameters needed by the clouddebugger server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param debuggeeId ID of the debuggee whose breakpoints to list.
+         * @param debuggeeId Required. ID of the debuggee whose breakpoints to list.
          * @return the request
          */
         public List list(java.lang.String debuggeeId) throws java.io.IOException {
@@ -1240,7 +1243,7 @@ public class CloudDebugger extends com.google.api.client.googleapis.services.jso
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param debuggeeId ID of the debuggee whose breakpoints to list.
+           * @param debuggeeId Required. ID of the debuggee whose breakpoints to list.
            * @since 1.13
            */
           protected List(java.lang.String debuggeeId) {
@@ -1313,17 +1316,17 @@ public class CloudDebugger extends com.google.api.client.googleapis.services.jso
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** ID of the debuggee whose breakpoints to list. */
+          /** Required. ID of the debuggee whose breakpoints to list. */
           @com.google.api.client.util.Key
           private java.lang.String debuggeeId;
 
-          /** ID of the debuggee whose breakpoints to list.
+          /** Required. ID of the debuggee whose breakpoints to list.
            */
           public java.lang.String getDebuggeeId() {
             return debuggeeId;
           }
 
-          /** ID of the debuggee whose breakpoints to list. */
+          /** Required. ID of the debuggee whose breakpoints to list. */
           public List setDebuggeeId(java.lang.String debuggeeId) {
             this.debuggeeId = debuggeeId;
             return this;
@@ -1346,20 +1349,21 @@ public class CloudDebugger extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * The client version making the call. Schema: `domain/type/version` (e.g.,
+           * Required. The client version making the call. Schema: `domain/type/version` (e.g.,
            * `google.com/intellij/v1`).
            */
           @com.google.api.client.util.Key
           private java.lang.String clientVersion;
 
-          /** The client version making the call. Schema: `domain/type/version` (e.g., `google.com/intellij/v1`).
+          /** Required. The client version making the call. Schema: `domain/type/version` (e.g.,
+         `google.com/intellij/v1`).
            */
           public java.lang.String getClientVersion() {
             return clientVersion;
           }
 
           /**
-           * The client version making the call. Schema: `domain/type/version` (e.g.,
+           * Required. The client version making the call. Schema: `domain/type/version` (e.g.,
            * `google.com/intellij/v1`).
            */
           public List setClientVersion(java.lang.String clientVersion) {
@@ -1478,7 +1482,7 @@ public class CloudDebugger extends com.google.api.client.googleapis.services.jso
          * This request holds the parameters needed by the clouddebugger server.  After setting any optional
          * parameters, call the {@link Set#execute()} method to invoke the remote operation.
          *
-         * @param debuggeeId ID of the debuggee where the breakpoint is to be set.
+         * @param debuggeeId Required. ID of the debuggee where the breakpoint is to be set.
          * @param content the {@link com.google.api.services.clouddebugger.v2.model.Breakpoint}
          * @return the request
          */
@@ -1502,7 +1506,7 @@ public class CloudDebugger extends com.google.api.client.googleapis.services.jso
            * {@link Set#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param debuggeeId ID of the debuggee where the breakpoint is to be set.
+           * @param debuggeeId Required. ID of the debuggee where the breakpoint is to be set.
            * @param content the {@link com.google.api.services.clouddebugger.v2.model.Breakpoint}
            * @since 1.13
            */
@@ -1566,37 +1570,38 @@ public class CloudDebugger extends com.google.api.client.googleapis.services.jso
             return (Set) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** ID of the debuggee where the breakpoint is to be set. */
+          /** Required. ID of the debuggee where the breakpoint is to be set. */
           @com.google.api.client.util.Key
           private java.lang.String debuggeeId;
 
-          /** ID of the debuggee where the breakpoint is to be set.
+          /** Required. ID of the debuggee where the breakpoint is to be set.
            */
           public java.lang.String getDebuggeeId() {
             return debuggeeId;
           }
 
-          /** ID of the debuggee where the breakpoint is to be set. */
+          /** Required. ID of the debuggee where the breakpoint is to be set. */
           public Set setDebuggeeId(java.lang.String debuggeeId) {
             this.debuggeeId = debuggeeId;
             return this;
           }
 
           /**
-           * The client version making the call. Schema: `domain/type/version` (e.g.,
+           * Required. The client version making the call. Schema: `domain/type/version` (e.g.,
            * `google.com/intellij/v1`).
            */
           @com.google.api.client.util.Key
           private java.lang.String clientVersion;
 
-          /** The client version making the call. Schema: `domain/type/version` (e.g., `google.com/intellij/v1`).
+          /** Required. The client version making the call. Schema: `domain/type/version` (e.g.,
+         `google.com/intellij/v1`).
            */
           public java.lang.String getClientVersion() {
             return clientVersion;
           }
 
           /**
-           * The client version making the call. Schema: `domain/type/version` (e.g.,
+           * Required. The client version making the call. Schema: `domain/type/version` (e.g.,
            * `google.com/intellij/v1`).
            */
           public Set setClientVersion(java.lang.String clientVersion) {

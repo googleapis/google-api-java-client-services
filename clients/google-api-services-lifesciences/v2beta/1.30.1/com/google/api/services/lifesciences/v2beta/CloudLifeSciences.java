@@ -1038,8 +1038,8 @@ public class CloudLifeSciences extends com.google.api.client.googleapis.services
         /**
          * Runs a pipeline.  The returned Operation's metadata field will contain a
          * google.cloud.lifesciences.v2beta.Metadata object describing the status of the pipeline execution.
-         * The [response] field will contain a google.cloud.lifesciences.v2beta.RunPipelineResponse object
-         * if the pipeline completes successfully.
+         * The response field will contain a google.cloud.lifesciences.v2beta.RunPipelineResponse object if
+         * the pipeline completes successfully.
          *
          * **Note:** Before you can use this method, the *Life Sciences Service Agent* must have access to
          * your project. This is done automatically when the Cloud Life Sciences API is first enabled, but
@@ -1074,7 +1074,7 @@ public class CloudLifeSciences extends com.google.api.client.googleapis.services
           /**
            * Runs a pipeline.  The returned Operation's metadata field will contain a
            * google.cloud.lifesciences.v2beta.Metadata object describing the status of the pipeline
-           * execution.  The [response] field will contain a
+           * execution. The response field will contain a
            * google.cloud.lifesciences.v2beta.RunPipelineResponse object if the pipeline completes
            * successfully.
            *

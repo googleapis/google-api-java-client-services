@@ -68,6 +68,13 @@ public final class ProductPurchase extends com.google.api.client.json.GenericJso
   private java.lang.String orderId;
 
   /**
+   * The inapp product SKU.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productId;
+
+  /**
    * The purchase state of the order. Possible values are: - Purchased  - Canceled  - Pending
    * The value may be {@code null}.
    */
@@ -184,6 +191,23 @@ public final class ProductPurchase extends com.google.api.client.json.GenericJso
    */
   public ProductPurchase setOrderId(java.lang.String orderId) {
     this.orderId = orderId;
+    return this;
+  }
+
+  /**
+   * The inapp product SKU.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductId() {
+    return productId;
+  }
+
+  /**
+   * The inapp product SKU.
+   * @param productId productId or {@code null} for none
+   */
+  public ProductPurchase setProductId(java.lang.String productId) {
+    this.productId = productId;
     return this;
   }
 

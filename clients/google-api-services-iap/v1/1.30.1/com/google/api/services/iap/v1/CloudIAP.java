@@ -289,6 +289,158 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
+     * Gets the IAP settings on a particular IAP protected resource.
+     *
+     * Create a request for the method "v1.getIapSettings".
+     *
+     * This request holds the parameters needed by the iap server.  After setting any optional
+     * parameters, call the {@link GetIapSettings#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The resource name for which to retrieve the settings.
+    Authorization: Requires the
+     *        `getSettings` permission for the associated
+    resource.
+     * @return the request
+     */
+    public GetIapSettings getIapSettings(java.lang.String name) throws java.io.IOException {
+      GetIapSettings result = new GetIapSettings(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetIapSettings extends CloudIAPRequest<com.google.api.services.iap.v1.model.IapSettings> {
+
+      private static final String REST_PATH = "v1/{+name}:iapSettings";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^.+$");
+
+      /**
+       * Gets the IAP settings on a particular IAP protected resource.
+       *
+       * Create a request for the method "v1.getIapSettings".
+       *
+       * This request holds the parameters needed by the the iap server.  After setting any optional
+       * parameters, call the {@link GetIapSettings#execute()} method to invoke the remote operation.
+       * <p> {@link GetIapSettings#initialize(com.google.api.client.googleapis.services.AbstractGoogleCl
+       * ientRequest)} must be called to initialize this instance immediately after invoking the
+       * constructor. </p>
+       *
+       * @param name Required. The resource name for which to retrieve the settings.
+    Authorization: Requires the
+     *        `getSettings` permission for the associated
+    resource.
+       * @since 1.13
+       */
+      protected GetIapSettings(java.lang.String name) {
+        super(CloudIAP.this, "GET", REST_PATH, null, com.google.api.services.iap.v1.model.IapSettings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^.+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetIapSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (GetIapSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetIapSettings setAccessToken(java.lang.String accessToken) {
+        return (GetIapSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetIapSettings setAlt(java.lang.String alt) {
+        return (GetIapSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public GetIapSettings setCallback(java.lang.String callback) {
+        return (GetIapSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public GetIapSettings setFields(java.lang.String fields) {
+        return (GetIapSettings) super.setFields(fields);
+      }
+
+      @Override
+      public GetIapSettings setKey(java.lang.String key) {
+        return (GetIapSettings) super.setKey(key);
+      }
+
+      @Override
+      public GetIapSettings setOauthToken(java.lang.String oauthToken) {
+        return (GetIapSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetIapSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetIapSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetIapSettings setQuotaUser(java.lang.String quotaUser) {
+        return (GetIapSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetIapSettings setUploadType(java.lang.String uploadType) {
+        return (GetIapSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetIapSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetIapSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The resource name for which to retrieve the settings. Authorization: Requires the
+       * `getSettings` permission for the associated resource.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The resource name for which to retrieve the settings. Authorization: Requires the
+     `getSettings` permission for the associated resource.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The resource name for which to retrieve the settings. Authorization: Requires the
+       * `getSettings` permission for the associated resource.
+       */
+      public GetIapSettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^.+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetIapSettings set(String parameterName, Object value) {
+        return (GetIapSettings) super.set(parameterName, value);
+      }
+    }
+    /**
      * Sets the access control policy for an Identity-Aware Proxy protected resource. Replaces any
      * existing policy. More information about managing access via IAP can be found at:
      * https://cloud.google.com/iap/docs/managing-access#managing_access_via_the_api
@@ -578,6 +730,165 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
       @Override
       public TestIamPermissions set(String parameterName, Object value) {
         return (TestIamPermissions) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates the IAP settings on a particular IAP protected resource. It replaces all fields unless
+     * the `update_mask` is set.
+     *
+     * Create a request for the method "v1.updateIapSettings".
+     *
+     * This request holds the parameters needed by the iap server.  After setting any optional
+     * parameters, call the {@link UpdateIapSettings#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The resource name of the IAP protected resource.
+     * @param content the {@link com.google.api.services.iap.v1.model.IapSettings}
+     * @return the request
+     */
+    public UpdateIapSettings updateIapSettings(java.lang.String name, com.google.api.services.iap.v1.model.IapSettings content) throws java.io.IOException {
+      UpdateIapSettings result = new UpdateIapSettings(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class UpdateIapSettings extends CloudIAPRequest<com.google.api.services.iap.v1.model.IapSettings> {
+
+      private static final String REST_PATH = "v1/{+name}:iapSettings";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^.+$");
+
+      /**
+       * Updates the IAP settings on a particular IAP protected resource. It replaces all fields unless
+       * the `update_mask` is set.
+       *
+       * Create a request for the method "v1.updateIapSettings".
+       *
+       * This request holds the parameters needed by the the iap server.  After setting any optional
+       * parameters, call the {@link UpdateIapSettings#execute()} method to invoke the remote operation.
+       * <p> {@link UpdateIapSettings#initialize(com.google.api.client.googleapis.services.AbstractGoogl
+       * eClientRequest)} must be called to initialize this instance immediately after invoking the
+       * constructor. </p>
+       *
+       * @param name Required. The resource name of the IAP protected resource.
+       * @param content the {@link com.google.api.services.iap.v1.model.IapSettings}
+       * @since 1.13
+       */
+      protected UpdateIapSettings(java.lang.String name, com.google.api.services.iap.v1.model.IapSettings content) {
+        super(CloudIAP.this, "PATCH", REST_PATH, content, com.google.api.services.iap.v1.model.IapSettings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^.+$");
+        }
+      }
+
+      @Override
+      public UpdateIapSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (UpdateIapSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UpdateIapSettings setAccessToken(java.lang.String accessToken) {
+        return (UpdateIapSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UpdateIapSettings setAlt(java.lang.String alt) {
+        return (UpdateIapSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public UpdateIapSettings setCallback(java.lang.String callback) {
+        return (UpdateIapSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public UpdateIapSettings setFields(java.lang.String fields) {
+        return (UpdateIapSettings) super.setFields(fields);
+      }
+
+      @Override
+      public UpdateIapSettings setKey(java.lang.String key) {
+        return (UpdateIapSettings) super.setKey(key);
+      }
+
+      @Override
+      public UpdateIapSettings setOauthToken(java.lang.String oauthToken) {
+        return (UpdateIapSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UpdateIapSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UpdateIapSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UpdateIapSettings setQuotaUser(java.lang.String quotaUser) {
+        return (UpdateIapSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UpdateIapSettings setUploadType(java.lang.String uploadType) {
+        return (UpdateIapSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UpdateIapSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UpdateIapSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The resource name of the IAP protected resource. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The resource name of the IAP protected resource.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Required. The resource name of the IAP protected resource. */
+      public UpdateIapSettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^.+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /**
+       * The field mask specifying which IAP settings should be updated. If omitted, the all of the
+       * settings are updated. See https://developers.google.com/protocol-
+       * buffers/docs/reference/google.protobuf#fieldmask
+       */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** The field mask specifying which IAP settings should be updated. If omitted, the all of the settings
+     are updated. See https://developers.google.com/protocol-
+     buffers/docs/reference/google.protobuf#fieldmask
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /**
+       * The field mask specifying which IAP settings should be updated. If omitted, the all of the
+       * settings are updated. See https://developers.google.com/protocol-
+       * buffers/docs/reference/google.protobuf#fieldmask
+       */
+      public UpdateIapSettings setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public UpdateIapSettings set(String parameterName, Object value) {
+        return (UpdateIapSettings) super.set(parameterName, value);
       }
     }
 

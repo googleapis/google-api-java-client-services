@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-iap</artifactId>
-  <version>v1-rev20191004-1.30.3</version>
-  <name>Cloud Identity-Aware Proxy API v1-rev20191004-1.30.3</name>
+  <version>v1-rev20191011-1.30.3</version>
+  <name>Cloud Identity-Aware Proxy API v1-rev20191011-1.30.3</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

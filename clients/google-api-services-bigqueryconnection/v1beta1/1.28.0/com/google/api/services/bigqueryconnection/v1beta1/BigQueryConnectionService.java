@@ -910,17 +910,17 @@ public class BigQueryConnectionService extends com.google.api.client.googleapis.
             return this;
           }
 
-          /** Maximum number of results to return. */
+          /** Maximum number of results per page. */
           @com.google.api.client.util.Key
           private java.lang.Long maxResults;
 
-          /** Maximum number of results to return.
+          /** Maximum number of results per page.
            */
           public java.lang.Long getMaxResults() {
             return maxResults;
           }
 
-          /** Maximum number of results to return. */
+          /** Maximum number of results per page. */
           public List setMaxResults(java.lang.Long maxResults) {
             this.maxResults = maxResults;
             return this;

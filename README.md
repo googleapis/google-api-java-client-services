@@ -61,6 +61,7 @@ packages on [Maven Central][maven-search].
 | Cloud Identity-Aware Proxy API | [v1](clients/google-api-services-iap/v1), [v1beta1](clients/google-api-services-iap/v1beta1) |
 | Cloud IoT API | [v1](clients/google-api-services-cloudiot/v1) |
 | Cloud Key Management Service (KMS) API | [v1](clients/google-api-services-cloudkms/v1) |
+| Cloud Life Sciences API | [v2beta](clients/google-api-services-lifesciences/v2beta) |
 | Cloud Machine Learning Engine | [v1](clients/google-api-services-ml/v1) |
 | Cloud Natural Language API | [v1](clients/google-api-services-language/v1), [v1beta1](clients/google-api-services-language/v1beta1), [v1beta2](clients/google-api-services-language/v1beta2) |
 | Cloud OS Login API | [v1](clients/google-api-services-oslogin/v1), [v1alpha](clients/google-api-services-oslogin/v1alpha), [v1beta](clients/google-api-services-oslogin/v1beta) |
@@ -70,14 +71,14 @@ packages on [Maven Central][maven-search].
 | Cloud Resource Manager API | [v1](clients/google-api-services-cloudresourcemanager/v1), [v1beta1](clients/google-api-services-cloudresourcemanager/v1beta1), [v2](clients/google-api-services-cloudresourcemanager/v2), [v2beta1](clients/google-api-services-cloudresourcemanager/v2beta1) |
 | Cloud Run API | [v1](clients/google-api-services-run/v1), [v1alpha1](clients/google-api-services-run/v1alpha1), [v1beta1](clients/google-api-services-run/v1beta1) |
 | Cloud Runtime Configuration API | [v1](clients/google-api-services-runtimeconfig/v1), [v1beta1](clients/google-api-services-runtimeconfig/v1beta1) |
-| Cloud SQL Admin API | [v1beta4](clients/google-api-services-sqladmin/v1beta4) |
+| Cloud SQL Admin API | [v1beta4](clients/google-api-services-sqladmin/v1beta4), [v1beta4](clients/google-api-services-sql/v1beta4) |
 | Cloud Scheduler API | [v1](clients/google-api-services-cloudscheduler/v1), [v1beta1](clients/google-api-services-cloudscheduler/v1beta1) |
 | Cloud Search API | [v1](clients/google-api-services-cloudsearch/v1) |
 | Cloud Security Command Center API | [v1](clients/google-api-services-securitycenter/v1), [v1beta1](clients/google-api-services-securitycenter/v1beta1), [v1p1alpha1](clients/google-api-services-securitycenter/v1p1alpha1) |
 | Cloud Shell API | [v1](clients/google-api-services-cloudshell/v1), [v1alpha1](clients/google-api-services-cloudshell/v1alpha1) |
 | Cloud Source Repositories API | [v1](clients/google-api-services-sourcerepo/v1) |
 | Cloud Spanner API | [v1](clients/google-api-services-spanner/v1) |
-| Cloud Speech-to-Text API | [v1](clients/google-api-services-speech/v1), [v1p1beta1](clients/google-api-services-speech/v1p1beta1), [v2beta](clients/google-api-services-speech/v2beta) |
+| Cloud Speech-to-Text API | [v1](clients/google-api-services-speech/v1), [v1p1beta1](clients/google-api-services-speech/v1p1beta1) |
 | Cloud Storage JSON API | [v1](clients/google-api-services-storage/v1), [v1beta1](clients/google-api-services-storage/v1beta1), [v1beta2](clients/google-api-services-storage/v1beta2) |
 | Cloud TPU API | [v1](clients/google-api-services-tpu/v1), [v1alpha1](clients/google-api-services-tpu/v1alpha1) |
 | Cloud Talent Solution API | [v2](clients/google-api-services-jobs/v2), [v3](clients/google-api-services-jobs/v3), [v3p1beta1](clients/google-api-services-jobs/v3p1beta1) |
@@ -172,7 +173,7 @@ packages on [Maven Central][maven-search].
 | Stackdriver Debugger API | [v2](clients/google-api-services-clouddebugger/v2) |
 | Stackdriver Error Reporting API | [v1beta1](clients/google-api-services-clouderrorreporting/v1beta1) |
 | Stackdriver Logging API | [v2](clients/google-api-services-logging/v2) |
-| Stackdriver Monitoring API | [v3](clients/google-api-services-monitoring/v3) |
+| Stackdriver Monitoring API | [v1](clients/google-api-services-monitoring/v1), [v3](clients/google-api-services-monitoring/v3) |
 | Stackdriver Profiler API | [v2](clients/google-api-services-cloudprofiler/v2) |
 | Stackdriver Trace API | [v1](clients/google-api-services-cloudtrace/v1), [v2](clients/google-api-services-cloudtrace/v2) |
 | Storage Transfer API | [v1](clients/google-api-services-storagetransfer/v1) |

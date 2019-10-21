@@ -1,7 +1,0 @@
-{
-  "maven": {
-    "groupId": "com.google.apis",
-    "artifactId": "google-api-services-speech",
-    "version": "v2beta-rev20190918-1.30.3"
-  }
-}

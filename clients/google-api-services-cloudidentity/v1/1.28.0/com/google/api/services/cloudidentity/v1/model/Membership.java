@@ -30,17 +30,17 @@ package com.google.api.services.cloudidentity.v1.model;
 public final class Membership extends com.google.api.client.json.GenericJson {
 
   /**
-   * Creation timestamp of the Membership. Output only.
+   * Output only. Creation timestamp of the Membership. Output only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * [Resource name](https://cloud.google.com/apis/design/resource_names) of the Membership in the
-   * format: `groups/{group_id}/memberships/{member_id}`, where group_id is the unique ID assigned
-   * to the Group to which Membership belongs to, and member_id is the unique ID assigned to the
-   * member
+   * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+   * Membership in the format: `groups/{group_id}/memberships/{member_id}`, where group_id is the
+   * unique ID assigned to the Group to which Membership belongs to, and member_id is the unique ID
+   * assigned to the member
    *
    * Must be left blank while creating a Membership.
    * The value may be {@code null}.
@@ -49,8 +49,8 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * EntityKey of the entity to be added as the member. Must be set while creating a Membership,
-   * read-only afterwards.
+   * Required. Immutable. EntityKey of the entity to be added as the member. Must be set while
+   * creating a Membership, read-only afterwards.
    *
    * Currently allowed entity types: `Users`, `Groups`.
    * The value may be {@code null}.
@@ -68,14 +68,14 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   private java.util.List<MembershipRole> roles;
 
   /**
-   * Last updated timestamp of the Membership. Output only.
+   * Output only. Last updated timestamp of the Membership. Output only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Creation timestamp of the Membership. Output only.
+   * Output only. Creation timestamp of the Membership. Output only.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -83,7 +83,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Creation timestamp of the Membership. Output only.
+   * Output only. Creation timestamp of the Membership. Output only.
    * @param createTime createTime or {@code null} for none
    */
   public Membership setCreateTime(String createTime) {
@@ -92,10 +92,10 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Resource name](https://cloud.google.com/apis/design/resource_names) of the Membership in the
-   * format: `groups/{group_id}/memberships/{member_id}`, where group_id is the unique ID assigned
-   * to the Group to which Membership belongs to, and member_id is the unique ID assigned to the
-   * member
+   * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+   * Membership in the format: `groups/{group_id}/memberships/{member_id}`, where group_id is the
+   * unique ID assigned to the Group to which Membership belongs to, and member_id is the unique ID
+   * assigned to the member
    *
    * Must be left blank while creating a Membership.
    * @return value or {@code null} for none
@@ -105,10 +105,10 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Resource name](https://cloud.google.com/apis/design/resource_names) of the Membership in the
-   * format: `groups/{group_id}/memberships/{member_id}`, where group_id is the unique ID assigned
-   * to the Group to which Membership belongs to, and member_id is the unique ID assigned to the
-   * member
+   * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+   * Membership in the format: `groups/{group_id}/memberships/{member_id}`, where group_id is the
+   * unique ID assigned to the Group to which Membership belongs to, and member_id is the unique ID
+   * assigned to the member
    *
    * Must be left blank while creating a Membership.
    * @param name name or {@code null} for none
@@ -119,8 +119,8 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * EntityKey of the entity to be added as the member. Must be set while creating a Membership,
-   * read-only afterwards.
+   * Required. Immutable. EntityKey of the entity to be added as the member. Must be set while
+   * creating a Membership, read-only afterwards.
    *
    * Currently allowed entity types: `Users`, `Groups`.
    * @return value or {@code null} for none
@@ -130,8 +130,8 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * EntityKey of the entity to be added as the member. Must be set while creating a Membership,
-   * read-only afterwards.
+   * Required. Immutable. EntityKey of the entity to be added as the member. Must be set while
+   * creating a Membership, read-only afterwards.
    *
    * Currently allowed entity types: `Users`, `Groups`.
    * @param preferredMemberKey preferredMemberKey or {@code null} for none
@@ -163,7 +163,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Last updated timestamp of the Membership. Output only.
+   * Output only. Last updated timestamp of the Membership. Output only.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -171,7 +171,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Last updated timestamp of the Membership. Output only.
+   * Output only. Last updated timestamp of the Membership. Output only.
    * @param updateTime updateTime or {@code null} for none
    */
   public Membership setUpdateTime(String updateTime) {

@@ -1653,6 +1653,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
         /**
          * Sets the access control policy on the specified resource. Replaces any existing policy.
          *
+         * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+         *
          * Create a request for the method "datasets.setIamPolicy".
          *
          * This request holds the parameters needed by the healthcare server.  After setting any optional
@@ -1679,6 +1681,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
           /**
            * Sets the access control policy on the specified resource. Replaces any existing policy.
+           *
+           * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
            *
            * Create a request for the method "datasets.setIamPolicy".
            *
@@ -3972,6 +3976,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           /**
            * Sets the access control policy on the specified resource. Replaces any existing policy.
            *
+           * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+           *
            * Create a request for the method "dicomStores.setIamPolicy".
            *
            * This request holds the parameters needed by the healthcare server.  After setting any optional
@@ -3998,6 +4004,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
             /**
              * Sets the access control policy on the specified resource. Replaces any existing policy.
+             *
+             * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
              *
              * Create a request for the method "dicomStores.setIamPolicy".
              *
@@ -9179,6 +9187,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           /**
            * Sets the access control policy on the specified resource. Replaces any existing policy.
            *
+           * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+           *
            * Create a request for the method "fhirStores.setIamPolicy".
            *
            * This request holds the parameters needed by the healthcare server.  After setting any optional
@@ -9205,6 +9215,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
             /**
              * Sets the access control policy on the specified resource. Replaces any existing policy.
+             *
+             * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
              *
              * Create a request for the method "fhirStores.setIamPolicy".
              *
@@ -11534,17 +11546,36 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return this;
               }
 
-              /** Same as `page`. Please use either `page` or `_page_token`. */
+              /**
+               * Used to retrieve the first, previous, next, or last page of resource versions when
+               * using pagination. Value should be set to the value of `_page_token` set in next or
+               * previous page links' URLs. Next and previous page are returned in the response
+               * bundle's links field, where `link.relation` is "previous" or "next".
+               *
+               * Omit `_page_token` if no previous request has been made.
+               */
               @com.google.api.client.util.Key("_page_token")
               private java.lang.String pageToken;
 
-              /** Same as `page`. Please use either `page` or `_page_token`.
+              /** Used to retrieve the first, previous, next, or last page of resource versions when using
+             pagination. Value should be set to the value of `_page_token` set in next or previous page links'
+             URLs. Next and previous page are returned in the response bundle's links field, where
+             `link.relation` is "previous" or "next".
+
+             Omit `_page_token` if no previous request has been made.
                */
               public java.lang.String getPageToken() {
                 return pageToken;
               }
 
-              /** Same as `page`. Please use either `page` or `_page_token`. */
+              /**
+               * Used to retrieve the first, previous, next, or last page of resource versions when
+               * using pagination. Value should be set to the value of `_page_token` set in next or
+               * previous page links' URLs. Next and previous page are returned in the response
+               * bundle's links field, where `link.relation` is "previous" or "next".
+               *
+               * Omit `_page_token` if no previous request has been made.
+               */
               public History setPageToken(java.lang.String pageToken) {
                 this.pageToken = pageToken;
                 return this;
@@ -11606,36 +11637,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return this;
               }
 
-              /**
-               * Used to retrieve the first, previous, next, or last page of resource versions when
-               * using pagination. Value should be set to the value of `page` set in next or
-               * previous page links' URLs. Next and previous page are returned in the response
-               * bundle's links field, where `link.relation` is "previous" or "next".
-               *
-               * Omit `page` if no previous request has been made.
-               */
+              /** DEPRECATED! Use `_page_token`. */
               @com.google.api.client.util.Key
               private java.lang.String page;
 
-              /** Used to retrieve the first, previous, next, or last page of resource versions when using
-             pagination. Value should be set to the value of `page` set in next or previous page links' URLs.
-             Next and previous page are returned in the response bundle's links field, where `link.relation` is
-             "previous" or "next".
-
-             Omit `page` if no previous request has been made.
+              /** DEPRECATED! Use `_page_token`.
                */
               public java.lang.String getPage() {
                 return page;
               }
 
-              /**
-               * Used to retrieve the first, previous, next, or last page of resource versions when
-               * using pagination. Value should be set to the value of `page` set in next or
-               * previous page links' URLs. Next and previous page are returned in the response
-               * bundle's links field, where `link.relation` is "previous" or "next".
-               *
-               * Omit `page` if no previous request has been made.
-               */
+              /** DEPRECATED! Use `_page_token`. */
               public History setPage(java.lang.String page) {
                 this.page = page;
                 return this;
@@ -13531,6 +13543,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           /**
            * Sets the access control policy on the specified resource. Replaces any existing policy.
            *
+           * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+           *
            * Create a request for the method "hl7V2Stores.setIamPolicy".
            *
            * This request holds the parameters needed by the healthcare server.  After setting any optional
@@ -13557,6 +13571,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
             /**
              * Sets the access control policy on the specified resource. Replaces any existing policy.
+             *
+             * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
              *
              * Create a request for the method "hl7V2Stores.setIamPolicy".
              *

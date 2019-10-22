@@ -44,7 +44,7 @@ public final class PacketMirroringMirroredResourceInfo extends com.google.api.cl
 
   /**
    * A set of subnetworks for which traffic from/to all VM instances will be mirrored. They must
-   * live in zones contained in the same region as this packetMirroring.
+   * live in the same region as this packetMirroring.
    *
    * You may specify a maximum of 5 subnetworks.
    * The value may be {@code null}.
@@ -91,7 +91,7 @@ public final class PacketMirroringMirroredResourceInfo extends com.google.api.cl
 
   /**
    * A set of subnetworks for which traffic from/to all VM instances will be mirrored. They must
-   * live in zones contained in the same region as this packetMirroring.
+   * live in the same region as this packetMirroring.
    *
    * You may specify a maximum of 5 subnetworks.
    * @return value or {@code null} for none
@@ -102,7 +102,7 @@ public final class PacketMirroringMirroredResourceInfo extends com.google.api.cl
 
   /**
    * A set of subnetworks for which traffic from/to all VM instances will be mirrored. They must
-   * live in zones contained in the same region as this packetMirroring.
+   * live in the same region as this packetMirroring.
    *
    * You may specify a maximum of 5 subnetworks.
    * @param subnetworks subnetworks or {@code null} for none

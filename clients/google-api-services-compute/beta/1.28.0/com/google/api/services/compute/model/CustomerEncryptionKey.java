@@ -37,6 +37,14 @@ public final class CustomerEncryptionKey extends com.google.api.client.json.Gene
   private java.lang.String kmsKeyName;
 
   /**
+   * The service account being used for the encryption request for the given KMS key. If absent,
+   * default GCE compute robot account will be used
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kmsKeyServiceAccount;
+
+  /**
    * Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either
    * encrypt or decrypt this resource.
    * The value may be {@code null}.
@@ -80,6 +88,25 @@ public final class CustomerEncryptionKey extends com.google.api.client.json.Gene
    */
   public CustomerEncryptionKey setKmsKeyName(java.lang.String kmsKeyName) {
     this.kmsKeyName = kmsKeyName;
+    return this;
+  }
+
+  /**
+   * The service account being used for the encryption request for the given KMS key. If absent,
+   * default GCE compute robot account will be used
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKmsKeyServiceAccount() {
+    return kmsKeyServiceAccount;
+  }
+
+  /**
+   * The service account being used for the encryption request for the given KMS key. If absent,
+   * default GCE compute robot account will be used
+   * @param kmsKeyServiceAccount kmsKeyServiceAccount or {@code null} for none
+   */
+  public CustomerEncryptionKey setKmsKeyServiceAccount(java.lang.String kmsKeyServiceAccount) {
+    this.kmsKeyServiceAccount = kmsKeyServiceAccount;
     return this;
   }
 

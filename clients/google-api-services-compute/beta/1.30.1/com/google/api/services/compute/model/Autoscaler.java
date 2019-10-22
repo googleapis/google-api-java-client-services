@@ -90,6 +90,16 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * [Output Only] Target recommended MIG size (number of instances) computed by autoscaler.
+   * Autoscaler calculates recommended MIG size even when autoscaling policy mode is different from
+   * ON. This field is empty when autoscaler is not connected to the existing managed instance group
+   * or autoscaler did not generate its prediction.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer recommendedSize;
+
+  /**
    * [Output Only] URL of the region where the instance group resides (for autoscalers living in
    * regional scope).
    * The value may be {@code null}.
@@ -252,6 +262,29 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
    */
   public Autoscaler setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * [Output Only] Target recommended MIG size (number of instances) computed by autoscaler.
+   * Autoscaler calculates recommended MIG size even when autoscaling policy mode is different from
+   * ON. This field is empty when autoscaler is not connected to the existing managed instance group
+   * or autoscaler did not generate its prediction.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getRecommendedSize() {
+    return recommendedSize;
+  }
+
+  /**
+   * [Output Only] Target recommended MIG size (number of instances) computed by autoscaler.
+   * Autoscaler calculates recommended MIG size even when autoscaling policy mode is different from
+   * ON. This field is empty when autoscaler is not connected to the existing managed instance group
+   * or autoscaler did not generate its prediction.
+   * @param recommendedSize recommendedSize or {@code null} for none
+   */
+  public Autoscaler setRecommendedSize(java.lang.Integer recommendedSize) {
+    this.recommendedSize = recommendedSize;
     return this;
   }
 

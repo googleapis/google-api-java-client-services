@@ -30,39 +30,12 @@ package com.google.api.services.compute.model;
 public final class InstanceGroupManagersDeletePerInstanceConfigsReq extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of instances for which we want to delete per-instance configs on this managed instance
-   * group.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> instances;
-
-  /**
    * The list of instance names for which we want to delete per-instance configs on this managed
    * instance group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> names;
-
-  /**
-   * The list of instances for which we want to delete per-instance configs on this managed instance
-   * group.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getInstances() {
-    return instances;
-  }
-
-  /**
-   * The list of instances for which we want to delete per-instance configs on this managed instance
-   * group.
-   * @param instances instances or {@code null} for none
-   */
-  public InstanceGroupManagersDeletePerInstanceConfigsReq setInstances(java.util.List<java.lang.String> instances) {
-    this.instances = instances;
-    return this;
-  }
 
   /**
    * The list of instance names for which we want to delete per-instance configs on this managed

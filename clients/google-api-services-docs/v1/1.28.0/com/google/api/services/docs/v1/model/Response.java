@@ -30,6 +30,20 @@ package com.google.api.services.docs.v1.model;
 public final class Response extends com.google.api.client.json.GenericJson {
 
   /**
+   * The result of creating a footer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CreateFooterResponse createFooter;
+
+  /**
+   * The result of creating a header.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CreateHeaderResponse createHeader;
+
+  /**
    * The result of creating a named range.
    * The value may be {@code null}.
    */
@@ -56,6 +70,40 @@ public final class Response extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private ReplaceAllTextResponse replaceAllText;
+
+  /**
+   * The result of creating a footer.
+   * @return value or {@code null} for none
+   */
+  public CreateFooterResponse getCreateFooter() {
+    return createFooter;
+  }
+
+  /**
+   * The result of creating a footer.
+   * @param createFooter createFooter or {@code null} for none
+   */
+  public Response setCreateFooter(CreateFooterResponse createFooter) {
+    this.createFooter = createFooter;
+    return this;
+  }
+
+  /**
+   * The result of creating a header.
+   * @return value or {@code null} for none
+   */
+  public CreateHeaderResponse getCreateHeader() {
+    return createHeader;
+  }
+
+  /**
+   * The result of creating a header.
+   * @param createHeader createHeader or {@code null} for none
+   */
+  public Response setCreateHeader(CreateHeaderResponse createHeader) {
+    this.createHeader = createHeader;
+    return this;
+  }
 
   /**
    * The result of creating a named range.

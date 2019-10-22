@@ -53,7 +53,7 @@ public final class Configuration extends com.google.api.client.json.GenericJson 
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private K8sIoApimachineryPkgApisMetaV1ObjectMeta metadata;
+  private ObjectMeta metadata;
 
   /**
    * Spec holds the desired state of the Configuration (from the client).
@@ -108,7 +108,7 @@ public final class Configuration extends com.google.api.client.json.GenericJson 
    * annotations.
    * @return value or {@code null} for none
    */
-  public K8sIoApimachineryPkgApisMetaV1ObjectMeta getMetadata() {
+  public ObjectMeta getMetadata() {
     return metadata;
   }
 
@@ -117,7 +117,7 @@ public final class Configuration extends com.google.api.client.json.GenericJson 
    * annotations.
    * @param metadata metadata or {@code null} for none
    */
-  public Configuration setMetadata(K8sIoApimachineryPkgApisMetaV1ObjectMeta metadata) {
+  public Configuration setMetadata(ObjectMeta metadata) {
     this.metadata = metadata;
     return this;
   }

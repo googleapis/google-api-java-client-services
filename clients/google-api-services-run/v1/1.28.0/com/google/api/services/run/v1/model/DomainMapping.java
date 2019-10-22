@@ -48,7 +48,7 @@ public final class DomainMapping extends com.google.api.client.json.GenericJson 
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private K8sIoApimachineryPkgApisMetaV1ObjectMeta metadata;
+  private ObjectMeta metadata;
 
   /**
    * The spec for this DomainMapping.
@@ -102,7 +102,7 @@ public final class DomainMapping extends com.google.api.client.json.GenericJson 
    * Metadata associated with this BuildTemplate.
    * @return value or {@code null} for none
    */
-  public K8sIoApimachineryPkgApisMetaV1ObjectMeta getMetadata() {
+  public ObjectMeta getMetadata() {
     return metadata;
   }
 
@@ -110,7 +110,7 @@ public final class DomainMapping extends com.google.api.client.json.GenericJson 
    * Metadata associated with this BuildTemplate.
    * @param metadata metadata or {@code null} for none
    */
-  public DomainMapping setMetadata(K8sIoApimachineryPkgApisMetaV1ObjectMeta metadata) {
+  public DomainMapping setMetadata(ObjectMeta metadata) {
     this.metadata = metadata;
     return this;
   }

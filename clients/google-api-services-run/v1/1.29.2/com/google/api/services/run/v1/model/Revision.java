@@ -51,7 +51,7 @@ public final class Revision extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private K8sIoApimachineryPkgApisMetaV1ObjectMeta metadata;
+  private ObjectMeta metadata;
 
   /**
    * Spec holds the desired state of the Revision (from the client).
@@ -105,7 +105,7 @@ public final class Revision extends com.google.api.client.json.GenericJson {
    * Metadata associated with this Revision, including name, namespace, labels, and annotations.
    * @return value or {@code null} for none
    */
-  public K8sIoApimachineryPkgApisMetaV1ObjectMeta getMetadata() {
+  public ObjectMeta getMetadata() {
     return metadata;
   }
 
@@ -113,7 +113,7 @@ public final class Revision extends com.google.api.client.json.GenericJson {
    * Metadata associated with this Revision, including name, namespace, labels, and annotations.
    * @param metadata metadata or {@code null} for none
    */
-  public Revision setMetadata(K8sIoApimachineryPkgApisMetaV1ObjectMeta metadata) {
+  public Revision setMetadata(ObjectMeta metadata) {
     this.metadata = metadata;
     return this;
   }

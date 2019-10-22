@@ -17,7 +17,7 @@
 package com.google.api.services.monitoring.v3.model;
 
 /**
- * An internal checker allows uptime checks to run on private/internal GCP resources.
+ * An internal checker allows Uptime checks to run on private/internal GCP resources.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Stackdriver Monitoring API. For a detailed
@@ -39,7 +39,7 @@ public final class InternalChecker extends com.google.api.client.json.GenericJso
   private java.lang.String displayName;
 
   /**
-   * The GCP zone the uptime check should egress from. Only respected for internal uptime checks,
+   * The GCP zone the Uptime check should egress from. Only respected for internal Uptime checks,
    * where internal_network is specified.
    * The value may be {@code null}.
    */
@@ -48,8 +48,8 @@ public final class InternalChecker extends com.google.api.client.json.GenericJso
 
   /**
    * A unique resource name for this InternalChecker. The format
-   * is:projects/[PROJECT_ID]/internalCheckers/[INTERNAL_CHECKER_ID].PROJECT_ID is the stackdriver
-   * workspace project for the uptime check config associated with the internal checker.
+   * is:projects/[PROJECT_ID]/internalCheckers/[INTERNAL_CHECKER_ID].[PROJECT_ID] is the Stackdriver
+   * Workspace project for the Uptime check config associated with the internal checker.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class InternalChecker extends com.google.api.client.json.GenericJso
   private java.lang.String network;
 
   /**
-   * The GCP project_id where the internal checker lives. Not necessary the same as the workspace
+   * The GCP project ID where the internal checker lives. Not necessary the same as the Workspace
    * project.
    * The value may be {@code null}.
    */
@@ -98,7 +98,7 @@ public final class InternalChecker extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The GCP zone the uptime check should egress from. Only respected for internal uptime checks,
+   * The GCP zone the Uptime check should egress from. Only respected for internal Uptime checks,
    * where internal_network is specified.
    * @return value or {@code null} for none
    */
@@ -107,7 +107,7 @@ public final class InternalChecker extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The GCP zone the uptime check should egress from. Only respected for internal uptime checks,
+   * The GCP zone the Uptime check should egress from. Only respected for internal Uptime checks,
    * where internal_network is specified.
    * @param gcpZone gcpZone or {@code null} for none
    */
@@ -118,8 +118,8 @@ public final class InternalChecker extends com.google.api.client.json.GenericJso
 
   /**
    * A unique resource name for this InternalChecker. The format
-   * is:projects/[PROJECT_ID]/internalCheckers/[INTERNAL_CHECKER_ID].PROJECT_ID is the stackdriver
-   * workspace project for the uptime check config associated with the internal checker.
+   * is:projects/[PROJECT_ID]/internalCheckers/[INTERNAL_CHECKER_ID].[PROJECT_ID] is the Stackdriver
+   * Workspace project for the Uptime check config associated with the internal checker.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -128,8 +128,8 @@ public final class InternalChecker extends com.google.api.client.json.GenericJso
 
   /**
    * A unique resource name for this InternalChecker. The format
-   * is:projects/[PROJECT_ID]/internalCheckers/[INTERNAL_CHECKER_ID].PROJECT_ID is the stackdriver
-   * workspace project for the uptime check config associated with the internal checker.
+   * is:projects/[PROJECT_ID]/internalCheckers/[INTERNAL_CHECKER_ID].[PROJECT_ID] is the Stackdriver
+   * Workspace project for the Uptime check config associated with the internal checker.
    * @param name name or {@code null} for none
    */
   public InternalChecker setName(java.lang.String name) {
@@ -157,7 +157,7 @@ public final class InternalChecker extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The GCP project_id where the internal checker lives. Not necessary the same as the workspace
+   * The GCP project ID where the internal checker lives. Not necessary the same as the Workspace
    * project.
    * @return value or {@code null} for none
    */
@@ -166,7 +166,7 @@ public final class InternalChecker extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The GCP project_id where the internal checker lives. Not necessary the same as the workspace
+   * The GCP project ID where the internal checker lives. Not necessary the same as the Workspace
    * project.
    * @param peerProjectId peerProjectId or {@code null} for none
    */

@@ -17,7 +17,7 @@
 package com.google.api.services.monitoring.v3.model;
 
 /**
- * Information required for a TCP uptime check request.
+ * Information required for a TCP Uptime check request.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Stackdriver Monitoring API. For a detailed
@@ -31,16 +31,16 @@ package com.google.api.services.monitoring.v3.model;
 public final class TcpCheck extends com.google.api.client.json.GenericJson {
 
   /**
-   * The port to the page to run the check against. Will be combined with host (specified within the
-   * MonitoredResource) to construct the full URL. Required.
+   * The TCP port on the server against which to run the check. Will be combined with host
+   * (specified within the monitored_resource) to construct the full URL. Required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer port;
 
   /**
-   * The port to the page to run the check against. Will be combined with host (specified within the
-   * MonitoredResource) to construct the full URL. Required.
+   * The TCP port on the server against which to run the check. Will be combined with host
+   * (specified within the monitored_resource) to construct the full URL. Required.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPort() {
@@ -48,8 +48,8 @@ public final class TcpCheck extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The port to the page to run the check against. Will be combined with host (specified within the
-   * MonitoredResource) to construct the full URL. Required.
+   * The TCP port on the server against which to run the check. Will be combined with host
+   * (specified within the monitored_resource) to construct the full URL. Required.
    * @param port port or {@code null} for none
    */
   public TcpCheck setPort(java.lang.Integer port) {

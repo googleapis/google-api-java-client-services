@@ -64,9 +64,7 @@ public final class MetricThreshold extends com.google.api.client.json.GenericJso
    * streams on each resource to a single stream for each resource or when aggregating streams
    * across all members of a group of resources).When computing ratios, the aggregations and
    * denominator_aggregations fields must use the same alignment period and produce time series that
-   * have the same periodicity and labels.This field is similar to the one in the
-   * MetricService.ListTimeSeries request. It is advisable to use the ListTimeSeries method when
-   * debugging this field.
+   * have the same periodicity and labels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,11 +79,9 @@ public final class MetricThreshold extends com.google.api.client.json.GenericJso
   /**
    * A filter that identifies a time series that should be used as the denominator of a ratio that
    * will be compared with the threshold. If a denominator_filter is specified, the time series
-   * specified by the filter field will be used as the numerator.The filter is similar to the one
-   * that is specified in the MetricService.ListTimeSeries request (that call is useful to verify
-   * the time series that will be retrieved / processed) and must specify the metric type and
-   * optionally may contain restrictions on resource type, resource labels, and metric labels. This
-   * field may not exceed 2048 Unicode characters in length.
+   * specified by the filter field will be used as the numerator.The filter must specify the metric
+   * type and optionally may contain restrictions on resource type, resource labels, and metric
+   * labels. This field may not exceed 2048 Unicode characters in length.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -188,9 +184,7 @@ public final class MetricThreshold extends com.google.api.client.json.GenericJso
    * streams on each resource to a single stream for each resource or when aggregating streams
    * across all members of a group of resources).When computing ratios, the aggregations and
    * denominator_aggregations fields must use the same alignment period and produce time series that
-   * have the same periodicity and labels.This field is similar to the one in the
-   * MetricService.ListTimeSeries request. It is advisable to use the ListTimeSeries method when
-   * debugging this field.
+   * have the same periodicity and labels.
    * @return value or {@code null} for none
    */
   public java.util.List<Aggregation> getDenominatorAggregations() {
@@ -203,9 +197,7 @@ public final class MetricThreshold extends com.google.api.client.json.GenericJso
    * streams on each resource to a single stream for each resource or when aggregating streams
    * across all members of a group of resources).When computing ratios, the aggregations and
    * denominator_aggregations fields must use the same alignment period and produce time series that
-   * have the same periodicity and labels.This field is similar to the one in the
-   * MetricService.ListTimeSeries request. It is advisable to use the ListTimeSeries method when
-   * debugging this field.
+   * have the same periodicity and labels.
    * @param denominatorAggregations denominatorAggregations or {@code null} for none
    */
   public MetricThreshold setDenominatorAggregations(java.util.List<Aggregation> denominatorAggregations) {
@@ -216,11 +208,9 @@ public final class MetricThreshold extends com.google.api.client.json.GenericJso
   /**
    * A filter that identifies a time series that should be used as the denominator of a ratio that
    * will be compared with the threshold. If a denominator_filter is specified, the time series
-   * specified by the filter field will be used as the numerator.The filter is similar to the one
-   * that is specified in the MetricService.ListTimeSeries request (that call is useful to verify
-   * the time series that will be retrieved / processed) and must specify the metric type and
-   * optionally may contain restrictions on resource type, resource labels, and metric labels. This
-   * field may not exceed 2048 Unicode characters in length.
+   * specified by the filter field will be used as the numerator.The filter must specify the metric
+   * type and optionally may contain restrictions on resource type, resource labels, and metric
+   * labels. This field may not exceed 2048 Unicode characters in length.
    * @return value or {@code null} for none
    */
   public java.lang.String getDenominatorFilter() {
@@ -230,11 +220,9 @@ public final class MetricThreshold extends com.google.api.client.json.GenericJso
   /**
    * A filter that identifies a time series that should be used as the denominator of a ratio that
    * will be compared with the threshold. If a denominator_filter is specified, the time series
-   * specified by the filter field will be used as the numerator.The filter is similar to the one
-   * that is specified in the MetricService.ListTimeSeries request (that call is useful to verify
-   * the time series that will be retrieved / processed) and must specify the metric type and
-   * optionally may contain restrictions on resource type, resource labels, and metric labels. This
-   * field may not exceed 2048 Unicode characters in length.
+   * specified by the filter field will be used as the numerator.The filter must specify the metric
+   * type and optionally may contain restrictions on resource type, resource labels, and metric
+   * labels. This field may not exceed 2048 Unicode characters in length.
    * @param denominatorFilter denominatorFilter or {@code null} for none
    */
   public MetricThreshold setDenominatorFilter(java.lang.String denominatorFilter) {

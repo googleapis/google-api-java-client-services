@@ -39,11 +39,32 @@ public final class GoogleDevtoolsRemotebuildbotCommandDurations extends com.goog
   private String dockerPrep;
 
   /**
+   * The timestamp when docker prepartion begins.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String dockerPrepStartTime;
+
+  /**
    * The time spent downloading the input files and constructing the working directory.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String download;
+
+  /**
+   * The timestamp when downloading the input files begins.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String downloadStartTime;
+
+  /**
+   * The timestamp when execution begins.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String execStartTime;
 
   /**
    * The time spent executing the command (i.e., doing useful work).
@@ -81,6 +102,13 @@ public final class GoogleDevtoolsRemotebuildbotCommandDurations extends com.goog
   private String upload;
 
   /**
+   * The timestamp when uploading the output files begins.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String uploadStartTime;
+
+  /**
    * The time spent preparing the command to be run in a Docker container (includes pulling the
    * Docker image, if necessary).
    * @return value or {@code null} for none
@@ -100,6 +128,23 @@ public final class GoogleDevtoolsRemotebuildbotCommandDurations extends com.goog
   }
 
   /**
+   * The timestamp when docker prepartion begins.
+   * @return value or {@code null} for none
+   */
+  public String getDockerPrepStartTime() {
+    return dockerPrepStartTime;
+  }
+
+  /**
+   * The timestamp when docker prepartion begins.
+   * @param dockerPrepStartTime dockerPrepStartTime or {@code null} for none
+   */
+  public GoogleDevtoolsRemotebuildbotCommandDurations setDockerPrepStartTime(String dockerPrepStartTime) {
+    this.dockerPrepStartTime = dockerPrepStartTime;
+    return this;
+  }
+
+  /**
    * The time spent downloading the input files and constructing the working directory.
    * @return value or {@code null} for none
    */
@@ -113,6 +158,40 @@ public final class GoogleDevtoolsRemotebuildbotCommandDurations extends com.goog
    */
   public GoogleDevtoolsRemotebuildbotCommandDurations setDownload(String download) {
     this.download = download;
+    return this;
+  }
+
+  /**
+   * The timestamp when downloading the input files begins.
+   * @return value or {@code null} for none
+   */
+  public String getDownloadStartTime() {
+    return downloadStartTime;
+  }
+
+  /**
+   * The timestamp when downloading the input files begins.
+   * @param downloadStartTime downloadStartTime or {@code null} for none
+   */
+  public GoogleDevtoolsRemotebuildbotCommandDurations setDownloadStartTime(String downloadStartTime) {
+    this.downloadStartTime = downloadStartTime;
+    return this;
+  }
+
+  /**
+   * The timestamp when execution begins.
+   * @return value or {@code null} for none
+   */
+  public String getExecStartTime() {
+    return execStartTime;
+  }
+
+  /**
+   * The timestamp when execution begins.
+   * @param execStartTime execStartTime or {@code null} for none
+   */
+  public GoogleDevtoolsRemotebuildbotCommandDurations setExecStartTime(String execStartTime) {
+    this.execStartTime = execStartTime;
     return this;
   }
 
@@ -198,6 +277,23 @@ public final class GoogleDevtoolsRemotebuildbotCommandDurations extends com.goog
    */
   public GoogleDevtoolsRemotebuildbotCommandDurations setUpload(String upload) {
     this.upload = upload;
+    return this;
+  }
+
+  /**
+   * The timestamp when uploading the output files begins.
+   * @return value or {@code null} for none
+   */
+  public String getUploadStartTime() {
+    return uploadStartTime;
+  }
+
+  /**
+   * The timestamp when uploading the output files begins.
+   * @param uploadStartTime uploadStartTime or {@code null} for none
+   */
+  public GoogleDevtoolsRemotebuildbotCommandDurations setUploadStartTime(String uploadStartTime) {
+    this.uploadStartTime = uploadStartTime;
     return this;
   }
 

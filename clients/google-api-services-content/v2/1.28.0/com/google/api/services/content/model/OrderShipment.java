@@ -35,10 +35,10 @@ public final class OrderShipment extends com.google.api.client.json.GenericJson 
    *
    * Acceptable values for US are:   - "gsx"  - "ups"  - "usps"  - "fedex"  - "dhl"  - "ecourier"  -
    * "cxt"  - "google"  - "ontrac"  - "emsy"  - "ont"  - "deliv"  - "dynamex"  - "lasership"  -
-   * "mpx"  - "uds"  - "efw"
+   * "mpx"  - "uds"  - "efw"  - "jd logistics"
    *
    * Acceptable values for FR are:   - "colissimo"  - "chronopost"  - "gls"  - "dpd"  - "bpost"  -
-   * "colis prive"  - "boxtal"  - "geodis"
+   * "colis prive"  - "boxtal"  - "geodis"  - "tnt"  - "la poste"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,10 +92,10 @@ public final class OrderShipment extends com.google.api.client.json.GenericJson 
    *
    * Acceptable values for US are:   - "gsx"  - "ups"  - "usps"  - "fedex"  - "dhl"  - "ecourier"  -
    * "cxt"  - "google"  - "ontrac"  - "emsy"  - "ont"  - "deliv"  - "dynamex"  - "lasership"  -
-   * "mpx"  - "uds"  - "efw"
+   * "mpx"  - "uds"  - "efw"  - "jd logistics"
    *
    * Acceptable values for FR are:   - "colissimo"  - "chronopost"  - "gls"  - "dpd"  - "bpost"  -
-   * "colis prive"  - "boxtal"  - "geodis"
+   * "colis prive"  - "boxtal"  - "geodis"  - "tnt"  - "la poste"
    * @return value or {@code null} for none
    */
   public java.lang.String getCarrier() {
@@ -107,10 +107,10 @@ public final class OrderShipment extends com.google.api.client.json.GenericJson 
    *
    * Acceptable values for US are:   - "gsx"  - "ups"  - "usps"  - "fedex"  - "dhl"  - "ecourier"  -
    * "cxt"  - "google"  - "ontrac"  - "emsy"  - "ont"  - "deliv"  - "dynamex"  - "lasership"  -
-   * "mpx"  - "uds"  - "efw"
+   * "mpx"  - "uds"  - "efw"  - "jd logistics"
    *
    * Acceptable values for FR are:   - "colissimo"  - "chronopost"  - "gls"  - "dpd"  - "bpost"  -
-   * "colis prive"  - "boxtal"  - "geodis"
+   * "colis prive"  - "boxtal"  - "geodis"  - "tnt"  - "la poste"
    * @param carrier carrier or {@code null} for none
    */
   public OrderShipment setCarrier(java.lang.String carrier) {

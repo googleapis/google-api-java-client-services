@@ -517,7 +517,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String sizeType;
 
   /**
-   * Size of the item.
+   * Size of the item. Only one value is allowed. For variants with different sizes, insert a
+   * separate product for each size with the same itemGroupId value (see size definition).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1738,7 +1739,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Size of the item.
+   * Size of the item. Only one value is allowed. For variants with different sizes, insert a
+   * separate product for each size with the same itemGroupId value (see size definition).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSizes() {
@@ -1746,7 +1748,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Size of the item.
+   * Size of the item. Only one value is allowed. For variants with different sizes, insert a
+   * separate product for each size with the same itemGroupId value (see size definition).
    * @param sizes sizes or {@code null} for none
    */
   public Product setSizes(java.util.List<java.lang.String> sizes) {

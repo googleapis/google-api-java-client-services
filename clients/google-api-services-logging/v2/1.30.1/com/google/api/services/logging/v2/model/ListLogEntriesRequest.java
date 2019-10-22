@@ -31,7 +31,7 @@ package com.google.api.services.logging.v2.model;
 public final class ListLogEntriesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. A filter that chooses which log entries to return. See Advanced Logs Filters. Only
+   * Optional. A filter that chooses which log entries to return. See Advanced Logs Queries. Only
    * log entries that match the filter are returned. An empty filter matches all log entries in the
    * resources listed in resource_names. Referencing a parent resource that is not listed in
    * resource_names will cause the filter to return no results. The maximum length of the filter is
@@ -89,7 +89,7 @@ public final class ListLogEntriesRequest extends com.google.api.client.json.Gene
   private java.util.List<java.lang.String> resourceNames;
 
   /**
-   * Optional. A filter that chooses which log entries to return. See Advanced Logs Filters. Only
+   * Optional. A filter that chooses which log entries to return. See Advanced Logs Queries. Only
    * log entries that match the filter are returned. An empty filter matches all log entries in the
    * resources listed in resource_names. Referencing a parent resource that is not listed in
    * resource_names will cause the filter to return no results. The maximum length of the filter is
@@ -101,7 +101,7 @@ public final class ListLogEntriesRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. A filter that chooses which log entries to return. See Advanced Logs Filters. Only
+   * Optional. A filter that chooses which log entries to return. See Advanced Logs Queries. Only
    * log entries that match the filter are returned. An empty filter matches all log entries in the
    * resources listed in resource_names. Referencing a parent resource that is not listed in
    * resource_names will cause the filter to return no results. The maximum length of the filter is

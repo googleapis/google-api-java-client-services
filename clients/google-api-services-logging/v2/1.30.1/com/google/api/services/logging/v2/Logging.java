@@ -46,7 +46,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.1 of the Stackdriver Logging API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.3 of the Stackdriver Logging API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -1065,7 +1065,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Deletes all the log entries in a log. The log reappears if it receives new entries. Log entries
-       * written shortly before the delete operation might not be deleted.
+       * written shortly before the delete operation might not be deleted. Entries received after the
+       * delete operation with a timestamp before the operation will be deleted.
        *
        * Create a request for the method "logs.delete".
        *
@@ -1097,7 +1098,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Deletes all the log entries in a log. The log reappears if it receives new entries. Log entries
-         * written shortly before the delete operation might not be deleted.
+         * written shortly before the delete operation might not be deleted. Entries received after the
+         * delete operation with a timestamp before the operation will be deleted.
          *
          * Create a request for the method "logs.delete".
          *
@@ -4732,7 +4734,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Deletes all the log entries in a log. The log reappears if it receives new entries. Log entries
-       * written shortly before the delete operation might not be deleted.
+       * written shortly before the delete operation might not be deleted. Entries received after the
+       * delete operation with a timestamp before the operation will be deleted.
        *
        * Create a request for the method "logs.delete".
        *
@@ -4764,7 +4767,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Deletes all the log entries in a log. The log reappears if it receives new entries. Log entries
-         * written shortly before the delete operation might not be deleted.
+         * written shortly before the delete operation might not be deleted. Entries received after the
+         * delete operation with a timestamp before the operation will be deleted.
          *
          * Create a request for the method "logs.delete".
          *
@@ -6348,7 +6352,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
     /**
      * Deletes all the log entries in a log. The log reappears if it receives new entries. Log entries
-     * written shortly before the delete operation might not be deleted.
+     * written shortly before the delete operation might not be deleted. Entries received after the
+     * delete operation with a timestamp before the operation will be deleted.
      *
      * Create a request for the method "logs.delete".
      *
@@ -6380,7 +6385,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Deletes all the log entries in a log. The log reappears if it receives new entries. Log entries
-       * written shortly before the delete operation might not be deleted.
+       * written shortly before the delete operation might not be deleted. Entries received after the
+       * delete operation with a timestamp before the operation will be deleted.
        *
        * Create a request for the method "logs.delete".
        *
@@ -7845,7 +7851,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Deletes all the log entries in a log. The log reappears if it receives new entries. Log entries
-       * written shortly before the delete operation might not be deleted.
+       * written shortly before the delete operation might not be deleted. Entries received after the
+       * delete operation with a timestamp before the operation will be deleted.
        *
        * Create a request for the method "logs.delete".
        *
@@ -7877,7 +7884,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Deletes all the log entries in a log. The log reappears if it receives new entries. Log entries
-         * written shortly before the delete operation might not be deleted.
+         * written shortly before the delete operation might not be deleted. Entries received after the
+         * delete operation with a timestamp before the operation will be deleted.
          *
          * Create a request for the method "logs.delete".
          *
@@ -10382,7 +10390,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Deletes all the log entries in a log. The log reappears if it receives new entries. Log entries
-       * written shortly before the delete operation might not be deleted.
+       * written shortly before the delete operation might not be deleted. Entries received after the
+       * delete operation with a timestamp before the operation will be deleted.
        *
        * Create a request for the method "logs.delete".
        *
@@ -10414,7 +10423,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Deletes all the log entries in a log. The log reappears if it receives new entries. Log entries
-         * written shortly before the delete operation might not be deleted.
+         * written shortly before the delete operation might not be deleted. Entries received after the
+         * delete operation with a timestamp before the operation will be deleted.
          *
          * Create a request for the method "logs.delete".
          *

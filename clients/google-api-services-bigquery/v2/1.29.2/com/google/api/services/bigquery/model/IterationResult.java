@@ -30,6 +30,12 @@ package com.google.api.services.bigquery.model;
 public final class IterationResult extends com.google.api.client.json.GenericJson {
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ArimaResult arimaResult;
+
+  /**
    * Information about top clusters for clustering models.
    * The value may be {@code null}.
    */
@@ -76,6 +82,21 @@ public final class IterationResult extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.Double trainingLoss;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public ArimaResult getArimaResult() {
+    return arimaResult;
+  }
+
+  /**
+   * @param arimaResult arimaResult or {@code null} for none
+   */
+  public IterationResult setArimaResult(ArimaResult arimaResult) {
+    this.arimaResult = arimaResult;
+    return this;
+  }
 
   /**
    * Information about top clusters for clustering models.

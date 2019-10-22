@@ -68,11 +68,7 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   private GoogleSheetsOptions googleSheetsOptions;
 
   /**
-   * [Optional, Trusted Tester] If hive partitioning is enabled, which mode to use. Two modes are
-   * supported: - AUTO: automatically infer partition key name(s) and type(s). - STRINGS: automatic
-   * infer partition key name(s). All types are strings. Not all storage formats support hive
-   * partitioning -- requesting hive partitioning on an unsupported format will lead to an error.
-   * Note: this setting is in the process of being deprecated in favor of hivePartitioningOptions.
+   * [Optional, Trusted Tester] Deprecated, do not use. Please set hivePartitioningOptions instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -231,11 +227,7 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * [Optional, Trusted Tester] If hive partitioning is enabled, which mode to use. Two modes are
-   * supported: - AUTO: automatically infer partition key name(s) and type(s). - STRINGS: automatic
-   * infer partition key name(s). All types are strings. Not all storage formats support hive
-   * partitioning -- requesting hive partitioning on an unsupported format will lead to an error.
-   * Note: this setting is in the process of being deprecated in favor of hivePartitioningOptions.
+   * [Optional, Trusted Tester] Deprecated, do not use. Please set hivePartitioningOptions instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getHivePartitioningMode() {
@@ -243,11 +235,7 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * [Optional, Trusted Tester] If hive partitioning is enabled, which mode to use. Two modes are
-   * supported: - AUTO: automatically infer partition key name(s) and type(s). - STRINGS: automatic
-   * infer partition key name(s). All types are strings. Not all storage formats support hive
-   * partitioning -- requesting hive partitioning on an unsupported format will lead to an error.
-   * Note: this setting is in the process of being deprecated in favor of hivePartitioningOptions.
+   * [Optional, Trusted Tester] Deprecated, do not use. Please set hivePartitioningOptions instead.
    * @param hivePartitioningMode hivePartitioningMode or {@code null} for none
    */
   public ExternalDataConfiguration setHivePartitioningMode(java.lang.String hivePartitioningMode) {

@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-bigqueryreservation",
+    "version": "v1beta1-rev20190920-1.30.3"
+  }
+}

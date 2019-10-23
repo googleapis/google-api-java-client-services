@@ -58,6 +58,13 @@ public final class TestExecution extends com.google.api.client.json.GenericJson 
   private java.lang.String projectId;
 
   /**
+   * Output only. Details about the shard.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Shard shard;
+
+  /**
    * Output only. Indicates the current progress of the test execution (e.g., FINISHED).
    * The value may be {@code null}.
    */
@@ -157,6 +164,23 @@ public final class TestExecution extends com.google.api.client.json.GenericJson 
    */
   public TestExecution setProjectId(java.lang.String projectId) {
     this.projectId = projectId;
+    return this;
+  }
+
+  /**
+   * Output only. Details about the shard.
+   * @return value or {@code null} for none
+   */
+  public Shard getShard() {
+    return shard;
+  }
+
+  /**
+   * Output only. Details about the shard.
+   * @param shard shard or {@code null} for none
+   */
+  public TestExecution setShard(Shard shard) {
+    this.shard = shard;
     return this;
   }
 

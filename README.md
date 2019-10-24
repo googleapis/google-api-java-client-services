@@ -18,6 +18,7 @@ packages on [Maven Central][maven-search].
 
 | API | Versions |
 | --- | -------- |
+| AI Platform Training & Prediction API | [v1](clients/google-api-services-ml/v1) |
 | API Discovery Service | [v1](clients/google-api-services-discovery/v1) |
 | Abusive Experience Report API | [v1](clients/google-api-services-abusiveexperiencereport/v1) |
 | Accelerated Mobile Pages (AMP) URL API | [v1](clients/google-api-services-acceleratedmobilepageurl/v1) |
@@ -62,7 +63,6 @@ packages on [Maven Central][maven-search].
 | Cloud IoT API | [v1](clients/google-api-services-cloudiot/v1) |
 | Cloud Key Management Service (KMS) API | [v1](clients/google-api-services-cloudkms/v1) |
 | Cloud Life Sciences API | [v2beta](clients/google-api-services-lifesciences/v2beta) |
-| Cloud Machine Learning Engine | [v1](clients/google-api-services-ml/v1) |
 | Cloud Natural Language API | [v1](clients/google-api-services-language/v1), [v1beta1](clients/google-api-services-language/v1beta1), [v1beta2](clients/google-api-services-language/v1beta2) |
 | Cloud OS Login API | [v1](clients/google-api-services-oslogin/v1), [v1alpha](clients/google-api-services-oslogin/v1alpha), [v1beta](clients/google-api-services-oslogin/v1beta) |
 | Cloud Private Catalog API | [v1beta1](clients/google-api-services-cloudprivatecatalog/v1beta1) |
@@ -78,7 +78,7 @@ packages on [Maven Central][maven-search].
 | Cloud Shell API | [v1](clients/google-api-services-cloudshell/v1), [v1alpha1](clients/google-api-services-cloudshell/v1alpha1) |
 | Cloud Source Repositories API | [v1](clients/google-api-services-sourcerepo/v1) |
 | Cloud Spanner API | [v1](clients/google-api-services-spanner/v1) |
-| Cloud Speech-to-Text API | [v1](clients/google-api-services-speech/v1), [v1p1beta1](clients/google-api-services-speech/v1p1beta1) |
+| Cloud Speech-to-Text API | [v1](clients/google-api-services-speech/v1), [v1p1beta1](clients/google-api-services-speech/v1p1beta1), [v2beta1](clients/google-api-services-speech/v2beta1) |
 | Cloud Storage JSON API | [v1](clients/google-api-services-storage/v1), [v1beta1](clients/google-api-services-storage/v1beta1), [v1beta2](clients/google-api-services-storage/v1beta2) |
 | Cloud TPU API | [v1](clients/google-api-services-tpu/v1), [v1alpha1](clients/google-api-services-tpu/v1alpha1) |
 | Cloud Talent Solution API | [v2](clients/google-api-services-jobs/v2), [v3](clients/google-api-services-jobs/v3), [v3p1beta1](clients/google-api-services-jobs/v3p1beta1) |

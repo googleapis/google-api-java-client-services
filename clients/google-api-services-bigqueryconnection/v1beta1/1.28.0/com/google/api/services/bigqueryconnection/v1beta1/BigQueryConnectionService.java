@@ -316,17 +316,17 @@ public class BigQueryConnectionService extends com.google.api.client.googleapis.
             return this;
           }
 
-          /** Optional connection id that should be assigned to the created connection. */
+          /** Optional. Connection id that should be assigned to the created connection. */
           @com.google.api.client.util.Key
           private java.lang.String connectionId;
 
-          /** Optional connection id that should be assigned to the created connection.
+          /** Optional. Connection id that should be assigned to the created connection.
            */
           public java.lang.String getConnectionId() {
             return connectionId;
           }
 
-          /** Optional connection id that should be assigned to the created connection. */
+          /** Optional. Connection id that should be assigned to the created connection. */
           public Create setConnectionId(java.lang.String connectionId) {
             this.connectionId = connectionId;
             return this;

@@ -30,6 +30,20 @@ package com.google.api.services.docs.v1.model;
 public final class Request extends com.google.api.client.json.GenericJson {
 
   /**
+   * Creates a footer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CreateFooterRequest createFooter;
+
+  /**
+   * Creates a header.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CreateHeaderRequest createHeader;
+
+  /**
    * Creates a named range.
    * The value may be {@code null}.
    */
@@ -203,6 +217,40 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private UpdateTextStyleRequest updateTextStyle;
+
+  /**
+   * Creates a footer.
+   * @return value or {@code null} for none
+   */
+  public CreateFooterRequest getCreateFooter() {
+    return createFooter;
+  }
+
+  /**
+   * Creates a footer.
+   * @param createFooter createFooter or {@code null} for none
+   */
+  public Request setCreateFooter(CreateFooterRequest createFooter) {
+    this.createFooter = createFooter;
+    return this;
+  }
+
+  /**
+   * Creates a header.
+   * @return value or {@code null} for none
+   */
+  public CreateHeaderRequest getCreateHeader() {
+    return createHeader;
+  }
+
+  /**
+   * Creates a header.
+   * @param createHeader createHeader or {@code null} for none
+   */
+  public Request setCreateHeader(CreateHeaderRequest createHeader) {
+    this.createHeader = createHeader;
+    return this;
+  }
 
   /**
    * Creates a named range.

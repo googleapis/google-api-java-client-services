@@ -86,6 +86,15 @@ public final class MetricDescriptor extends com.google.api.client.json.GenericJs
   private java.lang.String metricKind;
 
   /**
+   * Read-only. If present, then a time series, which is identified partially by a metric type and a
+   * MonitoredResourceDescriptor, that is associated with this metric type can only be associated
+   * with one of the monitored resource types listed here.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> monitoredResourceTypes;
+
+  /**
    * The resource name of the metric descriptor.
    * The value may be {@code null}.
    */
@@ -247,6 +256,27 @@ public final class MetricDescriptor extends com.google.api.client.json.GenericJs
    */
   public MetricDescriptor setMetricKind(java.lang.String metricKind) {
     this.metricKind = metricKind;
+    return this;
+  }
+
+  /**
+   * Read-only. If present, then a time series, which is identified partially by a metric type and a
+   * MonitoredResourceDescriptor, that is associated with this metric type can only be associated
+   * with one of the monitored resource types listed here.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getMonitoredResourceTypes() {
+    return monitoredResourceTypes;
+  }
+
+  /**
+   * Read-only. If present, then a time series, which is identified partially by a metric type and a
+   * MonitoredResourceDescriptor, that is associated with this metric type can only be associated
+   * with one of the monitored resource types listed here.
+   * @param monitoredResourceTypes monitoredResourceTypes or {@code null} for none
+   */
+  public MetricDescriptor setMonitoredResourceTypes(java.util.List<java.lang.String> monitoredResourceTypes) {
+    this.monitoredResourceTypes = monitoredResourceTypes;
     return this;
   }
 

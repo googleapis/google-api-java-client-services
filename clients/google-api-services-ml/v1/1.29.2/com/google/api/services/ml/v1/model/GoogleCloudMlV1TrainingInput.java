@@ -23,7 +23,7 @@ package com.google.api.services.ml.v1.model;
  * to submitting a training job.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Cloud Machine Learning Engine. For a detailed
+ * transmitted over HTTP when working with the AI Platform Training & Prediction API. For a detailed
  * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
@@ -211,6 +211,16 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private java.lang.String scaleTier;
+
+  /**
+   * Optional. Use 'chief' instead of 'master' in TF_CONFIG when Custom Container is used and
+   * evaluator is not specified.
+   *
+   * Defaults to false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean useChiefInTfConfig;
 
   /**
    * Optional. The configuration for workers.
@@ -657,6 +667,29 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    */
   public GoogleCloudMlV1TrainingInput setScaleTier(java.lang.String scaleTier) {
     this.scaleTier = scaleTier;
+    return this;
+  }
+
+  /**
+   * Optional. Use 'chief' instead of 'master' in TF_CONFIG when Custom Container is used and
+   * evaluator is not specified.
+   *
+   * Defaults to false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUseChiefInTfConfig() {
+    return useChiefInTfConfig;
+  }
+
+  /**
+   * Optional. Use 'chief' instead of 'master' in TF_CONFIG when Custom Container is used and
+   * evaluator is not specified.
+   *
+   * Defaults to false.
+   * @param useChiefInTfConfig useChiefInTfConfig or {@code null} for none
+   */
+  public GoogleCloudMlV1TrainingInput setUseChiefInTfConfig(java.lang.Boolean useChiefInTfConfig) {
+    this.useChiefInTfConfig = useChiefInTfConfig;
     return this;
   }
 

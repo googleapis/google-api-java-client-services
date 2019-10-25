@@ -17,7 +17,7 @@
 package com.google.api.services.ml.v1;
 
 /**
- * Available OAuth 2.0 scopes for use with the Cloud Machine Learning Engine.
+ * Available OAuth 2.0 scopes for use with the AI Platform Training & Prediction API.
  *
  * @since 1.4
  */

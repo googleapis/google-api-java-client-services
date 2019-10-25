@@ -46,7 +46,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.28.0 of the Cloud Machine Learning Engine library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.28.0 of the AI Platform Training & Prediction API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**

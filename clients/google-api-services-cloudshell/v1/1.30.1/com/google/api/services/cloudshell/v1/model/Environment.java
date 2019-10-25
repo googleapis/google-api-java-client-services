@@ -40,6 +40,13 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   private java.lang.String dockerImage;
 
   /**
+   * Output only. List of ports users can connect to on the environment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.Integer> httpsPorts;
+
+  /**
    * Output only. The environment's identifier, which is always "default".
    * The value may be {@code null}.
    */
@@ -134,6 +141,23 @@ public final class Environment extends com.google.api.client.json.GenericJson {
    */
   public Environment setDockerImage(java.lang.String dockerImage) {
     this.dockerImage = dockerImage;
+    return this;
+  }
+
+  /**
+   * Output only. List of ports users can connect to on the environment.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Integer> getHttpsPorts() {
+    return httpsPorts;
+  }
+
+  /**
+   * Output only. List of ports users can connect to on the environment.
+   * @param httpsPorts httpsPorts or {@code null} for none
+   */
+  public Environment setHttpsPorts(java.util.List<java.lang.Integer> httpsPorts) {
+    this.httpsPorts = httpsPorts;
     return this;
   }
 

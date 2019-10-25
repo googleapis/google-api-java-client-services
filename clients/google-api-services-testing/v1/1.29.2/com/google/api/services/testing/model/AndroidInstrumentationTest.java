@@ -73,6 +73,13 @@ public final class AndroidInstrumentationTest extends com.google.api.client.json
   private java.lang.String orchestratorOption;
 
   /**
+   * The option to run tests in multiple shards in parallel.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ShardingOption shardingOption;
+
+  /**
    * Required. The APK containing the test code to be executed.
    * The value may be {@code null}.
    */
@@ -191,6 +198,23 @@ public final class AndroidInstrumentationTest extends com.google.api.client.json
    */
   public AndroidInstrumentationTest setOrchestratorOption(java.lang.String orchestratorOption) {
     this.orchestratorOption = orchestratorOption;
+    return this;
+  }
+
+  /**
+   * The option to run tests in multiple shards in parallel.
+   * @return value or {@code null} for none
+   */
+  public ShardingOption getShardingOption() {
+    return shardingOption;
+  }
+
+  /**
+   * The option to run tests in multiple shards in parallel.
+   * @param shardingOption shardingOption or {@code null} for none
+   */
+  public AndroidInstrumentationTest setShardingOption(ShardingOption shardingOption) {
+    this.shardingOption = shardingOption;
     return this;
   }
 

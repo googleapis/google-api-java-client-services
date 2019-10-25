@@ -30,7 +30,7 @@ package com.google.api.services.oslogin.v1.model;
 public final class LoginProfile extends com.google.api.client.json.GenericJson {
 
   /**
-   * A unique user ID.
+   * Required. A unique user ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +51,7 @@ public final class LoginProfile extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, SshPublicKey> sshPublicKeys;
 
   /**
-   * A unique user ID.
+   * Required. A unique user ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -59,7 +59,7 @@ public final class LoginProfile extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A unique user ID.
+   * Required. A unique user ID.
    * @param name name or {@code null} for none
    */
   public LoginProfile setName(java.lang.String name) {

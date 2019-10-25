@@ -204,6 +204,13 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.lang.String rootPassword;
 
   /**
+   * The start time of any upcoming scheduled maintenance for this instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SqlScheduledMaintenance scheduledMaintenance;
+
+  /**
    * The URI of this resource.
    * The value may be {@code null}.
    */
@@ -661,6 +668,23 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
    */
   public DatabaseInstance setRootPassword(java.lang.String rootPassword) {
     this.rootPassword = rootPassword;
+    return this;
+  }
+
+  /**
+   * The start time of any upcoming scheduled maintenance for this instance.
+   * @return value or {@code null} for none
+   */
+  public SqlScheduledMaintenance getScheduledMaintenance() {
+    return scheduledMaintenance;
+  }
+
+  /**
+   * The start time of any upcoming scheduled maintenance for this instance.
+   * @param scheduledMaintenance scheduledMaintenance or {@code null} for none
+   */
+  public DatabaseInstance setScheduledMaintenance(SqlScheduledMaintenance scheduledMaintenance) {
+    this.scheduledMaintenance = scheduledMaintenance;
     return this;
   }
 

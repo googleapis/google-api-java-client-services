@@ -88,6 +88,12 @@ public final class Database extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SqlServerDatabaseDetails sqlserverDatabaseDetails;
+
+  /**
    * The MySQL charset value.
    * @return value or {@code null} for none
    */
@@ -224,6 +230,21 @@ public final class Database extends com.google.api.client.json.GenericJson {
    */
   public Database setSelfLink(java.lang.String selfLink) {
     this.selfLink = selfLink;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public SqlServerDatabaseDetails getSqlserverDatabaseDetails() {
+    return sqlserverDatabaseDetails;
+  }
+
+  /**
+   * @param sqlserverDatabaseDetails sqlserverDatabaseDetails or {@code null} for none
+   */
+  public Database setSqlserverDatabaseDetails(SqlServerDatabaseDetails sqlserverDatabaseDetails) {
+    this.sqlserverDatabaseDetails = sqlserverDatabaseDetails;
     return this;
   }
 

@@ -42,8 +42,8 @@ public final class SetMonitoringServiceRequest extends com.google.api.client.jso
    * The monitoring service the cluster should use to write metrics. Currently available options:
    *
    * * "monitoring.googleapis.com/kubernetes" - the Google Cloud Monitoring service with Kubernetes-
-   * native resource model in Stackdriver * "monitoring.googleapis.com" - the Google Cloud
-   * Monitoring service * "none" - no metrics will be exported from the cluster
+   * native resource model * "monitoring.googleapis.com" - the Google Cloud Monitoring service *
+   * "none" - no metrics will be exported from the cluster
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,8 +97,8 @@ public final class SetMonitoringServiceRequest extends com.google.api.client.jso
    * The monitoring service the cluster should use to write metrics. Currently available options:
    *
    * * "monitoring.googleapis.com/kubernetes" - the Google Cloud Monitoring service with Kubernetes-
-   * native resource model in Stackdriver * "monitoring.googleapis.com" - the Google Cloud
-   * Monitoring service * "none" - no metrics will be exported from the cluster
+   * native resource model * "monitoring.googleapis.com" - the Google Cloud Monitoring service *
+   * "none" - no metrics will be exported from the cluster
    * @return value or {@code null} for none
    */
   public java.lang.String getMonitoringService() {
@@ -109,8 +109,8 @@ public final class SetMonitoringServiceRequest extends com.google.api.client.jso
    * The monitoring service the cluster should use to write metrics. Currently available options:
    *
    * * "monitoring.googleapis.com/kubernetes" - the Google Cloud Monitoring service with Kubernetes-
-   * native resource model in Stackdriver * "monitoring.googleapis.com" - the Google Cloud
-   * Monitoring service * "none" - no metrics will be exported from the cluster
+   * native resource model * "monitoring.googleapis.com" - the Google Cloud Monitoring service *
+   * "none" - no metrics will be exported from the cluster
    * @param monitoringService monitoringService or {@code null} for none
    */
   public SetMonitoringServiceRequest setMonitoringService(java.lang.String monitoringService) {

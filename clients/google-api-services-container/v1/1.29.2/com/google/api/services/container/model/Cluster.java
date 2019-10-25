@@ -38,6 +38,20 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private AddonsConfig addonsConfig;
 
   /**
+   * Configuration controlling RBAC group membership information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AuthenticatorGroupsConfig authenticatorGroupsConfig;
+
+  /**
+   * Cluster-level autoscaling configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ClusterAutoscaling autoscaling;
+
+  /**
    * Configuration for Binary Authorization.
    * The value may be {@code null}.
    */
@@ -231,9 +245,9 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    * The logging service the cluster should use to write logs. Currently available options:
    *
    * * "logging.googleapis.com/kubernetes" - the Google Cloud Logging service with Kubernetes-native
-   * resource model in Stackdriver * `logging.googleapis.com` - the Google Cloud Logging service. *
-   * `none` - no logs will be exported from the cluster. * if left as an empty
-   * string,`logging.googleapis.com` will be used.
+   * resource model * `logging.googleapis.com` - the Google Cloud Logging service. * `none` - no
+   * logs will be exported from the cluster. * if left as an empty string,`logging.googleapis.com`
+   * will be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -408,6 +422,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String tpuIpv4CidrBlock;
 
   /**
+   * Cluster-level Vertical Pod Autoscaling configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VerticalPodAutoscaling verticalPodAutoscaling;
+
+  /**
    * [Output only] The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
    * which the cluster resides. This field is deprecated, use location instead.
    * The value may be {@code null}.
@@ -429,6 +450,40 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setAddonsConfig(AddonsConfig addonsConfig) {
     this.addonsConfig = addonsConfig;
+    return this;
+  }
+
+  /**
+   * Configuration controlling RBAC group membership information.
+   * @return value or {@code null} for none
+   */
+  public AuthenticatorGroupsConfig getAuthenticatorGroupsConfig() {
+    return authenticatorGroupsConfig;
+  }
+
+  /**
+   * Configuration controlling RBAC group membership information.
+   * @param authenticatorGroupsConfig authenticatorGroupsConfig or {@code null} for none
+   */
+  public Cluster setAuthenticatorGroupsConfig(AuthenticatorGroupsConfig authenticatorGroupsConfig) {
+    this.authenticatorGroupsConfig = authenticatorGroupsConfig;
+    return this;
+  }
+
+  /**
+   * Cluster-level autoscaling configuration.
+   * @return value or {@code null} for none
+   */
+  public ClusterAutoscaling getAutoscaling() {
+    return autoscaling;
+  }
+
+  /**
+   * Cluster-level autoscaling configuration.
+   * @param autoscaling autoscaling or {@code null} for none
+   */
+  public Cluster setAutoscaling(ClusterAutoscaling autoscaling) {
+    this.autoscaling = autoscaling;
     return this;
   }
 
@@ -882,9 +937,9 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    * The logging service the cluster should use to write logs. Currently available options:
    *
    * * "logging.googleapis.com/kubernetes" - the Google Cloud Logging service with Kubernetes-native
-   * resource model in Stackdriver * `logging.googleapis.com` - the Google Cloud Logging service. *
-   * `none` - no logs will be exported from the cluster. * if left as an empty
-   * string,`logging.googleapis.com` will be used.
+   * resource model * `logging.googleapis.com` - the Google Cloud Logging service. * `none` - no
+   * logs will be exported from the cluster. * if left as an empty string,`logging.googleapis.com`
+   * will be used.
    * @return value or {@code null} for none
    */
   public java.lang.String getLoggingService() {
@@ -895,9 +950,9 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    * The logging service the cluster should use to write logs. Currently available options:
    *
    * * "logging.googleapis.com/kubernetes" - the Google Cloud Logging service with Kubernetes-native
-   * resource model in Stackdriver * `logging.googleapis.com` - the Google Cloud Logging service. *
-   * `none` - no logs will be exported from the cluster. * if left as an empty
-   * string,`logging.googleapis.com` will be used.
+   * resource model * `logging.googleapis.com` - the Google Cloud Logging service. * `none` - no
+   * logs will be exported from the cluster. * if left as an empty string,`logging.googleapis.com`
+   * will be used.
    * @param loggingService loggingService or {@code null} for none
    */
   public Cluster setLoggingService(java.lang.String loggingService) {
@@ -1298,6 +1353,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setTpuIpv4CidrBlock(java.lang.String tpuIpv4CidrBlock) {
     this.tpuIpv4CidrBlock = tpuIpv4CidrBlock;
+    return this;
+  }
+
+  /**
+   * Cluster-level Vertical Pod Autoscaling configuration.
+   * @return value or {@code null} for none
+   */
+  public VerticalPodAutoscaling getVerticalPodAutoscaling() {
+    return verticalPodAutoscaling;
+  }
+
+  /**
+   * Cluster-level Vertical Pod Autoscaling configuration.
+   * @param verticalPodAutoscaling verticalPodAutoscaling or {@code null} for none
+   */
+  public Cluster setVerticalPodAutoscaling(VerticalPodAutoscaling verticalPodAutoscaling) {
+    this.verticalPodAutoscaling = verticalPodAutoscaling;
     return this;
   }
 

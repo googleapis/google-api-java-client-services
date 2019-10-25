@@ -32,6 +32,13 @@ package com.google.api.services.container.model;
 public final class NodePoolAutoscaling extends com.google.api.client.json.GenericJson {
 
   /**
+   * Can this node pool be deleted automatically.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean autoprovisioned;
+
+  /**
    * Is autoscaling enabled for this node pool.
    * The value may be {@code null}.
    */
@@ -52,6 +59,23 @@ public final class NodePoolAutoscaling extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private java.lang.Integer minNodeCount;
+
+  /**
+   * Can this node pool be deleted automatically.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAutoprovisioned() {
+    return autoprovisioned;
+  }
+
+  /**
+   * Can this node pool be deleted automatically.
+   * @param autoprovisioned autoprovisioned or {@code null} for none
+   */
+  public NodePoolAutoscaling setAutoprovisioned(java.lang.Boolean autoprovisioned) {
+    this.autoprovisioned = autoprovisioned;
+    return this;
+  }
 
   /**
    * Is autoscaling enabled for this node pool.

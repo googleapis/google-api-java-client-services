@@ -30,18 +30,16 @@ package com.google.api.services.cloudidentity.v1beta1.model;
 public final class MembershipRole extends com.google.api.client.json.GenericJson {
 
   /**
-   * MembershipRole in string format.
-   *
-   * Currently supported MembershipRoles: `"MEMBER"`.
+   * MembershipRole in string format. Currently supported MembershipRoles: `"MEMBER", "OWNER",
+   * "MANAGER"`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * MembershipRole in string format.
-   *
-   * Currently supported MembershipRoles: `"MEMBER"`.
+   * MembershipRole in string format. Currently supported MembershipRoles: `"MEMBER", "OWNER",
+   * "MANAGER"`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -49,9 +47,8 @@ public final class MembershipRole extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * MembershipRole in string format.
-   *
-   * Currently supported MembershipRoles: `"MEMBER"`.
+   * MembershipRole in string format. Currently supported MembershipRoles: `"MEMBER", "OWNER",
+   * "MANAGER"`.
    * @param name name or {@code null} for none
    */
   public MembershipRole setName(java.lang.String name) {

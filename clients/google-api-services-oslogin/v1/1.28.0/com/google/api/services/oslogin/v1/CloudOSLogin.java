@@ -151,7 +151,7 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the oslogin server.  After setting any optional
      * parameters, call the {@link GetLoginProfile#execute()} method to invoke the remote operation.
      *
-     * @param name The unique ID for the user in format `users/{user}`.
+     * @param name Required. The unique ID for the user in format `users/{user}`.
      * @return the request
      */
     public GetLoginProfile getLoginProfile(java.lang.String name) throws java.io.IOException {
@@ -179,7 +179,7 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
        * lientRequest)} must be called to initialize this instance immediately after invoking the
        * constructor. </p>
        *
-       * @param name The unique ID for the user in format `users/{user}`.
+       * @param name Required. The unique ID for the user in format `users/{user}`.
        * @since 1.13
        */
       protected GetLoginProfile(java.lang.String name) {
@@ -257,17 +257,17 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
         return (GetLoginProfile) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** The unique ID for the user in format `users/{user}`. */
+      /** Required. The unique ID for the user in format `users/{user}`. */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The unique ID for the user in format `users/{user}`.
+      /** Required. The unique ID for the user in format `users/{user}`.
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /** The unique ID for the user in format `users/{user}`. */
+      /** Required. The unique ID for the user in format `users/{user}`. */
       public GetLoginProfile setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -324,7 +324,7 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the oslogin server.  After setting any optional
      * parameters, call the {@link ImportSshPublicKey#execute()} method to invoke the remote operation.
      *
-     * @param parent The unique ID for the user in format `users/{user}`.
+     * @param parent Required. The unique ID for the user in format `users/{user}`.
      * @param content the {@link com.google.api.services.oslogin.v1.model.SshPublicKey}
      * @return the request
      */
@@ -353,7 +353,7 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
        * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param parent The unique ID for the user in format `users/{user}`.
+       * @param parent Required. The unique ID for the user in format `users/{user}`.
        * @param content the {@link com.google.api.services.oslogin.v1.model.SshPublicKey}
        * @since 1.13
        */
@@ -422,17 +422,17 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
         return (ImportSshPublicKey) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** The unique ID for the user in format `users/{user}`. */
+      /** Required. The unique ID for the user in format `users/{user}`. */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** The unique ID for the user in format `users/{user}`.
+      /** Required. The unique ID for the user in format `users/{user}`.
        */
       public java.lang.String getParent() {
         return parent;
       }
 
-      /** The unique ID for the user in format `users/{user}`. */
+      /** Required. The unique ID for the user in format `users/{user}`. */
       public ImportSshPublicKey setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -493,9 +493,9 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the oslogin server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name A reference to the POSIX account to update. POSIX accounts are identified
-      by the project ID they are
-       *        associated with. A reference to the POSIX
+       * @param name Required. A reference to the POSIX account to update. POSIX accounts are identified
+      by the project
+       *        ID they are associated with. A reference to the POSIX
       account is in format
        *        `users/{user}/projects/{project}`.
        * @return the request
@@ -523,9 +523,9 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name A reference to the POSIX account to update. POSIX accounts are identified
-      by the project ID they are
-       *        associated with. A reference to the POSIX
+         * @param name Required. A reference to the POSIX account to update. POSIX accounts are identified
+      by the project
+       *        ID they are associated with. A reference to the POSIX
       account is in format
        *        `users/{user}/projects/{project}`.
          * @since 1.13
@@ -596,15 +596,15 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * A reference to the POSIX account to update. POSIX accounts are identified by the project
-         * ID they are associated with. A reference to the POSIX account is in format
+         * Required. A reference to the POSIX account to update. POSIX accounts are identified by
+         * the project ID they are associated with. A reference to the POSIX account is in format
          * `users/{user}/projects/{project}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** A reference to the POSIX account to update. POSIX accounts are identified by the project ID they
-       are associated with. A reference to the POSIX account is in format
+        /** Required. A reference to the POSIX account to update. POSIX accounts are identified by the project
+       ID they are associated with. A reference to the POSIX account is in format
        `users/{user}/projects/{project}`.
          */
         public java.lang.String getName() {
@@ -612,8 +612,8 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * A reference to the POSIX account to update. POSIX accounts are identified by the project
-         * ID they are associated with. A reference to the POSIX account is in format
+         * Required. A reference to the POSIX account to update. POSIX accounts are identified by
+         * the project ID they are associated with. A reference to the POSIX account is in format
          * `users/{user}/projects/{project}`.
          */
         public Delete setName(java.lang.String name) {
@@ -661,7 +661,7 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the oslogin server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name The fingerprint of the public key to update. Public keys are identified by
+       * @param name Required. The fingerprint of the public key to update. Public keys are identified by
       their SHA-256
        *        fingerprint. The fingerprint of the public key is in format
        *        `users/{user}/sshPublicKeys/{fingerprint}`.
@@ -690,7 +690,7 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The fingerprint of the public key to update. Public keys are identified by
+         * @param name Required. The fingerprint of the public key to update. Public keys are identified by
       their SHA-256
        *        fingerprint. The fingerprint of the public key is in format
        *        `users/{user}/sshPublicKeys/{fingerprint}`.
@@ -762,14 +762,14 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * The fingerprint of the public key to update. Public keys are identified by their SHA-256
-         * fingerprint. The fingerprint of the public key is in format
+         * Required. The fingerprint of the public key to update. Public keys are identified by
+         * their SHA-256 fingerprint. The fingerprint of the public key is in format
          * `users/{user}/sshPublicKeys/{fingerprint}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The fingerprint of the public key to update. Public keys are identified by their SHA-256
+        /** Required. The fingerprint of the public key to update. Public keys are identified by their SHA-256
        fingerprint. The fingerprint of the public key is in format
        `users/{user}/sshPublicKeys/{fingerprint}`.
          */
@@ -778,8 +778,8 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * The fingerprint of the public key to update. Public keys are identified by their SHA-256
-         * fingerprint. The fingerprint of the public key is in format
+         * Required. The fingerprint of the public key to update. Public keys are identified by
+         * their SHA-256 fingerprint. The fingerprint of the public key is in format
          * `users/{user}/sshPublicKeys/{fingerprint}`.
          */
         public Delete setName(java.lang.String name) {
@@ -962,7 +962,7 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the oslogin server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name The fingerprint of the public key to update. Public keys are identified by
+       * @param name Required. The fingerprint of the public key to update. Public keys are identified by
       their SHA-256
        *        fingerprint. The fingerprint of the public key is in format
        *        `users/{user}/sshPublicKeys/{fingerprint}`.
@@ -993,7 +993,7 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The fingerprint of the public key to update. Public keys are identified by
+         * @param name Required. The fingerprint of the public key to update. Public keys are identified by
       their SHA-256
        *        fingerprint. The fingerprint of the public key is in format
        *        `users/{user}/sshPublicKeys/{fingerprint}`.
@@ -1066,14 +1066,14 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * The fingerprint of the public key to update. Public keys are identified by their SHA-256
-         * fingerprint. The fingerprint of the public key is in format
+         * Required. The fingerprint of the public key to update. Public keys are identified by
+         * their SHA-256 fingerprint. The fingerprint of the public key is in format
          * `users/{user}/sshPublicKeys/{fingerprint}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The fingerprint of the public key to update. Public keys are identified by their SHA-256
+        /** Required. The fingerprint of the public key to update. Public keys are identified by their SHA-256
        fingerprint. The fingerprint of the public key is in format
        `users/{user}/sshPublicKeys/{fingerprint}`.
          */
@@ -1082,8 +1082,8 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * The fingerprint of the public key to update. Public keys are identified by their SHA-256
-         * fingerprint. The fingerprint of the public key is in format
+         * Required. The fingerprint of the public key to update. Public keys are identified by
+         * their SHA-256 fingerprint. The fingerprint of the public key is in format
          * `users/{user}/sshPublicKeys/{fingerprint}`.
          */
         public Patch setName(java.lang.String name) {

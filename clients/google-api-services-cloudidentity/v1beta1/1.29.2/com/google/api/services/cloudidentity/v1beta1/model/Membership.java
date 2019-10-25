@@ -61,7 +61,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   /**
    * Roles for a member within the Group.
    *
-   * Currently supported MembershipRoles: `"MEMBER"`.
+   * Currently supported MembershipRoles: `"MEMBER", "OWNER", "MANAGER"`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -144,7 +144,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   /**
    * Roles for a member within the Group.
    *
-   * Currently supported MembershipRoles: `"MEMBER"`.
+   * Currently supported MembershipRoles: `"MEMBER", "OWNER", "MANAGER"`.
    * @return value or {@code null} for none
    */
   public java.util.List<MembershipRole> getRoles() {
@@ -154,7 +154,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   /**
    * Roles for a member within the Group.
    *
-   * Currently supported MembershipRoles: `"MEMBER"`.
+   * Currently supported MembershipRoles: `"MEMBER", "OWNER", "MANAGER"`.
    * @param roles roles or {@code null} for none
    */
   public Membership setRoles(java.util.List<MembershipRole> roles) {

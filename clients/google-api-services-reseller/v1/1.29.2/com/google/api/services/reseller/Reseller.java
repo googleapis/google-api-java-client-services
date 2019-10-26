@@ -1518,7 +1518,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Cancel or transfer a subscription to direct.
+     * Cancel, suspend, or transfer a subscription to direct.
      *
      * Create a request for the method "subscriptions.delete".
      *
@@ -1546,7 +1546,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       private static final String REST_PATH = "customers/{customerId}/subscriptions/{subscriptionId}";
 
       /**
-       * Cancel or transfer a subscription to direct.
+       * Cancel, suspend, or transfer a subscription to direct.
        *
        * Create a request for the method "subscriptions.delete".
        *

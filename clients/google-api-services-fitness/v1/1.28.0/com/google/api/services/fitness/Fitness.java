@@ -1675,7 +1675,7 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Aggregates data of a certain type or stream into buckets divided by a given type of boundary.
-       * Multiple data sets of multiple types and from multiple sources can be aggreated into exactly one
+       * Multiple data sets of multiple types and from multiple sources can be aggregated into exactly one
        * bucket type per request.
        *
        * Create a request for the method "dataset.aggregate".
@@ -1700,7 +1700,7 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Aggregates data of a certain type or stream into buckets divided by a given type of boundary.
-         * Multiple data sets of multiple types and from multiple sources can be aggreated into exactly
+         * Multiple data sets of multiple types and from multiple sources can be aggregated into exactly
          * one bucket type per request.
          *
          * Create a request for the method "dataset.aggregate".

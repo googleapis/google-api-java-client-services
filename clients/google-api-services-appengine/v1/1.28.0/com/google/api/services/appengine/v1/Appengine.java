@@ -5882,8 +5882,8 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
            * environment (https://cloud.google.com/appengine/docs/standard/python/how-instances-are-managed) |
            * flexible environment (https://cloud.google.com/appengine/docs/flexible/python/how-instances-are-
            * managed)).To ensure that instances are not re-created and avoid getting billed, you can stop all
-           * instances within the target version by changing the serving status of the version to 'STOPPEDwith
-           * the [apps.services.versions.patch`](https://cloud.google.com/appengine/docs/admin-
+           * instances within the target version by changing the serving status of the version to STOPPED with
+           * the apps.services.versions.patch (https://cloud.google.com/appengine/docs/admin-
            * api/reference/rest/v1/apps.services.versions/patch) method.
            *
            * Create a request for the method "instances.delete".
@@ -5915,7 +5915,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
              * | flexible environment (https://cloud.google.com/appengine/docs/flexible/python/how-instances-
              * are-managed)).To ensure that instances are not re-created and avoid getting billed, you can
              * stop all instances within the target version by changing the serving status of the version to
-             * 'STOPPEDwith the [apps.services.versions.patch`](https://cloud.google.com/appengine/docs/admin-
+             * STOPPED with the apps.services.versions.patch (https://cloud.google.com/appengine/docs/admin-
              * api/reference/rest/v1/apps.services.versions/patch) method.
              *
              * Create a request for the method "instances.delete".

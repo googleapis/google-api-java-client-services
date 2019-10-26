@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-civicinfo</artifactId>
-      <version>v2-rev20181017-1.30.3</version>
+      <version>v2-rev20191010-1.30.3</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-civicinfo:v2-rev20181017-1.30.3'
+  compile 'com.google.apis:google-api-services-civicinfo:v2-rev20191010-1.30.3'
 }
 ```
 

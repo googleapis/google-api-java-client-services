@@ -273,22 +273,22 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * The resource name of the new Folder's parent. Must be of the form `folders/{folder_id}` or
-       * `organizations/{org_id}`.
+       * Required. The resource name of the new Folder's parent. Must be of the form
+       * `folders/{folder_id}` or `organizations/{org_id}`.
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** The resource name of the new Folder's parent. Must be of the form `folders/{folder_id}` or
-     `organizations/{org_id}`.
+      /** Required. The resource name of the new Folder's parent. Must be of the form `folders/{folder_id}`
+     or `organizations/{org_id}`.
        */
       public java.lang.String getParent() {
         return parent;
       }
 
       /**
-       * The resource name of the new Folder's parent. Must be of the form `folders/{folder_id}` or
-       * `organizations/{org_id}`.
+       * Required. The resource name of the new Folder's parent. Must be of the form
+       * `folders/{folder_id}` or `organizations/{org_id}`.
        */
       public Create setParent(java.lang.String parent) {
         this.parent = parent;
@@ -312,7 +312,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
      * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
-     * @param name the resource name of the Folder to be deleted.
+     * @param name Required. the resource name of the Folder to be deleted.
     Must be of the form `folders/{folder_id}`.
      * @return the request
      */
@@ -344,7 +344,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name the resource name of the Folder to be deleted.
+       * @param name Required. the resource name of the Folder to be deleted.
     Must be of the form `folders/{folder_id}`.
        * @since 1.13
        */
@@ -414,19 +414,21 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * the resource name of the Folder to be deleted. Must be of the form `folders/{folder_id}`.
+       * Required. the resource name of the Folder to be deleted. Must be of the form
+       * `folders/{folder_id}`.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** the resource name of the Folder to be deleted. Must be of the form `folders/{folder_id}`.
+      /** Required. the resource name of the Folder to be deleted. Must be of the form `folders/{folder_id}`.
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * the resource name of the Folder to be deleted. Must be of the form `folders/{folder_id}`.
+       * Required. the resource name of the Folder to be deleted. Must be of the form
+       * `folders/{folder_id}`.
        */
       public Delete setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -453,7 +455,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
      * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param name The resource name of the Folder to retrieve.
+     * @param name Required. The resource name of the Folder to retrieve.
     Must be of the form `folders/{folder_id}`.
      * @return the request
      */
@@ -483,7 +485,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name The resource name of the Folder to retrieve.
+       * @param name Required. The resource name of the Folder to retrieve.
     Must be of the form `folders/{folder_id}`.
        * @since 1.13
        */
@@ -563,19 +565,21 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * The resource name of the Folder to retrieve. Must be of the form `folders/{folder_id}`.
+       * Required. The resource name of the Folder to retrieve. Must be of the form
+       * `folders/{folder_id}`.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The resource name of the Folder to retrieve. Must be of the form `folders/{folder_id}`.
+      /** Required. The resource name of the Folder to retrieve. Must be of the form `folders/{folder_id}`.
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * The resource name of the Folder to retrieve. Must be of the form `folders/{folder_id}`.
+       * Required. The resource name of the Folder to retrieve. Must be of the form
+       * `folders/{folder_id}`.
        */
       public Get setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -849,43 +853,39 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * The maximum number of Folders to return in the response. This field is optional.
-       */
+      /** Optional. The maximum number of Folders to return in the response. */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** The maximum number of Folders to return in the response. This field is optional.
+      /** Optional. The maximum number of Folders to return in the response.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
-      /**
-       * The maximum number of Folders to return in the response. This field is optional.
-       */
+      /** Optional. The maximum number of Folders to return in the response. */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
         return this;
       }
 
       /**
-       * A pagination token returned from a previous call to `ListFolders` that indicates where this
-       * listing should continue from. This field is optional.
+       * Optional. A pagination token returned from a previous call to `ListFolders` that indicates
+       * where this listing should continue from.
        */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** A pagination token returned from a previous call to `ListFolders` that indicates where this listing
-     should continue from. This field is optional.
+      /** Optional. A pagination token returned from a previous call to `ListFolders` that indicates where
+     this listing should continue from.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
       /**
-       * A pagination token returned from a previous call to `ListFolders` that indicates where this
-       * listing should continue from. This field is optional.
+       * Optional. A pagination token returned from a previous call to `ListFolders` that indicates
+       * where this listing should continue from.
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
@@ -893,25 +893,27 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * The resource name of the Organization or Folder whose Folders are being listed. Must be of
-       * the form `folders/{folder_id}` or `organizations/{org_id}`. Access to this method is
-       * controlled by checking the `resourcemanager.folders.list` permission on the `parent`.
+       * Required. The resource name of the Organization or Folder whose Folders are being listed.
+       * Must be of the form `folders/{folder_id}` or `organizations/{org_id}`. Access to this
+       * method is controlled by checking the `resourcemanager.folders.list` permission on the
+       * `parent`.
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** The resource name of the Organization or Folder whose Folders are being listed. Must be of the form
-     `folders/{folder_id}` or `organizations/{org_id}`. Access to this method is controlled by checking
-     the `resourcemanager.folders.list` permission on the `parent`.
+      /** Required. The resource name of the Organization or Folder whose Folders are being listed. Must be
+     of the form `folders/{folder_id}` or `organizations/{org_id}`. Access to this method is controlled
+     by checking the `resourcemanager.folders.list` permission on the `parent`.
        */
       public java.lang.String getParent() {
         return parent;
       }
 
       /**
-       * The resource name of the Organization or Folder whose Folders are being listed. Must be of
-       * the form `folders/{folder_id}` or `organizations/{org_id}`. Access to this method is
-       * controlled by checking the `resourcemanager.folders.list` permission on the `parent`.
+       * Required. The resource name of the Organization or Folder whose Folders are being listed.
+       * Must be of the form `folders/{folder_id}` or `organizations/{org_id}`. Access to this
+       * method is controlled by checking the `resourcemanager.folders.list` permission on the
+       * `parent`.
        */
       public List setParent(java.lang.String parent) {
         this.parent = parent;
@@ -919,22 +921,22 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * Controls whether Folders in the DELETE_REQUESTED state should be returned. Defaults to
-       * false. This field is optional.
+       * Optional. Controls whether Folders in the DELETE_REQUESTED state should be returned.
+       * Defaults to false.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean showDeleted;
 
-      /** Controls whether Folders in the DELETE_REQUESTED state should be returned. Defaults to false. This
-     field is optional.
+      /** Optional. Controls whether Folders in the DELETE_REQUESTED state should be returned. Defaults to
+     false.
        */
       public java.lang.Boolean getShowDeleted() {
         return showDeleted;
       }
 
       /**
-       * Controls whether Folders in the DELETE_REQUESTED state should be returned. Defaults to
-       * false. This field is optional.
+       * Optional. Controls whether Folders in the DELETE_REQUESTED state should be returned.
+       * Defaults to false.
        */
       public List setShowDeleted(java.lang.Boolean showDeleted) {
         this.showDeleted = showDeleted;
@@ -963,7 +965,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
      * optional parameters, call the {@link Move#execute()} method to invoke the remote operation.
      *
-     * @param name The resource name of the Folder to move.
+     * @param name Required. The resource name of the Folder to move.
     Must be of the form folders/{folder_id}
      * @param content the {@link com.google.api.services.cloudresourcemanager.model.MoveFolderRequest}
      * @return the request
@@ -1001,7 +1003,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * Move#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name The resource name of the Folder to move.
+       * @param name Required. The resource name of the Folder to move.
     Must be of the form folders/{folder_id}
        * @param content the {@link com.google.api.services.cloudresourcemanager.model.MoveFolderRequest}
        * @since 1.13
@@ -1072,19 +1074,19 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * The resource name of the Folder to move. Must be of the form folders/{folder_id}
+       * Required. The resource name of the Folder to move. Must be of the form folders/{folder_id}
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The resource name of the Folder to move. Must be of the form folders/{folder_id}
+      /** Required. The resource name of the Folder to move. Must be of the form folders/{folder_id}
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * The resource name of the Folder to move. Must be of the form folders/{folder_id}
+       * Required. The resource name of the Folder to move. Must be of the form folders/{folder_id}
        */
       public Move setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -1259,19 +1261,19 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * Fields to be updated. Only the `display_name` can be updated.
+       * Required. Fields to be updated. Only the `display_name` can be updated.
        */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** Fields to be updated. Only the `display_name` can be updated.
+      /** Required. Fields to be updated. Only the `display_name` can be updated.
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
       /**
-       * Fields to be updated. Only the `display_name` can be updated.
+       * Required. Fields to be updated. Only the `display_name` can be updated.
        */
       public Patch setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
@@ -1698,7 +1700,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
      * optional parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
      *
-     * @param name The resource name of the Folder to undelete.
+     * @param name Required. The resource name of the Folder to undelete.
     Must be of the form `folders/{folder_id}`.
      * @param content the {@link com.google.api.services.cloudresourcemanager.model.UndeleteFolderRequest}
      * @return the request
@@ -1731,7 +1733,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * Undelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name The resource name of the Folder to undelete.
+       * @param name Required. The resource name of the Folder to undelete.
     Must be of the form `folders/{folder_id}`.
        * @param content the {@link com.google.api.services.cloudresourcemanager.model.UndeleteFolderRequest}
        * @since 1.13
@@ -1802,19 +1804,21 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * The resource name of the Folder to undelete. Must be of the form `folders/{folder_id}`.
+       * Required. The resource name of the Folder to undelete. Must be of the form
+       * `folders/{folder_id}`.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The resource name of the Folder to undelete. Must be of the form `folders/{folder_id}`.
+      /** Required. The resource name of the Folder to undelete. Must be of the form `folders/{folder_id}`.
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * The resource name of the Folder to undelete. Must be of the form `folders/{folder_id}`.
+       * Required. The resource name of the Folder to undelete. Must be of the form
+       * `folders/{folder_id}`.
        */
       public Undelete setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {

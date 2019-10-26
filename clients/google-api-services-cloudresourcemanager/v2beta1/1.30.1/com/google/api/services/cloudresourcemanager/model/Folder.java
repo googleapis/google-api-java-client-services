@@ -65,8 +65,8 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The Folder’s parent's resource name. Updates to the folder's parent must be performed via
-   * MoveFolder.
+   * Required. The Folder’s parent's resource name. Updates to the folder's parent must be performed
+   * via MoveFolder.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -153,8 +153,8 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Folder’s parent's resource name. Updates to the folder's parent must be performed via
-   * MoveFolder.
+   * Required. The Folder’s parent's resource name. Updates to the folder's parent must be performed
+   * via MoveFolder.
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -162,8 +162,8 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Folder’s parent's resource name. Updates to the folder's parent must be performed via
-   * MoveFolder.
+   * Required. The Folder’s parent's resource name. Updates to the folder's parent must be performed
+   * via MoveFolder.
    * @param parent parent or {@code null} for none
    */
   public Folder setParent(java.lang.String parent) {

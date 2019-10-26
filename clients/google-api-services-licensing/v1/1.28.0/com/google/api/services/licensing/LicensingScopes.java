@@ -17,7 +17,7 @@
 package com.google.api.services.licensing;
 
 /**
- * Available OAuth 2.0 scopes for use with the Enterprise License Manager API.
+ * Available OAuth 2.0 scopes for use with the Licensing API.
  *
  * @since 1.4
  */

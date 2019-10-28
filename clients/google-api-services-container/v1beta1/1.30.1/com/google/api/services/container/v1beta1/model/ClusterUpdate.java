@@ -89,8 +89,8 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    * The logging service the cluster should use to write metrics. Currently available options:
    *
    * * "logging.googleapis.com/kubernetes" - the Google Cloud Logging service with Kubernetes-native
-   * resource model in Stackdriver * "logging.googleapis.com" - the Google Cloud Logging service *
-   * "none" - no logs will be exported from the cluster
+   * resource model * "logging.googleapis.com" - the Google Cloud Logging service * "none" - no logs
+   * will be exported from the cluster
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,8 +123,8 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    * The monitoring service the cluster should use to write metrics. Currently available options:
    *
    * * "monitoring.googleapis.com/kubernetes" - the Google Cloud Monitoring service with Kubernetes-
-   * native resource model in Stackdriver * "monitoring.googleapis.com" - the Google Cloud
-   * Monitoring service * "none" - no metrics will be exported from the cluster
+   * native resource model * "monitoring.googleapis.com" - the Google Cloud Monitoring service *
+   * "none" - no metrics will be exported from the cluster
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -338,8 +338,8 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    * The logging service the cluster should use to write metrics. Currently available options:
    *
    * * "logging.googleapis.com/kubernetes" - the Google Cloud Logging service with Kubernetes-native
-   * resource model in Stackdriver * "logging.googleapis.com" - the Google Cloud Logging service *
-   * "none" - no logs will be exported from the cluster
+   * resource model * "logging.googleapis.com" - the Google Cloud Logging service * "none" - no logs
+   * will be exported from the cluster
    * @return value or {@code null} for none
    */
   public java.lang.String getDesiredLoggingService() {
@@ -350,8 +350,8 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    * The logging service the cluster should use to write metrics. Currently available options:
    *
    * * "logging.googleapis.com/kubernetes" - the Google Cloud Logging service with Kubernetes-native
-   * resource model in Stackdriver * "logging.googleapis.com" - the Google Cloud Logging service *
-   * "none" - no logs will be exported from the cluster
+   * resource model * "logging.googleapis.com" - the Google Cloud Logging service * "none" - no logs
+   * will be exported from the cluster
    * @param desiredLoggingService desiredLoggingService or {@code null} for none
    */
   public ClusterUpdate setDesiredLoggingService(java.lang.String desiredLoggingService) {
@@ -415,8 +415,8 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    * The monitoring service the cluster should use to write metrics. Currently available options:
    *
    * * "monitoring.googleapis.com/kubernetes" - the Google Cloud Monitoring service with Kubernetes-
-   * native resource model in Stackdriver * "monitoring.googleapis.com" - the Google Cloud
-   * Monitoring service * "none" - no metrics will be exported from the cluster
+   * native resource model * "monitoring.googleapis.com" - the Google Cloud Monitoring service *
+   * "none" - no metrics will be exported from the cluster
    * @return value or {@code null} for none
    */
   public java.lang.String getDesiredMonitoringService() {
@@ -427,8 +427,8 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    * The monitoring service the cluster should use to write metrics. Currently available options:
    *
    * * "monitoring.googleapis.com/kubernetes" - the Google Cloud Monitoring service with Kubernetes-
-   * native resource model in Stackdriver * "monitoring.googleapis.com" - the Google Cloud
-   * Monitoring service * "none" - no metrics will be exported from the cluster
+   * native resource model * "monitoring.googleapis.com" - the Google Cloud Monitoring service *
+   * "none" - no metrics will be exported from the cluster
    * @param desiredMonitoringService desiredMonitoringService or {@code null} for none
    */
   public ClusterUpdate setDesiredMonitoringService(java.lang.String desiredMonitoringService) {

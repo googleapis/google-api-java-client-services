@@ -96,6 +96,13 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   private java.lang.String projectId;
 
   /**
+   * Upgrade settings control disruption and speed of the upgrade.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UpgradeSettings upgradeSettings;
+
+  /**
    * The desired image type for the node pool.
    * The value may be {@code null}.
    */
@@ -258,6 +265,23 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
    */
   public UpdateNodePoolRequest setProjectId(java.lang.String projectId) {
     this.projectId = projectId;
+    return this;
+  }
+
+  /**
+   * Upgrade settings control disruption and speed of the upgrade.
+   * @return value or {@code null} for none
+   */
+  public UpgradeSettings getUpgradeSettings() {
+    return upgradeSettings;
+  }
+
+  /**
+   * Upgrade settings control disruption and speed of the upgrade.
+   * @param upgradeSettings upgradeSettings or {@code null} for none
+   */
+  public UpdateNodePoolRequest setUpgradeSettings(UpgradeSettings upgradeSettings) {
+    this.upgradeSettings = upgradeSettings;
     return this;
   }
 

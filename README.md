@@ -102,7 +102,6 @@ packages on [Maven Central][maven-search].
 | Drive API | [v2](clients/google-api-services-drive/v2), [v3](clients/google-api-services-drive/v3) |
 | Drive Activity API | [v1](clients/google-api-services-appsactivity/v1), [v2](clients/google-api-services-driveactivity/v2) |
 | Enterprise Apps Reseller API | [v1](clients/google-api-services-reseller/v1) |
-| Enterprise License Manager API | [v1](clients/google-api-services-licensing/v1) |
 | Fact Check Tools API | [v1alpha1](clients/google-api-services-factchecktools/v1alpha1) |
 | Firebase Cloud Messaging API | [v1](clients/google-api-services-fcm/v1) |
 | Firebase Dynamic Links API | [v1](clients/google-api-services-firebasedynamiclinks/v1) |
@@ -151,6 +150,7 @@ packages on [Maven Central][maven-search].
 | Knowledge Graph Search API | [v1](clients/google-api-services-kgsearch/v1) |
 | Kubernetes Engine API | [v1](clients/google-api-services-container/v1), [v1beta1](clients/google-api-services-container/v1beta1) |
 | Library Agent API | [v1](clients/google-api-services-libraryagent/v1) |
+| Licensing API | [v1](clients/google-api-services-licensing/v1) |
 | Manufacturer Center API | [v1](clients/google-api-services-manufacturers/v1) |
 | PageSpeed Insights API | [v1](clients/google-api-services-pagespeedonline/v1), [v2](clients/google-api-services-pagespeedonline/v2), [v4](clients/google-api-services-pagespeedonline/v4), [v5](clients/google-api-services-pagespeedonline/v5) |
 | People API | [v1](clients/google-api-services-people/v1) |

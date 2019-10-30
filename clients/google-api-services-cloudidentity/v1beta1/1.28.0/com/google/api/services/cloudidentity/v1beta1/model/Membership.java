@@ -40,7 +40,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
    * Required. Immutable. EntityKey of the entity to be added as the member. Must be set while
    * creating a Membership, read-only afterwards.
    *
-   * Currently allowed entity types: `Users`, `Groups`.
+   * Currently allowed entity types: `Users`, `Groups`. This field will be deprecated soon.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,7 +95,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
    * Required. Immutable. EntityKey of the entity to be added as the member. Must be set while
    * creating a Membership, read-only afterwards.
    *
-   * Currently allowed entity types: `Users`, `Groups`.
+   * Currently allowed entity types: `Users`, `Groups`. This field will be deprecated soon.
    * @return value or {@code null} for none
    */
   public EntityKey getMemberKey() {
@@ -106,7 +106,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
    * Required. Immutable. EntityKey of the entity to be added as the member. Must be set while
    * creating a Membership, read-only afterwards.
    *
-   * Currently allowed entity types: `Users`, `Groups`.
+   * Currently allowed entity types: `Users`, `Groups`. This field will be deprecated soon.
    * @param memberKey memberKey or {@code null} for none
    */
   public Membership setMemberKey(EntityKey memberKey) {

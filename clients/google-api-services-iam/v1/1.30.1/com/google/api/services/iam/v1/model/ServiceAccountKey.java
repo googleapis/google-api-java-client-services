@@ -58,6 +58,13 @@ public final class ServiceAccountKey extends com.google.api.client.json.GenericJ
   private java.lang.String keyOrigin;
 
   /**
+   * The key type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String keyType;
+
+  /**
    * The resource name of the service account key in the following format
    * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`.
    * The value may be {@code null}.
@@ -139,6 +146,23 @@ public final class ServiceAccountKey extends com.google.api.client.json.GenericJ
    */
   public ServiceAccountKey setKeyOrigin(java.lang.String keyOrigin) {
     this.keyOrigin = keyOrigin;
+    return this;
+  }
+
+  /**
+   * The key type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKeyType() {
+    return keyType;
+  }
+
+  /**
+   * The key type.
+   * @param keyType keyType or {@code null} for none
+   */
+  public ServiceAccountKey setKeyType(java.lang.String keyType) {
+    this.keyType = keyType;
     return this;
   }
 

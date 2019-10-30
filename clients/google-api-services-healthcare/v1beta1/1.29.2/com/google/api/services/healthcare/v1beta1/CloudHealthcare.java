@@ -3408,13 +3408,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link SearchForInstances#execute()} method to invoke the remote operation.
            *
-           * @param parent The name of the DICOM store that is being accessed (for example,
+           * @param parent The name of the DICOM store that is being accessed. For example,
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
-           *        ore_id}`).
-           * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request (for example,
-          `instances` or
-           *        `series/{series_uid}/instances` or
-          `studies/{study_uid}/instances`).
+           *        ore_id}`.
+           * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request. For example,
+          `instances`,
+           *        `series/{series_uid}/instances`, or
+          `studies/{study_uid}/instances`.
            * @return the request
            */
           public SearchForInstances searchForInstances(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -3445,13 +3445,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
              * invoking the constructor. </p>
              *
-             * @param parent The name of the DICOM store that is being accessed (for example,
+             * @param parent The name of the DICOM store that is being accessed. For example,
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
-           *        ore_id}`).
-             * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request (for example,
-          `instances` or
-           *        `series/{series_uid}/instances` or
-          `studies/{study_uid}/instances`).
+           *        ore_id}`.
+             * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request. For example,
+          `instances`,
+           *        `series/{series_uid}/instances`, or
+          `studies/{study_uid}/instances`.
              * @since 1.13
              */
             protected SearchForInstances(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -3536,22 +3536,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The name of the DICOM store that is being accessed (for example, `projects/{project_i
-             * d}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`).
+             * The name of the DICOM store that is being accessed. For example, `projects/{project_i
+             * d}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** The name of the DICOM store that is being accessed (for example, `projects/{project_id}/locations/{
-           location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`).
+            /** The name of the DICOM store that is being accessed. For example,
+           `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * The name of the DICOM store that is being accessed (for example, `projects/{project_i
-             * d}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`).
+             * The name of the DICOM store that is being accessed. For example, `projects/{project_i
+             * d}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
              */
             public SearchForInstances setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -3564,22 +3564,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The path of the SearchForInstancesRequest DICOMweb request (for example, `instances`
-             * or `series/{series_uid}/instances` or `studies/{study_uid}/instances`).
+             * The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
+             * `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
              */
             @com.google.api.client.util.Key
             private java.lang.String dicomWebPath;
 
-            /** The path of the SearchForInstancesRequest DICOMweb request (for example, `instances` or
-           `series/{series_uid}/instances` or `studies/{study_uid}/instances`).
+            /** The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
+           `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
              */
             public java.lang.String getDicomWebPath() {
               return dicomWebPath;
             }
 
             /**
-             * The path of the SearchForInstancesRequest DICOMweb request (for example, `instances`
-             * or `series/{series_uid}/instances` or `studies/{study_uid}/instances`).
+             * The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
+             * `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
              */
             public SearchForInstances setDicomWebPath(java.lang.String dicomWebPath) {
               if (!getSuppressPatternChecks()) {
@@ -3605,11 +3605,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link SearchForSeries#execute()} method to invoke the remote operation.
            *
-           * @param parent The name of the DICOM store that is being accessed (for example,
+           * @param parent The name of the DICOM store that is being accessed. For example,
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
-           *        ore_id}`).
-           * @param dicomWebPath The path of the SearchForSeries DICOMweb request(for example, `series` or
-           *        `studies/{study_uid}/series`).
+           *        ore_id}`.
+           * @param dicomWebPath The path of the SearchForSeries DICOMweb request. For example, `series` or
+           *        `studies/{study_uid}/series`.
            * @return the request
            */
           public SearchForSeries searchForSeries(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -3640,11 +3640,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
              * the constructor. </p>
              *
-             * @param parent The name of the DICOM store that is being accessed (for example,
+             * @param parent The name of the DICOM store that is being accessed. For example,
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
-           *        ore_id}`).
-             * @param dicomWebPath The path of the SearchForSeries DICOMweb request(for example, `series` or
-           *        `studies/{study_uid}/series`).
+           *        ore_id}`.
+             * @param dicomWebPath The path of the SearchForSeries DICOMweb request. For example, `series` or
+           *        `studies/{study_uid}/series`.
              * @since 1.13
              */
             protected SearchForSeries(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -3729,22 +3729,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The name of the DICOM store that is being accessed (for example, `projects/{project_i
-             * d}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`).
+             * The name of the DICOM store that is being accessed. For example, `projects/{project_i
+             * d}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** The name of the DICOM store that is being accessed (for example, `projects/{project_id}/locations/{
-           location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`).
+            /** The name of the DICOM store that is being accessed. For example,
+           `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * The name of the DICOM store that is being accessed (for example, `projects/{project_i
-             * d}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`).
+             * The name of the DICOM store that is being accessed. For example, `projects/{project_i
+             * d}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
              */
             public SearchForSeries setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -3757,22 +3757,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The path of the SearchForSeries DICOMweb request(for example, `series` or
-             * `studies/{study_uid}/series`).
+             * The path of the SearchForSeries DICOMweb request. For example, `series` or
+             * `studies/{study_uid}/series`.
              */
             @com.google.api.client.util.Key
             private java.lang.String dicomWebPath;
 
-            /** The path of the SearchForSeries DICOMweb request(for example, `series` or
-           `studies/{study_uid}/series`).
+            /** The path of the SearchForSeries DICOMweb request. For example, `series` or
+           `studies/{study_uid}/series`.
              */
             public java.lang.String getDicomWebPath() {
               return dicomWebPath;
             }
 
             /**
-             * The path of the SearchForSeries DICOMweb request(for example, `series` or
-             * `studies/{study_uid}/series`).
+             * The path of the SearchForSeries DICOMweb request. For example, `series` or
+             * `studies/{study_uid}/series`.
              */
             public SearchForSeries setDicomWebPath(java.lang.String dicomWebPath) {
               if (!getSuppressPatternChecks()) {
@@ -3798,10 +3798,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link SearchForStudies#execute()} method to invoke the remote operation.
            *
-           * @param parent The name of the DICOM store that is being accessed (for example,
+           * @param parent The name of the DICOM store that is being accessed. For example,
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
-           *        ore_id}`).
-           * @param dicomWebPath The path of the SearchForStudies DICOMweb request (for example, `studies`).
+           *        ore_id}`.
+           * @param dicomWebPath The path of the SearchForStudies DICOMweb request. For example, `studies`.
            * @return the request
            */
           public SearchForStudies searchForStudies(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -3832,10 +3832,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * tractGoogleClientRequest)} must be called to initialize this instance immediately after
              * invoking the constructor. </p>
              *
-             * @param parent The name of the DICOM store that is being accessed (for example,
+             * @param parent The name of the DICOM store that is being accessed. For example,
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
-           *        ore_id}`).
-             * @param dicomWebPath The path of the SearchForStudies DICOMweb request (for example, `studies`).
+           *        ore_id}`.
+             * @param dicomWebPath The path of the SearchForStudies DICOMweb request. For example, `studies`.
              * @since 1.13
              */
             protected SearchForStudies(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -3920,22 +3920,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The name of the DICOM store that is being accessed (for example, `projects/{project_i
-             * d}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`).
+             * The name of the DICOM store that is being accessed. For example, `projects/{project_i
+             * d}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** The name of the DICOM store that is being accessed (for example, `projects/{project_id}/locations/{
-           location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`).
+            /** The name of the DICOM store that is being accessed. For example,
+           `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * The name of the DICOM store that is being accessed (for example, `projects/{project_i
-             * d}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`).
+             * The name of the DICOM store that is being accessed. For example, `projects/{project_i
+             * d}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
              */
             public SearchForStudies setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -3947,17 +3947,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               return this;
             }
 
-            /** The path of the SearchForStudies DICOMweb request (for example, `studies`). */
+            /** The path of the SearchForStudies DICOMweb request. For example, `studies`. */
             @com.google.api.client.util.Key
             private java.lang.String dicomWebPath;
 
-            /** The path of the SearchForStudies DICOMweb request (for example, `studies`).
+            /** The path of the SearchForStudies DICOMweb request. For example, `studies`.
              */
             public java.lang.String getDicomWebPath() {
               return dicomWebPath;
             }
 
-            /** The path of the SearchForStudies DICOMweb request (for example, `studies`). */
+            /** The path of the SearchForStudies DICOMweb request. For example, `studies`. */
             public SearchForStudies setDicomWebPath(java.lang.String dicomWebPath) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(DICOM_WEB_PATH_PATTERN.matcher(dicomWebPath).matches(),
@@ -4128,12 +4128,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link StoreInstances#execute()} method to invoke the remote operation.
            *
-           * @param parent The name of the DICOM store that is being accessed (for example,
+           * @param parent The name of the DICOM store that is being accessed. For example,
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
-           *        ore_id}`).
-           * @param dicomWebPath The path of the StoreInstances DICOMweb request (for example,
-          `studies/[{study_uid}]`). Note that
-           *        the `study_uid` is optional.
+           *        ore_id}`.
+           * @param dicomWebPath The path of the StoreInstances DICOMweb request. For example,
+          `studies/[{study_uid}]`. Note that the
+           *        `study_uid` is optional.
            * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
            * @return the request
            */
@@ -4165,12 +4165,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
              * the constructor. </p>
              *
-             * @param parent The name of the DICOM store that is being accessed (for example,
+             * @param parent The name of the DICOM store that is being accessed. For example,
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
-           *        ore_id}`).
-             * @param dicomWebPath The path of the StoreInstances DICOMweb request (for example,
-          `studies/[{study_uid}]`). Note that
-           *        the `study_uid` is optional.
+           *        ore_id}`.
+             * @param dicomWebPath The path of the StoreInstances DICOMweb request. For example,
+          `studies/[{study_uid}]`. Note that the
+           *        `study_uid` is optional.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
              * @since 1.13
              */
@@ -4246,22 +4246,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The name of the DICOM store that is being accessed (for example, `projects/{project_i
-             * d}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`).
+             * The name of the DICOM store that is being accessed. For example, `projects/{project_i
+             * d}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** The name of the DICOM store that is being accessed (for example, `projects/{project_id}/locations/{
-           location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`).
+            /** The name of the DICOM store that is being accessed. For example,
+           `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * The name of the DICOM store that is being accessed (for example, `projects/{project_i
-             * d}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`).
+             * The name of the DICOM store that is being accessed. For example, `projects/{project_i
+             * d}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
              */
             public StoreInstances setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -4274,13 +4274,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The path of the StoreInstances DICOMweb request (for example,
-             * `studies/[{study_uid}]`). Note that the `study_uid` is optional.
+             * The path of the StoreInstances DICOMweb request. For example,
+             * `studies/[{study_uid}]`. Note that the `study_uid` is optional.
              */
             @com.google.api.client.util.Key
             private java.lang.String dicomWebPath;
 
-            /** The path of the StoreInstances DICOMweb request (for example, `studies/[{study_uid}]`). Note that
+            /** The path of the StoreInstances DICOMweb request. For example, `studies/[{study_uid}]`. Note that
            the `study_uid` is optional.
              */
             public java.lang.String getDicomWebPath() {
@@ -4288,8 +4288,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The path of the StoreInstances DICOMweb request (for example,
-             * `studies/[{study_uid}]`). Note that the `study_uid` is optional.
+             * The path of the StoreInstances DICOMweb request. For example,
+             * `studies/[{study_uid}]`. Note that the `study_uid` is optional.
              */
             public StoreInstances setDicomWebPath(java.lang.String dicomWebPath) {
               if (!getSuppressPatternChecks()) {
@@ -4486,10 +4486,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
              *
-             * @param parent The name of the DICOM store that is being accessed (for example,
-             *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
-             *        ore_id}`).
-             * @param dicomWebPath The path of the DeleteStudy request (for example, `studies/{study_uid}`).
+             * @param parent
+             * @param dicomWebPath The path of the DeleteStudy request. For example, `studies/{study_uid}`.
              * @return the request
              */
             public Delete delete(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -4520,10 +4518,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent The name of the DICOM store that is being accessed (for example,
-             *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
-             *        ore_id}`).
-               * @param dicomWebPath The path of the DeleteStudy request (for example, `studies/{study_uid}`).
+               * @param parent
+               * @param dicomWebPath The path of the DeleteStudy request. For example, `studies/{study_uid}`.
                * @since 1.13
                */
               protected Delete(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -4597,24 +4593,16 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return (Delete) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * The name of the DICOM store that is being accessed (for example, `projects/{project
-               * _id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`).
-               */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** The name of the DICOM store that is being accessed (for example, `projects/{project_id}/locations/{
-             location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`).
+              /**
+
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
-              /**
-               * The name of the DICOM store that is being accessed (for example, `projects/{project
-               * _id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`).
-               */
               public Delete setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -4625,17 +4613,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return this;
               }
 
-              /** The path of the DeleteStudy request (for example, `studies/{study_uid}`). */
+              /** The path of the DeleteStudy request. For example, `studies/{study_uid}`. */
               @com.google.api.client.util.Key
               private java.lang.String dicomWebPath;
 
-              /** The path of the DeleteStudy request (for example, `studies/{study_uid}`).
+              /** The path of the DeleteStudy request. For example, `studies/{study_uid}`.
                */
               public java.lang.String getDicomWebPath() {
                 return dicomWebPath;
               }
 
-              /** The path of the DeleteStudy request (for example, `studies/{study_uid}`). */
+              /** The path of the DeleteStudy request. For example, `studies/{study_uid}`. */
               public Delete setDicomWebPath(java.lang.String dicomWebPath) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(DICOM_WEB_PATH_PATTERN.matcher(dicomWebPath).matches(),
@@ -4661,11 +4649,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link RetrieveMetadata#execute()} method to invoke the remote operation.
              *
-             * @param parent The name of the DICOM store that is being accessed (for example,
+             * @param parent The name of the DICOM store that is being accessed. For example,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
-             *        ore_id}`).
-             * @param dicomWebPath The path of the RetrieveStudyMetadata DICOMweb request (for example,
-             *        `studies/{study_uid}/metadata`).
+             *        ore_id}`.
+             * @param dicomWebPath The path of the RetrieveStudyMetadata DICOMweb request. For example,
+            `studies/{study_uid}/metadata`.
              * @return the request
              */
             public RetrieveMetadata retrieveMetadata(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -4697,11 +4685,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * tractGoogleClientRequest)} must be called to initialize this instance immediately after
                * invoking the constructor. </p>
                *
-               * @param parent The name of the DICOM store that is being accessed (for example,
+               * @param parent The name of the DICOM store that is being accessed. For example,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
-             *        ore_id}`).
-               * @param dicomWebPath The path of the RetrieveStudyMetadata DICOMweb request (for example,
-             *        `studies/{study_uid}/metadata`).
+             *        ore_id}`.
+               * @param dicomWebPath The path of the RetrieveStudyMetadata DICOMweb request. For example,
+            `studies/{study_uid}/metadata`.
                * @since 1.13
                */
               protected RetrieveMetadata(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -4786,22 +4774,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The name of the DICOM store that is being accessed (for example, `projects/{project
-               * _id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`).
+               * The name of the DICOM store that is being accessed. For example, `projects/{project
+               * _id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** The name of the DICOM store that is being accessed (for example, `projects/{project_id}/locations/{
-             location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`).
+              /** The name of the DICOM store that is being accessed. For example,
+             `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * The name of the DICOM store that is being accessed (for example, `projects/{project
-               * _id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`).
+               * The name of the DICOM store that is being accessed. For example, `projects/{project
+               * _id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
                */
               public RetrieveMetadata setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -4814,22 +4802,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The path of the RetrieveStudyMetadata DICOMweb request (for example,
-               * `studies/{study_uid}/metadata`).
+               * The path of the RetrieveStudyMetadata DICOMweb request. For example,
+               * `studies/{study_uid}/metadata`.
                */
               @com.google.api.client.util.Key
               private java.lang.String dicomWebPath;
 
-              /** The path of the RetrieveStudyMetadata DICOMweb request (for example,
-             `studies/{study_uid}/metadata`).
+              /** The path of the RetrieveStudyMetadata DICOMweb request. For example,
+             `studies/{study_uid}/metadata`.
                */
               public java.lang.String getDicomWebPath() {
                 return dicomWebPath;
               }
 
               /**
-               * The path of the RetrieveStudyMetadata DICOMweb request (for example,
-               * `studies/{study_uid}/metadata`).
+               * The path of the RetrieveStudyMetadata DICOMweb request. For example,
+               * `studies/{study_uid}/metadata`.
                */
               public RetrieveMetadata setDicomWebPath(java.lang.String dicomWebPath) {
                 if (!getSuppressPatternChecks()) {
@@ -4855,11 +4843,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link RetrieveStudy#execute()} method to invoke the remote operation.
              *
-             * @param parent The name of the DICOM store that is being accessed (for example,
+             * @param parent The name of the DICOM store that is being accessed. For example,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
-             *        ore_id}`).
-             * @param dicomWebPath The path of the RetrieveStudy DICOMweb request (for example,
-            `studies/{study_uid}`).
+             *        ore_id}`.
+             * @param dicomWebPath The path of the RetrieveStudy DICOMweb request. For example,
+            `studies/{study_uid}`.
              * @return the request
              */
             public RetrieveStudy retrieveStudy(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -4890,11 +4878,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
                * the constructor. </p>
                *
-               * @param parent The name of the DICOM store that is being accessed (for example,
+               * @param parent The name of the DICOM store that is being accessed. For example,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
-             *        ore_id}`).
-               * @param dicomWebPath The path of the RetrieveStudy DICOMweb request (for example,
-            `studies/{study_uid}`).
+             *        ore_id}`.
+               * @param dicomWebPath The path of the RetrieveStudy DICOMweb request. For example,
+            `studies/{study_uid}`.
                * @since 1.13
                */
               protected RetrieveStudy(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -4979,22 +4967,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The name of the DICOM store that is being accessed (for example, `projects/{project
-               * _id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`).
+               * The name of the DICOM store that is being accessed. For example, `projects/{project
+               * _id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** The name of the DICOM store that is being accessed (for example, `projects/{project_id}/locations/{
-             location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`).
+              /** The name of the DICOM store that is being accessed. For example,
+             `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * The name of the DICOM store that is being accessed (for example, `projects/{project
-               * _id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`).
+               * The name of the DICOM store that is being accessed. For example, `projects/{project
+               * _id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
                */
               public RetrieveStudy setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -5007,21 +4995,19 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The path of the RetrieveStudy DICOMweb request (for example,
-               * `studies/{study_uid}`).
+               * The path of the RetrieveStudy DICOMweb request. For example, `studies/{study_uid}`.
                */
               @com.google.api.client.util.Key
               private java.lang.String dicomWebPath;
 
-              /** The path of the RetrieveStudy DICOMweb request (for example, `studies/{study_uid}`).
+              /** The path of the RetrieveStudy DICOMweb request. For example, `studies/{study_uid}`.
                */
               public java.lang.String getDicomWebPath() {
                 return dicomWebPath;
               }
 
               /**
-               * The path of the RetrieveStudy DICOMweb request (for example,
-               * `studies/{study_uid}`).
+               * The path of the RetrieveStudy DICOMweb request. For example, `studies/{study_uid}`.
                */
               public RetrieveStudy setDicomWebPath(java.lang.String dicomWebPath) {
                 if (!getSuppressPatternChecks()) {
@@ -5047,13 +5033,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link SearchForInstances#execute()} method to invoke the remote operation.
              *
-             * @param parent The name of the DICOM store that is being accessed (for example,
+             * @param parent The name of the DICOM store that is being accessed. For example,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
-             *        ore_id}`).
-             * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request (for example,
-            `instances` or
-             *        `series/{series_uid}/instances` or
-            `studies/{study_uid}/instances`).
+             *        ore_id}`.
+             * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request. For example,
+            `instances`,
+             *        `series/{series_uid}/instances`, or
+            `studies/{study_uid}/instances`.
              * @return the request
              */
             public SearchForInstances searchForInstances(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -5084,13 +5070,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
                * invoking the constructor. </p>
                *
-               * @param parent The name of the DICOM store that is being accessed (for example,
+               * @param parent The name of the DICOM store that is being accessed. For example,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
-             *        ore_id}`).
-               * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request (for example,
-            `instances` or
-             *        `series/{series_uid}/instances` or
-            `studies/{study_uid}/instances`).
+             *        ore_id}`.
+               * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request. For example,
+            `instances`,
+             *        `series/{series_uid}/instances`, or
+            `studies/{study_uid}/instances`.
                * @since 1.13
                */
               protected SearchForInstances(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -5175,22 +5161,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The name of the DICOM store that is being accessed (for example, `projects/{project
-               * _id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`).
+               * The name of the DICOM store that is being accessed. For example, `projects/{project
+               * _id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** The name of the DICOM store that is being accessed (for example, `projects/{project_id}/locations/{
-             location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`).
+              /** The name of the DICOM store that is being accessed. For example,
+             `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * The name of the DICOM store that is being accessed (for example, `projects/{project
-               * _id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`).
+               * The name of the DICOM store that is being accessed. For example, `projects/{project
+               * _id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
                */
               public SearchForInstances setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -5203,22 +5189,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The path of the SearchForInstancesRequest DICOMweb request (for example,
-               * `instances` or `series/{series_uid}/instances` or `studies/{study_uid}/instances`).
+               * The path of the SearchForInstancesRequest DICOMweb request. For example,
+               * `instances`, `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
                */
               @com.google.api.client.util.Key
               private java.lang.String dicomWebPath;
 
-              /** The path of the SearchForInstancesRequest DICOMweb request (for example, `instances` or
-             `series/{series_uid}/instances` or `studies/{study_uid}/instances`).
+              /** The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
+             `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
                */
               public java.lang.String getDicomWebPath() {
                 return dicomWebPath;
               }
 
               /**
-               * The path of the SearchForInstancesRequest DICOMweb request (for example,
-               * `instances` or `series/{series_uid}/instances` or `studies/{study_uid}/instances`).
+               * The path of the SearchForInstancesRequest DICOMweb request. For example,
+               * `instances`, `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
                */
               public SearchForInstances setDicomWebPath(java.lang.String dicomWebPath) {
                 if (!getSuppressPatternChecks()) {
@@ -5244,11 +5230,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link SearchForSeries#execute()} method to invoke the remote operation.
              *
-             * @param parent The name of the DICOM store that is being accessed (for example,
+             * @param parent The name of the DICOM store that is being accessed. For example,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
-             *        ore_id}`).
-             * @param dicomWebPath The path of the SearchForSeries DICOMweb request(for example, `series` or
-             *        `studies/{study_uid}/series`).
+             *        ore_id}`.
+             * @param dicomWebPath The path of the SearchForSeries DICOMweb request. For example, `series` or
+             *        `studies/{study_uid}/series`.
              * @return the request
              */
             public SearchForSeries searchForSeries(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -5279,11 +5265,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
                * the constructor. </p>
                *
-               * @param parent The name of the DICOM store that is being accessed (for example,
+               * @param parent The name of the DICOM store that is being accessed. For example,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
-             *        ore_id}`).
-               * @param dicomWebPath The path of the SearchForSeries DICOMweb request(for example, `series` or
-             *        `studies/{study_uid}/series`).
+             *        ore_id}`.
+               * @param dicomWebPath The path of the SearchForSeries DICOMweb request. For example, `series` or
+             *        `studies/{study_uid}/series`.
                * @since 1.13
                */
               protected SearchForSeries(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -5368,22 +5354,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The name of the DICOM store that is being accessed (for example, `projects/{project
-               * _id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`).
+               * The name of the DICOM store that is being accessed. For example, `projects/{project
+               * _id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** The name of the DICOM store that is being accessed (for example, `projects/{project_id}/locations/{
-             location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`).
+              /** The name of the DICOM store that is being accessed. For example,
+             `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * The name of the DICOM store that is being accessed (for example, `projects/{project
-               * _id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`).
+               * The name of the DICOM store that is being accessed. For example, `projects/{project
+               * _id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
                */
               public SearchForSeries setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -5396,22 +5382,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The path of the SearchForSeries DICOMweb request(for example, `series` or
-               * `studies/{study_uid}/series`).
+               * The path of the SearchForSeries DICOMweb request. For example, `series` or
+               * `studies/{study_uid}/series`.
                */
               @com.google.api.client.util.Key
               private java.lang.String dicomWebPath;
 
-              /** The path of the SearchForSeries DICOMweb request(for example, `series` or
-             `studies/{study_uid}/series`).
+              /** The path of the SearchForSeries DICOMweb request. For example, `series` or
+             `studies/{study_uid}/series`.
                */
               public java.lang.String getDicomWebPath() {
                 return dicomWebPath;
               }
 
               /**
-               * The path of the SearchForSeries DICOMweb request(for example, `series` or
-               * `studies/{study_uid}/series`).
+               * The path of the SearchForSeries DICOMweb request. For example, `series` or
+               * `studies/{study_uid}/series`.
                */
               public SearchForSeries setDicomWebPath(java.lang.String dicomWebPath) {
                 if (!getSuppressPatternChecks()) {
@@ -5437,12 +5423,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link StoreInstances#execute()} method to invoke the remote operation.
              *
-             * @param parent The name of the DICOM store that is being accessed (for example,
+             * @param parent The name of the DICOM store that is being accessed. For example,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
-             *        ore_id}`).
-             * @param dicomWebPath The path of the StoreInstances DICOMweb request (for example,
-            `studies/[{study_uid}]`). Note that
-             *        the `study_uid` is optional.
+             *        ore_id}`.
+             * @param dicomWebPath The path of the StoreInstances DICOMweb request. For example,
+            `studies/[{study_uid}]`. Note that the
+             *        `study_uid` is optional.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
              * @return the request
              */
@@ -5474,12 +5460,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
                * the constructor. </p>
                *
-               * @param parent The name of the DICOM store that is being accessed (for example,
+               * @param parent The name of the DICOM store that is being accessed. For example,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
-             *        ore_id}`).
-               * @param dicomWebPath The path of the StoreInstances DICOMweb request (for example,
-            `studies/[{study_uid}]`). Note that
-             *        the `study_uid` is optional.
+             *        ore_id}`.
+               * @param dicomWebPath The path of the StoreInstances DICOMweb request. For example,
+            `studies/[{study_uid}]`. Note that the
+             *        `study_uid` is optional.
                * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
                * @since 1.13
                */
@@ -5555,22 +5541,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The name of the DICOM store that is being accessed (for example, `projects/{project
-               * _id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`).
+               * The name of the DICOM store that is being accessed. For example, `projects/{project
+               * _id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** The name of the DICOM store that is being accessed (for example, `projects/{project_id}/locations/{
-             location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`).
+              /** The name of the DICOM store that is being accessed. For example,
+             `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * The name of the DICOM store that is being accessed (for example, `projects/{project
-               * _id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`).
+               * The name of the DICOM store that is being accessed. For example, `projects/{project
+               * _id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
                */
               public StoreInstances setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -5583,13 +5569,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The path of the StoreInstances DICOMweb request (for example,
-               * `studies/[{study_uid}]`). Note that the `study_uid` is optional.
+               * The path of the StoreInstances DICOMweb request. For example,
+               * `studies/[{study_uid}]`. Note that the `study_uid` is optional.
                */
               @com.google.api.client.util.Key
               private java.lang.String dicomWebPath;
 
-              /** The path of the StoreInstances DICOMweb request (for example, `studies/[{study_uid}]`). Note that
+              /** The path of the StoreInstances DICOMweb request. For example, `studies/[{study_uid}]`. Note that
              the `study_uid` is optional.
                */
               public java.lang.String getDicomWebPath() {
@@ -5597,8 +5583,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The path of the StoreInstances DICOMweb request (for example,
-               * `studies/[{study_uid}]`). Note that the `study_uid` is optional.
+               * The path of the StoreInstances DICOMweb request. For example,
+               * `studies/[{study_uid}]`. Note that the `study_uid` is optional.
                */
               public StoreInstances setDicomWebPath(java.lang.String dicomWebPath) {
                 if (!getSuppressPatternChecks()) {
@@ -5645,11 +5631,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * This request holds the parameters needed by the healthcare server.  After setting any optional
                * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
                *
-               * @param parent The name of the DICOM store that is being accessed (for example,
+               * @param parent The name of the DICOM store that is being accessed. For example,
                *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
-               *        ore_id}`).
-               * @param dicomWebPath The path of the DeleteSeries request (for example,
-              `studies/{study_uid}/series/{series_uid}`).
+               *        ore_id}`.
+               * @param dicomWebPath The path of the DeleteSeries request. For example,
+              `studies/{study_uid}/series/{series_uid}`.
                * @return the request
                */
               public Delete delete(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -5680,11 +5666,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                  * be called to initialize this instance immediately after invoking the constructor. </p>
                  *
-                 * @param parent The name of the DICOM store that is being accessed (for example,
+                 * @param parent The name of the DICOM store that is being accessed. For example,
                *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
-               *        ore_id}`).
-                 * @param dicomWebPath The path of the DeleteSeries request (for example,
-              `studies/{study_uid}/series/{series_uid}`).
+               *        ore_id}`.
+                 * @param dicomWebPath The path of the DeleteSeries request. For example,
+              `studies/{study_uid}/series/{series_uid}`.
                  * @since 1.13
                  */
                 protected Delete(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -5759,24 +5745,24 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 }
 
                 /**
-                 * The name of the DICOM store that is being accessed (for example, `projects/{proje
+                 * The name of the DICOM store that is being accessed. For example, `projects/{proje
                  * ct_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}
-                 * `).
+                 * `.
                  */
                 @com.google.api.client.util.Key
                 private java.lang.String parent;
 
-                /** The name of the DICOM store that is being accessed (for example, `projects/{project_id}/locations/{
-               location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`).
+                /** The name of the DICOM store that is being accessed. For example,
+               `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
                  */
                 public java.lang.String getParent() {
                   return parent;
                 }
 
                 /**
-                 * The name of the DICOM store that is being accessed (for example, `projects/{proje
+                 * The name of the DICOM store that is being accessed. For example, `projects/{proje
                  * ct_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}
-                 * `).
+                 * `.
                  */
                 public Delete setParent(java.lang.String parent) {
                   if (!getSuppressPatternChecks()) {
@@ -5789,21 +5775,21 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 }
 
                 /**
-                 * The path of the DeleteSeries request (for example,
-                 * `studies/{study_uid}/series/{series_uid}`).
+                 * The path of the DeleteSeries request. For example,
+                 * `studies/{study_uid}/series/{series_uid}`.
                  */
                 @com.google.api.client.util.Key
                 private java.lang.String dicomWebPath;
 
-                /** The path of the DeleteSeries request (for example, `studies/{study_uid}/series/{series_uid}`).
+                /** The path of the DeleteSeries request. For example, `studies/{study_uid}/series/{series_uid}`.
                  */
                 public java.lang.String getDicomWebPath() {
                   return dicomWebPath;
                 }
 
                 /**
-                 * The path of the DeleteSeries request (for example,
-                 * `studies/{study_uid}/series/{series_uid}`).
+                 * The path of the DeleteSeries request. For example,
+                 * `studies/{study_uid}/series/{series_uid}`.
                  */
                 public Delete setDicomWebPath(java.lang.String dicomWebPath) {
                   if (!getSuppressPatternChecks()) {
@@ -5830,11 +5816,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * This request holds the parameters needed by the healthcare server.  After setting any optional
                * parameters, call the {@link RetrieveMetadata#execute()} method to invoke the remote operation.
                *
-               * @param parent The name of the DICOM store that is being accessed (for example,
+               * @param parent The name of the DICOM store that is being accessed. For example,
                *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
-               *        ore_id}`).
-               * @param dicomWebPath The path of the RetrieveSeriesMetadata DICOMweb request (for example,
-               *        `studies/{study_uid}/series/{series_uid}/metadata`).
+               *        ore_id}`.
+               * @param dicomWebPath The path of the RetrieveSeriesMetadata DICOMweb request. For example,
+               *        `studies/{study_uid}/series/{series_uid}/metadata`.
                * @return the request
                */
               public RetrieveMetadata retrieveMetadata(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -5866,11 +5852,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * tractGoogleClientRequest)} must be called to initialize this instance immediately after
                  * invoking the constructor. </p>
                  *
-                 * @param parent The name of the DICOM store that is being accessed (for example,
+                 * @param parent The name of the DICOM store that is being accessed. For example,
                *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
-               *        ore_id}`).
-                 * @param dicomWebPath The path of the RetrieveSeriesMetadata DICOMweb request (for example,
-               *        `studies/{study_uid}/series/{series_uid}/metadata`).
+               *        ore_id}`.
+                 * @param dicomWebPath The path of the RetrieveSeriesMetadata DICOMweb request. For example,
+               *        `studies/{study_uid}/series/{series_uid}/metadata`.
                  * @since 1.13
                  */
                 protected RetrieveMetadata(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -5955,24 +5941,24 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 }
 
                 /**
-                 * The name of the DICOM store that is being accessed (for example, `projects/{proje
+                 * The name of the DICOM store that is being accessed. For example, `projects/{proje
                  * ct_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}
-                 * `).
+                 * `.
                  */
                 @com.google.api.client.util.Key
                 private java.lang.String parent;
 
-                /** The name of the DICOM store that is being accessed (for example, `projects/{project_id}/locations/{
-               location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`).
+                /** The name of the DICOM store that is being accessed. For example,
+               `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
                  */
                 public java.lang.String getParent() {
                   return parent;
                 }
 
                 /**
-                 * The name of the DICOM store that is being accessed (for example, `projects/{proje
+                 * The name of the DICOM store that is being accessed. For example, `projects/{proje
                  * ct_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}
-                 * `).
+                 * `.
                  */
                 public RetrieveMetadata setParent(java.lang.String parent) {
                   if (!getSuppressPatternChecks()) {
@@ -5985,22 +5971,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 }
 
                 /**
-                 * The path of the RetrieveSeriesMetadata DICOMweb request (for example,
-                 * `studies/{study_uid}/series/{series_uid}/metadata`).
+                 * The path of the RetrieveSeriesMetadata DICOMweb request. For example,
+                 * `studies/{study_uid}/series/{series_uid}/metadata`.
                  */
                 @com.google.api.client.util.Key
                 private java.lang.String dicomWebPath;
 
-                /** The path of the RetrieveSeriesMetadata DICOMweb request (for example,
-               `studies/{study_uid}/series/{series_uid}/metadata`).
+                /** The path of the RetrieveSeriesMetadata DICOMweb request. For example,
+               `studies/{study_uid}/series/{series_uid}/metadata`.
                  */
                 public java.lang.String getDicomWebPath() {
                   return dicomWebPath;
                 }
 
                 /**
-                 * The path of the RetrieveSeriesMetadata DICOMweb request (for example,
-                 * `studies/{study_uid}/series/{series_uid}/metadata`).
+                 * The path of the RetrieveSeriesMetadata DICOMweb request. For example,
+                 * `studies/{study_uid}/series/{series_uid}/metadata`.
                  */
                 public RetrieveMetadata setDicomWebPath(java.lang.String dicomWebPath) {
                   if (!getSuppressPatternChecks()) {
@@ -6026,11 +6012,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * This request holds the parameters needed by the healthcare server.  After setting any optional
                * parameters, call the {@link RetrieveSeries#execute()} method to invoke the remote operation.
                *
-               * @param parent The name of the DICOM store that is being accessed (for example,
+               * @param parent The name of the DICOM store that is being accessed. For example,
                *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
-               *        ore_id}`).
-               * @param dicomWebPath The path of the RetrieveSeries DICOMweb request (for example,
-               *        `studies/{study_uid}/series/{series_uid}`).
+               *        ore_id}`.
+               * @param dicomWebPath The path of the RetrieveSeries DICOMweb request. For example,
+               *        `studies/{study_uid}/series/{series_uid}`.
                * @return the request
                */
               public RetrieveSeries retrieveSeries(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -6061,11 +6047,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
                  * the constructor. </p>
                  *
-                 * @param parent The name of the DICOM store that is being accessed (for example,
+                 * @param parent The name of the DICOM store that is being accessed. For example,
                *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
-               *        ore_id}`).
-                 * @param dicomWebPath The path of the RetrieveSeries DICOMweb request (for example,
-               *        `studies/{study_uid}/series/{series_uid}`).
+               *        ore_id}`.
+                 * @param dicomWebPath The path of the RetrieveSeries DICOMweb request. For example,
+               *        `studies/{study_uid}/series/{series_uid}`.
                  * @since 1.13
                  */
                 protected RetrieveSeries(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -6150,24 +6136,24 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 }
 
                 /**
-                 * The name of the DICOM store that is being accessed (for example, `projects/{proje
+                 * The name of the DICOM store that is being accessed. For example, `projects/{proje
                  * ct_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}
-                 * `).
+                 * `.
                  */
                 @com.google.api.client.util.Key
                 private java.lang.String parent;
 
-                /** The name of the DICOM store that is being accessed (for example, `projects/{project_id}/locations/{
-               location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`).
+                /** The name of the DICOM store that is being accessed. For example,
+               `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
                  */
                 public java.lang.String getParent() {
                   return parent;
                 }
 
                 /**
-                 * The name of the DICOM store that is being accessed (for example, `projects/{proje
+                 * The name of the DICOM store that is being accessed. For example, `projects/{proje
                  * ct_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}
-                 * `).
+                 * `.
                  */
                 public RetrieveSeries setParent(java.lang.String parent) {
                   if (!getSuppressPatternChecks()) {
@@ -6180,22 +6166,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 }
 
                 /**
-                 * The path of the RetrieveSeries DICOMweb request (for example,
-                 * `studies/{study_uid}/series/{series_uid}`).
+                 * The path of the RetrieveSeries DICOMweb request. For example,
+                 * `studies/{study_uid}/series/{series_uid}`.
                  */
                 @com.google.api.client.util.Key
                 private java.lang.String dicomWebPath;
 
-                /** The path of the RetrieveSeries DICOMweb request (for example,
-               `studies/{study_uid}/series/{series_uid}`).
+                /** The path of the RetrieveSeries DICOMweb request. For example,
+               `studies/{study_uid}/series/{series_uid}`.
                  */
                 public java.lang.String getDicomWebPath() {
                   return dicomWebPath;
                 }
 
                 /**
-                 * The path of the RetrieveSeries DICOMweb request (for example,
-                 * `studies/{study_uid}/series/{series_uid}`).
+                 * The path of the RetrieveSeries DICOMweb request. For example,
+                 * `studies/{study_uid}/series/{series_uid}`.
                  */
                 public RetrieveSeries setDicomWebPath(java.lang.String dicomWebPath) {
                   if (!getSuppressPatternChecks()) {
@@ -6221,13 +6207,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * This request holds the parameters needed by the healthcare server.  After setting any optional
                * parameters, call the {@link SearchForInstances#execute()} method to invoke the remote operation.
                *
-               * @param parent The name of the DICOM store that is being accessed (for example,
+               * @param parent The name of the DICOM store that is being accessed. For example,
                *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
-               *        ore_id}`).
-               * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request (for example,
-              `instances` or
-               *        `series/{series_uid}/instances` or
-              `studies/{study_uid}/instances`).
+               *        ore_id}`.
+               * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request. For example,
+              `instances`,
+               *        `series/{series_uid}/instances`, or
+              `studies/{study_uid}/instances`.
                * @return the request
                */
               public SearchForInstances searchForInstances(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -6258,13 +6244,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
                  * invoking the constructor. </p>
                  *
-                 * @param parent The name of the DICOM store that is being accessed (for example,
+                 * @param parent The name of the DICOM store that is being accessed. For example,
                *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
-               *        ore_id}`).
-                 * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request (for example,
-              `instances` or
-               *        `series/{series_uid}/instances` or
-              `studies/{study_uid}/instances`).
+               *        ore_id}`.
+                 * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request. For example,
+              `instances`,
+               *        `series/{series_uid}/instances`, or
+              `studies/{study_uid}/instances`.
                  * @since 1.13
                  */
                 protected SearchForInstances(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -6349,24 +6335,24 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 }
 
                 /**
-                 * The name of the DICOM store that is being accessed (for example, `projects/{proje
+                 * The name of the DICOM store that is being accessed. For example, `projects/{proje
                  * ct_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}
-                 * `).
+                 * `.
                  */
                 @com.google.api.client.util.Key
                 private java.lang.String parent;
 
-                /** The name of the DICOM store that is being accessed (for example, `projects/{project_id}/locations/{
-               location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`).
+                /** The name of the DICOM store that is being accessed. For example,
+               `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
                  */
                 public java.lang.String getParent() {
                   return parent;
                 }
 
                 /**
-                 * The name of the DICOM store that is being accessed (for example, `projects/{proje
+                 * The name of the DICOM store that is being accessed. For example, `projects/{proje
                  * ct_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}
-                 * `).
+                 * `.
                  */
                 public SearchForInstances setParent(java.lang.String parent) {
                   if (!getSuppressPatternChecks()) {
@@ -6379,24 +6365,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 }
 
                 /**
-                 * The path of the SearchForInstancesRequest DICOMweb request (for example,
-                 * `instances` or `series/{series_uid}/instances` or
-                 * `studies/{study_uid}/instances`).
+                 * The path of the SearchForInstancesRequest DICOMweb request. For example,
+                 * `instances`, `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
                  */
                 @com.google.api.client.util.Key
                 private java.lang.String dicomWebPath;
 
-                /** The path of the SearchForInstancesRequest DICOMweb request (for example, `instances` or
-               `series/{series_uid}/instances` or `studies/{study_uid}/instances`).
+                /** The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
+               `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
                  */
                 public java.lang.String getDicomWebPath() {
                   return dicomWebPath;
                 }
 
                 /**
-                 * The path of the SearchForInstancesRequest DICOMweb request (for example,
-                 * `instances` or `series/{series_uid}/instances` or
-                 * `studies/{study_uid}/instances`).
+                 * The path of the SearchForInstancesRequest DICOMweb request. For example,
+                 * `instances`, `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
                  */
                 public SearchForInstances setDicomWebPath(java.lang.String dicomWebPath) {
                   if (!getSuppressPatternChecks()) {
@@ -6443,11 +6427,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * This request holds the parameters needed by the healthcare server.  After setting any optional
                  * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
                  *
-                 * @param parent The name of the DICOM store that is being accessed (for example,
+                 * @param parent The name of the DICOM store that is being accessed. For example,
                  *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
-                 *        ore_id}`).
-                 * @param dicomWebPath The path of the DeleteInstance request (for example,
-                 *        `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`).
+                 *        ore_id}`.
+                 * @param dicomWebPath The path of the DeleteInstance request. For example,
+                 *        `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`.
                  * @return the request
                  */
                 public Delete delete(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -6478,11 +6462,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                    * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                    * be called to initialize this instance immediately after invoking the constructor. </p>
                    *
-                   * @param parent The name of the DICOM store that is being accessed (for example,
+                   * @param parent The name of the DICOM store that is being accessed. For example,
                  *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
-                 *        ore_id}`).
-                   * @param dicomWebPath The path of the DeleteInstance request (for example,
-                 *        `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`).
+                 *        ore_id}`.
+                   * @param dicomWebPath The path of the DeleteInstance request. For example,
+                 *        `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`.
                    * @since 1.13
                    */
                   protected Delete(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -6557,24 +6541,24 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   }
 
                   /**
-                   * The name of the DICOM store that is being accessed (for example, `projects/{pro
+                   * The name of the DICOM store that is being accessed. For example, `projects/{pro
                    * ject_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store
-                   * _id}`).
+                   * _id}`.
                    */
                   @com.google.api.client.util.Key
                   private java.lang.String parent;
 
-                  /** The name of the DICOM store that is being accessed (for example, `projects/{project_id}/locations/{
-                 location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`).
+                  /** The name of the DICOM store that is being accessed. For example,
+                 `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
                    */
                   public java.lang.String getParent() {
                     return parent;
                   }
 
                   /**
-                   * The name of the DICOM store that is being accessed (for example, `projects/{pro
+                   * The name of the DICOM store that is being accessed. For example, `projects/{pro
                    * ject_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store
-                   * _id}`).
+                   * _id}`.
                    */
                   public Delete setParent(java.lang.String parent) {
                     if (!getSuppressPatternChecks()) {
@@ -6587,22 +6571,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   }
 
                   /**
-                   * The path of the DeleteInstance request (for example,
-                   * `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`).
+                   * The path of the DeleteInstance request. For example,
+                   * `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`.
                    */
                   @com.google.api.client.util.Key
                   private java.lang.String dicomWebPath;
 
-                  /** The path of the DeleteInstance request (for example,
-                 `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`).
+                  /** The path of the DeleteInstance request. For example,
+                 `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`.
                    */
                   public java.lang.String getDicomWebPath() {
                     return dicomWebPath;
                   }
 
                   /**
-                   * The path of the DeleteInstance request (for example,
-                   * `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`).
+                   * The path of the DeleteInstance request. For example,
+                   * `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`.
                    */
                   public Delete setDicomWebPath(java.lang.String dicomWebPath) {
                     if (!getSuppressPatternChecks()) {
@@ -6628,11 +6612,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * This request holds the parameters needed by the healthcare server.  After setting any optional
                  * parameters, call the {@link RetrieveInstance#execute()} method to invoke the remote operation.
                  *
-                 * @param parent The name of the DICOM store that is being accessed (for example,
+                 * @param parent The name of the DICOM store that is being accessed. For example,
                  *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
-                 *        ore_id}`).
-                 * @param dicomWebPath The path of the RetrieveInstance DICOMweb request (for example,
-                 *        `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`).
+                 *        ore_id}`.
+                 * @param dicomWebPath The path of the RetrieveInstance DICOMweb request. For example,
+                 *        `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`.
                  * @return the request
                  */
                 public RetrieveInstance retrieveInstance(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -6663,11 +6647,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                    * tractGoogleClientRequest)} must be called to initialize this instance immediately after
                    * invoking the constructor. </p>
                    *
-                   * @param parent The name of the DICOM store that is being accessed (for example,
+                   * @param parent The name of the DICOM store that is being accessed. For example,
                  *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
-                 *        ore_id}`).
-                   * @param dicomWebPath The path of the RetrieveInstance DICOMweb request (for example,
-                 *        `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`).
+                 *        ore_id}`.
+                   * @param dicomWebPath The path of the RetrieveInstance DICOMweb request. For example,
+                 *        `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`.
                    * @since 1.13
                    */
                   protected RetrieveInstance(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -6752,24 +6736,24 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   }
 
                   /**
-                   * The name of the DICOM store that is being accessed (for example, `projects/{pro
+                   * The name of the DICOM store that is being accessed. For example, `projects/{pro
                    * ject_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store
-                   * _id}`).
+                   * _id}`.
                    */
                   @com.google.api.client.util.Key
                   private java.lang.String parent;
 
-                  /** The name of the DICOM store that is being accessed (for example, `projects/{project_id}/locations/{
-                 location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`).
+                  /** The name of the DICOM store that is being accessed. For example,
+                 `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
                    */
                   public java.lang.String getParent() {
                     return parent;
                   }
 
                   /**
-                   * The name of the DICOM store that is being accessed (for example, `projects/{pro
+                   * The name of the DICOM store that is being accessed. For example, `projects/{pro
                    * ject_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store
-                   * _id}`).
+                   * _id}`.
                    */
                   public RetrieveInstance setParent(java.lang.String parent) {
                     if (!getSuppressPatternChecks()) {
@@ -6782,22 +6766,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   }
 
                   /**
-                   * The path of the RetrieveInstance DICOMweb request (for example,
-                   * `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`).
+                   * The path of the RetrieveInstance DICOMweb request. For example,
+                   * `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`.
                    */
                   @com.google.api.client.util.Key
                   private java.lang.String dicomWebPath;
 
-                  /** The path of the RetrieveInstance DICOMweb request (for example,
-                 `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`).
+                  /** The path of the RetrieveInstance DICOMweb request. For example,
+                 `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`.
                    */
                   public java.lang.String getDicomWebPath() {
                     return dicomWebPath;
                   }
 
                   /**
-                   * The path of the RetrieveInstance DICOMweb request (for example,
-                   * `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`).
+                   * The path of the RetrieveInstance DICOMweb request. For example,
+                   * `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`.
                    */
                   public RetrieveInstance setDicomWebPath(java.lang.String dicomWebPath) {
                     if (!getSuppressPatternChecks()) {
@@ -6824,11 +6808,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * This request holds the parameters needed by the healthcare server.  After setting any optional
                  * parameters, call the {@link RetrieveMetadata#execute()} method to invoke the remote operation.
                  *
-                 * @param parent The name of the DICOM store that is being accessed (for example,
+                 * @param parent The name of the DICOM store that is being accessed. For example,
                  *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
-                 *        ore_id}`).
-                 * @param dicomWebPath The path of the RetrieveInstanceMetadata DICOMweb request (for example,
-                 *        `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/metadata`).
+                 *        ore_id}`.
+                 * @param dicomWebPath The path of the RetrieveInstanceMetadata DICOMweb request. For example,
+                 *        `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/metadata`.
                  * @return the request
                  */
                 public RetrieveMetadata retrieveMetadata(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -6860,11 +6844,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                    * tractGoogleClientRequest)} must be called to initialize this instance immediately after
                    * invoking the constructor. </p>
                    *
-                   * @param parent The name of the DICOM store that is being accessed (for example,
+                   * @param parent The name of the DICOM store that is being accessed. For example,
                  *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
-                 *        ore_id}`).
-                   * @param dicomWebPath The path of the RetrieveInstanceMetadata DICOMweb request (for example,
-                 *        `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/metadata`).
+                 *        ore_id}`.
+                   * @param dicomWebPath The path of the RetrieveInstanceMetadata DICOMweb request. For example,
+                 *        `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/metadata`.
                    * @since 1.13
                    */
                   protected RetrieveMetadata(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -6949,24 +6933,24 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   }
 
                   /**
-                   * The name of the DICOM store that is being accessed (for example, `projects/{pro
+                   * The name of the DICOM store that is being accessed. For example, `projects/{pro
                    * ject_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store
-                   * _id}`).
+                   * _id}`.
                    */
                   @com.google.api.client.util.Key
                   private java.lang.String parent;
 
-                  /** The name of the DICOM store that is being accessed (for example, `projects/{project_id}/locations/{
-                 location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`).
+                  /** The name of the DICOM store that is being accessed. For example,
+                 `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
                    */
                   public java.lang.String getParent() {
                     return parent;
                   }
 
                   /**
-                   * The name of the DICOM store that is being accessed (for example, `projects/{pro
+                   * The name of the DICOM store that is being accessed. For example, `projects/{pro
                    * ject_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store
-                   * _id}`).
+                   * _id}`.
                    */
                   public RetrieveMetadata setParent(java.lang.String parent) {
                     if (!getSuppressPatternChecks()) {
@@ -6979,22 +6963,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   }
 
                   /**
-                   * The path of the RetrieveInstanceMetadata DICOMweb request (for example,
-                   * `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/metadata`).
+                   * The path of the RetrieveInstanceMetadata DICOMweb request. For example,
+                   * `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/metadata`.
                    */
                   @com.google.api.client.util.Key
                   private java.lang.String dicomWebPath;
 
-                  /** The path of the RetrieveInstanceMetadata DICOMweb request (for example,
-                 `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/metadata`).
+                  /** The path of the RetrieveInstanceMetadata DICOMweb request. For example,
+                 `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/metadata`.
                    */
                   public java.lang.String getDicomWebPath() {
                     return dicomWebPath;
                   }
 
                   /**
-                   * The path of the RetrieveInstanceMetadata DICOMweb request (for example,
-                   * `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/metadata`).
+                   * The path of the RetrieveInstanceMetadata DICOMweb request. For example,
+                   * `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/metadata`.
                    */
                   public RetrieveMetadata setDicomWebPath(java.lang.String dicomWebPath) {
                     if (!getSuppressPatternChecks()) {
@@ -7021,11 +7005,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * This request holds the parameters needed by the healthcare server.  After setting any optional
                  * parameters, call the {@link RetrieveRendered#execute()} method to invoke the remote operation.
                  *
-                 * @param parent The name of the DICOM store that is being accessed (for example,
+                 * @param parent The name of the DICOM store that is being accessed. For example,
                  *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
-                 *        ore_id}`).
-                 * @param dicomWebPath The path of the RetrieveRenderedInstance DICOMweb request (for example,
-                 *        `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/rendered`).
+                 *        ore_id}`.
+                 * @param dicomWebPath The path of the RetrieveRenderedInstance DICOMweb request. For example,
+                 *        `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/rendered`.
                  * @return the request
                  */
                 public RetrieveRendered retrieveRendered(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -7057,11 +7041,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                    * tractGoogleClientRequest)} must be called to initialize this instance immediately after
                    * invoking the constructor. </p>
                    *
-                   * @param parent The name of the DICOM store that is being accessed (for example,
+                   * @param parent The name of the DICOM store that is being accessed. For example,
                  *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
-                 *        ore_id}`).
-                   * @param dicomWebPath The path of the RetrieveRenderedInstance DICOMweb request (for example,
-                 *        `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/rendered`).
+                 *        ore_id}`.
+                   * @param dicomWebPath The path of the RetrieveRenderedInstance DICOMweb request. For example,
+                 *        `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/rendered`.
                    * @since 1.13
                    */
                   protected RetrieveRendered(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -7146,24 +7130,24 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   }
 
                   /**
-                   * The name of the DICOM store that is being accessed (for example, `projects/{pro
+                   * The name of the DICOM store that is being accessed. For example, `projects/{pro
                    * ject_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store
-                   * _id}`).
+                   * _id}`.
                    */
                   @com.google.api.client.util.Key
                   private java.lang.String parent;
 
-                  /** The name of the DICOM store that is being accessed (for example, `projects/{project_id}/locations/{
-                 location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`).
+                  /** The name of the DICOM store that is being accessed. For example,
+                 `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
                    */
                   public java.lang.String getParent() {
                     return parent;
                   }
 
                   /**
-                   * The name of the DICOM store that is being accessed (for example, `projects/{pro
+                   * The name of the DICOM store that is being accessed. For example, `projects/{pro
                    * ject_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store
-                   * _id}`).
+                   * _id}`.
                    */
                   public RetrieveRendered setParent(java.lang.String parent) {
                     if (!getSuppressPatternChecks()) {
@@ -7176,22 +7160,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   }
 
                   /**
-                   * The path of the RetrieveRenderedInstance DICOMweb request (for example,
-                   * `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/rendered`).
+                   * The path of the RetrieveRenderedInstance DICOMweb request. For example,
+                   * `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/rendered`.
                    */
                   @com.google.api.client.util.Key
                   private java.lang.String dicomWebPath;
 
-                  /** The path of the RetrieveRenderedInstance DICOMweb request (for example,
-                 `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/rendered`).
+                  /** The path of the RetrieveRenderedInstance DICOMweb request. For example,
+                 `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/rendered`.
                    */
                   public java.lang.String getDicomWebPath() {
                     return dicomWebPath;
                   }
 
                   /**
-                   * The path of the RetrieveRenderedInstance DICOMweb request (for example,
-                   * `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/rendered`).
+                   * The path of the RetrieveRenderedInstance DICOMweb request. For example,
+                   * `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/rendered`.
                    */
                   public RetrieveRendered setDicomWebPath(java.lang.String dicomWebPath) {
                     if (!getSuppressPatternChecks()) {
@@ -7238,11 +7222,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                    * This request holds the parameters needed by the healthcare server.  After setting any optional
                    * parameters, call the {@link RetrieveFrames#execute()} method to invoke the remote operation.
                    *
-                   * @param parent The name of the DICOM store that is being accessed (for example,
+                   * @param parent The name of the DICOM store that is being accessed. For example,
                    *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
-                   *        ore_id}`).
-                   * @param dicomWebPath The path of the RetrieveFrames DICOMweb request (for example,
-                   *        `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/frames/{frame_list}`).
+                   *        ore_id}`.
+                   * @param dicomWebPath The path of the RetrieveFrames DICOMweb request. For example,
+                   *        `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/frames/{frame_list}`.
                    * @return the request
                    */
                   public RetrieveFrames retrieveFrames(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -7274,11 +7258,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                      * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
                      * the constructor. </p>
                      *
-                     * @param parent The name of the DICOM store that is being accessed (for example,
+                     * @param parent The name of the DICOM store that is being accessed. For example,
                    *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
-                   *        ore_id}`).
-                     * @param dicomWebPath The path of the RetrieveFrames DICOMweb request (for example,
-                   *        `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/frames/{frame_list}`).
+                   *        ore_id}`.
+                     * @param dicomWebPath The path of the RetrieveFrames DICOMweb request. For example,
+                   *        `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/frames/{frame_list}`.
                      * @since 1.13
                      */
                     protected RetrieveFrames(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -7363,24 +7347,24 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                     }
 
                     /**
-                     * The name of the DICOM store that is being accessed (for example, `projects/{p
+                     * The name of the DICOM store that is being accessed. For example, `projects/{p
                      * roject_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_s
-                     * tore_id}`).
+                     * tore_id}`.
                      */
                     @com.google.api.client.util.Key
                     private java.lang.String parent;
 
-                    /** The name of the DICOM store that is being accessed (for example, `projects/{project_id}/locations/{
-                   location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`).
+                    /** The name of the DICOM store that is being accessed. For example,
+                   `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
                      */
                     public java.lang.String getParent() {
                       return parent;
                     }
 
                     /**
-                     * The name of the DICOM store that is being accessed (for example, `projects/{p
+                     * The name of the DICOM store that is being accessed. For example, `projects/{p
                      * roject_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_s
-                     * tore_id}`).
+                     * tore_id}`.
                      */
                     public RetrieveFrames setParent(java.lang.String parent) {
                       if (!getSuppressPatternChecks()) {
@@ -7393,22 +7377,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                     }
 
                     /**
-                     * The path of the RetrieveFrames DICOMweb request (for example, `studies/{study
-                     * _uid}/series/{series_uid}/instances/{instance_uid}/frames/{frame_list}`).
+                     * The path of the RetrieveFrames DICOMweb request. For example, `studies/{study
+                     * _uid}/series/{series_uid}/instances/{instance_uid}/frames/{frame_list}`.
                      */
                     @com.google.api.client.util.Key
                     private java.lang.String dicomWebPath;
 
-                    /** The path of the RetrieveFrames DICOMweb request (for example,
-                   `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/frames/{frame_list}`).
+                    /** The path of the RetrieveFrames DICOMweb request. For example,
+                   `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/frames/{frame_list}`.
                      */
                     public java.lang.String getDicomWebPath() {
                       return dicomWebPath;
                     }
 
                     /**
-                     * The path of the RetrieveFrames DICOMweb request (for example, `studies/{study
-                     * _uid}/series/{series_uid}/instances/{instance_uid}/frames/{frame_list}`).
+                     * The path of the RetrieveFrames DICOMweb request. For example, `studies/{study
+                     * _uid}/series/{series_uid}/instances/{instance_uid}/frames/{frame_list}`.
                      */
                     public RetrieveFrames setDicomWebPath(java.lang.String dicomWebPath) {
                       if (!getSuppressPatternChecks()) {
@@ -7435,12 +7419,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                    * This request holds the parameters needed by the healthcare server.  After setting any optional
                    * parameters, call the {@link RetrieveRendered#execute()} method to invoke the remote operation.
                    *
-                   * @param parent The name of the DICOM store that is being accessed (for example,
+                   * @param parent The name of the DICOM store that is being accessed. For example,
                    *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
-                   *        ore_id}`).
-                   * @param dicomWebPath The path of the RetrieveRenderedFrames DICOMweb request (for example,
+                   *        ore_id}`.
+                   * @param dicomWebPath The path of the RetrieveRenderedFrames DICOMweb request. For example,
                    *        `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/frames/{frame_list}/rend
-                   *        ered`).
+                   *        ered`.
                    * @return the request
                    */
                   public RetrieveRendered retrieveRendered(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -7472,12 +7456,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                      * tractGoogleClientRequest)} must be called to initialize this instance immediately after
                      * invoking the constructor. </p>
                      *
-                     * @param parent The name of the DICOM store that is being accessed (for example,
+                     * @param parent The name of the DICOM store that is being accessed. For example,
                    *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
-                   *        ore_id}`).
-                     * @param dicomWebPath The path of the RetrieveRenderedFrames DICOMweb request (for example,
+                   *        ore_id}`.
+                     * @param dicomWebPath The path of the RetrieveRenderedFrames DICOMweb request. For example,
                    *        `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/frames/{frame_list}/rend
-                   *        ered`).
+                   *        ered`.
                      * @since 1.13
                      */
                     protected RetrieveRendered(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -7562,24 +7546,24 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                     }
 
                     /**
-                     * The name of the DICOM store that is being accessed (for example, `projects/{p
+                     * The name of the DICOM store that is being accessed. For example, `projects/{p
                      * roject_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_s
-                     * tore_id}`).
+                     * tore_id}`.
                      */
                     @com.google.api.client.util.Key
                     private java.lang.String parent;
 
-                    /** The name of the DICOM store that is being accessed (for example, `projects/{project_id}/locations/{
-                   location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`).
+                    /** The name of the DICOM store that is being accessed. For example,
+                   `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
                      */
                     public java.lang.String getParent() {
                       return parent;
                     }
 
                     /**
-                     * The name of the DICOM store that is being accessed (for example, `projects/{p
+                     * The name of the DICOM store that is being accessed. For example, `projects/{p
                      * roject_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_s
-                     * tore_id}`).
+                     * tore_id}`.
                      */
                     public RetrieveRendered setParent(java.lang.String parent) {
                       if (!getSuppressPatternChecks()) {
@@ -7592,24 +7576,24 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                     }
 
                     /**
-                     * The path of the RetrieveRenderedFrames DICOMweb request (for example, `studie
+                     * The path of the RetrieveRenderedFrames DICOMweb request. For example, `studie
                      * s/{study_uid}/series/{series_uid}/instances/{instance_uid}/frames/{frame_list
-                     * }/rendered`).
+                     * }/rendered`.
                      */
                     @com.google.api.client.util.Key
                     private java.lang.String dicomWebPath;
 
-                    /** The path of the RetrieveRenderedFrames DICOMweb request (for example,
-                   `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/frames/{frame_list}/rendered`).
+                    /** The path of the RetrieveRenderedFrames DICOMweb request. For example,
+                   `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/frames/{frame_list}/rendered`.
                      */
                     public java.lang.String getDicomWebPath() {
                       return dicomWebPath;
                     }
 
                     /**
-                     * The path of the RetrieveRenderedFrames DICOMweb request (for example, `studie
+                     * The path of the RetrieveRenderedFrames DICOMweb request. For example, `studie
                      * s/{study_uid}/series/{series_uid}/instances/{instance_uid}/frames/{frame_list
-                     * }/rendered`).
+                     * }/rendered`.
                      */
                     public RetrieveRendered setDicomWebPath(java.lang.String dicomWebPath) {
                       if (!getSuppressPatternChecks()) {
@@ -9509,11 +9493,18 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * lastn](http://hl7.org/implement/standards/fhir/STU3/observation-operations.html#lastn).
              *
              * Search terms are provided as query parameters following the same pattern as the search method.
-             * The following search parameters must be provided     - `subject` or `patient` to specify a
-             * subject for the Observation.     - `code`, `category` or any of the composite parameters that
-             * include       `code`. Any other valid Observation search parameters can also be provided. This
-             * operation accepts an additional query parameter `max`, which specifies N, the maximum number of
-             * Observations to return from each group, with a default of 1.
+             * The following search parameters must be provided:
+             *
+             *     - `subject` or `patient` to specify a subject for the Observation.     - `code`, `category`
+             * or any of the composite parameters that include       `code`.
+             *
+             * Any other valid Observation search parameters can also be provided. This operation accepts an
+             * additional query parameter `max`, which specifies N, the maximum number of Observations to return
+             * from each group, with a default of 1.
+             *
+             * Searches with over 1000 results are rejected. Results are counted before grouping and limiting
+             * the results with `max`. To stay within the limit, constrain these searches using Observation
+             * search parameters such as `_lastUpdated` or `date`.
              *
              * On success, the response body will contain a JSON-encoded representation of a `Bundle` resource
              * of type `searchset`, containing the results of the operation. Errors generated by the FHIR store
@@ -9551,11 +9542,18 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * lastn](http://hl7.org/implement/standards/fhir/STU3/observation-operations.html#lastn).
                *
                * Search terms are provided as query parameters following the same pattern as the search method.
-               * The following search parameters must be provided     - `subject` or `patient` to specify a
-               * subject for the Observation.     - `code`, `category` or any of the composite parameters that
-               * include       `code`. Any other valid Observation search parameters can also be provided. This
-               * operation accepts an additional query parameter `max`, which specifies N, the maximum number of
-               * Observations to return from each group, with a default of 1.
+               * The following search parameters must be provided:
+               *
+               *     - `subject` or `patient` to specify a subject for the Observation.     - `code`, `category`
+               * or any of the composite parameters that include       `code`.
+               *
+               * Any other valid Observation search parameters can also be provided. This operation accepts an
+               * additional query parameter `max`, which specifies N, the maximum number of Observations to
+               * return from each group, with a default of 1.
+               *
+               * Searches with over 1000 results are rejected. Results are counted before grouping and limiting
+               * the results with `max`. To stay within the limit, constrain these searches using Observation
+               * search parameters such as `_lastUpdated` or `date`.
                *
                * On success, the response body will contain a JSON-encoded representation of a `Bundle` resource
                * of type `searchset`, containing the results of the operation. Errors generated by the FHIR
@@ -9676,12 +9674,6 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
             }
             /**
-             * Retrieves all the resources directly referenced by a patient, as well as all of the resources in
-             * the patient compartment.
-             *
-             * Implements the FHIR extended operation [Patient-
-             * everything](http://hl7.org/implement/standards/fhir/STU3/patient-operations.html#everything).
-             *
              * On success, the response body will contain a JSON-encoded representation of a `Bundle` resource
              * of type `searchset`, containing the results of the operation. Errors generated by the FHIR store
              * will contain a JSON-encoded `OperationOutcome` resource describing the reason for the error. If
@@ -9710,12 +9702,6 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/Patient/[^/]+$");
 
               /**
-               * Retrieves all the resources directly referenced by a patient, as well as all of the resources
-               * in the patient compartment.
-               *
-               * Implements the FHIR extended operation [Patient-
-               * everything](http://hl7.org/implement/standards/fhir/STU3/patient-operations.html#everything).
-               *
                * On success, the response body will contain a JSON-encoded representation of a `Bundle` resource
                * of type `searchset`, containing the results of the operation. Errors generated by the FHIR
                * store will contain a JSON-encoded `OperationOutcome` resource describing the reason for the
@@ -12030,10 +12016,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * the request cannot be mapped to a valid API method on a FHIR store, a generic GCP error might be
              * returned instead.
              *
-             * The server's capability statement, retrieved through capabilities, indicates what search
-             * parameters are supported on each FHIR resource. A list of all search parameters defined by the
-             * specification can be found in the [FHIR Search Parameter
-             * Registry](http://hl7.org/implement/standards/fhir/STU3/searchparameter-registry.html).
+             * The server's capability statement, retrieved through capabilities, indicates the search
+             * parameters that are supported on each FHIR resource. For the list of search parameters for STU3,
+             * see the [STU3 FHIR Search Parameter Registry](http://hl7.org/implement/standards/fhir/STU3
+             * /searchparameter-registry.html).
              *
              * Supported search modifiers: `:missing`, `:exact`, `:contains`, `:text`, `:in`, `:not-in`,
              * `:above`, `:below`, `:[type]`, `:not`, and `:recurse`.
@@ -12098,9 +12084,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * the request cannot be mapped to a valid API method on a FHIR store, a generic GCP error might
                * be returned instead.
                *
-               * The server's capability statement, retrieved through capabilities, indicates what search
-               * parameters are supported on each FHIR resource. A list of all search parameters defined by the
-               * specification can be found in the [FHIR Search Parameter
+               * The server's capability statement, retrieved through capabilities, indicates the search
+               * parameters that are supported on each FHIR resource. For the list of search parameters for
+               * STU3, see the [STU3 FHIR Search Parameter
                * Registry](http://hl7.org/implement/standards/fhir/STU3/searchparameter-registry.html).
                *
                * Supported search modifiers: `:missing`, `:exact`, `:contains`, `:text`, `:in`, `:not-in`,
@@ -14566,15 +14552,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * RFC3339 time format for comparisons, from the MSH-7 segment. For example,
                * `send_time < "2017-01-02T00:00:00-05:00"`. *  `send_facility`, the care center that
                * the message came from, from the MSH-4 segment. For example, `send_facility =
-               * "ABC"`. *  `HL7RegExp(expr)`, which does regular expression matching of `expr`
-               * against the message payload using RE2 syntax
-               * (https://github.com/google/re2/wiki/Syntax). For example,
-               * `HL7RegExp("^.*\|.*\|EMERG")`. *  `PatientId(value, type)`, which matches if the
-               * message lists a patient having an ID of the given value and type in the PID-2,
-               * PID-3, or PID-4 segments. For example, `PatientId("123456", "MRN")`. *  `labels.x`,
-               * a string value of the label with key `x` as set using the Message.labels map. For
-               * example, `labels."priority"="high"`. The operator `:*` can be used to assert the
-               * existence of a label. For example, `labels."priority":*`.
+               * "ABC"`. *  `PatientId(value, type)`, which matches if the message lists a patient
+               * having an ID of the given value and type in the PID-2, PID-3, or PID-4 segments.
+               * For example, `PatientId("123456", "MRN")`. *  `labels.x`, a string value of the
+               * label with key `x` as set using the Message.labels map. For example,
+               * `labels."priority"="high"`. The operator `:*` can be used to assert the existence
+               * of a label. For example, `labels."priority":*`.
                *
                * Limitations on conjunctions:
                *
@@ -14601,14 +14584,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              segment. For example, `send_date < "2017-01-02"`. *  `send_time`, the timestamp when the message
              was sent, using the RFC3339 time format for comparisons, from the MSH-7 segment. For example,
              `send_time < "2017-01-02T00:00:00-05:00"`. *  `send_facility`, the care center that the message
-             came from, from the MSH-4 segment. For example, `send_facility = "ABC"`. *  `HL7RegExp(expr)`,
-             which does regular expression matching of `expr` against the message payload using RE2 syntax
-             (https://github.com/google/re2/wiki/Syntax). For example, `HL7RegExp("^.*\|.*\|EMERG")`. *
-             `PatientId(value, type)`, which matches if the message lists a patient having an ID of the given
-             value and type in the PID-2, PID-3, or PID-4 segments. For example, `PatientId("123456", "MRN")`. *
-             `labels.x`, a string value of the label with key `x` as set using the Message.labels map. For
-             example, `labels."priority"="high"`. The operator `:*` can be used to assert the existence of a
-             label. For example, `labels."priority":*`.
+             came from, from the MSH-4 segment. For example, `send_facility = "ABC"`. *  `PatientId(value,
+             type)`, which matches if the message lists a patient having an ID of the given value and type in
+             the PID-2, PID-3, or PID-4 segments. For example, `PatientId("123456", "MRN")`. *  `labels.x`, a
+             string value of the label with key `x` as set using the Message.labels map. For example,
+             `labels."priority"="high"`. The operator `:*` can be used to assert the existence of a label. For
+             example, `labels."priority":*`.
 
              Limitations on conjunctions:
 
@@ -14638,15 +14619,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * RFC3339 time format for comparisons, from the MSH-7 segment. For example,
                * `send_time < "2017-01-02T00:00:00-05:00"`. *  `send_facility`, the care center that
                * the message came from, from the MSH-4 segment. For example, `send_facility =
-               * "ABC"`. *  `HL7RegExp(expr)`, which does regular expression matching of `expr`
-               * against the message payload using RE2 syntax
-               * (https://github.com/google/re2/wiki/Syntax). For example,
-               * `HL7RegExp("^.*\|.*\|EMERG")`. *  `PatientId(value, type)`, which matches if the
-               * message lists a patient having an ID of the given value and type in the PID-2,
-               * PID-3, or PID-4 segments. For example, `PatientId("123456", "MRN")`. *  `labels.x`,
-               * a string value of the label with key `x` as set using the Message.labels map. For
-               * example, `labels."priority"="high"`. The operator `:*` can be used to assert the
-               * existence of a label. For example, `labels."priority":*`.
+               * "ABC"`. *  `PatientId(value, type)`, which matches if the message lists a patient
+               * having an ID of the given value and type in the PID-2, PID-3, or PID-4 segments.
+               * For example, `PatientId("123456", "MRN")`. *  `labels.x`, a string value of the
+               * label with key `x` as set using the Message.labels map. For example,
+               * `labels."priority"="high"`. The operator `:*` can be used to assert the existence
+               * of a label. For example, `labels."priority":*`.
                *
                * Limitations on conjunctions:
                *

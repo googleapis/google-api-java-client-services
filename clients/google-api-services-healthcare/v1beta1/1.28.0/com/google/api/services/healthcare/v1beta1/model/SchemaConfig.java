@@ -33,7 +33,7 @@ public final class SchemaConfig extends com.google.api.client.json.GenericJson {
    * The depth for all recursive structures in the output analytics schema. For example, `concept`
    * in the CodeSystem resource is a recursive structure; when the depth is 2, the CodeSystem table
    * will have a column called `concept.concept` but not `concept.concept.concept`. If not specified
-   * or set to 0, the server will use the default value 2.
+   * or set to 0, the server will use the default value 2. The maximum depth allowed is 5.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -50,7 +50,7 @@ public final class SchemaConfig extends com.google.api.client.json.GenericJson {
    * The depth for all recursive structures in the output analytics schema. For example, `concept`
    * in the CodeSystem resource is a recursive structure; when the depth is 2, the CodeSystem table
    * will have a column called `concept.concept` but not `concept.concept.concept`. If not specified
-   * or set to 0, the server will use the default value 2.
+   * or set to 0, the server will use the default value 2. The maximum depth allowed is 5.
    * @return value or {@code null} for none
    */
   public java.lang.Long getRecursiveStructureDepth() {
@@ -61,7 +61,7 @@ public final class SchemaConfig extends com.google.api.client.json.GenericJson {
    * The depth for all recursive structures in the output analytics schema. For example, `concept`
    * in the CodeSystem resource is a recursive structure; when the depth is 2, the CodeSystem table
    * will have a column called `concept.concept` but not `concept.concept.concept`. If not specified
-   * or set to 0, the server will use the default value 2.
+   * or set to 0, the server will use the default value 2. The maximum depth allowed is 5.
    * @param recursiveStructureDepth recursiveStructureDepth or {@code null} for none
    */
   public SchemaConfig setRecursiveStructureDepth(java.lang.Long recursiveStructureDepth) {

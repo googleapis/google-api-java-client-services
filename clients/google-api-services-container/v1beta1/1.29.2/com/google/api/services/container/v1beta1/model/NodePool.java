@@ -133,6 +133,13 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   private java.lang.String statusMessage;
 
   /**
+   * Upgrade settings control disruption and speed of the upgrade.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UpgradeSettings upgradeSettings;
+
+  /**
    * The version of the Kubernetes of this node.
    * The value may be {@code null}.
    */
@@ -371,6 +378,23 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
    */
   public NodePool setStatusMessage(java.lang.String statusMessage) {
     this.statusMessage = statusMessage;
+    return this;
+  }
+
+  /**
+   * Upgrade settings control disruption and speed of the upgrade.
+   * @return value or {@code null} for none
+   */
+  public UpgradeSettings getUpgradeSettings() {
+    return upgradeSettings;
+  }
+
+  /**
+   * Upgrade settings control disruption and speed of the upgrade.
+   * @param upgradeSettings upgradeSettings or {@code null} for none
+   */
+  public NodePool setUpgradeSettings(UpgradeSettings upgradeSettings) {
+    this.upgradeSettings = upgradeSettings;
     return this;
   }
 

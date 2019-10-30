@@ -20,8 +20,7 @@ package com.google.api.services.licensing.model;
  * LicesnseAssignment List for a given product/sku for a customer.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Enterprise License Manager API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Licensing API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -58,8 +57,9 @@ public final class LicenseAssignmentList extends com.google.api.client.json.Gene
   private java.lang.String kind;
 
   /**
-   * The continuation token, used to page through large result sets. Provide this value in a
-   * subsequent request to return the next page of results.
+   * The token that you must submit in a subsequent request to retrieve additional license results
+   * matching your query parameters. The maxResults query string is related to the nextPageToken
+   * since maxResults determines how many entries are returned on each next page.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,8 +117,9 @@ public final class LicenseAssignmentList extends com.google.api.client.json.Gene
   }
 
   /**
-   * The continuation token, used to page through large result sets. Provide this value in a
-   * subsequent request to return the next page of results.
+   * The token that you must submit in a subsequent request to retrieve additional license results
+   * matching your query parameters. The maxResults query string is related to the nextPageToken
+   * since maxResults determines how many entries are returned on each next page.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -126,8 +127,9 @@ public final class LicenseAssignmentList extends com.google.api.client.json.Gene
   }
 
   /**
-   * The continuation token, used to page through large result sets. Provide this value in a
-   * subsequent request to return the next page of results.
+   * The token that you must submit in a subsequent request to retrieve additional license results
+   * matching your query parameters. The maxResults query string is related to the nextPageToken
+   * since maxResults determines how many entries are returned on each next page.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public LicenseAssignmentList setNextPageToken(java.lang.String nextPageToken) {

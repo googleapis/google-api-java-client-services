@@ -36,7 +36,10 @@ package com.google.api.services.ml.v1.model;
 public final class GoogleCloudMlV1Version extends com.google.api.client.json.GenericJson {
 
   /**
-   * Accelerator config for GPU serving.
+   * Optional. Accelerator config for using GPUs for online prediction (beta). Only specify this
+   * field if you have specified a Compute Engine (N1) machine type in the `machineType` field.
+   * Learn more about [using GPUs for online prediction](/ml-engine/docs/machine-types-online-
+   * prediction#gpus).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,6 +49,9 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    * Automatically scale the number of nodes used to serve the model in response to increases and
    * decreases in traffic. Care should be taken to ramp up traffic according to the model's ability
    * to scale or you will start seeing increases in latency and 429 response codes.
+   *
+   * Note that you cannot use AutoScaling if your version uses
+   * [GPUs](#Version.FIELDS.accelerator_config). Instead, you must use specify `manual_scaling`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,6 +113,9 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    *
    * Do **not** specify a framework if you're deploying a [custom prediction routine](/ml-
    * engine/docs/tensorflow/custom-prediction-routines).
+   *
+   * If you specify a [Compute Engine (N1) machine type](/ml-engine/docs/machine-types-online-
+   * prediction) in the `machineType` field, you must specify `TENSORFLOW` for the framework.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,11 +150,17 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
 
   /**
    * Optional. The type of machine on which to serve the model. Currently only applies to online
-   * prediction service.
+   * prediction service. If this field is not specified, it defaults to `mls1-c1-m2`.
    *
-   *   mls1-c1-m2      The default machine type, with 1 core and 2 GB RAM. The deprecated   name for
-   * this machine type is "mls1-highmem-1".      mls1-c4-m2      In Beta. This machine type has 4
-   * cores and 2 GB RAM. The   deprecated name for this machine type is "mls1-highcpu-4".
+   * Online prediction supports the following machine types:
+   *
+   * * `mls1-c1-m2` * `mls1-c4-m2` * `n1-standard-2` * `n1-standard-4` * `n1-standard-8` *
+   * `n1-standard-16` * `n1-standard-32` * `n1-highmem-2` * `n1-highmem-4` * `n1-highmem-8` *
+   * `n1-highmem-16` * `n1-highmem-32` * `n1-highcpu-2` * `n1-highcpu-4` * `n1-highcpu-8` *
+   * `n1-highcpu-16` * `n1-highcpu-32`
+   *
+   * `mls1-c1-m2` is generally available. All other machine types are available in beta. Learn more
+   * about the [differences between machine types](/ml-engine/docs/machine-types-online-prediction).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -194,11 +209,13 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    *
    * Specify this field if and only if you are deploying a [custom prediction routine (beta)](/ml-
    * engine/docs/tensorflow/custom-prediction-routines). If you specify this field, you must set
-   * [`runtimeVersion`](#Version.FIELDS.runtime_version) to 1.4 or greater.
+   * [`runtimeVersion`](#Version.FIELDS.runtime_version) to 1.4 or greater and you must set
+   * `machineType` to a [legacy (MLS1) machine type](/ml-engine/docs/machine-types-online-
+   * prediction).
    *
    * The following code sample provides the Predictor interface:
    *
-   * ```py class Predictor(object): Interface for constructing custom predictors.
+   * class Predictor(object): Interface for constructing custom predictors.
    *
    * def predict(self, instances, **kwargs):     Performs custom prediction.
    *
@@ -221,7 +238,7 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    * file along with any additional files uploaded when creating the             version resource.
    *
    *     Returns:         An instance implementing this Predictor class.          raise
-   * NotImplementedError() ```
+   * NotImplementedError()
    *
    * Learn more about [the Predictor interface and custom prediction routines](/ml-
    * engine/docs/tensorflow/custom-prediction-routines).
@@ -271,7 +288,10 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   private java.lang.String state;
 
   /**
-   * Accelerator config for GPU serving.
+   * Optional. Accelerator config for using GPUs for online prediction (beta). Only specify this
+   * field if you have specified a Compute Engine (N1) machine type in the `machineType` field.
+   * Learn more about [using GPUs for online prediction](/ml-engine/docs/machine-types-online-
+   * prediction#gpus).
    * @return value or {@code null} for none
    */
   public GoogleCloudMlV1AcceleratorConfig getAcceleratorConfig() {
@@ -279,7 +299,10 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   }
 
   /**
-   * Accelerator config for GPU serving.
+   * Optional. Accelerator config for using GPUs for online prediction (beta). Only specify this
+   * field if you have specified a Compute Engine (N1) machine type in the `machineType` field.
+   * Learn more about [using GPUs for online prediction](/ml-engine/docs/machine-types-online-
+   * prediction#gpus).
    * @param acceleratorConfig acceleratorConfig or {@code null} for none
    */
   public GoogleCloudMlV1Version setAcceleratorConfig(GoogleCloudMlV1AcceleratorConfig acceleratorConfig) {
@@ -291,6 +314,9 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    * Automatically scale the number of nodes used to serve the model in response to increases and
    * decreases in traffic. Care should be taken to ramp up traffic according to the model's ability
    * to scale or you will start seeing increases in latency and 429 response codes.
+   *
+   * Note that you cannot use AutoScaling if your version uses
+   * [GPUs](#Version.FIELDS.accelerator_config). Instead, you must use specify `manual_scaling`.
    * @return value or {@code null} for none
    */
   public GoogleCloudMlV1AutoScaling getAutoScaling() {
@@ -301,6 +327,9 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    * Automatically scale the number of nodes used to serve the model in response to increases and
    * decreases in traffic. Care should be taken to ramp up traffic according to the model's ability
    * to scale or you will start seeing increases in latency and 429 response codes.
+   *
+   * Note that you cannot use AutoScaling if your version uses
+   * [GPUs](#Version.FIELDS.accelerator_config). Instead, you must use specify `manual_scaling`.
    * @param autoScaling autoScaling or {@code null} for none
    */
   public GoogleCloudMlV1Version setAutoScaling(GoogleCloudMlV1AutoScaling autoScaling) {
@@ -464,6 +493,9 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    *
    * Do **not** specify a framework if you're deploying a [custom prediction routine](/ml-
    * engine/docs/tensorflow/custom-prediction-routines).
+   *
+   * If you specify a [Compute Engine (N1) machine type](/ml-engine/docs/machine-types-online-
+   * prediction) in the `machineType` field, you must specify `TENSORFLOW` for the framework.
    * @return value or {@code null} for none
    */
   public java.lang.String getFramework() {
@@ -479,6 +511,9 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    *
    * Do **not** specify a framework if you're deploying a [custom prediction routine](/ml-
    * engine/docs/tensorflow/custom-prediction-routines).
+   *
+   * If you specify a [Compute Engine (N1) machine type](/ml-engine/docs/machine-types-online-
+   * prediction) in the `machineType` field, you must specify `TENSORFLOW` for the framework.
    * @param framework framework or {@code null} for none
    */
   public GoogleCloudMlV1Version setFramework(java.lang.String framework) {
@@ -551,11 +586,17 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
 
   /**
    * Optional. The type of machine on which to serve the model. Currently only applies to online
-   * prediction service.
+   * prediction service. If this field is not specified, it defaults to `mls1-c1-m2`.
    *
-   *   mls1-c1-m2      The default machine type, with 1 core and 2 GB RAM. The deprecated   name for
-   * this machine type is "mls1-highmem-1".      mls1-c4-m2      In Beta. This machine type has 4
-   * cores and 2 GB RAM. The   deprecated name for this machine type is "mls1-highcpu-4".
+   * Online prediction supports the following machine types:
+   *
+   * * `mls1-c1-m2` * `mls1-c4-m2` * `n1-standard-2` * `n1-standard-4` * `n1-standard-8` *
+   * `n1-standard-16` * `n1-standard-32` * `n1-highmem-2` * `n1-highmem-4` * `n1-highmem-8` *
+   * `n1-highmem-16` * `n1-highmem-32` * `n1-highcpu-2` * `n1-highcpu-4` * `n1-highcpu-8` *
+   * `n1-highcpu-16` * `n1-highcpu-32`
+   *
+   * `mls1-c1-m2` is generally available. All other machine types are available in beta. Learn more
+   * about the [differences between machine types](/ml-engine/docs/machine-types-online-prediction).
    * @return value or {@code null} for none
    */
   public java.lang.String getMachineType() {
@@ -564,11 +605,17 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
 
   /**
    * Optional. The type of machine on which to serve the model. Currently only applies to online
-   * prediction service.
+   * prediction service. If this field is not specified, it defaults to `mls1-c1-m2`.
    *
-   *   mls1-c1-m2      The default machine type, with 1 core and 2 GB RAM. The deprecated   name for
-   * this machine type is "mls1-highmem-1".      mls1-c4-m2      In Beta. This machine type has 4
-   * cores and 2 GB RAM. The   deprecated name for this machine type is "mls1-highcpu-4".
+   * Online prediction supports the following machine types:
+   *
+   * * `mls1-c1-m2` * `mls1-c4-m2` * `n1-standard-2` * `n1-standard-4` * `n1-standard-8` *
+   * `n1-standard-16` * `n1-standard-32` * `n1-highmem-2` * `n1-highmem-4` * `n1-highmem-8` *
+   * `n1-highmem-16` * `n1-highmem-32` * `n1-highcpu-2` * `n1-highcpu-4` * `n1-highcpu-8` *
+   * `n1-highcpu-16` * `n1-highcpu-32`
+   *
+   * `mls1-c1-m2` is generally available. All other machine types are available in beta. Learn more
+   * about the [differences between machine types](/ml-engine/docs/machine-types-online-prediction).
    * @param machineType machineType or {@code null} for none
    */
   public GoogleCloudMlV1Version setMachineType(java.lang.String machineType) {
@@ -664,11 +711,13 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    *
    * Specify this field if and only if you are deploying a [custom prediction routine (beta)](/ml-
    * engine/docs/tensorflow/custom-prediction-routines). If you specify this field, you must set
-   * [`runtimeVersion`](#Version.FIELDS.runtime_version) to 1.4 or greater.
+   * [`runtimeVersion`](#Version.FIELDS.runtime_version) to 1.4 or greater and you must set
+   * `machineType` to a [legacy (MLS1) machine type](/ml-engine/docs/machine-types-online-
+   * prediction).
    *
    * The following code sample provides the Predictor interface:
    *
-   * ```py class Predictor(object): Interface for constructing custom predictors.
+   * class Predictor(object): Interface for constructing custom predictors.
    *
    * def predict(self, instances, **kwargs):     Performs custom prediction.
    *
@@ -691,7 +740,7 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    * file along with any additional files uploaded when creating the             version resource.
    *
    *     Returns:         An instance implementing this Predictor class.          raise
-   * NotImplementedError() ```
+   * NotImplementedError()
    *
    * Learn more about [the Predictor interface and custom prediction routines](/ml-
    * engine/docs/tensorflow/custom-prediction-routines).
@@ -708,11 +757,13 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    *
    * Specify this field if and only if you are deploying a [custom prediction routine (beta)](/ml-
    * engine/docs/tensorflow/custom-prediction-routines). If you specify this field, you must set
-   * [`runtimeVersion`](#Version.FIELDS.runtime_version) to 1.4 or greater.
+   * [`runtimeVersion`](#Version.FIELDS.runtime_version) to 1.4 or greater and you must set
+   * `machineType` to a [legacy (MLS1) machine type](/ml-engine/docs/machine-types-online-
+   * prediction).
    *
    * The following code sample provides the Predictor interface:
    *
-   * ```py class Predictor(object): Interface for constructing custom predictors.
+   * class Predictor(object): Interface for constructing custom predictors.
    *
    * def predict(self, instances, **kwargs):     Performs custom prediction.
    *
@@ -735,7 +786,7 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    * file along with any additional files uploaded when creating the             version resource.
    *
    *     Returns:         An instance implementing this Predictor class.          raise
-   * NotImplementedError() ```
+   * NotImplementedError()
    *
    * Learn more about [the Predictor interface and custom prediction routines](/ml-
    * engine/docs/tensorflow/custom-prediction-routines).

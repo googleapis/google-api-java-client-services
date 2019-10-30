@@ -4271,10 +4271,14 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
            *
            * For example, to change the description of a version to "foo", the `update_mask`
            * parameter would be specified as `description`, and the `PATCH` request body would
-           * specify the new value, as follows: { "description": "foo" }
+           * specify the new value, as follows:
            *
-           * Currently the only supported update mask fields are `description` and
-           * `autoScaling.minNodes`.
+           * ``` { "description": "foo" } ```
+           *
+           * Currently the only supported update mask fields are `description`,
+           * `autoScaling.minNodes`, and `manualScaling.nodes`. However, you can only update
+           * `manualScaling.nodes` if the version uses a [Compute Engine (N1) machine type](/ml-
+           * engine/docs/machine-types-online-prediction).
            */
           @com.google.api.client.util.Key
           private String updateMask;
@@ -4283,10 +4287,13 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
          non-empty.
 
          For example, to change the description of a version to "foo", the `update_mask` parameter would be
-         specified as `description`, and the `PATCH` request body would specify the new value, as follows: {
-         "description": "foo" }
+         specified as `description`, and the `PATCH` request body would specify the new value, as follows:
 
-         Currently the only supported update mask fields are `description` and `autoScaling.minNodes`.
+         ``` { "description": "foo" } ```
+
+         Currently the only supported update mask fields are `description`, `autoScaling.minNodes`, and
+         `manualScaling.nodes`. However, you can only update `manualScaling.nodes` if the version uses a
+         [Compute Engine (N1) machine type](/ml-engine/docs/machine-types-online-prediction).
            */
           public String getUpdateMask() {
             return updateMask;
@@ -4298,10 +4305,14 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
            *
            * For example, to change the description of a version to "foo", the `update_mask`
            * parameter would be specified as `description`, and the `PATCH` request body would
-           * specify the new value, as follows: { "description": "foo" }
+           * specify the new value, as follows:
            *
-           * Currently the only supported update mask fields are `description` and
-           * `autoScaling.minNodes`.
+           * ``` { "description": "foo" } ```
+           *
+           * Currently the only supported update mask fields are `description`,
+           * `autoScaling.minNodes`, and `manualScaling.nodes`. However, you can only update
+           * `manualScaling.nodes` if the version uses a [Compute Engine (N1) machine type](/ml-
+           * engine/docs/machine-types-online-prediction).
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;

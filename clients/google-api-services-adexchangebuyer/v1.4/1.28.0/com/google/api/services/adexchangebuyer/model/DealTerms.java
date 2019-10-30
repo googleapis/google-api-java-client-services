@@ -31,7 +31,7 @@ package com.google.api.services.adexchangebuyer.model;
 public final class DealTerms extends com.google.api.client.json.GenericJson {
 
   /**
-   * Visibilty of the URL in bid requests.
+   * Visibility of the URL in bid requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,7 +104,7 @@ public final class DealTerms extends com.google.api.client.json.GenericJson {
   private java.lang.String sellerTimeZone;
 
   /**
-   * Visibilty of the URL in bid requests.
+   * Visibility of the URL in bid requests.
    * @return value or {@code null} for none
    */
   public java.lang.String getBrandingType() {
@@ -112,7 +112,7 @@ public final class DealTerms extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Visibilty of the URL in bid requests.
+   * Visibility of the URL in bid requests.
    * @param brandingType brandingType or {@code null} for none
    */
   public DealTerms setBrandingType(java.lang.String brandingType) {

@@ -31,15 +31,15 @@ package com.google.api.services.cloudresourcemanager.model;
 public final class SearchFoldersRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The maximum number of folders to return in the response. This field is optional.
+   * Optional. The maximum number of folders to return in the response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer pageSize;
 
   /**
-   * A pagination token returned from a previous call to `SearchFolders` that indicates from where
-   * search should continue. This field is optional.
+   * Optional. A pagination token returned from a previous call to `SearchFolders` that indicates
+   * from where search should continue.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +70,7 @@ public final class SearchFoldersRequest extends com.google.api.client.json.Gener
   private java.lang.String query;
 
   /**
-   * The maximum number of folders to return in the response. This field is optional.
+   * Optional. The maximum number of folders to return in the response.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPageSize() {
@@ -78,7 +78,7 @@ public final class SearchFoldersRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * The maximum number of folders to return in the response. This field is optional.
+   * Optional. The maximum number of folders to return in the response.
    * @param pageSize pageSize or {@code null} for none
    */
   public SearchFoldersRequest setPageSize(java.lang.Integer pageSize) {
@@ -87,8 +87,8 @@ public final class SearchFoldersRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * A pagination token returned from a previous call to `SearchFolders` that indicates from where
-   * search should continue. This field is optional.
+   * Optional. A pagination token returned from a previous call to `SearchFolders` that indicates
+   * from where search should continue.
    * @return value or {@code null} for none
    */
   public java.lang.String getPageToken() {
@@ -96,8 +96,8 @@ public final class SearchFoldersRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * A pagination token returned from a previous call to `SearchFolders` that indicates from where
-   * search should continue. This field is optional.
+   * Optional. A pagination token returned from a previous call to `SearchFolders` that indicates
+   * from where search should continue.
    * @param pageToken pageToken or {@code null} for none
    */
   public SearchFoldersRequest setPageToken(java.lang.String pageToken) {

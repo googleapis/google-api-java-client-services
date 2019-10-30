@@ -46,7 +46,7 @@ public final class ListFoldersResponse extends com.google.api.client.json.Generi
 
   /**
    * A pagination token returned from a previous call to `ListFolders` that indicates from where
-   * listing should continue. This field is optional.
+   * listing should continue.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +73,7 @@ public final class ListFoldersResponse extends com.google.api.client.json.Generi
 
   /**
    * A pagination token returned from a previous call to `ListFolders` that indicates from where
-   * listing should continue. This field is optional.
+   * listing should continue.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -82,7 +82,7 @@ public final class ListFoldersResponse extends com.google.api.client.json.Generi
 
   /**
    * A pagination token returned from a previous call to `ListFolders` that indicates from where
-   * listing should continue. This field is optional.
+   * listing should continue.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListFoldersResponse setNextPageToken(java.lang.String nextPageToken) {

@@ -45,7 +45,7 @@ public final class SearchFoldersResponse extends com.google.api.client.json.Gene
 
   /**
    * A pagination token returned from a previous call to `SearchFolders` that indicates from where
-   * searching should continue. This field is optional.
+   * searching should continue.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +70,7 @@ public final class SearchFoldersResponse extends com.google.api.client.json.Gene
 
   /**
    * A pagination token returned from a previous call to `SearchFolders` that indicates from where
-   * searching should continue. This field is optional.
+   * searching should continue.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -79,7 +79,7 @@ public final class SearchFoldersResponse extends com.google.api.client.json.Gene
 
   /**
    * A pagination token returned from a previous call to `SearchFolders` that indicates from where
-   * searching should continue. This field is optional.
+   * searching should continue.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public SearchFoldersResponse setNextPageToken(java.lang.String nextPageToken) {

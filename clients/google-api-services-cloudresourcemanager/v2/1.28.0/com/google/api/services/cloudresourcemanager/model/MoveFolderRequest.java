@@ -31,16 +31,16 @@ package com.google.api.services.cloudresourcemanager.model;
 public final class MoveFolderRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The resource name of the Folder or Organization to reparent the folder under. Must be of the
-   * form `folders/{folder_id}` or `organizations/{org_id}`.
+   * Required. The resource name of the Folder or Organization to reparent the folder under. Must be
+   * of the form `folders/{folder_id}` or `organizations/{org_id}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String destinationParent;
 
   /**
-   * The resource name of the Folder or Organization to reparent the folder under. Must be of the
-   * form `folders/{folder_id}` or `organizations/{org_id}`.
+   * Required. The resource name of the Folder or Organization to reparent the folder under. Must be
+   * of the form `folders/{folder_id}` or `organizations/{org_id}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getDestinationParent() {
@@ -48,8 +48,8 @@ public final class MoveFolderRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The resource name of the Folder or Organization to reparent the folder under. Must be of the
-   * form `folders/{folder_id}` or `organizations/{org_id}`.
+   * Required. The resource name of the Folder or Organization to reparent the folder under. Must be
+   * of the form `folders/{folder_id}` or `organizations/{org_id}`.
    * @param destinationParent destinationParent or {@code null} for none
    */
   public MoveFolderRequest setDestinationParent(java.lang.String destinationParent) {

@@ -105,6 +105,15 @@ public final class Version extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Version preview configuration for the site version. This configuration specfies whether
+   * previewing is enabled for this site version. Version previews allow you to preview your site at
+   * a custom URL before releasing it as the live version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PreviewConfig preview;
+
+  /**
    * The deploy status of a version.
    *
    * For a successful deploy, call the [`CreateVersion`](sites.versions/create) endpoint to make a
@@ -304,6 +313,27 @@ public final class Version extends com.google.api.client.json.GenericJson {
    */
   public Version setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Version preview configuration for the site version. This configuration specfies whether
+   * previewing is enabled for this site version. Version previews allow you to preview your site at
+   * a custom URL before releasing it as the live version.
+   * @return value or {@code null} for none
+   */
+  public PreviewConfig getPreview() {
+    return preview;
+  }
+
+  /**
+   * Version preview configuration for the site version. This configuration specfies whether
+   * previewing is enabled for this site version. Version previews allow you to preview your site at
+   * a custom URL before releasing it as the live version.
+   * @param preview preview or {@code null} for none
+   */
+  public Version setPreview(PreviewConfig preview) {
+    this.preview = preview;
     return this;
   }
 

@@ -42,9 +42,17 @@ public final class GoogleCloudMlV1AutoScaling extends com.google.api.client.json
    * always maintaining at least `min_nodes`. You will be charged for the time in which additional
    * nodes are used.
    *
-   * If not specified, `min_nodes` defaults to 0, in which case, when traffic to a model stops (and
-   * after a cool-down period), nodes will be shut down and no charges will be incurred until
-   * traffic to the model resumes.
+   * If `min_nodes` is not specified and AutoScaling is used with a [legacy (MLS1) machine type
+   * ](/ml-engine/docs/machine-types-online-prediction), `min_nodes` defaults to 0, in which case,
+   * when traffic to a model stops (and after a cool-down period), nodes will be shut down and no
+   * charges will be incurred until traffic to the model resumes.
+   *
+   * If `min_nodes` is not specified and AutoScaling is used with a [Compute Engine (N1) machine
+   * type](/ml-engine/docs/machine-types-online-prediction), `min_nodes` defaults to 1. `min_nodes`
+   * must be at least 1 for use with a Compute Engine machine type.
+   *
+   * Note that you cannot use AutoScaling if your version uses
+   * [GPUs](#Version.FIELDS.accelerator_config). Instead, you must use ManualScaling.
    *
    * You can set `min_nodes` when creating the model version, and you can also update `min_nodes`
    * for an existing version:
@@ -73,9 +81,17 @@ public final class GoogleCloudMlV1AutoScaling extends com.google.api.client.json
    * always maintaining at least `min_nodes`. You will be charged for the time in which additional
    * nodes are used.
    *
-   * If not specified, `min_nodes` defaults to 0, in which case, when traffic to a model stops (and
-   * after a cool-down period), nodes will be shut down and no charges will be incurred until
-   * traffic to the model resumes.
+   * If `min_nodes` is not specified and AutoScaling is used with a [legacy (MLS1) machine type
+   * ](/ml-engine/docs/machine-types-online-prediction), `min_nodes` defaults to 0, in which case,
+   * when traffic to a model stops (and after a cool-down period), nodes will be shut down and no
+   * charges will be incurred until traffic to the model resumes.
+   *
+   * If `min_nodes` is not specified and AutoScaling is used with a [Compute Engine (N1) machine
+   * type](/ml-engine/docs/machine-types-online-prediction), `min_nodes` defaults to 1. `min_nodes`
+   * must be at least 1 for use with a Compute Engine machine type.
+   *
+   * Note that you cannot use AutoScaling if your version uses
+   * [GPUs](#Version.FIELDS.accelerator_config). Instead, you must use ManualScaling.
    *
    * You can set `min_nodes` when creating the model version, and you can also update `min_nodes`
    * for an existing version:
@@ -105,9 +121,17 @@ public final class GoogleCloudMlV1AutoScaling extends com.google.api.client.json
    * always maintaining at least `min_nodes`. You will be charged for the time in which additional
    * nodes are used.
    *
-   * If not specified, `min_nodes` defaults to 0, in which case, when traffic to a model stops (and
-   * after a cool-down period), nodes will be shut down and no charges will be incurred until
-   * traffic to the model resumes.
+   * If `min_nodes` is not specified and AutoScaling is used with a [legacy (MLS1) machine type
+   * ](/ml-engine/docs/machine-types-online-prediction), `min_nodes` defaults to 0, in which case,
+   * when traffic to a model stops (and after a cool-down period), nodes will be shut down and no
+   * charges will be incurred until traffic to the model resumes.
+   *
+   * If `min_nodes` is not specified and AutoScaling is used with a [Compute Engine (N1) machine
+   * type](/ml-engine/docs/machine-types-online-prediction), `min_nodes` defaults to 1. `min_nodes`
+   * must be at least 1 for use with a Compute Engine machine type.
+   *
+   * Note that you cannot use AutoScaling if your version uses
+   * [GPUs](#Version.FIELDS.accelerator_config). Instead, you must use ManualScaling.
    *
    * You can set `min_nodes` when creating the model version, and you can also update `min_nodes`
    * for an existing version:

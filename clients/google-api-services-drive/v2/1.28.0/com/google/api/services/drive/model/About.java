@@ -201,7 +201,7 @@ public final class About extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The total number of quota bytes.
+   * The total number of quota bytes. This is only relevant when quotaType is LIMITED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -589,7 +589,7 @@ public final class About extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The total number of quota bytes.
+   * The total number of quota bytes. This is only relevant when quotaType is LIMITED.
    * @return value or {@code null} for none
    */
   public java.lang.Long getQuotaBytesTotal() {
@@ -597,7 +597,7 @@ public final class About extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The total number of quota bytes.
+   * The total number of quota bytes. This is only relevant when quotaType is LIMITED.
    * @param quotaBytesTotal quotaBytesTotal or {@code null} for none
    */
   public About setQuotaBytesTotal(java.lang.Long quotaBytesTotal) {

@@ -93,7 +93,7 @@ packages on [Maven Central][maven-search].
 | Container Analysis API | [v1alpha1](clients/google-api-services-containeranalysis/v1alpha1), [v1beta1](clients/google-api-services-containeranalysis/v1beta1) |
 | Content API for Shopping | [v2](clients/google-api-services-content/v2), [v2.1](clients/google-api-services-content/v2.1) |
 | CustomSearch API | [v1](clients/google-api-services-customsearch/v1) |
-| DCM/DFA Reporting And Trafficking API | [v3.2](clients/google-api-services-dfareporting/v3.2), [v3.3](clients/google-api-services-dfareporting/v3.3) |
+| DCM/DFA Reporting And Trafficking API | [v3.3](clients/google-api-services-dfareporting/v3.3) |
 | Dataflow API | [v1b3](clients/google-api-services-dataflow/v1b3) |
 | Dialogflow API | [v2](clients/google-api-services-dialogflow/v2), [v2beta1](clients/google-api-services-dialogflow/v2beta1) |
 | Digital Asset Links API | [v1](clients/google-api-services-digitalassetlinks/v1) |

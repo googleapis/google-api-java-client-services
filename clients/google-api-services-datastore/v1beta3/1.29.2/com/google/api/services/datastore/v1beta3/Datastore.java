@@ -618,7 +618,8 @@ public class Datastore extends com.google.api.client.googleapis.services.json.Ab
       }
     }
     /**
-     * Prevents the supplied keys' IDs from being auto-allocated by Cloud Datastore.
+     * Prevents the supplied keys' IDs from being auto-allocated by Cloud Datastore. Used for imports
+     * only; other workloads are not supported.
      *
      * Create a request for the method "projects.reserveIds".
      *
@@ -640,7 +641,8 @@ public class Datastore extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "v1beta3/projects/{projectId}:reserveIds";
 
       /**
-       * Prevents the supplied keys' IDs from being auto-allocated by Cloud Datastore.
+       * Prevents the supplied keys' IDs from being auto-allocated by Cloud Datastore. Used for imports
+       * only; other workloads are not supported.
        *
        * Create a request for the method "projects.reserveIds".
        *

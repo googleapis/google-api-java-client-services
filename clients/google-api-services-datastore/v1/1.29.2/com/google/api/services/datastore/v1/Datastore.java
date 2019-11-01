@@ -870,7 +870,8 @@ public class Datastore extends com.google.api.client.googleapis.services.json.Ab
       }
     }
     /**
-     * Prevents the supplied keys' IDs from being auto-allocated by Cloud Datastore.
+     * Prevents the supplied keys' IDs from being auto-allocated by Cloud Datastore. Used for imports
+     * only; other workloads are not supported.
      *
      * Create a request for the method "projects.reserveIds".
      *
@@ -892,7 +893,8 @@ public class Datastore extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "v1/projects/{projectId}:reserveIds";
 
       /**
-       * Prevents the supplied keys' IDs from being auto-allocated by Cloud Datastore.
+       * Prevents the supplied keys' IDs from being auto-allocated by Cloud Datastore. Used for imports
+       * only; other workloads are not supported.
        *
        * Create a request for the method "projects.reserveIds".
        *
@@ -1244,6 +1246,287 @@ public class Datastore extends com.google.api.client.googleapis.services.json.Ab
      */
     public class Indexes {
 
+      /**
+       * Creates the specified index. A newly created index's initial state is `CREATING`. On completion
+       * of the returned google.longrunning.Operation, the state will be `READY`. If the index already
+       * exists, the call will return an `ALREADY_EXISTS` status.
+       *
+       * During index creation, the process could result in an error, in which case the index will move to
+       * the `ERROR` state. The process can be recovered by fixing the data that caused the error,
+       * removing the index with delete, then re-creating the index with create.
+       *
+       * Indexes with a single property cannot be created.
+       *
+       * Create a request for the method "indexes.create".
+       *
+       * This request holds the parameters needed by the datastore server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param projectId Project ID against which to make the request.
+       * @param content the {@link com.google.api.services.datastore.v1.model.GoogleDatastoreAdminV1Index}
+       * @return the request
+       */
+      public Create create(java.lang.String projectId, com.google.api.services.datastore.v1.model.GoogleDatastoreAdminV1Index content) throws java.io.IOException {
+        Create result = new Create(projectId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends DatastoreRequest<com.google.api.services.datastore.v1.model.GoogleLongrunningOperation> {
+
+        private static final String REST_PATH = "v1/projects/{projectId}/indexes";
+
+        /**
+         * Creates the specified index. A newly created index's initial state is `CREATING`. On completion
+         * of the returned google.longrunning.Operation, the state will be `READY`. If the index already
+         * exists, the call will return an `ALREADY_EXISTS` status.
+         *
+         * During index creation, the process could result in an error, in which case the index will move
+         * to the `ERROR` state. The process can be recovered by fixing the data that caused the error,
+         * removing the index with delete, then re-creating the index with create.
+         *
+         * Indexes with a single property cannot be created.
+         *
+         * Create a request for the method "indexes.create".
+         *
+         * This request holds the parameters needed by the the datastore server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param projectId Project ID against which to make the request.
+         * @param content the {@link com.google.api.services.datastore.v1.model.GoogleDatastoreAdminV1Index}
+         * @since 1.13
+         */
+        protected Create(java.lang.String projectId, com.google.api.services.datastore.v1.model.GoogleDatastoreAdminV1Index content) {
+          super(Datastore.this, "POST", REST_PATH, content, com.google.api.services.datastore.v1.model.GoogleLongrunningOperation.class);
+          this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Project ID against which to make the request. */
+        @com.google.api.client.util.Key
+        private java.lang.String projectId;
+
+        /** Project ID against which to make the request.
+         */
+        public java.lang.String getProjectId() {
+          return projectId;
+        }
+
+        /** Project ID against which to make the request. */
+        public Create setProjectId(java.lang.String projectId) {
+          this.projectId = projectId;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes an existing index. An index can only be deleted if it is in a `READY` or `ERROR` state.
+       * On successful execution of the request, the index will be in a `DELETING` state. And on
+       * completion of the returned google.longrunning.Operation, the index will be removed.
+       *
+       * During index deletion, the process could result in an error, in which case the index will move to
+       * the `ERROR` state. The process can be recovered by fixing the data that caused the error,
+       * followed by calling delete again.
+       *
+       * Create a request for the method "indexes.delete".
+       *
+       * This request holds the parameters needed by the datastore server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param projectId Project ID against which to make the request.
+       * @param indexId The resource ID of the index to delete.
+       * @return the request
+       */
+      public Delete delete(java.lang.String projectId, java.lang.String indexId) throws java.io.IOException {
+        Delete result = new Delete(projectId, indexId);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends DatastoreRequest<com.google.api.services.datastore.v1.model.GoogleLongrunningOperation> {
+
+        private static final String REST_PATH = "v1/projects/{projectId}/indexes/{indexId}";
+
+        /**
+         * Deletes an existing index. An index can only be deleted if it is in a `READY` or `ERROR` state.
+         * On successful execution of the request, the index will be in a `DELETING` state. And on
+         * completion of the returned google.longrunning.Operation, the index will be removed.
+         *
+         * During index deletion, the process could result in an error, in which case the index will move
+         * to the `ERROR` state. The process can be recovered by fixing the data that caused the error,
+         * followed by calling delete again.
+         *
+         * Create a request for the method "indexes.delete".
+         *
+         * This request holds the parameters needed by the the datastore server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param projectId Project ID against which to make the request.
+         * @param indexId The resource ID of the index to delete.
+         * @since 1.13
+         */
+        protected Delete(java.lang.String projectId, java.lang.String indexId) {
+          super(Datastore.this, "DELETE", REST_PATH, null, com.google.api.services.datastore.v1.model.GoogleLongrunningOperation.class);
+          this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+          this.indexId = com.google.api.client.util.Preconditions.checkNotNull(indexId, "Required parameter indexId must be specified.");
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Project ID against which to make the request. */
+        @com.google.api.client.util.Key
+        private java.lang.String projectId;
+
+        /** Project ID against which to make the request.
+         */
+        public java.lang.String getProjectId() {
+          return projectId;
+        }
+
+        /** Project ID against which to make the request. */
+        public Delete setProjectId(java.lang.String projectId) {
+          this.projectId = projectId;
+          return this;
+        }
+
+        /** The resource ID of the index to delete. */
+        @com.google.api.client.util.Key
+        private java.lang.String indexId;
+
+        /** The resource ID of the index to delete.
+         */
+        public java.lang.String getIndexId() {
+          return indexId;
+        }
+
+        /** The resource ID of the index to delete. */
+        public Delete setIndexId(java.lang.String indexId) {
+          this.indexId = indexId;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
       /**
        * Gets an index.
        *

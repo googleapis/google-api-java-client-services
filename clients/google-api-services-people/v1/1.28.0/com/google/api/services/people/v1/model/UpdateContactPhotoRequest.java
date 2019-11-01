@@ -31,9 +31,9 @@ package com.google.api.services.people.v1.model;
 public final class UpdateContactPhotoRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * **Optional.** Not specifying any fields will skip the post mutate read. A field mask to
-   * restrict which fields on the person are returned. Multiple fields can be specified by
-   * separating them with commas. Valid values are:
+   * Optional. A field mask to restrict which fields on the person are returned. Multiple fields can
+   * be specified by separating them with commas. Defaults to empty if not set, which will skip the
+   * post mutate get. Valid values are:
    *
    * * addresses * ageRanges * biographies * birthdays * braggingRights * coverPhotos *
    * emailAddresses * events * genders * imClients * interests * locales * memberships * metadata *
@@ -46,16 +46,16 @@ public final class UpdateContactPhotoRequest extends com.google.api.client.json.
   private String personFields;
 
   /**
-   * Raw photo bytes
+   * Required. Raw photo bytes
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String photoBytes;
 
   /**
-   * **Optional.** Not specifying any fields will skip the post mutate read. A field mask to
-   * restrict which fields on the person are returned. Multiple fields can be specified by
-   * separating them with commas. Valid values are:
+   * Optional. A field mask to restrict which fields on the person are returned. Multiple fields can
+   * be specified by separating them with commas. Defaults to empty if not set, which will skip the
+   * post mutate get. Valid values are:
    *
    * * addresses * ageRanges * biographies * birthdays * braggingRights * coverPhotos *
    * emailAddresses * events * genders * imClients * interests * locales * memberships * metadata *
@@ -69,9 +69,9 @@ public final class UpdateContactPhotoRequest extends com.google.api.client.json.
   }
 
   /**
-   * **Optional.** Not specifying any fields will skip the post mutate read. A field mask to
-   * restrict which fields on the person are returned. Multiple fields can be specified by
-   * separating them with commas. Valid values are:
+   * Optional. A field mask to restrict which fields on the person are returned. Multiple fields can
+   * be specified by separating them with commas. Defaults to empty if not set, which will skip the
+   * post mutate get. Valid values are:
    *
    * * addresses * ageRanges * biographies * birthdays * braggingRights * coverPhotos *
    * emailAddresses * events * genders * imClients * interests * locales * memberships * metadata *
@@ -86,7 +86,7 @@ public final class UpdateContactPhotoRequest extends com.google.api.client.json.
   }
 
   /**
-   * Raw photo bytes
+   * Required. Raw photo bytes
    * @see #decodePhotoBytes()
    * @return value or {@code null} for none
    */
@@ -95,7 +95,7 @@ public final class UpdateContactPhotoRequest extends com.google.api.client.json.
   }
 
   /**
-   * Raw photo bytes
+   * Required. Raw photo bytes
    * @see #getPhotoBytes()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -106,7 +106,7 @@ public final class UpdateContactPhotoRequest extends com.google.api.client.json.
   }
 
   /**
-   * Raw photo bytes
+   * Required. Raw photo bytes
    * @see #encodePhotoBytes()
    * @param photoBytes photoBytes or {@code null} for none
    */
@@ -116,7 +116,7 @@ public final class UpdateContactPhotoRequest extends com.google.api.client.json.
   }
 
   /**
-   * Raw photo bytes
+   * Required. Raw photo bytes
    * @see #setPhotoBytes()
    *
    * <p>

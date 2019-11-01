@@ -17,7 +17,7 @@
 package com.google.api.services.people.v1.model;
 
 /**
- * The read-only metadata about a contact group.
+ * The metadata about a contact group.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the People API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.people.v1.model;
 public final class ContactGroupMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * True if the contact group resource has been deleted. Populated only for
+   * Output only. True if the contact group resource has been deleted. Populated only for
    * [`ListContactGroups`](/people/api/rest/v1/contactgroups/list) requests that include a sync
    * token.
    * The value may be {@code null}.
@@ -39,14 +39,14 @@ public final class ContactGroupMetadata extends com.google.api.client.json.Gener
   private java.lang.Boolean deleted;
 
   /**
-   * The time the group was last updated.
+   * Output only. The time the group was last updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * True if the contact group resource has been deleted. Populated only for
+   * Output only. True if the contact group resource has been deleted. Populated only for
    * [`ListContactGroups`](/people/api/rest/v1/contactgroups/list) requests that include a sync
    * token.
    * @return value or {@code null} for none
@@ -56,7 +56,7 @@ public final class ContactGroupMetadata extends com.google.api.client.json.Gener
   }
 
   /**
-   * True if the contact group resource has been deleted. Populated only for
+   * Output only. True if the contact group resource has been deleted. Populated only for
    * [`ListContactGroups`](/people/api/rest/v1/contactgroups/list) requests that include a sync
    * token.
    * @param deleted deleted or {@code null} for none
@@ -67,7 +67,7 @@ public final class ContactGroupMetadata extends com.google.api.client.json.Gener
   }
 
   /**
-   * The time the group was last updated.
+   * Output only. The time the group was last updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -75,7 +75,7 @@ public final class ContactGroupMetadata extends com.google.api.client.json.Gener
   }
 
   /**
-   * The time the group was last updated.
+   * Output only. The time the group was last updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public ContactGroupMetadata setUpdateTime(String updateTime) {

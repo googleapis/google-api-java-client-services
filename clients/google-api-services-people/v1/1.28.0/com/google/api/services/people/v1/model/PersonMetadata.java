@@ -17,7 +17,7 @@
 package com.google.api.services.people.v1.model;
 
 /**
- * The read-only metadata about a person.
+ * The metadata about a person.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the People API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.people.v1.model;
 public final class PersonMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * True if the person resource has been deleted. Populated only for
+   * Output only. True if the person resource has been deleted. Populated only for
    * [`connections.list`](/people/api/rest/v1/people.connections/list) requests that include a sync
    * token.
    * The value may be {@code null}.
@@ -39,14 +39,15 @@ public final class PersonMetadata extends com.google.api.client.json.GenericJson
   private java.lang.Boolean deleted;
 
   /**
-   * Resource names of people linked to this resource.
+   * Output only. Resource names of people linked to this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> linkedPeopleResourceNames;
 
   /**
-   * **DEPRECATED** (Please use `person.metadata.sources.profileMetadata.objectType` instead)
+   * Output only. **DEPRECATED** (Please use `person.metadata.sources.profileMetadata.objectType`
+   * instead)
    *
    * The type of the person object.
    * The value may be {@code null}.
@@ -55,7 +56,7 @@ public final class PersonMetadata extends com.google.api.client.json.GenericJson
   private java.lang.String objectType;
 
   /**
-   * Any former resource names this person has had. Populated only for
+   * Output only. Any former resource names this person has had. Populated only for
    * [`connections.list`](/people/api/rest/v1/people.connections/list) requests that include a sync
    * token.
    *
@@ -74,7 +75,7 @@ public final class PersonMetadata extends com.google.api.client.json.GenericJson
   private java.util.List<Source> sources;
 
   /**
-   * True if the person resource has been deleted. Populated only for
+   * Output only. True if the person resource has been deleted. Populated only for
    * [`connections.list`](/people/api/rest/v1/people.connections/list) requests that include a sync
    * token.
    * @return value or {@code null} for none
@@ -84,7 +85,7 @@ public final class PersonMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * True if the person resource has been deleted. Populated only for
+   * Output only. True if the person resource has been deleted. Populated only for
    * [`connections.list`](/people/api/rest/v1/people.connections/list) requests that include a sync
    * token.
    * @param deleted deleted or {@code null} for none
@@ -95,7 +96,7 @@ public final class PersonMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Resource names of people linked to this resource.
+   * Output only. Resource names of people linked to this resource.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLinkedPeopleResourceNames() {
@@ -103,7 +104,7 @@ public final class PersonMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Resource names of people linked to this resource.
+   * Output only. Resource names of people linked to this resource.
    * @param linkedPeopleResourceNames linkedPeopleResourceNames or {@code null} for none
    */
   public PersonMetadata setLinkedPeopleResourceNames(java.util.List<java.lang.String> linkedPeopleResourceNames) {
@@ -112,7 +113,8 @@ public final class PersonMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * **DEPRECATED** (Please use `person.metadata.sources.profileMetadata.objectType` instead)
+   * Output only. **DEPRECATED** (Please use `person.metadata.sources.profileMetadata.objectType`
+   * instead)
    *
    * The type of the person object.
    * @return value or {@code null} for none
@@ -122,7 +124,8 @@ public final class PersonMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * **DEPRECATED** (Please use `person.metadata.sources.profileMetadata.objectType` instead)
+   * Output only. **DEPRECATED** (Please use `person.metadata.sources.profileMetadata.objectType`
+   * instead)
    *
    * The type of the person object.
    * @param objectType objectType or {@code null} for none
@@ -133,7 +136,7 @@ public final class PersonMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Any former resource names this person has had. Populated only for
+   * Output only. Any former resource names this person has had. Populated only for
    * [`connections.list`](/people/api/rest/v1/people.connections/list) requests that include a sync
    * token.
    *
@@ -146,7 +149,7 @@ public final class PersonMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Any former resource names this person has had. Populated only for
+   * Output only. Any former resource names this person has had. Populated only for
    * [`connections.list`](/people/api/rest/v1/people.connections/list) requests that include a sync
    * token.
    *

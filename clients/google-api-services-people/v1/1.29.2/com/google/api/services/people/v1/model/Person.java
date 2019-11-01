@@ -47,16 +47,16 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * **DEPRECATED** (Please use `person.ageRanges` instead)**
+   * Output only. **DEPRECATED** (Please use `person.ageRanges` instead)**
    *
-   * The person's read-only age range.
+   * The person's age range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ageRange;
 
   /**
-   * The person's read-only age ranges.
+   * Output only. The person's age ranges.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,7 +108,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The person's read-only cover photos.
+   * Output only. The person's cover photos.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -220,7 +220,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Read-only metadata about the person.
+   * Output only. Metadata about the person.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -286,7 +286,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   private java.util.List<PhoneNumber> phoneNumbers;
 
   /**
-   * The person's read-only photos.
+   * Output only. The person's photos.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -300,14 +300,14 @@ public final class Person extends com.google.api.client.json.GenericJson {
   private java.util.List<Relation> relations;
 
   /**
-   * The person's read-only relationship interests.
+   * Output only. The person's relationship interests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<RelationshipInterest> relationshipInterests;
 
   /**
-   * The person's read-only relationship statuses.
+   * Output only. The person's relationship statuses.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -343,7 +343,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   private java.util.List<Skill> skills;
 
   /**
-   * The person's read-only taglines.
+   * Output only. The person's taglines.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -381,9 +381,9 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * **DEPRECATED** (Please use `person.ageRanges` instead)**
+   * Output only. **DEPRECATED** (Please use `person.ageRanges` instead)**
    *
-   * The person's read-only age range.
+   * The person's age range.
    * @return value or {@code null} for none
    */
   public java.lang.String getAgeRange() {
@@ -391,9 +391,9 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * **DEPRECATED** (Please use `person.ageRanges` instead)**
+   * Output only. **DEPRECATED** (Please use `person.ageRanges` instead)**
    *
-   * The person's read-only age range.
+   * The person's age range.
    * @param ageRange ageRange or {@code null} for none
    */
   public Person setAgeRange(java.lang.String ageRange) {
@@ -402,7 +402,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The person's read-only age ranges.
+   * Output only. The person's age ranges.
    * @return value or {@code null} for none
    */
   public java.util.List<AgeRangeType> getAgeRanges() {
@@ -410,7 +410,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The person's read-only age ranges.
+   * Output only. The person's age ranges.
    * @param ageRanges ageRanges or {@code null} for none
    */
   public Person setAgeRanges(java.util.List<AgeRangeType> ageRanges) {
@@ -470,7 +470,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The person's read-only cover photos.
+   * Output only. The person's cover photos.
    * @return value or {@code null} for none
    */
   public java.util.List<CoverPhoto> getCoverPhotos() {
@@ -478,7 +478,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The person's read-only cover photos.
+   * Output only. The person's cover photos.
    * @param coverPhotos coverPhotos or {@code null} for none
    */
   public Person setCoverPhotos(java.util.List<CoverPhoto> coverPhotos) {
@@ -625,7 +625,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Read-only metadata about the person.
+   * Output only. Metadata about the person.
    * @return value or {@code null} for none
    */
   public PersonMetadata getMetadata() {
@@ -633,7 +633,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Read-only metadata about the person.
+   * Output only. Metadata about the person.
    * @param metadata metadata or {@code null} for none
    */
   public Person setMetadata(PersonMetadata metadata) {
@@ -727,7 +727,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The person's read-only photos.
+   * Output only. The person's photos.
    * @return value or {@code null} for none
    */
   public java.util.List<Photo> getPhotos() {
@@ -735,7 +735,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The person's read-only photos.
+   * Output only. The person's photos.
    * @param photos photos or {@code null} for none
    */
   public Person setPhotos(java.util.List<Photo> photos) {
@@ -761,7 +761,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The person's read-only relationship interests.
+   * Output only. The person's relationship interests.
    * @return value or {@code null} for none
    */
   public java.util.List<RelationshipInterest> getRelationshipInterests() {
@@ -769,7 +769,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The person's read-only relationship interests.
+   * Output only. The person's relationship interests.
    * @param relationshipInterests relationshipInterests or {@code null} for none
    */
   public Person setRelationshipInterests(java.util.List<RelationshipInterest> relationshipInterests) {
@@ -778,7 +778,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The person's read-only relationship statuses.
+   * Output only. The person's relationship statuses.
    * @return value or {@code null} for none
    */
   public java.util.List<RelationshipStatus> getRelationshipStatuses() {
@@ -786,7 +786,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The person's read-only relationship statuses.
+   * Output only. The person's relationship statuses.
    * @param relationshipStatuses relationshipStatuses or {@code null} for none
    */
   public Person setRelationshipStatuses(java.util.List<RelationshipStatus> relationshipStatuses) {
@@ -865,7 +865,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The person's read-only taglines.
+   * Output only. The person's taglines.
    * @return value or {@code null} for none
    */
   public java.util.List<Tagline> getTaglines() {
@@ -873,7 +873,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The person's read-only taglines.
+   * Output only. The person's taglines.
    * @param taglines taglines or {@code null} for none
    */
   public Person setTaglines(java.util.List<Tagline> taglines) {

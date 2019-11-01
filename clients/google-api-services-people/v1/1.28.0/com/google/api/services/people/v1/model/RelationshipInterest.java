@@ -17,7 +17,7 @@
 package com.google.api.services.people.v1.model;
 
 /**
- * A person's read-only relationship interest .
+ * A person's relationship interest .
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the People API. For a detailed explanation see:
@@ -30,8 +30,8 @@ package com.google.api.services.people.v1.model;
 public final class RelationshipInterest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The value of the relationship interest translated and formatted in the viewer's account locale
-   * or the locale specified in the Accept-Language HTTP header.
+   * Output only. The value of the relationship interest translated and formatted in the viewer's
+   * account locale or the locale specified in the Accept-Language HTTP header.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,8 +55,8 @@ public final class RelationshipInterest extends com.google.api.client.json.Gener
   private java.lang.String value;
 
   /**
-   * The value of the relationship interest translated and formatted in the viewer's account locale
-   * or the locale specified in the Accept-Language HTTP header.
+   * Output only. The value of the relationship interest translated and formatted in the viewer's
+   * account locale or the locale specified in the Accept-Language HTTP header.
    * @return value or {@code null} for none
    */
   public java.lang.String getFormattedValue() {
@@ -64,8 +64,8 @@ public final class RelationshipInterest extends com.google.api.client.json.Gener
   }
 
   /**
-   * The value of the relationship interest translated and formatted in the viewer's account locale
-   * or the locale specified in the Accept-Language HTTP header.
+   * Output only. The value of the relationship interest translated and formatted in the viewer's
+   * account locale or the locale specified in the Accept-Language HTTP header.
    * @param formattedValue formattedValue or {@code null} for none
    */
   public RelationshipInterest setFormattedValue(java.lang.String formattedValue) {

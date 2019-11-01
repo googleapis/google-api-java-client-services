@@ -31,22 +31,21 @@ package com.google.api.services.people.v1.model;
 public final class ModifyContactGroupMembersRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The resource names of the contact people to add in the form of in the form `people/`person_id.
+   * The resource names of the contact people to add in the form of `people/`person_id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> resourceNamesToAdd;
 
   /**
-   * The resource names of the contact people to remove in the form of in the form of
-   * `people/`person_id.
+   * The resource names of the contact people to remove in the form of `people/`person_id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> resourceNamesToRemove;
 
   /**
-   * The resource names of the contact people to add in the form of in the form `people/`person_id.
+   * The resource names of the contact people to add in the form of `people/`person_id.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResourceNamesToAdd() {
@@ -54,7 +53,7 @@ public final class ModifyContactGroupMembersRequest extends com.google.api.clien
   }
 
   /**
-   * The resource names of the contact people to add in the form of in the form `people/`person_id.
+   * The resource names of the contact people to add in the form of `people/`person_id.
    * @param resourceNamesToAdd resourceNamesToAdd or {@code null} for none
    */
   public ModifyContactGroupMembersRequest setResourceNamesToAdd(java.util.List<java.lang.String> resourceNamesToAdd) {
@@ -63,8 +62,7 @@ public final class ModifyContactGroupMembersRequest extends com.google.api.clien
   }
 
   /**
-   * The resource names of the contact people to remove in the form of in the form of
-   * `people/`person_id.
+   * The resource names of the contact people to remove in the form of `people/`person_id.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResourceNamesToRemove() {
@@ -72,8 +70,7 @@ public final class ModifyContactGroupMembersRequest extends com.google.api.clien
   }
 
   /**
-   * The resource names of the contact people to remove in the form of in the form of
-   * `people/`person_id.
+   * The resource names of the contact people to remove in the form of `people/`person_id.
    * @param resourceNamesToRemove resourceNamesToRemove or {@code null} for none
    */
   public ModifyContactGroupMembersRequest setResourceNamesToRemove(java.util.List<java.lang.String> resourceNamesToRemove) {

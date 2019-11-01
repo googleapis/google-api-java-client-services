@@ -44,9 +44,9 @@ public final class FieldMetadata extends com.google.api.client.json.GenericJson 
   private Source source;
 
   /**
-   * True if the field is verified; false if the field is unverified. A verified field is typically
-   * a name, email address, phone number, or website that has been confirmed to be owned by the
-   * person.
+   * Output only. True if the field is verified; false if the field is unverified. A verified field
+   * is typically a name, email address, phone number, or website that has been confirmed to be
+   * owned by the person.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,9 +87,9 @@ public final class FieldMetadata extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * True if the field is verified; false if the field is unverified. A verified field is typically
-   * a name, email address, phone number, or website that has been confirmed to be owned by the
-   * person.
+   * Output only. True if the field is verified; false if the field is unverified. A verified field
+   * is typically a name, email address, phone number, or website that has been confirmed to be
+   * owned by the person.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getVerified() {
@@ -97,9 +97,9 @@ public final class FieldMetadata extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * True if the field is verified; false if the field is unverified. A verified field is typically
-   * a name, email address, phone number, or website that has been confirmed to be owned by the
-   * person.
+   * Output only. True if the field is verified; false if the field is unverified. A verified field
+   * is typically a name, email address, phone number, or website that has been confirmed to be
+   * owned by the person.
    * @param verified verified or {@code null} for none
    */
   public FieldMetadata setVerified(java.lang.Boolean verified) {

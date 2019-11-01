@@ -200,6 +200,20 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
   private java.lang.String query;
 
   /**
+   * The language code of query. For example, "en-US". This field helps to better interpret the
+   * query.
+   *
+   * If a value isn't specified, the query language code is automatically detected, which may not be
+   * accurate.
+   *
+   * Language code should be in BCP-47 format, such as "en-US" or "sr-Latn". For more information,
+   * see [Tags for Identifying Languages](https://tools.ietf.org/html/bcp47).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String queryLanguageCode;
+
+  /**
    * Optional. Allows filtering jobs by commute time with different travel methods (for  example,
    * driving or public transit). Note: This only works with COMMUTE  MODE. When specified,
    * [JobQuery.location_filters] is  ignored.
@@ -569,6 +583,37 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
    */
   public JobQuery setQuery(java.lang.String query) {
     this.query = query;
+    return this;
+  }
+
+  /**
+   * The language code of query. For example, "en-US". This field helps to better interpret the
+   * query.
+   *
+   * If a value isn't specified, the query language code is automatically detected, which may not be
+   * accurate.
+   *
+   * Language code should be in BCP-47 format, such as "en-US" or "sr-Latn". For more information,
+   * see [Tags for Identifying Languages](https://tools.ietf.org/html/bcp47).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getQueryLanguageCode() {
+    return queryLanguageCode;
+  }
+
+  /**
+   * The language code of query. For example, "en-US". This field helps to better interpret the
+   * query.
+   *
+   * If a value isn't specified, the query language code is automatically detected, which may not be
+   * accurate.
+   *
+   * Language code should be in BCP-47 format, such as "en-US" or "sr-Latn". For more information,
+   * see [Tags for Identifying Languages](https://tools.ietf.org/html/bcp47).
+   * @param queryLanguageCode queryLanguageCode or {@code null} for none
+   */
+  public JobQuery setQueryLanguageCode(java.lang.String queryLanguageCode) {
+    this.queryLanguageCode = queryLanguageCode;
     return this;
   }
 

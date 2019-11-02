@@ -805,7 +805,7 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the oslogin server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The fingerprint of the public key to retrieve. Public keys are identified
+       * @param name Required. The fingerprint of the public key to retrieve. Public keys are identified
       by their SHA-256
        *        fingerprint. The fingerprint of the public key is in
       format
@@ -835,7 +835,7 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The fingerprint of the public key to retrieve. Public keys are identified
+         * @param name Required. The fingerprint of the public key to retrieve. Public keys are identified
       by their SHA-256
        *        fingerprint. The fingerprint of the public key is in
       format
@@ -918,15 +918,15 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * The fingerprint of the public key to retrieve. Public keys are identified by their
-         * SHA-256 fingerprint. The fingerprint of the public key is in format
+         * Required. The fingerprint of the public key to retrieve. Public keys are identified by
+         * their SHA-256 fingerprint. The fingerprint of the public key is in format
          * `users/{user}/sshPublicKeys/{fingerprint}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The fingerprint of the public key to retrieve. Public keys are identified by their SHA-256
-       fingerprint. The fingerprint of the public key is in format
+        /** Required. The fingerprint of the public key to retrieve. Public keys are identified by their
+       SHA-256 fingerprint. The fingerprint of the public key is in format
        `users/{user}/sshPublicKeys/{fingerprint}`.
          */
         public java.lang.String getName() {
@@ -934,8 +934,8 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * The fingerprint of the public key to retrieve. Public keys are identified by their
-         * SHA-256 fingerprint. The fingerprint of the public key is in format
+         * Required. The fingerprint of the public key to retrieve. Public keys are identified by
+         * their SHA-256 fingerprint. The fingerprint of the public key is in format
          * `users/{user}/sshPublicKeys/{fingerprint}`.
          */
         public Get setName(java.lang.String name) {

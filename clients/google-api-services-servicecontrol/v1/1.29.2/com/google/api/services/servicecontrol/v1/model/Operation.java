@@ -136,17 +136,6 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private QuotaProperties quotaProperties;
 
   /**
-   * DO NOT USE. This field is deprecated, use "resources" field instead. The resource name of the
-   * parent of a resource in the resource hierarchy.
-   *
-   * This can be in one of the following formats:     - “projects/”     - “folders/”     -
-   * “organizations/”
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String resourceContainer;
-
-  /**
    * The resources that are involved in the operation. The maximum supported number of entries in
    * this field is 100.
    * The value may be {@code null}.
@@ -381,31 +370,6 @@ public final class Operation extends com.google.api.client.json.GenericJson {
    */
   public Operation setQuotaProperties(QuotaProperties quotaProperties) {
     this.quotaProperties = quotaProperties;
-    return this;
-  }
-
-  /**
-   * DO NOT USE. This field is deprecated, use "resources" field instead. The resource name of the
-   * parent of a resource in the resource hierarchy.
-   *
-   * This can be in one of the following formats:     - “projects/”     - “folders/”     -
-   * “organizations/”
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getResourceContainer() {
-    return resourceContainer;
-  }
-
-  /**
-   * DO NOT USE. This field is deprecated, use "resources" field instead. The resource name of the
-   * parent of a resource in the resource hierarchy.
-   *
-   * This can be in one of the following formats:     - “projects/”     - “folders/”     -
-   * “organizations/”
-   * @param resourceContainer resourceContainer or {@code null} for none
-   */
-  public Operation setResourceContainer(java.lang.String resourceContainer) {
-    this.resourceContainer = resourceContainer;
     return this;
   }
 

@@ -33,7 +33,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Only applicable to STANDARD_HA tier which protects the instance against zonal
    * failures by provisioning it across two zones. If provided, it must be a different zone from the
-   * one provided in [location_id].
+   * one provided in location_id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,8 +57,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The current zone where the Redis endpoint is placed. For Basic Tier instances,
-   * this will always be the same as the [location_id] provided by the user at creation time. For
-   * Standard Tier instances, this can be either [location_id] or [alternative_location_id] and can
+   * this will always be the same as the location_id provided by the user at creation time. For
+   * Standard Tier instances, this can be either location_id or alternative_location_id and can
    * change after a failover event.
    * The value may be {@code null}.
    */
@@ -90,8 +90,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The zone where the instance will be provisioned. If not provided, the service will
    * choose a zone for the instance. For STANDARD_HA tier, instances will be created across two
-   * zones for protection against zonal failures. If [alternative_location_id] is also provided, it
-   * must be different from [location_id].
+   * zones for protection against zonal failures. If alternative_location_id is also provided, it
+   * must be different from location_id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,8 +110,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    *
    * Note: Redis instances are managed and addressed at regional level so location_id here refers to
    * a GCP region; however, users may choose which specific zone (or collection of zones for cross-
-   * zone instances) an instance should be provisioned in. Refer to [location_id] and
-   * [alternative_location_id] fields for more details.
+   * zone instances) an instance should be provisioned in. Refer to location_id and
+   * alternative_location_id fields for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -195,7 +195,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Only applicable to STANDARD_HA tier which protects the instance against zonal
    * failures by provisioning it across two zones. If provided, it must be a different zone from the
-   * one provided in [location_id].
+   * one provided in location_id.
    * @return value or {@code null} for none
    */
   public java.lang.String getAlternativeLocationId() {
@@ -205,7 +205,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Only applicable to STANDARD_HA tier which protects the instance against zonal
    * failures by provisioning it across two zones. If provided, it must be a different zone from the
-   * one provided in [location_id].
+   * one provided in location_id.
    * @param alternativeLocationId alternativeLocationId or {@code null} for none
    */
   public Instance setAlternativeLocationId(java.lang.String alternativeLocationId) {
@@ -253,8 +253,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The current zone where the Redis endpoint is placed. For Basic Tier instances,
-   * this will always be the same as the [location_id] provided by the user at creation time. For
-   * Standard Tier instances, this can be either [location_id] or [alternative_location_id] and can
+   * this will always be the same as the location_id provided by the user at creation time. For
+   * Standard Tier instances, this can be either location_id or alternative_location_id and can
    * change after a failover event.
    * @return value or {@code null} for none
    */
@@ -264,8 +264,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The current zone where the Redis endpoint is placed. For Basic Tier instances,
-   * this will always be the same as the [location_id] provided by the user at creation time. For
-   * Standard Tier instances, this can be either [location_id] or [alternative_location_id] and can
+   * this will always be the same as the location_id provided by the user at creation time. For
+   * Standard Tier instances, this can be either location_id or alternative_location_id and can
    * change after a failover event.
    * @param currentLocationId currentLocationId or {@code null} for none
    */
@@ -330,8 +330,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The zone where the instance will be provisioned. If not provided, the service will
    * choose a zone for the instance. For STANDARD_HA tier, instances will be created across two
-   * zones for protection against zonal failures. If [alternative_location_id] is also provided, it
-   * must be different from [location_id].
+   * zones for protection against zonal failures. If alternative_location_id is also provided, it
+   * must be different from location_id.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocationId() {
@@ -341,8 +341,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The zone where the instance will be provisioned. If not provided, the service will
    * choose a zone for the instance. For STANDARD_HA tier, instances will be created across two
-   * zones for protection against zonal failures. If [alternative_location_id] is also provided, it
-   * must be different from [location_id].
+   * zones for protection against zonal failures. If alternative_location_id is also provided, it
+   * must be different from location_id.
    * @param locationId locationId or {@code null} for none
    */
   public Instance setLocationId(java.lang.String locationId) {
@@ -373,8 +373,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    *
    * Note: Redis instances are managed and addressed at regional level so location_id here refers to
    * a GCP region; however, users may choose which specific zone (or collection of zones for cross-
-   * zone instances) an instance should be provisioned in. Refer to [location_id] and
-   * [alternative_location_id] fields for more details.
+   * zone instances) an instance should be provisioned in. Refer to location_id and
+   * alternative_location_id fields for more details.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -387,8 +387,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    *
    * Note: Redis instances are managed and addressed at regional level so location_id here refers to
    * a GCP region; however, users may choose which specific zone (or collection of zones for cross-
-   * zone instances) an instance should be provisioned in. Refer to [location_id] and
-   * [alternative_location_id] fields for more details.
+   * zone instances) an instance should be provisioned in. Refer to location_id and
+   * alternative_location_id fields for more details.
    * @param name name or {@code null} for none
    */
   public Instance setName(java.lang.String name) {

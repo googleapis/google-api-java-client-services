@@ -50,7 +50,7 @@ public final class OrganizationSettings extends com.google.api.client.json.Gener
   /**
    * The relative resource name of the settings. See:
    * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-   * "organizations/123/organizationSettings".
+   * "organizations/{organization_id}/organizationSettings".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,7 +97,7 @@ public final class OrganizationSettings extends com.google.api.client.json.Gener
   /**
    * The relative resource name of the settings. See:
    * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-   * "organizations/123/organizationSettings".
+   * "organizations/{organization_id}/organizationSettings".
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -107,7 +107,7 @@ public final class OrganizationSettings extends com.google.api.client.json.Gener
   /**
    * The relative resource name of the settings. See:
    * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-   * "organizations/123/organizationSettings".
+   * "organizations/{organization_id}/organizationSettings".
    * @param name name or {@code null} for none
    */
   public OrganizationSettings setName(java.lang.String name) {

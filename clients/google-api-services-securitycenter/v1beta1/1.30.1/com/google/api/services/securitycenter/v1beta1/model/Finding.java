@@ -70,7 +70,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   /**
    * The relative resource name of this finding. See:
    * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-   * "organizations/123/sources/456/findings/789"
+   * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,7 +79,8 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   /**
    * Immutable. The relative resource name of the source the finding belongs to. See:
    * https://cloud.google.com/apis/design/resource_names#relative_resource_name This field is
-   * immutable after creation time. For example: "organizations/123/sources/456"
+   * immutable after creation time. For example:
+   * "organizations/{organization_id}/sources/{source_id}"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -199,7 +200,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   /**
    * The relative resource name of this finding. See:
    * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-   * "organizations/123/sources/456/findings/789"
+   * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -209,7 +210,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   /**
    * The relative resource name of this finding. See:
    * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-   * "organizations/123/sources/456/findings/789"
+   * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
    * @param name name or {@code null} for none
    */
   public Finding setName(java.lang.String name) {
@@ -220,7 +221,8 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   /**
    * Immutable. The relative resource name of the source the finding belongs to. See:
    * https://cloud.google.com/apis/design/resource_names#relative_resource_name This field is
-   * immutable after creation time. For example: "organizations/123/sources/456"
+   * immutable after creation time. For example:
+   * "organizations/{organization_id}/sources/{source_id}"
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -230,7 +232,8 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   /**
    * Immutable. The relative resource name of the source the finding belongs to. See:
    * https://cloud.google.com/apis/design/resource_names#relative_resource_name This field is
-   * immutable after creation time. For example: "organizations/123/sources/456"
+   * immutable after creation time. For example:
+   * "organizations/{organization_id}/sources/{source_id}"
    * @param parent parent or {@code null} for none
    */
   public Finding setParent(java.lang.String parent) {

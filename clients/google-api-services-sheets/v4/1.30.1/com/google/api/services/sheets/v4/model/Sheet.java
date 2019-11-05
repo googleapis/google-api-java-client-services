@@ -178,6 +178,13 @@ public final class Sheet extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The slicers on this sheet.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Slicer> slicers;
+
+  /**
    * The banded (alternating colors) ranges on this sheet.
    * @return value or {@code null} for none
    */
@@ -386,6 +393,23 @@ public final class Sheet extends com.google.api.client.json.GenericJson {
    */
   public Sheet setRowGroups(java.util.List<DimensionGroup> rowGroups) {
     this.rowGroups = rowGroups;
+    return this;
+  }
+
+  /**
+   * The slicers on this sheet.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Slicer> getSlicers() {
+    return slicers;
+  }
+
+  /**
+   * The slicers on this sheet.
+   * @param slicers slicers or {@code null} for none
+   */
+  public Sheet setSlicers(java.util.List<Slicer> slicers) {
+    this.slicers = slicers;
     return this;
   }
 

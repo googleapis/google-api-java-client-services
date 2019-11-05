@@ -30,6 +30,14 @@ package com.google.api.services.sheets.v4.model;
 public final class SortSpec extends com.google.api.client.json.GenericJson {
 
   /**
+   * The background fill color to sort by. Mutually exclusive with sorting by text color. Requests
+   * to set this field will fail with a 400 error if foreground color is also set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Color backgroundColor;
+
+  /**
    * The dimension the sort should be applied to.
    * The value may be {@code null}.
    */
@@ -37,11 +45,38 @@ public final class SortSpec extends com.google.api.client.json.GenericJson {
   private java.lang.Integer dimensionIndex;
 
   /**
+   * The text color to sort by. Mutually exclusive with sorting by background fill color. Requests
+   * to set this field will fail with a 400 error if background color is also set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Color foregroundColor;
+
+  /**
    * The order data should be sorted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sortOrder;
+
+  /**
+   * The background fill color to sort by. Mutually exclusive with sorting by text color. Requests
+   * to set this field will fail with a 400 error if foreground color is also set.
+   * @return value or {@code null} for none
+   */
+  public Color getBackgroundColor() {
+    return backgroundColor;
+  }
+
+  /**
+   * The background fill color to sort by. Mutually exclusive with sorting by text color. Requests
+   * to set this field will fail with a 400 error if foreground color is also set.
+   * @param backgroundColor backgroundColor or {@code null} for none
+   */
+  public SortSpec setBackgroundColor(Color backgroundColor) {
+    this.backgroundColor = backgroundColor;
+    return this;
+  }
 
   /**
    * The dimension the sort should be applied to.
@@ -57,6 +92,25 @@ public final class SortSpec extends com.google.api.client.json.GenericJson {
    */
   public SortSpec setDimensionIndex(java.lang.Integer dimensionIndex) {
     this.dimensionIndex = dimensionIndex;
+    return this;
+  }
+
+  /**
+   * The text color to sort by. Mutually exclusive with sorting by background fill color. Requests
+   * to set this field will fail with a 400 error if background color is also set.
+   * @return value or {@code null} for none
+   */
+  public Color getForegroundColor() {
+    return foregroundColor;
+  }
+
+  /**
+   * The text color to sort by. Mutually exclusive with sorting by background fill color. Requests
+   * to set this field will fail with a 400 error if background color is also set.
+   * @param foregroundColor foregroundColor or {@code null} for none
+   */
+  public SortSpec setForegroundColor(Color foregroundColor) {
+    this.foregroundColor = foregroundColor;
     return this;
   }
 

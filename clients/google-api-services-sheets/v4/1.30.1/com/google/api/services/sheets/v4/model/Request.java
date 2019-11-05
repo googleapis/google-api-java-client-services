@@ -86,6 +86,13 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private AddSheetRequest addSheet;
 
   /**
+   * Adds a slicer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AddSlicerRequest addSlicer;
+
+  /**
    * Appends cells after the last row with data in a sheet.
    * The value may be {@code null}.
    */
@@ -430,6 +437,13 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private UpdateSheetPropertiesRequest updateSheetProperties;
 
   /**
+   * Updates a slicer's specifications.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UpdateSlicerSpecRequest updateSlicerSpec;
+
+  /**
    * Updates the spreadsheet's properties.
    * The value may be {@code null}.
    */
@@ -569,6 +583,23 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   public Request setAddSheet(AddSheetRequest addSheet) {
     this.addSheet = addSheet;
+    return this;
+  }
+
+  /**
+   * Adds a slicer.
+   * @return value or {@code null} for none
+   */
+  public AddSlicerRequest getAddSlicer() {
+    return addSlicer;
+  }
+
+  /**
+   * Adds a slicer.
+   * @param addSlicer addSlicer or {@code null} for none
+   */
+  public Request setAddSlicer(AddSlicerRequest addSlicer) {
+    this.addSlicer = addSlicer;
     return this;
   }
 
@@ -1404,6 +1435,23 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   public Request setUpdateSheetProperties(UpdateSheetPropertiesRequest updateSheetProperties) {
     this.updateSheetProperties = updateSheetProperties;
+    return this;
+  }
+
+  /**
+   * Updates a slicer's specifications.
+   * @return value or {@code null} for none
+   */
+  public UpdateSlicerSpecRequest getUpdateSlicerSpec() {
+    return updateSlicerSpec;
+  }
+
+  /**
+   * Updates a slicer's specifications.
+   * @param updateSlicerSpec updateSlicerSpec or {@code null} for none
+   */
+  public Request setUpdateSlicerSpec(UpdateSlicerSpecRequest updateSlicerSpec) {
+    this.updateSlicerSpec = updateSlicerSpec;
     return this;
   }
 

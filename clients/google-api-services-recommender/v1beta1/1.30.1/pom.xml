@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-recommender</artifactId>
-  <version>v1beta1-rev20190922-1.30.3</version>
-  <name>Recommender API v1beta1-rev20190922-1.30.3</name>
+  <version>v1beta1-rev20191102-1.30.3</version>
+  <name>Recommender API v1beta1-rev20191102-1.30.3</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

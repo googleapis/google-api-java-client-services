@@ -1,6 +1,6 @@
 # Cloud SQL Admin API Client Library for Java
 
-Creates and manages Cloud SQL instances, which provide fully managed MySQL or PostgreSQL databases.
+API for Cloud SQL database instance management
 
 This page contains information about getting started with the Cloud SQL Admin API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -21,8 +21,8 @@ Add the following lines to your `pom.xml` file:
   <dependencies>
     <dependency>
       <groupId>com.google.apis</groupId>
-      <artifactId>google-api-services-sqladmin</artifactId>
-      <version>v1beta4-rev20190827-1.30.3</version>
+      <artifactId>google-api-services-sql</artifactId>
+      <version>v1beta4-rev20191018-1.30.3</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,10 +35,10 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-sqladmin:v1beta4-rev20190827-1.30.3'
+  compile 'com.google.apis:google-api-services-sql:v1beta4-rev20191018-1.30.3'
 }
 ```
 
-[javadoc]: https://googleapis.dev/java/google-api-services-sqladmin/latest/index.html
+[javadoc]: https://googleapis.dev/java/google-api-services-sql/latest/index.html
 [google-api-client]: https://github.com/googleapis/google-api-java-client/
 [api-explorer]: https://developers.google.com/apis-explorer/#p/abusiveexperiencereport/v1/

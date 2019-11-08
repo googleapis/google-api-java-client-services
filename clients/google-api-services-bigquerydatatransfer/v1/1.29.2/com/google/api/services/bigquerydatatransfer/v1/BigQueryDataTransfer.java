@@ -1730,6 +1730,32 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           }
 
           /**
+           * Optional service account name. If this field is set, transfer config will be created
+           * with this service account credentials. It requires that requesting user calling this
+           * API has permissions to act as this service account.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String serviceAccountName;
+
+          /** Optional service account name. If this field is set, transfer config will be created with this
+         service account credentials. It requires that requesting user calling this API has permissions to
+         act as this service account.
+           */
+          public java.lang.String getServiceAccountName() {
+            return serviceAccountName;
+          }
+
+          /**
+           * Optional service account name. If this field is set, transfer config will be created
+           * with this service account credentials. It requires that requesting user calling this
+           * API has permissions to act as this service account.
+           */
+          public Create setServiceAccountName(java.lang.String serviceAccountName) {
+            this.serviceAccountName = serviceAccountName;
+            return this;
+          }
+
+          /**
            * Optional version info. If users want to find a very recent access token, that is,
            * immediately after approving access, users have to set the version_info claim in the
            * token request. To obtain the version_info, users must use the "none+gsession" response
@@ -2471,6 +2497,34 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
            */
           public Patch setAuthorizationCode(java.lang.String authorizationCode) {
             this.authorizationCode = authorizationCode;
+            return this;
+          }
+
+          /**
+           * Optional service account name. If this field is set and "service_account_name" is set
+           * in update_mask, transfer config will be updated to use this service account
+           * credentials. It requires that requesting user calling this API has permissions to act
+           * as this service account.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String serviceAccountName;
+
+          /** Optional service account name. If this field is set and "service_account_name" is set in
+         update_mask, transfer config will be updated to use this service account credentials. It requires
+         that requesting user calling this API has permissions to act as this service account.
+           */
+          public java.lang.String getServiceAccountName() {
+            return serviceAccountName;
+          }
+
+          /**
+           * Optional service account name. If this field is set and "service_account_name" is set
+           * in update_mask, transfer config will be updated to use this service account
+           * credentials. It requires that requesting user calling this API has permissions to act
+           * as this service account.
+           */
+          public Patch setServiceAccountName(java.lang.String serviceAccountName) {
+            this.serviceAccountName = serviceAccountName;
             return this;
           }
 
@@ -3812,6 +3866,32 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         }
 
         /**
+         * Optional service account name. If this field is set, transfer config will be created with
+         * this service account credentials. It requires that requesting user calling this API has
+         * permissions to act as this service account.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String serviceAccountName;
+
+        /** Optional service account name. If this field is set, transfer config will be created with this
+       service account credentials. It requires that requesting user calling this API has permissions to
+       act as this service account.
+         */
+        public java.lang.String getServiceAccountName() {
+          return serviceAccountName;
+        }
+
+        /**
+         * Optional service account name. If this field is set, transfer config will be created with
+         * this service account credentials. It requires that requesting user calling this API has
+         * permissions to act as this service account.
+         */
+        public Create setServiceAccountName(java.lang.String serviceAccountName) {
+          this.serviceAccountName = serviceAccountName;
+          return this;
+        }
+
+        /**
          * Optional version info. If users want to find a very recent access token, that is,
          * immediately after approving access, users have to set the version_info claim in the token
          * request. To obtain the version_info, users must use the "none+gsession" response type.
@@ -4553,6 +4633,34 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          */
         public Patch setAuthorizationCode(java.lang.String authorizationCode) {
           this.authorizationCode = authorizationCode;
+          return this;
+        }
+
+        /**
+         * Optional service account name. If this field is set and "service_account_name" is set in
+         * update_mask, transfer config will be updated to use this service account credentials. It
+         * requires that requesting user calling this API has permissions to act as this service
+         * account.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String serviceAccountName;
+
+        /** Optional service account name. If this field is set and "service_account_name" is set in
+       update_mask, transfer config will be updated to use this service account credentials. It requires
+       that requesting user calling this API has permissions to act as this service account.
+         */
+        public java.lang.String getServiceAccountName() {
+          return serviceAccountName;
+        }
+
+        /**
+         * Optional service account name. If this field is set and "service_account_name" is set in
+         * update_mask, transfer config will be updated to use this service account credentials. It
+         * requires that requesting user calling this API has permissions to act as this service
+         * account.
+         */
+        public Patch setServiceAccountName(java.lang.String serviceAccountName) {
+          this.serviceAccountName = serviceAccountName;
           return this;
         }
 

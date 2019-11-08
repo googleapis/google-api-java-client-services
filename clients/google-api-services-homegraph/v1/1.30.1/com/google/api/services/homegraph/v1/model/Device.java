@@ -67,6 +67,18 @@ public final class Device extends com.google.api.client.json.GenericJson {
   private DeviceNames name;
 
   /**
+   * Indicates whether the device is capable of sending notifications. This field will be set by the
+   * agent (partner) on an incoming SYNC. If a device is not capable of generating notifications,
+   * the partner should set this flag to false. If a partner is not capable of calling
+   * ReportStateAndNotification to send notifications to Google, the partner should set this flag to
+   * false. If there is a user setting in the partner app to enable notifications and it is turned
+   * off, the partner should set this flag to false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean notificationSupportedByAgent;
+
+  /**
    * IDs of other devices associated with this device. This is used to represent a device group
    * (e.g. bonded zone) or "facets" synced through different flows (e.g. Google Nest Hub Max with a
    * Nest Camera).
@@ -208,6 +220,33 @@ public final class Device extends com.google.api.client.json.GenericJson {
    */
   public Device setName(DeviceNames name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Indicates whether the device is capable of sending notifications. This field will be set by the
+   * agent (partner) on an incoming SYNC. If a device is not capable of generating notifications,
+   * the partner should set this flag to false. If a partner is not capable of calling
+   * ReportStateAndNotification to send notifications to Google, the partner should set this flag to
+   * false. If there is a user setting in the partner app to enable notifications and it is turned
+   * off, the partner should set this flag to false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getNotificationSupportedByAgent() {
+    return notificationSupportedByAgent;
+  }
+
+  /**
+   * Indicates whether the device is capable of sending notifications. This field will be set by the
+   * agent (partner) on an incoming SYNC. If a device is not capable of generating notifications,
+   * the partner should set this flag to false. If a partner is not capable of calling
+   * ReportStateAndNotification to send notifications to Google, the partner should set this flag to
+   * false. If there is a user setting in the partner app to enable notifications and it is turned
+   * off, the partner should set this flag to false.
+   * @param notificationSupportedByAgent notificationSupportedByAgent or {@code null} for none
+   */
+  public Device setNotificationSupportedByAgent(java.lang.Boolean notificationSupportedByAgent) {
+    this.notificationSupportedByAgent = notificationSupportedByAgent;
     return this;
   }
 

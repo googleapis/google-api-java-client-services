@@ -130,6 +130,15 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
   private ManagedZonePrivateVisibilityConfig privateVisibilityConfig;
 
   /**
+   * The presence of this field indicates that this is a managed reverse lookup zone and Cloud DNS
+   * will resolve reverse lookup queries using automatically configured records for VPC resources.
+   * This only applies to networks listed under private_visibility_config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ManagedZoneReverseLookupConfig reverseLookupConfig;
+
+  /**
    * The zone's visibility: public zones are exposed to the Internet, while private zones are
    * visible only to Virtual Private Cloud resources.
    * The value may be {@code null}.
@@ -371,6 +380,27 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
    */
   public ManagedZone setPrivateVisibilityConfig(ManagedZonePrivateVisibilityConfig privateVisibilityConfig) {
     this.privateVisibilityConfig = privateVisibilityConfig;
+    return this;
+  }
+
+  /**
+   * The presence of this field indicates that this is a managed reverse lookup zone and Cloud DNS
+   * will resolve reverse lookup queries using automatically configured records for VPC resources.
+   * This only applies to networks listed under private_visibility_config.
+   * @return value or {@code null} for none
+   */
+  public ManagedZoneReverseLookupConfig getReverseLookupConfig() {
+    return reverseLookupConfig;
+  }
+
+  /**
+   * The presence of this field indicates that this is a managed reverse lookup zone and Cloud DNS
+   * will resolve reverse lookup queries using automatically configured records for VPC resources.
+   * This only applies to networks listed under private_visibility_config.
+   * @param reverseLookupConfig reverseLookupConfig or {@code null} for none
+   */
+  public ManagedZone setReverseLookupConfig(ManagedZoneReverseLookupConfig reverseLookupConfig) {
+    this.reverseLookupConfig = reverseLookupConfig;
     return this;
   }
 

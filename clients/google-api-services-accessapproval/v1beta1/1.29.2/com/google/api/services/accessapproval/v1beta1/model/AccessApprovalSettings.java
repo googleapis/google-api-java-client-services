@@ -30,6 +30,16 @@ package com.google.api.services.accessapproval.v1beta1.model;
 public final class AccessApprovalSettings extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. This field is read only (not settable via UpdateAccessAccessApprovalSettings
+   * method). If the field is true, that indicates that at least one service is enrolled for Access
+   * Approval in one or more ancestors of the Project or Folder (this field will always be unset for
+   * the organization since organizations do not have ancestors).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enrolledAncestor;
+
+  /**
    * A list of Google Cloud Services for which the given resource has Access Approval enrolled.
    * Access requests for the resource given by name against any of these services contained here
    * will be required to have explicit approval. If name refers to an organization, enrollment can
@@ -62,6 +72,29 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> notificationEmails;
+
+  /**
+   * Output only. This field is read only (not settable via UpdateAccessAccessApprovalSettings
+   * method). If the field is true, that indicates that at least one service is enrolled for Access
+   * Approval in one or more ancestors of the Project or Folder (this field will always be unset for
+   * the organization since organizations do not have ancestors).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnrolledAncestor() {
+    return enrolledAncestor;
+  }
+
+  /**
+   * Output only. This field is read only (not settable via UpdateAccessAccessApprovalSettings
+   * method). If the field is true, that indicates that at least one service is enrolled for Access
+   * Approval in one or more ancestors of the Project or Folder (this field will always be unset for
+   * the organization since organizations do not have ancestors).
+   * @param enrolledAncestor enrolledAncestor or {@code null} for none
+   */
+  public AccessApprovalSettings setEnrolledAncestor(java.lang.Boolean enrolledAncestor) {
+    this.enrolledAncestor = enrolledAncestor;
+    return this;
+  }
 
   /**
    * A list of Google Cloud Services for which the given resource has Access Approval enrolled.

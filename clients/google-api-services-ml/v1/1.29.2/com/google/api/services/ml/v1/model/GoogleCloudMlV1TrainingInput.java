@@ -74,44 +74,32 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
 
   /**
    * Optional. Specifies the type of virtual machine to use for your training job's master worker.
+   * You must specify this field when `scaleTier` is set to `CUSTOM`.
    *
-   * The following types are supported:
-   *
-   *   standard      A basic machine configuration suitable for training simple models with   small
-   * to moderate datasets.      large_model      A machine with a lot of memory, specially suited
-   * for parameter servers   when your model is large (having many hidden layers or layers with very
-   * large numbers of nodes).      complex_model_s      A machine suitable for the master and
-   * workers of the cluster when your   model requires more computation than the standard machine
-   * can handle   satisfactorily.      complex_model_m      A machine with roughly twice the number
-   * of cores and roughly double the   memory of complex_model_s.      complex_model_l      A
-   * machine with roughly twice the number of cores and roughly double the   memory of
-   * complex_model_m.      standard_gpu      A machine equivalent to standard that   also includes a
-   * single NVIDIA Tesla K80 GPU. See more about   using GPUs to   train your model.
-   * complex_model_m_gpu      A machine equivalent to complex_model_m that also includes   four
-   * NVIDIA Tesla K80 GPUs.      complex_model_l_gpu      A machine equivalent to complex_model_l
-   * that also includes   eight NVIDIA Tesla K80 GPUs.      standard_p100      A machine equivalent
-   * to standard that   also includes a single NVIDIA Tesla P100 GPU.      complex_model_m_p100
-   * A machine equivalent to complex_model_m that also includes   four NVIDIA Tesla P100 GPUs.
-   * standard_v100      A machine equivalent to standard that   also includes a single NVIDIA Tesla
-   * V100 GPU.      large_model_v100      A machine equivalent to large_model that   also includes a
-   * single NVIDIA Tesla V100 GPU.      complex_model_m_v100      A machine equivalent to
-   * complex_model_m that   also includes four NVIDIA Tesla V100 GPUs.      complex_model_l_v100
-   * A machine equivalent to complex_model_l that   also includes eight NVIDIA Tesla V100 GPUs.
-   * cloud_tpu      A TPU VM including one Cloud TPU. See more about   using TPUs to train   your
-   * model.
-   *
-   * You may also use certain Compute Engine machine types directly in this field. The following
-   * types are supported:
+   * You can use certain Compute Engine machine types directly in this field. The following types
+   * are supported:
    *
    * - `n1-standard-4` - `n1-standard-8` - `n1-standard-16` - `n1-standard-32` - `n1-standard-64` -
    * `n1-standard-96` - `n1-highmem-2` - `n1-highmem-4` - `n1-highmem-8` - `n1-highmem-16` -
    * `n1-highmem-32` - `n1-highmem-64` - `n1-highmem-96` - `n1-highcpu-16` - `n1-highcpu-32` -
    * `n1-highcpu-64` - `n1-highcpu-96`
    *
-   * See more about [using Compute Engine machine types](/ml-engine/docs/tensorflow/machine-types
-   * #compute-engine-machine-types).
+   * Learn more about [using Compute Engine machine types](/ml-engine/docs/machine-types#compute-
+   * engine-machine-types).
    *
-   * You must set this value when `scaleTier` is set to `CUSTOM`.
+   * Alternatively, you can use the following legacy machine types:
+   *
+   * - `standard` - `large_model` - `complex_model_s` - `complex_model_m` - `complex_model_l` -
+   * `standard_gpu` - `complex_model_m_gpu` - `complex_model_l_gpu` - `standard_p100` -
+   * `complex_model_m_p100` - `standard_v100` - `large_model_v100` - `complex_model_m_v100` -
+   * `complex_model_l_v100`
+   *
+   * Learn more about [using legacy machine types](/ml-engine/docs/machine-types#legacy-machine-
+   * types).
+   *
+   * Finally, if you want to use a TPU for training, specify `cloud_tpu` in this field. Learn more
+   * about the [special configuration options for training with TPUs](/ml-engine/docs/tensorflow
+   * /using-tpus#configuring_a_custom_tpu_machine).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -161,8 +149,7 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    * The supported values are the same as those described in the entry for `master_type`.
    *
    * This value must be consistent with the category of machine type that `masterType` uses. In
-   * other words, both must be AI Platform machine types or both must be Compute Engine machine
-   * types.
+   * other words, both must be Compute Engine machine types or both must be legacy machine types.
    *
    * This value must be present when `scaleTier` is set to `CUSTOM` and `parameter_server_count` is
    * greater than zero.
@@ -257,8 +244,7 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    * The supported values are the same as those described in the entry for `masterType`.
    *
    * This value must be consistent with the category of machine type that `masterType` uses. In
-   * other words, both must be AI Platform machine types or both must be Compute Engine machine
-   * types.
+   * other words, both must be Compute Engine machine types or both must be legacy machine types.
    *
    * If you use `cloud_tpu` for this value, see special instructions for [configuring a custom TPU
    * machine](/ml-engine/docs/tensorflow/using-tpus#configuring_a_custom_tpu_machine).
@@ -362,44 +348,32 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
 
   /**
    * Optional. Specifies the type of virtual machine to use for your training job's master worker.
+   * You must specify this field when `scaleTier` is set to `CUSTOM`.
    *
-   * The following types are supported:
-   *
-   *   standard      A basic machine configuration suitable for training simple models with   small
-   * to moderate datasets.      large_model      A machine with a lot of memory, specially suited
-   * for parameter servers   when your model is large (having many hidden layers or layers with very
-   * large numbers of nodes).      complex_model_s      A machine suitable for the master and
-   * workers of the cluster when your   model requires more computation than the standard machine
-   * can handle   satisfactorily.      complex_model_m      A machine with roughly twice the number
-   * of cores and roughly double the   memory of complex_model_s.      complex_model_l      A
-   * machine with roughly twice the number of cores and roughly double the   memory of
-   * complex_model_m.      standard_gpu      A machine equivalent to standard that   also includes a
-   * single NVIDIA Tesla K80 GPU. See more about   using GPUs to   train your model.
-   * complex_model_m_gpu      A machine equivalent to complex_model_m that also includes   four
-   * NVIDIA Tesla K80 GPUs.      complex_model_l_gpu      A machine equivalent to complex_model_l
-   * that also includes   eight NVIDIA Tesla K80 GPUs.      standard_p100      A machine equivalent
-   * to standard that   also includes a single NVIDIA Tesla P100 GPU.      complex_model_m_p100
-   * A machine equivalent to complex_model_m that also includes   four NVIDIA Tesla P100 GPUs.
-   * standard_v100      A machine equivalent to standard that   also includes a single NVIDIA Tesla
-   * V100 GPU.      large_model_v100      A machine equivalent to large_model that   also includes a
-   * single NVIDIA Tesla V100 GPU.      complex_model_m_v100      A machine equivalent to
-   * complex_model_m that   also includes four NVIDIA Tesla V100 GPUs.      complex_model_l_v100
-   * A machine equivalent to complex_model_l that   also includes eight NVIDIA Tesla V100 GPUs.
-   * cloud_tpu      A TPU VM including one Cloud TPU. See more about   using TPUs to train   your
-   * model.
-   *
-   * You may also use certain Compute Engine machine types directly in this field. The following
-   * types are supported:
+   * You can use certain Compute Engine machine types directly in this field. The following types
+   * are supported:
    *
    * - `n1-standard-4` - `n1-standard-8` - `n1-standard-16` - `n1-standard-32` - `n1-standard-64` -
    * `n1-standard-96` - `n1-highmem-2` - `n1-highmem-4` - `n1-highmem-8` - `n1-highmem-16` -
    * `n1-highmem-32` - `n1-highmem-64` - `n1-highmem-96` - `n1-highcpu-16` - `n1-highcpu-32` -
    * `n1-highcpu-64` - `n1-highcpu-96`
    *
-   * See more about [using Compute Engine machine types](/ml-engine/docs/tensorflow/machine-types
-   * #compute-engine-machine-types).
+   * Learn more about [using Compute Engine machine types](/ml-engine/docs/machine-types#compute-
+   * engine-machine-types).
    *
-   * You must set this value when `scaleTier` is set to `CUSTOM`.
+   * Alternatively, you can use the following legacy machine types:
+   *
+   * - `standard` - `large_model` - `complex_model_s` - `complex_model_m` - `complex_model_l` -
+   * `standard_gpu` - `complex_model_m_gpu` - `complex_model_l_gpu` - `standard_p100` -
+   * `complex_model_m_p100` - `standard_v100` - `large_model_v100` - `complex_model_m_v100` -
+   * `complex_model_l_v100`
+   *
+   * Learn more about [using legacy machine types](/ml-engine/docs/machine-types#legacy-machine-
+   * types).
+   *
+   * Finally, if you want to use a TPU for training, specify `cloud_tpu` in this field. Learn more
+   * about the [special configuration options for training with TPUs](/ml-engine/docs/tensorflow
+   * /using-tpus#configuring_a_custom_tpu_machine).
    * @return value or {@code null} for none
    */
   public java.lang.String getMasterType() {
@@ -408,44 +382,32 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
 
   /**
    * Optional. Specifies the type of virtual machine to use for your training job's master worker.
+   * You must specify this field when `scaleTier` is set to `CUSTOM`.
    *
-   * The following types are supported:
-   *
-   *   standard      A basic machine configuration suitable for training simple models with   small
-   * to moderate datasets.      large_model      A machine with a lot of memory, specially suited
-   * for parameter servers   when your model is large (having many hidden layers or layers with very
-   * large numbers of nodes).      complex_model_s      A machine suitable for the master and
-   * workers of the cluster when your   model requires more computation than the standard machine
-   * can handle   satisfactorily.      complex_model_m      A machine with roughly twice the number
-   * of cores and roughly double the   memory of complex_model_s.      complex_model_l      A
-   * machine with roughly twice the number of cores and roughly double the   memory of
-   * complex_model_m.      standard_gpu      A machine equivalent to standard that   also includes a
-   * single NVIDIA Tesla K80 GPU. See more about   using GPUs to   train your model.
-   * complex_model_m_gpu      A machine equivalent to complex_model_m that also includes   four
-   * NVIDIA Tesla K80 GPUs.      complex_model_l_gpu      A machine equivalent to complex_model_l
-   * that also includes   eight NVIDIA Tesla K80 GPUs.      standard_p100      A machine equivalent
-   * to standard that   also includes a single NVIDIA Tesla P100 GPU.      complex_model_m_p100
-   * A machine equivalent to complex_model_m that also includes   four NVIDIA Tesla P100 GPUs.
-   * standard_v100      A machine equivalent to standard that   also includes a single NVIDIA Tesla
-   * V100 GPU.      large_model_v100      A machine equivalent to large_model that   also includes a
-   * single NVIDIA Tesla V100 GPU.      complex_model_m_v100      A machine equivalent to
-   * complex_model_m that   also includes four NVIDIA Tesla V100 GPUs.      complex_model_l_v100
-   * A machine equivalent to complex_model_l that   also includes eight NVIDIA Tesla V100 GPUs.
-   * cloud_tpu      A TPU VM including one Cloud TPU. See more about   using TPUs to train   your
-   * model.
-   *
-   * You may also use certain Compute Engine machine types directly in this field. The following
-   * types are supported:
+   * You can use certain Compute Engine machine types directly in this field. The following types
+   * are supported:
    *
    * - `n1-standard-4` - `n1-standard-8` - `n1-standard-16` - `n1-standard-32` - `n1-standard-64` -
    * `n1-standard-96` - `n1-highmem-2` - `n1-highmem-4` - `n1-highmem-8` - `n1-highmem-16` -
    * `n1-highmem-32` - `n1-highmem-64` - `n1-highmem-96` - `n1-highcpu-16` - `n1-highcpu-32` -
    * `n1-highcpu-64` - `n1-highcpu-96`
    *
-   * See more about [using Compute Engine machine types](/ml-engine/docs/tensorflow/machine-types
-   * #compute-engine-machine-types).
+   * Learn more about [using Compute Engine machine types](/ml-engine/docs/machine-types#compute-
+   * engine-machine-types).
    *
-   * You must set this value when `scaleTier` is set to `CUSTOM`.
+   * Alternatively, you can use the following legacy machine types:
+   *
+   * - `standard` - `large_model` - `complex_model_s` - `complex_model_m` - `complex_model_l` -
+   * `standard_gpu` - `complex_model_m_gpu` - `complex_model_l_gpu` - `standard_p100` -
+   * `complex_model_m_p100` - `standard_v100` - `large_model_v100` - `complex_model_m_v100` -
+   * `complex_model_l_v100`
+   *
+   * Learn more about [using legacy machine types](/ml-engine/docs/machine-types#legacy-machine-
+   * types).
+   *
+   * Finally, if you want to use a TPU for training, specify `cloud_tpu` in this field. Learn more
+   * about the [special configuration options for training with TPUs](/ml-engine/docs/tensorflow
+   * /using-tpus#configuring_a_custom_tpu_machine).
    * @param masterType masterType or {@code null} for none
    */
   public GoogleCloudMlV1TrainingInput setMasterType(java.lang.String masterType) {
@@ -543,8 +505,7 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    * The supported values are the same as those described in the entry for `master_type`.
    *
    * This value must be consistent with the category of machine type that `masterType` uses. In
-   * other words, both must be AI Platform machine types or both must be Compute Engine machine
-   * types.
+   * other words, both must be Compute Engine machine types or both must be legacy machine types.
    *
    * This value must be present when `scaleTier` is set to `CUSTOM` and `parameter_server_count` is
    * greater than zero.
@@ -561,8 +522,7 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    * The supported values are the same as those described in the entry for `master_type`.
    *
    * This value must be consistent with the category of machine type that `masterType` uses. In
-   * other words, both must be AI Platform machine types or both must be Compute Engine machine
-   * types.
+   * other words, both must be Compute Engine machine types or both must be legacy machine types.
    *
    * This value must be present when `scaleTier` is set to `CUSTOM` and `parameter_server_count` is
    * greater than zero.
@@ -763,8 +723,7 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    * The supported values are the same as those described in the entry for `masterType`.
    *
    * This value must be consistent with the category of machine type that `masterType` uses. In
-   * other words, both must be AI Platform machine types or both must be Compute Engine machine
-   * types.
+   * other words, both must be Compute Engine machine types or both must be legacy machine types.
    *
    * If you use `cloud_tpu` for this value, see special instructions for [configuring a custom TPU
    * machine](/ml-engine/docs/tensorflow/using-tpus#configuring_a_custom_tpu_machine).
@@ -783,8 +742,7 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    * The supported values are the same as those described in the entry for `masterType`.
    *
    * This value must be consistent with the category of machine type that `masterType` uses. In
-   * other words, both must be AI Platform machine types or both must be Compute Engine machine
-   * types.
+   * other words, both must be Compute Engine machine types or both must be legacy machine types.
    *
    * If you use `cloud_tpu` for this value, see special instructions for [configuring a custom TPU
    * machine](/ml-engine/docs/tensorflow/using-tpus#configuring_a_custom_tpu_machine).

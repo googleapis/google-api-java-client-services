@@ -33,7 +33,8 @@ public final class Action extends com.google.api.client.json.GenericJson {
   /**
    * By default, after an action fails, no further actions are run. This flag indicates that this
    * action must be run even if the pipeline has already failed. This is useful for actions that
-   * copy output files off of the VM or for debugging.
+   * copy output files off of the VM or for debugging. Note that no actions will be run if image
+   * prefetching fails.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -230,7 +231,8 @@ public final class Action extends com.google.api.client.json.GenericJson {
   /**
    * By default, after an action fails, no further actions are run. This flag indicates that this
    * action must be run even if the pipeline has already failed. This is useful for actions that
-   * copy output files off of the VM or for debugging.
+   * copy output files off of the VM or for debugging. Note that no actions will be run if image
+   * prefetching fails.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAlwaysRun() {
@@ -240,7 +242,8 @@ public final class Action extends com.google.api.client.json.GenericJson {
   /**
    * By default, after an action fails, no further actions are run. This flag indicates that this
    * action must be run even if the pipeline has already failed. This is useful for actions that
-   * copy output files off of the VM or for debugging.
+   * copy output files off of the VM or for debugging. Note that no actions will be run if image
+   * prefetching fails.
    * @param alwaysRun alwaysRun or {@code null} for none
    */
   public Action setAlwaysRun(java.lang.Boolean alwaysRun) {

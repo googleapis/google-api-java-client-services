@@ -1473,7 +1473,9 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
          * Lists all Redis instances owned by a project in either the specified location (region) or all
          * locations.
          *
-         * The location should have the following format: * `projects/{project_id}/locations/{location_id}`
+         * The location should have the following format:
+         *
+         * * `projects/{project_id}/locations/{location_id}`
          *
          * If `location_id` is specified as `-` (wildcard), then all regions available to the project are
          * queried, and the results are aggregated.
@@ -1506,8 +1508,9 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
            * Lists all Redis instances owned by a project in either the specified location (region) or all
            * locations.
            *
-           * The location should have the following format: *
-           * `projects/{project_id}/locations/{location_id}`
+           * The location should have the following format:
+           *
+           * * `projects/{project_id}/locations/{location_id}`
            *
            * If `location_id` is specified as `-` (wildcard), then all regions available to the project are
            * queried, and the results are aggregated.
@@ -1635,8 +1638,8 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
            *
            * If not specified, a default value of 1000 will be used by the service. Regardless of
            * the page_size value, the response may include a partial list and a caller should only
-           * rely on response's next_page_token to determine if there are more instances left to be
-           * queried.
+           * rely on response's `next_page_token` to determine if there are more instances left to
+           * be queried.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
@@ -1645,7 +1648,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
 
          If not specified, a default value of 1000 will be used by the service. Regardless of the page_size
          value, the response may include a partial list and a caller should only rely on response's
-         next_page_token to determine if there are more instances left to be queried.
+         `next_page_token` to determine if there are more instances left to be queried.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
@@ -1656,8 +1659,8 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
            *
            * If not specified, a default value of 1000 will be used by the service. Regardless of
            * the page_size value, the response may include a partial list and a caller should only
-           * rely on response's next_page_token to determine if there are more instances left to be
-           * queried.
+           * rely on response's `next_page_token` to determine if there are more instances left to
+           * be queried.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -1665,19 +1668,19 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * The next_page_token value returned from a previous List request, if any.
+           * The `next_page_token` value returned from a previous ListInstances request, if any.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** The next_page_token value returned from a previous List request, if any.
+          /** The `next_page_token` value returned from a previous ListInstances request, if any.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * The next_page_token value returned from a previous List request, if any.
+           * The `next_page_token` value returned from a previous ListInstances request, if any.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -1710,8 +1713,8 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
          *        region; however, users may choose which
         specific zone (or collection of zones for cross-
          *        zone instances) an instance
-        should be provisioned in. Refer to [location_id] and
-         *        [alternative_location_id] fields for more details.
+        should be provisioned in. Refer to location_id and
+         *        alternative_location_id fields for more details.
          * @param content the {@link com.google.api.services.redis.v1beta1.model.Instance}
          * @return the request
          */
@@ -1751,8 +1754,8 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
          *        region; however, users may choose which
         specific zone (or collection of zones for cross-
          *        zone instances) an instance
-        should be provisioned in. Refer to [location_id] and
-         *        [alternative_location_id] fields for more details.
+        should be provisioned in. Refer to location_id and
+         *        alternative_location_id fields for more details.
            * @param content the {@link com.google.api.services.redis.v1beta1.model.Instance}
            * @since 1.13
            */
@@ -1828,7 +1831,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
            * Note: Redis instances are managed and addressed at regional level so location_id here
            * refers to a GCP region; however, users may choose which specific zone (or collection of
            * zones for cross-zone instances) an instance should be provisioned in. Refer to
-           * [location_id] and [alternative_location_id] fields for more details.
+           * location_id and alternative_location_id fields for more details.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
@@ -1838,8 +1841,8 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
 
          Note: Redis instances are managed and addressed at regional level so location_id here refers to a
          GCP region; however, users may choose which specific zone (or collection of zones for cross-zone
-         instances) an instance should be provisioned in. Refer to [location_id] and
-         [alternative_location_id] fields for more details.
+         instances) an instance should be provisioned in. Refer to location_id and alternative_location_id
+         fields for more details.
            */
           public java.lang.String getName() {
             return name;
@@ -1852,7 +1855,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
            * Note: Redis instances are managed and addressed at regional level so location_id here
            * refers to a GCP region; however, users may choose which specific zone (or collection of
            * zones for cross-zone instances) an instance should be provisioned in. Refer to
-           * [location_id] and [alternative_location_id] fields for more details.
+           * location_id and alternative_location_id fields for more details.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

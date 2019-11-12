@@ -3582,7 +3582,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Updates an existing comment. This method supports patch semantics.
+     * Updates an existing comment.
      *
      * Create a request for the method "comments.patch".
      *
@@ -3605,7 +3605,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/comments/{commentId}";
 
       /**
-       * Updates an existing comment. This method supports patch semantics.
+       * Updates an existing comment.
        *
        * Create a request for the method "comments.patch".
        *
@@ -13663,7 +13663,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Updates an existing reply. This method supports patch semantics.
+     * Updates an existing reply.
      *
      * Create a request for the method "replies.patch".
      *
@@ -13687,7 +13687,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/comments/{commentId}/replies/{replyId}";
 
       /**
-       * Updates an existing reply. This method supports patch semantics.
+       * Updates an existing reply.
        *
        * Create a request for the method "replies.patch".
        *
@@ -14346,7 +14346,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Updates a revision. This method supports patch semantics.
+     * Updates a revision.
      *
      * Create a request for the method "revisions.patch".
      *
@@ -14369,7 +14369,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/revisions/{revisionId}";
 
       /**
-       * Updates a revision. This method supports patch semantics.
+       * Updates a revision.
        *
        * Create a request for the method "revisions.patch".
        *

@@ -38,7 +38,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   private java.lang.String anchor;
 
   /**
-   * The user who wrote this comment.
+   * The author of the comment. The author's email address and permission ID will not be populated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -159,7 +159,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user who wrote this comment.
+   * The author of the comment. The author's email address and permission ID will not be populated.
    * @return value or {@code null} for none
    */
   public User getAuthor() {
@@ -167,7 +167,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user who wrote this comment.
+   * The author of the comment. The author's email address and permission ID will not be populated.
    * @param author author or {@code null} for none
    */
   public Comment setAuthor(User author) {

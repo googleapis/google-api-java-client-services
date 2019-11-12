@@ -30,7 +30,7 @@ package com.google.api.services.drive.model;
 public final class CommentReply extends com.google.api.client.json.GenericJson {
 
   /**
-   * The user who wrote this reply.
+   * The author of the reply. The author's email address and permission ID will not be populated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,7 +98,7 @@ public final class CommentReply extends com.google.api.client.json.GenericJson {
   private java.lang.String verb;
 
   /**
-   * The user who wrote this reply.
+   * The author of the reply. The author's email address and permission ID will not be populated.
    * @return value or {@code null} for none
    */
   public User getAuthor() {
@@ -106,7 +106,7 @@ public final class CommentReply extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user who wrote this reply.
+   * The author of the reply. The author's email address and permission ID will not be populated.
    * @param author author or {@code null} for none
    */
   public CommentReply setAuthor(User author) {

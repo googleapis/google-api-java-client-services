@@ -404,7 +404,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Password requirements. DEPRECATED - Use password_policies
+   * Password requirements. The field password_requirements.require_password_unlock must not be set.
+   * DEPRECATED - Use password_policies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1493,7 +1494,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Password requirements. DEPRECATED - Use password_policies
+   * Password requirements. The field password_requirements.require_password_unlock must not be set.
+   * DEPRECATED - Use password_policies.
    * @return value or {@code null} for none
    */
   public PasswordRequirements getPasswordRequirements() {
@@ -1501,7 +1503,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Password requirements. DEPRECATED - Use password_policies
+   * Password requirements. The field password_requirements.require_password_unlock must not be set.
+   * DEPRECATED - Use password_policies.
    * @param passwordRequirements passwordRequirements or {@code null} for none
    */
   public Policy setPasswordRequirements(PasswordRequirements passwordRequirements) {

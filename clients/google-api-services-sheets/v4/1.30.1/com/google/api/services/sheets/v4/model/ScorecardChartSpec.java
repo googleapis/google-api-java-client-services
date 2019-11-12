@@ -49,8 +49,8 @@ public final class ScorecardChartSpec extends com.google.api.client.json.Generic
   private ChartData baselineValueData;
 
   /**
-   * Formatting options for baseline value. This field is needed only if baseline_value_data field
-   * is specified.
+   * Formatting options for baseline value. This field is needed only if baseline_value_data is
+   * specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,8 +58,7 @@ public final class ScorecardChartSpec extends com.google.api.client.json.Generic
 
   /**
    * Custom formatting options for numeric key/baseline values in scorecard chart. This field is
-   * used only when [number_format_source] field is set to [ChartNumberFormatSource.CUSTOM]. This
-   * field is optional.
+   * used only when number_format_source is set to CUSTOM. This field is optional.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -131,8 +130,8 @@ public final class ScorecardChartSpec extends com.google.api.client.json.Generic
   }
 
   /**
-   * Formatting options for baseline value. This field is needed only if baseline_value_data field
-   * is specified.
+   * Formatting options for baseline value. This field is needed only if baseline_value_data is
+   * specified.
    * @return value or {@code null} for none
    */
   public BaselineValueFormat getBaselineValueFormat() {
@@ -140,8 +139,8 @@ public final class ScorecardChartSpec extends com.google.api.client.json.Generic
   }
 
   /**
-   * Formatting options for baseline value. This field is needed only if baseline_value_data field
-   * is specified.
+   * Formatting options for baseline value. This field is needed only if baseline_value_data is
+   * specified.
    * @param baselineValueFormat baselineValueFormat or {@code null} for none
    */
   public ScorecardChartSpec setBaselineValueFormat(BaselineValueFormat baselineValueFormat) {
@@ -151,8 +150,7 @@ public final class ScorecardChartSpec extends com.google.api.client.json.Generic
 
   /**
    * Custom formatting options for numeric key/baseline values in scorecard chart. This field is
-   * used only when [number_format_source] field is set to [ChartNumberFormatSource.CUSTOM]. This
-   * field is optional.
+   * used only when number_format_source is set to CUSTOM. This field is optional.
    * @return value or {@code null} for none
    */
   public ChartCustomNumberFormatOptions getCustomFormatOptions() {
@@ -161,8 +159,7 @@ public final class ScorecardChartSpec extends com.google.api.client.json.Generic
 
   /**
    * Custom formatting options for numeric key/baseline values in scorecard chart. This field is
-   * used only when [number_format_source] field is set to [ChartNumberFormatSource.CUSTOM]. This
-   * field is optional.
+   * used only when number_format_source is set to CUSTOM. This field is optional.
    * @param customFormatOptions customFormatOptions or {@code null} for none
    */
   public ScorecardChartSpec setCustomFormatOptions(ChartCustomNumberFormatOptions customFormatOptions) {

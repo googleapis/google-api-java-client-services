@@ -79,6 +79,13 @@ public final class Response extends com.google.api.client.json.GenericJson {
   private AddSheetResponse addSheet;
 
   /**
+   * A reply from adding a slicer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AddSlicerResponse addSlicer;
+
+  /**
    * A reply from creating a developer metadata entry.
    * The value may be {@code null}.
    */
@@ -278,6 +285,23 @@ public final class Response extends com.google.api.client.json.GenericJson {
    */
   public Response setAddSheet(AddSheetResponse addSheet) {
     this.addSheet = addSheet;
+    return this;
+  }
+
+  /**
+   * A reply from adding a slicer.
+   * @return value or {@code null} for none
+   */
+  public AddSlicerResponse getAddSlicer() {
+    return addSlicer;
+  }
+
+  /**
+   * A reply from adding a slicer.
+   * @param addSlicer addSlicer or {@code null} for none
+   */
+  public Response setAddSlicer(AddSlicerResponse addSlicer) {
+    this.addSlicer = addSlicer;
     return this;
   }
 

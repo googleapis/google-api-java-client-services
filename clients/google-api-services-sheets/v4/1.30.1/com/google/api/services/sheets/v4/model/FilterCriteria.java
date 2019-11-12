@@ -45,6 +45,24 @@ public final class FilterCriteria extends com.google.api.client.json.GenericJson
   private java.util.List<java.lang.String> hiddenValues;
 
   /**
+   * The background fill color to filter by; only cells with this fill color are shown. Mutually
+   * exclusive with all other filter criteria. Requests to set this field will fail with a 400 error
+   * if any other filter criteria field is set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Color visibleBackgroundColor;
+
+  /**
+   * The text color to filter by; only cells with this text color are shown. Mutually exclusive with
+   * all other filter criteria. Requests to set this field will fail with a 400 error if any other
+   * filter criteria field is set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Color visibleForegroundColor;
+
+  /**
    * A condition that must be true for values to be shown. (This does not override hiddenValues --
    * if a value is listed there,  it will still be hidden.)
    * @return value or {@code null} for none
@@ -77,6 +95,48 @@ public final class FilterCriteria extends com.google.api.client.json.GenericJson
    */
   public FilterCriteria setHiddenValues(java.util.List<java.lang.String> hiddenValues) {
     this.hiddenValues = hiddenValues;
+    return this;
+  }
+
+  /**
+   * The background fill color to filter by; only cells with this fill color are shown. Mutually
+   * exclusive with all other filter criteria. Requests to set this field will fail with a 400 error
+   * if any other filter criteria field is set.
+   * @return value or {@code null} for none
+   */
+  public Color getVisibleBackgroundColor() {
+    return visibleBackgroundColor;
+  }
+
+  /**
+   * The background fill color to filter by; only cells with this fill color are shown. Mutually
+   * exclusive with all other filter criteria. Requests to set this field will fail with a 400 error
+   * if any other filter criteria field is set.
+   * @param visibleBackgroundColor visibleBackgroundColor or {@code null} for none
+   */
+  public FilterCriteria setVisibleBackgroundColor(Color visibleBackgroundColor) {
+    this.visibleBackgroundColor = visibleBackgroundColor;
+    return this;
+  }
+
+  /**
+   * The text color to filter by; only cells with this text color are shown. Mutually exclusive with
+   * all other filter criteria. Requests to set this field will fail with a 400 error if any other
+   * filter criteria field is set.
+   * @return value or {@code null} for none
+   */
+  public Color getVisibleForegroundColor() {
+    return visibleForegroundColor;
+  }
+
+  /**
+   * The text color to filter by; only cells with this text color are shown. Mutually exclusive with
+   * all other filter criteria. Requests to set this field will fail with a 400 error if any other
+   * filter criteria field is set.
+   * @param visibleForegroundColor visibleForegroundColor or {@code null} for none
+   */
+  public FilterCriteria setVisibleForegroundColor(Color visibleForegroundColor) {
+    this.visibleForegroundColor = visibleForegroundColor;
     return this;
   }
 

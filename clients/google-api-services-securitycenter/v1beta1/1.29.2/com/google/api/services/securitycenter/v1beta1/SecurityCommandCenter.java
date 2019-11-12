@@ -303,7 +303,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
      * @param name The relative resource name of the settings. See:
      *        https://cloud.google.com/apis/design/resource_names#relative_resource_name
     Example:
-     *        "organizations/123/organizationSettings".
+     *        "organizations/{organization_id}/organizationSettings".
      * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.OrganizationSettings}
      * @return the request
      */
@@ -334,7 +334,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * @param name The relative resource name of the settings. See:
      *        https://cloud.google.com/apis/design/resource_names#relative_resource_name
     Example:
-     *        "organizations/123/organizationSettings".
+     *        "organizations/{organization_id}/organizationSettings".
        * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.OrganizationSettings}
        * @since 1.13
        */
@@ -406,14 +406,14 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       /**
        * The relative resource name of the settings. See:
        * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-       * "organizations/123/organizationSettings".
+       * "organizations/{organization_id}/organizationSettings".
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
       /** The relative resource name of the settings. See:
      https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-     "organizations/123/organizationSettings".
+     "organizations/{organization_id}/organizationSettings".
        */
       public java.lang.String getName() {
         return name;
@@ -422,7 +422,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       /**
        * The relative resource name of the settings. See:
        * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-       * "organizations/123/organizationSettings".
+       * "organizations/{organization_id}/organizationSettings".
        */
       public UpdateOrganizationSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -1209,8 +1209,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * @param name The relative resource name of the SecurityMarks. See:
        *        https://cloud.google.com/apis/design/resource_names#relative_resource_name
       Examples:
-       *        "organizations/123/assets/456/securityMarks"
-       *        "organizations/123/sources/456/findings/789/securityMarks".
+       *        "organizations/{organization_id}/assets/{asset_id}/securityMarks"
+       *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
        * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.SecurityMarks}
        * @return the request
        */
@@ -1241,8 +1241,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * @param name The relative resource name of the SecurityMarks. See:
        *        https://cloud.google.com/apis/design/resource_names#relative_resource_name
       Examples:
-       *        "organizations/123/assets/456/securityMarks"
-       *        "organizations/123/sources/456/findings/789/securityMarks".
+       *        "organizations/{organization_id}/assets/{asset_id}/securityMarks"
+       *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
          * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.SecurityMarks}
          * @since 1.13
          */
@@ -1314,16 +1314,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         /**
          * The relative resource name of the SecurityMarks. See:
          * https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-         * "organizations/123/assets/456/securityMarks"
-         * "organizations/123/sources/456/findings/789/securityMarks".
+         * "organizations/{organization_id}/assets/{asset_id}/securityMarks" "organizations/{organiz
+         * ation_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** The relative resource name of the SecurityMarks. See:
        https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-       "organizations/123/assets/456/securityMarks"
-       "organizations/123/sources/456/findings/789/securityMarks".
+       "organizations/{organization_id}/assets/{asset_id}/securityMarks"
+       "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
          */
         public java.lang.String getName() {
           return name;
@@ -1332,8 +1332,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         /**
          * The relative resource name of the SecurityMarks. See:
          * https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-         * "organizations/123/assets/456/securityMarks"
-         * "organizations/123/sources/456/findings/789/securityMarks".
+         * "organizations/{organization_id}/assets/{asset_id}/securityMarks" "organizations/{organiz
+         * ation_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
          */
         public UpdateSecurityMarks setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -2678,7 +2678,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * @param name The relative resource name of this source. See:
        *        https://cloud.google.com/apis/design/resource_names#relative_resource_name
       Example:
-       *        "organizations/123/sources/456"
+       *        "organizations/{organization_id}/sources/{source_id}"
        * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.Source}
        * @return the request
        */
@@ -2709,7 +2709,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * @param name The relative resource name of this source. See:
        *        https://cloud.google.com/apis/design/resource_names#relative_resource_name
       Example:
-       *        "organizations/123/sources/456"
+       *        "organizations/{organization_id}/sources/{source_id}"
          * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.Source}
          * @since 1.13
          */
@@ -2781,14 +2781,14 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         /**
          * The relative resource name of this source. See:
          * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         * "organizations/123/sources/456"
+         * "organizations/{organization_id}/sources/{source_id}"
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** The relative resource name of this source. See:
        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-       "organizations/123/sources/456"
+       "organizations/{organization_id}/sources/{source_id}"
          */
         public java.lang.String getName() {
           return name;
@@ -2797,7 +2797,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         /**
          * The relative resource name of this source. See:
          * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         * "organizations/123/sources/456"
+         * "organizations/{organization_id}/sources/{source_id}"
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -3306,7 +3306,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Filters an organization or source's findings and  groups them by their specified properties.
          *
          * To group across all sources provide a `-` as the source id. Example:
-         * /v1beta1/organizations/123/sources/-/findings
+         * /v1beta1/organizations/{organization_id}/sources/-/findings
          *
          * Create a request for the method "findings.group".
          *
@@ -3317,7 +3317,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          *        "organizations/[organization_id]/sources/[source_id]". To groupBy across
         all sources
          *        provide a source_id of `-`. For example:
-        organizations/123/sources/-
+        organizations/{organization_id}/sources/-
          * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.GroupFindingsRequest}
          * @return the request
          */
@@ -3338,7 +3338,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Filters an organization or source's findings and  groups them by their specified properties.
            *
            * To group across all sources provide a `-` as the source id. Example:
-           * /v1beta1/organizations/123/sources/-/findings
+           * /v1beta1/organizations/{organization_id}/sources/-/findings
            *
            * Create a request for the method "findings.group".
            *
@@ -3352,7 +3352,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          *        "organizations/[organization_id]/sources/[source_id]". To groupBy across
         all sources
          *        provide a source_id of `-`. For example:
-        organizations/123/sources/-
+        organizations/{organization_id}/sources/-
            * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.GroupFindingsRequest}
            * @since 1.13
            */
@@ -3424,14 +3424,14 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           /**
            * Required. Name of the source to groupBy. Its format is
            * "organizations/[organization_id]/sources/[source_id]". To groupBy across all sources
-           * provide a source_id of `-`. For example: organizations/123/sources/-
+           * provide a source_id of `-`. For example: organizations/{organization_id}/sources/-
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Name of the source to groupBy. Its format is
          "organizations/[organization_id]/sources/[source_id]". To groupBy across all sources provide a
-         source_id of `-`. For example: organizations/123/sources/-
+         source_id of `-`. For example: organizations/{organization_id}/sources/-
            */
           public java.lang.String getParent() {
             return parent;
@@ -3440,7 +3440,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           /**
            * Required. Name of the source to groupBy. Its format is
            * "organizations/[organization_id]/sources/[source_id]". To groupBy across all sources
-           * provide a source_id of `-`. For example: organizations/123/sources/-
+           * provide a source_id of `-`. For example: organizations/{organization_id}/sources/-
            */
           public Group setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -3461,7 +3461,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Lists an organization or source's findings.
          *
          * To list across all sources provide a `-` as the source id. Example:
-         * /v1beta1/organizations/123/sources/-/findings
+         * /v1beta1/organizations/{organization_id}/sources/-/findings
          *
          * Create a request for the method "findings.list".
          *
@@ -3472,7 +3472,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          *        "organizations/[organization_id]/sources/[source_id]". To list across all
         sources provide
          *        a source_id of `-`. For example:
-        organizations/123/sources/-
+        organizations/{organization_id}/sources/-
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -3492,7 +3492,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Lists an organization or source's findings.
            *
            * To list across all sources provide a `-` as the source id. Example:
-           * /v1beta1/organizations/123/sources/-/findings
+           * /v1beta1/organizations/{organization_id}/sources/-/findings
            *
            * Create a request for the method "findings.list".
            *
@@ -3505,7 +3505,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          *        "organizations/[organization_id]/sources/[source_id]". To list across all
         sources provide
          *        a source_id of `-`. For example:
-        organizations/123/sources/-
+        organizations/{organization_id}/sources/-
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -3586,14 +3586,14 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           /**
            * Required. Name of the source the findings belong to. Its format is
            * "organizations/[organization_id]/sources/[source_id]". To list across all sources
-           * provide a source_id of `-`. For example: organizations/123/sources/-
+           * provide a source_id of `-`. For example: organizations/{organization_id}/sources/-
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Name of the source the findings belong to. Its format is
          "organizations/[organization_id]/sources/[source_id]". To list across all sources provide a
-         source_id of `-`. For example: organizations/123/sources/-
+         source_id of `-`. For example: organizations/{organization_id}/sources/-
            */
           public java.lang.String getParent() {
             return parent;
@@ -3602,7 +3602,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           /**
            * Required. Name of the source the findings belong to. Its format is
            * "organizations/[organization_id]/sources/[source_id]". To list across all sources
-           * provide a source_id of `-`. For example: organizations/123/sources/-
+           * provide a source_id of `-`. For example: organizations/{organization_id}/sources/-
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -3843,7 +3843,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * @param name The relative resource name of this finding. See:
          *        https://cloud.google.com/apis/design/resource_names#relative_resource_name
         Example:
-         *        "organizations/123/sources/456/findings/789"
+         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
          * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.Finding}
          * @return the request
          */
@@ -3875,7 +3875,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * @param name The relative resource name of this finding. See:
          *        https://cloud.google.com/apis/design/resource_names#relative_resource_name
         Example:
-         *        "organizations/123/sources/456/findings/789"
+         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
            * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.Finding}
            * @since 1.13
            */
@@ -3947,14 +3947,14 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           /**
            * The relative resource name of this finding. See:
            * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-           * "organizations/123/sources/456/findings/789"
+           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** The relative resource name of this finding. See:
          https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         "organizations/123/sources/456/findings/789"
+         "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
            */
           public java.lang.String getName() {
             return name;
@@ -3963,7 +3963,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           /**
            * The relative resource name of this finding. See:
            * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-           * "organizations/123/sources/456/findings/789"
+           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -4014,7 +4014,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * @param name Required. The relative resource name of the finding. See:
          *        https://cloud.google.com/apis/design/resource_names#relative_resource_name
         Example:
-         *        "organizations/123/sources/456/finding/789".
+         *        "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
          * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.SetFindingStateRequest}
          * @return the request
          */
@@ -4045,7 +4045,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * @param name Required. The relative resource name of the finding. See:
          *        https://cloud.google.com/apis/design/resource_names#relative_resource_name
         Example:
-         *        "organizations/123/sources/456/finding/789".
+         *        "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
            * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.SetFindingStateRequest}
            * @since 1.13
            */
@@ -4117,14 +4117,14 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           /**
            * Required. The relative resource name of the finding. See:
            * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-           * "organizations/123/sources/456/finding/789".
+           * "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The relative resource name of the finding. See:
          https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         "organizations/123/sources/456/finding/789".
+         "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
            */
           public java.lang.String getName() {
             return name;
@@ -4133,7 +4133,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           /**
            * Required. The relative resource name of the finding. See:
            * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-           * "organizations/123/sources/456/finding/789".
+           * "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
            */
           public SetState setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -4162,8 +4162,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * @param name The relative resource name of the SecurityMarks. See:
          *        https://cloud.google.com/apis/design/resource_names#relative_resource_name
         Examples:
-         *        "organizations/123/assets/456/securityMarks"
-         *        "organizations/123/sources/456/findings/789/securityMarks".
+         *        "organizations/{organization_id}/assets/{asset_id}/securityMarks"
+         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
          * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.SecurityMarks}
          * @return the request
          */
@@ -4194,8 +4194,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * @param name The relative resource name of the SecurityMarks. See:
          *        https://cloud.google.com/apis/design/resource_names#relative_resource_name
         Examples:
-         *        "organizations/123/assets/456/securityMarks"
-         *        "organizations/123/sources/456/findings/789/securityMarks".
+         *        "organizations/{organization_id}/assets/{asset_id}/securityMarks"
+         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
            * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.SecurityMarks}
            * @since 1.13
            */
@@ -4267,16 +4267,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           /**
            * The relative resource name of the SecurityMarks. See:
            * https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-           * "organizations/123/assets/456/securityMarks"
-           * "organizations/123/sources/456/findings/789/securityMarks".
+           * "organizations/{organization_id}/assets/{asset_id}/securityMarks" "organizations/{organ
+           * ization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** The relative resource name of the SecurityMarks. See:
          https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-         "organizations/123/assets/456/securityMarks"
-         "organizations/123/sources/456/findings/789/securityMarks".
+         "organizations/{organization_id}/assets/{asset_id}/securityMarks"
+         "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
            */
           public java.lang.String getName() {
             return name;
@@ -4285,8 +4285,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           /**
            * The relative resource name of the SecurityMarks. See:
            * https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-           * "organizations/123/assets/456/securityMarks"
-           * "organizations/123/sources/456/findings/789/securityMarks".
+           * "organizations/{organization_id}/assets/{asset_id}/securityMarks" "organizations/{organ
+           * ization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
            */
           public UpdateSecurityMarks setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

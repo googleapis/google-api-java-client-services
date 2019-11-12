@@ -46,8 +46,8 @@ public final class SecurityMarks extends com.google.api.client.json.GenericJson 
   /**
    * The relative resource name of the SecurityMarks. See:
    * https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-   * "organizations/123/assets/456/securityMarks"
-   * "organizations/123/sources/456/findings/789/securityMarks".
+   * "organizations/{organization_id}/assets/{asset_id}/securityMarks"
+   * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,8 +81,8 @@ public final class SecurityMarks extends com.google.api.client.json.GenericJson 
   /**
    * The relative resource name of the SecurityMarks. See:
    * https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-   * "organizations/123/assets/456/securityMarks"
-   * "organizations/123/sources/456/findings/789/securityMarks".
+   * "organizations/{organization_id}/assets/{asset_id}/securityMarks"
+   * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -92,8 +92,8 @@ public final class SecurityMarks extends com.google.api.client.json.GenericJson 
   /**
    * The relative resource name of the SecurityMarks. See:
    * https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-   * "organizations/123/assets/456/securityMarks"
-   * "organizations/123/sources/456/findings/789/securityMarks".
+   * "organizations/{organization_id}/assets/{asset_id}/securityMarks"
+   * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
    * @param name name or {@code null} for none
    */
   public SecurityMarks setName(java.lang.String name) {

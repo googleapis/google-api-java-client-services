@@ -19,9 +19,10 @@ package com.google.api.services.securitycenter.v1.model;
 /**
  * Cloud Security Command Center (Cloud SCC) finding.
  *
- * A finding is a record of assessment data (security, risk, health or privacy) ingested into Cloud
- * SCC for presentation, notification, analysis, policy testing, and enforcement. For example, an
- * XSS vulnerability in an App Engine application is a finding.
+ * A finding is a record of assessment data like security, risk, health, or privacy, that is
+ * ingested into Cloud SCC for presentation, notification, analysis, policy testing, and
+ * enforcement. For example, a cross-site scripting (XSS) vulnerability in an App Engine application
+ * is a finding.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Security Command Center API. For a detailed
@@ -70,7 +71,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   /**
    * The relative resource name of this finding. See:
    * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-   * "organizations/123/sources/456/findings/789"
+   * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,7 +80,8 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   /**
    * The relative resource name of the source the finding belongs to. See:
    * https://cloud.google.com/apis/design/resource_names#relative_resource_name This field is
-   * immutable after creation time. For example: "organizations/123/sources/456"
+   * immutable after creation time. For example:
+   * "organizations/{organization_id}/sources/{source_id}"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -199,7 +201,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   /**
    * The relative resource name of this finding. See:
    * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-   * "organizations/123/sources/456/findings/789"
+   * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -209,7 +211,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   /**
    * The relative resource name of this finding. See:
    * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-   * "organizations/123/sources/456/findings/789"
+   * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
    * @param name name or {@code null} for none
    */
   public Finding setName(java.lang.String name) {
@@ -220,7 +222,8 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   /**
    * The relative resource name of the source the finding belongs to. See:
    * https://cloud.google.com/apis/design/resource_names#relative_resource_name This field is
-   * immutable after creation time. For example: "organizations/123/sources/456"
+   * immutable after creation time. For example:
+   * "organizations/{organization_id}/sources/{source_id}"
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -230,7 +233,8 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   /**
    * The relative resource name of the source the finding belongs to. See:
    * https://cloud.google.com/apis/design/resource_names#relative_resource_name This field is
-   * immutable after creation time. For example: "organizations/123/sources/456"
+   * immutable after creation time. For example:
+   * "organizations/{organization_id}/sources/{source_id}"
    * @param parent parent or {@code null} for none
    */
   public Finding setParent(java.lang.String parent) {

@@ -73,6 +73,15 @@ public final class LighthouseAuditResultV5 extends com.google.api.client.json.Ge
   private java.lang.String id;
 
   /**
+   * A numeric value that has a meaning specific to the audit, e.g. the number of nodes in the DOM
+   * or the timestamp of a specific load event. More information can be found in the audit details,
+   * if present.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double numericValue;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -197,6 +206,27 @@ public final class LighthouseAuditResultV5 extends com.google.api.client.json.Ge
    */
   public LighthouseAuditResultV5 setId(java.lang.String id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * A numeric value that has a meaning specific to the audit, e.g. the number of nodes in the DOM
+   * or the timestamp of a specific load event. More information can be found in the audit details,
+   * if present.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getNumericValue() {
+    return numericValue;
+  }
+
+  /**
+   * A numeric value that has a meaning specific to the audit, e.g. the number of nodes in the DOM
+   * or the timestamp of a specific load event. More information can be found in the audit details,
+   * if present.
+   * @param numericValue numericValue or {@code null} for none
+   */
+  public LighthouseAuditResultV5 setNumericValue(java.lang.Double numericValue) {
+    this.numericValue = numericValue;
     return this;
   }
 

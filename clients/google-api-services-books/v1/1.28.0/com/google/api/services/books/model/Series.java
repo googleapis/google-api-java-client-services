@@ -105,7 +105,19 @@ public final class Series extends com.google.api.client.json.GenericJson {
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
+    private java.lang.Boolean eligibleForSubscription;
+
+    /**
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
     private java.lang.String imageUrl;
+
+    /**
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean isComplete;
 
     /**
      * The value may be {@code null}.
@@ -118,6 +130,12 @@ public final class Series extends com.google.api.client.json.GenericJson {
      */
     @com.google.api.client.util.Key
     private java.lang.String seriesType;
+
+    /**
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String subscriptionId;
 
     /**
      * The value may be {@code null}.
@@ -143,6 +161,21 @@ public final class Series extends com.google.api.client.json.GenericJson {
     /**
      * @return value or {@code null} for none
      */
+    public java.lang.Boolean getEligibleForSubscription() {
+      return eligibleForSubscription;
+    }
+
+    /**
+     * @param eligibleForSubscription eligibleForSubscription or {@code null} for none
+     */
+    public SeriesSeries setEligibleForSubscription(java.lang.Boolean eligibleForSubscription) {
+      this.eligibleForSubscription = eligibleForSubscription;
+      return this;
+    }
+
+    /**
+     * @return value or {@code null} for none
+     */
     public java.lang.String getImageUrl() {
       return imageUrl;
     }
@@ -152,6 +185,21 @@ public final class Series extends com.google.api.client.json.GenericJson {
      */
     public SeriesSeries setImageUrl(java.lang.String imageUrl) {
       this.imageUrl = imageUrl;
+      return this;
+    }
+
+    /**
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getIsComplete() {
+      return isComplete;
+    }
+
+    /**
+     * @param isComplete isComplete or {@code null} for none
+     */
+    public SeriesSeries setIsComplete(java.lang.Boolean isComplete) {
+      this.isComplete = isComplete;
       return this;
     }
 
@@ -182,6 +230,21 @@ public final class Series extends com.google.api.client.json.GenericJson {
      */
     public SeriesSeries setSeriesType(java.lang.String seriesType) {
       this.seriesType = seriesType;
+      return this;
+    }
+
+    /**
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getSubscriptionId() {
+      return subscriptionId;
+    }
+
+    /**
+     * @param subscriptionId subscriptionId or {@code null} for none
+     */
+    public SeriesSeries setSubscriptionId(java.lang.String subscriptionId) {
+      this.subscriptionId = subscriptionId;
       return this;
     }
 

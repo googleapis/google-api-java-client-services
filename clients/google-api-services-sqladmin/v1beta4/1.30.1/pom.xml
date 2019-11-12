@@ -7,9 +7,9 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-sqladmin</artifactId>
-  <version>v1beta4-rev20190827-1.30.3</version>
-  <name>Cloud SQL Admin API v1beta4-rev20190827-1.30.3</name>
+  <artifactId>google-api-services-sql</artifactId>
+  <version>v1beta4-rev20191018-1.30.3</version>
+  <name>Cloud SQL Admin API v1beta4-rev20191018-1.30.3</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
@@ -67,7 +67,7 @@
         <configuration>
           <archive>
             <manifestEntries>
-              <Automatic-Module-Name>com.google.api.services.sqladmin</Automatic-Module-Name>
+              <Automatic-Module-Name>com.google.api.services.sql</Automatic-Module-Name>
             </manifestEntries>
           </archive>
         </configuration>

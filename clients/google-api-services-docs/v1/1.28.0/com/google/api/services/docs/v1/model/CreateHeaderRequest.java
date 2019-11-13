@@ -17,7 +17,7 @@
 package com.google.api.services.docs.v1.model;
 
 /**
- * Creates a Header. The new header will be applied to SectionStyle or the DocumentStyle.
+ * Creates a Header. The new header will be applied to the DocumentStyle.
  *
  * If a header of the specified type already exists then a 400 bad request error will be returned.
  *

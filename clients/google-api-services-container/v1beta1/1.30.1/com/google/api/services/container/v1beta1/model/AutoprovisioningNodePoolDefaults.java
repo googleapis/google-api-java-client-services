@@ -31,6 +31,13 @@ package com.google.api.services.container.v1beta1.model;
 public final class AutoprovisioningNodePoolDefaults extends com.google.api.client.json.GenericJson {
 
   /**
+   * Specifies the node management options for NAP created node-pools.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NodeManagement management;
+
+  /**
    * Scopes that are used by NAP when creating node pools. If oauth_scopes are specified,
    * service_account should be empty.
    * The value may be {@code null}.
@@ -45,6 +52,30 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
    */
   @com.google.api.client.util.Key
   private java.lang.String serviceAccount;
+
+  /**
+   * Specifies the upgrade settings for NAP created node pools
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UpgradeSettings upgradeSettings;
+
+  /**
+   * Specifies the node management options for NAP created node-pools.
+   * @return value or {@code null} for none
+   */
+  public NodeManagement getManagement() {
+    return management;
+  }
+
+  /**
+   * Specifies the node management options for NAP created node-pools.
+   * @param management management or {@code null} for none
+   */
+  public AutoprovisioningNodePoolDefaults setManagement(NodeManagement management) {
+    this.management = management;
+    return this;
+  }
 
   /**
    * Scopes that are used by NAP when creating node pools. If oauth_scopes are specified,
@@ -81,6 +112,23 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
    */
   public AutoprovisioningNodePoolDefaults setServiceAccount(java.lang.String serviceAccount) {
     this.serviceAccount = serviceAccount;
+    return this;
+  }
+
+  /**
+   * Specifies the upgrade settings for NAP created node pools
+   * @return value or {@code null} for none
+   */
+  public UpgradeSettings getUpgradeSettings() {
+    return upgradeSettings;
+  }
+
+  /**
+   * Specifies the upgrade settings for NAP created node pools
+   * @param upgradeSettings upgradeSettings or {@code null} for none
+   */
+  public AutoprovisioningNodePoolDefaults setUpgradeSettings(UpgradeSettings upgradeSettings) {
+    this.upgradeSettings = upgradeSettings;
     return this;
   }
 

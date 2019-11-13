@@ -65,11 +65,18 @@ public final class RepoSource extends com.google.api.client.json.GenericJson {
   private java.lang.String projectId;
 
   /**
-   * Name of the Cloud Source Repository. If omitted, the name "default" is assumed.
+   * Required. Name of the Cloud Source Repository.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String repoName;
+
+  /**
+   * Substitutions to use in a triggered build. Should only be used with RunBuildTrigger
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> substitutions;
 
   /**
    * Regex matching tags to build.
@@ -164,7 +171,7 @@ public final class RepoSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the Cloud Source Repository. If omitted, the name "default" is assumed.
+   * Required. Name of the Cloud Source Repository.
    * @return value or {@code null} for none
    */
   public java.lang.String getRepoName() {
@@ -172,11 +179,28 @@ public final class RepoSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the Cloud Source Repository. If omitted, the name "default" is assumed.
+   * Required. Name of the Cloud Source Repository.
    * @param repoName repoName or {@code null} for none
    */
   public RepoSource setRepoName(java.lang.String repoName) {
     this.repoName = repoName;
+    return this;
+  }
+
+  /**
+   * Substitutions to use in a triggered build. Should only be used with RunBuildTrigger
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getSubstitutions() {
+    return substitutions;
+  }
+
+  /**
+   * Substitutions to use in a triggered build. Should only be used with RunBuildTrigger
+   * @param substitutions substitutions or {@code null} for none
+   */
+  public RepoSource setSubstitutions(java.util.Map<String, java.lang.String> substitutions) {
+    this.substitutions = substitutions;
     return this;
   }
 

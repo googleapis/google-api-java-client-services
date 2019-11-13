@@ -676,8 +676,8 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the cloudbuild server.  After setting any optional
        * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
        *
-       * @param projectId ID of the project.
-       * @param id ID of the build.
+       * @param projectId Required. ID of the project.
+       * @param id Required. ID of the build.
        * @param content the {@link com.google.api.services.cloudbuild.v1.model.CancelBuildRequest}
        * @return the request
        */
@@ -702,8 +702,8 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
          * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param projectId ID of the project.
-         * @param id ID of the build.
+         * @param projectId Required. ID of the project.
+         * @param id Required. ID of the build.
          * @param content the {@link com.google.api.services.cloudbuild.v1.model.CancelBuildRequest}
          * @since 1.13
          */
@@ -768,33 +768,33 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           return (Cancel) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** ID of the project. */
+        /** Required. ID of the project. */
         @com.google.api.client.util.Key
         private java.lang.String projectId;
 
-        /** ID of the project.
+        /** Required. ID of the project.
          */
         public java.lang.String getProjectId() {
           return projectId;
         }
 
-        /** ID of the project. */
+        /** Required. ID of the project. */
         public Cancel setProjectId(java.lang.String projectId) {
           this.projectId = projectId;
           return this;
         }
 
-        /** ID of the build. */
+        /** Required. ID of the build. */
         @com.google.api.client.util.Key
         private java.lang.String id;
 
-        /** ID of the build.
+        /** Required. ID of the build.
          */
         public java.lang.String getId() {
           return id;
         }
 
-        /** ID of the build. */
+        /** Required. ID of the build. */
         public Cancel setId(java.lang.String id) {
           this.id = id;
           return this;
@@ -816,7 +816,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the cloudbuild server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param projectId ID of the project.
+       * @param projectId Required. ID of the project.
        * @param content the {@link com.google.api.services.cloudbuild.v1.model.Build}
        * @return the request
        */
@@ -844,7 +844,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param projectId ID of the project.
+         * @param projectId Required. ID of the project.
          * @param content the {@link com.google.api.services.cloudbuild.v1.model.Build}
          * @since 1.13
          */
@@ -908,17 +908,17 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** ID of the project. */
+        /** Required. ID of the project. */
         @com.google.api.client.util.Key
         private java.lang.String projectId;
 
-        /** ID of the project.
+        /** Required. ID of the project.
          */
         public java.lang.String getProjectId() {
           return projectId;
         }
 
-        /** ID of the project. */
+        /** Required. ID of the project. */
         public Create setProjectId(java.lang.String projectId) {
           this.projectId = projectId;
           return this;
@@ -940,8 +940,8 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the cloudbuild server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param projectId ID of the project.
-       * @param id ID of the build.
+       * @param projectId Required. ID of the project.
+       * @param id Required. ID of the build.
        * @return the request
        */
       public Get get(java.lang.String projectId, java.lang.String id) throws java.io.IOException {
@@ -967,8 +967,8 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param projectId ID of the project.
-         * @param id ID of the build.
+         * @param projectId Required. ID of the project.
+         * @param id Required. ID of the build.
          * @since 1.13
          */
         protected Get(java.lang.String projectId, java.lang.String id) {
@@ -1042,33 +1042,33 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** ID of the project. */
+        /** Required. ID of the project. */
         @com.google.api.client.util.Key
         private java.lang.String projectId;
 
-        /** ID of the project.
+        /** Required. ID of the project.
          */
         public java.lang.String getProjectId() {
           return projectId;
         }
 
-        /** ID of the project. */
+        /** Required. ID of the project. */
         public Get setProjectId(java.lang.String projectId) {
           this.projectId = projectId;
           return this;
         }
 
-        /** ID of the build. */
+        /** Required. ID of the build. */
         @com.google.api.client.util.Key
         private java.lang.String id;
 
-        /** ID of the build.
+        /** Required. ID of the build.
          */
         public java.lang.String getId() {
           return id;
         }
 
-        /** ID of the build. */
+        /** Required. ID of the build. */
         public Get setId(java.lang.String id) {
           this.id = id;
           return this;
@@ -1090,7 +1090,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the cloudbuild server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param projectId ID of the project.
+       * @param projectId Required. ID of the project.
        * @return the request
        */
       public List list(java.lang.String projectId) throws java.io.IOException {
@@ -1116,7 +1116,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param projectId ID of the project.
+         * @param projectId Required. ID of the project.
          * @since 1.13
          */
         protected List(java.lang.String projectId) {
@@ -1189,17 +1189,17 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** ID of the project. */
+        /** Required. ID of the project. */
         @com.google.api.client.util.Key
         private java.lang.String projectId;
 
-        /** ID of the project.
+        /** Required. ID of the project.
          */
         public java.lang.String getProjectId() {
           return projectId;
         }
 
-        /** ID of the project. */
+        /** Required. ID of the project. */
         public List setProjectId(java.lang.String projectId) {
           this.projectId = projectId;
           return this;
@@ -1288,8 +1288,8 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the cloudbuild server.  After setting any optional
        * parameters, call the {@link Retry#execute()} method to invoke the remote operation.
        *
-       * @param projectId ID of the project.
-       * @param id Build ID of the original build.
+       * @param projectId Required. ID of the project.
+       * @param id Required. Build ID of the original build.
        * @param content the {@link com.google.api.services.cloudbuild.v1.model.RetryBuildRequest}
        * @return the request
        */
@@ -1336,8 +1336,8 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
          * Retry#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param projectId ID of the project.
-         * @param id Build ID of the original build.
+         * @param projectId Required. ID of the project.
+         * @param id Required. Build ID of the original build.
          * @param content the {@link com.google.api.services.cloudbuild.v1.model.RetryBuildRequest}
          * @since 1.13
          */
@@ -1402,33 +1402,33 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           return (Retry) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** ID of the project. */
+        /** Required. ID of the project. */
         @com.google.api.client.util.Key
         private java.lang.String projectId;
 
-        /** ID of the project.
+        /** Required. ID of the project.
          */
         public java.lang.String getProjectId() {
           return projectId;
         }
 
-        /** ID of the project. */
+        /** Required. ID of the project. */
         public Retry setProjectId(java.lang.String projectId) {
           this.projectId = projectId;
           return this;
         }
 
-        /** Build ID of the original build. */
+        /** Required. Build ID of the original build. */
         @com.google.api.client.util.Key
         private java.lang.String id;
 
-        /** Build ID of the original build.
+        /** Required. Build ID of the original build.
          */
         public java.lang.String getId() {
           return id;
         }
 
-        /** Build ID of the original build. */
+        /** Required. Build ID of the original build. */
         public Retry setId(java.lang.String id) {
           this.id = id;
           return this;
@@ -1471,7 +1471,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the cloudbuild server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param projectId ID of the project for which to configure automatic builds.
+       * @param projectId Required. ID of the project for which to configure automatic builds.
        * @param content the {@link com.google.api.services.cloudbuild.v1.model.BuildTrigger}
        * @return the request
        */
@@ -1498,7 +1498,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param projectId ID of the project for which to configure automatic builds.
+         * @param projectId Required. ID of the project for which to configure automatic builds.
          * @param content the {@link com.google.api.services.cloudbuild.v1.model.BuildTrigger}
          * @since 1.13
          */
@@ -1562,17 +1562,17 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** ID of the project for which to configure automatic builds. */
+        /** Required. ID of the project for which to configure automatic builds. */
         @com.google.api.client.util.Key
         private java.lang.String projectId;
 
-        /** ID of the project for which to configure automatic builds.
+        /** Required. ID of the project for which to configure automatic builds.
          */
         public java.lang.String getProjectId() {
           return projectId;
         }
 
-        /** ID of the project for which to configure automatic builds. */
+        /** Required. ID of the project for which to configure automatic builds. */
         public Create setProjectId(java.lang.String projectId) {
           this.projectId = projectId;
           return this;
@@ -1593,8 +1593,8 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the cloudbuild server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param projectId ID of the project that owns the trigger.
-       * @param triggerId ID of the `BuildTrigger` to delete.
+       * @param projectId Required. ID of the project that owns the trigger.
+       * @param triggerId Required. ID of the `BuildTrigger` to delete.
        * @return the request
        */
       public Delete delete(java.lang.String projectId, java.lang.String triggerId) throws java.io.IOException {
@@ -1620,8 +1620,8 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param projectId ID of the project that owns the trigger.
-         * @param triggerId ID of the `BuildTrigger` to delete.
+         * @param projectId Required. ID of the project that owns the trigger.
+         * @param triggerId Required. ID of the `BuildTrigger` to delete.
          * @since 1.13
          */
         protected Delete(java.lang.String projectId, java.lang.String triggerId) {
@@ -1685,33 +1685,33 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           return (Delete) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** ID of the project that owns the trigger. */
+        /** Required. ID of the project that owns the trigger. */
         @com.google.api.client.util.Key
         private java.lang.String projectId;
 
-        /** ID of the project that owns the trigger.
+        /** Required. ID of the project that owns the trigger.
          */
         public java.lang.String getProjectId() {
           return projectId;
         }
 
-        /** ID of the project that owns the trigger. */
+        /** Required. ID of the project that owns the trigger. */
         public Delete setProjectId(java.lang.String projectId) {
           this.projectId = projectId;
           return this;
         }
 
-        /** ID of the `BuildTrigger` to delete. */
+        /** Required. ID of the `BuildTrigger` to delete. */
         @com.google.api.client.util.Key
         private java.lang.String triggerId;
 
-        /** ID of the `BuildTrigger` to delete.
+        /** Required. ID of the `BuildTrigger` to delete.
          */
         public java.lang.String getTriggerId() {
           return triggerId;
         }
 
-        /** ID of the `BuildTrigger` to delete. */
+        /** Required. ID of the `BuildTrigger` to delete. */
         public Delete setTriggerId(java.lang.String triggerId) {
           this.triggerId = triggerId;
           return this;
@@ -1732,8 +1732,8 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the cloudbuild server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param projectId ID of the project that owns the trigger.
-       * @param triggerId ID of the `BuildTrigger` to get.
+       * @param projectId Required. ID of the project that owns the trigger.
+       * @param triggerId Required. Identifier (`id` or `name`) of the `BuildTrigger` to get.
        * @return the request
        */
       public Get get(java.lang.String projectId, java.lang.String triggerId) throws java.io.IOException {
@@ -1758,8 +1758,8 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param projectId ID of the project that owns the trigger.
-         * @param triggerId ID of the `BuildTrigger` to get.
+         * @param projectId Required. ID of the project that owns the trigger.
+         * @param triggerId Required. Identifier (`id` or `name`) of the `BuildTrigger` to get.
          * @since 1.13
          */
         protected Get(java.lang.String projectId, java.lang.String triggerId) {
@@ -1833,33 +1833,33 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** ID of the project that owns the trigger. */
+        /** Required. ID of the project that owns the trigger. */
         @com.google.api.client.util.Key
         private java.lang.String projectId;
 
-        /** ID of the project that owns the trigger.
+        /** Required. ID of the project that owns the trigger.
          */
         public java.lang.String getProjectId() {
           return projectId;
         }
 
-        /** ID of the project that owns the trigger. */
+        /** Required. ID of the project that owns the trigger. */
         public Get setProjectId(java.lang.String projectId) {
           this.projectId = projectId;
           return this;
         }
 
-        /** ID of the `BuildTrigger` to get. */
+        /** Required. Identifier (`id` or `name`) of the `BuildTrigger` to get. */
         @com.google.api.client.util.Key
         private java.lang.String triggerId;
 
-        /** ID of the `BuildTrigger` to get.
+        /** Required. Identifier (`id` or `name`) of the `BuildTrigger` to get.
          */
         public java.lang.String getTriggerId() {
           return triggerId;
         }
 
-        /** ID of the `BuildTrigger` to get. */
+        /** Required. Identifier (`id` or `name`) of the `BuildTrigger` to get. */
         public Get setTriggerId(java.lang.String triggerId) {
           this.triggerId = triggerId;
           return this;
@@ -1880,7 +1880,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the cloudbuild server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param projectId ID of the project for which to list BuildTriggers.
+       * @param projectId Required. ID of the project for which to list BuildTriggers.
        * @return the request
        */
       public List list(java.lang.String projectId) throws java.io.IOException {
@@ -1905,7 +1905,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param projectId ID of the project for which to list BuildTriggers.
+         * @param projectId Required. ID of the project for which to list BuildTriggers.
          * @since 1.13
          */
         protected List(java.lang.String projectId) {
@@ -1978,17 +1978,17 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** ID of the project for which to list BuildTriggers. */
+        /** Required. ID of the project for which to list BuildTriggers. */
         @com.google.api.client.util.Key
         private java.lang.String projectId;
 
-        /** ID of the project for which to list BuildTriggers.
+        /** Required. ID of the project for which to list BuildTriggers.
          */
         public java.lang.String getProjectId() {
           return projectId;
         }
 
-        /** ID of the project for which to list BuildTriggers. */
+        /** Required. ID of the project for which to list BuildTriggers. */
         public List setProjectId(java.lang.String projectId) {
           this.projectId = projectId;
           return this;
@@ -2041,8 +2041,8 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the cloudbuild server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param projectId ID of the project that owns the trigger.
-       * @param triggerId ID of the `BuildTrigger` to update.
+       * @param projectId Required. ID of the project that owns the trigger.
+       * @param triggerId Required. ID of the `BuildTrigger` to update.
        * @param content the {@link com.google.api.services.cloudbuild.v1.model.BuildTrigger}
        * @return the request
        */
@@ -2069,8 +2069,8 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param projectId ID of the project that owns the trigger.
-         * @param triggerId ID of the `BuildTrigger` to update.
+         * @param projectId Required. ID of the project that owns the trigger.
+         * @param triggerId Required. ID of the `BuildTrigger` to update.
          * @param content the {@link com.google.api.services.cloudbuild.v1.model.BuildTrigger}
          * @since 1.13
          */
@@ -2135,33 +2135,33 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           return (Patch) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** ID of the project that owns the trigger. */
+        /** Required. ID of the project that owns the trigger. */
         @com.google.api.client.util.Key
         private java.lang.String projectId;
 
-        /** ID of the project that owns the trigger.
+        /** Required. ID of the project that owns the trigger.
          */
         public java.lang.String getProjectId() {
           return projectId;
         }
 
-        /** ID of the project that owns the trigger. */
+        /** Required. ID of the project that owns the trigger. */
         public Patch setProjectId(java.lang.String projectId) {
           this.projectId = projectId;
           return this;
         }
 
-        /** ID of the `BuildTrigger` to update. */
+        /** Required. ID of the `BuildTrigger` to update. */
         @com.google.api.client.util.Key
         private java.lang.String triggerId;
 
-        /** ID of the `BuildTrigger` to update.
+        /** Required. ID of the `BuildTrigger` to update.
          */
         public java.lang.String getTriggerId() {
           return triggerId;
         }
 
-        /** ID of the `BuildTrigger` to update. */
+        /** Required. ID of the `BuildTrigger` to update. */
         public Patch setTriggerId(java.lang.String triggerId) {
           this.triggerId = triggerId;
           return this;
@@ -2180,8 +2180,8 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the cloudbuild server.  After setting any optional
        * parameters, call the {@link Run#execute()} method to invoke the remote operation.
        *
-       * @param projectId ID of the project.
-       * @param triggerId ID of the trigger.
+       * @param projectId Required. ID of the project.
+       * @param triggerId Required. ID of the trigger.
        * @param content the {@link com.google.api.services.cloudbuild.v1.model.RepoSource}
        * @return the request
        */
@@ -2205,8 +2205,8 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
          * {@link Run#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param projectId ID of the project.
-         * @param triggerId ID of the trigger.
+         * @param projectId Required. ID of the project.
+         * @param triggerId Required. ID of the trigger.
          * @param content the {@link com.google.api.services.cloudbuild.v1.model.RepoSource}
          * @since 1.13
          */
@@ -2271,33 +2271,33 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           return (Run) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** ID of the project. */
+        /** Required. ID of the project. */
         @com.google.api.client.util.Key
         private java.lang.String projectId;
 
-        /** ID of the project.
+        /** Required. ID of the project.
          */
         public java.lang.String getProjectId() {
           return projectId;
         }
 
-        /** ID of the project. */
+        /** Required. ID of the project. */
         public Run setProjectId(java.lang.String projectId) {
           this.projectId = projectId;
           return this;
         }
 
-        /** ID of the trigger. */
+        /** Required. ID of the trigger. */
         @com.google.api.client.util.Key
         private java.lang.String triggerId;
 
-        /** ID of the trigger.
+        /** Required. ID of the trigger.
          */
         public java.lang.String getTriggerId() {
           return triggerId;
         }
 
-        /** ID of the trigger. */
+        /** Required. ID of the trigger. */
         public Run setTriggerId(java.lang.String triggerId) {
           this.triggerId = triggerId;
           return this;

@@ -67,6 +67,8 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
   /**
    * GitHubEventsConfig describes the configuration of a trigger that creates a build whenever a
    * GitHub event is received.
+   *
+   * Mutually exclusive with `trigger_template`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -132,6 +134,8 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
    *
    * Branch and tag names in trigger templates are interpreted as regular expressions. Any branch or
    * tag change that matches that regular expression will trigger a build.
+   *
+   * Mutually exclusive with `github`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -225,6 +229,8 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
   /**
    * GitHubEventsConfig describes the configuration of a trigger that creates a build whenever a
    * GitHub event is received.
+   *
+   * Mutually exclusive with `trigger_template`.
    * @return value or {@code null} for none
    */
   public GitHubEventsConfig getGithub() {
@@ -234,6 +240,8 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
   /**
    * GitHubEventsConfig describes the configuration of a trigger that creates a build whenever a
    * GitHub event is received.
+   *
+   * Mutually exclusive with `trigger_template`.
    * @param github github or {@code null} for none
    */
   public BuildTrigger setGithub(GitHubEventsConfig github) {
@@ -374,6 +382,8 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
    *
    * Branch and tag names in trigger templates are interpreted as regular expressions. Any branch or
    * tag change that matches that regular expression will trigger a build.
+   *
+   * Mutually exclusive with `github`.
    * @return value or {@code null} for none
    */
   public RepoSource getTriggerTemplate() {
@@ -385,6 +395,8 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
    *
    * Branch and tag names in trigger templates are interpreted as regular expressions. Any branch or
    * tag change that matches that regular expression will trigger a build.
+   *
+   * Mutually exclusive with `github`.
    * @param triggerTemplate triggerTemplate or {@code null} for none
    */
   public BuildTrigger setTriggerTemplate(RepoSource triggerTemplate) {

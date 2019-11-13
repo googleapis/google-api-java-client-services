@@ -38,6 +38,13 @@ public final class ListFindingsResult extends com.google.api.client.json.Generic
   private Finding finding;
 
   /**
+   * Output only. Resource that is associated with this finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Resource resource;
+
+  /**
    * State change of the finding between the points in time.
    * The value may be {@code null}.
    */
@@ -58,6 +65,23 @@ public final class ListFindingsResult extends com.google.api.client.json.Generic
    */
   public ListFindingsResult setFinding(Finding finding) {
     this.finding = finding;
+    return this;
+  }
+
+  /**
+   * Output only. Resource that is associated with this finding.
+   * @return value or {@code null} for none
+   */
+  public Resource getResource() {
+    return resource;
+  }
+
+  /**
+   * Output only. Resource that is associated with this finding.
+   * @param resource resource or {@code null} for none
+   */
+  public ListFindingsResult setResource(Resource resource) {
+    this.resource = resource;
     return this;
   }
 

@@ -44,6 +44,13 @@ public final class CheckInRequest extends com.google.api.client.json.GenericJson
   private java.util.Map<String, java.lang.Object> event;
 
   /**
+   * A list of timestamped events.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<TimestampedEvent> events;
+
+  /**
    * The operation has finished with the given result.
    * The value may be {@code null}.
    */
@@ -88,6 +95,23 @@ public final class CheckInRequest extends com.google.api.client.json.GenericJson
    */
   public CheckInRequest setEvent(java.util.Map<String, java.lang.Object> event) {
     this.event = event;
+    return this;
+  }
+
+  /**
+   * A list of timestamped events.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<TimestampedEvent> getEvents() {
+    return events;
+  }
+
+  /**
+   * A list of timestamped events.
+   * @param events events or {@code null} for none
+   */
+  public CheckInRequest setEvents(java.util.List<TimestampedEvent> events) {
+    this.events = events;
     return this;
   }
 

@@ -296,6 +296,29 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /**
+       * The name of the backupRun to delete. Format:
+       * projects/{project}/locations/{location}/instances/{instance}/backupRuns/{backupRun}
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String resourceName;
+
+      /** The name of the backupRun to delete. Format:
+     projects/{project}/locations/{location}/instances/{instance}/backupRuns/{backupRun}
+       */
+      public java.lang.String getResourceName() {
+        return resourceName;
+      }
+
+      /**
+       * The name of the backupRun to delete. Format:
+       * projects/{project}/locations/{location}/instances/{instance}/backupRuns/{backupRun}
+       */
+      public Delete setResourceName(java.lang.String resourceName) {
+        this.resourceName = resourceName;
+        return this;
+      }
+
       @Override
       public Delete set(String parameterName, Object value) {
         return (Delete) super.set(parameterName, value);
@@ -1024,6 +1047,29 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /**
+       * The name of the database to delete. Format:
+       * projects/{project}/locations/{location}/instances/{instance}/databases/{database}
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String resourceName;
+
+      /** The name of the database to delete. Format:
+     projects/{project}/locations/{location}/instances/{instance}/databases/{database}
+       */
+      public java.lang.String getResourceName() {
+        return resourceName;
+      }
+
+      /**
+       * The name of the database to delete. Format:
+       * projects/{project}/locations/{location}/instances/{instance}/databases/{database}
+       */
+      public Delete setResourceName(java.lang.String resourceName) {
+        this.resourceName = resourceName;
+        return this;
+      }
+
       @Override
       public Delete set(String parameterName, Object value) {
         return (Delete) super.set(parameterName, value);
@@ -1693,6 +1739,29 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /**
+       * The name of the database for Cloud SQL to update. Format:
+       * projects/{project}/locations/{location}/instances/{instance}/databases/{database}
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String resourceName;
+
+      /** The name of the database for Cloud SQL to update. Format:
+     projects/{project}/locations/{location}/instances/{instance}/databases/{database}
+       */
+      public java.lang.String getResourceName() {
+        return resourceName;
+      }
+
+      /**
+       * The name of the database for Cloud SQL to update. Format:
+       * projects/{project}/locations/{location}/instances/{instance}/databases/{database}
+       */
+      public Patch setResourceName(java.lang.String resourceName) {
+        this.resourceName = resourceName;
+        return this;
+      }
+
       @Override
       public Patch set(String parameterName, Object value) {
         return (Patch) super.set(parameterName, value);
@@ -1845,6 +1914,29 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Name of the database to be updated in the instance. */
       public Update setDatabase(java.lang.String database) {
         this.database = database;
+        return this;
+      }
+
+      /**
+       * The name of the database for Cloud SQL to update. Format:
+       * projects/{project}/locations/{location}/instances/{instance}/databases/{database}
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String resourceName;
+
+      /** The name of the database for Cloud SQL to update. Format:
+     projects/{project}/locations/{location}/instances/{instance}/databases/{database}
+       */
+      public java.lang.String getResourceName() {
+        return resourceName;
+      }
+
+      /**
+       * The name of the database for Cloud SQL to update. Format:
+       * projects/{project}/locations/{location}/instances/{instance}/databases/{database}
+       */
+      public Update setResourceName(java.lang.String resourceName) {
+        this.resourceName = resourceName;
         return this;
       }
 
@@ -2485,6 +2577,29 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Cloud SQL instance ID. This does not include the project ID. */
       public Delete setInstance(java.lang.String instance) {
         this.instance = instance;
+        return this;
+      }
+
+      /**
+       * The name of database instance to delete. Format:
+       * projects/{project}/locations/{location}/instances/{instance}
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String resourceName;
+
+      /** The name of database instance to delete. Format:
+     projects/{project}/locations/{location}/instances/{instance}
+       */
+      public java.lang.String getResourceName() {
+        return resourceName;
+      }
+
+      /**
+       * The name of database instance to delete. Format:
+       * projects/{project}/locations/{location}/instances/{instance}
+       */
+      public Delete setResourceName(java.lang.String resourceName) {
+        this.resourceName = resourceName;
         return this;
       }
 
@@ -3932,6 +4047,29 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /**
+       * The name of the database instance for Cloud SQL to update. Format:
+       * projects/{project}/locations/{location}/instances/{instance}
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String resourceName;
+
+      /** The name of the database instance for Cloud SQL to update. Format:
+     projects/{project}/locations/{location}/instances/{instance}
+       */
+      public java.lang.String getResourceName() {
+        return resourceName;
+      }
+
+      /**
+       * The name of the database instance for Cloud SQL to update. Format:
+       * projects/{project}/locations/{location}/instances/{instance}
+       */
+      public Patch setResourceName(java.lang.String resourceName) {
+        this.resourceName = resourceName;
+        return this;
+      }
+
       @Override
       public Patch set(String parameterName, Object value) {
         return (Patch) super.set(parameterName, value);
@@ -5342,6 +5480,29 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /**
+       * The name of the database instance for Cloud SQL to update. Format:
+       * projects/{project}/locations/{location}/instances/{instance}
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String resourceName;
+
+      /** The name of the database instance for Cloud SQL to update. Format:
+     projects/{project}/locations/{location}/instances/{instance}
+       */
+      public java.lang.String getResourceName() {
+        return resourceName;
+      }
+
+      /**
+       * The name of the database instance for Cloud SQL to update. Format:
+       * projects/{project}/locations/{location}/instances/{instance}
+       */
+      public Update setResourceName(java.lang.String resourceName) {
+        this.resourceName = resourceName;
+        return this;
+      }
+
       @Override
       public Update set(String parameterName, Object value) {
         return (Update) super.set(parameterName, value);
@@ -6050,6 +6211,29 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Sha1 FingerPrint. */
       public Delete setSha1Fingerprint(java.lang.String sha1Fingerprint) {
         this.sha1Fingerprint = sha1Fingerprint;
+        return this;
+      }
+
+      /**
+       * The name of SSL certificate to delete. Format:
+       * projects/{project}/locations/{location}/instances/{instance}/sslCerts/{sslCert}
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String resourceName;
+
+      /** The name of SSL certificate to delete. Format:
+     projects/{project}/locations/{location}/instances/{instance}/sslCerts/{sslCert}
+       */
+      public java.lang.String getResourceName() {
+        return resourceName;
+      }
+
+      /**
+       * The name of SSL certificate to delete. Format:
+       * projects/{project}/locations/{location}/instances/{instance}/sslCerts/{sslCert}
+       */
+      public Delete setResourceName(java.lang.String resourceName) {
+        this.resourceName = resourceName;
         return this;
       }
 
@@ -6908,6 +7092,29 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /**
+       * The name of the user to delete. Format:
+       * projects/{project}/locations/{location}/instances/{instance}/users
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String resourceName;
+
+      /** The name of the user to delete. Format:
+     projects/{project}/locations/{location}/instances/{instance}/users
+       */
+      public java.lang.String getResourceName() {
+        return resourceName;
+      }
+
+      /**
+       * The name of the user to delete. Format:
+       * projects/{project}/locations/{location}/instances/{instance}/users
+       */
+      public Delete setResourceName(java.lang.String resourceName) {
+        this.resourceName = resourceName;
+        return this;
+      }
+
       @Override
       public Delete set(String parameterName, Object value) {
         return (Delete) super.set(parameterName, value);
@@ -7406,6 +7613,29 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Name of the user in the instance. */
       public Update setName(java.lang.String name) {
         this.name = name;
+        return this;
+      }
+
+      /**
+       * The name of the user for Cloud SQL to update. Format:
+       * projects/{project}/locations/{location}/instances/{instance}/users
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String resourceName;
+
+      /** The name of the user for Cloud SQL to update. Format:
+     projects/{project}/locations/{location}/instances/{instance}/users
+       */
+      public java.lang.String getResourceName() {
+        return resourceName;
+      }
+
+      /**
+       * The name of the user for Cloud SQL to update. Format:
+       * projects/{project}/locations/{location}/instances/{instance}/users
+       */
+      public Update setResourceName(java.lang.String resourceName) {
+        this.resourceName = resourceName;
         return this;
       }
 

@@ -31,12 +31,36 @@ package com.google.api.services.fcm.v1.model;
 public final class WebpushFcmOptions extends com.google.api.client.json.GenericJson {
 
   /**
+   * Label associated with the message's analytics data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String analyticsLabel;
+
+  /**
    * The link to open when the user clicks on the notification. For all URL values, HTTPS is
    * required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String link;
+
+  /**
+   * Label associated with the message's analytics data.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAnalyticsLabel() {
+    return analyticsLabel;
+  }
+
+  /**
+   * Label associated with the message's analytics data.
+   * @param analyticsLabel analyticsLabel or {@code null} for none
+   */
+  public WebpushFcmOptions setAnalyticsLabel(java.lang.String analyticsLabel) {
+    this.analyticsLabel = analyticsLabel;
+    return this;
+  }
 
   /**
    * The link to open when the user clicks on the notification. For all URL values, HTTPS is

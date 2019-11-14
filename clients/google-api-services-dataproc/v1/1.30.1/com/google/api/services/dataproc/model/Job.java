@@ -122,6 +122,13 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private SparkJob sparkJob;
 
   /**
+   * Job is a SparkR job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SparkRJob sparkRJob;
+
+  /**
    * Job is a SparkSql job.
    * The value may be {@code null}.
    */
@@ -368,6 +375,23 @@ public final class Job extends com.google.api.client.json.GenericJson {
    */
   public Job setSparkJob(SparkJob sparkJob) {
     this.sparkJob = sparkJob;
+    return this;
+  }
+
+  /**
+   * Job is a SparkR job.
+   * @return value or {@code null} for none
+   */
+  public SparkRJob getSparkRJob() {
+    return sparkRJob;
+  }
+
+  /**
+   * Job is a SparkR job.
+   * @param sparkRJob sparkRJob or {@code null} for none
+   */
+  public Job setSparkRJob(SparkRJob sparkRJob) {
+    this.sparkRJob = sparkRJob;
     return this;
   }
 

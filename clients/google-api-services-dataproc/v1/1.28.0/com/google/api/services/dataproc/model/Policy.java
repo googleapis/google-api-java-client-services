@@ -24,7 +24,7 @@ package com.google.api.services.dataproc.model;
  * configured by users). A binding can optionally specify a condition, which is a logic expression
  * that further constrains the role binding based on attributes about the request and/or target
  * resource.JSON Example {   "bindings": [     {       "role":
- * "role/resourcemanager.organizationAdmin",       "members": [         "user:mike@example.com",
+ * "roles/resourcemanager.organizationAdmin",       "members": [         "user:mike@example.com",
  * "group:admins@example.com",         "domain:google.com",         "serviceAccount:my-project-
  * id@appspot.gserviceaccount.com"       ]     },     {       "role":
  * "roles/resourcemanager.organizationViewer",       "members": ["user:eve@example.com"],

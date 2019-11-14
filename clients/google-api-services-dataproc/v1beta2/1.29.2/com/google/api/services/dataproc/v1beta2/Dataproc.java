@@ -1081,7 +1081,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Sets the access control policy on the specified resource. Replaces any existing policy.
+         * Sets the access control policy on the specified resource. Replaces any existing policy.Can return
+         * Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
          *
          * Create a request for the method "autoscalingPolicies.setIamPolicy".
          *
@@ -1107,7 +1108,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/autoscalingPolicies/[^/]+$");
 
           /**
-           * Sets the access control policy on the specified resource. Replaces any existing policy.
+           * Sets the access control policy on the specified resource. Replaces any existing policy.Can
+           * return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
            *
            * Create a request for the method "autoscalingPolicies.setIamPolicy".
            *
@@ -2902,7 +2904,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Sets the access control policy on the specified resource. Replaces any existing policy.
+         * Sets the access control policy on the specified resource. Replaces any existing policy.Can return
+         * Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
          *
          * Create a request for the method "workflowTemplates.setIamPolicy".
          *
@@ -2928,7 +2931,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workflowTemplates/[^/]+$");
 
           /**
-           * Sets the access control policy on the specified resource. Replaces any existing policy.
+           * Sets the access control policy on the specified resource. Replaces any existing policy.Can
+           * return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
            *
            * Create a request for the method "workflowTemplates.setIamPolicy".
            *
@@ -4299,7 +4303,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Sets the access control policy on the specified resource. Replaces any existing policy.
+         * Sets the access control policy on the specified resource. Replaces any existing policy.Can return
+         * Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
          *
          * Create a request for the method "autoscalingPolicies.setIamPolicy".
          *
@@ -4325,7 +4330,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/regions/[^/]+/autoscalingPolicies/[^/]+$");
 
           /**
-           * Sets the access control policy on the specified resource. Replaces any existing policy.
+           * Sets the access control policy on the specified resource. Replaces any existing policy.Can
+           * return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
            *
            * Create a request for the method "autoscalingPolicies.setIamPolicy".
            *
@@ -6206,7 +6212,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Sets the access control policy on the specified resource. Replaces any existing policy.
+         * Sets the access control policy on the specified resource. Replaces any existing policy.Can return
+         * Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
          *
          * Create a request for the method "clusters.setIamPolicy".
          *
@@ -6232,7 +6239,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/regions/[^/]+/clusters/[^/]+$");
 
           /**
-           * Sets the access control policy on the specified resource. Replaces any existing policy.
+           * Sets the access control policy on the specified resource. Replaces any existing policy.Can
+           * return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
            *
            * Create a request for the method "clusters.setIamPolicy".
            *
@@ -7616,7 +7624,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Sets the access control policy on the specified resource. Replaces any existing policy.
+         * Sets the access control policy on the specified resource. Replaces any existing policy.Can return
+         * Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
          *
          * Create a request for the method "jobs.setIamPolicy".
          *
@@ -7642,7 +7651,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/regions/[^/]+/jobs/[^/]+$");
 
           /**
-           * Sets the access control policy on the specified resource. Replaces any existing policy.
+           * Sets the access control policy on the specified resource. Replaces any existing policy.Can
+           * return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
            *
            * Create a request for the method "jobs.setIamPolicy".
            *
@@ -8852,7 +8862,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Sets the access control policy on the specified resource. Replaces any existing policy.
+         * Sets the access control policy on the specified resource. Replaces any existing policy.Can return
+         * Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
          *
          * Create a request for the method "operations.setIamPolicy".
          *
@@ -8878,7 +8889,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/regions/[^/]+/operations/[^/]+$");
 
           /**
-           * Sets the access control policy on the specified resource. Replaces any existing policy.
+           * Sets the access control policy on the specified resource. Replaces any existing policy.Can
+           * return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
            *
            * Create a request for the method "operations.setIamPolicy".
            *
@@ -10503,7 +10515,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Sets the access control policy on the specified resource. Replaces any existing policy.
+         * Sets the access control policy on the specified resource. Replaces any existing policy.Can return
+         * Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
          *
          * Create a request for the method "workflowTemplates.setIamPolicy".
          *
@@ -10529,7 +10542,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/regions/[^/]+/workflowTemplates/[^/]+$");
 
           /**
-           * Sets the access control policy on the specified resource. Replaces any existing policy.
+           * Sets the access control policy on the specified resource. Replaces any existing policy.Can
+           * return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
            *
            * Create a request for the method "workflowTemplates.setIamPolicy".
            *

@@ -44,7 +44,7 @@ public final class PollItemsRequest extends com.google.api.client.json.GenericJs
   private DebugOptions debugOptions;
 
   /**
-   * Maximum number of items to return. The maximum and the default value is 1000
+   * Maximum number of items to return. The maximum value is 100 and the default value is 20.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +100,7 @@ public final class PollItemsRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Maximum number of items to return. The maximum and the default value is 1000
+   * Maximum number of items to return. The maximum value is 100 and the default value is 20.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getLimit() {
@@ -108,7 +108,7 @@ public final class PollItemsRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Maximum number of items to return. The maximum and the default value is 1000
+   * Maximum number of items to return. The maximum value is 100 and the default value is 20.
    * @param limit limit or {@code null} for none
    */
   public PollItemsRequest setLimit(java.lang.Integer limit) {

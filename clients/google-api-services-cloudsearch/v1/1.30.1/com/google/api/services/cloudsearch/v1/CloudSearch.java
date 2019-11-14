@@ -185,6 +185,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         /**
          * Checks whether an item is accessible by specified principal.
          *
+         * **Note:** This API requires an admin account to execute.
+         *
          * Create a request for the method "items.checkAccess".
          *
          * This request holds the parameters needed by the cloudsearch server.  After setting any optional
@@ -210,6 +212,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
           /**
            * Checks whether an item is accessible by specified principal.
+           *
+           * **Note:** This API requires an admin account to execute.
            *
            * Create a request for the method "items.checkAccess".
            *
@@ -344,6 +348,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         /**
          * Fetches the item whose viewUrl exactly matches that of the URL provided in the request.
          *
+         * **Note:** This API requires an admin account to execute.
+         *
          * Create a request for the method "items.searchByViewUrl".
          *
          * This request holds the parameters needed by the cloudsearch server.  After setting any optional
@@ -369,6 +375,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
           /**
            * Fetches the item whose viewUrl exactly matches that of the URL provided in the request.
+           *
+           * **Note:** This API requires an admin account to execute.
            *
            * Create a request for the method "items.searchByViewUrl".
            *
@@ -502,6 +510,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           /**
            * List all unmapped identities for a specific item.
            *
+           * **Note:** This API requires an admin account to execute.
+           *
            * Create a request for the method "unmappedids.list".
            *
            * This request holds the parameters needed by the cloudsearch server.  After setting any optional
@@ -526,6 +536,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
             /**
              * List all unmapped identities for a specific item.
+             *
+             * **Note:** This API requires an admin account to execute.
              *
              * Create a request for the method "unmappedids.list".
              *
@@ -748,6 +760,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         /**
          * Lists names of items associated with an unmapped identity.
          *
+         * **Note:** This API requires an admin account to execute.
+         *
          * Create a request for the method "items.listForunmappedidentity".
          *
          * This request holds the parameters needed by the cloudsearch server.  After setting any optional
@@ -773,6 +787,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
           /**
            * Lists names of items associated with an unmapped identity.
+           *
+           * **Note:** This API requires an admin account to execute.
            *
            * Create a request for the method "items.listForunmappedidentity".
            *
@@ -1004,6 +1020,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         /**
          * Lists unmapped user identities for an identity source.
          *
+         * **Note:** This API requires an admin account to execute.
+         *
          * Create a request for the method "unmappedids.list".
          *
          * This request holds the parameters needed by the cloudsearch server.  After setting any optional
@@ -1028,6 +1046,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
           /**
            * Lists unmapped user identities for an identity source.
+           *
+           * **Note:** This API requires an admin account to execute.
            *
            * Create a request for the method "unmappedids.list".
            *
@@ -1267,6 +1287,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       /**
        * Deletes the schema of a data source.
        *
+       * **Note:** This API requires an admin or service account to execute.
+       *
        * Create a request for the method "datasources.deleteSchema".
        *
        * This request holds the parameters needed by the cloudsearch server.  After setting any optional
@@ -1291,6 +1313,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
         /**
          * Deletes the schema of a data source.
+         *
+         * **Note:** This API requires an admin or service account to execute.
          *
          * Create a request for the method "datasources.deleteSchema".
          *
@@ -1424,6 +1448,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       /**
        * Gets the schema of a data source.
        *
+       * **Note:** This API requires an admin or service account to execute.
+       *
        * Create a request for the method "datasources.getSchema".
        *
        * This request holds the parameters needed by the cloudsearch server.  After setting any optional
@@ -1448,6 +1474,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
         /**
          * Gets the schema of a data source.
+         *
+         * **Note:** This API requires an admin or service account to execute.
          *
          * Create a request for the method "datasources.getSchema".
          *
@@ -1589,7 +1617,10 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         }
       }
       /**
-       * Updates the schema of a data source.
+       * Updates the schema of a data source. This method does not perform incremental updates to the
+       * schema. Instead, this method updates the schema by overwriting the entire schema.
+       *
+       * **Note:** This API requires an admin or service account to execute.
        *
        * Create a request for the method "datasources.updateSchema".
        *
@@ -1615,7 +1646,10 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
             java.util.regex.Pattern.compile("^datasources/[^/]+$");
 
         /**
-         * Updates the schema of a data source.
+         * Updates the schema of a data source. This method does not perform incremental updates to the
+         * schema. Instead, this method updates the schema by overwriting the entire schema.
+         *
+         * **Note:** This API requires an admin or service account to execute.
          *
          * Create a request for the method "datasources.updateSchema".
          *
@@ -3401,6 +3435,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
      * For additional information, see [Create a content connector using the REST
      * API](https://developers.google.com/cloud-search/docs/guides/content-connector#rest).
      *
+     *   **Note:** This API requires a service account to execute.
+     *
      * Create a request for the method "media.upload".
      *
      * This request holds the parameters needed by the cloudsearch server.  After setting any optional
@@ -3433,6 +3469,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
      *
      * For additional information, see [Create a content connector using the REST
      * API](https://developers.google.com/cloud-search/docs/guides/content-connector#rest).
+     *
+     *   **Note:** This API requires a service account to execute.
      *
      * Create a request for the method "media.upload".
      *
@@ -3480,6 +3518,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
        * For additional information, see [Create a content connector using the REST
        * API](https://developers.google.com/cloud-search/docs/guides/content-connector#rest).
        *
+       *   **Note:** This API requires a service account to execute.
+       *
        * Create a request for the method "media.upload".
        *
        * This request holds the parameters needed by the the cloudsearch server.  After setting any
@@ -3519,6 +3559,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
        *
        * For additional information, see [Create a content connector using the REST
        * API](https://developers.google.com/cloud-search/docs/guides/content-connector#rest).
+       *
+       *   **Note:** This API requires a service account to execute.
        *
        * Create a request for the method "media.upload".
        *
@@ -3820,6 +3862,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
      * from a user query.  The results can come from G Suite Apps, such as Gmail or Google Drive, or
      * they can come from data that you have indexed from a third party.
      *
+     * **Note:** This API requires a standard end user account to execute.
+     *
      * Create a request for the method "query.search".
      *
      * This request holds the parameters needed by the cloudsearch server.  After setting any optional
@@ -3842,6 +3886,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
        * The Cloud Search Query API provides the search method, which returns the most relevant results
        * from a user query.  The results can come from G Suite Apps, such as Gmail or Google Drive, or
        * they can come from data that you have indexed from a third party.
+       *
+       * **Note:** This API requires a standard end user account to execute.
        *
        * Create a request for the method "query.search".
        *
@@ -3921,6 +3967,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
     /**
      * Provides suggestions for autocompleting the query.
      *
+     * **Note:** This API requires a standard end user account to execute.
+     *
      * Create a request for the method "query.suggest".
      *
      * This request holds the parameters needed by the cloudsearch server.  After setting any optional
@@ -3941,6 +3989,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
       /**
        * Provides suggestions for autocompleting the query.
+       *
+       * **Note:** This API requires a standard end user account to execute.
        *
        * Create a request for the method "query.suggest".
        *
@@ -4041,6 +4091,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       /**
        * Returns list of sources that user can use for Search and Suggest APIs.
        *
+       * **Note:** This API requires a standard end user account to execute.
+       *
        * Create a request for the method "sources.list".
        *
        * This request holds the parameters needed by the cloudsearch server.  After setting any optional
@@ -4060,6 +4112,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
         /**
          * Returns list of sources that user can use for Search and Suggest APIs.
+         *
+         * **Note:** This API requires a standard end user account to execute.
          *
          * Create a request for the method "sources.list".
          *
@@ -4329,6 +4383,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       /**
        * Creates a datasource.
        *
+       * **Note:** This API requires an admin account to execute.
+       *
        * Create a request for the method "datasources.create".
        *
        * This request holds the parameters needed by the cloudsearch server.  After setting any optional
@@ -4349,6 +4405,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
         /**
          * Creates a datasource.
+         *
+         * **Note:** This API requires an admin account to execute.
          *
          * Create a request for the method "datasources.create".
          *
@@ -4428,6 +4486,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       /**
        * Deletes a datasource.
        *
+       * **Note:** This API requires an admin account to execute.
+       *
        * Create a request for the method "datasources.delete".
        *
        * This request holds the parameters needed by the cloudsearch server.  After setting any optional
@@ -4452,6 +4512,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
         /**
          * Deletes a datasource.
+         *
+         * **Note:** This API requires an admin account to execute.
          *
          * Create a request for the method "datasources.delete".
          *
@@ -4585,6 +4647,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       /**
        * Gets a datasource.
        *
+       * **Note:** This API requires an admin account to execute.
+       *
        * Create a request for the method "datasources.get".
        *
        * This request holds the parameters needed by the cloudsearch server.  After setting any optional
@@ -4609,6 +4673,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
         /**
          * Gets a datasource.
+         *
+         * **Note:** This API requires an admin account to execute.
          *
          * Create a request for the method "datasources.get".
          *
@@ -4751,6 +4817,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       /**
        * Lists datasources.
        *
+       * **Note:** This API requires an admin account to execute.
+       *
        * Create a request for the method "datasources.list".
        *
        * This request holds the parameters needed by the cloudsearch server.  After setting any optional
@@ -4770,6 +4838,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
         /**
          * Lists datasources.
+         *
+         * **Note:** This API requires an admin account to execute.
          *
          * Create a request for the method "datasources.list".
          *
@@ -4917,6 +4987,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       /**
        * Updates a datasource.
        *
+       * **Note:** This API requires an admin account to execute.
+       *
        * Create a request for the method "datasources.update".
        *
        * This request holds the parameters needed by the cloudsearch server.  After setting any optional
@@ -4944,6 +5016,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
         /**
          * Updates a datasource.
+         *
+         * **Note:** This API requires an admin account to execute.
          *
          * Create a request for the method "datasources.update".
          *
@@ -5083,6 +5157,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       /**
        * Creates a search application.
        *
+       * **Note:** This API requires an admin account to execute.
+       *
        * Create a request for the method "searchapplications.create".
        *
        * This request holds the parameters needed by the cloudsearch server.  After setting any optional
@@ -5103,6 +5179,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
         /**
          * Creates a search application.
+         *
+         * **Note:** This API requires an admin account to execute.
          *
          * Create a request for the method "searchapplications.create".
          *
@@ -5182,6 +5260,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       /**
        * Deletes a search application.
        *
+       * **Note:** This API requires an admin account to execute.
+       *
        * Create a request for the method "searchapplications.delete".
        *
        * This request holds the parameters needed by the cloudsearch server.  After setting any optional
@@ -5206,6 +5286,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
         /**
          * Deletes a search application.
+         *
+         * **Note:** This API requires an admin account to execute.
          *
          * Create a request for the method "searchapplications.delete".
          *
@@ -5339,6 +5421,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       /**
        * Gets the specified search application.
        *
+       * **Note:** This API requires an admin account to execute.
+       *
        * Create a request for the method "searchapplications.get".
        *
        * This request holds the parameters needed by the cloudsearch server.  After setting any optional
@@ -5363,6 +5447,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
         /**
          * Gets the specified search application.
+         *
+         * **Note:** This API requires an admin account to execute.
          *
          * Create a request for the method "searchapplications.get".
          *
@@ -5505,6 +5591,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       /**
        * Lists all search applications.
        *
+       * **Note:** This API requires an admin account to execute.
+       *
        * Create a request for the method "searchapplications.list".
        *
        * This request holds the parameters needed by the cloudsearch server.  After setting any optional
@@ -5524,6 +5612,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
         /**
          * Lists all search applications.
+         *
+         * **Note:** This API requires an admin account to execute.
          *
          * Create a request for the method "searchapplications.list".
          *
@@ -5671,6 +5761,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       /**
        * Resets a search application to default settings. This will return an empty response.
        *
+       * **Note:** This API requires an admin account to execute.
+       *
        * Create a request for the method "searchapplications.reset".
        *
        * This request holds the parameters needed by the cloudsearch server.  After setting any optional
@@ -5696,6 +5788,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
         /**
          * Resets a search application to default settings. This will return an empty response.
+         *
+         * **Note:** This API requires an admin account to execute.
          *
          * Create a request for the method "searchapplications.reset".
          *
@@ -5808,6 +5902,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       /**
        * Updates a search application.
        *
+       * **Note:** This API requires an admin account to execute.
+       *
        * Create a request for the method "searchapplications.update".
        *
        * This request holds the parameters needed by the cloudsearch server.  After setting any optional
@@ -5833,6 +5929,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
         /**
          * Updates a search application.
+         *
+         * **Note:** This API requires an admin account to execute.
          *
          * Create a request for the method "searchapplications.update".
          *
@@ -5970,6 +6068,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
      * Gets indexed item statistics aggreggated across all data sources. This API only returns
      * statistics for previous dates; it doesn't return statistics for the current day.
      *
+     * **Note:** This API requires a standard end user account to execute.
+     *
      * Create a request for the method "stats.getIndex".
      *
      * This request holds the parameters needed by the cloudsearch server.  After setting any optional
@@ -5990,6 +6090,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       /**
        * Gets indexed item statistics aggreggated across all data sources. This API only returns
        * statistics for previous dates; it doesn't return statistics for the current day.
+       *
+       * **Note:** This API requires a standard end user account to execute.
        *
        * Create a request for the method "stats.getIndex".
        *
@@ -6172,7 +6274,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       }
     }
     /**
-     * Get the query statistics for customer
+     * Get the query statistics for customer.
+     *
+     * **Note:** This API requires a standard end user account to execute.
      *
      * Create a request for the method "stats.getQuery".
      *
@@ -6192,7 +6296,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       private static final String REST_PATH = "v1/stats/query";
 
       /**
-       * Get the query statistics for customer
+       * Get the query statistics for customer.
+       *
+       * **Note:** This API requires a standard end user account to execute.
        *
        * Create a request for the method "stats.getQuery".
        *
@@ -6375,7 +6481,10 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       }
     }
     /**
-     * Get the # of search sessions for the customer
+     * Get the # of search sessions, % of successful sessions with a click query statistics for
+     * customer.
+     *
+     * **Note:** This API requires a standard end user account to execute.
      *
      * Create a request for the method "stats.getSession".
      *
@@ -6395,7 +6504,10 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       private static final String REST_PATH = "v1/stats/session";
 
       /**
-       * Get the # of search sessions for the customer
+       * Get the # of search sessions, % of successful sessions with a click query statistics for
+       * customer.
+       *
+       * **Note:** This API requires a standard end user account to execute.
        *
        * Create a request for the method "stats.getSession".
        *
@@ -6578,7 +6690,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       }
     }
     /**
-     * Get the users statistics for customer
+     * Get the users statistics for customer.
+     *
+     * **Note:** This API requires a standard end user account to execute.
      *
      * Create a request for the method "stats.getUser".
      *
@@ -6598,7 +6712,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       private static final String REST_PATH = "v1/stats/user";
 
       /**
-       * Get the users statistics for customer
+       * Get the users statistics for customer.
+       *
+       * **Note:** This API requires a standard end user account to execute.
        *
        * Create a request for the method "stats.getUser".
        *
@@ -6824,6 +6940,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         /**
          * Gets indexed item statistics for a single data source.
          *
+         * **Note:** This API requires a standard end user account to execute.
+         *
          * Create a request for the method "datasources.get".
          *
          * This request holds the parameters needed by the cloudsearch server.  After setting any optional
@@ -6849,6 +6967,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
           /**
            * Gets indexed item statistics for a single data source.
+           *
+           * **Note:** This API requires a standard end user account to execute.
            *
            * Create a request for the method "datasources.get".
            *
@@ -7110,7 +7230,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       public class Searchapplications {
 
         /**
-         * Get the query statistics for search application
+         * Get the query statistics for search application.
+         *
+         * **Note:** This API requires a standard end user account to execute.
          *
          * Create a request for the method "searchapplications.get".
          *
@@ -7136,7 +7258,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
               java.util.regex.Pattern.compile("^searchapplications/[^/]+$");
 
           /**
-           * Get the query statistics for search application
+           * Get the query statistics for search application.
+           *
+           * **Note:** This API requires a standard end user account to execute.
            *
            * Create a request for the method "searchapplications.get".
            *
@@ -7398,7 +7522,10 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       public class Searchapplications {
 
         /**
-         * Get the # of search sessions for the search application
+         * Get the # of search sessions, % of successful sessions with a click query statistics for search
+         * application.
+         *
+         * **Note:** This API requires a standard end user account to execute.
          *
          * Create a request for the method "searchapplications.get".
          *
@@ -7424,7 +7551,10 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
               java.util.regex.Pattern.compile("^searchapplications/[^/]+$");
 
           /**
-           * Get the # of search sessions for the search application
+           * Get the # of search sessions, % of successful sessions with a click query statistics for search
+           * application.
+           *
+           * **Note:** This API requires a standard end user account to execute.
            *
            * Create a request for the method "searchapplications.get".
            *
@@ -7686,7 +7816,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       public class Searchapplications {
 
         /**
-         * Get the users statistics for search application
+         * Get the users statistics for search application.
+         *
+         * **Note:** This API requires a standard end user account to execute.
          *
          * Create a request for the method "searchapplications.get".
          *
@@ -7712,7 +7844,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
               java.util.regex.Pattern.compile("^searchapplications/[^/]+$");
 
           /**
-           * Get the users statistics for search application
+           * Get the users statistics for search application.
+           *
+           * **Note:** This API requires a standard end user account to execute.
            *
            * Create a request for the method "searchapplications.get".
            *

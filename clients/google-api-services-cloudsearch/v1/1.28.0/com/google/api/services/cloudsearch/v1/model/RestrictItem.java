@@ -57,37 +57,6 @@ public final class RestrictItem extends com.google.api.client.json.GenericJson {
   private DriveTimeSpanRestrict driveTimeSpanRestrict;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GmailActionRestrict gmailActionRestrict;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GmailAttachmentRestrict gmailAttachmentRestrict;
-
-  /**
-   * Gmail Types.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GmailFolderRestrict gmailFolderRestrict;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GmailIntelligentRestrict gmailIntelligentRestrict;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GmailTimeRestrict gmailTimeRestrict;
-
-  /**
    * The search restrict (e.g. "after:2017-09-11 before:2017-09-12").
    * The value may be {@code null}.
    */
@@ -157,83 +126,6 @@ public final class RestrictItem extends com.google.api.client.json.GenericJson {
    */
   public RestrictItem setDriveTimeSpanRestrict(DriveTimeSpanRestrict driveTimeSpanRestrict) {
     this.driveTimeSpanRestrict = driveTimeSpanRestrict;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public GmailActionRestrict getGmailActionRestrict() {
-    return gmailActionRestrict;
-  }
-
-  /**
-   * @param gmailActionRestrict gmailActionRestrict or {@code null} for none
-   */
-  public RestrictItem setGmailActionRestrict(GmailActionRestrict gmailActionRestrict) {
-    this.gmailActionRestrict = gmailActionRestrict;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public GmailAttachmentRestrict getGmailAttachmentRestrict() {
-    return gmailAttachmentRestrict;
-  }
-
-  /**
-   * @param gmailAttachmentRestrict gmailAttachmentRestrict or {@code null} for none
-   */
-  public RestrictItem setGmailAttachmentRestrict(GmailAttachmentRestrict gmailAttachmentRestrict) {
-    this.gmailAttachmentRestrict = gmailAttachmentRestrict;
-    return this;
-  }
-
-  /**
-   * Gmail Types.
-   * @return value or {@code null} for none
-   */
-  public GmailFolderRestrict getGmailFolderRestrict() {
-    return gmailFolderRestrict;
-  }
-
-  /**
-   * Gmail Types.
-   * @param gmailFolderRestrict gmailFolderRestrict or {@code null} for none
-   */
-  public RestrictItem setGmailFolderRestrict(GmailFolderRestrict gmailFolderRestrict) {
-    this.gmailFolderRestrict = gmailFolderRestrict;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public GmailIntelligentRestrict getGmailIntelligentRestrict() {
-    return gmailIntelligentRestrict;
-  }
-
-  /**
-   * @param gmailIntelligentRestrict gmailIntelligentRestrict or {@code null} for none
-   */
-  public RestrictItem setGmailIntelligentRestrict(GmailIntelligentRestrict gmailIntelligentRestrict) {
-    this.gmailIntelligentRestrict = gmailIntelligentRestrict;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public GmailTimeRestrict getGmailTimeRestrict() {
-    return gmailTimeRestrict;
-  }
-
-  /**
-   * @param gmailTimeRestrict gmailTimeRestrict or {@code null} for none
-   */
-  public RestrictItem setGmailTimeRestrict(GmailTimeRestrict gmailTimeRestrict) {
-    this.gmailTimeRestrict = gmailTimeRestrict;
     return this;
   }
 

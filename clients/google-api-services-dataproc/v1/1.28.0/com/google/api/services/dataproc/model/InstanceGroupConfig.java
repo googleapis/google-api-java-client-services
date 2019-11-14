@@ -31,8 +31,7 @@ package com.google.api.services.dataproc.model;
 public final class InstanceGroupConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The Compute Engine accelerator configuration for these instances.Beta Feature: This
-   * feature is still under development. It may be changed before final release.
+   * Optional. The Compute Engine accelerator configuration for these instances.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,6 +95,14 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
   private ManagedGroupConfig managedGroupConfig;
 
   /**
+   * Optional. Specifies the minimum cpu platform for the Instance Group. See Cloud DataprocMinimum
+   * CPU Platform.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String minCpuPlatform;
+
+  /**
    * Optional. The number of VM instances in the instance group. For master instance groups, must be
    * set to 1.
    * The value may be {@code null}.
@@ -104,8 +111,7 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
   private java.lang.Integer numInstances;
 
   /**
-   * Optional. The Compute Engine accelerator configuration for these instances.Beta Feature: This
-   * feature is still under development. It may be changed before final release.
+   * Optional. The Compute Engine accelerator configuration for these instances.
    * @return value or {@code null} for none
    */
   public java.util.List<AcceleratorConfig> getAccelerators() {
@@ -113,8 +119,7 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. The Compute Engine accelerator configuration for these instances.Beta Feature: This
-   * feature is still under development. It may be changed before final release.
+   * Optional. The Compute Engine accelerator configuration for these instances.
    * @param accelerators accelerators or {@code null} for none
    */
   public InstanceGroupConfig setAccelerators(java.util.List<AcceleratorConfig> accelerators) {
@@ -239,6 +244,25 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
    */
   public InstanceGroupConfig setManagedGroupConfig(ManagedGroupConfig managedGroupConfig) {
     this.managedGroupConfig = managedGroupConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the minimum cpu platform for the Instance Group. See Cloud DataprocMinimum
+   * CPU Platform.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMinCpuPlatform() {
+    return minCpuPlatform;
+  }
+
+  /**
+   * Optional. Specifies the minimum cpu platform for the Instance Group. See Cloud DataprocMinimum
+   * CPU Platform.
+   * @param minCpuPlatform minCpuPlatform or {@code null} for none
+   */
+  public InstanceGroupConfig setMinCpuPlatform(java.lang.String minCpuPlatform) {
+    this.minCpuPlatform = minCpuPlatform;
     return this;
   }
 

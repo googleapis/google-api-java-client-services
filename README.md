@@ -118,6 +118,7 @@ packages on [Maven Central][maven-search].
 | Google Civic Information API | [v2](clients/google-api-services-civicinfo/v2) |
 | Google Classroom API | [v1](clients/google-api-services-classroom/v1) |
 | Google Cloud DNS API | [v1](clients/google-api-services-dns/v1), [v1beta2](clients/google-api-services-dns/v1beta2), [v2beta1](clients/google-api-services-dns/v2beta1) |
+| Google Cloud Data Catalog API | [v1beta1](clients/google-api-services-datacatalog/v1beta1) |
 | Google Cloud Deployment Manager API | [v2](clients/google-api-services-deploymentmanager/v2) |
 | Google Cloud Deployment Manager API V2Beta Methods | [v2beta](clients/google-api-services-deploymentmanager/v2beta) |
 | Google Cloud Deployment Manager Alpha API | [alpha](clients/google-api-services-deploymentmanager/alpha) |

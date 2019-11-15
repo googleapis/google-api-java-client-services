@@ -143,6 +143,155 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
   public class Projects {
 
     /**
+     * Performs explanation on the data in the request. AI Platform implements a custom `explain` verb
+     * on top of an HTTP POST method. For details of the request and response format, see the **guide to
+     * the [explain request format](/ml-engine/docs/v1/explain-request)**.
+     *
+     * Create a request for the method "projects.explain".
+     *
+     * This request holds the parameters needed by the ml server.  After setting any optional
+     * parameters, call the {@link Explain#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The resource name of a model or a version.
+    Authorization: requires the `predict`
+     *        permission on the specified resource.
+     * @param content the {@link com.google.api.services.ml.v1.model.GoogleCloudMlV1ExplainRequest}
+     * @return the request
+     */
+    public Explain explain(java.lang.String name, com.google.api.services.ml.v1.model.GoogleCloudMlV1ExplainRequest content) throws java.io.IOException {
+      Explain result = new Explain(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Explain extends CloudMachineLearningEngineRequest<com.google.api.services.ml.v1.model.GoogleApiHttpBody> {
+
+      private static final String REST_PATH = "v1/{+name}:explain";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/.+$");
+
+      /**
+       * Performs explanation on the data in the request. AI Platform implements a custom `explain` verb
+       * on top of an HTTP POST method. For details of the request and response format, see the **guide
+       * to the [explain request format](/ml-engine/docs/v1/explain-request)**.
+       *
+       * Create a request for the method "projects.explain".
+       *
+       * This request holds the parameters needed by the the ml server.  After setting any optional
+       * parameters, call the {@link Explain#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * Explain#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The resource name of a model or a version.
+    Authorization: requires the `predict`
+     *        permission on the specified resource.
+       * @param content the {@link com.google.api.services.ml.v1.model.GoogleCloudMlV1ExplainRequest}
+       * @since 1.13
+       */
+      protected Explain(java.lang.String name, com.google.api.services.ml.v1.model.GoogleCloudMlV1ExplainRequest content) {
+        super(CloudMachineLearningEngine.this, "POST", REST_PATH, content, com.google.api.services.ml.v1.model.GoogleApiHttpBody.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/.+$");
+        }
+      }
+
+      @Override
+      public Explain set$Xgafv(java.lang.String $Xgafv) {
+        return (Explain) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Explain setAccessToken(java.lang.String accessToken) {
+        return (Explain) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Explain setAlt(java.lang.String alt) {
+        return (Explain) super.setAlt(alt);
+      }
+
+      @Override
+      public Explain setCallback(java.lang.String callback) {
+        return (Explain) super.setCallback(callback);
+      }
+
+      @Override
+      public Explain setFields(java.lang.String fields) {
+        return (Explain) super.setFields(fields);
+      }
+
+      @Override
+      public Explain setKey(java.lang.String key) {
+        return (Explain) super.setKey(key);
+      }
+
+      @Override
+      public Explain setOauthToken(java.lang.String oauthToken) {
+        return (Explain) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Explain setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Explain) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Explain setQuotaUser(java.lang.String quotaUser) {
+        return (Explain) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Explain setUploadType(java.lang.String uploadType) {
+        return (Explain) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Explain setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Explain) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The resource name of a model or a version.
+       *
+       * Authorization: requires the `predict` permission on the specified resource.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The resource name of a model or a version.
+
+     Authorization: requires the `predict` permission on the specified resource.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The resource name of a model or a version.
+       *
+       * Authorization: requires the `predict` permission on the specified resource.
+       */
+      public Explain setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/.+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Explain set(String parameterName, Object value) {
+        return (Explain) super.set(parameterName, value);
+      }
+    }
+    /**
      * Get the service account information associated with your project. You need this information in
      * order to grant the service account permissions for the Google Cloud Storage location where you
      * put your model training code for training the model with Google Cloud Machine Learning.

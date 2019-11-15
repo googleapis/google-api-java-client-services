@@ -51,7 +51,7 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
   private java.lang.String consumerNetwork;
 
   /**
-   * An optional description of the subnet.
+   * Optional. Description of the subnet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -146,7 +146,7 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * An optional description of the subnet.
+   * Optional. Description of the subnet.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -154,7 +154,7 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * An optional description of the subnet.
+   * Optional. Description of the subnet.
    * @param description description or {@code null} for none
    */
   public AddSubnetworkRequest setDescription(java.lang.String description) {

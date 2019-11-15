@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-apigee",
+    "version": "v1-rev20191115-1.30.3"
+  }
+}

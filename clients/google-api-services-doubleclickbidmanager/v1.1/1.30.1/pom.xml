@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-doubleclickbidmanager</artifactId>
-  <version>v1-rev20191107-1.29.2</version>
-  <name>DoubleClick Bid Manager API v1-rev20191107-1.29.2</name>
+  <version>v1.1-rev20191107-1.30.3</version>
+  <name>DoubleClick Bid Manager API v1.1-rev20191107-1.30.3</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
@@ -90,11 +90,27 @@
           <windowtitle>DoubleClick Bid Manager API ${project.version}</windowtitle>
           <links>
             <link>http://docs.oracle.com/javase/7/docs/api</link>
-            <link>https://googleapis.dev/java/google-http-client/1.29.2/</link>
-            <link>https://googleapis.dev/java/google-oauth-client/1.29.2/</link>
-            <link>https://googleapis.dev/java/google-api-client/1.29.2/</link>
+            <link>https://googleapis.dev/java/google-http-client/1.32.0/</link>
+            <link>https://googleapis.dev/java/google-oauth-client/1.30.2/</link>
+            <link>https://googleapis.dev/java/google-api-client/1.30.3/</link>
           </links>
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>clirr-maven-plugin</artifactId>
+        <version>2.8</version>
+        <configuration>
+          <ignoredDifferencesFile>clirr-ignored-differences.xml</ignoredDifferencesFile>
+          <logResults>true</logResults>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>check</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
     <sourceDirectory>.</sourceDirectory>
@@ -109,7 +125,7 @@
     <dependency>
       <groupId>com.google.api-client</groupId>
       <artifactId>google-api-client</artifactId>
-      <version>1.29.2</version>
+      <version>1.30.3</version>
     </dependency>
   </dependencies>
 

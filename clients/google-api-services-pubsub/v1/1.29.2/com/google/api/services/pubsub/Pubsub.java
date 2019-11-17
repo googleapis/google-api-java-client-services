@@ -181,15 +181,14 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
        * This request holds the parameters needed by the pubsub server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param name Optional user-provided name for this snapshot.
-      If the name is not provided in the request, the
-       *        server will assign a random
-      name for this snapshot on the same project as the
-       *        subscription.
-      Note that for REST API requests, you must specify a name.  See the
-      resource
-       *        name rules.
-      Format is `projects/{project}/snapshots/{snap}`.
+       * @param name User-provided name for this snapshot. If the name is not provided in the
+      request, the server will
+       *        assign a random name for this snapshot on the same
+      project as the subscription. Note that
+       *        for REST API requests, you must
+      specify a name.  See the  resource
+      name rules. Format is
+       *        `projects/{project}/snapshots/{snap}`.
        * @param content the {@link com.google.api.services.pubsub.model.CreateSnapshotRequest}
        * @return the request
        */
@@ -227,15 +226,14 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Optional user-provided name for this snapshot.
-      If the name is not provided in the request, the
-       *        server will assign a random
-      name for this snapshot on the same project as the
-       *        subscription.
-      Note that for REST API requests, you must specify a name.  See the
-      resource
-       *        name rules.
-      Format is `projects/{project}/snapshots/{snap}`.
+         * @param name User-provided name for this snapshot. If the name is not provided in the
+      request, the server will
+       *        assign a random name for this snapshot on the same
+      project as the subscription. Note that
+       *        for REST API requests, you must
+      specify a name.  See the  resource
+      name rules. Format is
+       *        `projects/{project}/snapshots/{snap}`.
          * @param content the {@link com.google.api.services.pubsub.model.CreateSnapshotRequest}
          * @since 1.13
          */
@@ -305,30 +303,27 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Optional user-provided name for this snapshot. If the name is not provided in the
-         * request, the server will assign a random name for this snapshot on the same project as
-         * the subscription. Note that for REST API requests, you must specify a name.  See the
-         *
+         * User-provided name for this snapshot. If the name is not provided in the request, the
+         * server will assign a random name for this snapshot on the same project as the
+         * subscription. Note that for REST API requests, you must specify a name.  See the
          * resource name rules. Format is `projects/{project}/snapshots/{snap}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Optional user-provided name for this snapshot. If the name is not provided in the request, the
-       server will assign a random name for this snapshot on the same project as the subscription. Note
-       that for REST API requests, you must specify a name.  See the
-
-       resource name rules. Format is `projects/{project}/snapshots/{snap}`.
+        /** User-provided name for this snapshot. If the name is not provided in the request, the server will
+       assign a random name for this snapshot on the same project as the subscription. Note that for REST
+       API requests, you must specify a name.  See the  resource name rules. Format is
+       `projects/{project}/snapshots/{snap}`.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Optional user-provided name for this snapshot. If the name is not provided in the
-         * request, the server will assign a random name for this snapshot on the same project as
-         * the subscription. Note that for REST API requests, you must specify a name.  See the
-         *
+         * User-provided name for this snapshot. If the name is not provided in the request, the
+         * server will assign a random name for this snapshot on the same project as the
+         * subscription. Note that for REST API requests, you must specify a name.  See the
          * resource name rules. Format is `projects/{project}/snapshots/{snap}`.
          */
         public Create setName(java.lang.String name) {

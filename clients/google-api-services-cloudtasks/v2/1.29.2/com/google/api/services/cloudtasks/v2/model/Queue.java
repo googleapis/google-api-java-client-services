@@ -32,7 +32,7 @@ public final class Queue extends com.google.api.client.json.GenericJson {
 
   /**
    * Overrides for task-level app_engine_routing. These settings apply only to App Engine tasks in
-   * this queue.
+   * this queue. Http tasks are not affected.
    *
    * If set, `app_engine_routing_override` is used for all App Engine tasks in the queue, no matter
    * what the setting is for the task-level app_engine_routing.
@@ -127,7 +127,7 @@ public final class Queue extends com.google.api.client.json.GenericJson {
 
   /**
    * Overrides for task-level app_engine_routing. These settings apply only to App Engine tasks in
-   * this queue.
+   * this queue. Http tasks are not affected.
    *
    * If set, `app_engine_routing_override` is used for all App Engine tasks in the queue, no matter
    * what the setting is for the task-level app_engine_routing.
@@ -139,7 +139,7 @@ public final class Queue extends com.google.api.client.json.GenericJson {
 
   /**
    * Overrides for task-level app_engine_routing. These settings apply only to App Engine tasks in
-   * this queue.
+   * this queue. Http tasks are not affected.
    *
    * If set, `app_engine_routing_override` is used for all App Engine tasks in the queue, no matter
    * what the setting is for the task-level app_engine_routing.

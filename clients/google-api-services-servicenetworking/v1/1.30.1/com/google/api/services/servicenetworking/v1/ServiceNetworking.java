@@ -977,10 +977,9 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
      * optional parameters, call the {@link SearchRange#execute()} method to invoke the remote
      * operation.
      *
-     * @param parent Required. This is in a form services/{service}.
-    {service} the name of the private access management
-     *        service, for example
-    'service-peering.example.com'.
+     * @param parent Required. This is in a form services/{service}. {service} the name of the private
+    access management
+     *        service, for example 'service-peering.example.com'.
      * @param content the {@link com.google.api.services.servicenetworking.v1.model.SearchRangeRequest}
      * @return the request
      */
@@ -1012,10 +1011,9 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
        * SearchRange#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Required. This is in a form services/{service}.
-    {service} the name of the private access management
-     *        service, for example
-    'service-peering.example.com'.
+       * @param parent Required. This is in a form services/{service}. {service} the name of the private
+    access management
+     *        service, for example 'service-peering.example.com'.
        * @param content the {@link com.google.api.services.servicenetworking.v1.model.SearchRangeRequest}
        * @since 1.13
        */
@@ -1115,6 +1113,156 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
       @Override
       public SearchRange set(String parameterName, Object value) {
         return (SearchRange) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Service producers use this method to validate if the consumer provided network, project and the
+     * requested range is valid. This allows them to use a fail-fast mechanism for consumer requests,
+     * and not have to wait for AddSubnetwork operation completion to determine if user request is
+     * invalid.
+     *
+     * Create a request for the method "services.validate".
+     *
+     * This request holds the parameters needed by the servicenetworking server.  After setting any
+     * optional parameters, call the {@link Validate#execute()} method to invoke the remote operation.
+     *
+     * @param parent Required. This is in a form services/{service} where {service} is the name of the
+    private access
+     *        management service. For example
+    'service-peering.example.com'.
+     * @param content the {@link com.google.api.services.servicenetworking.v1.model.ValidateConsumerConfigRequest}
+     * @return the request
+     */
+    public Validate validate(java.lang.String parent, com.google.api.services.servicenetworking.v1.model.ValidateConsumerConfigRequest content) throws java.io.IOException {
+      Validate result = new Validate(parent, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Validate extends ServiceNetworkingRequest<com.google.api.services.servicenetworking.v1.model.ValidateConsumerConfigResponse> {
+
+      private static final String REST_PATH = "v1/{+parent}:validate";
+
+      private final java.util.regex.Pattern PARENT_PATTERN =
+          java.util.regex.Pattern.compile("^services/[^/]+$");
+
+      /**
+       * Service producers use this method to validate if the consumer provided network, project and the
+       * requested range is valid. This allows them to use a fail-fast mechanism for consumer requests,
+       * and not have to wait for AddSubnetwork operation completion to determine if user request is
+       * invalid.
+       *
+       * Create a request for the method "services.validate".
+       *
+       * This request holds the parameters needed by the the servicenetworking server.  After setting
+       * any optional parameters, call the {@link Validate#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Validate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param parent Required. This is in a form services/{service} where {service} is the name of the
+    private access
+     *        management service. For example
+    'service-peering.example.com'.
+       * @param content the {@link com.google.api.services.servicenetworking.v1.model.ValidateConsumerConfigRequest}
+       * @since 1.13
+       */
+      protected Validate(java.lang.String parent, com.google.api.services.servicenetworking.v1.model.ValidateConsumerConfigRequest content) {
+        super(ServiceNetworking.this, "POST", REST_PATH, content, com.google.api.services.servicenetworking.v1.model.ValidateConsumerConfigResponse.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^services/[^/]+$");
+        }
+      }
+
+      @Override
+      public Validate set$Xgafv(java.lang.String $Xgafv) {
+        return (Validate) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Validate setAccessToken(java.lang.String accessToken) {
+        return (Validate) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Validate setAlt(java.lang.String alt) {
+        return (Validate) super.setAlt(alt);
+      }
+
+      @Override
+      public Validate setCallback(java.lang.String callback) {
+        return (Validate) super.setCallback(callback);
+      }
+
+      @Override
+      public Validate setFields(java.lang.String fields) {
+        return (Validate) super.setFields(fields);
+      }
+
+      @Override
+      public Validate setKey(java.lang.String key) {
+        return (Validate) super.setKey(key);
+      }
+
+      @Override
+      public Validate setOauthToken(java.lang.String oauthToken) {
+        return (Validate) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Validate setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Validate) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Validate setQuotaUser(java.lang.String quotaUser) {
+        return (Validate) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Validate setUploadType(java.lang.String uploadType) {
+        return (Validate) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Validate setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Validate) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. This is in a form services/{service} where {service} is the name of the private
+       * access management service. For example 'service-peering.example.com'.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Required. This is in a form services/{service} where {service} is the name of the private access
+     management service. For example 'service-peering.example.com'.
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /**
+       * Required. This is in a form services/{service} where {service} is the name of the private
+       * access management service. For example 'service-peering.example.com'.
+       */
+      public Validate setParent(java.lang.String parent) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^services/[^/]+$");
+        }
+        this.parent = parent;
+        return this;
+      }
+
+      @Override
+      public Validate set(String parameterName, Object value) {
+        return (Validate) super.set(parameterName, value);
       }
     }
 

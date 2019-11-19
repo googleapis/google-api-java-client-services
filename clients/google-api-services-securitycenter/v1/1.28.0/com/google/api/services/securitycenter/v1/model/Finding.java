@@ -88,9 +88,11 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private java.lang.String parent;
 
   /**
-   * The full resource name of the Google Cloud Platform (GCP) resource this finding is for. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name This field is immutable
-   * after creation time.
+   * For findings on Google Cloud Platform (GCP) resources, the full resource name of the GCP
+   * resource this finding is for. See:
+   * https://cloud.google.com/apis/design/resource_names#full_resource_name When the finding is for
+   * a non-GCP resource, the resourceName can be a customer or partner defined string. This field is
+   * immutable after creation time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -243,9 +245,11 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The full resource name of the Google Cloud Platform (GCP) resource this finding is for. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name This field is immutable
-   * after creation time.
+   * For findings on Google Cloud Platform (GCP) resources, the full resource name of the GCP
+   * resource this finding is for. See:
+   * https://cloud.google.com/apis/design/resource_names#full_resource_name When the finding is for
+   * a non-GCP resource, the resourceName can be a customer or partner defined string. This field is
+   * immutable after creation time.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceName() {
@@ -253,9 +257,11 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The full resource name of the Google Cloud Platform (GCP) resource this finding is for. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name This field is immutable
-   * after creation time.
+   * For findings on Google Cloud Platform (GCP) resources, the full resource name of the GCP
+   * resource this finding is for. See:
+   * https://cloud.google.com/apis/design/resource_names#full_resource_name When the finding is for
+   * a non-GCP resource, the resourceName can be a customer or partner defined string. This field is
+   * immutable after creation time.
    * @param resourceName resourceName or {@code null} for none
    */
   public Finding setResourceName(java.lang.String resourceName) {

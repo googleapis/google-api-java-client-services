@@ -34,10 +34,12 @@ public final class SecurityMarks extends com.google.api.client.json.GenericJson 
 
   /**
    * Mutable user specified security marks belonging to the parent resource. Constraints are as
-   * follows:   - Keys and values are treated as case insensitive   - Keys must be between 1 - 256
-   * characters (inclusive)   - Keys must be letters, numbers, underscores, or dashes   - Values
-   * have leading and trailing whitespace trimmed, remaining     characters must be between 1 - 4096
-   * characters (inclusive)
+   * follows:
+   *
+   *   * Keys and values are treated as case insensitive   * Keys must be between 1 - 256 characters
+   * (inclusive)   * Keys must be letters, numbers, underscores, or dashes   * Values have leading
+   * and trailing whitespace trimmed, remaining     characters must be between 1 - 4096 characters
+   * (inclusive)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,10 +57,12 @@ public final class SecurityMarks extends com.google.api.client.json.GenericJson 
 
   /**
    * Mutable user specified security marks belonging to the parent resource. Constraints are as
-   * follows:   - Keys and values are treated as case insensitive   - Keys must be between 1 - 256
-   * characters (inclusive)   - Keys must be letters, numbers, underscores, or dashes   - Values
-   * have leading and trailing whitespace trimmed, remaining     characters must be between 1 - 4096
-   * characters (inclusive)
+   * follows:
+   *
+   *   * Keys and values are treated as case insensitive   * Keys must be between 1 - 256 characters
+   * (inclusive)   * Keys must be letters, numbers, underscores, or dashes   * Values have leading
+   * and trailing whitespace trimmed, remaining     characters must be between 1 - 4096 characters
+   * (inclusive)
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getMarks() {
@@ -67,10 +71,12 @@ public final class SecurityMarks extends com.google.api.client.json.GenericJson 
 
   /**
    * Mutable user specified security marks belonging to the parent resource. Constraints are as
-   * follows:   - Keys and values are treated as case insensitive   - Keys must be between 1 - 256
-   * characters (inclusive)   - Keys must be letters, numbers, underscores, or dashes   - Values
-   * have leading and trailing whitespace trimmed, remaining     characters must be between 1 - 4096
-   * characters (inclusive)
+   * follows:
+   *
+   *   * Keys and values are treated as case insensitive   * Keys must be between 1 - 256 characters
+   * (inclusive)   * Keys must be letters, numbers, underscores, or dashes   * Values have leading
+   * and trailing whitespace trimmed, remaining     characters must be between 1 - 4096 characters
+   * (inclusive)
    * @param marks marks or {@code null} for none
    */
   public SecurityMarks setMarks(java.util.Map<String, java.lang.String> marks) {

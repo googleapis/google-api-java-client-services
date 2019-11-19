@@ -35,6 +35,7 @@ packages on [Maven Central][maven-search].
 | Analytics Reporting API | [v4](clients/google-api-services-analyticsreporting/v4) |
 | Android Device Provisioning Partner API | [v1](clients/google-api-services-androiddeviceprovisioning/v1) |
 | Android Management API | [v1](clients/google-api-services-androidmanagement/v1) |
+| Apigee API | [v1](clients/google-api-services-apigee/v1) |
 | App Engine Admin API | [v1](clients/google-api-services-appengine/v1), [v1alpha](clients/google-api-services-appengine/v1alpha), [v1beta](clients/google-api-services-appengine/v1beta), [v1beta4](clients/google-api-services-appengine/v1beta4), [v1beta5](clients/google-api-services-appengine/v1beta5) |
 | Apps Script API | [v1](clients/google-api-services-script/v1) |
 | BigQuery API | [v2](clients/google-api-services-bigquery/v2) |

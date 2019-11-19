@@ -30,7 +30,7 @@ package com.google.api.services.sheets.v4.model;
 public final class FilterCriteria extends com.google.api.client.json.GenericJson {
 
   /**
-   * A condition that must be true for values to be shown. (This does not override hiddenValues --
+   * A condition that must be true for values to be shown. (This does not override hidden_values --
    * if a value is listed there,  it will still be hidden.)
    * The value may be {@code null}.
    */
@@ -63,7 +63,7 @@ public final class FilterCriteria extends com.google.api.client.json.GenericJson
   private Color visibleForegroundColor;
 
   /**
-   * A condition that must be true for values to be shown. (This does not override hiddenValues --
+   * A condition that must be true for values to be shown. (This does not override hidden_values --
    * if a value is listed there,  it will still be hidden.)
    * @return value or {@code null} for none
    */
@@ -72,7 +72,7 @@ public final class FilterCriteria extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A condition that must be true for values to be shown. (This does not override hiddenValues --
+   * A condition that must be true for values to be shown. (This does not override hidden_values --
    * if a value is listed there,  it will still be hidden.)
    * @param condition condition or {@code null} for none
    */

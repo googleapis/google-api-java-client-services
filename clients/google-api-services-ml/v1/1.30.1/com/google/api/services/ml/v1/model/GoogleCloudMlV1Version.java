@@ -105,6 +105,14 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   private java.lang.String etag;
 
   /**
+   * Optional. Configures explainability features on the model's version. Some explanation features
+   * require additional metadata to be loaded as part of the model payload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudMlV1ExplanationConfig explanationConfig;
+
+  /**
    * Optional. The machine learning framework AI Platform uses to train this version of the model.
    * Valid values are `TENSORFLOW`, `SCIKIT_LEARN`, `XGBOOST`. If you do not specify a framework, AI
    * Platform will analyze files in the deployment_uri to determine a framework. If you choose
@@ -481,6 +489,25 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    */
   public GoogleCloudMlV1Version encodeEtag(byte[] etag) {
     this.etag = com.google.api.client.util.Base64.encodeBase64URLSafeString(etag);
+    return this;
+  }
+
+  /**
+   * Optional. Configures explainability features on the model's version. Some explanation features
+   * require additional metadata to be loaded as part of the model payload.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudMlV1ExplanationConfig getExplanationConfig() {
+    return explanationConfig;
+  }
+
+  /**
+   * Optional. Configures explainability features on the model's version. Some explanation features
+   * require additional metadata to be loaded as part of the model payload.
+   * @param explanationConfig explanationConfig or {@code null} for none
+   */
+  public GoogleCloudMlV1Version setExplanationConfig(GoogleCloudMlV1ExplanationConfig explanationConfig) {
+    this.explanationConfig = explanationConfig;
     return this;
   }
 

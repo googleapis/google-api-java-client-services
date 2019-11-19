@@ -1908,6 +1908,194 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
         }
       }
       /**
+       * Lists the versions that have been created on the specified site. Will include filtering in the
+       * future.
+       *
+       * Create a request for the method "versions.list".
+       *
+       * This request holds the parameters needed by the firebasehosting server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent for which to list files, in the format:
+      sites/site-name
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.ListVersionsResponse> {
+
+        private static final String REST_PATH = "v1beta1/{+parent}/versions";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^sites/[^/]+$");
+
+        /**
+         * Lists the versions that have been created on the specified site. Will include filtering in the
+         * future.
+         *
+         * Create a request for the method "versions.list".
+         *
+         * This request holds the parameters needed by the the firebasehosting server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent for which to list files, in the format:
+      sites/site-name
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(FirebaseHosting.this, "GET", REST_PATH, null, com.google.api.services.firebasehosting.v1beta1.model.ListVersionsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^sites/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent for which to list files, in the format: sites/site-name
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent for which to list files, in the format: sites/site-name
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The parent for which to list files, in the format: sites/site-name
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^sites/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * The maximum number of versions to return. The service may return fewer than this value.
+         * If unspecified, at most 25 versions will be returned. The maximum value is 100; values
+         * above 100 will be coerced to 100
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of versions to return. The service may return fewer than this value. If
+       unspecified, at most 25 versions will be returned. The maximum value is 100; values above 100 will
+       be coerced to 100
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The maximum number of versions to return. The service may return fewer than this value.
+         * If unspecified, at most 25 versions will be returned. The maximum value is 100; values
+         * above 100 will be coerced to 100
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** The next_page_token from a previous request, if provided. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** The next_page_token from a previous request, if provided.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** The next_page_token from a previous request, if provided. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
        * Updates the specified metadata for a version. Note that this method will fail with
        * `FAILED_PRECONDITION` in the event of an invalid state transition. The only valid transition for
        * a version is currently from a `CREATED` status to a `FINALIZED` status. Use

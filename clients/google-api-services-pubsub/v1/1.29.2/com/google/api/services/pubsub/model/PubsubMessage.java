@@ -34,7 +34,7 @@ package com.google.api.services.pubsub.model;
 public final class PubsubMessage extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional attributes for this message.
+   * Attributes for this message. If this field is empty, the message must contain non-empty data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +67,7 @@ public final class PubsubMessage extends com.google.api.client.json.GenericJson 
   private String publishTime;
 
   /**
-   * Optional attributes for this message.
+   * Attributes for this message. If this field is empty, the message must contain non-empty data.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAttributes() {
@@ -75,7 +75,7 @@ public final class PubsubMessage extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional attributes for this message.
+   * Attributes for this message. If this field is empty, the message must contain non-empty data.
    * @param attributes attributes or {@code null} for none
    */
   public PubsubMessage setAttributes(java.util.Map<String, java.lang.String> attributes) {

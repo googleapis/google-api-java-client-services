@@ -438,8 +438,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
        * Examples:
        *
        * * `cloud_pubsub.project_id.topic_id` * ``pubsub.project_id.`topic.id.with.dots` `` *
-       * `bigquery.project_id.dataset_id.table_id` *
-       * `datacatalog.project_id.location_id.entry_group_id.entry_id`
+       * `bigquery.table.project_id.dataset_id.table_id` * `bigquery.dataset.project_id.dataset_id`
+       * * `datacatalog.project_id.location_id.entry_group_id.entry_id`
        *
        * `*_id`s shoud satisfy the standard SQL rules for identifiers.
        * https://cloud.google.com/bigquery/docs/reference/standard-sql/lexical.
@@ -452,7 +452,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
      Examples:
 
      * `cloud_pubsub.project_id.topic_id` * ``pubsub.project_id.`topic.id.with.dots` `` *
-     `bigquery.project_id.dataset_id.table_id` *
+     `bigquery.table.project_id.dataset_id.table_id` * `bigquery.dataset.project_id.dataset_id` *
      `datacatalog.project_id.location_id.entry_group_id.entry_id`
 
      `*_id`s shoud satisfy the standard SQL rules for identifiers.
@@ -468,8 +468,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
        * Examples:
        *
        * * `cloud_pubsub.project_id.topic_id` * ``pubsub.project_id.`topic.id.with.dots` `` *
-       * `bigquery.project_id.dataset_id.table_id` *
-       * `datacatalog.project_id.location_id.entry_group_id.entry_id`
+       * `bigquery.table.project_id.dataset_id.table_id` * `bigquery.dataset.project_id.dataset_id`
+       * * `datacatalog.project_id.location_id.entry_group_id.entry_id`
        *
        * `*_id`s shoud satisfy the standard SQL rules for identifiers.
        * https://cloud.google.com/bigquery/docs/reference/standard-sql/lexical.
@@ -5381,6 +5381,2761 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             @Override
             public Rename set(String parameterName, Object value) {
               return (Rename) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+      /**
+       * An accessor for creating requests from the Taxonomies collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DataCatalog datacatalog = new DataCatalog(...);}
+       *   {@code DataCatalog.Taxonomies.List request = datacatalog.taxonomies().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Taxonomies taxonomies() {
+        return new Taxonomies();
+      }
+
+      /**
+       * The "taxonomies" collection of methods.
+       */
+      public class Taxonomies {
+
+        /**
+         * Creates a taxonomy in the specified project.
+         *
+         * Create a request for the method "taxonomies.create".
+         *
+         * This request holds the parameters needed by the datacatalog server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Resource name of the project that the taxonomy will belong to.
+         * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1Taxonomy}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1Taxonomy content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends DataCatalogRequest<com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1Taxonomy> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/taxonomies";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a taxonomy in the specified project.
+           *
+           * Create a request for the method "taxonomies.create".
+           *
+           * This request holds the parameters needed by the the datacatalog server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Resource name of the project that the taxonomy will belong to.
+           * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1Taxonomy}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1Taxonomy content) {
+            super(DataCatalog.this, "POST", REST_PATH, content, com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1Taxonomy.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Resource name of the project that the taxonomy will belong to. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Resource name of the project that the taxonomy will belong to.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. Resource name of the project that the taxonomy will belong to. */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a taxonomy. This operation will also delete all policy tags in this taxonomy along with
+         * their associated policies.
+         *
+         * Create a request for the method "taxonomies.delete".
+         *
+         * This request holds the parameters needed by the datacatalog server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Resource name of the taxonomy to be deleted. All policy tags in
+        this taxonomy will also be
+         *        deleted.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends DataCatalogRequest<com.google.api.services.datacatalog.v1beta1.model.Empty> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/taxonomies/[^/]+$");
+
+          /**
+           * Deletes a taxonomy. This operation will also delete all policy tags in this taxonomy along with
+           * their associated policies.
+           *
+           * Create a request for the method "taxonomies.delete".
+           *
+           * This request holds the parameters needed by the the datacatalog server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Resource name of the taxonomy to be deleted. All policy tags in
+        this taxonomy will also be
+         *        deleted.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(DataCatalog.this, "DELETE", REST_PATH, null, com.google.api.services.datacatalog.v1beta1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/taxonomies/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the taxonomy to be deleted. All policy tags in this taxonomy
+           * will also be deleted.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Resource name of the taxonomy to be deleted. All policy tags in this taxonomy will also
+         be deleted.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Resource name of the taxonomy to be deleted. All policy tags in this taxonomy
+           * will also be deleted.
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/taxonomies/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Exports all taxonomies and their policy tags in a project.
+         *
+         * This method generates SerializedTaxonomy protos with nested policy tags that can be used as an
+         * input for future ImportTaxonomies calls.
+         *
+         * Create a request for the method "taxonomies.export".
+         *
+         * This request holds the parameters needed by the datacatalog server.  After setting any optional
+         * parameters, call the {@link Export#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Resource name of the project that taxonomies to be exported
+        will share.
+         * @return the request
+         */
+        public Export export(java.lang.String parent) throws java.io.IOException {
+          Export result = new Export(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class Export extends DataCatalogRequest<com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1ExportTaxonomiesResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/taxonomies:export";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Exports all taxonomies and their policy tags in a project.
+           *
+           * This method generates SerializedTaxonomy protos with nested policy tags that can be used as an
+           * input for future ImportTaxonomies calls.
+           *
+           * Create a request for the method "taxonomies.export".
+           *
+           * This request holds the parameters needed by the the datacatalog server.  After setting any
+           * optional parameters, call the {@link Export#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Export#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Resource name of the project that taxonomies to be exported
+        will share.
+           * @since 1.13
+           */
+          protected Export(java.lang.String parent) {
+            super(DataCatalog.this, "GET", REST_PATH, null, com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1ExportTaxonomiesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Export set$Xgafv(java.lang.String $Xgafv) {
+            return (Export) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Export setAccessToken(java.lang.String accessToken) {
+            return (Export) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Export setAlt(java.lang.String alt) {
+            return (Export) super.setAlt(alt);
+          }
+
+          @Override
+          public Export setCallback(java.lang.String callback) {
+            return (Export) super.setCallback(callback);
+          }
+
+          @Override
+          public Export setFields(java.lang.String fields) {
+            return (Export) super.setFields(fields);
+          }
+
+          @Override
+          public Export setKey(java.lang.String key) {
+            return (Export) super.setKey(key);
+          }
+
+          @Override
+          public Export setOauthToken(java.lang.String oauthToken) {
+            return (Export) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Export setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Export) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Export setQuotaUser(java.lang.String quotaUser) {
+            return (Export) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Export setUploadType(java.lang.String uploadType) {
+            return (Export) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Export setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Export) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the project that taxonomies to be exported will share.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Resource name of the project that taxonomies to be exported will share.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Resource name of the project that taxonomies to be exported will share.
+           */
+          public Export setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Export taxonomies as serialized taxonomies. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean serializedTaxonomies;
+
+          /** Export taxonomies as serialized taxonomies.
+           */
+          public java.lang.Boolean getSerializedTaxonomies() {
+            return serializedTaxonomies;
+          }
+
+          /** Export taxonomies as serialized taxonomies. */
+          public Export setSerializedTaxonomies(java.lang.Boolean serializedTaxonomies) {
+            this.serializedTaxonomies = serializedTaxonomies;
+            return this;
+          }
+
+          /** Required. Resource names of the taxonomies to be exported. */
+          @com.google.api.client.util.Key
+          private java.util.List<java.lang.String> taxonomies;
+
+          /** Required. Resource names of the taxonomies to be exported.
+           */
+          public java.util.List<java.lang.String> getTaxonomies() {
+            return taxonomies;
+          }
+
+          /** Required. Resource names of the taxonomies to be exported. */
+          public Export setTaxonomies(java.util.List<java.lang.String> taxonomies) {
+            this.taxonomies = taxonomies;
+            return this;
+          }
+
+          @Override
+          public Export set(String parameterName, Object value) {
+            return (Export) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets a taxonomy.
+         *
+         * Create a request for the method "taxonomies.get".
+         *
+         * This request holds the parameters needed by the datacatalog server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Resource name of the requested taxonomy.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends DataCatalogRequest<com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1Taxonomy> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/taxonomies/[^/]+$");
+
+          /**
+           * Gets a taxonomy.
+           *
+           * Create a request for the method "taxonomies.get".
+           *
+           * This request holds the parameters needed by the the datacatalog server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Resource name of the requested taxonomy.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(DataCatalog.this, "GET", REST_PATH, null, com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1Taxonomy.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/taxonomies/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Resource name of the requested taxonomy. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Resource name of the requested taxonomy.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. Resource name of the requested taxonomy. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/taxonomies/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets the IAM policy for a taxonomy or a policy tag.
+         *
+         * Create a request for the method "taxonomies.getIamPolicy".
+         *
+         * This request holds the parameters needed by the datacatalog server.  After setting any optional
+         * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
+         *
+         * @param resource REQUIRED: The resource for which the policy is being requested.
+        See the operation documentation for
+         *        the appropriate value for this field.
+         * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.GetIamPolicyRequest}
+         * @return the request
+         */
+        public GetIamPolicy getIamPolicy(java.lang.String resource, com.google.api.services.datacatalog.v1beta1.model.GetIamPolicyRequest content) throws java.io.IOException {
+          GetIamPolicy result = new GetIamPolicy(resource, content);
+          initialize(result);
+          return result;
+        }
+
+        public class GetIamPolicy extends DataCatalogRequest<com.google.api.services.datacatalog.v1beta1.model.Policy> {
+
+          private static final String REST_PATH = "v1beta1/{+resource}:getIamPolicy";
+
+          private final java.util.regex.Pattern RESOURCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/taxonomies/[^/]+$");
+
+          /**
+           * Gets the IAM policy for a taxonomy or a policy tag.
+           *
+           * Create a request for the method "taxonomies.getIamPolicy".
+           *
+           * This request holds the parameters needed by the the datacatalog server.  After setting any
+           * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param resource REQUIRED: The resource for which the policy is being requested.
+        See the operation documentation for
+         *        the appropriate value for this field.
+           * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.GetIamPolicyRequest}
+           * @since 1.13
+           */
+          protected GetIamPolicy(java.lang.String resource, com.google.api.services.datacatalog.v1beta1.model.GetIamPolicyRequest content) {
+            super(DataCatalog.this, "POST", REST_PATH, content, com.google.api.services.datacatalog.v1beta1.model.Policy.class);
+            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/taxonomies/[^/]+$");
+            }
+          }
+
+          @Override
+          public GetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+            return (GetIamPolicy) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetIamPolicy setAccessToken(java.lang.String accessToken) {
+            return (GetIamPolicy) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetIamPolicy setAlt(java.lang.String alt) {
+            return (GetIamPolicy) super.setAlt(alt);
+          }
+
+          @Override
+          public GetIamPolicy setCallback(java.lang.String callback) {
+            return (GetIamPolicy) super.setCallback(callback);
+          }
+
+          @Override
+          public GetIamPolicy setFields(java.lang.String fields) {
+            return (GetIamPolicy) super.setFields(fields);
+          }
+
+          @Override
+          public GetIamPolicy setKey(java.lang.String key) {
+            return (GetIamPolicy) super.setKey(key);
+          }
+
+          @Override
+          public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
+            return (GetIamPolicy) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetIamPolicy) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+            return (GetIamPolicy) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetIamPolicy setUploadType(java.lang.String uploadType) {
+            return (GetIamPolicy) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetIamPolicy) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being requested. See the operation
+           * documentation for the appropriate value for this field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** REQUIRED: The resource for which the policy is being requested. See the operation documentation for
+         the appropriate value for this field.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being requested. See the operation
+           * documentation for the appropriate value for this field.
+           */
+          public GetIamPolicy setResource(java.lang.String resource) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/taxonomies/[^/]+$");
+            }
+            this.resource = resource;
+            return this;
+          }
+
+          @Override
+          public GetIamPolicy set(String parameterName, Object value) {
+            return (GetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Imports all taxonomies and their policy tags to a project as new taxonomies.
+         *
+         * This method provides a bulk taxonomy / policy tag creation using nested proto structure.
+         *
+         * Create a request for the method "taxonomies.import".
+         *
+         * This request holds the parameters needed by the datacatalog server.  After setting any optional
+         * parameters, call the {@link DataCatalogImport#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Resource name of project that the newly created taxonomies will
+        belong to.
+         * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1ImportTaxonomiesRequest}
+         * @return the request
+         */
+        public DataCatalogImport datacatalogImport(java.lang.String parent, com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1ImportTaxonomiesRequest content) throws java.io.IOException {
+          DataCatalogImport result = new DataCatalogImport(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class DataCatalogImport extends DataCatalogRequest<com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1ImportTaxonomiesResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/taxonomies:import";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Imports all taxonomies and their policy tags to a project as new taxonomies.
+           *
+           * This method provides a bulk taxonomy / policy tag creation using nested proto structure.
+           *
+           * Create a request for the method "taxonomies.import".
+           *
+           * This request holds the parameters needed by the the datacatalog server.  After setting any
+           * optional parameters, call the {@link DataCatalogImport#execute()} method to invoke the remote
+           * operation. <p> {@link DataCatalogImport#initialize(com.google.api.client.googleapis.services.Ab
+           * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param parent Required. Resource name of project that the newly created taxonomies will
+        belong to.
+           * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1ImportTaxonomiesRequest}
+           * @since 1.13
+           */
+          protected DataCatalogImport(java.lang.String parent, com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1ImportTaxonomiesRequest content) {
+            super(DataCatalog.this, "POST", REST_PATH, content, com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1ImportTaxonomiesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public DataCatalogImport set$Xgafv(java.lang.String $Xgafv) {
+            return (DataCatalogImport) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public DataCatalogImport setAccessToken(java.lang.String accessToken) {
+            return (DataCatalogImport) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public DataCatalogImport setAlt(java.lang.String alt) {
+            return (DataCatalogImport) super.setAlt(alt);
+          }
+
+          @Override
+          public DataCatalogImport setCallback(java.lang.String callback) {
+            return (DataCatalogImport) super.setCallback(callback);
+          }
+
+          @Override
+          public DataCatalogImport setFields(java.lang.String fields) {
+            return (DataCatalogImport) super.setFields(fields);
+          }
+
+          @Override
+          public DataCatalogImport setKey(java.lang.String key) {
+            return (DataCatalogImport) super.setKey(key);
+          }
+
+          @Override
+          public DataCatalogImport setOauthToken(java.lang.String oauthToken) {
+            return (DataCatalogImport) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public DataCatalogImport setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (DataCatalogImport) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public DataCatalogImport setQuotaUser(java.lang.String quotaUser) {
+            return (DataCatalogImport) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public DataCatalogImport setUploadType(java.lang.String uploadType) {
+            return (DataCatalogImport) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public DataCatalogImport setUploadProtocol(java.lang.String uploadProtocol) {
+            return (DataCatalogImport) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of project that the newly created taxonomies will belong to.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Resource name of project that the newly created taxonomies will belong to.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Resource name of project that the newly created taxonomies will belong to.
+           */
+          public DataCatalogImport setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public DataCatalogImport set(String parameterName, Object value) {
+            return (DataCatalogImport) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists all taxonomies in a project in a particular location that the caller has permission to
+         * view.
+         *
+         * Create a request for the method "taxonomies.list".
+         *
+         * This request holds the parameters needed by the datacatalog server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Resource name of the project to list the taxonomies of.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DataCatalogRequest<com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1ListTaxonomiesResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/taxonomies";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists all taxonomies in a project in a particular location that the caller has permission to
+           * view.
+           *
+           * Create a request for the method "taxonomies.list".
+           *
+           * This request holds the parameters needed by the the datacatalog server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Resource name of the project to list the taxonomies of.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(DataCatalog.this, "GET", REST_PATH, null, com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1ListTaxonomiesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Resource name of the project to list the taxonomies of. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Resource name of the project to list the taxonomies of.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. Resource name of the project to list the taxonomies of. */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * The maximum number of items to return. Must be a value between 1 and 1000. If not set,
+           * defaults to 50.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of items to return. Must be a value between 1 and 1000. If not set, defaults to
+         50.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of items to return. Must be a value between 1 and 1000. If not set,
+           * defaults to 50.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * The next_page_token value returned from a previous list request, if any. If not set,
+           * defaults to an empty string.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The next_page_token value returned from a previous list request, if any. If not set, defaults to an
+         empty string.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * The next_page_token value returned from a previous list request, if any. If not set,
+           * defaults to an empty string.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a taxonomy.
+         *
+         * Create a request for the method "taxonomies.patch".
+         *
+         * This request holds the parameters needed by the datacatalog server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Output only. Resource name of this taxonomy, whose format is:
+         *        "projects/{project_number}/locations/{location_id}/taxonomies/{id}".
+         * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1Taxonomy}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1Taxonomy content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends DataCatalogRequest<com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1Taxonomy> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/taxonomies/[^/]+$");
+
+          /**
+           * Updates a taxonomy.
+           *
+           * Create a request for the method "taxonomies.patch".
+           *
+           * This request holds the parameters needed by the the datacatalog server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Output only. Resource name of this taxonomy, whose format is:
+         *        "projects/{project_number}/locations/{location_id}/taxonomies/{id}".
+           * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1Taxonomy}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1Taxonomy content) {
+            super(DataCatalog.this, "PATCH", REST_PATH, content, com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1Taxonomy.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/taxonomies/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Output only. Resource name of this taxonomy, whose format is:
+           * "projects/{project_number}/locations/{location_id}/taxonomies/{id}".
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Output only. Resource name of this taxonomy, whose format is:
+         "projects/{project_number}/locations/{location_id}/taxonomies/{id}".
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Output only. Resource name of this taxonomy, whose format is:
+           * "projects/{project_number}/locations/{location_id}/taxonomies/{id}".
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/taxonomies/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * The update mask applies to the resource. For the `FieldMask` definition, see
+           * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+           * If not set, defaults to all of the fields that are allowed to update.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** The update mask applies to the resource. For the `FieldMask` definition, see
+         https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask If not set,
+         defaults to all of the fields that are allowed to update.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * The update mask applies to the resource. For the `FieldMask` definition, see
+           * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+           * If not set, defaults to all of the fields that are allowed to update.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Sets the IAM policy for a taxonomy or a policy tag.
+         *
+         * Create a request for the method "taxonomies.setIamPolicy".
+         *
+         * This request holds the parameters needed by the datacatalog server.  After setting any optional
+         * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
+         *
+         * @param resource REQUIRED: The resource for which the policy is being specified.
+        See the operation documentation for
+         *        the appropriate value for this field.
+         * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.SetIamPolicyRequest}
+         * @return the request
+         */
+        public SetIamPolicy setIamPolicy(java.lang.String resource, com.google.api.services.datacatalog.v1beta1.model.SetIamPolicyRequest content) throws java.io.IOException {
+          SetIamPolicy result = new SetIamPolicy(resource, content);
+          initialize(result);
+          return result;
+        }
+
+        public class SetIamPolicy extends DataCatalogRequest<com.google.api.services.datacatalog.v1beta1.model.Policy> {
+
+          private static final String REST_PATH = "v1beta1/{+resource}:setIamPolicy";
+
+          private final java.util.regex.Pattern RESOURCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/taxonomies/[^/]+$");
+
+          /**
+           * Sets the IAM policy for a taxonomy or a policy tag.
+           *
+           * Create a request for the method "taxonomies.setIamPolicy".
+           *
+           * This request holds the parameters needed by the the datacatalog server.  After setting any
+           * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param resource REQUIRED: The resource for which the policy is being specified.
+        See the operation documentation for
+         *        the appropriate value for this field.
+           * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.SetIamPolicyRequest}
+           * @since 1.13
+           */
+          protected SetIamPolicy(java.lang.String resource, com.google.api.services.datacatalog.v1beta1.model.SetIamPolicyRequest content) {
+            super(DataCatalog.this, "POST", REST_PATH, content, com.google.api.services.datacatalog.v1beta1.model.Policy.class);
+            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/taxonomies/[^/]+$");
+            }
+          }
+
+          @Override
+          public SetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+            return (SetIamPolicy) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public SetIamPolicy setAccessToken(java.lang.String accessToken) {
+            return (SetIamPolicy) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public SetIamPolicy setAlt(java.lang.String alt) {
+            return (SetIamPolicy) super.setAlt(alt);
+          }
+
+          @Override
+          public SetIamPolicy setCallback(java.lang.String callback) {
+            return (SetIamPolicy) super.setCallback(callback);
+          }
+
+          @Override
+          public SetIamPolicy setFields(java.lang.String fields) {
+            return (SetIamPolicy) super.setFields(fields);
+          }
+
+          @Override
+          public SetIamPolicy setKey(java.lang.String key) {
+            return (SetIamPolicy) super.setKey(key);
+          }
+
+          @Override
+          public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
+            return (SetIamPolicy) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public SetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (SetIamPolicy) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public SetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+            return (SetIamPolicy) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public SetIamPolicy setUploadType(java.lang.String uploadType) {
+            return (SetIamPolicy) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public SetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+            return (SetIamPolicy) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being specified. See the operation
+           * documentation for the appropriate value for this field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** REQUIRED: The resource for which the policy is being specified. See the operation documentation for
+         the appropriate value for this field.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being specified. See the operation
+           * documentation for the appropriate value for this field.
+           */
+          public SetIamPolicy setResource(java.lang.String resource) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/taxonomies/[^/]+$");
+            }
+            this.resource = resource;
+            return this;
+          }
+
+          @Override
+          public SetIamPolicy set(String parameterName, Object value) {
+            return (SetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns the permissions that a caller has on the specified taxonomy or policy tag.
+         *
+         * Create a request for the method "taxonomies.testIamPermissions".
+         *
+         * This request holds the parameters needed by the datacatalog server.  After setting any optional
+         * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
+         *
+         * @param resource REQUIRED: The resource for which the policy detail is being requested.
+        See the operation
+         *        documentation for the appropriate value for this field.
+         * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.TestIamPermissionsRequest}
+         * @return the request
+         */
+        public TestIamPermissions testIamPermissions(java.lang.String resource, com.google.api.services.datacatalog.v1beta1.model.TestIamPermissionsRequest content) throws java.io.IOException {
+          TestIamPermissions result = new TestIamPermissions(resource, content);
+          initialize(result);
+          return result;
+        }
+
+        public class TestIamPermissions extends DataCatalogRequest<com.google.api.services.datacatalog.v1beta1.model.TestIamPermissionsResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+resource}:testIamPermissions";
+
+          private final java.util.regex.Pattern RESOURCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/taxonomies/[^/]+$");
+
+          /**
+           * Returns the permissions that a caller has on the specified taxonomy or policy tag.
+           *
+           * Create a request for the method "taxonomies.testIamPermissions".
+           *
+           * This request holds the parameters needed by the the datacatalog server.  After setting any
+           * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
+           * operation. <p> {@link TestIamPermissions#initialize(com.google.api.client.googleapis.services.A
+           * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param resource REQUIRED: The resource for which the policy detail is being requested.
+        See the operation
+         *        documentation for the appropriate value for this field.
+           * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.TestIamPermissionsRequest}
+           * @since 1.13
+           */
+          protected TestIamPermissions(java.lang.String resource, com.google.api.services.datacatalog.v1beta1.model.TestIamPermissionsRequest content) {
+            super(DataCatalog.this, "POST", REST_PATH, content, com.google.api.services.datacatalog.v1beta1.model.TestIamPermissionsResponse.class);
+            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/taxonomies/[^/]+$");
+            }
+          }
+
+          @Override
+          public TestIamPermissions set$Xgafv(java.lang.String $Xgafv) {
+            return (TestIamPermissions) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public TestIamPermissions setAccessToken(java.lang.String accessToken) {
+            return (TestIamPermissions) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public TestIamPermissions setAlt(java.lang.String alt) {
+            return (TestIamPermissions) super.setAlt(alt);
+          }
+
+          @Override
+          public TestIamPermissions setCallback(java.lang.String callback) {
+            return (TestIamPermissions) super.setCallback(callback);
+          }
+
+          @Override
+          public TestIamPermissions setFields(java.lang.String fields) {
+            return (TestIamPermissions) super.setFields(fields);
+          }
+
+          @Override
+          public TestIamPermissions setKey(java.lang.String key) {
+            return (TestIamPermissions) super.setKey(key);
+          }
+
+          @Override
+          public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
+            return (TestIamPermissions) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public TestIamPermissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (TestIamPermissions) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public TestIamPermissions setQuotaUser(java.lang.String quotaUser) {
+            return (TestIamPermissions) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public TestIamPermissions setUploadType(java.lang.String uploadType) {
+            return (TestIamPermissions) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public TestIamPermissions setUploadProtocol(java.lang.String uploadProtocol) {
+            return (TestIamPermissions) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy detail is being requested. See the
+           * operation documentation for the appropriate value for this field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** REQUIRED: The resource for which the policy detail is being requested. See the operation
+         documentation for the appropriate value for this field.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy detail is being requested. See the
+           * operation documentation for the appropriate value for this field.
+           */
+          public TestIamPermissions setResource(java.lang.String resource) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/taxonomies/[^/]+$");
+            }
+            this.resource = resource;
+            return this;
+          }
+
+          @Override
+          public TestIamPermissions set(String parameterName, Object value) {
+            return (TestIamPermissions) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the PolicyTags collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code DataCatalog datacatalog = new DataCatalog(...);}
+         *   {@code DataCatalog.PolicyTags.List request = datacatalog.policyTags().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public PolicyTags policyTags() {
+          return new PolicyTags();
+        }
+
+        /**
+         * The "policyTags" collection of methods.
+         */
+        public class PolicyTags {
+
+          /**
+           * Creates a policy tag in the specified taxonomy.
+           *
+           * Create a request for the method "policyTags.create".
+           *
+           * This request holds the parameters needed by the datacatalog server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. Resource name of the taxonomy that the policy tag will belong to.
+           * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1PolicyTag}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1PolicyTag content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends DataCatalogRequest<com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1PolicyTag> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/policyTags";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/taxonomies/[^/]+$");
+
+            /**
+             * Creates a policy tag in the specified taxonomy.
+             *
+             * Create a request for the method "policyTags.create".
+             *
+             * This request holds the parameters needed by the the datacatalog server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. Resource name of the taxonomy that the policy tag will belong to.
+             * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1PolicyTag}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1PolicyTag content) {
+              super(DataCatalog.this, "POST", REST_PATH, content, com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1PolicyTag.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/taxonomies/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. Resource name of the taxonomy that the policy tag will belong to. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Resource name of the taxonomy that the policy tag will belong to.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Resource name of the taxonomy that the policy tag will belong to. */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/taxonomies/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a policy tag. Also deletes all of its descendant policy tags.
+           *
+           * Create a request for the method "policyTags.delete".
+           *
+           * This request holds the parameters needed by the datacatalog server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Resource name of the policy tag to be deleted. All of its descendant
+          policy tags will also
+           *        be deleted.
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends DataCatalogRequest<com.google.api.services.datacatalog.v1beta1.model.Empty> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/taxonomies/[^/]+/policyTags/[^/]+$");
+
+            /**
+             * Deletes a policy tag. Also deletes all of its descendant policy tags.
+             *
+             * Create a request for the method "policyTags.delete".
+             *
+             * This request holds the parameters needed by the the datacatalog server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Resource name of the policy tag to be deleted. All of its descendant
+          policy tags will also
+           *        be deleted.
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(DataCatalog.this, "DELETE", REST_PATH, null, com.google.api.services.datacatalog.v1beta1.model.Empty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/taxonomies/[^/]+/policyTags/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Resource name of the policy tag to be deleted. All of its descendant policy
+             * tags will also be deleted.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Resource name of the policy tag to be deleted. All of its descendant policy tags will
+           also be deleted.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Resource name of the policy tag to be deleted. All of its descendant policy
+             * tags will also be deleted.
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/taxonomies/[^/]+/policyTags/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets a policy tag.
+           *
+           * Create a request for the method "policyTags.get".
+           *
+           * This request holds the parameters needed by the datacatalog server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Resource name of the requested policy tag.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends DataCatalogRequest<com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1PolicyTag> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/taxonomies/[^/]+/policyTags/[^/]+$");
+
+            /**
+             * Gets a policy tag.
+             *
+             * Create a request for the method "policyTags.get".
+             *
+             * This request holds the parameters needed by the the datacatalog server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Resource name of the requested policy tag.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(DataCatalog.this, "GET", REST_PATH, null, com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1PolicyTag.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/taxonomies/[^/]+/policyTags/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. Resource name of the requested policy tag. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Resource name of the requested policy tag.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. Resource name of the requested policy tag. */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/taxonomies/[^/]+/policyTags/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets the IAM policy for a taxonomy or a policy tag.
+           *
+           * Create a request for the method "policyTags.getIamPolicy".
+           *
+           * This request holds the parameters needed by the datacatalog server.  After setting any optional
+           * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
+           *
+           * @param resource REQUIRED: The resource for which the policy is being requested.
+          See the operation documentation for
+           *        the appropriate value for this field.
+           * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.GetIamPolicyRequest}
+           * @return the request
+           */
+          public GetIamPolicy getIamPolicy(java.lang.String resource, com.google.api.services.datacatalog.v1beta1.model.GetIamPolicyRequest content) throws java.io.IOException {
+            GetIamPolicy result = new GetIamPolicy(resource, content);
+            initialize(result);
+            return result;
+          }
+
+          public class GetIamPolicy extends DataCatalogRequest<com.google.api.services.datacatalog.v1beta1.model.Policy> {
+
+            private static final String REST_PATH = "v1beta1/{+resource}:getIamPolicy";
+
+            private final java.util.regex.Pattern RESOURCE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/taxonomies/[^/]+/policyTags/[^/]+$");
+
+            /**
+             * Gets the IAM policy for a taxonomy or a policy tag.
+             *
+             * Create a request for the method "policyTags.getIamPolicy".
+             *
+             * This request holds the parameters needed by the the datacatalog server.  After setting any
+             * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param resource REQUIRED: The resource for which the policy is being requested.
+          See the operation documentation for
+           *        the appropriate value for this field.
+             * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.GetIamPolicyRequest}
+             * @since 1.13
+             */
+            protected GetIamPolicy(java.lang.String resource, com.google.api.services.datacatalog.v1beta1.model.GetIamPolicyRequest content) {
+              super(DataCatalog.this, "POST", REST_PATH, content, com.google.api.services.datacatalog.v1beta1.model.Policy.class);
+              this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/taxonomies/[^/]+/policyTags/[^/]+$");
+              }
+            }
+
+            @Override
+            public GetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+              return (GetIamPolicy) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public GetIamPolicy setAccessToken(java.lang.String accessToken) {
+              return (GetIamPolicy) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public GetIamPolicy setAlt(java.lang.String alt) {
+              return (GetIamPolicy) super.setAlt(alt);
+            }
+
+            @Override
+            public GetIamPolicy setCallback(java.lang.String callback) {
+              return (GetIamPolicy) super.setCallback(callback);
+            }
+
+            @Override
+            public GetIamPolicy setFields(java.lang.String fields) {
+              return (GetIamPolicy) super.setFields(fields);
+            }
+
+            @Override
+            public GetIamPolicy setKey(java.lang.String key) {
+              return (GetIamPolicy) super.setKey(key);
+            }
+
+            @Override
+            public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
+              return (GetIamPolicy) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public GetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (GetIamPolicy) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public GetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+              return (GetIamPolicy) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public GetIamPolicy setUploadType(java.lang.String uploadType) {
+              return (GetIamPolicy) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public GetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+              return (GetIamPolicy) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy is being requested. See the operation
+             * documentation for the appropriate value for this field.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String resource;
+
+            /** REQUIRED: The resource for which the policy is being requested. See the operation documentation for
+           the appropriate value for this field.
+             */
+            public java.lang.String getResource() {
+              return resource;
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy is being requested. See the operation
+             * documentation for the appropriate value for this field.
+             */
+            public GetIamPolicy setResource(java.lang.String resource) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/taxonomies/[^/]+/policyTags/[^/]+$");
+              }
+              this.resource = resource;
+              return this;
+            }
+
+            @Override
+            public GetIamPolicy set(String parameterName, Object value) {
+              return (GetIamPolicy) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists all policy tags in a taxonomy.
+           *
+           * Create a request for the method "policyTags.list".
+           *
+           * This request holds the parameters needed by the datacatalog server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. Resource name of the taxonomy to list the policy tags of.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends DataCatalogRequest<com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1ListPolicyTagsResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/policyTags";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/taxonomies/[^/]+$");
+
+            /**
+             * Lists all policy tags in a taxonomy.
+             *
+             * Create a request for the method "policyTags.list".
+             *
+             * This request holds the parameters needed by the the datacatalog server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. Resource name of the taxonomy to list the policy tags of.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(DataCatalog.this, "GET", REST_PATH, null, com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1ListPolicyTagsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/taxonomies/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. Resource name of the taxonomy to list the policy tags of. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Resource name of the taxonomy to list the policy tags of.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Resource name of the taxonomy to list the policy tags of. */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/taxonomies/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * The maximum number of items to return. Must be a value between 1 and 1000. If not
+             * set, defaults to 50.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** The maximum number of items to return. Must be a value between 1 and 1000. If not set, defaults to
+           50.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * The maximum number of items to return. Must be a value between 1 and 1000. If not
+             * set, defaults to 50.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * The next_page_token value returned from a previous List request, if any. If not set,
+             * defaults to an empty string.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** The next_page_token value returned from a previous List request, if any. If not set, defaults to an
+           empty string.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * The next_page_token value returned from a previous List request, if any. If not set,
+             * defaults to an empty string.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates a policy tag.
+           *
+           * Create a request for the method "policyTags.patch".
+           *
+           * This request holds the parameters needed by the datacatalog server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name Output only. Resource name of this policy tag, whose format is:
+           *        "projects/{project_number}/locations/{location_id}/taxonomies/{taxonomy_id}/policyTags/{id
+           *        }".
+           * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1PolicyTag}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1PolicyTag content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends DataCatalogRequest<com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1PolicyTag> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/taxonomies/[^/]+/policyTags/[^/]+$");
+
+            /**
+             * Updates a policy tag.
+             *
+             * Create a request for the method "policyTags.patch".
+             *
+             * This request holds the parameters needed by the the datacatalog server.  After setting any
+             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Output only. Resource name of this policy tag, whose format is:
+           *        "projects/{project_number}/locations/{location_id}/taxonomies/{taxonomy_id}/policyTags/{id
+           *        }".
+             * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1PolicyTag}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1PolicyTag content) {
+              super(DataCatalog.this, "PATCH", REST_PATH, content, com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1PolicyTag.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/taxonomies/[^/]+/policyTags/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Output only. Resource name of this policy tag, whose format is: "projects/{project_nu
+             * mber}/locations/{location_id}/taxonomies/{taxonomy_id}/policyTags/{id}".
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Output only. Resource name of this policy tag, whose format is:
+           "projects/{project_number}/locations/{location_id}/taxonomies/{taxonomy_id}/policyTags/{id}".
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Output only. Resource name of this policy tag, whose format is: "projects/{project_nu
+             * mber}/locations/{location_id}/taxonomies/{taxonomy_id}/policyTags/{id}".
+             */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/taxonomies/[^/]+/policyTags/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * The update mask applies to the resource. Only display_name, description and
+             * parent_policy_tag can be updated and thus can be listed in the mask. If update_mask
+             * is not provided, all allowed fields (i.e. display_name, description and parent) will
+             * be updated. For more information including the `FieldMask` definition, see
+             * https://developers.google.com/protocol-
+             * buffers/docs/reference/google.protobuf#fieldmask If not set, defaults to all of the
+             * fields that are allowed to update.
+             */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** The update mask applies to the resource. Only display_name, description and parent_policy_tag can
+           be updated and thus can be listed in the mask. If update_mask is not provided, all allowed fields
+           (i.e. display_name, description and parent) will be updated. For more information including the
+           `FieldMask` definition, see https://developers.google.com/protocol-
+           buffers/docs/reference/google.protobuf#fieldmask If not set, defaults to all of the fields that are
+           allowed to update.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /**
+             * The update mask applies to the resource. Only display_name, description and
+             * parent_policy_tag can be updated and thus can be listed in the mask. If update_mask
+             * is not provided, all allowed fields (i.e. display_name, description and parent) will
+             * be updated. For more information including the `FieldMask` definition, see
+             * https://developers.google.com/protocol-
+             * buffers/docs/reference/google.protobuf#fieldmask If not set, defaults to all of the
+             * fields that are allowed to update.
+             */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Sets the IAM policy for a taxonomy or a policy tag.
+           *
+           * Create a request for the method "policyTags.setIamPolicy".
+           *
+           * This request holds the parameters needed by the datacatalog server.  After setting any optional
+           * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
+           *
+           * @param resource REQUIRED: The resource for which the policy is being specified.
+          See the operation documentation for
+           *        the appropriate value for this field.
+           * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.SetIamPolicyRequest}
+           * @return the request
+           */
+          public SetIamPolicy setIamPolicy(java.lang.String resource, com.google.api.services.datacatalog.v1beta1.model.SetIamPolicyRequest content) throws java.io.IOException {
+            SetIamPolicy result = new SetIamPolicy(resource, content);
+            initialize(result);
+            return result;
+          }
+
+          public class SetIamPolicy extends DataCatalogRequest<com.google.api.services.datacatalog.v1beta1.model.Policy> {
+
+            private static final String REST_PATH = "v1beta1/{+resource}:setIamPolicy";
+
+            private final java.util.regex.Pattern RESOURCE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/taxonomies/[^/]+/policyTags/[^/]+$");
+
+            /**
+             * Sets the IAM policy for a taxonomy or a policy tag.
+             *
+             * Create a request for the method "policyTags.setIamPolicy".
+             *
+             * This request holds the parameters needed by the the datacatalog server.  After setting any
+             * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param resource REQUIRED: The resource for which the policy is being specified.
+          See the operation documentation for
+           *        the appropriate value for this field.
+             * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.SetIamPolicyRequest}
+             * @since 1.13
+             */
+            protected SetIamPolicy(java.lang.String resource, com.google.api.services.datacatalog.v1beta1.model.SetIamPolicyRequest content) {
+              super(DataCatalog.this, "POST", REST_PATH, content, com.google.api.services.datacatalog.v1beta1.model.Policy.class);
+              this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/taxonomies/[^/]+/policyTags/[^/]+$");
+              }
+            }
+
+            @Override
+            public SetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+              return (SetIamPolicy) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SetIamPolicy setAccessToken(java.lang.String accessToken) {
+              return (SetIamPolicy) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SetIamPolicy setAlt(java.lang.String alt) {
+              return (SetIamPolicy) super.setAlt(alt);
+            }
+
+            @Override
+            public SetIamPolicy setCallback(java.lang.String callback) {
+              return (SetIamPolicy) super.setCallback(callback);
+            }
+
+            @Override
+            public SetIamPolicy setFields(java.lang.String fields) {
+              return (SetIamPolicy) super.setFields(fields);
+            }
+
+            @Override
+            public SetIamPolicy setKey(java.lang.String key) {
+              return (SetIamPolicy) super.setKey(key);
+            }
+
+            @Override
+            public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
+              return (SetIamPolicy) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SetIamPolicy) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+              return (SetIamPolicy) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SetIamPolicy setUploadType(java.lang.String uploadType) {
+              return (SetIamPolicy) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SetIamPolicy) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy is being specified. See the operation
+             * documentation for the appropriate value for this field.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String resource;
+
+            /** REQUIRED: The resource for which the policy is being specified. See the operation documentation for
+           the appropriate value for this field.
+             */
+            public java.lang.String getResource() {
+              return resource;
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy is being specified. See the operation
+             * documentation for the appropriate value for this field.
+             */
+            public SetIamPolicy setResource(java.lang.String resource) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/taxonomies/[^/]+/policyTags/[^/]+$");
+              }
+              this.resource = resource;
+              return this;
+            }
+
+            @Override
+            public SetIamPolicy set(String parameterName, Object value) {
+              return (SetIamPolicy) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Returns the permissions that a caller has on the specified taxonomy or policy tag.
+           *
+           * Create a request for the method "policyTags.testIamPermissions".
+           *
+           * This request holds the parameters needed by the datacatalog server.  After setting any optional
+           * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
+           *
+           * @param resource REQUIRED: The resource for which the policy detail is being requested.
+          See the operation
+           *        documentation for the appropriate value for this field.
+           * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.TestIamPermissionsRequest}
+           * @return the request
+           */
+          public TestIamPermissions testIamPermissions(java.lang.String resource, com.google.api.services.datacatalog.v1beta1.model.TestIamPermissionsRequest content) throws java.io.IOException {
+            TestIamPermissions result = new TestIamPermissions(resource, content);
+            initialize(result);
+            return result;
+          }
+
+          public class TestIamPermissions extends DataCatalogRequest<com.google.api.services.datacatalog.v1beta1.model.TestIamPermissionsResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+resource}:testIamPermissions";
+
+            private final java.util.regex.Pattern RESOURCE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/taxonomies/[^/]+/policyTags/[^/]+$");
+
+            /**
+             * Returns the permissions that a caller has on the specified taxonomy or policy tag.
+             *
+             * Create a request for the method "policyTags.testIamPermissions".
+             *
+             * This request holds the parameters needed by the the datacatalog server.  After setting any
+             * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
+             * operation. <p> {@link TestIamPermissions#initialize(com.google.api.client.googleapis.services.A
+             * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param resource REQUIRED: The resource for which the policy detail is being requested.
+          See the operation
+           *        documentation for the appropriate value for this field.
+             * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.TestIamPermissionsRequest}
+             * @since 1.13
+             */
+            protected TestIamPermissions(java.lang.String resource, com.google.api.services.datacatalog.v1beta1.model.TestIamPermissionsRequest content) {
+              super(DataCatalog.this, "POST", REST_PATH, content, com.google.api.services.datacatalog.v1beta1.model.TestIamPermissionsResponse.class);
+              this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/taxonomies/[^/]+/policyTags/[^/]+$");
+              }
+            }
+
+            @Override
+            public TestIamPermissions set$Xgafv(java.lang.String $Xgafv) {
+              return (TestIamPermissions) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public TestIamPermissions setAccessToken(java.lang.String accessToken) {
+              return (TestIamPermissions) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public TestIamPermissions setAlt(java.lang.String alt) {
+              return (TestIamPermissions) super.setAlt(alt);
+            }
+
+            @Override
+            public TestIamPermissions setCallback(java.lang.String callback) {
+              return (TestIamPermissions) super.setCallback(callback);
+            }
+
+            @Override
+            public TestIamPermissions setFields(java.lang.String fields) {
+              return (TestIamPermissions) super.setFields(fields);
+            }
+
+            @Override
+            public TestIamPermissions setKey(java.lang.String key) {
+              return (TestIamPermissions) super.setKey(key);
+            }
+
+            @Override
+            public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
+              return (TestIamPermissions) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public TestIamPermissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (TestIamPermissions) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public TestIamPermissions setQuotaUser(java.lang.String quotaUser) {
+              return (TestIamPermissions) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public TestIamPermissions setUploadType(java.lang.String uploadType) {
+              return (TestIamPermissions) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public TestIamPermissions setUploadProtocol(java.lang.String uploadProtocol) {
+              return (TestIamPermissions) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy detail is being requested. See the
+             * operation documentation for the appropriate value for this field.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String resource;
+
+            /** REQUIRED: The resource for which the policy detail is being requested. See the operation
+           documentation for the appropriate value for this field.
+             */
+            public java.lang.String getResource() {
+              return resource;
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy detail is being requested. See the
+             * operation documentation for the appropriate value for this field.
+             */
+            public TestIamPermissions setResource(java.lang.String resource) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/taxonomies/[^/]+/policyTags/[^/]+$");
+              }
+              this.resource = resource;
+              return this;
+            }
+
+            @Override
+            public TestIamPermissions set(String parameterName, Object value) {
+              return (TestIamPermissions) super.set(parameterName, value);
             }
           }
 

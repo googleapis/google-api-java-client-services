@@ -36,7 +36,7 @@ public final class GoogleCloudRecommenderV1beta1Operation extends com.google.api
 
   /**
    * Type of this operation. Contains one of 'and', 'remove', 'replace', 'move', 'copy', 'test' and
-   * custom operations. This field is case-insensitive and always populated.
+   * 'custom' operations. This field is case-insensitive and always populated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,9 +55,9 @@ public final class GoogleCloudRecommenderV1beta1Operation extends com.google.api
    * narrow down to a single unique element that is being tested/modified. This is intended to be an
    * exact match per filter. To perform advanced matching, use path_value_matchers.
    *
-   * * Example: {   "/versions/name" : "it-123"   "/versions/targetSize/percent": 20  } * Example: {
-   * "/bindings/role": "roles/admin"   "/bindings/condition" : null  } * Example: {
-   * "/bindings/role": "roles/admin"   "/bindings/members" : ["x@google.com", "y@google.com"]  }
+   * * Example: {   "/versions/name" : "it-123"   "/versions/targetSize/percent": 20   } * Example:
+   * {   "/bindings/role": "roles/admin"   "/bindings/condition" : null   } * Example: {
+   * "/bindings/role": "roles/admin"   "/bindings/members" : ["x@google.com", "y@google.com"]   }
    * When both path_filters and path_value_matchers are set, an implicit AND must be performed.
    * The value may be {@code null}.
    */
@@ -126,7 +126,7 @@ public final class GoogleCloudRecommenderV1beta1Operation extends com.google.api
 
   /**
    * Type of this operation. Contains one of 'and', 'remove', 'replace', 'move', 'copy', 'test' and
-   * custom operations. This field is case-insensitive and always populated.
+   * 'custom' operations. This field is case-insensitive and always populated.
    * @return value or {@code null} for none
    */
   public java.lang.String getAction() {
@@ -135,7 +135,7 @@ public final class GoogleCloudRecommenderV1beta1Operation extends com.google.api
 
   /**
    * Type of this operation. Contains one of 'and', 'remove', 'replace', 'move', 'copy', 'test' and
-   * custom operations. This field is case-insensitive and always populated.
+   * 'custom' operations. This field is case-insensitive and always populated.
    * @param action action or {@code null} for none
    */
   public GoogleCloudRecommenderV1beta1Operation setAction(java.lang.String action) {
@@ -167,9 +167,9 @@ public final class GoogleCloudRecommenderV1beta1Operation extends com.google.api
    * narrow down to a single unique element that is being tested/modified. This is intended to be an
    * exact match per filter. To perform advanced matching, use path_value_matchers.
    *
-   * * Example: {   "/versions/name" : "it-123"   "/versions/targetSize/percent": 20  } * Example: {
-   * "/bindings/role": "roles/admin"   "/bindings/condition" : null  } * Example: {
-   * "/bindings/role": "roles/admin"   "/bindings/members" : ["x@google.com", "y@google.com"]  }
+   * * Example: {   "/versions/name" : "it-123"   "/versions/targetSize/percent": 20   } * Example:
+   * {   "/bindings/role": "roles/admin"   "/bindings/condition" : null   } * Example: {
+   * "/bindings/role": "roles/admin"   "/bindings/members" : ["x@google.com", "y@google.com"]   }
    * When both path_filters and path_value_matchers are set, an implicit AND must be performed.
    * @return value or {@code null} for none
    */
@@ -182,9 +182,9 @@ public final class GoogleCloudRecommenderV1beta1Operation extends com.google.api
    * narrow down to a single unique element that is being tested/modified. This is intended to be an
    * exact match per filter. To perform advanced matching, use path_value_matchers.
    *
-   * * Example: {   "/versions/name" : "it-123"   "/versions/targetSize/percent": 20  } * Example: {
-   * "/bindings/role": "roles/admin"   "/bindings/condition" : null  } * Example: {
-   * "/bindings/role": "roles/admin"   "/bindings/members" : ["x@google.com", "y@google.com"]  }
+   * * Example: {   "/versions/name" : "it-123"   "/versions/targetSize/percent": 20   } * Example:
+   * {   "/bindings/role": "roles/admin"   "/bindings/condition" : null   } * Example: {
+   * "/bindings/role": "roles/admin"   "/bindings/members" : ["x@google.com", "y@google.com"]   }
    * When both path_filters and path_value_matchers are set, an implicit AND must be performed.
    * @param pathFilters pathFilters or {@code null} for none
    */

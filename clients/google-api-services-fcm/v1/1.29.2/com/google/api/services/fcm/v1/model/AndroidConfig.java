@@ -48,6 +48,15 @@ public final class AndroidConfig extends com.google.api.client.json.GenericJson 
   private java.util.Map<String, java.lang.String> data;
 
   /**
+   * If set to true, messages will be allowed to be delivered to the app while the device is in
+   * direct boot mode. See [Support Direct Boot
+   * mode](https://developer.android.com/training/articles/direct-boot).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean directBootOk;
+
+  /**
    * Options for features provided by the FCM SDK for Android.
    * The value may be {@code null}.
    */
@@ -126,6 +135,27 @@ public final class AndroidConfig extends com.google.api.client.json.GenericJson 
    */
   public AndroidConfig setData(java.util.Map<String, java.lang.String> data) {
     this.data = data;
+    return this;
+  }
+
+  /**
+   * If set to true, messages will be allowed to be delivered to the app while the device is in
+   * direct boot mode. See [Support Direct Boot
+   * mode](https://developer.android.com/training/articles/direct-boot).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDirectBootOk() {
+    return directBootOk;
+  }
+
+  /**
+   * If set to true, messages will be allowed to be delivered to the app while the device is in
+   * direct boot mode. See [Support Direct Boot
+   * mode](https://developer.android.com/training/articles/direct-boot).
+   * @param directBootOk directBootOk or {@code null} for none
+   */
+  public AndroidConfig setDirectBootOk(java.lang.Boolean directBootOk) {
+    this.directBootOk = directBootOk;
     return this;
   }
 

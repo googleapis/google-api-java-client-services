@@ -54,8 +54,8 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   private DeleteServiceStrategy deleteServiceStrategy;
 
   /**
-   * Optional. Unique identifier of this Rollout. Only lower case letters, digits  and '-' are
-   * allowed.
+   * Optional. Unique identifier of this Rollout. Must be no longer than 63 characters and only
+   * lower case letters, digits, '.', '_' and '-' are allowed.
    *
    * If not specified by client, the server will generate one. The generated id will have the form
    * of , where "date" is the create date in ISO 8601 format.  "revision number" is a monotonically
@@ -140,8 +140,8 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Unique identifier of this Rollout. Only lower case letters, digits  and '-' are
-   * allowed.
+   * Optional. Unique identifier of this Rollout. Must be no longer than 63 characters and only
+   * lower case letters, digits, '.', '_' and '-' are allowed.
    *
    * If not specified by client, the server will generate one. The generated id will have the form
    * of , where "date" is the create date in ISO 8601 format.  "revision number" is a monotonically
@@ -154,8 +154,8 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Unique identifier of this Rollout. Only lower case letters, digits  and '-' are
-   * allowed.
+   * Optional. Unique identifier of this Rollout. Must be no longer than 63 characters and only
+   * lower case letters, digits, '.', '_' and '-' are allowed.
    *
    * If not specified by client, the server will generate one. The generated id will have the form
    * of , where "date" is the create date in ISO 8601 format.  "revision number" is a monotonically

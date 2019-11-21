@@ -77,7 +77,7 @@ public final class CryptoKey extends com.google.api.client.json.GenericJson {
    *
    * The CryptoKey's primary version can be updated via UpdateCryptoKeyPrimaryVersion.
    *
-   * All keys with purpose ENCRYPT_DECRYPT have a primary. For other keys, this field will be
+   * Keys with purpose ENCRYPT_DECRYPT may have a primary. For other keys, this field will be
    * omitted.
    * The value may be {@code null}.
    */
@@ -207,7 +207,7 @@ public final class CryptoKey extends com.google.api.client.json.GenericJson {
    *
    * The CryptoKey's primary version can be updated via UpdateCryptoKeyPrimaryVersion.
    *
-   * All keys with purpose ENCRYPT_DECRYPT have a primary. For other keys, this field will be
+   * Keys with purpose ENCRYPT_DECRYPT may have a primary. For other keys, this field will be
    * omitted.
    * @return value or {@code null} for none
    */
@@ -221,7 +221,7 @@ public final class CryptoKey extends com.google.api.client.json.GenericJson {
    *
    * The CryptoKey's primary version can be updated via UpdateCryptoKeyPrimaryVersion.
    *
-   * All keys with purpose ENCRYPT_DECRYPT have a primary. For other keys, this field will be
+   * Keys with purpose ENCRYPT_DECRYPT may have a primary. For other keys, this field will be
    * omitted.
    * @param primary primary or {@code null} for none
    */

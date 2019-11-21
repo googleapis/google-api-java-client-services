@@ -99,7 +99,7 @@ packages on [Maven Central][maven-search].
 | Dialogflow API | [v2](clients/google-api-services-dialogflow/v2), [v2beta1](clients/google-api-services-dialogflow/v2beta1) |
 | Digital Asset Links API | [v1](clients/google-api-services-digitalassetlinks/v1) |
 | Domains RDAP API | [v1](clients/google-api-services-domainsrdap/v1) |
-| DoubleClick Bid Manager API | [v1](clients/google-api-services-doubleclickbidmanager/v1) |
+| DoubleClick Bid Manager API | [v1](clients/google-api-services-doubleclickbidmanager/v1), [v1.1](clients/google-api-services-doubleclickbidmanager/v1.1) |
 | Drive API | [v2](clients/google-api-services-drive/v2), [v3](clients/google-api-services-drive/v3) |
 | Drive Activity API | [v1](clients/google-api-services-appsactivity/v1), [v2](clients/google-api-services-driveactivity/v2) |
 | Enterprise Apps Reseller API | [v1](clients/google-api-services-reseller/v1) |

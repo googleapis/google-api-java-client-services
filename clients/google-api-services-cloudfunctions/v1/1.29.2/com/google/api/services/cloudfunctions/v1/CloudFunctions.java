@@ -1813,7 +1813,11 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
         specified in the format
          *        `projects/locations`
         If you want to list functions in all locations, use "-" in place of a
-         *        location.
+         *        location. When listing functions in all locations, if one or more
+        location(s) are
+         *        unreachable, the response will contain functions from all
+        reachable locations along with
+         *        the names of any unreachable locations.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1843,7 +1847,11 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
         specified in the format
          *        `projects/locations`
         If you want to list functions in all locations, use "-" in place of a
-         *        location.
+         *        location. When listing functions in all locations, if one or more
+        location(s) are
+         *        unreachable, the response will contain functions from all
+        reachable locations along with
+         *        the names of any unreachable locations.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1924,14 +1932,18 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
           /**
            * The project and location from which the function should be listed, specified in the
            * format `projects/locations` If you want to list functions in all locations, use "-" in
-           * place of a location.
+           * place of a location. When listing functions in all locations, if one or more
+           * location(s) are unreachable, the response will contain functions from all reachable
+           * locations along with the names of any unreachable locations.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** The project and location from which the function should be listed, specified in the format
          `projects/locations` If you want to list functions in all locations, use "-" in place of a
-         location.
+         location. When listing functions in all locations, if one or more location(s) are unreachable, the
+         response will contain functions from all reachable locations along with the names of any
+         unreachable locations.
            */
           public java.lang.String getParent() {
             return parent;
@@ -1940,7 +1952,9 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
           /**
            * The project and location from which the function should be listed, specified in the
            * format `projects/locations` If you want to list functions in all locations, use "-" in
-           * place of a location.
+           * place of a location. When listing functions in all locations, if one or more
+           * location(s) are unreachable, the response will contain functions from all reachable
+           * locations along with the names of any unreachable locations.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {

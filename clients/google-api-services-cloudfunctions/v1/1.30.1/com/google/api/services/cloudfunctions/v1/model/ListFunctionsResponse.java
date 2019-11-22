@@ -51,6 +51,14 @@ public final class ListFunctionsResponse extends com.google.api.client.json.Gene
   private java.lang.String nextPageToken;
 
   /**
+   * Locations that could not be reached. The response does not include any functions from these
+   * locations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> unreachable;
+
+  /**
    * The functions that match the request.
    * @return value or {@code null} for none
    */
@@ -83,6 +91,25 @@ public final class ListFunctionsResponse extends com.google.api.client.json.Gene
    */
   public ListFunctionsResponse setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
+    return this;
+  }
+
+  /**
+   * Locations that could not be reached. The response does not include any functions from these
+   * locations.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUnreachable() {
+    return unreachable;
+  }
+
+  /**
+   * Locations that could not be reached. The response does not include any functions from these
+   * locations.
+   * @param unreachable unreachable or {@code null} for none
+   */
+  public ListFunctionsResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
+    this.unreachable = unreachable;
     return this;
   }
 

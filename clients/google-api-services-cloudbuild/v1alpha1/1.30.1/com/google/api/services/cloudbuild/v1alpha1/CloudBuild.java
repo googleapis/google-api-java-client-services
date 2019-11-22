@@ -877,6 +877,22 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           return this;
         }
 
+        /** A mask specifying which fields in `WorkerPool` should be updated. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** A mask specifying which fields in `WorkerPool` should be updated.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** A mask specifying which fields in `WorkerPool` should be updated. */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
         @Override
         public Patch set(String parameterName, Object value) {
           return (Patch) super.set(parameterName, value);

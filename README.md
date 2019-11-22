@@ -35,7 +35,6 @@ packages on [Maven Central][maven-search].
 | Analytics Reporting API | [v4](clients/google-api-services-analyticsreporting/v4) |
 | Android Device Provisioning Partner API | [v1](clients/google-api-services-androiddeviceprovisioning/v1) |
 | Android Management API | [v1](clients/google-api-services-androidmanagement/v1) |
-| Apigee API | [v1](clients/google-api-services-apigee/v1) |
 | App Engine Admin API | [v1](clients/google-api-services-appengine/v1), [v1alpha](clients/google-api-services-appengine/v1alpha), [v1beta](clients/google-api-services-appengine/v1beta), [v1beta4](clients/google-api-services-appengine/v1beta4), [v1beta5](clients/google-api-services-appengine/v1beta5) |
 | Apps Script API | [v1](clients/google-api-services-script/v1) |
 | BigQuery API | [v2](clients/google-api-services-bigquery/v2) |
@@ -49,6 +48,7 @@ packages on [Maven Central][maven-search].
 | Cloud Asset API | [v1](clients/google-api-services-cloudasset/v1), [v1beta1](clients/google-api-services-cloudasset/v1beta1) |
 | Cloud Bigtable Admin API | [v1](clients/google-api-services-bigtableadmin/v1), [v2](clients/google-api-services-bigtableadmin/v2) |
 | Cloud Billing API | [v1](clients/google-api-services-cloudbilling/v1) |
+| Cloud Billing Budget API | [v1beta1](clients/google-api-services-billingbudgets/v1beta1) |
 | Cloud Build API | [v1](clients/google-api-services-cloudbuild/v1), [v1alpha1](clients/google-api-services-cloudbuild/v1alpha1) |
 | Cloud Composer API | [v1](clients/google-api-services-composer/v1), [v1beta1](clients/google-api-services-composer/v1beta1) |
 | Cloud Data Fusion API | [v1beta1](clients/google-api-services-datafusion/v1beta1) |
@@ -80,7 +80,7 @@ packages on [Maven Central][maven-search].
 | Cloud Source Repositories API | [v1](clients/google-api-services-sourcerepo/v1) |
 | Cloud Spanner API | [v1](clients/google-api-services-spanner/v1) |
 | Cloud Speech-to-Text API | [v1](clients/google-api-services-speech/v1), [v1p1beta1](clients/google-api-services-speech/v1p1beta1), [v2beta1](clients/google-api-services-speech/v2beta1) |
-| Cloud Storage JSON API | [v1](clients/google-api-services-storage/v1), [v1beta1](clients/google-api-services-storage/v1beta1), [v1beta2](clients/google-api-services-storage/v1beta2) |
+| Cloud Storage JSON API | [v1](clients/google-api-services-storage/v1), [v1beta2](clients/google-api-services-storage/v1beta2) |
 | Cloud TPU API | [v1](clients/google-api-services-tpu/v1), [v1alpha1](clients/google-api-services-tpu/v1alpha1) |
 | Cloud Talent Solution API | [v2](clients/google-api-services-jobs/v2), [v3](clients/google-api-services-jobs/v3), [v3p1beta1](clients/google-api-services-jobs/v3p1beta1) |
 | Cloud Tasks API | [v2](clients/google-api-services-cloudtasks/v2), [v2beta2](clients/google-api-services-cloudtasks/v2beta2), [v2beta3](clients/google-api-services-cloudtasks/v2beta3) |

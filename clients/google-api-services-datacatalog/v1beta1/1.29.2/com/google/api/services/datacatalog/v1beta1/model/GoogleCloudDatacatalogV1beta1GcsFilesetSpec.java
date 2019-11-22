@@ -31,13 +31,16 @@ package com.google.api.services.datacatalog.v1beta1.model;
 public final class GoogleCloudDatacatalogV1beta1GcsFilesetSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Patterns to identify a set of files in Google Cloud Storage.
+   * Required. Patterns to identify a set of files in Google Cloud Storage. See [Cloud Storage
+   * documentation](storage/docs/gsutil/addlhelp/WildcardNames) for more information. Note that
+   * bucket wildcards are currently not supported.
    *
    * Examples of valid file_patterns:
    *
-   *  * `gs://bucket_name`: matches all files in `bucket_name`  * `gs://bucket_name/file*`: matches
-   * files prefixed by `file` in                              `bucket_name`  *
-   * `gs://bucket_name/a/b`: matches all files in `bucket_name` that match
+   *  * `gs://bucket_name/dir`: matches all files within `bucket_name/dir`
+   * directory.  * `gs://bucket_name/dir*`: matches all files in `bucket_name/dir`
+   * spanning all subdirectories.  * `gs://bucket_name/file*`: matches files prefixed by `file` in
+   * `bucket_name`  * `gs://bucket_name/a/b`: matches all files in `bucket_name` that match
    * `a/b` pattern, such as `a/c/b`, `a/d/b`  * `gs://another_bucket/a.txt`: matches
    * `gs://another_bucket/a.txt`
    * The value may be {@code null}.
@@ -60,13 +63,16 @@ public final class GoogleCloudDatacatalogV1beta1GcsFilesetSpec extends com.googl
   }
 
   /**
-   * Required. Patterns to identify a set of files in Google Cloud Storage.
+   * Required. Patterns to identify a set of files in Google Cloud Storage. See [Cloud Storage
+   * documentation](storage/docs/gsutil/addlhelp/WildcardNames) for more information. Note that
+   * bucket wildcards are currently not supported.
    *
    * Examples of valid file_patterns:
    *
-   *  * `gs://bucket_name`: matches all files in `bucket_name`  * `gs://bucket_name/file*`: matches
-   * files prefixed by `file` in                              `bucket_name`  *
-   * `gs://bucket_name/a/b`: matches all files in `bucket_name` that match
+   *  * `gs://bucket_name/dir`: matches all files within `bucket_name/dir`
+   * directory.  * `gs://bucket_name/dir*`: matches all files in `bucket_name/dir`
+   * spanning all subdirectories.  * `gs://bucket_name/file*`: matches files prefixed by `file` in
+   * `bucket_name`  * `gs://bucket_name/a/b`: matches all files in `bucket_name` that match
    * `a/b` pattern, such as `a/c/b`, `a/d/b`  * `gs://another_bucket/a.txt`: matches
    * `gs://another_bucket/a.txt`
    * @return value or {@code null} for none
@@ -76,13 +82,16 @@ public final class GoogleCloudDatacatalogV1beta1GcsFilesetSpec extends com.googl
   }
 
   /**
-   * Required. Patterns to identify a set of files in Google Cloud Storage.
+   * Required. Patterns to identify a set of files in Google Cloud Storage. See [Cloud Storage
+   * documentation](storage/docs/gsutil/addlhelp/WildcardNames) for more information. Note that
+   * bucket wildcards are currently not supported.
    *
    * Examples of valid file_patterns:
    *
-   *  * `gs://bucket_name`: matches all files in `bucket_name`  * `gs://bucket_name/file*`: matches
-   * files prefixed by `file` in                              `bucket_name`  *
-   * `gs://bucket_name/a/b`: matches all files in `bucket_name` that match
+   *  * `gs://bucket_name/dir`: matches all files within `bucket_name/dir`
+   * directory.  * `gs://bucket_name/dir*`: matches all files in `bucket_name/dir`
+   * spanning all subdirectories.  * `gs://bucket_name/file*`: matches files prefixed by `file` in
+   * `bucket_name`  * `gs://bucket_name/a/b`: matches all files in `bucket_name` that match
    * `a/b` pattern, such as `a/c/b`, `a/d/b`  * `gs://another_bucket/a.txt`: matches
    * `gs://another_bucket/a.txt`
    * @param filePatterns filePatterns or {@code null} for none

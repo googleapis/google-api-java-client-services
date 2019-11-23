@@ -34,6 +34,18 @@ public final class TrackRelease extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.util.List<Control> controls;
+
+  static {
+    // hack to force ProGuard to consider Control used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Control.class);
+  }
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private CountryTargeting countryTargeting;
 
   /**
@@ -58,6 +70,12 @@ public final class TrackRelease extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MendelSampling sampling;
+
+  /**
    * The desired status of this release.
    * The value may be {@code null}.
    */
@@ -80,6 +98,21 @@ public final class TrackRelease extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.util.List<java.lang.Long> versionCodes;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Control> getControls() {
+    return controls;
+  }
+
+  /**
+   * @param controls controls or {@code null} for none
+   */
+  public TrackRelease setControls(java.util.List<Control> controls) {
+    this.controls = controls;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none
@@ -129,6 +162,21 @@ public final class TrackRelease extends com.google.api.client.json.GenericJson {
    */
   public TrackRelease setReleaseNotes(java.util.List<LocalizedText> releaseNotes) {
     this.releaseNotes = releaseNotes;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public MendelSampling getSampling() {
+    return sampling;
+  }
+
+  /**
+   * @param sampling sampling or {@code null} for none
+   */
+  public TrackRelease setSampling(MendelSampling sampling) {
+    this.sampling = sampling;
     return this;
   }
 

@@ -6958,7 +6958,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Select only change logs whose change time is before the specified minChangeTime.The time
+       * Select only change logs whose change time is after the specified minChangeTime.The time
        * should be formatted as an RFC3339 date/time string. For example, for 10:54 PM on July 18th,
        * 2015, in the America/New York time zone, the format is "2015-07-18T22:54:00-04:00". In
        * other words, the year, month, day, the letter T, the hour (24-hour clock system), minute,
@@ -6967,7 +6967,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.String minChangeTime;
 
-      /** Select only change logs whose change time is before the specified minChangeTime.The time should be
+      /** Select only change logs whose change time is after the specified minChangeTime.The time should be
      formatted as an RFC3339 date/time string. For example, for 10:54 PM on July 18th, 2015, in the
      America/New York time zone, the format is "2015-07-18T22:54:00-04:00". In other words, the year,
      month, day, the letter T, the hour (24-hour clock system), minute, second, and then the time zone
@@ -6978,7 +6978,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Select only change logs whose change time is before the specified minChangeTime.The time
+       * Select only change logs whose change time is after the specified minChangeTime.The time
        * should be formatted as an RFC3339 date/time string. For example, for 10:54 PM on July 18th,
        * 2015, in the America/New York time zone, the format is "2015-07-18T22:54:00-04:00". In
        * other words, the year, month, day, the letter T, the hour (24-hour clock system), minute,

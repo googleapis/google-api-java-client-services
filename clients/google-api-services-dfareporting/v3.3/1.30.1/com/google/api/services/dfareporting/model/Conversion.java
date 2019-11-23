@@ -58,11 +58,10 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
   /**
    * A list of the alphanumeric encrypted user IDs. Any user ID with exposure prior to the
    * conversion timestamp will be used in the inserted conversion. If no such user ID is found then
-   * the conversion will be rejected with NO_COOKIE_MATCH_FOUND error. When set, encryptionInfo
-   * should also be specified. This field may only be used when calling batchinsert; it is not
-   * supported by batchupdate. This field is mutually exclusive with encryptedUserId, matchId,
-   * mobileDeviceId and gclid. This or encryptedUserId or matchId or mobileDeviceId or gclid is a
-   * required field.
+   * the conversion will be rejected with INVALID_ARGUMENT error. When set, encryptionInfo should
+   * also be specified. This field may only be used when calling batchinsert; it is not supported by
+   * batchupdate. This field is mutually exclusive with encryptedUserId, matchId, mobileDeviceId and
+   * gclid. This or encryptedUserId or matchId or mobileDeviceId or gclid is a required field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -231,11 +230,10 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
   /**
    * A list of the alphanumeric encrypted user IDs. Any user ID with exposure prior to the
    * conversion timestamp will be used in the inserted conversion. If no such user ID is found then
-   * the conversion will be rejected with NO_COOKIE_MATCH_FOUND error. When set, encryptionInfo
-   * should also be specified. This field may only be used when calling batchinsert; it is not
-   * supported by batchupdate. This field is mutually exclusive with encryptedUserId, matchId,
-   * mobileDeviceId and gclid. This or encryptedUserId or matchId or mobileDeviceId or gclid is a
-   * required field.
+   * the conversion will be rejected with INVALID_ARGUMENT error. When set, encryptionInfo should
+   * also be specified. This field may only be used when calling batchinsert; it is not supported by
+   * batchupdate. This field is mutually exclusive with encryptedUserId, matchId, mobileDeviceId and
+   * gclid. This or encryptedUserId or matchId or mobileDeviceId or gclid is a required field.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEncryptedUserIdCandidates() {
@@ -245,11 +243,10 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
   /**
    * A list of the alphanumeric encrypted user IDs. Any user ID with exposure prior to the
    * conversion timestamp will be used in the inserted conversion. If no such user ID is found then
-   * the conversion will be rejected with NO_COOKIE_MATCH_FOUND error. When set, encryptionInfo
-   * should also be specified. This field may only be used when calling batchinsert; it is not
-   * supported by batchupdate. This field is mutually exclusive with encryptedUserId, matchId,
-   * mobileDeviceId and gclid. This or encryptedUserId or matchId or mobileDeviceId or gclid is a
-   * required field.
+   * the conversion will be rejected with INVALID_ARGUMENT error. When set, encryptionInfo should
+   * also be specified. This field may only be used when calling batchinsert; it is not supported by
+   * batchupdate. This field is mutually exclusive with encryptedUserId, matchId, mobileDeviceId and
+   * gclid. This or encryptedUserId or matchId or mobileDeviceId or gclid is a required field.
    * @param encryptedUserIdCandidates encryptedUserIdCandidates or {@code null} for none
    */
   public Conversion setEncryptedUserIdCandidates(java.util.List<java.lang.String> encryptedUserIdCandidates) {

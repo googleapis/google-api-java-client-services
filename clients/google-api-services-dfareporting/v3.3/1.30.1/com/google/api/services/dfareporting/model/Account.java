@@ -90,7 +90,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
    * for PEN  - "32" for ILS  - "33" for CHF  - "34" for VEF  - "35" for COP  - "36" for GTQ  - "37"
    * for PLN  - "39" for INR  - "40" for THB  - "41" for IDR  - "42" for CZK  - "43" for RON  - "44"
    * for HUF  - "45" for RUB  - "46" for AED  - "47" for BGN  - "48" for HRK  - "49" for MXN  - "50"
-   * for NGN
+   * for NGN  - "51" for EGP
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -312,7 +312,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
    * for PEN  - "32" for ILS  - "33" for CHF  - "34" for VEF  - "35" for COP  - "36" for GTQ  - "37"
    * for PLN  - "39" for INR  - "40" for THB  - "41" for IDR  - "42" for CZK  - "43" for RON  - "44"
    * for HUF  - "45" for RUB  - "46" for AED  - "47" for BGN  - "48" for HRK  - "49" for MXN  - "50"
-   * for NGN
+   * for NGN  - "51" for EGP
    * @return value or {@code null} for none
    */
   public java.lang.Long getCurrencyId() {
@@ -329,7 +329,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
    * for PEN  - "32" for ILS  - "33" for CHF  - "34" for VEF  - "35" for COP  - "36" for GTQ  - "37"
    * for PLN  - "39" for INR  - "40" for THB  - "41" for IDR  - "42" for CZK  - "43" for RON  - "44"
    * for HUF  - "45" for RUB  - "46" for AED  - "47" for BGN  - "48" for HRK  - "49" for MXN  - "50"
-   * for NGN
+   * for NGN  - "51" for EGP
    * @param currencyId currencyId or {@code null} for none
    */
   public Account setCurrencyId(java.lang.Long currencyId) {

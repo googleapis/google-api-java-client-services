@@ -2049,6 +2049,32 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
         }
 
         /**
+         * The filter string used to return a subset of versions in the response. Currently
+         * supported fields for filtering are: name, status, and create_time. Filter processing will
+         * be implemented in accordance with go/filtering.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** The filter string used to return a subset of versions in the response. Currently supported fields
+       for filtering are: name, status, and create_time. Filter processing will be implemented in
+       accordance with go/filtering.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * The filter string used to return a subset of versions in the response. Currently
+         * supported fields for filtering are: name, status, and create_time. Filter processing will
+         * be implemented in accordance with go/filtering.
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
          * The maximum number of versions to return. The service may return fewer than this value.
          * If unspecified, at most 25 versions will be returned. The maximum value is 100; values
          * above 100 will be coerced to 100

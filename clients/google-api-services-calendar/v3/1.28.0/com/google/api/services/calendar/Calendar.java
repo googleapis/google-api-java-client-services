@@ -3550,30 +3550,25 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Whether to always include a value in the email field for the organizer, creator and
-       * attendees, even if no real email is available (i.e. a generated, non-working value will be
-       * provided). The use of this option is discouraged and should only be used by clients which
-       * cannot handle the absence of an email address value in the mentioned places. Optional. The
-       * default is False.
+       * Deprecated and ignored. A value will always be returned in the email field for the
+       * organizer, creator and attendees, even if no real email address is available (i.e. a
+       * generated, non-working value will be provided).
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean alwaysIncludeEmail;
 
-      /** Whether to always include a value in the email field for the organizer, creator and attendees, even
-     if no real email is available (i.e. a generated, non-working value will be provided). The use of
-     this option is discouraged and should only be used by clients which cannot handle the absence of an
-     email address value in the mentioned places. Optional. The default is False.
+      /** Deprecated and ignored. A value will always be returned in the email field for the organizer,
+     creator and attendees, even if no real email address is available (i.e. a generated, non-working
+     value will be provided).
        */
       public java.lang.Boolean getAlwaysIncludeEmail() {
         return alwaysIncludeEmail;
       }
 
       /**
-       * Whether to always include a value in the email field for the organizer, creator and
-       * attendees, even if no real email is available (i.e. a generated, non-working value will be
-       * provided). The use of this option is discouraged and should only be used by clients which
-       * cannot handle the absence of an email address value in the mentioned places. Optional. The
-       * default is False.
+       * Deprecated and ignored. A value will always be returned in the email field for the
+       * organizer, creator and attendees, even if no real email address is available (i.e. a
+       * generated, non-working value will be provided).
        */
       public Get setAlwaysIncludeEmail(java.lang.Boolean alwaysIncludeEmail) {
         this.alwaysIncludeEmail = alwaysIncludeEmail;
@@ -4167,30 +4162,25 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Whether to always include a value in the email field for the organizer, creator and
-       * attendees, even if no real email is available (i.e. a generated, non-working value will be
-       * provided). The use of this option is discouraged and should only be used by clients which
-       * cannot handle the absence of an email address value in the mentioned places. Optional. The
-       * default is False.
+       * Deprecated and ignored. A value will always be returned in the email field for the
+       * organizer, creator and attendees, even if no real email address is available (i.e. a
+       * generated, non-working value will be provided).
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean alwaysIncludeEmail;
 
-      /** Whether to always include a value in the email field for the organizer, creator and attendees, even
-     if no real email is available (i.e. a generated, non-working value will be provided). The use of
-     this option is discouraged and should only be used by clients which cannot handle the absence of an
-     email address value in the mentioned places. Optional. The default is False.
+      /** Deprecated and ignored. A value will always be returned in the email field for the organizer,
+     creator and attendees, even if no real email address is available (i.e. a generated, non-working
+     value will be provided).
        */
       public java.lang.Boolean getAlwaysIncludeEmail() {
         return alwaysIncludeEmail;
       }
 
       /**
-       * Whether to always include a value in the email field for the organizer, creator and
-       * attendees, even if no real email is available (i.e. a generated, non-working value will be
-       * provided). The use of this option is discouraged and should only be used by clients which
-       * cannot handle the absence of an email address value in the mentioned places. Optional. The
-       * default is False.
+       * Deprecated and ignored. A value will always be returned in the email field for the
+       * organizer, creator and attendees, even if no real email address is available (i.e. a
+       * generated, non-working value will be provided).
        */
       public Instances setAlwaysIncludeEmail(java.lang.Boolean alwaysIncludeEmail) {
         this.alwaysIncludeEmail = alwaysIncludeEmail;
@@ -4488,30 +4478,25 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Whether to always include a value in the email field for the organizer, creator and
-       * attendees, even if no real email is available (i.e. a generated, non-working value will be
-       * provided). The use of this option is discouraged and should only be used by clients which
-       * cannot handle the absence of an email address value in the mentioned places. Optional. The
-       * default is False.
+       * Deprecated and ignored. A value will always be returned in the email field for the
+       * organizer, creator and attendees, even if no real email address is available (i.e. a
+       * generated, non-working value will be provided).
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean alwaysIncludeEmail;
 
-      /** Whether to always include a value in the email field for the organizer, creator and attendees, even
-     if no real email is available (i.e. a generated, non-working value will be provided). The use of
-     this option is discouraged and should only be used by clients which cannot handle the absence of an
-     email address value in the mentioned places. Optional. The default is False.
+      /** Deprecated and ignored. A value will always be returned in the email field for the organizer,
+     creator and attendees, even if no real email address is available (i.e. a generated, non-working
+     value will be provided).
        */
       public java.lang.Boolean getAlwaysIncludeEmail() {
         return alwaysIncludeEmail;
       }
 
       /**
-       * Whether to always include a value in the email field for the organizer, creator and
-       * attendees, even if no real email is available (i.e. a generated, non-working value will be
-       * provided). The use of this option is discouraged and should only be used by clients which
-       * cannot handle the absence of an email address value in the mentioned places. Optional. The
-       * default is False.
+       * Deprecated and ignored. A value will always be returned in the email field for the
+       * organizer, creator and attendees, even if no real email address is available (i.e. a
+       * generated, non-working value will be provided).
        */
       public List setAlwaysIncludeEmail(java.lang.Boolean alwaysIncludeEmail) {
         this.alwaysIncludeEmail = alwaysIncludeEmail;
@@ -5240,30 +5225,25 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Whether to always include a value in the email field for the organizer, creator and
-       * attendees, even if no real email is available (i.e. a generated, non-working value will be
-       * provided). The use of this option is discouraged and should only be used by clients which
-       * cannot handle the absence of an email address value in the mentioned places. Optional. The
-       * default is False.
+       * Deprecated and ignored. A value will always be returned in the email field for the
+       * organizer, creator and attendees, even if no real email address is available (i.e. a
+       * generated, non-working value will be provided).
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean alwaysIncludeEmail;
 
-      /** Whether to always include a value in the email field for the organizer, creator and attendees, even
-     if no real email is available (i.e. a generated, non-working value will be provided). The use of
-     this option is discouraged and should only be used by clients which cannot handle the absence of an
-     email address value in the mentioned places. Optional. The default is False.
+      /** Deprecated and ignored. A value will always be returned in the email field for the organizer,
+     creator and attendees, even if no real email address is available (i.e. a generated, non-working
+     value will be provided).
        */
       public java.lang.Boolean getAlwaysIncludeEmail() {
         return alwaysIncludeEmail;
       }
 
       /**
-       * Whether to always include a value in the email field for the organizer, creator and
-       * attendees, even if no real email is available (i.e. a generated, non-working value will be
-       * provided). The use of this option is discouraged and should only be used by clients which
-       * cannot handle the absence of an email address value in the mentioned places. Optional. The
-       * default is False.
+       * Deprecated and ignored. A value will always be returned in the email field for the
+       * organizer, creator and attendees, even if no real email address is available (i.e. a
+       * generated, non-working value will be provided).
        */
       public Patch setAlwaysIncludeEmail(java.lang.Boolean alwaysIncludeEmail) {
         this.alwaysIncludeEmail = alwaysIncludeEmail;
@@ -5701,30 +5681,25 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Whether to always include a value in the email field for the organizer, creator and
-       * attendees, even if no real email is available (i.e. a generated, non-working value will be
-       * provided). The use of this option is discouraged and should only be used by clients which
-       * cannot handle the absence of an email address value in the mentioned places. Optional. The
-       * default is False.
+       * Deprecated and ignored. A value will always be returned in the email field for the
+       * organizer, creator and attendees, even if no real email address is available (i.e. a
+       * generated, non-working value will be provided).
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean alwaysIncludeEmail;
 
-      /** Whether to always include a value in the email field for the organizer, creator and attendees, even
-     if no real email is available (i.e. a generated, non-working value will be provided). The use of
-     this option is discouraged and should only be used by clients which cannot handle the absence of an
-     email address value in the mentioned places. Optional. The default is False.
+      /** Deprecated and ignored. A value will always be returned in the email field for the organizer,
+     creator and attendees, even if no real email address is available (i.e. a generated, non-working
+     value will be provided).
        */
       public java.lang.Boolean getAlwaysIncludeEmail() {
         return alwaysIncludeEmail;
       }
 
       /**
-       * Whether to always include a value in the email field for the organizer, creator and
-       * attendees, even if no real email is available (i.e. a generated, non-working value will be
-       * provided). The use of this option is discouraged and should only be used by clients which
-       * cannot handle the absence of an email address value in the mentioned places. Optional. The
-       * default is False.
+       * Deprecated and ignored. A value will always be returned in the email field for the
+       * organizer, creator and attendees, even if no real email address is available (i.e. a
+       * generated, non-working value will be provided).
        */
       public Update setAlwaysIncludeEmail(java.lang.Boolean alwaysIncludeEmail) {
         this.alwaysIncludeEmail = alwaysIncludeEmail;
@@ -5972,30 +5947,25 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Whether to always include a value in the email field for the organizer, creator and
-       * attendees, even if no real email is available (i.e. a generated, non-working value will be
-       * provided). The use of this option is discouraged and should only be used by clients which
-       * cannot handle the absence of an email address value in the mentioned places. Optional. The
-       * default is False.
+       * Deprecated and ignored. A value will always be returned in the email field for the
+       * organizer, creator and attendees, even if no real email address is available (i.e. a
+       * generated, non-working value will be provided).
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean alwaysIncludeEmail;
 
-      /** Whether to always include a value in the email field for the organizer, creator and attendees, even
-     if no real email is available (i.e. a generated, non-working value will be provided). The use of
-     this option is discouraged and should only be used by clients which cannot handle the absence of an
-     email address value in the mentioned places. Optional. The default is False.
+      /** Deprecated and ignored. A value will always be returned in the email field for the organizer,
+     creator and attendees, even if no real email address is available (i.e. a generated, non-working
+     value will be provided).
        */
       public java.lang.Boolean getAlwaysIncludeEmail() {
         return alwaysIncludeEmail;
       }
 
       /**
-       * Whether to always include a value in the email field for the organizer, creator and
-       * attendees, even if no real email is available (i.e. a generated, non-working value will be
-       * provided). The use of this option is discouraged and should only be used by clients which
-       * cannot handle the absence of an email address value in the mentioned places. Optional. The
-       * default is False.
+       * Deprecated and ignored. A value will always be returned in the email field for the
+       * organizer, creator and attendees, even if no real email address is available (i.e. a
+       * generated, non-working value will be provided).
        */
       public Watch setAlwaysIncludeEmail(java.lang.Boolean alwaysIncludeEmail) {
         this.alwaysIncludeEmail = alwaysIncludeEmail;

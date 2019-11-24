@@ -48,6 +48,13 @@ public final class LogSink extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Optional. A description of this sink. The maximum length of the description is 8000 characters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String description;
+
+  /**
    * Required. The export destination: "storage.googleapis.com/[GCS_BUCKET]"
    * "bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
    * "pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]" The sink's writer_identity, set
@@ -57,6 +64,13 @@ public final class LogSink extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String destination;
+
+  /**
+   * Optional. If set to True, then this sink is disabled and it does not export any log entries.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disabled;
 
   /**
    * Do not use. This field is ignored.
@@ -169,6 +183,23 @@ public final class LogSink extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. A description of this sink. The maximum length of the description is 8000 characters.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  /**
+   * Optional. A description of this sink. The maximum length of the description is 8000 characters.
+   * @param description description or {@code null} for none
+   */
+  public LogSink setDescription(java.lang.String description) {
+    this.description = description;
+    return this;
+  }
+
+  /**
    * Required. The export destination: "storage.googleapis.com/[GCS_BUCKET]"
    * "bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
    * "pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]" The sink's writer_identity, set
@@ -190,6 +221,23 @@ public final class LogSink extends com.google.api.client.json.GenericJson {
    */
   public LogSink setDestination(java.lang.String destination) {
     this.destination = destination;
+    return this;
+  }
+
+  /**
+   * Optional. If set to True, then this sink is disabled and it does not export any log entries.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisabled() {
+    return disabled;
+  }
+
+  /**
+   * Optional. If set to True, then this sink is disabled and it does not export any log entries.
+   * @param disabled disabled or {@code null} for none
+   */
+  public LogSink setDisabled(java.lang.Boolean disabled) {
+    this.disabled = disabled;
     return this;
   }
 

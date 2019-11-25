@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-doubleclickbidmanager</artifactId>
-  <version>v1.1-rev20191107-1.29.2</version>
-  <name>DoubleClick Bid Manager API v1.1-rev20191107-1.29.2</name>
+  <version>v1.1-rev20191112-1.29.2</version>
+  <name>DoubleClick Bid Manager API v1.1-rev20191112-1.29.2</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

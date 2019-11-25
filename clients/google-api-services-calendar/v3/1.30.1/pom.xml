@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-calendar</artifactId>
-  <version>v3-rev20190929-1.30.3</version>
-  <name>Calendar API v3-rev20190929-1.30.3</name>
+  <version>v3-rev20191117-1.30.3</version>
+  <name>Calendar API v3-rev20191117-1.30.3</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

@@ -96,7 +96,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
   private Creator creator;
 
   /**
-   * Description of the event. Optional.
+   * Description of the event. Can contain HTML. Optional.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -578,7 +578,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Description of the event. Optional.
+   * Description of the event. Can contain HTML. Optional.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -586,7 +586,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Description of the event. Optional.
+   * Description of the event. Can contain HTML. Optional.
    * @param description description or {@code null} for none
    */
   public Event setDescription(java.lang.String description) {

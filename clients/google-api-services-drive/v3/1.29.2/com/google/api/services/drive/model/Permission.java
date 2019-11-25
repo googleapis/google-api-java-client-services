@@ -47,7 +47,10 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean deleted;
 
   /**
-   * A displayable name for users, groups or domains.
+   * The "pretty" name of the value of the permission. The following is a list of examples for each
+   * type of permission: - user - User's full name, as defined for their Google account, such as
+   * "Joe Smith."  - group - Name of the Google Group, such as "The Company Administrators."  -
+   * domain - String domain name, such as "thecompany.com."  - anyone - No displayName is present.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,7 +81,7 @@ public final class Permission extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of this permission. This is a unique identifier for the grantee, and is published in
-   * User resources as permissionId.
+   * User resources as permissionId. IDs should be treated as opaque values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,7 +138,10 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the grantee. Valid values are: - user  - group  - domain  - anyone
+   * The type of the grantee. Valid values are: - user  - group  - domain  - anyone  When creating a
+   * permission, if type is user or group, you must provide an emailAddress for the user or group.
+   * When type is domain, you must provide a domain. There isn't extra information required for a
+   * anyone type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -180,7 +186,10 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A displayable name for users, groups or domains.
+   * The "pretty" name of the value of the permission. The following is a list of examples for each
+   * type of permission: - user - User's full name, as defined for their Google account, such as
+   * "Joe Smith."  - group - Name of the Google Group, such as "The Company Administrators."  -
+   * domain - String domain name, such as "thecompany.com."  - anyone - No displayName is present.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -188,7 +197,10 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A displayable name for users, groups or domains.
+   * The "pretty" name of the value of the permission. The following is a list of examples for each
+   * type of permission: - user - User's full name, as defined for their Google account, such as
+   * "Joe Smith."  - group - Name of the Google Group, such as "The Company Administrators."  -
+   * domain - String domain name, such as "thecompany.com."  - anyone - No displayName is present.
    * @param displayName displayName or {@code null} for none
    */
   public Permission setDisplayName(java.lang.String displayName) {
@@ -253,7 +265,7 @@ public final class Permission extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of this permission. This is a unique identifier for the grantee, and is published in
-   * User resources as permissionId.
+   * User resources as permissionId. IDs should be treated as opaque values.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -262,7 +274,7 @@ public final class Permission extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of this permission. This is a unique identifier for the grantee, and is published in
-   * User resources as permissionId.
+   * User resources as permissionId. IDs should be treated as opaque values.
    * @param id id or {@code null} for none
    */
   public Permission setId(java.lang.String id) {
@@ -362,7 +374,10 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the grantee. Valid values are: - user  - group  - domain  - anyone
+   * The type of the grantee. Valid values are: - user  - group  - domain  - anyone  When creating a
+   * permission, if type is user or group, you must provide an emailAddress for the user or group.
+   * When type is domain, you must provide a domain. There isn't extra information required for a
+   * anyone type.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -370,7 +385,10 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the grantee. Valid values are: - user  - group  - domain  - anyone
+   * The type of the grantee. Valid values are: - user  - group  - domain  - anyone  When creating a
+   * permission, if type is user or group, you must provide an emailAddress for the user or group.
+   * When type is domain, you must provide a domain. There isn't extra information required for a
+   * anyone type.
    * @param type type or {@code null} for none
    */
   public Permission setType(java.lang.String type) {

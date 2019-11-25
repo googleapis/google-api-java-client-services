@@ -146,6 +146,15 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   private java.util.List<java.lang.String> languages;
 
   /**
+   * The maximum QPS allocated to this pretargeting configuration, used for pretargeting-level QPS
+   * limits. By default, this is not set, which indicates that there is no QPS limit at the
+   * configuration level (a global or account-level limit may still be imposed).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long maximumQps;
+
+  /**
    * Requests containing any of these mobile carrier ids will match. Values are from mobile-
    * carriers.csv in the downloadable files section.
    * The value may be {@code null}.
@@ -466,6 +475,27 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
    */
   public PretargetingConfig setLanguages(java.util.List<java.lang.String> languages) {
     this.languages = languages;
+    return this;
+  }
+
+  /**
+   * The maximum QPS allocated to this pretargeting configuration, used for pretargeting-level QPS
+   * limits. By default, this is not set, which indicates that there is no QPS limit at the
+   * configuration level (a global or account-level limit may still be imposed).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMaximumQps() {
+    return maximumQps;
+  }
+
+  /**
+   * The maximum QPS allocated to this pretargeting configuration, used for pretargeting-level QPS
+   * limits. By default, this is not set, which indicates that there is no QPS limit at the
+   * configuration level (a global or account-level limit may still be imposed).
+   * @param maximumQps maximumQps or {@code null} for none
+   */
+  public PretargetingConfig setMaximumQps(java.lang.Long maximumQps) {
+    this.maximumQps = maximumQps;
     return this;
   }
 

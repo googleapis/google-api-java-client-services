@@ -146,6 +146,15 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   private java.util.List<java.lang.String> languages;
 
   /**
+   * The maximum QPS allocated to this pretargeting configuration, used for pretargeting-level QPS
+   * limits. By default, this is not set, which indicates that there is no QPS limit at the
+   * configuration level (a global or account-level limit may still be imposed).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long maximumQps;
+
+  /**
    * Requests where the predicted viewability is below the specified decile will not match. E.g. if
    * the buyer sets this value to 5, requests from slots where the predicted viewability is below
    * 50% will not match. If the predicted viewability is unknown this field will be ignored.
@@ -498,6 +507,27 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
    */
   public PretargetingConfig setLanguages(java.util.List<java.lang.String> languages) {
     this.languages = languages;
+    return this;
+  }
+
+  /**
+   * The maximum QPS allocated to this pretargeting configuration, used for pretargeting-level QPS
+   * limits. By default, this is not set, which indicates that there is no QPS limit at the
+   * configuration level (a global or account-level limit may still be imposed).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMaximumQps() {
+    return maximumQps;
+  }
+
+  /**
+   * The maximum QPS allocated to this pretargeting configuration, used for pretargeting-level QPS
+   * limits. By default, this is not set, which indicates that there is no QPS limit at the
+   * configuration level (a global or account-level limit may still be imposed).
+   * @param maximumQps maximumQps or {@code null} for none
+   */
+  public PretargetingConfig setMaximumQps(java.lang.Long maximumQps) {
+    this.maximumQps = maximumQps;
     return this;
   }
 

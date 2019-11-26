@@ -56,8 +56,8 @@ public final class AnalyzeCommentResponse extends com.google.api.client.json.Gen
   /**
    * The language(s) used by CommentAnalyzer service to choose which Model to use when analyzing the
    * comment. Might better be called "effective_languages". The logic used to make the choice is as
-   * follows:   if Request.languages.empty()     effective_languages = detected_languages   else
-   * effective_languages = Request.languages
+   * follows:   if !Request.languages.empty()     effective_languages = Request.languages   else
+   * effective_languages = detected_languages[0]
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -121,8 +121,8 @@ public final class AnalyzeCommentResponse extends com.google.api.client.json.Gen
   /**
    * The language(s) used by CommentAnalyzer service to choose which Model to use when analyzing the
    * comment. Might better be called "effective_languages". The logic used to make the choice is as
-   * follows:   if Request.languages.empty()     effective_languages = detected_languages   else
-   * effective_languages = Request.languages
+   * follows:   if !Request.languages.empty()     effective_languages = Request.languages   else
+   * effective_languages = detected_languages[0]
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLanguages() {
@@ -132,8 +132,8 @@ public final class AnalyzeCommentResponse extends com.google.api.client.json.Gen
   /**
    * The language(s) used by CommentAnalyzer service to choose which Model to use when analyzing the
    * comment. Might better be called "effective_languages". The logic used to make the choice is as
-   * follows:   if Request.languages.empty()     effective_languages = detected_languages   else
-   * effective_languages = Request.languages
+   * follows:   if !Request.languages.empty()     effective_languages = Request.languages   else
+   * effective_languages = detected_languages[0]
    * @param languages languages or {@code null} for none
    */
   public AnalyzeCommentResponse setLanguages(java.util.List<java.lang.String> languages) {

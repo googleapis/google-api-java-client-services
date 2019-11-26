@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-commentanalyzer</artifactId>
-      <version>v1alpha1-rev20190922-1.30.3</version>
+      <version>v1alpha1-rev20191124-1.30.3</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-commentanalyzer:v1alpha1-rev20190922-1.30.3'
+  compile 'com.google.apis:google-api-services-commentanalyzer:v1alpha1-rev20191124-1.30.3'
 }
 ```
 

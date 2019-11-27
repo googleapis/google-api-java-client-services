@@ -31,16 +31,16 @@ package com.google.api.services.firebase.v1beta1.model;
 public final class Location extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ID of the default GCP resource location. It must be one of the available [GCP resource
-   * locations](https://firebase.google.com/docs/projects/locations).
+   * The ID of the GCP resource location. It will be one of the available [GCP resource
+   * locations](https://firebase.google.com/docs/projects/locations#types).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String locationId;
 
   /**
-   * The ID of the default GCP resource location. It must be one of the available [GCP resource
-   * locations](https://firebase.google.com/docs/projects/locations).
+   * The ID of the GCP resource location. It will be one of the available [GCP resource
+   * locations](https://firebase.google.com/docs/projects/locations#types).
    * @return value or {@code null} for none
    */
   public java.lang.String getLocationId() {
@@ -48,8 +48,8 @@ public final class Location extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the default GCP resource location. It must be one of the available [GCP resource
-   * locations](https://firebase.google.com/docs/projects/locations).
+   * The ID of the GCP resource location. It will be one of the available [GCP resource
+   * locations](https://firebase.google.com/docs/projects/locations#types).
    * @param locationId locationId or {@code null} for none
    */
   public Location setLocationId(java.lang.String locationId) {

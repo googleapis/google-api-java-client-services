@@ -69,11 +69,13 @@ public final class AnalyzeCommentRequest extends com.google.api.client.json.Gene
   private java.lang.Boolean doNotStore;
 
   /**
-   * The language(s) of the comment and context (if none are specified, the language is
-   * automatically detected). If multiple languages are specified, the text is checked in all of
-   * them that are supported. Both ISO and BCP-47 language codes are accepted. Current Language
-   * Restrictions:  * Only English text ("en") is supported. If none of the languages specified by
-   * the caller are supported, an `UNIMPLEMENTED` error is returned.
+   * The language(s) of the comment and context. If none are specified, we attempt to automatically
+   * detect the language. Specifying multiple languages means the text contains multiple lanugages.
+   * Both ISO and BCP-47 language codes are accepted.
+   *
+   * The server returns an error if no language was specified and language detection fails. The
+   * server also returns an error if the languages (either specified by the caller, or auto-
+   * detected) are not *all* supported by the service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -200,11 +202,13 @@ public final class AnalyzeCommentRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * The language(s) of the comment and context (if none are specified, the language is
-   * automatically detected). If multiple languages are specified, the text is checked in all of
-   * them that are supported. Both ISO and BCP-47 language codes are accepted. Current Language
-   * Restrictions:  * Only English text ("en") is supported. If none of the languages specified by
-   * the caller are supported, an `UNIMPLEMENTED` error is returned.
+   * The language(s) of the comment and context. If none are specified, we attempt to automatically
+   * detect the language. Specifying multiple languages means the text contains multiple lanugages.
+   * Both ISO and BCP-47 language codes are accepted.
+   *
+   * The server returns an error if no language was specified and language detection fails. The
+   * server also returns an error if the languages (either specified by the caller, or auto-
+   * detected) are not *all* supported by the service.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLanguages() {
@@ -212,11 +216,13 @@ public final class AnalyzeCommentRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * The language(s) of the comment and context (if none are specified, the language is
-   * automatically detected). If multiple languages are specified, the text is checked in all of
-   * them that are supported. Both ISO and BCP-47 language codes are accepted. Current Language
-   * Restrictions:  * Only English text ("en") is supported. If none of the languages specified by
-   * the caller are supported, an `UNIMPLEMENTED` error is returned.
+   * The language(s) of the comment and context. If none are specified, we attempt to automatically
+   * detect the language. Specifying multiple languages means the text contains multiple lanugages.
+   * Both ISO and BCP-47 language codes are accepted.
+   *
+   * The server returns an error if no language was specified and language detection fails. The
+   * server also returns an error if the languages (either specified by the caller, or auto-
+   * detected) are not *all* supported by the service.
    * @param languages languages or {@code null} for none
    */
   public AnalyzeCommentRequest setLanguages(java.util.List<java.lang.String> languages) {

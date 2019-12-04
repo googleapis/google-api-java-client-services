@@ -88,11 +88,8 @@ public final class SuggestCommentScoreRequest extends com.google.api.client.json
   private Context context;
 
   /**
-   * The language(s) of the comment and context (if none are specified, the language is
-   * automatically detected). If multiple languages are specified, the text is checked in all of
-   * them that are supported. Both ISO and BCP-47 language codes are accepted. Current Language
-   * Restrictions:  * Only English text ("en") is supported. If none of the languages specified by
-   * the caller are supported, an `UNIMPLEMENTED` error is returned.
+   * The language(s) of the comment and context. If none are specified, we attempt to automatically
+   * detect the language. Both ISO and BCP-47 language codes are accepted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -225,11 +222,8 @@ public final class SuggestCommentScoreRequest extends com.google.api.client.json
   }
 
   /**
-   * The language(s) of the comment and context (if none are specified, the language is
-   * automatically detected). If multiple languages are specified, the text is checked in all of
-   * them that are supported. Both ISO and BCP-47 language codes are accepted. Current Language
-   * Restrictions:  * Only English text ("en") is supported. If none of the languages specified by
-   * the caller are supported, an `UNIMPLEMENTED` error is returned.
+   * The language(s) of the comment and context. If none are specified, we attempt to automatically
+   * detect the language. Both ISO and BCP-47 language codes are accepted.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLanguages() {
@@ -237,11 +231,8 @@ public final class SuggestCommentScoreRequest extends com.google.api.client.json
   }
 
   /**
-   * The language(s) of the comment and context (if none are specified, the language is
-   * automatically detected). If multiple languages are specified, the text is checked in all of
-   * them that are supported. Both ISO and BCP-47 language codes are accepted. Current Language
-   * Restrictions:  * Only English text ("en") is supported. If none of the languages specified by
-   * the caller are supported, an `UNIMPLEMENTED` error is returned.
+   * The language(s) of the comment and context. If none are specified, we attempt to automatically
+   * detect the language. Both ISO and BCP-47 language codes are accepted.
    * @param languages languages or {@code null} for none
    */
   public SuggestCommentScoreRequest setLanguages(java.util.List<java.lang.String> languages) {

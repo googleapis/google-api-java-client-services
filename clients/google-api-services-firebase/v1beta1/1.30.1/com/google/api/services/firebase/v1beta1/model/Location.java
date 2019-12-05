@@ -31,12 +31,44 @@ package com.google.api.services.firebase.v1beta1.model;
 public final class Location extends com.google.api.client.json.GenericJson {
 
   /**
+   * Products and services that are available in the GCP resource location.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> features;
+
+  /**
    * The ID of the GCP resource location. It will be one of the available [GCP resource
    * locations](https://firebase.google.com/docs/projects/locations#types).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String locationId;
+
+  /**
+   * Indicates whether the GCP resource location is a [regional or multi-regional
+   * location](https://firebase.google.com/docs/projects/locations#types) for data replication.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String type;
+
+  /**
+   * Products and services that are available in the GCP resource location.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getFeatures() {
+    return features;
+  }
+
+  /**
+   * Products and services that are available in the GCP resource location.
+   * @param features features or {@code null} for none
+   */
+  public Location setFeatures(java.util.List<java.lang.String> features) {
+    this.features = features;
+    return this;
+  }
 
   /**
    * The ID of the GCP resource location. It will be one of the available [GCP resource
@@ -54,6 +86,25 @@ public final class Location extends com.google.api.client.json.GenericJson {
    */
   public Location setLocationId(java.lang.String locationId) {
     this.locationId = locationId;
+    return this;
+  }
+
+  /**
+   * Indicates whether the GCP resource location is a [regional or multi-regional
+   * location](https://firebase.google.com/docs/projects/locations#types) for data replication.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getType() {
+    return type;
+  }
+
+  /**
+   * Indicates whether the GCP resource location is a [regional or multi-regional
+   * location](https://firebase.google.com/docs/projects/locations#types) for data replication.
+   * @param type type or {@code null} for none
+   */
+  public Location setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 

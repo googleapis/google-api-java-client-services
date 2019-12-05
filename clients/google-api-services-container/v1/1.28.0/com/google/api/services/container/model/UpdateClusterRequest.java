@@ -31,8 +31,8 @@ package com.google.api.services.container.model;
 public final class UpdateClusterRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Deprecated. The name of the cluster to upgrade. This field has been deprecated and replaced by
-   * the name field.
+   * Required. Deprecated. The name of the cluster to upgrade. This field has been deprecated and
+   * replaced by the name field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +47,7 @@ public final class UpdateClusterRequest extends com.google.api.client.json.Gener
   private java.lang.String name;
 
   /**
-   * Deprecated. The Google Developers Console [project ID or project
+   * Required. Deprecated. The Google Developers Console [project ID or project
    * number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
    * replaced by the name field.
    * The value may be {@code null}.
@@ -56,23 +56,24 @@ public final class UpdateClusterRequest extends com.google.api.client.json.Gener
   private java.lang.String projectId;
 
   /**
-   * A description of the update.
+   * Required. A description of the update.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ClusterUpdate update;
 
   /**
-   * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
-   * which the cluster resides. This field has been deprecated and replaced by the name field.
+   * Required. Deprecated. The name of the Google Compute Engine
+   * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
+   * deprecated and replaced by the name field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
 
   /**
-   * Deprecated. The name of the cluster to upgrade. This field has been deprecated and replaced by
-   * the name field.
+   * Required. Deprecated. The name of the cluster to upgrade. This field has been deprecated and
+   * replaced by the name field.
    * @return value or {@code null} for none
    */
   public java.lang.String getClusterId() {
@@ -80,8 +81,8 @@ public final class UpdateClusterRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Deprecated. The name of the cluster to upgrade. This field has been deprecated and replaced by
-   * the name field.
+   * Required. Deprecated. The name of the cluster to upgrade. This field has been deprecated and
+   * replaced by the name field.
    * @param clusterId clusterId or {@code null} for none
    */
   public UpdateClusterRequest setClusterId(java.lang.String clusterId) {
@@ -109,7 +110,7 @@ public final class UpdateClusterRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Deprecated. The Google Developers Console [project ID or project
+   * Required. Deprecated. The Google Developers Console [project ID or project
    * number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
    * replaced by the name field.
    * @return value or {@code null} for none
@@ -119,7 +120,7 @@ public final class UpdateClusterRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Deprecated. The Google Developers Console [project ID or project
+   * Required. Deprecated. The Google Developers Console [project ID or project
    * number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
    * replaced by the name field.
    * @param projectId projectId or {@code null} for none
@@ -130,7 +131,7 @@ public final class UpdateClusterRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * A description of the update.
+   * Required. A description of the update.
    * @return value or {@code null} for none
    */
   public ClusterUpdate getUpdate() {
@@ -138,7 +139,7 @@ public final class UpdateClusterRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * A description of the update.
+   * Required. A description of the update.
    * @param update update or {@code null} for none
    */
   public UpdateClusterRequest setUpdate(ClusterUpdate update) {
@@ -147,8 +148,9 @@ public final class UpdateClusterRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
-   * which the cluster resides. This field has been deprecated and replaced by the name field.
+   * Required. Deprecated. The name of the Google Compute Engine
+   * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
+   * deprecated and replaced by the name field.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -156,8 +158,9 @@ public final class UpdateClusterRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
-   * which the cluster resides. This field has been deprecated and replaced by the name field.
+   * Required. Deprecated. The name of the Google Compute Engine
+   * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
+   * deprecated and replaced by the name field.
    * @param zone zone or {@code null} for none
    */
   public UpdateClusterRequest setZone(java.lang.String zone) {

@@ -31,8 +31,8 @@ package com.google.api.services.container.model;
 public final class SetNetworkPolicyRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Deprecated. The name of the cluster. This field has been deprecated and replaced by the name
-   * field.
+   * Required. Deprecated. The name of the cluster. This field has been deprecated and replaced by
+   * the name field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,14 +47,14 @@ public final class SetNetworkPolicyRequest extends com.google.api.client.json.Ge
   private java.lang.String name;
 
   /**
-   * Configuration options for the NetworkPolicy feature.
+   * Required. Configuration options for the NetworkPolicy feature.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private NetworkPolicy networkPolicy;
 
   /**
-   * Deprecated. The Google Developers Console [project ID or project
+   * Required. Deprecated. The Google Developers Console [project ID or project
    * number](https://developers.google.com/console/help/new/#projectnumber). This field has been
    * deprecated and replaced by the name field.
    * The value may be {@code null}.
@@ -63,16 +63,17 @@ public final class SetNetworkPolicyRequest extends com.google.api.client.json.Ge
   private java.lang.String projectId;
 
   /**
-   * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
-   * which the cluster resides. This field has been deprecated and replaced by the name field.
+   * Required. Deprecated. The name of the Google Compute Engine
+   * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
+   * deprecated and replaced by the name field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
 
   /**
-   * Deprecated. The name of the cluster. This field has been deprecated and replaced by the name
-   * field.
+   * Required. Deprecated. The name of the cluster. This field has been deprecated and replaced by
+   * the name field.
    * @return value or {@code null} for none
    */
   public java.lang.String getClusterId() {
@@ -80,8 +81,8 @@ public final class SetNetworkPolicyRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * Deprecated. The name of the cluster. This field has been deprecated and replaced by the name
-   * field.
+   * Required. Deprecated. The name of the cluster. This field has been deprecated and replaced by
+   * the name field.
    * @param clusterId clusterId or {@code null} for none
    */
   public SetNetworkPolicyRequest setClusterId(java.lang.String clusterId) {
@@ -109,7 +110,7 @@ public final class SetNetworkPolicyRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * Configuration options for the NetworkPolicy feature.
+   * Required. Configuration options for the NetworkPolicy feature.
    * @return value or {@code null} for none
    */
   public NetworkPolicy getNetworkPolicy() {
@@ -117,7 +118,7 @@ public final class SetNetworkPolicyRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * Configuration options for the NetworkPolicy feature.
+   * Required. Configuration options for the NetworkPolicy feature.
    * @param networkPolicy networkPolicy or {@code null} for none
    */
   public SetNetworkPolicyRequest setNetworkPolicy(NetworkPolicy networkPolicy) {
@@ -126,7 +127,7 @@ public final class SetNetworkPolicyRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * Deprecated. The Google Developers Console [project ID or project
+   * Required. Deprecated. The Google Developers Console [project ID or project
    * number](https://developers.google.com/console/help/new/#projectnumber). This field has been
    * deprecated and replaced by the name field.
    * @return value or {@code null} for none
@@ -136,7 +137,7 @@ public final class SetNetworkPolicyRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * Deprecated. The Google Developers Console [project ID or project
+   * Required. Deprecated. The Google Developers Console [project ID or project
    * number](https://developers.google.com/console/help/new/#projectnumber). This field has been
    * deprecated and replaced by the name field.
    * @param projectId projectId or {@code null} for none
@@ -147,8 +148,9 @@ public final class SetNetworkPolicyRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
-   * which the cluster resides. This field has been deprecated and replaced by the name field.
+   * Required. Deprecated. The name of the Google Compute Engine
+   * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
+   * deprecated and replaced by the name field.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -156,8 +158,9 @@ public final class SetNetworkPolicyRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
-   * which the cluster resides. This field has been deprecated and replaced by the name field.
+   * Required. Deprecated. The name of the Google Compute Engine
+   * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
+   * deprecated and replaced by the name field.
    * @param zone zone or {@code null} for none
    */
   public SetNetworkPolicyRequest setZone(java.lang.String zone) {

@@ -31,15 +31,15 @@ package com.google.api.services.container.model;
 public final class SetMasterAuthRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The exact form of action to be taken on the master auth.
+   * Required. The exact form of action to be taken on the master auth.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String action;
 
   /**
-   * Deprecated. The name of the cluster to upgrade. This field has been deprecated and replaced by
-   * the name field.
+   * Required. Deprecated. The name of the cluster to upgrade. This field has been deprecated and
+   * replaced by the name field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +54,7 @@ public final class SetMasterAuthRequest extends com.google.api.client.json.Gener
   private java.lang.String name;
 
   /**
-   * Deprecated. The Google Developers Console [project ID or project
+   * Required. Deprecated. The Google Developers Console [project ID or project
    * number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
    * replaced by the name field.
    * The value may be {@code null}.
@@ -63,22 +63,23 @@ public final class SetMasterAuthRequest extends com.google.api.client.json.Gener
   private java.lang.String projectId;
 
   /**
-   * A description of the update.
+   * Required. A description of the update.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private MasterAuth update;
 
   /**
-   * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
-   * which the cluster resides. This field has been deprecated and replaced by the name field.
+   * Required. Deprecated. The name of the Google Compute Engine
+   * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
+   * deprecated and replaced by the name field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
 
   /**
-   * The exact form of action to be taken on the master auth.
+   * Required. The exact form of action to be taken on the master auth.
    * @return value or {@code null} for none
    */
   public java.lang.String getAction() {
@@ -86,7 +87,7 @@ public final class SetMasterAuthRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * The exact form of action to be taken on the master auth.
+   * Required. The exact form of action to be taken on the master auth.
    * @param action action or {@code null} for none
    */
   public SetMasterAuthRequest setAction(java.lang.String action) {
@@ -95,8 +96,8 @@ public final class SetMasterAuthRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Deprecated. The name of the cluster to upgrade. This field has been deprecated and replaced by
-   * the name field.
+   * Required. Deprecated. The name of the cluster to upgrade. This field has been deprecated and
+   * replaced by the name field.
    * @return value or {@code null} for none
    */
   public java.lang.String getClusterId() {
@@ -104,8 +105,8 @@ public final class SetMasterAuthRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Deprecated. The name of the cluster to upgrade. This field has been deprecated and replaced by
-   * the name field.
+   * Required. Deprecated. The name of the cluster to upgrade. This field has been deprecated and
+   * replaced by the name field.
    * @param clusterId clusterId or {@code null} for none
    */
   public SetMasterAuthRequest setClusterId(java.lang.String clusterId) {
@@ -133,7 +134,7 @@ public final class SetMasterAuthRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Deprecated. The Google Developers Console [project ID or project
+   * Required. Deprecated. The Google Developers Console [project ID or project
    * number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
    * replaced by the name field.
    * @return value or {@code null} for none
@@ -143,7 +144,7 @@ public final class SetMasterAuthRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Deprecated. The Google Developers Console [project ID or project
+   * Required. Deprecated. The Google Developers Console [project ID or project
    * number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
    * replaced by the name field.
    * @param projectId projectId or {@code null} for none
@@ -154,7 +155,7 @@ public final class SetMasterAuthRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * A description of the update.
+   * Required. A description of the update.
    * @return value or {@code null} for none
    */
   public MasterAuth getUpdate() {
@@ -162,7 +163,7 @@ public final class SetMasterAuthRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * A description of the update.
+   * Required. A description of the update.
    * @param update update or {@code null} for none
    */
   public SetMasterAuthRequest setUpdate(MasterAuth update) {
@@ -171,8 +172,9 @@ public final class SetMasterAuthRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
-   * which the cluster resides. This field has been deprecated and replaced by the name field.
+   * Required. Deprecated. The name of the Google Compute Engine
+   * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
+   * deprecated and replaced by the name field.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -180,8 +182,9 @@ public final class SetMasterAuthRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
-   * which the cluster resides. This field has been deprecated and replaced by the name field.
+   * Required. Deprecated. The name of the Google Compute Engine
+   * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
+   * deprecated and replaced by the name field.
    * @param zone zone or {@code null} for none
    */
   public SetMasterAuthRequest setZone(java.lang.String zone) {

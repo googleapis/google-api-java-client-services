@@ -32,6 +32,13 @@ package com.google.api.services.container.model;
 public final class AddonsConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Configuration for the Cloud Run addon, which allows the user to use a managed Knative service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudRunConfig cloudRunConfig;
+
+  /**
    * Configuration for the horizontal pod autoscaling feature, which increases or decreases the
    * number of replica pods a replication controller has based on the resource usage of the existing
    * pods.
@@ -65,6 +72,23 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private NetworkPolicyConfig networkPolicyConfig;
+
+  /**
+   * Configuration for the Cloud Run addon, which allows the user to use a managed Knative service.
+   * @return value or {@code null} for none
+   */
+  public CloudRunConfig getCloudRunConfig() {
+    return cloudRunConfig;
+  }
+
+  /**
+   * Configuration for the Cloud Run addon, which allows the user to use a managed Knative service.
+   * @param cloudRunConfig cloudRunConfig or {@code null} for none
+   */
+  public AddonsConfig setCloudRunConfig(CloudRunConfig cloudRunConfig) {
+    this.cloudRunConfig = cloudRunConfig;
+    return this;
+  }
 
   /**
    * Configuration for the horizontal pod autoscaling feature, which increases or decreases the

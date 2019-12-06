@@ -17,7 +17,7 @@
 package com.google.api.services.policytroubleshooter.v1beta.model;
 
 /**
- * TroubleshootIamPolicyRequest is used in TroubleshootIamPolicy
+ * Request for TroubleshootIamPolicy.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Policy Troubleshooter API. For a detailed explanation
@@ -31,16 +31,14 @@ package com.google.api.services.policytroubleshooter.v1beta.model;
 public final class GoogleCloudPolicytroubleshooterV1betaTroubleshootIamPolicyRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Collection of attributes for example user, permission, resource that define troubleshooter's
-   * input.
+   * The information to use for checking whether a member has a permission for a resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudPolicytroubleshooterV1betaAccessTuple accessTuple;
 
   /**
-   * Collection of attributes for example user, permission, resource that define troubleshooter's
-   * input.
+   * The information to use for checking whether a member has a permission for a resource.
    * @return value or {@code null} for none
    */
   public GoogleCloudPolicytroubleshooterV1betaAccessTuple getAccessTuple() {
@@ -48,8 +46,7 @@ public final class GoogleCloudPolicytroubleshooterV1betaTroubleshootIamPolicyReq
   }
 
   /**
-   * Collection of attributes for example user, permission, resource that define troubleshooter's
-   * input.
+   * The information to use for checking whether a member has a permission for a resource.
    * @param accessTuple accessTuple or {@code null} for none
    */
   public GoogleCloudPolicytroubleshooterV1betaTroubleshootIamPolicyRequest setAccessTuple(GoogleCloudPolicytroubleshooterV1betaAccessTuple accessTuple) {

@@ -17,7 +17,7 @@
 package com.google.api.services.policytroubleshooter.v1beta.model;
 
 /**
- * Encapsulated membership and the relevance of that membership with respect to BindingExplanation.
+ * Details about whether the binding includes the member.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Policy Troubleshooter API. For a detailed explanation
@@ -31,21 +31,21 @@ package com.google.api.services.policytroubleshooter.v1beta.model;
 public final class GoogleCloudPolicytroubleshooterV1betaBindingExplanationAnnotatedMembership extends com.google.api.client.json.GenericJson {
 
   /**
-   * Membership status.
+   * Indicates whether the binding includes the member.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String membership;
 
   /**
-   * Relevance of this membership with respect to BindingExplanation.
+   * The relevance of the member's status to the overall determination for the binding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String relevance;
 
   /**
-   * Membership status.
+   * Indicates whether the binding includes the member.
    * @return value or {@code null} for none
    */
   public java.lang.String getMembership() {
@@ -53,7 +53,7 @@ public final class GoogleCloudPolicytroubleshooterV1betaBindingExplanationAnnota
   }
 
   /**
-   * Membership status.
+   * Indicates whether the binding includes the member.
    * @param membership membership or {@code null} for none
    */
   public GoogleCloudPolicytroubleshooterV1betaBindingExplanationAnnotatedMembership setMembership(java.lang.String membership) {
@@ -62,7 +62,7 @@ public final class GoogleCloudPolicytroubleshooterV1betaBindingExplanationAnnota
   }
 
   /**
-   * Relevance of this membership with respect to BindingExplanation.
+   * The relevance of the member's status to the overall determination for the binding.
    * @return value or {@code null} for none
    */
   public java.lang.String getRelevance() {
@@ -70,7 +70,7 @@ public final class GoogleCloudPolicytroubleshooterV1betaBindingExplanationAnnota
   }
 
   /**
-   * Relevance of this membership with respect to BindingExplanation.
+   * The relevance of the member's status to the overall determination for the binding.
    * @param relevance relevance or {@code null} for none
    */
   public GoogleCloudPolicytroubleshooterV1betaBindingExplanationAnnotatedMembership setRelevance(java.lang.String relevance) {

@@ -17,7 +17,7 @@
 package com.google.api.services.policytroubleshooter.v1beta.model;
 
 /**
- * Binding Explanation.
+ * Details about how a binding in a policy affects a member's ability to use a permission.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Policy Troubleshooter API. For a detailed explanation
@@ -31,62 +31,87 @@ package com.google.api.services.policytroubleshooter.v1beta.model;
 public final class GoogleCloudPolicytroubleshooterV1betaBindingExplanation extends com.google.api.client.json.GenericJson {
 
   /**
-   * REQUIRED: Access decision for this binding.
+   * Indicates whether _this binding_ provides the specified permission to the specified member for
+   * the specified resource.
+   *
+   * This field does _not_ indicate whether the member actually has the permission for the resource.
+   * There might be another binding that overrides this binding. To determine whether the member
+   * actually has the permission, use the `access` field in the TroubleshootIamPolicyResponse.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String access;
 
   /**
-   * The condition which needs to be satisfied in order for this binding to grant the role to the
-   * principal. See https://cloud.google.com/iam/docs/conditions-base
+   * A condition expression that prevents access unless the expression evaluates to `true`.
+   *
+   * To learn about IAM Conditions, see http://cloud.google.com/iam/help/conditions/overview.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleTypeExpr condition;
 
   /**
-   * For each member in the binding, provides information whether or not the principal from the
-   * request is included in the member by which the CheckResult is keyed. May indicate that the
-   * caller has no access to this information. example key: 'group:cloud-iam-assist-eng@google.com'
-   * example value '{NOT_GRANTED, HIGH}
+   * Indicates whether each member in the binding includes the member specified in the request,
+   * either directly or indirectly. Each key identifies a member in the binding, and each value
+   * indicates whether the member in the binding includes the member in the request.
+   *
+   * For example, suppose that a binding includes the following members:
+   *
+   * * `user:alice@example.com` * `group:product-eng@example.com`
+   *
+   * You want to troubleshoot access for `user:bob@example.com`. This user is a member of the group
+   * `group:product-eng@example.com`.
+   *
+   * For the first member in the binding, the key is `user:alice@example.com`, and the `membership`
+   * field in the value is set to `MEMBERSHIP_NOT_INCLUDED`.
+   *
+   * For the second member in the binding, the key is `group:product-eng@example.com`, and the
+   * `membership` field in the value is set to `MEMBERSHIP_INCLUDED`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, GoogleCloudPolicytroubleshooterV1betaBindingExplanationAnnotatedMembership> memberships;
 
   /**
-   * Bubbles up role_permission level relavance to BindingExplanation object. If role permission is
-   * NORMAL, then binding relevance is NORMAL. If role permission is HIGH, then binding relevance is
-   * HIGH.
+   * The relevance of this binding to the overall determination for the entire policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String relevance;
 
   /**
-   * The role that this binding grants in the policy. for example "roles/compute.serviceAgent"
+   * The role that this binding grants. For example, `roles/compute.serviceAgent`.
+   *
+   * For a complete list of predefined IAM roles, as well as the permissions in each role, see
+   * https://cloud.google.com/iam/help/roles/reference.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String role;
 
   /**
-   * Whether the role of this binding contains the checked permission
+   * Indicates whether the role granted by this binding contains the specified permission.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String rolePermission;
 
   /**
-   * The relevance of this permission with respect to the BindingExplanation.
+   * The relevance of the permission's existence, or nonexistence, in the role to the overall
+   * determination for the entire policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String rolePermissionRelevance;
 
   /**
-   * REQUIRED: Access decision for this binding.
+   * Indicates whether _this binding_ provides the specified permission to the specified member for
+   * the specified resource.
+   *
+   * This field does _not_ indicate whether the member actually has the permission for the resource.
+   * There might be another binding that overrides this binding. To determine whether the member
+   * actually has the permission, use the `access` field in the TroubleshootIamPolicyResponse.
    * @return value or {@code null} for none
    */
   public java.lang.String getAccess() {
@@ -94,7 +119,12 @@ public final class GoogleCloudPolicytroubleshooterV1betaBindingExplanation exten
   }
 
   /**
-   * REQUIRED: Access decision for this binding.
+   * Indicates whether _this binding_ provides the specified permission to the specified member for
+   * the specified resource.
+   *
+   * This field does _not_ indicate whether the member actually has the permission for the resource.
+   * There might be another binding that overrides this binding. To determine whether the member
+   * actually has the permission, use the `access` field in the TroubleshootIamPolicyResponse.
    * @param access access or {@code null} for none
    */
   public GoogleCloudPolicytroubleshooterV1betaBindingExplanation setAccess(java.lang.String access) {
@@ -103,8 +133,9 @@ public final class GoogleCloudPolicytroubleshooterV1betaBindingExplanation exten
   }
 
   /**
-   * The condition which needs to be satisfied in order for this binding to grant the role to the
-   * principal. See https://cloud.google.com/iam/docs/conditions-base
+   * A condition expression that prevents access unless the expression evaluates to `true`.
+   *
+   * To learn about IAM Conditions, see http://cloud.google.com/iam/help/conditions/overview.
    * @return value or {@code null} for none
    */
   public GoogleTypeExpr getCondition() {
@@ -112,8 +143,9 @@ public final class GoogleCloudPolicytroubleshooterV1betaBindingExplanation exten
   }
 
   /**
-   * The condition which needs to be satisfied in order for this binding to grant the role to the
-   * principal. See https://cloud.google.com/iam/docs/conditions-base
+   * A condition expression that prevents access unless the expression evaluates to `true`.
+   *
+   * To learn about IAM Conditions, see http://cloud.google.com/iam/help/conditions/overview.
    * @param condition condition or {@code null} for none
    */
   public GoogleCloudPolicytroubleshooterV1betaBindingExplanation setCondition(GoogleTypeExpr condition) {
@@ -122,10 +154,22 @@ public final class GoogleCloudPolicytroubleshooterV1betaBindingExplanation exten
   }
 
   /**
-   * For each member in the binding, provides information whether or not the principal from the
-   * request is included in the member by which the CheckResult is keyed. May indicate that the
-   * caller has no access to this information. example key: 'group:cloud-iam-assist-eng@google.com'
-   * example value '{NOT_GRANTED, HIGH}
+   * Indicates whether each member in the binding includes the member specified in the request,
+   * either directly or indirectly. Each key identifies a member in the binding, and each value
+   * indicates whether the member in the binding includes the member in the request.
+   *
+   * For example, suppose that a binding includes the following members:
+   *
+   * * `user:alice@example.com` * `group:product-eng@example.com`
+   *
+   * You want to troubleshoot access for `user:bob@example.com`. This user is a member of the group
+   * `group:product-eng@example.com`.
+   *
+   * For the first member in the binding, the key is `user:alice@example.com`, and the `membership`
+   * field in the value is set to `MEMBERSHIP_NOT_INCLUDED`.
+   *
+   * For the second member in the binding, the key is `group:product-eng@example.com`, and the
+   * `membership` field in the value is set to `MEMBERSHIP_INCLUDED`.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, GoogleCloudPolicytroubleshooterV1betaBindingExplanationAnnotatedMembership> getMemberships() {
@@ -133,10 +177,22 @@ public final class GoogleCloudPolicytroubleshooterV1betaBindingExplanation exten
   }
 
   /**
-   * For each member in the binding, provides information whether or not the principal from the
-   * request is included in the member by which the CheckResult is keyed. May indicate that the
-   * caller has no access to this information. example key: 'group:cloud-iam-assist-eng@google.com'
-   * example value '{NOT_GRANTED, HIGH}
+   * Indicates whether each member in the binding includes the member specified in the request,
+   * either directly or indirectly. Each key identifies a member in the binding, and each value
+   * indicates whether the member in the binding includes the member in the request.
+   *
+   * For example, suppose that a binding includes the following members:
+   *
+   * * `user:alice@example.com` * `group:product-eng@example.com`
+   *
+   * You want to troubleshoot access for `user:bob@example.com`. This user is a member of the group
+   * `group:product-eng@example.com`.
+   *
+   * For the first member in the binding, the key is `user:alice@example.com`, and the `membership`
+   * field in the value is set to `MEMBERSHIP_NOT_INCLUDED`.
+   *
+   * For the second member in the binding, the key is `group:product-eng@example.com`, and the
+   * `membership` field in the value is set to `MEMBERSHIP_INCLUDED`.
    * @param memberships memberships or {@code null} for none
    */
   public GoogleCloudPolicytroubleshooterV1betaBindingExplanation setMemberships(java.util.Map<String, GoogleCloudPolicytroubleshooterV1betaBindingExplanationAnnotatedMembership> memberships) {
@@ -145,9 +201,7 @@ public final class GoogleCloudPolicytroubleshooterV1betaBindingExplanation exten
   }
 
   /**
-   * Bubbles up role_permission level relavance to BindingExplanation object. If role permission is
-   * NORMAL, then binding relevance is NORMAL. If role permission is HIGH, then binding relevance is
-   * HIGH.
+   * The relevance of this binding to the overall determination for the entire policy.
    * @return value or {@code null} for none
    */
   public java.lang.String getRelevance() {
@@ -155,9 +209,7 @@ public final class GoogleCloudPolicytroubleshooterV1betaBindingExplanation exten
   }
 
   /**
-   * Bubbles up role_permission level relavance to BindingExplanation object. If role permission is
-   * NORMAL, then binding relevance is NORMAL. If role permission is HIGH, then binding relevance is
-   * HIGH.
+   * The relevance of this binding to the overall determination for the entire policy.
    * @param relevance relevance or {@code null} for none
    */
   public GoogleCloudPolicytroubleshooterV1betaBindingExplanation setRelevance(java.lang.String relevance) {
@@ -166,7 +218,10 @@ public final class GoogleCloudPolicytroubleshooterV1betaBindingExplanation exten
   }
 
   /**
-   * The role that this binding grants in the policy. for example "roles/compute.serviceAgent"
+   * The role that this binding grants. For example, `roles/compute.serviceAgent`.
+   *
+   * For a complete list of predefined IAM roles, as well as the permissions in each role, see
+   * https://cloud.google.com/iam/help/roles/reference.
    * @return value or {@code null} for none
    */
   public java.lang.String getRole() {
@@ -174,7 +229,10 @@ public final class GoogleCloudPolicytroubleshooterV1betaBindingExplanation exten
   }
 
   /**
-   * The role that this binding grants in the policy. for example "roles/compute.serviceAgent"
+   * The role that this binding grants. For example, `roles/compute.serviceAgent`.
+   *
+   * For a complete list of predefined IAM roles, as well as the permissions in each role, see
+   * https://cloud.google.com/iam/help/roles/reference.
    * @param role role or {@code null} for none
    */
   public GoogleCloudPolicytroubleshooterV1betaBindingExplanation setRole(java.lang.String role) {
@@ -183,7 +241,7 @@ public final class GoogleCloudPolicytroubleshooterV1betaBindingExplanation exten
   }
 
   /**
-   * Whether the role of this binding contains the checked permission
+   * Indicates whether the role granted by this binding contains the specified permission.
    * @return value or {@code null} for none
    */
   public java.lang.String getRolePermission() {
@@ -191,7 +249,7 @@ public final class GoogleCloudPolicytroubleshooterV1betaBindingExplanation exten
   }
 
   /**
-   * Whether the role of this binding contains the checked permission
+   * Indicates whether the role granted by this binding contains the specified permission.
    * @param rolePermission rolePermission or {@code null} for none
    */
   public GoogleCloudPolicytroubleshooterV1betaBindingExplanation setRolePermission(java.lang.String rolePermission) {
@@ -200,7 +258,8 @@ public final class GoogleCloudPolicytroubleshooterV1betaBindingExplanation exten
   }
 
   /**
-   * The relevance of this permission with respect to the BindingExplanation.
+   * The relevance of the permission's existence, or nonexistence, in the role to the overall
+   * determination for the entire policy.
    * @return value or {@code null} for none
    */
   public java.lang.String getRolePermissionRelevance() {
@@ -208,7 +267,8 @@ public final class GoogleCloudPolicytroubleshooterV1betaBindingExplanation exten
   }
 
   /**
-   * The relevance of this permission with respect to the BindingExplanation.
+   * The relevance of the permission's existence, or nonexistence, in the role to the overall
+   * determination for the entire policy.
    * @param rolePermissionRelevance rolePermissionRelevance or {@code null} for none
    */
   public GoogleCloudPolicytroubleshooterV1betaBindingExplanation setRolePermissionRelevance(java.lang.String rolePermissionRelevance) {

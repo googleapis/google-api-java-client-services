@@ -63,6 +63,13 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   private java.lang.String networkUri;
 
   /**
+   * Optional. Reservation Affinity for consuming Zonal reservation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReservationAffinity reservationAffinity;
+
+  /**
    * Optional. The service account of the instances. Defaults to the default Compute Engine service
    * account. Custom service accounts need permissions equivalent to the following IAM roles:
    * roles/logging.logWriter roles/storage.objectAdmin(see
@@ -187,6 +194,23 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
    */
   public GceClusterConfig setNetworkUri(java.lang.String networkUri) {
     this.networkUri = networkUri;
+    return this;
+  }
+
+  /**
+   * Optional. Reservation Affinity for consuming Zonal reservation.
+   * @return value or {@code null} for none
+   */
+  public ReservationAffinity getReservationAffinity() {
+    return reservationAffinity;
+  }
+
+  /**
+   * Optional. Reservation Affinity for consuming Zonal reservation.
+   * @param reservationAffinity reservationAffinity or {@code null} for none
+   */
+  public GceClusterConfig setReservationAffinity(ReservationAffinity reservationAffinity) {
+    this.reservationAffinity = reservationAffinity;
     return this;
   }
 

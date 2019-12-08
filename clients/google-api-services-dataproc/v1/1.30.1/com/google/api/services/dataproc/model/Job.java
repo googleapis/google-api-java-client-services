@@ -46,14 +46,12 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private java.lang.String driverOutputResourceUri;
 
   /**
-   * Job is a Hadoop job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private HadoopJob hadoopJob;
 
   /**
-   * Job is a Hive job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,7 +76,6 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Job is a Pig job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +89,6 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private JobPlacement placement;
 
   /**
-   * Job is a Pyspark job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,21 +111,18 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private JobScheduling scheduling;
 
   /**
-   * Job is a Spark job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SparkJob sparkJob;
 
   /**
-   * Job is a SparkR job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SparkRJob sparkRJob;
 
   /**
-   * Job is a SparkSql job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -197,7 +190,6 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Job is a Hadoop job.
    * @return value or {@code null} for none
    */
   public HadoopJob getHadoopJob() {
@@ -205,7 +197,6 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Job is a Hadoop job.
    * @param hadoopJob hadoopJob or {@code null} for none
    */
   public Job setHadoopJob(HadoopJob hadoopJob) {
@@ -214,7 +205,6 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Job is a Hive job.
    * @return value or {@code null} for none
    */
   public HiveJob getHiveJob() {
@@ -222,7 +212,6 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Job is a Hive job.
    * @param hiveJob hiveJob or {@code null} for none
    */
   public Job setHiveJob(HiveJob hiveJob) {
@@ -273,7 +262,6 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Job is a Pig job.
    * @return value or {@code null} for none
    */
   public PigJob getPigJob() {
@@ -281,7 +269,6 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Job is a Pig job.
    * @param pigJob pigJob or {@code null} for none
    */
   public Job setPigJob(PigJob pigJob) {
@@ -307,7 +294,6 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Job is a Pyspark job.
    * @return value or {@code null} for none
    */
   public PySparkJob getPysparkJob() {
@@ -315,7 +301,6 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Job is a Pyspark job.
    * @param pysparkJob pysparkJob or {@code null} for none
    */
   public Job setPysparkJob(PySparkJob pysparkJob) {
@@ -362,7 +347,6 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Job is a Spark job.
    * @return value or {@code null} for none
    */
   public SparkJob getSparkJob() {
@@ -370,7 +354,6 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Job is a Spark job.
    * @param sparkJob sparkJob or {@code null} for none
    */
   public Job setSparkJob(SparkJob sparkJob) {
@@ -379,7 +362,6 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Job is a SparkR job.
    * @return value or {@code null} for none
    */
   public SparkRJob getSparkRJob() {
@@ -387,7 +369,6 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Job is a SparkR job.
    * @param sparkRJob sparkRJob or {@code null} for none
    */
   public Job setSparkRJob(SparkRJob sparkRJob) {
@@ -396,7 +377,6 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Job is a SparkSql job.
    * @return value or {@code null} for none
    */
   public SparkSqlJob getSparkSqlJob() {
@@ -404,7 +384,6 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Job is a SparkSql job.
    * @param sparkSqlJob sparkSqlJob or {@code null} for none
    */
   public Job setSparkSqlJob(SparkSqlJob sparkSqlJob) {

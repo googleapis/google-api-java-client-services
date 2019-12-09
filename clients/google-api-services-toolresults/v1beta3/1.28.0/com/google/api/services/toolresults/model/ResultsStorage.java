@@ -17,7 +17,7 @@
 package com.google.api.services.toolresults.model;
 
 /**
- * Details for an outcome with a SUCCESS outcome summary. LINT.IfChange
+ * The storage for test results.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Tool Results API. For a detailed explanation
@@ -28,40 +28,64 @@ package com.google.api.services.toolresults.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SuccessDetail extends com.google.api.client.json.GenericJson {
+public final class ResultsStorage extends com.google.api.client.json.GenericJson {
 
   /**
-   * If a native process other than the app crashed.
+   * The root directory for test results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean otherNativeCrash;
+  private FileReference resultsStoragePath;
 
   /**
-   * If a native process other than the app crashed.
+   * The path to the Xunit XML file.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FileReference xunitXmlFile;
+
+  /**
+   * The root directory for test results.
    * @return value or {@code null} for none
    */
-  public java.lang.Boolean getOtherNativeCrash() {
-    return otherNativeCrash;
+  public FileReference getResultsStoragePath() {
+    return resultsStoragePath;
   }
 
   /**
-   * If a native process other than the app crashed.
-   * @param otherNativeCrash otherNativeCrash or {@code null} for none
+   * The root directory for test results.
+   * @param resultsStoragePath resultsStoragePath or {@code null} for none
    */
-  public SuccessDetail setOtherNativeCrash(java.lang.Boolean otherNativeCrash) {
-    this.otherNativeCrash = otherNativeCrash;
+  public ResultsStorage setResultsStoragePath(FileReference resultsStoragePath) {
+    this.resultsStoragePath = resultsStoragePath;
+    return this;
+  }
+
+  /**
+   * The path to the Xunit XML file.
+   * @return value or {@code null} for none
+   */
+  public FileReference getXunitXmlFile() {
+    return xunitXmlFile;
+  }
+
+  /**
+   * The path to the Xunit XML file.
+   * @param xunitXmlFile xunitXmlFile or {@code null} for none
+   */
+  public ResultsStorage setXunitXmlFile(FileReference xunitXmlFile) {
+    this.xunitXmlFile = xunitXmlFile;
     return this;
   }
 
   @Override
-  public SuccessDetail set(String fieldName, Object value) {
-    return (SuccessDetail) super.set(fieldName, value);
+  public ResultsStorage set(String fieldName, Object value) {
+    return (ResultsStorage) super.set(fieldName, value);
   }
 
   @Override
-  public SuccessDetail clone() {
-    return (SuccessDetail) super.clone();
+  public ResultsStorage clone() {
+    return (ResultsStorage) super.clone();
   }
 
 }

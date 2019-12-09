@@ -17,7 +17,7 @@
 package com.google.api.services.toolresults.model;
 
 /**
- * Details for an outcome with a SUCCESS outcome summary. LINT.IfChange
+ * Result summary for a shard in an environment.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Tool Results API. For a detailed explanation
@@ -28,40 +28,40 @@ package com.google.api.services.toolresults.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SuccessDetail extends com.google.api.client.json.GenericJson {
+public final class ShardSummary extends com.google.api.client.json.GenericJson {
 
   /**
-   * If a native process other than the app crashed.
+   * Merged result of the shard.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean otherNativeCrash;
+  private MergedResult shardResult;
 
   /**
-   * If a native process other than the app crashed.
+   * Merged result of the shard.
    * @return value or {@code null} for none
    */
-  public java.lang.Boolean getOtherNativeCrash() {
-    return otherNativeCrash;
+  public MergedResult getShardResult() {
+    return shardResult;
   }
 
   /**
-   * If a native process other than the app crashed.
-   * @param otherNativeCrash otherNativeCrash or {@code null} for none
+   * Merged result of the shard.
+   * @param shardResult shardResult or {@code null} for none
    */
-  public SuccessDetail setOtherNativeCrash(java.lang.Boolean otherNativeCrash) {
-    this.otherNativeCrash = otherNativeCrash;
+  public ShardSummary setShardResult(MergedResult shardResult) {
+    this.shardResult = shardResult;
     return this;
   }
 
   @Override
-  public SuccessDetail set(String fieldName, Object value) {
-    return (SuccessDetail) super.set(fieldName, value);
+  public ShardSummary set(String fieldName, Object value) {
+    return (ShardSummary) super.set(fieldName, value);
   }
 
   @Override
-  public SuccessDetail clone() {
-    return (SuccessDetail) super.clone();
+  public ShardSummary clone() {
+    return (ShardSummary) super.clone();
   }
 
 }

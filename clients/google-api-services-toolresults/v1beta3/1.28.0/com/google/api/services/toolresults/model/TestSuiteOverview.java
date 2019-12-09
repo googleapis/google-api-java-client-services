@@ -60,6 +60,16 @@ public final class TestSuiteOverview extends com.google.api.client.json.GenericJ
   private java.lang.Integer failureCount;
 
   /**
+   * Number of flaky test cases, set by the service by rolling up flaky test attempts.
+   *
+   * Present only for rollup test suite overview at environment level. A step cannot have flaky test
+   * cases.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer flakyCount;
+
+  /**
    * The name of the test suite.
    *
    * - In create/response: always set - In update request: never
@@ -157,6 +167,29 @@ public final class TestSuiteOverview extends com.google.api.client.json.GenericJ
    */
   public TestSuiteOverview setFailureCount(java.lang.Integer failureCount) {
     this.failureCount = failureCount;
+    return this;
+  }
+
+  /**
+   * Number of flaky test cases, set by the service by rolling up flaky test attempts.
+   *
+   * Present only for rollup test suite overview at environment level. A step cannot have flaky test
+   * cases.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getFlakyCount() {
+    return flakyCount;
+  }
+
+  /**
+   * Number of flaky test cases, set by the service by rolling up flaky test attempts.
+   *
+   * Present only for rollup test suite overview at environment level. A step cannot have flaky test
+   * cases.
+   * @param flakyCount flakyCount or {@code null} for none
+   */
+  public TestSuiteOverview setFlakyCount(java.lang.Integer flakyCount) {
+    this.flakyCount = flakyCount;
     return this;
   }
 

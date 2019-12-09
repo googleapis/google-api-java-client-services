@@ -42,4 +42,4 @@ dependencies {
 
 [javadoc]: https://googleapis.dev/java/google-api-services-firestore/latest/index.html
 [google-api-client]: https://github.com/googleapis/google-api-java-client/
-[api-explorer]: https://developers.google.com/apis-explorer/#p/abusiveexperiencereport/v1/
+[api-explorer]: https://developers.google.com/apis-explorer/#p/firestore/v1/

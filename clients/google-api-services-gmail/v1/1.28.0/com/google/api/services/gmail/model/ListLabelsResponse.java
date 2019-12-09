@@ -30,7 +30,8 @@ package com.google.api.services.gmail.model;
 public final class ListLabelsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of labels.
+   * List of labels. Note that each label resource only contains an id, name, messageListVisibility,
+   * labelListVisibility, and type. The labels.get method can fetch additional label details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,7 +44,8 @@ public final class ListLabelsResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * List of labels.
+   * List of labels. Note that each label resource only contains an id, name, messageListVisibility,
+   * labelListVisibility, and type. The labels.get method can fetch additional label details.
    * @return value or {@code null} for none
    */
   public java.util.List<Label> getLabels() {
@@ -51,7 +53,8 @@ public final class ListLabelsResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * List of labels.
+   * List of labels. Note that each label resource only contains an id, name, messageListVisibility,
+   * labelListVisibility, and type. The labels.get method can fetch additional label details.
    * @param labels labels or {@code null} for none
    */
   public ListLabelsResponse setLabels(java.util.List<Label> labels) {

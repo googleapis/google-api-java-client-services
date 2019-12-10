@@ -37,14 +37,14 @@ public final class CustomEvent extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AnnotateClickEvent annotateClickEvent;
+  private CustomEventClickAnnotation annotateClickEvent;
 
   /**
    * Custom variables associated with the event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<CustomVariables> customVariables;
+  private java.util.List<CustomVariable> customVariables;
 
   /**
    * The type of event. If INSERT, the fields in insertEvent need to be populated. If
@@ -67,7 +67,7 @@ public final class CustomEvent extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private InsertEvent insertEvent;
+  private CustomEventInsert insertEvent;
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string "dfareporting#customEvent".
@@ -94,7 +94,7 @@ public final class CustomEvent extends com.google.api.client.json.GenericJson {
    * Annotate a click event.
    * @return value or {@code null} for none
    */
-  public AnnotateClickEvent getAnnotateClickEvent() {
+  public CustomEventClickAnnotation getAnnotateClickEvent() {
     return annotateClickEvent;
   }
 
@@ -102,7 +102,7 @@ public final class CustomEvent extends com.google.api.client.json.GenericJson {
    * Annotate a click event.
    * @param annotateClickEvent annotateClickEvent or {@code null} for none
    */
-  public CustomEvent setAnnotateClickEvent(AnnotateClickEvent annotateClickEvent) {
+  public CustomEvent setAnnotateClickEvent(CustomEventClickAnnotation annotateClickEvent) {
     this.annotateClickEvent = annotateClickEvent;
     return this;
   }
@@ -111,7 +111,7 @@ public final class CustomEvent extends com.google.api.client.json.GenericJson {
    * Custom variables associated with the event.
    * @return value or {@code null} for none
    */
-  public java.util.List<CustomVariables> getCustomVariables() {
+  public java.util.List<CustomVariable> getCustomVariables() {
     return customVariables;
   }
 
@@ -119,7 +119,7 @@ public final class CustomEvent extends com.google.api.client.json.GenericJson {
    * Custom variables associated with the event.
    * @param customVariables customVariables or {@code null} for none
    */
-  public CustomEvent setCustomVariables(java.util.List<CustomVariables> customVariables) {
+  public CustomEvent setCustomVariables(java.util.List<CustomVariable> customVariables) {
     this.customVariables = customVariables;
     return this;
   }
@@ -166,7 +166,7 @@ public final class CustomEvent extends com.google.api.client.json.GenericJson {
    * Insert custom event.
    * @return value or {@code null} for none
    */
-  public InsertEvent getInsertEvent() {
+  public CustomEventInsert getInsertEvent() {
     return insertEvent;
   }
 
@@ -174,7 +174,7 @@ public final class CustomEvent extends com.google.api.client.json.GenericJson {
    * Insert custom event.
    * @param insertEvent insertEvent or {@code null} for none
    */
-  public CustomEvent setInsertEvent(InsertEvent insertEvent) {
+  public CustomEvent setInsertEvent(CustomEventInsert insertEvent) {
     this.insertEvent = insertEvent;
     return this;
   }

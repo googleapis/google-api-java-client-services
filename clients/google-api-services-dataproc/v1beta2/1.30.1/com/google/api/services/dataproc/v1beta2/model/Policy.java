@@ -70,8 +70,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * put that etag in the request to setIamPolicy to ensure that their change will be applied to the
    * same version of the policy.If no etag is provided in the call to setIamPolicy, then the
    * existing policy is overwritten. Due to blind-set semantics of an etag-less policy,
-   * 'setIamPolicy' will not fail even if either of incoming or stored policy does not meet the
-   * version requirements.
+   * 'setIamPolicy' will not fail even if the incoming policy version does not meet the requirements
+   * for modifying the stored policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,9 +81,10 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * Specifies the format of the policy.Valid values are 0, 1, and 3. Requests specifying an invalid
    * value will be rejected.Operations affecting conditional bindings must specify version 3. This
    * can be either setting a conditional policy, modifying a conditional binding, or removing a
-   * conditional binding from the stored conditional policy. Operations on non-conditional policies
-   * may specify any valid value or leave the field unset.If no etag is provided in the call to
-   * setIamPolicy, any version compliance checks on the incoming and/or stored policy is skipped.
+   * binding (conditional or unconditional) from the stored conditional policy. Operations on non-
+   * conditional policies may specify any valid value or leave the field unset.If no etag is
+   * provided in the call to setIamPolicy, version compliance checks against the stored policy is
+   * skipped.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,8 +117,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * put that etag in the request to setIamPolicy to ensure that their change will be applied to the
    * same version of the policy.If no etag is provided in the call to setIamPolicy, then the
    * existing policy is overwritten. Due to blind-set semantics of an etag-less policy,
-   * 'setIamPolicy' will not fail even if either of incoming or stored policy does not meet the
-   * version requirements.
+   * 'setIamPolicy' will not fail even if the incoming policy version does not meet the requirements
+   * for modifying the stored policy.
    * @see #decodeEtag()
    * @return value or {@code null} for none
    */
@@ -133,8 +134,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * put that etag in the request to setIamPolicy to ensure that their change will be applied to the
    * same version of the policy.If no etag is provided in the call to setIamPolicy, then the
    * existing policy is overwritten. Due to blind-set semantics of an etag-less policy,
-   * 'setIamPolicy' will not fail even if either of incoming or stored policy does not meet the
-   * version requirements.
+   * 'setIamPolicy' will not fail even if the incoming policy version does not meet the requirements
+   * for modifying the stored policy.
    * @see #getEtag()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -152,8 +153,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * put that etag in the request to setIamPolicy to ensure that their change will be applied to the
    * same version of the policy.If no etag is provided in the call to setIamPolicy, then the
    * existing policy is overwritten. Due to blind-set semantics of an etag-less policy,
-   * 'setIamPolicy' will not fail even if either of incoming or stored policy does not meet the
-   * version requirements.
+   * 'setIamPolicy' will not fail even if the incoming policy version does not meet the requirements
+   * for modifying the stored policy.
    * @see #encodeEtag()
    * @param etag etag or {@code null} for none
    */
@@ -170,8 +171,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * put that etag in the request to setIamPolicy to ensure that their change will be applied to the
    * same version of the policy.If no etag is provided in the call to setIamPolicy, then the
    * existing policy is overwritten. Due to blind-set semantics of an etag-less policy,
-   * 'setIamPolicy' will not fail even if either of incoming or stored policy does not meet the
-   * version requirements.
+   * 'setIamPolicy' will not fail even if the incoming policy version does not meet the requirements
+   * for modifying the stored policy.
    * @see #setEtag()
    *
    * <p>
@@ -189,9 +190,10 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * Specifies the format of the policy.Valid values are 0, 1, and 3. Requests specifying an invalid
    * value will be rejected.Operations affecting conditional bindings must specify version 3. This
    * can be either setting a conditional policy, modifying a conditional binding, or removing a
-   * conditional binding from the stored conditional policy. Operations on non-conditional policies
-   * may specify any valid value or leave the field unset.If no etag is provided in the call to
-   * setIamPolicy, any version compliance checks on the incoming and/or stored policy is skipped.
+   * binding (conditional or unconditional) from the stored conditional policy. Operations on non-
+   * conditional policies may specify any valid value or leave the field unset.If no etag is
+   * provided in the call to setIamPolicy, version compliance checks against the stored policy is
+   * skipped.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getVersion() {
@@ -202,9 +204,10 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * Specifies the format of the policy.Valid values are 0, 1, and 3. Requests specifying an invalid
    * value will be rejected.Operations affecting conditional bindings must specify version 3. This
    * can be either setting a conditional policy, modifying a conditional binding, or removing a
-   * conditional binding from the stored conditional policy. Operations on non-conditional policies
-   * may specify any valid value or leave the field unset.If no etag is provided in the call to
-   * setIamPolicy, any version compliance checks on the incoming and/or stored policy is skipped.
+   * binding (conditional or unconditional) from the stored conditional policy. Operations on non-
+   * conditional policies may specify any valid value or leave the field unset.If no etag is
+   * provided in the call to setIamPolicy, version compliance checks against the stored policy is
+   * skipped.
    * @param version version or {@code null} for none
    */
   public Policy setVersion(java.lang.Integer version) {

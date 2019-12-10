@@ -4803,7 +4803,13 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
         public class Create extends DataprocRequest<com.google.api.services.dataproc.v1beta2.model.Operation> {
 
-          private static final String REST_PATH = "v1beta2/projects/{projectId}/regions/{region}/clusters";
+          private static final String REST_PATH = "v1beta2/projects/{+projectId}/regions/{+region}/clusters";
+
+          private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          private final java.util.regex.Pattern REGION_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
 
           /**
            * Creates a cluster in a project. The returned Operation.metadata will be
@@ -4825,7 +4831,17 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           protected Create(java.lang.String projectId, java.lang.String region, com.google.api.services.dataproc.v1beta2.model.Cluster content) {
             super(Dataproc.this, "POST", REST_PATH, content, com.google.api.services.dataproc.v1beta2.model.Operation.class);
             this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+                  "Parameter projectId must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.region = com.google.api.client.util.Preconditions.checkNotNull(region, "Required parameter region must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+                  "Parameter region must conform to the pattern " +
+                  "^[^/]+$");
+            }
           }
 
           @Override
@@ -4895,6 +4911,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /** Required. The ID of the Google Cloud Platform project that the cluster belongs to. */
           public Create setProjectId(java.lang.String projectId) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+                  "Parameter projectId must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.projectId = projectId;
             return this;
           }
@@ -4911,6 +4932,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /** Required. The Cloud Dataproc region in which to handle the request. */
           public Create setRegion(java.lang.String region) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+                  "Parameter region must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.region = region;
             return this;
           }
@@ -4978,7 +5004,16 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
         public class Delete extends DataprocRequest<com.google.api.services.dataproc.v1beta2.model.Operation> {
 
-          private static final String REST_PATH = "v1beta2/projects/{projectId}/regions/{region}/clusters/{clusterName}";
+          private static final String REST_PATH = "v1beta2/projects/{+projectId}/regions/{+region}/clusters/{+clusterName}";
+
+          private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          private final java.util.regex.Pattern REGION_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          private final java.util.regex.Pattern CLUSTER_NAME_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
 
           /**
            * Deletes a cluster in a project. The returned Operation.metadata will be
@@ -5000,8 +5035,23 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           protected Delete(java.lang.String projectId, java.lang.String region, java.lang.String clusterName) {
             super(Dataproc.this, "DELETE", REST_PATH, null, com.google.api.services.dataproc.v1beta2.model.Operation.class);
             this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+                  "Parameter projectId must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.region = com.google.api.client.util.Preconditions.checkNotNull(region, "Required parameter region must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+                  "Parameter region must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.clusterName = com.google.api.client.util.Preconditions.checkNotNull(clusterName, "Required parameter clusterName must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CLUSTER_NAME_PATTERN.matcher(clusterName).matches(),
+                  "Parameter clusterName must conform to the pattern " +
+                  "^[^/]+$");
+            }
           }
 
           @Override
@@ -5071,6 +5121,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /** Required. The ID of the Google Cloud Platform project that the cluster belongs to. */
           public Delete setProjectId(java.lang.String projectId) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+                  "Parameter projectId must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.projectId = projectId;
             return this;
           }
@@ -5087,6 +5142,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /** Required. The Cloud Dataproc region in which to handle the request. */
           public Delete setRegion(java.lang.String region) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+                  "Parameter region must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.region = region;
             return this;
           }
@@ -5103,6 +5163,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /** Required. The cluster name. */
           public Delete setClusterName(java.lang.String clusterName) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CLUSTER_NAME_PATTERN.matcher(clusterName).matches(),
+                  "Parameter clusterName must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.clusterName = clusterName;
             return this;
           }
@@ -5195,7 +5260,16 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
         public class Diagnose extends DataprocRequest<com.google.api.services.dataproc.v1beta2.model.Operation> {
 
-          private static final String REST_PATH = "v1beta2/projects/{projectId}/regions/{region}/clusters/{clusterName}:diagnose";
+          private static final String REST_PATH = "v1beta2/projects/{+projectId}/regions/{+region}/clusters/{+clusterName}:diagnose";
+
+          private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          private final java.util.regex.Pattern REGION_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          private final java.util.regex.Pattern CLUSTER_NAME_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
 
           /**
            * Gets cluster diagnostic information. The returned Operation.metadata will be
@@ -5218,8 +5292,23 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           protected Diagnose(java.lang.String projectId, java.lang.String region, java.lang.String clusterName, com.google.api.services.dataproc.v1beta2.model.DiagnoseClusterRequest content) {
             super(Dataproc.this, "POST", REST_PATH, content, com.google.api.services.dataproc.v1beta2.model.Operation.class);
             this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+                  "Parameter projectId must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.region = com.google.api.client.util.Preconditions.checkNotNull(region, "Required parameter region must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+                  "Parameter region must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.clusterName = com.google.api.client.util.Preconditions.checkNotNull(clusterName, "Required parameter clusterName must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CLUSTER_NAME_PATTERN.matcher(clusterName).matches(),
+                  "Parameter clusterName must conform to the pattern " +
+                  "^[^/]+$");
+            }
           }
 
           @Override
@@ -5289,6 +5378,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /** Required. The ID of the Google Cloud Platform project that the cluster belongs to. */
           public Diagnose setProjectId(java.lang.String projectId) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+                  "Parameter projectId must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.projectId = projectId;
             return this;
           }
@@ -5305,6 +5399,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /** Required. The Cloud Dataproc region in which to handle the request. */
           public Diagnose setRegion(java.lang.String region) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+                  "Parameter region must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.region = region;
             return this;
           }
@@ -5321,6 +5420,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /** Required. The cluster name. */
           public Diagnose setClusterName(java.lang.String clusterName) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CLUSTER_NAME_PATTERN.matcher(clusterName).matches(),
+                  "Parameter clusterName must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.clusterName = clusterName;
             return this;
           }
@@ -5351,7 +5455,16 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
         public class Get extends DataprocRequest<com.google.api.services.dataproc.v1beta2.model.Cluster> {
 
-          private static final String REST_PATH = "v1beta2/projects/{projectId}/regions/{region}/clusters/{clusterName}";
+          private static final String REST_PATH = "v1beta2/projects/{+projectId}/regions/{+region}/clusters/{+clusterName}";
+
+          private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          private final java.util.regex.Pattern REGION_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          private final java.util.regex.Pattern CLUSTER_NAME_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
 
           /**
            * Gets the resource representation for a cluster in a project.
@@ -5371,8 +5484,23 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           protected Get(java.lang.String projectId, java.lang.String region, java.lang.String clusterName) {
             super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.v1beta2.model.Cluster.class);
             this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+                  "Parameter projectId must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.region = com.google.api.client.util.Preconditions.checkNotNull(region, "Required parameter region must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+                  "Parameter region must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.clusterName = com.google.api.client.util.Preconditions.checkNotNull(clusterName, "Required parameter clusterName must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CLUSTER_NAME_PATTERN.matcher(clusterName).matches(),
+                  "Parameter clusterName must conform to the pattern " +
+                  "^[^/]+$");
+            }
           }
 
           @Override
@@ -5452,6 +5580,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /** Required. The ID of the Google Cloud Platform project that the cluster belongs to. */
           public Get setProjectId(java.lang.String projectId) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+                  "Parameter projectId must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.projectId = projectId;
             return this;
           }
@@ -5468,6 +5601,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /** Required. The Cloud Dataproc region in which to handle the request. */
           public Get setRegion(java.lang.String region) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+                  "Parameter region must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.region = region;
             return this;
           }
@@ -5484,6 +5622,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /** Required. The cluster name. */
           public Get setClusterName(java.lang.String clusterName) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CLUSTER_NAME_PATTERN.matcher(clusterName).matches(),
+                  "Parameter clusterName must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.clusterName = clusterName;
             return this;
           }
@@ -5692,7 +5835,13 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
         public class List extends DataprocRequest<com.google.api.services.dataproc.v1beta2.model.ListClustersResponse> {
 
-          private static final String REST_PATH = "v1beta2/projects/{projectId}/regions/{region}/clusters";
+          private static final String REST_PATH = "v1beta2/projects/{+projectId}/regions/{+region}/clusters";
+
+          private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          private final java.util.regex.Pattern REGION_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
 
           /**
            * Lists all regions/{region}/clusters in a project.
@@ -5711,7 +5860,17 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           protected List(java.lang.String projectId, java.lang.String region) {
             super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.v1beta2.model.ListClustersResponse.class);
             this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+                  "Parameter projectId must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.region = com.google.api.client.util.Preconditions.checkNotNull(region, "Required parameter region must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+                  "Parameter region must conform to the pattern " +
+                  "^[^/]+$");
+            }
           }
 
           @Override
@@ -5791,6 +5950,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /** Required. The ID of the Google Cloud Platform project that the cluster belongs to. */
           public List setProjectId(java.lang.String projectId) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+                  "Parameter projectId must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.projectId = projectId;
             return this;
           }
@@ -5807,6 +5971,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /** Required. The Cloud Dataproc region in which to handle the request. */
           public List setRegion(java.lang.String region) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+                  "Parameter region must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.region = region;
             return this;
           }
@@ -5916,7 +6085,16 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
         public class Patch extends DataprocRequest<com.google.api.services.dataproc.v1beta2.model.Operation> {
 
-          private static final String REST_PATH = "v1beta2/projects/{projectId}/regions/{region}/clusters/{clusterName}";
+          private static final String REST_PATH = "v1beta2/projects/{+projectId}/regions/{+region}/clusters/{+clusterName}";
+
+          private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          private final java.util.regex.Pattern REGION_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          private final java.util.regex.Pattern CLUSTER_NAME_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
 
           /**
            * Updates a cluster in a project. The returned Operation.metadata will be
@@ -5939,8 +6117,23 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           protected Patch(java.lang.String projectId, java.lang.String region, java.lang.String clusterName, com.google.api.services.dataproc.v1beta2.model.Cluster content) {
             super(Dataproc.this, "PATCH", REST_PATH, content, com.google.api.services.dataproc.v1beta2.model.Operation.class);
             this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+                  "Parameter projectId must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.region = com.google.api.client.util.Preconditions.checkNotNull(region, "Required parameter region must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+                  "Parameter region must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.clusterName = com.google.api.client.util.Preconditions.checkNotNull(clusterName, "Required parameter clusterName must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CLUSTER_NAME_PATTERN.matcher(clusterName).matches(),
+                  "Parameter clusterName must conform to the pattern " +
+                  "^[^/]+$");
+            }
           }
 
           @Override
@@ -6010,6 +6203,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /** Required. The ID of the Google Cloud Platform project the cluster belongs to. */
           public Patch setProjectId(java.lang.String projectId) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+                  "Parameter projectId must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.projectId = projectId;
             return this;
           }
@@ -6026,6 +6224,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /** Required. The Cloud Dataproc region in which to handle the request. */
           public Patch setRegion(java.lang.String region) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+                  "Parameter region must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.region = region;
             return this;
           }
@@ -6042,6 +6245,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /** Required. The cluster name. */
           public Patch setClusterName(java.lang.String clusterName) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CLUSTER_NAME_PATTERN.matcher(clusterName).matches(),
+                  "Parameter clusterName must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.clusterName = clusterName;
             return this;
           }
@@ -6544,7 +6752,16 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
         public class Cancel extends DataprocRequest<com.google.api.services.dataproc.v1beta2.model.Job> {
 
-          private static final String REST_PATH = "v1beta2/projects/{projectId}/regions/{region}/jobs/{jobId}:cancel";
+          private static final String REST_PATH = "v1beta2/projects/{+projectId}/regions/{+region}/jobs/{+jobId}:cancel";
+
+          private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          private final java.util.regex.Pattern REGION_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          private final java.util.regex.Pattern JOB_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
 
           /**
            * Starts a job cancellation request. To access the job resource after cancellation, call
@@ -6567,8 +6784,23 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           protected Cancel(java.lang.String projectId, java.lang.String region, java.lang.String jobId, com.google.api.services.dataproc.v1beta2.model.CancelJobRequest content) {
             super(Dataproc.this, "POST", REST_PATH, content, com.google.api.services.dataproc.v1beta2.model.Job.class);
             this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+                  "Parameter projectId must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.region = com.google.api.client.util.Preconditions.checkNotNull(region, "Required parameter region must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+                  "Parameter region must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.jobId = com.google.api.client.util.Preconditions.checkNotNull(jobId, "Required parameter jobId must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(JOB_ID_PATTERN.matcher(jobId).matches(),
+                  "Parameter jobId must conform to the pattern " +
+                  "^[^/]+$");
+            }
           }
 
           @Override
@@ -6638,6 +6870,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /** Required. The ID of the Google Cloud Platform project that the job belongs to. */
           public Cancel setProjectId(java.lang.String projectId) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+                  "Parameter projectId must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.projectId = projectId;
             return this;
           }
@@ -6654,6 +6891,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /** Required. The Cloud Dataproc region in which to handle the request. */
           public Cancel setRegion(java.lang.String region) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+                  "Parameter region must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.region = region;
             return this;
           }
@@ -6670,6 +6912,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /** Required. The job ID. */
           public Cancel setJobId(java.lang.String jobId) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(JOB_ID_PATTERN.matcher(jobId).matches(),
+                  "Parameter jobId must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.jobId = jobId;
             return this;
           }
@@ -6701,7 +6948,16 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
         public class Delete extends DataprocRequest<com.google.api.services.dataproc.v1beta2.model.Empty> {
 
-          private static final String REST_PATH = "v1beta2/projects/{projectId}/regions/{region}/jobs/{jobId}";
+          private static final String REST_PATH = "v1beta2/projects/{+projectId}/regions/{+region}/jobs/{+jobId}";
+
+          private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          private final java.util.regex.Pattern REGION_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          private final java.util.regex.Pattern JOB_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
 
           /**
            * Deletes the job from the project. If the job is active, the delete fails, and the response
@@ -6723,8 +6979,23 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           protected Delete(java.lang.String projectId, java.lang.String region, java.lang.String jobId) {
             super(Dataproc.this, "DELETE", REST_PATH, null, com.google.api.services.dataproc.v1beta2.model.Empty.class);
             this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+                  "Parameter projectId must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.region = com.google.api.client.util.Preconditions.checkNotNull(region, "Required parameter region must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+                  "Parameter region must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.jobId = com.google.api.client.util.Preconditions.checkNotNull(jobId, "Required parameter jobId must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(JOB_ID_PATTERN.matcher(jobId).matches(),
+                  "Parameter jobId must conform to the pattern " +
+                  "^[^/]+$");
+            }
           }
 
           @Override
@@ -6794,6 +7065,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /** Required. The ID of the Google Cloud Platform project that the job belongs to. */
           public Delete setProjectId(java.lang.String projectId) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+                  "Parameter projectId must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.projectId = projectId;
             return this;
           }
@@ -6810,6 +7086,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /** Required. The Cloud Dataproc region in which to handle the request. */
           public Delete setRegion(java.lang.String region) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+                  "Parameter region must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.region = region;
             return this;
           }
@@ -6826,6 +7107,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /** Required. The job ID. */
           public Delete setJobId(java.lang.String jobId) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(JOB_ID_PATTERN.matcher(jobId).matches(),
+                  "Parameter jobId must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.jobId = jobId;
             return this;
           }
@@ -6856,7 +7142,16 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
         public class Get extends DataprocRequest<com.google.api.services.dataproc.v1beta2.model.Job> {
 
-          private static final String REST_PATH = "v1beta2/projects/{projectId}/regions/{region}/jobs/{jobId}";
+          private static final String REST_PATH = "v1beta2/projects/{+projectId}/regions/{+region}/jobs/{+jobId}";
+
+          private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          private final java.util.regex.Pattern REGION_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          private final java.util.regex.Pattern JOB_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
 
           /**
            * Gets the resource representation for a job in a project.
@@ -6876,8 +7171,23 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           protected Get(java.lang.String projectId, java.lang.String region, java.lang.String jobId) {
             super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.v1beta2.model.Job.class);
             this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+                  "Parameter projectId must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.region = com.google.api.client.util.Preconditions.checkNotNull(region, "Required parameter region must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+                  "Parameter region must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.jobId = com.google.api.client.util.Preconditions.checkNotNull(jobId, "Required parameter jobId must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(JOB_ID_PATTERN.matcher(jobId).matches(),
+                  "Parameter jobId must conform to the pattern " +
+                  "^[^/]+$");
+            }
           }
 
           @Override
@@ -6957,6 +7267,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /** Required. The ID of the Google Cloud Platform project that the job belongs to. */
           public Get setProjectId(java.lang.String projectId) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+                  "Parameter projectId must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.projectId = projectId;
             return this;
           }
@@ -6973,6 +7288,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /** Required. The Cloud Dataproc region in which to handle the request. */
           public Get setRegion(java.lang.String region) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+                  "Parameter region must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.region = region;
             return this;
           }
@@ -6989,6 +7309,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /** Required. The job ID. */
           public Get setJobId(java.lang.String jobId) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(JOB_ID_PATTERN.matcher(jobId).matches(),
+                  "Parameter jobId must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.jobId = jobId;
             return this;
           }
@@ -7197,7 +7522,13 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
         public class List extends DataprocRequest<com.google.api.services.dataproc.v1beta2.model.ListJobsResponse> {
 
-          private static final String REST_PATH = "v1beta2/projects/{projectId}/regions/{region}/jobs";
+          private static final String REST_PATH = "v1beta2/projects/{+projectId}/regions/{+region}/jobs";
+
+          private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          private final java.util.regex.Pattern REGION_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
 
           /**
            * Lists regions/{region}/jobs in a project.
@@ -7216,7 +7547,17 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           protected List(java.lang.String projectId, java.lang.String region) {
             super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.v1beta2.model.ListJobsResponse.class);
             this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+                  "Parameter projectId must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.region = com.google.api.client.util.Preconditions.checkNotNull(region, "Required parameter region must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+                  "Parameter region must conform to the pattern " +
+                  "^[^/]+$");
+            }
           }
 
           @Override
@@ -7296,6 +7637,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /** Required. The ID of the Google Cloud Platform project that the job belongs to. */
           public List setProjectId(java.lang.String projectId) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+                  "Parameter projectId must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.projectId = projectId;
             return this;
           }
@@ -7312,6 +7658,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /** Required. The Cloud Dataproc region in which to handle the request. */
           public List setRegion(java.lang.String region) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+                  "Parameter region must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.region = region;
             return this;
           }
@@ -7461,7 +7812,16 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
         public class Patch extends DataprocRequest<com.google.api.services.dataproc.v1beta2.model.Job> {
 
-          private static final String REST_PATH = "v1beta2/projects/{projectId}/regions/{region}/jobs/{jobId}";
+          private static final String REST_PATH = "v1beta2/projects/{+projectId}/regions/{+region}/jobs/{+jobId}";
+
+          private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          private final java.util.regex.Pattern REGION_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          private final java.util.regex.Pattern JOB_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
 
           /**
            * Updates a job in a project.
@@ -7483,8 +7843,23 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           protected Patch(java.lang.String projectId, java.lang.String region, java.lang.String jobId, com.google.api.services.dataproc.v1beta2.model.Job content) {
             super(Dataproc.this, "PATCH", REST_PATH, content, com.google.api.services.dataproc.v1beta2.model.Job.class);
             this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+                  "Parameter projectId must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.region = com.google.api.client.util.Preconditions.checkNotNull(region, "Required parameter region must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+                  "Parameter region must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.jobId = com.google.api.client.util.Preconditions.checkNotNull(jobId, "Required parameter jobId must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(JOB_ID_PATTERN.matcher(jobId).matches(),
+                  "Parameter jobId must conform to the pattern " +
+                  "^[^/]+$");
+            }
           }
 
           @Override
@@ -7554,6 +7929,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /** Required. The ID of the Google Cloud Platform project that the job belongs to. */
           public Patch setProjectId(java.lang.String projectId) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+                  "Parameter projectId must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.projectId = projectId;
             return this;
           }
@@ -7570,6 +7950,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /** Required. The Cloud Dataproc region in which to handle the request. */
           public Patch setRegion(java.lang.String region) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+                  "Parameter region must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.region = region;
             return this;
           }
@@ -7586,6 +7971,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /** Required. The job ID. */
           public Patch setJobId(java.lang.String jobId) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(JOB_ID_PATTERN.matcher(jobId).matches(),
+                  "Parameter jobId must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.jobId = jobId;
             return this;
           }
@@ -7786,7 +8176,13 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
         public class Submit extends DataprocRequest<com.google.api.services.dataproc.v1beta2.model.Job> {
 
-          private static final String REST_PATH = "v1beta2/projects/{projectId}/regions/{region}/jobs:submit";
+          private static final String REST_PATH = "v1beta2/projects/{+projectId}/regions/{+region}/jobs:submit";
+
+          private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          private final java.util.regex.Pattern REGION_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
 
           /**
            * Submits a job to a cluster.
@@ -7807,7 +8203,17 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           protected Submit(java.lang.String projectId, java.lang.String region, com.google.api.services.dataproc.v1beta2.model.SubmitJobRequest content) {
             super(Dataproc.this, "POST", REST_PATH, content, com.google.api.services.dataproc.v1beta2.model.Job.class);
             this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+                  "Parameter projectId must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.region = com.google.api.client.util.Preconditions.checkNotNull(region, "Required parameter region must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+                  "Parameter region must conform to the pattern " +
+                  "^[^/]+$");
+            }
           }
 
           @Override
@@ -7877,6 +8283,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /** Required. The ID of the Google Cloud Platform project that the job belongs to. */
           public Submit setProjectId(java.lang.String projectId) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+                  "Parameter projectId must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.projectId = projectId;
             return this;
           }
@@ -7893,6 +8304,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /** Required. The Cloud Dataproc region in which to handle the request. */
           public Submit setRegion(java.lang.String region) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+                  "Parameter region must conform to the pattern " +
+                  "^[^/]+$");
+            }
             this.region = region;
             return this;
           }

@@ -30,7 +30,8 @@ package com.google.api.services.gmail.model;
 public final class ListDraftsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of drafts.
+   * List of drafts. Note that the Message property in each Draft resource only contains an id and a
+   * threadId. The messages.get method can fetch additional message details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,7 +58,8 @@ public final class ListDraftsResponse extends com.google.api.client.json.Generic
   private java.lang.Long resultSizeEstimate;
 
   /**
-   * List of drafts.
+   * List of drafts. Note that the Message property in each Draft resource only contains an id and a
+   * threadId. The messages.get method can fetch additional message details.
    * @return value or {@code null} for none
    */
   public java.util.List<Draft> getDrafts() {
@@ -65,7 +67,8 @@ public final class ListDraftsResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * List of drafts.
+   * List of drafts. Note that the Message property in each Draft resource only contains an id and a
+   * threadId. The messages.get method can fetch additional message details.
    * @param drafts drafts or {@code null} for none
    */
   public ListDraftsResponse setDrafts(java.util.List<Draft> drafts) {

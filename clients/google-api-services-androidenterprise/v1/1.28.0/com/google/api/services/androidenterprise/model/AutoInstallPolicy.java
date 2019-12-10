@@ -59,7 +59,7 @@ public final class AutoInstallPolicy extends com.google.api.client.json.GenericJ
   /**
    * The minimum version of the app. If a lower version of the app is installed, then the app will
    * be auto-updated according to the auto-install constraints, instead of waiting for the regular
-   * auto-update.
+   * auto-update. You can set a minimum version code for at most 20 apps per device.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,7 +119,7 @@ public final class AutoInstallPolicy extends com.google.api.client.json.GenericJ
   /**
    * The minimum version of the app. If a lower version of the app is installed, then the app will
    * be auto-updated according to the auto-install constraints, instead of waiting for the regular
-   * auto-update.
+   * auto-update. You can set a minimum version code for at most 20 apps per device.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMinimumVersionCode() {
@@ -129,7 +129,7 @@ public final class AutoInstallPolicy extends com.google.api.client.json.GenericJ
   /**
    * The minimum version of the app. If a lower version of the app is installed, then the app will
    * be auto-updated according to the auto-install constraints, instead of waiting for the regular
-   * auto-update.
+   * auto-update. You can set a minimum version code for at most 20 apps per device.
    * @param minimumVersionCode minimumVersionCode or {@code null} for none
    */
   public AutoInstallPolicy setMinimumVersionCode(java.lang.Integer minimumVersionCode) {

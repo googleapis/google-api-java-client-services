@@ -17,7 +17,7 @@
 package com.google.api.services.toolresults.model;
 
 /**
- * Details for an outcome with a SUCCESS outcome summary. LINT.IfChange
+ * Model definition for EnvironmentDimensionValueEntry.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Tool Results API. For a detailed explanation
@@ -28,40 +28,58 @@ package com.google.api.services.toolresults.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SuccessDetail extends com.google.api.client.json.GenericJson {
+public final class EnvironmentDimensionValueEntry extends com.google.api.client.json.GenericJson {
 
   /**
-   * If a native process other than the app crashed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean otherNativeCrash;
+  private java.lang.String key;
 
   /**
-   * If a native process other than the app crashed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String value;
+
+  /**
    * @return value or {@code null} for none
    */
-  public java.lang.Boolean getOtherNativeCrash() {
-    return otherNativeCrash;
+  public java.lang.String getKey() {
+    return key;
   }
 
   /**
-   * If a native process other than the app crashed.
-   * @param otherNativeCrash otherNativeCrash or {@code null} for none
+   * @param key key or {@code null} for none
    */
-  public SuccessDetail setOtherNativeCrash(java.lang.Boolean otherNativeCrash) {
-    this.otherNativeCrash = otherNativeCrash;
+  public EnvironmentDimensionValueEntry setKey(java.lang.String key) {
+    this.key = key;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getValue() {
+    return value;
+  }
+
+  /**
+   * @param value value or {@code null} for none
+   */
+  public EnvironmentDimensionValueEntry setValue(java.lang.String value) {
+    this.value = value;
     return this;
   }
 
   @Override
-  public SuccessDetail set(String fieldName, Object value) {
-    return (SuccessDetail) super.set(fieldName, value);
+  public EnvironmentDimensionValueEntry set(String fieldName, Object value) {
+    return (EnvironmentDimensionValueEntry) super.set(fieldName, value);
   }
 
   @Override
-  public SuccessDetail clone() {
-    return (SuccessDetail) super.clone();
+  public EnvironmentDimensionValueEntry clone() {
+    return (EnvironmentDimensionValueEntry) super.clone();
   }
 
 }

@@ -17,8 +17,7 @@
 package com.google.api.services.policytroubleshooter.v1beta.model;
 
 /**
- * AccessTuple defines information required for checking an access attempt. In other words, this is
- * the tuple given to `CheckAccess`.
+ * Information about the member, resource, and permission to check.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Policy Troubleshooter API. For a detailed explanation
@@ -32,38 +31,47 @@ package com.google.api.services.policytroubleshooter.v1beta.model;
 public final class GoogleCloudPolicytroubleshooterV1betaAccessTuple extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. A full resource name according to
-   * https://cloud.google.com/apis/design/resource_names. This is the full resource name of the
-   * resource that access is checked against.
+   * Required. The full resource name that identifies the resource. For example,
+   * `//compute.googleapis.com/projects/my-project/zones/us-central1-a/instances/my-instance`.
+   *
+   * For examples of full resource names for Google Cloud services, see
+   * https://cloud.google.com/iam/help/troubleshooter/full-resource-names.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fullResourceName;
 
   /**
-   * Required. The Cloud IAM permission under which defines the kind of access being explained.
-   * Example: "resourcemanager.projects.get" would explain if and why the principal has the
-   * resourcemanager.projects.get permission on the resource specified in full_resource_name
-   * declared in this structure. See https://cloud.google.com/iam/docs/testing-permissions
+   * Required. The IAM permission to check for the specified member and resource.
+   *
+   * For a complete list of IAM permissions, see
+   * https://cloud.google.com/iam/help/permissions/reference.
+   *
+   * For a complete list of predefined IAM roles and the permissions in each role, see
+   * https://cloud.google.com/iam/help/roles/reference.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String permission;
 
   /**
-   * Required. The principal on behalf of who the access is explained for. The format is one of the
-   * principal's email addresses associated with its gaia account. It must be an account that can
-   * appear as an actor. For example groups are not supported. Currently, service accounts, users
-   * are supported.
+   * Required. The member, or principal, whose access you want to check, in the form of the email
+   * address that represents that member. For example, `alice@example.com` or `my-service-account
+   * @my-project.iam.gserviceaccount.com`.
+   *
+   * The member must be a Google Account or a service account. Other types of members are not
+   * supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String principal;
 
   /**
-   * Required. A full resource name according to
-   * https://cloud.google.com/apis/design/resource_names. This is the full resource name of the
-   * resource that access is checked against.
+   * Required. The full resource name that identifies the resource. For example,
+   * `//compute.googleapis.com/projects/my-project/zones/us-central1-a/instances/my-instance`.
+   *
+   * For examples of full resource names for Google Cloud services, see
+   * https://cloud.google.com/iam/help/troubleshooter/full-resource-names.
    * @return value or {@code null} for none
    */
   public java.lang.String getFullResourceName() {
@@ -71,9 +79,11 @@ public final class GoogleCloudPolicytroubleshooterV1betaAccessTuple extends com.
   }
 
   /**
-   * Required. A full resource name according to
-   * https://cloud.google.com/apis/design/resource_names. This is the full resource name of the
-   * resource that access is checked against.
+   * Required. The full resource name that identifies the resource. For example,
+   * `//compute.googleapis.com/projects/my-project/zones/us-central1-a/instances/my-instance`.
+   *
+   * For examples of full resource names for Google Cloud services, see
+   * https://cloud.google.com/iam/help/troubleshooter/full-resource-names.
    * @param fullResourceName fullResourceName or {@code null} for none
    */
   public GoogleCloudPolicytroubleshooterV1betaAccessTuple setFullResourceName(java.lang.String fullResourceName) {
@@ -82,10 +92,13 @@ public final class GoogleCloudPolicytroubleshooterV1betaAccessTuple extends com.
   }
 
   /**
-   * Required. The Cloud IAM permission under which defines the kind of access being explained.
-   * Example: "resourcemanager.projects.get" would explain if and why the principal has the
-   * resourcemanager.projects.get permission on the resource specified in full_resource_name
-   * declared in this structure. See https://cloud.google.com/iam/docs/testing-permissions
+   * Required. The IAM permission to check for the specified member and resource.
+   *
+   * For a complete list of IAM permissions, see
+   * https://cloud.google.com/iam/help/permissions/reference.
+   *
+   * For a complete list of predefined IAM roles and the permissions in each role, see
+   * https://cloud.google.com/iam/help/roles/reference.
    * @return value or {@code null} for none
    */
   public java.lang.String getPermission() {
@@ -93,10 +106,13 @@ public final class GoogleCloudPolicytroubleshooterV1betaAccessTuple extends com.
   }
 
   /**
-   * Required. The Cloud IAM permission under which defines the kind of access being explained.
-   * Example: "resourcemanager.projects.get" would explain if and why the principal has the
-   * resourcemanager.projects.get permission on the resource specified in full_resource_name
-   * declared in this structure. See https://cloud.google.com/iam/docs/testing-permissions
+   * Required. The IAM permission to check for the specified member and resource.
+   *
+   * For a complete list of IAM permissions, see
+   * https://cloud.google.com/iam/help/permissions/reference.
+   *
+   * For a complete list of predefined IAM roles and the permissions in each role, see
+   * https://cloud.google.com/iam/help/roles/reference.
    * @param permission permission or {@code null} for none
    */
   public GoogleCloudPolicytroubleshooterV1betaAccessTuple setPermission(java.lang.String permission) {
@@ -105,10 +121,12 @@ public final class GoogleCloudPolicytroubleshooterV1betaAccessTuple extends com.
   }
 
   /**
-   * Required. The principal on behalf of who the access is explained for. The format is one of the
-   * principal's email addresses associated with its gaia account. It must be an account that can
-   * appear as an actor. For example groups are not supported. Currently, service accounts, users
-   * are supported.
+   * Required. The member, or principal, whose access you want to check, in the form of the email
+   * address that represents that member. For example, `alice@example.com` or `my-service-account
+   * @my-project.iam.gserviceaccount.com`.
+   *
+   * The member must be a Google Account or a service account. Other types of members are not
+   * supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrincipal() {
@@ -116,10 +134,12 @@ public final class GoogleCloudPolicytroubleshooterV1betaAccessTuple extends com.
   }
 
   /**
-   * Required. The principal on behalf of who the access is explained for. The format is one of the
-   * principal's email addresses associated with its gaia account. It must be an account that can
-   * appear as an actor. For example groups are not supported. Currently, service accounts, users
-   * are supported.
+   * Required. The member, or principal, whose access you want to check, in the form of the email
+   * address that represents that member. For example, `alice@example.com` or `my-service-account
+   * @my-project.iam.gserviceaccount.com`.
+   *
+   * The member must be a Google Account or a service account. Other types of members are not
+   * supported.
    * @param principal principal or {@code null} for none
    */
   public GoogleCloudPolicytroubleshooterV1betaAccessTuple setPrincipal(java.lang.String principal) {

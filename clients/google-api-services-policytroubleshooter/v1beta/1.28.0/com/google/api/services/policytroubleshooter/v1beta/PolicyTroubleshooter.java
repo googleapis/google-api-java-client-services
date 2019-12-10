@@ -143,8 +143,8 @@ public class PolicyTroubleshooter extends com.google.api.client.googleapis.servi
   public class Iam {
 
     /**
-     * Perform a check on whether a member is granted a permission on a resource and how that grant/deny
-     * is determined accordinga to the resource's effective IAM policy interpretation.
+     * Checks whether a member has a specific permission for a specific resource, and explains why the
+     * member does or does not have that permission.
      *
      * Create a request for the method "iam.troubleshoot".
      *
@@ -166,8 +166,8 @@ public class PolicyTroubleshooter extends com.google.api.client.googleapis.servi
       private static final String REST_PATH = "v1beta/iam:troubleshoot";
 
       /**
-       * Perform a check on whether a member is granted a permission on a resource and how that
-       * grant/deny is determined accordinga to the resource's effective IAM policy interpretation.
+       * Checks whether a member has a specific permission for a specific resource, and explains why the
+       * member does or does not have that permission.
        *
        * Create a request for the method "iam.troubleshoot".
        *

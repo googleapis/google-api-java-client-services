@@ -58,6 +58,22 @@ public final class GoogleIamV1Binding extends com.google.api.client.json.Generic
    * * `group:{emailid}`: An email address that represents a Google group.    For example,
    * `admins@example.com`.
    *
+   * * `deleted:user:{emailid}?uid={uniqueid}`: An email address (plus unique    identifier)
+   * representing a user that has been recently deleted. For    example,
+   * `alice@example.com?uid=123456789012345678901`. If the user is    recovered, this value reverts
+   * to `user:{emailid}` and the recovered user    retains the role in the binding.
+   *
+   * * `deleted:serviceAccount:{emailid}?uid={uniqueid}`: An email address (plus    unique
+   * identifier) representing a service account that has been recently    deleted. For example,
+   * `my-other-app@appspot.gserviceaccount.com?uid=123456789012345678901`.    If the service account
+   * is undeleted, this value reverts to    `serviceAccount:{emailid}` and the undeleted service
+   * account retains the    role in the binding.
+   *
+   * * `deleted:group:{emailid}?uid={uniqueid}`: An email address (plus unique    identifier)
+   * representing a Google group that has been recently    deleted. For example,
+   * `admins@example.com?uid=123456789012345678901`. If    the group is recovered, this value
+   * reverts to `group:{emailid}` and the    recovered group retains the role in the binding.
+   *
    * * `domain:{domain}`: The G Suite domain (primary) that represents all the    users of that
    * domain. For example, `google.com` or `example.com`.
    * The value may be {@code null}.
@@ -113,6 +129,22 @@ public final class GoogleIamV1Binding extends com.google.api.client.json.Generic
    * * `group:{emailid}`: An email address that represents a Google group.    For example,
    * `admins@example.com`.
    *
+   * * `deleted:user:{emailid}?uid={uniqueid}`: An email address (plus unique    identifier)
+   * representing a user that has been recently deleted. For    example,
+   * `alice@example.com?uid=123456789012345678901`. If the user is    recovered, this value reverts
+   * to `user:{emailid}` and the recovered user    retains the role in the binding.
+   *
+   * * `deleted:serviceAccount:{emailid}?uid={uniqueid}`: An email address (plus    unique
+   * identifier) representing a service account that has been recently    deleted. For example,
+   * `my-other-app@appspot.gserviceaccount.com?uid=123456789012345678901`.    If the service account
+   * is undeleted, this value reverts to    `serviceAccount:{emailid}` and the undeleted service
+   * account retains the    role in the binding.
+   *
+   * * `deleted:group:{emailid}?uid={uniqueid}`: An email address (plus unique    identifier)
+   * representing a Google group that has been recently    deleted. For example,
+   * `admins@example.com?uid=123456789012345678901`. If    the group is recovered, this value
+   * reverts to `group:{emailid}` and the    recovered group retains the role in the binding.
+   *
    * * `domain:{domain}`: The G Suite domain (primary) that represents all the    users of that
    * domain. For example, `google.com` or `example.com`.
    * @return value or {@code null} for none
@@ -139,6 +171,22 @@ public final class GoogleIamV1Binding extends com.google.api.client.json.Generic
    *
    * * `group:{emailid}`: An email address that represents a Google group.    For example,
    * `admins@example.com`.
+   *
+   * * `deleted:user:{emailid}?uid={uniqueid}`: An email address (plus unique    identifier)
+   * representing a user that has been recently deleted. For    example,
+   * `alice@example.com?uid=123456789012345678901`. If the user is    recovered, this value reverts
+   * to `user:{emailid}` and the recovered user    retains the role in the binding.
+   *
+   * * `deleted:serviceAccount:{emailid}?uid={uniqueid}`: An email address (plus    unique
+   * identifier) representing a service account that has been recently    deleted. For example,
+   * `my-other-app@appspot.gserviceaccount.com?uid=123456789012345678901`.    If the service account
+   * is undeleted, this value reverts to    `serviceAccount:{emailid}` and the undeleted service
+   * account retains the    role in the binding.
+   *
+   * * `deleted:group:{emailid}?uid={uniqueid}`: An email address (plus unique    identifier)
+   * representing a Google group that has been recently    deleted. For example,
+   * `admins@example.com?uid=123456789012345678901`. If    the group is recovered, this value
+   * reverts to `group:{emailid}` and the    recovered group retains the role in the binding.
    *
    * * `domain:{domain}`: The G Suite domain (primary) that represents all the    users of that
    * domain. For example, `google.com` or `example.com`.

@@ -190,8 +190,9 @@ public class BigQueryConnectionService extends com.google.api.client.googleapis.
          * This request holds the parameters needed by the bigqueryconnection server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Parent resource name.
-        Must be in the format `projects/{project_id}/locations/{location_id}`
+         * @param parent Required. Parent resource name.
+        Must be in the format
+         *        `projects/{project_id}/locations/{location_id}`
          * @param content the {@link com.google.api.services.bigqueryconnection.v1beta1.model.Connection}
          * @return the request
          */
@@ -219,8 +220,9 @@ public class BigQueryConnectionService extends com.google.api.client.googleapis.
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Parent resource name.
-        Must be in the format `projects/{project_id}/locations/{location_id}`
+           * @param parent Required. Parent resource name.
+        Must be in the format
+         *        `projects/{project_id}/locations/{location_id}`
            * @param content the {@link com.google.api.services.bigqueryconnection.v1beta1.model.Connection}
            * @since 1.13
            */
@@ -290,20 +292,21 @@ public class BigQueryConnectionService extends com.google.api.client.googleapis.
           }
 
           /**
-           * Parent resource name. Must be in the format
+           * Required. Parent resource name. Must be in the format
            * `projects/{project_id}/locations/{location_id}`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Parent resource name. Must be in the format `projects/{project_id}/locations/{location_id}`
+          /** Required. Parent resource name. Must be in the format
+         `projects/{project_id}/locations/{location_id}`
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Parent resource name. Must be in the format
+           * Required. Parent resource name. Must be in the format
            * `projects/{project_id}/locations/{location_id}`
            */
           public Create setParent(java.lang.String parent) {
@@ -345,7 +348,7 @@ public class BigQueryConnectionService extends com.google.api.client.googleapis.
          * This request holds the parameters needed by the bigqueryconnection server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Name of the deleted connection, for example:
+         * @param name Required. Name of the deleted connection, for example:
          *        `projects/{project_id}/locations/{location_id}/connections/{connection_id}`
          * @return the request
          */
@@ -373,7 +376,7 @@ public class BigQueryConnectionService extends com.google.api.client.googleapis.
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Name of the deleted connection, for example:
+           * @param name Required. Name of the deleted connection, for example:
          *        `projects/{project_id}/locations/{location_id}/connections/{connection_id}`
            * @since 1.13
            */
@@ -443,13 +446,13 @@ public class BigQueryConnectionService extends com.google.api.client.googleapis.
           }
 
           /**
-           * Name of the deleted connection, for example:
+           * Required. Name of the deleted connection, for example:
            * `projects/{project_id}/locations/{location_id}/connections/{connection_id}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Name of the deleted connection, for example:
+          /** Required. Name of the deleted connection, for example:
          `projects/{project_id}/locations/{location_id}/connections/{connection_id}`
            */
           public java.lang.String getName() {
@@ -457,7 +460,7 @@ public class BigQueryConnectionService extends com.google.api.client.googleapis.
           }
 
           /**
-           * Name of the deleted connection, for example:
+           * Required. Name of the deleted connection, for example:
            * `projects/{project_id}/locations/{location_id}/connections/{connection_id}`
            */
           public Delete setName(java.lang.String name) {
@@ -483,7 +486,7 @@ public class BigQueryConnectionService extends com.google.api.client.googleapis.
          * This request holds the parameters needed by the bigqueryconnection server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Name of the requested connection, for example:
+         * @param name Required. Name of the requested connection, for example:
          *        `projects/{project_id}/locations/{location_id}/connections/{connection_id}`
          * @return the request
          */
@@ -511,7 +514,7 @@ public class BigQueryConnectionService extends com.google.api.client.googleapis.
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Name of the requested connection, for example:
+           * @param name Required. Name of the requested connection, for example:
          *        `projects/{project_id}/locations/{location_id}/connections/{connection_id}`
            * @since 1.13
            */
@@ -591,13 +594,13 @@ public class BigQueryConnectionService extends com.google.api.client.googleapis.
           }
 
           /**
-           * Name of the requested connection, for example:
+           * Required. Name of the requested connection, for example:
            * `projects/{project_id}/locations/{location_id}/connections/{connection_id}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Name of the requested connection, for example:
+          /** Required. Name of the requested connection, for example:
          `projects/{project_id}/locations/{location_id}/connections/{connection_id}`
            */
           public java.lang.String getName() {
@@ -605,7 +608,7 @@ public class BigQueryConnectionService extends com.google.api.client.googleapis.
           }
 
           /**
-           * Name of the requested connection, for example:
+           * Required. Name of the requested connection, for example:
            * `projects/{project_id}/locations/{location_id}/connections/{connection_id}`
            */
           public Get setName(java.lang.String name) {
@@ -776,7 +779,7 @@ public class BigQueryConnectionService extends com.google.api.client.googleapis.
          * This request holds the parameters needed by the bigqueryconnection server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Parent resource name.
+         * @param parent Required. Parent resource name.
         Must be in the form: `projects/{project_id}/locations/{location_id}`
          * @return the request
          */
@@ -804,7 +807,7 @@ public class BigQueryConnectionService extends com.google.api.client.googleapis.
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Parent resource name.
+           * @param parent Required. Parent resource name.
         Must be in the form: `projects/{project_id}/locations/{location_id}`
            * @since 1.13
            */
@@ -884,20 +887,21 @@ public class BigQueryConnectionService extends com.google.api.client.googleapis.
           }
 
           /**
-           * Parent resource name. Must be in the form:
+           * Required. Parent resource name. Must be in the form:
            * `projects/{project_id}/locations/{location_id}`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Parent resource name. Must be in the form: `projects/{project_id}/locations/{location_id}`
+          /** Required. Parent resource name. Must be in the form:
+         `projects/{project_id}/locations/{location_id}`
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Parent resource name. Must be in the form:
+           * Required. Parent resource name. Must be in the form:
            * `projects/{project_id}/locations/{location_id}`
            */
           public List setParent(java.lang.String parent) {
@@ -910,17 +914,17 @@ public class BigQueryConnectionService extends com.google.api.client.googleapis.
             return this;
           }
 
-          /** Maximum number of results per page. */
+          /** Required. Maximum number of results per page. */
           @com.google.api.client.util.Key
           private java.lang.Long maxResults;
 
-          /** Maximum number of results per page.
+          /** Required. Maximum number of results per page.
            */
           public java.lang.Long getMaxResults() {
             return maxResults;
           }
 
-          /** Maximum number of results per page. */
+          /** Required. Maximum number of results per page. */
           public List setMaxResults(java.lang.Long maxResults) {
             this.maxResults = maxResults;
             return this;
@@ -956,7 +960,7 @@ public class BigQueryConnectionService extends com.google.api.client.googleapis.
          * This request holds the parameters needed by the bigqueryconnection server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Name of the connection to update, for example:
+         * @param name Required. Name of the connection to update, for example:
          *        `projects/{project_id}/locations/{location_id}/connections/{connection_id}`
          * @param content the {@link com.google.api.services.bigqueryconnection.v1beta1.model.Connection}
          * @return the request
@@ -986,7 +990,7 @@ public class BigQueryConnectionService extends com.google.api.client.googleapis.
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Name of the connection to update, for example:
+           * @param name Required. Name of the connection to update, for example:
          *        `projects/{project_id}/locations/{location_id}/connections/{connection_id}`
            * @param content the {@link com.google.api.services.bigqueryconnection.v1beta1.model.Connection}
            * @since 1.13
@@ -1057,13 +1061,13 @@ public class BigQueryConnectionService extends com.google.api.client.googleapis.
           }
 
           /**
-           * Name of the connection to update, for example:
+           * Required. Name of the connection to update, for example:
            * `projects/{project_id}/locations/{location_id}/connections/{connection_id}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Name of the connection to update, for example:
+          /** Required. Name of the connection to update, for example:
          `projects/{project_id}/locations/{location_id}/connections/{connection_id}`
            */
           public java.lang.String getName() {
@@ -1071,7 +1075,7 @@ public class BigQueryConnectionService extends com.google.api.client.googleapis.
           }
 
           /**
-           * Name of the connection to update, for example:
+           * Required. Name of the connection to update, for example:
            * `projects/{project_id}/locations/{location_id}/connections/{connection_id}`
            */
           public Patch setName(java.lang.String name) {
@@ -1084,17 +1088,17 @@ public class BigQueryConnectionService extends com.google.api.client.googleapis.
             return this;
           }
 
-          /** Update mask for the connection fields to be updated. */
+          /** Required. Update mask for the connection fields to be updated. */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Update mask for the connection fields to be updated.
+          /** Required. Update mask for the connection fields to be updated.
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
-          /** Update mask for the connection fields to be updated. */
+          /** Required. Update mask for the connection fields to be updated. */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
             return this;
@@ -1412,7 +1416,7 @@ public class BigQueryConnectionService extends com.google.api.client.googleapis.
          * optional parameters, call the {@link UpdateCredential#execute()} method to invoke the remote
          * operation.
          *
-         * @param name Name of the connection, for example:
+         * @param name Required. Name of the connection, for example:
          *        `projects/{project_id}/locations/{location_id}/connections/{connection_id}/credential`
          * @param content the {@link com.google.api.services.bigqueryconnection.v1beta1.model.ConnectionCredential}
          * @return the request
@@ -1441,7 +1445,7 @@ public class BigQueryConnectionService extends com.google.api.client.googleapis.
            * ces.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param name Name of the connection, for example:
+           * @param name Required. Name of the connection, for example:
          *        `projects/{project_id}/locations/{location_id}/connections/{connection_id}/credential`
            * @param content the {@link com.google.api.services.bigqueryconnection.v1beta1.model.ConnectionCredential}
            * @since 1.13
@@ -1512,13 +1516,13 @@ public class BigQueryConnectionService extends com.google.api.client.googleapis.
           }
 
           /**
-           * Name of the connection, for example:
+           * Required. Name of the connection, for example:
            * `projects/{project_id}/locations/{location_id}/connections/{connection_id}/credential`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Name of the connection, for example:
+          /** Required. Name of the connection, for example:
          `projects/{project_id}/locations/{location_id}/connections/{connection_id}/credential`
            */
           public java.lang.String getName() {
@@ -1526,7 +1530,7 @@ public class BigQueryConnectionService extends com.google.api.client.googleapis.
           }
 
           /**
-           * Name of the connection, for example:
+           * Required. Name of the connection, for example:
            * `projects/{project_id}/locations/{location_id}/connections/{connection_id}/credential`
            */
           public UpdateCredential setName(java.lang.String name) {

@@ -31,6 +31,13 @@ package com.google.api.services.bigqueryconnection.v1beta1.model;
 public final class CloudSqlProperties extends com.google.api.client.json.GenericJson {
 
   /**
+   * Input only. Cloud SQL credential.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudSqlCredential credential;
+
+  /**
    * Database name.
    * The value may be {@code null}.
    */
@@ -50,6 +57,23 @@ public final class CloudSqlProperties extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * Input only. Cloud SQL credential.
+   * @return value or {@code null} for none
+   */
+  public CloudSqlCredential getCredential() {
+    return credential;
+  }
+
+  /**
+   * Input only. Cloud SQL credential.
+   * @param credential credential or {@code null} for none
+   */
+  public CloudSqlProperties setCredential(CloudSqlCredential credential) {
+    this.credential = credential;
+    return this;
+  }
 
   /**
    * Database name.

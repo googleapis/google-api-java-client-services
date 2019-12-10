@@ -23,7 +23,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-cloudtrace</artifactId>
-      <version>v2-rev20190917-1.30.3</version>
+      <version>v2-rev20191202-1.30.3</version>
     </dependency>
   </dependencies>
 </project>
@@ -36,7 +36,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-cloudtrace:v2-rev20190917-1.30.3'
+  compile 'com.google.apis:google-api-services-cloudtrace:v2-rev20191202-1.30.3'
 }
 ```
 

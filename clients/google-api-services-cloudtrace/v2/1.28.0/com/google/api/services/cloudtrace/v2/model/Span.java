@@ -49,8 +49,8 @@ public final class Span extends com.google.api.client.json.GenericJson {
   private java.lang.Integer childSpanCount;
 
   /**
-   * A description of the span's operation (up to 128 bytes). Stackdriver Trace displays the
-   * description in the Google Cloud Platform Console. For example, the display name can be a
+   * Required. A description of the span's operation (up to 128 bytes). Stackdriver Trace displays
+   * the description in the Google Cloud Platform Console. For example, the display name can be a
    * qualified method name or a file name and a line number where the operation is called. A best
    * practice is to use the same display name within an application and at the same call point. This
    * makes it easier to correlate spans in different traces.
@@ -60,9 +60,9 @@ public final class Span extends com.google.api.client.json.GenericJson {
   private TruncatableString displayName;
 
   /**
-   * The end time of the span. On the client side, this is the time kept by the local machine where
-   * the span execution ends. On the server side, this is the time when the server application
-   * handler stops running.
+   * Required. The end time of the span. On the client side, this is the time kept by the local
+   * machine where the span execution ends. On the server side, this is the time when the server
+   * application handler stops running.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,7 +106,7 @@ public final class Span extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean sameProcessAsParentSpan;
 
   /**
-   * The [SPAN_ID] portion of the span's resource name.
+   * Required. The [SPAN_ID] portion of the span's resource name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,8 +129,8 @@ public final class Span extends com.google.api.client.json.GenericJson {
   private StackTrace stackTrace;
 
   /**
-   * The start time of the span. On the client side, this is the time kept by the local machine
-   * where the span execution starts. On the server side, this is the time when the server's
+   * Required. The start time of the span. On the client side, this is the time kept by the local
+   * machine where the span execution starts. On the server side, this is the time when the server's
    * application handler starts running.
    * The value may be {@code null}.
    */
@@ -188,8 +188,8 @@ public final class Span extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A description of the span's operation (up to 128 bytes). Stackdriver Trace displays the
-   * description in the Google Cloud Platform Console. For example, the display name can be a
+   * Required. A description of the span's operation (up to 128 bytes). Stackdriver Trace displays
+   * the description in the Google Cloud Platform Console. For example, the display name can be a
    * qualified method name or a file name and a line number where the operation is called. A best
    * practice is to use the same display name within an application and at the same call point. This
    * makes it easier to correlate spans in different traces.
@@ -200,8 +200,8 @@ public final class Span extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A description of the span's operation (up to 128 bytes). Stackdriver Trace displays the
-   * description in the Google Cloud Platform Console. For example, the display name can be a
+   * Required. A description of the span's operation (up to 128 bytes). Stackdriver Trace displays
+   * the description in the Google Cloud Platform Console. For example, the display name can be a
    * qualified method name or a file name and a line number where the operation is called. A best
    * practice is to use the same display name within an application and at the same call point. This
    * makes it easier to correlate spans in different traces.
@@ -213,9 +213,9 @@ public final class Span extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The end time of the span. On the client side, this is the time kept by the local machine where
-   * the span execution ends. On the server side, this is the time when the server application
-   * handler stops running.
+   * Required. The end time of the span. On the client side, this is the time kept by the local
+   * machine where the span execution ends. On the server side, this is the time when the server
+   * application handler stops running.
    * @return value or {@code null} for none
    */
   public String getEndTime() {
@@ -223,9 +223,9 @@ public final class Span extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The end time of the span. On the client side, this is the time kept by the local machine where
-   * the span execution ends. On the server side, this is the time when the server application
-   * handler stops running.
+   * Required. The end time of the span. On the client side, this is the time kept by the local
+   * machine where the span execution ends. On the server side, this is the time when the server
+   * application handler stops running.
    * @param endTime endTime or {@code null} for none
    */
   public Span setEndTime(String endTime) {
@@ -320,7 +320,7 @@ public final class Span extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The [SPAN_ID] portion of the span's resource name.
+   * Required. The [SPAN_ID] portion of the span's resource name.
    * @return value or {@code null} for none
    */
   public java.lang.String getSpanId() {
@@ -328,7 +328,7 @@ public final class Span extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The [SPAN_ID] portion of the span's resource name.
+   * Required. The [SPAN_ID] portion of the span's resource name.
    * @param spanId spanId or {@code null} for none
    */
   public Span setSpanId(java.lang.String spanId) {
@@ -375,8 +375,8 @@ public final class Span extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The start time of the span. On the client side, this is the time kept by the local machine
-   * where the span execution starts. On the server side, this is the time when the server's
+   * Required. The start time of the span. On the client side, this is the time kept by the local
+   * machine where the span execution starts. On the server side, this is the time when the server's
    * application handler starts running.
    * @return value or {@code null} for none
    */
@@ -385,8 +385,8 @@ public final class Span extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The start time of the span. On the client side, this is the time kept by the local machine
-   * where the span execution starts. On the server side, this is the time when the server's
+   * Required. The start time of the span. On the client side, this is the time kept by the local
+   * machine where the span execution starts. On the server side, this is the time when the server's
    * application handler starts running.
    * @param startTime startTime or {@code null} for none
    */

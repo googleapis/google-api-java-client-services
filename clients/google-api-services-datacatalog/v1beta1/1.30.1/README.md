@@ -23,7 +23,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-datacatalog</artifactId>
-      <version>v1beta1-rev20191118-1.30.3</version>
+      <version>v1beta1-rev20191205-1.30.3</version>
     </dependency>
   </dependencies>
 </project>
@@ -36,7 +36,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-datacatalog:v1beta1-rev20191118-1.30.3'
+  compile 'com.google.apis:google-api-services-datacatalog:v1beta1-rev20191205-1.30.3'
 }
 ```
 

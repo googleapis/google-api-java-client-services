@@ -31,15 +31,15 @@ package com.google.api.services.container.model;
 public final class CreateNodePoolRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Deprecated. The name of the cluster. This field has been deprecated and replaced by the parent
-   * field.
+   * Required. Deprecated. The name of the cluster. This field has been deprecated and replaced by
+   * the parent field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String clusterId;
 
   /**
-   * The node pool to create.
+   * Required. The node pool to create.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +54,7 @@ public final class CreateNodePoolRequest extends com.google.api.client.json.Gene
   private java.lang.String parent;
 
   /**
-   * Deprecated. The Google Developers Console [project ID or project
+   * Required. Deprecated. The Google Developers Console [project ID or project
    * number](https://developers.google.com/console/help/new/#projectnumber). This field has been
    * deprecated and replaced by the parent field.
    * The value may be {@code null}.
@@ -63,16 +63,17 @@ public final class CreateNodePoolRequest extends com.google.api.client.json.Gene
   private java.lang.String projectId;
 
   /**
-   * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
-   * which the cluster resides. This field has been deprecated and replaced by the parent field.
+   * Required. Deprecated. The name of the Google Compute Engine
+   * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
+   * deprecated and replaced by the parent field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
 
   /**
-   * Deprecated. The name of the cluster. This field has been deprecated and replaced by the parent
-   * field.
+   * Required. Deprecated. The name of the cluster. This field has been deprecated and replaced by
+   * the parent field.
    * @return value or {@code null} for none
    */
   public java.lang.String getClusterId() {
@@ -80,8 +81,8 @@ public final class CreateNodePoolRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Deprecated. The name of the cluster. This field has been deprecated and replaced by the parent
-   * field.
+   * Required. Deprecated. The name of the cluster. This field has been deprecated and replaced by
+   * the parent field.
    * @param clusterId clusterId or {@code null} for none
    */
   public CreateNodePoolRequest setClusterId(java.lang.String clusterId) {
@@ -90,7 +91,7 @@ public final class CreateNodePoolRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * The node pool to create.
+   * Required. The node pool to create.
    * @return value or {@code null} for none
    */
   public NodePool getNodePool() {
@@ -98,7 +99,7 @@ public final class CreateNodePoolRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * The node pool to create.
+   * Required. The node pool to create.
    * @param nodePool nodePool or {@code null} for none
    */
   public CreateNodePoolRequest setNodePool(NodePool nodePool) {
@@ -126,7 +127,7 @@ public final class CreateNodePoolRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Deprecated. The Google Developers Console [project ID or project
+   * Required. Deprecated. The Google Developers Console [project ID or project
    * number](https://developers.google.com/console/help/new/#projectnumber). This field has been
    * deprecated and replaced by the parent field.
    * @return value or {@code null} for none
@@ -136,7 +137,7 @@ public final class CreateNodePoolRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Deprecated. The Google Developers Console [project ID or project
+   * Required. Deprecated. The Google Developers Console [project ID or project
    * number](https://developers.google.com/console/help/new/#projectnumber). This field has been
    * deprecated and replaced by the parent field.
    * @param projectId projectId or {@code null} for none
@@ -147,8 +148,9 @@ public final class CreateNodePoolRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
-   * which the cluster resides. This field has been deprecated and replaced by the parent field.
+   * Required. Deprecated. The name of the Google Compute Engine
+   * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
+   * deprecated and replaced by the parent field.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -156,8 +158,9 @@ public final class CreateNodePoolRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
-   * which the cluster resides. This field has been deprecated and replaced by the parent field.
+   * Required. Deprecated. The name of the Google Compute Engine
+   * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
+   * deprecated and replaced by the parent field.
    * @param zone zone or {@code null} for none
    */
   public CreateNodePoolRequest setZone(java.lang.String zone) {

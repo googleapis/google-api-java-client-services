@@ -39,15 +39,15 @@ public final class CancelOperationRequest extends com.google.api.client.json.Gen
   private java.lang.String name;
 
   /**
-   * Deprecated. The server-assigned `name` of the operation. This field has been deprecated and
-   * replaced by the name field.
+   * Required. Deprecated. The server-assigned `name` of the operation. This field has been
+   * deprecated and replaced by the name field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String operationId;
 
   /**
-   * Deprecated. The Google Developers Console [project ID or project
+   * Required. Deprecated. The Google Developers Console [project ID or project
    * number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
    * replaced by the name field.
    * The value may be {@code null}.
@@ -56,8 +56,9 @@ public final class CancelOperationRequest extends com.google.api.client.json.Gen
   private java.lang.String projectId;
 
   /**
-   * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
-   * which the operation resides. This field has been deprecated and replaced by the name field.
+   * Required. Deprecated. The name of the Google Compute Engine
+   * [zone](/compute/docs/zones#available) in which the operation resides. This field has been
+   * deprecated and replaced by the name field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,8 +84,8 @@ public final class CancelOperationRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Deprecated. The server-assigned `name` of the operation. This field has been deprecated and
-   * replaced by the name field.
+   * Required. Deprecated. The server-assigned `name` of the operation. This field has been
+   * deprecated and replaced by the name field.
    * @return value or {@code null} for none
    */
   public java.lang.String getOperationId() {
@@ -92,8 +93,8 @@ public final class CancelOperationRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Deprecated. The server-assigned `name` of the operation. This field has been deprecated and
-   * replaced by the name field.
+   * Required. Deprecated. The server-assigned `name` of the operation. This field has been
+   * deprecated and replaced by the name field.
    * @param operationId operationId or {@code null} for none
    */
   public CancelOperationRequest setOperationId(java.lang.String operationId) {
@@ -102,7 +103,7 @@ public final class CancelOperationRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Deprecated. The Google Developers Console [project ID or project
+   * Required. Deprecated. The Google Developers Console [project ID or project
    * number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
    * replaced by the name field.
    * @return value or {@code null} for none
@@ -112,7 +113,7 @@ public final class CancelOperationRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Deprecated. The Google Developers Console [project ID or project
+   * Required. Deprecated. The Google Developers Console [project ID or project
    * number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
    * replaced by the name field.
    * @param projectId projectId or {@code null} for none
@@ -123,8 +124,9 @@ public final class CancelOperationRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
-   * which the operation resides. This field has been deprecated and replaced by the name field.
+   * Required. Deprecated. The name of the Google Compute Engine
+   * [zone](/compute/docs/zones#available) in which the operation resides. This field has been
+   * deprecated and replaced by the name field.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -132,8 +134,9 @@ public final class CancelOperationRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
-   * which the operation resides. This field has been deprecated and replaced by the name field.
+   * Required. Deprecated. The name of the Google Compute Engine
+   * [zone](/compute/docs/zones#available) in which the operation resides. This field has been
+   * deprecated and replaced by the name field.
    * @param zone zone or {@code null} for none
    */
   public CancelOperationRequest setZone(java.lang.String zone) {

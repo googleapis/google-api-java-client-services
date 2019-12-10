@@ -38,6 +38,22 @@ public final class MaintenanceWindow extends com.google.api.client.json.GenericJ
   private DailyMaintenanceWindow dailyMaintenanceWindow;
 
   /**
+   * Exceptions to maintenance window. Non-emergency maintenance should not occur in these windows.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, TimeWindow> maintenanceExclusions;
+
+  /**
+   * RecurringWindow specifies some number of recurring time periods for maintenance to occur. The
+   * time windows may be overlapping. If no maintenance windows are set, maintenance can occur at
+   * any time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RecurringTimeWindow recurringWindow;
+
+  /**
    * DailyMaintenanceWindow specifies a daily maintenance operation window.
    * @return value or {@code null} for none
    */
@@ -51,6 +67,44 @@ public final class MaintenanceWindow extends com.google.api.client.json.GenericJ
    */
   public MaintenanceWindow setDailyMaintenanceWindow(DailyMaintenanceWindow dailyMaintenanceWindow) {
     this.dailyMaintenanceWindow = dailyMaintenanceWindow;
+    return this;
+  }
+
+  /**
+   * Exceptions to maintenance window. Non-emergency maintenance should not occur in these windows.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, TimeWindow> getMaintenanceExclusions() {
+    return maintenanceExclusions;
+  }
+
+  /**
+   * Exceptions to maintenance window. Non-emergency maintenance should not occur in these windows.
+   * @param maintenanceExclusions maintenanceExclusions or {@code null} for none
+   */
+  public MaintenanceWindow setMaintenanceExclusions(java.util.Map<String, TimeWindow> maintenanceExclusions) {
+    this.maintenanceExclusions = maintenanceExclusions;
+    return this;
+  }
+
+  /**
+   * RecurringWindow specifies some number of recurring time periods for maintenance to occur. The
+   * time windows may be overlapping. If no maintenance windows are set, maintenance can occur at
+   * any time.
+   * @return value or {@code null} for none
+   */
+  public RecurringTimeWindow getRecurringWindow() {
+    return recurringWindow;
+  }
+
+  /**
+   * RecurringWindow specifies some number of recurring time periods for maintenance to occur. The
+   * time windows may be overlapping. If no maintenance windows are set, maintenance can occur at
+   * any time.
+   * @param recurringWindow recurringWindow or {@code null} for none
+   */
+  public MaintenanceWindow setRecurringWindow(RecurringTimeWindow recurringWindow) {
+    this.recurringWindow = recurringWindow;
     return this;
   }
 

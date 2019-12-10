@@ -52,14 +52,16 @@ public final class StatusReportingSettings extends com.google.api.client.json.Ge
   private java.lang.Boolean deviceSettingsEnabled;
 
   /**
-   * Whether displays reporting is enabled.
+   * Whether displays reporting is enabled. Report data is not available for personally owned
+   * devices with work profiles.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean displayInfoEnabled;
 
   /**
-   * Whether hardware status reporting is enabled.
+   * Whether hardware status reporting is enabled. Report data is not available for personally owned
+   * devices with work profiles.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,7 +82,8 @@ public final class StatusReportingSettings extends com.google.api.client.json.Ge
   private java.lang.Boolean networkInfoEnabled;
 
   /**
-   * Whether power management event reporting is enabled.
+   * Whether power management event reporting is enabled. Report data is not available for
+   * personally owned devices with work profiles.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -152,7 +155,8 @@ public final class StatusReportingSettings extends com.google.api.client.json.Ge
   }
 
   /**
-   * Whether displays reporting is enabled.
+   * Whether displays reporting is enabled. Report data is not available for personally owned
+   * devices with work profiles.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisplayInfoEnabled() {
@@ -160,7 +164,8 @@ public final class StatusReportingSettings extends com.google.api.client.json.Ge
   }
 
   /**
-   * Whether displays reporting is enabled.
+   * Whether displays reporting is enabled. Report data is not available for personally owned
+   * devices with work profiles.
    * @param displayInfoEnabled displayInfoEnabled or {@code null} for none
    */
   public StatusReportingSettings setDisplayInfoEnabled(java.lang.Boolean displayInfoEnabled) {
@@ -169,7 +174,8 @@ public final class StatusReportingSettings extends com.google.api.client.json.Ge
   }
 
   /**
-   * Whether hardware status reporting is enabled.
+   * Whether hardware status reporting is enabled. Report data is not available for personally owned
+   * devices with work profiles.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getHardwareStatusEnabled() {
@@ -177,7 +183,8 @@ public final class StatusReportingSettings extends com.google.api.client.json.Ge
   }
 
   /**
-   * Whether hardware status reporting is enabled.
+   * Whether hardware status reporting is enabled. Report data is not available for personally owned
+   * devices with work profiles.
    * @param hardwareStatusEnabled hardwareStatusEnabled or {@code null} for none
    */
   public StatusReportingSettings setHardwareStatusEnabled(java.lang.Boolean hardwareStatusEnabled) {
@@ -220,7 +227,8 @@ public final class StatusReportingSettings extends com.google.api.client.json.Ge
   }
 
   /**
-   * Whether power management event reporting is enabled.
+   * Whether power management event reporting is enabled. Report data is not available for
+   * personally owned devices with work profiles.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPowerManagementEventsEnabled() {
@@ -228,7 +236,8 @@ public final class StatusReportingSettings extends com.google.api.client.json.Ge
   }
 
   /**
-   * Whether power management event reporting is enabled.
+   * Whether power management event reporting is enabled. Report data is not available for
+   * personally owned devices with work profiles.
    * @param powerManagementEventsEnabled powerManagementEventsEnabled or {@code null} for none
    */
   public StatusReportingSettings setPowerManagementEventsEnabled(java.lang.Boolean powerManagementEventsEnabled) {

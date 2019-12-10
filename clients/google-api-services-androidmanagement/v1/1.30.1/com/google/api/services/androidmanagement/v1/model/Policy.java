@@ -541,7 +541,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
 
   /**
    * A message displayed to the user in the settings screen wherever functionality has been disabled
-   * by the admin.
+   * by the admin. If the message is longer than 200 characters it may be truncated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1791,7 +1791,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
 
   /**
    * A message displayed to the user in the settings screen wherever functionality has been disabled
-   * by the admin.
+   * by the admin. If the message is longer than 200 characters it may be truncated.
    * @return value or {@code null} for none
    */
   public UserFacingMessage getShortSupportMessage() {
@@ -1800,7 +1800,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
 
   /**
    * A message displayed to the user in the settings screen wherever functionality has been disabled
-   * by the admin.
+   * by the admin. If the message is longer than 200 characters it may be truncated.
    * @param shortSupportMessage shortSupportMessage or {@code null} for none
    */
   public Policy setShortSupportMessage(UserFacingMessage shortSupportMessage) {

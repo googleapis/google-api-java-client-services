@@ -118,8 +118,10 @@ public final class BuildOptions extends com.google.api.client.json.GenericJson {
   private java.util.List<Volume> volumes;
 
   /**
-   * Option to specify a `WorkerPool` for the build. User specifies the pool with the format
-   * "[WORKERPOOL_PROJECT_ID]/[WORKERPOOL_NAME]". This is an experimental field.
+   * Option to specify a `WorkerPool` for the build. Format:
+   * projects/{project}/workerPools/{workerPool}
+   *
+   * This field is experimental.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -332,8 +334,10 @@ public final class BuildOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Option to specify a `WorkerPool` for the build. User specifies the pool with the format
-   * "[WORKERPOOL_PROJECT_ID]/[WORKERPOOL_NAME]". This is an experimental field.
+   * Option to specify a `WorkerPool` for the build. Format:
+   * projects/{project}/workerPools/{workerPool}
+   *
+   * This field is experimental.
    * @return value or {@code null} for none
    */
   public java.lang.String getWorkerPool() {
@@ -341,8 +345,10 @@ public final class BuildOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Option to specify a `WorkerPool` for the build. User specifies the pool with the format
-   * "[WORKERPOOL_PROJECT_ID]/[WORKERPOOL_NAME]". This is an experimental field.
+   * Option to specify a `WorkerPool` for the build. Format:
+   * projects/{project}/workerPools/{workerPool}
+   *
+   * This field is experimental.
    * @param workerPool workerPool or {@code null} for none
    */
   public BuildOptions setWorkerPool(java.lang.String workerPool) {

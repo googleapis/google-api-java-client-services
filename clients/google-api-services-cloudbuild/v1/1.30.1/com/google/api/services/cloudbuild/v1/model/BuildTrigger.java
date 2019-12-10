@@ -109,7 +109,11 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> includedFiles;
 
   /**
-   * User assigned name of the trigger. Must be unique within the project.
+   * User-assigned name of the trigger. Must be unique within the project. Trigger names must meet
+   * the following requirements:
+   *
+   * + They must contain only alphanumeric characters and dashes. + They can be 1-64 characters
+   * long. + They must begin and end with an alphanumeric character.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -327,7 +331,11 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User assigned name of the trigger. Must be unique within the project.
+   * User-assigned name of the trigger. Must be unique within the project. Trigger names must meet
+   * the following requirements:
+   *
+   * + They must contain only alphanumeric characters and dashes. + They can be 1-64 characters
+   * long. + They must begin and end with an alphanumeric character.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -335,7 +343,11 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User assigned name of the trigger. Must be unique within the project.
+   * User-assigned name of the trigger. Must be unique within the project. Trigger names must meet
+   * the following requirements:
+   *
+   * + They must contain only alphanumeric characters and dashes. + They can be 1-64 characters
+   * long. + They must begin and end with an alphanumeric character.
    * @param name name or {@code null} for none
    */
   public BuildTrigger setName(java.lang.String name) {

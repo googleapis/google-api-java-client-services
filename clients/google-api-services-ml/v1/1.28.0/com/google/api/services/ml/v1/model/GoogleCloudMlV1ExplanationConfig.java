@@ -17,10 +17,9 @@
 package com.google.api.services.ml.v1.model;
 
 /**
- * Message holding configuration options for explaining model predictions. Currently, the only
- * supported mechanism to explain a model's prediction is through attributing its output back to its
- * inputs which is essentially a credit assignment task. We support multiple attribution methods,
- * some specific to particular frameworks like Tensorflow and XGBoost. Next idx: 7.
+ * Message holding configuration options for explaining model predictions. There are two feature
+ * attribution methods supported for TensorFlow models: integrated gradients and sampled Shapley.
+ * Learn more about feature attributions.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AI Platform Training & Prediction API. For a detailed

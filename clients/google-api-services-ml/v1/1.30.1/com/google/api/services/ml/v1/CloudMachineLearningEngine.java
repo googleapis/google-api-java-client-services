@@ -144,8 +144,10 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
 
     /**
      * Performs explanation on the data in the request. AI Platform implements a custom `explain` verb
-     * on top of an HTTP POST method. For details of the request and response format, see the **guide to
-     * the [explain request format](/ml-engine/docs/v1/explain-request)**.
+     * on top of an HTTP POST method.
+     *
+     * For details of the request and response format, see the **guide to the [explain request format
+     * ](/ml-engine/docs/v1/explain-request)**.
      *
      * Create a request for the method "projects.explain".
      *
@@ -173,8 +175,10 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
 
       /**
        * Performs explanation on the data in the request. AI Platform implements a custom `explain` verb
-       * on top of an HTTP POST method. For details of the request and response format, see the **guide
-       * to the [explain request format](/ml-engine/docs/v1/explain-request)**.
+       * on top of an HTTP POST method.
+       *
+       * For details of the request and response format, see the **guide to the [explain request format
+       * ](/ml-engine/docs/v1/explain-request)**.
        *
        * Create a request for the method "projects.explain".
        *
@@ -436,8 +440,10 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
     }
     /**
      * Performs prediction on the data in the request. AI Platform implements a custom `predict` verb on
-     * top of an HTTP POST method. For details of the request and response format, see the **guide to
-     * the [predict request format](/ml-engine/docs/v1/predict-request)**.
+     * top of an HTTP POST method.
+     *
+     * For details of the request and response format, see the **guide to the [predict request format
+     * ](/ml-engine/docs/v1/predict-request)**.
      *
      * Create a request for the method "projects.predict".
      *
@@ -465,8 +471,10 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
 
       /**
        * Performs prediction on the data in the request. AI Platform implements a custom `predict` verb
-       * on top of an HTTP POST method. For details of the request and response format, see the **guide
-       * to the [predict request format](/ml-engine/docs/v1/predict-request)**.
+       * on top of an HTTP POST method.
+       *
+       * For details of the request and response format, see the **guide to the [predict request format
+       * ](/ml-engine/docs/v1/predict-request)**.
        *
        * Create a request for the method "projects.predict".
        *
@@ -2304,8 +2312,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
        * Creates a model which will later contain one or more versions.
        *
        * You must add at least one version before you can request predictions from the model. Add versions
-       * by calling [projects.models.versions.create](/ml-
-       * engine/reference/rest/v1/projects.models.versions/create).
+       * by calling projects.models.versions.create.
        *
        * Create a request for the method "models.create".
        *
@@ -2333,8 +2340,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
          * Creates a model which will later contain one or more versions.
          *
          * You must add at least one version before you can request predictions from the model. Add
-         * versions by calling [projects.models.versions.create](/ml-
-         * engine/reference/rest/v1/projects.models.versions/create).
+         * versions by calling projects.models.versions.create.
          *
          * Create a request for the method "models.create".
          *
@@ -2442,7 +2448,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
        * Deletes a model.
        *
        * You can only delete a model if there are no versions in it. You can delete versions by calling
-       * [projects.models.versions.delete](/ml-engine/reference/rest/v1/projects.models.versions/delete).
+       * projects.models.versions.delete.
        *
        * Create a request for the method "models.delete".
        *
@@ -2469,8 +2475,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
          * Deletes a model.
          *
          * You can only delete a model if there are no versions in it. You can delete versions by calling
-         * [projects.models.versions.delete](/ml-
-         * engine/reference/rest/v1/projects.models.versions/delete).
+         * projects.models.versions.delete.
          *
          * Create a request for the method "models.delete".
          *
@@ -3622,8 +3627,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
          * If the version created in the cloud by this call is the first deployed version of the specified
          * model, it will be made the default version of the model. When you add a version to a model that
          * already has one or more versions, the default version does not automatically change. If you want
-         * a new version to be the default, you must call [projects.models.versions.setDefault](/ml-
-         * engine/reference/rest/v1/projects.models.versions/setDefault).
+         * a new version to be the default, you must call projects.models.versions.setDefault.
          *
          * Create a request for the method "versions.create".
          *
@@ -3653,8 +3657,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
            * If the version created in the cloud by this call is the first deployed version of the specified
            * model, it will be made the default version of the model. When you add a version to a model that
            * already has one or more versions, the default version does not automatically change. If you
-           * want a new version to be the default, you must call [projects.models.versions.setDefault](/ml-
-           * engine/reference/rest/v1/projects.models.versions/setDefault).
+           * want a new version to be the default, you must call projects.models.versions.setDefault.
            *
            * Create a request for the method "versions.create".
            *
@@ -3774,8 +3777,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
          *
          * @param name Required. The name of the version. You can get the names of all the
         versions of a model by calling
-         *        [projects.models.versions.list](/ml-
-         *        engine/reference/rest/v1/projects.models.versions/list).
+         *        projects.models.versions.list.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -3809,8 +3811,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
            *
            * @param name Required. The name of the version. You can get the names of all the
         versions of a model by calling
-         *        [projects.models.versions.list](/ml-
-         *        engine/reference/rest/v1/projects.models.versions/list).
+         *        projects.models.versions.list.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -3880,14 +3881,13 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
 
           /**
            * Required. The name of the version. You can get the names of all the versions of a model
-           * by calling [projects.models.versions.list](/ml-
-           * engine/reference/rest/v1/projects.models.versions/list).
+           * by calling projects.models.versions.list.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The name of the version. You can get the names of all the versions of a model by calling
-         [projects.models.versions.list](/ml-engine/reference/rest/v1/projects.models.versions/list).
+         projects.models.versions.list.
            */
           public java.lang.String getName() {
             return name;
@@ -3895,8 +3895,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
 
           /**
            * Required. The name of the version. You can get the names of all the versions of a model
-           * by calling [projects.models.versions.list](/ml-
-           * engine/reference/rest/v1/projects.models.versions/list).
+           * by calling projects.models.versions.list.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -3916,9 +3915,8 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
         /**
          * Gets information about a model version.
          *
-         * Models can have multiple versions. You can call [projects.models.versions.list](/ml-
-         * engine/reference/rest/v1/projects.models.versions/list) to get the same information that this
-         * method returns for all of the versions of a model.
+         * Models can have multiple versions. You can call projects.models.versions.list to get the same
+         * information that this method returns for all of the versions of a model.
          *
          * Create a request for the method "versions.get".
          *
@@ -3944,9 +3942,8 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
           /**
            * Gets information about a model version.
            *
-           * Models can have multiple versions. You can call [projects.models.versions.list](/ml-
-           * engine/reference/rest/v1/projects.models.versions/list) to get the same information that this
-           * method returns for all of the versions of a model.
+           * Models can have multiple versions. You can call projects.models.versions.list to get the same
+           * information that this method returns for all of the versions of a model.
            *
            * Create a request for the method "versions.get".
            *
@@ -4288,7 +4285,8 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
         /**
          * Updates the specified Version resource.
          *
-         * Currently the only update-able fields are `description` and `autoScaling.minNodes`.
+         * Currently the only update-able fields are `description`, `requestLoggingConfig`,
+         * `autoScaling.minNodes`, and `manualScaling.nodes`.
          *
          * Create a request for the method "versions.patch".
          *
@@ -4315,7 +4313,8 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
           /**
            * Updates the specified Version resource.
            *
-           * Currently the only update-able fields are `description` and `autoScaling.minNodes`.
+           * Currently the only update-able fields are `description`, `requestLoggingConfig`,
+           * `autoScaling.minNodes`, and `manualScaling.nodes`.
            *
            * Create a request for the method "versions.patch".
            *
@@ -4425,9 +4424,9 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
            * ``` { "description": "foo" } ```
            *
            * Currently the only supported update mask fields are `description`,
-           * `autoScaling.minNodes`, and `manualScaling.nodes`. However, you can only update
-           * `manualScaling.nodes` if the version uses a [Compute Engine (N1) machine type](/ml-
-           * engine/docs/machine-types-online-prediction).
+           * `requestLoggingConfig`, `autoScaling.minNodes`, and `manualScaling.nodes`. However, you
+           * can only update `manualScaling.nodes` if the version uses a [Compute Engine (N1)
+           * machine type](/ml-engine/docs/machine-types-online-prediction).
            */
           @com.google.api.client.util.Key
           private String updateMask;
@@ -4440,9 +4439,10 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
 
          ``` { "description": "foo" } ```
 
-         Currently the only supported update mask fields are `description`, `autoScaling.minNodes`, and
-         `manualScaling.nodes`. However, you can only update `manualScaling.nodes` if the version uses a
-         [Compute Engine (N1) machine type](/ml-engine/docs/machine-types-online-prediction).
+         Currently the only supported update mask fields are `description`, `requestLoggingConfig`,
+         `autoScaling.minNodes`, and `manualScaling.nodes`. However, you can only update
+         `manualScaling.nodes` if the version uses a [Compute Engine (N1) machine type](/ml-engine/docs
+         /machine-types-online-prediction).
            */
           public String getUpdateMask() {
             return updateMask;
@@ -4459,9 +4459,9 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
            * ``` { "description": "foo" } ```
            *
            * Currently the only supported update mask fields are `description`,
-           * `autoScaling.minNodes`, and `manualScaling.nodes`. However, you can only update
-           * `manualScaling.nodes` if the version uses a [Compute Engine (N1) machine type](/ml-
-           * engine/docs/machine-types-online-prediction).
+           * `requestLoggingConfig`, `autoScaling.minNodes`, and `manualScaling.nodes`. However, you
+           * can only update `manualScaling.nodes` if the version uses a [Compute Engine (N1)
+           * machine type](/ml-engine/docs/machine-types-online-prediction).
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -4490,8 +4490,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
          * @param name Required. The name of the version to make the default for the model. You
         can get the names of all
          *        the versions of a model by calling
-        [projects.models.versions.list](/ml-
-         *        engine/reference/rest/v1/projects.models.versions/list).
+        projects.models.versions.list.
          * @param content the {@link com.google.api.services.ml.v1.model.GoogleCloudMlV1SetDefaultVersionRequest}
          * @return the request
          */
@@ -4528,8 +4527,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
            * @param name Required. The name of the version to make the default for the model. You
         can get the names of all
          *        the versions of a model by calling
-        [projects.models.versions.list](/ml-
-         *        engine/reference/rest/v1/projects.models.versions/list).
+        projects.models.versions.list.
            * @param content the {@link com.google.api.services.ml.v1.model.GoogleCloudMlV1SetDefaultVersionRequest}
            * @since 1.13
            */
@@ -4600,15 +4598,13 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
 
           /**
            * Required. The name of the version to make the default for the model. You can get the
-           * names of all the versions of a model by calling [projects.models.versions.list](/ml-
-           * engine/reference/rest/v1/projects.models.versions/list).
+           * names of all the versions of a model by calling projects.models.versions.list.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The name of the version to make the default for the model. You can get the names of all
-         the versions of a model by calling [projects.models.versions.list](/ml-
-         engine/reference/rest/v1/projects.models.versions/list).
+         the versions of a model by calling projects.models.versions.list.
            */
           public java.lang.String getName() {
             return name;
@@ -4616,8 +4612,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
 
           /**
            * Required. The name of the version to make the default for the model. You can get the
-           * names of all the versions of a model by calling [projects.models.versions.list](/ml-
-           * engine/reference/rest/v1/projects.models.versions/list).
+           * names of all the versions of a model by calling projects.models.versions.list.
            */
           public SetDefault setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

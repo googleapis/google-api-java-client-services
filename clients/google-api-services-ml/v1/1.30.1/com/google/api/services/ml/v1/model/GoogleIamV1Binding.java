@@ -59,9 +59,9 @@ public final class GoogleIamV1Binding extends com.google.api.client.json.Generic
    * `admins@example.com`.
    *
    * * `deleted:user:{emailid}?uid={uniqueid}`: An email address (plus unique    identifier)
-   * representing a user that has been recently deleted. For
-   * example,`alice@example.com?uid=123456789012345678901`. If the user is    recovered, this value
-   * reverts to `user:{emailid}` and the recovered user    retains the role in the binding.
+   * representing a user that has been recently deleted. For    example,
+   * `alice@example.com?uid=123456789012345678901`. If the user is    recovered, this value reverts
+   * to `user:{emailid}` and the recovered user    retains the role in the binding.
    *
    * * `deleted:serviceAccount:{emailid}?uid={uniqueid}`: An email address (plus    unique
    * identifier) representing a service account that has been recently    deleted. For example,
@@ -130,9 +130,9 @@ public final class GoogleIamV1Binding extends com.google.api.client.json.Generic
    * `admins@example.com`.
    *
    * * `deleted:user:{emailid}?uid={uniqueid}`: An email address (plus unique    identifier)
-   * representing a user that has been recently deleted. For
-   * example,`alice@example.com?uid=123456789012345678901`. If the user is    recovered, this value
-   * reverts to `user:{emailid}` and the recovered user    retains the role in the binding.
+   * representing a user that has been recently deleted. For    example,
+   * `alice@example.com?uid=123456789012345678901`. If the user is    recovered, this value reverts
+   * to `user:{emailid}` and the recovered user    retains the role in the binding.
    *
    * * `deleted:serviceAccount:{emailid}?uid={uniqueid}`: An email address (plus    unique
    * identifier) representing a service account that has been recently    deleted. For example,
@@ -173,9 +173,9 @@ public final class GoogleIamV1Binding extends com.google.api.client.json.Generic
    * `admins@example.com`.
    *
    * * `deleted:user:{emailid}?uid={uniqueid}`: An email address (plus unique    identifier)
-   * representing a user that has been recently deleted. For
-   * example,`alice@example.com?uid=123456789012345678901`. If the user is    recovered, this value
-   * reverts to `user:{emailid}` and the recovered user    retains the role in the binding.
+   * representing a user that has been recently deleted. For    example,
+   * `alice@example.com?uid=123456789012345678901`. If the user is    recovered, this value reverts
+   * to `user:{emailid}` and the recovered user    retains the role in the binding.
    *
    * * `deleted:serviceAccount:{emailid}?uid={uniqueid}`: An email address (plus    unique
    * identifier) representing a service account that has been recently    deleted. For example,

@@ -30,9 +30,11 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class SuggestRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The sources to use for suggestions. If not specified, all data sources from the current search
-   * application are used. Suggestions are based on Gmail titles. Suggestions from third party
-   * sources are not available.
+   * The sources to use for suggestions. If not specified, the data sources are taken from the
+   * current search application.
+   *
+   * NOTE: Suggestions are supported only for third party data sources and people (i.e.
+   * PredefinedSource.PERSON).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,9 +62,11 @@ public final class SuggestRequest extends com.google.api.client.json.GenericJson
   private RequestOptions requestOptions;
 
   /**
-   * The sources to use for suggestions. If not specified, all data sources from the current search
-   * application are used. Suggestions are based on Gmail titles. Suggestions from third party
-   * sources are not available.
+   * The sources to use for suggestions. If not specified, the data sources are taken from the
+   * current search application.
+   *
+   * NOTE: Suggestions are supported only for third party data sources and people (i.e.
+   * PredefinedSource.PERSON).
    * @return value or {@code null} for none
    */
   public java.util.List<DataSourceRestriction> getDataSourceRestrictions() {
@@ -70,9 +74,11 @@ public final class SuggestRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The sources to use for suggestions. If not specified, all data sources from the current search
-   * application are used. Suggestions are based on Gmail titles. Suggestions from third party
-   * sources are not available.
+   * The sources to use for suggestions. If not specified, the data sources are taken from the
+   * current search application.
+   *
+   * NOTE: Suggestions are supported only for third party data sources and people (i.e.
+   * PredefinedSource.PERSON).
    * @param dataSourceRestrictions dataSourceRestrictions or {@code null} for none
    */
   public SuggestRequest setDataSourceRestrictions(java.util.List<DataSourceRestriction> dataSourceRestrictions) {

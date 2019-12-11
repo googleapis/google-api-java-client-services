@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-cloudsearch</artifactId>
-      <version>v1-rev20191009-1.30.3</version>
+      <version>v1-rev20191112-1.30.3</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,10 +35,10 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-cloudsearch:v1-rev20191009-1.30.3'
+  compile 'com.google.apis:google-api-services-cloudsearch:v1-rev20191112-1.30.3'
 }
 ```
 
 [javadoc]: https://googleapis.dev/java/google-api-services-cloudsearch/latest/index.html
 [google-api-client]: https://github.com/googleapis/google-api-java-client/
-[api-explorer]: https://developers.google.com/apis-explorer/#p/abusiveexperiencereport/v1/
+[api-explorer]: https://developers.google.com/apis-explorer/#p/cloudsearch/v1/

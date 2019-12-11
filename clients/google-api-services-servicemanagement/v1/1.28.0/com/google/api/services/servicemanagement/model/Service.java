@@ -155,8 +155,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * A unique ID for a specific instance of this message, typically assigned by the client for
-   * tracking purpose. If empty, the server may choose to generate one instead. Must be no longer
-   * than 60 characters.
+   * tracking purpose. Must be no longer than 63 characters and only lower case letters, digits,
+   * '.', '_' and '-' are allowed. If empty, the server may choose to generate one instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -515,8 +515,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * A unique ID for a specific instance of this message, typically assigned by the client for
-   * tracking purpose. If empty, the server may choose to generate one instead. Must be no longer
-   * than 60 characters.
+   * tracking purpose. Must be no longer than 63 characters and only lower case letters, digits,
+   * '.', '_' and '-' are allowed. If empty, the server may choose to generate one instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -525,8 +525,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * A unique ID for a specific instance of this message, typically assigned by the client for
-   * tracking purpose. If empty, the server may choose to generate one instead. Must be no longer
-   * than 60 characters.
+   * tracking purpose. Must be no longer than 63 characters and only lower case letters, digits,
+   * '.', '_' and '-' are allowed. If empty, the server may choose to generate one instead.
    * @param id id or {@code null} for none
    */
   public Service setId(java.lang.String id) {

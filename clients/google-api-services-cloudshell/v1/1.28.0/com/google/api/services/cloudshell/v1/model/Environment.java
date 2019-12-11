@@ -40,14 +40,7 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   private java.lang.String dockerImage;
 
   /**
-   * Output only. List of ports users can connect to on the environment.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.Integer> httpsPorts;
-
-  /**
-   * Output only. The environment's identifier, which is always "default".
+   * Output only. The environment's identifier, unique among the user's environments.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,6 +119,14 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   private java.lang.String webHost;
 
   /**
+   * Output only. Ports to which clients can connect to initiate HTTPS or WSS connections with the
+   * environment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.Integer> webPorts;
+
+  /**
    * Required. Full path to the Docker image used to run this environment, e.g. "gcr.io/dev-con
    * /cloud-devshell:latest".
    * @return value or {@code null} for none
@@ -145,24 +146,7 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. List of ports users can connect to on the environment.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.Integer> getHttpsPorts() {
-    return httpsPorts;
-  }
-
-  /**
-   * Output only. List of ports users can connect to on the environment.
-   * @param httpsPorts httpsPorts or {@code null} for none
-   */
-  public Environment setHttpsPorts(java.util.List<java.lang.Integer> httpsPorts) {
-    this.httpsPorts = httpsPorts;
-    return this;
-  }
-
-  /**
-   * Output only. The environment's identifier, which is always "default".
+   * Output only. The environment's identifier, unique among the user's environments.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -170,7 +154,7 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The environment's identifier, which is always "default".
+   * Output only. The environment's identifier, unique among the user's environments.
    * @param id id or {@code null} for none
    */
   public Environment setId(java.lang.String id) {
@@ -346,6 +330,25 @@ public final class Environment extends com.google.api.client.json.GenericJson {
    */
   public Environment setWebHost(java.lang.String webHost) {
     this.webHost = webHost;
+    return this;
+  }
+
+  /**
+   * Output only. Ports to which clients can connect to initiate HTTPS or WSS connections with the
+   * environment.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Integer> getWebPorts() {
+    return webPorts;
+  }
+
+  /**
+   * Output only. Ports to which clients can connect to initiate HTTPS or WSS connections with the
+   * environment.
+   * @param webPorts webPorts or {@code null} for none
+   */
+  public Environment setWebPorts(java.util.List<java.lang.Integer> webPorts) {
+    this.webPorts = webPorts;
     return this;
   }
 

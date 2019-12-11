@@ -19,7 +19,8 @@ package com.google.api.services.bigqueryreservation.v1alpha2.model;
 /**
  * Slot pool is a way to purchase slots with some minimum committed period of usage. Slot pool is
  * immutable and cannot be deleted until the end of the commitment period. After the end of the
- * commitment period, slots are still available but can be freely removed any time.
+ * commitment period, slots are still available but can be freely removed any time. Annual
+ * commitments will automatically be downgraded to monthly after the commitment ends.
  *
  * A slot pool resource exists as a child resource of a top-level reservation. Sum of all the ACTIVE
  * pools slot_count is always equal to the reservation slot_capacity.
@@ -43,6 +44,13 @@ public final class SlotPool extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String commitmentEndTime;
+
+  /**
+   * Output only. For FAILED slot pool, provides the reason of failure.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Status failureStatus;
 
   /**
    * Output only. The resource name of the slot pool, e.g.,    projects/myproject/locations/us-
@@ -91,6 +99,23 @@ public final class SlotPool extends com.google.api.client.json.GenericJson {
    */
   public SlotPool setCommitmentEndTime(String commitmentEndTime) {
     this.commitmentEndTime = commitmentEndTime;
+    return this;
+  }
+
+  /**
+   * Output only. For FAILED slot pool, provides the reason of failure.
+   * @return value or {@code null} for none
+   */
+  public Status getFailureStatus() {
+    return failureStatus;
+  }
+
+  /**
+   * Output only. For FAILED slot pool, provides the reason of failure.
+   * @param failureStatus failureStatus or {@code null} for none
+   */
+  public SlotPool setFailureStatus(Status failureStatus) {
+    this.failureStatus = failureStatus;
     return this;
   }
 

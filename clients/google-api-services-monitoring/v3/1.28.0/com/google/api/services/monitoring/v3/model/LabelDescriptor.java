@@ -38,7 +38,10 @@ public final class LabelDescriptor extends com.google.api.client.json.GenericJso
   private java.lang.String description;
 
   /**
-   * The label key.
+   * The key for this label. The key must meet the following criteria: Does not exceed 100
+   * characters. Matches the following regular expression: [a-zA-Z][a-zA-Z0-9_]* The first character
+   * must be an upper- or lower-case letter. The remaining characters must be letters, digits, or
+   * underscores.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +72,10 @@ public final class LabelDescriptor extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The label key.
+   * The key for this label. The key must meet the following criteria: Does not exceed 100
+   * characters. Matches the following regular expression: [a-zA-Z][a-zA-Z0-9_]* The first character
+   * must be an upper- or lower-case letter. The remaining characters must be letters, digits, or
+   * underscores.
    * @return value or {@code null} for none
    */
   public java.lang.String getKey() {
@@ -77,7 +83,10 @@ public final class LabelDescriptor extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The label key.
+   * The key for this label. The key must meet the following criteria: Does not exceed 100
+   * characters. Matches the following regular expression: [a-zA-Z][a-zA-Z0-9_]* The first character
+   * must be an upper- or lower-case letter. The remaining characters must be letters, digits, or
+   * underscores.
    * @param key key or {@code null} for none
    */
   public LabelDescriptor setKey(java.lang.String key) {

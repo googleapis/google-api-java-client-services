@@ -41,7 +41,7 @@ public final class ListUptimeCheckConfigsResponse extends com.google.api.client.
   private java.lang.String nextPageToken;
 
   /**
-   * The total number of uptime check configurations for the project, irrespective of any
+   * The total number of Uptime check configurations for the project, irrespective of any
    * pagination.
    * The value may be {@code null}.
    */
@@ -49,7 +49,7 @@ public final class ListUptimeCheckConfigsResponse extends com.google.api.client.
   private java.lang.Integer totalSize;
 
   /**
-   * The returned uptime check configurations.
+   * The returned Uptime check configurations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,7 +79,7 @@ public final class ListUptimeCheckConfigsResponse extends com.google.api.client.
   }
 
   /**
-   * The total number of uptime check configurations for the project, irrespective of any
+   * The total number of Uptime check configurations for the project, irrespective of any
    * pagination.
    * @return value or {@code null} for none
    */
@@ -88,7 +88,7 @@ public final class ListUptimeCheckConfigsResponse extends com.google.api.client.
   }
 
   /**
-   * The total number of uptime check configurations for the project, irrespective of any
+   * The total number of Uptime check configurations for the project, irrespective of any
    * pagination.
    * @param totalSize totalSize or {@code null} for none
    */
@@ -98,7 +98,7 @@ public final class ListUptimeCheckConfigsResponse extends com.google.api.client.
   }
 
   /**
-   * The returned uptime check configurations.
+   * The returned Uptime check configurations.
    * @return value or {@code null} for none
    */
   public java.util.List<UptimeCheckConfig> getUptimeCheckConfigs() {
@@ -106,7 +106,7 @@ public final class ListUptimeCheckConfigsResponse extends com.google.api.client.
   }
 
   /**
-   * The returned uptime check configurations.
+   * The returned Uptime check configurations.
    * @param uptimeCheckConfigs uptimeCheckConfigs or {@code null} for none
    */
   public ListUptimeCheckConfigsResponse setUptimeCheckConfigs(java.util.List<UptimeCheckConfig> uptimeCheckConfigs) {

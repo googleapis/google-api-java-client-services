@@ -46,7 +46,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.1 of the Stackdriver Monitoring API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.3 of the Stackdriver Monitoring API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -141,141 +141,6 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
    * The "projects" collection of methods.
    */
   public class Projects {
-
-    /**
-     * Validates a new uptime check configuration, and also executes the Uptime check. The results of
-     * the Uptime check are returned, but not stored.
-     *
-     * Create a request for the method "projects.validateUptimeCheckConfig".
-     *
-     * This request holds the parameters needed by the monitoring server.  After setting any optional
-     * parameters, call the {@link ValidateUptimeCheckConfig#execute()} method to invoke the remote
-     * operation.
-     *
-     * @param parent The project for the uptime check. The format is projects/[PROJECT_ID].
-     * @param content the {@link com.google.api.services.monitoring.v3.model.UptimeCheckConfig}
-     * @return the request
-     */
-    public ValidateUptimeCheckConfig validateUptimeCheckConfig(java.lang.String parent, com.google.api.services.monitoring.v3.model.UptimeCheckConfig content) throws java.io.IOException {
-      ValidateUptimeCheckConfig result = new ValidateUptimeCheckConfig(parent, content);
-      initialize(result);
-      return result;
-    }
-
-    public class ValidateUptimeCheckConfig extends MonitoringRequest<com.google.api.services.monitoring.v3.model.ValidateUptimeCheckConfigResponse> {
-
-      private static final String REST_PATH = "v3/{+parent}:validateUptimeCheckConfig";
-
-      private final java.util.regex.Pattern PARENT_PATTERN =
-          java.util.regex.Pattern.compile("^projects/[^/]+$");
-
-      /**
-       * Validates a new uptime check configuration, and also executes the Uptime check. The results of
-       * the Uptime check are returned, but not stored.
-       *
-       * Create a request for the method "projects.validateUptimeCheckConfig".
-       *
-       * This request holds the parameters needed by the the monitoring server.  After setting any
-       * optional parameters, call the {@link ValidateUptimeCheckConfig#execute()} method to invoke the
-       * remote operation. <p> {@link ValidateUptimeCheckConfig#initialize(com.google.api.client.googlea
-       * pis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
-       * immediately after invoking the constructor. </p>
-       *
-       * @param parent The project for the uptime check. The format is projects/[PROJECT_ID].
-       * @param content the {@link com.google.api.services.monitoring.v3.model.UptimeCheckConfig}
-       * @since 1.13
-       */
-      protected ValidateUptimeCheckConfig(java.lang.String parent, com.google.api.services.monitoring.v3.model.UptimeCheckConfig content) {
-        super(Monitoring.this, "POST", REST_PATH, content, com.google.api.services.monitoring.v3.model.ValidateUptimeCheckConfigResponse.class);
-        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-              "Parameter parent must conform to the pattern " +
-              "^projects/[^/]+$");
-        }
-      }
-
-      @Override
-      public ValidateUptimeCheckConfig set$Xgafv(java.lang.String $Xgafv) {
-        return (ValidateUptimeCheckConfig) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public ValidateUptimeCheckConfig setAccessToken(java.lang.String accessToken) {
-        return (ValidateUptimeCheckConfig) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public ValidateUptimeCheckConfig setAlt(java.lang.String alt) {
-        return (ValidateUptimeCheckConfig) super.setAlt(alt);
-      }
-
-      @Override
-      public ValidateUptimeCheckConfig setCallback(java.lang.String callback) {
-        return (ValidateUptimeCheckConfig) super.setCallback(callback);
-      }
-
-      @Override
-      public ValidateUptimeCheckConfig setFields(java.lang.String fields) {
-        return (ValidateUptimeCheckConfig) super.setFields(fields);
-      }
-
-      @Override
-      public ValidateUptimeCheckConfig setKey(java.lang.String key) {
-        return (ValidateUptimeCheckConfig) super.setKey(key);
-      }
-
-      @Override
-      public ValidateUptimeCheckConfig setOauthToken(java.lang.String oauthToken) {
-        return (ValidateUptimeCheckConfig) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public ValidateUptimeCheckConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (ValidateUptimeCheckConfig) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public ValidateUptimeCheckConfig setQuotaUser(java.lang.String quotaUser) {
-        return (ValidateUptimeCheckConfig) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public ValidateUptimeCheckConfig setUploadType(java.lang.String uploadType) {
-        return (ValidateUptimeCheckConfig) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public ValidateUptimeCheckConfig setUploadProtocol(java.lang.String uploadProtocol) {
-        return (ValidateUptimeCheckConfig) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /** The project for the uptime check. The format is projects/[PROJECT_ID]. */
-      @com.google.api.client.util.Key
-      private java.lang.String parent;
-
-      /** The project for the uptime check. The format is projects/[PROJECT_ID].
-       */
-      public java.lang.String getParent() {
-        return parent;
-      }
-
-      /** The project for the uptime check. The format is projects/[PROJECT_ID]. */
-      public ValidateUptimeCheckConfig setParent(java.lang.String parent) {
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-              "Parameter parent must conform to the pattern " +
-              "^projects/[^/]+$");
-        }
-        this.parent = parent;
-        return this;
-      }
-
-      @Override
-      public ValidateUptimeCheckConfig set(String parameterName, Object value) {
-        return (ValidateUptimeCheckConfig) super.set(parameterName, value);
-      }
-    }
 
     /**
      * An accessor for creating requests from the AlertPolicies collection.
@@ -5866,21 +5731,22 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Unsupported: must be left blank. The points in each time series are returned in reverse
-         * time order.
+         * Unsupported: must be left blank. The points in each time series are currently returned in
+         * reverse time order (most recent to oldest).
          */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
-        /** Unsupported: must be left blank. The points in each time series are returned in reverse time order.
+        /** Unsupported: must be left blank. The points in each time series are currently returned in reverse
+       time order (most recent to oldest).
          */
         public java.lang.String getOrderBy() {
           return orderBy;
         }
 
         /**
-         * Unsupported: must be left blank. The points in each time series are returned in reverse
-         * time order.
+         * Unsupported: must be left blank. The points in each time series are currently returned in
+         * reverse time order (most recent to oldest).
          */
         public List setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;
@@ -5986,14 +5852,14 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
     public class UptimeCheckConfigs {
 
       /**
-       * Creates a new uptime check configuration.
+       * Creates a new Uptime check configuration.
        *
        * Create a request for the method "uptimeCheckConfigs.create".
        *
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent The project in which to create the uptime check. The format  is projects/[PROJECT_ID].
+       * @param parent The project in which to create the Uptime check. The format  is projects/[PROJECT_ID].
        * @param content the {@link com.google.api.services.monitoring.v3.model.UptimeCheckConfig}
        * @return the request
        */
@@ -6011,7 +5877,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Creates a new uptime check configuration.
+         * Creates a new Uptime check configuration.
          *
          * Create a request for the method "uptimeCheckConfigs.create".
          *
@@ -6021,7 +5887,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The project in which to create the uptime check. The format  is projects/[PROJECT_ID].
+         * @param parent The project in which to create the Uptime check. The format  is projects/[PROJECT_ID].
          * @param content the {@link com.google.api.services.monitoring.v3.model.UptimeCheckConfig}
          * @since 1.13
          */
@@ -6091,19 +5957,19 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * The project in which to create the uptime check. The format  is projects/[PROJECT_ID].
+         * The project in which to create the Uptime check. The format  is projects/[PROJECT_ID].
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The project in which to create the uptime check. The format  is projects/[PROJECT_ID].
+        /** The project in which to create the Uptime check. The format  is projects/[PROJECT_ID].
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The project in which to create the uptime check. The format  is projects/[PROJECT_ID].
+         * The project in which to create the Uptime check. The format  is projects/[PROJECT_ID].
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -6121,7 +5987,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Deletes an uptime check configuration. Note that this method will fail if the uptime check
+       * Deletes an Uptime check configuration. Note that this method will fail if the Uptime check
        * configuration is referenced by an alert policy or other dependent configs that would be rendered
        * invalid by the deletion.
        *
@@ -6130,7 +5996,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name The uptime check configuration to delete. The format  is
+       * @param name The Uptime check configuration to delete. The format  is
        *        projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].
        * @return the request
        */
@@ -6148,7 +6014,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+/uptimeCheckConfigs/[^/]+$");
 
         /**
-         * Deletes an uptime check configuration. Note that this method will fail if the uptime check
+         * Deletes an Uptime check configuration. Note that this method will fail if the Uptime check
          * configuration is referenced by an alert policy or other dependent configs that would be
          * rendered invalid by the deletion.
          *
@@ -6160,7 +6026,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The uptime check configuration to delete. The format  is
+         * @param name The Uptime check configuration to delete. The format  is
        *        projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].
          * @since 1.13
          */
@@ -6230,13 +6096,13 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * The uptime check configuration to delete. The format  is
+         * The Uptime check configuration to delete. The format  is
          * projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The uptime check configuration to delete. The format  is
+        /** The Uptime check configuration to delete. The format  is
        projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].
          */
         public java.lang.String getName() {
@@ -6244,7 +6110,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * The uptime check configuration to delete. The format  is
+         * The Uptime check configuration to delete. The format  is
          * projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].
          */
         public Delete setName(java.lang.String name) {
@@ -6263,14 +6129,14 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Gets a single uptime check configuration.
+       * Gets a single Uptime check configuration.
        *
        * Create a request for the method "uptimeCheckConfigs.get".
        *
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The uptime check configuration to retrieve. The format  is
+       * @param name The Uptime check configuration to retrieve. The format  is
        *        projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].
        * @return the request
        */
@@ -6288,7 +6154,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+/uptimeCheckConfigs/[^/]+$");
 
         /**
-         * Gets a single uptime check configuration.
+         * Gets a single Uptime check configuration.
          *
          * Create a request for the method "uptimeCheckConfigs.get".
          *
@@ -6297,7 +6163,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The uptime check configuration to retrieve. The format  is
+         * @param name The Uptime check configuration to retrieve. The format  is
        *        projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].
          * @since 1.13
          */
@@ -6377,13 +6243,13 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * The uptime check configuration to retrieve. The format  is
+         * The Uptime check configuration to retrieve. The format  is
          * projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The uptime check configuration to retrieve. The format  is
+        /** The Uptime check configuration to retrieve. The format  is
        projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].
          */
         public java.lang.String getName() {
@@ -6391,7 +6257,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * The uptime check configuration to retrieve. The format  is
+         * The Uptime check configuration to retrieve. The format  is
          * projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].
          */
         public Get setName(java.lang.String name) {
@@ -6410,15 +6276,15 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Lists the existing valid uptime check configurations for the project, leaving out any invalid
-       * configurations.
+       * Lists the existing valid Uptime check configurations for the project (leaving out any invalid
+       * configurations).
        *
        * Create a request for the method "uptimeCheckConfigs.list".
        *
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent The project whose uptime check configurations are listed. The format  is projects/[PROJECT_ID].
+       * @param parent The project whose Uptime check configurations are listed. The format  is projects/[PROJECT_ID].
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -6435,8 +6301,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists the existing valid uptime check configurations for the project, leaving out any invalid
-         * configurations.
+         * Lists the existing valid Uptime check configurations for the project (leaving out any invalid
+         * configurations).
          *
          * Create a request for the method "uptimeCheckConfigs.list".
          *
@@ -6445,7 +6311,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The project whose uptime check configurations are listed. The format  is projects/[PROJECT_ID].
+         * @param parent The project whose Uptime check configurations are listed. The format  is projects/[PROJECT_ID].
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -6524,20 +6390,20 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * The project whose uptime check configurations are listed. The format  is
+         * The project whose Uptime check configurations are listed. The format  is
          * projects/[PROJECT_ID].
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The project whose uptime check configurations are listed. The format  is projects/[PROJECT_ID].
+        /** The project whose Uptime check configurations are listed. The format  is projects/[PROJECT_ID].
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The project whose uptime check configurations are listed. The format  is
+         * The project whose Uptime check configurations are listed. The format  is
          * projects/[PROJECT_ID].
          */
         public List setParent(java.lang.String parent) {
@@ -6608,18 +6474,18 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Updates an uptime check configuration. You can either replace the entire configuration with a new
+       * Updates an Uptime check configuration. You can either replace the entire configuration with a new
        * one or replace only certain fields in the current configuration by specifying the fields to be
-       * updated via "updateMask". Returns the updated configuration.
+       * updated via updateMask. Returns the updated configuration.
        *
        * Create a request for the method "uptimeCheckConfigs.patch".
        *
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name A unique resource name for this UptimeCheckConfig. The format
+       * @param name A unique resource name for this Uptime check configuration. The format
        *        is:projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].This field should be omitted
-       *        when creating the uptime check configuration; on create, the resource name is assigned by
+       *        when creating the Uptime check configuration; on create, the resource name is assigned by
        *        the server and included in the response.
        * @param content the {@link com.google.api.services.monitoring.v3.model.UptimeCheckConfig}
        * @return the request
@@ -6638,9 +6504,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+/uptimeCheckConfigs/[^/]+$");
 
         /**
-         * Updates an uptime check configuration. You can either replace the entire configuration with a
+         * Updates an Uptime check configuration. You can either replace the entire configuration with a
          * new one or replace only certain fields in the current configuration by specifying the fields to
-         * be updated via "updateMask". Returns the updated configuration.
+         * be updated via updateMask. Returns the updated configuration.
          *
          * Create a request for the method "uptimeCheckConfigs.patch".
          *
@@ -6650,9 +6516,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name A unique resource name for this UptimeCheckConfig. The format
+         * @param name A unique resource name for this Uptime check configuration. The format
        *        is:projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].This field should be omitted
-       *        when creating the uptime check configuration; on create, the resource name is assigned by
+       *        when creating the Uptime check configuration; on create, the resource name is assigned by
        *        the server and included in the response.
          * @param content the {@link com.google.api.services.monitoring.v3.model.UptimeCheckConfig}
          * @since 1.13
@@ -6723,17 +6589,17 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * A unique resource name for this UptimeCheckConfig. The format
+         * A unique resource name for this Uptime check configuration. The format
          * is:projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].This field should be
-         * omitted when creating the uptime check configuration; on create, the resource name is
+         * omitted when creating the Uptime check configuration; on create, the resource name is
          * assigned by the server and included in the response.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** A unique resource name for this UptimeCheckConfig. The format
+        /** A unique resource name for this Uptime check configuration. The format
        is:projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].This field should be omitted when
-       creating the uptime check configuration; on create, the resource name is assigned by the server and
+       creating the Uptime check configuration; on create, the resource name is assigned by the server and
        included in the response.
          */
         public java.lang.String getName() {
@@ -6741,9 +6607,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * A unique resource name for this UptimeCheckConfig. The format
+         * A unique resource name for this Uptime check configuration. The format
          * is:projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].This field should be
-         * omitted when creating the uptime check configuration; on create, the resource name is
+         * omitted when creating the Uptime check configuration; on create, the resource name is
          * assigned by the server and included in the response.
          */
         public Patch setName(java.lang.String name) {
@@ -6757,14 +6623,14 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Optional. If present, only the listed fields in the current uptime check configuration
+         * Optional. If present, only the listed fields in the current Uptime check configuration
          * are updated with values from the new configuration. If this field is empty, then the
          * current configuration is completely replaced with the new configuration.
          */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** Optional. If present, only the listed fields in the current uptime check configuration are updated
+        /** Optional. If present, only the listed fields in the current Uptime check configuration are updated
        with values from the new configuration. If this field is empty, then the current configuration is
        completely replaced with the new configuration.
          */
@@ -6773,10 +6639,1723 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Optional. If present, only the listed fields in the current uptime check configuration
+         * Optional. If present, only the listed fields in the current Uptime check configuration
          * are updated with values from the new configuration. If this field is empty, then the
          * current configuration is completely replaced with the new configuration.
          */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+
+    }
+  }
+
+  /**
+   * An accessor for creating requests from the Services collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Monitoring monitoring = new Monitoring(...);}
+   *   {@code Monitoring.Services.List request = monitoring.services().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Services services() {
+    return new Services();
+  }
+
+  /**
+   * The "services" collection of methods.
+   */
+  public class Services {
+
+    /**
+     * Create a Service.
+     *
+     * Create a request for the method "services.create".
+     *
+     * This request holds the parameters needed by the monitoring server.  After setting any optional
+     * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+     *
+     * @param parent Resource name of the parent workspace. Of the form projects/{project_id}.
+     * @param content the {@link com.google.api.services.monitoring.v3.model.Service}
+     * @return the request
+     */
+    public Create create(java.lang.String parent, com.google.api.services.monitoring.v3.model.Service content) throws java.io.IOException {
+      Create result = new Create(parent, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Create extends MonitoringRequest<com.google.api.services.monitoring.v3.model.Service> {
+
+      private static final String REST_PATH = "v3/{+parent}/services";
+
+      private final java.util.regex.Pattern PARENT_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
+
+      /**
+       * Create a Service.
+       *
+       * Create a request for the method "services.create".
+       *
+       * This request holds the parameters needed by the the monitoring server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param parent Resource name of the parent workspace. Of the form projects/{project_id}.
+       * @param content the {@link com.google.api.services.monitoring.v3.model.Service}
+       * @since 1.13
+       */
+      protected Create(java.lang.String parent, com.google.api.services.monitoring.v3.model.Service content) {
+        super(Monitoring.this, "POST", REST_PATH, content, com.google.api.services.monitoring.v3.model.Service.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+      }
+
+      @Override
+      public Create set$Xgafv(java.lang.String $Xgafv) {
+        return (Create) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Create setAccessToken(java.lang.String accessToken) {
+        return (Create) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Create setAlt(java.lang.String alt) {
+        return (Create) super.setAlt(alt);
+      }
+
+      @Override
+      public Create setCallback(java.lang.String callback) {
+        return (Create) super.setCallback(callback);
+      }
+
+      @Override
+      public Create setFields(java.lang.String fields) {
+        return (Create) super.setFields(fields);
+      }
+
+      @Override
+      public Create setKey(java.lang.String key) {
+        return (Create) super.setKey(key);
+      }
+
+      @Override
+      public Create setOauthToken(java.lang.String oauthToken) {
+        return (Create) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Create) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Create setQuotaUser(java.lang.String quotaUser) {
+        return (Create) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Create setUploadType(java.lang.String uploadType) {
+        return (Create) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Create setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Create) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Resource name of the parent workspace. Of the form projects/{project_id}. */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Resource name of the parent workspace. Of the form projects/{project_id}.
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /** Resource name of the parent workspace. Of the form projects/{project_id}. */
+      public Create setParent(java.lang.String parent) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+        this.parent = parent;
+        return this;
+      }
+
+      /**
+       * Optional. The Service id to use for this Service. If omitted, an id will be generated
+       * instead. Must match the pattern a-z0-9-+
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String serviceId;
+
+      /** Optional. The Service id to use for this Service. If omitted, an id will be generated instead. Must
+     match the pattern a-z0-9-+
+       */
+      public java.lang.String getServiceId() {
+        return serviceId;
+      }
+
+      /**
+       * Optional. The Service id to use for this Service. If omitted, an id will be generated
+       * instead. Must match the pattern a-z0-9-+
+       */
+      public Create setServiceId(java.lang.String serviceId) {
+        this.serviceId = serviceId;
+        return this;
+      }
+
+      @Override
+      public Create set(String parameterName, Object value) {
+        return (Create) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Soft delete this Service.
+     *
+     * Create a request for the method "services.delete".
+     *
+     * This request holds the parameters needed by the monitoring server.  After setting any optional
+     * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @param name Resource name of the Service to delete. Of the form projects/{project_id}/service/{service_id}.
+     * @return the request
+     */
+    public Delete delete(java.lang.String name) throws java.io.IOException {
+      Delete result = new Delete(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends MonitoringRequest<com.google.api.services.monitoring.v3.model.Empty> {
+
+      private static final String REST_PATH = "v3/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+/[^/]+/services/[^/]+$");
+
+      /**
+       * Soft delete this Service.
+       *
+       * Create a request for the method "services.delete".
+       *
+       * This request holds the parameters needed by the the monitoring server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Resource name of the Service to delete. Of the form projects/{project_id}/service/{service_id}.
+       * @since 1.13
+       */
+      protected Delete(java.lang.String name) {
+        super(Monitoring.this, "DELETE", REST_PATH, null, com.google.api.services.monitoring.v3.model.Empty.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^[^/]+/[^/]+/services/[^/]+$");
+        }
+      }
+
+      @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Resource name of the Service to delete. Of the form
+       * projects/{project_id}/service/{service_id}.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Resource name of the Service to delete. Of the form projects/{project_id}/service/{service_id}.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Resource name of the Service to delete. Of the form
+       * projects/{project_id}/service/{service_id}.
+       */
+      public Delete setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^[^/]+/[^/]+/services/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Get the named Service.
+     *
+     * Create a request for the method "services.get".
+     *
+     * This request holds the parameters needed by the monitoring server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param name Resource name of the Service. Of the form projects/{project_id}/services/{service_id}.
+     * @return the request
+     */
+    public Get get(java.lang.String name) throws java.io.IOException {
+      Get result = new Get(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends MonitoringRequest<com.google.api.services.monitoring.v3.model.Service> {
+
+      private static final String REST_PATH = "v3/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+/[^/]+/services/[^/]+$");
+
+      /**
+       * Get the named Service.
+       *
+       * Create a request for the method "services.get".
+       *
+       * This request holds the parameters needed by the the monitoring server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+       * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Resource name of the Service. Of the form projects/{project_id}/services/{service_id}.
+       * @since 1.13
+       */
+      protected Get(java.lang.String name) {
+        super(Monitoring.this, "GET", REST_PATH, null, com.google.api.services.monitoring.v3.model.Service.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^[^/]+/[^/]+/services/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Resource name of the Service. Of the form projects/{project_id}/services/{service_id}. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Resource name of the Service. Of the form projects/{project_id}/services/{service_id}.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Resource name of the Service. Of the form projects/{project_id}/services/{service_id}. */
+      public Get setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^[^/]+/[^/]+/services/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * List Services for this workspace.
+     *
+     * Create a request for the method "services.list".
+     *
+     * This request holds the parameters needed by the monitoring server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param parent Resource name of the parent Workspace. Of the form projects/{project_id}.
+     * @return the request
+     */
+    public List list(java.lang.String parent) throws java.io.IOException {
+      List result = new List(parent);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends MonitoringRequest<com.google.api.services.monitoring.v3.model.ListServicesResponse> {
+
+      private static final String REST_PATH = "v3/{+parent}/services";
+
+      private final java.util.regex.Pattern PARENT_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
+
+      /**
+       * List Services for this workspace.
+       *
+       * Create a request for the method "services.list".
+       *
+       * This request holds the parameters needed by the the monitoring server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+       * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param parent Resource name of the parent Workspace. Of the form projects/{project_id}.
+       * @since 1.13
+       */
+      protected List(java.lang.String parent) {
+        super(Monitoring.this, "GET", REST_PATH, null, com.google.api.services.monitoring.v3.model.ListServicesResponse.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Resource name of the parent Workspace. Of the form projects/{project_id}. */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Resource name of the parent Workspace. Of the form projects/{project_id}.
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /** Resource name of the parent Workspace. Of the form projects/{project_id}. */
+      public List setParent(java.lang.String parent) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+        this.parent = parent;
+        return this;
+      }
+
+      /**
+       * A filter specifying what Services to return. The filter currently supports the following
+       * fields: - `identifier_case` - `app_engine.module_id` - `cloud_endpoints.service` -
+       * `cluster_istio.location` - `cluster_istio.cluster_name` - `cluster_istio.service_namespace`
+       * - `cluster_istio.service_name` identifier_case refers to which option in the identifier
+       * oneof is populated. For example, the filter identifier_case = "CUSTOM" would match all
+       * services with a value for the custom field. Valid options are "CUSTOM", "APP_ENGINE",
+       * "CLOUD_ENDPOINTS", and "CLUSTER_ISTIO".
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** A filter specifying what Services to return. The filter currently supports the following fields: -
+     `identifier_case` - `app_engine.module_id` - `cloud_endpoints.service` - `cluster_istio.location` -
+     `cluster_istio.cluster_name` - `cluster_istio.service_namespace` - `cluster_istio.service_name`
+     identifier_case refers to which option in the identifier oneof is populated. For example, the
+     filter identifier_case = "CUSTOM" would match all services with a value for the custom field. Valid
+     options are "CUSTOM", "APP_ENGINE", "CLOUD_ENDPOINTS", and "CLUSTER_ISTIO".
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /**
+       * A filter specifying what Services to return. The filter currently supports the following
+       * fields: - `identifier_case` - `app_engine.module_id` - `cloud_endpoints.service` -
+       * `cluster_istio.location` - `cluster_istio.cluster_name` - `cluster_istio.service_namespace`
+       * - `cluster_istio.service_name` identifier_case refers to which option in the identifier
+       * oneof is populated. For example, the filter identifier_case = "CUSTOM" would match all
+       * services with a value for the custom field. Valid options are "CUSTOM", "APP_ENGINE",
+       * "CLOUD_ENDPOINTS", and "CLUSTER_ISTIO".
+       */
+      public List setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      /**
+       * A non-negative number that is the maximum number of results to return. When 0, use default
+       * page size.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** A non-negative number that is the maximum number of results to return. When 0, use default page
+     size.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * A non-negative number that is the maximum number of results to return. When 0, use default
+       * page size.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * If this field is not empty then it must contain the nextPageToken value returned by a
+       * previous call to this method. Using this field causes the method to return additional
+       * results from the previous method call.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** If this field is not empty then it must contain the nextPageToken value returned by a previous call
+     to this method. Using this field causes the method to return additional results from the previous
+     method call.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * If this field is not empty then it must contain the nextPageToken value returned by a
+       * previous call to this method. Using this field causes the method to return additional
+       * results from the previous method call.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Update this Service.
+     *
+     * Create a request for the method "services.patch".
+     *
+     * This request holds the parameters needed by the monitoring server.  After setting any optional
+     * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+     *
+     * @param name Resource name for this Service. Of the form projects/{project_id}/services/{service_id}.
+     * @param content the {@link com.google.api.services.monitoring.v3.model.Service}
+     * @return the request
+     */
+    public Patch patch(java.lang.String name, com.google.api.services.monitoring.v3.model.Service content) throws java.io.IOException {
+      Patch result = new Patch(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Patch extends MonitoringRequest<com.google.api.services.monitoring.v3.model.Service> {
+
+      private static final String REST_PATH = "v3/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+/[^/]+/services/[^/]+$");
+
+      /**
+       * Update this Service.
+       *
+       * Create a request for the method "services.patch".
+       *
+       * This request holds the parameters needed by the the monitoring server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Resource name for this Service. Of the form projects/{project_id}/services/{service_id}.
+       * @param content the {@link com.google.api.services.monitoring.v3.model.Service}
+       * @since 1.13
+       */
+      protected Patch(java.lang.String name, com.google.api.services.monitoring.v3.model.Service content) {
+        super(Monitoring.this, "PATCH", REST_PATH, content, com.google.api.services.monitoring.v3.model.Service.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^[^/]+/[^/]+/services/[^/]+$");
+        }
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Patch setAlt(java.lang.String alt) {
+        return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
+      }
+
+      @Override
+      public Patch setFields(java.lang.String fields) {
+        return (Patch) super.setFields(fields);
+      }
+
+      @Override
+      public Patch setKey(java.lang.String key) {
+        return (Patch) super.setKey(key);
+      }
+
+      @Override
+      public Patch setOauthToken(java.lang.String oauthToken) {
+        return (Patch) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Patch) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Patch setQuotaUser(java.lang.String quotaUser) {
+        return (Patch) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Resource name for this Service. Of the form projects/{project_id}/services/{service_id}.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Resource name for this Service. Of the form projects/{project_id}/services/{service_id}.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Resource name for this Service. Of the form projects/{project_id}/services/{service_id}.
+       */
+      public Patch setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^[^/]+/[^/]+/services/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /** A set of field paths defining which fields to use for the update. */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** A set of field paths defining which fields to use for the update.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /** A set of field paths defining which fields to use for the update. */
+      public Patch setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public Patch set(String parameterName, Object value) {
+        return (Patch) super.set(parameterName, value);
+      }
+    }
+
+    /**
+     * An accessor for creating requests from the ServiceLevelObjectives collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Monitoring monitoring = new Monitoring(...);}
+     *   {@code Monitoring.ServiceLevelObjectives.List request = monitoring.serviceLevelObjectives().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public ServiceLevelObjectives serviceLevelObjectives() {
+      return new ServiceLevelObjectives();
+    }
+
+    /**
+     * The "serviceLevelObjectives" collection of methods.
+     */
+    public class ServiceLevelObjectives {
+
+      /**
+       * Create a ServiceLevelObjective for the given Service.
+       *
+       * Create a request for the method "serviceLevelObjectives.create".
+       *
+       * This request holds the parameters needed by the monitoring server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Resource name of the parent Service. Of the form projects/{project_id}/services/{service_id}.
+       * @param content the {@link com.google.api.services.monitoring.v3.model.ServiceLevelObjective}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.monitoring.v3.model.ServiceLevelObjective content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends MonitoringRequest<com.google.api.services.monitoring.v3.model.ServiceLevelObjective> {
+
+        private static final String REST_PATH = "v3/{+parent}/serviceLevelObjectives";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+/[^/]+/services/[^/]+$");
+
+        /**
+         * Create a ServiceLevelObjective for the given Service.
+         *
+         * Create a request for the method "serviceLevelObjectives.create".
+         *
+         * This request holds the parameters needed by the the monitoring server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Resource name of the parent Service. Of the form projects/{project_id}/services/{service_id}.
+         * @param content the {@link com.google.api.services.monitoring.v3.model.ServiceLevelObjective}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.monitoring.v3.model.ServiceLevelObjective content) {
+          super(Monitoring.this, "POST", REST_PATH, content, com.google.api.services.monitoring.v3.model.ServiceLevelObjective.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^[^/]+/[^/]+/services/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Resource name of the parent Service. Of the form
+         * projects/{project_id}/services/{service_id}.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Resource name of the parent Service. Of the form projects/{project_id}/services/{service_id}.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Resource name of the parent Service. Of the form
+         * projects/{project_id}/services/{service_id}.
+         */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^[^/]+/[^/]+/services/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. The ServiceLevelObjective id to use for this ServiceLevelObjective. If omitted,
+         * an id will be generated instead. Must match the pattern a-z0-9-+
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String serviceLevelObjectiveId;
+
+        /** Optional. The ServiceLevelObjective id to use for this ServiceLevelObjective. If omitted, an id
+       will be generated instead. Must match the pattern a-z0-9-+
+         */
+        public java.lang.String getServiceLevelObjectiveId() {
+          return serviceLevelObjectiveId;
+        }
+
+        /**
+         * Optional. The ServiceLevelObjective id to use for this ServiceLevelObjective. If omitted,
+         * an id will be generated instead. Must match the pattern a-z0-9-+
+         */
+        public Create setServiceLevelObjectiveId(java.lang.String serviceLevelObjectiveId) {
+          this.serviceLevelObjectiveId = serviceLevelObjectiveId;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Delete the given ServiceLevelObjective.
+       *
+       * Create a request for the method "serviceLevelObjectives.delete".
+       *
+       * This request holds the parameters needed by the monitoring server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Resource name of the ServiceLevelObjective to delete. Of the form
+       *        projects/{project_id}/services/{service_id}/serviceLevelObjectives/{slo_name}.
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends MonitoringRequest<com.google.api.services.monitoring.v3.model.Empty> {
+
+        private static final String REST_PATH = "v3/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+/[^/]+/services/[^/]+/serviceLevelObjectives/[^/]+$");
+
+        /**
+         * Delete the given ServiceLevelObjective.
+         *
+         * Create a request for the method "serviceLevelObjectives.delete".
+         *
+         * This request holds the parameters needed by the the monitoring server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Resource name of the ServiceLevelObjective to delete. Of the form
+       *        projects/{project_id}/services/{service_id}/serviceLevelObjectives/{slo_name}.
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(Monitoring.this, "DELETE", REST_PATH, null, com.google.api.services.monitoring.v3.model.Empty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^[^/]+/[^/]+/services/[^/]+/serviceLevelObjectives/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Resource name of the ServiceLevelObjective to delete. Of the form
+         * projects/{project_id}/services/{service_id}/serviceLevelObjectives/{slo_name}.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Resource name of the ServiceLevelObjective to delete. Of the form
+       projects/{project_id}/services/{service_id}/serviceLevelObjectives/{slo_name}.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Resource name of the ServiceLevelObjective to delete. Of the form
+         * projects/{project_id}/services/{service_id}/serviceLevelObjectives/{slo_name}.
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^[^/]+/[^/]+/services/[^/]+/serviceLevelObjectives/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Get a ServiceLevelObjective by name.
+       *
+       * Create a request for the method "serviceLevelObjectives.get".
+       *
+       * This request holds the parameters needed by the monitoring server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Resource name of the ServiceLevelObjective to get. Of the form
+       *        projects/{project_id}/services/{service_id}/serviceLevelObjectives/{slo_name}.
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends MonitoringRequest<com.google.api.services.monitoring.v3.model.ServiceLevelObjective> {
+
+        private static final String REST_PATH = "v3/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+/[^/]+/services/[^/]+/serviceLevelObjectives/[^/]+$");
+
+        /**
+         * Get a ServiceLevelObjective by name.
+         *
+         * Create a request for the method "serviceLevelObjectives.get".
+         *
+         * This request holds the parameters needed by the the monitoring server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Resource name of the ServiceLevelObjective to get. Of the form
+       *        projects/{project_id}/services/{service_id}/serviceLevelObjectives/{slo_name}.
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Monitoring.this, "GET", REST_PATH, null, com.google.api.services.monitoring.v3.model.ServiceLevelObjective.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^[^/]+/[^/]+/services/[^/]+/serviceLevelObjectives/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Resource name of the ServiceLevelObjective to get. Of the form
+         * projects/{project_id}/services/{service_id}/serviceLevelObjectives/{slo_name}.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Resource name of the ServiceLevelObjective to get. Of the form
+       projects/{project_id}/services/{service_id}/serviceLevelObjectives/{slo_name}.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Resource name of the ServiceLevelObjective to get. Of the form
+         * projects/{project_id}/services/{service_id}/serviceLevelObjectives/{slo_name}.
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^[^/]+/[^/]+/services/[^/]+/serviceLevelObjectives/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * View of the ServiceLevelObjective to return. If DEFAULT, return the ServiceLevelObjective
+         * as originally defined. If EXPLICIT and the ServiceLevelObjective is defined in terms of a
+         * BasicSli, replace the BasicSli with a RequestBasedSli spelling out how the SLI is
+         * computed.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String view;
+
+        /** View of the ServiceLevelObjective to return. If DEFAULT, return the ServiceLevelObjective as
+       originally defined. If EXPLICIT and the ServiceLevelObjective is defined in terms of a BasicSli,
+       replace the BasicSli with a RequestBasedSli spelling out how the SLI is computed.
+         */
+        public java.lang.String getView() {
+          return view;
+        }
+
+        /**
+         * View of the ServiceLevelObjective to return. If DEFAULT, return the ServiceLevelObjective
+         * as originally defined. If EXPLICIT and the ServiceLevelObjective is defined in terms of a
+         * BasicSli, replace the BasicSli with a RequestBasedSli spelling out how the SLI is
+         * computed.
+         */
+        public Get setView(java.lang.String view) {
+          this.view = view;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * List the ServiceLevelObjectives for the given Service.
+       *
+       * Create a request for the method "serviceLevelObjectives.list".
+       *
+       * This request holds the parameters needed by the monitoring server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Resource name of the parent Service. Of the form projects/{project_id}/services/{service_id}.
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends MonitoringRequest<com.google.api.services.monitoring.v3.model.ListServiceLevelObjectivesResponse> {
+
+        private static final String REST_PATH = "v3/{+parent}/serviceLevelObjectives";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+/[^/]+/services/[^/]+$");
+
+        /**
+         * List the ServiceLevelObjectives for the given Service.
+         *
+         * Create a request for the method "serviceLevelObjectives.list".
+         *
+         * This request holds the parameters needed by the the monitoring server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Resource name of the parent Service. Of the form projects/{project_id}/services/{service_id}.
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(Monitoring.this, "GET", REST_PATH, null, com.google.api.services.monitoring.v3.model.ListServiceLevelObjectivesResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^[^/]+/[^/]+/services/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Resource name of the parent Service. Of the form
+         * projects/{project_id}/services/{service_id}.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Resource name of the parent Service. Of the form projects/{project_id}/services/{service_id}.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Resource name of the parent Service. Of the form
+         * projects/{project_id}/services/{service_id}.
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^[^/]+/[^/]+/services/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /** A filter specifying what ServiceLevelObjectives to return. */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** A filter specifying what ServiceLevelObjectives to return.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /** A filter specifying what ServiceLevelObjectives to return. */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * A non-negative number that is the maximum number of results to return. When 0, use
+         * default page size.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** A non-negative number that is the maximum number of results to return. When 0, use default page
+       size.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * A non-negative number that is the maximum number of results to return. When 0, use
+         * default page size.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * If this field is not empty then it must contain the nextPageToken value returned by a
+         * previous call to this method. Using this field causes the method to return additional
+         * results from the previous method call.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** If this field is not empty then it must contain the nextPageToken value returned by a previous call
+       to this method. Using this field causes the method to return additional results from the previous
+       method call.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * If this field is not empty then it must contain the nextPageToken value returned by a
+         * previous call to this method. Using this field causes the method to return additional
+         * results from the previous method call.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        /**
+         * View of the ServiceLevelObjectives to return. If DEFAULT, return each
+         * ServiceLevelObjective as originally defined. If EXPLICIT and the ServiceLevelObjective is
+         * defined in terms of a BasicSli, replace the BasicSli with a RequestBasedSli spelling out
+         * how the SLI is computed.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String view;
+
+        /** View of the ServiceLevelObjectives to return. If DEFAULT, return each ServiceLevelObjective as
+       originally defined. If EXPLICIT and the ServiceLevelObjective is defined in terms of a BasicSli,
+       replace the BasicSli with a RequestBasedSli spelling out how the SLI is computed.
+         */
+        public java.lang.String getView() {
+          return view;
+        }
+
+        /**
+         * View of the ServiceLevelObjectives to return. If DEFAULT, return each
+         * ServiceLevelObjective as originally defined. If EXPLICIT and the ServiceLevelObjective is
+         * defined in terms of a BasicSli, replace the BasicSli with a RequestBasedSli spelling out
+         * how the SLI is computed.
+         */
+        public List setView(java.lang.String view) {
+          this.view = view;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Update the given ServiceLevelObjective.
+       *
+       * Create a request for the method "serviceLevelObjectives.patch".
+       *
+       * This request holds the parameters needed by the monitoring server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name Resource name for this ServiceLevelObjective. Of the form
+       *        projects/{project_id}/services/{service_id}/serviceLevelObjectives/{slo_name}.
+       * @param content the {@link com.google.api.services.monitoring.v3.model.ServiceLevelObjective}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.monitoring.v3.model.ServiceLevelObjective content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends MonitoringRequest<com.google.api.services.monitoring.v3.model.ServiceLevelObjective> {
+
+        private static final String REST_PATH = "v3/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+/[^/]+/services/[^/]+/serviceLevelObjectives/[^/]+$");
+
+        /**
+         * Update the given ServiceLevelObjective.
+         *
+         * Create a request for the method "serviceLevelObjectives.patch".
+         *
+         * This request holds the parameters needed by the the monitoring server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Resource name for this ServiceLevelObjective. Of the form
+       *        projects/{project_id}/services/{service_id}/serviceLevelObjectives/{slo_name}.
+         * @param content the {@link com.google.api.services.monitoring.v3.model.ServiceLevelObjective}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.monitoring.v3.model.ServiceLevelObjective content) {
+          super(Monitoring.this, "PATCH", REST_PATH, content, com.google.api.services.monitoring.v3.model.ServiceLevelObjective.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^[^/]+/[^/]+/services/[^/]+/serviceLevelObjectives/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Resource name for this ServiceLevelObjective. Of the form
+         * projects/{project_id}/services/{service_id}/serviceLevelObjectives/{slo_name}.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Resource name for this ServiceLevelObjective. Of the form
+       projects/{project_id}/services/{service_id}/serviceLevelObjectives/{slo_name}.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Resource name for this ServiceLevelObjective. Of the form
+         * projects/{project_id}/services/{service_id}/serviceLevelObjectives/{slo_name}.
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^[^/]+/[^/]+/services/[^/]+/serviceLevelObjectives/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** A set of field paths defining which fields to use for the update. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** A set of field paths defining which fields to use for the update.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** A set of field paths defining which fields to use for the update. */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
           return this;
@@ -6812,7 +8391,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
   public class UptimeCheckIps {
 
     /**
-     * Returns the list of IPs that checkers run from
+     * Returns the list of IP addresses that checkers run from
      *
      * Create a request for the method "uptimeCheckIps.list".
      *
@@ -6832,7 +8411,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
       private static final String REST_PATH = "v3/uptimeCheckIps";
 
       /**
-       * Returns the list of IPs that checkers run from
+       * Returns the list of IP addresses that checkers run from
        *
        * Create a request for the method "uptimeCheckIps.list".
        *

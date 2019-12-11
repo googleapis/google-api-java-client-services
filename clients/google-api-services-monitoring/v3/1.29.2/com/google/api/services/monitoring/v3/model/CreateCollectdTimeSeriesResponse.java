@@ -31,8 +31,9 @@ package com.google.api.services.monitoring.v3.model;
 public final class CreateCollectdTimeSeriesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Records the error status for points that were not written due to an error.Failed requests for
-   * which nothing is written will return an error response instead.
+   * Records the error status for points that were not written due to an error in the request.Failed
+   * requests for which nothing is written will return an error response instead. Requests where
+   * data points were rejected by the backend will set summary instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,8 +46,18 @@ public final class CreateCollectdTimeSeriesResponse extends com.google.api.clien
   }
 
   /**
-   * Records the error status for points that were not written due to an error.Failed requests for
-   * which nothing is written will return an error response instead.
+   * Aggregate statistics from writing the payloads. This field is omitted if all points were
+   * successfully written, so that the response is empty. This is for backwards compatibility with
+   * clients that log errors on any non-empty response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CreateTimeSeriesSummary summary;
+
+  /**
+   * Records the error status for points that were not written due to an error in the request.Failed
+   * requests for which nothing is written will return an error response instead. Requests where
+   * data points were rejected by the backend will set summary instead.
    * @return value or {@code null} for none
    */
   public java.util.List<CollectdPayloadError> getPayloadErrors() {
@@ -54,12 +65,34 @@ public final class CreateCollectdTimeSeriesResponse extends com.google.api.clien
   }
 
   /**
-   * Records the error status for points that were not written due to an error.Failed requests for
-   * which nothing is written will return an error response instead.
+   * Records the error status for points that were not written due to an error in the request.Failed
+   * requests for which nothing is written will return an error response instead. Requests where
+   * data points were rejected by the backend will set summary instead.
    * @param payloadErrors payloadErrors or {@code null} for none
    */
   public CreateCollectdTimeSeriesResponse setPayloadErrors(java.util.List<CollectdPayloadError> payloadErrors) {
     this.payloadErrors = payloadErrors;
+    return this;
+  }
+
+  /**
+   * Aggregate statistics from writing the payloads. This field is omitted if all points were
+   * successfully written, so that the response is empty. This is for backwards compatibility with
+   * clients that log errors on any non-empty response.
+   * @return value or {@code null} for none
+   */
+  public CreateTimeSeriesSummary getSummary() {
+    return summary;
+  }
+
+  /**
+   * Aggregate statistics from writing the payloads. This field is omitted if all points were
+   * successfully written, so that the response is empty. This is for backwards compatibility with
+   * clients that log errors on any non-empty response.
+   * @param summary summary or {@code null} for none
+   */
+  public CreateCollectdTimeSeriesResponse setSummary(CreateTimeSeriesSummary summary) {
+    this.summary = summary;
     return this;
   }
 

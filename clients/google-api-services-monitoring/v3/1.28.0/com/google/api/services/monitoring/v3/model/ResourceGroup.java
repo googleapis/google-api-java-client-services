@@ -32,7 +32,8 @@ package com.google.api.services.monitoring.v3.model;
 public final class ResourceGroup extends com.google.api.client.json.GenericJson {
 
   /**
-   * The group of resources being monitored. Should be only the group_id, not projects//groups/.
+   * The group of resources being monitored. Should be only the [GROUP_ID], and not the full-path
+   * projects/[PROJECT_ID]/groups/[GROUP_ID].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +47,8 @@ public final class ResourceGroup extends com.google.api.client.json.GenericJson 
   private java.lang.String resourceType;
 
   /**
-   * The group of resources being monitored. Should be only the group_id, not projects//groups/.
+   * The group of resources being monitored. Should be only the [GROUP_ID], and not the full-path
+   * projects/[PROJECT_ID]/groups/[GROUP_ID].
    * @return value or {@code null} for none
    */
   public java.lang.String getGroupId() {
@@ -54,7 +56,8 @@ public final class ResourceGroup extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The group of resources being monitored. Should be only the group_id, not projects//groups/.
+   * The group of resources being monitored. Should be only the [GROUP_ID], and not the full-path
+   * projects/[PROJECT_ID]/groups/[GROUP_ID].
    * @param groupId groupId or {@code null} for none
    */
   public ResourceGroup setGroupId(java.lang.String groupId) {

@@ -38,8 +38,8 @@ public final class MetricAbsence extends com.google.api.client.json.GenericJson 
    * retrieved time series together (such as when aggregating multiple streams on each resource to a
    * single stream for each resource or when aggregating streams across all members of a group of
    * resrouces). Multiple aggregations are applied in the order specified.This field is similar to
-   * the one in the MetricService.ListTimeSeries request. It is advisable to use the ListTimeSeries
-   * method when debugging this field.
+   * the one in the ListTimeSeries request. It is advisable to use the ListTimeSeries method when
+   * debugging this field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,10 +63,10 @@ public final class MetricAbsence extends com.google.api.client.json.GenericJson 
 
   /**
    * A filter that identifies which time series should be compared with the threshold.The filter is
-   * similar to the one that is specified in the MetricService.ListTimeSeries request (that call is
-   * useful to verify the time series that will be retrieved / processed) and must specify the
-   * metric type and optionally may contain restrictions on resource type, resource labels, and
-   * metric labels. This field may not exceed 2048 Unicode characters in length.
+   * similar to the one that is specified in the ListTimeSeries request (that call is useful to
+   * verify the time series that will be retrieved / processed) and must specify the metric type and
+   * optionally may contain restrictions on resource type, resource labels, and metric labels. This
+   * field may not exceed 2048 Unicode characters in length.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,8 +86,8 @@ public final class MetricAbsence extends com.google.api.client.json.GenericJson 
    * retrieved time series together (such as when aggregating multiple streams on each resource to a
    * single stream for each resource or when aggregating streams across all members of a group of
    * resrouces). Multiple aggregations are applied in the order specified.This field is similar to
-   * the one in the MetricService.ListTimeSeries request. It is advisable to use the ListTimeSeries
-   * method when debugging this field.
+   * the one in the ListTimeSeries request. It is advisable to use the ListTimeSeries method when
+   * debugging this field.
    * @return value or {@code null} for none
    */
   public java.util.List<Aggregation> getAggregations() {
@@ -99,8 +99,8 @@ public final class MetricAbsence extends com.google.api.client.json.GenericJson 
    * retrieved time series together (such as when aggregating multiple streams on each resource to a
    * single stream for each resource or when aggregating streams across all members of a group of
    * resrouces). Multiple aggregations are applied in the order specified.This field is similar to
-   * the one in the MetricService.ListTimeSeries request. It is advisable to use the ListTimeSeries
-   * method when debugging this field.
+   * the one in the ListTimeSeries request. It is advisable to use the ListTimeSeries method when
+   * debugging this field.
    * @param aggregations aggregations or {@code null} for none
    */
   public MetricAbsence setAggregations(java.util.List<Aggregation> aggregations) {
@@ -133,10 +133,10 @@ public final class MetricAbsence extends com.google.api.client.json.GenericJson 
 
   /**
    * A filter that identifies which time series should be compared with the threshold.The filter is
-   * similar to the one that is specified in the MetricService.ListTimeSeries request (that call is
-   * useful to verify the time series that will be retrieved / processed) and must specify the
-   * metric type and optionally may contain restrictions on resource type, resource labels, and
-   * metric labels. This field may not exceed 2048 Unicode characters in length.
+   * similar to the one that is specified in the ListTimeSeries request (that call is useful to
+   * verify the time series that will be retrieved / processed) and must specify the metric type and
+   * optionally may contain restrictions on resource type, resource labels, and metric labels. This
+   * field may not exceed 2048 Unicode characters in length.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -145,10 +145,10 @@ public final class MetricAbsence extends com.google.api.client.json.GenericJson 
 
   /**
    * A filter that identifies which time series should be compared with the threshold.The filter is
-   * similar to the one that is specified in the MetricService.ListTimeSeries request (that call is
-   * useful to verify the time series that will be retrieved / processed) and must specify the
-   * metric type and optionally may contain restrictions on resource type, resource labels, and
-   * metric labels. This field may not exceed 2048 Unicode characters in length.
+   * similar to the one that is specified in the ListTimeSeries request (that call is useful to
+   * verify the time series that will be retrieved / processed) and must specify the metric type and
+   * optionally may contain restrictions on resource type, resource labels, and metric labels. This
+   * field may not exceed 2048 Unicode characters in length.
    * @param filter filter or {@code null} for none
    */
   public MetricAbsence setFilter(java.lang.String filter) {

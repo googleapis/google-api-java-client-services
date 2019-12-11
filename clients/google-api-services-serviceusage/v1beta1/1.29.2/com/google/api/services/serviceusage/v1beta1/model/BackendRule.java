@@ -45,7 +45,21 @@ public final class BackendRule extends com.google.api.client.json.GenericJson {
   private java.lang.Double deadline;
 
   /**
-   * The JWT audience is used when generating a JWT id token for the backend.
+   * When disable_auth is false,  a JWT ID token will be generated with the value from
+   * BackendRule.address as jwt_audience, overrode to the HTTP "Authorization" request header and
+   * sent to the backend.
+   *
+   * When disable_auth is true, a JWT ID token won't be generated and the original "Authorization"
+   * HTTP header will be preserved. If the header is used to carry the original token and is
+   * expected by the backend, this field must be set to true to preserve the header.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disableAuth;
+
+  /**
+   * The JWT audience is used when generating a JWT ID token for the backend. This ID token will be
+   * added in the HTTP "authorization" header, and sent to the backend.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,7 +133,37 @@ public final class BackendRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The JWT audience is used when generating a JWT id token for the backend.
+   * When disable_auth is false,  a JWT ID token will be generated with the value from
+   * BackendRule.address as jwt_audience, overrode to the HTTP "Authorization" request header and
+   * sent to the backend.
+   *
+   * When disable_auth is true, a JWT ID token won't be generated and the original "Authorization"
+   * HTTP header will be preserved. If the header is used to carry the original token and is
+   * expected by the backend, this field must be set to true to preserve the header.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableAuth() {
+    return disableAuth;
+  }
+
+  /**
+   * When disable_auth is false,  a JWT ID token will be generated with the value from
+   * BackendRule.address as jwt_audience, overrode to the HTTP "Authorization" request header and
+   * sent to the backend.
+   *
+   * When disable_auth is true, a JWT ID token won't be generated and the original "Authorization"
+   * HTTP header will be preserved. If the header is used to carry the original token and is
+   * expected by the backend, this field must be set to true to preserve the header.
+   * @param disableAuth disableAuth or {@code null} for none
+   */
+  public BackendRule setDisableAuth(java.lang.Boolean disableAuth) {
+    this.disableAuth = disableAuth;
+    return this;
+  }
+
+  /**
+   * The JWT audience is used when generating a JWT ID token for the backend. This ID token will be
+   * added in the HTTP "authorization" header, and sent to the backend.
    * @return value or {@code null} for none
    */
   public java.lang.String getJwtAudience() {
@@ -127,7 +171,8 @@ public final class BackendRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The JWT audience is used when generating a JWT id token for the backend.
+   * The JWT audience is used when generating a JWT ID token for the backend. This ID token will be
+   * added in the HTTP "authorization" header, and sent to the backend.
    * @param jwtAudience jwtAudience or {@code null} for none
    */
   public BackendRule setJwtAudience(java.lang.String jwtAudience) {

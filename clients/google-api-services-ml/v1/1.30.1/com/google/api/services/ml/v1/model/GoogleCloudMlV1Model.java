@@ -37,8 +37,7 @@ public final class GoogleCloudMlV1Model extends com.google.api.client.json.Gener
    * Output only. The default version of the model. This version will be used to handle prediction
    * requests that do not specify a version.
    *
-   * You can change the default version by calling [projects.methods.versions.setDefault](/ml-
-   * engine/reference/rest/v1/projects.models.versions/setDefault).
+   * You can change the default version by calling projects.models.versions.setDefault.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,8 +122,7 @@ public final class GoogleCloudMlV1Model extends com.google.api.client.json.Gener
    * Output only. The default version of the model. This version will be used to handle prediction
    * requests that do not specify a version.
    *
-   * You can change the default version by calling [projects.methods.versions.setDefault](/ml-
-   * engine/reference/rest/v1/projects.models.versions/setDefault).
+   * You can change the default version by calling projects.models.versions.setDefault.
    * @return value or {@code null} for none
    */
   public GoogleCloudMlV1Version getDefaultVersion() {
@@ -135,8 +133,7 @@ public final class GoogleCloudMlV1Model extends com.google.api.client.json.Gener
    * Output only. The default version of the model. This version will be used to handle prediction
    * requests that do not specify a version.
    *
-   * You can change the default version by calling [projects.methods.versions.setDefault](/ml-
-   * engine/reference/rest/v1/projects.models.versions/setDefault).
+   * You can change the default version by calling projects.models.versions.setDefault.
    * @param defaultVersion defaultVersion or {@code null} for none
    */
   public GoogleCloudMlV1Model setDefaultVersion(GoogleCloudMlV1Version defaultVersion) {

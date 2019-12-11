@@ -21,8 +21,7 @@ package com.google.api.services.ml.v1.model;
  *
  * Each version is a trained model deployed in the cloud, ready to handle prediction requests. A
  * model can have multiple versions. You can get information about all of the versions of a given
- * model by calling [projects.models.versions.list](/ml-
- * engine/reference/rest/v1/projects.models.versions/list).
+ * model by calling projects.models.versions.list.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AI Platform Training & Prediction API. For a detailed
@@ -68,8 +67,7 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    * Required. The Cloud Storage location of the trained model used to create the version. See the
    * [guide to model deployment](/ml-engine/docs/tensorflow/deploying-models) for more information.
    *
-   * When passing Version to [projects.models.versions.create](/ml-
-   * engine/reference/rest/v1/projects.models.versions/create) the model service uses the specified
+   * When passing Version to projects.models.versions.create the model service uses the specified
    * location as the source of the model. Once deployed, the model version is hosted by the
    * prediction service, so this location is useful only as a historical record. The total number of
    * model files can't exceed 1000.
@@ -133,8 +131,7 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    * Output only. If true, this version will be used to handle prediction requests that do not
    * specify a version.
    *
-   * You can change the default version by calling [projects.methods.versions.setDefault](/ml-
-   * engine/reference/rest/v1/projects.models.versions/setDefault).
+   * You can change the default version by calling projects.methods.versions.setDefault.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -265,7 +262,10 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   private java.lang.String pythonVersion;
 
   /**
-   * Optional. Configures the request-response pair logging on predictions from this Version.
+   * Optional. *Only* specify this field in a projects.models.versions.patch request. Specifying it
+   * in a projects.models.versions.create request has no effect.
+   *
+   * Configures the request-response pair logging on predictions from this Version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -366,8 +366,7 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    * Required. The Cloud Storage location of the trained model used to create the version. See the
    * [guide to model deployment](/ml-engine/docs/tensorflow/deploying-models) for more information.
    *
-   * When passing Version to [projects.models.versions.create](/ml-
-   * engine/reference/rest/v1/projects.models.versions/create) the model service uses the specified
+   * When passing Version to projects.models.versions.create the model service uses the specified
    * location as the source of the model. Once deployed, the model version is hosted by the
    * prediction service, so this location is useful only as a historical record. The total number of
    * model files can't exceed 1000.
@@ -381,8 +380,7 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    * Required. The Cloud Storage location of the trained model used to create the version. See the
    * [guide to model deployment](/ml-engine/docs/tensorflow/deploying-models) for more information.
    *
-   * When passing Version to [projects.models.versions.create](/ml-
-   * engine/reference/rest/v1/projects.models.versions/create) the model service uses the specified
+   * When passing Version to projects.models.versions.create the model service uses the specified
    * location as the source of the model. Once deployed, the model version is hosted by the
    * prediction service, so this location is useful only as a historical record. The total number of
    * model files can't exceed 1000.
@@ -552,8 +550,7 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    * Output only. If true, this version will be used to handle prediction requests that do not
    * specify a version.
    *
-   * You can change the default version by calling [projects.methods.versions.setDefault](/ml-
-   * engine/reference/rest/v1/projects.models.versions/setDefault).
+   * You can change the default version by calling projects.methods.versions.setDefault.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsDefault() {
@@ -564,8 +561,7 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    * Output only. If true, this version will be used to handle prediction requests that do not
    * specify a version.
    *
-   * You can change the default version by calling [projects.methods.versions.setDefault](/ml-
-   * engine/reference/rest/v1/projects.models.versions/setDefault).
+   * You can change the default version by calling projects.methods.versions.setDefault.
    * @param isDefault isDefault or {@code null} for none
    */
   public GoogleCloudMlV1Version setIsDefault(java.lang.Boolean isDefault) {
@@ -846,7 +842,10 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Configures the request-response pair logging on predictions from this Version.
+   * Optional. *Only* specify this field in a projects.models.versions.patch request. Specifying it
+   * in a projects.models.versions.create request has no effect.
+   *
+   * Configures the request-response pair logging on predictions from this Version.
    * @return value or {@code null} for none
    */
   public GoogleCloudMlV1RequestLoggingConfig getRequestLoggingConfig() {
@@ -854,7 +853,10 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Configures the request-response pair logging on predictions from this Version.
+   * Optional. *Only* specify this field in a projects.models.versions.patch request. Specifying it
+   * in a projects.models.versions.create request has no effect.
+   *
+   * Configures the request-response pair logging on predictions from this Version.
    * @param requestLoggingConfig requestLoggingConfig or {@code null} for none
    */
   public GoogleCloudMlV1Version setRequestLoggingConfig(GoogleCloudMlV1RequestLoggingConfig requestLoggingConfig) {

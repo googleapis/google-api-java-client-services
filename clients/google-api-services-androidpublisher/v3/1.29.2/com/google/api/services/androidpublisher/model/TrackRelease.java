@@ -73,7 +73,7 @@ public final class TrackRelease extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private MendelSampling sampling;
+  private Sampling sampling;
 
   /**
    * The desired status of this release.
@@ -168,14 +168,14 @@ public final class TrackRelease extends com.google.api.client.json.GenericJson {
   /**
    * @return value or {@code null} for none
    */
-  public MendelSampling getSampling() {
+  public Sampling getSampling() {
     return sampling;
   }
 
   /**
    * @param sampling sampling or {@code null} for none
    */
-  public TrackRelease setSampling(MendelSampling sampling) {
+  public TrackRelease setSampling(Sampling sampling) {
     this.sampling = sampling;
     return this;
   }

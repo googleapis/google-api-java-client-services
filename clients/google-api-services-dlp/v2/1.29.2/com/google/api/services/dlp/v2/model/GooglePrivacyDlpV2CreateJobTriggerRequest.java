@@ -38,6 +38,13 @@ public final class GooglePrivacyDlpV2CreateJobTriggerRequest extends com.google.
   private GooglePrivacyDlpV2JobTrigger jobTrigger;
 
   /**
+   * The geographic location to store the job trigger. Reserved for future extensions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String locationId;
+
+  /**
    * The trigger id can contain uppercase and lowercase letters, numbers, and hyphens; that is, it
    * must match the regular expression: `[a-zA-Z\\d-_]+`. The maximum length is 100 characters. Can
    * be empty to allow the system to generate one.
@@ -60,6 +67,23 @@ public final class GooglePrivacyDlpV2CreateJobTriggerRequest extends com.google.
    */
   public GooglePrivacyDlpV2CreateJobTriggerRequest setJobTrigger(GooglePrivacyDlpV2JobTrigger jobTrigger) {
     this.jobTrigger = jobTrigger;
+    return this;
+  }
+
+  /**
+   * The geographic location to store the job trigger. Reserved for future extensions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocationId() {
+    return locationId;
+  }
+
+  /**
+   * The geographic location to store the job trigger. Reserved for future extensions.
+   * @param locationId locationId or {@code null} for none
+   */
+  public GooglePrivacyDlpV2CreateJobTriggerRequest setLocationId(java.lang.String locationId) {
+    this.locationId = locationId;
     return this;
   }
 

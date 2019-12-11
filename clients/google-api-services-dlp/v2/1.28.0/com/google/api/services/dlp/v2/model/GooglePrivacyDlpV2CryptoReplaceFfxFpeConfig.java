@@ -80,7 +80,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfig extends com.googl
   /**
    * This is supported by mapping these to the alphanumeric characters that the FFX mode natively
    * supports. This happens before/after encryption/decryption. Each character listed must appear
-   * only once. Number of characters must be in the range [2, 62]. This must be encoded as ASCII.
+   * only once. Number of characters must be in the range [2, 95]. This must be encoded as ASCII.
    * The order of characters does not matter.
    * The value may be {@code null}.
    */
@@ -88,7 +88,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfig extends com.googl
   private java.lang.String customAlphabet;
 
   /**
-   * The native way to select the alphabet. Must be in the range [2, 62].
+   * The native way to select the alphabet. Must be in the range [2, 95].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -207,7 +207,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfig extends com.googl
   /**
    * This is supported by mapping these to the alphanumeric characters that the FFX mode natively
    * supports. This happens before/after encryption/decryption. Each character listed must appear
-   * only once. Number of characters must be in the range [2, 62]. This must be encoded as ASCII.
+   * only once. Number of characters must be in the range [2, 95]. This must be encoded as ASCII.
    * The order of characters does not matter.
    * @return value or {@code null} for none
    */
@@ -218,7 +218,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfig extends com.googl
   /**
    * This is supported by mapping these to the alphanumeric characters that the FFX mode natively
    * supports. This happens before/after encryption/decryption. Each character listed must appear
-   * only once. Number of characters must be in the range [2, 62]. This must be encoded as ASCII.
+   * only once. Number of characters must be in the range [2, 95]. This must be encoded as ASCII.
    * The order of characters does not matter.
    * @param customAlphabet customAlphabet or {@code null} for none
    */
@@ -228,7 +228,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfig extends com.googl
   }
 
   /**
-   * The native way to select the alphabet. Must be in the range [2, 62].
+   * The native way to select the alphabet. Must be in the range [2, 95].
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRadix() {
@@ -236,7 +236,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfig extends com.googl
   }
 
   /**
-   * The native way to select the alphabet. Must be in the range [2, 62].
+   * The native way to select the alphabet. Must be in the range [2, 95].
    * @param radix radix or {@code null} for none
    */
   public GooglePrivacyDlpV2CryptoReplaceFfxFpeConfig setRadix(java.lang.Integer radix) {

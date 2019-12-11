@@ -33,7 +33,7 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2InspectTemplate extends com.google.api.client.json.GenericJson {
 
   /**
-   * The creation timestamp of a inspectTemplate, output only field.
+   * The creation timestamp of an inspectTemplate, output only field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,14 +72,14 @@ public final class GooglePrivacyDlpV2InspectTemplate extends com.google.api.clie
   private java.lang.String name;
 
   /**
-   * The last update timestamp of a inspectTemplate, output only field.
+   * The last update timestamp of an inspectTemplate, output only field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * The creation timestamp of a inspectTemplate, output only field.
+   * The creation timestamp of an inspectTemplate, output only field.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -87,7 +87,7 @@ public final class GooglePrivacyDlpV2InspectTemplate extends com.google.api.clie
   }
 
   /**
-   * The creation timestamp of a inspectTemplate, output only field.
+   * The creation timestamp of an inspectTemplate, output only field.
    * @param createTime createTime or {@code null} for none
    */
   public GooglePrivacyDlpV2InspectTemplate setCreateTime(String createTime) {
@@ -172,7 +172,7 @@ public final class GooglePrivacyDlpV2InspectTemplate extends com.google.api.clie
   }
 
   /**
-   * The last update timestamp of a inspectTemplate, output only field.
+   * The last update timestamp of an inspectTemplate, output only field.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -180,7 +180,7 @@ public final class GooglePrivacyDlpV2InspectTemplate extends com.google.api.clie
   }
 
   /**
-   * The last update timestamp of a inspectTemplate, output only field.
+   * The last update timestamp of an inspectTemplate, output only field.
    * @param updateTime updateTime or {@code null} for none
    */
   public GooglePrivacyDlpV2InspectTemplate setUpdateTime(String updateTime) {

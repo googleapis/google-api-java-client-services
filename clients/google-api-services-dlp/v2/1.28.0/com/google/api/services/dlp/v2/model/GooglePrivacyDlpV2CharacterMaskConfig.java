@@ -34,18 +34,19 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2CharacterMaskConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * When masking a string, items in this list will be skipped when replacing. For example, if your
-   * string is 555-555-5555 and you ask us to skip `-` and mask 5 chars with * we would produce
-   * ***-*55-5555.
+   * When masking a string, items in this list will be skipped when replacing characters. For
+   * example, if the input string is `555-555-5555` and you instruct Cloud DLP to skip `-` and mask
+   * 5 characters with `*`, Cloud DLP returns `***-**5-5555`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2CharsToIgnore> charactersToIgnore;
 
   /**
-   * Character to mask the sensitive valuesfor example, "*" for an alphabetic string such as name,
-   * or "0" for a numeric string such as ZIP code or credit card number. String must have length 1.
-   * If not supplied, we will default to "*" for strings, 0 for digits.
+   * Character to use to mask the sensitive valuesfor example, `*` for an alphabetic string such as
+   * a name, or `0` for a numeric string such as ZIP code or credit card number. This string must
+   * have a length of 1. If not supplied, this value defaults to `*` for strings, and `0` for
+   * digits.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,19 +61,19 @@ public final class GooglePrivacyDlpV2CharacterMaskConfig extends com.google.api.
   private java.lang.Integer numberToMask;
 
   /**
-   * Mask characters in reverse order. For example, if `masking_character` is '0', number_to_mask is
-   * 14, and `reverse_order` is false, then 1234-5678-9012-3456 -> 00000000000000-3456 If
-   * `masking_character` is '*', `number_to_mask` is 3, and `reverse_order` is true, then 12345 ->
-   * 12***
+   * Mask characters in reverse order. For example, if `masking_character` is `0`, `number_to_mask`
+   * is `14`, and `reverse_order` is `false`, then the input string `1234-5678-9012-3456` is masked
+   * as `00000000000000-3456`. If `masking_character` is `*`, `number_to_mask` is `3`, and
+   * `reverse_order` is `true`, then the string `12345` is masked as `12***`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean reverseOrder;
 
   /**
-   * When masking a string, items in this list will be skipped when replacing. For example, if your
-   * string is 555-555-5555 and you ask us to skip `-` and mask 5 chars with * we would produce
-   * ***-*55-5555.
+   * When masking a string, items in this list will be skipped when replacing characters. For
+   * example, if the input string is `555-555-5555` and you instruct Cloud DLP to skip `-` and mask
+   * 5 characters with `*`, Cloud DLP returns `***-**5-5555`.
    * @return value or {@code null} for none
    */
   public java.util.List<GooglePrivacyDlpV2CharsToIgnore> getCharactersToIgnore() {
@@ -80,9 +81,9 @@ public final class GooglePrivacyDlpV2CharacterMaskConfig extends com.google.api.
   }
 
   /**
-   * When masking a string, items in this list will be skipped when replacing. For example, if your
-   * string is 555-555-5555 and you ask us to skip `-` and mask 5 chars with * we would produce
-   * ***-*55-5555.
+   * When masking a string, items in this list will be skipped when replacing characters. For
+   * example, if the input string is `555-555-5555` and you instruct Cloud DLP to skip `-` and mask
+   * 5 characters with `*`, Cloud DLP returns `***-**5-5555`.
    * @param charactersToIgnore charactersToIgnore or {@code null} for none
    */
   public GooglePrivacyDlpV2CharacterMaskConfig setCharactersToIgnore(java.util.List<GooglePrivacyDlpV2CharsToIgnore> charactersToIgnore) {
@@ -91,9 +92,10 @@ public final class GooglePrivacyDlpV2CharacterMaskConfig extends com.google.api.
   }
 
   /**
-   * Character to mask the sensitive valuesfor example, "*" for an alphabetic string such as name,
-   * or "0" for a numeric string such as ZIP code or credit card number. String must have length 1.
-   * If not supplied, we will default to "*" for strings, 0 for digits.
+   * Character to use to mask the sensitive valuesfor example, `*` for an alphabetic string such as
+   * a name, or `0` for a numeric string such as ZIP code or credit card number. This string must
+   * have a length of 1. If not supplied, this value defaults to `*` for strings, and `0` for
+   * digits.
    * @return value or {@code null} for none
    */
   public java.lang.String getMaskingCharacter() {
@@ -101,9 +103,10 @@ public final class GooglePrivacyDlpV2CharacterMaskConfig extends com.google.api.
   }
 
   /**
-   * Character to mask the sensitive valuesfor example, "*" for an alphabetic string such as name,
-   * or "0" for a numeric string such as ZIP code or credit card number. String must have length 1.
-   * If not supplied, we will default to "*" for strings, 0 for digits.
+   * Character to use to mask the sensitive valuesfor example, `*` for an alphabetic string such as
+   * a name, or `0` for a numeric string such as ZIP code or credit card number. This string must
+   * have a length of 1. If not supplied, this value defaults to `*` for strings, and `0` for
+   * digits.
    * @param maskingCharacter maskingCharacter or {@code null} for none
    */
   public GooglePrivacyDlpV2CharacterMaskConfig setMaskingCharacter(java.lang.String maskingCharacter) {
@@ -131,10 +134,10 @@ public final class GooglePrivacyDlpV2CharacterMaskConfig extends com.google.api.
   }
 
   /**
-   * Mask characters in reverse order. For example, if `masking_character` is '0', number_to_mask is
-   * 14, and `reverse_order` is false, then 1234-5678-9012-3456 -> 00000000000000-3456 If
-   * `masking_character` is '*', `number_to_mask` is 3, and `reverse_order` is true, then 12345 ->
-   * 12***
+   * Mask characters in reverse order. For example, if `masking_character` is `0`, `number_to_mask`
+   * is `14`, and `reverse_order` is `false`, then the input string `1234-5678-9012-3456` is masked
+   * as `00000000000000-3456`. If `masking_character` is `*`, `number_to_mask` is `3`, and
+   * `reverse_order` is `true`, then the string `12345` is masked as `12***`.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getReverseOrder() {
@@ -142,10 +145,10 @@ public final class GooglePrivacyDlpV2CharacterMaskConfig extends com.google.api.
   }
 
   /**
-   * Mask characters in reverse order. For example, if `masking_character` is '0', number_to_mask is
-   * 14, and `reverse_order` is false, then 1234-5678-9012-3456 -> 00000000000000-3456 If
-   * `masking_character` is '*', `number_to_mask` is 3, and `reverse_order` is true, then 12345 ->
-   * 12***
+   * Mask characters in reverse order. For example, if `masking_character` is `0`, `number_to_mask`
+   * is `14`, and `reverse_order` is `false`, then the input string `1234-5678-9012-3456` is masked
+   * as `00000000000000-3456`. If `masking_character` is `*`, `number_to_mask` is `3`, and
+   * `reverse_order` is `true`, then the string `12345` is masked as `12***`.
    * @param reverseOrder reverseOrder or {@code null} for none
    */
   public GooglePrivacyDlpV2CharacterMaskConfig setReverseOrder(java.lang.Boolean reverseOrder) {

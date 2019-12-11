@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-chat</artifactId>
-  <version>v1-rev20180806-1.28.0</version>
-  <name>Hangouts Chat API v1-rev20180806-1.28.0</name>
+  <version>v1-rev20191205-1.28.0</version>
+  <name>Hangouts Chat API v1-rev20191205-1.28.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

@@ -57,6 +57,13 @@ public final class SpeakerDiarizationConfig extends com.google.api.client.json.G
   private java.lang.Integer minSpeakerCount;
 
   /**
+   * Output only. Unused.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer speakerTag;
+
+  /**
    * If 'true', enables speaker detection for each recognized word in the top alternative of the
    * recognition result using a speaker_tag provided in the WordInfo.
    * @return value or {@code null} for none
@@ -114,6 +121,23 @@ public final class SpeakerDiarizationConfig extends com.google.api.client.json.G
    */
   public SpeakerDiarizationConfig setMinSpeakerCount(java.lang.Integer minSpeakerCount) {
     this.minSpeakerCount = minSpeakerCount;
+    return this;
+  }
+
+  /**
+   * Output only. Unused.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getSpeakerTag() {
+    return speakerTag;
+  }
+
+  /**
+   * Output only. Unused.
+   * @param speakerTag speakerTag or {@code null} for none
+   */
+  public SpeakerDiarizationConfig setSpeakerTag(java.lang.Integer speakerTag) {
+    this.speakerTag = speakerTag;
     return this;
   }
 

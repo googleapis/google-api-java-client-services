@@ -30,8 +30,8 @@ package com.google.api.services.vision.v1p1beta1.model;
 public final class GoogleCloudVisionV1p1beta1ProductSearchParams extends com.google.api.client.json.GenericJson {
 
   /**
-   * The bounding polygon around the area of interest in the image. Optional. If it is not
-   * specified, system discretion will be applied.
+   * The bounding polygon around the area of interest in the image. If it is not specified, system
+   * discretion will be applied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,8 +72,8 @@ public final class GoogleCloudVisionV1p1beta1ProductSearchParams extends com.goo
   private java.lang.String productSet;
 
   /**
-   * The bounding polygon around the area of interest in the image. Optional. If it is not
-   * specified, system discretion will be applied.
+   * The bounding polygon around the area of interest in the image. If it is not specified, system
+   * discretion will be applied.
    * @return value or {@code null} for none
    */
   public GoogleCloudVisionV1p1beta1BoundingPoly getBoundingPoly() {
@@ -81,8 +81,8 @@ public final class GoogleCloudVisionV1p1beta1ProductSearchParams extends com.goo
   }
 
   /**
-   * The bounding polygon around the area of interest in the image. Optional. If it is not
-   * specified, system discretion will be applied.
+   * The bounding polygon around the area of interest in the image. If it is not specified, system
+   * discretion will be applied.
    * @param boundingPoly boundingPoly or {@code null} for none
    */
   public GoogleCloudVisionV1p1beta1ProductSearchParams setBoundingPoly(GoogleCloudVisionV1p1beta1BoundingPoly boundingPoly) {

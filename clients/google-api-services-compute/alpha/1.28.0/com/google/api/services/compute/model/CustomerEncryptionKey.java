@@ -37,6 +37,8 @@ public final class CustomerEncryptionKey extends com.google.api.client.json.Gene
   private java.lang.String kmsKeyName;
 
   /**
+   * The service account being used for the encryption request for the given KMS key. If absent, the
+   * Compute Engine default service account is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,6 +92,8 @@ public final class CustomerEncryptionKey extends com.google.api.client.json.Gene
   }
 
   /**
+   * The service account being used for the encryption request for the given KMS key. If absent, the
+   * Compute Engine default service account is used.
    * @return value or {@code null} for none
    */
   public java.lang.String getKmsKeyServiceAccount() {
@@ -97,6 +101,8 @@ public final class CustomerEncryptionKey extends com.google.api.client.json.Gene
   }
 
   /**
+   * The service account being used for the encryption request for the given KMS key. If absent, the
+   * Compute Engine default service account is used.
    * @param kmsKeyServiceAccount kmsKeyServiceAccount or {@code null} for none
    */
   public CustomerEncryptionKey setKmsKeyServiceAccount(java.lang.String kmsKeyServiceAccount) {

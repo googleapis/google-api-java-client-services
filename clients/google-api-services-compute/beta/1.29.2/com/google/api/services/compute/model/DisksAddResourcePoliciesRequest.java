@@ -30,14 +30,14 @@ package com.google.api.services.compute.model;
 public final class DisksAddResourcePoliciesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Resource policies to be added to this disk.
+   * Resource policies to be added to this disk. Currently you can only specify one policy here.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> resourcePolicies;
 
   /**
-   * Resource policies to be added to this disk.
+   * Resource policies to be added to this disk. Currently you can only specify one policy here.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResourcePolicies() {
@@ -45,7 +45,7 @@ public final class DisksAddResourcePoliciesRequest extends com.google.api.client
   }
 
   /**
-   * Resource policies to be added to this disk.
+   * Resource policies to be added to this disk. Currently you can only specify one policy here.
    * @param resourcePolicies resourcePolicies or {@code null} for none
    */
   public DisksAddResourcePoliciesRequest setResourcePolicies(java.util.List<java.lang.String> resourcePolicies) {

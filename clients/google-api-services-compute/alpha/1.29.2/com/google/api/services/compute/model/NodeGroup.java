@@ -23,7 +23,7 @@ package com.google.api.services.compute.model;
  * specific project. Use sole-tenant nodes to keep your instances physically separated from
  * instances in other projects, or to group your instances together on the same host hardware. For
  * more information, read Sole-tenant nodes. (== resource_for beta.nodeGroups ==) (== resource_for
- * v1.nodeGroups ==) NextID: 15
+ * v1.nodeGroups ==) NextID: 16
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -54,6 +54,12 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String fingerprint;
 
   /**
    * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
@@ -173,6 +179,49 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
    */
   public NodeGroup setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * @see #decodeFingerprint()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFingerprint() {
+    return fingerprint;
+  }
+
+  /**
+
+   * @see #getFingerprint()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeFingerprint() {
+    return com.google.api.client.util.Base64.decodeBase64(fingerprint);
+  }
+
+  /**
+   * @see #encodeFingerprint()
+   * @param fingerprint fingerprint or {@code null} for none
+   */
+  public NodeGroup setFingerprint(java.lang.String fingerprint) {
+    this.fingerprint = fingerprint;
+    return this;
+  }
+
+  /**
+
+   * @see #setFingerprint()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public NodeGroup encodeFingerprint(byte[] fingerprint) {
+    this.fingerprint = com.google.api.client.util.Base64.encodeBase64URLSafeString(fingerprint);
     return this;
   }
 

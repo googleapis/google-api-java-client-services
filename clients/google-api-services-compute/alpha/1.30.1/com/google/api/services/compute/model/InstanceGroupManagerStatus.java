@@ -30,6 +30,13 @@ package com.google.api.services.compute.model;
 public final class InstanceGroupManagerStatus extends com.google.api.client.json.GenericJson {
 
   /**
+   * [Output Only] The URL of the Autoscaler that targets this instance group manager.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String autoscaler;
+
+  /**
    * [Output Only] A bit indicating whether the managed instance group is in a stable state. A
    * stable state means that: none of the instances in the managed instance group is currently
    * undergoing any type of change (for example, creation, restart, or deletion); no future changes
@@ -54,6 +61,23 @@ public final class InstanceGroupManagerStatus extends com.google.api.client.json
    */
   @com.google.api.client.util.Key
   private InstanceGroupManagerStatusVersionTarget versionTarget;
+
+  /**
+   * [Output Only] The URL of the Autoscaler that targets this instance group manager.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAutoscaler() {
+    return autoscaler;
+  }
+
+  /**
+   * [Output Only] The URL of the Autoscaler that targets this instance group manager.
+   * @param autoscaler autoscaler or {@code null} for none
+   */
+  public InstanceGroupManagerStatus setAutoscaler(java.lang.String autoscaler) {
+    this.autoscaler = autoscaler;
+    return this;
+  }
 
   /**
    * [Output Only] A bit indicating whether the managed instance group is in a stable state. A

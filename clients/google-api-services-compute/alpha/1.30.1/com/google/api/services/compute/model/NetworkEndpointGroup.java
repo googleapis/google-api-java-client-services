@@ -19,6 +19,9 @@ package com.google.api.services.compute.model;
 /**
  * Represents a collection of network endpoints.
  *
+ * For more information read Setting up network endpoint groups in load balancing. (== resource_for
+ * v1.networkEndpointGroups ==) (== resource_for beta.networkEndpointGroups ==)
+ *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
@@ -35,6 +38,30 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> annotations;
+
+  /**
+   * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or
+   * cloudFunction may be set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NetworkEndpointGroupAppEngine appEngine;
+
+  /**
+   * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or
+   * cloudFunction may be set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NetworkEndpointGroupCloudFunction cloudFunction;
+
+  /**
+   * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or
+   * cloudFunction may be set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NetworkEndpointGroupCloudRun cloudRun;
 
   /**
    * [Output Only] Creation timestamp in RFC3339 text format.
@@ -108,6 +135,13 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   private java.lang.String networkEndpointType;
 
   /**
+   * [Output Only] The URL of the region where the network endpoint group is located.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String region;
+
+  /**
    * [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
@@ -163,6 +197,63 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
    */
   public NetworkEndpointGroup setAnnotations(java.util.Map<String, java.lang.String> annotations) {
     this.annotations = annotations;
+    return this;
+  }
+
+  /**
+   * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or
+   * cloudFunction may be set.
+   * @return value or {@code null} for none
+   */
+  public NetworkEndpointGroupAppEngine getAppEngine() {
+    return appEngine;
+  }
+
+  /**
+   * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or
+   * cloudFunction may be set.
+   * @param appEngine appEngine or {@code null} for none
+   */
+  public NetworkEndpointGroup setAppEngine(NetworkEndpointGroupAppEngine appEngine) {
+    this.appEngine = appEngine;
+    return this;
+  }
+
+  /**
+   * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or
+   * cloudFunction may be set.
+   * @return value or {@code null} for none
+   */
+  public NetworkEndpointGroupCloudFunction getCloudFunction() {
+    return cloudFunction;
+  }
+
+  /**
+   * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or
+   * cloudFunction may be set.
+   * @param cloudFunction cloudFunction or {@code null} for none
+   */
+  public NetworkEndpointGroup setCloudFunction(NetworkEndpointGroupCloudFunction cloudFunction) {
+    this.cloudFunction = cloudFunction;
+    return this;
+  }
+
+  /**
+   * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or
+   * cloudFunction may be set.
+   * @return value or {@code null} for none
+   */
+  public NetworkEndpointGroupCloudRun getCloudRun() {
+    return cloudRun;
+  }
+
+  /**
+   * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or
+   * cloudFunction may be set.
+   * @param cloudRun cloudRun or {@code null} for none
+   */
+  public NetworkEndpointGroup setCloudRun(NetworkEndpointGroupCloudRun cloudRun) {
+    this.cloudRun = cloudRun;
     return this;
   }
 
@@ -332,6 +423,23 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
    */
   public NetworkEndpointGroup setNetworkEndpointType(java.lang.String networkEndpointType) {
     this.networkEndpointType = networkEndpointType;
+    return this;
+  }
+
+  /**
+   * [Output Only] The URL of the region where the network endpoint group is located.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRegion() {
+    return region;
+  }
+
+  /**
+   * [Output Only] The URL of the region where the network endpoint group is located.
+   * @param region region or {@code null} for none
+   */
+  public NetworkEndpointGroup setRegion(java.lang.String region) {
+    this.region = region;
     return this;
   }
 

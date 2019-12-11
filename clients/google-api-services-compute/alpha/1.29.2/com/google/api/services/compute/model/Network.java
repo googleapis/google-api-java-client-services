@@ -103,7 +103,7 @@ public final class Network extends com.google.api.client.json.GenericJson {
 
   /**
    * Maximum Transmission Unit in bytes. The minimum value for this field is 1460 and the maximum
-   * value is 1600 bytes.
+   * value is 1500 bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -331,7 +331,7 @@ public final class Network extends com.google.api.client.json.GenericJson {
 
   /**
    * Maximum Transmission Unit in bytes. The minimum value for this field is 1460 and the maximum
-   * value is 1600 bytes.
+   * value is 1500 bytes.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMtu() {
@@ -340,7 +340,7 @@ public final class Network extends com.google.api.client.json.GenericJson {
 
   /**
    * Maximum Transmission Unit in bytes. The minimum value for this field is 1460 and the maximum
-   * value is 1600 bytes.
+   * value is 1500 bytes.
    * @param mtu mtu or {@code null} for none
    */
   public Network setMtu(java.lang.Integer mtu) {

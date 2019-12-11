@@ -67,9 +67,10 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
   private HttpRetryPolicy retryPolicy;
 
   /**
-   * Specifies the timeout for the selected route. Timeout is computed from the time the request is
-   * has been fully processed (i.e. end-of-stream) up until the response has been completely
-   * processed. Timeout includes all retries. If not specified, the default value is 15 seconds.
+   * Specifies the timeout for the selected route. Timeout is computed from the time the request has
+   * been fully processed (i.e. end-of-stream) up until the response has been completely processed.
+   * Timeout includes all retries. If not specified, will use the largest timeout among all backend
+   * services associated with the route.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -182,9 +183,10 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Specifies the timeout for the selected route. Timeout is computed from the time the request is
-   * has been fully processed (i.e. end-of-stream) up until the response has been completely
-   * processed. Timeout includes all retries. If not specified, the default value is 15 seconds.
+   * Specifies the timeout for the selected route. Timeout is computed from the time the request has
+   * been fully processed (i.e. end-of-stream) up until the response has been completely processed.
+   * Timeout includes all retries. If not specified, will use the largest timeout among all backend
+   * services associated with the route.
    * @return value or {@code null} for none
    */
   public Duration getTimeout() {
@@ -192,9 +194,10 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Specifies the timeout for the selected route. Timeout is computed from the time the request is
-   * has been fully processed (i.e. end-of-stream) up until the response has been completely
-   * processed. Timeout includes all retries. If not specified, the default value is 15 seconds.
+   * Specifies the timeout for the selected route. Timeout is computed from the time the request has
+   * been fully processed (i.e. end-of-stream) up until the response has been completely processed.
+   * Timeout includes all retries. If not specified, will use the largest timeout among all backend
+   * services associated with the route.
    * @param timeout timeout or {@code null} for none
    */
   public HttpRouteAction setTimeout(Duration timeout) {

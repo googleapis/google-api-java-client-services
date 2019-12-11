@@ -32,7 +32,7 @@ package com.google.api.services.compute.model;
 public final class Reservation extends com.google.api.client.json.GenericJson {
 
   /**
-   * [OutputOnly] Full or partial URL to a parent commitment. This field displays for reservations
+   * [Output Only] Full or partial URL to a parent commitment. This field displays for reservations
    * that are tied to a commitment.
    * The value may be {@code null}.
    */
@@ -117,7 +117,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.lang.String zone;
 
   /**
-   * [OutputOnly] Full or partial URL to a parent commitment. This field displays for reservations
+   * [Output Only] Full or partial URL to a parent commitment. This field displays for reservations
    * that are tied to a commitment.
    * @return value or {@code null} for none
    */
@@ -126,7 +126,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [OutputOnly] Full or partial URL to a parent commitment. This field displays for reservations
+   * [Output Only] Full or partial URL to a parent commitment. This field displays for reservations
    * that are tied to a commitment.
    * @param commitment commitment or {@code null} for none
    */

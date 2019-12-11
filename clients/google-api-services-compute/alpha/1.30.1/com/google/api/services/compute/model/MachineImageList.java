@@ -30,12 +30,6 @@ package com.google.api.services.compute.model;
 public final class MachineImageList extends com.google.api.client.json.GenericJson {
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String etag;
-
-  /**
    * [Output Only] Unique identifier for the resource; defined by the server.
    * The value may be {@code null}.
    */
@@ -86,21 +80,6 @@ public final class MachineImageList extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private Warning warning;
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getEtag() {
-    return etag;
-  }
-
-  /**
-   * @param etag etag or {@code null} for none
-   */
-  public MachineImageList setEtag(java.lang.String etag) {
-    this.etag = etag;
-    return this;
-  }
 
   /**
    * [Output Only] Unique identifier for the resource; defined by the server.

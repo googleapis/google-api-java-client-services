@@ -92,6 +92,14 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private DisplayDevice displayDevice;
 
   /**
+   * Specifies whether the disks restored from source snapshots or source machine image should erase
+   * Windows specific VSS signature.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean eraseWindowsVssSignature;
+
+  /**
    * A list of the type and count of accelerator cards attached to the instance.
    * The value may be {@code null}.
    */
@@ -259,6 +267,20 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private ShieldedVmIntegrityPolicy shieldedVmIntegrityPolicy;
 
   /**
+   * Source machine image
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceMachineImage;
+
+  /**
+   * Source GMI encryption key when creating an instance from GMI.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CustomerEncryptionKey sourceMachineImageEncryptionKey;
+
+  /**
    * [Output Only] Whether a VM has been restricted for start because Compute Engine has detected
    * suspicious activity.
    * The value may be {@code null}.
@@ -421,6 +443,25 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setDisplayDevice(DisplayDevice displayDevice) {
     this.displayDevice = displayDevice;
+    return this;
+  }
+
+  /**
+   * Specifies whether the disks restored from source snapshots or source machine image should erase
+   * Windows specific VSS signature.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEraseWindowsVssSignature() {
+    return eraseWindowsVssSignature;
+  }
+
+  /**
+   * Specifies whether the disks restored from source snapshots or source machine image should erase
+   * Windows specific VSS signature.
+   * @param eraseWindowsVssSignature eraseWindowsVssSignature or {@code null} for none
+   */
+  public Instance setEraseWindowsVssSignature(java.lang.Boolean eraseWindowsVssSignature) {
+    this.eraseWindowsVssSignature = eraseWindowsVssSignature;
     return this;
   }
 
@@ -838,6 +879,40 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setShieldedVmIntegrityPolicy(ShieldedVmIntegrityPolicy shieldedVmIntegrityPolicy) {
     this.shieldedVmIntegrityPolicy = shieldedVmIntegrityPolicy;
+    return this;
+  }
+
+  /**
+   * Source machine image
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceMachineImage() {
+    return sourceMachineImage;
+  }
+
+  /**
+   * Source machine image
+   * @param sourceMachineImage sourceMachineImage or {@code null} for none
+   */
+  public Instance setSourceMachineImage(java.lang.String sourceMachineImage) {
+    this.sourceMachineImage = sourceMachineImage;
+    return this;
+  }
+
+  /**
+   * Source GMI encryption key when creating an instance from GMI.
+   * @return value or {@code null} for none
+   */
+  public CustomerEncryptionKey getSourceMachineImageEncryptionKey() {
+    return sourceMachineImageEncryptionKey;
+  }
+
+  /**
+   * Source GMI encryption key when creating an instance from GMI.
+   * @param sourceMachineImageEncryptionKey sourceMachineImageEncryptionKey or {@code null} for none
+   */
+  public Instance setSourceMachineImageEncryptionKey(CustomerEncryptionKey sourceMachineImageEncryptionKey) {
+    this.sourceMachineImageEncryptionKey = sourceMachineImageEncryptionKey;
     return this;
   }
 

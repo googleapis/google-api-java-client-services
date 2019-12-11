@@ -87,7 +87,7 @@ public final class Principal extends com.google.api.client.json.GenericJson {
 
   /**
    * A map of Istio attribute to expected values. Exact match, prefix match, and suffix match are
-   * supported for values. For example, `request.headers[version]: ?v1?`. The properties are ANDed
+   * supported for values. For example, `request.headers[version]: "v1"`. The properties are ANDed
    * together.
    * The value may be {@code null}.
    */
@@ -240,7 +240,7 @@ public final class Principal extends com.google.api.client.json.GenericJson {
 
   /**
    * A map of Istio attribute to expected values. Exact match, prefix match, and suffix match are
-   * supported for values. For example, `request.headers[version]: ?v1?`. The properties are ANDed
+   * supported for values. For example, `request.headers[version]: "v1"`. The properties are ANDed
    * together.
    * @return value or {@code null} for none
    */
@@ -250,7 +250,7 @@ public final class Principal extends com.google.api.client.json.GenericJson {
 
   /**
    * A map of Istio attribute to expected values. Exact match, prefix match, and suffix match are
-   * supported for values. For example, `request.headers[version]: ?v1?`. The properties are ANDed
+   * supported for values. For example, `request.headers[version]: "v1"`. The properties are ANDed
    * together.
    * @param properties properties or {@code null} for none
    */

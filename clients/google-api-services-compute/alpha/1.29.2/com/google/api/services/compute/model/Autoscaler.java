@@ -122,7 +122,12 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLinkWithId;
 
   /**
-   * [Output Only] The status of the autoscaler configuration.
+   * [Output Only] The status of the autoscaler configuration. Current set of possible values: -
+   * PENDING: Autoscaler backend hasn't read new/updated configuration.  - DELETING: Configuration
+   * is being deleted.  - ACTIVE: Configuration is acknowledged to be effective. Some warnings might
+   * be present in the statusDetails field.  - ERROR: Configuration has errors. Actionable for
+   * users. Details are present in the statusDetails field.  New values might be added in the
+   * future.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -349,7 +354,12 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The status of the autoscaler configuration.
+   * [Output Only] The status of the autoscaler configuration. Current set of possible values: -
+   * PENDING: Autoscaler backend hasn't read new/updated configuration.  - DELETING: Configuration
+   * is being deleted.  - ACTIVE: Configuration is acknowledged to be effective. Some warnings might
+   * be present in the statusDetails field.  - ERROR: Configuration has errors. Actionable for
+   * users. Details are present in the statusDetails field.  New values might be added in the
+   * future.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -357,7 +367,12 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The status of the autoscaler configuration.
+   * [Output Only] The status of the autoscaler configuration. Current set of possible values: -
+   * PENDING: Autoscaler backend hasn't read new/updated configuration.  - DELETING: Configuration
+   * is being deleted.  - ACTIVE: Configuration is acknowledged to be effective. Some warnings might
+   * be present in the statusDetails field.  - ERROR: Configuration has errors. Actionable for
+   * users. Details are present in the statusDetails field.  New values might be added in the
+   * future.
    * @param status status or {@code null} for none
    */
   public Autoscaler setStatus(java.lang.String status) {

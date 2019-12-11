@@ -30,14 +30,16 @@ package com.google.api.services.compute.model;
 public final class HttpRetryPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Specifies the allowed number retries. This number must be > 0.
+   * Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Long numRetries;
 
   /**
-   * Specifies a non-zero timeout per retry attempt.
+   * Specifies a non-zero timeout per retry attempt. If not specified, will use the timeout set in
+   * HttpRouteAction. If timeout in HttpRouteAction is not set, will use the largest timeout among
+   * all backend services associated with the route.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +66,7 @@ public final class HttpRetryPolicy extends com.google.api.client.json.GenericJso
   private java.util.List<java.lang.String> retryConditions;
 
   /**
-   * Specifies the allowed number retries. This number must be > 0.
+   * Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
    * @return value or {@code null} for none
    */
   public java.lang.Long getNumRetries() {
@@ -72,7 +74,7 @@ public final class HttpRetryPolicy extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Specifies the allowed number retries. This number must be > 0.
+   * Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
    * @param numRetries numRetries or {@code null} for none
    */
   public HttpRetryPolicy setNumRetries(java.lang.Long numRetries) {
@@ -81,7 +83,9 @@ public final class HttpRetryPolicy extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Specifies a non-zero timeout per retry attempt.
+   * Specifies a non-zero timeout per retry attempt. If not specified, will use the timeout set in
+   * HttpRouteAction. If timeout in HttpRouteAction is not set, will use the largest timeout among
+   * all backend services associated with the route.
    * @return value or {@code null} for none
    */
   public Duration getPerTryTimeout() {
@@ -89,7 +93,9 @@ public final class HttpRetryPolicy extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Specifies a non-zero timeout per retry attempt.
+   * Specifies a non-zero timeout per retry attempt. If not specified, will use the timeout set in
+   * HttpRouteAction. If timeout in HttpRouteAction is not set, will use the largest timeout among
+   * all backend services associated with the route.
    * @param perTryTimeout perTryTimeout or {@code null} for none
    */
   public HttpRetryPolicy setPerTryTimeout(Duration perTryTimeout) {

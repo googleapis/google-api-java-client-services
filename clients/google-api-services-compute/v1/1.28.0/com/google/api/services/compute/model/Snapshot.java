@@ -33,8 +33,8 @@ package com.google.api.services.compute.model;
 public final class Snapshot extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Set to true if snapshots are automatically by applying resource policy on the
-   * target disk.
+   * [Output Only] Set to true if snapshots are automatically created by applying resource policy on
+   * the target disk.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,7 +55,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * [Output Only] Size of the snapshot, specified in GB.
+   * [Output Only] Size of the source disk, specified in GB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -204,8 +204,8 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> storageLocations;
 
   /**
-   * [Output Only] Set to true if snapshots are automatically by applying resource policy on the
-   * target disk.
+   * [Output Only] Set to true if snapshots are automatically created by applying resource policy on
+   * the target disk.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAutoCreated() {
@@ -213,8 +213,8 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Set to true if snapshots are automatically by applying resource policy on the
-   * target disk.
+   * [Output Only] Set to true if snapshots are automatically created by applying resource policy on
+   * the target disk.
    * @param autoCreated autoCreated or {@code null} for none
    */
   public Snapshot setAutoCreated(java.lang.Boolean autoCreated) {
@@ -257,7 +257,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Size of the snapshot, specified in GB.
+   * [Output Only] Size of the source disk, specified in GB.
    * @return value or {@code null} for none
    */
   public java.lang.Long getDiskSizeGb() {
@@ -265,7 +265,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Size of the snapshot, specified in GB.
+   * [Output Only] Size of the source disk, specified in GB.
    * @param diskSizeGb diskSizeGb or {@code null} for none
    */
   public Snapshot setDiskSizeGb(java.lang.Long diskSizeGb) {

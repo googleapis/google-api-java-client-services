@@ -84,6 +84,13 @@ public final class AutoscalingPolicy extends com.google.api.client.json.GenericJ
   private java.lang.Integer minNumReplicas;
 
   /**
+   * Defines operating mode for this policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String mode;
+
+  /**
    * The number of seconds that the autoscaler should wait before it starts collecting information
    * from a new instance. This prevents the autoscaler from collecting information when the instance
    * is initializing, during which the collected usage would not be reliable. The default time
@@ -206,6 +213,23 @@ public final class AutoscalingPolicy extends com.google.api.client.json.GenericJ
    */
   public AutoscalingPolicy setMinNumReplicas(java.lang.Integer minNumReplicas) {
     this.minNumReplicas = minNumReplicas;
+    return this;
+  }
+
+  /**
+   * Defines operating mode for this policy.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMode() {
+    return mode;
+  }
+
+  /**
+   * Defines operating mode for this policy.
+   * @param mode mode or {@code null} for none
+   */
+  public AutoscalingPolicy setMode(java.lang.String mode) {
+    this.mode = mode;
     return this;
   }
 

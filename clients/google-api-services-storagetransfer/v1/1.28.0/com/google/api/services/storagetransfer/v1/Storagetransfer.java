@@ -743,7 +743,10 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
     }
     /**
      * Updates a transfer job. Updating a job's transfer spec does not affect transfer operations that
-     * are running already. Updating the scheduling of a job is not allowed.
+     * are running already. Updating a job's schedule is not allowed.
+     *
+     * Note: The job's `status` field can be modified using this RPC (for example, to set a job's status
+     * to `DELETED`, `DISABLED`, or `ENABLED`).
      *
      * Create a request for the method "transferJobs.patch".
      *
@@ -769,7 +772,10 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
 
       /**
        * Updates a transfer job. Updating a job's transfer spec does not affect transfer operations that
-       * are running already. Updating the scheduling of a job is not allowed.
+       * are running already. Updating a job's schedule is not allowed.
+       *
+       * Note: The job's `status` field can be modified using this RPC (for example, to set a job's
+       * status to `DELETED`, `DISABLED`, or `ENABLED`).
        *
        * Create a request for the method "transferJobs.patch".
        *

@@ -966,6 +966,156 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
       }
     }
     /**
+     * Disables VPC service controls for a connection.
+     *
+     * Create a request for the method "services.disableVpcServiceControls".
+     *
+     * This request holds the parameters needed by the servicenetworking server.  After setting any
+     * optional parameters, call the {@link DisableVpcServiceControls#execute()} method to invoke the
+     * remote operation.
+     *
+     * @param parent The service that is managing peering connectivity for a service producer's
+    organization. For Google
+     *        services that support this functionality, this
+    value is
+     *        `services/servicenetworking.googleapis.com`.
+     * @param content the {@link com.google.api.services.servicenetworking.v1.model.DisableVpcServiceControlsRequest}
+     * @return the request
+     */
+    public DisableVpcServiceControls disableVpcServiceControls(java.lang.String parent, com.google.api.services.servicenetworking.v1.model.DisableVpcServiceControlsRequest content) throws java.io.IOException {
+      DisableVpcServiceControls result = new DisableVpcServiceControls(parent, content);
+      initialize(result);
+      return result;
+    }
+
+    public class DisableVpcServiceControls extends ServiceNetworkingRequest<com.google.api.services.servicenetworking.v1.model.Operation> {
+
+      private static final String REST_PATH = "v1/{+parent}:disableVpcServiceControls";
+
+      private final java.util.regex.Pattern PARENT_PATTERN =
+          java.util.regex.Pattern.compile("^services/[^/]+$");
+
+      /**
+       * Disables VPC service controls for a connection.
+       *
+       * Create a request for the method "services.disableVpcServiceControls".
+       *
+       * This request holds the parameters needed by the the servicenetworking server.  After setting
+       * any optional parameters, call the {@link DisableVpcServiceControls#execute()} method to invoke
+       * the remote operation. <p> {@link DisableVpcServiceControls#initialize(com.google.api.client.goo
+       * gleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @param parent The service that is managing peering connectivity for a service producer's
+    organization. For Google
+     *        services that support this functionality, this
+    value is
+     *        `services/servicenetworking.googleapis.com`.
+       * @param content the {@link com.google.api.services.servicenetworking.v1.model.DisableVpcServiceControlsRequest}
+       * @since 1.13
+       */
+      protected DisableVpcServiceControls(java.lang.String parent, com.google.api.services.servicenetworking.v1.model.DisableVpcServiceControlsRequest content) {
+        super(ServiceNetworking.this, "PATCH", REST_PATH, content, com.google.api.services.servicenetworking.v1.model.Operation.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^services/[^/]+$");
+        }
+      }
+
+      @Override
+      public DisableVpcServiceControls set$Xgafv(java.lang.String $Xgafv) {
+        return (DisableVpcServiceControls) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public DisableVpcServiceControls setAccessToken(java.lang.String accessToken) {
+        return (DisableVpcServiceControls) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public DisableVpcServiceControls setAlt(java.lang.String alt) {
+        return (DisableVpcServiceControls) super.setAlt(alt);
+      }
+
+      @Override
+      public DisableVpcServiceControls setCallback(java.lang.String callback) {
+        return (DisableVpcServiceControls) super.setCallback(callback);
+      }
+
+      @Override
+      public DisableVpcServiceControls setFields(java.lang.String fields) {
+        return (DisableVpcServiceControls) super.setFields(fields);
+      }
+
+      @Override
+      public DisableVpcServiceControls setKey(java.lang.String key) {
+        return (DisableVpcServiceControls) super.setKey(key);
+      }
+
+      @Override
+      public DisableVpcServiceControls setOauthToken(java.lang.String oauthToken) {
+        return (DisableVpcServiceControls) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public DisableVpcServiceControls setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (DisableVpcServiceControls) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public DisableVpcServiceControls setQuotaUser(java.lang.String quotaUser) {
+        return (DisableVpcServiceControls) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public DisableVpcServiceControls setUploadType(java.lang.String uploadType) {
+        return (DisableVpcServiceControls) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public DisableVpcServiceControls setUploadProtocol(java.lang.String uploadProtocol) {
+        return (DisableVpcServiceControls) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * The service that is managing peering connectivity for a service producer's organization.
+       * For Google services that support this functionality, this value is
+       * `services/servicenetworking.googleapis.com`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** The service that is managing peering connectivity for a service producer's organization. For Google
+     services that support this functionality, this value is
+     `services/servicenetworking.googleapis.com`.
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /**
+       * The service that is managing peering connectivity for a service producer's organization.
+       * For Google services that support this functionality, this value is
+       * `services/servicenetworking.googleapis.com`.
+       */
+      public DisableVpcServiceControls setParent(java.lang.String parent) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^services/[^/]+$");
+        }
+        this.parent = parent;
+        return this;
+      }
+
+      @Override
+      public DisableVpcServiceControls set(String parameterName, Object value) {
+        return (DisableVpcServiceControls) super.set(parameterName, value);
+      }
+    }
+    /**
      * Enables VPC service controls for a connection.
      *
      * Create a request for the method "services.enableVpcServiceControls".

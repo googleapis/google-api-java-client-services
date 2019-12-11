@@ -147,7 +147,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
   /**
    * A list of custom (merchant-provided) attributes. It can also be used for submitting any
    * attribute of the feed specification in its generic form (e.g., { "name": "size type", "value":
-   * "regular" }). This is useful for submitting attributes not explicitly exposed by the API.
+   * "regular" }). This is useful for submitting attributes not explicitly exposed by the API, such
+   * as additional attributes used for Shopping Actions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -541,7 +542,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String sizeType;
 
   /**
-   * Size of the item.
+   * Size of the item. Only one value is allowed. For variants with different sizes, insert a
+   * separate product for each size with the same itemGroupId value (see size definition).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -886,7 +888,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
   /**
    * A list of custom (merchant-provided) attributes. It can also be used for submitting any
    * attribute of the feed specification in its generic form (e.g., { "name": "size type", "value":
-   * "regular" }). This is useful for submitting attributes not explicitly exposed by the API.
+   * "regular" }). This is useful for submitting attributes not explicitly exposed by the API, such
+   * as additional attributes used for Shopping Actions.
    * @return value or {@code null} for none
    */
   public java.util.List<CustomAttribute> getCustomAttributes() {
@@ -896,7 +899,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
   /**
    * A list of custom (merchant-provided) attributes. It can also be used for submitting any
    * attribute of the feed specification in its generic form (e.g., { "name": "size type", "value":
-   * "regular" }). This is useful for submitting attributes not explicitly exposed by the API.
+   * "regular" }). This is useful for submitting attributes not explicitly exposed by the API, such
+   * as additional attributes used for Shopping Actions.
    * @param customAttributes customAttributes or {@code null} for none
    */
   public Product setCustomAttributes(java.util.List<CustomAttribute> customAttributes) {
@@ -1811,7 +1815,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Size of the item.
+   * Size of the item. Only one value is allowed. For variants with different sizes, insert a
+   * separate product for each size with the same itemGroupId value (see size definition).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSizes() {
@@ -1819,7 +1824,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Size of the item.
+   * Size of the item. Only one value is allowed. For variants with different sizes, insert a
+   * separate product for each size with the same itemGroupId value (see size definition).
    * @param sizes sizes or {@code null} for none
    */
   public Product setSizes(java.util.List<java.lang.String> sizes) {

@@ -52,7 +52,7 @@ public final class OrderCancellation extends com.google.api.client.json.GenericJ
   private java.lang.Long quantity;
 
   /**
-   * The reason for the cancellation. Orders that are cancelled with a noInventory reason will lead
+   * The reason for the cancellation. Orders that are canceled with a noInventory reason will lead
    * to the removal of the product from Shopping Actions until you make an update to that product.
    * This will not affect your Shopping ads.
    * The value may be {@code null}.
@@ -119,7 +119,7 @@ public final class OrderCancellation extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The reason for the cancellation. Orders that are cancelled with a noInventory reason will lead
+   * The reason for the cancellation. Orders that are canceled with a noInventory reason will lead
    * to the removal of the product from Shopping Actions until you make an update to that product.
    * This will not affect your Shopping ads.
    * @return value or {@code null} for none
@@ -129,7 +129,7 @@ public final class OrderCancellation extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The reason for the cancellation. Orders that are cancelled with a noInventory reason will lead
+   * The reason for the cancellation. Orders that are canceled with a noInventory reason will lead
    * to the removal of the product from Shopping Actions until you make an update to that product.
    * This will not affect your Shopping ads.
    * @param reason reason or {@code null} for none

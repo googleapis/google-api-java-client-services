@@ -59,8 +59,8 @@ public final class Organization extends com.google.api.client.json.GenericJson {
   private Date endDate;
 
   /**
-   * The read-only type of the organization translated and formatted in the viewer's account locale
-   * or the `Accept-Language` HTTP header locale.
+   * Output only. The type of the organization translated and formatted in the viewer's account
+   * locale or the `Accept-Language` HTTP header locale.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -203,8 +203,8 @@ public final class Organization extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The read-only type of the organization translated and formatted in the viewer's account locale
-   * or the `Accept-Language` HTTP header locale.
+   * Output only. The type of the organization translated and formatted in the viewer's account
+   * locale or the `Accept-Language` HTTP header locale.
    * @return value or {@code null} for none
    */
   public java.lang.String getFormattedType() {
@@ -212,8 +212,8 @@ public final class Organization extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The read-only type of the organization translated and formatted in the viewer's account locale
-   * or the `Accept-Language` HTTP header locale.
+   * Output only. The type of the organization translated and formatted in the viewer's account
+   * locale or the `Accept-Language` HTTP header locale.
    * @param formattedType formattedType or {@code null} for none
    */
   public Organization setFormattedType(java.lang.String formattedType) {

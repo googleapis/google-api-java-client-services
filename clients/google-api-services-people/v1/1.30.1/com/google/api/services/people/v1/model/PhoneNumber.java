@@ -30,7 +30,7 @@ package com.google.api.services.people.v1.model;
 public final class PhoneNumber extends com.google.api.client.json.GenericJson {
 
   /**
-   * The read-only canonicalized [ITU-T
+   * Output only. The canonicalized [ITU-T
    * E.164](https://law.resource.org/pub/us/cfr/ibr/004/itu-t.E.164.1.2008.pdf) form of the phone
    * number.
    * The value may be {@code null}.
@@ -39,8 +39,8 @@ public final class PhoneNumber extends com.google.api.client.json.GenericJson {
   private java.lang.String canonicalForm;
 
   /**
-   * The read-only type of the phone number translated and formatted in the viewer's account locale
-   * or the `Accept-Language` HTTP header locale.
+   * Output only. The type of the phone number translated and formatted in the viewer's account
+   * locale or the `Accept-Language` HTTP header locale.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +71,7 @@ public final class PhoneNumber extends com.google.api.client.json.GenericJson {
   private java.lang.String value;
 
   /**
-   * The read-only canonicalized [ITU-T
+   * Output only. The canonicalized [ITU-T
    * E.164](https://law.resource.org/pub/us/cfr/ibr/004/itu-t.E.164.1.2008.pdf) form of the phone
    * number.
    * @return value or {@code null} for none
@@ -81,7 +81,7 @@ public final class PhoneNumber extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The read-only canonicalized [ITU-T
+   * Output only. The canonicalized [ITU-T
    * E.164](https://law.resource.org/pub/us/cfr/ibr/004/itu-t.E.164.1.2008.pdf) form of the phone
    * number.
    * @param canonicalForm canonicalForm or {@code null} for none
@@ -92,8 +92,8 @@ public final class PhoneNumber extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The read-only type of the phone number translated and formatted in the viewer's account locale
-   * or the `Accept-Language` HTTP header locale.
+   * Output only. The type of the phone number translated and formatted in the viewer's account
+   * locale or the `Accept-Language` HTTP header locale.
    * @return value or {@code null} for none
    */
   public java.lang.String getFormattedType() {
@@ -101,8 +101,8 @@ public final class PhoneNumber extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The read-only type of the phone number translated and formatted in the viewer's account locale
-   * or the `Accept-Language` HTTP header locale.
+   * Output only. The type of the phone number translated and formatted in the viewer's account
+   * locale or the `Accept-Language` HTTP header locale.
    * @param formattedType formattedType or {@code null} for none
    */
   public PhoneNumber setFormattedType(java.lang.String formattedType) {

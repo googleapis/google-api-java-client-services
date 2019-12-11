@@ -30,7 +30,7 @@ package com.google.api.services.people.v1.model;
 public final class Url extends com.google.api.client.json.GenericJson {
 
   /**
-   * The read-only type of the URL translated and formatted in the viewer's account locale or the
+   * Output only. The type of the URL translated and formatted in the viewer's account locale or the
    * `Accept-Language` HTTP header locale.
    * The value may be {@code null}.
    */
@@ -62,7 +62,7 @@ public final class Url extends com.google.api.client.json.GenericJson {
   private java.lang.String value;
 
   /**
-   * The read-only type of the URL translated and formatted in the viewer's account locale or the
+   * Output only. The type of the URL translated and formatted in the viewer's account locale or the
    * `Accept-Language` HTTP header locale.
    * @return value or {@code null} for none
    */
@@ -71,7 +71,7 @@ public final class Url extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The read-only type of the URL translated and formatted in the viewer's account locale or the
+   * Output only. The type of the URL translated and formatted in the viewer's account locale or the
    * `Accept-Language` HTTP header locale.
    * @param formattedType formattedType or {@code null} for none
    */

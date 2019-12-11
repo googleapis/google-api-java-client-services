@@ -30,7 +30,7 @@ package com.google.api.services.people.v1.model;
 public final class ContactGroupMembership extends com.google.api.client.json.GenericJson {
 
   /**
-   * The read-only contact group ID for the contact group membership.
+   * Output only. The contact group ID for the contact group membership.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +48,7 @@ public final class ContactGroupMembership extends com.google.api.client.json.Gen
   private java.lang.String contactGroupResourceName;
 
   /**
-   * The read-only contact group ID for the contact group membership.
+   * Output only. The contact group ID for the contact group membership.
    * @return value or {@code null} for none
    */
   public java.lang.String getContactGroupId() {
@@ -56,7 +56,7 @@ public final class ContactGroupMembership extends com.google.api.client.json.Gen
   }
 
   /**
-   * The read-only contact group ID for the contact group membership.
+   * Output only. The contact group ID for the contact group membership.
    * @param contactGroupId contactGroupId or {@code null} for none
    */
   public ContactGroupMembership setContactGroupId(java.lang.String contactGroupId) {

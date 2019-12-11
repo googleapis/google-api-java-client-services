@@ -17,7 +17,7 @@
 package com.google.api.services.people.v1.model;
 
 /**
- * The read-only metadata about a profile.
+ * The metadata about a profile.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the People API. For a detailed explanation see:
@@ -30,21 +30,21 @@ package com.google.api.services.people.v1.model;
 public final class ProfileMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * The profile object type.
+   * Output only. The profile object type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String objectType;
 
   /**
-   * The user types.
+   * Output only. The user types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> userTypes;
 
   /**
-   * The profile object type.
+   * Output only. The profile object type.
    * @return value or {@code null} for none
    */
   public java.lang.String getObjectType() {
@@ -52,7 +52,7 @@ public final class ProfileMetadata extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The profile object type.
+   * Output only. The profile object type.
    * @param objectType objectType or {@code null} for none
    */
   public ProfileMetadata setObjectType(java.lang.String objectType) {
@@ -61,7 +61,7 @@ public final class ProfileMetadata extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The user types.
+   * Output only. The user types.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUserTypes() {
@@ -69,7 +69,7 @@ public final class ProfileMetadata extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The user types.
+   * Output only. The user types.
    * @param userTypes userTypes or {@code null} for none
    */
   public ProfileMetadata setUserTypes(java.util.List<java.lang.String> userTypes) {

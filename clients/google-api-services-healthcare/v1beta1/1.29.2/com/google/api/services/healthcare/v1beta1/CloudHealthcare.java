@@ -9832,29 +9832,6 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The response includes records prior to the end date. If no end date is provided,
-               * all records subsequent to the start date are in scope.
-               */
-              @com.google.api.client.util.Key
-              private java.lang.String end;
-
-              /** The response includes records prior to the end date. If no end date is provided, all records
-             subsequent to the start date are in scope.
-               */
-              public java.lang.String getEnd() {
-                return end;
-              }
-
-              /**
-               * The response includes records prior to the end date. If no end date is provided,
-               * all records subsequent to the start date are in scope.
-               */
-              public PatientEverything setEnd(java.lang.String end) {
-                this.end = end;
-                return this;
-              }
-
-              /**
                * Used to retrieve the next or previous page of results when using pagination. Value
                * should be set to the value of page_token set in next or previous page links' urls.
                * Next and previous page are returned in the response bundle's links field, where
@@ -9862,7 +9839,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                *
                * Omit `page_token` if no previous request has been made.
                */
-              @com.google.api.client.util.Key
+              @com.google.api.client.util.Key("_page_token")
               private java.lang.String pageToken;
 
               /** Used to retrieve the next or previous page of results when using pagination. Value should be set to
@@ -9885,6 +9862,29 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                */
               public PatientEverything setPageToken(java.lang.String pageToken) {
                 this.pageToken = pageToken;
+                return this;
+              }
+
+              /**
+               * The response includes records prior to the end date. If no end date is provided,
+               * all records subsequent to the start date are in scope.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String end;
+
+              /** The response includes records prior to the end date. If no end date is provided, all records
+             subsequent to the start date are in scope.
+               */
+              public java.lang.String getEnd() {
+                return end;
+              }
+
+              /**
+               * The response includes records prior to the end date. If no end date is provided,
+               * all records subsequent to the start date are in scope.
+               */
+              public PatientEverything setEnd(java.lang.String end) {
+                this.end = end;
                 return this;
               }
 
@@ -11533,6 +11533,62 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
+               * Only include resource versions that were current at some point during the time
+               * period specified in the date time value. The date parameter format is yyyy-mm-
+               * ddThh:mm:ss[Z|(+|-)hh:mm]
+               *
+               * Clients may specify any of the following:
+               *
+               * *  An entire year: `_at=2019` *  An entire month: `_at=2019-01` *  A specific day:
+               * `_at=2019-01-20` *  A specific second: `_at=2018-12-31T23:59:58Z`
+               */
+              @com.google.api.client.util.Key("_at")
+              private java.lang.String at;
+
+              /** Only include resource versions that were current at some point during the time period specified in
+             the date time value. The date parameter format is yyyy-mm-ddThh:mm:ss[Z|(+|-)hh:mm]
+
+             Clients may specify any of the following:
+
+             *  An entire year: `_at=2019` *  An entire month: `_at=2019-01` *  A specific day: `_at=2019-01-20`
+             *  A specific second: `_at=2018-12-31T23:59:58Z`
+               */
+              public java.lang.String getAt() {
+                return at;
+              }
+
+              /**
+               * Only include resource versions that were current at some point during the time
+               * period specified in the date time value. The date parameter format is yyyy-mm-
+               * ddThh:mm:ss[Z|(+|-)hh:mm]
+               *
+               * Clients may specify any of the following:
+               *
+               * *  An entire year: `_at=2019` *  An entire month: `_at=2019-01` *  A specific day:
+               * `_at=2019-01-20` *  A specific second: `_at=2018-12-31T23:59:58Z`
+               */
+              public History setAt(java.lang.String at) {
+                this.at = at;
+                return this;
+              }
+
+              /** The maximum number of search results on a page. Defaults to 1000. */
+              @com.google.api.client.util.Key("_count")
+              private java.lang.Integer count;
+
+              /** The maximum number of search results on a page. Defaults to 1000.
+               */
+              public java.lang.Integer getCount() {
+                return count;
+              }
+
+              /** The maximum number of search results on a page. Defaults to 1000. */
+              public History setCount(java.lang.Integer count) {
+                this.count = count;
+                return this;
+              }
+
+              /**
                * Used to retrieve the first, previous, next, or last page of resource versions when
                * using pagination. Value should be set to the value of `_page_token` set in next or
                * previous page links' URLs. Next and previous page are returned in the response
@@ -11568,84 +11624,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Only include resource versions that were current at some point during the time
-               * period specified in the date time value. The date parameter format is yyyy-mm-
-               * ddThh:mm:ss[Z|(+|-)hh:mm]
-               *
-               * Clients may specify any of the following:
-               *
-               * *  An entire year: `_at=2019` *  An entire month: `_at=2019-01` *  A specific day:
-               * `_at=2019-01-20` *  A specific second: `_at=2018-12-31T23:59:58Z`
-               */
-              @com.google.api.client.util.Key
-              private java.lang.String at;
-
-              /** Only include resource versions that were current at some point during the time period specified in
-             the date time value. The date parameter format is yyyy-mm-ddThh:mm:ss[Z|(+|-)hh:mm]
-
-             Clients may specify any of the following:
-
-             *  An entire year: `_at=2019` *  An entire month: `_at=2019-01` *  A specific day: `_at=2019-01-20`
-             *  A specific second: `_at=2018-12-31T23:59:58Z`
-               */
-              public java.lang.String getAt() {
-                return at;
-              }
-
-              /**
-               * Only include resource versions that were current at some point during the time
-               * period specified in the date time value. The date parameter format is yyyy-mm-
-               * ddThh:mm:ss[Z|(+|-)hh:mm]
-               *
-               * Clients may specify any of the following:
-               *
-               * *  An entire year: `_at=2019` *  An entire month: `_at=2019-01` *  A specific day:
-               * `_at=2019-01-20` *  A specific second: `_at=2018-12-31T23:59:58Z`
-               */
-              public History setAt(java.lang.String at) {
-                this.at = at;
-                return this;
-              }
-
-              /** The maximum number of search results on a page. Defaults to 1000. */
-              @com.google.api.client.util.Key
-              private java.lang.Integer count;
-
-              /** The maximum number of search results on a page. Defaults to 1000.
-               */
-              public java.lang.Integer getCount() {
-                return count;
-              }
-
-              /** The maximum number of search results on a page. Defaults to 1000. */
-              public History setCount(java.lang.Integer count) {
-                this.count = count;
-                return this;
-              }
-
-              /** DEPRECATED! Use `_page_token`. */
-              @com.google.api.client.util.Key
-              private java.lang.String page;
-
-              /** DEPRECATED! Use `_page_token`.
-               */
-              public java.lang.String getPage() {
-                return page;
-              }
-
-              /** DEPRECATED! Use `_page_token`. */
-              public History setPage(java.lang.String page) {
-                this.page = page;
-                return this;
-              }
-
-              /**
                * Only include resource versions that were created at or after the given instant in
                * time. The instant in time uses the format YYYY-MM-DDThh:mm:ss.sss+zz:zz (for
                * example 2015-02-07T13:28:17.239+02:00 or 2017-01-01T00:00:00Z). The time must be
                * specified to the second and include a time zone.
                */
-              @com.google.api.client.util.Key
+              @com.google.api.client.util.Key("_since")
               private java.lang.String since;
 
               /** Only include resource versions that were created at or after the given instant in time. The instant

@@ -123,6 +123,1331 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
   }
 
   /**
+   * An accessor for creating requests from the Oauth collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code CloudIAP iap = new CloudIAP(...);}
+   *   {@code CloudIAP.Oauth.List request = iap.oauth().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Oauth oauth() {
+    return new Oauth();
+  }
+
+  /**
+   * The "oauth" collection of methods.
+   */
+  public class Oauth {
+
+    /**
+     * An accessor for creating requests from the Projects collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code CloudIAP iap = new CloudIAP(...);}
+     *   {@code CloudIAP.Projects.List request = iap.projects().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Projects projects() {
+      return new Projects();
+    }
+
+    /**
+     * The "projects" collection of methods.
+     */
+    public class Projects {
+
+      /**
+       * An accessor for creating requests from the Brands collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudIAP iap = new CloudIAP(...);}
+       *   {@code CloudIAP.Brands.List request = iap.brands().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Brands brands() {
+        return new Brands();
+      }
+
+      /**
+       * The "brands" collection of methods.
+       */
+      public class Brands {
+
+        /**
+         * Constructs a new OAuth brand for the project if one does not exists. The created brand is
+         * 'internal only', meaning that OAuth clients created under it only accept requests from users who
+         * belong to the same GSuites account as the project. The brand is created in un-reviewed status.
+         * NOTE: the 'internal_only' can be manually changed in Pantheon UI. Requires that brand does not
+         * already exists for the project.
+         *
+         * Create a request for the method "brands.create".
+         *
+         * This request holds the parameters needed by the iap server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. GCP Project number/id under which the brand is to be created.
+        In the following format:
+         *        projects/{project_number/id}.
+         * @param content the {@link com.google.api.services.iap.v1.model.Brand}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.iap.v1.model.Brand content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends CloudIAPRequest<com.google.api.services.iap.v1.model.Brand> {
+
+          private static final String REST_PATH = "v1/oauth/{+parent}/brands";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+          /**
+           * Constructs a new OAuth brand for the project if one does not exists. The created brand is
+           * 'internal only', meaning that OAuth clients created under it only accept requests from users
+           * who belong to the same GSuites account as the project. The brand is created in un-reviewed
+           * status. NOTE: the 'internal_only' can be manually changed in Pantheon UI. Requires that brand
+           * does not already exists for the project.
+           *
+           * Create a request for the method "brands.create".
+           *
+           * This request holds the parameters needed by the the iap server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. GCP Project number/id under which the brand is to be created.
+        In the following format:
+         *        projects/{project_number/id}.
+           * @param content the {@link com.google.api.services.iap.v1.model.Brand}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.iap.v1.model.Brand content) {
+            super(CloudIAP.this, "POST", REST_PATH, content, com.google.api.services.iap.v1.model.Brand.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. GCP Project number/id under which the brand is to be created. In the
+           * following format: projects/{project_number/id}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. GCP Project number/id under which the brand is to be created. In the following format:
+         projects/{project_number/id}.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. GCP Project number/id under which the brand is to be created. In the
+           * following format: projects/{project_number/id}.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Retrieves the OAuth brand of the project.
+         *
+         * Create a request for the method "brands.get".
+         *
+         * This request holds the parameters needed by the iap server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the brand to be fetched.
+        In the following format:
+         *        projects/{project_number/id}/brands/{brand}.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends CloudIAPRequest<com.google.api.services.iap.v1.model.Brand> {
+
+          private static final String REST_PATH = "v1/oauth/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/brands/[^/]+$");
+
+          /**
+           * Retrieves the OAuth brand of the project.
+           *
+           * Create a request for the method "brands.get".
+           *
+           * This request holds the parameters needed by the the iap server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the brand to be fetched.
+        In the following format:
+         *        projects/{project_number/id}/brands/{brand}.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(CloudIAP.this, "GET", REST_PATH, null, com.google.api.services.iap.v1.model.Brand.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/brands/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the brand to be fetched. In the following format:
+           * projects/{project_number/id}/brands/{brand}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the brand to be fetched. In the following format:
+         projects/{project_number/id}/brands/{brand}.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the brand to be fetched. In the following format:
+           * projects/{project_number/id}/brands/{brand}.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/brands/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists the existing brands for the project.
+         *
+         * Create a request for the method "brands.list".
+         *
+         * This request holds the parameters needed by the iap server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. GCP Project number/id.
+        In the following format: projects/{project_number/id}.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends CloudIAPRequest<com.google.api.services.iap.v1.model.ListBrandsResponse> {
+
+          private static final String REST_PATH = "v1/oauth/{+parent}/brands";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+          /**
+           * Lists the existing brands for the project.
+           *
+           * Create a request for the method "brands.list".
+           *
+           * This request holds the parameters needed by the the iap server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. GCP Project number/id.
+        In the following format: projects/{project_number/id}.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(CloudIAP.this, "GET", REST_PATH, null, com.google.api.services.iap.v1.model.ListBrandsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. GCP Project number/id. In the following format: projects/{project_number/id}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. GCP Project number/id. In the following format: projects/{project_number/id}.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. GCP Project number/id. In the following format: projects/{project_number/id}.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the IdentityAwareProxyClients collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code CloudIAP iap = new CloudIAP(...);}
+         *   {@code CloudIAP.IdentityAwareProxyClients.List request = iap.identityAwareProxyClients().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public IdentityAwareProxyClients identityAwareProxyClients() {
+          return new IdentityAwareProxyClients();
+        }
+
+        /**
+         * The "identityAwareProxyClients" collection of methods.
+         */
+        public class IdentityAwareProxyClients {
+
+          /**
+           * Creates an Identity Aware Proxy (IAP) OAuth client, the client is owned by IAP. Requires that the
+           * brand for the project exists and that it is set for internal only use.
+           *
+           * Create a request for the method "identityAwareProxyClients.create".
+           *
+           * This request holds the parameters needed by the iap server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. Path to create the client in.
+          In the following format:
+           *        projects/{project_number/id}/brands/{brand}.
+          The project must belong to a GSuite account.
+           * @param content the {@link com.google.api.services.iap.v1.model.IdentityAwareProxyClient}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.iap.v1.model.IdentityAwareProxyClient content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends CloudIAPRequest<com.google.api.services.iap.v1.model.IdentityAwareProxyClient> {
+
+            private static final String REST_PATH = "v1/oauth/{+parent}/identityAwareProxyClients";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/brands/[^/]+$");
+
+            /**
+             * Creates an Identity Aware Proxy (IAP) OAuth client, the client is owned by IAP. Requires that
+             * the brand for the project exists and that it is set for internal only use.
+             *
+             * Create a request for the method "identityAwareProxyClients.create".
+             *
+             * This request holds the parameters needed by the the iap server.  After setting any optional
+             * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. Path to create the client in.
+          In the following format:
+           *        projects/{project_number/id}/brands/{brand}.
+          The project must belong to a GSuite account.
+             * @param content the {@link com.google.api.services.iap.v1.model.IdentityAwareProxyClient}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.iap.v1.model.IdentityAwareProxyClient content) {
+              super(CloudIAP.this, "POST", REST_PATH, content, com.google.api.services.iap.v1.model.IdentityAwareProxyClient.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/brands/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Path to create the client in. In the following format:
+             * projects/{project_number/id}/brands/{brand}. The project must belong to a GSuite
+             * account.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Path to create the client in. In the following format:
+           projects/{project_number/id}/brands/{brand}. The project must belong to a GSuite account.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. Path to create the client in. In the following format:
+             * projects/{project_number/id}/brands/{brand}. The project must belong to a GSuite
+             * account.
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/brands/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes an Identity Aware Proxy (IAP) OAuth client. Useful if the secret was compromised.
+           * Requires that the client is owned by IAP.
+           *
+           * Create a request for the method "identityAwareProxyClients.delete".
+           *
+           * This request holds the parameters needed by the iap server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Name of the Identity Aware Proxy client to be deleted.
+          In the following format:
+           *        projects/{project_number/id}/brands/{brand}/identityAwareProxyClients/{client_id}.
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends CloudIAPRequest<com.google.api.services.iap.v1.model.Empty> {
+
+            private static final String REST_PATH = "v1/oauth/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/brands/[^/]+/identityAwareProxyClients/[^/]+$");
+
+            /**
+             * Deletes an Identity Aware Proxy (IAP) OAuth client. Useful if the secret was compromised.
+             * Requires that the client is owned by IAP.
+             *
+             * Create a request for the method "identityAwareProxyClients.delete".
+             *
+             * This request holds the parameters needed by the the iap server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Name of the Identity Aware Proxy client to be deleted.
+          In the following format:
+           *        projects/{project_number/id}/brands/{brand}/identityAwareProxyClients/{client_id}.
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(CloudIAP.this, "DELETE", REST_PATH, null, com.google.api.services.iap.v1.model.Empty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/brands/[^/]+/identityAwareProxyClients/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Name of the Identity Aware Proxy client to be deleted. In the following
+             * format:
+             * projects/{project_number/id}/brands/{brand}/identityAwareProxyClients/{client_id}.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Name of the Identity Aware Proxy client to be deleted. In the following format:
+           projects/{project_number/id}/brands/{brand}/identityAwareProxyClients/{client_id}.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Name of the Identity Aware Proxy client to be deleted. In the following
+             * format:
+             * projects/{project_number/id}/brands/{brand}/identityAwareProxyClients/{client_id}.
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/brands/[^/]+/identityAwareProxyClients/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Retrieves an Identity Aware Proxy (IAP) OAuth client. Requires that the client is owned by IAP.
+           *
+           * Create a request for the method "identityAwareProxyClients.get".
+           *
+           * This request holds the parameters needed by the iap server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Name of the Identity Aware Proxy client to be fetched.
+          In the following format:
+           *        projects/{project_number/id}/brands/{brand}/identityAwareProxyClients/{client_id}.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends CloudIAPRequest<com.google.api.services.iap.v1.model.IdentityAwareProxyClient> {
+
+            private static final String REST_PATH = "v1/oauth/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/brands/[^/]+/identityAwareProxyClients/[^/]+$");
+
+            /**
+             * Retrieves an Identity Aware Proxy (IAP) OAuth client. Requires that the client is owned by IAP.
+             *
+             * Create a request for the method "identityAwareProxyClients.get".
+             *
+             * This request holds the parameters needed by the the iap server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+             * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Name of the Identity Aware Proxy client to be fetched.
+          In the following format:
+           *        projects/{project_number/id}/brands/{brand}/identityAwareProxyClients/{client_id}.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(CloudIAP.this, "GET", REST_PATH, null, com.google.api.services.iap.v1.model.IdentityAwareProxyClient.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/brands/[^/]+/identityAwareProxyClients/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Name of the Identity Aware Proxy client to be fetched. In the following
+             * format:
+             * projects/{project_number/id}/brands/{brand}/identityAwareProxyClients/{client_id}.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Name of the Identity Aware Proxy client to be fetched. In the following format:
+           projects/{project_number/id}/brands/{brand}/identityAwareProxyClients/{client_id}.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Name of the Identity Aware Proxy client to be fetched. In the following
+             * format:
+             * projects/{project_number/id}/brands/{brand}/identityAwareProxyClients/{client_id}.
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/brands/[^/]+/identityAwareProxyClients/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists the existing clients for the brand.
+           *
+           * Create a request for the method "identityAwareProxyClients.list".
+           *
+           * This request holds the parameters needed by the iap server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. Full brand path.
+          In the following format: projects/{project_number/id}/brands/{brand}.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends CloudIAPRequest<com.google.api.services.iap.v1.model.ListIdentityAwareProxyClientsResponse> {
+
+            private static final String REST_PATH = "v1/oauth/{+parent}/identityAwareProxyClients";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/brands/[^/]+$");
+
+            /**
+             * Lists the existing clients for the brand.
+             *
+             * Create a request for the method "identityAwareProxyClients.list".
+             *
+             * This request holds the parameters needed by the the iap server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+             * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. Full brand path.
+          In the following format: projects/{project_number/id}/brands/{brand}.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(CloudIAP.this, "GET", REST_PATH, null, com.google.api.services.iap.v1.model.ListIdentityAwareProxyClientsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/brands/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Full brand path. In the following format:
+             * projects/{project_number/id}/brands/{brand}.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Full brand path. In the following format: projects/{project_number/id}/brands/{brand}.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. Full brand path. In the following format:
+             * projects/{project_number/id}/brands/{brand}.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/brands/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * The maximum number of clients to return. The service may return fewer than this
+             * value. If unspecified, at most 100 clients will be returned. The maximum value is
+             * 1000; values above 1000 will be coerced to 1000.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** The maximum number of clients to return. The service may return fewer than this value. If
+           unspecified, at most 100 clients will be returned. The maximum value is 1000; values above 1000
+           will be coerced to 1000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * The maximum number of clients to return. The service may return fewer than this
+             * value. If unspecified, at most 100 clients will be returned. The maximum value is
+             * 1000; values above 1000 will be coerced to 1000.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * A page token, received from a previous `ListIdentityAwareProxyClients` call. Provide
+             * this to retrieve the subsequent page.
+             *
+             * When paginating, all other parameters provided to `ListIdentityAwareProxyClients`
+             * must match the call that provided the page token.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** A page token, received from a previous `ListIdentityAwareProxyClients` call. Provide this to
+           retrieve the subsequent page.
+
+           When paginating, all other parameters provided to `ListIdentityAwareProxyClients` must match the
+           call that provided the page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * A page token, received from a previous `ListIdentityAwareProxyClients` call. Provide
+             * this to retrieve the subsequent page.
+             *
+             * When paginating, all other parameters provided to `ListIdentityAwareProxyClients`
+             * must match the call that provided the page token.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Resets an Identity Aware Proxy (IAP) OAuth client secret. Useful for removing obsolete clients,
+           * managing the number of clients in a given project, and cleaning up after tests. Requires that the
+           * client is owned by IAP.
+           *
+           * Create a request for the method "identityAwareProxyClients.resetSecret".
+           *
+           * This request holds the parameters needed by the iap server.  After setting any optional
+           * parameters, call the {@link ResetSecret#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Name of the Identity Aware Proxy client to that will have its
+          secret reset. In the
+           *        following format:
+           *        projects/{project_number/id}/brands/{brand}/identityAwareProxyClients/{client_id}.
+           * @param content the {@link com.google.api.services.iap.v1.model.ResetIdentityAwareProxyClientSecretRequest}
+           * @return the request
+           */
+          public ResetSecret resetSecret(java.lang.String name, com.google.api.services.iap.v1.model.ResetIdentityAwareProxyClientSecretRequest content) throws java.io.IOException {
+            ResetSecret result = new ResetSecret(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class ResetSecret extends CloudIAPRequest<com.google.api.services.iap.v1.model.IdentityAwareProxyClient> {
+
+            private static final String REST_PATH = "v1/oauth/{+name}:resetSecret";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/brands/[^/]+/identityAwareProxyClients/[^/]+$");
+
+            /**
+             * Resets an Identity Aware Proxy (IAP) OAuth client secret. Useful for removing obsolete clients,
+             * managing the number of clients in a given project, and cleaning up after tests. Requires that
+             * the client is owned by IAP.
+             *
+             * Create a request for the method "identityAwareProxyClients.resetSecret".
+             *
+             * This request holds the parameters needed by the the iap server.  After setting any optional
+             * parameters, call the {@link ResetSecret#execute()} method to invoke the remote operation. <p>
+             * {@link
+             * ResetSecret#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Name of the Identity Aware Proxy client to that will have its
+          secret reset. In the
+           *        following format:
+           *        projects/{project_number/id}/brands/{brand}/identityAwareProxyClients/{client_id}.
+             * @param content the {@link com.google.api.services.iap.v1.model.ResetIdentityAwareProxyClientSecretRequest}
+             * @since 1.13
+             */
+            protected ResetSecret(java.lang.String name, com.google.api.services.iap.v1.model.ResetIdentityAwareProxyClientSecretRequest content) {
+              super(CloudIAP.this, "POST", REST_PATH, content, com.google.api.services.iap.v1.model.IdentityAwareProxyClient.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/brands/[^/]+/identityAwareProxyClients/[^/]+$");
+              }
+            }
+
+            @Override
+            public ResetSecret set$Xgafv(java.lang.String $Xgafv) {
+              return (ResetSecret) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ResetSecret setAccessToken(java.lang.String accessToken) {
+              return (ResetSecret) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ResetSecret setAlt(java.lang.String alt) {
+              return (ResetSecret) super.setAlt(alt);
+            }
+
+            @Override
+            public ResetSecret setCallback(java.lang.String callback) {
+              return (ResetSecret) super.setCallback(callback);
+            }
+
+            @Override
+            public ResetSecret setFields(java.lang.String fields) {
+              return (ResetSecret) super.setFields(fields);
+            }
+
+            @Override
+            public ResetSecret setKey(java.lang.String key) {
+              return (ResetSecret) super.setKey(key);
+            }
+
+            @Override
+            public ResetSecret setOauthToken(java.lang.String oauthToken) {
+              return (ResetSecret) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ResetSecret setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ResetSecret) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ResetSecret setQuotaUser(java.lang.String quotaUser) {
+              return (ResetSecret) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ResetSecret setUploadType(java.lang.String uploadType) {
+              return (ResetSecret) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ResetSecret setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ResetSecret) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Name of the Identity Aware Proxy client to that will have its secret reset.
+             * In the following format:
+             * projects/{project_number/id}/brands/{brand}/identityAwareProxyClients/{client_id}.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Name of the Identity Aware Proxy client to that will have its secret reset. In the
+           following format:
+           projects/{project_number/id}/brands/{brand}/identityAwareProxyClients/{client_id}.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Name of the Identity Aware Proxy client to that will have its secret reset.
+             * In the following format:
+             * projects/{project_number/id}/brands/{brand}/identityAwareProxyClients/{client_id}.
+             */
+            public ResetSecret setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/brands/[^/]+/identityAwareProxyClients/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public ResetSecret set(String parameterName, Object value) {
+              return (ResetSecret) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+  /**
    * An accessor for creating requests from the V1 collection.
    *
    * <p>The typical use is:</p>

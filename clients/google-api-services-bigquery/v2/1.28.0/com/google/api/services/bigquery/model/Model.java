@@ -45,7 +45,8 @@ public final class Model extends com.google.api.client.json.GenericJson {
 
   /**
    * Custom encryption configuration (e.g., Cloud KMS keys). This shows the encryption configuration
-   * of the model data while stored in BigQuery storage.
+   * of the model data while stored in BigQuery storage. This field can be used with PatchModel to
+   * update encryption key for an already encrypted model.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -173,7 +174,8 @@ public final class Model extends com.google.api.client.json.GenericJson {
 
   /**
    * Custom encryption configuration (e.g., Cloud KMS keys). This shows the encryption configuration
-   * of the model data while stored in BigQuery storage.
+   * of the model data while stored in BigQuery storage. This field can be used with PatchModel to
+   * update encryption key for an already encrypted model.
    * @return value or {@code null} for none
    */
   public EncryptionConfiguration getEncryptionConfiguration() {
@@ -182,7 +184,8 @@ public final class Model extends com.google.api.client.json.GenericJson {
 
   /**
    * Custom encryption configuration (e.g., Cloud KMS keys). This shows the encryption configuration
-   * of the model data while stored in BigQuery storage.
+   * of the model data while stored in BigQuery storage. This field can be used with PatchModel to
+   * update encryption key for an already encrypted model.
    * @param encryptionConfiguration encryptionConfiguration or {@code null} for none
    */
   public Model setEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {

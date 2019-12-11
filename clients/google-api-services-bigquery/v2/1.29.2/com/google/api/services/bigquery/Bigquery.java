@@ -3357,29 +3357,6 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /**
-       * If set, only the Routine fields in the field mask are returned in the response. If unset,
-       * all Routine fields are returned.
-       */
-      @com.google.api.client.util.Key
-      private String fieldMask;
-
-      /** If set, only the Routine fields in the field mask are returned in the response. If unset, all
-     Routine fields are returned.
-       */
-      public String getFieldMask() {
-        return fieldMask;
-      }
-
-      /**
-       * If set, only the Routine fields in the field mask are returned in the response. If unset,
-       * all Routine fields are returned.
-       */
-      public Get setFieldMask(String fieldMask) {
-        this.fieldMask = fieldMask;
-        return this;
-      }
-
       @Override
       public Get set(String parameterName, Object value) {
         return (Get) super.set(parameterName, value);

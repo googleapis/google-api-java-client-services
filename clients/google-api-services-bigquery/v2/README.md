@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-bigquery</artifactId>
-      <version>v2-rev20190917-1.30.3</version>
+      <version>v2-rev20191201-1.30.3</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,10 +35,10 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-bigquery:v2-rev20190917-1.30.3'
+  compile 'com.google.apis:google-api-services-bigquery:v2-rev20191201-1.30.3'
 }
 ```
 
 [javadoc]: https://googleapis.dev/java/google-api-services-bigquery/latest/index.html
 [google-api-client]: https://github.com/googleapis/google-api-java-client/
-[api-explorer]: https://developers.google.com/apis-explorer/#p/abusiveexperiencereport/v1/
+[api-explorer]: https://developers.google.com/apis-explorer/#p/bigquery/v1/

@@ -68,6 +68,12 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   private java.lang.String name;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PolicyTags policyTags;
+
+  /**
    * [Required] The field data type. Possible values include STRING, BYTES, INTEGER, INT64 (same as
    * INTEGER), FLOAT, FLOAT64 (same as FLOAT), BOOLEAN, BOOL (same as BOOLEAN), TIMESTAMP, DATE,
    * TIME, DATETIME, RECORD (where RECORD indicates that the field contains a nested schema) or
@@ -169,6 +175,21 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * @return value or {@code null} for none
+   */
+  public PolicyTags getPolicyTags() {
+    return policyTags;
+  }
+
+  /**
+   * @param policyTags policyTags or {@code null} for none
+   */
+  public TableFieldSchema setPolicyTags(PolicyTags policyTags) {
+    this.policyTags = policyTags;
+    return this;
+  }
+
+  /**
    * [Required] The field data type. Possible values include STRING, BYTES, INTEGER, INT64 (same as
    * INTEGER), FLOAT, FLOAT64 (same as FLOAT), BOOLEAN, BOOL (same as BOOLEAN), TIMESTAMP, DATE,
    * TIME, DATETIME, RECORD (where RECORD indicates that the field contains a nested schema) or
@@ -241,6 +262,50 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
     @Override
     public Categories clone() {
       return (Categories) super.clone();
+    }
+
+  }
+
+  /**
+   * Model definition for TableFieldSchemaPolicyTags.
+   */
+  public static final class PolicyTags extends com.google.api.client.json.GenericJson {
+
+    /**
+     * A list of category resource names. For example,
+     * "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.util.List<java.lang.String> names;
+
+    /**
+     * A list of category resource names. For example,
+     * "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.
+     * @return value or {@code null} for none
+     */
+    public java.util.List<java.lang.String> getNames() {
+      return names;
+    }
+
+    /**
+     * A list of category resource names. For example,
+     * "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.
+     * @param names names or {@code null} for none
+     */
+    public PolicyTags setNames(java.util.List<java.lang.String> names) {
+      this.names = names;
+      return this;
+    }
+
+    @Override
+    public PolicyTags set(String fieldName, Object value) {
+      return (PolicyTags) super.set(fieldName, value);
+    }
+
+    @Override
+    public PolicyTags clone() {
+      return (PolicyTags) super.clone();
     }
 
   }

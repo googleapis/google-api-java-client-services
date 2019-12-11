@@ -187,8 +187,8 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private RangePartitioning rangePartitioning;
 
   /**
-   * [Beta] [Optional] If set to true, queries over this table require a partition filter that can
-   * be used for partition elimination to be specified.
+   * [Optional] If set to true, queries over this table require a partition filter that can be used
+   * for partition elimination to be specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -624,8 +624,8 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Beta] [Optional] If set to true, queries over this table require a partition filter that can
-   * be used for partition elimination to be specified.
+   * [Optional] If set to true, queries over this table require a partition filter that can be used
+   * for partition elimination to be specified.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getRequirePartitionFilter() {
@@ -633,8 +633,8 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Beta] [Optional] If set to true, queries over this table require a partition filter that can
-   * be used for partition elimination to be specified.
+   * [Optional] If set to true, queries over this table require a partition filter that can be used
+   * for partition elimination to be specified.
    * @param requirePartitionFilter requirePartitionFilter or {@code null} for none
    */
   public Table setRequirePartitionFilter(java.lang.Boolean requirePartitionFilter) {
@@ -659,8 +659,8 @@ public final class Table extends com.google.api.client.json.GenericJson {
    * </p>
    *
    * <p>
-   *[ Beta] [Optional] If set to true, queries over this table require a partition filter that can be
-[ used for partition elimination to be specified.
+   *[ Optional] If set to true, queries over this table require a partition filter that can be used for
+[ partition elimination to be specified.
    * </p>
    */
   public boolean isRequirePartitionFilter() {

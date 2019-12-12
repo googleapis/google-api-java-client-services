@@ -1243,17 +1243,17 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
         return (Create) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** A safety hatch to opt out of the new reliable project creation process. */
+      /** A now unused experiment opt-out option. */
       @com.google.api.client.util.Key
       private java.lang.Boolean useLegacyStack;
 
-      /** A safety hatch to opt out of the new reliable project creation process.
+      /** A now unused experiment opt-out option.
        */
       public java.lang.Boolean getUseLegacyStack() {
         return useLegacyStack;
       }
 
-      /** A safety hatch to opt out of the new reliable project creation process. */
+      /** A now unused experiment opt-out option. */
       public Create setUseLegacyStack(java.lang.Boolean useLegacyStack) {
         this.useLegacyStack = useLegacyStack;
         return this;

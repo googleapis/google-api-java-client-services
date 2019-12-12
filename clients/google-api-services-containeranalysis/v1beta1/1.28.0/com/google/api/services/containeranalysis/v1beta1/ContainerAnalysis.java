@@ -171,9 +171,9 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * optional parameters, call the {@link BatchCreate#execute()} method to invoke the remote
        * operation.
        *
-       * @param parent The name of the project in the form of `projects/[PROJECT_ID]`, under which
-      the notes are to be
-       *        created.
+       * @param parent Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which
+      the notes are
+       *        to be created.
        * @param content the {@link com.google.api.services.containeranalysis.v1beta1.model.BatchCreateNotesRequest}
        * @return the request
        */
@@ -201,9 +201,9 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * BatchCreate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The name of the project in the form of `projects/[PROJECT_ID]`, under which
-      the notes are to be
-       *        created.
+         * @param parent Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which
+      the notes are
+       *        to be created.
          * @param content the {@link com.google.api.services.containeranalysis.v1beta1.model.BatchCreateNotesRequest}
          * @since 1.13
          */
@@ -273,22 +273,22 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
         }
 
         /**
-         * The name of the project in the form of `projects/[PROJECT_ID]`, under which the notes are
-         * to be created.
+         * Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which the
+         * notes are to be created.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The name of the project in the form of `projects/[PROJECT_ID]`, under which the notes are to be
-       created.
+        /** Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which the notes are
+       to be created.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The name of the project in the form of `projects/[PROJECT_ID]`, under which the notes are
-         * to be created.
+         * Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which the
+         * notes are to be created.
          */
         public BatchCreate setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -313,9 +313,9 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the containeranalysis server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent The name of the project in the form of `projects/[PROJECT_ID]`, under which
-      the note is to be
-       *        created.
+       * @param parent Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which
+      the note is to
+       *        be created.
        * @param content the {@link com.google.api.services.containeranalysis.v1beta1.model.Note}
        * @return the request
        */
@@ -343,9 +343,9 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The name of the project in the form of `projects/[PROJECT_ID]`, under which
-      the note is to be
-       *        created.
+         * @param parent Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which
+      the note is to
+       *        be created.
          * @param content the {@link com.google.api.services.containeranalysis.v1beta1.model.Note}
          * @since 1.13
          */
@@ -415,22 +415,22 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
         }
 
         /**
-         * The name of the project in the form of `projects/[PROJECT_ID]`, under which the note is
-         * to be created.
+         * Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which the
+         * note is to be created.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The name of the project in the form of `projects/[PROJECT_ID]`, under which the note is to be
-       created.
+        /** Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which the note is
+       to be created.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The name of the project in the form of `projects/[PROJECT_ID]`, under which the note is
-         * to be created.
+         * Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which the
+         * note is to be created.
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -442,17 +442,17 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
           return this;
         }
 
-        /** The ID to use for this note. */
+        /** Required. The ID to use for this note. */
         @com.google.api.client.util.Key
         private java.lang.String noteId;
 
-        /** The ID to use for this note.
+        /** Required. The ID to use for this note.
          */
         public java.lang.String getNoteId() {
           return noteId;
         }
 
-        /** The ID to use for this note. */
+        /** Required. The ID to use for this note. */
         public Create setNoteId(java.lang.String noteId) {
           this.noteId = noteId;
           return this;
@@ -471,7 +471,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the containeranalysis server.  After setting any
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the note in the form of
+       * @param name Required. The name of the note in the form of
       `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
        * @return the request
        */
@@ -499,7 +499,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the note in the form of
+         * @param name Required. The name of the note in the form of
       `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
          * @since 1.13
          */
@@ -569,19 +569,19 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
         }
 
         /**
-         * The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+         * Required. The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+        /** Required. The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+         * Required. The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -606,7 +606,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the containeranalysis server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the note in the form of
+       * @param name Required. The name of the note in the form of
       `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
        * @return the request
        */
@@ -634,7 +634,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the note in the form of
+         * @param name Required. The name of the note in the form of
       `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
          * @since 1.13
          */
@@ -714,19 +714,19 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
         }
 
         /**
-         * The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+         * Required. The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+        /** Required. The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+         * Required. The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -904,7 +904,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the containeranalysis server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent The name of the project to list notes for in the form of
+       * @param parent Required. The name of the project to list notes for in the form of
       `projects/[PROJECT_ID]`.
        * @return the request
        */
@@ -932,7 +932,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The name of the project to list notes for in the form of
+         * @param parent Required. The name of the project to list notes for in the form of
       `projects/[PROJECT_ID]`.
          * @since 1.13
          */
@@ -1012,19 +1012,21 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
         }
 
         /**
-         * The name of the project to list notes for in the form of `projects/[PROJECT_ID]`.
+         * Required. The name of the project to list notes for in the form of
+         * `projects/[PROJECT_ID]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The name of the project to list notes for in the form of `projects/[PROJECT_ID]`.
+        /** Required. The name of the project to list notes for in the form of `projects/[PROJECT_ID]`.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The name of the project to list notes for in the form of `projects/[PROJECT_ID]`.
+         * Required. The name of the project to list notes for in the form of
+         * `projects/[PROJECT_ID]`.
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -1104,7 +1106,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the containeranalysis server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the note in the form of
+       * @param name Required. The name of the note in the form of
       `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
        * @param content the {@link com.google.api.services.containeranalysis.v1beta1.model.Note}
        * @return the request
@@ -1133,7 +1135,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the note in the form of
+         * @param name Required. The name of the note in the form of
       `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
          * @param content the {@link com.google.api.services.containeranalysis.v1beta1.model.Note}
          * @since 1.13
@@ -1204,19 +1206,19 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
         }
 
         /**
-         * The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+         * Required. The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+        /** Required. The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+         * Required. The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -1583,7 +1585,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * This request holds the parameters needed by the containeranalysis server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the note to list occurrences for in the form of
+         * @param name Required. The name of the note to list occurrences for in the form of
          *        `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
          * @return the request
          */
@@ -1612,7 +1614,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the note to list occurrences for in the form of
+           * @param name Required. The name of the note to list occurrences for in the form of
          *        `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
            * @since 1.13
            */
@@ -1692,13 +1694,13 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
           }
 
           /**
-           * The name of the note to list occurrences for in the form of
+           * Required. The name of the note to list occurrences for in the form of
            * `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name of the note to list occurrences for in the form of
+          /** Required. The name of the note to list occurrences for in the form of
          `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
            */
           public java.lang.String getName() {
@@ -1706,7 +1708,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
           }
 
           /**
-           * The name of the note to list occurrences for in the form of
+           * Required. The name of the note to list occurrences for in the form of
            * `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
            */
           public List setName(java.lang.String name) {
@@ -1804,9 +1806,9 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * optional parameters, call the {@link BatchCreate#execute()} method to invoke the remote
        * operation.
        *
-       * @param parent The name of the project in the form of `projects/[PROJECT_ID]`, under which
-      the occurrences are to
-       *        be created.
+       * @param parent Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which
+      the
+       *        occurrences are to be created.
        * @param content the {@link com.google.api.services.containeranalysis.v1beta1.model.BatchCreateOccurrencesRequest}
        * @return the request
        */
@@ -1834,9 +1836,9 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * BatchCreate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The name of the project in the form of `projects/[PROJECT_ID]`, under which
-      the occurrences are to
-       *        be created.
+         * @param parent Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which
+      the
+       *        occurrences are to be created.
          * @param content the {@link com.google.api.services.containeranalysis.v1beta1.model.BatchCreateOccurrencesRequest}
          * @since 1.13
          */
@@ -1906,21 +1908,21 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
         }
 
         /**
-         * The name of the project in the form of `projects/[PROJECT_ID]`, under which the
+         * Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which the
          * occurrences are to be created.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The name of the project in the form of `projects/[PROJECT_ID]`, under which the occurrences are to
-       be created.
+        /** Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which the
+       occurrences are to be created.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The name of the project in the form of `projects/[PROJECT_ID]`, under which the
+         * Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which the
          * occurrences are to be created.
          */
         public BatchCreate setParent(java.lang.String parent) {
@@ -1946,9 +1948,9 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the containeranalysis server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent The name of the project in the form of `projects/[PROJECT_ID]`, under which
-      the occurrence is to be
-       *        created.
+       * @param parent Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which
+      the occurrence
+       *        is to be created.
        * @param content the {@link com.google.api.services.containeranalysis.v1beta1.model.Occurrence}
        * @return the request
        */
@@ -1976,9 +1978,9 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The name of the project in the form of `projects/[PROJECT_ID]`, under which
-      the occurrence is to be
-       *        created.
+         * @param parent Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which
+      the occurrence
+       *        is to be created.
          * @param content the {@link com.google.api.services.containeranalysis.v1beta1.model.Occurrence}
          * @since 1.13
          */
@@ -2048,21 +2050,21 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
         }
 
         /**
-         * The name of the project in the form of `projects/[PROJECT_ID]`, under which the
+         * Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which the
          * occurrence is to be created.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The name of the project in the form of `projects/[PROJECT_ID]`, under which the occurrence is to be
-       created.
+        /** Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which the
+       occurrence is to be created.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The name of the project in the form of `projects/[PROJECT_ID]`, under which the
+         * Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which the
          * occurrence is to be created.
          */
         public Create setParent(java.lang.String parent) {
@@ -2089,8 +2091,8 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the containeranalysis server.  After setting any
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the occurrence in the form of
-      `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
+       * @param name Required. The name of the occurrence in the form of
+       *        `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -2118,8 +2120,8 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the occurrence in the form of
-      `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
+         * @param name Required. The name of the occurrence in the form of
+       *        `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -2188,20 +2190,21 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
         }
 
         /**
-         * The name of the occurrence in the form of
+         * Required. The name of the occurrence in the form of
          * `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the occurrence in the form of `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
+        /** Required. The name of the occurrence in the form of
+       `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The name of the occurrence in the form of
+         * Required. The name of the occurrence in the form of
          * `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
          */
         public Delete setName(java.lang.String name) {
@@ -2227,8 +2230,8 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the containeranalysis server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the occurrence in the form of
-      `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
+       * @param name Required. The name of the occurrence in the form of
+       *        `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -2255,8 +2258,8 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the occurrence in the form of
-      `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
+         * @param name Required. The name of the occurrence in the form of
+       *        `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -2335,20 +2338,21 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
         }
 
         /**
-         * The name of the occurrence in the form of
+         * Required. The name of the occurrence in the form of
          * `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the occurrence in the form of `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
+        /** Required. The name of the occurrence in the form of
+       `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The name of the occurrence in the form of
+         * Required. The name of the occurrence in the form of
          * `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
          */
         public Get setName(java.lang.String name) {
@@ -2528,8 +2532,8 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the containeranalysis server.  After setting any
        * optional parameters, call the {@link GetNotes#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the occurrence in the form of
-      `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
+       * @param name Required. The name of the occurrence in the form of
+       *        `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
        * @return the request
        */
       public GetNotes getNotes(java.lang.String name) throws java.io.IOException {
@@ -2557,8 +2561,8 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * GetNotes#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the occurrence in the form of
-      `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
+         * @param name Required. The name of the occurrence in the form of
+       *        `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
          * @since 1.13
          */
         protected GetNotes(java.lang.String name) {
@@ -2637,20 +2641,21 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
         }
 
         /**
-         * The name of the occurrence in the form of
+         * Required. The name of the occurrence in the form of
          * `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the occurrence in the form of `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
+        /** Required. The name of the occurrence in the form of
+       `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The name of the occurrence in the form of
+         * Required. The name of the occurrence in the form of
          * `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
          */
         public GetNotes setName(java.lang.String name) {
@@ -2677,8 +2682,8 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * optional parameters, call the {@link GetVulnerabilitySummary#execute()} method to invoke the
        * remote operation.
        *
-       * @param parent The name of the project to get a vulnerability summary for in the form of
-      `projects/[PROJECT_ID]`.
+       * @param parent Required. The name of the project to get a vulnerability summary for in the form of
+       *        `projects/[PROJECT_ID]`.
        * @return the request
        */
       public GetVulnerabilitySummary getVulnerabilitySummary(java.lang.String parent) throws java.io.IOException {
@@ -2705,8 +2710,8 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * eapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
          * immediately after invoking the constructor. </p>
          *
-         * @param parent The name of the project to get a vulnerability summary for in the form of
-      `projects/[PROJECT_ID]`.
+         * @param parent Required. The name of the project to get a vulnerability summary for in the form of
+       *        `projects/[PROJECT_ID]`.
          * @since 1.13
          */
         protected GetVulnerabilitySummary(java.lang.String parent) {
@@ -2785,20 +2790,21 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
         }
 
         /**
-         * The name of the project to get a vulnerability summary for in the form of
+         * Required. The name of the project to get a vulnerability summary for in the form of
          * `projects/[PROJECT_ID]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The name of the project to get a vulnerability summary for in the form of `projects/[PROJECT_ID]`.
+        /** Required. The name of the project to get a vulnerability summary for in the form of
+       `projects/[PROJECT_ID]`.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The name of the project to get a vulnerability summary for in the form of
+         * Required. The name of the project to get a vulnerability summary for in the form of
          * `projects/[PROJECT_ID]`.
          */
         public GetVulnerabilitySummary setParent(java.lang.String parent) {
@@ -2840,7 +2846,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the containeranalysis server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent The name of the project to list occurrences for in the form of
+       * @param parent Required. The name of the project to list occurrences for in the form of
       `projects/[PROJECT_ID]`.
        * @return the request
        */
@@ -2868,7 +2874,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The name of the project to list occurrences for in the form of
+         * @param parent Required. The name of the project to list occurrences for in the form of
       `projects/[PROJECT_ID]`.
          * @since 1.13
          */
@@ -2948,19 +2954,21 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
         }
 
         /**
-         * The name of the project to list occurrences for in the form of `projects/[PROJECT_ID]`.
+         * Required. The name of the project to list occurrences for in the form of
+         * `projects/[PROJECT_ID]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The name of the project to list occurrences for in the form of `projects/[PROJECT_ID]`.
+        /** Required. The name of the project to list occurrences for in the form of `projects/[PROJECT_ID]`.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The name of the project to list occurrences for in the form of `projects/[PROJECT_ID]`.
+         * Required. The name of the project to list occurrences for in the form of
+         * `projects/[PROJECT_ID]`.
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -3040,8 +3048,8 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the containeranalysis server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the occurrence in the form of
-      `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
+       * @param name Required. The name of the occurrence in the form of
+       *        `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
        * @param content the {@link com.google.api.services.containeranalysis.v1beta1.model.Occurrence}
        * @return the request
        */
@@ -3069,8 +3077,8 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the occurrence in the form of
-      `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
+         * @param name Required. The name of the occurrence in the form of
+       *        `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
          * @param content the {@link com.google.api.services.containeranalysis.v1beta1.model.Occurrence}
          * @since 1.13
          */
@@ -3140,20 +3148,21 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
         }
 
         /**
-         * The name of the occurrence in the form of
+         * Required. The name of the occurrence in the form of
          * `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the occurrence in the form of `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
+        /** Required. The name of the occurrence in the form of
+       `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The name of the occurrence in the form of
+         * Required. The name of the occurrence in the form of
          * `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
          */
         public Patch setName(java.lang.String name) {
@@ -3521,7 +3530,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the containeranalysis server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the scan configuration in the form of
+       * @param name Required. The name of the scan configuration in the form of
        *        `projects/[PROJECT_ID]/scanConfigs/[SCAN_CONFIG_ID]`.
        * @return the request
        */
@@ -3549,7 +3558,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the scan configuration in the form of
+         * @param name Required. The name of the scan configuration in the form of
        *        `projects/[PROJECT_ID]/scanConfigs/[SCAN_CONFIG_ID]`.
          * @since 1.13
          */
@@ -3629,13 +3638,13 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
         }
 
         /**
-         * The name of the scan configuration in the form of
+         * Required. The name of the scan configuration in the form of
          * `projects/[PROJECT_ID]/scanConfigs/[SCAN_CONFIG_ID]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the scan configuration in the form of
+        /** Required. The name of the scan configuration in the form of
        `projects/[PROJECT_ID]/scanConfigs/[SCAN_CONFIG_ID]`.
          */
         public java.lang.String getName() {
@@ -3643,7 +3652,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
         }
 
         /**
-         * The name of the scan configuration in the form of
+         * Required. The name of the scan configuration in the form of
          * `projects/[PROJECT_ID]/scanConfigs/[SCAN_CONFIG_ID]`.
          */
         public Get setName(java.lang.String name) {
@@ -3669,8 +3678,8 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the containeranalysis server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent The name of the project to list scan configurations for in the form of
-      `projects/[PROJECT_ID]`.
+       * @param parent Required. The name of the project to list scan configurations for in the form of
+       *        `projects/[PROJECT_ID]`.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -3697,8 +3706,8 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The name of the project to list scan configurations for in the form of
-      `projects/[PROJECT_ID]`.
+         * @param parent Required. The name of the project to list scan configurations for in the form of
+       *        `projects/[PROJECT_ID]`.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -3777,20 +3786,21 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
         }
 
         /**
-         * The name of the project to list scan configurations for in the form of
+         * Required. The name of the project to list scan configurations for in the form of
          * `projects/[PROJECT_ID]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The name of the project to list scan configurations for in the form of `projects/[PROJECT_ID]`.
+        /** Required. The name of the project to list scan configurations for in the form of
+       `projects/[PROJECT_ID]`.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The name of the project to list scan configurations for in the form of
+         * Required. The name of the project to list scan configurations for in the form of
          * `projects/[PROJECT_ID]`.
          */
         public List setParent(java.lang.String parent) {
@@ -3803,17 +3813,17 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
           return this;
         }
 
-        /** The filter expression. */
+        /** Required. The filter expression. */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** The filter expression.
+        /** Required. The filter expression.
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
-        /** The filter expression. */
+        /** Required. The filter expression. */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
           return this;
@@ -3864,7 +3874,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the containeranalysis server.  After setting any
        * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the scan configuration in the form of
+       * @param name Required. The name of the scan configuration in the form of
        *        `projects/[PROJECT_ID]/scanConfigs/[SCAN_CONFIG_ID]`.
        * @param content the {@link com.google.api.services.containeranalysis.v1beta1.model.ScanConfig}
        * @return the request
@@ -3893,7 +3903,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the scan configuration in the form of
+         * @param name Required. The name of the scan configuration in the form of
        *        `projects/[PROJECT_ID]/scanConfigs/[SCAN_CONFIG_ID]`.
          * @param content the {@link com.google.api.services.containeranalysis.v1beta1.model.ScanConfig}
          * @since 1.13
@@ -3964,13 +3974,13 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
         }
 
         /**
-         * The name of the scan configuration in the form of
+         * Required. The name of the scan configuration in the form of
          * `projects/[PROJECT_ID]/scanConfigs/[SCAN_CONFIG_ID]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the scan configuration in the form of
+        /** Required. The name of the scan configuration in the form of
        `projects/[PROJECT_ID]/scanConfigs/[SCAN_CONFIG_ID]`.
          */
         public java.lang.String getName() {
@@ -3978,7 +3988,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
         }
 
         /**
-         * The name of the scan configuration in the form of
+         * Required. The name of the scan configuration in the form of
          * `projects/[PROJECT_ID]/scanConfigs/[SCAN_CONFIG_ID]`.
          */
         public Update setName(java.lang.String name) {

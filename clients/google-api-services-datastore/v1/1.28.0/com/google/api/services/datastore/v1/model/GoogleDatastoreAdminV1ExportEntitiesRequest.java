@@ -44,7 +44,7 @@ public final class GoogleDatastoreAdminV1ExportEntitiesRequest extends com.googl
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Location for the export metadata and data files.
+   * Required. Location for the export metadata and data files.
    *
    * The full resource URL of the external storage location. Currently, only Google Cloud Storage is
    * supported. So output_url_prefix should be of the form: `gs://BUCKET_NAME[/NAMESPACE_PATH]`,
@@ -99,7 +99,7 @@ public final class GoogleDatastoreAdminV1ExportEntitiesRequest extends com.googl
   }
 
   /**
-   * Location for the export metadata and data files.
+   * Required. Location for the export metadata and data files.
    *
    * The full resource URL of the external storage location. Currently, only Google Cloud Storage is
    * supported. So output_url_prefix should be of the form: `gs://BUCKET_NAME[/NAMESPACE_PATH]`,
@@ -121,7 +121,7 @@ public final class GoogleDatastoreAdminV1ExportEntitiesRequest extends com.googl
   }
 
   /**
-   * Location for the export metadata and data files.
+   * Required. Location for the export metadata and data files.
    *
    * The full resource URL of the external storage location. Currently, only Google Cloud Storage is
    * supported. So output_url_prefix should be of the form: `gs://BUCKET_NAME[/NAMESPACE_PATH]`,

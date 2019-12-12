@@ -152,7 +152,7 @@ public class Datastore extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the datastore server.  After setting any optional
      * parameters, call the {@link AllocateIds#execute()} method to invoke the remote operation.
      *
-     * @param projectId The ID of the project against which to make the request.
+     * @param projectId Required. The ID of the project against which to make the request.
      * @param content the {@link com.google.api.services.datastore.v1beta3.model.AllocateIdsRequest}
      * @return the request
      */
@@ -178,7 +178,7 @@ public class Datastore extends com.google.api.client.googleapis.services.json.Ab
        * AllocateIds#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId The ID of the project against which to make the request.
+       * @param projectId Required. The ID of the project against which to make the request.
        * @param content the {@link com.google.api.services.datastore.v1beta3.model.AllocateIdsRequest}
        * @since 1.13
        */
@@ -242,17 +242,17 @@ public class Datastore extends com.google.api.client.googleapis.services.json.Ab
         return (AllocateIds) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** The ID of the project against which to make the request. */
+      /** Required. The ID of the project against which to make the request. */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** The ID of the project against which to make the request.
+      /** Required. The ID of the project against which to make the request.
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** The ID of the project against which to make the request. */
+      /** Required. The ID of the project against which to make the request. */
       public AllocateIds setProjectId(java.lang.String projectId) {
         this.projectId = projectId;
         return this;
@@ -271,7 +271,7 @@ public class Datastore extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the datastore server.  After setting any optional
      * parameters, call the {@link BeginTransaction#execute()} method to invoke the remote operation.
      *
-     * @param projectId The ID of the project against which to make the request.
+     * @param projectId Required. The ID of the project against which to make the request.
      * @param content the {@link com.google.api.services.datastore.v1beta3.model.BeginTransactionRequest}
      * @return the request
      */
@@ -296,7 +296,7 @@ public class Datastore extends com.google.api.client.googleapis.services.json.Ab
        * tractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param projectId The ID of the project against which to make the request.
+       * @param projectId Required. The ID of the project against which to make the request.
        * @param content the {@link com.google.api.services.datastore.v1beta3.model.BeginTransactionRequest}
        * @since 1.13
        */
@@ -360,17 +360,17 @@ public class Datastore extends com.google.api.client.googleapis.services.json.Ab
         return (BeginTransaction) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** The ID of the project against which to make the request. */
+      /** Required. The ID of the project against which to make the request. */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** The ID of the project against which to make the request.
+      /** Required. The ID of the project against which to make the request.
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** The ID of the project against which to make the request. */
+      /** Required. The ID of the project against which to make the request. */
       public BeginTransaction setProjectId(java.lang.String projectId) {
         this.projectId = projectId;
         return this;
@@ -389,7 +389,7 @@ public class Datastore extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the datastore server.  After setting any optional
      * parameters, call the {@link Commit#execute()} method to invoke the remote operation.
      *
-     * @param projectId The ID of the project against which to make the request.
+     * @param projectId Required. The ID of the project against which to make the request.
      * @param content the {@link com.google.api.services.datastore.v1beta3.model.CommitRequest}
      * @return the request
      */
@@ -414,7 +414,7 @@ public class Datastore extends com.google.api.client.googleapis.services.json.Ab
        * Commit#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId The ID of the project against which to make the request.
+       * @param projectId Required. The ID of the project against which to make the request.
        * @param content the {@link com.google.api.services.datastore.v1beta3.model.CommitRequest}
        * @since 1.13
        */
@@ -478,17 +478,17 @@ public class Datastore extends com.google.api.client.googleapis.services.json.Ab
         return (Commit) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** The ID of the project against which to make the request. */
+      /** Required. The ID of the project against which to make the request. */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** The ID of the project against which to make the request.
+      /** Required. The ID of the project against which to make the request.
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** The ID of the project against which to make the request. */
+      /** Required. The ID of the project against which to make the request. */
       public Commit setProjectId(java.lang.String projectId) {
         this.projectId = projectId;
         return this;
@@ -507,7 +507,7 @@ public class Datastore extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the datastore server.  After setting any optional
      * parameters, call the {@link Lookup#execute()} method to invoke the remote operation.
      *
-     * @param projectId The ID of the project against which to make the request.
+     * @param projectId Required. The ID of the project against which to make the request.
      * @param content the {@link com.google.api.services.datastore.v1beta3.model.LookupRequest}
      * @return the request
      */
@@ -532,7 +532,7 @@ public class Datastore extends com.google.api.client.googleapis.services.json.Ab
        * Lookup#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId The ID of the project against which to make the request.
+       * @param projectId Required. The ID of the project against which to make the request.
        * @param content the {@link com.google.api.services.datastore.v1beta3.model.LookupRequest}
        * @since 1.13
        */
@@ -596,17 +596,17 @@ public class Datastore extends com.google.api.client.googleapis.services.json.Ab
         return (Lookup) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** The ID of the project against which to make the request. */
+      /** Required. The ID of the project against which to make the request. */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** The ID of the project against which to make the request.
+      /** Required. The ID of the project against which to make the request.
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** The ID of the project against which to make the request. */
+      /** Required. The ID of the project against which to make the request. */
       public Lookup setProjectId(java.lang.String projectId) {
         this.projectId = projectId;
         return this;
@@ -618,15 +618,14 @@ public class Datastore extends com.google.api.client.googleapis.services.json.Ab
       }
     }
     /**
-     * Prevents the supplied keys' IDs from being auto-allocated by Cloud Datastore. Used for imports
-     * only; other workloads are not supported.
+     * Prevents the supplied keys' IDs from being auto-allocated by Cloud Datastore.
      *
      * Create a request for the method "projects.reserveIds".
      *
      * This request holds the parameters needed by the datastore server.  After setting any optional
      * parameters, call the {@link ReserveIds#execute()} method to invoke the remote operation.
      *
-     * @param projectId The ID of the project against which to make the request.
+     * @param projectId Required. The ID of the project against which to make the request.
      * @param content the {@link com.google.api.services.datastore.v1beta3.model.ReserveIdsRequest}
      * @return the request
      */
@@ -641,8 +640,7 @@ public class Datastore extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "v1beta3/projects/{projectId}:reserveIds";
 
       /**
-       * Prevents the supplied keys' IDs from being auto-allocated by Cloud Datastore. Used for imports
-       * only; other workloads are not supported.
+       * Prevents the supplied keys' IDs from being auto-allocated by Cloud Datastore.
        *
        * Create a request for the method "projects.reserveIds".
        *
@@ -652,7 +650,7 @@ public class Datastore extends com.google.api.client.googleapis.services.json.Ab
        * ReserveIds#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId The ID of the project against which to make the request.
+       * @param projectId Required. The ID of the project against which to make the request.
        * @param content the {@link com.google.api.services.datastore.v1beta3.model.ReserveIdsRequest}
        * @since 1.13
        */
@@ -716,17 +714,17 @@ public class Datastore extends com.google.api.client.googleapis.services.json.Ab
         return (ReserveIds) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** The ID of the project against which to make the request. */
+      /** Required. The ID of the project against which to make the request. */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** The ID of the project against which to make the request.
+      /** Required. The ID of the project against which to make the request.
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** The ID of the project against which to make the request. */
+      /** Required. The ID of the project against which to make the request. */
       public ReserveIds setProjectId(java.lang.String projectId) {
         this.projectId = projectId;
         return this;
@@ -745,7 +743,7 @@ public class Datastore extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the datastore server.  After setting any optional
      * parameters, call the {@link Rollback#execute()} method to invoke the remote operation.
      *
-     * @param projectId The ID of the project against which to make the request.
+     * @param projectId Required. The ID of the project against which to make the request.
      * @param content the {@link com.google.api.services.datastore.v1beta3.model.RollbackRequest}
      * @return the request
      */
@@ -770,7 +768,7 @@ public class Datastore extends com.google.api.client.googleapis.services.json.Ab
        * Rollback#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId The ID of the project against which to make the request.
+       * @param projectId Required. The ID of the project against which to make the request.
        * @param content the {@link com.google.api.services.datastore.v1beta3.model.RollbackRequest}
        * @since 1.13
        */
@@ -834,17 +832,17 @@ public class Datastore extends com.google.api.client.googleapis.services.json.Ab
         return (Rollback) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** The ID of the project against which to make the request. */
+      /** Required. The ID of the project against which to make the request. */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** The ID of the project against which to make the request.
+      /** Required. The ID of the project against which to make the request.
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** The ID of the project against which to make the request. */
+      /** Required. The ID of the project against which to make the request. */
       public Rollback setProjectId(java.lang.String projectId) {
         this.projectId = projectId;
         return this;
@@ -863,7 +861,7 @@ public class Datastore extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the datastore server.  After setting any optional
      * parameters, call the {@link RunQuery#execute()} method to invoke the remote operation.
      *
-     * @param projectId The ID of the project against which to make the request.
+     * @param projectId Required. The ID of the project against which to make the request.
      * @param content the {@link com.google.api.services.datastore.v1beta3.model.RunQueryRequest}
      * @return the request
      */
@@ -888,7 +886,7 @@ public class Datastore extends com.google.api.client.googleapis.services.json.Ab
        * RunQuery#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId The ID of the project against which to make the request.
+       * @param projectId Required. The ID of the project against which to make the request.
        * @param content the {@link com.google.api.services.datastore.v1beta3.model.RunQueryRequest}
        * @since 1.13
        */
@@ -952,17 +950,17 @@ public class Datastore extends com.google.api.client.googleapis.services.json.Ab
         return (RunQuery) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** The ID of the project against which to make the request. */
+      /** Required. The ID of the project against which to make the request. */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** The ID of the project against which to make the request.
+      /** Required. The ID of the project against which to make the request.
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** The ID of the project against which to make the request. */
+      /** Required. The ID of the project against which to make the request. */
       public RunQuery setProjectId(java.lang.String projectId) {
         this.projectId = projectId;
         return this;

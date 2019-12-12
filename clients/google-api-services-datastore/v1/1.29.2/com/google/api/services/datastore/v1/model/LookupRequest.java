@@ -30,7 +30,7 @@ package com.google.api.services.datastore.v1.model;
 public final class LookupRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Keys of entities to look up.
+   * Required. Keys of entities to look up.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,7 +50,7 @@ public final class LookupRequest extends com.google.api.client.json.GenericJson 
   private ReadOptions readOptions;
 
   /**
-   * Keys of entities to look up.
+   * Required. Keys of entities to look up.
    * @return value or {@code null} for none
    */
   public java.util.List<Key> getKeys() {
@@ -58,7 +58,7 @@ public final class LookupRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Keys of entities to look up.
+   * Required. Keys of entities to look up.
    * @param keys keys or {@code null} for none
    */
   public LookupRequest setKeys(java.util.List<Key> keys) {

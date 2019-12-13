@@ -56,6 +56,22 @@ public final class TestResult extends com.google.api.client.json.GenericJson {
   private SourcePosition errorPosition;
 
   /**
+   * The mapping from expression in the ruleset AST to the values they were evaluated to. Partially-
+   * nested to mirror AST structure. Note that this field is actually tracking expressions and not
+   * permission statements in contrast to the "visited_expressions" field above. Literal expressions
+   * are omitted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ExpressionReport> expressionReports;
+
+  static {
+    // hack to force ProGuard to consider ExpressionReport used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ExpressionReport.class);
+  }
+
+  /**
    * The set of function calls made to service-defined methods.
    *
    * Function calls are included in the order in which they are encountered during evaluation, are
@@ -142,6 +158,29 @@ public final class TestResult extends com.google.api.client.json.GenericJson {
    */
   public TestResult setErrorPosition(SourcePosition errorPosition) {
     this.errorPosition = errorPosition;
+    return this;
+  }
+
+  /**
+   * The mapping from expression in the ruleset AST to the values they were evaluated to. Partially-
+   * nested to mirror AST structure. Note that this field is actually tracking expressions and not
+   * permission statements in contrast to the "visited_expressions" field above. Literal expressions
+   * are omitted.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ExpressionReport> getExpressionReports() {
+    return expressionReports;
+  }
+
+  /**
+   * The mapping from expression in the ruleset AST to the values they were evaluated to. Partially-
+   * nested to mirror AST structure. Note that this field is actually tracking expressions and not
+   * permission statements in contrast to the "visited_expressions" field above. Literal expressions
+   * are omitted.
+   * @param expressionReports expressionReports or {@code null} for none
+   */
+  public TestResult setExpressionReports(java.util.List<ExpressionReport> expressionReports) {
+    this.expressionReports = expressionReports;
     return this;
   }
 

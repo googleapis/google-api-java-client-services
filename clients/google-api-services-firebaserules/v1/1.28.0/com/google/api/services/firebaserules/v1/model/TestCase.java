@@ -44,6 +44,13 @@ public final class TestCase extends com.google.api.client.json.GenericJson {
   private java.lang.String expectation;
 
   /**
+   * Specifies what should be included in the response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String expressionReportLevel;
+
+  /**
    * Optional function mocks for service-defined functions. If not set, any service defined function
    * is expected to return an error, which may or may not influence the test outcome.
    * The value may be {@code null}.
@@ -105,6 +112,23 @@ public final class TestCase extends com.google.api.client.json.GenericJson {
    */
   public TestCase setExpectation(java.lang.String expectation) {
     this.expectation = expectation;
+    return this;
+  }
+
+  /**
+   * Specifies what should be included in the response.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExpressionReportLevel() {
+    return expressionReportLevel;
+  }
+
+  /**
+   * Specifies what should be included in the response.
+   * @param expressionReportLevel expressionReportLevel or {@code null} for none
+   */
+  public TestCase setExpressionReportLevel(java.lang.String expressionReportLevel) {
+    this.expressionReportLevel = expressionReportLevel;
     return this;
   }
 

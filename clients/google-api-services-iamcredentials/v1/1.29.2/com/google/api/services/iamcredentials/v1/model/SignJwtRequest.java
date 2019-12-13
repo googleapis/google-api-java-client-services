@@ -45,7 +45,7 @@ public final class SignJwtRequest extends com.google.api.client.json.GenericJson
   private java.util.List<java.lang.String> delegates;
 
   /**
-   * The JWT payload to sign: a JSON object that contains a JWT Claims Set.
+   * Required. The JWT payload to sign: a JSON object that contains a JWT Claims Set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +83,7 @@ public final class SignJwtRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The JWT payload to sign: a JSON object that contains a JWT Claims Set.
+   * Required. The JWT payload to sign: a JSON object that contains a JWT Claims Set.
    * @return value or {@code null} for none
    */
   public java.lang.String getPayload() {
@@ -91,7 +91,7 @@ public final class SignJwtRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The JWT payload to sign: a JSON object that contains a JWT Claims Set.
+   * Required. The JWT payload to sign: a JSON object that contains a JWT Claims Set.
    * @param payload payload or {@code null} for none
    */
   public SignJwtRequest setPayload(java.lang.String payload) {

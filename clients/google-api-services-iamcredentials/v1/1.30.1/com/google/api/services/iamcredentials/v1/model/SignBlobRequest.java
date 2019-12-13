@@ -45,7 +45,7 @@ public final class SignBlobRequest extends com.google.api.client.json.GenericJso
   private java.util.List<java.lang.String> delegates;
 
   /**
-   * The bytes to sign.
+   * Required. The bytes to sign.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +83,7 @@ public final class SignBlobRequest extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The bytes to sign.
+   * Required. The bytes to sign.
    * @see #decodePayload()
    * @return value or {@code null} for none
    */
@@ -92,7 +92,7 @@ public final class SignBlobRequest extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The bytes to sign.
+   * Required. The bytes to sign.
    * @see #getPayload()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -103,7 +103,7 @@ public final class SignBlobRequest extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The bytes to sign.
+   * Required. The bytes to sign.
    * @see #encodePayload()
    * @param payload payload or {@code null} for none
    */
@@ -113,7 +113,7 @@ public final class SignBlobRequest extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The bytes to sign.
+   * Required. The bytes to sign.
    * @see #setPayload()
    *
    * <p>

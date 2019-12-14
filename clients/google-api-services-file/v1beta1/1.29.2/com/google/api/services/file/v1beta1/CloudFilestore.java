@@ -449,6 +449,26 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           return this;
         }
 
+        /**
+         * If true, the returned list will include locations which are not yet revealed.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean includeUnrevealedLocations;
+
+        /** If true, the returned list will include locations which are not yet revealed.
+         */
+        public java.lang.Boolean getIncludeUnrevealedLocations() {
+          return includeUnrevealedLocations;
+        }
+
+        /**
+         * If true, the returned list will include locations which are not yet revealed.
+         */
+        public List setIncludeUnrevealedLocations(java.lang.Boolean includeUnrevealedLocations) {
+          this.includeUnrevealedLocations = includeUnrevealedLocations;
+          return this;
+        }
+
         /** The standard list page size. */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
@@ -1329,14 +1349,17 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
 
           /**
            * Mask of fields to update.  At least one path must be supplied in this field.  The
-           * elements of the repeated paths field may only include these fields: "description"
-           * "file_shares" "labels"
+           * elements of the repeated paths field may only include these fields:
+           *
+           * * "description" * "file_shares" * "labels"
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
           /** Mask of fields to update.  At least one path must be supplied in this field.  The elements of the
-         repeated paths field may only include these fields: "description" "file_shares" "labels"
+         repeated paths field may only include these fields:
+
+         * "description" * "file_shares" * "labels"
            */
           public String getUpdateMask() {
             return updateMask;
@@ -1344,8 +1367,9 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
 
           /**
            * Mask of fields to update.  At least one path must be supplied in this field.  The
-           * elements of the repeated paths field may only include these fields: "description"
-           * "file_shares" "labels"
+           * elements of the repeated paths field may only include these fields:
+           *
+           * * "description" * "file_shares" * "labels"
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;

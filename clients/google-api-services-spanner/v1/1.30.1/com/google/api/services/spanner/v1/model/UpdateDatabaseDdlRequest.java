@@ -56,7 +56,7 @@ public final class UpdateDatabaseDdlRequest extends com.google.api.client.json.G
   private java.lang.String operationId;
 
   /**
-   * DDL statements to be applied to the database.
+   * Required. DDL statements to be applied to the database.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +100,7 @@ public final class UpdateDatabaseDdlRequest extends com.google.api.client.json.G
   }
 
   /**
-   * DDL statements to be applied to the database.
+   * Required. DDL statements to be applied to the database.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getStatements() {
@@ -108,7 +108,7 @@ public final class UpdateDatabaseDdlRequest extends com.google.api.client.json.G
   }
 
   /**
-   * DDL statements to be applied to the database.
+   * Required. DDL statements to be applied to the database.
    * @param statements statements or {@code null} for none
    */
   public UpdateDatabaseDdlRequest setStatements(java.util.List<java.lang.String> statements) {

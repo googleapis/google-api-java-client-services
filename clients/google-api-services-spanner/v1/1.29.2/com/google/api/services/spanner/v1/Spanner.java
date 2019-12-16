@@ -1011,6 +1011,32 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           return this;
         }
 
+        /**
+         * If field_mask is present, specifies the subset of
+         * [][google.spanner.admin.instance.v1.Instance] fields that should be returned. If absent,
+         * all [][google.spanner.admin.instance.v1.Instance] fields are returned.
+         */
+        @com.google.api.client.util.Key
+        private String fieldMask;
+
+        /** If field_mask is present, specifies the subset of [][google.spanner.admin.instance.v1.Instance]
+       fields that should be returned. If absent, all [][google.spanner.admin.instance.v1.Instance] fields
+       are returned.
+         */
+        public String getFieldMask() {
+          return fieldMask;
+        }
+
+        /**
+         * If field_mask is present, specifies the subset of
+         * [][google.spanner.admin.instance.v1.Instance] fields that should be returned. If absent,
+         * all [][google.spanner.admin.instance.v1.Instance] fields are returned.
+         */
+        public Get setFieldMask(String fieldMask) {
+          this.fieldMask = fieldMask;
+          return this;
+        }
+
         @Override
         public Get set(String parameterName, Object value) {
           return (Get) super.set(parameterName, value);

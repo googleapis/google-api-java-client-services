@@ -46,6 +46,18 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
+   * Output only. The endpoint URIs based on the instance config. For example, instances located in
+   * a specific cloud region (or multi region) such as nam3, would have a nam3 specific endpoint
+   * URI. This URI is to be used implictly by SDK clients, with fallback to default URI. These
+   * endpoints are intended to optimize the network routing between the client and the instance's
+   * serving resources. If multiple endpoints are present, client may establish connections using
+   * any of the given URIs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> endpointUris;
+
+  /**
    * Cloud Labels are a flexible and lightweight mechanism for organizing cloud resources into
    * groups that reflect a customer's organizational needs and deployment strategies. Cloud Labels
    * can be used to filter collections of resources. They can be used to control how resource
@@ -79,8 +91,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Required. The number of nodes allocated to this instance. This may be zero in API responses for
-   * instances that are not yet in state `READY`.
+   * The number of nodes allocated to this instance. This may be zero in API responses for instances
+   * that are not yet in state `READY`.
    *
    * See [the documentation](https://cloud.google.com/spanner/docs/instances#node_count) for more
    * information about nodes.
@@ -132,6 +144,33 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Output only. The endpoint URIs based on the instance config. For example, instances located in
+   * a specific cloud region (or multi region) such as nam3, would have a nam3 specific endpoint
+   * URI. This URI is to be used implictly by SDK clients, with fallback to default URI. These
+   * endpoints are intended to optimize the network routing between the client and the instance's
+   * serving resources. If multiple endpoints are present, client may establish connections using
+   * any of the given URIs.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getEndpointUris() {
+    return endpointUris;
+  }
+
+  /**
+   * Output only. The endpoint URIs based on the instance config. For example, instances located in
+   * a specific cloud region (or multi region) such as nam3, would have a nam3 specific endpoint
+   * URI. This URI is to be used implictly by SDK clients, with fallback to default URI. These
+   * endpoints are intended to optimize the network routing between the client and the instance's
+   * serving resources. If multiple endpoints are present, client may establish connections using
+   * any of the given URIs.
+   * @param endpointUris endpointUris or {@code null} for none
+   */
+  public Instance setEndpointUris(java.util.List<java.lang.String> endpointUris) {
+    this.endpointUris = endpointUris;
     return this;
   }
 
@@ -208,8 +247,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The number of nodes allocated to this instance. This may be zero in API responses for
-   * instances that are not yet in state `READY`.
+   * The number of nodes allocated to this instance. This may be zero in API responses for instances
+   * that are not yet in state `READY`.
    *
    * See [the documentation](https://cloud.google.com/spanner/docs/instances#node_count) for more
    * information about nodes.
@@ -220,8 +259,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The number of nodes allocated to this instance. This may be zero in API responses for
-   * instances that are not yet in state `READY`.
+   * The number of nodes allocated to this instance. This may be zero in API responses for instances
+   * that are not yet in state `READY`.
    *
    * See [the documentation](https://cloud.google.com/spanner/docs/instances#node_count) for more
    * information about nodes.

@@ -30,6 +30,28 @@ package com.google.api.services.sql.model;
 public final class OnPremisesConfiguration extends com.google.api.client.json.GenericJson {
 
   /**
+   * PEM representation of the trusted CA's x509 certificate.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String caCertificate;
+
+  /**
+   * PEM representation of the slave's x509 certificate.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String clientCertificate;
+
+  /**
+   * PEM representation of the slave's private key. The corresponsing public key is encoded in the
+   * client's certificate.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String clientKey;
+
+  /**
    * The host and port of the on-premises instance in host:port format
    * The value may be {@code null}.
    */
@@ -42,6 +64,59 @@ public final class OnPremisesConfiguration extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
+
+  /**
+   * PEM representation of the trusted CA's x509 certificate.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCaCertificate() {
+    return caCertificate;
+  }
+
+  /**
+   * PEM representation of the trusted CA's x509 certificate.
+   * @param caCertificate caCertificate or {@code null} for none
+   */
+  public OnPremisesConfiguration setCaCertificate(java.lang.String caCertificate) {
+    this.caCertificate = caCertificate;
+    return this;
+  }
+
+  /**
+   * PEM representation of the slave's x509 certificate.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClientCertificate() {
+    return clientCertificate;
+  }
+
+  /**
+   * PEM representation of the slave's x509 certificate.
+   * @param clientCertificate clientCertificate or {@code null} for none
+   */
+  public OnPremisesConfiguration setClientCertificate(java.lang.String clientCertificate) {
+    this.clientCertificate = clientCertificate;
+    return this;
+  }
+
+  /**
+   * PEM representation of the slave's private key. The corresponsing public key is encoded in the
+   * client's certificate.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClientKey() {
+    return clientKey;
+  }
+
+  /**
+   * PEM representation of the slave's private key. The corresponsing public key is encoded in the
+   * client's certificate.
+   * @param clientKey clientKey or {@code null} for none
+   */
+  public OnPremisesConfiguration setClientKey(java.lang.String clientKey) {
+    this.clientKey = clientKey;
+    return this;
+  }
 
   /**
    * The host and port of the on-premises instance in host:port format

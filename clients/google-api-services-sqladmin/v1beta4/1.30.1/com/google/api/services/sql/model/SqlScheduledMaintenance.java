@@ -30,11 +30,17 @@ package com.google.api.services.sql.model;
 public final class SqlScheduledMaintenance extends com.google.api.client.json.GenericJson {
 
   /**
-   * If the scheduled maintenance can be deferred.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean canDefer;
+
+  /**
+   * If the scheduled maintenance can be rescheduled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean canReschedule;
 
   /**
    * The start time of any upcoming scheduled maintenance for this instance.
@@ -44,7 +50,6 @@ public final class SqlScheduledMaintenance extends com.google.api.client.json.Ge
   private String startTime;
 
   /**
-   * If the scheduled maintenance can be deferred.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCanDefer() {
@@ -52,11 +57,27 @@ public final class SqlScheduledMaintenance extends com.google.api.client.json.Ge
   }
 
   /**
-   * If the scheduled maintenance can be deferred.
    * @param canDefer canDefer or {@code null} for none
    */
   public SqlScheduledMaintenance setCanDefer(java.lang.Boolean canDefer) {
     this.canDefer = canDefer;
+    return this;
+  }
+
+  /**
+   * If the scheduled maintenance can be rescheduled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCanReschedule() {
+    return canReschedule;
+  }
+
+  /**
+   * If the scheduled maintenance can be rescheduled.
+   * @param canReschedule canReschedule or {@code null} for none
+   */
+  public SqlScheduledMaintenance setCanReschedule(java.lang.Boolean canReschedule) {
+    this.canReschedule = canReschedule;
     return this;
   }
 

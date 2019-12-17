@@ -30,49 +30,49 @@ package com.google.api.services.datastore.v1.model;
 public final class GoogleDatastoreAdminV1Index extends com.google.api.client.json.GenericJson {
 
   /**
-   * The index's ancestor mode.  Must not be ANCESTOR_MODE_UNSPECIFIED. Required.
+   * Required. The index's ancestor mode.  Must not be ANCESTOR_MODE_UNSPECIFIED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ancestor;
 
   /**
-   * The resource ID of the index. Output only.
+   * Output only. The resource ID of the index.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String indexId;
 
   /**
-   * The entity kind to which this index applies. Required.
+   * Required. The entity kind to which this index applies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * Project ID. Output only.
+   * Output only. Project ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String projectId;
 
   /**
-   * An ordered sequence of property names and their index attributes. Required.
+   * Required. An ordered sequence of property names and their index attributes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleDatastoreAdminV1IndexedProperty> properties;
 
   /**
-   * The state of the index. Output only.
+   * Output only. The state of the index.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * The index's ancestor mode.  Must not be ANCESTOR_MODE_UNSPECIFIED. Required.
+   * Required. The index's ancestor mode.  Must not be ANCESTOR_MODE_UNSPECIFIED.
    * @return value or {@code null} for none
    */
   public java.lang.String getAncestor() {
@@ -80,7 +80,7 @@ public final class GoogleDatastoreAdminV1Index extends com.google.api.client.jso
   }
 
   /**
-   * The index's ancestor mode.  Must not be ANCESTOR_MODE_UNSPECIFIED. Required.
+   * Required. The index's ancestor mode.  Must not be ANCESTOR_MODE_UNSPECIFIED.
    * @param ancestor ancestor or {@code null} for none
    */
   public GoogleDatastoreAdminV1Index setAncestor(java.lang.String ancestor) {
@@ -89,7 +89,7 @@ public final class GoogleDatastoreAdminV1Index extends com.google.api.client.jso
   }
 
   /**
-   * The resource ID of the index. Output only.
+   * Output only. The resource ID of the index.
    * @return value or {@code null} for none
    */
   public java.lang.String getIndexId() {
@@ -97,7 +97,7 @@ public final class GoogleDatastoreAdminV1Index extends com.google.api.client.jso
   }
 
   /**
-   * The resource ID of the index. Output only.
+   * Output only. The resource ID of the index.
    * @param indexId indexId or {@code null} for none
    */
   public GoogleDatastoreAdminV1Index setIndexId(java.lang.String indexId) {
@@ -106,7 +106,7 @@ public final class GoogleDatastoreAdminV1Index extends com.google.api.client.jso
   }
 
   /**
-   * The entity kind to which this index applies. Required.
+   * Required. The entity kind to which this index applies.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -114,7 +114,7 @@ public final class GoogleDatastoreAdminV1Index extends com.google.api.client.jso
   }
 
   /**
-   * The entity kind to which this index applies. Required.
+   * Required. The entity kind to which this index applies.
    * @param kind kind or {@code null} for none
    */
   public GoogleDatastoreAdminV1Index setKind(java.lang.String kind) {
@@ -123,7 +123,7 @@ public final class GoogleDatastoreAdminV1Index extends com.google.api.client.jso
   }
 
   /**
-   * Project ID. Output only.
+   * Output only. Project ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -131,7 +131,7 @@ public final class GoogleDatastoreAdminV1Index extends com.google.api.client.jso
   }
 
   /**
-   * Project ID. Output only.
+   * Output only. Project ID.
    * @param projectId projectId or {@code null} for none
    */
   public GoogleDatastoreAdminV1Index setProjectId(java.lang.String projectId) {
@@ -140,7 +140,7 @@ public final class GoogleDatastoreAdminV1Index extends com.google.api.client.jso
   }
 
   /**
-   * An ordered sequence of property names and their index attributes. Required.
+   * Required. An ordered sequence of property names and their index attributes.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleDatastoreAdminV1IndexedProperty> getProperties() {
@@ -148,7 +148,7 @@ public final class GoogleDatastoreAdminV1Index extends com.google.api.client.jso
   }
 
   /**
-   * An ordered sequence of property names and their index attributes. Required.
+   * Required. An ordered sequence of property names and their index attributes.
    * @param properties properties or {@code null} for none
    */
   public GoogleDatastoreAdminV1Index setProperties(java.util.List<GoogleDatastoreAdminV1IndexedProperty> properties) {
@@ -157,7 +157,7 @@ public final class GoogleDatastoreAdminV1Index extends com.google.api.client.jso
   }
 
   /**
-   * The state of the index. Output only.
+   * Output only. The state of the index.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -165,7 +165,7 @@ public final class GoogleDatastoreAdminV1Index extends com.google.api.client.jso
   }
 
   /**
-   * The state of the index. Output only.
+   * Output only. The state of the index.
    * @param state state or {@code null} for none
    */
   public GoogleDatastoreAdminV1Index setState(java.lang.String state) {

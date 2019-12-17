@@ -30,16 +30,16 @@ package com.google.api.services.datastore.v1beta3.model;
 public final class AllocateIdsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of keys with incomplete key paths for which to allocate IDs. No key may be reserved
-   * /read-only.
+   * Required. A list of keys with incomplete key paths for which to allocate IDs. No key may be
+   * reserved/read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Key> keys;
 
   /**
-   * A list of keys with incomplete key paths for which to allocate IDs. No key may be reserved
-   * /read-only.
+   * Required. A list of keys with incomplete key paths for which to allocate IDs. No key may be
+   * reserved/read-only.
    * @return value or {@code null} for none
    */
   public java.util.List<Key> getKeys() {
@@ -47,8 +47,8 @@ public final class AllocateIdsRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * A list of keys with incomplete key paths for which to allocate IDs. No key may be reserved
-   * /read-only.
+   * Required. A list of keys with incomplete key paths for which to allocate IDs. No key may be
+   * reserved/read-only.
    * @param keys keys or {@code null} for none
    */
   public AllocateIdsRequest setKeys(java.util.List<Key> keys) {

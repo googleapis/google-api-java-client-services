@@ -37,7 +37,8 @@ public final class ReserveIdsRequest extends com.google.api.client.json.GenericJ
   private java.lang.String databaseId;
 
   /**
-   * A list of keys with complete key paths whose numeric IDs should not be auto-allocated.
+   * Required. A list of keys with complete key paths whose numeric IDs should not be auto-
+   * allocated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +68,8 @@ public final class ReserveIdsRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * A list of keys with complete key paths whose numeric IDs should not be auto-allocated.
+   * Required. A list of keys with complete key paths whose numeric IDs should not be auto-
+   * allocated.
    * @return value or {@code null} for none
    */
   public java.util.List<Key> getKeys() {
@@ -75,7 +77,8 @@ public final class ReserveIdsRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * A list of keys with complete key paths whose numeric IDs should not be auto-allocated.
+   * Required. A list of keys with complete key paths whose numeric IDs should not be auto-
+   * allocated.
    * @param keys keys or {@code null} for none
    */
   public ReserveIdsRequest setKeys(java.util.List<Key> keys) {

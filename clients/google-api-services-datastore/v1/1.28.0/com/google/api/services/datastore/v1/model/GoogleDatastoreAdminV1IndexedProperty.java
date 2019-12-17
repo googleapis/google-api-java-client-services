@@ -30,21 +30,21 @@ package com.google.api.services.datastore.v1.model;
 public final class GoogleDatastoreAdminV1IndexedProperty extends com.google.api.client.json.GenericJson {
 
   /**
-   * The indexed property's direction.  Must not be DIRECTION_UNSPECIFIED. Required.
+   * Required. The indexed property's direction.  Must not be DIRECTION_UNSPECIFIED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String direction;
 
   /**
-   * The property name to index. Required.
+   * Required. The property name to index.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The indexed property's direction.  Must not be DIRECTION_UNSPECIFIED. Required.
+   * Required. The indexed property's direction.  Must not be DIRECTION_UNSPECIFIED.
    * @return value or {@code null} for none
    */
   public java.lang.String getDirection() {
@@ -52,7 +52,7 @@ public final class GoogleDatastoreAdminV1IndexedProperty extends com.google.api.
   }
 
   /**
-   * The indexed property's direction.  Must not be DIRECTION_UNSPECIFIED. Required.
+   * Required. The indexed property's direction.  Must not be DIRECTION_UNSPECIFIED.
    * @param direction direction or {@code null} for none
    */
   public GoogleDatastoreAdminV1IndexedProperty setDirection(java.lang.String direction) {
@@ -61,7 +61,7 @@ public final class GoogleDatastoreAdminV1IndexedProperty extends com.google.api.
   }
 
   /**
-   * The property name to index. Required.
+   * Required. The property name to index.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -69,7 +69,7 @@ public final class GoogleDatastoreAdminV1IndexedProperty extends com.google.api.
   }
 
   /**
-   * The property name to index. Required.
+   * Required. The property name to index.
    * @param name name or {@code null} for none
    */
   public GoogleDatastoreAdminV1IndexedProperty setName(java.lang.String name) {

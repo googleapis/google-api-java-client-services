@@ -17,7 +17,7 @@
 package com.google.api.services.sheets.v4.model;
 
 /**
- * Updates a slicer’s specifications. (This does not move or resize a slicer. To move or resize a
+ * Updates a slicer's specifications. (This does not move or resize a slicer. To move or resize a
  * slicer use UpdateEmbeddedObjectPositionRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

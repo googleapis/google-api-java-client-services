@@ -66,10 +66,11 @@ public final class PartitionQueryRequest extends com.google.api.client.json.Gene
   private PartitionOptions partitionOptions;
 
   /**
-   * The query request to generate partitions for. The request will fail if the query is not root
-   * partitionable. The query plan of a root partitionable query has a single distributed union
-   * operator. A distributed union operator conceptually divides one or more tables into multiple
-   * splits, remotely evaluates a subquery independently on each split, and then unions all results.
+   * Required. The query request to generate partitions for. The request will fail if the query is
+   * not root partitionable. The query plan of a root partitionable query has a single distributed
+   * union operator. A distributed union operator conceptually divides one or more tables into
+   * multiple splits, remotely evaluates a subquery independently on each split, and then unions all
+   * results.
    *
    * This must not contain DML commands, such as INSERT, UPDATE, or DELETE. Use ExecuteStreamingSql
    * with a PartitionedDml transaction for large, partition-friendly DML operations.
@@ -167,10 +168,11 @@ public final class PartitionQueryRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * The query request to generate partitions for. The request will fail if the query is not root
-   * partitionable. The query plan of a root partitionable query has a single distributed union
-   * operator. A distributed union operator conceptually divides one or more tables into multiple
-   * splits, remotely evaluates a subquery independently on each split, and then unions all results.
+   * Required. The query request to generate partitions for. The request will fail if the query is
+   * not root partitionable. The query plan of a root partitionable query has a single distributed
+   * union operator. A distributed union operator conceptually divides one or more tables into
+   * multiple splits, remotely evaluates a subquery independently on each split, and then unions all
+   * results.
    *
    * This must not contain DML commands, such as INSERT, UPDATE, or DELETE. Use ExecuteStreamingSql
    * with a PartitionedDml transaction for large, partition-friendly DML operations.
@@ -181,10 +183,11 @@ public final class PartitionQueryRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * The query request to generate partitions for. The request will fail if the query is not root
-   * partitionable. The query plan of a root partitionable query has a single distributed union
-   * operator. A distributed union operator conceptually divides one or more tables into multiple
-   * splits, remotely evaluates a subquery independently on each split, and then unions all results.
+   * Required. The query request to generate partitions for. The request will fail if the query is
+   * not root partitionable. The query plan of a root partitionable query has a single distributed
+   * union operator. A distributed union operator conceptually divides one or more tables into
+   * multiple splits, remotely evaluates a subquery independently on each split, and then unions all
+   * results.
    *
    * This must not contain DML commands, such as INSERT, UPDATE, or DELETE. Use ExecuteStreamingSql
    * with a PartitionedDml transaction for large, partition-friendly DML operations.

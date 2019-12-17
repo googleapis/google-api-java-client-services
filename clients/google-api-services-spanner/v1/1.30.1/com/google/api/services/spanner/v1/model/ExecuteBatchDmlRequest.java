@@ -30,8 +30,9 @@ package com.google.api.services.spanner.v1.model;
 public final class ExecuteBatchDmlRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * A per-transaction sequence number used to identify this request. This field makes each request
-   * idempotent such that if the request is received multiple times, at most one will succeed.
+   * Required. A per-transaction sequence number used to identify this request. This field makes
+   * each request idempotent such that if the request is received multiple times, at most one will
+   * succeed.
    *
    * The sequence number must be monotonically increasing within the transaction. If a request
    * arrives for the first time with an out-of-order sequence number, the transaction may be
@@ -43,9 +44,9 @@ public final class ExecuteBatchDmlRequest extends com.google.api.client.json.Gen
   private java.lang.Long seqno;
 
   /**
-   * The list of statements to execute in this batch. Statements are executed serially, such that
-   * the effects of statement `i` are visible to statement `i+1`. Each statement must be a DML
-   * statement. Execution stops at the first failed statement; the remaining statements are not
+   * Required. The list of statements to execute in this batch. Statements are executed serially,
+   * such that the effects of statement `i` are visible to statement `i+1`. Each statement must be a
+   * DML statement. Execution stops at the first failed statement; the remaining statements are not
    * executed.
    *
    * Callers must provide at least one statement.
@@ -55,7 +56,7 @@ public final class ExecuteBatchDmlRequest extends com.google.api.client.json.Gen
   private java.util.List<Statement> statements;
 
   /**
-   * The transaction to use. Must be a read-write transaction.
+   * Required. The transaction to use. Must be a read-write transaction.
    *
    * To protect against replays, single-use transactions are not supported. The caller must either
    * supply an existing transaction ID or begin a new transaction.
@@ -65,8 +66,9 @@ public final class ExecuteBatchDmlRequest extends com.google.api.client.json.Gen
   private TransactionSelector transaction;
 
   /**
-   * A per-transaction sequence number used to identify this request. This field makes each request
-   * idempotent such that if the request is received multiple times, at most one will succeed.
+   * Required. A per-transaction sequence number used to identify this request. This field makes
+   * each request idempotent such that if the request is received multiple times, at most one will
+   * succeed.
    *
    * The sequence number must be monotonically increasing within the transaction. If a request
    * arrives for the first time with an out-of-order sequence number, the transaction may be
@@ -79,8 +81,9 @@ public final class ExecuteBatchDmlRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * A per-transaction sequence number used to identify this request. This field makes each request
-   * idempotent such that if the request is received multiple times, at most one will succeed.
+   * Required. A per-transaction sequence number used to identify this request. This field makes
+   * each request idempotent such that if the request is received multiple times, at most one will
+   * succeed.
    *
    * The sequence number must be monotonically increasing within the transaction. If a request
    * arrives for the first time with an out-of-order sequence number, the transaction may be
@@ -94,9 +97,9 @@ public final class ExecuteBatchDmlRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The list of statements to execute in this batch. Statements are executed serially, such that
-   * the effects of statement `i` are visible to statement `i+1`. Each statement must be a DML
-   * statement. Execution stops at the first failed statement; the remaining statements are not
+   * Required. The list of statements to execute in this batch. Statements are executed serially,
+   * such that the effects of statement `i` are visible to statement `i+1`. Each statement must be a
+   * DML statement. Execution stops at the first failed statement; the remaining statements are not
    * executed.
    *
    * Callers must provide at least one statement.
@@ -107,9 +110,9 @@ public final class ExecuteBatchDmlRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The list of statements to execute in this batch. Statements are executed serially, such that
-   * the effects of statement `i` are visible to statement `i+1`. Each statement must be a DML
-   * statement. Execution stops at the first failed statement; the remaining statements are not
+   * Required. The list of statements to execute in this batch. Statements are executed serially,
+   * such that the effects of statement `i` are visible to statement `i+1`. Each statement must be a
+   * DML statement. Execution stops at the first failed statement; the remaining statements are not
    * executed.
    *
    * Callers must provide at least one statement.
@@ -121,7 +124,7 @@ public final class ExecuteBatchDmlRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The transaction to use. Must be a read-write transaction.
+   * Required. The transaction to use. Must be a read-write transaction.
    *
    * To protect against replays, single-use transactions are not supported. The caller must either
    * supply an existing transaction ID or begin a new transaction.
@@ -132,7 +135,7 @@ public final class ExecuteBatchDmlRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The transaction to use. Must be a read-write transaction.
+   * Required. The transaction to use. Must be a read-write transaction.
    *
    * To protect against replays, single-use transactions are not supported. The caller must either
    * supply an existing transaction ID or begin a new transaction.

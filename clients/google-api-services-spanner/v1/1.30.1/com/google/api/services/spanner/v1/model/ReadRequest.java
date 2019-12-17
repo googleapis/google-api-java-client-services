@@ -30,7 +30,7 @@ package com.google.api.services.spanner.v1.model;
 public final class ReadRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The columns of table to be returned for each row matching this request.
+   * Required. The columns of table to be returned for each row matching this request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,7 +103,7 @@ public final class ReadRequest extends com.google.api.client.json.GenericJson {
   private TransactionSelector transaction;
 
   /**
-   * The columns of table to be returned for each row matching this request.
+   * Required. The columns of table to be returned for each row matching this request.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getColumns() {
@@ -111,7 +111,7 @@ public final class ReadRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The columns of table to be returned for each row matching this request.
+   * Required. The columns of table to be returned for each row matching this request.
    * @param columns columns or {@code null} for none
    */
   public ReadRequest setColumns(java.util.List<java.lang.String> columns) {

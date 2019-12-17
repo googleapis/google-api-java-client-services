@@ -31,14 +31,14 @@ package com.google.api.services.containeranalysis.v1beta1.model;
 public final class BatchCreateNotesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The notes to create. Max allowed length is 1000.
+   * Required. The notes to create. Max allowed length is 1000.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, Note> notes;
 
   /**
-   * The notes to create. Max allowed length is 1000.
+   * Required. The notes to create. Max allowed length is 1000.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, Note> getNotes() {
@@ -46,7 +46,7 @@ public final class BatchCreateNotesRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * The notes to create. Max allowed length is 1000.
+   * Required. The notes to create. Max allowed length is 1000.
    * @param notes notes or {@code null} for none
    */
   public BatchCreateNotesRequest setNotes(java.util.Map<String, Note> notes) {

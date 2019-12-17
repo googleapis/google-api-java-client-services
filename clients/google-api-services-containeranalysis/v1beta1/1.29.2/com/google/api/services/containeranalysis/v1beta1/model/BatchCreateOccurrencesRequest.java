@@ -31,14 +31,14 @@ package com.google.api.services.containeranalysis.v1beta1.model;
 public final class BatchCreateOccurrencesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The occurrences to create. Max allowed length is 1000.
+   * Required. The occurrences to create. Max allowed length is 1000.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Occurrence> occurrences;
 
   /**
-   * The occurrences to create. Max allowed length is 1000.
+   * Required. The occurrences to create. Max allowed length is 1000.
    * @return value or {@code null} for none
    */
   public java.util.List<Occurrence> getOccurrences() {
@@ -46,7 +46,7 @@ public final class BatchCreateOccurrencesRequest extends com.google.api.client.j
   }
 
   /**
-   * The occurrences to create. Max allowed length is 1000.
+   * Required. The occurrences to create. Max allowed length is 1000.
    * @param occurrences occurrences or {@code null} for none
    */
   public BatchCreateOccurrencesRequest setOccurrences(java.util.List<Occurrence> occurrences) {

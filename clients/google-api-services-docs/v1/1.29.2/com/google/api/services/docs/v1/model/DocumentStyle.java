@@ -111,6 +111,20 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   private Dimension marginBottom;
 
   /**
+   * The amount of space between the bottom of the page and the contents of the footer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Dimension marginFooter;
+
+  /**
+   * The amount of space between the top of the page and the contents of the header.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Dimension marginHeader;
+
+  /**
    * The left page margin.
    *
    * Updating the left page margin on the document style clears the left page margin on all section
@@ -153,6 +167,17 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private Size pageSize;
+
+  /**
+   * Indicates whether DocumentStyle margin_header, SectionStyle margin_header and DocumentStyle
+   * margin_footer, SectionStyle margin_footer are respected. When false, the default values in the
+   * Docs editor for header and footer margin are used.
+   *
+   * This property is read-only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean useCustomHeaderFooterMargins;
 
   /**
    * Indicates whether to use the even page header / footer IDs for the even pages.
@@ -359,6 +384,40 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * The amount of space between the bottom of the page and the contents of the footer.
+   * @return value or {@code null} for none
+   */
+  public Dimension getMarginFooter() {
+    return marginFooter;
+  }
+
+  /**
+   * The amount of space between the bottom of the page and the contents of the footer.
+   * @param marginFooter marginFooter or {@code null} for none
+   */
+  public DocumentStyle setMarginFooter(Dimension marginFooter) {
+    this.marginFooter = marginFooter;
+    return this;
+  }
+
+  /**
+   * The amount of space between the top of the page and the contents of the header.
+   * @return value or {@code null} for none
+   */
+  public Dimension getMarginHeader() {
+    return marginHeader;
+  }
+
+  /**
+   * The amount of space between the top of the page and the contents of the header.
+   * @param marginHeader marginHeader or {@code null} for none
+   */
+  public DocumentStyle setMarginHeader(Dimension marginHeader) {
+    this.marginHeader = marginHeader;
+    return this;
+  }
+
+  /**
    * The left page margin.
    *
    * Updating the left page margin on the document style clears the left page margin on all section
@@ -458,6 +517,31 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
    */
   public DocumentStyle setPageSize(Size pageSize) {
     this.pageSize = pageSize;
+    return this;
+  }
+
+  /**
+   * Indicates whether DocumentStyle margin_header, SectionStyle margin_header and DocumentStyle
+   * margin_footer, SectionStyle margin_footer are respected. When false, the default values in the
+   * Docs editor for header and footer margin are used.
+   *
+   * This property is read-only.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUseCustomHeaderFooterMargins() {
+    return useCustomHeaderFooterMargins;
+  }
+
+  /**
+   * Indicates whether DocumentStyle margin_header, SectionStyle margin_header and DocumentStyle
+   * margin_footer, SectionStyle margin_footer are respected. When false, the default values in the
+   * Docs editor for header and footer margin are used.
+   *
+   * This property is read-only.
+   * @param useCustomHeaderFooterMargins useCustomHeaderFooterMargins or {@code null} for none
+   */
+  public DocumentStyle setUseCustomHeaderFooterMargins(java.lang.Boolean useCustomHeaderFooterMargins) {
+    this.useCustomHeaderFooterMargins = useCustomHeaderFooterMargins;
     return this;
   }
 

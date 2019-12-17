@@ -114,6 +114,13 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private InsertPageBreakRequest insertPageBreak;
 
   /**
+   * Inserts a section break at the specified location.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InsertSectionBreakRequest insertSectionBreak;
+
+  /**
    * Inserts a table at the specified location.
    * The value may be {@code null}.
    */
@@ -189,6 +196,13 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private UpdateParagraphStyleRequest updateParagraphStyle;
+
+  /**
+   * Updates the section style of the specified range.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UpdateSectionStyleRequest updateSectionStyle;
 
   /**
    * Updates the style of table cells.
@@ -423,6 +437,23 @@ public final class Request extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Inserts a section break at the specified location.
+   * @return value or {@code null} for none
+   */
+  public InsertSectionBreakRequest getInsertSectionBreak() {
+    return insertSectionBreak;
+  }
+
+  /**
+   * Inserts a section break at the specified location.
+   * @param insertSectionBreak insertSectionBreak or {@code null} for none
+   */
+  public Request setInsertSectionBreak(InsertSectionBreakRequest insertSectionBreak) {
+    this.insertSectionBreak = insertSectionBreak;
+    return this;
+  }
+
+  /**
    * Inserts a table at the specified location.
    * @return value or {@code null} for none
    */
@@ -606,6 +637,23 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   public Request setUpdateParagraphStyle(UpdateParagraphStyleRequest updateParagraphStyle) {
     this.updateParagraphStyle = updateParagraphStyle;
+    return this;
+  }
+
+  /**
+   * Updates the section style of the specified range.
+   * @return value or {@code null} for none
+   */
+  public UpdateSectionStyleRequest getUpdateSectionStyle() {
+    return updateSectionStyle;
+  }
+
+  /**
+   * Updates the section style of the specified range.
+   * @param updateSectionStyle updateSectionStyle or {@code null} for none
+   */
+  public Request setUpdateSectionStyle(UpdateSectionStyleRequest updateSectionStyle) {
+    this.updateSectionStyle = updateSectionStyle;
     return this;
   }
 

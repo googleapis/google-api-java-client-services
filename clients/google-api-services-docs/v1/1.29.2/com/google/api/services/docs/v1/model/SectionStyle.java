@@ -61,6 +61,83 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   private java.lang.String contentDirection;
 
   /**
+   * The bottom page margin of the section. If unset, uses margin_bottom from DocumentStyle.
+   *
+   * When updating this property, setting a concrete value is required. Unsetting this property
+   * results in a 400 bad request error.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Dimension marginBottom;
+
+  /**
+   * The footer margin of the section. If unset, uses margin_footer from DocumentStyle. If updated,
+   * use_custom_header_footer_margins is set to true on DocumentStyle. The value of
+   * use_custom_header_footer_margins on DocumentStyle indicates if a footer margin is being
+   * respected for this section
+   *
+   * When updating this property, setting a concrete value is required. Unsetting this property
+   * results in a 400 bad request error.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Dimension marginFooter;
+
+  /**
+   * The header margin of the section. If unset, uses margin_header from DocumentStyle. If updated,
+   * use_custom_header_footer_margins is set to true on DocumentStyle. The value of
+   * use_custom_header_footer_margins on DocumentStyle indicates if a header margin is being
+   * respected for this section.
+   *
+   * When updating this property, setting a concrete value is required. Unsetting this property
+   * results in a 400 bad request error.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Dimension marginHeader;
+
+  /**
+   * The left page margin of the section. If unset, uses margin_left from DocumentStyle. Updating
+   * left margin causes columns in this section to resize. Since the margin affects column width, it
+   * is applied before column properties.
+   *
+   * When updating this property, setting a concrete value is required. Unsetting this property
+   * results in a 400 bad request error.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Dimension marginLeft;
+
+  /**
+   * The right page margin of the section. If unset, uses margin_right from DocumentStyle. Updating
+   * right margin causes columns in this section to resize. Since the margin affects column width,
+   * it is applied before column properties.
+   *
+   * When updating this property, setting a concrete value is required. Unsetting this property
+   * results in a 400 bad request error.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Dimension marginRight;
+
+  /**
+   * The top page margin of the section. If unset, uses margin_top from DocumentStyle.
+   *
+   * When updating this property, setting a concrete value is required. Unsetting this property
+   * results in a 400 bad request error.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Dimension marginTop;
+
+  /**
+   * Output only. The type of section.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sectionType;
+
+  /**
    * The section's columns properties.
    *
    * If empty, the section contains one column with the default properties in the Docs editor.
@@ -116,6 +193,181 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
    */
   public SectionStyle setContentDirection(java.lang.String contentDirection) {
     this.contentDirection = contentDirection;
+    return this;
+  }
+
+  /**
+   * The bottom page margin of the section. If unset, uses margin_bottom from DocumentStyle.
+   *
+   * When updating this property, setting a concrete value is required. Unsetting this property
+   * results in a 400 bad request error.
+   * @return value or {@code null} for none
+   */
+  public Dimension getMarginBottom() {
+    return marginBottom;
+  }
+
+  /**
+   * The bottom page margin of the section. If unset, uses margin_bottom from DocumentStyle.
+   *
+   * When updating this property, setting a concrete value is required. Unsetting this property
+   * results in a 400 bad request error.
+   * @param marginBottom marginBottom or {@code null} for none
+   */
+  public SectionStyle setMarginBottom(Dimension marginBottom) {
+    this.marginBottom = marginBottom;
+    return this;
+  }
+
+  /**
+   * The footer margin of the section. If unset, uses margin_footer from DocumentStyle. If updated,
+   * use_custom_header_footer_margins is set to true on DocumentStyle. The value of
+   * use_custom_header_footer_margins on DocumentStyle indicates if a footer margin is being
+   * respected for this section
+   *
+   * When updating this property, setting a concrete value is required. Unsetting this property
+   * results in a 400 bad request error.
+   * @return value or {@code null} for none
+   */
+  public Dimension getMarginFooter() {
+    return marginFooter;
+  }
+
+  /**
+   * The footer margin of the section. If unset, uses margin_footer from DocumentStyle. If updated,
+   * use_custom_header_footer_margins is set to true on DocumentStyle. The value of
+   * use_custom_header_footer_margins on DocumentStyle indicates if a footer margin is being
+   * respected for this section
+   *
+   * When updating this property, setting a concrete value is required. Unsetting this property
+   * results in a 400 bad request error.
+   * @param marginFooter marginFooter or {@code null} for none
+   */
+  public SectionStyle setMarginFooter(Dimension marginFooter) {
+    this.marginFooter = marginFooter;
+    return this;
+  }
+
+  /**
+   * The header margin of the section. If unset, uses margin_header from DocumentStyle. If updated,
+   * use_custom_header_footer_margins is set to true on DocumentStyle. The value of
+   * use_custom_header_footer_margins on DocumentStyle indicates if a header margin is being
+   * respected for this section.
+   *
+   * When updating this property, setting a concrete value is required. Unsetting this property
+   * results in a 400 bad request error.
+   * @return value or {@code null} for none
+   */
+  public Dimension getMarginHeader() {
+    return marginHeader;
+  }
+
+  /**
+   * The header margin of the section. If unset, uses margin_header from DocumentStyle. If updated,
+   * use_custom_header_footer_margins is set to true on DocumentStyle. The value of
+   * use_custom_header_footer_margins on DocumentStyle indicates if a header margin is being
+   * respected for this section.
+   *
+   * When updating this property, setting a concrete value is required. Unsetting this property
+   * results in a 400 bad request error.
+   * @param marginHeader marginHeader or {@code null} for none
+   */
+  public SectionStyle setMarginHeader(Dimension marginHeader) {
+    this.marginHeader = marginHeader;
+    return this;
+  }
+
+  /**
+   * The left page margin of the section. If unset, uses margin_left from DocumentStyle. Updating
+   * left margin causes columns in this section to resize. Since the margin affects column width, it
+   * is applied before column properties.
+   *
+   * When updating this property, setting a concrete value is required. Unsetting this property
+   * results in a 400 bad request error.
+   * @return value or {@code null} for none
+   */
+  public Dimension getMarginLeft() {
+    return marginLeft;
+  }
+
+  /**
+   * The left page margin of the section. If unset, uses margin_left from DocumentStyle. Updating
+   * left margin causes columns in this section to resize. Since the margin affects column width, it
+   * is applied before column properties.
+   *
+   * When updating this property, setting a concrete value is required. Unsetting this property
+   * results in a 400 bad request error.
+   * @param marginLeft marginLeft or {@code null} for none
+   */
+  public SectionStyle setMarginLeft(Dimension marginLeft) {
+    this.marginLeft = marginLeft;
+    return this;
+  }
+
+  /**
+   * The right page margin of the section. If unset, uses margin_right from DocumentStyle. Updating
+   * right margin causes columns in this section to resize. Since the margin affects column width,
+   * it is applied before column properties.
+   *
+   * When updating this property, setting a concrete value is required. Unsetting this property
+   * results in a 400 bad request error.
+   * @return value or {@code null} for none
+   */
+  public Dimension getMarginRight() {
+    return marginRight;
+  }
+
+  /**
+   * The right page margin of the section. If unset, uses margin_right from DocumentStyle. Updating
+   * right margin causes columns in this section to resize. Since the margin affects column width,
+   * it is applied before column properties.
+   *
+   * When updating this property, setting a concrete value is required. Unsetting this property
+   * results in a 400 bad request error.
+   * @param marginRight marginRight or {@code null} for none
+   */
+  public SectionStyle setMarginRight(Dimension marginRight) {
+    this.marginRight = marginRight;
+    return this;
+  }
+
+  /**
+   * The top page margin of the section. If unset, uses margin_top from DocumentStyle.
+   *
+   * When updating this property, setting a concrete value is required. Unsetting this property
+   * results in a 400 bad request error.
+   * @return value or {@code null} for none
+   */
+  public Dimension getMarginTop() {
+    return marginTop;
+  }
+
+  /**
+   * The top page margin of the section. If unset, uses margin_top from DocumentStyle.
+   *
+   * When updating this property, setting a concrete value is required. Unsetting this property
+   * results in a 400 bad request error.
+   * @param marginTop marginTop or {@code null} for none
+   */
+  public SectionStyle setMarginTop(Dimension marginTop) {
+    this.marginTop = marginTop;
+    return this;
+  }
+
+  /**
+   * Output only. The type of section.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSectionType() {
+    return sectionType;
+  }
+
+  /**
+   * Output only. The type of section.
+   * @param sectionType sectionType or {@code null} for none
+   */
+  public SectionStyle setSectionType(java.lang.String sectionType) {
+    this.sectionType = sectionType;
     return this;
   }
 

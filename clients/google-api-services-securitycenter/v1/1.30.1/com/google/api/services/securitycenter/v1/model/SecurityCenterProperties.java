@@ -32,6 +32,13 @@ package com.google.api.services.securitycenter.v1.model;
 public final class SecurityCenterProperties extends com.google.api.client.json.GenericJson {
 
   /**
+   * The user defined display name for this resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resourceDisplayName;
+
+  /**
    * The full resource name of the GCP resource this asset represents. This field is immutable after
    * create time. See: https://cloud.google.com/apis/design/resource_names#full_resource_name
    * The value may be {@code null}.
@@ -55,12 +62,26 @@ public final class SecurityCenterProperties extends com.google.api.client.json.G
   private java.lang.String resourceParent;
 
   /**
+   * The user defined display name for the parent of this resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resourceParentDisplayName;
+
+  /**
    * The full resource name of the project the resource belongs to. See:
    * https://cloud.google.com/apis/design/resource_names#full_resource_name
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceProject;
+
+  /**
+   * The user defined display name for the project of this resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resourceProjectDisplayName;
 
   /**
    * The type of the GCP resource. Examples include: APPLICATION, PROJECT, and ORGANIZATION. This is
@@ -70,6 +91,23 @@ public final class SecurityCenterProperties extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceType;
+
+  /**
+   * The user defined display name for this resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResourceDisplayName() {
+    return resourceDisplayName;
+  }
+
+  /**
+   * The user defined display name for this resource.
+   * @param resourceDisplayName resourceDisplayName or {@code null} for none
+   */
+  public SecurityCenterProperties setResourceDisplayName(java.lang.String resourceDisplayName) {
+    this.resourceDisplayName = resourceDisplayName;
+    return this;
+  }
 
   /**
    * The full resource name of the GCP resource this asset represents. This field is immutable after
@@ -127,6 +165,23 @@ public final class SecurityCenterProperties extends com.google.api.client.json.G
   }
 
   /**
+   * The user defined display name for the parent of this resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResourceParentDisplayName() {
+    return resourceParentDisplayName;
+  }
+
+  /**
+   * The user defined display name for the parent of this resource.
+   * @param resourceParentDisplayName resourceParentDisplayName or {@code null} for none
+   */
+  public SecurityCenterProperties setResourceParentDisplayName(java.lang.String resourceParentDisplayName) {
+    this.resourceParentDisplayName = resourceParentDisplayName;
+    return this;
+  }
+
+  /**
    * The full resource name of the project the resource belongs to. See:
    * https://cloud.google.com/apis/design/resource_names#full_resource_name
    * @return value or {@code null} for none
@@ -142,6 +197,23 @@ public final class SecurityCenterProperties extends com.google.api.client.json.G
    */
   public SecurityCenterProperties setResourceProject(java.lang.String resourceProject) {
     this.resourceProject = resourceProject;
+    return this;
+  }
+
+  /**
+   * The user defined display name for the project of this resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResourceProjectDisplayName() {
+    return resourceProjectDisplayName;
+  }
+
+  /**
+   * The user defined display name for the project of this resource.
+   * @param resourceProjectDisplayName resourceProjectDisplayName or {@code null} for none
+   */
+  public SecurityCenterProperties setResourceProjectDisplayName(java.lang.String resourceProjectDisplayName) {
+    this.resourceProjectDisplayName = resourceProjectDisplayName;
     return this;
   }
 

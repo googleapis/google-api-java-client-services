@@ -898,9 +898,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          *
          * * iam_policy.policy_blob: `=`, `:` * resource_properties: `=`, `:`, `>`, `<`, `>=`, `<=`
          * * security_marks.marks: `=`, `:` * security_center_properties.resource_name: `=`, `:` *
+         * security_center_properties.resource_display_name: `=`, `:` *
          * security_center_properties.resource_type: `=`, `:` *
          * security_center_properties.resource_parent: `=`, `:` *
+         * security_center_properties.resource_parent_display_name: `=`, `:` *
          * security_center_properties.resource_project: `=`, `:` *
+         * security_center_properties.resource_project_display_name: `=`, `:` *
          * security_center_properties.resource_owners: `=`, `:`
          *
          * For example, `resource_properties.size = 100` is a valid filter string.
@@ -942,8 +945,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
        * iam_policy.policy_blob: `=`, `:` * resource_properties: `=`, `:`, `>`, `<`, `>=`, `<=` *
        security_marks.marks: `=`, `:` * security_center_properties.resource_name: `=`, `:` *
+       security_center_properties.resource_display_name: `=`, `:` *
        security_center_properties.resource_type: `=`, `:` * security_center_properties.resource_parent:
-       `=`, `:` * security_center_properties.resource_project: `=`, `:` *
+       `=`, `:` * security_center_properties.resource_parent_display_name: `=`, `:` *
+       security_center_properties.resource_project: `=`, `:` *
+       security_center_properties.resource_project_display_name: `=`, `:` *
        security_center_properties.resource_owners: `=`, `:`
 
        For example, `resource_properties.size = 100` is a valid filter string.
@@ -987,9 +993,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          *
          * * iam_policy.policy_blob: `=`, `:` * resource_properties: `=`, `:`, `>`, `<`, `>=`, `<=`
          * * security_marks.marks: `=`, `:` * security_center_properties.resource_name: `=`, `:` *
+         * security_center_properties.resource_display_name: `=`, `:` *
          * security_center_properties.resource_type: `=`, `:` *
          * security_center_properties.resource_parent: `=`, `:` *
+         * security_center_properties.resource_parent_display_name: `=`, `:` *
          * security_center_properties.resource_project: `=`, `:` *
+         * security_center_properties.resource_project_display_name: `=`, `:` *
          * security_center_properties.resource_owners: `=`, `:`
          *
          * For example, `resource_properties.size = 100` is a valid filter string.
@@ -1010,7 +1019,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          *
          * The following fields are supported: name update_time resource_properties
          * security_marks.marks security_center_properties.resource_name
-         * security_center_properties.resource_parent security_center_properties.resource_project
+         * security_center_properties.resource_display_name
+         * security_center_properties.resource_parent
+         * security_center_properties.resource_parent_display_name
+         * security_center_properties.resource_project
+         * security_center_properties.resource_project_display_name
          * security_center_properties.resource_type
          */
         @com.google.api.client.util.Key
@@ -1025,8 +1038,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        equivalent.
 
        The following fields are supported: name update_time resource_properties security_marks.marks
-       security_center_properties.resource_name security_center_properties.resource_parent
-       security_center_properties.resource_project security_center_properties.resource_type
+       security_center_properties.resource_name security_center_properties.resource_display_name
+       security_center_properties.resource_parent security_center_properties.resource_parent_display_name
+       security_center_properties.resource_project
+       security_center_properties.resource_project_display_name security_center_properties.resource_type
          */
         public java.lang.String getOrderBy() {
           return orderBy;
@@ -1043,7 +1058,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          *
          * The following fields are supported: name update_time resource_properties
          * security_marks.marks security_center_properties.resource_name
-         * security_center_properties.resource_parent security_center_properties.resource_project
+         * security_center_properties.resource_display_name
+         * security_center_properties.resource_parent
+         * security_center_properties.resource_parent_display_name
+         * security_center_properties.resource_project
+         * security_center_properties.resource_project_display_name
          * security_center_properties.resource_type
          */
         public List setOrderBy(java.lang.String orderBy) {

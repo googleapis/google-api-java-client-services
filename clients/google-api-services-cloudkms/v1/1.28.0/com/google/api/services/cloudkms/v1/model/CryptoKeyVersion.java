@@ -76,6 +76,14 @@ public final class CryptoKeyVersion extends com.google.api.client.json.GenericJs
   private String destroyTime;
 
   /**
+   * [ExternalProtectionLevelOptions] stores a group of additional fields for configuring a
+   * [CryptoKeyVersion] that are specific to the [EXTERNAL] protection level.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ExternalProtectionLevelOptions externalProtectionLevelOptions;
+
+  /**
    * Output only. The time this CryptoKeyVersion's key material was generated.
    * The value may be {@code null}.
    */
@@ -217,6 +225,25 @@ public final class CryptoKeyVersion extends com.google.api.client.json.GenericJs
    */
   public CryptoKeyVersion setDestroyTime(String destroyTime) {
     this.destroyTime = destroyTime;
+    return this;
+  }
+
+  /**
+   * [ExternalProtectionLevelOptions] stores a group of additional fields for configuring a
+   * [CryptoKeyVersion] that are specific to the [EXTERNAL] protection level.
+   * @return value or {@code null} for none
+   */
+  public ExternalProtectionLevelOptions getExternalProtectionLevelOptions() {
+    return externalProtectionLevelOptions;
+  }
+
+  /**
+   * [ExternalProtectionLevelOptions] stores a group of additional fields for configuring a
+   * [CryptoKeyVersion] that are specific to the [EXTERNAL] protection level.
+   * @param externalProtectionLevelOptions externalProtectionLevelOptions or {@code null} for none
+   */
+  public CryptoKeyVersion setExternalProtectionLevelOptions(ExternalProtectionLevelOptions externalProtectionLevelOptions) {
+    this.externalProtectionLevelOptions = externalProtectionLevelOptions;
     return this;
   }
 

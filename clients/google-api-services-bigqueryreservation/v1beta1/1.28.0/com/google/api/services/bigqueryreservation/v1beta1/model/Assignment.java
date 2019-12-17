@@ -55,6 +55,13 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. State of the assignment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
    * The resource which will use the reservation. E.g. projects/myproject, folders/123,
    * organizations/456.
    * @return value or {@code null} for none
@@ -106,6 +113,23 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
    */
   public Assignment setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. State of the assignment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * Output only. State of the assignment.
+   * @param state state or {@code null} for none
+   */
+  public Assignment setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 

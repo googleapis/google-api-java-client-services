@@ -68,6 +68,13 @@ public final class SpreadsheetProperties extends com.google.api.client.json.Gene
   private java.lang.String locale;
 
   /**
+   * Theme applied to the spreadsheet.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SpreadsheetTheme spreadsheetTheme;
+
+  /**
    * The time zone of the spreadsheet, in CLDR format such as `America/New_York`. If the time zone
    * isn't recognized, this may be a custom time zone such as `GMT-07:00`.
    * The value may be {@code null}.
@@ -167,6 +174,23 @@ public final class SpreadsheetProperties extends com.google.api.client.json.Gene
    */
   public SpreadsheetProperties setLocale(java.lang.String locale) {
     this.locale = locale;
+    return this;
+  }
+
+  /**
+   * Theme applied to the spreadsheet.
+   * @return value or {@code null} for none
+   */
+  public SpreadsheetTheme getSpreadsheetTheme() {
+    return spreadsheetTheme;
+  }
+
+  /**
+   * Theme applied to the spreadsheet.
+   * @param spreadsheetTheme spreadsheetTheme or {@code null} for none
+   */
+  public SpreadsheetProperties setSpreadsheetTheme(SpreadsheetTheme spreadsheetTheme) {
+    this.spreadsheetTheme = spreadsheetTheme;
     return this;
   }
 

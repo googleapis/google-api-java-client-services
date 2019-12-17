@@ -5881,6 +5881,429 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
   }
 
   /**
+   * An accessor for creating requests from the Projects collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code SQLAdmin sql = new SQLAdmin(...);}
+   *   {@code SQLAdmin.Projects.List request = sql.projects().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Projects projects() {
+    return new Projects();
+  }
+
+  /**
+   * The "projects" collection of methods.
+   */
+  public class Projects {
+
+    /**
+     * An accessor for creating requests from the Instances collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code SQLAdmin sql = new SQLAdmin(...);}
+     *   {@code SQLAdmin.Instances.List request = sql.instances().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Instances instances() {
+      return new Instances();
+    }
+
+    /**
+     * The "instances" collection of methods.
+     */
+    public class Instances {
+
+      /**
+       * Reschedules the maintenance on the given instance.
+       *
+       * Create a request for the method "instances.rescheduleMaintenance".
+       *
+       * This request holds the parameters needed by the sql server.  After setting any optional
+       * parameters, call the {@link RescheduleMaintenance#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param project ID of the project that contains the instance.
+       * @param instance Cloud SQL instance ID. This does not include the project ID.
+       * @param content the {@link com.google.api.services.sql.model.SqlInstancesRescheduleMaintenanceRequestBody}
+       * @return the request
+       */
+      public RescheduleMaintenance rescheduleMaintenance(java.lang.String project, java.lang.String instance, com.google.api.services.sql.model.SqlInstancesRescheduleMaintenanceRequestBody content) throws java.io.IOException {
+        RescheduleMaintenance result = new RescheduleMaintenance(project, instance, content);
+        initialize(result);
+        return result;
+      }
+
+      public class RescheduleMaintenance extends SQLAdminRequest<com.google.api.services.sql.model.Operation> {
+
+        private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/rescheduleMaintenance";
+
+        /**
+         * Reschedules the maintenance on the given instance.
+         *
+         * Create a request for the method "instances.rescheduleMaintenance".
+         *
+         * This request holds the parameters needed by the the sql server.  After setting any optional
+         * parameters, call the {@link RescheduleMaintenance#execute()} method to invoke the remote
+         * operation. <p> {@link RescheduleMaintenance#initialize(com.google.api.client.googleapis.service
+         * s.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param project ID of the project that contains the instance.
+         * @param instance Cloud SQL instance ID. This does not include the project ID.
+         * @param content the {@link com.google.api.services.sql.model.SqlInstancesRescheduleMaintenanceRequestBody}
+         * @since 1.13
+         */
+        protected RescheduleMaintenance(java.lang.String project, java.lang.String instance, com.google.api.services.sql.model.SqlInstancesRescheduleMaintenanceRequestBody content) {
+          super(SQLAdmin.this, "POST", REST_PATH, content, com.google.api.services.sql.model.Operation.class);
+          this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+          this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
+        }
+
+        @Override
+        public RescheduleMaintenance set$Xgafv(java.lang.String $Xgafv) {
+          return (RescheduleMaintenance) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public RescheduleMaintenance setAccessToken(java.lang.String accessToken) {
+          return (RescheduleMaintenance) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public RescheduleMaintenance setAlt(java.lang.String alt) {
+          return (RescheduleMaintenance) super.setAlt(alt);
+        }
+
+        @Override
+        public RescheduleMaintenance setCallback(java.lang.String callback) {
+          return (RescheduleMaintenance) super.setCallback(callback);
+        }
+
+        @Override
+        public RescheduleMaintenance setFields(java.lang.String fields) {
+          return (RescheduleMaintenance) super.setFields(fields);
+        }
+
+        @Override
+        public RescheduleMaintenance setKey(java.lang.String key) {
+          return (RescheduleMaintenance) super.setKey(key);
+        }
+
+        @Override
+        public RescheduleMaintenance setOauthToken(java.lang.String oauthToken) {
+          return (RescheduleMaintenance) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public RescheduleMaintenance setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (RescheduleMaintenance) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public RescheduleMaintenance setQuotaUser(java.lang.String quotaUser) {
+          return (RescheduleMaintenance) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public RescheduleMaintenance setUploadType(java.lang.String uploadType) {
+          return (RescheduleMaintenance) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public RescheduleMaintenance setUploadProtocol(java.lang.String uploadProtocol) {
+          return (RescheduleMaintenance) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** ID of the project that contains the instance. */
+        @com.google.api.client.util.Key
+        private java.lang.String project;
+
+        /** ID of the project that contains the instance.
+         */
+        public java.lang.String getProject() {
+          return project;
+        }
+
+        /** ID of the project that contains the instance. */
+        public RescheduleMaintenance setProject(java.lang.String project) {
+          this.project = project;
+          return this;
+        }
+
+        /** Cloud SQL instance ID. This does not include the project ID. */
+        @com.google.api.client.util.Key
+        private java.lang.String instance;
+
+        /** Cloud SQL instance ID. This does not include the project ID.
+         */
+        public java.lang.String getInstance() {
+          return instance;
+        }
+
+        /** Cloud SQL instance ID. This does not include the project ID. */
+        public RescheduleMaintenance setInstance(java.lang.String instance) {
+          this.instance = instance;
+          return this;
+        }
+
+        /**
+         * The parent resource where Cloud SQL reshedule this database instance's maintenance.
+         * Format: projects/{project}/locations/{location}/instances/{instance}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** The parent resource where Cloud SQL reshedule this database instance's maintenance. Format:
+       projects/{project}/locations/{location}/instances/{instance}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * The parent resource where Cloud SQL reshedule this database instance's maintenance.
+         * Format: projects/{project}/locations/{location}/instances/{instance}
+         */
+        public RescheduleMaintenance setParent(java.lang.String parent) {
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public RescheduleMaintenance set(String parameterName, Object value) {
+          return (RescheduleMaintenance) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the Locations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code SQLAdmin sql = new SQLAdmin(...);}
+     *   {@code SQLAdmin.Locations.List request = sql.locations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Locations locations() {
+      return new Locations();
+    }
+
+    /**
+     * The "locations" collection of methods.
+     */
+    public class Locations {
+
+      /**
+       * An accessor for creating requests from the Instances collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code SQLAdmin sql = new SQLAdmin(...);}
+       *   {@code SQLAdmin.Instances.List request = sql.instances().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Instances instances() {
+        return new Instances();
+      }
+
+      /**
+       * The "instances" collection of methods.
+       */
+      public class Instances {
+
+        /**
+         * Reschedules the maintenance on the given instance.
+         *
+         * Create a request for the method "instances.rescheduleMaintenance".
+         *
+         * This request holds the parameters needed by the sql server.  After setting any optional
+         * parameters, call the {@link RescheduleMaintenance#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param parent The parent resource where Cloud SQL reshedule this database instance's
+        maintenance. Format:
+         *        projects/{project}/locations/{location}/instances/{instance}
+         * @param content the {@link com.google.api.services.sql.model.SqlInstancesRescheduleMaintenanceRequestBody}
+         * @return the request
+         */
+        public RescheduleMaintenance rescheduleMaintenance(java.lang.String parent, com.google.api.services.sql.model.SqlInstancesRescheduleMaintenanceRequestBody content) throws java.io.IOException {
+          RescheduleMaintenance result = new RescheduleMaintenance(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class RescheduleMaintenance extends SQLAdminRequest<com.google.api.services.sql.model.Operation> {
+
+          private static final String REST_PATH = "sql/v1beta4/{+parent}/rescheduleMaintenance";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Reschedules the maintenance on the given instance.
+           *
+           * Create a request for the method "instances.rescheduleMaintenance".
+           *
+           * This request holds the parameters needed by the the sql server.  After setting any optional
+           * parameters, call the {@link RescheduleMaintenance#execute()} method to invoke the remote
+           * operation. <p> {@link RescheduleMaintenance#initialize(com.google.api.client.googleapis.service
+           * s.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param parent The parent resource where Cloud SQL reshedule this database instance's
+        maintenance. Format:
+         *        projects/{project}/locations/{location}/instances/{instance}
+           * @param content the {@link com.google.api.services.sql.model.SqlInstancesRescheduleMaintenanceRequestBody}
+           * @since 1.13
+           */
+          protected RescheduleMaintenance(java.lang.String parent, com.google.api.services.sql.model.SqlInstancesRescheduleMaintenanceRequestBody content) {
+            super(SQLAdmin.this, "POST", REST_PATH, content, com.google.api.services.sql.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public RescheduleMaintenance set$Xgafv(java.lang.String $Xgafv) {
+            return (RescheduleMaintenance) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public RescheduleMaintenance setAccessToken(java.lang.String accessToken) {
+            return (RescheduleMaintenance) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public RescheduleMaintenance setAlt(java.lang.String alt) {
+            return (RescheduleMaintenance) super.setAlt(alt);
+          }
+
+          @Override
+          public RescheduleMaintenance setCallback(java.lang.String callback) {
+            return (RescheduleMaintenance) super.setCallback(callback);
+          }
+
+          @Override
+          public RescheduleMaintenance setFields(java.lang.String fields) {
+            return (RescheduleMaintenance) super.setFields(fields);
+          }
+
+          @Override
+          public RescheduleMaintenance setKey(java.lang.String key) {
+            return (RescheduleMaintenance) super.setKey(key);
+          }
+
+          @Override
+          public RescheduleMaintenance setOauthToken(java.lang.String oauthToken) {
+            return (RescheduleMaintenance) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public RescheduleMaintenance setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (RescheduleMaintenance) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public RescheduleMaintenance setQuotaUser(java.lang.String quotaUser) {
+            return (RescheduleMaintenance) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public RescheduleMaintenance setUploadType(java.lang.String uploadType) {
+            return (RescheduleMaintenance) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public RescheduleMaintenance setUploadProtocol(java.lang.String uploadProtocol) {
+            return (RescheduleMaintenance) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The parent resource where Cloud SQL reshedule this database instance's maintenance.
+           * Format: projects/{project}/locations/{location}/instances/{instance}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** The parent resource where Cloud SQL reshedule this database instance's maintenance. Format:
+         projects/{project}/locations/{location}/instances/{instance}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * The parent resource where Cloud SQL reshedule this database instance's maintenance.
+           * Format: projects/{project}/locations/{location}/instances/{instance}
+           */
+          public RescheduleMaintenance setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Cloud SQL instance ID. This does not include the project ID. */
+          @com.google.api.client.util.Key
+          private java.lang.String instance;
+
+          /** Cloud SQL instance ID. This does not include the project ID.
+           */
+          public java.lang.String getInstance() {
+            return instance;
+          }
+
+          /** Cloud SQL instance ID. This does not include the project ID. */
+          public RescheduleMaintenance setInstance(java.lang.String instance) {
+            this.instance = instance;
+            return this;
+          }
+
+          /** ID of the project that contains the instance. */
+          @com.google.api.client.util.Key
+          private java.lang.String project;
+
+          /** ID of the project that contains the instance.
+           */
+          public java.lang.String getProject() {
+            return project;
+          }
+
+          /** ID of the project that contains the instance. */
+          public RescheduleMaintenance setProject(java.lang.String project) {
+            this.project = project;
+            return this;
+          }
+
+          @Override
+          public RescheduleMaintenance set(String parameterName, Object value) {
+            return (RescheduleMaintenance) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+  }
+
+  /**
    * An accessor for creating requests from the SslCerts collection.
    *
    * <p>The typical use is:</p>
@@ -7577,24 +8000,17 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /**
-       * Host of the user in the instance. For a MySQL instance, it's required; For a PostgreSQL
-       * instance, it's optional.
-       */
+      /** Optional. Host of the user in the instance. */
       @com.google.api.client.util.Key
       private java.lang.String host;
 
-      /** Host of the user in the instance. For a MySQL instance, it's required; For a PostgreSQL instance,
-     it's optional.
+      /** Optional. Host of the user in the instance.
        */
       public java.lang.String getHost() {
         return host;
       }
 
-      /**
-       * Host of the user in the instance. For a MySQL instance, it's required; For a PostgreSQL
-       * instance, it's optional.
-       */
+      /** Optional. Host of the user in the instance. */
       public Update setHost(java.lang.String host) {
         this.host = host;
         return this;

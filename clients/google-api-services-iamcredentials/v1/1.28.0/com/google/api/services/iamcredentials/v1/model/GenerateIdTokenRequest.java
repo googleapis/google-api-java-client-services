@@ -31,7 +31,8 @@ package com.google.api.services.iamcredentials.v1.model;
 public final class GenerateIdTokenRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The audience for the token, such as the API or account that this token grants access to.
+   * Required. The audience for the token, such as the API or account that this token grants access
+   * to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +61,8 @@ public final class GenerateIdTokenRequest extends com.google.api.client.json.Gen
   private java.lang.Boolean includeEmail;
 
   /**
-   * The audience for the token, such as the API or account that this token grants access to.
+   * Required. The audience for the token, such as the API or account that this token grants access
+   * to.
    * @return value or {@code null} for none
    */
   public java.lang.String getAudience() {
@@ -68,7 +70,8 @@ public final class GenerateIdTokenRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The audience for the token, such as the API or account that this token grants access to.
+   * Required. The audience for the token, such as the API or account that this token grants access
+   * to.
    * @param audience audience or {@code null} for none
    */
   public GenerateIdTokenRequest setAudience(java.lang.String audience) {

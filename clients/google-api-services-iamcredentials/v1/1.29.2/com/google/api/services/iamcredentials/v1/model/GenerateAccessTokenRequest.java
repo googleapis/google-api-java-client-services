@@ -54,7 +54,7 @@ public final class GenerateAccessTokenRequest extends com.google.api.client.json
   private String lifetime;
 
   /**
-   * Code to identify the scopes to be included in the OAuth 2.0 access token. See
+   * Required. Code to identify the scopes to be included in the OAuth 2.0 access token. See
    * https://developers.google.com/identity/protocols/googlescopes for more information. At least
    * one value required.
    * The value may be {@code null}.
@@ -115,7 +115,7 @@ public final class GenerateAccessTokenRequest extends com.google.api.client.json
   }
 
   /**
-   * Code to identify the scopes to be included in the OAuth 2.0 access token. See
+   * Required. Code to identify the scopes to be included in the OAuth 2.0 access token. See
    * https://developers.google.com/identity/protocols/googlescopes for more information. At least
    * one value required.
    * @return value or {@code null} for none
@@ -125,7 +125,7 @@ public final class GenerateAccessTokenRequest extends com.google.api.client.json
   }
 
   /**
-   * Code to identify the scopes to be included in the OAuth 2.0 access token. See
+   * Required. Code to identify the scopes to be included in the OAuth 2.0 access token. See
    * https://developers.google.com/identity/protocols/googlescopes for more information. At least
    * one value required.
    * @param scope scope or {@code null} for none

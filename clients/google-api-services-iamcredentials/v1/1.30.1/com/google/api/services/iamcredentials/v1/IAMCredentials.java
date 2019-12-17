@@ -171,11 +171,12 @@ public class IAMCredentials extends com.google.api.client.googleapis.services.js
        * optional parameters, call the {@link GenerateAccessToken#execute()} method to invoke the remote
        * operation.
        *
-       * @param name The resource name of the service account for which the credentials
-      are requested, in the following
-       *        format:
-      `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-` wildcard
-       *        character is required; replacing it with a project ID is invalid.
+       * @param name Required. The resource name of the service account for which the credentials
+      are requested, in the
+       *        following format:
+      `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-`
+       *        wildcard
+      character is required; replacing it with a project ID is invalid.
        * @param content the {@link com.google.api.services.iamcredentials.v1.model.GenerateAccessTokenRequest}
        * @return the request
        */
@@ -203,11 +204,12 @@ public class IAMCredentials extends com.google.api.client.googleapis.services.js
          * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param name The resource name of the service account for which the credentials
-      are requested, in the following
-       *        format:
-      `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-` wildcard
-       *        character is required; replacing it with a project ID is invalid.
+         * @param name Required. The resource name of the service account for which the credentials
+      are requested, in the
+       *        following format:
+      `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-`
+       *        wildcard
+      character is required; replacing it with a project ID is invalid.
          * @param content the {@link com.google.api.services.iamcredentials.v1.model.GenerateAccessTokenRequest}
          * @since 1.13
          */
@@ -277,25 +279,27 @@ public class IAMCredentials extends com.google.api.client.googleapis.services.js
         }
 
         /**
-         * The resource name of the service account for which the credentials are requested, in the
-         * following format: `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-`
-         * wildcard character is required; replacing it with a project ID is invalid.
+         * Required. The resource name of the service account for which the credentials are
+         * requested, in the following format:
+         * `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-` wildcard character is
+         * required; replacing it with a project ID is invalid.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The resource name of the service account for which the credentials are requested, in the following
-       format: `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-` wildcard character is
-       required; replacing it with a project ID is invalid.
+        /** Required. The resource name of the service account for which the credentials are requested, in the
+       following format: `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-` wildcard
+       character is required; replacing it with a project ID is invalid.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The resource name of the service account for which the credentials are requested, in the
-         * following format: `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-`
-         * wildcard character is required; replacing it with a project ID is invalid.
+         * Required. The resource name of the service account for which the credentials are
+         * requested, in the following format:
+         * `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-` wildcard character is
+         * required; replacing it with a project ID is invalid.
          */
         public GenerateAccessToken setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -321,11 +325,12 @@ public class IAMCredentials extends com.google.api.client.googleapis.services.js
        * optional parameters, call the {@link GenerateIdToken#execute()} method to invoke the remote
        * operation.
        *
-       * @param name The resource name of the service account for which the credentials
-      are requested, in the following
-       *        format:
-      `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-` wildcard
-       *        character is required; replacing it with a project ID is invalid.
+       * @param name Required. The resource name of the service account for which the credentials
+      are requested, in the
+       *        following format:
+      `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-`
+       *        wildcard
+      character is required; replacing it with a project ID is invalid.
        * @param content the {@link com.google.api.services.iamcredentials.v1.model.GenerateIdTokenRequest}
        * @return the request
        */
@@ -353,11 +358,12 @@ public class IAMCredentials extends com.google.api.client.googleapis.services.js
          * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
          * the constructor. </p>
          *
-         * @param name The resource name of the service account for which the credentials
-      are requested, in the following
-       *        format:
-      `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-` wildcard
-       *        character is required; replacing it with a project ID is invalid.
+         * @param name Required. The resource name of the service account for which the credentials
+      are requested, in the
+       *        following format:
+      `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-`
+       *        wildcard
+      character is required; replacing it with a project ID is invalid.
          * @param content the {@link com.google.api.services.iamcredentials.v1.model.GenerateIdTokenRequest}
          * @since 1.13
          */
@@ -427,25 +433,27 @@ public class IAMCredentials extends com.google.api.client.googleapis.services.js
         }
 
         /**
-         * The resource name of the service account for which the credentials are requested, in the
-         * following format: `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-`
-         * wildcard character is required; replacing it with a project ID is invalid.
+         * Required. The resource name of the service account for which the credentials are
+         * requested, in the following format:
+         * `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-` wildcard character is
+         * required; replacing it with a project ID is invalid.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The resource name of the service account for which the credentials are requested, in the following
-       format: `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-` wildcard character is
-       required; replacing it with a project ID is invalid.
+        /** Required. The resource name of the service account for which the credentials are requested, in the
+       following format: `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-` wildcard
+       character is required; replacing it with a project ID is invalid.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The resource name of the service account for which the credentials are requested, in the
-         * following format: `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-`
-         * wildcard character is required; replacing it with a project ID is invalid.
+         * Required. The resource name of the service account for which the credentials are
+         * requested, in the following format:
+         * `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-` wildcard character is
+         * required; replacing it with a project ID is invalid.
          */
         public GenerateIdToken setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -470,11 +478,12 @@ public class IAMCredentials extends com.google.api.client.googleapis.services.js
        * This request holds the parameters needed by the iamcredentials server.  After setting any
        * optional parameters, call the {@link SignBlob#execute()} method to invoke the remote operation.
        *
-       * @param name The resource name of the service account for which the credentials
-      are requested, in the following
-       *        format:
-      `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-` wildcard
-       *        character is required; replacing it with a project ID is invalid.
+       * @param name Required. The resource name of the service account for which the credentials
+      are requested, in the
+       *        following format:
+      `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-`
+       *        wildcard
+      character is required; replacing it with a project ID is invalid.
        * @param content the {@link com.google.api.services.iamcredentials.v1.model.SignBlobRequest}
        * @return the request
        */
@@ -502,11 +511,12 @@ public class IAMCredentials extends com.google.api.client.googleapis.services.js
          * SignBlob#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The resource name of the service account for which the credentials
-      are requested, in the following
-       *        format:
-      `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-` wildcard
-       *        character is required; replacing it with a project ID is invalid.
+         * @param name Required. The resource name of the service account for which the credentials
+      are requested, in the
+       *        following format:
+      `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-`
+       *        wildcard
+      character is required; replacing it with a project ID is invalid.
          * @param content the {@link com.google.api.services.iamcredentials.v1.model.SignBlobRequest}
          * @since 1.13
          */
@@ -576,25 +586,27 @@ public class IAMCredentials extends com.google.api.client.googleapis.services.js
         }
 
         /**
-         * The resource name of the service account for which the credentials are requested, in the
-         * following format: `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-`
-         * wildcard character is required; replacing it with a project ID is invalid.
+         * Required. The resource name of the service account for which the credentials are
+         * requested, in the following format:
+         * `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-` wildcard character is
+         * required; replacing it with a project ID is invalid.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The resource name of the service account for which the credentials are requested, in the following
-       format: `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-` wildcard character is
-       required; replacing it with a project ID is invalid.
+        /** Required. The resource name of the service account for which the credentials are requested, in the
+       following format: `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-` wildcard
+       character is required; replacing it with a project ID is invalid.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The resource name of the service account for which the credentials are requested, in the
-         * following format: `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-`
-         * wildcard character is required; replacing it with a project ID is invalid.
+         * Required. The resource name of the service account for which the credentials are
+         * requested, in the following format:
+         * `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-` wildcard character is
+         * required; replacing it with a project ID is invalid.
          */
         public SignBlob setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -619,11 +631,12 @@ public class IAMCredentials extends com.google.api.client.googleapis.services.js
        * This request holds the parameters needed by the iamcredentials server.  After setting any
        * optional parameters, call the {@link SignJwt#execute()} method to invoke the remote operation.
        *
-       * @param name The resource name of the service account for which the credentials
-      are requested, in the following
-       *        format:
-      `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-` wildcard
-       *        character is required; replacing it with a project ID is invalid.
+       * @param name Required. The resource name of the service account for which the credentials
+      are requested, in the
+       *        following format:
+      `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-`
+       *        wildcard
+      character is required; replacing it with a project ID is invalid.
        * @param content the {@link com.google.api.services.iamcredentials.v1.model.SignJwtRequest}
        * @return the request
        */
@@ -651,11 +664,12 @@ public class IAMCredentials extends com.google.api.client.googleapis.services.js
          * SignJwt#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The resource name of the service account for which the credentials
-      are requested, in the following
-       *        format:
-      `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-` wildcard
-       *        character is required; replacing it with a project ID is invalid.
+         * @param name Required. The resource name of the service account for which the credentials
+      are requested, in the
+       *        following format:
+      `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-`
+       *        wildcard
+      character is required; replacing it with a project ID is invalid.
          * @param content the {@link com.google.api.services.iamcredentials.v1.model.SignJwtRequest}
          * @since 1.13
          */
@@ -725,25 +739,27 @@ public class IAMCredentials extends com.google.api.client.googleapis.services.js
         }
 
         /**
-         * The resource name of the service account for which the credentials are requested, in the
-         * following format: `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-`
-         * wildcard character is required; replacing it with a project ID is invalid.
+         * Required. The resource name of the service account for which the credentials are
+         * requested, in the following format:
+         * `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-` wildcard character is
+         * required; replacing it with a project ID is invalid.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The resource name of the service account for which the credentials are requested, in the following
-       format: `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-` wildcard character is
-       required; replacing it with a project ID is invalid.
+        /** Required. The resource name of the service account for which the credentials are requested, in the
+       following format: `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-` wildcard
+       character is required; replacing it with a project ID is invalid.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The resource name of the service account for which the credentials are requested, in the
-         * following format: `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-`
-         * wildcard character is required; replacing it with a project ID is invalid.
+         * Required. The resource name of the service account for which the credentials are
+         * requested, in the following format:
+         * `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-` wildcard character is
+         * required; replacing it with a project ID is invalid.
          */
         public SignJwt setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {

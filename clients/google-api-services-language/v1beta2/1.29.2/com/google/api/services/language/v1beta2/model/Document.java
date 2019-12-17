@@ -33,6 +33,15 @@ package com.google.api.services.language.v1beta2.model;
 public final class Document extends com.google.api.client.json.GenericJson {
 
   /**
+   * Indicates how detected boilerplate(e.g. advertisements, copyright declarations, banners) should
+   * be handled for this document. If not specified, boilerplate will be treated the same as
+   * content.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String boilerplateHandling;
+
+  /**
    * The content of the input in string format. Cloud audit logging exempt since it is based on user
    * data.
    * The value may be {@code null}.
@@ -61,11 +70,40 @@ public final class Document extends com.google.api.client.json.GenericJson {
   private java.lang.String language;
 
   /**
+   * The web URI where the document comes from. This URI is not used for fetching the content, but
+   * as a hint for analyzing the document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String referenceWebUri;
+
+  /**
    * Required. If the type is not set or is `TYPE_UNSPECIFIED`, returns an `INVALID_ARGUMENT` error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * Indicates how detected boilerplate(e.g. advertisements, copyright declarations, banners) should
+   * be handled for this document. If not specified, boilerplate will be treated the same as
+   * content.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBoilerplateHandling() {
+    return boilerplateHandling;
+  }
+
+  /**
+   * Indicates how detected boilerplate(e.g. advertisements, copyright declarations, banners) should
+   * be handled for this document. If not specified, boilerplate will be treated the same as
+   * content.
+   * @param boilerplateHandling boilerplateHandling or {@code null} for none
+   */
+  public Document setBoilerplateHandling(java.lang.String boilerplateHandling) {
+    this.boilerplateHandling = boilerplateHandling;
+    return this;
+  }
 
   /**
    * The content of the input in string format. Cloud audit logging exempt since it is based on user
@@ -129,6 +167,25 @@ public final class Document extends com.google.api.client.json.GenericJson {
    */
   public Document setLanguage(java.lang.String language) {
     this.language = language;
+    return this;
+  }
+
+  /**
+   * The web URI where the document comes from. This URI is not used for fetching the content, but
+   * as a hint for analyzing the document.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReferenceWebUri() {
+    return referenceWebUri;
+  }
+
+  /**
+   * The web URI where the document comes from. This URI is not used for fetching the content, but
+   * as a hint for analyzing the document.
+   * @param referenceWebUri referenceWebUri or {@code null} for none
+   */
+  public Document setReferenceWebUri(java.lang.String referenceWebUri) {
+    this.referenceWebUri = referenceWebUri;
     return this;
   }
 

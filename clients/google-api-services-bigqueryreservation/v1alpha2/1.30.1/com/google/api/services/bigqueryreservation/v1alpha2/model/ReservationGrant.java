@@ -63,6 +63,13 @@ public final class ReservationGrant extends com.google.api.client.json.GenericJs
   private java.lang.String reservation;
 
   /**
+   * Output only. State of the ReservationGrant.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
    * The resource which will use the reservation. E.g. projects/myproject, folders/123,
    * organizations/456.
    * @return value or {@code null} for none
@@ -133,6 +140,23 @@ public final class ReservationGrant extends com.google.api.client.json.GenericJs
    */
   public ReservationGrant setReservation(java.lang.String reservation) {
     this.reservation = reservation;
+    return this;
+  }
+
+  /**
+   * Output only. State of the ReservationGrant.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * Output only. State of the ReservationGrant.
+   * @param state state or {@code null} for none
+   */
+  public ReservationGrant setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 

@@ -53,6 +53,14 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean adjustVolumeDisabled;
 
   /**
+   * Security policies set to the most secure values by default. To maintain the security posture of
+   * a device, we don't recommend overriding any of the default values.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AdvancedSecurityOverrides advancedSecurityOverrides;
+
+  /**
    * Configuration for an always-on VPN connection. Use with vpn_config_disabled to prevent
    * modification of this setting.
    * The value may be {@code null}.
@@ -290,6 +298,14 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean kioskCustomLauncherEnabled;
+
+  /**
+   * Settings controlling the behavior of a device in kiosk mode. To enable kiosk mode, set
+   * kioskCustomLauncherEnabled to true or specify an app in the policy with installType KIOSK.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private KioskCustomization kioskCustomization;
 
   /**
    * The degree of location detection enabled. The user may change the value unless the user is
@@ -707,6 +723,25 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   public Policy setAdjustVolumeDisabled(java.lang.Boolean adjustVolumeDisabled) {
     this.adjustVolumeDisabled = adjustVolumeDisabled;
+    return this;
+  }
+
+  /**
+   * Security policies set to the most secure values by default. To maintain the security posture of
+   * a device, we don't recommend overriding any of the default values.
+   * @return value or {@code null} for none
+   */
+  public AdvancedSecurityOverrides getAdvancedSecurityOverrides() {
+    return advancedSecurityOverrides;
+  }
+
+  /**
+   * Security policies set to the most secure values by default. To maintain the security posture of
+   * a device, we don't recommend overriding any of the default values.
+   * @param advancedSecurityOverrides advancedSecurityOverrides or {@code null} for none
+   */
+  public Policy setAdvancedSecurityOverrides(AdvancedSecurityOverrides advancedSecurityOverrides) {
+    this.advancedSecurityOverrides = advancedSecurityOverrides;
     return this;
   }
 
@@ -1236,6 +1271,25 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   public Policy setKioskCustomLauncherEnabled(java.lang.Boolean kioskCustomLauncherEnabled) {
     this.kioskCustomLauncherEnabled = kioskCustomLauncherEnabled;
+    return this;
+  }
+
+  /**
+   * Settings controlling the behavior of a device in kiosk mode. To enable kiosk mode, set
+   * kioskCustomLauncherEnabled to true or specify an app in the policy with installType KIOSK.
+   * @return value or {@code null} for none
+   */
+  public KioskCustomization getKioskCustomization() {
+    return kioskCustomization;
+  }
+
+  /**
+   * Settings controlling the behavior of a device in kiosk mode. To enable kiosk mode, set
+   * kioskCustomLauncherEnabled to true or specify an app in the policy with installType KIOSK.
+   * @param kioskCustomization kioskCustomization or {@code null} for none
+   */
+  public Policy setKioskCustomization(KioskCustomization kioskCustomization) {
+    this.kioskCustomization = kioskCustomization;
     return this;
   }
 

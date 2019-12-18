@@ -125,6 +125,16 @@ public final class PasswordRequirements extends com.google.api.client.json.Gener
   private java.lang.String passwordScope;
 
   /**
+   * The length of time after a device or work profile is unlocked using a strong form of
+   * authentication (password, PIN, pattern) that it can be unlocked using any other authentication
+   * method (e.g. fingerprint, trust agents, face). After the specified time period elapses, only
+   * strong forms of authentication can be used to unlock the device or work profile.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String requirePasswordUnlock;
+
+  /**
    * Number of incorrect device-unlock passwords that can be entered before a device is wiped. A
    * value of 0 means there is no restriction.
    * @return value or {@code null} for none
@@ -345,6 +355,29 @@ public final class PasswordRequirements extends com.google.api.client.json.Gener
    */
   public PasswordRequirements setPasswordScope(java.lang.String passwordScope) {
     this.passwordScope = passwordScope;
+    return this;
+  }
+
+  /**
+   * The length of time after a device or work profile is unlocked using a strong form of
+   * authentication (password, PIN, pattern) that it can be unlocked using any other authentication
+   * method (e.g. fingerprint, trust agents, face). After the specified time period elapses, only
+   * strong forms of authentication can be used to unlock the device or work profile.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRequirePasswordUnlock() {
+    return requirePasswordUnlock;
+  }
+
+  /**
+   * The length of time after a device or work profile is unlocked using a strong form of
+   * authentication (password, PIN, pattern) that it can be unlocked using any other authentication
+   * method (e.g. fingerprint, trust agents, face). After the specified time period elapses, only
+   * strong forms of authentication can be used to unlock the device or work profile.
+   * @param requirePasswordUnlock requirePasswordUnlock or {@code null} for none
+   */
+  public PasswordRequirements setRequirePasswordUnlock(java.lang.String requirePasswordUnlock) {
+    this.requirePasswordUnlock = requirePasswordUnlock;
     return this;
   }
 

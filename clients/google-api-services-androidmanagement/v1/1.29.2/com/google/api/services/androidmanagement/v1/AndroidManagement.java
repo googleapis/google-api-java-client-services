@@ -932,6 +932,31 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
           return this;
         }
 
+        /**
+         * Optional short message displayed to the user before wiping the work profile on personal
+         * devices. This has no effect on company owned devices. The maximum message length is 200
+         * characters.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String wipeReasonMessage;
+
+        /** Optional short message displayed to the user before wiping the work profile on personal devices.
+       This has no effect on company owned devices. The maximum message length is 200 characters.
+         */
+        public java.lang.String getWipeReasonMessage() {
+          return wipeReasonMessage;
+        }
+
+        /**
+         * Optional short message displayed to the user before wiping the work profile on personal
+         * devices. This has no effect on company owned devices. The maximum message length is 200
+         * characters.
+         */
+        public Delete setWipeReasonMessage(java.lang.String wipeReasonMessage) {
+          this.wipeReasonMessage = wipeReasonMessage;
+          return this;
+        }
+
         @Override
         public Delete set(String parameterName, Object value) {
           return (Delete) super.set(parameterName, value);

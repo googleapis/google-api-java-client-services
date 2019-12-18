@@ -37,7 +37,8 @@ public final class GoogleCloudRecommenderV1beta1MarkRecommendationSucceededReque
   private java.lang.String etag;
 
   /**
-   * State properties to include with this state. Overwrites any existing `state_metadata`.
+   * State properties to include with this state. Overwrites any existing `state_metadata`. Keys
+   * must match the regex /^a-z0-9{0,62}$/. Values must match the regex /^[a-zA-Z0-9_./-]{0,255}$/.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +62,8 @@ public final class GoogleCloudRecommenderV1beta1MarkRecommendationSucceededReque
   }
 
   /**
-   * State properties to include with this state. Overwrites any existing `state_metadata`.
+   * State properties to include with this state. Overwrites any existing `state_metadata`. Keys
+   * must match the regex /^a-z0-9{0,62}$/. Values must match the regex /^[a-zA-Z0-9_./-]{0,255}$/.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getStateMetadata() {
@@ -69,7 +71,8 @@ public final class GoogleCloudRecommenderV1beta1MarkRecommendationSucceededReque
   }
 
   /**
-   * State properties to include with this state. Overwrites any existing `state_metadata`.
+   * State properties to include with this state. Overwrites any existing `state_metadata`. Keys
+   * must match the regex /^a-z0-9{0,62}$/. Values must match the regex /^[a-zA-Z0-9_./-]{0,255}$/.
    * @param stateMetadata stateMetadata or {@code null} for none
    */
   public GoogleCloudRecommenderV1beta1MarkRecommendationSucceededRequest setStateMetadata(java.util.Map<String, java.lang.String> stateMetadata) {

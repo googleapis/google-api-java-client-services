@@ -32,26 +32,14 @@ package com.google.api.services.iam.v1.model;
 public final class LintPolicyResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of lint results sorted by a composite  key, descending order of severity and ascending
-   * order of binding_ordinal. There is no certain order among the same keys.
-   *
-   * For cross-binding results (only if the input object to lint is instance of
-   * google.iam.v1.Policy), there will be a google.iam.admin.v1.LintResult for each of the involved
-   * bindings, and the associated debug_message may enumerate the other involved binding ordinal
-   * number(s).
+   * List of lint results sorted by `severity` in descending order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<LintResult> lintResults;
 
   /**
-   * List of lint results sorted by a composite  key, descending order of severity and ascending
-   * order of binding_ordinal. There is no certain order among the same keys.
-   *
-   * For cross-binding results (only if the input object to lint is instance of
-   * google.iam.v1.Policy), there will be a google.iam.admin.v1.LintResult for each of the involved
-   * bindings, and the associated debug_message may enumerate the other involved binding ordinal
-   * number(s).
+   * List of lint results sorted by `severity` in descending order.
    * @return value or {@code null} for none
    */
   public java.util.List<LintResult> getLintResults() {
@@ -59,13 +47,7 @@ public final class LintPolicyResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * List of lint results sorted by a composite  key, descending order of severity and ascending
-   * order of binding_ordinal. There is no certain order among the same keys.
-   *
-   * For cross-binding results (only if the input object to lint is instance of
-   * google.iam.v1.Policy), there will be a google.iam.admin.v1.LintResult for each of the involved
-   * bindings, and the associated debug_message may enumerate the other involved binding ordinal
-   * number(s).
+   * List of lint results sorted by `severity` in descending order.
    * @param lintResults lintResults or {@code null} for none
    */
   public LintPolicyResponse setLintResults(java.util.List<LintResult> lintResults) {

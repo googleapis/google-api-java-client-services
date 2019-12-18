@@ -143,19 +143,12 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
   public class IamPolicies {
 
     /**
-     * Lints a Cloud IAM policy object or its sub fields. Currently supports google.iam.v1.Policy,
-     * google.iam.v1.Binding and google.iam.v1.Binding.condition.
+     * Lints a Cloud IAM policy object or its sub fields. Currently supports
+     * google.iam.v1.Binding.condition.
      *
-     * Each lint operation consists of multiple lint validation units. Validation units have the
-     * following properties:
-     *
-     * - Each unit inspects the input object in regard to a particular   linting aspect and issues a
-     * google.iam.admin.v1.LintResult   disclosing the result. - Domain of discourse of each unit can be
-     * either   google.iam.v1.Policy, google.iam.v1.Binding, or   google.iam.v1.Binding.condition
-     * depending on the purpose of the   validation. - A unit may require additional data (like the list
-     * of all possible   enumerable values of a particular attribute used in the policy instance)
-     * which shall be provided by the caller. Refer to the comments of
-     * google.iam.admin.v1.LintPolicyRequest.context for more details.
+     * Each lint operation consists of multiple lint validation units. Each unit inspects the input
+     * object in regard to a particular linting aspect and issues a google.iam.admin.v1.LintResult
+     * disclosing the result.
      *
      * The set of applicable validation units is determined by the Cloud IAM server and is not
      * configurable.
@@ -182,19 +175,12 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "v1/iamPolicies:lintPolicy";
 
       /**
-       * Lints a Cloud IAM policy object or its sub fields. Currently supports google.iam.v1.Policy,
-       * google.iam.v1.Binding and google.iam.v1.Binding.condition.
+       * Lints a Cloud IAM policy object or its sub fields. Currently supports
+       * google.iam.v1.Binding.condition.
        *
-       * Each lint operation consists of multiple lint validation units. Validation units have the
-       * following properties:
-       *
-       * - Each unit inspects the input object in regard to a particular   linting aspect and issues a
-       * google.iam.admin.v1.LintResult   disclosing the result. - Domain of discourse of each unit can
-       * be either   google.iam.v1.Policy, google.iam.v1.Binding, or   google.iam.v1.Binding.condition
-       * depending on the purpose of the   validation. - A unit may require additional data (like the
-       * list of all possible   enumerable values of a particular attribute used in the policy instance)
-       * which shall be provided by the caller. Refer to the comments of
-       * google.iam.admin.v1.LintPolicyRequest.context for more details.
+       * Each lint operation consists of multiple lint validation units. Each unit inspects the input
+       * object in regard to a particular linting aspect and issues a google.iam.admin.v1.LintResult
+       * disclosing the result.
        *
        * The set of applicable validation units is determined by the Cloud IAM server and is not
        * configurable.
@@ -3928,7 +3914,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the iam server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name The resource name of the service account in the following format:
+       * @param name Required. The resource name of the service account in the following format:
        *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
       Using `-` as a wildcard for the
        *        `PROJECT_ID` will infer the project from
@@ -3960,7 +3946,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The resource name of the service account in the following format:
+         * @param name Required. The resource name of the service account in the following format:
        *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
       Using `-` as a wildcard for the
        *        `PROJECT_ID` will infer the project from
@@ -4035,7 +4021,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * The resource name of the service account in the following format:
+         * Required. The resource name of the service account in the following format:
          * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
          * `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
          * `email` address or the `unique_id` of the service account.
@@ -4043,7 +4029,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The resource name of the service account in the following format:
+        /** Required. The resource name of the service account in the following format:
        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the `PROJECT_ID`
        will infer the project from the account. The `ACCOUNT` value can be the `email` address or the
        `unique_id` of the service account.
@@ -4053,7 +4039,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * The resource name of the service account in the following format:
+         * Required. The resource name of the service account in the following format:
          * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
          * `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
          * `email` address or the `unique_id` of the service account.
@@ -4434,7 +4420,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the iam server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The resource name of the service account in the following format:
+       * @param name Required. The resource name of the service account in the following format:
        *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
       Using `-` as a wildcard for the
        *        `PROJECT_ID` will infer the project from
@@ -4466,7 +4452,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The resource name of the service account in the following format:
+         * @param name Required. The resource name of the service account in the following format:
        *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
       Using `-` as a wildcard for the
        *        `PROJECT_ID` will infer the project from
@@ -4551,7 +4537,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * The resource name of the service account in the following format:
+         * Required. The resource name of the service account in the following format:
          * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
          * `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
          * `email` address or the `unique_id` of the service account.
@@ -4559,7 +4545,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The resource name of the service account in the following format:
+        /** Required. The resource name of the service account in the following format:
        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the `PROJECT_ID`
        will infer the project from the account. The `ACCOUNT` value can be the `email` address or the
        `unique_id` of the service account.
@@ -4569,7 +4555,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * The resource name of the service account in the following format:
+         * Required. The resource name of the service account in the following format:
          * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
          * `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
          * `email` address or the `unique_id` of the service account.
@@ -5343,7 +5329,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the iam server.  After setting any optional
        * parameters, call the {@link SignBlob#execute()} method to invoke the remote operation.
        *
-       * @param name The resource name of the service account in the following format:
+       * @param name Required. The resource name of the service account in the following format:
        *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
       Using `-` as a wildcard for the
        *        `PROJECT_ID` will infer the project from
@@ -5381,7 +5367,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * SignBlob#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The resource name of the service account in the following format:
+         * @param name Required. The resource name of the service account in the following format:
        *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
       Using `-` as a wildcard for the
        *        `PROJECT_ID` will infer the project from
@@ -5457,7 +5443,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * The resource name of the service account in the following format:
+         * Required. The resource name of the service account in the following format:
          * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
          * `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
          * `email` address or the `unique_id` of the service account.
@@ -5465,7 +5451,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The resource name of the service account in the following format:
+        /** Required. The resource name of the service account in the following format:
        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the `PROJECT_ID`
        will infer the project from the account. The `ACCOUNT` value can be the `email` address or the
        `unique_id` of the service account.
@@ -5475,7 +5461,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * The resource name of the service account in the following format:
+         * Required. The resource name of the service account in the following format:
          * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
          * `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
          * `email` address or the `unique_id` of the service account.
@@ -5510,7 +5496,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the iam server.  After setting any optional
        * parameters, call the {@link SignJwt#execute()} method to invoke the remote operation.
        *
-       * @param name The resource name of the service account in the following format:
+       * @param name Required. The resource name of the service account in the following format:
        *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
       Using `-` as a wildcard for the
        *        `PROJECT_ID` will infer the project from
@@ -5552,7 +5538,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * SignJwt#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The resource name of the service account in the following format:
+         * @param name Required. The resource name of the service account in the following format:
        *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
       Using `-` as a wildcard for the
        *        `PROJECT_ID` will infer the project from
@@ -5628,7 +5614,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * The resource name of the service account in the following format:
+         * Required. The resource name of the service account in the following format:
          * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
          * `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
          * `email` address or the `unique_id` of the service account.
@@ -5636,7 +5622,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The resource name of the service account in the following format:
+        /** Required. The resource name of the service account in the following format:
        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the `PROJECT_ID`
        will infer the project from the account. The `ACCOUNT` value can be the `email` address or the
        `unique_id` of the service account.
@@ -5646,7 +5632,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * The resource name of the service account in the following format:
+         * Required. The resource name of the service account in the following format:
          * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
          * `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
          * `email` address or the `unique_id` of the service account.
@@ -6171,7 +6157,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the iam server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param name The resource name of the service account in the following format:
+         * @param name Required. The resource name of the service account in the following format:
          *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
         Using `-` as a wildcard for the
          *        `PROJECT_ID` will infer the project from
@@ -6204,7 +6190,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The resource name of the service account in the following format:
+           * @param name Required. The resource name of the service account in the following format:
          *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
         Using `-` as a wildcard for the
          *        `PROJECT_ID` will infer the project from
@@ -6280,7 +6266,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * The resource name of the service account in the following format:
+           * Required. The resource name of the service account in the following format:
            * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
            * `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
            * `email` address or the `unique_id` of the service account.
@@ -6288,7 +6274,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The resource name of the service account in the following format:
+          /** Required. The resource name of the service account in the following format:
          `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the `PROJECT_ID`
          will infer the project from the account. The `ACCOUNT` value can be the `email` address or the
          `unique_id` of the service account.
@@ -6298,7 +6284,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * The resource name of the service account in the following format:
+           * Required. The resource name of the service account in the following format:
            * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the
            * `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
            * `email` address or the `unique_id` of the service account.
@@ -6326,7 +6312,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the iam server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name The resource name of the service account key in the following format:
+         * @param name Required. The resource name of the service account key in the following format:
          *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`.
         Using `-` as a wildcard for
          *        the `PROJECT_ID` will infer the project from
@@ -6358,7 +6344,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The resource name of the service account key in the following format:
+           * @param name Required. The resource name of the service account key in the following format:
          *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`.
         Using `-` as a wildcard for
          *        the `PROJECT_ID` will infer the project from
@@ -6433,7 +6419,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * The resource name of the service account key in the following format:
+           * Required. The resource name of the service account key in the following format:
            * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`. Using `-` as a wildcard
            * for the `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can
            * be the `email` address or the `unique_id` of the service account.
@@ -6441,7 +6427,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The resource name of the service account key in the following format:
+          /** Required. The resource name of the service account key in the following format:
          `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`. Using `-` as a wildcard for the
          `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the `email`
          address or the `unique_id` of the service account.
@@ -6451,7 +6437,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * The resource name of the service account key in the following format:
+           * Required. The resource name of the service account key in the following format:
            * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`. Using `-` as a wildcard
            * for the `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can
            * be the `email` address or the `unique_id` of the service account.
@@ -6479,7 +6465,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the iam server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name The resource name of the service account key in the following format:
+         * @param name Required. The resource name of the service account key in the following format:
          *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`.
         Using `-` as a wildcard for
          *        the `PROJECT_ID` will infer the project from
@@ -6511,7 +6497,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The resource name of the service account key in the following format:
+           * @param name Required. The resource name of the service account key in the following format:
          *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`.
         Using `-` as a wildcard for
          *        the `PROJECT_ID` will infer the project from
@@ -6596,7 +6582,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * The resource name of the service account key in the following format:
+           * Required. The resource name of the service account key in the following format:
            * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`.
            *
            * Using `-` as a wildcard for the `PROJECT_ID` will infer the project from the account.
@@ -6606,7 +6592,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The resource name of the service account key in the following format:
+          /** Required. The resource name of the service account key in the following format:
          `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`.
 
          Using `-` as a wildcard for the `PROJECT_ID` will infer the project from the account. The `ACCOUNT`
@@ -6617,7 +6603,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * The resource name of the service account key in the following format:
+           * Required. The resource name of the service account key in the following format:
            * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`.
            *
            * Using `-` as a wildcard for the `PROJECT_ID` will infer the project from the account.
@@ -6667,7 +6653,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the iam server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param name The resource name of the service account in the following format:
+         * @param name Required. The resource name of the service account in the following format:
          *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
         Using `-` as a wildcard for the
          *        `PROJECT_ID`, will infer the project from
@@ -6699,7 +6685,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The resource name of the service account in the following format:
+           * @param name Required. The resource name of the service account in the following format:
          *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
         Using `-` as a wildcard for the
          *        `PROJECT_ID`, will infer the project from
@@ -6784,7 +6770,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * The resource name of the service account in the following format:
+           * Required. The resource name of the service account in the following format:
            * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
            *
            * Using `-` as a wildcard for the `PROJECT_ID`, will infer the project from the account.
@@ -6794,7 +6780,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The resource name of the service account in the following format:
+          /** Required. The resource name of the service account in the following format:
          `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
 
          Using `-` as a wildcard for the `PROJECT_ID`, will infer the project from the account. The
@@ -6805,7 +6791,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * The resource name of the service account in the following format:
+           * Required. The resource name of the service account in the following format:
            * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
            *
            * Using `-` as a wildcard for the `PROJECT_ID`, will infer the project from the account.

@@ -17,8 +17,7 @@
 package com.google.api.services.iam.v1.model;
 
 /**
- * The request to lint a Cloud IAM policy object. LintPolicy is currently functional only for
- * `lint_object` of type `condition`.
+ * The request to lint a Cloud IAM policy object.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Identity and Access Management (IAM) API. For a
@@ -32,28 +31,11 @@ package com.google.api.services.iam.v1.model;
 public final class LintPolicyRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Binding object to be linted. The functionality of linting a binding is not yet implemented and
-   * if this field is set, it returns NOT_IMPLEMENTED error.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private Binding binding;
-
-  /**
    * google.iam.v1.Binding.condition object to be linted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Expr condition;
-
-  /**
-   * `context` contains additional *permission-controlled* data that any lint unit may depend on, in
-   * form of `{key: value}` pairs. Currently, this field is non-operational and it will not be used
-   * during the lint operation.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.Map<String, java.lang.Object> context;
 
   /**
    * The full resource name of the policy this lint request is about.
@@ -69,33 +51,6 @@ public final class LintPolicyRequest extends com.google.api.client.json.GenericJ
   private java.lang.String fullResourceName;
 
   /**
-   * Policy object to be linted. The functionality of linting a policy is not yet implemented and if
-   * this field is set, it returns NOT_IMPLEMENTED error.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private Policy policy;
-
-  /**
-   * Binding object to be linted. The functionality of linting a binding is not yet implemented and
-   * if this field is set, it returns NOT_IMPLEMENTED error.
-   * @return value or {@code null} for none
-   */
-  public Binding getBinding() {
-    return binding;
-  }
-
-  /**
-   * Binding object to be linted. The functionality of linting a binding is not yet implemented and
-   * if this field is set, it returns NOT_IMPLEMENTED error.
-   * @param binding binding or {@code null} for none
-   */
-  public LintPolicyRequest setBinding(Binding binding) {
-    this.binding = binding;
-    return this;
-  }
-
-  /**
    * google.iam.v1.Binding.condition object to be linted.
    * @return value or {@code null} for none
    */
@@ -109,27 +64,6 @@ public final class LintPolicyRequest extends com.google.api.client.json.GenericJ
    */
   public LintPolicyRequest setCondition(Expr condition) {
     this.condition = condition;
-    return this;
-  }
-
-  /**
-   * `context` contains additional *permission-controlled* data that any lint unit may depend on, in
-   * form of `{key: value}` pairs. Currently, this field is non-operational and it will not be used
-   * during the lint operation.
-   * @return value or {@code null} for none
-   */
-  public java.util.Map<String, java.lang.Object> getContext() {
-    return context;
-  }
-
-  /**
-   * `context` contains additional *permission-controlled* data that any lint unit may depend on, in
-   * form of `{key: value}` pairs. Currently, this field is non-operational and it will not be used
-   * during the lint operation.
-   * @param context context or {@code null} for none
-   */
-  public LintPolicyRequest setContext(java.util.Map<String, java.lang.Object> context) {
-    this.context = context;
     return this;
   }
 
@@ -159,25 +93,6 @@ public final class LintPolicyRequest extends com.google.api.client.json.GenericJ
    */
   public LintPolicyRequest setFullResourceName(java.lang.String fullResourceName) {
     this.fullResourceName = fullResourceName;
-    return this;
-  }
-
-  /**
-   * Policy object to be linted. The functionality of linting a policy is not yet implemented and if
-   * this field is set, it returns NOT_IMPLEMENTED error.
-   * @return value or {@code null} for none
-   */
-  public Policy getPolicy() {
-    return policy;
-  }
-
-  /**
-   * Policy object to be linted. The functionality of linting a policy is not yet implemented and if
-   * this field is set, it returns NOT_IMPLEMENTED error.
-   * @param policy policy or {@code null} for none
-   */
-  public LintPolicyRequest setPolicy(Policy policy) {
-    this.policy = policy;
     return this;
   }
 

@@ -31,17 +31,6 @@ package com.google.api.services.iam.v1.model;
 public final class LintResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * 0-based index ordinality of the binding in the input object associated with this result. This
-   * field is populated only if the input object to lint is of type google.iam.v1.Policy, which can
-   * comprise more than one binding. It is set to -1 if the result is not associated with any
-   * particular binding and only targets the policy as a whole, such as results about policy size
-   * violations.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer bindingOrdinal;
-
-  /**
    * Human readable debug message associated with the issue.
    * The value may be {@code null}.
    */
@@ -51,14 +40,10 @@ public final class LintResult extends com.google.api.client.json.GenericJson {
   /**
    * The name of the field for which this lint result is about.
    *
-   * For nested messages, `field_name` consists of names of the embedded fields separated by period
-   * character. The top-level qualifier is the input object to lint in the request. For instance, if
-   * the lint request is on a google.iam.v1.Policy and this lint result is about a condition
-   * expression of one of the input policy bindings, the field would be populated as
-   * `policy.bindings.condition.expression`.
-   *
-   * This field does not identify the ordinality of the repetitive fields (for instance bindings in
-   * a policy).
+   * For nested messages `field_name` consists of names of the embedded fields separated by period
+   * character. The top-level qualifier is the input object to lint in the request. For example, the
+   * `field_name` value `condition.expression` identifies a lint result for the `expression` field
+   * of the provided condition.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,31 +79,6 @@ public final class LintResult extends com.google.api.client.json.GenericJson {
   private java.lang.String validationUnitName;
 
   /**
-   * 0-based index ordinality of the binding in the input object associated with this result. This
-   * field is populated only if the input object to lint is of type google.iam.v1.Policy, which can
-   * comprise more than one binding. It is set to -1 if the result is not associated with any
-   * particular binding and only targets the policy as a whole, such as results about policy size
-   * violations.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getBindingOrdinal() {
-    return bindingOrdinal;
-  }
-
-  /**
-   * 0-based index ordinality of the binding in the input object associated with this result. This
-   * field is populated only if the input object to lint is of type google.iam.v1.Policy, which can
-   * comprise more than one binding. It is set to -1 if the result is not associated with any
-   * particular binding and only targets the policy as a whole, such as results about policy size
-   * violations.
-   * @param bindingOrdinal bindingOrdinal or {@code null} for none
-   */
-  public LintResult setBindingOrdinal(java.lang.Integer bindingOrdinal) {
-    this.bindingOrdinal = bindingOrdinal;
-    return this;
-  }
-
-  /**
    * Human readable debug message associated with the issue.
    * @return value or {@code null} for none
    */
@@ -138,14 +98,10 @@ public final class LintResult extends com.google.api.client.json.GenericJson {
   /**
    * The name of the field for which this lint result is about.
    *
-   * For nested messages, `field_name` consists of names of the embedded fields separated by period
-   * character. The top-level qualifier is the input object to lint in the request. For instance, if
-   * the lint request is on a google.iam.v1.Policy and this lint result is about a condition
-   * expression of one of the input policy bindings, the field would be populated as
-   * `policy.bindings.condition.expression`.
-   *
-   * This field does not identify the ordinality of the repetitive fields (for instance bindings in
-   * a policy).
+   * For nested messages `field_name` consists of names of the embedded fields separated by period
+   * character. The top-level qualifier is the input object to lint in the request. For example, the
+   * `field_name` value `condition.expression` identifies a lint result for the `expression` field
+   * of the provided condition.
    * @return value or {@code null} for none
    */
   public java.lang.String getFieldName() {
@@ -155,14 +111,10 @@ public final class LintResult extends com.google.api.client.json.GenericJson {
   /**
    * The name of the field for which this lint result is about.
    *
-   * For nested messages, `field_name` consists of names of the embedded fields separated by period
-   * character. The top-level qualifier is the input object to lint in the request. For instance, if
-   * the lint request is on a google.iam.v1.Policy and this lint result is about a condition
-   * expression of one of the input policy bindings, the field would be populated as
-   * `policy.bindings.condition.expression`.
-   *
-   * This field does not identify the ordinality of the repetitive fields (for instance bindings in
-   * a policy).
+   * For nested messages `field_name` consists of names of the embedded fields separated by period
+   * character. The top-level qualifier is the input object to lint in the request. For example, the
+   * `field_name` value `condition.expression` identifies a lint result for the `expression` field
+   * of the provided condition.
    * @param fieldName fieldName or {@code null} for none
    */
   public LintResult setFieldName(java.lang.String fieldName) {

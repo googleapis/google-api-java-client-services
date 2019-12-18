@@ -17,26 +17,27 @@
 package com.google.api.services.dataproc.v1beta2.model;
 
 /**
- * Defines an Identity and Access Management (IAM) policy. It is used to specify access control
- * policies for Cloud Platform resources.A Policy is a collection of bindings. A binding binds one
- * or more members to a single role. Members can be user accounts, service accounts, Google groups,
- * and domains (such as G Suite). A role is a named list of permissions (defined by IAM or
- * configured by users). A binding can optionally specify a condition, which is a logic expression
- * that further constrains the role binding based on attributes about the request and/or target
- * resource.JSON Example {   "bindings": [     {       "role":
- * "roles/resourcemanager.organizationAdmin",       "members": [         "user:mike@example.com",
- * "group:admins@example.com",         "domain:google.com",         "serviceAccount:my-project-
- * id@appspot.gserviceaccount.com"       ]     },     {       "role":
+ * An Identity and Access Management (IAM) policy, which specifies access controls for Google Cloud
+ * resources.A Policy is a collection of bindings. A binding binds one or more members to a single
+ * role. Members can be user accounts, service accounts, Google groups, and domains (such as G
+ * Suite). A role is a named list of permissions; each role can be an IAM predefined role or a user-
+ * created custom role.Optionally, a binding can specify a condition, which is a logical expression
+ * that allows access to a resource only if the expression evaluates to true. A condition can add
+ * constraints based on attributes of the request, the resource, or both.JSON example: {
+ * "bindings": [     {       "role": "roles/resourcemanager.organizationAdmin",       "members": [
+ * "user:mike@example.com",         "group:admins@example.com",         "domain:google.com",
+ * "serviceAccount:my-project-id@appspot.gserviceaccount.com"       ]     },     {       "role":
  * "roles/resourcemanager.organizationViewer",       "members": ["user:eve@example.com"],
  * "condition": {         "title": "expirable access",         "description": "Does not grant access
- * after Sep 2020",         "expression": "request.time <
- * timestamp('2020-10-01T00:00:00.000Z')",       }     }   ] } YAML Example bindings: - members:   -
+ * after Sep 2020",         "expression": "request.time < timestamp('2020-10-01T00:00:00.000Z')",
+ * }     }   ],   "etag": "BwWWja0YfJA=",   "version": 3 } YAML example: bindings: - members:   -
  * user:mike@example.com   - group:admins@example.com   - domain:google.com   - serviceAccount:my-
  * project-id@appspot.gserviceaccount.com   role: roles/resourcemanager.organizationAdmin - members:
  * - user:eve@example.com   role: roles/resourcemanager.organizationViewer   condition:     title:
  * expirable access     description: Does not grant access after Sep 2020     expression:
- * request.time < timestamp('2020-10-01T00:00:00.000Z') For a description of IAM and its features,
- * see the IAM developer's guide (https://cloud.google.com/iam/docs).
+ * request.time < timestamp('2020-10-01T00:00:00.000Z') - etag: BwWWja0YfJA= - version: 3 For a
+ * description of IAM and its features, see the IAM documentation
+ * (https://cloud.google.com/iam/docs/).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataproc API. For a detailed explanation see:
@@ -49,8 +50,8 @@ package com.google.api.services.dataproc.v1beta2.model;
 public final class Policy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Associates a list of members to a role. Optionally may specify a condition that determines when
-   * binding is in effect. bindings with no members will result in an error.
+   * Associates a list of members to a role. Optionally, may specify a condition that determines how
+   * and when the bindings are applied. Each of the bindings must contain at least one member.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,31 +69,34 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * etag in the read-modify-write cycle to perform policy updates in order to avoid race
    * conditions: An etag is returned in the response to getIamPolicy, and systems are expected to
    * put that etag in the request to setIamPolicy to ensure that their change will be applied to the
-   * same version of the policy.If no etag is provided in the call to setIamPolicy, then the
-   * existing policy is overwritten. Due to blind-set semantics of an etag-less policy,
-   * 'setIamPolicy' will not fail even if the incoming policy version does not meet the requirements
-   * for modifying the stored policy.
+   * same version of the policy.Important: If you use IAM Conditions, you must include the etag
+   * field whenever you call setIamPolicy. If you omit this field, then IAM allows you to overwrite
+   * a version 3 policy with a version 1 policy, and all of the conditions in the version 3 policy
+   * are lost.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String etag;
 
   /**
-   * Specifies the format of the policy.Valid values are 0, 1, and 3. Requests specifying an invalid
-   * value will be rejected.Operations affecting conditional bindings must specify version 3. This
-   * can be either setting a conditional policy, modifying a conditional binding, or removing a
-   * binding (conditional or unconditional) from the stored conditional policy. Operations on non-
-   * conditional policies may specify any valid value or leave the field unset.If no etag is
-   * provided in the call to setIamPolicy, version compliance checks against the stored policy is
-   * skipped.
+   * Specifies the format of the policy.Valid values are 0, 1, and 3. Requests that specify an
+   * invalid value are rejected.Any operation that affects conditional role bindings must specify
+   * version 3. This requirement applies to the following operations: Getting a policy that includes
+   * a conditional role binding Adding a conditional role binding to a policy Changing a conditional
+   * role binding in a policy Removing any role binding, with or without a condition, from a policy
+   * that includes conditionsImportant: If you use IAM Conditions, you must include the etag field
+   * whenever you call setIamPolicy. If you omit this field, then IAM allows you to overwrite a
+   * version 3 policy with a version 1 policy, and all of the conditions in the version 3 policy are
+   * lost.If a policy does not include any conditions, operations on that policy may specify any
+   * valid version or leave the field unset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer version;
 
   /**
-   * Associates a list of members to a role. Optionally may specify a condition that determines when
-   * binding is in effect. bindings with no members will result in an error.
+   * Associates a list of members to a role. Optionally, may specify a condition that determines how
+   * and when the bindings are applied. Each of the bindings must contain at least one member.
    * @return value or {@code null} for none
    */
   public java.util.List<Binding> getBindings() {
@@ -100,8 +104,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Associates a list of members to a role. Optionally may specify a condition that determines when
-   * binding is in effect. bindings with no members will result in an error.
+   * Associates a list of members to a role. Optionally, may specify a condition that determines how
+   * and when the bindings are applied. Each of the bindings must contain at least one member.
    * @param bindings bindings or {@code null} for none
    */
   public Policy setBindings(java.util.List<Binding> bindings) {
@@ -115,10 +119,10 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * etag in the read-modify-write cycle to perform policy updates in order to avoid race
    * conditions: An etag is returned in the response to getIamPolicy, and systems are expected to
    * put that etag in the request to setIamPolicy to ensure that their change will be applied to the
-   * same version of the policy.If no etag is provided in the call to setIamPolicy, then the
-   * existing policy is overwritten. Due to blind-set semantics of an etag-less policy,
-   * 'setIamPolicy' will not fail even if the incoming policy version does not meet the requirements
-   * for modifying the stored policy.
+   * same version of the policy.Important: If you use IAM Conditions, you must include the etag
+   * field whenever you call setIamPolicy. If you omit this field, then IAM allows you to overwrite
+   * a version 3 policy with a version 1 policy, and all of the conditions in the version 3 policy
+   * are lost.
    * @see #decodeEtag()
    * @return value or {@code null} for none
    */
@@ -132,10 +136,10 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * etag in the read-modify-write cycle to perform policy updates in order to avoid race
    * conditions: An etag is returned in the response to getIamPolicy, and systems are expected to
    * put that etag in the request to setIamPolicy to ensure that their change will be applied to the
-   * same version of the policy.If no etag is provided in the call to setIamPolicy, then the
-   * existing policy is overwritten. Due to blind-set semantics of an etag-less policy,
-   * 'setIamPolicy' will not fail even if the incoming policy version does not meet the requirements
-   * for modifying the stored policy.
+   * same version of the policy.Important: If you use IAM Conditions, you must include the etag
+   * field whenever you call setIamPolicy. If you omit this field, then IAM allows you to overwrite
+   * a version 3 policy with a version 1 policy, and all of the conditions in the version 3 policy
+   * are lost.
    * @see #getEtag()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -151,10 +155,10 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * etag in the read-modify-write cycle to perform policy updates in order to avoid race
    * conditions: An etag is returned in the response to getIamPolicy, and systems are expected to
    * put that etag in the request to setIamPolicy to ensure that their change will be applied to the
-   * same version of the policy.If no etag is provided in the call to setIamPolicy, then the
-   * existing policy is overwritten. Due to blind-set semantics of an etag-less policy,
-   * 'setIamPolicy' will not fail even if the incoming policy version does not meet the requirements
-   * for modifying the stored policy.
+   * same version of the policy.Important: If you use IAM Conditions, you must include the etag
+   * field whenever you call setIamPolicy. If you omit this field, then IAM allows you to overwrite
+   * a version 3 policy with a version 1 policy, and all of the conditions in the version 3 policy
+   * are lost.
    * @see #encodeEtag()
    * @param etag etag or {@code null} for none
    */
@@ -169,10 +173,10 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * etag in the read-modify-write cycle to perform policy updates in order to avoid race
    * conditions: An etag is returned in the response to getIamPolicy, and systems are expected to
    * put that etag in the request to setIamPolicy to ensure that their change will be applied to the
-   * same version of the policy.If no etag is provided in the call to setIamPolicy, then the
-   * existing policy is overwritten. Due to blind-set semantics of an etag-less policy,
-   * 'setIamPolicy' will not fail even if the incoming policy version does not meet the requirements
-   * for modifying the stored policy.
+   * same version of the policy.Important: If you use IAM Conditions, you must include the etag
+   * field whenever you call setIamPolicy. If you omit this field, then IAM allows you to overwrite
+   * a version 3 policy with a version 1 policy, and all of the conditions in the version 3 policy
+   * are lost.
    * @see #setEtag()
    *
    * <p>
@@ -187,13 +191,16 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies the format of the policy.Valid values are 0, 1, and 3. Requests specifying an invalid
-   * value will be rejected.Operations affecting conditional bindings must specify version 3. This
-   * can be either setting a conditional policy, modifying a conditional binding, or removing a
-   * binding (conditional or unconditional) from the stored conditional policy. Operations on non-
-   * conditional policies may specify any valid value or leave the field unset.If no etag is
-   * provided in the call to setIamPolicy, version compliance checks against the stored policy is
-   * skipped.
+   * Specifies the format of the policy.Valid values are 0, 1, and 3. Requests that specify an
+   * invalid value are rejected.Any operation that affects conditional role bindings must specify
+   * version 3. This requirement applies to the following operations: Getting a policy that includes
+   * a conditional role binding Adding a conditional role binding to a policy Changing a conditional
+   * role binding in a policy Removing any role binding, with or without a condition, from a policy
+   * that includes conditionsImportant: If you use IAM Conditions, you must include the etag field
+   * whenever you call setIamPolicy. If you omit this field, then IAM allows you to overwrite a
+   * version 3 policy with a version 1 policy, and all of the conditions in the version 3 policy are
+   * lost.If a policy does not include any conditions, operations on that policy may specify any
+   * valid version or leave the field unset.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getVersion() {
@@ -201,13 +208,16 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies the format of the policy.Valid values are 0, 1, and 3. Requests specifying an invalid
-   * value will be rejected.Operations affecting conditional bindings must specify version 3. This
-   * can be either setting a conditional policy, modifying a conditional binding, or removing a
-   * binding (conditional or unconditional) from the stored conditional policy. Operations on non-
-   * conditional policies may specify any valid value or leave the field unset.If no etag is
-   * provided in the call to setIamPolicy, version compliance checks against the stored policy is
-   * skipped.
+   * Specifies the format of the policy.Valid values are 0, 1, and 3. Requests that specify an
+   * invalid value are rejected.Any operation that affects conditional role bindings must specify
+   * version 3. This requirement applies to the following operations: Getting a policy that includes
+   * a conditional role binding Adding a conditional role binding to a policy Changing a conditional
+   * role binding in a policy Removing any role binding, with or without a condition, from a policy
+   * that includes conditionsImportant: If you use IAM Conditions, you must include the etag field
+   * whenever you call setIamPolicy. If you omit this field, then IAM allows you to overwrite a
+   * version 3 policy with a version 1 policy, and all of the conditions in the version 3 policy are
+   * lost.If a policy does not include any conditions, operations on that policy may specify any
+   * valid version or leave the field unset.
    * @param version version or {@code null} for none
    */
   public Policy setVersion(java.lang.Integer version) {

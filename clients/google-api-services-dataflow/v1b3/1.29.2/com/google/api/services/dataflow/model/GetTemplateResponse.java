@@ -37,12 +37,26 @@ public final class GetTemplateResponse extends com.google.api.client.json.Generi
   private TemplateMetadata metadata;
 
   /**
+   * Describes the runtime metadata with SDKInfo and available parameters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RuntimeMetadata runtimeMetadata;
+
+  /**
    * The status of the get template request. Any problems with the request will be indicated in the
    * error_details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Status status;
+
+  /**
+   * Template Type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String templateType;
 
   /**
    * The template metadata describing the template name, available parameters, etc.
@@ -62,6 +76,23 @@ public final class GetTemplateResponse extends com.google.api.client.json.Generi
   }
 
   /**
+   * Describes the runtime metadata with SDKInfo and available parameters.
+   * @return value or {@code null} for none
+   */
+  public RuntimeMetadata getRuntimeMetadata() {
+    return runtimeMetadata;
+  }
+
+  /**
+   * Describes the runtime metadata with SDKInfo and available parameters.
+   * @param runtimeMetadata runtimeMetadata or {@code null} for none
+   */
+  public GetTemplateResponse setRuntimeMetadata(RuntimeMetadata runtimeMetadata) {
+    this.runtimeMetadata = runtimeMetadata;
+    return this;
+  }
+
+  /**
    * The status of the get template request. Any problems with the request will be indicated in the
    * error_details.
    * @return value or {@code null} for none
@@ -77,6 +108,23 @@ public final class GetTemplateResponse extends com.google.api.client.json.Generi
    */
   public GetTemplateResponse setStatus(Status status) {
     this.status = status;
+    return this;
+  }
+
+  /**
+   * Template Type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTemplateType() {
+    return templateType;
+  }
+
+  /**
+   * Template Type.
+   * @param templateType templateType or {@code null} for none
+   */
+  public GetTemplateResponse setTemplateType(java.lang.String templateType) {
+    this.templateType = templateType;
     return this;
   }
 

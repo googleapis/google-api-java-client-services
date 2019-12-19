@@ -58,6 +58,13 @@ public final class ParameterMetadata extends com.google.api.client.json.GenericJ
   private java.lang.String name;
 
   /**
+   * Optional. The type of the parameter. Used for selecting input picker.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String paramType;
+
+  /**
    * Optional. Regexes that the parameter must match.
    * The value may be {@code null}.
    */
@@ -129,6 +136,23 @@ public final class ParameterMetadata extends com.google.api.client.json.GenericJ
    */
   public ParameterMetadata setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. The type of the parameter. Used for selecting input picker.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getParamType() {
+    return paramType;
+  }
+
+  /**
+   * Optional. The type of the parameter. Used for selecting input picker.
+   * @param paramType paramType or {@code null} for none
+   */
+  public ParameterMetadata setParamType(java.lang.String paramType) {
+    this.paramType = paramType;
     return this;
   }
 

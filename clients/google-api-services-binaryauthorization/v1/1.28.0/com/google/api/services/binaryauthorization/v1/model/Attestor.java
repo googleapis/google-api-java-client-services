@@ -55,7 +55,8 @@ public final class Attestor extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
-   * A Grafeas Attestation.Authority Note, created by the user.
+   * This specifies how an attestation will be read, and how it will be used during policy
+   * enforcement.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,7 +118,8 @@ public final class Attestor extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A Grafeas Attestation.Authority Note, created by the user.
+   * This specifies how an attestation will be read, and how it will be used during policy
+   * enforcement.
    * @return value or {@code null} for none
    */
   public UserOwnedGrafeasNote getUserOwnedGrafeasNote() {
@@ -125,7 +127,8 @@ public final class Attestor extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A Grafeas Attestation.Authority Note, created by the user.
+   * This specifies how an attestation will be read, and how it will be used during policy
+   * enforcement.
    * @param userOwnedGrafeasNote userOwnedGrafeasNote or {@code null} for none
    */
   public Attestor setUserOwnedGrafeasNote(UserOwnedGrafeasNote userOwnedGrafeasNote) {

@@ -48,7 +48,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig ex
   /**
    * Required. Disk Type to use for the worker. See [Storage
    * options](https://cloud.google.com/compute/docs/disks/#introduction). Currently only `pd-
-   * standard` is supported.
+   * standard` and `pd-ssd` are supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -140,7 +140,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig ex
   /**
    * Required. Disk Type to use for the worker. See [Storage
    * options](https://cloud.google.com/compute/docs/disks/#introduction). Currently only `pd-
-   * standard` is supported.
+   * standard` and `pd-ssd` are supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getDiskType() {
@@ -150,7 +150,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig ex
   /**
    * Required. Disk Type to use for the worker. See [Storage
    * options](https://cloud.google.com/compute/docs/disks/#introduction). Currently only `pd-
-   * standard` is supported.
+   * standard` and `pd-ssd` are supported.
    * @param diskType diskType or {@code null} for none
    */
   public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig setDiskType(java.lang.String diskType) {

@@ -116,10 +116,7 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   private java.lang.String fieldDelimiter;
 
   /**
-   * [Optional, Trusted Tester] If hive partitioning is enabled, which mode to use. Two modes are
-   * supported: - AUTO: automatically infer partition key name(s) and type(s). - STRINGS: automatic
-   * infer partition key name(s). All types are strings. Not all storage formats support hive
-   * partitioning -- requesting hive partitioning on an unsupported format will lead to an error.
+   * [Optional, Trusted Tester] Deprecated, do not use. Please set hivePartitioningOptions instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -496,10 +493,7 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional, Trusted Tester] If hive partitioning is enabled, which mode to use. Two modes are
-   * supported: - AUTO: automatically infer partition key name(s) and type(s). - STRINGS: automatic
-   * infer partition key name(s). All types are strings. Not all storage formats support hive
-   * partitioning -- requesting hive partitioning on an unsupported format will lead to an error.
+   * [Optional, Trusted Tester] Deprecated, do not use. Please set hivePartitioningOptions instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getHivePartitioningMode() {
@@ -507,10 +501,7 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional, Trusted Tester] If hive partitioning is enabled, which mode to use. Two modes are
-   * supported: - AUTO: automatically infer partition key name(s) and type(s). - STRINGS: automatic
-   * infer partition key name(s). All types are strings. Not all storage formats support hive
-   * partitioning -- requesting hive partitioning on an unsupported format will lead to an error.
+   * [Optional, Trusted Tester] Deprecated, do not use. Please set hivePartitioningOptions instead.
    * @param hivePartitioningMode hivePartitioningMode or {@code null} for none
    */
   public JobConfigurationLoad setHivePartitioningMode(java.lang.String hivePartitioningMode) {

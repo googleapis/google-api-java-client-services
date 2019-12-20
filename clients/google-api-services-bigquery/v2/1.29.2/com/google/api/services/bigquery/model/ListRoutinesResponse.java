@@ -37,8 +37,9 @@ public final class ListRoutinesResponse extends com.google.api.client.json.Gener
   private java.lang.String nextPageToken;
 
   /**
-   * Routines in the requested dataset. Only the following fields are populated: etag, project_id,
-   * dataset_id, routine_id, routine_type, creation_time, last_modified_time, language.
+   * Routines in the requested dataset. Unless read_mask is set in the request, only the following
+   * fields are populated: etag, project_id, dataset_id, routine_id, routine_type, creation_time,
+   * last_modified_time, and language.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,8 +63,9 @@ public final class ListRoutinesResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * Routines in the requested dataset. Only the following fields are populated: etag, project_id,
-   * dataset_id, routine_id, routine_type, creation_time, last_modified_time, language.
+   * Routines in the requested dataset. Unless read_mask is set in the request, only the following
+   * fields are populated: etag, project_id, dataset_id, routine_id, routine_type, creation_time,
+   * last_modified_time, and language.
    * @return value or {@code null} for none
    */
   public java.util.List<Routine> getRoutines() {
@@ -71,8 +73,9 @@ public final class ListRoutinesResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * Routines in the requested dataset. Only the following fields are populated: etag, project_id,
-   * dataset_id, routine_id, routine_type, creation_time, last_modified_time, language.
+   * Routines in the requested dataset. Unless read_mask is set in the request, only the following
+   * fields are populated: etag, project_id, dataset_id, routine_id, routine_type, creation_time,
+   * last_modified_time, and language.
    * @param routines routines or {@code null} for none
    */
   public ListRoutinesResponse setRoutines(java.util.List<Routine> routines) {

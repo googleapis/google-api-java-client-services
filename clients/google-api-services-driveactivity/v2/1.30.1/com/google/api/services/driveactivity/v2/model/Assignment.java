@@ -30,11 +30,35 @@ package com.google.api.services.driveactivity.v2.model;
 public final class Assignment extends com.google.api.client.json.GenericJson {
 
   /**
+   * The user to whom the comment was assigned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private User assignedUser;
+
+  /**
    * The sub-type of this event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String subtype;
+
+  /**
+   * The user to whom the comment was assigned.
+   * @return value or {@code null} for none
+   */
+  public User getAssignedUser() {
+    return assignedUser;
+  }
+
+  /**
+   * The user to whom the comment was assigned.
+   * @param assignedUser assignedUser or {@code null} for none
+   */
+  public Assignment setAssignedUser(User assignedUser) {
+    this.assignedUser = assignedUser;
+    return this;
+  }
 
   /**
    * The sub-type of this event.

@@ -114,6 +114,14 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> nameServers;
 
   /**
+   * The presence of this field indicates that DNS Peering is enabled for this zone. The value of
+   * this field contains the network to peer with.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ManagedZonePeeringConfig peeringConfig;
+
+  /**
    * For privately visible zones, the set of Virtual Private Cloud resources that the zone is
    * visible from.
    * The value may be {@code null}.
@@ -325,6 +333,25 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
    */
   public ManagedZone setNameServers(java.util.List<java.lang.String> nameServers) {
     this.nameServers = nameServers;
+    return this;
+  }
+
+  /**
+   * The presence of this field indicates that DNS Peering is enabled for this zone. The value of
+   * this field contains the network to peer with.
+   * @return value or {@code null} for none
+   */
+  public ManagedZonePeeringConfig getPeeringConfig() {
+    return peeringConfig;
+  }
+
+  /**
+   * The presence of this field indicates that DNS Peering is enabled for this zone. The value of
+   * this field contains the network to peer with.
+   * @param peeringConfig peeringConfig or {@code null} for none
+   */
+  public ManagedZone setPeeringConfig(ManagedZonePeeringConfig peeringConfig) {
+    this.peeringConfig = peeringConfig;
     return this;
   }
 

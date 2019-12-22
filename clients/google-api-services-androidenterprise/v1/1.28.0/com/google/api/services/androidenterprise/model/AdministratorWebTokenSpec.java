@@ -31,8 +31,6 @@ package com.google.api.services.androidenterprise.model;
 public final class AdministratorWebTokenSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#administratorWebTokenSpec".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,8 +87,6 @@ public final class AdministratorWebTokenSpec extends com.google.api.client.json.
   private AdministratorWebTokenSpecWebApps webApps;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#administratorWebTokenSpec".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -98,8 +94,6 @@ public final class AdministratorWebTokenSpec extends com.google.api.client.json.
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#administratorWebTokenSpec".
    * @param kind kind or {@code null} for none
    */
   public AdministratorWebTokenSpec setKind(java.lang.String kind) {

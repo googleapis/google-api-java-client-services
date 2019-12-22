@@ -41,8 +41,6 @@ public final class StoreLayout extends com.google.api.client.json.GenericJson {
   private java.lang.String homepageId;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#storeLayout".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,8 +79,6 @@ public final class StoreLayout extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#storeLayout".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -90,8 +86,6 @@ public final class StoreLayout extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#storeLayout".
    * @param kind kind or {@code null} for none
    */
   public StoreLayout setKind(java.lang.String kind) {

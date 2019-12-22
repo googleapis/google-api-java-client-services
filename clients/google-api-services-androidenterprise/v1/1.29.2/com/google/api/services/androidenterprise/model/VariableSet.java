@@ -32,8 +32,6 @@ package com.google.api.services.androidenterprise.model;
 public final class VariableSet extends com.google.api.client.json.GenericJson {
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#variableSet".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,8 +52,6 @@ public final class VariableSet extends com.google.api.client.json.GenericJson {
   private java.lang.String userValue;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#variableSet".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -63,8 +59,6 @@ public final class VariableSet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#variableSet".
    * @param kind kind or {@code null} for none
    */
   public VariableSet setKind(java.lang.String kind) {

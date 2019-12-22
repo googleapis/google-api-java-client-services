@@ -124,7 +124,6 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String iconUrl;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "androidenterprise#product".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -416,7 +415,6 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "androidenterprise#product".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -424,7 +422,6 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "androidenterprise#product".
    * @param kind kind or {@code null} for none
    */
   public Product setKind(java.lang.String kind) {

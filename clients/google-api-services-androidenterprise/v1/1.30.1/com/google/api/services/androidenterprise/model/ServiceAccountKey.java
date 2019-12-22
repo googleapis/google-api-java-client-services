@@ -45,8 +45,6 @@ public final class ServiceAccountKey extends com.google.api.client.json.GenericJ
   private java.lang.String id;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#serviceAccountKey".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,8 +103,6 @@ public final class ServiceAccountKey extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#serviceAccountKey".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -114,8 +110,6 @@ public final class ServiceAccountKey extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#serviceAccountKey".
    * @param kind kind or {@code null} for none
    */
   public ServiceAccountKey setKind(java.lang.String kind) {

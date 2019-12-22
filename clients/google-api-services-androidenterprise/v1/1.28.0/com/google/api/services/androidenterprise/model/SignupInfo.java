@@ -39,8 +39,6 @@ public final class SignupInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String completionToken;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#signupInfo".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,8 +72,6 @@ public final class SignupInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#signupInfo".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -83,8 +79,6 @@ public final class SignupInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#signupInfo".
    * @param kind kind or {@code null} for none
    */
   public SignupInfo setKind(java.lang.String kind) {

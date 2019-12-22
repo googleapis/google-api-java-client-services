@@ -31,8 +31,6 @@ package com.google.api.services.androidenterprise.model;
 public final class NotificationSet extends com.google.api.client.json.GenericJson {
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#notificationSet".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,8 +58,6 @@ public final class NotificationSet extends com.google.api.client.json.GenericJso
   private java.lang.String notificationSetId;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#notificationSet".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -69,8 +65,6 @@ public final class NotificationSet extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#notificationSet".
    * @param kind kind or {@code null} for none
    */
   public NotificationSet setKind(java.lang.String kind) {

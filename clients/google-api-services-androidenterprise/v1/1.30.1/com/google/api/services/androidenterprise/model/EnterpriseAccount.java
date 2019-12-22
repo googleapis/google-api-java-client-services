@@ -38,8 +38,6 @@ public final class EnterpriseAccount extends com.google.api.client.json.GenericJ
   private java.lang.String accountEmail;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#enterpriseAccount".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,8 +61,6 @@ public final class EnterpriseAccount extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#enterpriseAccount".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -72,8 +68,6 @@ public final class EnterpriseAccount extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#enterpriseAccount".
    * @param kind kind or {@code null} for none
    */
   public EnterpriseAccount setKind(java.lang.String kind) {

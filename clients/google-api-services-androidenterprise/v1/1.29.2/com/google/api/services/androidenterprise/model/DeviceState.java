@@ -40,8 +40,6 @@ public final class DeviceState extends com.google.api.client.json.GenericJson {
   private java.lang.String accountState;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#deviceState".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,8 +67,6 @@ public final class DeviceState extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#deviceState".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -78,8 +74,6 @@ public final class DeviceState extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#deviceState".
    * @param kind kind or {@code null} for none
    */
   public DeviceState setKind(java.lang.String kind) {

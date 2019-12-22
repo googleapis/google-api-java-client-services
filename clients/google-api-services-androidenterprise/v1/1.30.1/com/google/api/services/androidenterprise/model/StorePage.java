@@ -38,8 +38,6 @@ public final class StorePage extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#storePage".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,8 +87,6 @@ public final class StorePage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#storePage".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -98,8 +94,6 @@ public final class StorePage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#storePage".
    * @param kind kind or {@code null} for none
    */
   public StorePage setKind(java.lang.String kind) {

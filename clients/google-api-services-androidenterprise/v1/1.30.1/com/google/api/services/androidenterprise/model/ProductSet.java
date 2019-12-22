@@ -30,8 +30,6 @@ package com.google.api.services.androidenterprise.model;
 public final class ProductSet extends com.google.api.client.json.GenericJson {
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#productSet".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,8 +68,6 @@ public final class ProductSet extends com.google.api.client.json.GenericJson {
   private java.util.List<ProductVisibility> productVisibility;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#productSet".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -79,8 +75,6 @@ public final class ProductSet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#productSet".
    * @param kind kind or {@code null} for none
    */
   public ProductSet setKind(java.lang.String kind) {

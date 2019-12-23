@@ -30,11 +30,9 @@ package com.google.api.services.spanner.v1.model;
 public final class UpdateInstanceRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. A mask specifying which fields in
-   * [][google.spanner.admin.instance.v1.UpdateInstanceRequest.instance] should be updated. The
-   * field mask must always be specified; this prevents any future fields in
-   * [][google.spanner.admin.instance.v1.Instance] from being erased accidentally by clients that do
-   * not know about them.
+   * Required. A mask specifying which fields in Instance should be updated. The field mask must
+   * always be specified; this prevents any future fields in Instance from being erased accidentally
+   * by clients that do not know about them.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,19 +40,16 @@ public final class UpdateInstanceRequest extends com.google.api.client.json.Gene
 
   /**
    * Required. The instance to update, which must always include the instance name.  Otherwise, only
-   * fields mentioned in [][google.spanner.admin.instance.v1.UpdateInstanceRequest.field_mask] need
-   * be included.
+   * fields mentioned in field_mask need be included.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Instance instance;
 
   /**
-   * Required. A mask specifying which fields in
-   * [][google.spanner.admin.instance.v1.UpdateInstanceRequest.instance] should be updated. The
-   * field mask must always be specified; this prevents any future fields in
-   * [][google.spanner.admin.instance.v1.Instance] from being erased accidentally by clients that do
-   * not know about them.
+   * Required. A mask specifying which fields in Instance should be updated. The field mask must
+   * always be specified; this prevents any future fields in Instance from being erased accidentally
+   * by clients that do not know about them.
    * @return value or {@code null} for none
    */
   public String getFieldMask() {
@@ -62,11 +57,9 @@ public final class UpdateInstanceRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Required. A mask specifying which fields in
-   * [][google.spanner.admin.instance.v1.UpdateInstanceRequest.instance] should be updated. The
-   * field mask must always be specified; this prevents any future fields in
-   * [][google.spanner.admin.instance.v1.Instance] from being erased accidentally by clients that do
-   * not know about them.
+   * Required. A mask specifying which fields in Instance should be updated. The field mask must
+   * always be specified; this prevents any future fields in Instance from being erased accidentally
+   * by clients that do not know about them.
    * @param fieldMask fieldMask or {@code null} for none
    */
   public UpdateInstanceRequest setFieldMask(String fieldMask) {
@@ -76,8 +69,7 @@ public final class UpdateInstanceRequest extends com.google.api.client.json.Gene
 
   /**
    * Required. The instance to update, which must always include the instance name.  Otherwise, only
-   * fields mentioned in [][google.spanner.admin.instance.v1.UpdateInstanceRequest.field_mask] need
-   * be included.
+   * fields mentioned in field_mask need be included.
    * @return value or {@code null} for none
    */
   public Instance getInstance() {
@@ -86,8 +78,7 @@ public final class UpdateInstanceRequest extends com.google.api.client.json.Gene
 
   /**
    * Required. The instance to update, which must always include the instance name.  Otherwise, only
-   * fields mentioned in [][google.spanner.admin.instance.v1.UpdateInstanceRequest.field_mask] need
-   * be included.
+   * fields mentioned in field_mask need be included.
    * @param instance instance or {@code null} for none
    */
   public UpdateInstanceRequest setInstance(Instance instance) {

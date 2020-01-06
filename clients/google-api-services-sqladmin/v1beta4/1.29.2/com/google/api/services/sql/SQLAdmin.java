@@ -3562,7 +3562,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Lists instances under a given project in the alphabetical order of the instance name.
+     * Lists instances under a given project.
      *
      * Create a request for the method "instances.list".
      *
@@ -3583,7 +3583,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances";
 
       /**
-       * Lists instances under a given project in the alphabetical order of the instance name.
+       * Lists instances under a given project.
        *
        * Create a request for the method "instances.list".
        *
@@ -5667,6 +5667,29 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Instance operation ID. */
       public Get setOperation(java.lang.String operation) {
         this.operation = operation;
+        return this;
+      }
+
+      /**
+       * The name of the operation for Cloud SQL to get. Format:
+       * projects/{project}/locations/{location}/operations/{operation}
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String resourceName;
+
+      /** The name of the operation for Cloud SQL to get. Format:
+     projects/{project}/locations/{location}/operations/{operation}
+       */
+      public java.lang.String getResourceName() {
+        return resourceName;
+      }
+
+      /**
+       * The name of the operation for Cloud SQL to get. Format:
+       * projects/{project}/locations/{location}/operations/{operation}
+       */
+      public Get setResourceName(java.lang.String resourceName) {
+        this.resourceName = resourceName;
         return this;
       }
 

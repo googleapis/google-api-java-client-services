@@ -227,7 +227,7 @@ def remove_unused_services(services: List[Service]) -> None:
         client_name = existing_client.split("/")[1]
         if client_name not in services_by_id:
             print(f"deleting entire service: {client_name}")
-            shutil.rmtree(f"clients/{client_name}")
+            shutil.rmtree(f"clients/{client_name}", ignore_errors=True)
         elif version not in services_by_id[client_name]:
             print(f"deleting {version} of {client_name}")
             shutil.rmtree(f"clients/{client_name}/{version}")

@@ -71,7 +71,6 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "androidenterprise#user".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -177,7 +176,6 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "androidenterprise#user".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -185,7 +183,6 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "androidenterprise#user".
    * @param kind kind or {@code null} for none
    */
   public User setKind(java.lang.String kind) {

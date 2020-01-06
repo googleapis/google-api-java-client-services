@@ -59,8 +59,6 @@ public final class Enterprise extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#enterprise".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,8 +115,6 @@ public final class Enterprise extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#enterprise".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -126,8 +122,6 @@ public final class Enterprise extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#enterprise".
    * @param kind kind or {@code null} for none
    */
   public Enterprise setKind(java.lang.String kind) {

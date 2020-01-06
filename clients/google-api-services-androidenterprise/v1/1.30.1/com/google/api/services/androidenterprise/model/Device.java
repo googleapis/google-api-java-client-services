@@ -39,7 +39,6 @@ public final class Device extends com.google.api.client.json.GenericJson {
   private java.lang.String androidId;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "androidenterprise#device".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +93,6 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "androidenterprise#device".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -102,7 +100,6 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "androidenterprise#device".
    * @param kind kind or {@code null} for none
    */
   public Device setKind(java.lang.String kind) {

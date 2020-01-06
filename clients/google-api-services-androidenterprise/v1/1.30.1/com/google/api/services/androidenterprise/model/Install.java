@@ -59,7 +59,6 @@ public final class Install extends com.google.api.client.json.GenericJson {
   private java.lang.String installState;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "androidenterprise#install".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,7 +101,6 @@ public final class Install extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "androidenterprise#install".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -110,7 +108,6 @@ public final class Install extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "androidenterprise#install".
    * @param kind kind or {@code null} for none
    */
   public Install setKind(java.lang.String kind) {

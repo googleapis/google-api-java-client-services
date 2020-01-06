@@ -49,8 +49,6 @@ package com.google.api.services.androidenterprise.model;
 public final class Entitlement extends com.google.api.client.json.GenericJson {
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#entitlement".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,8 +70,6 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
   private java.lang.String reason;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#entitlement".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -81,8 +77,6 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#entitlement".
    * @param kind kind or {@code null} for none
    */
   public Entitlement setKind(java.lang.String kind) {

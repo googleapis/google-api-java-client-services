@@ -32,8 +32,6 @@ package com.google.api.services.androidenterprise.model;
 public final class UserToken extends com.google.api.client.json.GenericJson {
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#userToken".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,8 +53,6 @@ public final class UserToken extends com.google.api.client.json.GenericJson {
   private java.lang.String userId;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#userToken".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -64,8 +60,6 @@ public final class UserToken extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#userToken".
    * @param kind kind or {@code null} for none
    */
   public UserToken setKind(java.lang.String kind) {

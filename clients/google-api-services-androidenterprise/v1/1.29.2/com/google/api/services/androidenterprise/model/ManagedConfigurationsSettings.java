@@ -32,8 +32,6 @@ package com.google.api.services.androidenterprise.model;
 public final class ManagedConfigurationsSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#managedConfigurationsSettings".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,8 +60,6 @@ public final class ManagedConfigurationsSettings extends com.google.api.client.j
   private java.lang.String name;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#managedConfigurationsSettings".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -71,8 +67,6 @@ public final class ManagedConfigurationsSettings extends com.google.api.client.j
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#managedConfigurationsSettings".
    * @param kind kind or {@code null} for none
    */
   public ManagedConfigurationsSettings setKind(java.lang.String kind) {

@@ -31,8 +31,6 @@ package com.google.api.services.androidenterprise.model;
 public final class AuthenticationToken extends com.google.api.client.json.GenericJson {
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#authenticationToken".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,8 +45,6 @@ public final class AuthenticationToken extends com.google.api.client.json.Generi
   private java.lang.String token;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#authenticationToken".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -56,8 +52,6 @@ public final class AuthenticationToken extends com.google.api.client.json.Generi
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "androidenterprise#authenticationToken".
    * @param kind kind or {@code null} for none
    */
   public AuthenticationToken setKind(java.lang.String kind) {

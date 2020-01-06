@@ -48,6 +48,10 @@ public final class Mutation extends com.google.api.client.json.GenericJson {
   /**
    * Like insert, except that if the row already exists, then its column values are overwritten with
    * the ones provided. Any column values not explicitly written are preserved.
+   *
+   * When using insert_or_update, just as when using insert, all `NOT NULL` columns in the table
+   * must be given a value. This holds true even when the row already exists and will therefore
+   * actually be updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,6 +117,10 @@ public final class Mutation extends com.google.api.client.json.GenericJson {
   /**
    * Like insert, except that if the row already exists, then its column values are overwritten with
    * the ones provided. Any column values not explicitly written are preserved.
+   *
+   * When using insert_or_update, just as when using insert, all `NOT NULL` columns in the table
+   * must be given a value. This holds true even when the row already exists and will therefore
+   * actually be updated.
    * @return value or {@code null} for none
    */
   public Write getInsertOrUpdate() {
@@ -122,6 +130,10 @@ public final class Mutation extends com.google.api.client.json.GenericJson {
   /**
    * Like insert, except that if the row already exists, then its column values are overwritten with
    * the ones provided. Any column values not explicitly written are preserved.
+   *
+   * When using insert_or_update, just as when using insert, all `NOT NULL` columns in the table
+   * must be given a value. This holds true even when the row already exists and will therefore
+   * actually be updated.
    * @param insertOrUpdate insertOrUpdate or {@code null} for none
    */
   public Mutation setInsertOrUpdate(Write insertOrUpdate) {

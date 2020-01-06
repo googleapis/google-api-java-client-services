@@ -875,6 +875,22 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             return this;
           }
 
+          /** Optional. If true, deletes all entries in the entry group. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean force;
+
+          /** Optional. If true, deletes all entries in the entry group.
+           */
+          public java.lang.Boolean getForce() {
+            return force;
+          }
+
+          /** Optional. If true, deletes all entries in the entry group. */
+          public Delete setForce(java.lang.Boolean force) {
+            this.force = force;
+            return this;
+          }
+
           @Override
           public Delete set(String parameterName, Object value) {
             return (Delete) super.set(parameterName, value);
@@ -5182,44 +5198,49 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * The field mask specifies the parts of the template to be updated. Allowed fields:
+             * Optional. The field mask specifies the parts of the template to be updated. Allowed
+             * fields:
              *
-             * * `display_name` * `type.enum_type`
+             * * `display_name` * `type.enum_type` * `is_required`
              *
              * If `update_mask` is not set or empty, all of the allowed fields above will be
              * updated.
              *
              * When updating an enum type, the provided values will be merged with the existing
              * values. Therefore, enum values can only be added, existing enum values cannot be
-             * deleted nor renamed.
+             * deleted nor renamed. Updating a template field from optional to required is NOT
+             * allowed.
              */
             @com.google.api.client.util.Key
             private String updateMask;
 
-            /** The field mask specifies the parts of the template to be updated. Allowed fields:
+            /** Optional. The field mask specifies the parts of the template to be updated. Allowed fields:
 
-           * `display_name` * `type.enum_type`
+           * `display_name` * `type.enum_type` * `is_required`
 
            If `update_mask` is not set or empty, all of the allowed fields above will be updated.
 
            When updating an enum type, the provided values will be merged with the existing values. Therefore,
-           enum values can only be added, existing enum values cannot be deleted nor renamed.
+           enum values can only be added, existing enum values cannot be deleted nor renamed. Updating a
+           template field from optional to required is NOT allowed.
              */
             public String getUpdateMask() {
               return updateMask;
             }
 
             /**
-             * The field mask specifies the parts of the template to be updated. Allowed fields:
+             * Optional. The field mask specifies the parts of the template to be updated. Allowed
+             * fields:
              *
-             * * `display_name` * `type.enum_type`
+             * * `display_name` * `type.enum_type` * `is_required`
              *
              * If `update_mask` is not set or empty, all of the allowed fields above will be
              * updated.
              *
              * When updating an enum type, the provided values will be merged with the existing
              * values. Therefore, enum values can only be added, existing enum values cannot be
-             * deleted nor renamed.
+             * deleted nor renamed. Updating a template field from optional to required is NOT
+             * allowed.
              */
             public Patch setUpdateMask(String updateMask) {
               this.updateMask = updateMask;

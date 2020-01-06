@@ -38,6 +38,13 @@ public final class GoogleCloudDatacatalogV1beta1TagTemplateField extends com.goo
   private java.lang.String displayName;
 
   /**
+   * Whether this is a required field. Defaults to false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isRequired;
+
+  /**
    * Output only. The resource name of the tag template field in URL format. Example:
    *
    * * projects/{project_id}/locations/{location}/tagTemplates/{tag_template}/fields/{field}
@@ -69,6 +76,23 @@ public final class GoogleCloudDatacatalogV1beta1TagTemplateField extends com.goo
    */
   public GoogleCloudDatacatalogV1beta1TagTemplateField setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Whether this is a required field. Defaults to false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsRequired() {
+    return isRequired;
+  }
+
+  /**
+   * Whether this is a required field. Defaults to false.
+   * @param isRequired isRequired or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1beta1TagTemplateField setIsRequired(java.lang.Boolean isRequired) {
+    this.isRequired = isRequired;
     return this;
   }
 

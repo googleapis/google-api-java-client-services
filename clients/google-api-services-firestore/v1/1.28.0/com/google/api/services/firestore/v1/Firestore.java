@@ -176,8 +176,8 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the firestore server.  After setting any optional
        * parameters, call the {@link ExportDocuments#execute()} method to invoke the remote operation.
        *
-       * @param name Database to export. Should be of the form:
-      `projects/{project_id}/databases/{database_id}`.
+       * @param name Required. Database to export. Should be of the form:
+       *        `projects/{project_id}/databases/{database_id}`.
        * @param content the {@link com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1ExportDocumentsRequest}
        * @return the request
        */
@@ -210,8 +210,8 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
          * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
          * the constructor. </p>
          *
-         * @param name Database to export. Should be of the form:
-      `projects/{project_id}/databases/{database_id}`.
+         * @param name Required. Database to export. Should be of the form:
+       *        `projects/{project_id}/databases/{database_id}`.
          * @param content the {@link com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1ExportDocumentsRequest}
          * @since 1.13
          */
@@ -281,20 +281,21 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Database to export. Should be of the form:
+         * Required. Database to export. Should be of the form:
          * `projects/{project_id}/databases/{database_id}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Database to export. Should be of the form: `projects/{project_id}/databases/{database_id}`.
+        /** Required. Database to export. Should be of the form:
+       `projects/{project_id}/databases/{database_id}`.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Database to export. Should be of the form:
+         * Required. Database to export. Should be of the form:
          * `projects/{project_id}/databases/{database_id}`.
          */
         public ExportDocuments setName(java.lang.String name) {
@@ -323,8 +324,8 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the firestore server.  After setting any optional
        * parameters, call the {@link ImportDocuments#execute()} method to invoke the remote operation.
        *
-       * @param name Database to import into. Should be of the form:
-      `projects/{project_id}/databases/{database_id}`.
+       * @param name Required. Database to import into. Should be of the form:
+       *        `projects/{project_id}/databases/{database_id}`.
        * @param content the {@link com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1ImportDocumentsRequest}
        * @return the request
        */
@@ -355,8 +356,8 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
          * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
          * the constructor. </p>
          *
-         * @param name Database to import into. Should be of the form:
-      `projects/{project_id}/databases/{database_id}`.
+         * @param name Required. Database to import into. Should be of the form:
+       *        `projects/{project_id}/databases/{database_id}`.
          * @param content the {@link com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1ImportDocumentsRequest}
          * @since 1.13
          */
@@ -426,20 +427,21 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Database to import into. Should be of the form:
+         * Required. Database to import into. Should be of the form:
          * `projects/{project_id}/databases/{database_id}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Database to import into. Should be of the form: `projects/{project_id}/databases/{database_id}`.
+        /** Required. Database to import into. Should be of the form:
+       `projects/{project_id}/databases/{database_id}`.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Database to import into. Should be of the form:
+         * Required. Database to import into. Should be of the form:
          * `projects/{project_id}/databases/{database_id}`.
          */
         public ImportDocuments setName(java.lang.String name) {
@@ -506,7 +508,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the firestore server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name A name of the form
+           * @param name Required. A name of the form
            *        `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/fields/{fi
            *        eld_id}`
            * @return the request
@@ -534,7 +536,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name A name of the form
+             * @param name Required. A name of the form
            *        `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/fields/{fi
            *        eld_id}`
              * @since 1.13
@@ -615,13 +617,13 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * A name of the form `projects/{project_id}/databases/{database_id}/collectionGroups/{c
-             * ollection_id}/fields/{field_id}`
+             * Required. A name of the form `projects/{project_id}/databases/{database_id}/collectio
+             * nGroups/{collection_id}/fields/{field_id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** A name of the form
+            /** Required. A name of the form
            `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/fields/{field_id}`
              */
             public java.lang.String getName() {
@@ -629,8 +631,8 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * A name of the form `projects/{project_id}/databases/{database_id}/collectionGroups/{c
-             * ollection_id}/fields/{field_id}`
+             * Required. A name of the form `projects/{project_id}/databases/{database_id}/collectio
+             * nGroups/{collection_id}/fields/{field_id}`
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -659,7 +661,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the firestore server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent A parent name of the form
+           * @param parent Required. A parent name of the form
            *        `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}`
            * @return the request
            */
@@ -690,7 +692,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent A parent name of the form
+             * @param parent Required. A parent name of the form
            *        `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}`
              * @since 1.13
              */
@@ -770,13 +772,13 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * A parent name of the form
+             * Required. A parent name of the form
              * `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** A parent name of the form
+            /** Required. A parent name of the form
            `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}`
              */
             public java.lang.String getParent() {
@@ -784,7 +786,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * A parent name of the form
+             * Required. A parent name of the form
              * `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}`
              */
             public List setParent(java.lang.String parent) {
@@ -1200,7 +1202,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the firestore server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent A parent name of the form
+           * @param parent Required. A parent name of the form
            *        `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}`
            * @param content the {@link com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1Index}
            * @return the request
@@ -1231,7 +1233,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent A parent name of the form
+             * @param parent Required. A parent name of the form
            *        `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}`
              * @param content the {@link com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1Index}
              * @since 1.13
@@ -1302,13 +1304,13 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * A parent name of the form
+             * Required. A parent name of the form
              * `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** A parent name of the form
+            /** Required. A parent name of the form
            `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}`
              */
             public java.lang.String getParent() {
@@ -1316,7 +1318,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * A parent name of the form
+             * Required. A parent name of the form
              * `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}`
              */
             public Create setParent(java.lang.String parent) {
@@ -1342,7 +1344,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the firestore server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name A name of the form
+           * @param name Required. A name of the form
            *        `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/indexes/{i
            *        ndex_id}`
            * @return the request
@@ -1371,7 +1373,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name A name of the form
+             * @param name Required. A name of the form
            *        `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/indexes/{i
            *        ndex_id}`
              * @since 1.13
@@ -1442,13 +1444,13 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * A name of the form `projects/{project_id}/databases/{database_id}/collectionGroups/{c
-             * ollection_id}/indexes/{index_id}`
+             * Required. A name of the form `projects/{project_id}/databases/{database_id}/collectio
+             * nGroups/{collection_id}/indexes/{index_id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** A name of the form
+            /** Required. A name of the form
            `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/indexes/{index_id}`
              */
             public java.lang.String getName() {
@@ -1456,8 +1458,8 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * A name of the form `projects/{project_id}/databases/{database_id}/collectionGroups/{c
-             * ollection_id}/indexes/{index_id}`
+             * Required. A name of the form `projects/{project_id}/databases/{database_id}/collectio
+             * nGroups/{collection_id}/indexes/{index_id}`
              */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -1482,7 +1484,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the firestore server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name A name of the form
+           * @param name Required. A name of the form
            *        `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/indexes/{i
            *        ndex_id}`
            * @return the request
@@ -1510,7 +1512,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name A name of the form
+             * @param name Required. A name of the form
            *        `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/indexes/{i
            *        ndex_id}`
              * @since 1.13
@@ -1591,13 +1593,13 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * A name of the form `projects/{project_id}/databases/{database_id}/collectionGroups/{c
-             * ollection_id}/indexes/{index_id}`
+             * Required. A name of the form `projects/{project_id}/databases/{database_id}/collectio
+             * nGroups/{collection_id}/indexes/{index_id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** A name of the form
+            /** Required. A name of the form
            `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/indexes/{index_id}`
              */
             public java.lang.String getName() {
@@ -1605,8 +1607,8 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * A name of the form `projects/{project_id}/databases/{database_id}/collectionGroups/{c
-             * ollection_id}/indexes/{index_id}`
+             * Required. A name of the form `projects/{project_id}/databases/{database_id}/collectio
+             * nGroups/{collection_id}/indexes/{index_id}`
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -1631,7 +1633,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the firestore server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent A parent name of the form
+           * @param parent Required. A parent name of the form
            *        `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}`
            * @return the request
            */
@@ -1658,7 +1660,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent A parent name of the form
+             * @param parent Required. A parent name of the form
            *        `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}`
              * @since 1.13
              */
@@ -1738,13 +1740,13 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * A parent name of the form
+             * Required. A parent name of the form
              * `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** A parent name of the form
+            /** Required. A parent name of the form
            `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}`
              */
             public java.lang.String getParent() {
@@ -1752,7 +1754,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * A parent name of the form
+             * Required. A parent name of the form
              * `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}`
              */
             public List setParent(java.lang.String parent) {
@@ -1859,7 +1861,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the firestore server.  After setting any optional
          * parameters, call the {@link BatchGet#execute()} method to invoke the remote operation.
          *
-         * @param database The database name. In the format:
+         * @param database Required. The database name. In the format:
         `projects/{project_id}/databases/{database_id}`.
          * @param content the {@link com.google.api.services.firestore.v1.model.BatchGetDocumentsRequest}
          * @return the request
@@ -1891,7 +1893,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            * BatchGet#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param database The database name. In the format:
+           * @param database Required. The database name. In the format:
         `projects/{project_id}/databases/{database_id}`.
            * @param content the {@link com.google.api.services.firestore.v1.model.BatchGetDocumentsRequest}
            * @since 1.13
@@ -1962,19 +1964,21 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * The database name. In the format: `projects/{project_id}/databases/{database_id}`.
+           * Required. The database name. In the format:
+           * `projects/{project_id}/databases/{database_id}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String database;
 
-          /** The database name. In the format: `projects/{project_id}/databases/{database_id}`.
+          /** Required. The database name. In the format: `projects/{project_id}/databases/{database_id}`.
            */
           public java.lang.String getDatabase() {
             return database;
           }
 
           /**
-           * The database name. In the format: `projects/{project_id}/databases/{database_id}`.
+           * Required. The database name. In the format:
+           * `projects/{project_id}/databases/{database_id}`.
            */
           public BatchGet setDatabase(java.lang.String database) {
             if (!getSuppressPatternChecks()) {
@@ -1999,7 +2003,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the firestore server.  After setting any optional
          * parameters, call the {@link BeginTransaction#execute()} method to invoke the remote operation.
          *
-         * @param database The database name. In the format:
+         * @param database Required. The database name. In the format:
         `projects/{project_id}/databases/{database_id}`.
          * @param content the {@link com.google.api.services.firestore.v1.model.BeginTransactionRequest}
          * @return the request
@@ -2028,7 +2032,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            * tractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param database The database name. In the format:
+           * @param database Required. The database name. In the format:
         `projects/{project_id}/databases/{database_id}`.
            * @param content the {@link com.google.api.services.firestore.v1.model.BeginTransactionRequest}
            * @since 1.13
@@ -2099,19 +2103,21 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * The database name. In the format: `projects/{project_id}/databases/{database_id}`.
+           * Required. The database name. In the format:
+           * `projects/{project_id}/databases/{database_id}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String database;
 
-          /** The database name. In the format: `projects/{project_id}/databases/{database_id}`.
+          /** Required. The database name. In the format: `projects/{project_id}/databases/{database_id}`.
            */
           public java.lang.String getDatabase() {
             return database;
           }
 
           /**
-           * The database name. In the format: `projects/{project_id}/databases/{database_id}`.
+           * Required. The database name. In the format:
+           * `projects/{project_id}/databases/{database_id}`.
            */
           public BeginTransaction setDatabase(java.lang.String database) {
             if (!getSuppressPatternChecks()) {
@@ -2136,7 +2142,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the firestore server.  After setting any optional
          * parameters, call the {@link Commit#execute()} method to invoke the remote operation.
          *
-         * @param database The database name. In the format:
+         * @param database Required. The database name. In the format:
         `projects/{project_id}/databases/{database_id}`.
          * @param content the {@link com.google.api.services.firestore.v1.model.CommitRequest}
          * @return the request
@@ -2165,7 +2171,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            * Commit#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param database The database name. In the format:
+           * @param database Required. The database name. In the format:
         `projects/{project_id}/databases/{database_id}`.
            * @param content the {@link com.google.api.services.firestore.v1.model.CommitRequest}
            * @since 1.13
@@ -2236,19 +2242,21 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * The database name. In the format: `projects/{project_id}/databases/{database_id}`.
+           * Required. The database name. In the format:
+           * `projects/{project_id}/databases/{database_id}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String database;
 
-          /** The database name. In the format: `projects/{project_id}/databases/{database_id}`.
+          /** Required. The database name. In the format: `projects/{project_id}/databases/{database_id}`.
            */
           public java.lang.String getDatabase() {
             return database;
           }
 
           /**
-           * The database name. In the format: `projects/{project_id}/databases/{database_id}`.
+           * Required. The database name. In the format:
+           * `projects/{project_id}/databases/{database_id}`.
            */
           public Commit setDatabase(java.lang.String database) {
             if (!getSuppressPatternChecks()) {
@@ -2273,10 +2281,10 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the firestore server.  After setting any optional
          * parameters, call the {@link CreateDocument#execute()} method to invoke the remote operation.
          *
-         * @param parent The parent resource. For example:
-        `projects/{project_id}/databases/{database_id}/documents` or
+         * @param parent Required. The parent resource. For example:
+         *        `projects/{project_id}/databases/{database_id}/documents` or
          *        `projects/{project_id}/databases/{database_id}/documents/chatrooms/{chatroom_id}`
-         * @param collectionId The collection ID, relative to `parent`, to list. For example: `chatrooms`.
+         * @param collectionId Required. The collection ID, relative to `parent`, to list. For example: `chatrooms`.
          * @param content the {@link com.google.api.services.firestore.v1.model.Document}
          * @return the request
          */
@@ -2304,10 +2312,10 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
            * the constructor. </p>
            *
-           * @param parent The parent resource. For example:
-        `projects/{project_id}/databases/{database_id}/documents` or
+           * @param parent Required. The parent resource. For example:
+         *        `projects/{project_id}/databases/{database_id}/documents` or
          *        `projects/{project_id}/databases/{database_id}/documents/chatrooms/{chatroom_id}`
-           * @param collectionId The collection ID, relative to `parent`, to list. For example: `chatrooms`.
+           * @param collectionId Required. The collection ID, relative to `parent`, to list. For example: `chatrooms`.
            * @param content the {@link com.google.api.services.firestore.v1.model.Document}
            * @since 1.13
            */
@@ -2378,14 +2386,15 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * The parent resource. For example:
+           * Required. The parent resource. For example:
            * `projects/{project_id}/databases/{database_id}/documents` or
            * `projects/{project_id}/databases/{database_id}/documents/chatrooms/{chatroom_id}`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The parent resource. For example: `projects/{project_id}/databases/{database_id}/documents` or
+          /** Required. The parent resource. For example:
+         `projects/{project_id}/databases/{database_id}/documents` or
          `projects/{project_id}/databases/{database_id}/documents/chatrooms/{chatroom_id}`
            */
           public java.lang.String getParent() {
@@ -2393,7 +2402,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * The parent resource. For example:
+           * Required. The parent resource. For example:
            * `projects/{project_id}/databases/{database_id}/documents` or
            * `projects/{project_id}/databases/{database_id}/documents/chatrooms/{chatroom_id}`
            */
@@ -2407,17 +2416,21 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
-          /** The collection ID, relative to `parent`, to list. For example: `chatrooms`. */
+          /**
+           * Required. The collection ID, relative to `parent`, to list. For example: `chatrooms`.
+           */
           @com.google.api.client.util.Key
           private java.lang.String collectionId;
 
-          /** The collection ID, relative to `parent`, to list. For example: `chatrooms`.
+          /** Required. The collection ID, relative to `parent`, to list. For example: `chatrooms`.
            */
           public java.lang.String getCollectionId() {
             return collectionId;
           }
 
-          /** The collection ID, relative to `parent`, to list. For example: `chatrooms`. */
+          /**
+           * Required. The collection ID, relative to `parent`, to list. For example: `chatrooms`.
+           */
           public CreateDocument setCollectionId(java.lang.String collectionId) {
             this.collectionId = collectionId;
             return this;
@@ -2484,7 +2497,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the firestore server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name The resource name of the Document to delete. In the format:
+         * @param name Required. The resource name of the Document to delete. In the format:
          *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
          * @return the request
          */
@@ -2512,7 +2525,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The resource name of the Document to delete. In the format:
+           * @param name Required. The resource name of the Document to delete. In the format:
          *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
            * @since 1.13
            */
@@ -2582,13 +2595,13 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * The resource name of the Document to delete. In the format:
+           * Required. The resource name of the Document to delete. In the format:
            * `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The resource name of the Document to delete. In the format:
+          /** Required. The resource name of the Document to delete. In the format:
          `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
            */
           public java.lang.String getName() {
@@ -2596,7 +2609,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * The resource name of the Document to delete. In the format:
+           * Required. The resource name of the Document to delete. In the format:
            * `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
            */
           public Delete setName(java.lang.String name) {
@@ -2665,7 +2678,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the firestore server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name The resource name of the Document to get. In the format:
+         * @param name Required. The resource name of the Document to get. In the format:
          *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
          * @return the request
          */
@@ -2692,7 +2705,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The resource name of the Document to get. In the format:
+           * @param name Required. The resource name of the Document to get. In the format:
          *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
            * @since 1.13
            */
@@ -2772,13 +2785,13 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * The resource name of the Document to get. In the format:
+           * Required. The resource name of the Document to get. In the format:
            * `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The resource name of the Document to get. In the format:
+          /** Required. The resource name of the Document to get. In the format:
          `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
            */
           public java.lang.String getName() {
@@ -2786,7 +2799,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * The resource name of the Document to get. In the format:
+           * Required. The resource name of the Document to get. In the format:
            * `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
            */
           public Get setName(java.lang.String name) {
@@ -2872,15 +2885,14 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the firestore server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent The parent resource name. In the format:
-        `projects/{project_id}/databases/{database_id}/documents`
-         *        or
-        `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
+         * @param parent Required. The parent resource name. In the format:
+         *        `projects/{project_id}/databases/{database_id}/documents` or
+         *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
         For example:
          *        `projects/my-project/databases/my-database/documents` or
         `projects/my-project/databases
          *        /my-database/documents/chatrooms/my-chatroom`
-         * @param collectionId The collection ID, relative to `parent`, to list. For example: `chatrooms`
+         * @param collectionId Required. The collection ID, relative to `parent`, to list. For example: `chatrooms`
         or `messages`.
          * @return the request
          */
@@ -2907,15 +2919,14 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The parent resource name. In the format:
-        `projects/{project_id}/databases/{database_id}/documents`
-         *        or
-        `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
+           * @param parent Required. The parent resource name. In the format:
+         *        `projects/{project_id}/databases/{database_id}/documents` or
+         *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
         For example:
          *        `projects/my-project/databases/my-database/documents` or
         `projects/my-project/databases
          *        /my-database/documents/chatrooms/my-chatroom`
-           * @param collectionId The collection ID, relative to `parent`, to list. For example: `chatrooms`
+           * @param collectionId Required. The collection ID, relative to `parent`, to list. For example: `chatrooms`
         or `messages`.
            * @since 1.13
            */
@@ -2996,7 +3007,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * The parent resource name. In the format:
+           * Required. The parent resource name. In the format:
            * `projects/{project_id}/databases/{database_id}/documents` or
            * `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
            * `projects/my-project/databases/my-database/documents` or `projects/my-project/databases
@@ -3005,9 +3016,10 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The parent resource name. In the format: `projects/{project_id}/databases/{database_id}/documents`
-         or `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
-         `projects/my-project/databases/my-database/documents` or `projects/my-project/databases/my-
+          /** Required. The parent resource name. In the format:
+         `projects/{project_id}/databases/{database_id}/documents` or
+         `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example: `projects
+         /my-project/databases/my-database/documents` or `projects/my-project/databases/my-
          database/documents/chatrooms/my-chatroom`
            */
           public java.lang.String getParent() {
@@ -3015,7 +3027,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * The parent resource name. In the format:
+           * Required. The parent resource name. In the format:
            * `projects/{project_id}/databases/{database_id}/documents` or
            * `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
            * `projects/my-project/databases/my-database/documents` or `projects/my-project/databases
@@ -3032,20 +3044,20 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * The collection ID, relative to `parent`, to list. For example: `chatrooms` or
+           * Required. The collection ID, relative to `parent`, to list. For example: `chatrooms` or
            * `messages`.
            */
           @com.google.api.client.util.Key
           private java.lang.String collectionId;
 
-          /** The collection ID, relative to `parent`, to list. For example: `chatrooms` or `messages`.
+          /** Required. The collection ID, relative to `parent`, to list. For example: `chatrooms` or `messages`.
            */
           public java.lang.String getCollectionId() {
             return collectionId;
           }
 
           /**
-           * The collection ID, relative to `parent`, to list. For example: `chatrooms` or
+           * Required. The collection ID, relative to `parent`, to list. For example: `chatrooms` or
            * `messages`.
            */
           public List setCollectionId(java.lang.String collectionId) {
@@ -3204,7 +3216,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the firestore server.  After setting any optional
          * parameters, call the {@link ListCollectionIds#execute()} method to invoke the remote operation.
          *
-         * @param parent The parent document. In the format:
+         * @param parent Required. The parent document. In the format:
          *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
         For example:
          *        `projects/my-project/databases/my-database/documents/chatrooms/my-chatroom`
@@ -3235,7 +3247,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            * stractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param parent The parent document. In the format:
+           * @param parent Required. The parent document. In the format:
          *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
         For example:
          *        `projects/my-project/databases/my-database/documents/chatrooms/my-chatroom`
@@ -3308,14 +3320,14 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * The parent document. In the format:
+           * Required. The parent document. In the format:
            * `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
            * `projects/my-project/databases/my-database/documents/chatrooms/my-chatroom`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The parent document. In the format:
+          /** Required. The parent document. In the format:
          `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example: `projects
          /my-project/databases/my-database/documents/chatrooms/my-chatroom`
            */
@@ -3324,7 +3336,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * The parent document. In the format:
+           * Required. The parent document. In the format:
            * `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
            * `projects/my-project/databases/my-database/documents/chatrooms/my-chatroom`
            */
@@ -3351,7 +3363,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the firestore server.  After setting any optional
          * parameters, call the {@link Listen#execute()} method to invoke the remote operation.
          *
-         * @param database The database name. In the format:
+         * @param database Required. The database name. In the format:
         `projects/{project_id}/databases/{database_id}`.
          * @param content the {@link com.google.api.services.firestore.v1.model.ListenRequest}
          * @return the request
@@ -3380,7 +3392,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            * Listen#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param database The database name. In the format:
+           * @param database Required. The database name. In the format:
         `projects/{project_id}/databases/{database_id}`.
            * @param content the {@link com.google.api.services.firestore.v1.model.ListenRequest}
            * @since 1.13
@@ -3451,19 +3463,21 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * The database name. In the format: `projects/{project_id}/databases/{database_id}`.
+           * Required. The database name. In the format:
+           * `projects/{project_id}/databases/{database_id}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String database;
 
-          /** The database name. In the format: `projects/{project_id}/databases/{database_id}`.
+          /** Required. The database name. In the format: `projects/{project_id}/databases/{database_id}`.
            */
           public java.lang.String getDatabase() {
             return database;
           }
 
           /**
-           * The database name. In the format: `projects/{project_id}/databases/{database_id}`.
+           * Required. The database name. In the format:
+           * `projects/{project_id}/databases/{database_id}`.
            */
           public Listen setDatabase(java.lang.String database) {
             if (!getSuppressPatternChecks()) {
@@ -3715,7 +3729,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the firestore server.  After setting any optional
          * parameters, call the {@link Rollback#execute()} method to invoke the remote operation.
          *
-         * @param database The database name. In the format:
+         * @param database Required. The database name. In the format:
         `projects/{project_id}/databases/{database_id}`.
          * @param content the {@link com.google.api.services.firestore.v1.model.RollbackRequest}
          * @return the request
@@ -3744,7 +3758,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            * Rollback#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param database The database name. In the format:
+           * @param database Required. The database name. In the format:
         `projects/{project_id}/databases/{database_id}`.
            * @param content the {@link com.google.api.services.firestore.v1.model.RollbackRequest}
            * @since 1.13
@@ -3815,19 +3829,21 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * The database name. In the format: `projects/{project_id}/databases/{database_id}`.
+           * Required. The database name. In the format:
+           * `projects/{project_id}/databases/{database_id}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String database;
 
-          /** The database name. In the format: `projects/{project_id}/databases/{database_id}`.
+          /** Required. The database name. In the format: `projects/{project_id}/databases/{database_id}`.
            */
           public java.lang.String getDatabase() {
             return database;
           }
 
           /**
-           * The database name. In the format: `projects/{project_id}/databases/{database_id}`.
+           * Required. The database name. In the format:
+           * `projects/{project_id}/databases/{database_id}`.
            */
           public Rollback setDatabase(java.lang.String database) {
             if (!getSuppressPatternChecks()) {
@@ -3852,10 +3868,9 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the firestore server.  After setting any optional
          * parameters, call the {@link RunQuery#execute()} method to invoke the remote operation.
          *
-         * @param parent The parent resource name. In the format:
-        `projects/{project_id}/databases/{database_id}/documents`
-         *        or
-        `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
+         * @param parent Required. The parent resource name. In the format:
+         *        `projects/{project_id}/databases/{database_id}/documents` or
+         *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
         For example:
          *        `projects/my-project/databases/my-database/documents` or
         `projects/my-project/databases
@@ -3887,10 +3902,9 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            * RunQuery#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The parent resource name. In the format:
-        `projects/{project_id}/databases/{database_id}/documents`
-         *        or
-        `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
+           * @param parent Required. The parent resource name. In the format:
+         *        `projects/{project_id}/databases/{database_id}/documents` or
+         *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
         For example:
          *        `projects/my-project/databases/my-database/documents` or
         `projects/my-project/databases
@@ -3964,7 +3978,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * The parent resource name. In the format:
+           * Required. The parent resource name. In the format:
            * `projects/{project_id}/databases/{database_id}/documents` or
            * `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
            * `projects/my-project/databases/my-database/documents` or `projects/my-project/databases
@@ -3973,9 +3987,10 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The parent resource name. In the format: `projects/{project_id}/databases/{database_id}/documents`
-         or `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
-         `projects/my-project/databases/my-database/documents` or `projects/my-project/databases/my-
+          /** Required. The parent resource name. In the format:
+         `projects/{project_id}/databases/{database_id}/documents` or
+         `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example: `projects
+         /my-project/databases/my-database/documents` or `projects/my-project/databases/my-
          database/documents/chatrooms/my-chatroom`
            */
           public java.lang.String getParent() {
@@ -3983,7 +3998,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * The parent resource name. In the format:
+           * Required. The parent resource name. In the format:
            * `projects/{project_id}/databases/{database_id}/documents` or
            * `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
            * `projects/my-project/databases/my-database/documents` or `projects/my-project/databases
@@ -4012,10 +4027,10 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the firestore server.  After setting any optional
          * parameters, call the {@link Write#execute()} method to invoke the remote operation.
          *
-         * @param database The database name. In the format:
+         * @param database Required. The database name. In the format:
         `projects/{project_id}/databases/{database_id}`.
-        This is only
-         *        required in the first message.
+        This is
+         *        only required in the first message.
          * @param content the {@link com.google.api.services.firestore.v1.model.WriteRequest}
          * @return the request
          */
@@ -4043,10 +4058,10 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            * Write#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param database The database name. In the format:
+           * @param database Required. The database name. In the format:
         `projects/{project_id}/databases/{database_id}`.
-        This is only
-         *        required in the first message.
+        This is
+         *        only required in the first message.
            * @param content the {@link com.google.api.services.firestore.v1.model.WriteRequest}
            * @since 1.13
            */
@@ -4116,22 +4131,24 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * The database name. In the format: `projects/{project_id}/databases/{database_id}`. This
-           * is only required in the first message.
+           * Required. The database name. In the format:
+           * `projects/{project_id}/databases/{database_id}`. This is only required in the first
+           * message.
            */
           @com.google.api.client.util.Key
           private java.lang.String database;
 
-          /** The database name. In the format: `projects/{project_id}/databases/{database_id}`. This is only
-         required in the first message.
+          /** Required. The database name. In the format: `projects/{project_id}/databases/{database_id}`. This
+         is only required in the first message.
            */
           public java.lang.String getDatabase() {
             return database;
           }
 
           /**
-           * The database name. In the format: `projects/{project_id}/databases/{database_id}`. This
-           * is only required in the first message.
+           * Required. The database name. In the format:
+           * `projects/{project_id}/databases/{database_id}`. This is only required in the first
+           * message.
            */
           public Write setDatabase(java.lang.String database) {
             if (!getSuppressPatternChecks()) {

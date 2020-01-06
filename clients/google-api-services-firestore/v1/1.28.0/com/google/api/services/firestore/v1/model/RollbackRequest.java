@@ -30,14 +30,14 @@ package com.google.api.services.firestore.v1.model;
 public final class RollbackRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The transaction to roll back.
+   * Required. The transaction to roll back.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String transaction;
 
   /**
-   * The transaction to roll back.
+   * Required. The transaction to roll back.
    * @see #decodeTransaction()
    * @return value or {@code null} for none
    */
@@ -46,7 +46,7 @@ public final class RollbackRequest extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The transaction to roll back.
+   * Required. The transaction to roll back.
    * @see #getTransaction()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -57,7 +57,7 @@ public final class RollbackRequest extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The transaction to roll back.
+   * Required. The transaction to roll back.
    * @see #encodeTransaction()
    * @param transaction transaction or {@code null} for none
    */
@@ -67,7 +67,7 @@ public final class RollbackRequest extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The transaction to roll back.
+   * Required. The transaction to roll back.
    * @see #setTransaction()
    *
    * <p>

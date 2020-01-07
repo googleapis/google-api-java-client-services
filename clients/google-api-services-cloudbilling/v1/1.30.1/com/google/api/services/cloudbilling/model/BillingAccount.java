@@ -57,9 +57,9 @@ public final class BillingAccount extends com.google.api.client.json.GenericJson
   private java.lang.String name;
 
   /**
-   * True if the billing account is open, and will therefore be charged for any usage on associated
-   * projects. False if the billing account is closed, and therefore projects associated with it
-   * will be unable to use paid services.
+   * Output only. True if the billing account is open, and will therefore be charged for any usage
+   * on associated projects. False if the billing account is closed, and therefore projects
+   * associated with it will be unable to use paid services.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -127,9 +127,9 @@ public final class BillingAccount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * True if the billing account is open, and will therefore be charged for any usage on associated
-   * projects. False if the billing account is closed, and therefore projects associated with it
-   * will be unable to use paid services.
+   * Output only. True if the billing account is open, and will therefore be charged for any usage
+   * on associated projects. False if the billing account is closed, and therefore projects
+   * associated with it will be unable to use paid services.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getOpen() {
@@ -137,9 +137,9 @@ public final class BillingAccount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * True if the billing account is open, and will therefore be charged for any usage on associated
-   * projects. False if the billing account is closed, and therefore projects associated with it
-   * will be unable to use paid services.
+   * Output only. True if the billing account is open, and will therefore be charged for any usage
+   * on associated projects. False if the billing account is closed, and therefore projects
+   * associated with it will be unable to use paid services.
    * @param open open or {@code null} for none
    */
   public BillingAccount setOpen(java.lang.Boolean open) {

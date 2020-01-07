@@ -72,7 +72,8 @@ public final class Parameter extends com.google.api.client.json.GenericJson {
    * list: A list of parameters should be specified map: A map of parameters should be specified
    * template: The value represents any text; this can include     variable references (even
    * variable references that might return     non-string types) trigger_reference: The value
-   * represents a trigger,     represented as the trigger id
+   * represents a trigger,     represented as the trigger id tag_reference: The value represents a
+   * tag, represented as     the tag name
    *
    * @mutable tagmanager.accounts.containers.variables.create @mutable
    * tagmanager.accounts.containers.variables.update @mutable
@@ -185,7 +186,8 @@ public final class Parameter extends com.google.api.client.json.GenericJson {
    * list: A list of parameters should be specified map: A map of parameters should be specified
    * template: The value represents any text; this can include     variable references (even
    * variable references that might return     non-string types) trigger_reference: The value
-   * represents a trigger,     represented as the trigger id
+   * represents a trigger,     represented as the trigger id tag_reference: The value represents a
+   * tag, represented as     the tag name
    *
    * @mutable tagmanager.accounts.containers.variables.create @mutable
    * tagmanager.accounts.containers.variables.update @mutable
@@ -204,7 +206,8 @@ public final class Parameter extends com.google.api.client.json.GenericJson {
    * list: A list of parameters should be specified map: A map of parameters should be specified
    * template: The value represents any text; this can include     variable references (even
    * variable references that might return     non-string types) trigger_reference: The value
-   * represents a trigger,     represented as the trigger id
+   * represents a trigger,     represented as the trigger id tag_reference: The value represents a
+   * tag, represented as     the tag name
    *
    * @mutable tagmanager.accounts.containers.variables.create @mutable
    * tagmanager.accounts.containers.variables.update @mutable

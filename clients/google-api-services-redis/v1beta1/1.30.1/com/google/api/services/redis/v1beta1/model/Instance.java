@@ -151,8 +151,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The version of Redis software. If not provided, latest supported version will be
-   * used. Updating the version will perform an upgrade/downgrade to the new version. Currently, the
-   * supported values are:
+   * used. Currently, the supported values are:
    *
    *  *   `REDIS_4_0` for Redis 4.0 compatibility (default)  *   `REDIS_3_2` for Redis 3.2
    * compatibility
@@ -471,8 +470,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The version of Redis software. If not provided, latest supported version will be
-   * used. Updating the version will perform an upgrade/downgrade to the new version. Currently, the
-   * supported values are:
+   * used. Currently, the supported values are:
    *
    *  *   `REDIS_4_0` for Redis 4.0 compatibility (default)  *   `REDIS_3_2` for Redis 3.2
    * compatibility
@@ -484,8 +482,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The version of Redis software. If not provided, latest supported version will be
-   * used. Updating the version will perform an upgrade/downgrade to the new version. Currently, the
-   * supported values are:
+   * used. Currently, the supported values are:
    *
    *  *   `REDIS_4_0` for Redis 4.0 compatibility (default)  *   `REDIS_3_2` for Redis 3.2
    * compatibility

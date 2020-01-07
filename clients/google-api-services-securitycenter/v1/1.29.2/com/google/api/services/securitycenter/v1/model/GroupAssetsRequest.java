@@ -92,9 +92,12 @@ public final class GroupAssetsRequest extends com.google.api.client.json.Generic
    *
    * * iam_policy.policy_blob: `=`, `:` * resource_properties: `=`, `:`, `>`, `<`, `>=`, `<=` *
    * security_marks.marks: `=`, `:` * security_center_properties.resource_name: `=`, `:` *
+   * security_center_properties.resource_display_name: `=`, `:` *
    * security_center_properties.resource_type: `=`, `:` *
    * security_center_properties.resource_parent: `=`, `:` *
+   * security_center_properties.resource_parent_display_name: `=`, `:` *
    * security_center_properties.resource_project: `=`, `:` *
+   * security_center_properties.resource_project_display_name: `=`, `:` *
    * security_center_properties.resource_owners: `=`, `:`
    *
    * For example, `resource_properties.size = 100` is a valid filter string.
@@ -110,12 +113,16 @@ public final class GroupAssetsRequest extends com.google.api.client.json.Generic
    *
    * The following fields are supported when compare_duration is not set:
    *
-   * * security_center_properties.resource_project * security_center_properties.resource_type *
-   * security_center_properties.resource_parent
+   * * security_center_properties.resource_project *
+   * security_center_properties.resource_project_display_name *
+   * security_center_properties.resource_type * security_center_properties.resource_parent *
+   * security_center_properties.resource_parent_display_name
    *
    * The following fields are supported when compare_duration is set:
    *
-   * * security_center_properties.resource_type
+   * * security_center_properties.resource_type *
+   * security_center_properties.resource_project_display_name *
+   * security_center_properties.resource_parent_display_name
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -238,9 +245,12 @@ public final class GroupAssetsRequest extends com.google.api.client.json.Generic
    *
    * * iam_policy.policy_blob: `=`, `:` * resource_properties: `=`, `:`, `>`, `<`, `>=`, `<=` *
    * security_marks.marks: `=`, `:` * security_center_properties.resource_name: `=`, `:` *
+   * security_center_properties.resource_display_name: `=`, `:` *
    * security_center_properties.resource_type: `=`, `:` *
    * security_center_properties.resource_parent: `=`, `:` *
+   * security_center_properties.resource_parent_display_name: `=`, `:` *
    * security_center_properties.resource_project: `=`, `:` *
+   * security_center_properties.resource_project_display_name: `=`, `:` *
    * security_center_properties.resource_owners: `=`, `:`
    *
    * For example, `resource_properties.size = 100` is a valid filter string.
@@ -285,9 +295,12 @@ public final class GroupAssetsRequest extends com.google.api.client.json.Generic
    *
    * * iam_policy.policy_blob: `=`, `:` * resource_properties: `=`, `:`, `>`, `<`, `>=`, `<=` *
    * security_marks.marks: `=`, `:` * security_center_properties.resource_name: `=`, `:` *
+   * security_center_properties.resource_display_name: `=`, `:` *
    * security_center_properties.resource_type: `=`, `:` *
    * security_center_properties.resource_parent: `=`, `:` *
+   * security_center_properties.resource_parent_display_name: `=`, `:` *
    * security_center_properties.resource_project: `=`, `:` *
+   * security_center_properties.resource_project_display_name: `=`, `:` *
    * security_center_properties.resource_owners: `=`, `:`
    *
    * For example, `resource_properties.size = 100` is a valid filter string.
@@ -305,12 +318,16 @@ public final class GroupAssetsRequest extends com.google.api.client.json.Generic
    *
    * The following fields are supported when compare_duration is not set:
    *
-   * * security_center_properties.resource_project * security_center_properties.resource_type *
-   * security_center_properties.resource_parent
+   * * security_center_properties.resource_project *
+   * security_center_properties.resource_project_display_name *
+   * security_center_properties.resource_type * security_center_properties.resource_parent *
+   * security_center_properties.resource_parent_display_name
    *
    * The following fields are supported when compare_duration is set:
    *
-   * * security_center_properties.resource_type
+   * * security_center_properties.resource_type *
+   * security_center_properties.resource_project_display_name *
+   * security_center_properties.resource_parent_display_name
    * @return value or {@code null} for none
    */
   public java.lang.String getGroupBy() {
@@ -324,12 +341,16 @@ public final class GroupAssetsRequest extends com.google.api.client.json.Generic
    *
    * The following fields are supported when compare_duration is not set:
    *
-   * * security_center_properties.resource_project * security_center_properties.resource_type *
-   * security_center_properties.resource_parent
+   * * security_center_properties.resource_project *
+   * security_center_properties.resource_project_display_name *
+   * security_center_properties.resource_type * security_center_properties.resource_parent *
+   * security_center_properties.resource_parent_display_name
    *
    * The following fields are supported when compare_duration is set:
    *
-   * * security_center_properties.resource_type
+   * * security_center_properties.resource_type *
+   * security_center_properties.resource_project_display_name *
+   * security_center_properties.resource_parent_display_name
    * @param groupBy groupBy or {@code null} for none
    */
   public GroupAssetsRequest setGroupBy(java.lang.String groupBy) {

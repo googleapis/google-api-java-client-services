@@ -261,7 +261,7 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the cloudbilling server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param name The resource name of the billing account to retrieve. For example,
+     * @param name Required. The resource name of the billing account to retrieve. For example,
      *        `billingAccounts/012345-567890-ABCDEF`.
      * @return the request
      */
@@ -289,7 +289,7 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
        * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name The resource name of the billing account to retrieve. For example,
+       * @param name Required. The resource name of the billing account to retrieve. For example,
      *        `billingAccounts/012345-567890-ABCDEF`.
        * @since 1.13
        */
@@ -369,13 +369,13 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * The resource name of the billing account to retrieve. For example,
+       * Required. The resource name of the billing account to retrieve. For example,
        * `billingAccounts/012345-567890-ABCDEF`.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The resource name of the billing account to retrieve. For example,
+      /** Required. The resource name of the billing account to retrieve. For example,
      `billingAccounts/012345-567890-ABCDEF`.
        */
       public java.lang.String getName() {
@@ -383,7 +383,7 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * The resource name of the billing account to retrieve. For example,
+       * Required. The resource name of the billing account to retrieve. For example,
        * `billingAccounts/012345-567890-ABCDEF`.
        */
       public Get setName(java.lang.String name) {
@@ -785,7 +785,7 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the cloudbilling server.  After setting any optional
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
-     * @param name The name of the billing account resource to be updated.
+     * @param name Required. The name of the billing account resource to be updated.
      * @param content the {@link com.google.api.services.cloudbilling.model.BillingAccount}
      * @return the request
      */
@@ -817,7 +817,7 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
        * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name The name of the billing account resource to be updated.
+       * @param name Required. The name of the billing account resource to be updated.
        * @param content the {@link com.google.api.services.cloudbilling.model.BillingAccount}
        * @since 1.13
        */
@@ -886,17 +886,17 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
         return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** The name of the billing account resource to be updated. */
+      /** Required. The name of the billing account resource to be updated. */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The name of the billing account resource to be updated.
+      /** Required. The name of the billing account resource to be updated.
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /** The name of the billing account resource to be updated. */
+      /** Required. The name of the billing account resource to be updated. */
       public Patch setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1256,9 +1256,9 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the cloudbilling server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param name The resource name of the billing account associated with the projects that
-      you want to list. For
-       *        example, `billingAccounts/012345-567890-ABCDEF`.
+       * @param name Required. The resource name of the billing account associated with the projects that
+      you want to
+       *        list. For example, `billingAccounts/012345-567890-ABCDEF`.
        * @return the request
        */
       public List list(java.lang.String name) throws java.io.IOException {
@@ -1286,9 +1286,9 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The resource name of the billing account associated with the projects that
-      you want to list. For
-       *        example, `billingAccounts/012345-567890-ABCDEF`.
+         * @param name Required. The resource name of the billing account associated with the projects that
+      you want to
+       *        list. For example, `billingAccounts/012345-567890-ABCDEF`.
          * @since 1.13
          */
         protected List(java.lang.String name) {
@@ -1367,22 +1367,22 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * The resource name of the billing account associated with the projects that you want to
-         * list. For example, `billingAccounts/012345-567890-ABCDEF`.
+         * Required. The resource name of the billing account associated with the projects that you
+         * want to list. For example, `billingAccounts/012345-567890-ABCDEF`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The resource name of the billing account associated with the projects that you want to list. For
-       example, `billingAccounts/012345-567890-ABCDEF`.
+        /** Required. The resource name of the billing account associated with the projects that you want to
+       list. For example, `billingAccounts/012345-567890-ABCDEF`.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The resource name of the billing account associated with the projects that you want to
-         * list. For example, `billingAccounts/012345-567890-ABCDEF`.
+         * Required. The resource name of the billing account associated with the projects that you
+         * want to list. For example, `billingAccounts/012345-567890-ABCDEF`.
          */
         public List setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -1478,9 +1478,9 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the cloudbilling server.  After setting any optional
      * parameters, call the {@link GetBillingInfo#execute()} method to invoke the remote operation.
      *
-     * @param name The resource name of the project for which billing information is
-    retrieved. For example, `projects
-     *        /tokyo-rain-123`.
+     * @param name Required. The resource name of the project for which billing information is
+    retrieved. For example,
+     *        `projects/tokyo-rain-123`.
      * @return the request
      */
     public GetBillingInfo getBillingInfo(java.lang.String name) throws java.io.IOException {
@@ -1509,9 +1509,9 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
        * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
        * the constructor. </p>
        *
-       * @param name The resource name of the project for which billing information is
-    retrieved. For example, `projects
-     *        /tokyo-rain-123`.
+       * @param name Required. The resource name of the project for which billing information is
+    retrieved. For example,
+     *        `projects/tokyo-rain-123`.
        * @since 1.13
        */
       protected GetBillingInfo(java.lang.String name) {
@@ -1590,22 +1590,22 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * The resource name of the project for which billing information is retrieved. For example,
-       * `projects/tokyo-rain-123`.
+       * Required. The resource name of the project for which billing information is retrieved. For
+       * example, `projects/tokyo-rain-123`.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The resource name of the project for which billing information is retrieved. For example, `projects
-     /tokyo-rain-123`.
+      /** Required. The resource name of the project for which billing information is retrieved. For example,
+     `projects/tokyo-rain-123`.
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * The resource name of the project for which billing information is retrieved. For example,
-       * `projects/tokyo-rain-123`.
+       * Required. The resource name of the project for which billing information is retrieved. For
+       * example, `projects/tokyo-rain-123`.
        */
       public GetBillingInfo setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -1653,9 +1653,9 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the cloudbilling server.  After setting any optional
      * parameters, call the {@link UpdateBillingInfo#execute()} method to invoke the remote operation.
      *
-     * @param name The resource name of the project associated with the billing information
-    that you want to update.
-     *        For example, `projects/tokyo-rain-123`.
+     * @param name Required. The resource name of the project associated with the billing information
+    that you want to
+     *        update. For example, `projects/tokyo-rain-123`.
      * @param content the {@link com.google.api.services.cloudbilling.model.ProjectBillingInfo}
      * @return the request
      */
@@ -1707,9 +1707,9 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
        * stractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param name The resource name of the project associated with the billing information
-    that you want to update.
-     *        For example, `projects/tokyo-rain-123`.
+       * @param name Required. The resource name of the project associated with the billing information
+    that you want to
+     *        update. For example, `projects/tokyo-rain-123`.
        * @param content the {@link com.google.api.services.cloudbilling.model.ProjectBillingInfo}
        * @since 1.13
        */
@@ -1779,22 +1779,22 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * The resource name of the project associated with the billing information that you want to
-       * update. For example, `projects/tokyo-rain-123`.
+       * Required. The resource name of the project associated with the billing information that you
+       * want to update. For example, `projects/tokyo-rain-123`.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The resource name of the project associated with the billing information that you want to update.
-     For example, `projects/tokyo-rain-123`.
+      /** Required. The resource name of the project associated with the billing information that you want to
+     update. For example, `projects/tokyo-rain-123`.
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * The resource name of the project associated with the billing information that you want to
-       * update. For example, `projects/tokyo-rain-123`.
+       * Required. The resource name of the project associated with the billing information that you
+       * want to update. For example, `projects/tokyo-rain-123`.
        */
       public UpdateBillingInfo setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {

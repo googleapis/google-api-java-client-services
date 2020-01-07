@@ -45,6 +45,13 @@ public final class Authentication extends com.google.api.client.json.GenericJson
   private GoogleAccount googleAccount;
 
   /**
+   * Authentication using Identity-Aware-Proxy (IAP).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IapCredential iapCredential;
+
+  /**
    * Authentication using a custom account.
    * @return value or {@code null} for none
    */
@@ -75,6 +82,23 @@ public final class Authentication extends com.google.api.client.json.GenericJson
    */
   public Authentication setGoogleAccount(GoogleAccount googleAccount) {
     this.googleAccount = googleAccount;
+    return this;
+  }
+
+  /**
+   * Authentication using Identity-Aware-Proxy (IAP).
+   * @return value or {@code null} for none
+   */
+  public IapCredential getIapCredential() {
+    return iapCredential;
+  }
+
+  /**
+   * Authentication using Identity-Aware-Proxy (IAP).
+   * @param iapCredential iapCredential or {@code null} for none
+   */
+  public Authentication setIapCredential(IapCredential iapCredential) {
+    this.iapCredential = iapCredential;
     return this;
   }
 

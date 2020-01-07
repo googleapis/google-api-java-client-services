@@ -49,7 +49,7 @@ packages on [Maven Central][maven-search].
 | Cloud Bigtable Admin API | [v1](clients/google-api-services-bigtableadmin/v1), [v2](clients/google-api-services-bigtableadmin/v2) |
 | Cloud Billing API | [v1](clients/google-api-services-cloudbilling/v1) |
 | Cloud Billing Budget API | [v1beta1](clients/google-api-services-billingbudgets/v1beta1) |
-| Cloud Build API | [v1](clients/google-api-services-cloudbuild/v1) |
+| Cloud Build API | [v1](clients/google-api-services-cloudbuild/v1), [v1alpha1](clients/google-api-services-cloudbuild/v1alpha1) |
 | Cloud Composer API | [v1](clients/google-api-services-composer/v1), [v1beta1](clients/google-api-services-composer/v1beta1) |
 | Cloud Data Fusion API | [v1beta1](clients/google-api-services-datafusion/v1beta1) |
 | Cloud Data Loss Prevention (DLP) API | [v2](clients/google-api-services-dlp/v2) |
@@ -86,7 +86,7 @@ packages on [Maven Central][maven-search].
 | Cloud Tasks API | [v2](clients/google-api-services-cloudtasks/v2), [v2beta2](clients/google-api-services-cloudtasks/v2beta2), [v2beta3](clients/google-api-services-cloudtasks/v2beta3) |
 | Cloud Testing API | [v1](clients/google-api-services-testing/v1) |
 | Cloud Text-to-Speech API | [v1](clients/google-api-services-texttospeech/v1), [v1beta1](clients/google-api-services-texttospeech/v1beta1) |
-| Cloud Tool Results API | [v1beta3](clients/google-api-services-toolresults/v1beta3) |
+| Cloud Tool Results API | [v1](clients/google-api-services-toolresults/v1), [v1beta3](clients/google-api-services-toolresults/v1beta3) |
 | Cloud Translation API | [v3beta1](clients/google-api-services-translate/v3beta1) |
 | Cloud Video Intelligence API | [v1](clients/google-api-services-videointelligence/v1), [v1beta2](clients/google-api-services-videointelligence/v1beta2), [v1p1beta1](clients/google-api-services-videointelligence/v1p1beta1), [v1p2beta1](clients/google-api-services-videointelligence/v1p2beta1), [v1p3beta1](clients/google-api-services-videointelligence/v1p3beta1) |
 | Cloud Vision API | [v1](clients/google-api-services-vision/v1), [v1p1beta1](clients/google-api-services-vision/v1p1beta1), [v1p2beta1](clients/google-api-services-vision/v1p2beta1) |
@@ -110,7 +110,6 @@ packages on [Maven Central][maven-search].
 | Firebase Management API | [v1beta1](clients/google-api-services-firebase/v1beta1) |
 | Firebase Rules API | [v1](clients/google-api-services-firebaserules/v1) |
 | Fitness | [v1](clients/google-api-services-fitness/v1) |
-| Fusion Tables API | [v1](clients/google-api-services-fusiontables/v1), [v2](clients/google-api-services-fusiontables/v2) |
 | G Suite Alert Center API | [v1beta1](clients/google-api-services-alertcenter/v1beta1) |
 | G Suite Vault API | [v1](clients/google-api-services-vault/v1) |
 | Genomics API | [v1](clients/google-api-services-genomics/v1), [v1alpha2](clients/google-api-services-genomics/v1alpha2), [v2alpha1](clients/google-api-services-genomics/v2alpha1) |
@@ -157,15 +156,18 @@ packages on [Maven Central][maven-search].
 | PageSpeed Insights API | [v1](clients/google-api-services-pagespeedonline/v1), [v2](clients/google-api-services-pagespeedonline/v2), [v4](clients/google-api-services-pagespeedonline/v4), [v5](clients/google-api-services-pagespeedonline/v5) |
 | People API | [v1](clients/google-api-services-people/v1) |
 | Perspective Comment Analyzer API | [v1alpha1](clients/google-api-services-commentanalyzer/v1alpha1) |
-| Policy Troubleshooter API | [v1beta](clients/google-api-services-policytroubleshooter/v1beta) |
+| Policy Troubleshooter API | [v1](clients/google-api-services-policytroubleshooter/v1), [v1beta](clients/google-api-services-policytroubleshooter/v1beta) |
 | Poly API | [v1](clients/google-api-services-poly/v1) |
 | Proximity Beacon API | [v1beta1](clients/google-api-services-proximitybeacon/v1beta1) |
 | Recommender API | [v1beta1](clients/google-api-services-recommender/v1beta1) |
 | Remote Build Execution API | [v1](clients/google-api-services-remotebuildexecution/v1), [v1alpha](clients/google-api-services-remotebuildexecution/v1alpha), [v2](clients/google-api-services-remotebuildexecution/v2) |
 | Replica Pool API | [v1beta1](clients/google-api-services-replicapool/v1beta1) |
+| SAS Portal API | [v1alpha1](clients/google-api-services-sasportal/v1alpha1) |
+| SAS Portal API (Testing) | [v1alpha1](clients/google-api-services-prod_tt_sasportal/v1alpha1) |
 | Safe Browsing API | [v4](clients/google-api-services-safebrowsing/v4) |
 | Search Ads 360 API | [v2](clients/google-api-services-doubleclicksearch/v2) |
 | Search Console API | [v3](clients/google-api-services-webmasters/v3) |
+| Secret Manager API | [v1beta1](clients/google-api-services-secretmanager/v1beta1) |
 | Service Broker API | [v1](clients/google-api-services-servicebroker/v1), [v1alpha1](clients/google-api-services-servicebroker/v1alpha1), [v1beta1](clients/google-api-services-servicebroker/v1beta1) |
 | Service Consumer Management API | [v1](clients/google-api-services-serviceconsumermanagement/v1) |
 | Service Control API | [v1](clients/google-api-services-servicecontrol/v1) |
@@ -180,7 +182,6 @@ packages on [Maven Central][maven-search].
 | Stackdriver Trace API | [v1](clients/google-api-services-cloudtrace/v1), [v2](clients/google-api-services-cloudtrace/v2) |
 | Storage Transfer API | [v1](clients/google-api-services-storagetransfer/v1) |
 | Street View Publish API | [v1](clients/google-api-services-streetviewpublish/v1) |
-| Surveys API | [v2](clients/google-api-services-surveys/v2) |
 | Tag Manager API | [v1](clients/google-api-services-tagmanager/v1), [v2](clients/google-api-services-tagmanager/v2) |
 | Tasks API | [v1](clients/google-api-services-tasks/v1) |
 | Verified Access API | [v1](clients/google-api-services-verifiedaccess/v1) |

@@ -68,6 +68,13 @@ public final class ScanConfig extends com.google.api.client.json.GenericJson {
   private ScanRun latestRun;
 
   /**
+   * Whether the scan config is managed by Cloud Web Security Scanner, output only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean managedScan;
+
+  /**
    * The maximum QPS during scanning. A valid value ranges from 5 to 20 inclusively. If the field is
    * unspecified or its value is set 0, server will default to 15. Other values outside of [5, 20]
    * range will be rejected with INVALID_ARGUMENT error.
@@ -105,6 +112,14 @@ public final class ScanConfig extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> startingUrls;
+
+  /**
+   * Whether the scan configuration has enabled static IP address scan feature. If enabled, the
+   * scanner will access applications from static IP addresses.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean staticIpScan;
 
   /**
    * Set of Cloud Platforms targeted by the scan. If empty, APP_ENGINE will be used as a default.
@@ -210,6 +225,23 @@ public final class ScanConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Whether the scan config is managed by Cloud Web Security Scanner, output only.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getManagedScan() {
+    return managedScan;
+  }
+
+  /**
+   * Whether the scan config is managed by Cloud Web Security Scanner, output only.
+   * @param managedScan managedScan or {@code null} for none
+   */
+  public ScanConfig setManagedScan(java.lang.Boolean managedScan) {
+    this.managedScan = managedScan;
+    return this;
+  }
+
+  /**
    * The maximum QPS during scanning. A valid value ranges from 5 to 20 inclusively. If the field is
    * unspecified or its value is set 0, server will default to 15. Other values outside of [5, 20]
    * range will be rejected with INVALID_ARGUMENT error.
@@ -299,6 +331,25 @@ public final class ScanConfig extends com.google.api.client.json.GenericJson {
    */
   public ScanConfig setStartingUrls(java.util.List<java.lang.String> startingUrls) {
     this.startingUrls = startingUrls;
+    return this;
+  }
+
+  /**
+   * Whether the scan configuration has enabled static IP address scan feature. If enabled, the
+   * scanner will access applications from static IP addresses.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getStaticIpScan() {
+    return staticIpScan;
+  }
+
+  /**
+   * Whether the scan configuration has enabled static IP address scan feature. If enabled, the
+   * scanner will access applications from static IP addresses.
+   * @param staticIpScan staticIpScan or {@code null} for none
+   */
+  public ScanConfig setStaticIpScan(java.lang.Boolean staticIpScan) {
+    this.staticIpScan = staticIpScan;
     return this;
   }
 

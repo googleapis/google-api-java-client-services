@@ -45,13 +45,6 @@ public final class RecognizeRequest extends com.google.api.client.json.GenericJs
   private RecognitionConfig config;
 
   /**
-   * Use `model` field in RecognitionConfig instead.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String name;
-
-  /**
    * Required. The audio data to be recognized.
    * @return value or {@code null} for none
    */
@@ -82,23 +75,6 @@ public final class RecognizeRequest extends com.google.api.client.json.GenericJs
    */
   public RecognizeRequest setConfig(RecognitionConfig config) {
     this.config = config;
-    return this;
-  }
-
-  /**
-   * Use `model` field in RecognitionConfig instead.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getName() {
-    return name;
-  }
-
-  /**
-   * Use `model` field in RecognitionConfig instead.
-   * @param name name or {@code null} for none
-   */
-  public RecognizeRequest setName(java.lang.String name) {
-    this.name = name;
     return this;
   }
 

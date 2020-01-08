@@ -110,10 +110,10 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must
    * not conflict with any other metadata keys for the project or be one of the reserved keys:
    * "cluster-location"  "cluster-name"  "cluster-uid"  "configure-sh"  "containerd-configure-sh"
-   * "enable-os-login"  "gci-update-strategy"  "gci-ensure-gke-docker"  "instance-template"  "kube-
-   * env"  "startup-script"  "user-data"  "disable-address-manager"  "windows-startup-script-ps1"
-   * "common-psm1"  "k8s-node-setup-psm1"  "install-ssh-psm1"  "user-profile-psm1"  "serial-port-
-   * logging-enable"
+   * "enable-os-login"  "gci-ensure-gke-docker"  "gci-metrics-enabled"  "gci-update-strategy"
+   * "instance-template"  "kube-env"  "startup-script"  "user-data"  "disable-address-manager"
+   * "windows-startup-script-ps1"  "common-psm1"  "k8s-node-setup-psm1"  "install-ssh-psm1"  "user-
+   * profile-psm1"  "serial-port-logging-enable"
    *
    * Values are free-form strings, and only have meaning as interpreted by the image running in the
    * instance. The only restriction placed on them is that each value's size must be less than or
@@ -161,6 +161,14 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean preemptible;
+
+  /**
+   * The optional reservation affinity. Setting this field will apply the specified [Zonal Compute
+   * Reservation](/compute/docs/instances/reserving-zonal-resources) to this node pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReservationAffinity reservationAffinity;
 
   /**
    * The Google Cloud Platform Service Account to be used by the node VMs. If no Service Account is
@@ -358,10 +366,10 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must
    * not conflict with any other metadata keys for the project or be one of the reserved keys:
    * "cluster-location"  "cluster-name"  "cluster-uid"  "configure-sh"  "containerd-configure-sh"
-   * "enable-os-login"  "gci-update-strategy"  "gci-ensure-gke-docker"  "instance-template"  "kube-
-   * env"  "startup-script"  "user-data"  "disable-address-manager"  "windows-startup-script-ps1"
-   * "common-psm1"  "k8s-node-setup-psm1"  "install-ssh-psm1"  "user-profile-psm1"  "serial-port-
-   * logging-enable"
+   * "enable-os-login"  "gci-ensure-gke-docker"  "gci-metrics-enabled"  "gci-update-strategy"
+   * "instance-template"  "kube-env"  "startup-script"  "user-data"  "disable-address-manager"
+   * "windows-startup-script-ps1"  "common-psm1"  "k8s-node-setup-psm1"  "install-ssh-psm1"  "user-
+   * profile-psm1"  "serial-port-logging-enable"
    *
    * Values are free-form strings, and only have meaning as interpreted by the image running in the
    * instance. The only restriction placed on them is that each value's size must be less than or
@@ -381,10 +389,10 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must
    * not conflict with any other metadata keys for the project or be one of the reserved keys:
    * "cluster-location"  "cluster-name"  "cluster-uid"  "configure-sh"  "containerd-configure-sh"
-   * "enable-os-login"  "gci-update-strategy"  "gci-ensure-gke-docker"  "instance-template"  "kube-
-   * env"  "startup-script"  "user-data"  "disable-address-manager"  "windows-startup-script-ps1"
-   * "common-psm1"  "k8s-node-setup-psm1"  "install-ssh-psm1"  "user-profile-psm1"  "serial-port-
-   * logging-enable"
+   * "enable-os-login"  "gci-ensure-gke-docker"  "gci-metrics-enabled"  "gci-update-strategy"
+   * "instance-template"  "kube-env"  "startup-script"  "user-data"  "disable-address-manager"
+   * "windows-startup-script-ps1"  "common-psm1"  "k8s-node-setup-psm1"  "install-ssh-psm1"  "user-
+   * profile-psm1"  "serial-port-logging-enable"
    *
    * Values are free-form strings, and only have meaning as interpreted by the image running in the
    * instance. The only restriction placed on them is that each value's size must be less than or
@@ -478,6 +486,25 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setPreemptible(java.lang.Boolean preemptible) {
     this.preemptible = preemptible;
+    return this;
+  }
+
+  /**
+   * The optional reservation affinity. Setting this field will apply the specified [Zonal Compute
+   * Reservation](/compute/docs/instances/reserving-zonal-resources) to this node pool.
+   * @return value or {@code null} for none
+   */
+  public ReservationAffinity getReservationAffinity() {
+    return reservationAffinity;
+  }
+
+  /**
+   * The optional reservation affinity. Setting this field will apply the specified [Zonal Compute
+   * Reservation](/compute/docs/instances/reserving-zonal-resources) to this node pool.
+   * @param reservationAffinity reservationAffinity or {@code null} for none
+   */
+  public NodeConfig setReservationAffinity(ReservationAffinity reservationAffinity) {
+    this.reservationAffinity = reservationAffinity;
     return this;
   }
 

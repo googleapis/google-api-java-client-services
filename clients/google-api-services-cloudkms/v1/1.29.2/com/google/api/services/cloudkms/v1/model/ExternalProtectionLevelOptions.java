@@ -17,8 +17,8 @@
 package com.google.api.services.cloudkms.v1.model;
 
 /**
- * [ExternalProtectionLevelOptions] stores a group of additional fields for configuring a
- * [CryptoKeyVersion] that are specific to the [EXTERNAL] protection level.
+ * ExternalProtectionLevelOptions stores a group of additional fields for configuring a
+ * CryptoKeyVersion that are specific to the EXTERNAL protection level.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Key Management Service (KMS) API. For a

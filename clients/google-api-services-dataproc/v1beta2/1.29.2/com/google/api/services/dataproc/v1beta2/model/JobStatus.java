@@ -17,7 +17,7 @@
 package com.google.api.services.dataproc.v1beta2.model;
 
 /**
- * Cloud Dataproc job status.
+ * Dataproc job status.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataproc API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.dataproc.v1beta2.model;
 public final class JobStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Optional job state details, such as an error description if the state is ERROR.
+   * Output only. Optional Job state details, such as an error description if the state is ERROR.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class JobStatus extends com.google.api.client.json.GenericJson {
   private java.lang.String substate;
 
   /**
-   * Output only. Optional job state details, such as an error description if the state is ERROR.
+   * Output only. Optional Job state details, such as an error description if the state is ERROR.
    * @return value or {@code null} for none
    */
   public java.lang.String getDetails() {
@@ -66,7 +66,7 @@ public final class JobStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Optional job state details, such as an error description if the state is ERROR.
+   * Output only. Optional Job state details, such as an error description if the state is ERROR.
    * @param details details or {@code null} for none
    */
   public JobStatus setDetails(java.lang.String details) {

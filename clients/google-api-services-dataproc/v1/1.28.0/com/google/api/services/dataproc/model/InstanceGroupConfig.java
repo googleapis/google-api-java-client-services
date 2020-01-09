@@ -59,7 +59,7 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
   private java.lang.String imageUri;
 
   /**
-   * Output only. The list of instance names. Cloud Dataproc derives the names from cluster_name,
+   * Output only. The list of instance names. Dataproc derives the names from cluster_name,
    * num_instances, and the instance group.
    * The value may be {@code null}.
    */
@@ -78,7 +78,7 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
    * or short name are valid. Examples:
    * https://www.googleapis.com/compute/v1/projects/[project_id]/zones/us-
    * east1-a/machineTypes/n1-standard-2 projects/[project_id]/zones/us-
-   * east1-a/machineTypes/n1-standard-2 n1-standard-2Auto Zone Exception: If you are using the Cloud
+   * east1-a/machineTypes/n1-standard-2 n1-standard-2Auto Zone Exception: If you are using the
    * Dataproc Auto Zone Placement feature, you must use the short name of the machine type resource,
    * for example, n1-standard-2.
    * The value may be {@code null}.
@@ -95,8 +95,8 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
   private ManagedGroupConfig managedGroupConfig;
 
   /**
-   * Optional. Specifies the minimum cpu platform for the Instance Group. See Cloud DataprocMinimum
-   * CPU Platform.
+   * Optional. Specifies the minimum cpu platform for the Instance Group. See DataprocMinimum CPU
+   * Platform.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -164,7 +164,7 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. The list of instance names. Cloud Dataproc derives the names from cluster_name,
+   * Output only. The list of instance names. Dataproc derives the names from cluster_name,
    * num_instances, and the instance group.
    * @return value or {@code null} for none
    */
@@ -173,7 +173,7 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. The list of instance names. Cloud Dataproc derives the names from cluster_name,
+   * Output only. The list of instance names. Dataproc derives the names from cluster_name,
    * num_instances, and the instance group.
    * @param instanceNames instanceNames or {@code null} for none
    */
@@ -204,7 +204,7 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
    * or short name are valid. Examples:
    * https://www.googleapis.com/compute/v1/projects/[project_id]/zones/us-
    * east1-a/machineTypes/n1-standard-2 projects/[project_id]/zones/us-
-   * east1-a/machineTypes/n1-standard-2 n1-standard-2Auto Zone Exception: If you are using the Cloud
+   * east1-a/machineTypes/n1-standard-2 n1-standard-2Auto Zone Exception: If you are using the
    * Dataproc Auto Zone Placement feature, you must use the short name of the machine type resource,
    * for example, n1-standard-2.
    * @return value or {@code null} for none
@@ -218,7 +218,7 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
    * or short name are valid. Examples:
    * https://www.googleapis.com/compute/v1/projects/[project_id]/zones/us-
    * east1-a/machineTypes/n1-standard-2 projects/[project_id]/zones/us-
-   * east1-a/machineTypes/n1-standard-2 n1-standard-2Auto Zone Exception: If you are using the Cloud
+   * east1-a/machineTypes/n1-standard-2 n1-standard-2Auto Zone Exception: If you are using the
    * Dataproc Auto Zone Placement feature, you must use the short name of the machine type resource,
    * for example, n1-standard-2.
    * @param machineTypeUri machineTypeUri or {@code null} for none
@@ -248,8 +248,8 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. Specifies the minimum cpu platform for the Instance Group. See Cloud DataprocMinimum
-   * CPU Platform.
+   * Optional. Specifies the minimum cpu platform for the Instance Group. See DataprocMinimum CPU
+   * Platform.
    * @return value or {@code null} for none
    */
   public java.lang.String getMinCpuPlatform() {
@@ -257,8 +257,8 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. Specifies the minimum cpu platform for the Instance Group. See Cloud DataprocMinimum
-   * CPU Platform.
+   * Optional. Specifies the minimum cpu platform for the Instance Group. See DataprocMinimum CPU
+   * Platform.
    * @param minCpuPlatform minCpuPlatform or {@code null} for none
    */
   public InstanceGroupConfig setMinCpuPlatform(java.lang.String minCpuPlatform) {

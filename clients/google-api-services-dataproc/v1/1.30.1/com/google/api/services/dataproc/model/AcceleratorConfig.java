@@ -42,9 +42,8 @@ public final class AcceleratorConfig extends com.google.api.client.json.GenericJ
    * instance. See Compute Engine AcceleratorTypes.Examples:
    * https://www.googleapis.com/compute/beta/projects/[project_id]/zones/us-east1-a/acceleratorTypes
    * /nvidia-tesla-k80 projects/[project_id]/zones/us-east1-a/acceleratorTypes/nvidia-tesla-k80
-   * nvidia-tesla-k80Auto Zone Exception: If you are using the Cloud Dataproc Auto Zone Placement
-   * feature, you must use the short name of the accelerator type resource, for example, nvidia-
-   * tesla-k80.
+   * nvidia-tesla-k80Auto Zone Exception: If you are using the Dataproc Auto Zone Placement feature,
+   * you must use the short name of the accelerator type resource, for example, nvidia-tesla-k80.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,9 +71,8 @@ public final class AcceleratorConfig extends com.google.api.client.json.GenericJ
    * instance. See Compute Engine AcceleratorTypes.Examples:
    * https://www.googleapis.com/compute/beta/projects/[project_id]/zones/us-east1-a/acceleratorTypes
    * /nvidia-tesla-k80 projects/[project_id]/zones/us-east1-a/acceleratorTypes/nvidia-tesla-k80
-   * nvidia-tesla-k80Auto Zone Exception: If you are using the Cloud Dataproc Auto Zone Placement
-   * feature, you must use the short name of the accelerator type resource, for example, nvidia-
-   * tesla-k80.
+   * nvidia-tesla-k80Auto Zone Exception: If you are using the Dataproc Auto Zone Placement feature,
+   * you must use the short name of the accelerator type resource, for example, nvidia-tesla-k80.
    * @return value or {@code null} for none
    */
   public java.lang.String getAcceleratorTypeUri() {
@@ -86,9 +84,8 @@ public final class AcceleratorConfig extends com.google.api.client.json.GenericJ
    * instance. See Compute Engine AcceleratorTypes.Examples:
    * https://www.googleapis.com/compute/beta/projects/[project_id]/zones/us-east1-a/acceleratorTypes
    * /nvidia-tesla-k80 projects/[project_id]/zones/us-east1-a/acceleratorTypes/nvidia-tesla-k80
-   * nvidia-tesla-k80Auto Zone Exception: If you are using the Cloud Dataproc Auto Zone Placement
-   * feature, you must use the short name of the accelerator type resource, for example, nvidia-
-   * tesla-k80.
+   * nvidia-tesla-k80Auto Zone Exception: If you are using the Dataproc Auto Zone Placement feature,
+   * you must use the short name of the accelerator type resource, for example, nvidia-tesla-k80.
    * @param acceleratorTypeUri acceleratorTypeUri or {@code null} for none
    */
   public AcceleratorConfig setAcceleratorTypeUri(java.lang.String acceleratorTypeUri) {

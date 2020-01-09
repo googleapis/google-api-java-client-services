@@ -99,6 +99,27 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean liveOnly;
 
   /**
+   * A map of key-value pairs of tag metadata to be included in the event data for tag monitoring.
+   * Notes: This parameter must be type MAP. Each parameter in the map are type TEMPLATE, however
+   * cannot contain variable references.
+   *
+   * @mutable tagmanager.accounts.containers.workspaces.tags.create @mutable
+   * tagmanager.accounts.containers.workspaces.tags.update
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Parameter monitoringMetadata;
+
+  /**
+   * If non-empty, then the tag display name will be included in the monitoring metadata map using
+   * the key specified. @mutable tagmanager.accounts.containers.workspaces.tags.create @mutable
+   * tagmanager.accounts.containers.workspaces.tags.update
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String monitoringMetadataTagNameKey;
+
+  /**
    * Tag display name. @mutable tagmanager.accounts.containers.workspaces.tags.create @mutable
    * tagmanager.accounts.containers.workspaces.tags.update
    * The value may be {@code null}.
@@ -395,6 +416,54 @@ public final class Tag extends com.google.api.client.json.GenericJson {
    */
   public Tag setLiveOnly(java.lang.Boolean liveOnly) {
     this.liveOnly = liveOnly;
+    return this;
+  }
+
+  /**
+   * A map of key-value pairs of tag metadata to be included in the event data for tag monitoring.
+   * Notes: This parameter must be type MAP. Each parameter in the map are type TEMPLATE, however
+   * cannot contain variable references.
+   *
+   * @mutable tagmanager.accounts.containers.workspaces.tags.create @mutable
+   * tagmanager.accounts.containers.workspaces.tags.update
+   * @return value or {@code null} for none
+   */
+  public Parameter getMonitoringMetadata() {
+    return monitoringMetadata;
+  }
+
+  /**
+   * A map of key-value pairs of tag metadata to be included in the event data for tag monitoring.
+   * Notes: This parameter must be type MAP. Each parameter in the map are type TEMPLATE, however
+   * cannot contain variable references.
+   *
+   * @mutable tagmanager.accounts.containers.workspaces.tags.create @mutable
+   * tagmanager.accounts.containers.workspaces.tags.update
+   * @param monitoringMetadata monitoringMetadata or {@code null} for none
+   */
+  public Tag setMonitoringMetadata(Parameter monitoringMetadata) {
+    this.monitoringMetadata = monitoringMetadata;
+    return this;
+  }
+
+  /**
+   * If non-empty, then the tag display name will be included in the monitoring metadata map using
+   * the key specified. @mutable tagmanager.accounts.containers.workspaces.tags.create @mutable
+   * tagmanager.accounts.containers.workspaces.tags.update
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMonitoringMetadataTagNameKey() {
+    return monitoringMetadataTagNameKey;
+  }
+
+  /**
+   * If non-empty, then the tag display name will be included in the monitoring metadata map using
+   * the key specified. @mutable tagmanager.accounts.containers.workspaces.tags.create @mutable
+   * tagmanager.accounts.containers.workspaces.tags.update
+   * @param monitoringMetadataTagNameKey monitoringMetadataTagNameKey or {@code null} for none
+   */
+  public Tag setMonitoringMetadataTagNameKey(java.lang.String monitoringMetadataTagNameKey) {
+    this.monitoringMetadataTagNameKey = monitoringMetadataTagNameKey;
     return this;
   }
 

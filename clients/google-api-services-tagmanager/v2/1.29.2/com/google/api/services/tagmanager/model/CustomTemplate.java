@@ -52,6 +52,13 @@ public final class CustomTemplate extends com.google.api.client.json.GenericJson
   private java.lang.String fingerprint;
 
   /**
+   * A reference to the Community Template Gallery entry.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GalleryReference galleryReference;
+
+  /**
    * Custom Template display name.
    * The value may be {@code null}.
    */
@@ -143,6 +150,23 @@ public final class CustomTemplate extends com.google.api.client.json.GenericJson
    */
   public CustomTemplate setFingerprint(java.lang.String fingerprint) {
     this.fingerprint = fingerprint;
+    return this;
+  }
+
+  /**
+   * A reference to the Community Template Gallery entry.
+   * @return value or {@code null} for none
+   */
+  public GalleryReference getGalleryReference() {
+    return galleryReference;
+  }
+
+  /**
+   * A reference to the Community Template Gallery entry.
+   * @param galleryReference galleryReference or {@code null} for none
+   */
+  public CustomTemplate setGalleryReference(GalleryReference galleryReference) {
+    this.galleryReference = galleryReference;
     return this;
   }
 

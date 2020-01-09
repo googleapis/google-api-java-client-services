@@ -17,7 +17,7 @@
 package com.google.api.services.alertcenter.v1beta1.model;
 
 /**
- * Entity whose actions triggered a Gmail phishing alert.
+ * A user.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the G Suite Alert Center API. For a detailed explanation
@@ -28,31 +28,24 @@ package com.google.api.services.alertcenter.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class MaliciousEntity extends com.google.api.client.json.GenericJson {
+public final class User extends com.google.api.client.json.GenericJson {
 
   /**
-   * The header from display name.
+   * Display name of the user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * The actor who triggered a gmail phishing alert.
+   * Email address of the user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private User entity;
+  private java.lang.String emailAddress;
 
   /**
-   * The sender email address.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String fromHeader;
-
-  /**
-   * The header from display name.
+   * Display name of the user.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -60,56 +53,39 @@ public final class MaliciousEntity extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The header from display name.
+   * Display name of the user.
    * @param displayName displayName or {@code null} for none
    */
-  public MaliciousEntity setDisplayName(java.lang.String displayName) {
+  public User setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
     return this;
   }
 
   /**
-   * The actor who triggered a gmail phishing alert.
+   * Email address of the user.
    * @return value or {@code null} for none
    */
-  public User getEntity() {
-    return entity;
+  public java.lang.String getEmailAddress() {
+    return emailAddress;
   }
 
   /**
-   * The actor who triggered a gmail phishing alert.
-   * @param entity entity or {@code null} for none
+   * Email address of the user.
+   * @param emailAddress emailAddress or {@code null} for none
    */
-  public MaliciousEntity setEntity(User entity) {
-    this.entity = entity;
-    return this;
-  }
-
-  /**
-   * The sender email address.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getFromHeader() {
-    return fromHeader;
-  }
-
-  /**
-   * The sender email address.
-   * @param fromHeader fromHeader or {@code null} for none
-   */
-  public MaliciousEntity setFromHeader(java.lang.String fromHeader) {
-    this.fromHeader = fromHeader;
+  public User setEmailAddress(java.lang.String emailAddress) {
+    this.emailAddress = emailAddress;
     return this;
   }
 
   @Override
-  public MaliciousEntity set(String fieldName, Object value) {
-    return (MaliciousEntity) super.set(fieldName, value);
+  public User set(String fieldName, Object value) {
+    return (User) super.set(fieldName, value);
   }
 
   @Override
-  public MaliciousEntity clone() {
-    return (MaliciousEntity) super.clone();
+  public User clone() {
+    return (User) super.clone();
   }
 
 }

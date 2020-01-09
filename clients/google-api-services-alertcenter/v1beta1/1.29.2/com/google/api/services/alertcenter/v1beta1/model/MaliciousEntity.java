@@ -38,6 +38,13 @@ public final class MaliciousEntity extends com.google.api.client.json.GenericJso
   private java.lang.String displayName;
 
   /**
+   * The actor who triggered a gmail phishing alert.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private User entity;
+
+  /**
    * The sender email address.
    * The value may be {@code null}.
    */
@@ -58,6 +65,23 @@ public final class MaliciousEntity extends com.google.api.client.json.GenericJso
    */
   public MaliciousEntity setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * The actor who triggered a gmail phishing alert.
+   * @return value or {@code null} for none
+   */
+  public User getEntity() {
+    return entity;
+  }
+
+  /**
+   * The actor who triggered a gmail phishing alert.
+   * @param entity entity or {@code null} for none
+   */
+  public MaliciousEntity setEntity(User entity) {
+    this.entity = entity;
     return this;
   }
 

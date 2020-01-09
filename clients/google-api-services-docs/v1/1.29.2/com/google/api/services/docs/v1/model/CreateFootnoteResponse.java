@@ -17,9 +17,7 @@
 package com.google.api.services.docs.v1.model;
 
 /**
- * Creates a Header. The new header is applied to the DocumentStyle.
- *
- * If a header of the specified type already exists, a 400 bad request error is returned.
+ * The result of creating a footnote.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Docs API. For a detailed explanation see:
@@ -29,40 +27,40 @@ package com.google.api.services.docs.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class CreateHeaderRequest extends com.google.api.client.json.GenericJson {
+public final class CreateFootnoteResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The type of header to create.
+   * The ID of the created footnote.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String type;
+  private java.lang.String footnoteId;
 
   /**
-   * The type of header to create.
+   * The ID of the created footnote.
    * @return value or {@code null} for none
    */
-  public java.lang.String getType() {
-    return type;
+  public java.lang.String getFootnoteId() {
+    return footnoteId;
   }
 
   /**
-   * The type of header to create.
-   * @param type type or {@code null} for none
+   * The ID of the created footnote.
+   * @param footnoteId footnoteId or {@code null} for none
    */
-  public CreateHeaderRequest setType(java.lang.String type) {
-    this.type = type;
+  public CreateFootnoteResponse setFootnoteId(java.lang.String footnoteId) {
+    this.footnoteId = footnoteId;
     return this;
   }
 
   @Override
-  public CreateHeaderRequest set(String fieldName, Object value) {
-    return (CreateHeaderRequest) super.set(fieldName, value);
+  public CreateFootnoteResponse set(String fieldName, Object value) {
+    return (CreateFootnoteResponse) super.set(fieldName, value);
   }
 
   @Override
-  public CreateHeaderRequest clone() {
-    return (CreateHeaderRequest) super.clone();
+  public CreateFootnoteResponse clone() {
+    return (CreateFootnoteResponse) super.clone();
   }
 
 }

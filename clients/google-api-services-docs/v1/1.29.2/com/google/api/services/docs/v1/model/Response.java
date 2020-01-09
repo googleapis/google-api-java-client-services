@@ -37,6 +37,13 @@ public final class Response extends com.google.api.client.json.GenericJson {
   private CreateFooterResponse createFooter;
 
   /**
+   * The result of creating a footnote.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CreateFootnoteResponse createFootnote;
+
+  /**
    * The result of creating a header.
    * The value may be {@code null}.
    */
@@ -85,6 +92,23 @@ public final class Response extends com.google.api.client.json.GenericJson {
    */
   public Response setCreateFooter(CreateFooterResponse createFooter) {
     this.createFooter = createFooter;
+    return this;
+  }
+
+  /**
+   * The result of creating a footnote.
+   * @return value or {@code null} for none
+   */
+  public CreateFootnoteResponse getCreateFootnote() {
+    return createFootnote;
+  }
+
+  /**
+   * The result of creating a footnote.
+   * @param createFootnote createFootnote or {@code null} for none
+   */
+  public Response setCreateFootnote(CreateFootnoteResponse createFootnote) {
+    this.createFootnote = createFootnote;
     return this;
   }
 

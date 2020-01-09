@@ -17,9 +17,9 @@
 package com.google.api.services.docs.v1.model;
 
 /**
- * Creates a Footer. The new footer will be applied to the DocumentStyle.
+ * Creates a Footer. The new footer is applied to the DocumentStyle.
  *
- * If a footer of the specified type already exists then a 400 bad request error will be returned.
+ * If a footer of the specified type already exists, a 400 bad request error is returned.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Docs API. For a detailed explanation see:

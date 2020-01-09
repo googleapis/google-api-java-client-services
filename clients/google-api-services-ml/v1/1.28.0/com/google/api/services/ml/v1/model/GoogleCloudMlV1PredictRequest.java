@@ -31,14 +31,16 @@ package com.google.api.services.ml.v1.model;
 public final class GoogleCloudMlV1PredictRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The prediction request body.
+   * Required. The prediction request body. Refer to the [request body details section](#request-
+   * body-details) for more information on how to structure your request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleApiHttpBody httpBody;
 
   /**
-   * Required. The prediction request body.
+   * Required. The prediction request body. Refer to the [request body details section](#request-
+   * body-details) for more information on how to structure your request.
    * @return value or {@code null} for none
    */
   public GoogleApiHttpBody getHttpBody() {
@@ -46,7 +48,8 @@ public final class GoogleCloudMlV1PredictRequest extends com.google.api.client.j
   }
 
   /**
-   * Required. The prediction request body.
+   * Required. The prediction request body. Refer to the [request body details section](#request-
+   * body-details) for more information on how to structure your request.
    * @param httpBody httpBody or {@code null} for none
    */
   public GoogleCloudMlV1PredictRequest setHttpBody(GoogleApiHttpBody httpBody) {

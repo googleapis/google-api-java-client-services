@@ -146,9 +146,6 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
      * Performs explanation on the data in the request. AI Platform implements a custom `explain` verb
      * on top of an HTTP POST method.
      *
-     * For details of the request and response format, see the **guide to the [explain request format
-     * ](/ml-engine/docs/v1/explain-request)**.
-     *
      * Create a request for the method "projects.explain".
      *
      * This request holds the parameters needed by the ml server.  After setting any optional
@@ -176,9 +173,6 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
       /**
        * Performs explanation on the data in the request. AI Platform implements a custom `explain` verb
        * on top of an HTTP POST method.
-       *
-       * For details of the request and response format, see the **guide to the [explain request format
-       * ](/ml-engine/docs/v1/explain-request)**.
        *
        * Create a request for the method "projects.explain".
        *
@@ -439,11 +433,9 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
       }
     }
     /**
-     * Performs prediction on the data in the request. AI Platform implements a custom `predict` verb on
-     * top of an HTTP POST method.
+     * Performs online prediction on the data in the request.
      *
-     * For details of the request and response format, see the **guide to the [predict request format
-     * ](/ml-engine/docs/v1/predict-request)**.
+     * {% dynamic include "/ai-platform/includes/___predict-request" %}
      *
      * Create a request for the method "projects.predict".
      *
@@ -470,11 +462,9 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
           java.util.regex.Pattern.compile("^projects/.+$");
 
       /**
-       * Performs prediction on the data in the request. AI Platform implements a custom `predict` verb
-       * on top of an HTTP POST method.
+       * Performs online prediction on the data in the request.
        *
-       * For details of the request and response format, see the **guide to the [predict request format
-       * ](/ml-engine/docs/v1/predict-request)**.
+       * {% dynamic include "/ai-platform/includes/___predict-request" %}
        *
        * Create a request for the method "projects.predict".
        *

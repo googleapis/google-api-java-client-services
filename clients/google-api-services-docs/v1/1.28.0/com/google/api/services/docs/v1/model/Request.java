@@ -37,6 +37,13 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private CreateFooterRequest createFooter;
 
   /**
+   * Creates a footnote.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CreateFootnoteRequest createFootnote;
+
+  /**
    * Creates a header.
    * The value may be {@code null}.
    */
@@ -246,6 +253,23 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   public Request setCreateFooter(CreateFooterRequest createFooter) {
     this.createFooter = createFooter;
+    return this;
+  }
+
+  /**
+   * Creates a footnote.
+   * @return value or {@code null} for none
+   */
+  public CreateFootnoteRequest getCreateFootnote() {
+    return createFootnote;
+  }
+
+  /**
+   * Creates a footnote.
+   * @param createFootnote createFootnote or {@code null} for none
+   */
+  public Request setCreateFootnote(CreateFootnoteRequest createFootnote) {
+    this.createFootnote = createFootnote;
     return this;
   }
 

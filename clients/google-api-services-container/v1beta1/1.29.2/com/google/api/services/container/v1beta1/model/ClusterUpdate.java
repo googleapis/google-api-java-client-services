@@ -53,6 +53,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private ClusterAutoscaling desiredClusterAutoscaling;
 
   /**
+   * The desired telemetry integration for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ClusterTelemetry desiredClusterTelemetry;
+
+  /**
    * Configuration of etcd encryption.
    * The value may be {@code null}.
    */
@@ -178,6 +185,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private PrivateClusterConfig desiredPrivateClusterConfig;
 
   /**
+   * The desired release channel configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReleaseChannel desiredReleaseChannel;
+
+  /**
    * The desired configuration for exporting resource usage.
    * The value may be {@code null}.
    */
@@ -253,6 +267,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredClusterAutoscaling(ClusterAutoscaling desiredClusterAutoscaling) {
     this.desiredClusterAutoscaling = desiredClusterAutoscaling;
+    return this;
+  }
+
+  /**
+   * The desired telemetry integration for the cluster.
+   * @return value or {@code null} for none
+   */
+  public ClusterTelemetry getDesiredClusterTelemetry() {
+    return desiredClusterTelemetry;
+  }
+
+  /**
+   * The desired telemetry integration for the cluster.
+   * @param desiredClusterTelemetry desiredClusterTelemetry or {@code null} for none
+   */
+  public ClusterUpdate setDesiredClusterTelemetry(ClusterTelemetry desiredClusterTelemetry) {
+    this.desiredClusterTelemetry = desiredClusterTelemetry;
     return this;
   }
 
@@ -542,6 +573,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredPrivateClusterConfig(PrivateClusterConfig desiredPrivateClusterConfig) {
     this.desiredPrivateClusterConfig = desiredPrivateClusterConfig;
+    return this;
+  }
+
+  /**
+   * The desired release channel configuration.
+   * @return value or {@code null} for none
+   */
+  public ReleaseChannel getDesiredReleaseChannel() {
+    return desiredReleaseChannel;
+  }
+
+  /**
+   * The desired release channel configuration.
+   * @param desiredReleaseChannel desiredReleaseChannel or {@code null} for none
+   */
+  public ClusterUpdate setDesiredReleaseChannel(ReleaseChannel desiredReleaseChannel) {
+    this.desiredReleaseChannel = desiredReleaseChannel;
     return this;
   }
 

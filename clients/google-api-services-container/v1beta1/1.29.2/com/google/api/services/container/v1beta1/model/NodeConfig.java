@@ -110,12 +110,12 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must
    * not conflict with any other metadata keys for the project or be one of the reserved keys:
    * "cluster-location"  "cluster-name"  "cluster-uid"  "configure-sh"  "containerd-configure-sh"
-   * "enable-oslogin"  "gci-ensure-gke-docker"  "gci-update-strategy"  "instance-template"  "kube-
-   * env"  "startup-script"  "user-data"  "disable-address-manager"  "windows-startup-script-ps1"
-   * "common-psm1"  "k8s-node-setup-psm1"  "install-ssh-psm1"  "user-profile-psm1"  "serial-port-
-   * logging-enable" Values are free-form strings, and only have meaning as interpreted by the image
-   * running in the instance. The only restriction placed on them is that each value's size must be
-   * less than or equal to 32 KB.
+   * "enable-oslogin"  "gci-ensure-gke-docker"  "gci-metrics-enabled"  "gci-update-strategy"
+   * "instance-template"  "kube-env"  "startup-script"  "user-data"  "disable-address-manager"
+   * "windows-startup-script-ps1"  "common-psm1"  "k8s-node-setup-psm1"  "install-ssh-psm1"  "user-
+   * profile-psm1"  "serial-port-logging-enable" Values are free-form strings, and only have meaning
+   * as interpreted by the image running in the instance. The only restriction placed on them is
+   * that each value's size must be less than or equal to 32 KB.
    *
    * The total size of all keys and values must be less than 512 KB.
    * The value may be {@code null}.
@@ -128,7 +128,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * specified or newer CPU platform. Applicable values are the friendly names of CPU platforms,
    * such as minCpuPlatform: Intel Haswell or minCpuPlatform: Intel Sandy Bridge. For more
    * information, read [how to specify min CPU
-   * platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
+   * platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform) To unset
+   * the min cpu platform field pass "automatic" as field value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -159,6 +160,14 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean preemptible;
+
+  /**
+   * The optional reservation affinity. Setting this field will apply the specified [Zonal Compute
+   * Reservation](/compute/docs/instances/reserving-zonal-resources) to this node pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReservationAffinity reservationAffinity;
 
   /**
    * Sandbox configuration for this node.
@@ -370,12 +379,12 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must
    * not conflict with any other metadata keys for the project or be one of the reserved keys:
    * "cluster-location"  "cluster-name"  "cluster-uid"  "configure-sh"  "containerd-configure-sh"
-   * "enable-oslogin"  "gci-ensure-gke-docker"  "gci-update-strategy"  "instance-template"  "kube-
-   * env"  "startup-script"  "user-data"  "disable-address-manager"  "windows-startup-script-ps1"
-   * "common-psm1"  "k8s-node-setup-psm1"  "install-ssh-psm1"  "user-profile-psm1"  "serial-port-
-   * logging-enable" Values are free-form strings, and only have meaning as interpreted by the image
-   * running in the instance. The only restriction placed on them is that each value's size must be
-   * less than or equal to 32 KB.
+   * "enable-oslogin"  "gci-ensure-gke-docker"  "gci-metrics-enabled"  "gci-update-strategy"
+   * "instance-template"  "kube-env"  "startup-script"  "user-data"  "disable-address-manager"
+   * "windows-startup-script-ps1"  "common-psm1"  "k8s-node-setup-psm1"  "install-ssh-psm1"  "user-
+   * profile-psm1"  "serial-port-logging-enable" Values are free-form strings, and only have meaning
+   * as interpreted by the image running in the instance. The only restriction placed on them is
+   * that each value's size must be less than or equal to 32 KB.
    *
    * The total size of all keys and values must be less than 512 KB.
    * @return value or {@code null} for none
@@ -391,12 +400,12 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must
    * not conflict with any other metadata keys for the project or be one of the reserved keys:
    * "cluster-location"  "cluster-name"  "cluster-uid"  "configure-sh"  "containerd-configure-sh"
-   * "enable-oslogin"  "gci-ensure-gke-docker"  "gci-update-strategy"  "instance-template"  "kube-
-   * env"  "startup-script"  "user-data"  "disable-address-manager"  "windows-startup-script-ps1"
-   * "common-psm1"  "k8s-node-setup-psm1"  "install-ssh-psm1"  "user-profile-psm1"  "serial-port-
-   * logging-enable" Values are free-form strings, and only have meaning as interpreted by the image
-   * running in the instance. The only restriction placed on them is that each value's size must be
-   * less than or equal to 32 KB.
+   * "enable-oslogin"  "gci-ensure-gke-docker"  "gci-metrics-enabled"  "gci-update-strategy"
+   * "instance-template"  "kube-env"  "startup-script"  "user-data"  "disable-address-manager"
+   * "windows-startup-script-ps1"  "common-psm1"  "k8s-node-setup-psm1"  "install-ssh-psm1"  "user-
+   * profile-psm1"  "serial-port-logging-enable" Values are free-form strings, and only have meaning
+   * as interpreted by the image running in the instance. The only restriction placed on them is
+   * that each value's size must be less than or equal to 32 KB.
    *
    * The total size of all keys and values must be less than 512 KB.
    * @param metadata metadata or {@code null} for none
@@ -411,7 +420,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * specified or newer CPU platform. Applicable values are the friendly names of CPU platforms,
    * such as minCpuPlatform: Intel Haswell or minCpuPlatform: Intel Sandy Bridge. For more
    * information, read [how to specify min CPU
-   * platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
+   * platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform) To unset
+   * the min cpu platform field pass "automatic" as field value.
    * @return value or {@code null} for none
    */
   public java.lang.String getMinCpuPlatform() {
@@ -423,7 +433,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * specified or newer CPU platform. Applicable values are the friendly names of CPU platforms,
    * such as minCpuPlatform: Intel Haswell or minCpuPlatform: Intel Sandy Bridge. For more
    * information, read [how to specify min CPU
-   * platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
+   * platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform) To unset
+   * the min cpu platform field pass "automatic" as field value.
    * @param minCpuPlatform minCpuPlatform or {@code null} for none
    */
   public NodeConfig setMinCpuPlatform(java.lang.String minCpuPlatform) {
@@ -486,6 +497,25 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setPreemptible(java.lang.Boolean preemptible) {
     this.preemptible = preemptible;
+    return this;
+  }
+
+  /**
+   * The optional reservation affinity. Setting this field will apply the specified [Zonal Compute
+   * Reservation](/compute/docs/instances/reserving-zonal-resources) to this node pool.
+   * @return value or {@code null} for none
+   */
+  public ReservationAffinity getReservationAffinity() {
+    return reservationAffinity;
+  }
+
+  /**
+   * The optional reservation affinity. Setting this field will apply the specified [Zonal Compute
+   * Reservation](/compute/docs/instances/reserving-zonal-resources) to this node pool.
+   * @param reservationAffinity reservationAffinity or {@code null} for none
+   */
+  public NodeConfig setReservationAffinity(ReservationAffinity reservationAffinity) {
+    this.reservationAffinity = reservationAffinity;
     return this;
   }
 

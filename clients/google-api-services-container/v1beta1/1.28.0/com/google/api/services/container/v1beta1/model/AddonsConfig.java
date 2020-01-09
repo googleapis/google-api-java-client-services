@@ -40,6 +40,13 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
   private CloudRunConfig cloudRunConfig;
 
   /**
+   * Configuration for NodeLocalDNS, a dns cache running on cluster nodes
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DnsCacheConfig dnsCacheConfig;
+
+  /**
    * Configuration for the horizontal pod autoscaling feature, which increases or decreases the
    * number of replica pods a replication controller has based on the resource usage of the existing
    * pods.
@@ -62,6 +69,13 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private IstioConfig istioConfig;
+
+  /**
+   * Configuration for the KALM addon, which manages the lifecycle of k8s applications.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private KalmConfig kalmConfig;
 
   /**
    * Configuration for the Kubernetes Dashboard. This addon is deprecated, and will be disabled in
@@ -97,6 +111,23 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
    */
   public AddonsConfig setCloudRunConfig(CloudRunConfig cloudRunConfig) {
     this.cloudRunConfig = cloudRunConfig;
+    return this;
+  }
+
+  /**
+   * Configuration for NodeLocalDNS, a dns cache running on cluster nodes
+   * @return value or {@code null} for none
+   */
+  public DnsCacheConfig getDnsCacheConfig() {
+    return dnsCacheConfig;
+  }
+
+  /**
+   * Configuration for NodeLocalDNS, a dns cache running on cluster nodes
+   * @param dnsCacheConfig dnsCacheConfig or {@code null} for none
+   */
+  public AddonsConfig setDnsCacheConfig(DnsCacheConfig dnsCacheConfig) {
+    this.dnsCacheConfig = dnsCacheConfig;
     return this;
   }
 
@@ -154,6 +185,23 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
    */
   public AddonsConfig setIstioConfig(IstioConfig istioConfig) {
     this.istioConfig = istioConfig;
+    return this;
+  }
+
+  /**
+   * Configuration for the KALM addon, which manages the lifecycle of k8s applications.
+   * @return value or {@code null} for none
+   */
+  public KalmConfig getKalmConfig() {
+    return kalmConfig;
+  }
+
+  /**
+   * Configuration for the KALM addon, which manages the lifecycle of k8s applications.
+   * @param kalmConfig kalmConfig or {@code null} for none
+   */
+  public AddonsConfig setKalmConfig(KalmConfig kalmConfig) {
+    this.kalmConfig = kalmConfig;
     return this;
   }
 

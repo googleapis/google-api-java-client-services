@@ -31,15 +31,15 @@ package com.google.api.services.container.v1beta1.model;
 public final class UpdateNodePoolRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Deprecated. The name of the cluster to upgrade. This field has been deprecated and replaced by
-   * the name field.
+   * Required. Deprecated. The name of the cluster to upgrade. This field has been deprecated and
+   * replaced by the name field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String clusterId;
 
   /**
-   * The desired image type for the node pool.
+   * Required. The desired image type for the node pool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,15 +64,15 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   private java.lang.String name;
 
   /**
-   * Deprecated. The name of the node pool to upgrade. This field has been deprecated and replaced
-   * by the name field.
+   * Required. Deprecated. The name of the node pool to upgrade. This field has been deprecated and
+   * replaced by the name field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nodePoolId;
 
   /**
-   * The Kubernetes version to change the nodes to (typically an upgrade).
+   * Required. The Kubernetes version to change the nodes to (typically an upgrade).
    *
    * Users may specify either explicit versions offered by Kubernetes Engine or version aliases,
    * which have the following behavior:
@@ -87,7 +87,7 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   private java.lang.String nodeVersion;
 
   /**
-   * Deprecated. The Google Developers Console [project ID or project
+   * Required. Deprecated. The Google Developers Console [project ID or project
    * number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
    * replaced by the name field.
    * The value may be {@code null}.
@@ -110,16 +110,17 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   private WorkloadMetadataConfig workloadMetadataConfig;
 
   /**
-   * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
-   * which the cluster resides. This field has been deprecated and replaced by the name field.
+   * Required. Deprecated. The name of the Google Compute Engine
+   * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
+   * deprecated and replaced by the name field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
 
   /**
-   * Deprecated. The name of the cluster to upgrade. This field has been deprecated and replaced by
-   * the name field.
+   * Required. Deprecated. The name of the cluster to upgrade. This field has been deprecated and
+   * replaced by the name field.
    * @return value or {@code null} for none
    */
   public java.lang.String getClusterId() {
@@ -127,8 +128,8 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Deprecated. The name of the cluster to upgrade. This field has been deprecated and replaced by
-   * the name field.
+   * Required. Deprecated. The name of the cluster to upgrade. This field has been deprecated and
+   * replaced by the name field.
    * @param clusterId clusterId or {@code null} for none
    */
   public UpdateNodePoolRequest setClusterId(java.lang.String clusterId) {
@@ -137,7 +138,7 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * The desired image type for the node pool.
+   * Required. The desired image type for the node pool.
    * @return value or {@code null} for none
    */
   public java.lang.String getImageType() {
@@ -145,7 +146,7 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * The desired image type for the node pool.
+   * Required. The desired image type for the node pool.
    * @param imageType imageType or {@code null} for none
    */
   public UpdateNodePoolRequest setImageType(java.lang.String imageType) {
@@ -196,8 +197,8 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Deprecated. The name of the node pool to upgrade. This field has been deprecated and replaced
-   * by the name field.
+   * Required. Deprecated. The name of the node pool to upgrade. This field has been deprecated and
+   * replaced by the name field.
    * @return value or {@code null} for none
    */
   public java.lang.String getNodePoolId() {
@@ -205,8 +206,8 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Deprecated. The name of the node pool to upgrade. This field has been deprecated and replaced
-   * by the name field.
+   * Required. Deprecated. The name of the node pool to upgrade. This field has been deprecated and
+   * replaced by the name field.
    * @param nodePoolId nodePoolId or {@code null} for none
    */
   public UpdateNodePoolRequest setNodePoolId(java.lang.String nodePoolId) {
@@ -215,7 +216,7 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * The Kubernetes version to change the nodes to (typically an upgrade).
+   * Required. The Kubernetes version to change the nodes to (typically an upgrade).
    *
    * Users may specify either explicit versions offered by Kubernetes Engine or version aliases,
    * which have the following behavior:
@@ -231,7 +232,7 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * The Kubernetes version to change the nodes to (typically an upgrade).
+   * Required. The Kubernetes version to change the nodes to (typically an upgrade).
    *
    * Users may specify either explicit versions offered by Kubernetes Engine or version aliases,
    * which have the following behavior:
@@ -248,7 +249,7 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Deprecated. The Google Developers Console [project ID or project
+   * Required. Deprecated. The Google Developers Console [project ID or project
    * number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
    * replaced by the name field.
    * @return value or {@code null} for none
@@ -258,7 +259,7 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Deprecated. The Google Developers Console [project ID or project
+   * Required. Deprecated. The Google Developers Console [project ID or project
    * number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
    * replaced by the name field.
    * @param projectId projectId or {@code null} for none
@@ -303,8 +304,9 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
-   * which the cluster resides. This field has been deprecated and replaced by the name field.
+   * Required. Deprecated. The name of the Google Compute Engine
+   * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
+   * deprecated and replaced by the name field.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -312,8 +314,9 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
-   * which the cluster resides. This field has been deprecated and replaced by the name field.
+   * Required. Deprecated. The name of the Google Compute Engine
+   * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
+   * deprecated and replaced by the name field.
    * @param zone zone or {@code null} for none
    */
   public UpdateNodePoolRequest setZone(java.lang.String zone) {

@@ -69,6 +69,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String clusterIpv4Cidr;
 
   /**
+   * Telemetry integration for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ClusterTelemetry clusterTelemetry;
+
+  /**
    * Which conditions caused the current cluster state.
    * The value may be {@code null}.
    */
@@ -576,6 +583,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setClusterIpv4Cidr(java.lang.String clusterIpv4Cidr) {
     this.clusterIpv4Cidr = clusterIpv4Cidr;
+    return this;
+  }
+
+  /**
+   * Telemetry integration for the cluster.
+   * @return value or {@code null} for none
+   */
+  public ClusterTelemetry getClusterTelemetry() {
+    return clusterTelemetry;
+  }
+
+  /**
+   * Telemetry integration for the cluster.
+   * @param clusterTelemetry clusterTelemetry or {@code null} for none
+   */
+  public Cluster setClusterTelemetry(ClusterTelemetry clusterTelemetry) {
+    this.clusterTelemetry = clusterTelemetry;
     return this;
   }
 

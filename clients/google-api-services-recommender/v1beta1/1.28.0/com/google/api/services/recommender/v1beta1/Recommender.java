@@ -211,7 +211,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            * This request holds the parameters needed by the recommender server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Name of the recommendation.
+           * @param name Required. Name of the recommendation.
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -238,7 +238,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Name of the recommendation.
+             * @param name Required. Name of the recommendation.
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -316,17 +316,17 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Name of the recommendation. */
+            /** Required. Name of the recommendation. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Name of the recommendation.
+            /** Required. Name of the recommendation.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** Name of the recommendation. */
+            /** Required. Name of the recommendation. */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -529,14 +529,14 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Optional. The maximum number of results to return from this request. Non-positive
+             * Optional. The maximum number of results to return from this request.  Non-positive
              * values are ignored. If not specified, the server will determine the number of results
              * to return.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** Optional. The maximum number of results to return from this request. Non-positive values are
+            /** Optional. The maximum number of results to return from this request.  Non-positive values are
            ignored. If not specified, the server will determine the number of results to return.
              */
             public java.lang.Integer getPageSize() {
@@ -544,7 +544,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Optional. The maximum number of results to return from this request. Non-positive
+             * Optional. The maximum number of results to return from this request.  Non-positive
              * values are ignored. If not specified, the server will determine the number of results
              * to return.
              */
@@ -601,7 +601,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            * This request holds the parameters needed by the recommender server.  After setting any optional
            * parameters, call the {@link MarkClaimed#execute()} method to invoke the remote operation.
            *
-           * @param name Name of the recommendation.
+           * @param name Required. Name of the recommendation.
            * @param content the {@link com.google.api.services.recommender.v1beta1.model.GoogleCloudRecommenderV1beta1MarkRecommendationClaimedRequest}
            * @return the request
            */
@@ -636,7 +636,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
              * MarkClaimed#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Name of the recommendation.
+             * @param name Required. Name of the recommendation.
              * @param content the {@link com.google.api.services.recommender.v1beta1.model.GoogleCloudRecommenderV1beta1MarkRecommendationClaimedRequest}
              * @since 1.13
              */
@@ -705,17 +705,17 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
               return (MarkClaimed) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Name of the recommendation. */
+            /** Required. Name of the recommendation. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Name of the recommendation.
+            /** Required. Name of the recommendation.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** Name of the recommendation. */
+            /** Required. Name of the recommendation. */
             public MarkClaimed setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -747,7 +747,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            * This request holds the parameters needed by the recommender server.  After setting any optional
            * parameters, call the {@link MarkFailed#execute()} method to invoke the remote operation.
            *
-           * @param name Name of the recommendation.
+           * @param name Required. Name of the recommendation.
            * @param content the {@link com.google.api.services.recommender.v1beta1.model.GoogleCloudRecommenderV1beta1MarkRecommendationFailedRequest}
            * @return the request
            */
@@ -783,7 +783,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
              * MarkFailed#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Name of the recommendation.
+             * @param name Required. Name of the recommendation.
              * @param content the {@link com.google.api.services.recommender.v1beta1.model.GoogleCloudRecommenderV1beta1MarkRecommendationFailedRequest}
              * @since 1.13
              */
@@ -852,17 +852,17 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
               return (MarkFailed) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Name of the recommendation. */
+            /** Required. Name of the recommendation. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Name of the recommendation.
+            /** Required. Name of the recommendation.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** Name of the recommendation. */
+            /** Required. Name of the recommendation. */
             public MarkFailed setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -894,7 +894,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            * This request holds the parameters needed by the recommender server.  After setting any optional
            * parameters, call the {@link MarkSucceeded#execute()} method to invoke the remote operation.
            *
-           * @param name Name of the recommendation.
+           * @param name Required. Name of the recommendation.
            * @param content the {@link com.google.api.services.recommender.v1beta1.model.GoogleCloudRecommenderV1beta1MarkRecommendationSucceededRequest}
            * @return the request
            */
@@ -930,7 +930,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
              * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
              * the constructor. </p>
              *
-             * @param name Name of the recommendation.
+             * @param name Required. Name of the recommendation.
              * @param content the {@link com.google.api.services.recommender.v1beta1.model.GoogleCloudRecommenderV1beta1MarkRecommendationSucceededRequest}
              * @since 1.13
              */
@@ -999,17 +999,17 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
               return (MarkSucceeded) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Name of the recommendation. */
+            /** Required. Name of the recommendation. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Name of the recommendation.
+            /** Required. Name of the recommendation.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** Name of the recommendation. */
+            /** Required. Name of the recommendation. */
             public MarkSucceeded setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

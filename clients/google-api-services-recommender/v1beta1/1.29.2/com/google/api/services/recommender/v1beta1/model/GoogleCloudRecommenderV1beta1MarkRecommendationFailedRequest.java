@@ -30,7 +30,7 @@ package com.google.api.services.recommender.v1beta1.model;
 public final class GoogleCloudRecommenderV1beta1MarkRecommendationFailedRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Fingerprint of the Recommendation. Provides optimistic locking.
+   * Required. Fingerprint of the Recommendation. Provides optimistic locking.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class GoogleCloudRecommenderV1beta1MarkRecommendationFailedRequest 
   private java.util.Map<String, java.lang.String> stateMetadata;
 
   /**
-   * Fingerprint of the Recommendation. Provides optimistic locking.
+   * Required. Fingerprint of the Recommendation. Provides optimistic locking.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -53,7 +53,7 @@ public final class GoogleCloudRecommenderV1beta1MarkRecommendationFailedRequest 
   }
 
   /**
-   * Fingerprint of the Recommendation. Provides optimistic locking.
+   * Required. Fingerprint of the Recommendation. Provides optimistic locking.
    * @param etag etag or {@code null} for none
    */
   public GoogleCloudRecommenderV1beta1MarkRecommendationFailedRequest setEtag(java.lang.String etag) {

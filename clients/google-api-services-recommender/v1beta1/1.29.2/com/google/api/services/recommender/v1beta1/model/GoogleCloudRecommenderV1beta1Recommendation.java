@@ -74,9 +74,6 @@ public final class GoogleCloudRecommenderV1beta1Recommendation extends com.googl
 
   /**
    * Name of recommendation.
-   *
-   * A project recommendation is represented as   projects/[PROJECT_NUMBER]/locations/[LOCATION]/rec
-   * ommenders/[RECOMMENDER_ID]/recommendations/[RECOMMENDATION_ID]
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -198,9 +195,6 @@ public final class GoogleCloudRecommenderV1beta1Recommendation extends com.googl
 
   /**
    * Name of recommendation.
-   *
-   * A project recommendation is represented as   projects/[PROJECT_NUMBER]/locations/[LOCATION]/rec
-   * ommenders/[RECOMMENDER_ID]/recommendations/[RECOMMENDATION_ID]
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -209,9 +203,6 @@ public final class GoogleCloudRecommenderV1beta1Recommendation extends com.googl
 
   /**
    * Name of recommendation.
-   *
-   * A project recommendation is represented as   projects/[PROJECT_NUMBER]/locations/[LOCATION]/rec
-   * ommenders/[RECOMMENDER_ID]/recommendations/[RECOMMENDATION_ID]
    * @param name name or {@code null} for none
    */
   public GoogleCloudRecommenderV1beta1Recommendation setName(java.lang.String name) {

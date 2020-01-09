@@ -30,7 +30,8 @@ package com.google.api.services.dataproc.model;
 public final class LifecycleConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The time when cluster will be auto-deleted.
+   * Optional. The time when cluster will be auto-deleted (see JSON representation of Timestamp
+   * (https://developers.google.com/protocol-buffers/docs/proto3#json)).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -38,16 +39,18 @@ public final class LifecycleConfig extends com.google.api.client.json.GenericJso
 
   /**
    * Optional. The lifetime duration of cluster. The cluster will be auto-deleted at the end of this
-   * period. Valid range: 10m, 14d.Example: "1d", to delete the cluster 1 day after its creation..
+   * period. Minimum value is 10 minutes; maximum value is 14 days (see JSON representation of
+   * Duration (https://developers.google.com/protocol-buffers/docs/proto3#json)).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String autoDeleteTtl;
 
   /**
-   * Optional. The duration to keep the cluster alive while idling. Passing this threshold will
-   * cause the cluster to be deleted. Valid range: 10m, 14d.Example: "10m", the minimum value, to
-   * delete the cluster when it has had no jobs running for 10 minutes.
+   * Optional. The duration to keep the cluster alive while idling (when no jobs are running).
+   * Passing this threshold will cause the cluster to be deleted. Minimum value is 10 minutes;
+   * maximum value is 14 days (see JSON representation of Duration (https://developers.google.com
+   * /protocol-buffers/docs/proto3#json).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,14 +58,16 @@ public final class LifecycleConfig extends com.google.api.client.json.GenericJso
 
   /**
    * Output only. The time when cluster became idle (most recent job finished) and became eligible
-   * for deletion due to idleness.
+   * for deletion due to idleness (see JSON representation of Timestamp
+   * (https://developers.google.com/protocol-buffers/docs/proto3#json)).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String idleStartTime;
 
   /**
-   * Optional. The time when cluster will be auto-deleted.
+   * Optional. The time when cluster will be auto-deleted (see JSON representation of Timestamp
+   * (https://developers.google.com/protocol-buffers/docs/proto3#json)).
    * @return value or {@code null} for none
    */
   public String getAutoDeleteTime() {
@@ -70,7 +75,8 @@ public final class LifecycleConfig extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The time when cluster will be auto-deleted.
+   * Optional. The time when cluster will be auto-deleted (see JSON representation of Timestamp
+   * (https://developers.google.com/protocol-buffers/docs/proto3#json)).
    * @param autoDeleteTime autoDeleteTime or {@code null} for none
    */
   public LifecycleConfig setAutoDeleteTime(String autoDeleteTime) {
@@ -80,7 +86,8 @@ public final class LifecycleConfig extends com.google.api.client.json.GenericJso
 
   /**
    * Optional. The lifetime duration of cluster. The cluster will be auto-deleted at the end of this
-   * period. Valid range: 10m, 14d.Example: "1d", to delete the cluster 1 day after its creation..
+   * period. Minimum value is 10 minutes; maximum value is 14 days (see JSON representation of
+   * Duration (https://developers.google.com/protocol-buffers/docs/proto3#json)).
    * @return value or {@code null} for none
    */
   public String getAutoDeleteTtl() {
@@ -89,7 +96,8 @@ public final class LifecycleConfig extends com.google.api.client.json.GenericJso
 
   /**
    * Optional. The lifetime duration of cluster. The cluster will be auto-deleted at the end of this
-   * period. Valid range: 10m, 14d.Example: "1d", to delete the cluster 1 day after its creation..
+   * period. Minimum value is 10 minutes; maximum value is 14 days (see JSON representation of
+   * Duration (https://developers.google.com/protocol-buffers/docs/proto3#json)).
    * @param autoDeleteTtl autoDeleteTtl or {@code null} for none
    */
   public LifecycleConfig setAutoDeleteTtl(String autoDeleteTtl) {
@@ -98,9 +106,10 @@ public final class LifecycleConfig extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The duration to keep the cluster alive while idling. Passing this threshold will
-   * cause the cluster to be deleted. Valid range: 10m, 14d.Example: "10m", the minimum value, to
-   * delete the cluster when it has had no jobs running for 10 minutes.
+   * Optional. The duration to keep the cluster alive while idling (when no jobs are running).
+   * Passing this threshold will cause the cluster to be deleted. Minimum value is 10 minutes;
+   * maximum value is 14 days (see JSON representation of Duration (https://developers.google.com
+   * /protocol-buffers/docs/proto3#json).
    * @return value or {@code null} for none
    */
   public String getIdleDeleteTtl() {
@@ -108,9 +117,10 @@ public final class LifecycleConfig extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The duration to keep the cluster alive while idling. Passing this threshold will
-   * cause the cluster to be deleted. Valid range: 10m, 14d.Example: "10m", the minimum value, to
-   * delete the cluster when it has had no jobs running for 10 minutes.
+   * Optional. The duration to keep the cluster alive while idling (when no jobs are running).
+   * Passing this threshold will cause the cluster to be deleted. Minimum value is 10 minutes;
+   * maximum value is 14 days (see JSON representation of Duration (https://developers.google.com
+   * /protocol-buffers/docs/proto3#json).
    * @param idleDeleteTtl idleDeleteTtl or {@code null} for none
    */
   public LifecycleConfig setIdleDeleteTtl(String idleDeleteTtl) {
@@ -120,7 +130,8 @@ public final class LifecycleConfig extends com.google.api.client.json.GenericJso
 
   /**
    * Output only. The time when cluster became idle (most recent job finished) and became eligible
-   * for deletion due to idleness.
+   * for deletion due to idleness (see JSON representation of Timestamp
+   * (https://developers.google.com/protocol-buffers/docs/proto3#json)).
    * @return value or {@code null} for none
    */
   public String getIdleStartTime() {
@@ -129,7 +140,8 @@ public final class LifecycleConfig extends com.google.api.client.json.GenericJso
 
   /**
    * Output only. The time when cluster became idle (most recent job finished) and became eligible
-   * for deletion due to idleness.
+   * for deletion due to idleness (see JSON representation of Timestamp
+   * (https://developers.google.com/protocol-buffers/docs/proto3#json)).
    * @param idleStartTime idleStartTime or {@code null} for none
    */
   public LifecycleConfig setIdleStartTime(String idleStartTime) {

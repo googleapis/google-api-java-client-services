@@ -34,7 +34,7 @@ public final class AutoscalingConfig extends com.google.api.client.json.GenericJ
    * and location (region) are valid. Examples: https://www.googleapis.com/compute/v1/projects/[proj
    * ect_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id]
    * projects/[project_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id]Note that the
-   * policy must be in the same project and Cloud Dataproc region.
+   * policy must be in the same project and Dataproc region.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class AutoscalingConfig extends com.google.api.client.json.GenericJ
    * and location (region) are valid. Examples: https://www.googleapis.com/compute/v1/projects/[proj
    * ect_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id]
    * projects/[project_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id]Note that the
-   * policy must be in the same project and Cloud Dataproc region.
+   * policy must be in the same project and Dataproc region.
    * @return value or {@code null} for none
    */
   public java.lang.String getPolicyUri() {
@@ -57,7 +57,7 @@ public final class AutoscalingConfig extends com.google.api.client.json.GenericJ
    * and location (region) are valid. Examples: https://www.googleapis.com/compute/v1/projects/[proj
    * ect_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id]
    * projects/[project_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id]Note that the
-   * policy must be in the same project and Cloud Dataproc region.
+   * policy must be in the same project and Dataproc region.
    * @param policyUri policyUri or {@code null} for none
    */
   public AutoscalingConfig setPolicyUri(java.lang.String policyUri) {

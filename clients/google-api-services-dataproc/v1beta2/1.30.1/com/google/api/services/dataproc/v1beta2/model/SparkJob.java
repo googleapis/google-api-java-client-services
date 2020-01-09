@@ -17,8 +17,8 @@
 package com.google.api.services.dataproc.v1beta2.model;
 
 /**
- * A Cloud Dataproc job for running Apache Spark (http://spark.apache.org/) applications on YARN.
- * The specification of the main method to call to drive the job. Specify either the jar file that
+ * A Dataproc job for running Apache Spark (http://spark.apache.org/) applications on YARN. The
+ * specification of the main method to call to drive the job. Specify either the jar file that
  * contains the main class or the main class name. To pass both a main jar and a main class in that
  * jar, add the jar to CommonJob.jar_file_uris, and then specify the main class name in main_class.
  *
@@ -88,8 +88,8 @@ public final class SparkJob extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A mapping of property names to values, used to configure Spark. Properties that
-   * conflict with values set by the Cloud Dataproc API may be overwritten. Can include properties
-   * set in /etc/spark/conf/spark-defaults.conf and classes in user code.
+   * conflict with values set by the Dataproc API may be overwritten. Can include properties set in
+   * /etc/spark/conf/spark-defaults.conf and classes in user code.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -226,8 +226,8 @@ public final class SparkJob extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A mapping of property names to values, used to configure Spark. Properties that
-   * conflict with values set by the Cloud Dataproc API may be overwritten. Can include properties
-   * set in /etc/spark/conf/spark-defaults.conf and classes in user code.
+   * conflict with values set by the Dataproc API may be overwritten. Can include properties set in
+   * /etc/spark/conf/spark-defaults.conf and classes in user code.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getProperties() {
@@ -236,8 +236,8 @@ public final class SparkJob extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A mapping of property names to values, used to configure Spark. Properties that
-   * conflict with values set by the Cloud Dataproc API may be overwritten. Can include properties
-   * set in /etc/spark/conf/spark-defaults.conf and classes in user code.
+   * conflict with values set by the Dataproc API may be overwritten. Can include properties set in
+   * /etc/spark/conf/spark-defaults.conf and classes in user code.
    * @param properties properties or {@code null} for none
    */
   public SparkJob setProperties(java.util.Map<String, java.lang.String> properties) {

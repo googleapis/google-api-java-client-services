@@ -38,9 +38,11 @@ public final class NodeInitializationAction extends com.google.api.client.json.G
   private java.lang.String executableFile;
 
   /**
-   * Optional. Amount of time executable has to complete. Default is 10 minutes. Cluster creation
-   * fails with an explanatory error message (the name of the executable that caused the error and
-   * the exceeded timeout period) if the executable is not completed at end of the timeout period.
+   * Optional. Amount of time executable has to complete. Default is 10 minutes (see JSON
+   * representation of Duration (https://developers.google.com/protocol-
+   * buffers/docs/proto3#json)).Cluster creation fails with an explanatory error message (the name
+   * of the executable that caused the error and the exceeded timeout period) if the executable is
+   * not completed at end of the timeout period.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,9 +66,11 @@ public final class NodeInitializationAction extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. Amount of time executable has to complete. Default is 10 minutes. Cluster creation
-   * fails with an explanatory error message (the name of the executable that caused the error and
-   * the exceeded timeout period) if the executable is not completed at end of the timeout period.
+   * Optional. Amount of time executable has to complete. Default is 10 minutes (see JSON
+   * representation of Duration (https://developers.google.com/protocol-
+   * buffers/docs/proto3#json)).Cluster creation fails with an explanatory error message (the name
+   * of the executable that caused the error and the exceeded timeout period) if the executable is
+   * not completed at end of the timeout period.
    * @return value or {@code null} for none
    */
   public String getExecutionTimeout() {
@@ -74,9 +78,11 @@ public final class NodeInitializationAction extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. Amount of time executable has to complete. Default is 10 minutes. Cluster creation
-   * fails with an explanatory error message (the name of the executable that caused the error and
-   * the exceeded timeout period) if the executable is not completed at end of the timeout period.
+   * Optional. Amount of time executable has to complete. Default is 10 minutes (see JSON
+   * representation of Duration (https://developers.google.com/protocol-
+   * buffers/docs/proto3#json)).Cluster creation fails with an explanatory error message (the name
+   * of the executable that caused the error and the exceeded timeout period) if the executable is
+   * not completed at end of the timeout period.
    * @param executionTimeout executionTimeout or {@code null} for none
    */
   public NodeInitializationAction setExecutionTimeout(String executionTimeout) {

@@ -38,11 +38,11 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   private AutoscalingConfig autoscalingConfig;
 
   /**
-   * Optional. A Google Cloud Storage bucket used to stage job dependencies, config files, and job
-   * driver console output. If you do not specify a staging bucket, Cloud Dataproc will determine a
-   * Cloud Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the
-   * Google Compute Engine zone where your cluster is deployed, and then create and manage this
-   * project-level, per-location bucket (see Cloud Dataproc staging bucket).
+   * Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver
+   * console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud
+   * Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute
+   * Engine zone where your cluster is deployed, and then create and manage this project-level, per-
+   * location bucket (see Dataproc staging bucket).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -143,11 +143,11 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. A Google Cloud Storage bucket used to stage job dependencies, config files, and job
-   * driver console output. If you do not specify a staging bucket, Cloud Dataproc will determine a
-   * Cloud Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the
-   * Google Compute Engine zone where your cluster is deployed, and then create and manage this
-   * project-level, per-location bucket (see Cloud Dataproc staging bucket).
+   * Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver
+   * console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud
+   * Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute
+   * Engine zone where your cluster is deployed, and then create and manage this project-level, per-
+   * location bucket (see Dataproc staging bucket).
    * @return value or {@code null} for none
    */
   public java.lang.String getConfigBucket() {
@@ -155,11 +155,11 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. A Google Cloud Storage bucket used to stage job dependencies, config files, and job
-   * driver console output. If you do not specify a staging bucket, Cloud Dataproc will determine a
-   * Cloud Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the
-   * Google Compute Engine zone where your cluster is deployed, and then create and manage this
-   * project-level, per-location bucket (see Cloud Dataproc staging bucket).
+   * Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver
+   * console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud
+   * Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute
+   * Engine zone where your cluster is deployed, and then create and manage this project-level, per-
+   * location bucket (see Dataproc staging bucket).
    * @param configBucket configBucket or {@code null} for none
    */
   public ClusterConfig setConfigBucket(java.lang.String configBucket) {

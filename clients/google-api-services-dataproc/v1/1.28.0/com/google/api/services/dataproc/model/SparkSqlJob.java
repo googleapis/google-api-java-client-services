@@ -17,7 +17,7 @@
 package com.google.api.services.dataproc.model;
 
 /**
- * A Cloud Dataproc job for running Apache Spark SQL (http://spark.apache.org/sql/) queries.
+ * A Dataproc job for running Apache Spark SQL (http://spark.apache.org/sql/) queries.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataproc API. For a detailed explanation see:
@@ -45,7 +45,7 @@ public final class SparkSqlJob extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A mapping of property names to values, used to configure Spark SQL's SparkConf.
-   * Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
+   * Properties that conflict with values set by the Dataproc API may be overwritten.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,7 +109,7 @@ public final class SparkSqlJob extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A mapping of property names to values, used to configure Spark SQL's SparkConf.
-   * Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
+   * Properties that conflict with values set by the Dataproc API may be overwritten.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getProperties() {
@@ -118,7 +118,7 @@ public final class SparkSqlJob extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A mapping of property names to values, used to configure Spark SQL's SparkConf.
-   * Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
+   * Properties that conflict with values set by the Dataproc API may be overwritten.
    * @param properties properties or {@code null} for none
    */
   public SparkSqlJob setProperties(java.util.Map<String, java.lang.String> properties) {

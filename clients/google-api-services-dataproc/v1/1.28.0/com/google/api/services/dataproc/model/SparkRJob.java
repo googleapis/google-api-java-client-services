@@ -17,7 +17,7 @@
 package com.google.api.services.dataproc.model;
 
 /**
- * A Cloud Dataproc job for running Apache SparkR (https://spark.apache.org/docs/latest/sparkr.html)
+ * A Dataproc job for running Apache SparkR (https://spark.apache.org/docs/latest/sparkr.html)
  * applications on YARN.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -71,8 +71,8 @@ public final class SparkRJob extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A mapping of property names to values, used to configure SparkR. Properties that
-   * conflict with values set by the Cloud Dataproc API may be overwritten. Can include properties
-   * set in /etc/spark/conf/spark-defaults.conf and classes in user code.
+   * conflict with values set by the Dataproc API may be overwritten. Can include properties set in
+   * /etc/spark/conf/spark-defaults.conf and classes in user code.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -173,8 +173,8 @@ public final class SparkRJob extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A mapping of property names to values, used to configure SparkR. Properties that
-   * conflict with values set by the Cloud Dataproc API may be overwritten. Can include properties
-   * set in /etc/spark/conf/spark-defaults.conf and classes in user code.
+   * conflict with values set by the Dataproc API may be overwritten. Can include properties set in
+   * /etc/spark/conf/spark-defaults.conf and classes in user code.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getProperties() {
@@ -183,8 +183,8 @@ public final class SparkRJob extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A mapping of property names to values, used to configure SparkR. Properties that
-   * conflict with values set by the Cloud Dataproc API may be overwritten. Can include properties
-   * set in /etc/spark/conf/spark-defaults.conf and classes in user code.
+   * conflict with values set by the Dataproc API may be overwritten. Can include properties set in
+   * /etc/spark/conf/spark-defaults.conf and classes in user code.
    * @param properties properties or {@code null} for none
    */
   public SparkRJob setProperties(java.util.Map<String, java.lang.String> properties) {

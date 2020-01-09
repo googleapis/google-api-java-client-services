@@ -44,7 +44,8 @@ public final class ClusterStatus extends com.google.api.client.json.GenericJson 
   private java.lang.String state;
 
   /**
-   * Output only. Time when this state was entered.
+   * Output only. Time when this state was entered (see JSON representation of Timestamp
+   * (https://developers.google.com/protocol-buffers/docs/proto3#json)).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +93,8 @@ public final class ClusterStatus extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Time when this state was entered.
+   * Output only. Time when this state was entered (see JSON representation of Timestamp
+   * (https://developers.google.com/protocol-buffers/docs/proto3#json)).
    * @return value or {@code null} for none
    */
   public String getStateStartTime() {
@@ -100,7 +102,8 @@ public final class ClusterStatus extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Time when this state was entered.
+   * Output only. Time when this state was entered (see JSON representation of Timestamp
+   * (https://developers.google.com/protocol-buffers/docs/proto3#json)).
    * @param stateStartTime stateStartTime or {@code null} for none
    */
   public ClusterStatus setStateStartTime(String stateStartTime) {

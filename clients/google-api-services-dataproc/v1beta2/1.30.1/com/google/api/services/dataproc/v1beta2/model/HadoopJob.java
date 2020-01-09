@@ -17,7 +17,7 @@
 package com.google.api.services.dataproc.v1beta2.model;
 
 /**
- * A Cloud Dataproc job for running Apache Hadoop MapReduce (https://hadoop.apache.org/docs/current
+ * A Dataproc job for running Apache Hadoop MapReduce (https://hadoop.apache.org/docs/current
  * /hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapReduceTutorial.html) jobs on Apache
  * Hadoop YARN (https://hadoop.apache.org/docs/r2.7.1/hadoop-yarn/hadoop-yarn-site/YARN.html).
  *
@@ -89,8 +89,8 @@ public final class HadoopJob extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A mapping of property names to values, used to configure Hadoop. Properties that
-   * conflict with values set by the Cloud Dataproc API may be overwritten. Can include properties
-   * set in /etc/hadoop/conf-site and classes in user code.
+   * conflict with values set by the Dataproc API may be overwritten. Can include properties set in
+   * /etc/hadoop/conf-site and classes in user code.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -231,8 +231,8 @@ public final class HadoopJob extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A mapping of property names to values, used to configure Hadoop. Properties that
-   * conflict with values set by the Cloud Dataproc API may be overwritten. Can include properties
-   * set in /etc/hadoop/conf-site and classes in user code.
+   * conflict with values set by the Dataproc API may be overwritten. Can include properties set in
+   * /etc/hadoop/conf-site and classes in user code.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getProperties() {
@@ -241,8 +241,8 @@ public final class HadoopJob extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A mapping of property names to values, used to configure Hadoop. Properties that
-   * conflict with values set by the Cloud Dataproc API may be overwritten. Can include properties
-   * set in /etc/hadoop/conf-site and classes in user code.
+   * conflict with values set by the Dataproc API may be overwritten. Can include properties set in
+   * /etc/hadoop/conf-site and classes in user code.
    * @param properties properties or {@code null} for none
    */
   public HadoopJob setProperties(java.util.Map<String, java.lang.String> properties) {

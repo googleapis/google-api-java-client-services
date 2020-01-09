@@ -70,11 +70,9 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   private ReservationAffinity reservationAffinity;
 
   /**
-   * Optional. The service account of the instances. Defaults to the default Compute Engine service
-   * account. Custom service accounts need permissions equivalent to the following IAM roles:
-   * roles/logging.logWriter roles/storage.objectAdmin(see
-   * https://cloud.google.com/compute/docs/access/service-accounts#custom_service_accounts for more
-   * information). Example: [account_id]@[project_id].iam.gserviceaccount.com
+   * Optional. The Dataproc service account (also see VM Data Plane identity) used by Dataproc
+   * cluster VM instances to access Google Cloud Platform services.If not specified, the Compute
+   * Engine default service account is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,9 +112,9 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. The zone where the Compute Engine cluster will be located. On a create request, it is
-   * required in the "global" region. If omitted in a non-global Cloud Dataproc region, the service
-   * will pick a zone in the corresponding Compute Engine region. On a get request, zone will always
-   * be present.A full URL, partial URI, or short name are valid. Examples:
+   * required in the "global" region. If omitted in a non-global Dataproc region, the service will
+   * pick a zone in the corresponding Compute Engine region. On a get request, zone will always be
+   * present.A full URL, partial URI, or short name are valid. Examples:
    * https://www.googleapis.com/compute/v1/projects/[project_id]/zones/[zone]
    * projects/[project_id]/zones/[zone] us-central1-f
    * The value may be {@code null}.
@@ -215,11 +213,9 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The service account of the instances. Defaults to the default Compute Engine service
-   * account. Custom service accounts need permissions equivalent to the following IAM roles:
-   * roles/logging.logWriter roles/storage.objectAdmin(see
-   * https://cloud.google.com/compute/docs/access/service-accounts#custom_service_accounts for more
-   * information). Example: [account_id]@[project_id].iam.gserviceaccount.com
+   * Optional. The Dataproc service account (also see VM Data Plane identity) used by Dataproc
+   * cluster VM instances to access Google Cloud Platform services.If not specified, the Compute
+   * Engine default service account is used.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -227,11 +223,9 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The service account of the instances. Defaults to the default Compute Engine service
-   * account. Custom service accounts need permissions equivalent to the following IAM roles:
-   * roles/logging.logWriter roles/storage.objectAdmin(see
-   * https://cloud.google.com/compute/docs/access/service-accounts#custom_service_accounts for more
-   * information). Example: [account_id]@[project_id].iam.gserviceaccount.com
+   * Optional. The Dataproc service account (also see VM Data Plane identity) used by Dataproc
+   * cluster VM instances to access Google Cloud Platform services.If not specified, the Compute
+   * Engine default service account is used.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public GceClusterConfig setServiceAccount(java.lang.String serviceAccount) {
@@ -314,9 +308,9 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. The zone where the Compute Engine cluster will be located. On a create request, it is
-   * required in the "global" region. If omitted in a non-global Cloud Dataproc region, the service
-   * will pick a zone in the corresponding Compute Engine region. On a get request, zone will always
-   * be present.A full URL, partial URI, or short name are valid. Examples:
+   * required in the "global" region. If omitted in a non-global Dataproc region, the service will
+   * pick a zone in the corresponding Compute Engine region. On a get request, zone will always be
+   * present.A full URL, partial URI, or short name are valid. Examples:
    * https://www.googleapis.com/compute/v1/projects/[project_id]/zones/[zone]
    * projects/[project_id]/zones/[zone] us-central1-f
    * @return value or {@code null} for none
@@ -327,9 +321,9 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. The zone where the Compute Engine cluster will be located. On a create request, it is
-   * required in the "global" region. If omitted in a non-global Cloud Dataproc region, the service
-   * will pick a zone in the corresponding Compute Engine region. On a get request, zone will always
-   * be present.A full URL, partial URI, or short name are valid. Examples:
+   * required in the "global" region. If omitted in a non-global Dataproc region, the service will
+   * pick a zone in the corresponding Compute Engine region. On a get request, zone will always be
+   * present.A full URL, partial URI, or short name are valid. Examples:
    * https://www.googleapis.com/compute/v1/projects/[project_id]/zones/[zone]
    * projects/[project_id]/zones/[zone] us-central1-f
    * @param zoneUri zoneUri or {@code null} for none

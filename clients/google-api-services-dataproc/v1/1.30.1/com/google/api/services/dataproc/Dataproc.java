@@ -4670,7 +4670,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param projectId Required. The ID of the Google Cloud Platform project that the cluster belongs to.
-         * @param region Required. The Cloud Dataproc region in which to handle the request.
+         * @param region Required. The Dataproc region in which to handle the request.
          * @param content the {@link com.google.api.services.dataproc.model.Cluster}
          * @return the request
          */
@@ -4697,7 +4697,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId Required. The ID of the Google Cloud Platform project that the cluster belongs to.
-           * @param region Required. The Cloud Dataproc region in which to handle the request.
+           * @param region Required. The Dataproc region in which to handle the request.
            * @param content the {@link com.google.api.services.dataproc.model.Cluster}
            * @since 1.13
            */
@@ -4778,17 +4778,17 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** Required. The Cloud Dataproc region in which to handle the request. */
+          /** Required. The Dataproc region in which to handle the request. */
           @com.google.api.client.util.Key
           private java.lang.String region;
 
-          /** Required. The Cloud Dataproc region in which to handle the request.
+          /** Required. The Dataproc region in which to handle the request.
            */
           public java.lang.String getRegion() {
             return region;
           }
 
-          /** Required. The Cloud Dataproc region in which to handle the request. */
+          /** Required. The Dataproc region in which to handle the request. */
           public Create setRegion(java.lang.String region) {
             this.region = region;
             return this;
@@ -4845,7 +4845,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param projectId Required. The ID of the Google Cloud Platform project that the cluster belongs to.
-         * @param region Required. The Cloud Dataproc region in which to handle the request.
+         * @param region Required. The Dataproc region in which to handle the request.
          * @param clusterName Required. The cluster name.
          * @return the request
          */
@@ -4872,7 +4872,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId Required. The ID of the Google Cloud Platform project that the cluster belongs to.
-           * @param region Required. The Cloud Dataproc region in which to handle the request.
+           * @param region Required. The Dataproc region in which to handle the request.
            * @param clusterName Required. The cluster name.
            * @since 1.13
            */
@@ -4954,17 +4954,17 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** Required. The Cloud Dataproc region in which to handle the request. */
+          /** Required. The Dataproc region in which to handle the request. */
           @com.google.api.client.util.Key
           private java.lang.String region;
 
-          /** Required. The Cloud Dataproc region in which to handle the request.
+          /** Required. The Dataproc region in which to handle the request.
            */
           public java.lang.String getRegion() {
             return region;
           }
 
-          /** Required. The Cloud Dataproc region in which to handle the request. */
+          /** Required. The Dataproc region in which to handle the request. */
           public Delete setRegion(java.lang.String region) {
             this.region = region;
             return this;
@@ -5062,7 +5062,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Diagnose#execute()} method to invoke the remote operation.
          *
          * @param projectId Required. The ID of the Google Cloud Platform project that the cluster belongs to.
-         * @param region Required. The Cloud Dataproc region in which to handle the request.
+         * @param region Required. The Dataproc region in which to handle the request.
          * @param clusterName Required. The cluster name.
          * @param content the {@link com.google.api.services.dataproc.model.DiagnoseClusterRequest}
          * @return the request
@@ -5091,7 +5091,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId Required. The ID of the Google Cloud Platform project that the cluster belongs to.
-           * @param region Required. The Cloud Dataproc region in which to handle the request.
+           * @param region Required. The Dataproc region in which to handle the request.
            * @param clusterName Required. The cluster name.
            * @param content the {@link com.google.api.services.dataproc.model.DiagnoseClusterRequest}
            * @since 1.13
@@ -5174,17 +5174,17 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** Required. The Cloud Dataproc region in which to handle the request. */
+          /** Required. The Dataproc region in which to handle the request. */
           @com.google.api.client.util.Key
           private java.lang.String region;
 
-          /** Required. The Cloud Dataproc region in which to handle the request.
+          /** Required. The Dataproc region in which to handle the request.
            */
           public java.lang.String getRegion() {
             return region;
           }
 
-          /** Required. The Cloud Dataproc region in which to handle the request. */
+          /** Required. The Dataproc region in which to handle the request. */
           public Diagnose setRegion(java.lang.String region) {
             this.region = region;
             return this;
@@ -5220,7 +5220,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param projectId Required. The ID of the Google Cloud Platform project that the cluster belongs to.
-         * @param region Required. The Cloud Dataproc region in which to handle the request.
+         * @param region Required. The Dataproc region in which to handle the request.
          * @param clusterName Required. The cluster name.
          * @return the request
          */
@@ -5245,7 +5245,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId Required. The ID of the Google Cloud Platform project that the cluster belongs to.
-           * @param region Required. The Cloud Dataproc region in which to handle the request.
+           * @param region Required. The Dataproc region in which to handle the request.
            * @param clusterName Required. The cluster name.
            * @since 1.13
            */
@@ -5337,17 +5337,17 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** Required. The Cloud Dataproc region in which to handle the request. */
+          /** Required. The Dataproc region in which to handle the request. */
           @com.google.api.client.util.Key
           private java.lang.String region;
 
-          /** Required. The Cloud Dataproc region in which to handle the request.
+          /** Required. The Dataproc region in which to handle the request.
            */
           public java.lang.String getRegion() {
             return region;
           }
 
-          /** Required. The Cloud Dataproc region in which to handle the request. */
+          /** Required. The Dataproc region in which to handle the request. */
           public Get setRegion(java.lang.String region) {
             this.region = region;
             return this;
@@ -5525,7 +5525,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param projectId Required. The ID of the Google Cloud Platform project that the cluster belongs to.
-         * @param region Required. The Cloud Dataproc region in which to handle the request.
+         * @param region Required. The Dataproc region in which to handle the request.
          * @return the request
          */
         public List list(java.lang.String projectId, java.lang.String region) throws java.io.IOException {
@@ -5549,7 +5549,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId Required. The ID of the Google Cloud Platform project that the cluster belongs to.
-           * @param region Required. The Cloud Dataproc region in which to handle the request.
+           * @param region Required. The Dataproc region in which to handle the request.
            * @since 1.13
            */
           protected List(java.lang.String projectId, java.lang.String region) {
@@ -5639,17 +5639,17 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** Required. The Cloud Dataproc region in which to handle the request. */
+          /** Required. The Dataproc region in which to handle the request. */
           @com.google.api.client.util.Key
           private java.lang.String region;
 
-          /** Required. The Cloud Dataproc region in which to handle the request.
+          /** Required. The Dataproc region in which to handle the request.
            */
           public java.lang.String getRegion() {
             return region;
           }
 
-          /** Required. The Cloud Dataproc region in which to handle the request. */
+          /** Required. The Dataproc region in which to handle the request. */
           public List setRegion(java.lang.String region) {
             this.region = region;
             return this;
@@ -5747,7 +5747,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
          * @param projectId Required. The ID of the Google Cloud Platform project the cluster belongs to.
-         * @param region Required. The Cloud Dataproc region in which to handle the request.
+         * @param region Required. The Dataproc region in which to handle the request.
          * @param clusterName Required. The cluster name.
          * @param content the {@link com.google.api.services.dataproc.model.Cluster}
          * @return the request
@@ -5775,7 +5775,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId Required. The ID of the Google Cloud Platform project the cluster belongs to.
-           * @param region Required. The Cloud Dataproc region in which to handle the request.
+           * @param region Required. The Dataproc region in which to handle the request.
            * @param clusterName Required. The cluster name.
            * @param content the {@link com.google.api.services.dataproc.model.Cluster}
            * @since 1.13
@@ -5858,17 +5858,17 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** Required. The Cloud Dataproc region in which to handle the request. */
+          /** Required. The Dataproc region in which to handle the request. */
           @com.google.api.client.util.Key
           private java.lang.String region;
 
-          /** Required. The Cloud Dataproc region in which to handle the request.
+          /** Required. The Dataproc region in which to handle the request.
            */
           public java.lang.String getRegion() {
             return region;
           }
 
-          /** Required. The Cloud Dataproc region in which to handle the request. */
+          /** Required. The Dataproc region in which to handle the request. */
           public Patch setRegion(java.lang.String region) {
             this.region = region;
             return this;
@@ -5895,8 +5895,9 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * removing nodes from the cluster without interrupting jobs in progress. Timeout
            * specifies how long to wait for jobs in progress to finish before forcefully removing
            * nodes (and potentially interrupting jobs). Default timeout is 0 (for forceful
-           * decommission), and the maximum allowed timeout is 1 day.Only supported on Dataproc
-           * image versions 1.2 and higher.
+           * decommission), and the maximum allowed timeout is 1 day. (see JSON representation of
+           * Duration (https://developers.google.com/protocol-buffers/docs/proto3#json)).Only
+           * supported on Dataproc image versions 1.2 and higher.
            */
           @com.google.api.client.util.Key
           private String gracefulDecommissionTimeout;
@@ -5904,8 +5905,9 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /** Optional. Timeout for graceful YARN decomissioning. Graceful decommissioning allows removing nodes
          from the cluster without interrupting jobs in progress. Timeout specifies how long to wait for jobs
          in progress to finish before forcefully removing nodes (and potentially interrupting jobs). Default
-         timeout is 0 (for forceful decommission), and the maximum allowed timeout is 1 day.Only supported
-         on Dataproc image versions 1.2 and higher.
+         timeout is 0 (for forceful decommission), and the maximum allowed timeout is 1 day. (see JSON
+         representation of Duration (https://developers.google.com/protocol-buffers/docs/proto3#json)).Only
+         supported on Dataproc image versions 1.2 and higher.
            */
           public String getGracefulDecommissionTimeout() {
             return gracefulDecommissionTimeout;
@@ -5916,8 +5918,9 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * removing nodes from the cluster without interrupting jobs in progress. Timeout
            * specifies how long to wait for jobs in progress to finish before forcefully removing
            * nodes (and potentially interrupting jobs). Default timeout is 0 (for forceful
-           * decommission), and the maximum allowed timeout is 1 day.Only supported on Dataproc
-           * image versions 1.2 and higher.
+           * decommission), and the maximum allowed timeout is 1 day. (see JSON representation of
+           * Duration (https://developers.google.com/protocol-buffers/docs/proto3#json)).Only
+           * supported on Dataproc image versions 1.2 and higher.
            */
           public Patch setGracefulDecommissionTimeout(String gracefulDecommissionTimeout) {
             this.gracefulDecommissionTimeout = gracefulDecommissionTimeout;
@@ -6338,7 +6341,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
          *
          * @param projectId Required. The ID of the Google Cloud Platform project that the job belongs to.
-         * @param region Required. The Cloud Dataproc region in which to handle the request.
+         * @param region Required. The Dataproc region in which to handle the request.
          * @param jobId Required. The job ID.
          * @param content the {@link com.google.api.services.dataproc.model.CancelJobRequest}
          * @return the request
@@ -6366,7 +6369,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId Required. The ID of the Google Cloud Platform project that the job belongs to.
-           * @param region Required. The Cloud Dataproc region in which to handle the request.
+           * @param region Required. The Dataproc region in which to handle the request.
            * @param jobId Required. The job ID.
            * @param content the {@link com.google.api.services.dataproc.model.CancelJobRequest}
            * @since 1.13
@@ -6449,17 +6452,17 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** Required. The Cloud Dataproc region in which to handle the request. */
+          /** Required. The Dataproc region in which to handle the request. */
           @com.google.api.client.util.Key
           private java.lang.String region;
 
-          /** Required. The Cloud Dataproc region in which to handle the request.
+          /** Required. The Dataproc region in which to handle the request.
            */
           public java.lang.String getRegion() {
             return region;
           }
 
-          /** Required. The Cloud Dataproc region in which to handle the request. */
+          /** Required. The Dataproc region in which to handle the request. */
           public Cancel setRegion(java.lang.String region) {
             this.region = region;
             return this;
@@ -6496,7 +6499,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param projectId Required. The ID of the Google Cloud Platform project that the job belongs to.
-         * @param region Required. The Cloud Dataproc region in which to handle the request.
+         * @param region Required. The Dataproc region in which to handle the request.
          * @param jobId Required. The job ID.
          * @return the request
          */
@@ -6523,7 +6526,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId Required. The ID of the Google Cloud Platform project that the job belongs to.
-           * @param region Required. The Cloud Dataproc region in which to handle the request.
+           * @param region Required. The Dataproc region in which to handle the request.
            * @param jobId Required. The job ID.
            * @since 1.13
            */
@@ -6605,17 +6608,17 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** Required. The Cloud Dataproc region in which to handle the request. */
+          /** Required. The Dataproc region in which to handle the request. */
           @com.google.api.client.util.Key
           private java.lang.String region;
 
-          /** Required. The Cloud Dataproc region in which to handle the request.
+          /** Required. The Dataproc region in which to handle the request.
            */
           public java.lang.String getRegion() {
             return region;
           }
 
-          /** Required. The Cloud Dataproc region in which to handle the request. */
+          /** Required. The Dataproc region in which to handle the request. */
           public Delete setRegion(java.lang.String region) {
             this.region = region;
             return this;
@@ -6651,7 +6654,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param projectId Required. The ID of the Google Cloud Platform project that the job belongs to.
-         * @param region Required. The Cloud Dataproc region in which to handle the request.
+         * @param region Required. The Dataproc region in which to handle the request.
          * @param jobId Required. The job ID.
          * @return the request
          */
@@ -6676,7 +6679,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId Required. The ID of the Google Cloud Platform project that the job belongs to.
-           * @param region Required. The Cloud Dataproc region in which to handle the request.
+           * @param region Required. The Dataproc region in which to handle the request.
            * @param jobId Required. The job ID.
            * @since 1.13
            */
@@ -6768,17 +6771,17 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** Required. The Cloud Dataproc region in which to handle the request. */
+          /** Required. The Dataproc region in which to handle the request. */
           @com.google.api.client.util.Key
           private java.lang.String region;
 
-          /** Required. The Cloud Dataproc region in which to handle the request.
+          /** Required. The Dataproc region in which to handle the request.
            */
           public java.lang.String getRegion() {
             return region;
           }
 
-          /** Required. The Cloud Dataproc region in which to handle the request. */
+          /** Required. The Dataproc region in which to handle the request. */
           public Get setRegion(java.lang.String region) {
             this.region = region;
             return this;
@@ -6956,7 +6959,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param projectId Required. The ID of the Google Cloud Platform project that the job belongs to.
-         * @param region Required. The Cloud Dataproc region in which to handle the request.
+         * @param region Required. The Dataproc region in which to handle the request.
          * @return the request
          */
         public List list(java.lang.String projectId, java.lang.String region) throws java.io.IOException {
@@ -6980,7 +6983,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId Required. The ID of the Google Cloud Platform project that the job belongs to.
-           * @param region Required. The Cloud Dataproc region in which to handle the request.
+           * @param region Required. The Dataproc region in which to handle the request.
            * @since 1.13
            */
           protected List(java.lang.String projectId, java.lang.String region) {
@@ -7070,17 +7073,17 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** Required. The Cloud Dataproc region in which to handle the request. */
+          /** Required. The Dataproc region in which to handle the request. */
           @com.google.api.client.util.Key
           private java.lang.String region;
 
-          /** Required. The Cloud Dataproc region in which to handle the request.
+          /** Required. The Dataproc region in which to handle the request.
            */
           public java.lang.String getRegion() {
             return region;
           }
 
-          /** Required. The Cloud Dataproc region in which to handle the request. */
+          /** Required. The Dataproc region in which to handle the request. */
           public List setRegion(java.lang.String region) {
             this.region = region;
             return this;
@@ -7218,7 +7221,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
          * @param projectId Required. The ID of the Google Cloud Platform project that the job belongs to.
-         * @param region Required. The Cloud Dataproc region in which to handle the request.
+         * @param region Required. The Dataproc region in which to handle the request.
          * @param jobId Required. The job ID.
          * @param content the {@link com.google.api.services.dataproc.model.Job}
          * @return the request
@@ -7245,7 +7248,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId Required. The ID of the Google Cloud Platform project that the job belongs to.
-           * @param region Required. The Cloud Dataproc region in which to handle the request.
+           * @param region Required. The Dataproc region in which to handle the request.
            * @param jobId Required. The job ID.
            * @param content the {@link com.google.api.services.dataproc.model.Job}
            * @since 1.13
@@ -7328,17 +7331,17 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** Required. The Cloud Dataproc region in which to handle the request. */
+          /** Required. The Dataproc region in which to handle the request. */
           @com.google.api.client.util.Key
           private java.lang.String region;
 
-          /** Required. The Cloud Dataproc region in which to handle the request.
+          /** Required. The Dataproc region in which to handle the request.
            */
           public java.lang.String getRegion() {
             return region;
           }
 
-          /** Required. The Cloud Dataproc region in which to handle the request. */
+          /** Required. The Dataproc region in which to handle the request. */
           public Patch setRegion(java.lang.String region) {
             this.region = region;
             return this;
@@ -7544,7 +7547,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Submit#execute()} method to invoke the remote operation.
          *
          * @param projectId Required. The ID of the Google Cloud Platform project that the job belongs to.
-         * @param region Required. The Cloud Dataproc region in which to handle the request.
+         * @param region Required. The Dataproc region in which to handle the request.
          * @param content the {@link com.google.api.services.dataproc.model.SubmitJobRequest}
          * @return the request
          */
@@ -7570,7 +7573,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId Required. The ID of the Google Cloud Platform project that the job belongs to.
-           * @param region Required. The Cloud Dataproc region in which to handle the request.
+           * @param region Required. The Dataproc region in which to handle the request.
            * @param content the {@link com.google.api.services.dataproc.model.SubmitJobRequest}
            * @since 1.13
            */
@@ -7651,17 +7654,17 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** Required. The Cloud Dataproc region in which to handle the request. */
+          /** Required. The Dataproc region in which to handle the request. */
           @com.google.api.client.util.Key
           private java.lang.String region;
 
-          /** Required. The Cloud Dataproc region in which to handle the request.
+          /** Required. The Dataproc region in which to handle the request.
            */
           public java.lang.String getRegion() {
             return region;
           }
 
-          /** Required. The Cloud Dataproc region in which to handle the request. */
+          /** Required. The Dataproc region in which to handle the request. */
           public Submit setRegion(java.lang.String region) {
             this.region = region;
             return this;

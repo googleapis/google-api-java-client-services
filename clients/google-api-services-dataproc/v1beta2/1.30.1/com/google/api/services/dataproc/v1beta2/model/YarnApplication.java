@@ -53,9 +53,9 @@ public final class YarnApplication extends com.google.api.client.json.GenericJso
   private java.lang.String state;
 
   /**
-   * Optional. Output only. The HTTP URL of the ApplicationMaster, HistoryServer, or TimelineServer
-   * that provides application-specific information. The URL uses the internal hostname, and
-   * requires a proxy server for resolution and, possibly, access.
+   * Output only. The HTTP URL of the ApplicationMaster, HistoryServer, or TimelineServer that
+   * provides application-specific information. The URL uses the internal hostname, and requires a
+   * proxy server for resolution and, possibly, access.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,9 +113,9 @@ public final class YarnApplication extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Output only. The HTTP URL of the ApplicationMaster, HistoryServer, or TimelineServer
-   * that provides application-specific information. The URL uses the internal hostname, and
-   * requires a proxy server for resolution and, possibly, access.
+   * Output only. The HTTP URL of the ApplicationMaster, HistoryServer, or TimelineServer that
+   * provides application-specific information. The URL uses the internal hostname, and requires a
+   * proxy server for resolution and, possibly, access.
    * @return value or {@code null} for none
    */
   public java.lang.String getTrackingUrl() {
@@ -123,9 +123,9 @@ public final class YarnApplication extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Output only. The HTTP URL of the ApplicationMaster, HistoryServer, or TimelineServer
-   * that provides application-specific information. The URL uses the internal hostname, and
-   * requires a proxy server for resolution and, possibly, access.
+   * Output only. The HTTP URL of the ApplicationMaster, HistoryServer, or TimelineServer that
+   * provides application-specific information. The URL uses the internal hostname, and requires a
+   * proxy server for resolution and, possibly, access.
    * @param trackingUrl trackingUrl or {@code null} for none
    */
   public YarnApplication setTrackingUrl(java.lang.String trackingUrl) {

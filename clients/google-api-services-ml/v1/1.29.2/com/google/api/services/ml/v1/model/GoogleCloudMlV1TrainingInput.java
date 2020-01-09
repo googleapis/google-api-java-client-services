@@ -167,8 +167,19 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
 
   /**
    * Optional. The version of Python used in training. If not set, the default version is '2.7'.
-   * Python '3.5' is available when `runtime_version` is set to '1.4' and above. Python '2.7' works
-   * with all supported runtime versions.
+   * Starting [January 13, 2020](/ml-engine/docs/release-notes#december_10_2019), this field is
+   * required.
+   *
+   * The following Python versions are available:
+   *
+   * * Python '3.7' is available when `runtime_version` is set to '1.15' or   later. * Python '3.5'
+   * is available when `runtime_version` is set to a version   from '1.4' to '1.14'. * Python '2.7'
+   * is available when `runtime_version` is set to '1.15' or   earlier. (Runtime versions released
+   * [after January 1,   2020](/ml-engine/docs/release-notes#december_10_2019) do not support
+   * Python 2.7.)
+   *
+   * Read more about the Python versions available for [each runtime version](/ml-engine/docs
+   * /runtime-version-list).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -184,8 +195,10 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
 
   /**
    * Optional. The AI Platform runtime version to use for training. If not set, AI Platform uses the
-   * default stable version, 1.0. For more information, see the runtime version list and how to
-   * manage runtime versions.
+   * default stable version, 1.0. Starting [January 13, 2020](/ml-engine/docs/release-
+   * notes#december_10_2019), this field is required.
+   *
+   * For more information, see the runtime version list and how to manage runtime versions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -552,8 +565,19 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
 
   /**
    * Optional. The version of Python used in training. If not set, the default version is '2.7'.
-   * Python '3.5' is available when `runtime_version` is set to '1.4' and above. Python '2.7' works
-   * with all supported runtime versions.
+   * Starting [January 13, 2020](/ml-engine/docs/release-notes#december_10_2019), this field is
+   * required.
+   *
+   * The following Python versions are available:
+   *
+   * * Python '3.7' is available when `runtime_version` is set to '1.15' or   later. * Python '3.5'
+   * is available when `runtime_version` is set to a version   from '1.4' to '1.14'. * Python '2.7'
+   * is available when `runtime_version` is set to '1.15' or   earlier. (Runtime versions released
+   * [after January 1,   2020](/ml-engine/docs/release-notes#december_10_2019) do not support
+   * Python 2.7.)
+   *
+   * Read more about the Python versions available for [each runtime version](/ml-engine/docs
+   * /runtime-version-list).
    * @return value or {@code null} for none
    */
   public java.lang.String getPythonVersion() {
@@ -562,8 +586,19 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
 
   /**
    * Optional. The version of Python used in training. If not set, the default version is '2.7'.
-   * Python '3.5' is available when `runtime_version` is set to '1.4' and above. Python '2.7' works
-   * with all supported runtime versions.
+   * Starting [January 13, 2020](/ml-engine/docs/release-notes#december_10_2019), this field is
+   * required.
+   *
+   * The following Python versions are available:
+   *
+   * * Python '3.7' is available when `runtime_version` is set to '1.15' or   later. * Python '3.5'
+   * is available when `runtime_version` is set to a version   from '1.4' to '1.14'. * Python '2.7'
+   * is available when `runtime_version` is set to '1.15' or   earlier. (Runtime versions released
+   * [after January 1,   2020](/ml-engine/docs/release-notes#december_10_2019) do not support
+   * Python 2.7.)
+   *
+   * Read more about the Python versions available for [each runtime version](/ml-engine/docs
+   * /runtime-version-list).
    * @param pythonVersion pythonVersion or {@code null} for none
    */
   public GoogleCloudMlV1TrainingInput setPythonVersion(java.lang.String pythonVersion) {
@@ -592,8 +627,10 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
 
   /**
    * Optional. The AI Platform runtime version to use for training. If not set, AI Platform uses the
-   * default stable version, 1.0. For more information, see the runtime version list and how to
-   * manage runtime versions.
+   * default stable version, 1.0. Starting [January 13, 2020](/ml-engine/docs/release-
+   * notes#december_10_2019), this field is required.
+   *
+   * For more information, see the runtime version list and how to manage runtime versions.
    * @return value or {@code null} for none
    */
   public java.lang.String getRuntimeVersion() {
@@ -602,8 +639,10 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
 
   /**
    * Optional. The AI Platform runtime version to use for training. If not set, AI Platform uses the
-   * default stable version, 1.0. For more information, see the runtime version list and how to
-   * manage runtime versions.
+   * default stable version, 1.0. Starting [January 13, 2020](/ml-engine/docs/release-
+   * notes#december_10_2019), this field is required.
+   *
+   * For more information, see the runtime version list and how to manage runtime versions.
    * @param runtimeVersion runtimeVersion or {@code null} for none
    */
   public GoogleCloudMlV1TrainingInput setRuntimeVersion(java.lang.String runtimeVersion) {

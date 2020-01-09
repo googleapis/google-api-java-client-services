@@ -33,14 +33,14 @@ package com.google.api.services.ml.v1.model;
 public final class GoogleCloudMlV1SampledShapleyAttribution extends com.google.api.client.json.GenericJson {
 
   /**
-   * The number of feature permutations to consider when approximating the shapley values.
+   * The number of feature permutations to consider when approximating the Shapley values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer numPaths;
 
   /**
-   * The number of feature permutations to consider when approximating the shapley values.
+   * The number of feature permutations to consider when approximating the Shapley values.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNumPaths() {
@@ -48,7 +48,7 @@ public final class GoogleCloudMlV1SampledShapleyAttribution extends com.google.a
   }
 
   /**
-   * The number of feature permutations to consider when approximating the shapley values.
+   * The number of feature permutations to consider when approximating the Shapley values.
    * @param numPaths numPaths or {@code null} for none
    */
   public GoogleCloudMlV1SampledShapleyAttribution setNumPaths(java.lang.Integer numPaths) {

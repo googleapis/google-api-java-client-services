@@ -183,11 +183,12 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
       public class Brands {
 
         /**
-         * Constructs a new OAuth brand for the project if one does not exists. The created brand is
-         * 'internal only', meaning that OAuth clients created under it only accept requests from users who
-         * belong to the same GSuites account as the project. The brand is created in un-reviewed status.
-         * NOTE: the 'internal_only' can be manually changed in Pantheon UI. Requires that brand does not
-         * already exists for the project.
+         * Constructs a new OAuth brand for the project if one does not exist. The created brand is
+         * "internal only", meaning that OAuth clients created under it only accept requests from users who
+         * belong to the same G Suite organization as the project. The brand is created in an un-reviewed
+         * status. NOTE: The "internal only" status can be manually changed in the Google Cloud console.
+         * Requires that a brand does not already exist for the project, and that the specified support
+         * email is owned by the caller.
          *
          * Create a request for the method "brands.create".
          *
@@ -214,11 +215,12 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+$");
 
           /**
-           * Constructs a new OAuth brand for the project if one does not exists. The created brand is
-           * 'internal only', meaning that OAuth clients created under it only accept requests from users
-           * who belong to the same GSuites account as the project. The brand is created in un-reviewed
-           * status. NOTE: the 'internal_only' can be manually changed in Pantheon UI. Requires that brand
-           * does not already exists for the project.
+           * Constructs a new OAuth brand for the project if one does not exist. The created brand is
+           * "internal only", meaning that OAuth clients created under it only accept requests from users
+           * who belong to the same G Suite organization as the project. The brand is created in an un-
+           * reviewed status. NOTE: The "internal only" status can be manually changed in the Google Cloud
+           * console. Requires that a brand does not already exist for the project, and that the specified
+           * support email is owned by the caller.
            *
            * Create a request for the method "brands.create".
            *
@@ -646,8 +648,8 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
         public class IdentityAwareProxyClients {
 
           /**
-           * Creates an Identity Aware Proxy (IAP) OAuth client, the client is owned by IAP. Requires that the
-           * brand for the project exists and that it is set for internal only use.
+           * Creates an Identity Aware Proxy (IAP) OAuth client. The client is owned by IAP. Requires that the
+           * brand for the project exists and that it is set for internal-only use.
            *
            * Create a request for the method "identityAwareProxyClients.create".
            *
@@ -675,8 +677,8 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
                 java.util.regex.Pattern.compile("^projects/[^/]+/brands/[^/]+$");
 
             /**
-             * Creates an Identity Aware Proxy (IAP) OAuth client, the client is owned by IAP. Requires that
-             * the brand for the project exists and that it is set for internal only use.
+             * Creates an Identity Aware Proxy (IAP) OAuth client. The client is owned by IAP. Requires that
+             * the brand for the project exists and that it is set for internal-only use.
              *
              * Create a request for the method "identityAwareProxyClients.create".
              *
@@ -793,8 +795,9 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
             }
           }
           /**
-           * Deletes an Identity Aware Proxy (IAP) OAuth client. Useful if the secret was compromised.
-           * Requires that the client is owned by IAP.
+           * Deletes an Identity Aware Proxy (IAP) OAuth client. Useful for removing obsolete clients,
+           * managing the number of clients in a given project, and cleaning up after tests. Requires that the
+           * client is owned by IAP.
            *
            * Create a request for the method "identityAwareProxyClients.delete".
            *
@@ -820,8 +823,9 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
                 java.util.regex.Pattern.compile("^projects/[^/]+/brands/[^/]+/identityAwareProxyClients/[^/]+$");
 
             /**
-             * Deletes an Identity Aware Proxy (IAP) OAuth client. Useful if the secret was compromised.
-             * Requires that the client is owned by IAP.
+             * Deletes an Identity Aware Proxy (IAP) OAuth client. Useful for removing obsolete clients,
+             * managing the number of clients in a given project, and cleaning up after tests. Requires that
+             * the client is owned by IAP.
              *
              * Create a request for the method "identityAwareProxyClients.delete".
              *
@@ -1291,9 +1295,8 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
             }
           }
           /**
-           * Resets an Identity Aware Proxy (IAP) OAuth client secret. Useful for removing obsolete clients,
-           * managing the number of clients in a given project, and cleaning up after tests. Requires that the
-           * client is owned by IAP.
+           * Resets an Identity Aware Proxy (IAP) OAuth client secret. Useful if the secret was compromised.
+           * Requires that the client is owned by IAP.
            *
            * Create a request for the method "identityAwareProxyClients.resetSecret".
            *
@@ -1321,9 +1324,8 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
                 java.util.regex.Pattern.compile("^projects/[^/]+/brands/[^/]+/identityAwareProxyClients/[^/]+$");
 
             /**
-             * Resets an Identity Aware Proxy (IAP) OAuth client secret. Useful for removing obsolete clients,
-             * managing the number of clients in a given project, and cleaning up after tests. Requires that
-             * the client is owned by IAP.
+             * Resets an Identity Aware Proxy (IAP) OAuth client secret. Useful if the secret was compromised.
+             * Requires that the client is owned by IAP.
              *
              * Create a request for the method "identityAwareProxyClients.resetSecret".
              *

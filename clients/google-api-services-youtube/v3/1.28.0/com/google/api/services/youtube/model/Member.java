@@ -38,13 +38,6 @@ public final class Member extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * The ID that YouTube assigns to uniquely identify the member.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String id;
-
-  /**
    * Identifies what kind of resource this is. Value: the fixed string "youtube#member".
    * The value may be {@code null}.
    */
@@ -72,23 +65,6 @@ public final class Member extends com.google.api.client.json.GenericJson {
    */
   public Member setEtag(java.lang.String etag) {
     this.etag = etag;
-    return this;
-  }
-
-  /**
-   * The ID that YouTube assigns to uniquely identify the member.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getId() {
-    return id;
-  }
-
-  /**
-   * The ID that YouTube assigns to uniquely identify the member.
-   * @param id id or {@code null} for none
-   */
-  public Member setId(java.lang.String id) {
-    this.id = id;
     return this;
   }
 

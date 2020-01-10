@@ -203,9 +203,9 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
   /**
    * The bucket's default storage class, used whenever no storageClass is specified for a newly-
    * created object. This defines how objects in the bucket are stored and determines the SLA and
-   * the cost of storage. Values include MULTI_REGIONAL, REGIONAL, STANDARD, NEARLINE, COLDLINE, and
-   * DURABLE_REDUCED_AVAILABILITY. If this value is not specified when the bucket is created, it
-   * will default to STANDARD. For more information, see storage classes.
+   * the cost of storage. Values include MULTI_REGIONAL, REGIONAL, STANDARD, NEARLINE, COLDLINE,
+   * ARCHIVE, and DURABLE_REDUCED_AVAILABILITY. If this value is not specified when the bucket is
+   * created, it will default to STANDARD. For more information, see storage classes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -634,9 +634,9 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
   /**
    * The bucket's default storage class, used whenever no storageClass is specified for a newly-
    * created object. This defines how objects in the bucket are stored and determines the SLA and
-   * the cost of storage. Values include MULTI_REGIONAL, REGIONAL, STANDARD, NEARLINE, COLDLINE, and
-   * DURABLE_REDUCED_AVAILABILITY. If this value is not specified when the bucket is created, it
-   * will default to STANDARD. For more information, see storage classes.
+   * the cost of storage. Values include MULTI_REGIONAL, REGIONAL, STANDARD, NEARLINE, COLDLINE,
+   * ARCHIVE, and DURABLE_REDUCED_AVAILABILITY. If this value is not specified when the bucket is
+   * created, it will default to STANDARD. For more information, see storage classes.
    * @return value or {@code null} for none
    */
   public java.lang.String getStorageClass() {
@@ -646,9 +646,9 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
   /**
    * The bucket's default storage class, used whenever no storageClass is specified for a newly-
    * created object. This defines how objects in the bucket are stored and determines the SLA and
-   * the cost of storage. Values include MULTI_REGIONAL, REGIONAL, STANDARD, NEARLINE, COLDLINE, and
-   * DURABLE_REDUCED_AVAILABILITY. If this value is not specified when the bucket is created, it
-   * will default to STANDARD. For more information, see storage classes.
+   * the cost of storage. Values include MULTI_REGIONAL, REGIONAL, STANDARD, NEARLINE, COLDLINE,
+   * ARCHIVE, and DURABLE_REDUCED_AVAILABILITY. If this value is not specified when the bucket is
+   * created, it will default to STANDARD. For more information, see storage classes.
    * @param storageClass storageClass or {@code null} for none
    */
   public Bucket setStorageClass(java.lang.String storageClass) {
@@ -952,7 +952,10 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
   public static final class IamConfiguration extends com.google.api.client.json.GenericJson {
 
     /**
-     * The bucket's Bucket Policy Only configuration.
+     * The bucket's uniform bucket-level access configuration. The feature was formerly known as
+     * Bucket Policy Only. For backward compatibility, this field will be populated with identical
+     * information as the uniformBucketLevelAccess field. We recommend using the
+     * uniformBucketLevelAccess field to enable and disable the feature.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -966,7 +969,10 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
     private UniformBucketLevelAccess uniformBucketLevelAccess;
 
     /**
-     * The bucket's Bucket Policy Only configuration.
+     * The bucket's uniform bucket-level access configuration. The feature was formerly known as
+     * Bucket Policy Only. For backward compatibility, this field will be populated with identical
+     * information as the uniformBucketLevelAccess field. We recommend using the
+     * uniformBucketLevelAccess field to enable and disable the feature.
      * @return value or {@code null} for none
      */
     public BucketPolicyOnly getBucketPolicyOnly() {
@@ -974,7 +980,10 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The bucket's Bucket Policy Only configuration.
+     * The bucket's uniform bucket-level access configuration. The feature was formerly known as
+     * Bucket Policy Only. For backward compatibility, this field will be populated with identical
+     * information as the uniformBucketLevelAccess field. We recommend using the
+     * uniformBucketLevelAccess field to enable and disable the feature.
      * @param bucketPolicyOnly bucketPolicyOnly or {@code null} for none
      */
     public IamConfiguration setBucketPolicyOnly(BucketPolicyOnly bucketPolicyOnly) {
@@ -1010,7 +1019,10 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The bucket's Bucket Policy Only configuration.
+     * The bucket's uniform bucket-level access configuration. The feature was formerly known as Bucket
+     * Policy Only. For backward compatibility, this field will be populated with identical information
+     * as the uniformBucketLevelAccess field. We recommend using the uniformBucketLevelAccess field to
+     * enable and disable the feature.
      */
     public static final class BucketPolicyOnly extends com.google.api.client.json.GenericJson {
 
@@ -1367,7 +1379,7 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
 
         /**
          * Objects having any of the storage classes specified by this condition will be matched. Values
-         * include MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, STANDARD, and
+         * include MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, and
          * DURABLE_REDUCED_AVAILABILITY.
          * The value may be {@code null}.
          */
@@ -1464,7 +1476,7 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
 
         /**
          * Objects having any of the storage classes specified by this condition will be matched. Values
-         * include MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, STANDARD, and
+         * include MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, and
          * DURABLE_REDUCED_AVAILABILITY.
          * @return value or {@code null} for none
          */
@@ -1474,7 +1486,7 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
 
         /**
          * Objects having any of the storage classes specified by this condition will be matched. Values
-         * include MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, STANDARD, and
+         * include MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, and
          * DURABLE_REDUCED_AVAILABILITY.
          * @param matchesStorageClass matchesStorageClass or {@code null} for none
          */

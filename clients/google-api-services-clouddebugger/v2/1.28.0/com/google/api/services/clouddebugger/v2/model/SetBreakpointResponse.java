@@ -31,14 +31,14 @@ package com.google.api.services.clouddebugger.v2.model;
 public final class SetBreakpointResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Breakpoint resource. The field `id` is guaranteed to be set (in addition to the echoed fileds).
+   * Breakpoint resource. The field `id` is guaranteed to be set (in addition to the echoed fields).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Breakpoint breakpoint;
 
   /**
-   * Breakpoint resource. The field `id` is guaranteed to be set (in addition to the echoed fileds).
+   * Breakpoint resource. The field `id` is guaranteed to be set (in addition to the echoed fields).
    * @return value or {@code null} for none
    */
   public Breakpoint getBreakpoint() {
@@ -46,7 +46,7 @@ public final class SetBreakpointResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * Breakpoint resource. The field `id` is guaranteed to be set (in addition to the echoed fileds).
+   * Breakpoint resource. The field `id` is guaranteed to be set (in addition to the echoed fields).
    * @param breakpoint breakpoint or {@code null} for none
    */
   public SetBreakpointResponse setBreakpoint(Breakpoint breakpoint) {

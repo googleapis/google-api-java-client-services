@@ -156,6 +156,13 @@ public final class ExplainQueryStage extends com.google.api.client.json.GenericJ
   private java.lang.Long shuffleOutputBytesSpilled;
 
   /**
+   * Slot-milliseconds used by the stage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long slotMs;
+
+  /**
    * Stage start time represented as milliseconds since epoch.
    * The value may be {@code null}.
    */
@@ -535,6 +542,23 @@ public final class ExplainQueryStage extends com.google.api.client.json.GenericJ
    */
   public ExplainQueryStage setShuffleOutputBytesSpilled(java.lang.Long shuffleOutputBytesSpilled) {
     this.shuffleOutputBytesSpilled = shuffleOutputBytesSpilled;
+    return this;
+  }
+
+  /**
+   * Slot-milliseconds used by the stage.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getSlotMs() {
+    return slotMs;
+  }
+
+  /**
+   * Slot-milliseconds used by the stage.
+   * @param slotMs slotMs or {@code null} for none
+   */
+  public ExplainQueryStage setSlotMs(java.lang.Long slotMs) {
+    this.slotMs = slotMs;
     return this;
   }
 

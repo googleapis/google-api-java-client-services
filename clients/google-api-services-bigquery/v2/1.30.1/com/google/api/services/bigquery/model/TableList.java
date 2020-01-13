@@ -222,6 +222,13 @@ public final class TableList extends com.google.api.client.json.GenericJson {
     private java.util.Map<String, java.lang.String> labels;
 
     /**
+     * The range partitioning specification for this table, if configured.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private RangePartitioning rangePartitioning;
+
+    /**
      * A reference uniquely identifying the table.
      * The value may be {@code null}.
      */
@@ -369,6 +376,23 @@ public final class TableList extends com.google.api.client.json.GenericJson {
      */
     public Tables setLabels(java.util.Map<String, java.lang.String> labels) {
       this.labels = labels;
+      return this;
+    }
+
+    /**
+     * The range partitioning specification for this table, if configured.
+     * @return value or {@code null} for none
+     */
+    public RangePartitioning getRangePartitioning() {
+      return rangePartitioning;
+    }
+
+    /**
+     * The range partitioning specification for this table, if configured.
+     * @param rangePartitioning rangePartitioning or {@code null} for none
+     */
+    public Tables setRangePartitioning(RangePartitioning rangePartitioning) {
+      this.rangePartitioning = rangePartitioning;
       return this;
     }
 

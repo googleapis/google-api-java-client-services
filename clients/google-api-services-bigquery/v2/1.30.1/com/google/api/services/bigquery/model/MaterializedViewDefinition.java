@@ -30,6 +30,14 @@ package com.google.api.services.bigquery.model;
 public final class MaterializedViewDefinition extends com.google.api.client.json.GenericJson {
 
   /**
+   * [Optional] [TrustedTester] Enable automatic refresh of the materialized view when the base
+   * table is updated. The default value is "true".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableRefresh;
+
+  /**
    * [Output-only] [TrustedTester] The time when this materialized view was last modified, in
    * milliseconds since the epoch.
    * The value may be {@code null}.
@@ -43,6 +51,33 @@ public final class MaterializedViewDefinition extends com.google.api.client.json
    */
   @com.google.api.client.util.Key
   private java.lang.String query;
+
+  /**
+   * [Optional] [TrustedTester] The maximum frequency at which this materialized view will be
+   * refreshed. The default value is "1800000" (30 minutes).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long refreshIntervalMs;
+
+  /**
+   * [Optional] [TrustedTester] Enable automatic refresh of the materialized view when the base
+   * table is updated. The default value is "true".
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableRefresh() {
+    return enableRefresh;
+  }
+
+  /**
+   * [Optional] [TrustedTester] Enable automatic refresh of the materialized view when the base
+   * table is updated. The default value is "true".
+   * @param enableRefresh enableRefresh or {@code null} for none
+   */
+  public MaterializedViewDefinition setEnableRefresh(java.lang.Boolean enableRefresh) {
+    this.enableRefresh = enableRefresh;
+    return this;
+  }
 
   /**
    * [Output-only] [TrustedTester] The time when this materialized view was last modified, in
@@ -77,6 +112,25 @@ public final class MaterializedViewDefinition extends com.google.api.client.json
    */
   public MaterializedViewDefinition setQuery(java.lang.String query) {
     this.query = query;
+    return this;
+  }
+
+  /**
+   * [Optional] [TrustedTester] The maximum frequency at which this materialized view will be
+   * refreshed. The default value is "1800000" (30 minutes).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getRefreshIntervalMs() {
+    return refreshIntervalMs;
+  }
+
+  /**
+   * [Optional] [TrustedTester] The maximum frequency at which this materialized view will be
+   * refreshed. The default value is "1800000" (30 minutes).
+   * @param refreshIntervalMs refreshIntervalMs or {@code null} for none
+   */
+  public MaterializedViewDefinition setRefreshIntervalMs(java.lang.Long refreshIntervalMs) {
+    this.refreshIntervalMs = refreshIntervalMs;
     return this;
   }
 

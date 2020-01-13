@@ -30,6 +30,13 @@ package com.google.api.services.bigquery.model;
 public final class TrainingRun extends com.google.api.client.json.GenericJson {
 
   /**
+   * Data split result of the training run. Only set when the input data is actually split.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DataSplitResult dataSplitResult;
+
+  /**
    * The evaluation metrics over training/eval data that were computed at the end of training.
    * The value may be {@code null}.
    */
@@ -63,6 +70,23 @@ public final class TrainingRun extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private TrainingOptions trainingOptions;
+
+  /**
+   * Data split result of the training run. Only set when the input data is actually split.
+   * @return value or {@code null} for none
+   */
+  public DataSplitResult getDataSplitResult() {
+    return dataSplitResult;
+  }
+
+  /**
+   * Data split result of the training run. Only set when the input data is actually split.
+   * @param dataSplitResult dataSplitResult or {@code null} for none
+   */
+  public TrainingRun setDataSplitResult(DataSplitResult dataSplitResult) {
+    this.dataSplitResult = dataSplitResult;
+    return this;
+  }
 
   /**
    * The evaluation metrics over training/eval data that were computed at the end of training.

@@ -3362,21 +3362,21 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * all Routine fields are returned.
        */
       @com.google.api.client.util.Key
-      private String fieldMask;
+      private String readMask;
 
       /** If set, only the Routine fields in the field mask are returned in the response. If unset, all
      Routine fields are returned.
        */
-      public String getFieldMask() {
-        return fieldMask;
+      public String getReadMask() {
+        return readMask;
       }
 
       /**
        * If set, only the Routine fields in the field mask are returned in the response. If unset,
        * all Routine fields are returned.
        */
-      public Get setFieldMask(String fieldMask) {
-        this.fieldMask = fieldMask;
+      public Get setReadMask(String readMask) {
+        this.readMask = readMask;
         return this;
       }
 
@@ -3674,6 +3674,32 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
+       * If set, then only the Routines matching this filter are returned. The current supported
+       * form is either "routine_type:" or "routineType:", where  is a RoutineType enum. Example:
+       * "routineType:SCALAR_FUNCTION".
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** If set, then only the Routines matching this filter are returned. The current supported form is
+     either "routine_type:" or "routineType:", where  is a RoutineType enum. Example:
+     "routineType:SCALAR_FUNCTION".
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /**
+       * If set, then only the Routines matching this filter are returned. The current supported
+       * form is either "routine_type:" or "routineType:", where  is a RoutineType enum. Example:
+       * "routineType:SCALAR_FUNCTION".
+       */
+      public List setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      /**
        * The maximum number of results to return in a single response page. Leverage the page tokens
        * to iterate through the entire collection.
        */
@@ -3713,6 +3739,35 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
+        return this;
+      }
+
+      /**
+       * If set, then only the Routine fields in the field mask, as well as project_id, dataset_id
+       * and routine_id, are returned in the response. If unset, then the following Routine fields
+       * are returned: etag, project_id, dataset_id, routine_id, routine_type, creation_time,
+       * last_modified_time, and language.
+       */
+      @com.google.api.client.util.Key
+      private String readMask;
+
+      /** If set, then only the Routine fields in the field mask, as well as project_id, dataset_id and
+     routine_id, are returned in the response. If unset, then the following Routine fields are returned:
+     etag, project_id, dataset_id, routine_id, routine_type, creation_time, last_modified_time, and
+     language.
+       */
+      public String getReadMask() {
+        return readMask;
+      }
+
+      /**
+       * If set, then only the Routine fields in the field mask, as well as project_id, dataset_id
+       * and routine_id, are returned in the response. If unset, then the following Routine fields
+       * are returned: etag, project_id, dataset_id, routine_id, routine_type, creation_time,
+       * last_modified_time, and language.
+       */
+      public List setReadMask(String readMask) {
+        this.readMask = readMask;
         return this;
       }
 

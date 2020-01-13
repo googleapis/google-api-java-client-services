@@ -164,12 +164,12 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
    * https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language.
    * "MERGE": MERGE query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-
    * manipulation-language. "ALTER_TABLE": ALTER TABLE query. "ALTER_VIEW": ALTER VIEW query.
-   * "CREATE_FUNCTION": CREATE FUNCTION query. "CREATE_MODEL": CREATE [OR REPLACE] MODEL ... AS
-   * SELECT ... . "CREATE_PROCEDURE": CREATE PROCEDURE query. "CREATE_TABLE": CREATE [OR REPLACE]
-   * TABLE without AS SELECT. "CREATE_TABLE_AS_SELECT": CREATE [OR REPLACE] TABLE ... AS SELECT ...
-   * . "CREATE_VIEW": CREATE [OR REPLACE] VIEW ... AS SELECT ... . "DROP_FUNCTION" : DROP FUNCTION
-   * query. "DROP_PROCEDURE": DROP PROCEDURE query. "DROP_TABLE": DROP TABLE query. "DROP_VIEW":
-   * DROP VIEW query.
+   * "ASSERT": ASSERT condition AS 'description'. "CREATE_FUNCTION": CREATE FUNCTION query.
+   * "CREATE_MODEL": CREATE [OR REPLACE] MODEL ... AS SELECT ... . "CREATE_PROCEDURE": CREATE
+   * PROCEDURE query. "CREATE_TABLE": CREATE [OR REPLACE] TABLE without AS SELECT.
+   * "CREATE_TABLE_AS_SELECT": CREATE [OR REPLACE] TABLE ... AS SELECT ... . "CREATE_VIEW": CREATE
+   * [OR REPLACE] VIEW ... AS SELECT ... . "DROP_FUNCTION" : DROP FUNCTION query. "DROP_PROCEDURE":
+   * DROP PROCEDURE query. "DROP_TABLE": DROP TABLE query. "DROP_VIEW": DROP VIEW query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -510,12 +510,12 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
    * https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language.
    * "MERGE": MERGE query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-
    * manipulation-language. "ALTER_TABLE": ALTER TABLE query. "ALTER_VIEW": ALTER VIEW query.
-   * "CREATE_FUNCTION": CREATE FUNCTION query. "CREATE_MODEL": CREATE [OR REPLACE] MODEL ... AS
-   * SELECT ... . "CREATE_PROCEDURE": CREATE PROCEDURE query. "CREATE_TABLE": CREATE [OR REPLACE]
-   * TABLE without AS SELECT. "CREATE_TABLE_AS_SELECT": CREATE [OR REPLACE] TABLE ... AS SELECT ...
-   * . "CREATE_VIEW": CREATE [OR REPLACE] VIEW ... AS SELECT ... . "DROP_FUNCTION" : DROP FUNCTION
-   * query. "DROP_PROCEDURE": DROP PROCEDURE query. "DROP_TABLE": DROP TABLE query. "DROP_VIEW":
-   * DROP VIEW query.
+   * "ASSERT": ASSERT condition AS 'description'. "CREATE_FUNCTION": CREATE FUNCTION query.
+   * "CREATE_MODEL": CREATE [OR REPLACE] MODEL ... AS SELECT ... . "CREATE_PROCEDURE": CREATE
+   * PROCEDURE query. "CREATE_TABLE": CREATE [OR REPLACE] TABLE without AS SELECT.
+   * "CREATE_TABLE_AS_SELECT": CREATE [OR REPLACE] TABLE ... AS SELECT ... . "CREATE_VIEW": CREATE
+   * [OR REPLACE] VIEW ... AS SELECT ... . "DROP_FUNCTION" : DROP FUNCTION query. "DROP_PROCEDURE":
+   * DROP PROCEDURE query. "DROP_TABLE": DROP TABLE query. "DROP_VIEW": DROP VIEW query.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatementType() {
@@ -531,12 +531,12 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
    * https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language.
    * "MERGE": MERGE query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-
    * manipulation-language. "ALTER_TABLE": ALTER TABLE query. "ALTER_VIEW": ALTER VIEW query.
-   * "CREATE_FUNCTION": CREATE FUNCTION query. "CREATE_MODEL": CREATE [OR REPLACE] MODEL ... AS
-   * SELECT ... . "CREATE_PROCEDURE": CREATE PROCEDURE query. "CREATE_TABLE": CREATE [OR REPLACE]
-   * TABLE without AS SELECT. "CREATE_TABLE_AS_SELECT": CREATE [OR REPLACE] TABLE ... AS SELECT ...
-   * . "CREATE_VIEW": CREATE [OR REPLACE] VIEW ... AS SELECT ... . "DROP_FUNCTION" : DROP FUNCTION
-   * query. "DROP_PROCEDURE": DROP PROCEDURE query. "DROP_TABLE": DROP TABLE query. "DROP_VIEW":
-   * DROP VIEW query.
+   * "ASSERT": ASSERT condition AS 'description'. "CREATE_FUNCTION": CREATE FUNCTION query.
+   * "CREATE_MODEL": CREATE [OR REPLACE] MODEL ... AS SELECT ... . "CREATE_PROCEDURE": CREATE
+   * PROCEDURE query. "CREATE_TABLE": CREATE [OR REPLACE] TABLE without AS SELECT.
+   * "CREATE_TABLE_AS_SELECT": CREATE [OR REPLACE] TABLE ... AS SELECT ... . "CREATE_VIEW": CREATE
+   * [OR REPLACE] VIEW ... AS SELECT ... . "DROP_FUNCTION" : DROP FUNCTION query. "DROP_PROCEDURE":
+   * DROP PROCEDURE query. "DROP_TABLE": DROP TABLE query. "DROP_VIEW": DROP VIEW query.
    * @param statementType statementType or {@code null} for none
    */
   public JobStatistics2 setStatementType(java.lang.String statementType) {

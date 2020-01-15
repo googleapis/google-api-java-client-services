@@ -17,7 +17,7 @@
 package com.google.api.services.cloudidentity.v1beta1.model;
 
 /**
- * Model definition for ListMembershipsResponse.
+ * The response message for MembershipsService.ListMemberships.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Identity API. For a detailed explanation see:
@@ -30,22 +30,22 @@ package com.google.api.services.cloudidentity.v1beta1.model;
 public final class ListMembershipsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of Memberships
+   * The `Membership`s under the specified `parent`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Membership> memberships;
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results available for
-   * listing.
+   * A continuation token to retrieve the next page of results, or empty if there are no more
+   * results available.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * List of Memberships
+   * The `Membership`s under the specified `parent`.
    * @return value or {@code null} for none
    */
   public java.util.List<Membership> getMemberships() {
@@ -53,7 +53,7 @@ public final class ListMembershipsResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * List of Memberships
+   * The `Membership`s under the specified `parent`.
    * @param memberships memberships or {@code null} for none
    */
   public ListMembershipsResponse setMemberships(java.util.List<Membership> memberships) {
@@ -62,8 +62,8 @@ public final class ListMembershipsResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results available for
-   * listing.
+   * A continuation token to retrieve the next page of results, or empty if there are no more
+   * results available.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -71,8 +71,8 @@ public final class ListMembershipsResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results available for
-   * listing.
+   * A continuation token to retrieve the next page of results, or empty if there are no more
+   * results available.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListMembershipsResponse setNextPageToken(java.lang.String nextPageToken) {

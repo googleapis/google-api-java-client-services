@@ -539,7 +539,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
     }
     /**
-     * List groups within a customer or a domain.
+     * Lists groups within a customer or a domain.
      *
      * Create a request for the method "groups.list".
      *
@@ -559,7 +559,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       private static final String REST_PATH = "v1/groups";
 
       /**
-       * List groups within a customer or a domain.
+       * Lists groups within a customer or a domain.
        *
        * Create a request for the method "groups.list".
        *
@@ -1752,7 +1752,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
       }
       /**
-       * List Memberships within a Group.
+       * Lists Memberships within a Group.
        *
        * Create a request for the method "memberships.list".
        *
@@ -1781,7 +1781,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
             java.util.regex.Pattern.compile("^groups/[^/]+$");
 
         /**
-         * List Memberships within a Group.
+         * Lists Memberships within a Group.
          *
          * Create a request for the method "memberships.list".
          *

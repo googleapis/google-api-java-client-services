@@ -17,7 +17,10 @@
 package com.google.api.services.cloudidentity.v1beta1.model;
 
 /**
- * Resource representing a Membership within a Group
+ * A membership within the Cloud Identity Groups API.
+ *
+ * A `Membership` defines a relationship between a `Group` and an entity belonging to that `Group`,
+ * referred to as a "member".
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Identity API. For a detailed explanation see:
@@ -30,52 +33,52 @@ package com.google.api.services.cloudidentity.v1beta1.model;
 public final class Membership extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Creation timestamp of the Membership.
+   * Output only. The time when the `Membership` was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Required. Immutable. EntityKey of the entity to be added as the member. Must be set while
-   * creating a Membership, read-only afterwards.
+   * Immutable. The `EntityKey` of the member.
    *
-   * Currently allowed entity types: `Users`, `Groups`. This field will be deprecated soon.
+   * Either `member_key` or `preferred_member_key` must be set when calling
+   * MembershipsService.CreateMembership but not both; both shall be set when returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private EntityKey memberKey;
 
   /**
-   * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-   * Membership in the format: `groups/{group_id}/memberships/{member_id}`, where group_id is the
-   * unique id assigned to the Group to which Membership belongs to, and member_id is the unique id
-   * assigned to the member
+   * Output only. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+   * `Membership`.
    *
-   * Must be left blank while creating a Membership.
+   * Shall be of the form `groups/{group_id}/memberships/{membership_id}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Roles for a member within the Group.
+   * The `MembershipRole`s that apply to the `Membership`.
    *
-   * Currently supported MembershipRoles: `"MEMBER", "OWNER", "MANAGER"`.
+   * If unspecified, defaults to a single `MembershipRole` with `name` `MEMBER`.
+   *
+   * Must not contain duplicate `MembershipRole`s with the same `name`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<MembershipRole> roles;
 
   /**
-   * Output only. Last updated timestamp of the Membership.
+   * Output only. The time when the `Membership` was last updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Output only. Creation timestamp of the Membership.
+   * Output only. The time when the `Membership` was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -83,7 +86,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Creation timestamp of the Membership.
+   * Output only. The time when the `Membership` was created.
    * @param createTime createTime or {@code null} for none
    */
   public Membership setCreateTime(String createTime) {
@@ -92,10 +95,10 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. EntityKey of the entity to be added as the member. Must be set while
-   * creating a Membership, read-only afterwards.
+   * Immutable. The `EntityKey` of the member.
    *
-   * Currently allowed entity types: `Users`, `Groups`. This field will be deprecated soon.
+   * Either `member_key` or `preferred_member_key` must be set when calling
+   * MembershipsService.CreateMembership but not both; both shall be set when returned.
    * @return value or {@code null} for none
    */
   public EntityKey getMemberKey() {
@@ -103,10 +106,10 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. EntityKey of the entity to be added as the member. Must be set while
-   * creating a Membership, read-only afterwards.
+   * Immutable. The `EntityKey` of the member.
    *
-   * Currently allowed entity types: `Users`, `Groups`. This field will be deprecated soon.
+   * Either `member_key` or `preferred_member_key` must be set when calling
+   * MembershipsService.CreateMembership but not both; both shall be set when returned.
    * @param memberKey memberKey or {@code null} for none
    */
   public Membership setMemberKey(EntityKey memberKey) {
@@ -115,12 +118,10 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-   * Membership in the format: `groups/{group_id}/memberships/{member_id}`, where group_id is the
-   * unique id assigned to the Group to which Membership belongs to, and member_id is the unique id
-   * assigned to the member
+   * Output only. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+   * `Membership`.
    *
-   * Must be left blank while creating a Membership.
+   * Shall be of the form `groups/{group_id}/memberships/{membership_id}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -128,12 +129,10 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-   * Membership in the format: `groups/{group_id}/memberships/{member_id}`, where group_id is the
-   * unique id assigned to the Group to which Membership belongs to, and member_id is the unique id
-   * assigned to the member
+   * Output only. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+   * `Membership`.
    *
-   * Must be left blank while creating a Membership.
+   * Shall be of the form `groups/{group_id}/memberships/{membership_id}`.
    * @param name name or {@code null} for none
    */
   public Membership setName(java.lang.String name) {
@@ -142,9 +141,11 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Roles for a member within the Group.
+   * The `MembershipRole`s that apply to the `Membership`.
    *
-   * Currently supported MembershipRoles: `"MEMBER", "OWNER", "MANAGER"`.
+   * If unspecified, defaults to a single `MembershipRole` with `name` `MEMBER`.
+   *
+   * Must not contain duplicate `MembershipRole`s with the same `name`.
    * @return value or {@code null} for none
    */
   public java.util.List<MembershipRole> getRoles() {
@@ -152,9 +153,11 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Roles for a member within the Group.
+   * The `MembershipRole`s that apply to the `Membership`.
    *
-   * Currently supported MembershipRoles: `"MEMBER", "OWNER", "MANAGER"`.
+   * If unspecified, defaults to a single `MembershipRole` with `name` `MEMBER`.
+   *
+   * Must not contain duplicate `MembershipRole`s with the same `name`.
    * @param roles roles or {@code null} for none
    */
   public Membership setRoles(java.util.List<MembershipRole> roles) {
@@ -163,7 +166,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Last updated timestamp of the Membership.
+   * Output only. The time when the `Membership` was last updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -171,7 +174,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Last updated timestamp of the Membership.
+   * Output only. The time when the `Membership` was last updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public Membership setUpdateTime(String updateTime) {

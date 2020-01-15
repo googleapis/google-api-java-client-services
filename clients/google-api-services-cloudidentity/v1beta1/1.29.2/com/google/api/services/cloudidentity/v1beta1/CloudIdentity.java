@@ -143,7 +143,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
   public class Groups {
 
     /**
-     * Creates a Group.
+     * Creates a `Group`.
      *
      * Create a request for the method "groups.create".
      *
@@ -164,7 +164,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       private static final String REST_PATH = "v1beta1/groups";
 
       /**
-       * Creates a Group.
+       * Creates a `Group`.
        *
        * Create a request for the method "groups.create".
        *
@@ -242,17 +242,16 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
     }
     /**
-     * Deletes a Group.
+     * Deletes a `Group`.
      *
      * Create a request for the method "groups.delete".
      *
      * This request holds the parameters needed by the cloudidentity server.  After setting any optional
      * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
-     * @param name [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-    Group in the format:
-     *        `groups/{group_id}`, where `group_id` is the unique id
-    assigned to the Group.
+     * @param name The [resource name](https://cloud.google.com/apis/design/resource_names) of
+    the `Group` to retrieve.
+     *        Must be of the form `groups/{group_id}`.
      * @return the request
      */
     public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -269,7 +268,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
           java.util.regex.Pattern.compile("^groups/[^/]+$");
 
       /**
-       * Deletes a Group.
+       * Deletes a `Group`.
        *
        * Create a request for the method "groups.delete".
        *
@@ -279,10 +278,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-    Group in the format:
-     *        `groups/{group_id}`, where `group_id` is the unique id
-    assigned to the Group.
+       * @param name The [resource name](https://cloud.google.com/apis/design/resource_names) of
+    the `Group` to retrieve.
+     *        Must be of the form `groups/{group_id}`.
        * @since 1.13
        */
       protected Delete(java.lang.String name) {
@@ -351,24 +349,28 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group in the
-       * format: `groups/{group_id}`, where `group_id` is the unique id assigned to the Group.
+       * The [resource name](https://cloud.google.com/apis/design/resource_names) of the `Group` to
+       * retrieve.
+       *
+       * Must be of the form `groups/{group_id}`.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /**[ Resource name](https://cloud.google.com/apis/design/resource_names) of the Group in the format:
-    [ `groups/{group_id}`, where `group_id` is the unique id assigned to the Group.
-    [
+      /** The [resource name](https://cloud.google.com/apis/design/resource_names) of the `Group` to
+     retrieve.
 
+     Must be of the form `groups/{group_id}`.
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group in the
-       * format: `groups/{group_id}`, where `group_id` is the unique id assigned to the Group.
+       * The [resource name](https://cloud.google.com/apis/design/resource_names) of the `Group` to
+       * retrieve.
+       *
+       * Must be of the form `groups/{group_id}`.
        */
       public Delete setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -386,17 +388,16 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
     }
     /**
-     * Retrieves a Group.
+     * Retrieves a `Group`.
      *
      * Create a request for the method "groups.get".
      *
      * This request holds the parameters needed by the cloudidentity server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param name [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-    Group in the format:
-     *        `groups/{group_id}`, where `group_id` is the unique id
-    assigned to the Group.
+     * @param name The [resource name](https://cloud.google.com/apis/design/resource_names) of
+    the `Group` to retrieve.
+     *        Must be of the form `groups/{group_id}`.
      * @return the request
      */
     public Get get(java.lang.String name) throws java.io.IOException {
@@ -413,7 +414,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
           java.util.regex.Pattern.compile("^groups/[^/]+$");
 
       /**
-       * Retrieves a Group.
+       * Retrieves a `Group`.
        *
        * Create a request for the method "groups.get".
        *
@@ -422,10 +423,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-    Group in the format:
-     *        `groups/{group_id}`, where `group_id` is the unique id
-    assigned to the Group.
+       * @param name The [resource name](https://cloud.google.com/apis/design/resource_names) of
+    the `Group` to retrieve.
+     *        Must be of the form `groups/{group_id}`.
        * @since 1.13
        */
       protected Get(java.lang.String name) {
@@ -504,24 +504,28 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group in the
-       * format: `groups/{group_id}`, where `group_id` is the unique id assigned to the Group.
+       * The [resource name](https://cloud.google.com/apis/design/resource_names) of the `Group` to
+       * retrieve.
+       *
+       * Must be of the form `groups/{group_id}`.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /**[ Resource name](https://cloud.google.com/apis/design/resource_names) of the Group in the format:
-    [ `groups/{group_id}`, where `group_id` is the unique id assigned to the Group.
-    [
+      /** The [resource name](https://cloud.google.com/apis/design/resource_names) of the `Group` to
+     retrieve.
 
+     Must be of the form `groups/{group_id}`.
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group in the
-       * format: `groups/{group_id}`, where `group_id` is the unique id assigned to the Group.
+       * The [resource name](https://cloud.google.com/apis/design/resource_names) of the `Group` to
+       * retrieve.
+       *
+       * Must be of the form `groups/{group_id}`.
        */
       public Get setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -539,8 +543,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
     }
     /**
-     * Looks up [resource name](https://cloud.google.com/apis/design/resource_names) of a Group by its
-     * EntityKey.
+     * Looks up the [resource name](https://cloud.google.com/apis/design/resource_names) of a `Group` by
+     * its `EntityKey`.
      *
      * Create a request for the method "groups.lookup".
      *
@@ -560,8 +564,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       private static final String REST_PATH = "v1beta1/groups:lookup";
 
       /**
-       * Looks up [resource name](https://cloud.google.com/apis/design/resource_names) of a Group by its
-       * EntityKey.
+       * Looks up the [resource name](https://cloud.google.com/apis/design/resource_names) of a `Group`
+       * by its `EntityKey`.
        *
        * Create a request for the method "groups.lookup".
        *
@@ -643,21 +647,40 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * The id of the entity within the given namespace. The id must be unique within its
-       * namespace.
+       * The ID of the entity.
+       *
+       * For Google-managed entities, the `id` must be the email address of a group or user.
+       *
+       * For external-identity-mapped entities, the `id` must be a string conforming to the Identity
+       * Source's requirements.
+       *
+       * Must be unique within a `namespace`.
        */
       @com.google.api.client.util.Key("groupKey.id")
       private java.lang.String groupKeyId;
 
-      /** The id of the entity within the given namespace. The id must be unique within its namespace.
+      /** The ID of the entity.
+
+     For Google-managed entities, the `id` must be the email address of a group or user.
+
+     For external-identity-mapped entities, the `id` must be a string conforming to the Identity
+     Source's requirements.
+
+     Must be unique within a `namespace`.
        */
       public java.lang.String getGroupKeyId() {
         return groupKeyId;
       }
 
       /**
-       * The id of the entity within the given namespace. The id must be unique within its
-       * namespace.
+       * The ID of the entity.
+       *
+       * For Google-managed entities, the `id` must be the email address of a group or user.
+       *
+       * For external-identity-mapped entities, the `id` must be a string conforming to the Identity
+       * Source's requirements.
+       *
+       * Must be unique within a `namespace`.
        */
       public Lookup setGroupKeyId(java.lang.String groupKeyId) {
         this.groupKeyId = groupKeyId;
@@ -665,33 +688,37 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * Namespaces provide isolation for ids, i.e an id only needs to be unique within its
-       * namespace.
+       * The namespace in which the entity exists.
        *
-       * Namespaces are currently only created as part of IdentitySource creation from Admin
-       * Console. A namespace `"identitysources/{identity_source_id}"` is created corresponding to
-       * every Identity Source `identity_source_id`.
+       * If not specified, the `EntityKey` represents a Google-managed entity such as a Google user
+       * or a Google Group.
+       *
+       * If specified, the `EntityKey` represents an external-identity-mapped group created through
+       * Admin Console. Must be of the form `identitysources/{identity_source_id}.
        */
       @com.google.api.client.util.Key("groupKey.namespace")
       private java.lang.String groupKeyNamespace;
 
-      /** Namespaces provide isolation for ids, i.e an id only needs to be unique within its namespace.
+      /** The namespace in which the entity exists.
 
-     Namespaces are currently only created as part of IdentitySource creation from Admin Console. A
-     namespace `"identitysources/{identity_source_id}"` is created corresponding to every Identity
-     Source `identity_source_id`.
+     If not specified, the `EntityKey` represents a Google-managed entity such as a Google user or a
+     Google Group.
+
+     If specified, the `EntityKey` represents an external-identity-mapped group created through Admin
+     Console. Must be of the form `identitysources/{identity_source_id}.
        */
       public java.lang.String getGroupKeyNamespace() {
         return groupKeyNamespace;
       }
 
       /**
-       * Namespaces provide isolation for ids, i.e an id only needs to be unique within its
-       * namespace.
+       * The namespace in which the entity exists.
        *
-       * Namespaces are currently only created as part of IdentitySource creation from Admin
-       * Console. A namespace `"identitysources/{identity_source_id}"` is created corresponding to
-       * every Identity Source `identity_source_id`.
+       * If not specified, the `EntityKey` represents a Google-managed entity such as a Google user
+       * or a Google Group.
+       *
+       * If specified, the `EntityKey` represents an external-identity-mapped group created through
+       * Admin Console. Must be of the form `identitysources/{identity_source_id}.
        */
       public Lookup setGroupKeyNamespace(java.lang.String groupKeyNamespace) {
         this.groupKeyNamespace = groupKeyNamespace;
@@ -704,18 +731,17 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
     }
     /**
-     * Updates a Group.
+     * Updates a `Group`.
      *
      * Create a request for the method "groups.patch".
      *
      * This request holds the parameters needed by the cloudidentity server.  After setting any optional
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
-     * @param name Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-    Group in
-     *        the format: `groups/{group_id}`, where group_id is the unique id
-    assigned to the Group.
-     *        Must be left blank while creating a Group
+     * @param name Output only. The [resource name](https://cloud.google.com/apis/design/resource_names) of
+    the
+     *        `Group`.
+    Shall be of the form `groups/{group_id}`.
      * @param content the {@link com.google.api.services.cloudidentity.v1beta1.model.Group}
      * @return the request
      */
@@ -733,7 +759,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
           java.util.regex.Pattern.compile("^groups/[^/]+$");
 
       /**
-       * Updates a Group.
+       * Updates a `Group`.
        *
        * Create a request for the method "groups.patch".
        *
@@ -743,11 +769,10 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-    Group in
-     *        the format: `groups/{group_id}`, where group_id is the unique id
-    assigned to the Group.
-     *        Must be left blank while creating a Group
+       * @param name Output only. The [resource name](https://cloud.google.com/apis/design/resource_names) of
+    the
+     *        `Group`.
+    Shall be of the form `groups/{group_id}`.
        * @param content the {@link com.google.api.services.cloudidentity.v1beta1.model.Group}
        * @since 1.13
        */
@@ -817,30 +842,28 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-       * Group in the format: `groups/{group_id}`, where group_id is the unique id assigned to the
-       * Group.
+       * Output only. The [resource name](https://cloud.google.com/apis/design/resource_names) of
+       * the `Group`.
        *
-       * Must be left blank while creating a Group
+       * Shall be of the form `groups/{group_id}`.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group in
-     the format: `groups/{group_id}`, where group_id is the unique id assigned to the Group.
+      /** Output only. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+     `Group`.
 
-     Must be left blank while creating a Group
+     Shall be of the form `groups/{group_id}`.
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-       * Group in the format: `groups/{group_id}`, where group_id is the unique id assigned to the
-       * Group.
+       * Output only. The [resource name](https://cloud.google.com/apis/design/resource_names) of
+       * the `Group`.
        *
-       * Must be left blank while creating a Group
+       * Shall be of the form `groups/{group_id}`.
        */
       public Patch setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -852,17 +875,27 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         return this;
       }
 
-      /** Editable fields: `display_name`, `description` */
+      /**
+       * The fully-qualified names of fields to update.
+       *
+       * May only contain the following fields: `display_name`, `description`.
+       */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** Editable fields: `display_name`, `description`
+      /** The fully-qualified names of fields to update.
+
+     May only contain the following fields: `display_name`, `description`.
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
-      /** Editable fields: `display_name`, `description` */
+      /**
+       * The fully-qualified names of fields to update.
+       *
+       * May only contain the following fields: `display_name`, `description`.
+       */
       public Patch setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -874,7 +907,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
     }
     /**
-     * Searches for Groups.
+     * Searches for `Group`s matching a specified query.
      *
      * Create a request for the method "groups.search".
      *
@@ -894,7 +927,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       private static final String REST_PATH = "v1beta1/groups:search";
 
       /**
-       * Searches for Groups.
+       * Searches for `Group`s matching a specified query.
        *
        * Create a request for the method "groups.search".
        *
@@ -976,85 +1009,130 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * The default page size is 200 (max 1000) for the BASIC view, and 50 (max 500) for the FULL
-       * view.
+       * The maximum number of results to return.
+       *
+       * Note that the number of results returned may be less than this value even if there are more
+       * available results. To fetch all results, clients must continue calling this method
+       * repeatedly until the response no longer contains a `next_page_token`.
+       *
+       * If unspecified, defaults to 200 for `GroupView.BASIC` and to 50 for `GroupView.FULL`.
+       *
+       * Must not be greater than 1000 for `GroupView.BASIC` or 500 for `GroupView.FULL`.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** The default page size is 200 (max 1000) for the BASIC view, and 50 (max 500) for the FULL view.
+      /** The maximum number of results to return.
+
+     Note that the number of results returned may be less than this value even if there are more
+     available results. To fetch all results, clients must continue calling this method repeatedly until
+     the response no longer contains a `next_page_token`.
+
+     If unspecified, defaults to 200 for `GroupView.BASIC` and to 50 for `GroupView.FULL`.
+
+     Must not be greater than 1000 for `GroupView.BASIC` or 500 for `GroupView.FULL`.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
       /**
-       * The default page size is 200 (max 1000) for the BASIC view, and 50 (max 500) for the FULL
-       * view.
+       * The maximum number of results to return.
+       *
+       * Note that the number of results returned may be less than this value even if there are more
+       * available results. To fetch all results, clients must continue calling this method
+       * repeatedly until the response no longer contains a `next_page_token`.
+       *
+       * If unspecified, defaults to 200 for `GroupView.BASIC` and to 50 for `GroupView.FULL`.
+       *
+       * Must not be greater than 1000 for `GroupView.BASIC` or 500 for `GroupView.FULL`.
        */
       public Search setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
         return this;
       }
 
-      /** The next_page_token value returned from a previous search request, if any. */
+      /**
+       * The `next_page_token` value returned from a previous search request, if any.
+       */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** The next_page_token value returned from a previous search request, if any.
+      /** The `next_page_token` value returned from a previous search request, if any.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
-      /** The next_page_token value returned from a previous search request, if any. */
+      /**
+       * The `next_page_token` value returned from a previous search request, if any.
+       */
       public Search setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
         return this;
       }
 
       /**
-       * Query string for performing search on groups. Users can search on namespace and label
-       * attributes of groups. EXACT match ('=') is supported on namespace, and CONTAINS match (':')
-       * is supported on labels. This is a `required` field. Multiple queries can be combined using
-       * `AND` operator. The operator is case sensitive. An example query would be: "namespace= AND
-       * labels:".
+       * The search query.
+       *
+       * Only queries on the parent and labels of `Group`s are supported.
+       *
+       * Must be specified in [Common Expression Language](https://opensource.google/projects/cel).
+       * May only contain equality operators on the parent (e.g. `parent ==
+       * 'customers/{customer_id}'`) and inclusion operators on labels (e.g.,
+       * `'cloudidentity.googleapis.com/groups.discussion_forum' in labels`).
        */
       @com.google.api.client.util.Key
       private java.lang.String query;
 
-      /** Query string for performing search on groups. Users can search on namespace and label attributes of
-     groups. EXACT match ('=') is supported on namespace, and CONTAINS match (':') is supported on
-     labels. This is a `required` field. Multiple queries can be combined using `AND` operator. The
-     operator is case sensitive. An example query would be: "namespace= AND labels:".
+      /** The search query.
+
+     Only queries on the parent and labels of `Group`s are supported.
+
+     Must be specified in [Common Expression Language](https://opensource.google/projects/cel). May only
+     contain equality operators on the parent (e.g. `parent == 'customers/{customer_id}'`) and inclusion
+     operators on labels (e.g., `'cloudidentity.googleapis.com/groups.discussion_forum' in labels`).
        */
       public java.lang.String getQuery() {
         return query;
       }
 
       /**
-       * Query string for performing search on groups. Users can search on namespace and label
-       * attributes of groups. EXACT match ('=') is supported on namespace, and CONTAINS match (':')
-       * is supported on labels. This is a `required` field. Multiple queries can be combined using
-       * `AND` operator. The operator is case sensitive. An example query would be: "namespace= AND
-       * labels:".
+       * The search query.
+       *
+       * Only queries on the parent and labels of `Group`s are supported.
+       *
+       * Must be specified in [Common Expression Language](https://opensource.google/projects/cel).
+       * May only contain equality operators on the parent (e.g. `parent ==
+       * 'customers/{customer_id}'`) and inclusion operators on labels (e.g.,
+       * `'cloudidentity.googleapis.com/groups.discussion_forum' in labels`).
        */
       public Search setQuery(java.lang.String query) {
         this.query = query;
         return this;
       }
 
-      /** Group resource view to be returned. Defaults to [GroupView.BASIC](). */
+      /**
+       * The level of detail to be returned.
+       *
+       * If unspecified, defaults to `View.BASIC`.
+       */
       @com.google.api.client.util.Key
       private java.lang.String view;
 
-      /** Group resource view to be returned. Defaults to [GroupView.BASIC]().
+      /** The level of detail to be returned.
+
+     If unspecified, defaults to `View.BASIC`.
        */
       public java.lang.String getView() {
         return view;
       }
 
-      /** Group resource view to be returned. Defaults to [GroupView.BASIC](). */
+      /**
+       * The level of detail to be returned.
+       *
+       * If unspecified, defaults to `View.BASIC`.
+       */
       public Search setView(java.lang.String view) {
         this.view = view;
         return this;
@@ -1087,18 +1165,16 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
     public class Memberships {
 
       /**
-       * Creates a Membership.
+       * Creates a `Membership`.
        *
        * Create a request for the method "memberships.create".
        *
        * This request holds the parameters needed by the cloudidentity server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-      Group to create
-       *        Membership within. Format: `groups/{group_id}`, where
-      `group_id` is the unique id assigned
-       *        to the Group.
+       * @param parent The parent `Group` resource under which to create the `Membership`.
+      Must be of the form
+       *        `groups/{group_id}`.
        * @param content the {@link com.google.api.services.cloudidentity.v1beta1.model.Membership}
        * @return the request
        */
@@ -1116,7 +1192,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
             java.util.regex.Pattern.compile("^groups/[^/]+$");
 
         /**
-         * Creates a Membership.
+         * Creates a `Membership`.
          *
          * Create a request for the method "memberships.create".
          *
@@ -1126,11 +1202,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-      Group to create
-       *        Membership within. Format: `groups/{group_id}`, where
-      `group_id` is the unique id assigned
-       *        to the Group.
+         * @param parent The parent `Group` resource under which to create the `Membership`.
+      Must be of the form
+       *        `groups/{group_id}`.
          * @param content the {@link com.google.api.services.cloudidentity.v1beta1.model.Membership}
          * @since 1.13
          */
@@ -1200,27 +1274,25 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group to
-         * create Membership within. Format: `groups/{group_id}`, where `group_id` is the unique id
-         * assigned to the Group.
+         * The parent `Group` resource under which to create the `Membership`.
+         *
+         * Must be of the form `groups/{group_id}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /**[ Resource name](https://cloud.google.com/apis/design/resource_names) of the Group to create
-      [ Membership within. Format: `groups/{group_id}`, where `group_id` is the unique id assigned to the
-      [ Group.
-      [
+        /** The parent `Group` resource under which to create the `Membership`.
 
+       Must be of the form `groups/{group_id}`.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group to
-         * create Membership within. Format: `groups/{group_id}`, where `group_id` is the unique id
-         * assigned to the Group.
+         * The parent `Group` resource under which to create the `Membership`.
+         *
+         * Must be of the form `groups/{group_id}`.
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -1238,21 +1310,17 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
       }
       /**
-       * Deletes a Membership.
+       * Deletes a `Membership`.
        *
        * Create a request for the method "memberships.delete".
        *
        * This request holds the parameters needed by the cloudidentity server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-      Membership to be
-       *        deleted.
-      Format: `groups/{group_id}/memberships/{member_id}`, where `group_id` is
-      the
-       *        unique id assigned to the Group to which Membership belongs to, and
-      member_id is the
-       *        unique id assigned to the member.
+       * @param name The [resource name](https://cloud.google.com/apis/design/resource_names) of
+      the `Membership` to
+       *        delete.
+      Must be of the form `groups/{group_id}/memberships/{membership_id}`.
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -1269,7 +1337,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
             java.util.regex.Pattern.compile("^groups/[^/]+/memberships/[^/]+$");
 
         /**
-         * Deletes a Membership.
+         * Deletes a `Membership`.
          *
          * Create a request for the method "memberships.delete".
          *
@@ -1279,14 +1347,10 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-      Membership to be
-       *        deleted.
-      Format: `groups/{group_id}/memberships/{member_id}`, where `group_id` is
-      the
-       *        unique id assigned to the Group to which Membership belongs to, and
-      member_id is the
-       *        unique id assigned to the member.
+         * @param name The [resource name](https://cloud.google.com/apis/design/resource_names) of
+      the `Membership` to
+       *        delete.
+      Must be of the form `groups/{group_id}/memberships/{membership_id}`.
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -1355,35 +1419,28 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * [Resource name](https://cloud.google.com/apis/design/resource_names) of the Membership to
-         * be deleted.
+         * The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * `Membership` to delete.
          *
-         * Format: `groups/{group_id}/memberships/{member_id}`, where `group_id` is the unique id
-         * assigned to the Group to which Membership belongs to, and member_id is the unique id
-         * assigned to the member.
+         * Must be of the form `groups/{group_id}/memberships/{membership_id}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /**[ Resource name](https://cloud.google.com/apis/design/resource_names) of the Membership to be
-      [ deleted.
-      [
-      [ Format: `groups/{group_id}/memberships/{member_id}`, where `group_id` is the unique id assigned to
-      [ the Group to which Membership belongs to, and member_id is the unique id assigned to the member.
-      [
+        /** The [resource name](https://cloud.google.com/apis/design/resource_names) of the `Membership` to
+       delete.
 
+       Must be of the form `groups/{group_id}/memberships/{membership_id}`.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * [Resource name](https://cloud.google.com/apis/design/resource_names) of the Membership to
-         * be deleted.
+         * The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * `Membership` to delete.
          *
-         * Format: `groups/{group_id}/memberships/{member_id}`, where `group_id` is the unique id
-         * assigned to the Group to which Membership belongs to, and member_id is the unique id
-         * assigned to the member.
+         * Must be of the form `groups/{group_id}/memberships/{membership_id}`.
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -1401,21 +1458,17 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
       }
       /**
-       * Retrieves a Membership.
+       * Retrieves a `Membership`.
        *
        * Create a request for the method "memberships.get".
        *
        * This request holds the parameters needed by the cloudidentity server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-      Membership to be
-       *        retrieved.
-      Format: `groups/{group_id}/memberships/{member_id}`, where `group_id` is
-      the
-       *        unique id assigned to the Group to which Membership belongs to, and
-      `member_id` is the
-       *        unique id assigned to the member.
+       * @param name The [resource name](https://cloud.google.com/apis/design/resource_names) of
+      the `Membership` to
+       *        retrieve.
+      Must be of the form `groups/{group_id}/memberships/{membership_id}`.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -1432,7 +1485,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
             java.util.regex.Pattern.compile("^groups/[^/]+/memberships/[^/]+$");
 
         /**
-         * Retrieves a Membership.
+         * Retrieves a `Membership`.
          *
          * Create a request for the method "memberships.get".
          *
@@ -1441,14 +1494,10 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-      Membership to be
-       *        retrieved.
-      Format: `groups/{group_id}/memberships/{member_id}`, where `group_id` is
-      the
-       *        unique id assigned to the Group to which Membership belongs to, and
-      `member_id` is the
-       *        unique id assigned to the member.
+         * @param name The [resource name](https://cloud.google.com/apis/design/resource_names) of
+      the `Membership` to
+       *        retrieve.
+      Must be of the form `groups/{group_id}/memberships/{membership_id}`.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -1527,35 +1576,28 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * [Resource name](https://cloud.google.com/apis/design/resource_names) of the Membership to
-         * be retrieved.
+         * The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * `Membership` to retrieve.
          *
-         * Format: `groups/{group_id}/memberships/{member_id}`, where `group_id` is the unique id
-         * assigned to the Group to which Membership belongs to, and `member_id` is the unique id
-         * assigned to the member.
+         * Must be of the form `groups/{group_id}/memberships/{membership_id}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /**[ Resource name](https://cloud.google.com/apis/design/resource_names) of the Membership to be
-      [ retrieved.
-      [
-      [ Format: `groups/{group_id}/memberships/{member_id}`, where `group_id` is the unique id assigned to
-      [ the Group to which Membership belongs to, and `member_id` is the unique id assigned to the member.
-      [
+        /** The [resource name](https://cloud.google.com/apis/design/resource_names) of the `Membership` to
+       retrieve.
 
+       Must be of the form `groups/{group_id}/memberships/{membership_id}`.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * [Resource name](https://cloud.google.com/apis/design/resource_names) of the Membership to
-         * be retrieved.
+         * The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * `Membership` to retrieve.
          *
-         * Format: `groups/{group_id}/memberships/{member_id}`, where `group_id` is the unique id
-         * assigned to the Group to which Membership belongs to, and `member_id` is the unique id
-         * assigned to the member.
+         * Must be of the form `groups/{group_id}/memberships/{membership_id}`.
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -1573,19 +1615,16 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
       }
       /**
-       * List Memberships within a Group.
+       * Lists the `Membership`s within a `Group`.
        *
        * Create a request for the method "memberships.list".
        *
        * This request holds the parameters needed by the cloudidentity server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-      Group to list
-       *        Memberships within.
-      Format: `groups/{group_id}`, where `group_id` is the unique id
-       *        assigned to
-      the Group.
+       * @param parent The parent `Group` resource under which to lookup the `Membership` name.
+      Must be of the form
+       *        `groups/{group_id}`.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -1602,7 +1641,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
             java.util.regex.Pattern.compile("^groups/[^/]+$");
 
         /**
-         * List Memberships within a Group.
+         * Lists the `Membership`s within a `Group`.
          *
          * Create a request for the method "memberships.list".
          *
@@ -1611,12 +1650,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-      Group to list
-       *        Memberships within.
-      Format: `groups/{group_id}`, where `group_id` is the unique id
-       *        assigned to
-      the Group.
+         * @param parent The parent `Group` resource under which to lookup the `Membership` name.
+      Must be of the form
+       *        `groups/{group_id}`.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -1695,30 +1731,25 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group to list
-         * Memberships within.
+         * The parent `Group` resource under which to lookup the `Membership` name.
          *
-         * Format: `groups/{group_id}`, where `group_id` is the unique id assigned to the Group.
+         * Must be of the form `groups/{group_id}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /**[ Resource name](https://cloud.google.com/apis/design/resource_names) of the Group to list
-      [ Memberships within.
-      [
-      [ Format: `groups/{group_id}`, where `group_id` is the unique id assigned to the Group.
-      [
+        /** The parent `Group` resource under which to lookup the `Membership` name.
 
+       Must be of the form `groups/{group_id}`.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group to list
-         * Memberships within.
+         * The parent `Group` resource under which to lookup the `Membership` name.
          *
-         * Format: `groups/{group_id}`, where `group_id` is the unique id assigned to the Group.
+         * Must be of the form `groups/{group_id}`.
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -1731,54 +1762,90 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * The default page size is 200 (max 1000) for the BASIC view, and 50 (max 500) for the FULL
-         * view.
+         * The maximum number of results to return.
+         *
+         * Note that the number of results returned may be less than this value even if there are
+         * more available results. To fetch all results, clients must continue calling this method
+         * repeatedly until the response no longer contains a `next_page_token`.
+         *
+         * If unspecified, defaults to 200 for `GroupView.BASIC` and to 50 for `GroupView.FULL`.
+         *
+         * Must not be greater than 1000 for `GroupView.BASIC` or 500 for `GroupView.FULL`.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The default page size is 200 (max 1000) for the BASIC view, and 50 (max 500) for the FULL view.
+        /** The maximum number of results to return.
+
+       Note that the number of results returned may be less than this value even if there are more
+       available results. To fetch all results, clients must continue calling this method repeatedly until
+       the response no longer contains a `next_page_token`.
+
+       If unspecified, defaults to 200 for `GroupView.BASIC` and to 50 for `GroupView.FULL`.
+
+       Must not be greater than 1000 for `GroupView.BASIC` or 500 for `GroupView.FULL`.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
         /**
-         * The default page size is 200 (max 1000) for the BASIC view, and 50 (max 500) for the FULL
-         * view.
+         * The maximum number of results to return.
+         *
+         * Note that the number of results returned may be less than this value even if there are
+         * more available results. To fetch all results, clients must continue calling this method
+         * repeatedly until the response no longer contains a `next_page_token`.
+         *
+         * If unspecified, defaults to 200 for `GroupView.BASIC` and to 50 for `GroupView.FULL`.
+         *
+         * Must not be greater than 1000 for `GroupView.BASIC` or 500 for `GroupView.FULL`.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
-        /** The next_page_token value returned from a previous list request, if any */
+        /**
+         * The `next_page_token` value returned from a previous search request, if any.
+         */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** The next_page_token value returned from a previous list request, if any
+        /** The `next_page_token` value returned from a previous search request, if any.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /** The next_page_token value returned from a previous list request, if any */
+        /**
+         * The `next_page_token` value returned from a previous search request, if any.
+         */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
         }
 
-        /** Membership resource view to be returned. Defaults to MembershipView.BASIC. */
+        /**
+         * The level of detail to be returned.
+         *
+         * If unspecified, defaults to `MembershipView.BASIC`.
+         */
         @com.google.api.client.util.Key
         private java.lang.String view;
 
-        /** Membership resource view to be returned. Defaults to MembershipView.BASIC.
+        /** The level of detail to be returned.
+
+       If unspecified, defaults to `MembershipView.BASIC`.
          */
         public java.lang.String getView() {
           return view;
         }
 
-        /** Membership resource view to be returned. Defaults to MembershipView.BASIC. */
+        /**
+         * The level of detail to be returned.
+         *
+         * If unspecified, defaults to `MembershipView.BASIC`.
+         */
         public List setView(java.lang.String view) {
           this.view = view;
           return this;
@@ -1790,20 +1857,17 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
       }
       /**
-       * Looks up [resource name](https://cloud.google.com/apis/design/resource_names) of a Membership
-       * within a Group by member's EntityKey.
+       * Looks up the [resource name](https://cloud.google.com/apis/design/resource_names) of a
+       * `Membership` by its `EntityKey`.
        *
        * Create a request for the method "memberships.lookup".
        *
        * This request holds the parameters needed by the cloudidentity server.  After setting any optional
        * parameters, call the {@link Lookup#execute()} method to invoke the remote operation.
        *
-       * @param parent [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-      Group to lookup
-       *        Membership within.
-      Format: `groups/{group_id}`, where `group_id` is the unique id assigned
-       *        to
-      the Group.
+       * @param parent The parent `Group` resource under which to lookup the `Membership` name.
+      Must be of the form
+       *        `groups/{group_id}`.
        * @return the request
        */
       public Lookup lookup(java.lang.String parent) throws java.io.IOException {
@@ -1820,8 +1884,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
             java.util.regex.Pattern.compile("^groups/[^/]+$");
 
         /**
-         * Looks up [resource name](https://cloud.google.com/apis/design/resource_names) of a Membership
-         * within a Group by member's EntityKey.
+         * Looks up the [resource name](https://cloud.google.com/apis/design/resource_names) of a
+         * `Membership` by its `EntityKey`.
          *
          * Create a request for the method "memberships.lookup".
          *
@@ -1831,12 +1895,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * Lookup#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-      Group to lookup
-       *        Membership within.
-      Format: `groups/{group_id}`, where `group_id` is the unique id assigned
-       *        to
-      the Group.
+         * @param parent The parent `Group` resource under which to lookup the `Membership` name.
+      Must be of the form
+       *        `groups/{group_id}`.
          * @since 1.13
          */
         protected Lookup(java.lang.String parent) {
@@ -1915,30 +1976,25 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group to
-         * lookup Membership within.
+         * The parent `Group` resource under which to lookup the `Membership` name.
          *
-         * Format: `groups/{group_id}`, where `group_id` is the unique id assigned to the Group.
+         * Must be of the form `groups/{group_id}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /**[ Resource name](https://cloud.google.com/apis/design/resource_names) of the Group to lookup
-      [ Membership within.
-      [
-      [ Format: `groups/{group_id}`, where `group_id` is the unique id assigned to the Group.
-      [
+        /** The parent `Group` resource under which to lookup the `Membership` name.
 
+       Must be of the form `groups/{group_id}`.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group to
-         * lookup Membership within.
+         * The parent `Group` resource under which to lookup the `Membership` name.
          *
-         * Format: `groups/{group_id}`, where `group_id` is the unique id assigned to the Group.
+         * Must be of the form `groups/{group_id}`.
          */
         public Lookup setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -1951,21 +2007,40 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * The id of the entity within the given namespace. The id must be unique within its
-         * namespace.
+         * The ID of the entity.
+         *
+         * For Google-managed entities, the `id` must be the email address of a group or user.
+         *
+         * For external-identity-mapped entities, the `id` must be a string conforming to the
+         * Identity Source's requirements.
+         *
+         * Must be unique within a `namespace`.
          */
         @com.google.api.client.util.Key("memberKey.id")
         private java.lang.String memberKeyId;
 
-        /** The id of the entity within the given namespace. The id must be unique within its namespace.
+        /** The ID of the entity.
+
+       For Google-managed entities, the `id` must be the email address of a group or user.
+
+       For external-identity-mapped entities, the `id` must be a string conforming to the Identity
+       Source's requirements.
+
+       Must be unique within a `namespace`.
          */
         public java.lang.String getMemberKeyId() {
           return memberKeyId;
         }
 
         /**
-         * The id of the entity within the given namespace. The id must be unique within its
-         * namespace.
+         * The ID of the entity.
+         *
+         * For Google-managed entities, the `id` must be the email address of a group or user.
+         *
+         * For external-identity-mapped entities, the `id` must be a string conforming to the
+         * Identity Source's requirements.
+         *
+         * Must be unique within a `namespace`.
          */
         public Lookup setMemberKeyId(java.lang.String memberKeyId) {
           this.memberKeyId = memberKeyId;
@@ -1973,33 +2048,37 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * Namespaces provide isolation for ids, i.e an id only needs to be unique within its
-         * namespace.
+         * The namespace in which the entity exists.
          *
-         * Namespaces are currently only created as part of IdentitySource creation from Admin
-         * Console. A namespace `"identitysources/{identity_source_id}"` is created corresponding to
-         * every Identity Source `identity_source_id`.
+         * If not specified, the `EntityKey` represents a Google-managed entity such as a Google
+         * user or a Google Group.
+         *
+         * If specified, the `EntityKey` represents an external-identity-mapped group created
+         * through Admin Console. Must be of the form `identitysources/{identity_source_id}.
          */
         @com.google.api.client.util.Key("memberKey.namespace")
         private java.lang.String memberKeyNamespace;
 
-        /** Namespaces provide isolation for ids, i.e an id only needs to be unique within its namespace.
+        /** The namespace in which the entity exists.
 
-       Namespaces are currently only created as part of IdentitySource creation from Admin Console. A
-       namespace `"identitysources/{identity_source_id}"` is created corresponding to every Identity
-       Source `identity_source_id`.
+       If not specified, the `EntityKey` represents a Google-managed entity such as a Google user or a
+       Google Group.
+
+       If specified, the `EntityKey` represents an external-identity-mapped group created through Admin
+       Console. Must be of the form `identitysources/{identity_source_id}.
          */
         public java.lang.String getMemberKeyNamespace() {
           return memberKeyNamespace;
         }
 
         /**
-         * Namespaces provide isolation for ids, i.e an id only needs to be unique within its
-         * namespace.
+         * The namespace in which the entity exists.
          *
-         * Namespaces are currently only created as part of IdentitySource creation from Admin
-         * Console. A namespace `"identitysources/{identity_source_id}"` is created corresponding to
-         * every Identity Source `identity_source_id`.
+         * If not specified, the `EntityKey` represents a Google-managed entity such as a Google
+         * user or a Google Group.
+         *
+         * If specified, the `EntityKey` represents an external-identity-mapped group created
+         * through Admin Console. Must be of the form `identitysources/{identity_source_id}.
          */
         public Lookup setMemberKeyNamespace(java.lang.String memberKeyNamespace) {
           this.memberKeyNamespace = memberKeyNamespace;

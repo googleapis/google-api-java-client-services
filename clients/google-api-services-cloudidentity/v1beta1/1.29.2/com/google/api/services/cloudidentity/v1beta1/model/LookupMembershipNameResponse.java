@@ -17,7 +17,7 @@
 package com.google.api.services.cloudidentity.v1beta1.model;
 
 /**
- * Model definition for LookupMembershipNameResponse.
+ * The response message for MembershipsService.LookupMembershipName.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Identity API. For a detailed explanation see:
@@ -30,24 +30,20 @@ package com.google.api.services.cloudidentity.v1beta1.model;
 public final class LookupMembershipNameResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Resource name](https://cloud.google.com/apis/design/resource_names) of the Membership being
-   * looked up.
+   * The [resource name](https://cloud.google.com/apis/design/resource_names) of the looked-up
+   * `Membership`.
    *
-   * Format: `groups/{group_id}/memberships/{member_id}`, where `group_id` is the unique id assigned
-   * to the Group to which Membership belongs to, and `member_id` is the unique id assigned to the
-   * member.
+   * Must be of the form `groups/{group_id}/memberships/{membership_id}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * [Resource name](https://cloud.google.com/apis/design/resource_names) of the Membership being
-   * looked up.
+   * The [resource name](https://cloud.google.com/apis/design/resource_names) of the looked-up
+   * `Membership`.
    *
-   * Format: `groups/{group_id}/memberships/{member_id}`, where `group_id` is the unique id assigned
-   * to the Group to which Membership belongs to, and `member_id` is the unique id assigned to the
-   * member.
+   * Must be of the form `groups/{group_id}/memberships/{membership_id}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -55,12 +51,10 @@ public final class LookupMembershipNameResponse extends com.google.api.client.js
   }
 
   /**
-   * [Resource name](https://cloud.google.com/apis/design/resource_names) of the Membership being
-   * looked up.
+   * The [resource name](https://cloud.google.com/apis/design/resource_names) of the looked-up
+   * `Membership`.
    *
-   * Format: `groups/{group_id}/memberships/{member_id}`, where `group_id` is the unique id assigned
-   * to the Group to which Membership belongs to, and `member_id` is the unique id assigned to the
-   * member.
+   * Must be of the form `groups/{group_id}/memberships/{membership_id}`.
    * @param name name or {@code null} for none
    */
   public LookupMembershipNameResponse setName(java.lang.String name) {

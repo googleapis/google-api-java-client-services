@@ -17,7 +17,9 @@
 package com.google.api.services.cloudidentity.v1beta1.model;
 
 /**
- * Resource representing a Group
+ * A group within the Cloud Identity Groups API.
+ *
+ * A `Group` is a collection of entities, where each entity is either a user or another group.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Identity API. For a detailed explanation see:
@@ -30,7 +32,7 @@ package com.google.api.services.cloudidentity.v1beta1.model;
 public final class Group extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Additional entity key aliases for a Group
+   * Optional. Additional entity key aliases for a Group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,74 +45,76 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time when the Group was created. Output only
+   * Output only. The time when the `Group` was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * An extended description to help users determine the purpose of a Group. For example, you can
-   * include information about who should join the Group, the types of messages to send to the
-   * Group, links to FAQs about the Group, or related Groups. Maximum length is 4,096 characters.
+   * An extended description to help users determine the purpose of a `Group`.
+   *
+   * Must not be longer than 4,096 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * The Group's display name.
+   * The display name of the `Group`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Required. Immutable. EntityKey of the Group.
-   *
-   * Must be set when creating a Group, read-only afterwards.
+   * Required. Immutable. The `EntityKey` of the `Group`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private EntityKey groupKey;
 
   /**
-   * Required. Labels for Group resource. Required. For creating Groups under a namespace, set label
-   * key to 'labels/system/groups/external' and label value as empty.
+   * Required. The labels that apply to the `Group`.
+   *
+   * Must not contain more than one entry. Must contain the entry `'system/groups/external': ''` if
+   * the `Group` is an external-identity-mapped group or
+   * `'cloudidentity.googleapis.com/groups.discussion_forum': ''` if the `Group` is a Google Group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group
-   * in the format: `groups/{group_id}`, where group_id is the unique id assigned to the Group.
+   * Output only. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+   * `Group`.
    *
-   * Must be left blank while creating a Group
+   * Shall be of the form `groups/{group_id}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Required. Immutable. The entity under which this Group resides in Cloud Identity resource
-   * hierarchy. Must be set when creating a Group, read-only afterwards.
+   * Required. Immutable. The resource name of the entity under which this `Group` resides in the
+   * Cloud Identity resource hierarchy.
    *
-   * Currently allowed types: 'identitysources'.
+   * Must be of the form `identitysources/{identity_source_id}` for external- identity-mapped groups
+   * or `customers/{customer_id}` for Google Groups.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String parent;
 
   /**
-   * Output only. The time when the Group was last updated. Output only
+   * Output only. The time when the `Group` was last updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Optional. Additional entity key aliases for a Group
+   * Optional. Additional entity key aliases for a Group.
    * @return value or {@code null} for none
    */
   public java.util.List<EntityKey> getAdditionalGroupKeys() {
@@ -118,7 +122,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Additional entity key aliases for a Group
+   * Optional. Additional entity key aliases for a Group.
    * @param additionalGroupKeys additionalGroupKeys or {@code null} for none
    */
   public Group setAdditionalGroupKeys(java.util.List<EntityKey> additionalGroupKeys) {
@@ -127,7 +131,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time when the Group was created. Output only
+   * Output only. The time when the `Group` was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -135,7 +139,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time when the Group was created. Output only
+   * Output only. The time when the `Group` was created.
    * @param createTime createTime or {@code null} for none
    */
   public Group setCreateTime(String createTime) {
@@ -144,9 +148,9 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An extended description to help users determine the purpose of a Group. For example, you can
-   * include information about who should join the Group, the types of messages to send to the
-   * Group, links to FAQs about the Group, or related Groups. Maximum length is 4,096 characters.
+   * An extended description to help users determine the purpose of a `Group`.
+   *
+   * Must not be longer than 4,096 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -154,9 +158,9 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An extended description to help users determine the purpose of a Group. For example, you can
-   * include information about who should join the Group, the types of messages to send to the
-   * Group, links to FAQs about the Group, or related Groups. Maximum length is 4,096 characters.
+   * An extended description to help users determine the purpose of a `Group`.
+   *
+   * Must not be longer than 4,096 characters.
    * @param description description or {@code null} for none
    */
   public Group setDescription(java.lang.String description) {
@@ -165,7 +169,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Group's display name.
+   * The display name of the `Group`.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -173,7 +177,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Group's display name.
+   * The display name of the `Group`.
    * @param displayName displayName or {@code null} for none
    */
   public Group setDisplayName(java.lang.String displayName) {
@@ -182,9 +186,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. EntityKey of the Group.
-   *
-   * Must be set when creating a Group, read-only afterwards.
+   * Required. Immutable. The `EntityKey` of the `Group`.
    * @return value or {@code null} for none
    */
   public EntityKey getGroupKey() {
@@ -192,9 +194,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. EntityKey of the Group.
-   *
-   * Must be set when creating a Group, read-only afterwards.
+   * Required. Immutable. The `EntityKey` of the `Group`.
    * @param groupKey groupKey or {@code null} for none
    */
   public Group setGroupKey(EntityKey groupKey) {
@@ -203,8 +203,11 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Labels for Group resource. Required. For creating Groups under a namespace, set label
-   * key to 'labels/system/groups/external' and label value as empty.
+   * Required. The labels that apply to the `Group`.
+   *
+   * Must not contain more than one entry. Must contain the entry `'system/groups/external': ''` if
+   * the `Group` is an external-identity-mapped group or
+   * `'cloudidentity.googleapis.com/groups.discussion_forum': ''` if the `Group` is a Google Group.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -212,8 +215,11 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Labels for Group resource. Required. For creating Groups under a namespace, set label
-   * key to 'labels/system/groups/external' and label value as empty.
+   * Required. The labels that apply to the `Group`.
+   *
+   * Must not contain more than one entry. Must contain the entry `'system/groups/external': ''` if
+   * the `Group` is an external-identity-mapped group or
+   * `'cloudidentity.googleapis.com/groups.discussion_forum': ''` if the `Group` is a Google Group.
    * @param labels labels or {@code null} for none
    */
   public Group setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -222,10 +228,10 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group
-   * in the format: `groups/{group_id}`, where group_id is the unique id assigned to the Group.
+   * Output only. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+   * `Group`.
    *
-   * Must be left blank while creating a Group
+   * Shall be of the form `groups/{group_id}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -233,10 +239,10 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group
-   * in the format: `groups/{group_id}`, where group_id is the unique id assigned to the Group.
+   * Output only. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+   * `Group`.
    *
-   * Must be left blank while creating a Group
+   * Shall be of the form `groups/{group_id}`.
    * @param name name or {@code null} for none
    */
   public Group setName(java.lang.String name) {
@@ -245,10 +251,11 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. The entity under which this Group resides in Cloud Identity resource
-   * hierarchy. Must be set when creating a Group, read-only afterwards.
+   * Required. Immutable. The resource name of the entity under which this `Group` resides in the
+   * Cloud Identity resource hierarchy.
    *
-   * Currently allowed types: 'identitysources'.
+   * Must be of the form `identitysources/{identity_source_id}` for external- identity-mapped groups
+   * or `customers/{customer_id}` for Google Groups.
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -256,10 +263,11 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. The entity under which this Group resides in Cloud Identity resource
-   * hierarchy. Must be set when creating a Group, read-only afterwards.
+   * Required. Immutable. The resource name of the entity under which this `Group` resides in the
+   * Cloud Identity resource hierarchy.
    *
-   * Currently allowed types: 'identitysources'.
+   * Must be of the form `identitysources/{identity_source_id}` for external- identity-mapped groups
+   * or `customers/{customer_id}` for Google Groups.
    * @param parent parent or {@code null} for none
    */
   public Group setParent(java.lang.String parent) {
@@ -268,7 +276,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time when the Group was last updated. Output only
+   * Output only. The time when the `Group` was last updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -276,7 +284,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time when the Group was last updated. Output only
+   * Output only. The time when the `Group` was last updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public Group setUpdateTime(String updateTime) {

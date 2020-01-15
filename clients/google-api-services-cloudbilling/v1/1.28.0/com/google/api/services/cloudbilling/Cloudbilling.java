@@ -2010,7 +2010,7 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the cloudbilling server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent The name of the service.
+       * @param parent Required. The name of the service.
       Example: "services/DA34-426B-A397"
        * @return the request
        */
@@ -2037,7 +2037,7 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The name of the service.
+         * @param parent Required. The name of the service.
       Example: "services/DA34-426B-A397"
          * @since 1.13
          */
@@ -2117,19 +2117,19 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * The name of the service. Example: "services/DA34-426B-A397"
+         * Required. The name of the service. Example: "services/DA34-426B-A397"
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The name of the service. Example: "services/DA34-426B-A397"
+        /** Required. The name of the service. Example: "services/DA34-426B-A397"
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The name of the service. Example: "services/DA34-426B-A397"
+         * Required. The name of the service. Example: "services/DA34-426B-A397"
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {

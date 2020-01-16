@@ -22,7 +22,7 @@ packages on [Maven Central][maven-search].
 | API Discovery Service | [v1](clients/google-api-services-discovery/v1) |
 | Abusive Experience Report API | [v1](clients/google-api-services-abusiveexperiencereport/v1) |
 | Accelerated Mobile Pages (AMP) URL API | [v1](clients/google-api-services-acceleratedmobilepageurl/v1) |
-| Access Approval API | [v1beta1](clients/google-api-services-accessapproval/v1beta1) |
+| Access Approval API | [v1](clients/google-api-services-accessapproval/v1), [v1beta1](clients/google-api-services-accessapproval/v1beta1) |
 | Access Context Manager API | [v1](clients/google-api-services-accesscontextmanager/v1), [v1beta](clients/google-api-services-accesscontextmanager/v1beta) |
 | Ad Exchange Buyer API | [v1.2](clients/google-api-services-adexchangebuyer/v1.2), [v1.3](clients/google-api-services-adexchangebuyer/v1.3), [v1.4](clients/google-api-services-adexchangebuyer/v1.4) |
 | Ad Exchange Buyer API II | [v2beta1](clients/google-api-services-adexchangebuyer2/v2beta1) |
@@ -49,7 +49,7 @@ packages on [Maven Central][maven-search].
 | Cloud Bigtable Admin API | [v1](clients/google-api-services-bigtableadmin/v1), [v2](clients/google-api-services-bigtableadmin/v2) |
 | Cloud Billing API | [v1](clients/google-api-services-cloudbilling/v1) |
 | Cloud Billing Budget API | [v1beta1](clients/google-api-services-billingbudgets/v1beta1) |
-| Cloud Build API | [v1](clients/google-api-services-cloudbuild/v1), [v1alpha1](clients/google-api-services-cloudbuild/v1alpha1) |
+| Cloud Build API | [v1](clients/google-api-services-cloudbuild/v1), [v1alpha1](clients/google-api-services-cloudbuild/v1alpha1), [v1alpha2](clients/google-api-services-cloudbuild/v1alpha2) |
 | Cloud Composer API | [v1](clients/google-api-services-composer/v1), [v1beta1](clients/google-api-services-composer/v1beta1) |
 | Cloud Data Fusion API | [v1beta1](clients/google-api-services-datafusion/v1beta1) |
 | Cloud Data Loss Prevention (DLP) API | [v2](clients/google-api-services-dlp/v2) |
@@ -87,7 +87,7 @@ packages on [Maven Central][maven-search].
 | Cloud Testing API | [v1](clients/google-api-services-testing/v1) |
 | Cloud Text-to-Speech API | [v1](clients/google-api-services-texttospeech/v1), [v1beta1](clients/google-api-services-texttospeech/v1beta1) |
 | Cloud Tool Results API | [v1](clients/google-api-services-toolresults/v1), [v1beta3](clients/google-api-services-toolresults/v1beta3) |
-| Cloud Translation API | [v3beta1](clients/google-api-services-translate/v3beta1) |
+| Cloud Translation API | [v3](clients/google-api-services-translate/v3), [v3beta1](clients/google-api-services-translate/v3beta1) |
 | Cloud Video Intelligence API | [v1](clients/google-api-services-videointelligence/v1), [v1beta2](clients/google-api-services-videointelligence/v1beta2), [v1p1beta1](clients/google-api-services-videointelligence/v1p1beta1), [v1p2beta1](clients/google-api-services-videointelligence/v1p2beta1), [v1p3beta1](clients/google-api-services-videointelligence/v1p3beta1) |
 | Cloud Vision API | [v1](clients/google-api-services-vision/v1), [v1p1beta1](clients/google-api-services-vision/v1p1beta1), [v1p2beta1](clients/google-api-services-vision/v1p2beta1) |
 | Compute Engine API | [alpha](clients/google-api-services-compute/alpha), [beta](clients/google-api-services-compute/beta), [v1](clients/google-api-services-compute/v1) |

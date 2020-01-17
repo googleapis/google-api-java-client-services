@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-accessapproval",
+    "version": "v1-rev20200113-1.30.3"
+  }
+}

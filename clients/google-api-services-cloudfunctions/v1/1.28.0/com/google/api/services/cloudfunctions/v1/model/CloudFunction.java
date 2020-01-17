@@ -76,6 +76,13 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
   private HttpsTrigger httpsTrigger;
 
   /**
+   * The ingress settings for the function, controlling what traffic can reach it.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ingressSettings;
+
+  /**
    * Labels associated with this Cloud Function.
    * The value may be {@code null}.
    */
@@ -201,6 +208,13 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
   private java.lang.String vpcConnector;
 
   /**
+   * The egress settings for the connector, controlling what traffic is diverted through it.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String vpcConnectorEgressSettings;
+
+  /**
    * The amount of memory in MB available for a function. Defaults to 256MB.
    * @return value or {@code null} for none
    */
@@ -305,6 +319,23 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
    */
   public CloudFunction setHttpsTrigger(HttpsTrigger httpsTrigger) {
     this.httpsTrigger = httpsTrigger;
+    return this;
+  }
+
+  /**
+   * The ingress settings for the function, controlling what traffic can reach it.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIngressSettings() {
+    return ingressSettings;
+  }
+
+  /**
+   * The ingress settings for the function, controlling what traffic can reach it.
+   * @param ingressSettings ingressSettings or {@code null} for none
+   */
+  public CloudFunction setIngressSettings(java.lang.String ingressSettings) {
+    this.ingressSettings = ingressSettings;
     return this;
   }
 
@@ -597,6 +628,23 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
    */
   public CloudFunction setVpcConnector(java.lang.String vpcConnector) {
     this.vpcConnector = vpcConnector;
+    return this;
+  }
+
+  /**
+   * The egress settings for the connector, controlling what traffic is diverted through it.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVpcConnectorEgressSettings() {
+    return vpcConnectorEgressSettings;
+  }
+
+  /**
+   * The egress settings for the connector, controlling what traffic is diverted through it.
+   * @param vpcConnectorEgressSettings vpcConnectorEgressSettings or {@code null} for none
+   */
+  public CloudFunction setVpcConnectorEgressSettings(java.lang.String vpcConnectorEgressSettings) {
+    this.vpcConnectorEgressSettings = vpcConnectorEgressSettings;
     return this;
   }
 

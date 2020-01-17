@@ -45,6 +45,13 @@ public final class GoogleIdentityAccesscontextmanagerV1AccessLevel extends com.g
   private String createTime;
 
   /**
+   * A `CustomLevel` written in the Common Expression Language.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleIdentityAccesscontextmanagerV1CustomLevel custom;
+
+  /**
    * Description of the `AccessLevel` and its use. Does not affect behavior.
    * The value may be {@code null}.
    */
@@ -105,6 +112,23 @@ public final class GoogleIdentityAccesscontextmanagerV1AccessLevel extends com.g
    */
   public GoogleIdentityAccesscontextmanagerV1AccessLevel setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * A `CustomLevel` written in the Common Expression Language.
+   * @return value or {@code null} for none
+   */
+  public GoogleIdentityAccesscontextmanagerV1CustomLevel getCustom() {
+    return custom;
+  }
+
+  /**
+   * A `CustomLevel` written in the Common Expression Language.
+   * @param custom custom or {@code null} for none
+   */
+  public GoogleIdentityAccesscontextmanagerV1AccessLevel setCustom(GoogleIdentityAccesscontextmanagerV1CustomLevel custom) {
+    this.custom = custom;
     return this;
   }
 

@@ -6929,6 +6929,381 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
   public class Organizations {
 
     /**
+     * Gets the Logs Router CMEK settings for the given resource.Note: CMEK for the Logs Router can
+     * currently only be configured for GCP organizations. Once configured, it applies to all projects
+     * and folders in the GCP organization.See Enabling CMEK for Logs Router for more information.
+     *
+     * Create a request for the method "organizations.getCmekSettings".
+     *
+     * This request holds the parameters needed by the logging server.  After setting any optional
+     * parameters, call the {@link GetCmekSettings#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The resource for which to retrieve CMEK settings.
+    "projects/[PROJECT_ID]/cmekSettings"
+     *        "organizations/[ORGANIZATION_ID]/cmekSettings"
+     *        "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings"
+    "folders/[FOLDER_ID]/cmekSettings"
+     *        Example: "organizations/12345/cmekSettings".Note: CMEK for the Logs Router can currently
+     *        only be configured for GCP organizations. Once configured, it applies to all projects and
+     *        folders in the GCP organization.
+     * @return the request
+     */
+    public GetCmekSettings getCmekSettings(java.lang.String name) throws java.io.IOException {
+      GetCmekSettings result = new GetCmekSettings(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetCmekSettings extends LoggingRequest<com.google.api.services.logging.v2.model.CmekSettings> {
+
+      private static final String REST_PATH = "v2/{+name}/cmekSettings";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+      /**
+       * Gets the Logs Router CMEK settings for the given resource.Note: CMEK for the Logs Router can
+       * currently only be configured for GCP organizations. Once configured, it applies to all projects
+       * and folders in the GCP organization.See Enabling CMEK for Logs Router for more information.
+       *
+       * Create a request for the method "organizations.getCmekSettings".
+       *
+       * This request holds the parameters needed by the the logging server.  After setting any optional
+       * parameters, call the {@link GetCmekSettings#execute()} method to invoke the remote operation.
+       * <p> {@link GetCmekSettings#initialize(com.google.api.client.googleapis.services.AbstractGoogleC
+       * lientRequest)} must be called to initialize this instance immediately after invoking the
+       * constructor. </p>
+       *
+       * @param name Required. The resource for which to retrieve CMEK settings.
+    "projects/[PROJECT_ID]/cmekSettings"
+     *        "organizations/[ORGANIZATION_ID]/cmekSettings"
+     *        "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings"
+    "folders/[FOLDER_ID]/cmekSettings"
+     *        Example: "organizations/12345/cmekSettings".Note: CMEK for the Logs Router can currently
+     *        only be configured for GCP organizations. Once configured, it applies to all projects and
+     *        folders in the GCP organization.
+       * @since 1.13
+       */
+      protected GetCmekSettings(java.lang.String name) {
+        super(Logging.this, "GET", REST_PATH, null, com.google.api.services.logging.v2.model.CmekSettings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetCmekSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (GetCmekSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetCmekSettings setAccessToken(java.lang.String accessToken) {
+        return (GetCmekSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetCmekSettings setAlt(java.lang.String alt) {
+        return (GetCmekSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public GetCmekSettings setCallback(java.lang.String callback) {
+        return (GetCmekSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public GetCmekSettings setFields(java.lang.String fields) {
+        return (GetCmekSettings) super.setFields(fields);
+      }
+
+      @Override
+      public GetCmekSettings setKey(java.lang.String key) {
+        return (GetCmekSettings) super.setKey(key);
+      }
+
+      @Override
+      public GetCmekSettings setOauthToken(java.lang.String oauthToken) {
+        return (GetCmekSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetCmekSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetCmekSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetCmekSettings setQuotaUser(java.lang.String quotaUser) {
+        return (GetCmekSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetCmekSettings setUploadType(java.lang.String uploadType) {
+        return (GetCmekSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetCmekSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetCmekSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The resource for which to retrieve CMEK settings.
+       * "projects/[PROJECT_ID]/cmekSettings" "organizations/[ORGANIZATION_ID]/cmekSettings"
+       * "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings"
+       * Example: "organizations/12345/cmekSettings".Note: CMEK for the Logs Router can currently
+       * only be configured for GCP organizations. Once configured, it applies to all projects and
+       * folders in the GCP organization.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The resource for which to retrieve CMEK settings. "projects/[PROJECT_ID]/cmekSettings"
+     "organizations/[ORGANIZATION_ID]/cmekSettings" "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings"
+     "folders/[FOLDER_ID]/cmekSettings" Example: "organizations/12345/cmekSettings".Note: CMEK for the
+     Logs Router can currently only be configured for GCP organizations. Once configured, it applies to
+     all projects and folders in the GCP organization.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The resource for which to retrieve CMEK settings.
+       * "projects/[PROJECT_ID]/cmekSettings" "organizations/[ORGANIZATION_ID]/cmekSettings"
+       * "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings"
+       * Example: "organizations/12345/cmekSettings".Note: CMEK for the Logs Router can currently
+       * only be configured for GCP organizations. Once configured, it applies to all projects and
+       * folders in the GCP organization.
+       */
+      public GetCmekSettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetCmekSettings set(String parameterName, Object value) {
+        return (GetCmekSettings) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates the Logs Router CMEK settings for the given resource.Note: CMEK for the Logs Router can
+     * currently only be configured for GCP organizations. Once configured, it applies to all projects
+     * and folders in the GCP organization.UpdateCmekSettings will fail if 1) kms_key_name is invalid,
+     * or 2) the associated service account does not have the required
+     * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key, or 3) access to the key is
+     * disabled.See Enabling CMEK for Logs Router for more information.
+     *
+     * Create a request for the method "organizations.updateCmekSettings".
+     *
+     * This request holds the parameters needed by the logging server.  After setting any optional
+     * parameters, call the {@link UpdateCmekSettings#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The resource name for the CMEK settings to update.
+    "projects/[PROJECT_ID]/cmekSettings"
+     *        "organizations/[ORGANIZATION_ID]/cmekSettings"
+     *        "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings"
+    "folders/[FOLDER_ID]/cmekSettings"
+     *        Example: "organizations/12345/cmekSettings".Note: CMEK for the Logs Router can currently
+     *        only be configured for GCP organizations. Once configured, it applies to all projects and
+     *        folders in the GCP organization.
+     * @param content the {@link com.google.api.services.logging.v2.model.CmekSettings}
+     * @return the request
+     */
+    public UpdateCmekSettings updateCmekSettings(java.lang.String name, com.google.api.services.logging.v2.model.CmekSettings content) throws java.io.IOException {
+      UpdateCmekSettings result = new UpdateCmekSettings(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class UpdateCmekSettings extends LoggingRequest<com.google.api.services.logging.v2.model.CmekSettings> {
+
+      private static final String REST_PATH = "v2/{+name}/cmekSettings";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+      /**
+       * Updates the Logs Router CMEK settings for the given resource.Note: CMEK for the Logs Router can
+       * currently only be configured for GCP organizations. Once configured, it applies to all projects
+       * and folders in the GCP organization.UpdateCmekSettings will fail if 1) kms_key_name is invalid,
+       * or 2) the associated service account does not have the required
+       * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key, or 3) access to the key
+       * is disabled.See Enabling CMEK for Logs Router for more information.
+       *
+       * Create a request for the method "organizations.updateCmekSettings".
+       *
+       * This request holds the parameters needed by the the logging server.  After setting any optional
+       * parameters, call the {@link UpdateCmekSettings#execute()} method to invoke the remote
+       * operation. <p> {@link UpdateCmekSettings#initialize(com.google.api.client.googleapis.services.A
+       * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param name Required. The resource name for the CMEK settings to update.
+    "projects/[PROJECT_ID]/cmekSettings"
+     *        "organizations/[ORGANIZATION_ID]/cmekSettings"
+     *        "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings"
+    "folders/[FOLDER_ID]/cmekSettings"
+     *        Example: "organizations/12345/cmekSettings".Note: CMEK for the Logs Router can currently
+     *        only be configured for GCP organizations. Once configured, it applies to all projects and
+     *        folders in the GCP organization.
+       * @param content the {@link com.google.api.services.logging.v2.model.CmekSettings}
+       * @since 1.13
+       */
+      protected UpdateCmekSettings(java.lang.String name, com.google.api.services.logging.v2.model.CmekSettings content) {
+        super(Logging.this, "PATCH", REST_PATH, content, com.google.api.services.logging.v2.model.CmekSettings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+$");
+        }
+      }
+
+      @Override
+      public UpdateCmekSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (UpdateCmekSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UpdateCmekSettings setAccessToken(java.lang.String accessToken) {
+        return (UpdateCmekSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UpdateCmekSettings setAlt(java.lang.String alt) {
+        return (UpdateCmekSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public UpdateCmekSettings setCallback(java.lang.String callback) {
+        return (UpdateCmekSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public UpdateCmekSettings setFields(java.lang.String fields) {
+        return (UpdateCmekSettings) super.setFields(fields);
+      }
+
+      @Override
+      public UpdateCmekSettings setKey(java.lang.String key) {
+        return (UpdateCmekSettings) super.setKey(key);
+      }
+
+      @Override
+      public UpdateCmekSettings setOauthToken(java.lang.String oauthToken) {
+        return (UpdateCmekSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UpdateCmekSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UpdateCmekSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UpdateCmekSettings setQuotaUser(java.lang.String quotaUser) {
+        return (UpdateCmekSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UpdateCmekSettings setUploadType(java.lang.String uploadType) {
+        return (UpdateCmekSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UpdateCmekSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UpdateCmekSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The resource name for the CMEK settings to update.
+       * "projects/[PROJECT_ID]/cmekSettings" "organizations/[ORGANIZATION_ID]/cmekSettings"
+       * "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings"
+       * Example: "organizations/12345/cmekSettings".Note: CMEK for the Logs Router can currently
+       * only be configured for GCP organizations. Once configured, it applies to all projects and
+       * folders in the GCP organization.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The resource name for the CMEK settings to update. "projects/[PROJECT_ID]/cmekSettings"
+     "organizations/[ORGANIZATION_ID]/cmekSettings" "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings"
+     "folders/[FOLDER_ID]/cmekSettings" Example: "organizations/12345/cmekSettings".Note: CMEK for the
+     Logs Router can currently only be configured for GCP organizations. Once configured, it applies to
+     all projects and folders in the GCP organization.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The resource name for the CMEK settings to update.
+       * "projects/[PROJECT_ID]/cmekSettings" "organizations/[ORGANIZATION_ID]/cmekSettings"
+       * "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings"
+       * Example: "organizations/12345/cmekSettings".Note: CMEK for the Logs Router can currently
+       * only be configured for GCP organizations. Once configured, it applies to all projects and
+       * folders in the GCP organization.
+       */
+      public UpdateCmekSettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /**
+       * Optional. Field mask identifying which fields from cmek_settings should be updated. A field
+       * will be overwritten if and only if it is in the update mask. Output only fields cannot be
+       * updated.See FieldMask for more information.Example: "updateMask=kmsKeyName"
+       */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Optional. Field mask identifying which fields from cmek_settings should be updated. A field will be
+     overwritten if and only if it is in the update mask. Output only fields cannot be updated.See
+     FieldMask for more information.Example: "updateMask=kmsKeyName"
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /**
+       * Optional. Field mask identifying which fields from cmek_settings should be updated. A field
+       * will be overwritten if and only if it is in the update mask. Output only fields cannot be
+       * updated.See FieldMask for more information.Example: "updateMask=kmsKeyName"
+       */
+      public UpdateCmekSettings setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public UpdateCmekSettings set(String parameterName, Object value) {
+        return (UpdateCmekSettings) super.set(parameterName, value);
+      }
+    }
+
+    /**
      * An accessor for creating requests from the Exclusions collection.
      *
      * <p>The typical use is:</p>
@@ -13750,6 +14125,403 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       @Override
       public Update set(String parameterName, Object value) {
         return (Update) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
+   * An accessor for creating requests from the V2 collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Logging logging = new Logging(...);}
+   *   {@code Logging.V2.List request = logging.v2().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public V2 v2() {
+    return new V2();
+  }
+
+  /**
+   * The "v2" collection of methods.
+   */
+  public class V2 {
+
+    /**
+     * Gets the Logs Router CMEK settings for the given resource.Note: CMEK for the Logs Router can
+     * currently only be configured for GCP organizations. Once configured, it applies to all projects
+     * and folders in the GCP organization.See Enabling CMEK for Logs Router for more information.
+     *
+     * Create a request for the method "v2.getCmekSettings".
+     *
+     * This request holds the parameters needed by the logging server.  After setting any optional
+     * parameters, call the {@link GetCmekSettings#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The resource for which to retrieve CMEK settings.
+    "projects/[PROJECT_ID]/cmekSettings"
+     *        "organizations/[ORGANIZATION_ID]/cmekSettings"
+     *        "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings"
+    "folders/[FOLDER_ID]/cmekSettings"
+     *        Example: "organizations/12345/cmekSettings".Note: CMEK for the Logs Router can currently
+     *        only be configured for GCP organizations. Once configured, it applies to all projects and
+     *        folders in the GCP organization.
+     * @return the request
+     */
+    public GetCmekSettings getCmekSettings(java.lang.String name) throws java.io.IOException {
+      GetCmekSettings result = new GetCmekSettings(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetCmekSettings extends LoggingRequest<com.google.api.services.logging.v2.model.CmekSettings> {
+
+      private static final String REST_PATH = "v2/{+name}/cmekSettings";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
+
+      /**
+       * Gets the Logs Router CMEK settings for the given resource.Note: CMEK for the Logs Router can
+       * currently only be configured for GCP organizations. Once configured, it applies to all projects
+       * and folders in the GCP organization.See Enabling CMEK for Logs Router for more information.
+       *
+       * Create a request for the method "v2.getCmekSettings".
+       *
+       * This request holds the parameters needed by the the logging server.  After setting any optional
+       * parameters, call the {@link GetCmekSettings#execute()} method to invoke the remote operation.
+       * <p> {@link GetCmekSettings#initialize(com.google.api.client.googleapis.services.AbstractGoogleC
+       * lientRequest)} must be called to initialize this instance immediately after invoking the
+       * constructor. </p>
+       *
+       * @param name Required. The resource for which to retrieve CMEK settings.
+    "projects/[PROJECT_ID]/cmekSettings"
+     *        "organizations/[ORGANIZATION_ID]/cmekSettings"
+     *        "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings"
+    "folders/[FOLDER_ID]/cmekSettings"
+     *        Example: "organizations/12345/cmekSettings".Note: CMEK for the Logs Router can currently
+     *        only be configured for GCP organizations. Once configured, it applies to all projects and
+     *        folders in the GCP organization.
+       * @since 1.13
+       */
+      protected GetCmekSettings(java.lang.String name) {
+        super(Logging.this, "GET", REST_PATH, null, com.google.api.services.logging.v2.model.CmekSettings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetCmekSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (GetCmekSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetCmekSettings setAccessToken(java.lang.String accessToken) {
+        return (GetCmekSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetCmekSettings setAlt(java.lang.String alt) {
+        return (GetCmekSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public GetCmekSettings setCallback(java.lang.String callback) {
+        return (GetCmekSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public GetCmekSettings setFields(java.lang.String fields) {
+        return (GetCmekSettings) super.setFields(fields);
+      }
+
+      @Override
+      public GetCmekSettings setKey(java.lang.String key) {
+        return (GetCmekSettings) super.setKey(key);
+      }
+
+      @Override
+      public GetCmekSettings setOauthToken(java.lang.String oauthToken) {
+        return (GetCmekSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetCmekSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetCmekSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetCmekSettings setQuotaUser(java.lang.String quotaUser) {
+        return (GetCmekSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetCmekSettings setUploadType(java.lang.String uploadType) {
+        return (GetCmekSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetCmekSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetCmekSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The resource for which to retrieve CMEK settings.
+       * "projects/[PROJECT_ID]/cmekSettings" "organizations/[ORGANIZATION_ID]/cmekSettings"
+       * "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings"
+       * Example: "organizations/12345/cmekSettings".Note: CMEK for the Logs Router can currently
+       * only be configured for GCP organizations. Once configured, it applies to all projects and
+       * folders in the GCP organization.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The resource for which to retrieve CMEK settings. "projects/[PROJECT_ID]/cmekSettings"
+     "organizations/[ORGANIZATION_ID]/cmekSettings" "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings"
+     "folders/[FOLDER_ID]/cmekSettings" Example: "organizations/12345/cmekSettings".Note: CMEK for the
+     Logs Router can currently only be configured for GCP organizations. Once configured, it applies to
+     all projects and folders in the GCP organization.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The resource for which to retrieve CMEK settings.
+       * "projects/[PROJECT_ID]/cmekSettings" "organizations/[ORGANIZATION_ID]/cmekSettings"
+       * "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings"
+       * Example: "organizations/12345/cmekSettings".Note: CMEK for the Logs Router can currently
+       * only be configured for GCP organizations. Once configured, it applies to all projects and
+       * folders in the GCP organization.
+       */
+      public GetCmekSettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetCmekSettings set(String parameterName, Object value) {
+        return (GetCmekSettings) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates the Logs Router CMEK settings for the given resource.Note: CMEK for the Logs Router can
+     * currently only be configured for GCP organizations. Once configured, it applies to all projects
+     * and folders in the GCP organization.UpdateCmekSettings will fail if 1) kms_key_name is invalid,
+     * or 2) the associated service account does not have the required
+     * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key, or 3) access to the key is
+     * disabled.See Enabling CMEK for Logs Router for more information.
+     *
+     * Create a request for the method "v2.updateCmekSettings".
+     *
+     * This request holds the parameters needed by the logging server.  After setting any optional
+     * parameters, call the {@link UpdateCmekSettings#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The resource name for the CMEK settings to update.
+    "projects/[PROJECT_ID]/cmekSettings"
+     *        "organizations/[ORGANIZATION_ID]/cmekSettings"
+     *        "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings"
+    "folders/[FOLDER_ID]/cmekSettings"
+     *        Example: "organizations/12345/cmekSettings".Note: CMEK for the Logs Router can currently
+     *        only be configured for GCP organizations. Once configured, it applies to all projects and
+     *        folders in the GCP organization.
+     * @param content the {@link com.google.api.services.logging.v2.model.CmekSettings}
+     * @return the request
+     */
+    public UpdateCmekSettings updateCmekSettings(java.lang.String name, com.google.api.services.logging.v2.model.CmekSettings content) throws java.io.IOException {
+      UpdateCmekSettings result = new UpdateCmekSettings(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class UpdateCmekSettings extends LoggingRequest<com.google.api.services.logging.v2.model.CmekSettings> {
+
+      private static final String REST_PATH = "v2/{+name}/cmekSettings";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
+
+      /**
+       * Updates the Logs Router CMEK settings for the given resource.Note: CMEK for the Logs Router can
+       * currently only be configured for GCP organizations. Once configured, it applies to all projects
+       * and folders in the GCP organization.UpdateCmekSettings will fail if 1) kms_key_name is invalid,
+       * or 2) the associated service account does not have the required
+       * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key, or 3) access to the key
+       * is disabled.See Enabling CMEK for Logs Router for more information.
+       *
+       * Create a request for the method "v2.updateCmekSettings".
+       *
+       * This request holds the parameters needed by the the logging server.  After setting any optional
+       * parameters, call the {@link UpdateCmekSettings#execute()} method to invoke the remote
+       * operation. <p> {@link UpdateCmekSettings#initialize(com.google.api.client.googleapis.services.A
+       * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param name Required. The resource name for the CMEK settings to update.
+    "projects/[PROJECT_ID]/cmekSettings"
+     *        "organizations/[ORGANIZATION_ID]/cmekSettings"
+     *        "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings"
+    "folders/[FOLDER_ID]/cmekSettings"
+     *        Example: "organizations/12345/cmekSettings".Note: CMEK for the Logs Router can currently
+     *        only be configured for GCP organizations. Once configured, it applies to all projects and
+     *        folders in the GCP organization.
+       * @param content the {@link com.google.api.services.logging.v2.model.CmekSettings}
+       * @since 1.13
+       */
+      protected UpdateCmekSettings(java.lang.String name, com.google.api.services.logging.v2.model.CmekSettings content) {
+        super(Logging.this, "PATCH", REST_PATH, content, com.google.api.services.logging.v2.model.CmekSettings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+      }
+
+      @Override
+      public UpdateCmekSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (UpdateCmekSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UpdateCmekSettings setAccessToken(java.lang.String accessToken) {
+        return (UpdateCmekSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UpdateCmekSettings setAlt(java.lang.String alt) {
+        return (UpdateCmekSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public UpdateCmekSettings setCallback(java.lang.String callback) {
+        return (UpdateCmekSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public UpdateCmekSettings setFields(java.lang.String fields) {
+        return (UpdateCmekSettings) super.setFields(fields);
+      }
+
+      @Override
+      public UpdateCmekSettings setKey(java.lang.String key) {
+        return (UpdateCmekSettings) super.setKey(key);
+      }
+
+      @Override
+      public UpdateCmekSettings setOauthToken(java.lang.String oauthToken) {
+        return (UpdateCmekSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UpdateCmekSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UpdateCmekSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UpdateCmekSettings setQuotaUser(java.lang.String quotaUser) {
+        return (UpdateCmekSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UpdateCmekSettings setUploadType(java.lang.String uploadType) {
+        return (UpdateCmekSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UpdateCmekSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UpdateCmekSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The resource name for the CMEK settings to update.
+       * "projects/[PROJECT_ID]/cmekSettings" "organizations/[ORGANIZATION_ID]/cmekSettings"
+       * "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings"
+       * Example: "organizations/12345/cmekSettings".Note: CMEK for the Logs Router can currently
+       * only be configured for GCP organizations. Once configured, it applies to all projects and
+       * folders in the GCP organization.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The resource name for the CMEK settings to update. "projects/[PROJECT_ID]/cmekSettings"
+     "organizations/[ORGANIZATION_ID]/cmekSettings" "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings"
+     "folders/[FOLDER_ID]/cmekSettings" Example: "organizations/12345/cmekSettings".Note: CMEK for the
+     Logs Router can currently only be configured for GCP organizations. Once configured, it applies to
+     all projects and folders in the GCP organization.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The resource name for the CMEK settings to update.
+       * "projects/[PROJECT_ID]/cmekSettings" "organizations/[ORGANIZATION_ID]/cmekSettings"
+       * "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings"
+       * Example: "organizations/12345/cmekSettings".Note: CMEK for the Logs Router can currently
+       * only be configured for GCP organizations. Once configured, it applies to all projects and
+       * folders in the GCP organization.
+       */
+      public UpdateCmekSettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /**
+       * Optional. Field mask identifying which fields from cmek_settings should be updated. A field
+       * will be overwritten if and only if it is in the update mask. Output only fields cannot be
+       * updated.See FieldMask for more information.Example: "updateMask=kmsKeyName"
+       */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Optional. Field mask identifying which fields from cmek_settings should be updated. A field will be
+     overwritten if and only if it is in the update mask. Output only fields cannot be updated.See
+     FieldMask for more information.Example: "updateMask=kmsKeyName"
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /**
+       * Optional. Field mask identifying which fields from cmek_settings should be updated. A field
+       * will be overwritten if and only if it is in the update mask. Output only fields cannot be
+       * updated.See FieldMask for more information.Example: "updateMask=kmsKeyName"
+       */
+      public UpdateCmekSettings setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public UpdateCmekSettings set(String parameterName, Object value) {
+        return (UpdateCmekSettings) super.set(parameterName, value);
       }
     }
 

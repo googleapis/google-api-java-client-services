@@ -46,9 +46,10 @@ public final class Feed extends com.google.api.client.json.GenericJson {
   /**
    * A list of types of the assets to receive updates. You must specify either or both of
    * asset_names and asset_types. Only asset updates matching specified asset_names and asset_types
-   * are exported to the feed. For example: "compute.googleapis.com/Disk" See [Introduction to Cloud
-   * Asset Inventory](https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview)
-   * for all supported asset types.
+   * are exported to the feed. For example: `"compute.googleapis.com/Disk"`
+   *
+   * See [this topic](https://cloud.google.com/asset-inventory/docs/supported-asset-types) for a
+   * list of all supported asset types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,9 +111,10 @@ public final class Feed extends com.google.api.client.json.GenericJson {
   /**
    * A list of types of the assets to receive updates. You must specify either or both of
    * asset_names and asset_types. Only asset updates matching specified asset_names and asset_types
-   * are exported to the feed. For example: "compute.googleapis.com/Disk" See [Introduction to Cloud
-   * Asset Inventory](https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview)
-   * for all supported asset types.
+   * are exported to the feed. For example: `"compute.googleapis.com/Disk"`
+   *
+   * See [this topic](https://cloud.google.com/asset-inventory/docs/supported-asset-types) for a
+   * list of all supported asset types.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAssetTypes() {
@@ -122,9 +124,10 @@ public final class Feed extends com.google.api.client.json.GenericJson {
   /**
    * A list of types of the assets to receive updates. You must specify either or both of
    * asset_names and asset_types. Only asset updates matching specified asset_names and asset_types
-   * are exported to the feed. For example: "compute.googleapis.com/Disk" See [Introduction to Cloud
-   * Asset Inventory](https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview)
-   * for all supported asset types.
+   * are exported to the feed. For example: `"compute.googleapis.com/Disk"`
+   *
+   * See [this topic](https://cloud.google.com/asset-inventory/docs/supported-asset-types) for a
+   * list of all supported asset types.
    * @param assetTypes assetTypes or {@code null} for none
    */
   public Feed setAssetTypes(java.util.List<java.lang.String> assetTypes) {

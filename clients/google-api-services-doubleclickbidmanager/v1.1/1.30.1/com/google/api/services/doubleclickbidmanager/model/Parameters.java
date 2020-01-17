@@ -65,6 +65,13 @@ public final class Parameters extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> metrics;
 
   /**
+   * Additional query options.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Options options;
+
+  /**
    * Report type.
    * The value may be {@code null}.
    */
@@ -136,6 +143,23 @@ public final class Parameters extends com.google.api.client.json.GenericJson {
    */
   public Parameters setMetrics(java.util.List<java.lang.String> metrics) {
     this.metrics = metrics;
+    return this;
+  }
+
+  /**
+   * Additional query options.
+   * @return value or {@code null} for none
+   */
+  public Options getOptions() {
+    return options;
+  }
+
+  /**
+   * Additional query options.
+   * @param options options or {@code null} for none
+   */
+  public Parameters setOptions(Options options) {
+    this.options = options;
     return this;
   }
 

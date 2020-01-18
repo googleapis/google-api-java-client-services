@@ -1589,7 +1589,8 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
     }
     /**
      * Partially updates a resource containing information about a database inside a Cloud SQL instance.
-     * This method supports patch semantics.
+     * This method supports patch semantics. Caution: This is not a partial update, so you must include
+     * values for all the settings that you want to retain. For partial updates, use update.
      *
      * Create a request for the method "databases.patch".
      *
@@ -1614,7 +1615,9 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Partially updates a resource containing information about a database inside a Cloud SQL
-       * instance. This method supports patch semantics.
+       * instance. This method supports patch semantics. Caution: This is not a partial update, so you
+       * must include values for all the settings that you want to retain. For partial updates, use
+       * update.
        *
        * Create a request for the method "databases.patch".
        *
@@ -3682,19 +3685,37 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * An expression for filtering the results of the request, such as by name or label.
+       * A filter expression that filters resources listed in the response. The expression is in the
+       * form of field:value. For example, 'instanceType:CLOUD_SQL_INSTANCE'. Fields can be nested
+       * as needed as per their JSON representation, such as 'settings.userLabels.auto_start:true'.
+       *
+       * Multiple filter queries are space-separated. For example. 'state:RUNNABLE
+       * instanceType:CLOUD_SQL_INSTANCE'. By default, each expression is an AND expression.
+       * However, you can include AND and OR expressions explicitly.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** An expression for filtering the results of the request, such as by name or label.
+      /** A filter expression that filters resources listed in the response. The expression is in the form of
+     field:value. For example, 'instanceType:CLOUD_SQL_INSTANCE'. Fields can be nested as needed as per
+     their JSON representation, such as 'settings.userLabels.auto_start:true'.
+
+     Multiple filter queries are space-separated. For example. 'state:RUNNABLE
+     instanceType:CLOUD_SQL_INSTANCE'. By default, each expression is an AND expression. However, you
+     can include AND and OR expressions explicitly.
        */
       public java.lang.String getFilter() {
         return filter;
       }
 
       /**
-       * An expression for filtering the results of the request, such as by name or label.
+       * A filter expression that filters resources listed in the response. The expression is in the
+       * form of field:value. For example, 'instanceType:CLOUD_SQL_INSTANCE'. Fields can be nested
+       * as needed as per their JSON representation, such as 'settings.userLabels.auto_start:true'.
+       *
+       * Multiple filter queries are space-separated. For example. 'state:RUNNABLE
+       * instanceType:CLOUD_SQL_INSTANCE'. By default, each expression is an AND expression.
+       * However, you can include AND and OR expressions explicitly.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -3734,6 +3755,29 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
+        return this;
+      }
+
+      /**
+       * The parent, which owns this collection of database instances. Format:
+       * projects/{project}/locations/{location}
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** The parent, which owns this collection of database instances. Format:
+     projects/{project}/locations/{location}
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /**
+       * The parent, which owns this collection of database instances. Format:
+       * projects/{project}/locations/{location}
+       */
+      public List setParent(java.lang.String parent) {
+        this.parent = parent;
         return this;
       }
 
@@ -5348,8 +5392,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Updates settings of a Cloud SQL instance. Caution: This is not a partial update, so you must
-     * include values for all the settings that you want to retain. For partial updates, use patch.
+     * Updates settings of a Cloud SQL instance.
      *
      * Create a request for the method "instances.update".
      *
@@ -5372,8 +5415,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}";
 
       /**
-       * Updates settings of a Cloud SQL instance. Caution: This is not a partial update, so you must
-       * include values for all the settings that you want to retain. For partial updates, use patch.
+       * Updates settings of a Cloud SQL instance.
        *
        * Create a request for the method "instances.update".
        *

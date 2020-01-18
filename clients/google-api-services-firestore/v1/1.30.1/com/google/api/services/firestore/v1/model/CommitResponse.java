@@ -30,7 +30,8 @@ package com.google.api.services.firestore.v1.model;
 public final class CommitResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The time at which the commit occurred.
+   * The time at which the commit occurred. Any read with an equal or greater `read_time` is
+   * guaranteed to see the effects of the commit.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +47,8 @@ public final class CommitResponse extends com.google.api.client.json.GenericJson
   private java.util.List<WriteResult> writeResults;
 
   /**
-   * The time at which the commit occurred.
+   * The time at which the commit occurred. Any read with an equal or greater `read_time` is
+   * guaranteed to see the effects of the commit.
    * @return value or {@code null} for none
    */
   public String getCommitTime() {
@@ -54,7 +56,8 @@ public final class CommitResponse extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The time at which the commit occurred.
+   * The time at which the commit occurred. Any read with an equal or greater `read_time` is
+   * guaranteed to see the effects of the commit.
    * @param commitTime commitTime or {@code null} for none
    */
   public CommitResponse setCommitTime(String commitTime) {

@@ -30,6 +30,14 @@ package com.google.api.services.sql.model;
 public final class Flag extends com.google.api.client.json.GenericJson {
 
   /**
+   * Use this field if only certain integers are accepted. Can be combined with min_value and
+   * max_value to add additional values.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.util.List<java.lang.Long> allowedIntValues;
+
+  /**
    * For STRING flags, a list of strings that the value can be set to.
    * The value may be {@code null}.
    */
@@ -95,6 +103,25 @@ public final class Flag extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * Use this field if only certain integers are accepted. Can be combined with min_value and
+   * max_value to add additional values.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Long> getAllowedIntValues() {
+    return allowedIntValues;
+  }
+
+  /**
+   * Use this field if only certain integers are accepted. Can be combined with min_value and
+   * max_value to add additional values.
+   * @param allowedIntValues allowedIntValues or {@code null} for none
+   */
+  public Flag setAllowedIntValues(java.util.List<java.lang.Long> allowedIntValues) {
+    this.allowedIntValues = allowedIntValues;
+    return this;
+  }
 
   /**
    * For STRING flags, a list of strings that the value can be set to.

@@ -106,6 +106,12 @@ public final class Player extends com.google.api.client.json.GenericJson {
   private java.lang.String playerId;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String playerStattus;
+
+  /**
    * The player's profile settings. Controls whether or not the player's profile is visible to other
    * players.
    * The value may be {@code null}.
@@ -297,6 +303,21 @@ public final class Player extends com.google.api.client.json.GenericJson {
    */
   public Player setPlayerId(java.lang.String playerId) {
     this.playerId = playerId;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPlayerStattus() {
+    return playerStattus;
+  }
+
+  /**
+   * @param playerStattus playerStattus or {@code null} for none
+   */
+  public Player setPlayerStattus(java.lang.String playerStattus) {
+    this.playerStattus = playerStattus;
     return this;
   }
 

@@ -3,13 +3,13 @@
 
 <differences>
     <difference>
-        <className>com/google/api/services/homegraph/v1/model</className>
-        <method>public java.util.Map getCustomData()</method>
+        <className>com/google/api/services/homegraph/v1/model/Device</className>
+        <method>java.util.Map getCustomData()</method>
         <differenceType>7006</differenceType>
     </difference>
     <difference>
-        <className>com/google/api/services/homegraph/v1/model</className>
-        <method>public com.google.api.services.homegraph.v1.model.Device setCustomData(java.util.Map)</method>
+        <className>com/google/api/services/homegraph/v1/model/Device</className>
+        <method>com.google.api.services.homegraph.v1.model.Device setCustomData(java.util.Map)</method>
         <differenceType>7005</differenceType>
     </difference>
 </differences>

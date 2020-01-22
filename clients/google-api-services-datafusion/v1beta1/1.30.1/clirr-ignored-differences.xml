@@ -18,8 +18,7 @@
   </difference>
   <difference>
     <className>com/google/api/services/datafusion/v1beta1/model/AuditLogConfig</className>
-    <method>com.google.api.services.datafusion.v1beta1.model.AuditLogConfig
-      setIgnoreChildExemptions(java.lang.Boolean)
+    <method>com.google.api.services.datafusion.v1beta1.model.AuditLogConfig setIgnoreChildExemptions(java.lang.Boolean)
     </method>
     <differenceType>7002</differenceType>
   </difference>

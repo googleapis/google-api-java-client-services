@@ -42,7 +42,7 @@ public final class Device extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String customData;
+  private java.util.Map<String, java.lang.Object> customData;
 
   /**
    * Device manufacturer, model, hardware version, and software version.
@@ -156,7 +156,7 @@ public final class Device extends com.google.api.client.json.GenericJson {
    * AoG.
    * @return value or {@code null} for none
    */
-  public java.lang.String getCustomData() {
+  public java.util.Map<String, java.lang.Object> getCustomData() {
     return customData;
   }
 
@@ -165,7 +165,7 @@ public final class Device extends com.google.api.client.json.GenericJson {
    * AoG.
    * @param customData customData or {@code null} for none
    */
-  public Device setCustomData(java.lang.String customData) {
+  public Device setCustomData(java.util.Map<String, java.lang.Object> customData) {
     this.customData = customData;
     return this;
   }

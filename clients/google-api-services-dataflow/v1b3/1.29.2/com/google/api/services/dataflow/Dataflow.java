@@ -2563,6 +2563,178 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
+       * An accessor for creating requests from the FlexTemplates collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Dataflow dataflow = new Dataflow(...);}
+       *   {@code Dataflow.FlexTemplates.List request = dataflow.flexTemplates().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public FlexTemplates flexTemplates() {
+        return new FlexTemplates();
+      }
+
+      /**
+       * The "flexTemplates" collection of methods.
+       */
+      public class FlexTemplates {
+
+        /**
+         * Launch a job with a FlexTemplate.
+         *
+         * Create a request for the method "flexTemplates.launch".
+         *
+         * This request holds the parameters needed by the dataflow server.  After setting any optional
+         * parameters, call the {@link Launch#execute()} method to invoke the remote operation.
+         *
+         * @param projectId Required. The ID of the Cloud Platform project that the job belongs to.
+         * @param location Required. The [regional endpoint]
+        (https://cloud.google.com/dataflow/docs/concepts/regional-
+         *        endpoints) to
+        which to direct the request. E.g., us-central1, us-west1.
+         * @param content the {@link com.google.api.services.dataflow.model.LaunchFlexTemplateRequest}
+         * @return the request
+         */
+        public Launch launch(java.lang.String projectId, java.lang.String location, com.google.api.services.dataflow.model.LaunchFlexTemplateRequest content) throws java.io.IOException {
+          Launch result = new Launch(projectId, location, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Launch extends DataflowRequest<com.google.api.services.dataflow.model.LaunchFlexTemplateResponse> {
+
+          private static final String REST_PATH = "v1b3/projects/{projectId}/locations/{location}/flexTemplates:launch";
+
+          /**
+           * Launch a job with a FlexTemplate.
+           *
+           * Create a request for the method "flexTemplates.launch".
+           *
+           * This request holds the parameters needed by the the dataflow server.  After setting any
+           * optional parameters, call the {@link Launch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Launch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param projectId Required. The ID of the Cloud Platform project that the job belongs to.
+           * @param location Required. The [regional endpoint]
+        (https://cloud.google.com/dataflow/docs/concepts/regional-
+         *        endpoints) to
+        which to direct the request. E.g., us-central1, us-west1.
+           * @param content the {@link com.google.api.services.dataflow.model.LaunchFlexTemplateRequest}
+           * @since 1.13
+           */
+          protected Launch(java.lang.String projectId, java.lang.String location, com.google.api.services.dataflow.model.LaunchFlexTemplateRequest content) {
+            super(Dataflow.this, "POST", REST_PATH, content, com.google.api.services.dataflow.model.LaunchFlexTemplateResponse.class);
+            this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+            this.location = com.google.api.client.util.Preconditions.checkNotNull(location, "Required parameter location must be specified.");
+          }
+
+          @Override
+          public Launch set$Xgafv(java.lang.String $Xgafv) {
+            return (Launch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Launch setAccessToken(java.lang.String accessToken) {
+            return (Launch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Launch setAlt(java.lang.String alt) {
+            return (Launch) super.setAlt(alt);
+          }
+
+          @Override
+          public Launch setCallback(java.lang.String callback) {
+            return (Launch) super.setCallback(callback);
+          }
+
+          @Override
+          public Launch setFields(java.lang.String fields) {
+            return (Launch) super.setFields(fields);
+          }
+
+          @Override
+          public Launch setKey(java.lang.String key) {
+            return (Launch) super.setKey(key);
+          }
+
+          @Override
+          public Launch setOauthToken(java.lang.String oauthToken) {
+            return (Launch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Launch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Launch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Launch setQuotaUser(java.lang.String quotaUser) {
+            return (Launch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Launch setUploadType(java.lang.String uploadType) {
+            return (Launch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Launch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Launch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The ID of the Cloud Platform project that the job belongs to. */
+          @com.google.api.client.util.Key
+          private java.lang.String projectId;
+
+          /** Required. The ID of the Cloud Platform project that the job belongs to.
+           */
+          public java.lang.String getProjectId() {
+            return projectId;
+          }
+
+          /** Required. The ID of the Cloud Platform project that the job belongs to. */
+          public Launch setProjectId(java.lang.String projectId) {
+            this.projectId = projectId;
+            return this;
+          }
+
+          /**
+           * Required. The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts
+           * /regional-endpoints) to which to direct the request. E.g., us-central1, us-west1.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String location;
+
+          /** Required. The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+         endpoints) to which to direct the request. E.g., us-central1, us-west1.
+           */
+          public java.lang.String getLocation() {
+            return location;
+          }
+
+          /**
+           * Required. The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts
+           * /regional-endpoints) to which to direct the request. E.g., us-central1, us-west1.
+           */
+          public Launch setLocation(java.lang.String location) {
+            this.location = location;
+            return this;
+          }
+
+          @Override
+          public Launch set(String parameterName, Object value) {
+            return (Launch) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the Jobs collection.
        *
        * <p>The typical use is:</p>

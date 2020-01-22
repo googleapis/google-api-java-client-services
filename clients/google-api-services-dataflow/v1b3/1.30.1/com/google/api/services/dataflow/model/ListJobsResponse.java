@@ -17,8 +17,10 @@
 package com.google.api.services.dataflow.model;
 
 /**
- * Response to a request to list Cloud Dataflow jobs.  This may be a partial response, depending on
- * the page size in the ListJobsRequest.
+ * Response to a request to list Cloud Dataflow jobs in a project. This might be a partial response,
+ * depending on the page size in the ListJobsRequest. However, if the project does not have any
+ * jobs, an instance of ListJobsResponse is not returned and the requests's response body is empty
+ * {}.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataflow API. For a detailed explanation see:

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- see http://mojo.codehaus.org/clirr-maven-plugin/examples/ignored-differences.html -->
+
+<differences>
+    <difference>
+        <className>com/google/api/services/homegraph/v1/model</className>
+        <method>public java.lang.String getCustomData()</method>
+        <differenceType>7006</differenceType>
+    </difference>
+    <difference>
+        <className>com/google/api/services/homegraph/v1/model</className>
+        <method>public java.util.Map getCustomData(java.lang.String)</method>
+        <differenceType>7005</differenceType>
+    </difference>
+</differences>

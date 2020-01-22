@@ -17,8 +17,9 @@
 package com.google.api.services.monitoring.v3.model;
 
 /**
- * A type of authentication to perform against the specified resource or URL that uses username and
- * password. Currently, only Basic authentication is supported in Uptime Monitoring.
+ * The authentication parameters to provide to the specified resource or URL that requires a
+ * username and password. Currently, only Basic HTTP authentication
+ * (https://tools.ietf.org/html/rfc7617) is supported in Uptime checks.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Stackdriver Monitoring API. For a detailed
@@ -32,21 +33,21 @@ package com.google.api.services.monitoring.v3.model;
 public final class BasicAuthentication extends com.google.api.client.json.GenericJson {
 
   /**
-   * The password to authenticate.
+   * The password to use when authenticating with the HTTP server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String password;
 
   /**
-   * The username to authenticate.
+   * The username to use when authenticating with the HTTP server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String username;
 
   /**
-   * The password to authenticate.
+   * The password to use when authenticating with the HTTP server.
    * @return value or {@code null} for none
    */
   public java.lang.String getPassword() {
@@ -54,7 +55,7 @@ public final class BasicAuthentication extends com.google.api.client.json.Generi
   }
 
   /**
-   * The password to authenticate.
+   * The password to use when authenticating with the HTTP server.
    * @param password password or {@code null} for none
    */
   public BasicAuthentication setPassword(java.lang.String password) {
@@ -63,7 +64,7 @@ public final class BasicAuthentication extends com.google.api.client.json.Generi
   }
 
   /**
-   * The username to authenticate.
+   * The username to use when authenticating with the HTTP server.
    * @return value or {@code null} for none
    */
   public java.lang.String getUsername() {
@@ -71,7 +72,7 @@ public final class BasicAuthentication extends com.google.api.client.json.Generi
   }
 
   /**
-   * The username to authenticate.
+   * The username to use when authenticating with the HTTP server.
    * @param username username or {@code null} for none
    */
   public BasicAuthentication setUsername(java.lang.String username) {

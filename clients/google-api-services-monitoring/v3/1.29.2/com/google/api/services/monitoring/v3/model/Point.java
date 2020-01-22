@@ -31,12 +31,13 @@ package com.google.api.services.monitoring.v3.model;
 public final class Point extends com.google.api.client.json.GenericJson {
 
   /**
-   * The time interval to which the data point applies. For GAUGE metrics, only the end time of the
-   * interval is used. For DELTA metrics, the start and end time should specify a non-zero interval,
-   * with subsequent points specifying contiguous and non-overlapping intervals. For CUMULATIVE
-   * metrics, the start and end time should specify a non-zero interval, with subsequent points
-   * specifying the same start time and increasing end times, until an event resets the cumulative
-   * value to zero and sets a new start time for the following points.
+   * The time interval to which the data point applies. For GAUGE metrics, the start time is
+   * optional, but if it is supplied, it must equal the end time. For DELTA metrics, the start and
+   * end time should specify a non-zero interval, with subsequent points specifying contiguous and
+   * non-overlapping intervals. For CUMULATIVE metrics, the start and end time should specify a non-
+   * zero interval, with subsequent points specifying the same start time and increasing end times,
+   * until an event resets the cumulative value to zero and sets a new start time for the following
+   * points.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,12 +51,13 @@ public final class Point extends com.google.api.client.json.GenericJson {
   private TypedValue value;
 
   /**
-   * The time interval to which the data point applies. For GAUGE metrics, only the end time of the
-   * interval is used. For DELTA metrics, the start and end time should specify a non-zero interval,
-   * with subsequent points specifying contiguous and non-overlapping intervals. For CUMULATIVE
-   * metrics, the start and end time should specify a non-zero interval, with subsequent points
-   * specifying the same start time and increasing end times, until an event resets the cumulative
-   * value to zero and sets a new start time for the following points.
+   * The time interval to which the data point applies. For GAUGE metrics, the start time is
+   * optional, but if it is supplied, it must equal the end time. For DELTA metrics, the start and
+   * end time should specify a non-zero interval, with subsequent points specifying contiguous and
+   * non-overlapping intervals. For CUMULATIVE metrics, the start and end time should specify a non-
+   * zero interval, with subsequent points specifying the same start time and increasing end times,
+   * until an event resets the cumulative value to zero and sets a new start time for the following
+   * points.
    * @return value or {@code null} for none
    */
   public TimeInterval getInterval() {
@@ -63,12 +65,13 @@ public final class Point extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time interval to which the data point applies. For GAUGE metrics, only the end time of the
-   * interval is used. For DELTA metrics, the start and end time should specify a non-zero interval,
-   * with subsequent points specifying contiguous and non-overlapping intervals. For CUMULATIVE
-   * metrics, the start and end time should specify a non-zero interval, with subsequent points
-   * specifying the same start time and increasing end times, until an event resets the cumulative
-   * value to zero and sets a new start time for the following points.
+   * The time interval to which the data point applies. For GAUGE metrics, the start time is
+   * optional, but if it is supplied, it must equal the end time. For DELTA metrics, the start and
+   * end time should specify a non-zero interval, with subsequent points specifying contiguous and
+   * non-overlapping intervals. For CUMULATIVE metrics, the start and end time should specify a non-
+   * zero interval, with subsequent points specifying the same start time and increasing end times,
+   * until an event resets the cumulative value to zero and sets a new start time for the following
+   * points.
    * @param interval interval or {@code null} for none
    */
   public Point setInterval(TimeInterval interval) {

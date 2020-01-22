@@ -17,8 +17,10 @@
 package com.google.api.services.monitoring.v3.model;
 
 /**
- * Used to perform string matching. It allows substring and regular expressions, together with their
- * negations.
+ * Optional. Used to perform content matching. This allows matching based on substrings and regular
+ * expressions, together with their negations. Only the first 4MB of an HTTP or HTTPS check's
+ * response (and the first 1MB of a TCP check's response) are examined for purposes of content
+ * matching.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Stackdriver Monitoring API. For a detailed
@@ -32,23 +34,24 @@ package com.google.api.services.monitoring.v3.model;
 public final class ContentMatcher extends com.google.api.client.json.GenericJson {
 
   /**
-   * String or regex content to match (max 1024 bytes)
+   * String or regex content to match. Maximum 1024 bytes. An empty content string indicates no
+   * content matching is to be performed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String content;
 
   /**
-   * The matcher representing content match options which the check will run with. If the field is
-   * not specified (in previous versions), the option is set to be CONTAINS_STRING which performs
-   * content substring matching.
+   * The type of content matcher that will be applied to the server output, compared to the content
+   * string when the check is run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String matcher;
 
   /**
-   * String or regex content to match (max 1024 bytes)
+   * String or regex content to match. Maximum 1024 bytes. An empty content string indicates no
+   * content matching is to be performed.
    * @return value or {@code null} for none
    */
   public java.lang.String getContent() {
@@ -56,7 +59,8 @@ public final class ContentMatcher extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * String or regex content to match (max 1024 bytes)
+   * String or regex content to match. Maximum 1024 bytes. An empty content string indicates no
+   * content matching is to be performed.
    * @param content content or {@code null} for none
    */
   public ContentMatcher setContent(java.lang.String content) {
@@ -65,9 +69,8 @@ public final class ContentMatcher extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The matcher representing content match options which the check will run with. If the field is
-   * not specified (in previous versions), the option is set to be CONTAINS_STRING which performs
-   * content substring matching.
+   * The type of content matcher that will be applied to the server output, compared to the content
+   * string when the check is run.
    * @return value or {@code null} for none
    */
   public java.lang.String getMatcher() {
@@ -75,9 +78,8 @@ public final class ContentMatcher extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The matcher representing content match options which the check will run with. If the field is
-   * not specified (in previous versions), the option is set to be CONTAINS_STRING which performs
-   * content substring matching.
+   * The type of content matcher that will be applied to the server output, compared to the content
+   * string when the check is run.
    * @param matcher matcher or {@code null} for none
    */
   public ContentMatcher setMatcher(java.lang.String matcher) {

@@ -31,10 +31,10 @@ package com.google.api.services.monitoring.v3.model;
 public final class UptimeCheckIp extends com.google.api.client.json.GenericJson {
 
   /**
-   * The IP address from which the uptime check originates. This is a full IP address (not an IP
-   * address range). Most IP addresses, as of this publication, are in IPv4 format; however, one
-   * should not rely on the IP addresses being in IPv4 format indefinitely and should support
-   * interpreting this field in either IPv4 or IPv6 format.
+   * The IP address from which the Uptime check originates. This is a fully specified IP address
+   * (not an IP address range). Most IP addresses, as of this publication, are in IPv4 format;
+   * however, one should not rely on the IP addresses being in IPv4 format indefinitely, and should
+   * support interpreting this field in either IPv4 or IPv6 format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,10 +56,10 @@ public final class UptimeCheckIp extends com.google.api.client.json.GenericJson 
   private java.lang.String region;
 
   /**
-   * The IP address from which the uptime check originates. This is a full IP address (not an IP
-   * address range). Most IP addresses, as of this publication, are in IPv4 format; however, one
-   * should not rely on the IP addresses being in IPv4 format indefinitely and should support
-   * interpreting this field in either IPv4 or IPv6 format.
+   * The IP address from which the Uptime check originates. This is a fully specified IP address
+   * (not an IP address range). Most IP addresses, as of this publication, are in IPv4 format;
+   * however, one should not rely on the IP addresses being in IPv4 format indefinitely, and should
+   * support interpreting this field in either IPv4 or IPv6 format.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpAddress() {
@@ -67,10 +67,10 @@ public final class UptimeCheckIp extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The IP address from which the uptime check originates. This is a full IP address (not an IP
-   * address range). Most IP addresses, as of this publication, are in IPv4 format; however, one
-   * should not rely on the IP addresses being in IPv4 format indefinitely and should support
-   * interpreting this field in either IPv4 or IPv6 format.
+   * The IP address from which the Uptime check originates. This is a fully specified IP address
+   * (not an IP address range). Most IP addresses, as of this publication, are in IPv4 format;
+   * however, one should not rely on the IP addresses being in IPv4 format indefinitely, and should
+   * support interpreting this field in either IPv4 or IPv6 format.
    * @param ipAddress ipAddress or {@code null} for none
    */
   public UptimeCheckIp setIpAddress(java.lang.String ipAddress) {

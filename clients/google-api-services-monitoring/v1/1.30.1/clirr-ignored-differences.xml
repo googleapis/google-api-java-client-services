@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- see http://mojo.codehaus.org/clirr-maven-plugin/examples/ignored-differences.html -->
+<differences>
+  <difference>
+    <className>com/google/api/services/monitoring/v1/Monitoring/**</className>
+    <method>com.google.api.services.monitoring.v1.Monitoring$Operations operations()</method>
+    <differenceType>7002</differenceType>
+  </difference>
+  <difference>
+    <className>com/google/api/services/monitoring/v1/Monitoring$Operations</className>
+    <differenceType>8001</differenceType>
+  </difference>
+  <difference>
+    <className>com/google/api/services/monitoring/v1/Monitoring$Operations$Cancel</className>
+    <differenceType>8001</differenceType>
+  </difference>
+  <difference>
+    <className>com/google/api/services/monitoring/v1/Monitoring$Operations$Delete</className>
+    <differenceType>8001</differenceType>
+  </difference>
+  <difference>
+    <className>com/google/api/services/monitoring/v1/Monitoring$Operations$Get</className>
+    <differenceType>8001</differenceType>
+  </difference>
+  <difference>
+    <className>com/google/api/services/monitoring/v1/Monitoring$Operations$List</className>
+    <differenceType>8001</differenceType>
+  </difference>
+  <difference>
+    <className>com/google/api/services/monitoring/v1/model/CancelOperationRequest</className>
+    <differenceType>8001</differenceType>
+  </difference>
+  <difference>
+    <className>com/google/api/services/monitoring/v1/model/ListOperationsResponse</className>
+    <differenceType>8001</differenceType>
+  </difference>
+  <difference>
+    <className>com/google/api/services/monitoring/v1/model/Operation</className>
+    <differenceType>8001</differenceType>
+  </difference>
+  <difference>
+    <className>com/google/api/services/monitoring/v1/model/Status</className>
+    <differenceType>8001</differenceType>
+  </difference>
+</differences>

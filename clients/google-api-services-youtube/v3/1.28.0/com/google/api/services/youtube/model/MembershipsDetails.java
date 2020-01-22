@@ -30,12 +30,26 @@ package com.google.api.services.youtube.model;
 public final class MembershipsDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * All levels that the user has access to. This includes the purchased level and all other levels
-   * that are included because of a higher purchase.
+   * All levels that the user has access to. This includes the currently active level and all other
+   * levels that are included because of a higher purchase.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> accessibleLevels;
+
+  /**
+   * The highest level that the user has access to at the moment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String highestAccessibleLevel;
+
+  /**
+   * Display name for the highest level that the user has access to at the moment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String highestAccessibleLevelDisplayName;
 
   /**
    * The date and time when the user became a continuous member across all levels.
@@ -69,15 +83,17 @@ public final class MembershipsDetails extends com.google.api.client.json.Generic
   private java.lang.Integer memberTotalDurationCurrentLevel;
 
   /**
-   * The highest level the user has access to at the moment.
+   * The highest level that the user has access to at the moment. DEPRECATED -
+   * highest_accessible_level should be used instead. This will be removed after we make sure there
+   * are no 3rd parties relying on it.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String purchasedLevel;
 
   /**
-   * All levels that the user has access to. This includes the purchased level and all other levels
-   * that are included because of a higher purchase.
+   * All levels that the user has access to. This includes the currently active level and all other
+   * levels that are included because of a higher purchase.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAccessibleLevels() {
@@ -85,12 +101,46 @@ public final class MembershipsDetails extends com.google.api.client.json.Generic
   }
 
   /**
-   * All levels that the user has access to. This includes the purchased level and all other levels
-   * that are included because of a higher purchase.
+   * All levels that the user has access to. This includes the currently active level and all other
+   * levels that are included because of a higher purchase.
    * @param accessibleLevels accessibleLevels or {@code null} for none
    */
   public MembershipsDetails setAccessibleLevels(java.util.List<java.lang.String> accessibleLevels) {
     this.accessibleLevels = accessibleLevels;
+    return this;
+  }
+
+  /**
+   * The highest level that the user has access to at the moment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHighestAccessibleLevel() {
+    return highestAccessibleLevel;
+  }
+
+  /**
+   * The highest level that the user has access to at the moment.
+   * @param highestAccessibleLevel highestAccessibleLevel or {@code null} for none
+   */
+  public MembershipsDetails setHighestAccessibleLevel(java.lang.String highestAccessibleLevel) {
+    this.highestAccessibleLevel = highestAccessibleLevel;
+    return this;
+  }
+
+  /**
+   * Display name for the highest level that the user has access to at the moment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHighestAccessibleLevelDisplayName() {
+    return highestAccessibleLevelDisplayName;
+  }
+
+  /**
+   * Display name for the highest level that the user has access to at the moment.
+   * @param highestAccessibleLevelDisplayName highestAccessibleLevelDisplayName or {@code null} for none
+   */
+  public MembershipsDetails setHighestAccessibleLevelDisplayName(java.lang.String highestAccessibleLevelDisplayName) {
+    this.highestAccessibleLevelDisplayName = highestAccessibleLevelDisplayName;
     return this;
   }
 
@@ -169,7 +219,9 @@ public final class MembershipsDetails extends com.google.api.client.json.Generic
   }
 
   /**
-   * The highest level the user has access to at the moment.
+   * The highest level that the user has access to at the moment. DEPRECATED -
+   * highest_accessible_level should be used instead. This will be removed after we make sure there
+   * are no 3rd parties relying on it.
    * @return value or {@code null} for none
    */
   public java.lang.String getPurchasedLevel() {
@@ -177,7 +229,9 @@ public final class MembershipsDetails extends com.google.api.client.json.Generic
   }
 
   /**
-   * The highest level the user has access to at the moment.
+   * The highest level that the user has access to at the moment. DEPRECATED -
+   * highest_accessible_level should be used instead. This will be removed after we make sure there
+   * are no 3rd parties relying on it.
    * @param purchasedLevel purchasedLevel or {@code null} for none
    */
   public MembershipsDetails setPurchasedLevel(java.lang.String purchasedLevel) {

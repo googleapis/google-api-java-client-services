@@ -45,6 +45,12 @@ public final class LiveBroadcastStatus extends com.google.api.client.json.Generi
   private java.lang.String liveBroadcastPriority;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean madeForKids;
+
+  /**
    * The broadcast's privacy status. Note that the broadcast represents exactly one YouTube video,
    * so the privacy settings are identical to those supported for videos. In addition, you can set
    * this field by modifying the broadcast resource or by setting the privacyStatus field of the
@@ -60,6 +66,12 @@ public final class LiveBroadcastStatus extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private java.lang.String recordingStatus;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean selfDeclaredMadeForKids;
 
   /**
    * The broadcast's status. The status can be updated using the API's liveBroadcasts.transition
@@ -94,6 +106,21 @@ public final class LiveBroadcastStatus extends com.google.api.client.json.Generi
    */
   public LiveBroadcastStatus setLiveBroadcastPriority(java.lang.String liveBroadcastPriority) {
     this.liveBroadcastPriority = liveBroadcastPriority;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getMadeForKids() {
+    return madeForKids;
+  }
+
+  /**
+   * @param madeForKids madeForKids or {@code null} for none
+   */
+  public LiveBroadcastStatus setMadeForKids(java.lang.Boolean madeForKids) {
+    this.madeForKids = madeForKids;
     return this;
   }
 
@@ -134,6 +161,21 @@ public final class LiveBroadcastStatus extends com.google.api.client.json.Generi
    */
   public LiveBroadcastStatus setRecordingStatus(java.lang.String recordingStatus) {
     this.recordingStatus = recordingStatus;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSelfDeclaredMadeForKids() {
+    return selfDeclaredMadeForKids;
+  }
+
+  /**
+   * @param selfDeclaredMadeForKids selfDeclaredMadeForKids or {@code null} for none
+   */
+  public LiveBroadcastStatus setSelfDeclaredMadeForKids(java.lang.Boolean selfDeclaredMadeForKids) {
+    this.selfDeclaredMadeForKids = selfDeclaredMadeForKids;
     return this;
   }
 

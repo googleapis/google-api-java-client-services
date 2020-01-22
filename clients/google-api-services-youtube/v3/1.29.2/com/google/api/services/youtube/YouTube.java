@@ -9757,8 +9757,8 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
      * This request holds the parameters needed by the youtube server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param part The part parameter specifies the member resource parts that the API response will include. Supported
-     *        values are id and snippet.
+     * @param part The part parameter specifies the member resource parts that the API response will include. Set the
+     *        parameter value to snippet.
      * @return the request
      */
     public List list(java.lang.String part) throws java.io.IOException {
@@ -9781,8 +9781,8 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
        * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param part The part parameter specifies the member resource parts that the API response will include. Supported
-     *        values are id and snippet.
+       * @param part The part parameter specifies the member resource parts that the API response will include. Set the
+     *        parameter value to snippet.
        * @since 1.13
        */
       protected List(java.lang.String part) {
@@ -9837,13 +9837,13 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * The part parameter specifies the member resource parts that the API response will include.
-       * Supported values are id and snippet.
+       * Set the parameter value to snippet.
        */
       @com.google.api.client.util.Key
       private java.lang.String part;
 
-      /** The part parameter specifies the member resource parts that the API response will include.
-     Supported values are id and snippet.
+      /** The part parameter specifies the member resource parts that the API response will include. Set the
+     parameter value to snippet.
        */
       public java.lang.String getPart() {
         return part;
@@ -9851,10 +9851,38 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * The part parameter specifies the member resource parts that the API response will include.
-       * Supported values are id and snippet.
+       * Set the parameter value to snippet.
        */
       public List setPart(java.lang.String part) {
         this.part = part;
+        return this;
+      }
+
+      /**
+       * The filterByMemberChannelId parameter represents a comma separated list of channel IDs.
+       * Only data about members that are part of this list will be included in the response. It can
+       * be used to efficiently check whether specific users are entitled to perks offered via third
+       * parties.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String filterByMemberChannelId;
+
+      /** The filterByMemberChannelId parameter represents a comma separated list of channel IDs. Only data
+     about members that are part of this list will be included in the response. It can be used to
+     efficiently check whether specific users are entitled to perks offered via third parties.
+       */
+      public java.lang.String getFilterByMemberChannelId() {
+        return filterByMemberChannelId;
+      }
+
+      /**
+       * The filterByMemberChannelId parameter represents a comma separated list of channel IDs.
+       * Only data about members that are part of this list will be included in the response. It can
+       * be used to efficiently check whether specific users are entitled to perks offered via third
+       * parties.
+       */
+      public List setFilterByMemberChannelId(java.lang.String filterByMemberChannelId) {
+        this.filterByMemberChannelId = filterByMemberChannelId;
         return this;
       }
 

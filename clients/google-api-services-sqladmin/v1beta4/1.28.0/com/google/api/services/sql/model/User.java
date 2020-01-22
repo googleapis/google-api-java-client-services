@@ -84,6 +84,12 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.String project;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SqlServerUserDetails sqlserverUserDetails;
+
+  /**
    * This field is deprecated and will be removed from a future version of the API.
    * @return value or {@code null} for none
    */
@@ -209,6 +215,21 @@ public final class User extends com.google.api.client.json.GenericJson {
    */
   public User setProject(java.lang.String project) {
     this.project = project;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public SqlServerUserDetails getSqlserverUserDetails() {
+    return sqlserverUserDetails;
+  }
+
+  /**
+   * @param sqlserverUserDetails sqlserverUserDetails or {@code null} for none
+   */
+  public User setSqlserverUserDetails(SqlServerUserDetails sqlserverUserDetails) {
+    this.sqlserverUserDetails = sqlserverUserDetails;
     return this;
   }
 

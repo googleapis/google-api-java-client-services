@@ -58,7 +58,7 @@ public final class InstancesListResponse extends com.google.api.client.json.Gene
   private java.lang.String nextPageToken;
 
   /**
-   * List of warnings that ocurred while handling the request.
+   * List of warnings that occurred while handling the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,7 +124,7 @@ public final class InstancesListResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * List of warnings that ocurred while handling the request.
+   * List of warnings that occurred while handling the request.
    * @return value or {@code null} for none
    */
   public java.util.List<ApiWarning> getWarnings() {
@@ -132,7 +132,7 @@ public final class InstancesListResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * List of warnings that ocurred while handling the request.
+   * List of warnings that occurred while handling the request.
    * @param warnings warnings or {@code null} for none
    */
   public InstancesListResponse setWarnings(java.util.List<ApiWarning> warnings) {

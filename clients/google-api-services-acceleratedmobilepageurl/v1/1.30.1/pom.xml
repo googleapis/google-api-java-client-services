@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-acceleratedmobilepageurl</artifactId>
-  <version>v1-rev20180612-1.30.3</version>
-  <name>Accelerated Mobile Pages (AMP) URL API v1-rev20180612-1.30.3</name>
+  <version>v1-rev20200121-1.30.3</version>
+  <name>Accelerated Mobile Pages (AMP) URL API v1-rev20200121-1.30.3</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

@@ -12098,6 +12098,113 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
+     * Retrieves supported pickup services for an account.
+     *
+     * Create a request for the method "shippingsettings.getsupportedpickupservices".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Getsupportedpickupservices#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param merchantId The ID of the account for which to retrieve the supported pickup services.
+     * @return the request
+     */
+    public Getsupportedpickupservices getsupportedpickupservices(java.math.BigInteger merchantId) throws java.io.IOException {
+      Getsupportedpickupservices result = new Getsupportedpickupservices(merchantId);
+      initialize(result);
+      return result;
+    }
+
+    public class Getsupportedpickupservices extends ShoppingContentRequest<com.google.api.services.content.model.ShippingsettingsGetSupportedPickupServicesResponse> {
+
+      private static final String REST_PATH = "{merchantId}/supportedPickupServices";
+
+      /**
+       * Retrieves supported pickup services for an account.
+       *
+       * Create a request for the method "shippingsettings.getsupportedpickupservices".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Getsupportedpickupservices#execute()} method to invoke the remote
+       * operation. <p> {@link Getsupportedpickupservices#initialize(com.google.api.client.googleapis.se
+       * rvices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param merchantId The ID of the account for which to retrieve the supported pickup services.
+       * @since 1.13
+       */
+      protected Getsupportedpickupservices(java.math.BigInteger merchantId) {
+        super(ShoppingContent.this, "GET", REST_PATH, null, com.google.api.services.content.model.ShippingsettingsGetSupportedPickupServicesResponse.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Getsupportedpickupservices setAlt(java.lang.String alt) {
+        return (Getsupportedpickupservices) super.setAlt(alt);
+      }
+
+      @Override
+      public Getsupportedpickupservices setFields(java.lang.String fields) {
+        return (Getsupportedpickupservices) super.setFields(fields);
+      }
+
+      @Override
+      public Getsupportedpickupservices setKey(java.lang.String key) {
+        return (Getsupportedpickupservices) super.setKey(key);
+      }
+
+      @Override
+      public Getsupportedpickupservices setOauthToken(java.lang.String oauthToken) {
+        return (Getsupportedpickupservices) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Getsupportedpickupservices setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Getsupportedpickupservices) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Getsupportedpickupservices setQuotaUser(java.lang.String quotaUser) {
+        return (Getsupportedpickupservices) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Getsupportedpickupservices setUserIp(java.lang.String userIp) {
+        return (Getsupportedpickupservices) super.setUserIp(userIp);
+      }
+
+      /** The ID of the account for which to retrieve the supported pickup services. */
+      @com.google.api.client.util.Key
+      private java.math.BigInteger merchantId;
+
+      /** The ID of the account for which to retrieve the supported pickup services.
+       */
+      public java.math.BigInteger getMerchantId() {
+        return merchantId;
+      }
+
+      /** The ID of the account for which to retrieve the supported pickup services. */
+      public Getsupportedpickupservices setMerchantId(java.math.BigInteger merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      @Override
+      public Getsupportedpickupservices set(String parameterName, Object value) {
+        return (Getsupportedpickupservices) super.set(parameterName, value);
+      }
+    }
+    /**
      * Lists the shipping settings of the sub-accounts in your Merchant Center account.
      *
      * Create a request for the method "shippingsettings.list".

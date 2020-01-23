@@ -17,7 +17,7 @@
 package com.google.api.services.content.model;
 
 /**
- * Order. All methods require the order manager role.
+ * Order. Production access (all methods) requires the order manager role. Sandbox access does not.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation

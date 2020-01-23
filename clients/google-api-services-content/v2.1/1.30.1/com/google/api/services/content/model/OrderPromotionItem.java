@@ -31,25 +31,35 @@ package com.google.api.services.content.model;
 public final class OrderPromotionItem extends com.google.api.client.json.GenericJson {
 
   /**
+   * The line item ID of a product. Do not provide for orders.createtestorder.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String lineItemId;
 
   /**
+   * Offer ID of a product. Only for orders.createtestorder.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String offerId;
+
+  /**
+   * orders.createtestorder.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String productId;
 
   /**
-   * The quantity of the associated product.
+   * The quantity of the associated product. Do not provide for orders.createtestorder.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer quantity;
 
   /**
+   * The line item ID of a product. Do not provide for orders.createtestorder.
    * @return value or {@code null} for none
    */
   public java.lang.String getLineItemId() {
@@ -57,6 +67,7 @@ public final class OrderPromotionItem extends com.google.api.client.json.Generic
   }
 
   /**
+   * The line item ID of a product. Do not provide for orders.createtestorder.
    * @param lineItemId lineItemId or {@code null} for none
    */
   public OrderPromotionItem setLineItemId(java.lang.String lineItemId) {
@@ -65,6 +76,24 @@ public final class OrderPromotionItem extends com.google.api.client.json.Generic
   }
 
   /**
+   * Offer ID of a product. Only for orders.createtestorder.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOfferId() {
+    return offerId;
+  }
+
+  /**
+   * Offer ID of a product. Only for orders.createtestorder.
+   * @param offerId offerId or {@code null} for none
+   */
+  public OrderPromotionItem setOfferId(java.lang.String offerId) {
+    this.offerId = offerId;
+    return this;
+  }
+
+  /**
+   * orders.createtestorder.
    * @return value or {@code null} for none
    */
   public java.lang.String getProductId() {
@@ -72,6 +101,7 @@ public final class OrderPromotionItem extends com.google.api.client.json.Generic
   }
 
   /**
+   * orders.createtestorder.
    * @param productId productId or {@code null} for none
    */
   public OrderPromotionItem setProductId(java.lang.String productId) {
@@ -80,7 +110,7 @@ public final class OrderPromotionItem extends com.google.api.client.json.Generic
   }
 
   /**
-   * The quantity of the associated product.
+   * The quantity of the associated product. Do not provide for orders.createtestorder.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getQuantity() {
@@ -88,7 +118,7 @@ public final class OrderPromotionItem extends com.google.api.client.json.Generic
   }
 
   /**
-   * The quantity of the associated product.
+   * The quantity of the associated product. Do not provide for orders.createtestorder.
    * @param quantity quantity or {@code null} for none
    */
   public OrderPromotionItem setQuantity(java.lang.Integer quantity) {

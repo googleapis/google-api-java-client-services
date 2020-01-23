@@ -52,6 +52,13 @@ public final class AccountsLinkRequest extends com.google.api.client.json.Generi
   private java.lang.String linkedAccountId;
 
   /**
+   * List of provided services.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> services;
+
+  /**
    * Action to perform for this link. The "request" action is only available to select merchants.
    * @return value or {@code null} for none
    */
@@ -99,6 +106,23 @@ public final class AccountsLinkRequest extends com.google.api.client.json.Generi
    */
   public AccountsLinkRequest setLinkedAccountId(java.lang.String linkedAccountId) {
     this.linkedAccountId = linkedAccountId;
+    return this;
+  }
+
+  /**
+   * List of provided services.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getServices() {
+    return services;
+  }
+
+  /**
+   * List of provided services.
+   * @param services services or {@code null} for none
+   */
+  public AccountsLinkRequest setServices(java.util.List<java.lang.String> services) {
+    this.services = services;
     return this;
   }
 

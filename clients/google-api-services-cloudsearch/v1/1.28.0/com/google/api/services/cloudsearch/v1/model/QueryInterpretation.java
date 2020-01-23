@@ -38,7 +38,7 @@ public final class QueryInterpretation extends com.google.api.client.json.Generi
   /**
    * The interpretation of the query used in search. For example, queries with natural language
    * intent like "email from john" will be interpreted as "from:john source:mail". This field will
-   * not be filled when the reason is NO_RESULTS_FOUND_FOR_USER_QUERY.
+   * not be filled when the reason is NOT_ENOUGH_RESULTS_FOUND_FOR_USER_QUERY.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +70,7 @@ public final class QueryInterpretation extends com.google.api.client.json.Generi
   /**
    * The interpretation of the query used in search. For example, queries with natural language
    * intent like "email from john" will be interpreted as "from:john source:mail". This field will
-   * not be filled when the reason is NO_RESULTS_FOUND_FOR_USER_QUERY.
+   * not be filled when the reason is NOT_ENOUGH_RESULTS_FOUND_FOR_USER_QUERY.
    * @return value or {@code null} for none
    */
   public java.lang.String getInterpretedQuery() {
@@ -80,7 +80,7 @@ public final class QueryInterpretation extends com.google.api.client.json.Generi
   /**
    * The interpretation of the query used in search. For example, queries with natural language
    * intent like "email from john" will be interpreted as "from:john source:mail". This field will
-   * not be filled when the reason is NO_RESULTS_FOUND_FOR_USER_QUERY.
+   * not be filled when the reason is NOT_ENOUGH_RESULTS_FOUND_FOR_USER_QUERY.
    * @param interpretedQuery interpretedQuery or {@code null} for none
    */
   public QueryInterpretation setInterpretedQuery(java.lang.String interpretedQuery) {

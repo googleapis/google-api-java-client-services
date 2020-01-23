@@ -44,7 +44,8 @@ public final class UpdateSchemaRequest extends com.google.api.client.json.Generi
   private Schema schema;
 
   /**
-   * If true, the request will be validated without side effects.
+   * If true, the schema will be checked for validity, but will not be registered with the data
+   * source, even if valid.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +86,8 @@ public final class UpdateSchemaRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * If true, the request will be validated without side effects.
+   * If true, the schema will be checked for validity, but will not be registered with the data
+   * source, even if valid.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getValidateOnly() {
@@ -93,7 +95,8 @@ public final class UpdateSchemaRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * If true, the request will be validated without side effects.
+   * If true, the schema will be checked for validity, but will not be registered with the data
+   * source, even if valid.
    * @param validateOnly validateOnly or {@code null} for none
    */
   public UpdateSchemaRequest setValidateOnly(java.lang.Boolean validateOnly) {

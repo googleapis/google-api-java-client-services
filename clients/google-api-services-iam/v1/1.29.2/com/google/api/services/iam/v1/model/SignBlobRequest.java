@@ -31,14 +31,14 @@ package com.google.api.services.iam.v1.model;
 public final class SignBlobRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The bytes to sign.
+   * Required. The bytes to sign.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String bytesToSign;
 
   /**
-   * The bytes to sign.
+   * Required. The bytes to sign.
    * @see #decodeBytesToSign()
    * @return value or {@code null} for none
    */
@@ -47,7 +47,7 @@ public final class SignBlobRequest extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The bytes to sign.
+   * Required. The bytes to sign.
    * @see #getBytesToSign()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -58,7 +58,7 @@ public final class SignBlobRequest extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The bytes to sign.
+   * Required. The bytes to sign.
    * @see #encodeBytesToSign()
    * @param bytesToSign bytesToSign or {@code null} for none
    */
@@ -68,7 +68,7 @@ public final class SignBlobRequest extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The bytes to sign.
+   * Required. The bytes to sign.
    * @see #setBytesToSign()
    *
    * <p>

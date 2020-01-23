@@ -100,6 +100,15 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   private NotificationConfig notificationConfig;
 
   /**
+   * The FHIR specification version that this FHIR store supports natively. This field is immutable
+   * after store creation. Requests are rejected if they contain FHIR resources of a different
+   * version. An empty value is treated as STU3.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String version;
+
+  /**
    * Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR
    * store creation. The default value is false, meaning that the API enforces referential integrity
    * and fails the requests that result in inconsistent state in the FHIR store. When this field is
@@ -254,6 +263,27 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
    */
   public FhirStore setNotificationConfig(NotificationConfig notificationConfig) {
     this.notificationConfig = notificationConfig;
+    return this;
+  }
+
+  /**
+   * The FHIR specification version that this FHIR store supports natively. This field is immutable
+   * after store creation. Requests are rejected if they contain FHIR resources of a different
+   * version. An empty value is treated as STU3.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVersion() {
+    return version;
+  }
+
+  /**
+   * The FHIR specification version that this FHIR store supports natively. This field is immutable
+   * after store creation. Requests are rejected if they contain FHIR resources of a different
+   * version. An empty value is treated as STU3.
+   * @param version version or {@code null} for none
+   */
+  public FhirStore setVersion(java.lang.String version) {
+    this.version = version;
     return this;
   }
 

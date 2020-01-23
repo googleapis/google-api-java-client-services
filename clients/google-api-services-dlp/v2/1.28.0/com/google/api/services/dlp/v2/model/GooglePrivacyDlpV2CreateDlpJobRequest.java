@@ -32,6 +32,7 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2CreateDlpJobRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Set to control what and how to inspect.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,12 +48,21 @@ public final class GooglePrivacyDlpV2CreateDlpJobRequest extends com.google.api.
   private java.lang.String jobId;
 
   /**
+   * The geographic location to store and process the job. Reserved for future extensions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String locationId;
+
+  /**
+   * Set to choose what metric to calculate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2RiskAnalysisJobConfig riskJob;
 
   /**
+   * Set to control what and how to inspect.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2InspectJobConfig getInspectJob() {
@@ -60,6 +70,7 @@ public final class GooglePrivacyDlpV2CreateDlpJobRequest extends com.google.api.
   }
 
   /**
+   * Set to control what and how to inspect.
    * @param inspectJob inspectJob or {@code null} for none
    */
   public GooglePrivacyDlpV2CreateDlpJobRequest setInspectJob(GooglePrivacyDlpV2InspectJobConfig inspectJob) {
@@ -89,6 +100,24 @@ public final class GooglePrivacyDlpV2CreateDlpJobRequest extends com.google.api.
   }
 
   /**
+   * The geographic location to store and process the job. Reserved for future extensions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocationId() {
+    return locationId;
+  }
+
+  /**
+   * The geographic location to store and process the job. Reserved for future extensions.
+   * @param locationId locationId or {@code null} for none
+   */
+  public GooglePrivacyDlpV2CreateDlpJobRequest setLocationId(java.lang.String locationId) {
+    this.locationId = locationId;
+    return this;
+  }
+
+  /**
+   * Set to choose what metric to calculate.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2RiskAnalysisJobConfig getRiskJob() {
@@ -96,6 +125,7 @@ public final class GooglePrivacyDlpV2CreateDlpJobRequest extends com.google.api.
   }
 
   /**
+   * Set to choose what metric to calculate.
    * @param riskJob riskJob or {@code null} for none
    */
   public GooglePrivacyDlpV2CreateDlpJobRequest setRiskJob(GooglePrivacyDlpV2RiskAnalysisJobConfig riskJob) {

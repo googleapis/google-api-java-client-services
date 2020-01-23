@@ -31,12 +31,14 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2TimePartConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * The part of the time to keep.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String partToExtract;
 
   /**
+   * The part of the time to keep.
    * @return value or {@code null} for none
    */
   public java.lang.String getPartToExtract() {
@@ -44,6 +46,7 @@ public final class GooglePrivacyDlpV2TimePartConfig extends com.google.api.clien
   }
 
   /**
+   * The part of the time to keep.
    * @param partToExtract partToExtract or {@code null} for none
    */
   public GooglePrivacyDlpV2TimePartConfig setPartToExtract(java.lang.String partToExtract) {

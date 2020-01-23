@@ -45,7 +45,7 @@ public final class GooglePrivacyDlpV2RecordTransformations extends com.google.ap
 
   /**
    * Configuration defining which records get suppressed entirely. Records that match any
-   * suppression rule are omitted from the output [optional].
+   * suppression rule are omitted from the output.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +76,7 @@ public final class GooglePrivacyDlpV2RecordTransformations extends com.google.ap
 
   /**
    * Configuration defining which records get suppressed entirely. Records that match any
-   * suppression rule are omitted from the output [optional].
+   * suppression rule are omitted from the output.
    * @return value or {@code null} for none
    */
   public java.util.List<GooglePrivacyDlpV2RecordSuppression> getRecordSuppressions() {
@@ -85,7 +85,7 @@ public final class GooglePrivacyDlpV2RecordTransformations extends com.google.ap
 
   /**
    * Configuration defining which records get suppressed entirely. Records that match any
-   * suppression rule are omitted from the output [optional].
+   * suppression rule are omitted from the output.
    * @param recordSuppressions recordSuppressions or {@code null} for none
    */
   public GooglePrivacyDlpV2RecordTransformations setRecordSuppressions(java.util.List<GooglePrivacyDlpV2RecordSuppression> recordSuppressions) {

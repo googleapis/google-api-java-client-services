@@ -46,6 +46,14 @@ public final class GooglePrivacyDlpV2DeidentifyConfig extends com.google.api.cli
   private GooglePrivacyDlpV2RecordTransformations recordTransformations;
 
   /**
+   * Mode for handling transformation errors. If left unspecified, the default mode is
+   * `TransformationErrorHandling.ThrowError`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2TransformationErrorHandling transformationErrorHandling;
+
+  /**
    * Treat the dataset as free-form text and apply the same free text transformation everywhere.
    * @return value or {@code null} for none
    */
@@ -78,6 +86,25 @@ public final class GooglePrivacyDlpV2DeidentifyConfig extends com.google.api.cli
    */
   public GooglePrivacyDlpV2DeidentifyConfig setRecordTransformations(GooglePrivacyDlpV2RecordTransformations recordTransformations) {
     this.recordTransformations = recordTransformations;
+    return this;
+  }
+
+  /**
+   * Mode for handling transformation errors. If left unspecified, the default mode is
+   * `TransformationErrorHandling.ThrowError`.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2TransformationErrorHandling getTransformationErrorHandling() {
+    return transformationErrorHandling;
+  }
+
+  /**
+   * Mode for handling transformation errors. If left unspecified, the default mode is
+   * `TransformationErrorHandling.ThrowError`.
+   * @param transformationErrorHandling transformationErrorHandling or {@code null} for none
+   */
+  public GooglePrivacyDlpV2DeidentifyConfig setTransformationErrorHandling(GooglePrivacyDlpV2TransformationErrorHandling transformationErrorHandling) {
+    this.transformationErrorHandling = transformationErrorHandling;
     return this;
   }
 

@@ -31,11 +31,18 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2CreateJobTriggerRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The JobTrigger to create.
+   * Required. The JobTrigger to create.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2JobTrigger jobTrigger;
+
+  /**
+   * The geographic location to store the job trigger. Reserved for future extensions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String locationId;
 
   /**
    * The trigger id can contain uppercase and lowercase letters, numbers, and hyphens; that is, it
@@ -47,7 +54,7 @@ public final class GooglePrivacyDlpV2CreateJobTriggerRequest extends com.google.
   private java.lang.String triggerId;
 
   /**
-   * The JobTrigger to create.
+   * Required. The JobTrigger to create.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2JobTrigger getJobTrigger() {
@@ -55,11 +62,28 @@ public final class GooglePrivacyDlpV2CreateJobTriggerRequest extends com.google.
   }
 
   /**
-   * The JobTrigger to create.
+   * Required. The JobTrigger to create.
    * @param jobTrigger jobTrigger or {@code null} for none
    */
   public GooglePrivacyDlpV2CreateJobTriggerRequest setJobTrigger(GooglePrivacyDlpV2JobTrigger jobTrigger) {
     this.jobTrigger = jobTrigger;
+    return this;
+  }
+
+  /**
+   * The geographic location to store the job trigger. Reserved for future extensions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocationId() {
+    return locationId;
+  }
+
+  /**
+   * The geographic location to store the job trigger. Reserved for future extensions.
+   * @param locationId locationId or {@code null} for none
+   */
+  public GooglePrivacyDlpV2CreateJobTriggerRequest setLocationId(java.lang.String locationId) {
+    this.locationId = locationId;
     return this;
   }
 

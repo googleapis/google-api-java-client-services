@@ -39,10 +39,10 @@ public final class GooglePrivacyDlpV2InspectContentRequest extends com.google.ap
   private GooglePrivacyDlpV2InspectConfig inspectConfig;
 
   /**
-   * Optional template to use. Any configuration directly specified in inspect_config will override
-   * those set in the template. Singular fields that are set in this request will replace their
-   * corresponding fields in the template. Repeated fields are appended. Singular sub-messages and
-   * groups are recursively merged.
+   * Template to use. Any configuration directly specified in inspect_config will override those set
+   * in the template. Singular fields that are set in this request will replace their corresponding
+   * fields in the template. Repeated fields are appended. Singular sub-messages and groups are
+   * recursively merged.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +60,7 @@ public final class GooglePrivacyDlpV2InspectContentRequest extends com.google.ap
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String location;
+  private java.lang.String locationId;
 
   /**
    * Configuration for the inspector. What specified here will override the template referenced by
@@ -82,10 +82,10 @@ public final class GooglePrivacyDlpV2InspectContentRequest extends com.google.ap
   }
 
   /**
-   * Optional template to use. Any configuration directly specified in inspect_config will override
-   * those set in the template. Singular fields that are set in this request will replace their
-   * corresponding fields in the template. Repeated fields are appended. Singular sub-messages and
-   * groups are recursively merged.
+   * Template to use. Any configuration directly specified in inspect_config will override those set
+   * in the template. Singular fields that are set in this request will replace their corresponding
+   * fields in the template. Repeated fields are appended. Singular sub-messages and groups are
+   * recursively merged.
    * @return value or {@code null} for none
    */
   public java.lang.String getInspectTemplateName() {
@@ -93,10 +93,10 @@ public final class GooglePrivacyDlpV2InspectContentRequest extends com.google.ap
   }
 
   /**
-   * Optional template to use. Any configuration directly specified in inspect_config will override
-   * those set in the template. Singular fields that are set in this request will replace their
-   * corresponding fields in the template. Repeated fields are appended. Singular sub-messages and
-   * groups are recursively merged.
+   * Template to use. Any configuration directly specified in inspect_config will override those set
+   * in the template. Singular fields that are set in this request will replace their corresponding
+   * fields in the template. Repeated fields are appended. Singular sub-messages and groups are
+   * recursively merged.
    * @param inspectTemplateName inspectTemplateName or {@code null} for none
    */
   public GooglePrivacyDlpV2InspectContentRequest setInspectTemplateName(java.lang.String inspectTemplateName) {
@@ -125,16 +125,16 @@ public final class GooglePrivacyDlpV2InspectContentRequest extends com.google.ap
    * The geographic location to process content inspection. Reserved for future extensions.
    * @return value or {@code null} for none
    */
-  public java.lang.String getLocation() {
-    return location;
+  public java.lang.String getLocationId() {
+    return locationId;
   }
 
   /**
    * The geographic location to process content inspection. Reserved for future extensions.
-   * @param location location or {@code null} for none
+   * @param locationId locationId or {@code null} for none
    */
-  public GooglePrivacyDlpV2InspectContentRequest setLocation(java.lang.String location) {
-    this.location = location;
+  public GooglePrivacyDlpV2InspectContentRequest setLocationId(java.lang.String locationId) {
+    this.locationId = locationId;
     return this;
   }
 

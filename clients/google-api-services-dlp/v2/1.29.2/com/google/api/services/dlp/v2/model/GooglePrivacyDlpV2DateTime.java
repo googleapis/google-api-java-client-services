@@ -31,34 +31,35 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2DateTime extends com.google.api.client.json.GenericJson {
 
   /**
-   * One or more of the following must be set. All fields are optional, but when set must be valid
-   * date or time values.
+   * One or more of the following must be set. Must be a valid date or time value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleTypeDate date;
 
   /**
+   * Day of week
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dayOfWeek;
 
   /**
+   * Time of day
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleTypeTimeOfDay time;
 
   /**
+   * Time zone
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2TimeZone timeZone;
 
   /**
-   * One or more of the following must be set. All fields are optional, but when set must be valid
-   * date or time values.
+   * One or more of the following must be set. Must be a valid date or time value.
    * @return value or {@code null} for none
    */
   public GoogleTypeDate getDate() {
@@ -66,8 +67,7 @@ public final class GooglePrivacyDlpV2DateTime extends com.google.api.client.json
   }
 
   /**
-   * One or more of the following must be set. All fields are optional, but when set must be valid
-   * date or time values.
+   * One or more of the following must be set. Must be a valid date or time value.
    * @param date date or {@code null} for none
    */
   public GooglePrivacyDlpV2DateTime setDate(GoogleTypeDate date) {
@@ -76,6 +76,7 @@ public final class GooglePrivacyDlpV2DateTime extends com.google.api.client.json
   }
 
   /**
+   * Day of week
    * @return value or {@code null} for none
    */
   public java.lang.String getDayOfWeek() {
@@ -83,6 +84,7 @@ public final class GooglePrivacyDlpV2DateTime extends com.google.api.client.json
   }
 
   /**
+   * Day of week
    * @param dayOfWeek dayOfWeek or {@code null} for none
    */
   public GooglePrivacyDlpV2DateTime setDayOfWeek(java.lang.String dayOfWeek) {
@@ -91,6 +93,7 @@ public final class GooglePrivacyDlpV2DateTime extends com.google.api.client.json
   }
 
   /**
+   * Time of day
    * @return value or {@code null} for none
    */
   public GoogleTypeTimeOfDay getTime() {
@@ -98,6 +101,7 @@ public final class GooglePrivacyDlpV2DateTime extends com.google.api.client.json
   }
 
   /**
+   * Time of day
    * @param time time or {@code null} for none
    */
   public GooglePrivacyDlpV2DateTime setTime(GoogleTypeTimeOfDay time) {
@@ -106,6 +110,7 @@ public final class GooglePrivacyDlpV2DateTime extends com.google.api.client.json
   }
 
   /**
+   * Time zone
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2TimeZone getTimeZone() {
@@ -113,6 +118,7 @@ public final class GooglePrivacyDlpV2DateTime extends com.google.api.client.json
   }
 
   /**
+   * Time zone
    * @param timeZone timeZone or {@code null} for none
    */
   public GooglePrivacyDlpV2DateTime setTimeZone(GooglePrivacyDlpV2TimeZone timeZone) {

@@ -31,11 +31,18 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2CreateInspectTemplateRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The InspectTemplate to create.
+   * Required. The InspectTemplate to create.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2InspectTemplate inspectTemplate;
+
+  /**
+   * The geographic location to store the inspection template. Reserved for future extensions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String locationId;
 
   /**
    * The template id can contain uppercase and lowercase letters, numbers, and hyphens; that is, it
@@ -47,7 +54,7 @@ public final class GooglePrivacyDlpV2CreateInspectTemplateRequest extends com.go
   private java.lang.String templateId;
 
   /**
-   * The InspectTemplate to create.
+   * Required. The InspectTemplate to create.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2InspectTemplate getInspectTemplate() {
@@ -55,11 +62,28 @@ public final class GooglePrivacyDlpV2CreateInspectTemplateRequest extends com.go
   }
 
   /**
-   * The InspectTemplate to create.
+   * Required. The InspectTemplate to create.
    * @param inspectTemplate inspectTemplate or {@code null} for none
    */
   public GooglePrivacyDlpV2CreateInspectTemplateRequest setInspectTemplate(GooglePrivacyDlpV2InspectTemplate inspectTemplate) {
     this.inspectTemplate = inspectTemplate;
+    return this;
+  }
+
+  /**
+   * The geographic location to store the inspection template. Reserved for future extensions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocationId() {
+    return locationId;
+  }
+
+  /**
+   * The geographic location to store the inspection template. Reserved for future extensions.
+   * @param locationId locationId or {@code null} for none
+   */
+  public GooglePrivacyDlpV2CreateInspectTemplateRequest setLocationId(java.lang.String locationId) {
+    this.locationId = locationId;
     return this;
   }
 

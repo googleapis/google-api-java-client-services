@@ -31,42 +31,49 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2PrivacyMetric extends com.google.api.client.json.GenericJson {
 
   /**
+   * Categorical stats
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2CategoricalStatsConfig categoricalStatsConfig;
 
   /**
+   * delta-presence
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2DeltaPresenceEstimationConfig deltaPresenceEstimationConfig;
 
   /**
+   * K-anonymity
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2KAnonymityConfig kAnonymityConfig;
 
   /**
+   * k-map
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2KMapEstimationConfig kMapEstimationConfig;
 
   /**
+   * l-diversity
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2LDiversityConfig lDiversityConfig;
 
   /**
+   * Numerical stats
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2NumericalStatsConfig numericalStatsConfig;
 
   /**
+   * Categorical stats
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2CategoricalStatsConfig getCategoricalStatsConfig() {
@@ -74,6 +81,7 @@ public final class GooglePrivacyDlpV2PrivacyMetric extends com.google.api.client
   }
 
   /**
+   * Categorical stats
    * @param categoricalStatsConfig categoricalStatsConfig or {@code null} for none
    */
   public GooglePrivacyDlpV2PrivacyMetric setCategoricalStatsConfig(GooglePrivacyDlpV2CategoricalStatsConfig categoricalStatsConfig) {
@@ -82,6 +90,7 @@ public final class GooglePrivacyDlpV2PrivacyMetric extends com.google.api.client
   }
 
   /**
+   * delta-presence
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2DeltaPresenceEstimationConfig getDeltaPresenceEstimationConfig() {
@@ -89,6 +98,7 @@ public final class GooglePrivacyDlpV2PrivacyMetric extends com.google.api.client
   }
 
   /**
+   * delta-presence
    * @param deltaPresenceEstimationConfig deltaPresenceEstimationConfig or {@code null} for none
    */
   public GooglePrivacyDlpV2PrivacyMetric setDeltaPresenceEstimationConfig(GooglePrivacyDlpV2DeltaPresenceEstimationConfig deltaPresenceEstimationConfig) {
@@ -97,6 +107,7 @@ public final class GooglePrivacyDlpV2PrivacyMetric extends com.google.api.client
   }
 
   /**
+   * K-anonymity
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2KAnonymityConfig getKAnonymityConfig() {
@@ -104,6 +115,7 @@ public final class GooglePrivacyDlpV2PrivacyMetric extends com.google.api.client
   }
 
   /**
+   * K-anonymity
    * @param kAnonymityConfig kAnonymityConfig or {@code null} for none
    */
   public GooglePrivacyDlpV2PrivacyMetric setKAnonymityConfig(GooglePrivacyDlpV2KAnonymityConfig kAnonymityConfig) {
@@ -112,6 +124,7 @@ public final class GooglePrivacyDlpV2PrivacyMetric extends com.google.api.client
   }
 
   /**
+   * k-map
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2KMapEstimationConfig getKMapEstimationConfig() {
@@ -119,6 +132,7 @@ public final class GooglePrivacyDlpV2PrivacyMetric extends com.google.api.client
   }
 
   /**
+   * k-map
    * @param kMapEstimationConfig kMapEstimationConfig or {@code null} for none
    */
   public GooglePrivacyDlpV2PrivacyMetric setKMapEstimationConfig(GooglePrivacyDlpV2KMapEstimationConfig kMapEstimationConfig) {
@@ -127,6 +141,7 @@ public final class GooglePrivacyDlpV2PrivacyMetric extends com.google.api.client
   }
 
   /**
+   * l-diversity
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2LDiversityConfig getLDiversityConfig() {
@@ -134,6 +149,7 @@ public final class GooglePrivacyDlpV2PrivacyMetric extends com.google.api.client
   }
 
   /**
+   * l-diversity
    * @param lDiversityConfig lDiversityConfig or {@code null} for none
    */
   public GooglePrivacyDlpV2PrivacyMetric setLDiversityConfig(GooglePrivacyDlpV2LDiversityConfig lDiversityConfig) {
@@ -142,6 +158,7 @@ public final class GooglePrivacyDlpV2PrivacyMetric extends com.google.api.client
   }
 
   /**
+   * Numerical stats
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2NumericalStatsConfig getNumericalStatsConfig() {
@@ -149,6 +166,7 @@ public final class GooglePrivacyDlpV2PrivacyMetric extends com.google.api.client
   }
 
   /**
+   * Numerical stats
    * @param numericalStatsConfig numericalStatsConfig or {@code null} for none
    */
   public GooglePrivacyDlpV2PrivacyMetric setNumericalStatsConfig(GooglePrivacyDlpV2NumericalStatsConfig numericalStatsConfig) {

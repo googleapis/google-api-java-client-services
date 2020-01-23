@@ -35,29 +35,29 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2AuxiliaryTable extends com.google.api.client.json.GenericJson {
 
   /**
-   * Quasi-identifier columns. [required]
+   * Required. Quasi-identifier columns.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2QuasiIdField> quasiIds;
 
   /**
-   * The relative frequency column must contain a floating-point number between 0 and 1 (inclusive).
-   * Null values are assumed to be zero. [required]
+   * Required. The relative frequency column must contain a floating-point number between 0 and 1
+   * (inclusive). Null values are assumed to be zero.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2FieldId relativeFrequency;
 
   /**
-   * Auxiliary table location. [required]
+   * Required. Auxiliary table location.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2BigQueryTable table;
 
   /**
-   * Quasi-identifier columns. [required]
+   * Required. Quasi-identifier columns.
    * @return value or {@code null} for none
    */
   public java.util.List<GooglePrivacyDlpV2QuasiIdField> getQuasiIds() {
@@ -65,7 +65,7 @@ public final class GooglePrivacyDlpV2AuxiliaryTable extends com.google.api.clien
   }
 
   /**
-   * Quasi-identifier columns. [required]
+   * Required. Quasi-identifier columns.
    * @param quasiIds quasiIds or {@code null} for none
    */
   public GooglePrivacyDlpV2AuxiliaryTable setQuasiIds(java.util.List<GooglePrivacyDlpV2QuasiIdField> quasiIds) {
@@ -74,8 +74,8 @@ public final class GooglePrivacyDlpV2AuxiliaryTable extends com.google.api.clien
   }
 
   /**
-   * The relative frequency column must contain a floating-point number between 0 and 1 (inclusive).
-   * Null values are assumed to be zero. [required]
+   * Required. The relative frequency column must contain a floating-point number between 0 and 1
+   * (inclusive). Null values are assumed to be zero.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2FieldId getRelativeFrequency() {
@@ -83,8 +83,8 @@ public final class GooglePrivacyDlpV2AuxiliaryTable extends com.google.api.clien
   }
 
   /**
-   * The relative frequency column must contain a floating-point number between 0 and 1 (inclusive).
-   * Null values are assumed to be zero. [required]
+   * Required. The relative frequency column must contain a floating-point number between 0 and 1
+   * (inclusive). Null values are assumed to be zero.
    * @param relativeFrequency relativeFrequency or {@code null} for none
    */
   public GooglePrivacyDlpV2AuxiliaryTable setRelativeFrequency(GooglePrivacyDlpV2FieldId relativeFrequency) {
@@ -93,7 +93,7 @@ public final class GooglePrivacyDlpV2AuxiliaryTable extends com.google.api.clien
   }
 
   /**
-   * Auxiliary table location. [required]
+   * Required. Auxiliary table location.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2BigQueryTable getTable() {
@@ -101,7 +101,7 @@ public final class GooglePrivacyDlpV2AuxiliaryTable extends com.google.api.clien
   }
 
   /**
-   * Auxiliary table location. [required]
+   * Required. Auxiliary table location.
    * @param table table or {@code null} for none
    */
   public GooglePrivacyDlpV2AuxiliaryTable setTable(GooglePrivacyDlpV2BigQueryTable table) {

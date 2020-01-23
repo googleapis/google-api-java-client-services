@@ -33,7 +33,7 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2InfoTypeTransformations extends com.google.api.client.json.GenericJson {
 
   /**
-   * Transformation for each infoType. Cannot specify more than one for a given infoType. [required]
+   * Required. Transformation for each infoType. Cannot specify more than one for a given infoType.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2InfoTypeTransformations extends com.google.
   }
 
   /**
-   * Transformation for each infoType. Cannot specify more than one for a given infoType. [required]
+   * Required. Transformation for each infoType. Cannot specify more than one for a given infoType.
    * @return value or {@code null} for none
    */
   public java.util.List<GooglePrivacyDlpV2InfoTypeTransformation> getTransformations() {
@@ -54,7 +54,7 @@ public final class GooglePrivacyDlpV2InfoTypeTransformations extends com.google.
   }
 
   /**
-   * Transformation for each infoType. Cannot specify more than one for a given infoType. [required]
+   * Required. Transformation for each infoType. Cannot specify more than one for a given infoType.
    * @param transformations transformations or {@code null} for none
    */
   public GooglePrivacyDlpV2InfoTypeTransformations setTransformations(java.util.List<GooglePrivacyDlpV2InfoTypeTransformation> transformations) {

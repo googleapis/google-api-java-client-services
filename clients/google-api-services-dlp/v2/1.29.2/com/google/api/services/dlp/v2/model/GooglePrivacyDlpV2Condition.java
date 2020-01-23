@@ -42,28 +42,28 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2Condition extends com.google.api.client.json.GenericJson {
 
   /**
-   * Field within the record this condition is evaluated against. [required]
+   * Required. Field within the record this condition is evaluated against.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2FieldId field;
 
   /**
-   * Operator used to compare the field or infoType to the value. [required]
+   * Required. Operator used to compare the field or infoType to the value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String operator;
 
   /**
-   * Value to compare against. [Required, except for `EXISTS` tests.]
+   * Value to compare against. [Mandatory, except for `EXISTS` tests.]
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2Value value;
 
   /**
-   * Field within the record this condition is evaluated against. [required]
+   * Required. Field within the record this condition is evaluated against.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2FieldId getField() {
@@ -71,7 +71,7 @@ public final class GooglePrivacyDlpV2Condition extends com.google.api.client.jso
   }
 
   /**
-   * Field within the record this condition is evaluated against. [required]
+   * Required. Field within the record this condition is evaluated against.
    * @param field field or {@code null} for none
    */
   public GooglePrivacyDlpV2Condition setField(GooglePrivacyDlpV2FieldId field) {
@@ -80,7 +80,7 @@ public final class GooglePrivacyDlpV2Condition extends com.google.api.client.jso
   }
 
   /**
-   * Operator used to compare the field or infoType to the value. [required]
+   * Required. Operator used to compare the field or infoType to the value.
    * @return value or {@code null} for none
    */
   public java.lang.String getOperator() {
@@ -88,7 +88,7 @@ public final class GooglePrivacyDlpV2Condition extends com.google.api.client.jso
   }
 
   /**
-   * Operator used to compare the field or infoType to the value. [required]
+   * Required. Operator used to compare the field or infoType to the value.
    * @param operator operator or {@code null} for none
    */
   public GooglePrivacyDlpV2Condition setOperator(java.lang.String operator) {
@@ -97,7 +97,7 @@ public final class GooglePrivacyDlpV2Condition extends com.google.api.client.jso
   }
 
   /**
-   * Value to compare against. [Required, except for `EXISTS` tests.]
+   * Value to compare against. [Mandatory, except for `EXISTS` tests.]
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2Value getValue() {
@@ -105,7 +105,7 @@ public final class GooglePrivacyDlpV2Condition extends com.google.api.client.jso
   }
 
   /**
-   * Value to compare against. [Required, except for `EXISTS` tests.]
+   * Value to compare against. [Mandatory, except for `EXISTS` tests.]
    * @param value value or {@code null} for none
    */
   public GooglePrivacyDlpV2Condition setValue(GooglePrivacyDlpV2Value value) {

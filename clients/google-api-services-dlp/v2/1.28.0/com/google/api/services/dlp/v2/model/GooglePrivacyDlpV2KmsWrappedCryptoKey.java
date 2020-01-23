@@ -33,21 +33,21 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2KmsWrappedCryptoKey extends com.google.api.client.json.GenericJson {
 
   /**
-   * The resource name of the KMS CryptoKey to use for unwrapping. [required]
+   * Required. The resource name of the KMS CryptoKey to use for unwrapping.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cryptoKeyName;
 
   /**
-   * The wrapped data crypto key. [required]
+   * Required. The wrapped data crypto key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String wrappedKey;
 
   /**
-   * The resource name of the KMS CryptoKey to use for unwrapping. [required]
+   * Required. The resource name of the KMS CryptoKey to use for unwrapping.
    * @return value or {@code null} for none
    */
   public java.lang.String getCryptoKeyName() {
@@ -55,7 +55,7 @@ public final class GooglePrivacyDlpV2KmsWrappedCryptoKey extends com.google.api.
   }
 
   /**
-   * The resource name of the KMS CryptoKey to use for unwrapping. [required]
+   * Required. The resource name of the KMS CryptoKey to use for unwrapping.
    * @param cryptoKeyName cryptoKeyName or {@code null} for none
    */
   public GooglePrivacyDlpV2KmsWrappedCryptoKey setCryptoKeyName(java.lang.String cryptoKeyName) {
@@ -64,7 +64,7 @@ public final class GooglePrivacyDlpV2KmsWrappedCryptoKey extends com.google.api.
   }
 
   /**
-   * The wrapped data crypto key. [required]
+   * Required. The wrapped data crypto key.
    * @see #decodeWrappedKey()
    * @return value or {@code null} for none
    */
@@ -73,7 +73,7 @@ public final class GooglePrivacyDlpV2KmsWrappedCryptoKey extends com.google.api.
   }
 
   /**
-   * The wrapped data crypto key. [required]
+   * Required. The wrapped data crypto key.
    * @see #getWrappedKey()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -84,7 +84,7 @@ public final class GooglePrivacyDlpV2KmsWrappedCryptoKey extends com.google.api.
   }
 
   /**
-   * The wrapped data crypto key. [required]
+   * Required. The wrapped data crypto key.
    * @see #encodeWrappedKey()
    * @param wrappedKey wrappedKey or {@code null} for none
    */
@@ -94,7 +94,7 @@ public final class GooglePrivacyDlpV2KmsWrappedCryptoKey extends com.google.api.
   }
 
   /**
-   * The wrapped data crypto key. [required]
+   * Required. The wrapped data crypto key.
    * @see #setWrappedKey()
    *
    * <p>

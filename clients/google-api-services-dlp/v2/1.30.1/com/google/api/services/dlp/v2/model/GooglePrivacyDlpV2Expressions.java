@@ -31,6 +31,7 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2Expressions extends com.google.api.client.json.GenericJson {
 
   /**
+   * Conditions to apply to the expression.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,6 +46,7 @@ public final class GooglePrivacyDlpV2Expressions extends com.google.api.client.j
   private java.lang.String logicalOperator;
 
   /**
+   * Conditions to apply to the expression.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2Conditions getConditions() {
@@ -52,6 +54,7 @@ public final class GooglePrivacyDlpV2Expressions extends com.google.api.client.j
   }
 
   /**
+   * Conditions to apply to the expression.
    * @param conditions conditions or {@code null} for none
    */
   public GooglePrivacyDlpV2Expressions setConditions(GooglePrivacyDlpV2Conditions conditions) {

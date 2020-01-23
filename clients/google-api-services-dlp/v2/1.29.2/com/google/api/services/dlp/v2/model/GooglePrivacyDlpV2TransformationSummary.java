@@ -67,6 +67,7 @@ public final class GooglePrivacyDlpV2TransformationSummary extends com.google.ap
   private GooglePrivacyDlpV2RecordSuppression recordSuppress;
 
   /**
+   * Collection of all transformations that took place or had an error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,6 +164,7 @@ public final class GooglePrivacyDlpV2TransformationSummary extends com.google.ap
   }
 
   /**
+   * Collection of all transformations that took place or had an error.
    * @return value or {@code null} for none
    */
   public java.util.List<GooglePrivacyDlpV2SummaryResult> getResults() {
@@ -170,6 +172,7 @@ public final class GooglePrivacyDlpV2TransformationSummary extends com.google.ap
   }
 
   /**
+   * Collection of all transformations that took place or had an error.
    * @param results results or {@code null} for none
    */
   public GooglePrivacyDlpV2TransformationSummary setResults(java.util.List<GooglePrivacyDlpV2SummaryResult> results) {

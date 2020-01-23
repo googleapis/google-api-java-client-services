@@ -33,7 +33,7 @@ public final class GooglePrivacyDlpV2DateShiftConfig extends com.google.api.clie
 
   /**
    * Points to the field that contains the context, for example, an entity id. If set, must also set
-   * method. If set, shift will be consistent for the given context.
+   * cryptoKey. If set, shift will be consistent for the given context.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,25 +41,26 @@ public final class GooglePrivacyDlpV2DateShiftConfig extends com.google.api.clie
 
   /**
    * Causes the shift to be computed based on this key and the context. This results in the same
-   * shift for the same context and crypto_key.
+   * shift for the same context and crypto_key. If set, must also set context. Can only be applied
+   * to table items.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2CryptoKey cryptoKey;
 
   /**
-   * For example, -5 means shift date to at most 5 days back in the past. [Required]
+   * Required. For example, -5 means shift date to at most 5 days back in the past.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer lowerBoundDays;
 
   /**
-   * Range of shift in days. Actual shift will be selected at random within this range (inclusive
-   * ends). Negative means shift to earlier in time. Must not be more than 365250 days (1000 years)
-   * each direction.
+   * Required. Range of shift in days. Actual shift will be selected at random within this range
+   * (inclusive ends). Negative means shift to earlier in time. Must not be more than 365250 days
+   * (1000 years) each direction.
    *
-   * For example, 3 means shift date to at most 3 days into the future. [Required]
+   * For example, 3 means shift date to at most 3 days into the future.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +68,7 @@ public final class GooglePrivacyDlpV2DateShiftConfig extends com.google.api.clie
 
   /**
    * Points to the field that contains the context, for example, an entity id. If set, must also set
-   * method. If set, shift will be consistent for the given context.
+   * cryptoKey. If set, shift will be consistent for the given context.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2FieldId getContext() {
@@ -76,7 +77,7 @@ public final class GooglePrivacyDlpV2DateShiftConfig extends com.google.api.clie
 
   /**
    * Points to the field that contains the context, for example, an entity id. If set, must also set
-   * method. If set, shift will be consistent for the given context.
+   * cryptoKey. If set, shift will be consistent for the given context.
    * @param context context or {@code null} for none
    */
   public GooglePrivacyDlpV2DateShiftConfig setContext(GooglePrivacyDlpV2FieldId context) {
@@ -86,7 +87,8 @@ public final class GooglePrivacyDlpV2DateShiftConfig extends com.google.api.clie
 
   /**
    * Causes the shift to be computed based on this key and the context. This results in the same
-   * shift for the same context and crypto_key.
+   * shift for the same context and crypto_key. If set, must also set context. Can only be applied
+   * to table items.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2CryptoKey getCryptoKey() {
@@ -95,7 +97,8 @@ public final class GooglePrivacyDlpV2DateShiftConfig extends com.google.api.clie
 
   /**
    * Causes the shift to be computed based on this key and the context. This results in the same
-   * shift for the same context and crypto_key.
+   * shift for the same context and crypto_key. If set, must also set context. Can only be applied
+   * to table items.
    * @param cryptoKey cryptoKey or {@code null} for none
    */
   public GooglePrivacyDlpV2DateShiftConfig setCryptoKey(GooglePrivacyDlpV2CryptoKey cryptoKey) {
@@ -104,7 +107,7 @@ public final class GooglePrivacyDlpV2DateShiftConfig extends com.google.api.clie
   }
 
   /**
-   * For example, -5 means shift date to at most 5 days back in the past. [Required]
+   * Required. For example, -5 means shift date to at most 5 days back in the past.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getLowerBoundDays() {
@@ -112,7 +115,7 @@ public final class GooglePrivacyDlpV2DateShiftConfig extends com.google.api.clie
   }
 
   /**
-   * For example, -5 means shift date to at most 5 days back in the past. [Required]
+   * Required. For example, -5 means shift date to at most 5 days back in the past.
    * @param lowerBoundDays lowerBoundDays or {@code null} for none
    */
   public GooglePrivacyDlpV2DateShiftConfig setLowerBoundDays(java.lang.Integer lowerBoundDays) {
@@ -121,11 +124,11 @@ public final class GooglePrivacyDlpV2DateShiftConfig extends com.google.api.clie
   }
 
   /**
-   * Range of shift in days. Actual shift will be selected at random within this range (inclusive
-   * ends). Negative means shift to earlier in time. Must not be more than 365250 days (1000 years)
-   * each direction.
+   * Required. Range of shift in days. Actual shift will be selected at random within this range
+   * (inclusive ends). Negative means shift to earlier in time. Must not be more than 365250 days
+   * (1000 years) each direction.
    *
-   * For example, 3 means shift date to at most 3 days into the future. [Required]
+   * For example, 3 means shift date to at most 3 days into the future.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getUpperBoundDays() {
@@ -133,11 +136,11 @@ public final class GooglePrivacyDlpV2DateShiftConfig extends com.google.api.clie
   }
 
   /**
-   * Range of shift in days. Actual shift will be selected at random within this range (inclusive
-   * ends). Negative means shift to earlier in time. Must not be more than 365250 days (1000 years)
-   * each direction.
+   * Required. Range of shift in days. Actual shift will be selected at random within this range
+   * (inclusive ends). Negative means shift to earlier in time. Must not be more than 365250 days
+   * (1000 years) each direction.
    *
-   * For example, 3 means shift date to at most 3 days into the future. [Required]
+   * For example, 3 means shift date to at most 3 days into the future.
    * @param upperBoundDays upperBoundDays or {@code null} for none
    */
   public GooglePrivacyDlpV2DateShiftConfig setUpperBoundDays(java.lang.Integer upperBoundDays) {

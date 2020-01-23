@@ -17,7 +17,7 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * Model definition for GooglePrivacyDlpV2RequestedOptions.
+ * Snapshot of the inspection configuration.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Data Loss Prevention (DLP) API. For a detailed
@@ -31,6 +31,7 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2RequestedOptions extends com.google.api.client.json.GenericJson {
 
   /**
+   * Inspect config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,6 +45,7 @@ public final class GooglePrivacyDlpV2RequestedOptions extends com.google.api.cli
   private GooglePrivacyDlpV2InspectTemplate snapshotInspectTemplate;
 
   /**
+   * Inspect config.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2InspectJobConfig getJobConfig() {
@@ -51,6 +53,7 @@ public final class GooglePrivacyDlpV2RequestedOptions extends com.google.api.cli
   }
 
   /**
+   * Inspect config.
    * @param jobConfig jobConfig or {@code null} for none
    */
   public GooglePrivacyDlpV2RequestedOptions setJobConfig(GooglePrivacyDlpV2InspectJobConfig jobConfig) {

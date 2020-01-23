@@ -21,8 +21,9 @@ package com.google.api.services.dlp.v2.model;
  * functionality, but requires more configuration. This message is provided as a convenience to the
  * user for simple bucketing strategies.
  *
- * The transformed value will be a hyphenated string of -, i.e if lower_bound = 10 and upper_bound =
- * 20 all values that are within this bucket will be replaced with "10-20".
+ * The transformed value will be a hyphenated string of {lower_bound}-{upper_bound}, i.e if
+ * lower_bound = 10 and upper_bound = 20 all values that are within this bucket will be replaced
+ * with "10-20".
  *
  * This can be used on data of type: double, long.
  *
@@ -44,38 +45,36 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2FixedSizeBucketingConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Size of each bucket (except for minimum and maximum buckets). So if `lower_bound` = 10,
-   * `upper_bound` = 89, and `bucket_size` = 10, then the following buckets would be used: -10,
+   * Required. Size of each bucket (except for minimum and maximum buckets). So if `lower_bound` =
+   * 10, `upper_bound` = 89, and `bucket_size` = 10, then the following buckets would be used: -10,
    * 10-20, 20-30, 30-40, 40-50, 50-60, 60-70, 70-80, 80-89, 89+. Precision up to 2 decimals works.
-   * [Required].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double bucketSize;
 
   /**
-   * Lower bound value of buckets. All values less than `lower_bound` are grouped together into a
-   * single bucket; for example if `lower_bound` = 10, then all values less than 10 are replaced
-   * with the value “-10”. [Required].
+   * Required. Lower bound value of buckets. All values less than `lower_bound` are grouped together
+   * into a single bucket; for example if `lower_bound` = 10, then all values less than 10 are
+   * replaced with the value “-10”.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2Value lowerBound;
 
   /**
-   * Upper bound value of buckets. All values greater than upper_bound are grouped together into a
-   * single bucket; for example if `upper_bound` = 89, then all values greater than 89 are replaced
-   * with the value “89+”. [Required].
+   * Required. Upper bound value of buckets. All values greater than upper_bound are grouped
+   * together into a single bucket; for example if `upper_bound` = 89, then all values greater than
+   * 89 are replaced with the value “89+”.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2Value upperBound;
 
   /**
-   * Size of each bucket (except for minimum and maximum buckets). So if `lower_bound` = 10,
-   * `upper_bound` = 89, and `bucket_size` = 10, then the following buckets would be used: -10,
+   * Required. Size of each bucket (except for minimum and maximum buckets). So if `lower_bound` =
+   * 10, `upper_bound` = 89, and `bucket_size` = 10, then the following buckets would be used: -10,
    * 10-20, 20-30, 30-40, 40-50, 50-60, 60-70, 70-80, 80-89, 89+. Precision up to 2 decimals works.
-   * [Required].
    * @return value or {@code null} for none
    */
   public java.lang.Double getBucketSize() {
@@ -83,10 +82,9 @@ public final class GooglePrivacyDlpV2FixedSizeBucketingConfig extends com.google
   }
 
   /**
-   * Size of each bucket (except for minimum and maximum buckets). So if `lower_bound` = 10,
-   * `upper_bound` = 89, and `bucket_size` = 10, then the following buckets would be used: -10,
+   * Required. Size of each bucket (except for minimum and maximum buckets). So if `lower_bound` =
+   * 10, `upper_bound` = 89, and `bucket_size` = 10, then the following buckets would be used: -10,
    * 10-20, 20-30, 30-40, 40-50, 50-60, 60-70, 70-80, 80-89, 89+. Precision up to 2 decimals works.
-   * [Required].
    * @param bucketSize bucketSize or {@code null} for none
    */
   public GooglePrivacyDlpV2FixedSizeBucketingConfig setBucketSize(java.lang.Double bucketSize) {
@@ -95,9 +93,9 @@ public final class GooglePrivacyDlpV2FixedSizeBucketingConfig extends com.google
   }
 
   /**
-   * Lower bound value of buckets. All values less than `lower_bound` are grouped together into a
-   * single bucket; for example if `lower_bound` = 10, then all values less than 10 are replaced
-   * with the value “-10”. [Required].
+   * Required. Lower bound value of buckets. All values less than `lower_bound` are grouped together
+   * into a single bucket; for example if `lower_bound` = 10, then all values less than 10 are
+   * replaced with the value “-10”.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2Value getLowerBound() {
@@ -105,9 +103,9 @@ public final class GooglePrivacyDlpV2FixedSizeBucketingConfig extends com.google
   }
 
   /**
-   * Lower bound value of buckets. All values less than `lower_bound` are grouped together into a
-   * single bucket; for example if `lower_bound` = 10, then all values less than 10 are replaced
-   * with the value “-10”. [Required].
+   * Required. Lower bound value of buckets. All values less than `lower_bound` are grouped together
+   * into a single bucket; for example if `lower_bound` = 10, then all values less than 10 are
+   * replaced with the value “-10”.
    * @param lowerBound lowerBound or {@code null} for none
    */
   public GooglePrivacyDlpV2FixedSizeBucketingConfig setLowerBound(GooglePrivacyDlpV2Value lowerBound) {
@@ -116,9 +114,9 @@ public final class GooglePrivacyDlpV2FixedSizeBucketingConfig extends com.google
   }
 
   /**
-   * Upper bound value of buckets. All values greater than upper_bound are grouped together into a
-   * single bucket; for example if `upper_bound` = 89, then all values greater than 89 are replaced
-   * with the value “89+”. [Required].
+   * Required. Upper bound value of buckets. All values greater than upper_bound are grouped
+   * together into a single bucket; for example if `upper_bound` = 89, then all values greater than
+   * 89 are replaced with the value “89+”.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2Value getUpperBound() {
@@ -126,9 +124,9 @@ public final class GooglePrivacyDlpV2FixedSizeBucketingConfig extends com.google
   }
 
   /**
-   * Upper bound value of buckets. All values greater than upper_bound are grouped together into a
-   * single bucket; for example if `upper_bound` = 89, then all values greater than 89 are replaced
-   * with the value “89+”. [Required].
+   * Required. Upper bound value of buckets. All values greater than upper_bound are grouped
+   * together into a single bucket; for example if `upper_bound` = 89, then all values greater than
+   * 89 are replaced with the value “89+”.
    * @param upperBound upperBound or {@code null} for none
    */
   public GooglePrivacyDlpV2FixedSizeBucketingConfig setUpperBound(GooglePrivacyDlpV2Value upperBound) {

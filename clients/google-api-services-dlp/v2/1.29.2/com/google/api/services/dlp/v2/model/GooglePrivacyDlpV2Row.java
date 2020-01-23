@@ -17,7 +17,7 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * Model definition for GooglePrivacyDlpV2Row.
+ * Values of the row.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Data Loss Prevention (DLP) API. For a detailed
@@ -31,12 +31,14 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2Row extends com.google.api.client.json.GenericJson {
 
   /**
+   * Individual cells.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2Value> values;
 
   /**
+   * Individual cells.
    * @return value or {@code null} for none
    */
   public java.util.List<GooglePrivacyDlpV2Value> getValues() {
@@ -44,6 +46,7 @@ public final class GooglePrivacyDlpV2Row extends com.google.api.client.json.Gene
   }
 
   /**
+   * Individual cells.
    * @param values values or {@code null} for none
    */
   public GooglePrivacyDlpV2Row setValues(java.util.List<GooglePrivacyDlpV2Value> values) {

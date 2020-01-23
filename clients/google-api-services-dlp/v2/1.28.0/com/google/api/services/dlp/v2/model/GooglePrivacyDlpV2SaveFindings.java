@@ -32,12 +32,14 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2SaveFindings extends com.google.api.client.json.GenericJson {
 
   /**
+   * Location to store findings outside of DLP.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2OutputStorageConfig outputConfig;
 
   /**
+   * Location to store findings outside of DLP.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2OutputStorageConfig getOutputConfig() {
@@ -45,6 +47,7 @@ public final class GooglePrivacyDlpV2SaveFindings extends com.google.api.client.
   }
 
   /**
+   * Location to store findings outside of DLP.
    * @param outputConfig outputConfig or {@code null} for none
    */
   public GooglePrivacyDlpV2SaveFindings setOutputConfig(GooglePrivacyDlpV2OutputStorageConfig outputConfig) {

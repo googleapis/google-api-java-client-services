@@ -45,7 +45,7 @@ public final class GooglePrivacyDlpV2InfoTypeTransformation extends com.google.a
   }
 
   /**
-   * Primitive transformation to apply to the infoType. [required]
+   * Required. Primitive transformation to apply to the infoType.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +71,7 @@ public final class GooglePrivacyDlpV2InfoTypeTransformation extends com.google.a
   }
 
   /**
-   * Primitive transformation to apply to the infoType. [required]
+   * Required. Primitive transformation to apply to the infoType.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2PrimitiveTransformation getPrimitiveTransformation() {
@@ -79,7 +79,7 @@ public final class GooglePrivacyDlpV2InfoTypeTransformation extends com.google.a
   }
 
   /**
-   * Primitive transformation to apply to the infoType. [required]
+   * Required. Primitive transformation to apply to the infoType.
    * @param primitiveTransformation primitiveTransformation or {@code null} for none
    */
   public GooglePrivacyDlpV2InfoTypeTransformation setPrimitiveTransformation(GooglePrivacyDlpV2PrimitiveTransformation primitiveTransformation) {

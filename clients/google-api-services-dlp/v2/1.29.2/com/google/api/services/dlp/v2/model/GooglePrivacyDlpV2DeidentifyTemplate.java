@@ -17,7 +17,7 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * The DeidentifyTemplates contains instructions on how to deidentify content. See
+ * DeidentifyTemplates contains instructions on how to de-identify content. See
  * https://cloud.google.com/dlp/docs/concepts-templates to learn more.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -32,7 +32,7 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2DeidentifyTemplate extends com.google.api.client.json.GenericJson {
 
   /**
-   * The creation timestamp of a inspectTemplate, output only field.
+   * Output only. The creation timestamp of an inspectTemplate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +60,7 @@ public final class GooglePrivacyDlpV2DeidentifyTemplate extends com.google.api.c
   private java.lang.String displayName;
 
   /**
-   * The template name. Output only.
+   * Output only. The template name.
    *
    * The template will have one of the following formats:
    * `projects/PROJECT_ID/deidentifyTemplates/TEMPLATE_ID` OR
@@ -71,14 +71,14 @@ public final class GooglePrivacyDlpV2DeidentifyTemplate extends com.google.api.c
   private java.lang.String name;
 
   /**
-   * The last update timestamp of a inspectTemplate, output only field.
+   * Output only. The last update timestamp of an inspectTemplate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * The creation timestamp of a inspectTemplate, output only field.
+   * Output only. The creation timestamp of an inspectTemplate.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -86,7 +86,7 @@ public final class GooglePrivacyDlpV2DeidentifyTemplate extends com.google.api.c
   }
 
   /**
-   * The creation timestamp of a inspectTemplate, output only field.
+   * Output only. The creation timestamp of an inspectTemplate.
    * @param createTime createTime or {@code null} for none
    */
   public GooglePrivacyDlpV2DeidentifyTemplate setCreateTime(String createTime) {
@@ -146,7 +146,7 @@ public final class GooglePrivacyDlpV2DeidentifyTemplate extends com.google.api.c
   }
 
   /**
-   * The template name. Output only.
+   * Output only. The template name.
    *
    * The template will have one of the following formats:
    * `projects/PROJECT_ID/deidentifyTemplates/TEMPLATE_ID` OR
@@ -158,7 +158,7 @@ public final class GooglePrivacyDlpV2DeidentifyTemplate extends com.google.api.c
   }
 
   /**
-   * The template name. Output only.
+   * Output only. The template name.
    *
    * The template will have one of the following formats:
    * `projects/PROJECT_ID/deidentifyTemplates/TEMPLATE_ID` OR
@@ -171,7 +171,7 @@ public final class GooglePrivacyDlpV2DeidentifyTemplate extends com.google.api.c
   }
 
   /**
-   * The last update timestamp of a inspectTemplate, output only field.
+   * Output only. The last update timestamp of an inspectTemplate.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -179,7 +179,7 @@ public final class GooglePrivacyDlpV2DeidentifyTemplate extends com.google.api.c
   }
 
   /**
-   * The last update timestamp of a inspectTemplate, output only field.
+   * Output only. The last update timestamp of an inspectTemplate.
    * @param updateTime updateTime or {@code null} for none
    */
   public GooglePrivacyDlpV2DeidentifyTemplate setUpdateTime(String updateTime) {

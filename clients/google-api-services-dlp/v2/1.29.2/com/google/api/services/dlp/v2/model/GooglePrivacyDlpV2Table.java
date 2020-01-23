@@ -32,6 +32,7 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2Table extends com.google.api.client.json.GenericJson {
 
   /**
+   * Headers of the table.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,6 +45,7 @@ public final class GooglePrivacyDlpV2Table extends com.google.api.client.json.Ge
   }
 
   /**
+   * Rows of the table.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,6 +58,7 @@ public final class GooglePrivacyDlpV2Table extends com.google.api.client.json.Ge
   }
 
   /**
+   * Headers of the table.
    * @return value or {@code null} for none
    */
   public java.util.List<GooglePrivacyDlpV2FieldId> getHeaders() {
@@ -63,6 +66,7 @@ public final class GooglePrivacyDlpV2Table extends com.google.api.client.json.Ge
   }
 
   /**
+   * Headers of the table.
    * @param headers headers or {@code null} for none
    */
   public GooglePrivacyDlpV2Table setHeaders(java.util.List<GooglePrivacyDlpV2FieldId> headers) {
@@ -71,6 +75,7 @@ public final class GooglePrivacyDlpV2Table extends com.google.api.client.json.Ge
   }
 
   /**
+   * Rows of the table.
    * @return value or {@code null} for none
    */
   public java.util.List<GooglePrivacyDlpV2Row> getRows() {
@@ -78,6 +83,7 @@ public final class GooglePrivacyDlpV2Table extends com.google.api.client.json.Ge
   }
 
   /**
+   * Rows of the table.
    * @param rows rows or {@code null} for none
    */
   public GooglePrivacyDlpV2Table setRows(java.util.List<GooglePrivacyDlpV2Row> rows) {

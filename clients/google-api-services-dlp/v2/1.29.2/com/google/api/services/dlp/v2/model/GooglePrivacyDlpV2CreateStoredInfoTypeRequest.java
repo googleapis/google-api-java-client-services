@@ -31,11 +31,18 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2CreateStoredInfoTypeRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Configuration of the storedInfoType to create.
+   * Required. Configuration of the storedInfoType to create.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2StoredInfoTypeConfig config;
+
+  /**
+   * The geographic location to store the stored infoType. Reserved for future extensions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String locationId;
 
   /**
    * The storedInfoType ID can contain uppercase and lowercase letters, numbers, and hyphens; that
@@ -47,7 +54,7 @@ public final class GooglePrivacyDlpV2CreateStoredInfoTypeRequest extends com.goo
   private java.lang.String storedInfoTypeId;
 
   /**
-   * Configuration of the storedInfoType to create.
+   * Required. Configuration of the storedInfoType to create.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2StoredInfoTypeConfig getConfig() {
@@ -55,11 +62,28 @@ public final class GooglePrivacyDlpV2CreateStoredInfoTypeRequest extends com.goo
   }
 
   /**
-   * Configuration of the storedInfoType to create.
+   * Required. Configuration of the storedInfoType to create.
    * @param config config or {@code null} for none
    */
   public GooglePrivacyDlpV2CreateStoredInfoTypeRequest setConfig(GooglePrivacyDlpV2StoredInfoTypeConfig config) {
     this.config = config;
+    return this;
+  }
+
+  /**
+   * The geographic location to store the stored infoType. Reserved for future extensions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocationId() {
+    return locationId;
+  }
+
+  /**
+   * The geographic location to store the stored infoType. Reserved for future extensions.
+   * @param locationId locationId or {@code null} for none
+   */
+  public GooglePrivacyDlpV2CreateStoredInfoTypeRequest setLocationId(java.lang.String locationId) {
+    this.locationId = locationId;
     return this;
   }
 

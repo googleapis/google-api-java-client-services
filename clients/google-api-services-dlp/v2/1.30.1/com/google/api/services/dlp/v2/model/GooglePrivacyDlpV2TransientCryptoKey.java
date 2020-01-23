@@ -32,7 +32,7 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2TransientCryptoKey extends com.google.api.client.json.GenericJson {
 
   /**
-   * Name of the key. [required] This is an arbitrary string used to differentiate different keys. A
+   * Required. Name of the key. This is an arbitrary string used to differentiate different keys. A
    * unique key is generated per name: two separate `TransientCryptoKey` protos share the same
    * generated key if their names are the same. When the data crypto key is generated, this name is
    * not used in any way (repeating the api call will result in a different key being generated).
@@ -42,7 +42,7 @@ public final class GooglePrivacyDlpV2TransientCryptoKey extends com.google.api.c
   private java.lang.String name;
 
   /**
-   * Name of the key. [required] This is an arbitrary string used to differentiate different keys. A
+   * Required. Name of the key. This is an arbitrary string used to differentiate different keys. A
    * unique key is generated per name: two separate `TransientCryptoKey` protos share the same
    * generated key if their names are the same. When the data crypto key is generated, this name is
    * not used in any way (repeating the api call will result in a different key being generated).
@@ -53,7 +53,7 @@ public final class GooglePrivacyDlpV2TransientCryptoKey extends com.google.api.c
   }
 
   /**
-   * Name of the key. [required] This is an arbitrary string used to differentiate different keys. A
+   * Required. Name of the key. This is an arbitrary string used to differentiate different keys. A
    * unique key is generated per name: two separate `TransientCryptoKey` protos share the same
    * generated key if their names are the same. When the data crypto key is generated, this name is
    * not used in any way (repeating the api call will result in a different key being generated).

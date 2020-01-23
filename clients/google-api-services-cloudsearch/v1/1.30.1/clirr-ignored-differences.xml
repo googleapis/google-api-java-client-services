@@ -56,6 +56,4 @@
         <method>com.google.api.services.cloudsearch.v1.model.RestrictItem setGmailAttachmentRestrict(com.google.api.services.cloudsearch.v1.model.GmailAttachmentRestrict)</method>
         <differenceType>7002</differenceType>
     </difference>
-
-
 </differences>

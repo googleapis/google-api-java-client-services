@@ -43,7 +43,7 @@ discovery_url = "https://github.com/googleapis/discovery-artifact-manager.git"
 repository = Path('.')
 
 log.debug(f"Cloning {discovery_url}.")
-discovery = git.clone(discovery_url, depth=1)
+discovery = git.clone(discovery_url)
 
 log.debug("Cleaning output directory.")
 shell.run("rm -rf .cache".split(), cwd=repository)

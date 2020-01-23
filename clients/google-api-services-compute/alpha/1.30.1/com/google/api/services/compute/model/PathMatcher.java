@@ -62,8 +62,8 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
   private java.lang.String defaultService;
 
   /**
-   * When when none of the specified pathRules or routeRules match, the request is redirected to a
-   * URL specified by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
+   * When none of the specified pathRules or routeRules match, the request is redirected to a URL
+   * specified by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
    * defaultRouteAction must not be set.
    * The value may be {@code null}.
    */
@@ -105,11 +105,10 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
   private java.util.List<PathRule> pathRules;
 
   /**
-   * The list of ordered HTTP route rules. Use this list instead of pathRules when advanced route
-   * matching and routing actions are desired. The order of specifying routeRules matters: the first
-   * rule that matches will cause its specified routing action to take effect. Within a given
-   * pathMatcher, only one of pathRules or routeRules must be set. routeRules are not supported in
-   * UrlMaps intended for External Load balancers.
+   * The list of HTTP route rules. Use this list instead of pathRules when advanced route matching
+   * and routing actions are desired. routeRules are evaluated in order of priority, from the lowest
+   * to highest number. Within a given pathMatcher, only one of pathRules or routeRules must be set.
+   * routeRules are not supported in UrlMaps intended for External Load balancers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -190,8 +189,8 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When when none of the specified pathRules or routeRules match, the request is redirected to a
-   * URL specified by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
+   * When none of the specified pathRules or routeRules match, the request is redirected to a URL
+   * specified by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
    * defaultRouteAction must not be set.
    * @return value or {@code null} for none
    */
@@ -200,8 +199,8 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When when none of the specified pathRules or routeRules match, the request is redirected to a
-   * URL specified by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
+   * When none of the specified pathRules or routeRules match, the request is redirected to a URL
+   * specified by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
    * defaultRouteAction must not be set.
    * @param defaultUrlRedirect defaultUrlRedirect or {@code null} for none
    */
@@ -291,11 +290,10 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of ordered HTTP route rules. Use this list instead of pathRules when advanced route
-   * matching and routing actions are desired. The order of specifying routeRules matters: the first
-   * rule that matches will cause its specified routing action to take effect. Within a given
-   * pathMatcher, only one of pathRules or routeRules must be set. routeRules are not supported in
-   * UrlMaps intended for External Load balancers.
+   * The list of HTTP route rules. Use this list instead of pathRules when advanced route matching
+   * and routing actions are desired. routeRules are evaluated in order of priority, from the lowest
+   * to highest number. Within a given pathMatcher, only one of pathRules or routeRules must be set.
+   * routeRules are not supported in UrlMaps intended for External Load balancers.
    * @return value or {@code null} for none
    */
   public java.util.List<HttpRouteRule> getRouteRules() {
@@ -303,11 +301,10 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of ordered HTTP route rules. Use this list instead of pathRules when advanced route
-   * matching and routing actions are desired. The order of specifying routeRules matters: the first
-   * rule that matches will cause its specified routing action to take effect. Within a given
-   * pathMatcher, only one of pathRules or routeRules must be set. routeRules are not supported in
-   * UrlMaps intended for External Load balancers.
+   * The list of HTTP route rules. Use this list instead of pathRules when advanced route matching
+   * and routing actions are desired. routeRules are evaluated in order of priority, from the lowest
+   * to highest number. Within a given pathMatcher, only one of pathRules or routeRules must be set.
+   * routeRules are not supported in UrlMaps intended for External Load balancers.
    * @param routeRules routeRules or {@code null} for none
    */
   public PathMatcher setRouteRules(java.util.List<HttpRouteRule> routeRules) {

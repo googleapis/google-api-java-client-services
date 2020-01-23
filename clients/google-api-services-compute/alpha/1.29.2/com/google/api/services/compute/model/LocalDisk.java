@@ -34,14 +34,14 @@ public final class LocalDisk extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String diskCount;
+  private java.lang.Integer diskCount;
 
   /**
    * Specifies the size of the disk in base-2 GB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String diskSizeGb;
+  private java.lang.Integer diskSizeGb;
 
   /**
    * Specifies the desired disk type on the node. This disk type must be a local storage type (e.g.:
@@ -56,7 +56,7 @@ public final class LocalDisk extends com.google.api.client.json.GenericJson {
    * Specifies the number of such disks.
    * @return value or {@code null} for none
    */
-  public java.lang.String getDiskCount() {
+  public java.lang.Integer getDiskCount() {
     return diskCount;
   }
 
@@ -64,7 +64,7 @@ public final class LocalDisk extends com.google.api.client.json.GenericJson {
    * Specifies the number of such disks.
    * @param diskCount diskCount or {@code null} for none
    */
-  public LocalDisk setDiskCount(java.lang.String diskCount) {
+  public LocalDisk setDiskCount(java.lang.Integer diskCount) {
     this.diskCount = diskCount;
     return this;
   }
@@ -73,7 +73,7 @@ public final class LocalDisk extends com.google.api.client.json.GenericJson {
    * Specifies the size of the disk in base-2 GB.
    * @return value or {@code null} for none
    */
-  public java.lang.String getDiskSizeGb() {
+  public java.lang.Integer getDiskSizeGb() {
     return diskSizeGb;
   }
 
@@ -81,7 +81,7 @@ public final class LocalDisk extends com.google.api.client.json.GenericJson {
    * Specifies the size of the disk in base-2 GB.
    * @param diskSizeGb diskSizeGb or {@code null} for none
    */
-  public LocalDisk setDiskSizeGb(java.lang.String diskSizeGb) {
+  public LocalDisk setDiskSizeGb(java.lang.Integer diskSizeGb) {
     this.diskSizeGb = diskSizeGb;
     return this;
   }

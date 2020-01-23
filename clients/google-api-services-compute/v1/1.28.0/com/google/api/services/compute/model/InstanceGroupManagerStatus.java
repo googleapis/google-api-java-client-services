@@ -41,6 +41,14 @@ public final class InstanceGroupManagerStatus extends com.google.api.client.json
   private java.lang.Boolean isStable;
 
   /**
+   * [Output Only] A status of consistency of Instances' versions with their target version
+   * specified by version field on Instance Group Manager.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InstanceGroupManagerStatusVersionTarget versionTarget;
+
+  /**
    * [Output Only] A bit indicating whether the managed instance group is in a stable state. A
    * stable state means that: none of the instances in the managed instance group is currently
    * undergoing any type of change (for example, creation, restart, or deletion); no future changes
@@ -62,6 +70,25 @@ public final class InstanceGroupManagerStatus extends com.google.api.client.json
    */
   public InstanceGroupManagerStatus setIsStable(java.lang.Boolean isStable) {
     this.isStable = isStable;
+    return this;
+  }
+
+  /**
+   * [Output Only] A status of consistency of Instances' versions with their target version
+   * specified by version field on Instance Group Manager.
+   * @return value or {@code null} for none
+   */
+  public InstanceGroupManagerStatusVersionTarget getVersionTarget() {
+    return versionTarget;
+  }
+
+  /**
+   * [Output Only] A status of consistency of Instances' versions with their target version
+   * specified by version field on Instance Group Manager.
+   * @param versionTarget versionTarget or {@code null} for none
+   */
+  public InstanceGroupManagerStatus setVersionTarget(InstanceGroupManagerStatusVersionTarget versionTarget) {
+    this.versionTarget = versionTarget;
     return this;
   }
 

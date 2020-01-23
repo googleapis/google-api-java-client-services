@@ -90,6 +90,16 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * [Output Only] Target recommended MIG size (number of instances) computed by autoscaler.
+   * Autoscaler calculates recommended MIG size even when autoscaling policy mode is different from
+   * ON. This field is empty when autoscaler is not connected to the existing managed instance group
+   * or autoscaler did not generate its prediction.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer recommendedSize;
+
+  /**
    * [Output Only] URL of the region where the instance group resides (for autoscalers living in
    * regional scope).
    * The value may be {@code null}.
@@ -105,7 +115,12 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] The status of the autoscaler configuration.
+   * [Output Only] The status of the autoscaler configuration. Current set of possible values: -
+   * PENDING: Autoscaler backend hasn't read new/updated configuration.  - DELETING: Configuration
+   * is being deleted.  - ACTIVE: Configuration is acknowledged to be effective. Some warnings might
+   * be present in the statusDetails field.  - ERROR: Configuration has errors. Actionable for
+   * users. Details are present in the statusDetails field.  New values might be added in the
+   * future.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -256,6 +271,29 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * [Output Only] Target recommended MIG size (number of instances) computed by autoscaler.
+   * Autoscaler calculates recommended MIG size even when autoscaling policy mode is different from
+   * ON. This field is empty when autoscaler is not connected to the existing managed instance group
+   * or autoscaler did not generate its prediction.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getRecommendedSize() {
+    return recommendedSize;
+  }
+
+  /**
+   * [Output Only] Target recommended MIG size (number of instances) computed by autoscaler.
+   * Autoscaler calculates recommended MIG size even when autoscaling policy mode is different from
+   * ON. This field is empty when autoscaler is not connected to the existing managed instance group
+   * or autoscaler did not generate its prediction.
+   * @param recommendedSize recommendedSize or {@code null} for none
+   */
+  public Autoscaler setRecommendedSize(java.lang.Integer recommendedSize) {
+    this.recommendedSize = recommendedSize;
+    return this;
+  }
+
+  /**
    * [Output Only] URL of the region where the instance group resides (for autoscalers living in
    * regional scope).
    * @return value or {@code null} for none
@@ -292,7 +330,12 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The status of the autoscaler configuration.
+   * [Output Only] The status of the autoscaler configuration. Current set of possible values: -
+   * PENDING: Autoscaler backend hasn't read new/updated configuration.  - DELETING: Configuration
+   * is being deleted.  - ACTIVE: Configuration is acknowledged to be effective. Some warnings might
+   * be present in the statusDetails field.  - ERROR: Configuration has errors. Actionable for
+   * users. Details are present in the statusDetails field.  New values might be added in the
+   * future.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -300,7 +343,12 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The status of the autoscaler configuration.
+   * [Output Only] The status of the autoscaler configuration. Current set of possible values: -
+   * PENDING: Autoscaler backend hasn't read new/updated configuration.  - DELETING: Configuration
+   * is being deleted.  - ACTIVE: Configuration is acknowledged to be effective. Some warnings might
+   * be present in the statusDetails field.  - ERROR: Configuration has errors. Actionable for
+   * users. Details are present in the statusDetails field.  New values might be added in the
+   * future.
    * @param status status or {@code null} for none
    */
   public Autoscaler setStatus(java.lang.String status) {

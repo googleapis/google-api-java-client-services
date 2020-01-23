@@ -37,7 +37,7 @@ public final class AllocationSpecificSKUReservation extends com.google.api.clien
   private java.lang.Long count;
 
   /**
-   * [OutputOnly] Indicates how many instances are in use.
+   * [Output Only] Indicates how many instances are in use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -68,7 +68,7 @@ public final class AllocationSpecificSKUReservation extends com.google.api.clien
   }
 
   /**
-   * [OutputOnly] Indicates how many instances are in use.
+   * [Output Only] Indicates how many instances are in use.
    * @return value or {@code null} for none
    */
   public java.lang.Long getInUseCount() {
@@ -76,7 +76,7 @@ public final class AllocationSpecificSKUReservation extends com.google.api.clien
   }
 
   /**
-   * [OutputOnly] Indicates how many instances are in use.
+   * [Output Only] Indicates how many instances are in use.
    * @param inUseCount inUseCount or {@code null} for none
    */
   public AllocationSpecificSKUReservation setInUseCount(java.lang.Long inUseCount) {

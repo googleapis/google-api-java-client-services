@@ -96,6 +96,16 @@ public final class Route extends com.google.api.client.json.GenericJson {
   private java.lang.String nextHopGateway;
 
   /**
+   * The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching
+   * packets. You can only specify the forwarding rule as a partial or full URL. For example, the
+   * following are all valid URLs: - https://www.googleapis.com/compute/v1/projects/project/regions/
+   * region/forwardingRules/forwardingRule  - regions/region/forwardingRules/forwardingRule
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String nextHopIlb;
+
+  /**
    * The URL to an instance that should handle matching packets. You can specify this as a full or
    * partial URL. For example:
    * https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/
@@ -317,6 +327,29 @@ public final class Route extends com.google.api.client.json.GenericJson {
    */
   public Route setNextHopGateway(java.lang.String nextHopGateway) {
     this.nextHopGateway = nextHopGateway;
+    return this;
+  }
+
+  /**
+   * The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching
+   * packets. You can only specify the forwarding rule as a partial or full URL. For example, the
+   * following are all valid URLs: - https://www.googleapis.com/compute/v1/projects/project/regions/
+   * region/forwardingRules/forwardingRule  - regions/region/forwardingRules/forwardingRule
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNextHopIlb() {
+    return nextHopIlb;
+  }
+
+  /**
+   * The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching
+   * packets. You can only specify the forwarding rule as a partial or full URL. For example, the
+   * following are all valid URLs: - https://www.googleapis.com/compute/v1/projects/project/regions/
+   * region/forwardingRules/forwardingRule  - regions/region/forwardingRules/forwardingRule
+   * @param nextHopIlb nextHopIlb or {@code null} for none
+   */
+  public Route setNextHopIlb(java.lang.String nextHopIlb) {
+    this.nextHopIlb = nextHopIlb;
     return this;
   }
 

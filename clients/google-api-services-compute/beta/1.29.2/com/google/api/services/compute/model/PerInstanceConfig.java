@@ -50,6 +50,14 @@ public final class PerInstanceConfig extends com.google.api.client.json.GenericJ
   private java.lang.String name;
 
   /**
+   * Intended preserved state for the given instance. Does not contain state generated based on
+   * Stateful Policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PreservedState preservedState;
+
+  /**
    * Fingerprint of this per-instance config. This field may be used in optimistic locking. It will
    * be ignored when inserting a per-instance config. An up-to-date fingerprint must be provided in
    * order to update an existing per-instance config or the field needs to be unset.
@@ -124,6 +132,25 @@ public final class PerInstanceConfig extends com.google.api.client.json.GenericJ
    */
   public PerInstanceConfig setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Intended preserved state for the given instance. Does not contain state generated based on
+   * Stateful Policy.
+   * @return value or {@code null} for none
+   */
+  public PreservedState getPreservedState() {
+    return preservedState;
+  }
+
+  /**
+   * Intended preserved state for the given instance. Does not contain state generated based on
+   * Stateful Policy.
+   * @param preservedState preservedState or {@code null} for none
+   */
+  public PerInstanceConfig setPreservedState(PreservedState preservedState) {
+    this.preservedState = preservedState;
     return this;
   }
 

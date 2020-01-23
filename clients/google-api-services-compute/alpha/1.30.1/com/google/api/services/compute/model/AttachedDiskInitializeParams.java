@@ -51,8 +51,9 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   private java.lang.String diskName;
 
   /**
-   * Specifies the size of the disk in base-2 GB. If not specified, the disk will be the same size
-   * as the image (usually 10GB). If specified, the size must be equal to or larger than 10GB.
+   * Specifies the size of the disk in base-2 GB. The size must be at least 10 GB. If you specify a
+   * sourceImage, which is required for boot disks, the default size is the size of the sourceImage.
+   * If you do not specify a sourceImage, the default disk size is 500 GB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -91,6 +92,14 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
+
+  /**
+   * Specifies which action to take on instance update with this disk. Default is to use the
+   * existing disk.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String onUpdateAction;
 
   /**
    * URLs of the zones where the disk should be replicated to. Only applicable for regional
@@ -205,8 +214,9 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   }
 
   /**
-   * Specifies the size of the disk in base-2 GB. If not specified, the disk will be the same size
-   * as the image (usually 10GB). If specified, the size must be equal to or larger than 10GB.
+   * Specifies the size of the disk in base-2 GB. The size must be at least 10 GB. If you specify a
+   * sourceImage, which is required for boot disks, the default size is the size of the sourceImage.
+   * If you do not specify a sourceImage, the default disk size is 500 GB.
    * @return value or {@code null} for none
    */
   public java.lang.Long getDiskSizeGb() {
@@ -214,8 +224,9 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   }
 
   /**
-   * Specifies the size of the disk in base-2 GB. If not specified, the disk will be the same size
-   * as the image (usually 10GB). If specified, the size must be equal to or larger than 10GB.
+   * Specifies the size of the disk in base-2 GB. The size must be at least 10 GB. If you specify a
+   * sourceImage, which is required for boot disks, the default size is the size of the sourceImage.
+   * If you do not specify a sourceImage, the default disk size is 500 GB.
    * @param diskSizeGb diskSizeGb or {@code null} for none
    */
   public AttachedDiskInitializeParams setDiskSizeGb(java.lang.Long diskSizeGb) {
@@ -297,6 +308,25 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
    */
   public AttachedDiskInitializeParams setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Specifies which action to take on instance update with this disk. Default is to use the
+   * existing disk.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOnUpdateAction() {
+    return onUpdateAction;
+  }
+
+  /**
+   * Specifies which action to take on instance update with this disk. Default is to use the
+   * existing disk.
+   * @param onUpdateAction onUpdateAction or {@code null} for none
+   */
+  public AttachedDiskInitializeParams setOnUpdateAction(java.lang.String onUpdateAction) {
+    this.onUpdateAction = onUpdateAction;
     return this;
   }
 

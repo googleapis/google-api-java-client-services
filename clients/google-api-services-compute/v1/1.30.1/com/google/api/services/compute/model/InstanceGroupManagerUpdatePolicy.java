@@ -30,6 +30,15 @@ package com.google.api.services.compute.model;
 public final class InstanceGroupManagerUpdatePolicy extends com.google.api.client.json.GenericJson {
 
   /**
+   * The  instance redistribution policy for regional managed instance groups. Valid values are: -
+   * PROACTIVE (default): The group attempts to maintain an even distribution of VM instances across
+   * zones in the region.  - NONE: For non-autoscaled groups, proactive redistribution is disabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String instanceRedistributionType;
+
+  /**
    * The maximum number of instances that can be created above the specified targetSize during the
    * update process. By default, a fixed value of 1 is used. This value can be either a fixed number
    * or a percentage if the instance group has 10 or more instances. If you set a percentage, the
@@ -80,6 +89,27 @@ public final class InstanceGroupManagerUpdatePolicy extends com.google.api.clien
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * The  instance redistribution policy for regional managed instance groups. Valid values are: -
+   * PROACTIVE (default): The group attempts to maintain an even distribution of VM instances across
+   * zones in the region.  - NONE: For non-autoscaled groups, proactive redistribution is disabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInstanceRedistributionType() {
+    return instanceRedistributionType;
+  }
+
+  /**
+   * The  instance redistribution policy for regional managed instance groups. Valid values are: -
+   * PROACTIVE (default): The group attempts to maintain an even distribution of VM instances across
+   * zones in the region.  - NONE: For non-autoscaled groups, proactive redistribution is disabled.
+   * @param instanceRedistributionType instanceRedistributionType or {@code null} for none
+   */
+  public InstanceGroupManagerUpdatePolicy setInstanceRedistributionType(java.lang.String instanceRedistributionType) {
+    this.instanceRedistributionType = instanceRedistributionType;
+    return this;
+  }
 
   /**
    * The maximum number of instances that can be created above the specified targetSize during the

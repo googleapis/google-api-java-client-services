@@ -185,6 +185,13 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   private java.lang.String serviceAccount;
 
   /**
+   * Stateful configuration for this Instanced Group Manager
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StatefulPolicy statefulPolicy;
+
+  /**
    * [Output Only] The status of this managed instance group.
    * The value may be {@code null}.
    */
@@ -614,6 +621,23 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
    */
   public InstanceGroupManager setServiceAccount(java.lang.String serviceAccount) {
     this.serviceAccount = serviceAccount;
+    return this;
+  }
+
+  /**
+   * Stateful configuration for this Instanced Group Manager
+   * @return value or {@code null} for none
+   */
+  public StatefulPolicy getStatefulPolicy() {
+    return statefulPolicy;
+  }
+
+  /**
+   * Stateful configuration for this Instanced Group Manager
+   * @param statefulPolicy statefulPolicy or {@code null} for none
+   */
+  public InstanceGroupManager setStatefulPolicy(StatefulPolicy statefulPolicy) {
+    this.statefulPolicy = statefulPolicy;
     return this;
   }
 

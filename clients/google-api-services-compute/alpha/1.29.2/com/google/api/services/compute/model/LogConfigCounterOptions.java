@@ -32,9 +32,10 @@ package com.google.api.services.compute.model;
  * fields.
  *
  * Examples: counter { metric: "/debug_access_count" field: "iam_principal" } ==> increment counter
- * /iam/policy/backend_debug_access_count {iam_principal=[value of IAMContext.principal]}
+ * /iam/policy/debug_access_count {iam_principal=[value of IAMContext.principal]}
  *
- * At this time we do not support multiple field names (though this may be supported in the future).
+ * TODO(b/141846426): Consider supporting "authority" and "iam_principal" fields in the same
+ * counter.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -45,6 +46,13 @@ package com.google.api.services.compute.model;
  */
 @SuppressWarnings("javadoc")
 public final class LogConfigCounterOptions extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Custom fields.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<LogConfigCounterOptionsCustomField> customFields;
 
   /**
    * The field value to attribute.
@@ -59,6 +67,23 @@ public final class LogConfigCounterOptions extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private java.lang.String metric;
+
+  /**
+   * Custom fields.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<LogConfigCounterOptionsCustomField> getCustomFields() {
+    return customFields;
+  }
+
+  /**
+   * Custom fields.
+   * @param customFields customFields or {@code null} for none
+   */
+  public LogConfigCounterOptions setCustomFields(java.util.List<LogConfigCounterOptionsCustomField> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
 
   /**
    * The field value to attribute.

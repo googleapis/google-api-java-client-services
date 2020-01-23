@@ -38,7 +38,7 @@ public final class RouterStatusNatStatus extends com.google.api.client.json.Gene
 
   /**
    * A list of IPs auto-allocated for NAT that are in drain mode. Example: ["1.1.1.1",
-   * ?179.12.26.133?].
+   * "179.12.26.133"].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class RouterStatusNatStatus extends com.google.api.client.json.Gene
 
   /**
    * A list of IPs user-allocated for NAT that are in drain mode. Example: ["1.1.1.1",
-   * ?179.12.26.133?].
+   * "179.12.26.133"].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,7 +108,7 @@ public final class RouterStatusNatStatus extends com.google.api.client.json.Gene
 
   /**
    * A list of IPs auto-allocated for NAT that are in drain mode. Example: ["1.1.1.1",
-   * ?179.12.26.133?].
+   * "179.12.26.133"].
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDrainAutoAllocatedNatIps() {
@@ -117,7 +117,7 @@ public final class RouterStatusNatStatus extends com.google.api.client.json.Gene
 
   /**
    * A list of IPs auto-allocated for NAT that are in drain mode. Example: ["1.1.1.1",
-   * ?179.12.26.133?].
+   * "179.12.26.133"].
    * @param drainAutoAllocatedNatIps drainAutoAllocatedNatIps or {@code null} for none
    */
   public RouterStatusNatStatus setDrainAutoAllocatedNatIps(java.util.List<java.lang.String> drainAutoAllocatedNatIps) {
@@ -127,7 +127,7 @@ public final class RouterStatusNatStatus extends com.google.api.client.json.Gene
 
   /**
    * A list of IPs user-allocated for NAT that are in drain mode. Example: ["1.1.1.1",
-   * ?179.12.26.133?].
+   * "179.12.26.133"].
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDrainUserAllocatedNatIps() {
@@ -136,7 +136,7 @@ public final class RouterStatusNatStatus extends com.google.api.client.json.Gene
 
   /**
    * A list of IPs user-allocated for NAT that are in drain mode. Example: ["1.1.1.1",
-   * ?179.12.26.133?].
+   * "179.12.26.133"].
    * @param drainUserAllocatedNatIps drainUserAllocatedNatIps or {@code null} for none
    */
   public RouterStatusNatStatus setDrainUserAllocatedNatIps(java.util.List<java.lang.String> drainUserAllocatedNatIps) {

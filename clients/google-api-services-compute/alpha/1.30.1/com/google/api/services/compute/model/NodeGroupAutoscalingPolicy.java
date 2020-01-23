@@ -30,54 +30,62 @@ package com.google.api.services.compute.model;
 public final class NodeGroupAutoscalingPolicy extends com.google.api.client.json.GenericJson {
 
   /**
+   * The maximum number of nodes that the group should have.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Integer maxSize;
+  private java.lang.Integer maxNodes;
 
   /**
+   * The minimum number of nodes that the group should have.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Integer minSize;
+  private java.lang.Integer minNodes;
 
   /**
+   * The autoscaling mode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mode;
 
   /**
+   * The maximum number of nodes that the group should have.
    * @return value or {@code null} for none
    */
-  public java.lang.Integer getMaxSize() {
-    return maxSize;
+  public java.lang.Integer getMaxNodes() {
+    return maxNodes;
   }
 
   /**
-   * @param maxSize maxSize or {@code null} for none
+   * The maximum number of nodes that the group should have.
+   * @param maxNodes maxNodes or {@code null} for none
    */
-  public NodeGroupAutoscalingPolicy setMaxSize(java.lang.Integer maxSize) {
-    this.maxSize = maxSize;
+  public NodeGroupAutoscalingPolicy setMaxNodes(java.lang.Integer maxNodes) {
+    this.maxNodes = maxNodes;
     return this;
   }
 
   /**
+   * The minimum number of nodes that the group should have.
    * @return value or {@code null} for none
    */
-  public java.lang.Integer getMinSize() {
-    return minSize;
+  public java.lang.Integer getMinNodes() {
+    return minNodes;
   }
 
   /**
-   * @param minSize minSize or {@code null} for none
+   * The minimum number of nodes that the group should have.
+   * @param minNodes minNodes or {@code null} for none
    */
-  public NodeGroupAutoscalingPolicy setMinSize(java.lang.Integer minSize) {
-    this.minSize = minSize;
+  public NodeGroupAutoscalingPolicy setMinNodes(java.lang.Integer minNodes) {
+    this.minNodes = minNodes;
     return this;
   }
 
   /**
+   * The autoscaling mode.
    * @return value or {@code null} for none
    */
   public java.lang.String getMode() {
@@ -85,6 +93,7 @@ public final class NodeGroupAutoscalingPolicy extends com.google.api.client.json
   }
 
   /**
+   * The autoscaling mode.
    * @param mode mode or {@code null} for none
    */
   public NodeGroupAutoscalingPolicy setMode(java.lang.String mode) {

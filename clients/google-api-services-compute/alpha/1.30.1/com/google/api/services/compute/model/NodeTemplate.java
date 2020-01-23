@@ -21,7 +21,7 @@ package com.google.api.services.compute.model;
  *
  * You can use a template to define properties for nodes in a node group. For more information, read
  * Creating node groups and instances. (== resource_for beta.nodeTemplates ==) (== resource_for
- * v1.nodeTemplates ==) (== NextID: 16 ==)
+ * v1.nodeTemplates ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

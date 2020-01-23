@@ -31,6 +31,14 @@ package com.google.api.services.compute.model;
 public final class HttpRouteRule extends com.google.api.client.json.GenericJson {
 
   /**
+   * The short description conveying the intent of this routeRule. The description can have a
+   * maximum length of 1024 characters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String description;
+
+  /**
    * Specifies changes to request and response headers that need to take effect for the selected
    * backendService. The headerAction specified here are applied before the matching
    * pathMatchers[].headerAction and after pathMatchers[].routeRules[].routeAction.weightedBackendSe
@@ -47,11 +55,26 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
   private java.util.List<HttpRouteRuleMatch> matchRules;
 
   /**
+   * For routeRules within a given pathMatcher, priority determines the order in which load balancer
+   * will interpret routeRules. RouteRules are evaluated in order of priority, from the lowest to
+   * highest number. The priority of a rule decreases as its number increases (1, 2, 3, N+1). The
+   * first rule that matches the request is applied. You cannot configure two or more routeRules
+   * with the same priority. Priority for each rule must be set to a number between 0 and 2147483647
+   * inclusive. Priority numbers can have gaps, which enable you to add or remove rules in the
+   * future without affecting the rest of the rules. For example, 1, 2, 3, 4, 5, 9, 12, 16 is a
+   * valid series of priority numbers to which you could add rules numbered from 6 to 8, 10 to 11,
+   * and 13 to 15 in the future without any impact on existing rules.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer priority;
+
+  /**
    * In response to a matching matchRule, the load balancer performs advanced routing actions like
    * URL rewrites, header transformations, etc. prior to forwarding the request to the selected
    * backend. If  routeAction specifies any  weightedBackendServices, service must not be set.
    * Conversely if service is set, routeAction cannot contain any  weightedBackendServices. Only one
-   * of routeAction or urlRedirect must be set.
+   * of urlRedirect, service or routeAction.weightedBackendService must be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,6 +99,25 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private HttpRedirectAction urlRedirect;
+
+  /**
+   * The short description conveying the intent of this routeRule. The description can have a
+   * maximum length of 1024 characters.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  /**
+   * The short description conveying the intent of this routeRule. The description can have a
+   * maximum length of 1024 characters.
+   * @param description description or {@code null} for none
+   */
+  public HttpRouteRule setDescription(java.lang.String description) {
+    this.description = description;
+    return this;
+  }
 
   /**
    * Specifies changes to request and response headers that need to take effect for the selected
@@ -116,11 +158,44 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * For routeRules within a given pathMatcher, priority determines the order in which load balancer
+   * will interpret routeRules. RouteRules are evaluated in order of priority, from the lowest to
+   * highest number. The priority of a rule decreases as its number increases (1, 2, 3, N+1). The
+   * first rule that matches the request is applied. You cannot configure two or more routeRules
+   * with the same priority. Priority for each rule must be set to a number between 0 and 2147483647
+   * inclusive. Priority numbers can have gaps, which enable you to add or remove rules in the
+   * future without affecting the rest of the rules. For example, 1, 2, 3, 4, 5, 9, 12, 16 is a
+   * valid series of priority numbers to which you could add rules numbered from 6 to 8, 10 to 11,
+   * and 13 to 15 in the future without any impact on existing rules.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getPriority() {
+    return priority;
+  }
+
+  /**
+   * For routeRules within a given pathMatcher, priority determines the order in which load balancer
+   * will interpret routeRules. RouteRules are evaluated in order of priority, from the lowest to
+   * highest number. The priority of a rule decreases as its number increases (1, 2, 3, N+1). The
+   * first rule that matches the request is applied. You cannot configure two or more routeRules
+   * with the same priority. Priority for each rule must be set to a number between 0 and 2147483647
+   * inclusive. Priority numbers can have gaps, which enable you to add or remove rules in the
+   * future without affecting the rest of the rules. For example, 1, 2, 3, 4, 5, 9, 12, 16 is a
+   * valid series of priority numbers to which you could add rules numbered from 6 to 8, 10 to 11,
+   * and 13 to 15 in the future without any impact on existing rules.
+   * @param priority priority or {@code null} for none
+   */
+  public HttpRouteRule setPriority(java.lang.Integer priority) {
+    this.priority = priority;
+    return this;
+  }
+
+  /**
    * In response to a matching matchRule, the load balancer performs advanced routing actions like
    * URL rewrites, header transformations, etc. prior to forwarding the request to the selected
    * backend. If  routeAction specifies any  weightedBackendServices, service must not be set.
    * Conversely if service is set, routeAction cannot contain any  weightedBackendServices. Only one
-   * of routeAction or urlRedirect must be set.
+   * of urlRedirect, service or routeAction.weightedBackendService must be set.
    * @return value or {@code null} for none
    */
   public HttpRouteAction getRouteAction() {
@@ -132,7 +207,7 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
    * URL rewrites, header transformations, etc. prior to forwarding the request to the selected
    * backend. If  routeAction specifies any  weightedBackendServices, service must not be set.
    * Conversely if service is set, routeAction cannot contain any  weightedBackendServices. Only one
-   * of routeAction or urlRedirect must be set.
+   * of urlRedirect, service or routeAction.weightedBackendService must be set.
    * @param routeAction routeAction or {@code null} for none
    */
   public HttpRouteRule setRouteAction(HttpRouteAction routeAction) {

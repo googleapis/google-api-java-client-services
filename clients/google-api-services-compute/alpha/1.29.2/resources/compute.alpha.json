@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"LYADMvHWYH2ul9D6m9UT9gT77YM/izEdOcuZpHaO3ZMBrrGiJt5j1Pk\"",
+ "etag": "\"LYADMvHWYH2ul9D6m9UT9gT77YM/GVKiLhvd2GLMksDcEkmWb-P74ss\"",
  "discoveryVersion": "v1",
  "id": "compute:alpha",
  "name": "compute",
  "version": "alpha",
- "revision": "20190905",
+ "revision": "20191125",
  "title": "Compute Engine API",
  "description": "Creates and runs virtual machines on Google Cloud Platform.",
  "ownerDomain": "google.com",
@@ -1095,7 +1095,7 @@
     },
     "inUseCount": {
      "type": "string",
-     "description": "[OutputOnly] Indicates how many instances are in use.",
+     "description": "[Output Only] Indicates how many instances are in use.",
      "format": "int64"
     },
     "instanceProperties": {
@@ -1233,7 +1233,7 @@
     },
     "diskSizeGb": {
      "type": "string",
-     "description": "Specifies the size of the disk in base-2 GB. If not specified, the disk will be the same size as the image (usually 10GB). If specified, the size must be equal to or larger than 10GB.",
+     "description": "Specifies the size of the disk in base-2 GB. The size must be at least 10 GB. If you specify a sourceImage, which is required for boot disks, the default size is the size of the sourceImage. If you do not specify a sourceImage, the default disk size is 500 GB.",
      "format": "int64"
     },
     "diskType": {
@@ -1253,6 +1253,20 @@
      "additionalProperties": {
       "type": "string"
      }
+    },
+    "onUpdateAction": {
+     "type": "string",
+     "description": "Specifies which action to take on instance update with this disk. Default is to use the existing disk.",
+     "enum": [
+      "RECREATE_DISK",
+      "RECREATE_DISK_IF_SOURCE_CHANGED",
+      "USE_EXISTING_DISK"
+     ],
+     "enumDescriptions": [
+      "",
+      "",
+      ""
+     ]
     },
     "replicaZones": {
      "type": "array",
@@ -1479,7 +1493,7 @@
     },
     "status": {
      "type": "string",
-     "description": "[Output Only] The status of the autoscaler configuration.",
+     "description": "[Output Only] The status of the autoscaler configuration. Current set of possible values:  \n- PENDING: Autoscaler backend hasn't read new/updated configuration. \n- DELETING: Configuration is being deleted. \n- ACTIVE: Configuration is acknowledged to be effective. Some warnings might be present in the statusDetails field. \n- ERROR: Configuration has errors. Actionable for users. Details are present in the statusDetails field.  New values might be added in the future.",
      "enum": [
       "ACTIVE",
       "DELETING",
@@ -1744,7 +1758,7 @@
     },
     "type": {
      "type": "string",
-     "description": "The type of error returned.",
+     "description": "The type of error, warning, or notice returned. Current set of possible values:  \n- ALL_INSTANCES_UNHEALTHY (WARNING): All instances in the instance group are unhealthy (not in RUNNING state). \n- BACKEND_SERVICE_DOES_NOT_EXIST (ERROR): There is no backend service attached to the instance group. \n- CAPPED_AT_MAX_NUM_REPLICAS (WARNING): Autoscaler recommends a size greater than maxNumReplicas. \n- CUSTOM_METRIC_DATA_POINTS_TOO_SPARSE (WARNING): The custom metric samples are not exported often enough to be a credible base for autoscaling. \n- CUSTOM_METRIC_INVALID (ERROR): The custom metric that was specified does not exist or does not have the necessary labels. \n- MIN_EQUALS_MAX (WARNING): The minNumReplicas is equal to maxNumReplicas. This means the autoscaler cannot add or remove instances from the instance group. \n- MISSING_CUSTOM_METRIC_DATA_POINTS (WARNING): The autoscaler did not receive any data from the custom metric configured for autoscaling. \n- MISSING_LOAD_BALANCING_DATA_POINTS (WARNING): The autoscaler is configured to scale based on a load balancing signal but the instance group has not received any requests from the load balancer. \n- MODE_OFF (WARNING): Autoscaling is turned off. The number of instances in the group won't change automatically. The autoscaling configuration is preserved. \n- MODE_ONLY_UP (WARNING): Autoscaling is in the \"Autoscale only up\" mode. The autoscaler can add instances but not remove any. \n- MORE_THAN_ONE_BACKEND_SERVICE (ERROR): The instance group cannot be autoscaled because it has more than one backend service attached to it. \n- NOT_ENOUGH_QUOTA_AVAILABLE (ERROR): There is insufficient quota for the necessary resources, such as CPU or number of instances. \n- REGION_RESOURCE_STOCKOUT (ERROR): Shown only for regional autoscalers: there is a resource stockout in the chosen region. \n- SCALING_TARGET_DOES_NOT_EXIST (ERROR): The target to be scaled does not exist. \n- UNSUPPORTED_MAX_RATE_LOAD_BALANCING_CONFIGURATION (ERROR): Autoscaling does not work with an HTTP/S load balancer that has been configured for maxRate. \n- ZONE_RESOURCE_STOCKOUT (ERROR): For zonal autoscalers: there is a resource stockout in the chosen zone. For regional autoscalers: in at least one of the zones you're using there is a resource stockout.  New values might be added in the future. Some of the values might not be available in all API versions.",
      "enum": [
       "ALL_INSTANCES_UNHEALTHY",
       "BACKEND_SERVICE_DOES_NOT_EXIST",
@@ -1921,11 +1935,9 @@
      "enum": [
       "OFF",
       "ON",
-      "ONLY_DOWN",
       "ONLY_UP"
      ],
      "enumDescriptions": [
-      "",
       "",
       "",
       ""
@@ -2312,7 +2324,7 @@
   "BackendService": {
    "id": "BackendService",
    "type": "object",
-   "description": "Represents a Backend Service resource.\n\n\n\nBackend services must have an associated health check. Backend services also store information about session affinity. For more information, read Backend Services.\n\nA backendServices resource represents a global backend service. Global backend services are used for HTTP(S), SSL Proxy, TCP Proxy load balancing and Traffic Director.\n\nA regionBackendServices resource represents a regional backend service. Regional backend services are used for internal TCP/UDP load balancing. For more information, read Internal TCP/UDP Load balancing. (== resource_for v1.backendService ==) (== resource_for beta.backendService ==)",
+   "description": "Represents a Backend Service resource.\n\nA backend service contains configuration values for Google Cloud Platform load balancing services.\n\nFor more information, read Backend Services.\n\n(== resource_for v1.backendService ==) (== resource_for beta.backendService ==)",
    "properties": {
     "affinityCookieTtlSec": {
      "type": "integer",
@@ -2332,7 +2344,7 @@
     },
     "circuitBreakers": {
      "$ref": "CircuitBreakers",
-     "description": "Settings controlling the volume of connections to a backend service.\n\nThis field is applicable to either:  \n- A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. \n- A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED."
+     "description": "Settings controlling the volume of connections to a backend service. If not set, this feature is considered disabled.\n\nThis field is applicable to either:  \n- A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. \n- A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED."
     },
     "connectionDraining": {
      "$ref": "ConnectionDraining"
@@ -2391,7 +2403,7 @@
     },
     "loadBalancingScheme": {
      "type": "string",
-     "description": "Indicates whether the backend service will be used with internal or external load balancing. A backend service created for one type of load balancing cannot be used with the other. Possible values are INTERNAL and EXTERNAL.",
+     "description": "Specifies the load balancer type. Choose EXTERNAL for load balancers that receive traffic from external clients. Choose INTERNAL for Internal TCP/UDP Load Balancing. Choose INTERNAL_MANAGED for Internal HTTP(S) Load Balancing. Choose INTERNAL_SELF_MANAGED for Traffic Director. A backend service created for one type of load balancing cannot be used with another. For more information, refer to Choosing a load balancer.",
      "enum": [
       "EXTERNAL",
       "INTERNAL",
@@ -2409,7 +2421,7 @@
     },
     "localityLbPolicy": {
      "type": "string",
-     "description": "The load balancing algorithm used within the scope of the locality. The possible values are:  \n- ROUND_ROBIN: This is a simple policy in which each healthy backend is selected in round robin order. This is the default. \n- LEAST_REQUEST: An O(1) algorithm which selects two random healthy hosts and picks the host which has fewer active requests. \n- RING_HASH: The ring/modulo hash load balancer implements consistent hashing to backends. The algorithm has the property that the addition/removal of a host from a set of N hosts only affects 1/N of the requests. \n- RANDOM: The load balancer selects a random healthy host. \n- ORIGINAL_DESTINATION: Backend host is selected based on the client connection metadata, i.e., connections are opened to the same address as the destination address of the incoming connection before the connection was redirected to the load balancer. \n- MAGLEV: used as a drop in replacement for the ring hash load balancer. Maglev is not as stable as ring hash but has faster table lookup build times and host selection times. For more information about Maglev, refer to https://ai.google/research/pubs/pub44824 \n\nThis field is applicable to either:  \n- A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. \n- A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.",
+     "description": "The load balancing algorithm used within the scope of the locality. The possible values are:  \n- ROUND_ROBIN: This is a simple policy in which each healthy backend is selected in round robin order. This is the default. \n- LEAST_REQUEST: An O(1) algorithm which selects two random healthy hosts and picks the host which has fewer active requests. \n- RING_HASH: The ring/modulo hash load balancer implements consistent hashing to backends. The algorithm has the property that the addition/removal of a host from a set of N hosts only affects 1/N of the requests. \n- RANDOM: The load balancer selects a random healthy host. \n- ORIGINAL_DESTINATION: Backend host is selected based on the client connection metadata, i.e., connections are opened to the same address as the destination address of the incoming connection before the connection was redirected to the load balancer. \n- MAGLEV: used as a drop in replacement for the ring hash load balancer. Maglev is not as stable as ring hash but has faster table lookup build times and host selection times. For more information about Maglev, refer to https://ai.google/research/pubs/pub44824 \n\nThis field is applicable to either:  \n- A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. \n- A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.  \n\nIf sessionAffinity is not NONE, and this field is not set to \u003eMAGLEV or RING_HASH, session affinity settings will not take effect.",
      "enum": [
       "INVALID_LB_POLICY",
       "LEAST_REQUEST",
@@ -2444,7 +2456,7 @@
     },
     "outlierDetection": {
      "$ref": "OutlierDetection",
-     "description": "Settings controlling eviction of unhealthy hosts from the load balancing pool. This field is applicable to either:  \n- A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. \n- A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED."
+     "description": "Settings controlling the eviction of unhealthy hosts from the load balancing pool for the backend service. If not set, this feature is considered disabled.\n\nThis field is applicable to either:  \n- A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. \n- A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED."
     },
     "port": {
      "type": "integer",
@@ -2457,7 +2469,7 @@
     },
     "protocol": {
      "type": "string",
-     "description": "The protocol this BackendService uses to communicate with backends.\n\nPossible values are HTTP, HTTPS, TCP, SSL, or UDP, depending on the chosen load balancer or Traffic Director configuration. Refer to the documentation for the load balancer or for Traffic director for more information.",
+     "description": "The protocol this BackendService uses to communicate with backends.\n\nPossible values are HTTP, HTTPS, HTTP2, TCP, SSL, or UDP, depending on the chosen load balancer or Traffic Director configuration. Refer to the documentation for the load balancer or for Traffic Director for more information.",
      "enum": [
       "HTTP",
       "HTTP2",
@@ -2497,7 +2509,7 @@
     },
     "sessionAffinity": {
      "type": "string",
-     "description": "Type of session affinity to use. The default is NONE. Session affinity is not applicable if the --protocol is UDP.\n\nWhen the loadBalancingScheme is EXTERNAL, possible values are NONE, CLIENT_IP, or GENERATED_COOKIE. You can use GENERATED_COOKIE if the protocol is HTTP or HTTPS.\n\nWhen the loadBalancingScheme is INTERNAL, possible values are NONE, CLIENT_IP, CLIENT_IP_PROTO, or CLIENT_IP_PORT_PROTO.\n\nWhen the loadBalancingScheme is INTERNAL_SELF_MANAGED, possible values are NONE, CLIENT_IP, GENERATED_COOKIE, HEADER_FIELD, or HTTP_COOKIE.",
+     "description": "Type of session affinity to use. The default is NONE. Session affinity is not applicable if the --protocol is UDP.\n\nWhen the loadBalancingScheme is EXTERNAL, possible values are NONE, CLIENT_IP, or GENERATED_COOKIE. You can use GENERATED_COOKIE if the protocol is HTTP or HTTPS.\n\nWhen the loadBalancingScheme is INTERNAL, possible values are NONE, CLIENT_IP, CLIENT_IP_PROTO, or CLIENT_IP_PORT_PROTO.\n\nWhen the loadBalancingScheme is INTERNAL_SELF_MANAGED, or INTERNAL_MANAGED, possible values are NONE, CLIENT_IP, GENERATED_COOKIE, HEADER_FIELD, or HTTP_COOKIE.",
      "enum": [
       "CLIENT_IP",
       "CLIENT_IP_PORT_PROTO",
@@ -3252,7 +3264,7 @@
     },
     "members": {
      "type": "array",
-     "description": "Specifies the identities requesting access for a Cloud Platform resource. `members` can have the following values:\n\n* `allUsers`: A special identifier that represents anyone who is on the internet; with or without a Google account.\n\n* `allAuthenticatedUsers`: A special identifier that represents anyone who is authenticated with a Google account or a service account.\n\n* `user:{emailid}`: An email address that represents a specific Google account. For example, `alice@example.com` .\n\n\n\n* `serviceAccount:{emailid}`: An email address that represents a service account. For example, `my-other-app@appspot.gserviceaccount.com`.\n\n* `group:{emailid}`: An email address that represents a Google group. For example, `admins@example.com`.\n\n\n\n* `domain:{domain}`: The G Suite domain (primary) that represents all the users of that domain. For example, `google.com` or `example.com`.",
+     "description": "Specifies the identities requesting access for a Cloud Platform resource. `members` can have the following values:\n\n* `allUsers`: A special identifier that represents anyone who is on the internet; with or without a Google account.\n\n* `allAuthenticatedUsers`: A special identifier that represents anyone who is authenticated with a Google account or a service account.\n\n* `user:{emailid}`: An email address that represents a specific Google account. For example, `alice@example.com` .\n\n\n\n* `serviceAccount:{emailid}`: An email address that represents a service account. For example, `my-other-app@appspot.gserviceaccount.com`.\n\n* `group:{emailid}`: An email address that represents a Google group. For example, `admins@example.com`.\n\n* `deleted:user:{emailid}?uid={uniqueid}`: An email address (plus unique identifier) representing a user that has been recently deleted. For example,`alice@example.com?uid=123456789012345678901`. If the user is recovered, this value reverts to `user:{emailid}` and the recovered user retains the role in the binding.\n\n* `deleted:serviceAccount:{emailid}?uid={uniqueid}`: An email address (plus unique identifier) representing a service account that has been recently deleted. For example, `my-other-app@appspot.gserviceaccount.com?uid=123456789012345678901`. If the service account is undeleted, this value reverts to `serviceAccount:{emailid}` and the undeleted service account retains the role in the binding.\n\n* `deleted:group:{emailid}?uid={uniqueid}`: An email address (plus unique identifier) representing a Google group that has been recently deleted. For example, `admins@example.com?uid=123456789012345678901`. If the group is recovered, this value reverts to `group:{emailid}` and the recovered group retains the role in the binding.\n\n\n\n* `domain:{domain}`: The G Suite domain (primary) that represents all the users of that domain. For example, `google.com` or `example.com`.",
      "items": {
       "type": "string"
      }
@@ -3316,7 +3328,7 @@
    "properties": {
     "callCredentialType": {
      "type": "string",
-     "description": "The type of call credentials to use for GRPC requests to the SDS server. This field can be set to one of the following: ACCESS_TOKEN: An access token is used as call credentials for the SDS server. GCE_VM: The local GCE VM service account credentials are used to access the SDS server. JWT_SERVICE_TOKEN: The user provisioned service account credentials are used to access the SDS server. FROM_PLUGIN: Custom authenticator credentials are used to access the SDS server.",
+     "description": "The type of call credentials to use for GRPC requests to the SDS server. This field can be set to one of the following:  \n- GCE_VM: The local GCE VM service account credentials are used to access the SDS server.\n- FROM_PLUGIN: Custom authenticator credentials are used to access the SDS server.",
      "enum": [
       "FROM_PLUGIN",
       "GCE_VM",
@@ -3330,7 +3342,7 @@
     },
     "fromPlugin": {
      "$ref": "MetadataCredentialsFromPlugin",
-     "description": "Custom authenticator credentials."
+     "description": "Custom authenticator credentials. Valid if callCredentialType is FROM_PLUGIN."
     }
    }
   },
@@ -3370,27 +3382,27 @@
     },
     "maxConnections": {
      "type": "integer",
-     "description": "The maximum number of connections to the backend cluster. If not specified, the default is 1024.",
+     "description": "The maximum number of connections to the backend service. If not specified, there is no limit.",
      "format": "int32"
     },
     "maxPendingRequests": {
      "type": "integer",
-     "description": "The maximum number of pending requests allowed to the backend cluster. If not specified, the default is 1024.",
+     "description": "The maximum number of pending requests allowed to the backend service. If not specified, there is no limit.",
      "format": "int32"
     },
     "maxRequests": {
      "type": "integer",
-     "description": "The maximum number of parallel requests that allowed to the backend cluster. If not specified, the default is 1024.",
+     "description": "The maximum number of parallel requests that allowed to the backend service. If not specified, there is no limit.",
      "format": "int32"
     },
     "maxRequestsPerConnection": {
      "type": "integer",
-     "description": "Maximum requests for a single backend connection. This parameter is respected by both the HTTP/1.1 and HTTP/2 implementations. If not specified, there is no limit. Setting this parameter to 1 will effectively disable keep alive.",
+     "description": "Maximum requests for a single connection to the backend service. This parameter is respected by both the HTTP/1.1 and HTTP/2 implementations. If not specified, there is no limit. Setting this parameter to 1 will effectively disable keep alive.",
      "format": "int32"
     },
     "maxRetries": {
      "type": "integer",
-     "description": "The maximum number of parallel retries allowed to the backend cluster. If not specified, the default is 3.",
+     "description": "The maximum number of parallel retries allowed to the backend cluster. If not specified, the default is 1.",
      "format": "int32"
     }
    }
@@ -3438,6 +3450,20 @@
    "type": "object",
    "description": "Represents a regional Commitment resource.\n\nCreating a commitment resource means that you are purchasing a committed use contract with an explicit start and end time. You can create commitments based on vCPUs and memory usage and receive discounted rates. For full details, read Signing Up for Committed Use Discounts. (== resource_for beta.regionCommitments ==) (== resource_for v1.regionCommitments ==)",
    "properties": {
+    "category": {
+     "type": "string",
+     "description": "The category of the commitment. Category MACHINE specifies commitments composed of machine resources such as VCPU or MEMORY, listed in resources. Category LICENSE specifies commitments composed of software licenses, listed in licenseResources. Note that only MACHINE commitments should have a Type specified.",
+     "enum": [
+      "CATEGORY_UNSPECIFIED",
+      "LICENSE",
+      "MACHINE"
+     ],
+     "enumDescriptions": [
+      "",
+      "",
+      ""
+     ]
+    },
     "creationTimestamp": {
      "type": "string",
      "description": "[Output Only] Creation timestamp in RFC3339 text format."
@@ -3459,6 +3485,13 @@
      "type": "string",
      "description": "[Output Only] Type of the resource. Always compute#commitment for commitments.",
      "default": "compute#commitment"
+    },
+    "licenseResources": {
+     "type": "array",
+     "description": "A list of commitment amounts for particular licenses.",
+     "items": {
+      "$ref": "LicenseResourceCommitment"
+     }
     },
     "name": {
      "type": "string",
@@ -3949,6 +3982,17 @@
     }
    }
   },
+  "ConfidentialInstanceConfig": {
+   "id": "ConfidentialInstanceConfig",
+   "type": "object",
+   "description": "A set of Confidential Instance options.",
+   "properties": {
+    "enableConfidentialCompute": {
+     "type": "boolean",
+     "description": "Defines whether the instance should have confidential compute enabled."
+    }
+   }
+  },
   "ConnectionDraining": {
    "id": "ConnectionDraining",
    "type": "object",
@@ -4065,7 +4109,8 @@
      "description": "The name of the encryption key that is stored in Google Cloud KMS."
     },
     "kmsKeyServiceAccount": {
-     "type": "string"
+     "type": "string",
+     "description": "The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used."
     },
     "rawKey": {
      "type": "string",
@@ -4292,6 +4337,10 @@
     "sourceSnapshotId": {
      "type": "string",
      "description": "[Output Only] The unique ID of the snapshot used to create this disk. This value identifies the exact snapshot that was used to create this persistent disk. For example, if you created the persistent disk from a snapshot that was later deleted and recreated under the same name, the source snapshot ID would identify the exact version of the snapshot that was used."
+    },
+    "sourceStorageObject": {
+     "type": "string",
+     "description": "The full Google Cloud Storage URI where the disk image is stored. This file must be a gzip-compressed tarball whose name ends in .tar.gz or virtual machine disk whose name ends in vmdk. Valid URIs may start with gs:// or https://storage.googleapis.com/."
     },
     "status": {
      "type": "string",
@@ -5002,7 +5051,7 @@
    "properties": {
     "resourcePolicies": {
      "type": "array",
-     "description": "Resource policies to be added to this disk.",
+     "description": "Resource policies to be added to this disk. Currently you can only specify one policy here.",
      "items": {
       "type": "string"
      }
@@ -5142,6 +5191,18 @@
    "id": "DistributionPolicy",
    "type": "object",
    "properties": {
+    "targetShape": {
+     "type": "string",
+     "description": "The shape to which the group converges either proactively or on resize events (depending on the value set in updatePolicy.instanceRedistributionType). The possible values are EVEN and ANY. For EVEN the group attempts to preserve a balanced number of instances across zones. For ANY the group creates new instances where resources are available to fulfill the request; as a result, instances may be distributed unevenly across zones in this mode. The default value is EVEN.",
+     "enum": [
+      "ANY",
+      "EVEN"
+     ],
+     "enumDescriptions": [
+      "",
+      ""
+     ]
+    },
     "zones": {
      "type": "array",
      "description": "Zones where the regional managed instance group will create and manage instances.",
@@ -5901,7 +5962,7 @@
   "ForwardingRule": {
    "id": "ForwardingRule",
    "type": "object",
-   "description": "Represents a Forwarding Rule resource.\n\n\n\nA forwardingRules resource represents a regional forwarding rule.\n\nRegional external forwarding rules can reference any of the following resources:\n \n- A target instance \n- A Cloud VPN Classic gateway (targetVpnGateway),  \n- A target pool for a Network Load Balancer \n- A global target HTTP(S) proxy for an HTTP(S) load balancer using Standard Tier \n- A target SSL proxy for a SSL Proxy load balancer using Standard Tier \n- A target TCP proxy for a TCP Proxy load balancer using Standard Tier.  \n\nRegional internal forwarding rules can reference the backend service of an internal TCP/UDP load balancer.\n\nFor regional internal forwarding rules, the following applies:  \n- If the loadBalancingScheme for the load balancer is INTERNAL, then the forwarding rule references a regional internal backend service. \n- If the loadBalancingScheme for the load balancer is INTERNAL_MANAGED, then the forwarding rule must reference a regional target HTTP(S) proxy.  \n\nFor more information, read Using Forwarding rules.\n\nA globalForwardingRules resource represents a global forwarding rule.\n\nGlobal forwarding rules are only used by load balancers that use Premium Tier. (== resource_for beta.forwardingRules ==) (== resource_for v1.forwardingRules ==) (== resource_for beta.globalForwardingRules ==) (== resource_for v1.globalForwardingRules ==) (== resource_for beta.regionForwardingRules ==) (== resource_for v1.regionForwardingRules ==)",
+   "description": "Represents a Forwarding Rule resource.\n\nA forwarding rule and its corresponding IP address represent the frontend configuration of a Google Cloud Platform load balancer. Forwarding rules can also reference target instances and Cloud VPN Classic gateways (targetVpnGateway).\n\nFor more information, read Forwarding rule concepts and Using protocol forwarding.\n\n(== resource_for beta.forwardingRules ==) (== resource_for v1.forwardingRules ==) (== resource_for beta.globalForwardingRules ==) (== resource_for v1.globalForwardingRules ==) (== resource_for beta.regionForwardingRules ==) (== resource_for v1.regionForwardingRules ==)",
    "properties": {
     "IPAddress": {
      "type": "string",
@@ -5909,7 +5970,7 @@
     },
     "IPProtocol": {
      "type": "string",
-     "description": "The IP protocol to which this rule applies. Valid options are TCP, UDP, ESP, AH, SCTP or ICMP.\n\nWhen the load balancing scheme is INTERNAL, only TCP and UDP are valid. When the load balancing scheme is INTERNAL_SELF_MANAGED, only TCPis valid.",
+     "description": "The IP protocol to which this rule applies. For protocol forwarding, valid options are TCP, UDP, ESP, AH, SCTP or ICMP.\n\nFor Internal TCP/UDP Load Balancing, the load balancing scheme is INTERNAL, and one of TCP or UDP are valid. For Traffic Director, the load balancing scheme is INTERNAL_SELF_MANAGED, and only TCPis valid. For Internal HTTP(S) Load Balancing, the load balancing scheme is INTERNAL_MANAGED, and only TCP is valid. For HTTP(S), SSL Proxy, and TCP Proxy Load Balancing, the load balancing scheme is EXTERNAL and only TCP is valid. For Network TCP/UDP Load Balancing, the load balancing scheme is EXTERNAL, and one of TCP or UDP is valid.",
      "enum": [
       "AH",
       "ESP",
@@ -5994,7 +6055,7 @@
     },
     "loadBalancingScheme": {
      "type": "string",
-     "description": "This signifies what the ForwardingRule will be used for and can only take the following values: INTERNAL, INTERNAL_SELF_MANAGED, EXTERNAL. The value of INTERNAL means that this will be used for Internal Network Load Balancing (TCP, UDP). The value of INTERNAL_SELF_MANAGED means that this will be used for Internal Global HTTP(S) LB. The value of EXTERNAL means that this will be used for External Load Balancing (HTTP(S) LB, External TCP/UDP LB, SSL Proxy)",
+     "description": "Specifies the forwarding rule type. EXTERNAL is used for: - Classic Cloud VPN gateways - Protocol forwarding to VMs from an external IP address - The following load balancers: HTTP(S), SSL Proxy, TCP Proxy, and Network TCP/UDP.\n\nINTERNAL is used for: - Protocol forwarding to VMs from an internal IP address - Internal TCP/UDP load balancers\n\nINTERNAL_MANAGED is used for: - Internal HTTP(S) load balancers\n\nINTERNAL_SELF_MANAGED is used for: - Traffic Director\n\nFor more information about forwarding rules, refer to Forwarding rule concepts.",
      "enum": [
       "EXTERNAL",
       "INTERNAL",
@@ -6012,7 +6073,7 @@
     },
     "metadataFilters": {
      "type": "array",
-     "description": "Opaque filter criteria used by Loadbalancer to restrict routing configuration to a limited set xDS compliant clients. In their xDS requests to Loadbalancer, xDS clients present node metadata. If a match takes place, the relevant routing configuration is made available to those proxies.\nFor each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with corresponding labels in the provided metadata.\nmetadataFilters specified here can be overridden by those specified in the UrlMap that this ForwardingRule references.\nmetadataFilters only applies to Loadbalancers that have their loadBalancingScheme set to INTERNAL_SELF_MANAGED.",
+     "description": "Opaque filter criteria used by Loadbalancer to restrict routing configuration to a limited set of xDS compliant clients. In their xDS requests to Loadbalancer, xDS clients present node metadata. If a match takes place, the relevant configuration is made available to those proxies. Otherwise, all the resources (e.g. TargetHttpProxy, UrlMap) referenced by the ForwardingRule will not be visible to those proxies.\nFor each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with corresponding labels provided in the metadata.\nmetadataFilters specified here will be applifed before those specified in the UrlMap that this ForwardingRule references.\nmetadataFilters only applies to Loadbalancers that have their loadBalancingScheme set to INTERNAL_SELF_MANAGED.",
      "items": {
       "$ref": "MetadataFilter"
      }
@@ -6042,11 +6103,11 @@
     },
     "portRange": {
      "type": "string",
-     "description": "This field is deprecated. See the port\nfield."
+     "description": "When the load balancing scheme is EXTERNAL, INTERNAL_SELF_MANAGED and INTERNAL_MANAGED, you can specify a port_range. Use with a forwarding rule that points to a target proxy or a target pool. Do not use with a forwarding rule that points to a backend service. This field is used along with the target field for TargetHttpProxy, TargetHttpsProxy, TargetSslProxy, TargetTcpProxy, TargetVpnGateway, TargetPool, TargetInstance.\n\nApplicable only when IPProtocol is TCP, UDP, or SCTP, only packets addressed to ports in the specified range will be forwarded to target. Forwarding rules with the same [IPAddress, IPProtocol] pair must have disjoint port ranges.\n\nSome types of forwarding target have constraints on the acceptable ports:  \n- TargetHttpProxy: 80, 8080 \n- TargetHttpsProxy: 443 \n- TargetTcpProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995, 1688, 1883, 5222 \n- TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995, 1688, 1883, 5222 \n- TargetVpnGateway: 500, 4500"
     },
     "ports": {
      "type": "array",
-     "description": "List of comma-separated ports. The forwarding rule forwards packets with matching destination ports. If the forwarding rule's loadBalancingScheme is EXTERNAL, and the forwarding rule references a target pool, specifying ports is optional. You can specify an unlimited number of ports, but they must be contiguous. If you omit ports, GCP forwards traffic on any port of the forwarding rule's protocol.\n\nIf the forwarding rule's loadBalancingScheme is EXTERNAL, and the forwarding rule references a target HTTP proxy, target HTTPS proxy, target TCP proxy, target SSL proxy, or target VPN gateway, you must specify ports using the following constraints:\n\n \n- TargetHttpProxy: 80, 8080 \n- TargetHttpsProxy: 443 \n- TargetTcpProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995, 1688, 1883, 5222 \n- TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995, 1688, 1883, 5222 \n- TargetVpnGateway: 500, 4500  \n\nIf the forwarding rule's loadBalancingScheme is INTERNAL, you must specify ports in one of the following ways:\n\n* A list of up to five ports, which can be non-contiguous * Keyword ALL, which causes the forwarding rule to forward traffic on any port of the forwarding rule's protocol.\n\nThe ports field is used along with the target field for TargetHttpProxy, TargetHttpsProxy, TargetSslProxy, TargetTcpProxy, TargetVpnGateway, TargetPool, TargetInstance.\n\nApplicable only when IPProtocol is TCP, UDP, or SCTP. Forwarding rules with the same [IPAddress, IPProtocol] pair must have disjoint port ranges.",
+     "description": "This field is used along with the backend_service field for internal load balancing.\n\nWhen the load balancing scheme is INTERNAL, a list of ports can be configured, for example, ['80'], ['8000','9000']. Only packets addressed to these ports are forwarded to the backends configured with the forwarding rule.\n\nIf the forwarding rule's loadBalancingScheme is INTERNAL, you can specify ports in one of the following ways:\n\n* A list of up to five ports, which can be non-contiguous * Keyword ALL, which causes the forwarding rule to forward traffic on any port of the forwarding rule's protocol.",
      "items": {
       "type": "string"
      }
@@ -6506,7 +6567,7 @@
     },
     "queryPath": {
      "type": "string",
-     "description": "The path to be queried. This can be the default namespace ('/') or a nested namespace ('//') or a specified key ('//')"
+     "description": "The path to be queried. This can be the default namespace ('/') or a nested namespace ('/\\/') or a specified key ('/\\/\\')"
     },
     "queryValue": {
      "$ref": "GuestAttributesValue",
@@ -7603,7 +7664,7 @@
     },
     "presentMatch": {
      "type": "boolean",
-     "description": "A header with the contents of headerName must exist. The match takes place whether or not the request's header has a value or not.\nOnly one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set."
+     "description": "A header with the contents of headerName must exist. The match takes place whether or not the request's header has a value.\nOnly one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set."
     },
     "rangeMatch": {
      "$ref": "Int64RangeMatch",
@@ -7828,7 +7889,7 @@
    "properties": {
     "exactMatch": {
      "type": "string",
-     "description": "The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch.\nOnly one of presentMatch, exactMatch and regexMatch must be set."
+     "description": "The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch.\nOnly one of presentMatch, exactMatch or regexMatch must be set."
     },
     "name": {
      "type": "string",
@@ -7836,11 +7897,11 @@
     },
     "presentMatch": {
      "type": "boolean",
-     "description": "Specifies that the queryParameterMatch matches if the request contains the query parameter, irrespective of whether the parameter has a value or not.\nOnly one of presentMatch, exactMatch and regexMatch must be set."
+     "description": "Specifies that the queryParameterMatch matches if the request contains the query parameter, irrespective of whether the parameter has a value or not.\nOnly one of presentMatch, exactMatch or regexMatch must be set."
     },
     "regexMatch": {
      "type": "string",
-     "description": "The queryParameterMatch matches if the value of the parameter matches the regular expression specified by regexMatch. For the regular expression grammar, please see en.cppreference.com/w/cpp/regex/ecmascript \nOnly one of presentMatch, exactMatch and regexMatch must be set."
+     "description": "The queryParameterMatch matches if the value of the parameter matches the regular expression specified by regexMatch. For the regular expression grammar, please see en.cppreference.com/w/cpp/regex/ecmascript \nOnly one of presentMatch, exactMatch or regexMatch must be set."
     }
    }
   },
@@ -7896,12 +7957,12 @@
    "properties": {
     "numRetries": {
      "type": "integer",
-     "description": "Specifies the allowed number retries. This number must be \u003e 0.",
+     "description": "Specifies the allowed number retries. This number must be \u003e 0. If not specified, defaults to 1.",
      "format": "uint32"
     },
     "perTryTimeout": {
      "$ref": "Duration",
-     "description": "Specifies a non-zero timeout per retry attempt."
+     "description": "Specifies a non-zero timeout per retry attempt.\nIf not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set, will use the largest timeout among all backend services associated with the route."
     },
     "retryConditions": {
      "type": "array",
@@ -7934,11 +7995,11 @@
     },
     "timeout": {
      "$ref": "Duration",
-     "description": "Specifies the timeout for the selected route. Timeout is computed from the time the request is has been fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.\nIf not specified, the default value is 15 seconds."
+     "description": "Specifies the timeout for the selected route. Timeout is computed from the time the request has been fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.\nIf not specified, will use the largest timeout among all backend services associated with the route."
     },
     "urlRewrite": {
      "$ref": "UrlRewrite",
-     "description": "The spec to modify the URL of the request, prior to forwarding the request to the matched service"
+     "description": "The spec to modify the URL of the request, prior to forwarding the request to the matched service."
     },
     "weightedBackendServices": {
      "type": "array",
@@ -7954,6 +8015,10 @@
    "type": "object",
    "description": "An HttpRouteRule specifies how to match an HTTP request and the corresponding routing action that load balancing proxies will perform.",
    "properties": {
+    "description": {
+     "type": "string",
+     "description": "The short description conveying the intent of this routeRule.\nThe description can have a maximum length of 1024 characters."
+    },
     "headerAction": {
      "$ref": "HttpHeaderAction",
      "description": "Specifies changes to request and response headers that need to take effect for the selected backendService.\nThe headerAction specified here are applied before the matching pathMatchers[].headerAction and after pathMatchers[].routeRules[].routeAction.weightedBackendService.backendServiceWeightAction[].headerAction"
@@ -7964,9 +8029,14 @@
       "$ref": "HttpRouteRuleMatch"
      }
     },
+    "priority": {
+     "type": "integer",
+     "description": "For routeRules within a given pathMatcher, priority determines the order in which load balancer will interpret routeRules. RouteRules are evaluated in order of priority, from the lowest to highest number. The priority of a rule decreases as its number increases (1, 2, 3, N+1). The first rule that matches the request is applied.\nYou cannot configure two or more routeRules with the same priority. Priority for each rule must be set to a number between 0 and 2147483647 inclusive.\nPriority numbers can have gaps, which enable you to add or remove rules in the future without affecting the rest of the rules. For example, 1, 2, 3, 4, 5, 9, 12, 16 is a valid series of priority numbers to which you could add rules numbered from 6 to 8, 10 to 11, and 13 to 15 in the future without any impact on existing rules.",
+     "format": "int32"
+    },
     "routeAction": {
      "$ref": "HttpRouteAction",
-     "description": "In response to a matching matchRule, the load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If  routeAction specifies any  weightedBackendServices, service must not be set. Conversely if service is set, routeAction cannot contain any  weightedBackendServices.\nOnly one of routeAction or urlRedirect must be set."
+     "description": "In response to a matching matchRule, the load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If  routeAction specifies any  weightedBackendServices, service must not be set. Conversely if service is set, routeAction cannot contain any  weightedBackendServices.\nOnly one of urlRedirect, service or routeAction.weightedBackendService must be set."
     },
     "service": {
      "type": "string",
@@ -7985,7 +8055,7 @@
    "properties": {
     "fullPathMatch": {
      "type": "string",
-     "description": "For satifying the matchRule condition, the path of the request must exactly match the value specified in fullPathMatch after removing any query parameters and anchor that may be part of the original URL.\nFullPathMatch must be between 1 and 1024 characters.\nOnly one of prefixMatch, fullPathMatch or regexMatch must be specified."
+     "description": "For satisfying the matchRule condition, the path of the request must exactly match the value specified in fullPathMatch after removing any query parameters and anchor that may be part of the original URL.\nfullPathMatch must be between 1 and 1024 characters.\nOnly one of prefixMatch, fullPathMatch or regexMatch must be specified."
     },
     "headerMatches": {
      "type": "array",
@@ -7996,18 +8066,18 @@
     },
     "ignoreCase": {
      "type": "boolean",
-     "description": "Specifies that prefixMatch and fullPathMatch matches are case sensitive.\nThe default value is false.\ncaseSensitive must not be used with regexMatch."
+     "description": "Specifies that prefixMatch and fullPathMatch matches are case sensitive.\nThe default value is false.\nignoreCase must not be used with regexMatch."
     },
     "metadataFilters": {
      "type": "array",
-     "description": "Opaque filter criteria used by Loadbalancer to restrict routing configuration to a limited set xDS compliant clients. In their xDS requests to Loadbalancer, xDS clients present node metadata. If a match takes place, the relevant routing configuration is made available to those proxies.\nFor each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with corresponding labels in the provided metadata.\nmetadataFilters specified here can be overrides those specified in ForwardingRule that refers to this UrlMap.\nmetadataFilters only applies to Loadbalancers that have their loadBalancingScheme set to INTERNAL_SELF_MANAGED.",
+     "description": "Opaque filter criteria used by Loadbalancer to restrict routing configuration to a limited set of xDS compliant clients. In their xDS requests to Loadbalancer, xDS clients present node metadata. If a match takes place, the relevant routing configuration is made available to those proxies.\nFor each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with corresponding labels provided in the metadata.\nmetadataFilters specified here will be applied after those specified in ForwardingRule that refers to the UrlMap this HttpRouteRuleMatch belongs to.\nmetadataFilters only applies to Loadbalancers that have their loadBalancingScheme set to INTERNAL_SELF_MANAGED.",
      "items": {
       "$ref": "MetadataFilter"
      }
     },
     "prefixMatch": {
      "type": "string",
-     "description": "For satifying the matchRule condition, the request's path must begin with the specified prefixMatch. prefixMatch must begin with a /.\nThe value must be between 1 and 1024 characters.\nOnly one of prefixMatch, fullPathMatch or regexMatch must be specified."
+     "description": "For satisfying the matchRule condition, the request's path must begin with the specified prefixMatch. prefixMatch must begin with a /.\nThe value must be between 1 and 1024 characters.\nOnly one of prefixMatch, fullPathMatch or regexMatch must be specified."
     },
     "queryParameterMatches": {
      "type": "array",
@@ -8018,7 +8088,7 @@
     },
     "regexMatch": {
      "type": "string",
-     "description": "For satifying the matchRule condition, the path of the request must satisfy the regular expression specified in regexMatch after removing any query parameters and anchor supplied with the original URL. For regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript \nOnly one of prefixMatch, fullPathMatch or regexMatch must be specified."
+     "description": "For satisfying the matchRule condition, the path of the request must satisfy the regular expression specified in regexMatch after removing any query parameters and anchor supplied with the original URL. For regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript \nOnly one of prefixMatch, fullPathMatch or regexMatch must be specified."
     }
    }
   },
@@ -8561,6 +8631,9 @@
      "type": "boolean",
      "description": "Allows this instance to send and receive packets with non-matching destination or source IPs. This is required if you plan to use this instance to forward routes. For more information, see Enabling IP Forwarding."
     },
+    "confidentialInstanceConfig": {
+     "$ref": "ConfidentialInstanceConfig"
+    },
     "cpuPlatform": {
      "type": "string",
      "description": "[Output Only] The CPU platform used by this instance."
@@ -8591,6 +8664,11 @@
     "eraseWindowsVssSignature": {
      "type": "boolean",
      "description": "Specifies whether the disks restored from source snapshots or source machine image should erase Windows specific VSS signature."
+    },
+    "fingerprint": {
+     "type": "string",
+     "description": "Specifies a fingerprint for this resource, which is essentially a hash of the instance's contents and used for optimistic locking. The fingerprint is initially generated by Compute Engine and changes after every request to modify or update the instance. You must always provide an up-to-date fingerprint hash in order to update the instance.\n\nTo see the latest fingerprint, make get() request to the instance.",
+     "format": "byte"
     },
     "guestAccelerators": {
      "type": "array",
@@ -8891,7 +8969,7 @@
   "InstanceGroup": {
    "id": "InstanceGroup",
    "type": "object",
-   "description": "Represents an unmanaged Instance Group resource.\n\nUse unmanaged instance groups if you need to apply load balancing to groups of heterogeneous instances or if you need to manage the instances yourself. For more information, read  Instance groups.\n\nFor zonal unmanaged Instance Group, use instanceGroups resource.\n\nFor regional unmanaged Instance Group, use regionInstanceGroups resource. (== resource_for beta.instanceGroups ==) (== resource_for v1.instanceGroups ==) (== resource_for beta.regionInstanceGroups ==) (== resource_for v1.regionInstanceGroups ==)",
+   "description": "Represents an Instance Group resource.\n\nInstance Groups can be used to configure a target for load balancing.\n\nInstance groups can either be managed or unmanaged.\n\nTo create  managed instance groups, use the instanceGroupManager or regionInstanceGroupManager resource instead.\n\nUse zonal unmanaged instance groups if you need to apply load balancing to groups of heterogeneous instances or if you need to manage the instances yourself. You cannot create regional unmanaged instance groups.\n\nFor more information, read Instance groups.\n\n(== resource_for beta.instanceGroups ==) (== resource_for v1.instanceGroups ==) (== resource_for beta.regionInstanceGroups ==) (== resource_for v1.regionInstanceGroups ==)",
    "properties": {
     "creationTimestamp": {
      "type": "string",
@@ -9667,6 +9745,10 @@
    "id": "InstanceGroupManagerStatus",
    "type": "object",
    "properties": {
+    "autoscaler": {
+     "type": "string",
+     "description": "[Output Only] The URL of the Autoscaler that targets this instance group manager."
+    },
     "isStable": {
      "type": "boolean",
      "description": "[Output Only] A bit indicating whether the managed instance group is in a stable state. A stable state means that: none of the instances in the managed instance group is currently undergoing any type of change (for example, creation, restart, or deletion); no future changes are scheduled for instances in the managed instance group; and the managed instance group itself is not being modified."
@@ -9901,13 +9983,6 @@
    "type": "object",
    "description": "InstanceGroupManagers.deletePerInstanceConfigs",
    "properties": {
-    "instances": {
-     "type": "array",
-     "description": "The list of instances for which we want to delete per-instance configs on this managed instance group.",
-     "items": {
-      "type": "string"
-     }
-    },
     "names": {
      "type": "array",
      "description": "The list of instance names for which we want to delete per-instance configs on this managed instance group.",
@@ -10825,6 +10900,10 @@
      "type": "boolean",
      "description": "Enables instances created based on this template to send packets with source IP addresses other than their own and receive packets with destination IP addresses other than their own. If these instances will be used as an IP gateway or it will be set as the next-hop in a Route resource, specify true. If unsure, leave this set to false. See the Enable IP forwarding documentation for more information."
     },
+    "confidentialInstanceConfig": {
+     "$ref": "ConfidentialInstanceConfig",
+     "description": "Specifies the Confidential Instance options."
+    },
     "description": {
      "type": "string",
      "description": "An optional text description for the instances that are created from this instance template."
@@ -10895,6 +10974,13 @@
     "reservationAffinity": {
      "$ref": "ReservationAffinity",
      "description": "Specifies the reservations that this instance can consume from."
+    },
+    "resourcePolicies": {
+     "type": "array",
+     "description": "Resource policies (names, not ULRs) applied to instances created from this templae.",
+     "items": {
+      "type": "string"
+     }
     },
     "scheduling": {
      "$ref": "Scheduling",
@@ -13227,6 +13313,26 @@
     }
    }
   },
+  "LicenseResourceCommitment": {
+   "id": "LicenseResourceCommitment",
+   "type": "object",
+   "description": "Commitment for a particular license resource (a License Commitment is composed of one or more of these).",
+   "properties": {
+    "amount": {
+     "type": "string",
+     "description": "The number of licenses purchased.",
+     "format": "int64"
+    },
+    "coresPerLicense": {
+     "type": "string",
+     "description": "Specifies the core range of the instance for which this license applies."
+    },
+    "license": {
+     "type": "string",
+     "description": "Any applicable license URI."
+    }
+   }
+  },
   "LicenseResourceRequirements": {
    "id": "LicenseResourceRequirements",
    "type": "object",
@@ -13354,12 +13460,14 @@
    "type": "object",
    "properties": {
     "diskCount": {
-     "type": "string",
-     "description": "Specifies the number of such disks."
+     "type": "integer",
+     "description": "Specifies the number of such disks.",
+     "format": "int32"
     },
     "diskSizeGb": {
-     "type": "string",
-     "description": "Specifies the size of the disk in base-2 GB."
+     "type": "integer",
+     "description": "Specifies the size of the disk in base-2 GB.",
+     "format": "int32"
     },
     "diskType": {
      "type": "string",
@@ -13414,8 +13522,15 @@
   "LogConfigCounterOptions": {
    "id": "LogConfigCounterOptions",
    "type": "object",
-   "description": "Increment a streamz counter with the specified metric and field names.\n\nMetric names should start with a '/', generally be lowercase-only, and end in \"_count\". Field names should not contain an initial slash. The actual exported metric names will have \"/iam/policy\" prepended.\n\nField names correspond to IAM request parameters and field values are their respective values.\n\nSupported field names: - \"authority\", which is \"[token]\" if IAMContext.token is present, otherwise the value of IAMContext.authority_selector if present, and otherwise a representation of IAMContext.principal; or - \"iam_principal\", a representation of IAMContext.principal even if a token or authority selector is present; or - \"\" (empty string), resulting in a counter with no fields.\n\nExamples: counter { metric: \"/debug_access_count\" field: \"iam_principal\" } ==\u003e increment counter /iam/policy/backend_debug_access_count {iam_principal=[value of IAMContext.principal]}\n\nAt this time we do not support multiple field names (though this may be supported in the future).",
+   "description": "Increment a streamz counter with the specified metric and field names.\n\nMetric names should start with a '/', generally be lowercase-only, and end in \"_count\". Field names should not contain an initial slash. The actual exported metric names will have \"/iam/policy\" prepended.\n\nField names correspond to IAM request parameters and field values are their respective values.\n\nSupported field names: - \"authority\", which is \"[token]\" if IAMContext.token is present, otherwise the value of IAMContext.authority_selector if present, and otherwise a representation of IAMContext.principal; or - \"iam_principal\", a representation of IAMContext.principal even if a token or authority selector is present; or - \"\" (empty string), resulting in a counter with no fields.\n\nExamples: counter { metric: \"/debug_access_count\" field: \"iam_principal\" } ==\u003e increment counter /iam/policy/debug_access_count {iam_principal=[value of IAMContext.principal]}\n\nTODO(b/141846426): Consider supporting \"authority\" and \"iam_principal\" fields in the same counter.",
    "properties": {
+    "customFields": {
+     "type": "array",
+     "description": "Custom fields.",
+     "items": {
+      "$ref": "LogConfigCounterOptionsCustomField"
+     }
+    },
     "field": {
      "type": "string",
      "description": "The field value to attribute."
@@ -13423,6 +13538,21 @@
     "metric": {
      "type": "string",
      "description": "The metric to update."
+    }
+   }
+  },
+  "LogConfigCounterOptionsCustomField": {
+   "id": "LogConfigCounterOptionsCustomField",
+   "type": "object",
+   "description": "Custom fields. These can be used to create a counter with arbitrary field/value pairs. See: go/rpcsp-custom-fields.",
+   "properties": {
+    "name": {
+     "type": "string",
+     "description": "Name is the field name."
+    },
+    "value": {
+     "type": "string",
+     "description": "Value is the field value. It is important that in contrast to the CounterOptions.field, the value here is a constant that is not derived from the IAMContext."
     }
    }
   },
@@ -13546,9 +13676,6 @@
    "type": "object",
    "description": "A list of machine images.",
    "properties": {
-    "etag": {
-     "type": "string"
-    },
     "id": {
      "type": "string",
      "description": "[Output Only] Unique identifier for the resource; defined by the server."
@@ -14295,7 +14422,7 @@
   "MetadataFilter": {
    "id": "MetadataFilter",
    "type": "object",
-   "description": "Opaque filter criteria used by loadbalancers to restrict routing configuration to a limited set of loadbalancing proxies. Proxies and sidecars involved in loadbalancing would typically present metadata to the loadbalancers which need to match criteria specified here. If a match takes place, the relevant routing configuration is made available to those proxies.\nFor each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with corresponding labels in the provided metadata.\nAn example for using metadataFilters would be: if loadbalancing involves  Envoys, they will only receive routing configuration when values in metadataFilters match values supplied in \u003ca href=\"https://www.envoyproxy.io/docs/envoy/latest/api-v2/api/v2/core/base.proto#envoy-api-msg-core-node\" Node metadata of their XDS requests to loadbalancers.",
+   "description": "Opaque filter criteria used by loadbalancers to restrict routing configuration to a limited set of loadbalancing proxies. Proxies and sidecars involved in loadbalancing would typically present metadata to the loadbalancers which need to match criteria specified here. If a match takes place, the relevant configuration is made available to those proxies.\nFor each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with corresponding labels provided in the metadata.\nAn example for using metadataFilters would be: if loadbalancing involves  Envoys, they will only receive routing configuration when values in metadataFilters match values supplied in \u003ca href=\"https://www.envoyproxy.io/docs/envoy/latest/api-v2/api/v2/core/base.proto#envoy-api-msg-core-node\" Node metadata of their XDS requests to loadbalancers.",
    "properties": {
     "filterLabels": {
      "type": "array",
@@ -14435,7 +14562,7 @@
     },
     "mtu": {
      "type": "integer",
-     "description": "Maximum Transmission Unit in bytes. The minimum value for this field is 1460 and the maximum value is 1600 bytes.",
+     "description": "Maximum Transmission Unit in bytes. The minimum value for this field is 1460 and the maximum value is 1500 bytes.",
      "format": "int32"
     },
     "multicastMode": {
@@ -14452,7 +14579,7 @@
     },
     "name": {
      "type": "string",
-     "description": "Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?. The first character must be a lowercase letter, and all following characters (except for the last character) must be a dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.",
+     "description": "Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all following characters (except for the last character) must be a dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.",
      "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?",
      "annotations": {
       "required": [
@@ -14491,7 +14618,7 @@
   "NetworkEndpoint": {
    "id": "NetworkEndpoint",
    "type": "object",
-   "description": "The network endpoint.",
+   "description": "The network endpoint. Next ID: 7",
    "properties": {
     "annotations": {
      "type": "object",
@@ -14522,7 +14649,7 @@
   "NetworkEndpointGroup": {
    "id": "NetworkEndpointGroup",
    "type": "object",
-   "description": "Represents a collection of network endpoints.",
+   "description": "Represents a collection of network endpoints.\n\nFor more information read Setting up network endpoint groups in load balancing. (== resource_for v1.networkEndpointGroups ==) (== resource_for beta.networkEndpointGroups ==) Next ID: 21",
    "properties": {
     "annotations": {
      "type": "object",
@@ -14530,6 +14657,18 @@
      "additionalProperties": {
       "type": "string"
      }
+    },
+    "appEngine": {
+     "$ref": "NetworkEndpointGroupAppEngine",
+     "description": "Only valid when networkEndpointType is \"SERVERLESS\". Only one of cloudRun, appEngine or cloudFunction may be set."
+    },
+    "cloudFunction": {
+     "$ref": "NetworkEndpointGroupCloudFunction",
+     "description": "Only valid when networkEndpointType is \"SERVERLESS\". Only one of cloudRun, appEngine or cloudFunction may be set."
+    },
+    "cloudRun": {
+     "$ref": "NetworkEndpointGroupCloudRun",
+     "description": "Only valid when networkEndpointType is \"SERVERLESS\". Only one of cloudRun, appEngine or cloudFunction may be set."
     },
     "creationTimestamp": {
      "type": "string",
@@ -14574,15 +14713,21 @@
       "GCE_VM_PRIMARY_IP",
       "INTERNET_FQDN_PORT",
       "INTERNET_IP_PORT",
-      "NON_GCP_PRIVATE_IP_PORT"
+      "NON_GCP_PRIVATE_IP_PORT",
+      "SERVERLESS"
      ],
      "enumDescriptions": [
       "",
       "",
       "",
       "",
+      "",
       ""
      ]
+    },
+    "region": {
+     "type": "string",
+     "description": "[Output Only] The URL of the region where the network endpoint group is located."
     },
     "selfLink": {
      "type": "string",
@@ -14726,6 +14871,59 @@
        "description": "[Output Only] A human-readable description of the warning code."
       }
      }
+    }
+   }
+  },
+  "NetworkEndpointGroupAppEngine": {
+   "id": "NetworkEndpointGroupAppEngine",
+   "type": "object",
+   "description": "Configuration for an App Engine network endpoint group (NEG). The service is optional, may be provided explicitly or in the URL mask. The version is optional and can only be provided explicitly or in the URL mask when service is present.\n\nNote: App Engine service must be in the same project and located in the same region as the Serverless NEG.",
+   "properties": {
+    "service": {
+     "type": "string",
+     "description": "Optional serving service.\n\nThe service name must be 1-63 characters long, and comply with RFC1035.\n\nExample value: \"default\", \"my-service\"."
+    },
+    "urlMask": {
+     "type": "string",
+     "description": "A template to parse service and version fields from a request URL. URL mask allows for routing to multiple App Engine services without having to create multiple Network Endpoint Groups and backend services.\n\nFor example, the request URLs \"foo1-dot-appname.appspot.com/v1\" and \"foo1-dot-appname.appspot.com/v2\" can be backed by the same Serverless NEG with URL mask \"-dot-appname.appspot.com/\". The URL mask will parse them to { service = \"foo1\", version = \"v1\" } and { service = \"foo1\", version = \"v2\" } respectively."
+    },
+    "version": {
+     "type": "string",
+     "description": "Optional serving version.\n\nThe version must be 1-63 characters long, and comply with RFC1035.\n\nExample value: \"v1\", \"v2\"."
+    }
+   }
+  },
+  "NetworkEndpointGroupCloudFunction": {
+   "id": "NetworkEndpointGroupCloudFunction",
+   "type": "object",
+   "description": "Configuration for a Cloud Function network endpoint group (NEG). The function must be provided explicitly or in the URL mask.\n\nNote: Cloud Function must be in the same project and located in the same region as the Serverless NEG.",
+   "properties": {
+    "function": {
+     "type": "string",
+     "description": "A user-defined name of the Cloud Function.\n\nThe service name must be 1-63 characters long, and comply with RFC1035.\n\nExample value: \"func1\"."
+    },
+    "urlMask": {
+     "type": "string",
+     "description": "A template to parse function field from a request URL. URL mask allows for routing to multiple Cloud Functions without having to create multiple Network Endpoint Groups and backend services.\n\nFor example, request URLs \"mydomain.com/function1\" and \"mydomain.com/function2\" can be backed by the same Serverless NEG with URL mask \"/\". The URL mask will parse them to { function = \"function1\" } and { function = \"function2\" } respectively."
+    }
+   }
+  },
+  "NetworkEndpointGroupCloudRun": {
+   "id": "NetworkEndpointGroupCloudRun",
+   "type": "object",
+   "description": "Configuration for a Cloud Run network endpoint group (NEG). The service must be provided explicitly or in the URL mask. The tag is optional, may be provided explicitly or in the URL mask.\n\nNote: Cloud Run service must be in the same project and located in the same region as the Serverless NEG.",
+   "properties": {
+    "service": {
+     "type": "string",
+     "description": "Cloud Run service is the main resource of Cloud Run.\n\nThe tag must be 1-63 characters long, and comply with RFC1035.\n\nExample value: \"run-service\"."
+    },
+    "tag": {
+     "type": "string",
+     "description": "Optional Cloud Run tag represents the \"named-revision\" to provide additional fine-grained traffic routing information.\n\nThe tag must be 1-63 characters long, and comply with RFC1035.\n\nExample value: \"revision-0010\"."
+    },
+    "urlMask": {
+     "type": "string",
+     "description": "A template to parse service and tag fields from a request URL. URL mask allows for routing to multiple Run services without having to create multiple network endpoint groups and backend services.\n\nFor example, request URLs \"foo1.domain.com/bar1\" and \"foo1.domain.com/bar2\" can be backed by the same Serverless Network Endpoint Group (NEG) with URL mask \".domain.com/\". The URL mask will parse them to { service=\"bar1\", tag=\"foo1\" } and { service=\"bar2\", tag=\"foo2\" } respectively."
     }
    }
   },
@@ -15484,10 +15682,11 @@
   "NodeGroup": {
    "id": "NodeGroup",
    "type": "object",
-   "description": "Represent a sole-tenant Node Group resource.\n\nA sole-tenant node is a physical server that is dedicated to hosting VM instances only for your specific project. Use sole-tenant nodes to keep your instances physically separated from instances in other projects, or to group your instances together on the same host hardware. For more information, read Sole-tenant nodes. (== resource_for beta.nodeGroups ==) (== resource_for v1.nodeGroups ==) NextID: 15",
+   "description": "Represent a sole-tenant Node Group resource.\n\nA sole-tenant node is a physical server that is dedicated to hosting VM instances only for your specific project. Use sole-tenant nodes to keep your instances physically separated from instances in other projects, or to group your instances together on the same host hardware. For more information, read Sole-tenant nodes. (== resource_for beta.nodeGroups ==) (== resource_for v1.nodeGroups ==)",
    "properties": {
     "autoscalingPolicy": {
-     "$ref": "NodeGroupAutoscalingPolicy"
+     "$ref": "NodeGroupAutoscalingPolicy",
+     "description": "Specifies how autoscaling should behave."
     },
     "creationTimestamp": {
      "type": "string",
@@ -15496,6 +15695,10 @@
     "description": {
      "type": "string",
      "description": "An optional description of this resource. Provide this property when you create the resource."
+    },
+    "fingerprint": {
+     "type": "string",
+     "format": "byte"
     },
     "id": {
      "type": "string",
@@ -15509,6 +15712,7 @@
     },
     "maintenancePolicy": {
      "type": "string",
+     "description": "Specifies how to handle instances when a node in the group undergoes maintenance.",
      "enum": [
       "DEFAULT",
       "MAINTENANCE_POLICY_UNSPECIFIED",
@@ -15680,22 +15884,27 @@
    "id": "NodeGroupAutoscalingPolicy",
    "type": "object",
    "properties": {
-    "maxSize": {
+    "maxNodes": {
      "type": "integer",
+     "description": "The maximum number of nodes that the group should have.",
      "format": "int32"
     },
-    "minSize": {
+    "minNodes": {
      "type": "integer",
+     "description": "The minimum number of nodes that the group should have.",
      "format": "int32"
     },
     "mode": {
      "type": "string",
+     "description": "The autoscaling mode.",
      "enum": [
       "MODE_UNSPECIFIED",
       "OFF",
-      "ON"
+      "ON",
+      "ONLY_SCALE_OUT"
      ],
      "enumDescriptions": [
+      "",
       "",
       "",
       ""
@@ -15844,6 +16053,10 @@
     "serverBinding": {
      "$ref": "ServerBinding",
      "description": "Binding properties for the physical server."
+    },
+    "serverId": {
+     "type": "string",
+     "description": "Server ID associated with this node."
     },
     "status": {
      "type": "string",
@@ -16115,7 +16328,7 @@
   "NodeTemplate": {
    "id": "NodeTemplate",
    "type": "object",
-   "description": "Represent a sole-tenant Node Template resource.\n\nYou can use a template to define properties for nodes in a node group. For more information, read Creating node groups and instances. (== resource_for beta.nodeTemplates ==) (== resource_for v1.nodeTemplates ==) (== NextID: 16 ==)",
+   "description": "Represent a sole-tenant Node Template resource.\n\nYou can use a template to define properties for nodes in a node group. For more information, read Creating node groups and instances. (== resource_for beta.nodeTemplates ==) (== resource_for v1.nodeTemplates ==)",
    "properties": {
     "creationTimestamp": {
      "type": "string",
@@ -16971,7 +17184,7 @@
     },
     "payloadName": {
      "type": "string",
-     "description": "Optional. If specified, this field is used to populate the ?name? field in gRPC requests."
+     "description": "Optional. If specified, this field is used to populate the \"name\" field in gRPC requests."
     },
     "resendInterval": {
      "$ref": "Duration",
@@ -17665,11 +17878,11 @@
   "OutlierDetection": {
    "id": "OutlierDetection",
    "type": "object",
-   "description": "Settings controlling eviction of unhealthy hosts from the load balancing pool.",
+   "description": "Settings controlling the eviction of unhealthy hosts from the load balancing pool for the backend service.",
    "properties": {
     "baseEjectionTime": {
      "$ref": "Duration",
-     "description": "The base time that a host is ejected for. The real time is equal to the base time multiplied by the number of times the host has been ejected. Defaults to 30000ms or 30s."
+     "description": "The base time that a host is ejected for. The real ejection time is equal to the base ejection time multiplied by the number of times the host has been ejected. Defaults to 30000ms or 30s."
     },
     "consecutiveErrors": {
      "type": "integer",
@@ -17678,17 +17891,17 @@
     },
     "consecutiveGatewayFailure": {
      "type": "integer",
-     "description": "The number of consecutive gateway failures (502, 503, 504 status or connection errors that are mapped to one of those status codes) before a consecutive gateway failure ejection occurs. Defaults to 5.",
+     "description": "The number of consecutive gateway failures (502, 503, 504 status or connection errors that are mapped to one of those status codes) before a consecutive gateway failure ejection occurs. Defaults to 3.",
      "format": "int32"
     },
     "enforcingConsecutiveErrors": {
      "type": "integer",
-     "description": "The percentage chance that a host will be actually ejected when an outlier status is detected through consecutive 5xx. This setting can be used to disable ejection or to ramp it up slowly. Defaults to 100.",
+     "description": "The percentage chance that a host will be actually ejected when an outlier status is detected through consecutive 5xx. This setting can be used to disable ejection or to ramp it up slowly. Defaults to 0.",
      "format": "int32"
     },
     "enforcingConsecutiveGatewayFailure": {
      "type": "integer",
-     "description": "The percentage chance that a host will be actually ejected when an outlier status is detected through consecutive gateway failures. This setting can be used to disable ejection or to ramp it up slowly. Defaults to 0.",
+     "description": "The percentage chance that a host will be actually ejected when an outlier status is detected through consecutive gateway failures. This setting can be used to disable ejection or to ramp it up slowly. Defaults to 100.",
      "format": "int32"
     },
     "enforcingSuccessRate": {
@@ -17698,11 +17911,11 @@
     },
     "interval": {
      "$ref": "Duration",
-     "description": "Time interval between ejection sweep analysis. This can result in both new ejections as well as hosts being returned to service. Defaults to 10 seconds."
+     "description": "Time interval between ejection analysis sweeps. This can result in both new ejections as well as hosts being returned to service. Defaults to 1 second."
     },
     "maxEjectionPercent": {
      "type": "integer",
-     "description": "Maximum percentage of hosts in the load balancing pool for the backend service that can be ejected. Defaults to 10%.",
+     "description": "Maximum percentage of hosts in the load balancing pool for the backend service that can be ejected. Defaults to 50%.",
      "format": "int32"
     },
     "successRateMinimumHosts": {
@@ -17790,10 +18003,6 @@
      "$ref": "PacketMirroringForwardingRuleInfo",
      "description": "The Forwarding Rule resource of type loadBalancingScheme=INTERNAL that will be used as collector for mirrored traffic. The specified forwarding rule must have isMirroringCollector set to true."
     },
-    "collectors": {
-     "$ref": "PacketMirroringCollectorInfo",
-     "description": "PacketMirroring collectorInfos. Each collectorInfo specifies a set of collector VM instances, preferably in the same zone as the mirrored VM(s)"
-    },
     "creationTimestamp": {
      "type": "string",
      "description": "[Output Only] Creation timestamp in RFC3339 text format."
@@ -17830,7 +18039,7 @@
     },
     "mirroredResources": {
      "$ref": "PacketMirroringMirroredResourceInfo",
-     "description": "PacketMirroring mirroredResourceInfos. Each mirroredResourceInfo specifies a set of mirrored VM instances and/or a set of subnetworks for which traffic from/to all VM instances will be mirrored."
+     "description": "PacketMirroring mirroredResourceInfos. MirroredResourceInfo specifies a set of mirrored VM instances, subnetworks and/or tags for which traffic from/to all VM instances will be mirrored."
     },
     "name": {
      "type": "string",
@@ -17849,13 +18058,6 @@
       "required": [
        "compute.packetMirrorings.insert"
       ]
-     }
-    },
-    "packetMatchers": {
-     "type": "array",
-     "description": "PacketMirroring packetMatchers. Each packetMatcher specifies a CIRD filter that will apply to the source or destination IP in the IP header for the mirrored VM traffic.",
-     "items": {
-      "$ref": "PacketMirroringPacketMatcher"
      }
     },
     "priority": {
@@ -17987,30 +18189,6 @@
        "description": "[Output Only] A human-readable description of the warning code."
       }
      }
-    }
-   }
-  },
-  "PacketMirroringCollectorInfo": {
-   "id": "PacketMirroringCollectorInfo",
-   "type": "object",
-   "description": "",
-   "properties": {
-    "instances": {
-     "type": "array",
-     "description": "A set of virtual machines configured as destination of the mirrored traffic. They must live in zones contained in the same region as this packetMirroring.",
-     "items": {
-      "$ref": "PacketMirroringCollectorInfoInstanceInfo"
-     }
-    }
-   }
-  },
-  "PacketMirroringCollectorInfoInstanceInfo": {
-   "id": "PacketMirroringCollectorInfoInstanceInfo",
-   "type": "object",
-   "properties": {
-    "url": {
-     "type": "string",
-     "description": "Resource URL to the virtual machine instance configured as destination of the mirrored traffic."
     }
    }
   },
@@ -18173,7 +18351,7 @@
     },
     "subnetworks": {
      "type": "array",
-     "description": "A set of subnetworks for which traffic from/to all VM instances will be mirrored. They must live in zones contained in the same region as this packetMirroring.\n\nYou may specify a maximum of 5 subnetworks.",
+     "description": "A set of subnetworks for which traffic from/to all VM instances will be mirrored. They must live in the same region as this packetMirroring.\n\nYou may specify a maximum of 5 subnetworks.",
      "items": {
       "$ref": "PacketMirroringMirroredResourceInfoSubnetInfo"
      }
@@ -18226,17 +18404,6 @@
     "url": {
      "type": "string",
      "description": "URL of the network resource."
-    }
-   }
-  },
-  "PacketMirroringPacketMatcher": {
-   "id": "PacketMirroringPacketMatcher",
-   "type": "object",
-   "description": "",
-   "properties": {
-    "cidrRange": {
-     "type": "string",
-     "description": "IP CIDR range that applies as filter on the source or destination IP in the IP header. Only IPv4 is supported."
     }
    }
   },
@@ -18349,7 +18516,7 @@
     },
     "defaultUrlRedirect": {
      "$ref": "HttpRedirectAction",
-     "description": "When when none of the specified pathRules or routeRules match, the request is redirected to a URL specified by defaultUrlRedirect.\nIf defaultUrlRedirect is specified, defaultService or defaultRouteAction must not be set."
+     "description": "When none of the specified pathRules or routeRules match, the request is redirected to a URL specified by defaultUrlRedirect.\nIf defaultUrlRedirect is specified, defaultService or defaultRouteAction must not be set."
     },
     "description": {
      "type": "string",
@@ -18372,7 +18539,7 @@
     },
     "routeRules": {
      "type": "array",
-     "description": "The list of ordered HTTP route rules. Use this list instead of pathRules when advanced route matching and routing actions are desired. The order of specifying routeRules matters: the first rule that matches will cause its specified routing action to take effect.\nWithin a given pathMatcher, only one of pathRules or routeRules must be set.\nrouteRules are not supported in UrlMaps intended for External Load balancers.",
+     "description": "The list of HTTP route rules. Use this list instead of pathRules when advanced route matching and routing actions are desired. routeRules are evaluated in order of priority, from the lowest to highest number.\nWithin a given pathMatcher, only one of pathRules or routeRules must be set.\nrouteRules are not supported in UrlMaps intended for External Load balancers.",
      "items": {
       "$ref": "HttpRouteRule"
      }
@@ -18526,7 +18693,7 @@
   "Policy": {
    "id": "Policy",
    "type": "object",
-   "description": "Defines an Identity and Access Management (IAM) policy. It is used to specify access control policies for Cloud Platform resources.\n\n\n\nA `Policy` consists of a list of `bindings`. A `binding` binds a list of `members` to a `role`, where the members can be user accounts, Google groups, Google domains, and service accounts. A `role` is a named list of permissions defined by IAM.\n\n**JSON Example**\n\n{ \"bindings\": [ { \"role\": \"roles/owner\", \"members\": [ \"user:mike@example.com\", \"group:admins@example.com\", \"domain:google.com\", \"serviceAccount:my-other-app@appspot.gserviceaccount.com\" ] }, { \"role\": \"roles/viewer\", \"members\": [\"user:sean@example.com\"] } ] }\n\n**YAML Example**\n\nbindings: - members: - user:mike@example.com - group:admins@example.com - domain:google.com - serviceAccount:my-other-app@appspot.gserviceaccount.com role: roles/owner - members: - user:sean@example.com role: roles/viewer\n\n\n\nFor a description of IAM and its features, see the [IAM developer's guide](https://cloud.google.com/iam/docs).",
+   "description": "An Identity and Access Management (IAM) policy, which specifies access controls for Google Cloud resources.\n\n\n\nA `Policy` is a collection of `bindings`. A `binding` binds one or more `members` to a single `role`. Members can be user accounts, service accounts, Google groups, and domains (such as G Suite). A `role` is a named list of permissions; each `role` can be an IAM predefined role or a user-created custom role.\n\nOptionally, a `binding` can specify a `condition`, which is a logical expression that allows access to a resource only if the expression evaluates to `true`. A condition can add constraints based on attributes of the request, the resource, or both.\n\n**JSON example:**\n\n{ \"bindings\": [ { \"role\": \"roles/resourcemanager.organizationAdmin\", \"members\": [ \"user:mike@example.com\", \"group:admins@example.com\", \"domain:google.com\", \"serviceAccount:my-project-id@appspot.gserviceaccount.com\" ] }, { \"role\": \"roles/resourcemanager.organizationViewer\", \"members\": [\"user:eve@example.com\"], \"condition\": { \"title\": \"expirable access\", \"description\": \"Does not grant access after Sep 2020\", \"expression\": \"request.time \u003c timestamp('2020-10-01T00:00:00.000Z')\", } } ], \"etag\": \"BwWWja0YfJA=\", \"version\": 3 }\n\n**YAML example:**\n\nbindings: - members: - user:mike@example.com - group:admins@example.com - domain:google.com - serviceAccount:my-project-id@appspot.gserviceaccount.com role: roles/resourcemanager.organizationAdmin - members: - user:eve@example.com role: roles/resourcemanager.organizationViewer condition: title: expirable access description: Does not grant access after Sep 2020 expression: request.time \u003c timestamp('2020-10-01T00:00:00.000Z') - etag: BwWWja0YfJA= - version: 3\n\nFor a description of IAM and its features, see the [IAM documentation](https://cloud.google.com/iam/docs/).",
    "properties": {
     "auditConfigs": {
      "type": "array",
@@ -18537,14 +18704,14 @@
     },
     "bindings": {
      "type": "array",
-     "description": "Associates a list of `members` to a `role`. `bindings` with no members will result in an error.",
+     "description": "Associates a list of `members` to a `role`. Optionally, may specify a `condition` that determines how and when the `bindings` are applied. Each of the `bindings` must contain at least one member.",
      "items": {
       "$ref": "Binding"
      }
     },
     "etag": {
      "type": "string",
-     "description": "`etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other. It is strongly suggested that systems make use of the `etag` in the read-modify-write cycle to perform policy updates in order to avoid race conditions: An `etag` is returned in the response to `getIamPolicy`, and systems are expected to put that etag in the request to `setIamPolicy` to ensure that their change will be applied to the same version of the policy.\n\nIf no `etag` is provided in the call to `setIamPolicy`, then the existing policy is overwritten.",
+     "description": "`etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other. It is strongly suggested that systems make use of the `etag` in the read-modify-write cycle to perform policy updates in order to avoid race conditions: An `etag` is returned in the response to `getIamPolicy`, and systems are expected to put that etag in the request to `setIamPolicy` to ensure that their change will be applied to the same version of the policy.\n\n**Important:** If you use IAM Conditions, you must include the `etag` field whenever you call `setIamPolicy`. If you omit this field, then IAM allows you to overwrite a version `3` policy with a version `1` policy, and all of the conditions in the version `3` policy are lost.",
      "format": "byte"
     },
     "iamOwned": {
@@ -18560,7 +18727,7 @@
     },
     "version": {
      "type": "integer",
-     "description": "Specifies the format of the policy.\n\nValid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.\n\nPolicies with any conditional bindings must specify version 3. Policies without any conditional bindings may specify any valid value or leave the field unset.",
+     "description": "Specifies the format of the policy.\n\nValid values are `0`, `1`, and `3`. Requests that specify an invalid value are rejected.\n\nAny operation that affects conditional role bindings must specify version `3`. This requirement applies to the following operations:\n\n* Getting a policy that includes a conditional role binding * Adding a conditional role binding to a policy * Changing a conditional role binding in a policy * Removing any role binding, with or without a condition, from a policy that includes conditions\n\n**Important:** If you use IAM Conditions, you must include the `etag` field whenever you call `setIamPolicy`. If you omit this field, then IAM allows you to overwrite a version `3` policy with a version `1` policy, and all of the conditions in the version `3` policy are lost.\n\nIf a policy does not include any conditions, operations on that policy may specify any valid version or leave the field unset.",
      "format": "int32"
     }
    }
@@ -18693,7 +18860,7 @@
     },
     "properties": {
      "type": "object",
-     "description": "A map of Istio attribute to expected values. Exact match, prefix match, and suffix match are supported for values. For example, `request.headers[version]: ?v1?`. The properties are ANDed together.",
+     "description": "A map of Istio attribute to expected values. Exact match, prefix match, and suffix match are supported for values. For example, `request.headers[version]: \"v1\"`. The properties are ANDed together.",
      "additionalProperties": {
       "type": "string"
      }
@@ -19605,6 +19772,7 @@
       "ROUTERS",
       "ROUTES",
       "SECURITY_POLICIES",
+      "SECURITY_POLICY_CEVAL_RULES",
       "SECURITY_POLICY_RULES",
       "SNAPSHOTS",
       "SSD_TOTAL_GB",
@@ -19624,6 +19792,7 @@
       "XPN_SERVICE_PROJECTS"
      ],
      "enumDescriptions": [
+      "",
       "",
       "",
       "",
@@ -20234,13 +20403,6 @@
    "type": "object",
    "description": "RegionInstanceGroupManagers.deletePerInstanceConfigs",
    "properties": {
-    "instances": {
-     "type": "array",
-     "description": "The list of instances for which we want to delete per-instance configs on this managed instance group.",
-     "items": {
-      "type": "string"
-     }
-    },
     "names": {
      "type": "array",
      "description": "The list of instance names for which we want to delete per-instance configs on this managed instance group.",
@@ -21022,7 +21184,7 @@
    "properties": {
     "commitment": {
      "type": "string",
-     "description": "[OutputOnly] Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment."
+     "description": "[Output Only] Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment."
     },
     "creationTimestamp": {
      "type": "string",
@@ -21104,9 +21266,11 @@
       "ANY_RESERVATION",
       "NO_RESERVATION",
       "SPECIFIC_RESERVATION",
+      "SPECIFIC_THEN_ANY_RESERVATION",
       "UNSPECIFIED"
      ],
      "enumDescriptions": [
+      "",
       "",
       "",
       "",
@@ -21806,6 +21970,23 @@
    "type": "object",
    "description": "A GroupPlacementPolicy specifies resource placement configuration. It specifies the failure bucket separation as well as network locality",
    "properties": {
+    "availabilityDomainCount": {
+     "type": "integer",
+     "description": "The number of availability domains instances will be spread across. If two instances are in different availability domain, they will not be put in the same low latency network",
+     "format": "int32"
+    },
+    "collocation": {
+     "type": "string",
+     "description": "Specifies network collocation",
+     "enum": [
+      "COLLOCATED",
+      "UNSPECIFIED_COLLOCATION"
+     ],
+     "enumDescriptions": [
+      "",
+      ""
+     ]
+    },
     "locality": {
      "type": "string",
      "description": "Specifies network locality",
@@ -22218,7 +22399,7 @@
     },
     "nextHopIlb": {
      "type": "string",
-     "description": "The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching packets. You can only specify the forwarding rule as a partial or full URL. For example, the following are all valid URLs:  \n- https://www.googleapis.com/compute/v1/projects/project/regions/region/forwardingRules/forwardingRule \n- regions/region/forwardingRules/forwardingRule  Note that this can only be used when the destination_range is a public (non-RFC 1918) IP CIDR range."
+     "description": "The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching packets. You can only specify the forwarding rule as a partial or full URL. For example, the following are all valid URLs:  \n- https://www.googleapis.com/compute/v1/projects/project/regions/region/forwardingRules/forwardingRule \n- regions/region/forwardingRules/forwardingRule"
     },
     "nextHopInstance": {
      "type": "string",
@@ -23157,7 +23338,7 @@
     },
     "filter": {
      "type": "string",
-     "description": "Specifies the desired filtering of logs on this NAT. If unspecified, logs are exported for all connections handled by this NAT.",
+     "description": "Specify the desired filtering of logs on this NAT. If unspecified, logs are exported for all connections handled by this NAT. This option can take one of the following values: \n- ERRORS_ONLY: Export logs only for connection failures. \n- TRANSLATIONS_ONLY: Export logs only for successful connections. \n- ALL: Export logs for all connections, successful and unsuccessful.",
      "enum": [
       "ALL",
       "ERRORS_ONLY",
@@ -23319,14 +23500,14 @@
     },
     "drainAutoAllocatedNatIps": {
      "type": "array",
-     "description": "A list of IPs auto-allocated for NAT that are in drain mode. Example: [\"1.1.1.1\", ?179.12.26.133?].",
+     "description": "A list of IPs auto-allocated for NAT that are in drain mode. Example: [\"1.1.1.1\", \"179.12.26.133\"].",
      "items": {
       "type": "string"
      }
     },
     "drainUserAllocatedNatIps": {
      "type": "array",
-     "description": "A list of IPs user-allocated for NAT that are in drain mode. Example: [\"1.1.1.1\", ?179.12.26.133?].",
+     "description": "A list of IPs user-allocated for NAT that are in drain mode. Example: [\"1.1.1.1\", \"179.12.26.133\"].",
      "items": {
       "type": "string"
      }
@@ -23619,6 +23800,10 @@
      "type": "string",
      "description": "The size of the disk in base-2 GB.",
      "format": "int64"
+    },
+    "diskType": {
+     "type": "string",
+     "description": "[Output Only] URL of the disk type resource. For example: projects/project/zones/zone/diskTypes/pd-standard or pd-ssd"
     },
     "guestOsFeatures": {
      "type": "array",
@@ -24363,7 +24548,7 @@
    "properties": {
     "encryptionKey": {
      "$ref": "ShieldedInstanceIdentityEntry",
-     "description": "An Endorsement Key (EK) issued to the Shielded Instance's vTPM."
+     "description": "An Endorsement Key (EK) made by the RSA 2048 algorithm issued to the Shielded Instance's vTPM."
     },
     "kind": {
      "type": "string",
@@ -24372,7 +24557,7 @@
     },
     "signingKey": {
      "$ref": "ShieldedInstanceIdentityEntry",
-     "description": "An Attestation Key (AK) issued to the Shielded Instance's vTPM."
+     "description": "An Attestation Key (AK) made by the RSA 2048 algorithm issued to the Shielded Instance's vTPM."
     }
    }
   },
@@ -24490,7 +24675,7 @@
    "properties": {
     "autoCreated": {
      "type": "boolean",
-     "description": "[Output Only] Set to true if snapshots are automatically by applying resource policy on the target disk."
+     "description": "[Output Only] Set to true if snapshots are automatically created by applying resource policy on the target disk."
     },
     "creationTimestamp": {
      "type": "string",
@@ -24502,7 +24687,12 @@
     },
     "diskSizeGb": {
      "type": "string",
-     "description": "[Output Only] Size of the snapshot, specified in GB.",
+     "description": "[Output Only] Size of the source disk, specified in GB.",
+     "format": "int64"
+    },
+    "downloadBytes": {
+     "type": "string",
+     "description": "[Output Only] Number of bytes downloaded to restore a snapshot to a disk.",
      "format": "int64"
     },
     "guestOsFeatures": {
@@ -24839,7 +25029,7 @@
   "SslCertificate": {
    "id": "SslCertificate",
    "type": "object",
-   "description": "Represents an SSL Certificate resource.\n\nThis SSL certificate resource also contains a private key. You can use SSL keys and certificates to secure connections to a load balancer. For more information, read  Creating and Using SSL Certificates. (== resource_for beta.sslCertificates ==) (== resource_for v1.sslCertificates ==)",
+   "description": "Represents an SSL Certificate resource.\n\nThis SSL certificate resource also contains a private key. You can use SSL keys and certificates to secure connections to a load balancer. For more information, read  Creating and Using SSL Certificates. (== resource_for beta.sslCertificates ==) (== resource_for v1.sslCertificates ==) (== resource_for beta.regionSslCertificates ==) (== resource_for v1.regionSslCertificates ==) Next ID: 17",
    "properties": {
     "certificate": {
      "type": "string",
@@ -26464,7 +26654,7 @@
   "TargetHttpProxy": {
    "id": "TargetHttpProxy",
    "type": "object",
-   "description": "Represents a Target HTTP Proxy resource.\n\nA target HTTP proxy is a component of certain types of load balancers. Global forwarding rules reference a target HTTP proxy, and the target proxy then references a URL map. For more information, read Using Target Proxies. (== resource_for beta.targetHttpProxies ==) (== resource_for v1.targetHttpProxies ==)",
+   "description": "Represents a Target HTTP Proxy resource.\n\nA target HTTP proxy is a component of GCP HTTP load balancers. Forwarding rules reference a target HTTP proxy, and the target proxy then references a URL map. For more information, read Using Target Proxies and  Forwarding rule concepts. (== resource_for beta.targetHttpProxies ==) (== resource_for v1.targetHttpProxies ==) (== resource_for beta.regionTargetHttpProxies ==) (== resource_for v1.regionTargetHttpProxies ==)",
    "properties": {
     "creationTimestamp": {
      "type": "string",
@@ -26865,7 +27055,7 @@
   "TargetHttpsProxy": {
    "id": "TargetHttpsProxy",
    "type": "object",
-   "description": "Represents a Target HTTPS Proxy resource.\n\nA target HTTPS proxy is a component of certain types of load balancers. Global forwarding rules reference a target HTTPS proxy, and the target proxy then references a URL map. For more information, read Using Target Proxies. (== resource_for beta.targetHttpsProxies ==) (== resource_for v1.targetHttpsProxies ==)",
+   "description": "Represents a Target HTTPS Proxy resource.\n\nA target HTTPS proxy is a component of GCP HTTPS load balancers. Forwarding rules reference a target HTTPS proxy, and the target proxy then references a URL map. For more information, read Using Target Proxies and  Forwarding rule concepts. (== resource_for beta.targetHttpsProxies ==) (== resource_for v1.targetHttpsProxies ==) (== resource_for beta.regionTargetHttpsProxies ==) (== resource_for v1.regionTargetHttpsProxies ==)",
    "properties": {
     "creationTimestamp": {
      "type": "string",
@@ -26896,7 +27086,7 @@
     },
     "quicOverride": {
      "type": "string",
-     "description": "Specifies the QUIC override policy for this TargetHttpsProxy resource. This determines whether the load balancer will attempt to negotiate QUIC with clients or not. Can specify one of NONE, ENABLE, or DISABLE. Specify ENABLE to always enable QUIC, Enables QUIC when set to ENABLE, and disables QUIC when set to DISABLE. If NONE is specified, uses the QUIC policy with no user overrides, which is equivalent to DISABLE. Not specifying this field is equivalent to specifying NONE.",
+     "description": "Specifies the QUIC override policy for this TargetHttpsProxy resource. This setting determines whether the load balancer attempts to negotiate QUIC with clients. You can specify NONE, ENABLE, or DISABLE.  \n- When quic-override is set to NONE, Google manages whether QUIC is used. \n- When quic-override is set to ENABLE, the load balancer uses QUIC when possible. \n- When quic-override is set to DISABLE, the load balancer doesn't use QUIC. \n- If the quic-override flag is not specified, NONE is implied.\n-",
      "enum": [
       "DISABLE",
       "ENABLE",
@@ -26929,7 +27119,7 @@
     },
     "sslPolicy": {
      "type": "string",
-     "description": "URL of SslPolicy resource that will be associated with the TargetHttpsProxy resource. If not set, the TargetHttpsProxy resource will not have any SSL policy configured."
+     "description": "URL of SslPolicy resource that will be associated with the TargetHttpsProxy resource. If not set, the TargetHttpsProxy resource has no SSL policy configured."
     },
     "urlMap": {
      "type": "string",
@@ -29827,7 +30017,7 @@
   "VpnGateway": {
    "id": "VpnGateway",
    "type": "object",
-   "description": "Represents a VPN gateway resource.",
+   "description": "Represents a VPN gateway resource. Next ID: 13",
    "properties": {
     "creationTimestamp": {
      "type": "string",
@@ -30434,7 +30624,7 @@
     },
     "status": {
      "type": "string",
-     "description": "[Output Only] The status of the VPN tunnel, which can be one of the following: \n- PROVISIONING: Resource is being allocated for the VPN tunnel. \n- WAITING_FOR_FULL_CONFIG: Waiting to receive all VPN-related configs from the user. Network, TargetVpnGateway, VpnTunnel, ForwardingRule, and Route resources are needed to setup the VPN tunnel. \n- FIRST_HANDSHAKE: Successful first handshake with the peer VPN. \n- ESTABLISHED: Secure session is successfully established with the peer VPN. \n- NETWORK_ERROR: Deprecated, replaced by NO_INCOMING_PACKETS \n- AUTHORIZATION_ERROR: Auth error (for example, bad shared secret). \n- NEGOTIATION_FAILURE: Handshake failed. \n- DEPROVISIONING: Resources are being deallocated for the VPN tunnel. \n- FAILED: Tunnel creation has failed and the tunnel is not ready to be used.",
+     "description": "[Output Only] The status of the VPN tunnel, which can be one of the following: \n- PROVISIONING: Resource is being allocated for the VPN tunnel. \n- WAITING_FOR_FULL_CONFIG: Waiting to receive all VPN-related configs from the user. Network, TargetVpnGateway, VpnTunnel, ForwardingRule, and Route resources are needed to setup the VPN tunnel. \n- FIRST_HANDSHAKE: Successful first handshake with the peer VPN. \n- ESTABLISHED: Secure session is successfully established with the peer VPN. \n- NETWORK_ERROR: Deprecated, replaced by NO_INCOMING_PACKETS \n- AUTHORIZATION_ERROR: Auth error (for example, bad shared secret). \n- NEGOTIATION_FAILURE: Handshake failed. \n- DEPROVISIONING: Resources are being deallocated for the VPN tunnel. \n- FAILED: Tunnel creation has failed and the tunnel is not ready to be used. \n- NO_INCOMING_PACKETS: No incoming packets from peer. \n- REJECTED: Tunnel configuration was rejected, can be result of being blacklisted. \n- ALLOCATING_RESOURCES: Cloud VPN is in the process of allocating all required resources. \n- STOPPED: Tunnel is stopped due to its Forwarding Rules being deleted for Classic VPN tunnels or the project is in frozen state. \n- PEER_IDENTITY_MISMATCH: Peer identity does not match peer IP, probably behind NAT. \n- TS_NARROWING_NOT_ALLOWED: Traffic selector narrowing not allowed for an HA-VPN tunnel.",
      "enum": [
       "ALLOCATING_RESOURCES",
       "AUTHORIZATION_ERROR",
@@ -31214,6 +31404,11 @@
        "description": "A filter expression that filters resources listed in the response. The expression must specify the field name, a comparison operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The comparison operator must be either =, !=, \u003e, or \u003c.\n\nFor example, if you are filtering Compute Engine instances, you can exclude instances named example-instance by specifying name != example-instance.\n\nYou can also filter nested fields. For example, you could specify scheduling.automaticRestart = false to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels.\n\nTo filter on multiple expressions, provide each separate expression within parentheses. For example, (scheduling.automaticRestart = true) (cpuPlatform = \"Intel Skylake\"). By default, each expression is an AND expression. However, you can include AND and OR expressions explicitly. For example, (cpuPlatform = \"Intel Skylake\") OR (cpuPlatform = \"Intel Broadwell\") AND (scheduling.automaticRestart = true).",
        "location": "query"
       },
+      "includeAllScopes": {
+       "type": "boolean",
+       "description": "Indicates whether every visible scope for each scope type (zone, region, global) should be included in the response. For new resource types added after this field, the flag has no effect as new resource types will always include every visible scope for each scope type in response. For resource types which predate this field, if this flag is omitted or false, only scopes of the scope types where the resource type is expected to be found will be included.",
+       "location": "query"
+      },
       "maxResults": {
        "type": "integer",
        "description": "The maximum number of results per page that should be returned. If the number of available results is larger than maxResults, Compute Engine returns a nextPageToken that can be used to get the next page of results in subsequent list requests. Acceptable values are 0 to 500, inclusive. (Default: 500)",
@@ -31364,6 +31559,11 @@
       "filter": {
        "type": "string",
        "description": "A filter expression that filters resources listed in the response. The expression must specify the field name, a comparison operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The comparison operator must be either =, !=, \u003e, or \u003c.\n\nFor example, if you are filtering Compute Engine instances, you can exclude instances named example-instance by specifying name != example-instance.\n\nYou can also filter nested fields. For example, you could specify scheduling.automaticRestart = false to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels.\n\nTo filter on multiple expressions, provide each separate expression within parentheses. For example, (scheduling.automaticRestart = true) (cpuPlatform = \"Intel Skylake\"). By default, each expression is an AND expression. However, you can include AND and OR expressions explicitly. For example, (cpuPlatform = \"Intel Skylake\") OR (cpuPlatform = \"Intel Broadwell\") AND (scheduling.automaticRestart = true).",
+       "location": "query"
+      },
+      "includeAllScopes": {
+       "type": "boolean",
+       "description": "Indicates whether every visible scope for each scope type (zone, region, global) should be included in the response. For new resource types added after this field, the flag has no effect as new resource types will always include every visible scope for each scope type in response. For resource types which predate this field, if this flag is omitted or false, only scopes of the scope types where the resource type is expected to be found will be included.",
        "location": "query"
       },
       "maxResults": {
@@ -31697,6 +31897,11 @@
       "filter": {
        "type": "string",
        "description": "A filter expression that filters resources listed in the response. The expression must specify the field name, a comparison operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The comparison operator must be either =, !=, \u003e, or \u003c.\n\nFor example, if you are filtering Compute Engine instances, you can exclude instances named example-instance by specifying name != example-instance.\n\nYou can also filter nested fields. For example, you could specify scheduling.automaticRestart = false to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels.\n\nTo filter on multiple expressions, provide each separate expression within parentheses. For example, (scheduling.automaticRestart = true) (cpuPlatform = \"Intel Skylake\"). By default, each expression is an AND expression. However, you can include AND and OR expressions explicitly. For example, (cpuPlatform = \"Intel Skylake\") OR (cpuPlatform = \"Intel Broadwell\") AND (scheduling.automaticRestart = true).",
+       "location": "query"
+      },
+      "includeAllScopes": {
+       "type": "boolean",
+       "description": "Indicates whether every visible scope for each scope type (zone, region, global) should be included in the response. For new resource types added after this field, the flag has no effect as new resource types will always include every visible scope for each scope type in response. For resource types which predate this field, if this flag is omitted or false, only scopes of the scope types where the resource type is expected to be found will be included.",
        "location": "query"
       },
       "maxResults": {
@@ -32554,6 +32759,11 @@
        "description": "A filter expression that filters resources listed in the response. The expression must specify the field name, a comparison operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The comparison operator must be either =, !=, \u003e, or \u003c.\n\nFor example, if you are filtering Compute Engine instances, you can exclude instances named example-instance by specifying name != example-instance.\n\nYou can also filter nested fields. For example, you could specify scheduling.automaticRestart = false to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels.\n\nTo filter on multiple expressions, provide each separate expression within parentheses. For example, (scheduling.automaticRestart = true) (cpuPlatform = \"Intel Skylake\"). By default, each expression is an AND expression. However, you can include AND and OR expressions explicitly. For example, (cpuPlatform = \"Intel Skylake\") OR (cpuPlatform = \"Intel Broadwell\") AND (scheduling.automaticRestart = true).",
        "location": "query"
       },
+      "includeAllScopes": {
+       "type": "boolean",
+       "description": "Indicates whether every visible scope for each scope type (zone, region, global) should be included in the response. For new resource types added after this field, the flag has no effect as new resource types will always include every visible scope for each scope type in response. For resource types which predate this field, if this flag is omitted or false, only scopes of the scope types where the resource type is expected to be found will be included.",
+       "location": "query"
+      },
       "maxResults": {
        "type": "integer",
        "description": "The maximum number of results per page that should be returned. If the number of available results is larger than maxResults, Compute Engine returns a nextPageToken that can be used to get the next page of results in subsequent list requests. Acceptable values are 0 to 500, inclusive. (Default: 500)",
@@ -33000,6 +33210,11 @@
        "description": "A filter expression that filters resources listed in the response. The expression must specify the field name, a comparison operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The comparison operator must be either =, !=, \u003e, or \u003c.\n\nFor example, if you are filtering Compute Engine instances, you can exclude instances named example-instance by specifying name != example-instance.\n\nYou can also filter nested fields. For example, you could specify scheduling.automaticRestart = false to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels.\n\nTo filter on multiple expressions, provide each separate expression within parentheses. For example, (scheduling.automaticRestart = true) (cpuPlatform = \"Intel Skylake\"). By default, each expression is an AND expression. However, you can include AND and OR expressions explicitly. For example, (cpuPlatform = \"Intel Skylake\") OR (cpuPlatform = \"Intel Broadwell\") AND (scheduling.automaticRestart = true).",
        "location": "query"
       },
+      "includeAllScopes": {
+       "type": "boolean",
+       "description": "Indicates whether every visible scope for each scope type (zone, region, global) should be included in the response. For new resource types added after this field, the flag has no effect as new resource types will always include every visible scope for each scope type in response. For resource types which predate this field, if this flag is omitted or false, only scopes of the scope types where the resource type is expected to be found will be included.",
+       "location": "query"
+      },
       "maxResults": {
        "type": "integer",
        "description": "The maximum number of results per page that should be returned. If the number of available results is larger than maxResults, Compute Engine returns a nextPageToken that can be used to get the next page of results in subsequent list requests. Acceptable values are 0 to 500, inclusive. (Default: 500)",
@@ -33199,6 +33414,11 @@
       "filter": {
        "type": "string",
        "description": "A filter expression that filters resources listed in the response. The expression must specify the field name, a comparison operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The comparison operator must be either =, !=, \u003e, or \u003c.\n\nFor example, if you are filtering Compute Engine instances, you can exclude instances named example-instance by specifying name != example-instance.\n\nYou can also filter nested fields. For example, you could specify scheduling.automaticRestart = false to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels.\n\nTo filter on multiple expressions, provide each separate expression within parentheses. For example, (scheduling.automaticRestart = true) (cpuPlatform = \"Intel Skylake\"). By default, each expression is an AND expression. However, you can include AND and OR expressions explicitly. For example, (cpuPlatform = \"Intel Skylake\") OR (cpuPlatform = \"Intel Broadwell\") AND (scheduling.automaticRestart = true).",
+       "location": "query"
+      },
+      "includeAllScopes": {
+       "type": "boolean",
+       "description": "Indicates whether every visible scope for each scope type (zone, region, global) should be included in the response. For new resource types added after this field, the flag has no effect as new resource types will always include every visible scope for each scope type in response. For resource types which predate this field, if this flag is omitted or false, only scopes of the scope types where the resource type is expected to be found will be included.",
        "location": "query"
       },
       "maxResults": {
@@ -34238,7 +34458,7 @@
      "id": "compute.firewalls.update",
      "path": "{project}/global/firewalls/{firewall}",
      "httpMethod": "PUT",
-     "description": "Updates the specified firewall rule with the data included in the request. The PUT method can only update the following fields of firewall rule: allowed, description, sourceRanges, sourceTags, targetTags.",
+     "description": "Updates the specified firewall rule with the data included in the request. Note that all fields will be updated if using PUT, even fields that are not specified. To update individual fields, please use PATCH instead.",
      "parameters": {
       "firewall": {
        "type": "string",
@@ -34288,6 +34508,11 @@
       "filter": {
        "type": "string",
        "description": "A filter expression that filters resources listed in the response. The expression must specify the field name, a comparison operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The comparison operator must be either =, !=, \u003e, or \u003c.\n\nFor example, if you are filtering Compute Engine instances, you can exclude instances named example-instance by specifying name != example-instance.\n\nYou can also filter nested fields. For example, you could specify scheduling.automaticRestart = false to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels.\n\nTo filter on multiple expressions, provide each separate expression within parentheses. For example, (scheduling.automaticRestart = true) (cpuPlatform = \"Intel Skylake\"). By default, each expression is an AND expression. However, you can include AND and OR expressions explicitly. For example, (cpuPlatform = \"Intel Skylake\") OR (cpuPlatform = \"Intel Broadwell\") AND (scheduling.automaticRestart = true).",
+       "location": "query"
+      },
+      "includeAllScopes": {
+       "type": "boolean",
+       "description": "Indicates whether every visible scope for each scope type (zone, region, global) should be included in the response. For new resource types added after this field, the flag has no effect as new resource types will always include every visible scope for each scope type in response. For resource types which predate this field, if this flag is omitted or false, only scopes of the scope types where the resource type is expected to be found will be included.",
        "location": "query"
       },
       "maxResults": {
@@ -35557,6 +35782,11 @@
        "description": "A filter expression that filters resources listed in the response. The expression must specify the field name, a comparison operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The comparison operator must be either =, !=, \u003e, or \u003c.\n\nFor example, if you are filtering Compute Engine instances, you can exclude instances named example-instance by specifying name != example-instance.\n\nYou can also filter nested fields. For example, you could specify scheduling.automaticRestart = false to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels.\n\nTo filter on multiple expressions, provide each separate expression within parentheses. For example, (scheduling.automaticRestart = true) (cpuPlatform = \"Intel Skylake\"). By default, each expression is an AND expression. However, you can include AND and OR expressions explicitly. For example, (cpuPlatform = \"Intel Skylake\") OR (cpuPlatform = \"Intel Broadwell\") AND (scheduling.automaticRestart = true).",
        "location": "query"
       },
+      "includeAllScopes": {
+       "type": "boolean",
+       "description": "Indicates whether every visible scope for each scope type (zone, region, global) should be included in the response. For new resource types added after this field, the flag has no effect as new resource types will always include every visible scope for each scope type in response. For resource types which predate this field, if this flag is omitted or false, only scopes of the scope types where the resource type is expected to be found will be included.",
+       "location": "query"
+      },
       "maxResults": {
        "type": "integer",
        "description": "The maximum number of results per page that should be returned. If the number of available results is larger than maxResults, Compute Engine returns a nextPageToken that can be used to get the next page of results in subsequent list requests. Acceptable values are 0 to 500, inclusive. (Default: 500)",
@@ -36091,6 +36321,11 @@
       "filter": {
        "type": "string",
        "description": "A filter expression that filters resources listed in the response. The expression must specify the field name, a comparison operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The comparison operator must be either =, !=, \u003e, or \u003c.\n\nFor example, if you are filtering Compute Engine instances, you can exclude instances named example-instance by specifying name != example-instance.\n\nYou can also filter nested fields. For example, you could specify scheduling.automaticRestart = false to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels.\n\nTo filter on multiple expressions, provide each separate expression within parentheses. For example, (scheduling.automaticRestart = true) (cpuPlatform = \"Intel Skylake\"). By default, each expression is an AND expression. However, you can include AND and OR expressions explicitly. For example, (cpuPlatform = \"Intel Skylake\") OR (cpuPlatform = \"Intel Broadwell\") AND (scheduling.automaticRestart = true).",
+       "location": "query"
+      },
+      "includeAllScopes": {
+       "type": "boolean",
+       "description": "Indicates whether every visible scope for each scope type (zone, region, global) should be included in the response. For new resource types added after this field, the flag has no effect as new resource types will always include every visible scope for each scope type in response. For resource types which predate this field, if this flag is omitted or false, only scopes of the scope types where the resource type is expected to be found will be included.",
        "location": "query"
       },
       "maxResults": {
@@ -37410,6 +37645,11 @@
        "description": "A filter expression that filters resources listed in the response. The expression must specify the field name, a comparison operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The comparison operator must be either =, !=, \u003e, or \u003c.\n\nFor example, if you are filtering Compute Engine instances, you can exclude instances named example-instance by specifying name != example-instance.\n\nYou can also filter nested fields. For example, you could specify scheduling.automaticRestart = false to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels.\n\nTo filter on multiple expressions, provide each separate expression within parentheses. For example, (scheduling.automaticRestart = true) (cpuPlatform = \"Intel Skylake\"). By default, each expression is an AND expression. However, you can include AND and OR expressions explicitly. For example, (cpuPlatform = \"Intel Skylake\") OR (cpuPlatform = \"Intel Broadwell\") AND (scheduling.automaticRestart = true).",
        "location": "query"
       },
+      "includeAllScopes": {
+       "type": "boolean",
+       "description": "Indicates whether every visible scope for each scope type (zone, region, global) should be included in the response. For new resource types added after this field, the flag has no effect as new resource types will always include every visible scope for each scope type in response. For resource types which predate this field, if this flag is omitted or false, only scopes of the scope types where the resource type is expected to be found will be included.",
+       "location": "query"
+      },
       "maxResults": {
        "type": "integer",
        "description": "The maximum number of results per page that should be returned. If the number of available results is larger than maxResults, Compute Engine returns a nextPageToken that can be used to get the next page of results in subsequent list requests. Acceptable values are 0 to 500, inclusive. (Default: 500)",
@@ -38577,6 +38817,11 @@
        "description": "A filter expression that filters resources listed in the response. The expression must specify the field name, a comparison operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The comparison operator must be either =, !=, \u003e, or \u003c.\n\nFor example, if you are filtering Compute Engine instances, you can exclude instances named example-instance by specifying name != example-instance.\n\nYou can also filter nested fields. For example, you could specify scheduling.automaticRestart = false to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels.\n\nTo filter on multiple expressions, provide each separate expression within parentheses. For example, (scheduling.automaticRestart = true) (cpuPlatform = \"Intel Skylake\"). By default, each expression is an AND expression. However, you can include AND and OR expressions explicitly. For example, (cpuPlatform = \"Intel Skylake\") OR (cpuPlatform = \"Intel Broadwell\") AND (scheduling.automaticRestart = true).",
        "location": "query"
       },
+      "includeAllScopes": {
+       "type": "boolean",
+       "description": "Indicates whether every visible scope for each scope type (zone, region, global) should be included in the response. For new resource types added after this field, the flag has no effect as new resource types will always include every visible scope for each scope type in response. For resource types which predate this field, if this flag is omitted or false, only scopes of the scope types where the resource type is expected to be found will be included.",
+       "location": "query"
+      },
       "maxResults": {
        "type": "integer",
        "description": "The maximum number of results per page that should be returned. If the number of available results is larger than maxResults, Compute Engine returns a nextPageToken that can be used to get the next page of results in subsequent list requests. Acceptable values are 0 to 500, inclusive. (Default: 500)",
@@ -39389,6 +39634,11 @@
       "filter": {
        "type": "string",
        "description": "A filter expression that filters resources listed in the response. The expression must specify the field name, a comparison operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The comparison operator must be either =, !=, \u003e, or \u003c.\n\nFor example, if you are filtering Compute Engine instances, you can exclude instances named example-instance by specifying name != example-instance.\n\nYou can also filter nested fields. For example, you could specify scheduling.automaticRestart = false to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels.\n\nTo filter on multiple expressions, provide each separate expression within parentheses. For example, (scheduling.automaticRestart = true) (cpuPlatform = \"Intel Skylake\"). By default, each expression is an AND expression. However, you can include AND and OR expressions explicitly. For example, (cpuPlatform = \"Intel Skylake\") OR (cpuPlatform = \"Intel Broadwell\") AND (scheduling.automaticRestart = true).",
+       "location": "query"
+      },
+      "includeAllScopes": {
+       "type": "boolean",
+       "description": "Indicates whether every visible scope for each scope type (zone, region, global) should be included in the response. For new resource types added after this field, the flag has no effect as new resource types will always include every visible scope for each scope type in response. For resource types which predate this field, if this flag is omitted or false, only scopes of the scope types where the resource type is expected to be found will be included.",
        "location": "query"
       },
       "maxResults": {
@@ -41270,6 +41520,89 @@
       "https://www.googleapis.com/auth/compute.readonly"
      ]
     },
+    "update": {
+     "id": "compute.instances.update",
+     "path": "{project}/zones/{zone}/instances/{instance}",
+     "httpMethod": "PUT",
+     "description": "Updates an instance.",
+     "parameters": {
+      "instance": {
+       "type": "string",
+       "description": "Name of the instance resource to update.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}",
+       "location": "path"
+      },
+      "minimalAction": {
+       "type": "string",
+       "description": "If specified, this action or higher level action is performed on the instance irrespective of what action is required for the update to take effect. If not specified, then Compute Engine acts based on the minimum action required.",
+       "enum": [
+        "INVALID",
+        "NO_EFFECT",
+        "REFRESH",
+        "RESTART"
+       ],
+       "enumDescriptions": [
+        "",
+        "",
+        "",
+        ""
+       ],
+       "location": "query"
+      },
+      "mostDisruptiveAllowedAction": {
+       "type": "string",
+       "description": "If specified, Compute Engine returns an error if the update requires a higher action to be applied to the instance. If not specified, the default will be REFRESH.",
+       "enum": [
+        "INVALID",
+        "NO_EFFECT",
+        "REFRESH",
+        "RESTART"
+       ],
+       "enumDescriptions": [
+        "",
+        "",
+        "",
+        ""
+       ],
+       "location": "query"
+      },
+      "project": {
+       "type": "string",
+       "description": "Project ID for this request.",
+       "required": true,
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "location": "path"
+      },
+      "requestId": {
+       "type": "string",
+       "description": "An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed.\n\nFor example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments.\n\nThe request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).",
+       "location": "query"
+      },
+      "zone": {
+       "type": "string",
+       "description": "The name of the zone for this request.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?",
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "project",
+      "zone",
+      "instance"
+     ],
+     "request": {
+      "$ref": "Instance"
+     },
+     "response": {
+      "$ref": "Operation"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute"
+     ]
+    },
     "updateAccessConfig": {
      "id": "compute.instances.updateAccessConfig",
      "path": "{project}/zones/{zone}/instances/{instance}/updateAccessConfig",
@@ -41542,6 +41875,11 @@
       "filter": {
        "type": "string",
        "description": "A filter expression that filters resources listed in the response. The expression must specify the field name, a comparison operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The comparison operator must be either =, !=, \u003e, or \u003c.\n\nFor example, if you are filtering Compute Engine instances, you can exclude instances named example-instance by specifying name != example-instance.\n\nYou can also filter nested fields. For example, you could specify scheduling.automaticRestart = false to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels.\n\nTo filter on multiple expressions, provide each separate expression within parentheses. For example, (scheduling.automaticRestart = true) (cpuPlatform = \"Intel Skylake\"). By default, each expression is an AND expression. However, you can include AND and OR expressions explicitly. For example, (cpuPlatform = \"Intel Skylake\") OR (cpuPlatform = \"Intel Broadwell\") AND (scheduling.automaticRestart = true).",
+       "location": "query"
+      },
+      "includeAllScopes": {
+       "type": "boolean",
+       "description": "Indicates whether every visible scope for each scope type (zone, region, global) should be included in the response. For new resource types added after this field, the flag has no effect as new resource types will always include every visible scope for each scope type in response. For resource types which predate this field, if this flag is omitted or false, only scopes of the scope types where the resource type is expected to be found will be included.",
        "location": "query"
       },
       "maxResults": {
@@ -43230,6 +43568,11 @@
        "description": "A filter expression that filters resources listed in the response. The expression must specify the field name, a comparison operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The comparison operator must be either =, !=, \u003e, or \u003c.\n\nFor example, if you are filtering Compute Engine instances, you can exclude instances named example-instance by specifying name != example-instance.\n\nYou can also filter nested fields. For example, you could specify scheduling.automaticRestart = false to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels.\n\nTo filter on multiple expressions, provide each separate expression within parentheses. For example, (scheduling.automaticRestart = true) (cpuPlatform = \"Intel Skylake\"). By default, each expression is an AND expression. However, you can include AND and OR expressions explicitly. For example, (cpuPlatform = \"Intel Skylake\") OR (cpuPlatform = \"Intel Broadwell\") AND (scheduling.automaticRestart = true).",
        "location": "query"
       },
+      "includeAllScopes": {
+       "type": "boolean",
+       "description": "Indicates whether every visible scope for each scope type (zone, region, global) should be included in the response. For new resource types added after this field, the flag has no effect as new resource types will always include every visible scope for each scope type in response. For resource types which predate this field, if this flag is omitted or false, only scopes of the scope types where the resource type is expected to be found will be included.",
+       "location": "query"
+      },
       "maxResults": {
        "type": "integer",
        "description": "The maximum number of results per page that should be returned. If the number of available results is larger than maxResults, Compute Engine returns a nextPageToken that can be used to get the next page of results in subsequent list requests. Acceptable values are 0 to 500, inclusive. (Default: 500)",
@@ -43380,6 +43723,11 @@
       "filter": {
        "type": "string",
        "description": "A filter expression that filters resources listed in the response. The expression must specify the field name, a comparison operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The comparison operator must be either =, !=, \u003e, or \u003c.\n\nFor example, if you are filtering Compute Engine instances, you can exclude instances named example-instance by specifying name != example-instance.\n\nYou can also filter nested fields. For example, you could specify scheduling.automaticRestart = false to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels.\n\nTo filter on multiple expressions, provide each separate expression within parentheses. For example, (scheduling.automaticRestart = true) (cpuPlatform = \"Intel Skylake\"). By default, each expression is an AND expression. However, you can include AND and OR expressions explicitly. For example, (cpuPlatform = \"Intel Skylake\") OR (cpuPlatform = \"Intel Broadwell\") AND (scheduling.automaticRestart = true).",
+       "location": "query"
+      },
+      "includeAllScopes": {
+       "type": "boolean",
+       "description": "Indicates whether every visible scope for each scope type (zone, region, global) should be included in the response. For new resource types added after this field, the flag has no effect as new resource types will always include every visible scope for each scope type in response. For resource types which predate this field, if this flag is omitted or false, only scopes of the scope types where the resource type is expected to be found will be included.",
        "location": "query"
       },
       "maxResults": {
@@ -44526,6 +44874,11 @@
        "description": "A filter expression that filters resources listed in the response. The expression must specify the field name, a comparison operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The comparison operator must be either =, !=, \u003e, or \u003c.\n\nFor example, if you are filtering Compute Engine instances, you can exclude instances named example-instance by specifying name != example-instance.\n\nYou can also filter nested fields. For example, you could specify scheduling.automaticRestart = false to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels.\n\nTo filter on multiple expressions, provide each separate expression within parentheses. For example, (scheduling.automaticRestart = true) (cpuPlatform = \"Intel Skylake\"). By default, each expression is an AND expression. However, you can include AND and OR expressions explicitly. For example, (cpuPlatform = \"Intel Skylake\") OR (cpuPlatform = \"Intel Broadwell\") AND (scheduling.automaticRestart = true).",
        "location": "query"
       },
+      "includeAllScopes": {
+       "type": "boolean",
+       "description": "Indicates whether every visible scope for each scope type (zone, region, global) should be included in the response. For new resource types added after this field, the flag has no effect as new resource types will always include every visible scope for each scope type in response. For resource types which predate this field, if this flag is omitted or false, only scopes of the scope types where the resource type is expected to be found will be included.",
+       "location": "query"
+      },
       "maxResults": {
        "type": "integer",
        "description": "The maximum number of results per page that should be returned. If the number of available results is larger than maxResults, Compute Engine returns a nextPageToken that can be used to get the next page of results in subsequent list requests. Acceptable values are 0 to 500, inclusive. (Default: 500)",
@@ -44920,6 +45273,55 @@
       "https://www.googleapis.com/auth/compute.readonly"
      ]
     },
+    "patch": {
+     "id": "compute.nodeGroups.patch",
+     "path": "{project}/zones/{zone}/nodeGroups/{nodeGroup}",
+     "httpMethod": "PATCH",
+     "description": "Patch the node group.",
+     "parameters": {
+      "nodeGroup": {
+       "type": "string",
+       "description": "Name of the NodeGroup resource to update.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}",
+       "location": "path"
+      },
+      "project": {
+       "type": "string",
+       "description": "Project ID for this request.",
+       "required": true,
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "location": "path"
+      },
+      "requestId": {
+       "type": "string",
+       "description": "An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed.\n\nFor example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments.\n\nThe request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).",
+       "location": "query"
+      },
+      "zone": {
+       "type": "string",
+       "description": "The name of the zone for this request.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?",
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "project",
+      "zone",
+      "nodeGroup"
+     ],
+     "request": {
+      "$ref": "NodeGroup"
+     },
+     "response": {
+      "$ref": "Operation"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute"
+     ]
+    },
     "setAutoscalingPolicy": {
      "id": "compute.nodeGroups.setAutoscalingPolicy",
      "path": "{project}/zones/{zone}/nodeGroups/{nodeGroup}/setAutoscalingPolicy",
@@ -45120,6 +45522,11 @@
       "filter": {
        "type": "string",
        "description": "A filter expression that filters resources listed in the response. The expression must specify the field name, a comparison operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The comparison operator must be either =, !=, \u003e, or \u003c.\n\nFor example, if you are filtering Compute Engine instances, you can exclude instances named example-instance by specifying name != example-instance.\n\nYou can also filter nested fields. For example, you could specify scheduling.automaticRestart = false to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels.\n\nTo filter on multiple expressions, provide each separate expression within parentheses. For example, (scheduling.automaticRestart = true) (cpuPlatform = \"Intel Skylake\"). By default, each expression is an AND expression. However, you can include AND and OR expressions explicitly. For example, (cpuPlatform = \"Intel Skylake\") OR (cpuPlatform = \"Intel Broadwell\") AND (scheduling.automaticRestart = true).",
+       "location": "query"
+      },
+      "includeAllScopes": {
+       "type": "boolean",
+       "description": "Indicates whether every visible scope for each scope type (zone, region, global) should be included in the response. For new resource types added after this field, the flag has no effect as new resource types will always include every visible scope for each scope type in response. For resource types which predate this field, if this flag is omitted or false, only scopes of the scope types where the resource type is expected to be found will be included.",
        "location": "query"
       },
       "maxResults": {
@@ -45496,6 +45903,11 @@
       "filter": {
        "type": "string",
        "description": "A filter expression that filters resources listed in the response. The expression must specify the field name, a comparison operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The comparison operator must be either =, !=, \u003e, or \u003c.\n\nFor example, if you are filtering Compute Engine instances, you can exclude instances named example-instance by specifying name != example-instance.\n\nYou can also filter nested fields. For example, you could specify scheduling.automaticRestart = false to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels.\n\nTo filter on multiple expressions, provide each separate expression within parentheses. For example, (scheduling.automaticRestart = true) (cpuPlatform = \"Intel Skylake\"). By default, each expression is an AND expression. However, you can include AND and OR expressions explicitly. For example, (cpuPlatform = \"Intel Skylake\") OR (cpuPlatform = \"Intel Broadwell\") AND (scheduling.automaticRestart = true).",
+       "location": "query"
+      },
+      "includeAllScopes": {
+       "type": "boolean",
+       "description": "Indicates whether every visible scope for each scope type (zone, region, global) should be included in the response. For new resource types added after this field, the flag has no effect as new resource types will always include every visible scope for each scope type in response. For resource types which predate this field, if this flag is omitted or false, only scopes of the scope types where the resource type is expected to be found will be included.",
        "location": "query"
       },
       "maxResults": {
@@ -46147,6 +46559,11 @@
       "filter": {
        "type": "string",
        "description": "A filter expression that filters resources listed in the response. The expression must specify the field name, a comparison operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The comparison operator must be either =, !=, \u003e, or \u003c.\n\nFor example, if you are filtering Compute Engine instances, you can exclude instances named example-instance by specifying name != example-instance.\n\nYou can also filter nested fields. For example, you could specify scheduling.automaticRestart = false to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels.\n\nTo filter on multiple expressions, provide each separate expression within parentheses. For example, (scheduling.automaticRestart = true) (cpuPlatform = \"Intel Skylake\"). By default, each expression is an AND expression. However, you can include AND and OR expressions explicitly. For example, (cpuPlatform = \"Intel Skylake\") OR (cpuPlatform = \"Intel Broadwell\") AND (scheduling.automaticRestart = true).",
+       "location": "query"
+      },
+      "includeAllScopes": {
+       "type": "boolean",
+       "description": "Indicates whether every visible scope for each scope type (zone, region, global) should be included in the response. For new resource types added after this field, the flag has no effect as new resource types will always include every visible scope for each scope type in response. For resource types which predate this field, if this flag is omitted or false, only scopes of the scope types where the resource type is expected to be found will be included.",
        "location": "query"
       },
       "maxResults": {
@@ -47162,6 +47579,11 @@
        "description": "A filter expression that filters resources listed in the response. The expression must specify the field name, a comparison operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The comparison operator must be either =, !=, \u003e, or \u003c.\n\nFor example, if you are filtering Compute Engine instances, you can exclude instances named example-instance by specifying name != example-instance.\n\nYou can also filter nested fields. For example, you could specify scheduling.automaticRestart = false to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels.\n\nTo filter on multiple expressions, provide each separate expression within parentheses. For example, (scheduling.automaticRestart = true) (cpuPlatform = \"Intel Skylake\"). By default, each expression is an AND expression. However, you can include AND and OR expressions explicitly. For example, (cpuPlatform = \"Intel Skylake\") OR (cpuPlatform = \"Intel Broadwell\") AND (scheduling.automaticRestart = true).",
        "location": "query"
       },
+      "includeAllScopes": {
+       "type": "boolean",
+       "description": "Indicates whether every visible scope for each scope type (zone, region, global) should be included in the response. For new resource types added after this field, the flag has no effect as new resource types will always include every visible scope for each scope type in response. For resource types which predate this field, if this flag is omitted or false, only scopes of the scope types where the resource type is expected to be found will be included.",
+       "location": "query"
+      },
       "maxResults": {
        "type": "integer",
        "description": "The maximum number of results per page that should be returned. If the number of available results is larger than maxResults, Compute Engine returns a nextPageToken that can be used to get the next page of results in subsequent list requests. Acceptable values are 0 to 500, inclusive. (Default: 500)",
@@ -48154,6 +48576,11 @@
       "filter": {
        "type": "string",
        "description": "A filter expression that filters resources listed in the response. The expression must specify the field name, a comparison operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The comparison operator must be either =, !=, \u003e, or \u003c.\n\nFor example, if you are filtering Compute Engine instances, you can exclude instances named example-instance by specifying name != example-instance.\n\nYou can also filter nested fields. For example, you could specify scheduling.automaticRestart = false to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels.\n\nTo filter on multiple expressions, provide each separate expression within parentheses. For example, (scheduling.automaticRestart = true) (cpuPlatform = \"Intel Skylake\"). By default, each expression is an AND expression. However, you can include AND and OR expressions explicitly. For example, (cpuPlatform = \"Intel Skylake\") OR (cpuPlatform = \"Intel Broadwell\") AND (scheduling.automaticRestart = true).",
+       "location": "query"
+      },
+      "includeAllScopes": {
+       "type": "boolean",
+       "description": "Indicates whether every visible scope for each scope type (zone, region, global) should be included in the response. For new resource types added after this field, the flag has no effect as new resource types will always include every visible scope for each scope type in response. For resource types which predate this field, if this flag is omitted or false, only scopes of the scope types where the resource type is expected to be found will be included.",
        "location": "query"
       },
       "maxResults": {
@@ -51010,6 +51437,190 @@
     }
    }
   },
+  "regionNetworkEndpointGroups": {
+   "methods": {
+    "delete": {
+     "id": "compute.regionNetworkEndpointGroups.delete",
+     "path": "{project}/regions/{region}/networkEndpointGroups/{networkEndpointGroup}",
+     "httpMethod": "DELETE",
+     "description": "Deletes the specified network endpoint group. Note that the NEG cannot be deleted if it is configured as a backend of a backend service.",
+     "parameters": {
+      "networkEndpointGroup": {
+       "type": "string",
+       "description": "The name of the network endpoint group to delete. It should comply with RFC1035.",
+       "required": true,
+       "location": "path"
+      },
+      "project": {
+       "type": "string",
+       "description": "Project ID for this request.",
+       "required": true,
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "location": "path"
+      },
+      "region": {
+       "type": "string",
+       "description": "The name of the region where the network endpoint group is located. It should comply with RFC1035.",
+       "required": true,
+       "location": "path"
+      },
+      "requestId": {
+       "type": "string",
+       "description": "An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed.\n\nFor example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments.\n\nThe request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).",
+       "location": "query"
+      }
+     },
+     "parameterOrder": [
+      "project",
+      "region",
+      "networkEndpointGroup"
+     ],
+     "response": {
+      "$ref": "Operation"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute"
+     ]
+    },
+    "get": {
+     "id": "compute.regionNetworkEndpointGroups.get",
+     "path": "{project}/regions/{region}/networkEndpointGroups/{networkEndpointGroup}",
+     "httpMethod": "GET",
+     "description": "Returns the specified network endpoint group. Gets a list of available network endpoint groups by making a list() request.",
+     "parameters": {
+      "networkEndpointGroup": {
+       "type": "string",
+       "description": "The name of the network endpoint group. It should comply with RFC1035.",
+       "required": true,
+       "location": "path"
+      },
+      "project": {
+       "type": "string",
+       "description": "Project ID for this request.",
+       "required": true,
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "location": "path"
+      },
+      "region": {
+       "type": "string",
+       "description": "The name of the region where the network endpoint group is located. It should comply with RFC1035.",
+       "required": true,
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "project",
+      "region",
+      "networkEndpointGroup"
+     ],
+     "response": {
+      "$ref": "NetworkEndpointGroup"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute",
+      "https://www.googleapis.com/auth/compute.readonly"
+     ]
+    },
+    "insert": {
+     "id": "compute.regionNetworkEndpointGroups.insert",
+     "path": "{project}/regions/{region}/networkEndpointGroups",
+     "httpMethod": "POST",
+     "description": "Creates a network endpoint group in the specified project using the parameters that are included in the request.",
+     "parameters": {
+      "project": {
+       "type": "string",
+       "description": "Project ID for this request.",
+       "required": true,
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "location": "path"
+      },
+      "region": {
+       "type": "string",
+       "description": "The name of the region where you want to create the network endpoint group. It should comply with RFC1035.",
+       "required": true,
+       "location": "path"
+      },
+      "requestId": {
+       "type": "string",
+       "description": "An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed.\n\nFor example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments.\n\nThe request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).",
+       "location": "query"
+      }
+     },
+     "parameterOrder": [
+      "project",
+      "region"
+     ],
+     "request": {
+      "$ref": "NetworkEndpointGroup"
+     },
+     "response": {
+      "$ref": "Operation"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute"
+     ]
+    },
+    "list": {
+     "id": "compute.regionNetworkEndpointGroups.list",
+     "path": "{project}/regions/{region}/networkEndpointGroups",
+     "httpMethod": "GET",
+     "description": "Retrieves the list of regional network endpoint groups available to the specified project in the given region.",
+     "parameters": {
+      "filter": {
+       "type": "string",
+       "description": "A filter expression that filters resources listed in the response. The expression must specify the field name, a comparison operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The comparison operator must be either =, !=, \u003e, or \u003c.\n\nFor example, if you are filtering Compute Engine instances, you can exclude instances named example-instance by specifying name != example-instance.\n\nYou can also filter nested fields. For example, you could specify scheduling.automaticRestart = false to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels.\n\nTo filter on multiple expressions, provide each separate expression within parentheses. For example, (scheduling.automaticRestart = true) (cpuPlatform = \"Intel Skylake\"). By default, each expression is an AND expression. However, you can include AND and OR expressions explicitly. For example, (cpuPlatform = \"Intel Skylake\") OR (cpuPlatform = \"Intel Broadwell\") AND (scheduling.automaticRestart = true).",
+       "location": "query"
+      },
+      "maxResults": {
+       "type": "integer",
+       "description": "The maximum number of results per page that should be returned. If the number of available results is larger than maxResults, Compute Engine returns a nextPageToken that can be used to get the next page of results in subsequent list requests. Acceptable values are 0 to 500, inclusive. (Default: 500)",
+       "default": "500",
+       "format": "uint32",
+       "minimum": "0",
+       "location": "query"
+      },
+      "orderBy": {
+       "type": "string",
+       "description": "Sorts list results by a certain order. By default, results are returned in alphanumerical order based on the resource name.\n\nYou can also sort results in descending order based on the creation timestamp using orderBy=\"creationTimestamp desc\". This sorts results based on the creationTimestamp field in reverse chronological order (newest result first). Use this to sort resources like operations so that the newest operation is returned first.\n\nCurrently, only sorting by name or creationTimestamp desc is supported.",
+       "location": "query"
+      },
+      "pageToken": {
+       "type": "string",
+       "description": "Specifies a page token to use. Set pageToken to the nextPageToken returned by a previous list request to get the next page of results.",
+       "location": "query"
+      },
+      "project": {
+       "type": "string",
+       "description": "Project ID for this request.",
+       "required": true,
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "location": "path"
+      },
+      "region": {
+       "type": "string",
+       "description": "The name of the region where the network endpoint group is located. It should comply with RFC1035.",
+       "required": true,
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "project",
+      "region"
+     ],
+     "response": {
+      "$ref": "NetworkEndpointGroupList"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute",
+      "https://www.googleapis.com/auth/compute.readonly"
+     ]
+    }
+   }
+  },
   "regionNotificationEndpoints": {
    "methods": {
     "delete": {
@@ -52806,6 +53417,11 @@
        "description": "A filter expression that filters resources listed in the response. The expression must specify the field name, a comparison operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The comparison operator must be either =, !=, \u003e, or \u003c.\n\nFor example, if you are filtering Compute Engine instances, you can exclude instances named example-instance by specifying name != example-instance.\n\nYou can also filter nested fields. For example, you could specify scheduling.automaticRestart = false to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels.\n\nTo filter on multiple expressions, provide each separate expression within parentheses. For example, (scheduling.automaticRestart = true) (cpuPlatform = \"Intel Skylake\"). By default, each expression is an AND expression. However, you can include AND and OR expressions explicitly. For example, (cpuPlatform = \"Intel Skylake\") OR (cpuPlatform = \"Intel Broadwell\") AND (scheduling.automaticRestart = true).",
        "location": "query"
       },
+      "includeAllScopes": {
+       "type": "boolean",
+       "description": "Indicates whether every visible scope for each scope type (zone, region, global) should be included in the response. For new resource types added after this field, the flag has no effect as new resource types will always include every visible scope for each scope type in response. For resource types which predate this field, if this flag is omitted or false, only scopes of the scope types where the resource type is expected to be found will be included.",
+       "location": "query"
+      },
       "maxResults": {
        "type": "integer",
        "description": "The maximum number of results per page that should be returned. If the number of available results is larger than maxResults, Compute Engine returns a nextPageToken that can be used to get the next page of results in subsequent list requests. Acceptable values are 0 to 500, inclusive. (Default: 500)",
@@ -53231,6 +53847,11 @@
        "description": "A filter expression that filters resources listed in the response. The expression must specify the field name, a comparison operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The comparison operator must be either =, !=, \u003e, or \u003c.\n\nFor example, if you are filtering Compute Engine instances, you can exclude instances named example-instance by specifying name != example-instance.\n\nYou can also filter nested fields. For example, you could specify scheduling.automaticRestart = false to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels.\n\nTo filter on multiple expressions, provide each separate expression within parentheses. For example, (scheduling.automaticRestart = true) (cpuPlatform = \"Intel Skylake\"). By default, each expression is an AND expression. However, you can include AND and OR expressions explicitly. For example, (cpuPlatform = \"Intel Skylake\") OR (cpuPlatform = \"Intel Broadwell\") AND (scheduling.automaticRestart = true).",
        "location": "query"
       },
+      "includeAllScopes": {
+       "type": "boolean",
+       "description": "Indicates whether every visible scope for each scope type (zone, region, global) should be included in the response. For new resource types added after this field, the flag has no effect as new resource types will always include every visible scope for each scope type in response. For resource types which predate this field, if this flag is omitted or false, only scopes of the scope types where the resource type is expected to be found will be included.",
+       "location": "query"
+      },
       "maxResults": {
        "type": "integer",
        "description": "The maximum number of results per page that should be returned. If the number of available results is larger than maxResults, Compute Engine returns a nextPageToken that can be used to get the next page of results in subsequent list requests. Acceptable values are 0 to 500, inclusive. (Default: 500)",
@@ -53605,6 +54226,11 @@
       "filter": {
        "type": "string",
        "description": "A filter expression that filters resources listed in the response. The expression must specify the field name, a comparison operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The comparison operator must be either =, !=, \u003e, or \u003c.\n\nFor example, if you are filtering Compute Engine instances, you can exclude instances named example-instance by specifying name != example-instance.\n\nYou can also filter nested fields. For example, you could specify scheduling.automaticRestart = false to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels.\n\nTo filter on multiple expressions, provide each separate expression within parentheses. For example, (scheduling.automaticRestart = true) (cpuPlatform = \"Intel Skylake\"). By default, each expression is an AND expression. However, you can include AND and OR expressions explicitly. For example, (cpuPlatform = \"Intel Skylake\") OR (cpuPlatform = \"Intel Broadwell\") AND (scheduling.automaticRestart = true).",
+       "location": "query"
+      },
+      "includeAllScopes": {
+       "type": "boolean",
+       "description": "Indicates whether every visible scope for each scope type (zone, region, global) should be included in the response. For new resource types added after this field, the flag has no effect as new resource types will always include every visible scope for each scope type in response. For resource types which predate this field, if this flag is omitted or false, only scopes of the scope types where the resource type is expected to be found will be included.",
        "location": "query"
       },
       "maxResults": {
@@ -55107,6 +55733,11 @@
        "description": "A filter expression that filters resources listed in the response. The expression must specify the field name, a comparison operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The comparison operator must be either =, !=, \u003e, or \u003c.\n\nFor example, if you are filtering Compute Engine instances, you can exclude instances named example-instance by specifying name != example-instance.\n\nYou can also filter nested fields. For example, you could specify scheduling.automaticRestart = false to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels.\n\nTo filter on multiple expressions, provide each separate expression within parentheses. For example, (scheduling.automaticRestart = true) (cpuPlatform = \"Intel Skylake\"). By default, each expression is an AND expression. However, you can include AND and OR expressions explicitly. For example, (cpuPlatform = \"Intel Skylake\") OR (cpuPlatform = \"Intel Broadwell\") AND (scheduling.automaticRestart = true).",
        "location": "query"
       },
+      "includeAllScopes": {
+       "type": "boolean",
+       "description": "Indicates whether every visible scope for each scope type (zone, region, global) should be included in the response. For new resource types added after this field, the flag has no effect as new resource types will always include every visible scope for each scope type in response. For resource types which predate this field, if this flag is omitted or false, only scopes of the scope types where the resource type is expected to be found will be included.",
+       "location": "query"
+      },
       "maxResults": {
        "type": "integer",
        "description": "The maximum number of results per page that should be returned. If the number of available results is larger than maxResults, Compute Engine returns a nextPageToken that can be used to get the next page of results in subsequent list requests. Acceptable values are 0 to 500, inclusive. (Default: 500)",
@@ -55631,6 +56262,11 @@
       "filter": {
        "type": "string",
        "description": "A filter expression that filters resources listed in the response. The expression must specify the field name, a comparison operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The comparison operator must be either =, !=, \u003e, or \u003c.\n\nFor example, if you are filtering Compute Engine instances, you can exclude instances named example-instance by specifying name != example-instance.\n\nYou can also filter nested fields. For example, you could specify scheduling.automaticRestart = false to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels.\n\nTo filter on multiple expressions, provide each separate expression within parentheses. For example, (scheduling.automaticRestart = true) (cpuPlatform = \"Intel Skylake\"). By default, each expression is an AND expression. However, you can include AND and OR expressions explicitly. For example, (cpuPlatform = \"Intel Skylake\") OR (cpuPlatform = \"Intel Broadwell\") AND (scheduling.automaticRestart = true).",
+       "location": "query"
+      },
+      "includeAllScopes": {
+       "type": "boolean",
+       "description": "Indicates whether every visible scope for each scope type (zone, region, global) should be included in the response. For new resource types added after this field, the flag has no effect as new resource types will always include every visible scope for each scope type in response. For resource types which predate this field, if this flag is omitted or false, only scopes of the scope types where the resource type is expected to be found will be included.",
        "location": "query"
       },
       "maxResults": {
@@ -56211,6 +56847,11 @@
        "description": "A filter expression that filters resources listed in the response. The expression must specify the field name, a comparison operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The comparison operator must be either =, !=, \u003e, or \u003c.\n\nFor example, if you are filtering Compute Engine instances, you can exclude instances named example-instance by specifying name != example-instance.\n\nYou can also filter nested fields. For example, you could specify scheduling.automaticRestart = false to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels.\n\nTo filter on multiple expressions, provide each separate expression within parentheses. For example, (scheduling.automaticRestart = true) (cpuPlatform = \"Intel Skylake\"). By default, each expression is an AND expression. However, you can include AND and OR expressions explicitly. For example, (cpuPlatform = \"Intel Skylake\") OR (cpuPlatform = \"Intel Broadwell\") AND (scheduling.automaticRestart = true).",
        "location": "query"
       },
+      "includeAllScopes": {
+       "type": "boolean",
+       "description": "Indicates whether every visible scope for each scope type (zone, region, global) should be included in the response. For new resource types added after this field, the flag has no effect as new resource types will always include every visible scope for each scope type in response. For resource types which predate this field, if this flag is omitted or false, only scopes of the scope types where the resource type is expected to be found will be included.",
+       "location": "query"
+      },
       "maxResults": {
        "type": "integer",
        "description": "The maximum number of results per page that should be returned. If the number of available results is larger than maxResults, Compute Engine returns a nextPageToken that can be used to get the next page of results in subsequent list requests. Acceptable values are 0 to 500, inclusive. (Default: 500)",
@@ -56494,6 +57135,11 @@
       "filter": {
        "type": "string",
        "description": "A filter expression that filters resources listed in the response. The expression must specify the field name, a comparison operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The comparison operator must be either =, !=, \u003e, or \u003c.\n\nFor example, if you are filtering Compute Engine instances, you can exclude instances named example-instance by specifying name != example-instance.\n\nYou can also filter nested fields. For example, you could specify scheduling.automaticRestart = false to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels.\n\nTo filter on multiple expressions, provide each separate expression within parentheses. For example, (scheduling.automaticRestart = true) (cpuPlatform = \"Intel Skylake\"). By default, each expression is an AND expression. However, you can include AND and OR expressions explicitly. For example, (cpuPlatform = \"Intel Skylake\") OR (cpuPlatform = \"Intel Broadwell\") AND (scheduling.automaticRestart = true).",
+       "location": "query"
+      },
+      "includeAllScopes": {
+       "type": "boolean",
+       "description": "Indicates whether every visible scope for each scope type (zone, region, global) should be included in the response. For new resource types added after this field, the flag has no effect as new resource types will always include every visible scope for each scope type in response. For resource types which predate this field, if this flag is omitted or false, only scopes of the scope types where the resource type is expected to be found will be included.",
        "location": "query"
       },
       "maxResults": {
@@ -56902,6 +57548,11 @@
        "description": "A filter expression that filters resources listed in the response. The expression must specify the field name, a comparison operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The comparison operator must be either =, !=, \u003e, or \u003c.\n\nFor example, if you are filtering Compute Engine instances, you can exclude instances named example-instance by specifying name != example-instance.\n\nYou can also filter nested fields. For example, you could specify scheduling.automaticRestart = false to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels.\n\nTo filter on multiple expressions, provide each separate expression within parentheses. For example, (scheduling.automaticRestart = true) (cpuPlatform = \"Intel Skylake\"). By default, each expression is an AND expression. However, you can include AND and OR expressions explicitly. For example, (cpuPlatform = \"Intel Skylake\") OR (cpuPlatform = \"Intel Broadwell\") AND (scheduling.automaticRestart = true).",
        "location": "query"
       },
+      "includeAllScopes": {
+       "type": "boolean",
+       "description": "Indicates whether every visible scope for each scope type (zone, region, global) should be included in the response. For new resource types added after this field, the flag has no effect as new resource types will always include every visible scope for each scope type in response. For resource types which predate this field, if this flag is omitted or false, only scopes of the scope types where the resource type is expected to be found will be included.",
+       "location": "query"
+      },
       "maxResults": {
        "type": "integer",
        "description": "The maximum number of results per page that should be returned. If the number of available results is larger than maxResults, Compute Engine returns a nextPageToken that can be used to get the next page of results in subsequent list requests. Acceptable values are 0 to 500, inclusive. (Default: 500)",
@@ -57282,6 +57933,11 @@
       "filter": {
        "type": "string",
        "description": "A filter expression that filters resources listed in the response. The expression must specify the field name, a comparison operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The comparison operator must be either =, !=, \u003e, or \u003c.\n\nFor example, if you are filtering Compute Engine instances, you can exclude instances named example-instance by specifying name != example-instance.\n\nYou can also filter nested fields. For example, you could specify scheduling.automaticRestart = false to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels.\n\nTo filter on multiple expressions, provide each separate expression within parentheses. For example, (scheduling.automaticRestart = true) (cpuPlatform = \"Intel Skylake\"). By default, each expression is an AND expression. However, you can include AND and OR expressions explicitly. For example, (cpuPlatform = \"Intel Skylake\") OR (cpuPlatform = \"Intel Broadwell\") AND (scheduling.automaticRestart = true).",
+       "location": "query"
+      },
+      "includeAllScopes": {
+       "type": "boolean",
+       "description": "Indicates whether every visible scope for each scope type (zone, region, global) should be included in the response. For new resource types added after this field, the flag has no effect as new resource types will always include every visible scope for each scope type in response. For resource types which predate this field, if this flag is omitted or false, only scopes of the scope types where the resource type is expected to be found will be included.",
        "location": "query"
       },
       "maxResults": {
@@ -58401,6 +59057,11 @@
        "description": "A filter expression that filters resources listed in the response. The expression must specify the field name, a comparison operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The comparison operator must be either =, !=, \u003e, or \u003c.\n\nFor example, if you are filtering Compute Engine instances, you can exclude instances named example-instance by specifying name != example-instance.\n\nYou can also filter nested fields. For example, you could specify scheduling.automaticRestart = false to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels.\n\nTo filter on multiple expressions, provide each separate expression within parentheses. For example, (scheduling.automaticRestart = true) (cpuPlatform = \"Intel Skylake\"). By default, each expression is an AND expression. However, you can include AND and OR expressions explicitly. For example, (cpuPlatform = \"Intel Skylake\") OR (cpuPlatform = \"Intel Broadwell\") AND (scheduling.automaticRestart = true).",
        "location": "query"
       },
+      "includeAllScopes": {
+       "type": "boolean",
+       "description": "Indicates whether every visible scope for each scope type (zone, region, global) should be included in the response. For new resource types added after this field, the flag has no effect as new resource types will always include every visible scope for each scope type in response. For resource types which predate this field, if this flag is omitted or false, only scopes of the scope types where the resource type is expected to be found will be included.",
+       "location": "query"
+      },
       "maxResults": {
        "type": "integer",
        "description": "The maximum number of results per page that should be returned. If the number of available results is larger than maxResults, Compute Engine returns a nextPageToken that can be used to get the next page of results in subsequent list requests. Acceptable values are 0 to 500, inclusive. (Default: 500)",
@@ -58732,6 +59393,11 @@
       "filter": {
        "type": "string",
        "description": "A filter expression that filters resources listed in the response. The expression must specify the field name, a comparison operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The comparison operator must be either =, !=, \u003e, or \u003c.\n\nFor example, if you are filtering Compute Engine instances, you can exclude instances named example-instance by specifying name != example-instance.\n\nYou can also filter nested fields. For example, you could specify scheduling.automaticRestart = false to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels.\n\nTo filter on multiple expressions, provide each separate expression within parentheses. For example, (scheduling.automaticRestart = true) (cpuPlatform = \"Intel Skylake\"). By default, each expression is an AND expression. However, you can include AND and OR expressions explicitly. For example, (cpuPlatform = \"Intel Skylake\") OR (cpuPlatform = \"Intel Broadwell\") AND (scheduling.automaticRestart = true).",
+       "location": "query"
+      },
+      "includeAllScopes": {
+       "type": "boolean",
+       "description": "Indicates whether every visible scope for each scope type (zone, region, global) should be included in the response. For new resource types added after this field, the flag has no effect as new resource types will always include every visible scope for each scope type in response. For resource types which predate this field, if this flag is omitted or false, only scopes of the scope types where the resource type is expected to be found will be included.",
        "location": "query"
       },
       "maxResults": {
@@ -59137,6 +59803,11 @@
        "description": "A filter expression that filters resources listed in the response. The expression must specify the field name, a comparison operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The comparison operator must be either =, !=, \u003e, or \u003c.\n\nFor example, if you are filtering Compute Engine instances, you can exclude instances named example-instance by specifying name != example-instance.\n\nYou can also filter nested fields. For example, you could specify scheduling.automaticRestart = false to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels.\n\nTo filter on multiple expressions, provide each separate expression within parentheses. For example, (scheduling.automaticRestart = true) (cpuPlatform = \"Intel Skylake\"). By default, each expression is an AND expression. However, you can include AND and OR expressions explicitly. For example, (cpuPlatform = \"Intel Skylake\") OR (cpuPlatform = \"Intel Broadwell\") AND (scheduling.automaticRestart = true).",
        "location": "query"
       },
+      "includeAllScopes": {
+       "type": "boolean",
+       "description": "Indicates whether every visible scope for each scope type (zone, region, global) should be included in the response. For new resource types added after this field, the flag has no effect as new resource types will always include every visible scope for each scope type in response. For resource types which predate this field, if this flag is omitted or false, only scopes of the scope types where the resource type is expected to be found will be included.",
+       "location": "query"
+      },
       "maxResults": {
        "type": "integer",
        "description": "The maximum number of results per page that should be returned. If the number of available results is larger than maxResults, Compute Engine returns a nextPageToken that can be used to get the next page of results in subsequent list requests. Acceptable values are 0 to 500, inclusive. (Default: 500)",
@@ -59510,6 +60181,11 @@
       "filter": {
        "type": "string",
        "description": "A filter expression that filters resources listed in the response. The expression must specify the field name, a comparison operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The comparison operator must be either =, !=, \u003e, or \u003c.\n\nFor example, if you are filtering Compute Engine instances, you can exclude instances named example-instance by specifying name != example-instance.\n\nYou can also filter nested fields. For example, you could specify scheduling.automaticRestart = false to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels.\n\nTo filter on multiple expressions, provide each separate expression within parentheses. For example, (scheduling.automaticRestart = true) (cpuPlatform = \"Intel Skylake\"). By default, each expression is an AND expression. However, you can include AND and OR expressions explicitly. For example, (cpuPlatform = \"Intel Skylake\") OR (cpuPlatform = \"Intel Broadwell\") AND (scheduling.automaticRestart = true).",
+       "location": "query"
+      },
+      "includeAllScopes": {
+       "type": "boolean",
+       "description": "Indicates whether every visible scope for each scope type (zone, region, global) should be included in the response. For new resource types added after this field, the flag has no effect as new resource types will always include every visible scope for each scope type in response. For resource types which predate this field, if this flag is omitted or false, only scopes of the scope types where the resource type is expected to be found will be included.",
        "location": "query"
       },
       "maxResults": {

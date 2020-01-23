@@ -31,17 +31,16 @@ public final class CallCredentials extends com.google.api.client.json.GenericJso
 
   /**
    * The type of call credentials to use for GRPC requests to the SDS server. This field can be set
-   * to one of the following: ACCESS_TOKEN: An access token is used as call credentials for the SDS
-   * server. GCE_VM: The local GCE VM service account credentials are used to access the SDS server.
-   * JWT_SERVICE_TOKEN: The user provisioned service account credentials are used to access the SDS
-   * server. FROM_PLUGIN: Custom authenticator credentials are used to access the SDS server.
+   * to one of the following: - GCE_VM: The local GCE VM service account credentials are used to
+   * access the SDS server. - FROM_PLUGIN: Custom authenticator credentials are used to access the
+   * SDS server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String callCredentialType;
 
   /**
-   * Custom authenticator credentials.
+   * Custom authenticator credentials. Valid if callCredentialType is FROM_PLUGIN.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,10 +48,9 @@ public final class CallCredentials extends com.google.api.client.json.GenericJso
 
   /**
    * The type of call credentials to use for GRPC requests to the SDS server. This field can be set
-   * to one of the following: ACCESS_TOKEN: An access token is used as call credentials for the SDS
-   * server. GCE_VM: The local GCE VM service account credentials are used to access the SDS server.
-   * JWT_SERVICE_TOKEN: The user provisioned service account credentials are used to access the SDS
-   * server. FROM_PLUGIN: Custom authenticator credentials are used to access the SDS server.
+   * to one of the following: - GCE_VM: The local GCE VM service account credentials are used to
+   * access the SDS server. - FROM_PLUGIN: Custom authenticator credentials are used to access the
+   * SDS server.
    * @return value or {@code null} for none
    */
   public java.lang.String getCallCredentialType() {
@@ -61,10 +59,9 @@ public final class CallCredentials extends com.google.api.client.json.GenericJso
 
   /**
    * The type of call credentials to use for GRPC requests to the SDS server. This field can be set
-   * to one of the following: ACCESS_TOKEN: An access token is used as call credentials for the SDS
-   * server. GCE_VM: The local GCE VM service account credentials are used to access the SDS server.
-   * JWT_SERVICE_TOKEN: The user provisioned service account credentials are used to access the SDS
-   * server. FROM_PLUGIN: Custom authenticator credentials are used to access the SDS server.
+   * to one of the following: - GCE_VM: The local GCE VM service account credentials are used to
+   * access the SDS server. - FROM_PLUGIN: Custom authenticator credentials are used to access the
+   * SDS server.
    * @param callCredentialType callCredentialType or {@code null} for none
    */
   public CallCredentials setCallCredentialType(java.lang.String callCredentialType) {
@@ -73,7 +70,7 @@ public final class CallCredentials extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Custom authenticator credentials.
+   * Custom authenticator credentials. Valid if callCredentialType is FROM_PLUGIN.
    * @return value or {@code null} for none
    */
   public MetadataCredentialsFromPlugin getFromPlugin() {
@@ -81,7 +78,7 @@ public final class CallCredentials extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Custom authenticator credentials.
+   * Custom authenticator credentials. Valid if callCredentialType is FROM_PLUGIN.
    * @param fromPlugin fromPlugin or {@code null} for none
    */
   public CallCredentials setFromPlugin(MetadataCredentialsFromPlugin fromPlugin) {

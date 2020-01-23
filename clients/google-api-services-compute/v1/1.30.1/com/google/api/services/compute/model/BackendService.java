@@ -19,15 +19,12 @@ package com.google.api.services.compute.model;
 /**
  * Represents a Backend Service resource.
  *
- * Backend services must have an associated health check. Backend services also store information
- * about session affinity. For more information, read Backend Services.
+ * A backend service contains configuration values for Google Cloud Platform load balancing
+ * services.
  *
- * A backendServices resource represents a global backend service. Global backend services are used
- * for HTTP(S), SSL Proxy, TCP Proxy load balancing and Traffic Director.
+ * For more information, read Backend Services.
  *
- * A regionBackendServices resource represents a regional backend service. Regional backend services
- * are used for internal TCP/UDP load balancing. For more information, read Internal TCP/UDP Load
- * balancing. (== resource_for v1.backendService ==) (== resource_for beta.backendService ==)
+ * (== resource_for v1.backendService ==) (== resource_for beta.backendService ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -68,7 +65,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private BackendServiceCdnPolicy cdnPolicy;
 
   /**
-   * Settings controlling the volume of connections to a backend service.
+   * Settings controlling the volume of connections to a backend service. If not set, this feature
+   * is considered disabled.
    *
    * This field is applicable to either:   - A regional backend service with the service_protocol
    * set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global
@@ -174,9 +172,11 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.lang.String kind;
 
   /**
-   * Indicates whether the backend service will be used with internal or external load balancing. A
-   * backend service created for one type of load balancing cannot be used with the other. Possible
-   * values are INTERNAL and EXTERNAL.
+   * Specifies the load balancer type. Choose EXTERNAL for load balancers that receive traffic from
+   * external clients. Choose INTERNAL for Internal TCP/UDP Load Balancing. Choose INTERNAL_MANAGED
+   * for Internal HTTP(S) Load Balancing. Choose INTERNAL_SELF_MANAGED for Traffic Director. A
+   * backend service created for one type of load balancing cannot be used with another. For more
+   * information, refer to Choosing a load balancer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -200,6 +200,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * This field is applicable to either:   - A regional backend service with the service_protocol
    * set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global
    * backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+   *
+   * If sessionAffinity is not NONE, and this field is not set to >MAGLEV or RING_HASH, session
+   * affinity settings will not take effect.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -217,10 +220,12 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.lang.String name;
 
   /**
-   * Settings controlling eviction of unhealthy hosts from the load balancing pool. This field is
-   * applicable to either: - A regional backend service with the service_protocol set to HTTP,
-   * HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global backend service
-   * with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+   * Settings controlling the eviction of unhealthy hosts from the load balancing pool for the
+   * backend service. If not set, this feature is considered disabled.
+   *
+   * This field is applicable to either:   - A regional backend service with the service_protocol
+   * set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global
+   * backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -251,9 +256,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * The protocol this BackendService uses to communicate with backends.
    *
-   * Possible values are HTTP, HTTPS, TCP, SSL, or UDP, depending on the chosen load balancer or
-   * Traffic Director configuration. Refer to the documentation for the load balancer or for Traffic
-   * director for more information.
+   * Possible values are HTTP, HTTPS, HTTP2, TCP, SSL, or UDP, depending on the chosen load balancer
+   * or Traffic Director configuration. Refer to the documentation for the load balancer or for
+   * Traffic Director for more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -292,8 +297,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * When the loadBalancingScheme is INTERNAL, possible values are NONE, CLIENT_IP, CLIENT_IP_PROTO,
    * or CLIENT_IP_PORT_PROTO.
    *
-   * When the loadBalancingScheme is INTERNAL_SELF_MANAGED, possible values are NONE, CLIENT_IP,
-   * GENERATED_COOKIE, HEADER_FIELD, or HTTP_COOKIE.
+   * When the loadBalancingScheme is INTERNAL_SELF_MANAGED, or INTERNAL_MANAGED, possible values are
+   * NONE, CLIENT_IP, GENERATED_COOKIE, HEADER_FIELD, or HTTP_COOKIE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -361,7 +366,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Settings controlling the volume of connections to a backend service.
+   * Settings controlling the volume of connections to a backend service. If not set, this feature
+   * is considered disabled.
    *
    * This field is applicable to either:   - A regional backend service with the service_protocol
    * set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global
@@ -373,7 +379,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Settings controlling the volume of connections to a backend service.
+   * Settings controlling the volume of connections to a backend service. If not set, this feature
+   * is considered disabled.
    *
    * This field is applicable to either:   - A regional backend service with the service_protocol
    * set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global
@@ -647,9 +654,11 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Indicates whether the backend service will be used with internal or external load balancing. A
-   * backend service created for one type of load balancing cannot be used with the other. Possible
-   * values are INTERNAL and EXTERNAL.
+   * Specifies the load balancer type. Choose EXTERNAL for load balancers that receive traffic from
+   * external clients. Choose INTERNAL for Internal TCP/UDP Load Balancing. Choose INTERNAL_MANAGED
+   * for Internal HTTP(S) Load Balancing. Choose INTERNAL_SELF_MANAGED for Traffic Director. A
+   * backend service created for one type of load balancing cannot be used with another. For more
+   * information, refer to Choosing a load balancer.
    * @return value or {@code null} for none
    */
   public java.lang.String getLoadBalancingScheme() {
@@ -657,9 +666,11 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Indicates whether the backend service will be used with internal or external load balancing. A
-   * backend service created for one type of load balancing cannot be used with the other. Possible
-   * values are INTERNAL and EXTERNAL.
+   * Specifies the load balancer type. Choose EXTERNAL for load balancers that receive traffic from
+   * external clients. Choose INTERNAL for Internal TCP/UDP Load Balancing. Choose INTERNAL_MANAGED
+   * for Internal HTTP(S) Load Balancing. Choose INTERNAL_SELF_MANAGED for Traffic Director. A
+   * backend service created for one type of load balancing cannot be used with another. For more
+   * information, refer to Choosing a load balancer.
    * @param loadBalancingScheme loadBalancingScheme or {@code null} for none
    */
   public BackendService setLoadBalancingScheme(java.lang.String loadBalancingScheme) {
@@ -685,6 +696,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * This field is applicable to either:   - A regional backend service with the service_protocol
    * set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global
    * backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+   *
+   * If sessionAffinity is not NONE, and this field is not set to >MAGLEV or RING_HASH, session
+   * affinity settings will not take effect.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocalityLbPolicy() {
@@ -709,6 +723,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * This field is applicable to either:   - A regional backend service with the service_protocol
    * set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global
    * backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+   *
+   * If sessionAffinity is not NONE, and this field is not set to >MAGLEV or RING_HASH, session
+   * affinity settings will not take effect.
    * @param localityLbPolicy localityLbPolicy or {@code null} for none
    */
   public BackendService setLocalityLbPolicy(java.lang.String localityLbPolicy) {
@@ -742,10 +759,12 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Settings controlling eviction of unhealthy hosts from the load balancing pool. This field is
-   * applicable to either: - A regional backend service with the service_protocol set to HTTP,
-   * HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global backend service
-   * with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+   * Settings controlling the eviction of unhealthy hosts from the load balancing pool for the
+   * backend service. If not set, this feature is considered disabled.
+   *
+   * This field is applicable to either:   - A regional backend service with the service_protocol
+   * set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global
+   * backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
    * @return value or {@code null} for none
    */
   public OutlierDetection getOutlierDetection() {
@@ -753,10 +772,12 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Settings controlling eviction of unhealthy hosts from the load balancing pool. This field is
-   * applicable to either: - A regional backend service with the service_protocol set to HTTP,
-   * HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global backend service
-   * with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+   * Settings controlling the eviction of unhealthy hosts from the load balancing pool for the
+   * backend service. If not set, this feature is considered disabled.
+   *
+   * This field is applicable to either:   - A regional backend service with the service_protocol
+   * set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global
+   * backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
    * @param outlierDetection outlierDetection or {@code null} for none
    */
   public BackendService setOutlierDetection(OutlierDetection outlierDetection) {
@@ -817,9 +838,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * The protocol this BackendService uses to communicate with backends.
    *
-   * Possible values are HTTP, HTTPS, TCP, SSL, or UDP, depending on the chosen load balancer or
-   * Traffic Director configuration. Refer to the documentation for the load balancer or for Traffic
-   * director for more information.
+   * Possible values are HTTP, HTTPS, HTTP2, TCP, SSL, or UDP, depending on the chosen load balancer
+   * or Traffic Director configuration. Refer to the documentation for the load balancer or for
+   * Traffic Director for more information.
    * @return value or {@code null} for none
    */
   public java.lang.String getProtocol() {
@@ -829,9 +850,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * The protocol this BackendService uses to communicate with backends.
    *
-   * Possible values are HTTP, HTTPS, TCP, SSL, or UDP, depending on the chosen load balancer or
-   * Traffic Director configuration. Refer to the documentation for the load balancer or for Traffic
-   * director for more information.
+   * Possible values are HTTP, HTTPS, HTTP2, TCP, SSL, or UDP, depending on the chosen load balancer
+   * or Traffic Director configuration. Refer to the documentation for the load balancer or for
+   * Traffic Director for more information.
    * @param protocol protocol or {@code null} for none
    */
   public BackendService setProtocol(java.lang.String protocol) {
@@ -904,8 +925,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * When the loadBalancingScheme is INTERNAL, possible values are NONE, CLIENT_IP, CLIENT_IP_PROTO,
    * or CLIENT_IP_PORT_PROTO.
    *
-   * When the loadBalancingScheme is INTERNAL_SELF_MANAGED, possible values are NONE, CLIENT_IP,
-   * GENERATED_COOKIE, HEADER_FIELD, or HTTP_COOKIE.
+   * When the loadBalancingScheme is INTERNAL_SELF_MANAGED, or INTERNAL_MANAGED, possible values are
+   * NONE, CLIENT_IP, GENERATED_COOKIE, HEADER_FIELD, or HTTP_COOKIE.
    * @return value or {@code null} for none
    */
   public java.lang.String getSessionAffinity() {
@@ -922,8 +943,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * When the loadBalancingScheme is INTERNAL, possible values are NONE, CLIENT_IP, CLIENT_IP_PROTO,
    * or CLIENT_IP_PORT_PROTO.
    *
-   * When the loadBalancingScheme is INTERNAL_SELF_MANAGED, possible values are NONE, CLIENT_IP,
-   * GENERATED_COOKIE, HEADER_FIELD, or HTTP_COOKIE.
+   * When the loadBalancingScheme is INTERNAL_SELF_MANAGED, or INTERNAL_MANAGED, possible values are
+   * NONE, CLIENT_IP, GENERATED_COOKIE, HEADER_FIELD, or HTTP_COOKIE.
    * @param sessionAffinity sessionAffinity or {@code null} for none
    */
   public BackendService setSessionAffinity(java.lang.String sessionAffinity) {

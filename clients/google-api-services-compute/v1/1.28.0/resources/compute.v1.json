@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"LYADMvHWYH2ul9D6m9UT9gT77YM/vJ5sEvcswqgzJDezOEEfhJ7kuRc\"",
+ "etag": "\"LYADMvHWYH2ul9D6m9UT9gT77YM/1LnP0Zro00iUoT3mgctVphUVN5I\"",
  "discoveryVersion": "v1",
  "id": "compute:v1",
  "name": "compute",
  "version": "v1",
- "revision": "20190905",
+ "revision": "20191125",
  "title": "Compute Engine API",
  "description": "Creates and runs virtual machines on Google Cloud Platform.",
  "ownerDomain": "google.com",
@@ -1057,7 +1057,7 @@
     },
     "inUseCount": {
      "type": "string",
-     "description": "[OutputOnly] Indicates how many instances are in use.",
+     "description": "[Output Only] Indicates how many instances are in use.",
      "format": "int64"
     },
     "instanceProperties": {
@@ -1172,7 +1172,7 @@
     },
     "diskSizeGb": {
      "type": "string",
-     "description": "Specifies the size of the disk in base-2 GB. If not specified, the disk will be the same size as the image (usually 10GB). If specified, the size must be equal to or larger than 10GB.",
+     "description": "Specifies the size of the disk in base-2 GB. The size must be at least 10 GB. If you specify a sourceImage, which is required for boot disks, the default size is the size of the sourceImage. If you do not specify a sourceImage, the default disk size is 500 GB.",
      "format": "int64"
     },
     "diskType": {
@@ -1332,6 +1332,11 @@
       ]
      }
     },
+    "recommendedSize": {
+     "type": "integer",
+     "description": "[Output Only] Target recommended MIG size (number of instances) computed by autoscaler. Autoscaler calculates recommended MIG size even when autoscaling policy mode is different from ON. This field is empty when autoscaler is not connected to the existing managed instance group or autoscaler did not generate its prediction.",
+     "format": "int32"
+    },
     "region": {
      "type": "string",
      "description": "[Output Only] URL of the region where the instance group resides (for autoscalers living in regional scope)."
@@ -1342,7 +1347,7 @@
     },
     "status": {
      "type": "string",
-     "description": "[Output Only] The status of the autoscaler configuration.",
+     "description": "[Output Only] The status of the autoscaler configuration. Current set of possible values:  \n- PENDING: Autoscaler backend hasn't read new/updated configuration. \n- DELETING: Configuration is being deleted. \n- ACTIVE: Configuration is acknowledged to be effective. Some warnings might be present in the statusDetails field. \n- ERROR: Configuration has errors. Actionable for users. Details are present in the statusDetails field.  New values might be added in the future.",
      "enum": [
       "ACTIVE",
       "DELETING",
@@ -1607,7 +1612,7 @@
     },
     "type": {
      "type": "string",
-     "description": "The type of error returned.",
+     "description": "The type of error, warning, or notice returned. Current set of possible values:  \n- ALL_INSTANCES_UNHEALTHY (WARNING): All instances in the instance group are unhealthy (not in RUNNING state). \n- BACKEND_SERVICE_DOES_NOT_EXIST (ERROR): There is no backend service attached to the instance group. \n- CAPPED_AT_MAX_NUM_REPLICAS (WARNING): Autoscaler recommends a size greater than maxNumReplicas. \n- CUSTOM_METRIC_DATA_POINTS_TOO_SPARSE (WARNING): The custom metric samples are not exported often enough to be a credible base for autoscaling. \n- CUSTOM_METRIC_INVALID (ERROR): The custom metric that was specified does not exist or does not have the necessary labels. \n- MIN_EQUALS_MAX (WARNING): The minNumReplicas is equal to maxNumReplicas. This means the autoscaler cannot add or remove instances from the instance group. \n- MISSING_CUSTOM_METRIC_DATA_POINTS (WARNING): The autoscaler did not receive any data from the custom metric configured for autoscaling. \n- MISSING_LOAD_BALANCING_DATA_POINTS (WARNING): The autoscaler is configured to scale based on a load balancing signal but the instance group has not received any requests from the load balancer. \n- MODE_OFF (WARNING): Autoscaling is turned off. The number of instances in the group won't change automatically. The autoscaling configuration is preserved. \n- MODE_ONLY_UP (WARNING): Autoscaling is in the \"Autoscale only up\" mode. The autoscaler can add instances but not remove any. \n- MORE_THAN_ONE_BACKEND_SERVICE (ERROR): The instance group cannot be autoscaled because it has more than one backend service attached to it. \n- NOT_ENOUGH_QUOTA_AVAILABLE (ERROR): There is insufficient quota for the necessary resources, such as CPU or number of instances. \n- REGION_RESOURCE_STOCKOUT (ERROR): Shown only for regional autoscalers: there is a resource stockout in the chosen region. \n- SCALING_TARGET_DOES_NOT_EXIST (ERROR): The target to be scaled does not exist. \n- UNSUPPORTED_MAX_RATE_LOAD_BALANCING_CONFIGURATION (ERROR): Autoscaling does not work with an HTTP/S load balancer that has been configured for maxRate. \n- ZONE_RESOURCE_STOCKOUT (ERROR): For zonal autoscalers: there is a resource stockout in the chosen zone. For regional autoscalers: in at least one of the zones you're using there is a resource stockout.  New values might be added in the future. Some of the values might not be available in all API versions.",
      "enum": [
       "ALL_INSTANCES_UNHEALTHY",
       "BACKEND_SERVICE_DOES_NOT_EXIST",
@@ -1617,6 +1622,8 @@
       "MIN_EQUALS_MAX",
       "MISSING_CUSTOM_METRIC_DATA_POINTS",
       "MISSING_LOAD_BALANCING_DATA_POINTS",
+      "MODE_OFF",
+      "MODE_ONLY_UP",
       "MORE_THAN_ONE_BACKEND_SERVICE",
       "NOT_ENOUGH_QUOTA_AVAILABLE",
       "REGION_RESOURCE_STOCKOUT",
@@ -1626,6 +1633,8 @@
       "ZONE_RESOURCE_STOCKOUT"
      ],
      "enumDescriptions": [
+      "",
+      "",
       "",
       "",
       "",
@@ -1773,6 +1782,20 @@
      "type": "integer",
      "description": "The minimum number of replicas that the autoscaler can scale down to. This cannot be less than 0. If not provided, autoscaler will choose a default value depending on maximum number of instances allowed.",
      "format": "int32"
+    },
+    "mode": {
+     "type": "string",
+     "description": "Defines operating mode for this policy.",
+     "enum": [
+      "OFF",
+      "ON",
+      "ONLY_UP"
+     ],
+     "enumDescriptions": [
+      "",
+      "",
+      ""
+     ]
     }
    }
   },
@@ -2079,7 +2102,7 @@
   "BackendService": {
    "id": "BackendService",
    "type": "object",
-   "description": "Represents a Backend Service resource.\n\n\n\nBackend services must have an associated health check. Backend services also store information about session affinity. For more information, read Backend Services.\n\nA backendServices resource represents a global backend service. Global backend services are used for HTTP(S), SSL Proxy, TCP Proxy load balancing and Traffic Director.\n\nA regionBackendServices resource represents a regional backend service. Regional backend services are used for internal TCP/UDP load balancing. For more information, read Internal TCP/UDP Load balancing. (== resource_for v1.backendService ==) (== resource_for beta.backendService ==)",
+   "description": "Represents a Backend Service resource.\n\nA backend service contains configuration values for Google Cloud Platform load balancing services.\n\nFor more information, read Backend Services.\n\n(== resource_for v1.backendService ==) (== resource_for beta.backendService ==)",
    "properties": {
     "affinityCookieTtlSec": {
      "type": "integer",
@@ -2099,7 +2122,7 @@
     },
     "circuitBreakers": {
      "$ref": "CircuitBreakers",
-     "description": "Settings controlling the volume of connections to a backend service.\n\nThis field is applicable to either:  \n- A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. \n- A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED."
+     "description": "Settings controlling the volume of connections to a backend service. If not set, this feature is considered disabled.\n\nThis field is applicable to either:  \n- A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. \n- A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED."
     },
     "connectionDraining": {
      "$ref": "ConnectionDraining"
@@ -2154,7 +2177,7 @@
     },
     "loadBalancingScheme": {
      "type": "string",
-     "description": "Indicates whether the backend service will be used with internal or external load balancing. A backend service created for one type of load balancing cannot be used with the other. Possible values are INTERNAL and EXTERNAL.",
+     "description": "Specifies the load balancer type. Choose EXTERNAL for load balancers that receive traffic from external clients. Choose INTERNAL for Internal TCP/UDP Load Balancing. Choose INTERNAL_MANAGED for Internal HTTP(S) Load Balancing. Choose INTERNAL_SELF_MANAGED for Traffic Director. A backend service created for one type of load balancing cannot be used with another. For more information, refer to Choosing a load balancer.",
      "enum": [
       "EXTERNAL",
       "INTERNAL",
@@ -2172,7 +2195,7 @@
     },
     "localityLbPolicy": {
      "type": "string",
-     "description": "The load balancing algorithm used within the scope of the locality. The possible values are:  \n- ROUND_ROBIN: This is a simple policy in which each healthy backend is selected in round robin order. This is the default. \n- LEAST_REQUEST: An O(1) algorithm which selects two random healthy hosts and picks the host which has fewer active requests. \n- RING_HASH: The ring/modulo hash load balancer implements consistent hashing to backends. The algorithm has the property that the addition/removal of a host from a set of N hosts only affects 1/N of the requests. \n- RANDOM: The load balancer selects a random healthy host. \n- ORIGINAL_DESTINATION: Backend host is selected based on the client connection metadata, i.e., connections are opened to the same address as the destination address of the incoming connection before the connection was redirected to the load balancer. \n- MAGLEV: used as a drop in replacement for the ring hash load balancer. Maglev is not as stable as ring hash but has faster table lookup build times and host selection times. For more information about Maglev, refer to https://ai.google/research/pubs/pub44824 \n\nThis field is applicable to either:  \n- A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. \n- A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.",
+     "description": "The load balancing algorithm used within the scope of the locality. The possible values are:  \n- ROUND_ROBIN: This is a simple policy in which each healthy backend is selected in round robin order. This is the default. \n- LEAST_REQUEST: An O(1) algorithm which selects two random healthy hosts and picks the host which has fewer active requests. \n- RING_HASH: The ring/modulo hash load balancer implements consistent hashing to backends. The algorithm has the property that the addition/removal of a host from a set of N hosts only affects 1/N of the requests. \n- RANDOM: The load balancer selects a random healthy host. \n- ORIGINAL_DESTINATION: Backend host is selected based on the client connection metadata, i.e., connections are opened to the same address as the destination address of the incoming connection before the connection was redirected to the load balancer. \n- MAGLEV: used as a drop in replacement for the ring hash load balancer. Maglev is not as stable as ring hash but has faster table lookup build times and host selection times. For more information about Maglev, refer to https://ai.google/research/pubs/pub44824 \n\nThis field is applicable to either:  \n- A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. \n- A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.  \n\nIf sessionAffinity is not NONE, and this field is not set to \u003eMAGLEV or RING_HASH, session affinity settings will not take effect.",
      "enum": [
       "INVALID_LB_POLICY",
       "LEAST_REQUEST",
@@ -2199,7 +2222,7 @@
     },
     "outlierDetection": {
      "$ref": "OutlierDetection",
-     "description": "Settings controlling eviction of unhealthy hosts from the load balancing pool. This field is applicable to either:  \n- A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. \n- A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED."
+     "description": "Settings controlling the eviction of unhealthy hosts from the load balancing pool for the backend service. If not set, this feature is considered disabled.\n\nThis field is applicable to either:  \n- A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. \n- A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED."
     },
     "port": {
      "type": "integer",
@@ -2212,7 +2235,7 @@
     },
     "protocol": {
      "type": "string",
-     "description": "The protocol this BackendService uses to communicate with backends.\n\nPossible values are HTTP, HTTPS, TCP, SSL, or UDP, depending on the chosen load balancer or Traffic Director configuration. Refer to the documentation for the load balancer or for Traffic director for more information.",
+     "description": "The protocol this BackendService uses to communicate with backends.\n\nPossible values are HTTP, HTTPS, HTTP2, TCP, SSL, or UDP, depending on the chosen load balancer or Traffic Director configuration. Refer to the documentation for the load balancer or for Traffic Director for more information.",
      "enum": [
       "HTTP",
       "HTTP2",
@@ -2244,7 +2267,7 @@
     },
     "sessionAffinity": {
      "type": "string",
-     "description": "Type of session affinity to use. The default is NONE. Session affinity is not applicable if the --protocol is UDP.\n\nWhen the loadBalancingScheme is EXTERNAL, possible values are NONE, CLIENT_IP, or GENERATED_COOKIE. You can use GENERATED_COOKIE if the protocol is HTTP or HTTPS.\n\nWhen the loadBalancingScheme is INTERNAL, possible values are NONE, CLIENT_IP, CLIENT_IP_PROTO, or CLIENT_IP_PORT_PROTO.\n\nWhen the loadBalancingScheme is INTERNAL_SELF_MANAGED, possible values are NONE, CLIENT_IP, GENERATED_COOKIE, HEADER_FIELD, or HTTP_COOKIE.",
+     "description": "Type of session affinity to use. The default is NONE. Session affinity is not applicable if the --protocol is UDP.\n\nWhen the loadBalancingScheme is EXTERNAL, possible values are NONE, CLIENT_IP, or GENERATED_COOKIE. You can use GENERATED_COOKIE if the protocol is HTTP or HTTPS.\n\nWhen the loadBalancingScheme is INTERNAL, possible values are NONE, CLIENT_IP, CLIENT_IP_PROTO, or CLIENT_IP_PORT_PROTO.\n\nWhen the loadBalancingScheme is INTERNAL_SELF_MANAGED, or INTERNAL_MANAGED, possible values are NONE, CLIENT_IP, GENERATED_COOKIE, HEADER_FIELD, or HTTP_COOKIE.",
      "enum": [
       "CLIENT_IP",
       "CLIENT_IP_PORT_PROTO",
@@ -2671,7 +2694,7 @@
     },
     "members": {
      "type": "array",
-     "description": "Specifies the identities requesting access for a Cloud Platform resource. `members` can have the following values:\n\n* `allUsers`: A special identifier that represents anyone who is on the internet; with or without a Google account.\n\n* `allAuthenticatedUsers`: A special identifier that represents anyone who is authenticated with a Google account or a service account.\n\n* `user:{emailid}`: An email address that represents a specific Google account. For example, `alice@example.com` .\n\n\n\n* `serviceAccount:{emailid}`: An email address that represents a service account. For example, `my-other-app@appspot.gserviceaccount.com`.\n\n* `group:{emailid}`: An email address that represents a Google group. For example, `admins@example.com`.\n\n\n\n* `domain:{domain}`: The G Suite domain (primary) that represents all the users of that domain. For example, `google.com` or `example.com`.",
+     "description": "Specifies the identities requesting access for a Cloud Platform resource. `members` can have the following values:\n\n* `allUsers`: A special identifier that represents anyone who is on the internet; with or without a Google account.\n\n* `allAuthenticatedUsers`: A special identifier that represents anyone who is authenticated with a Google account or a service account.\n\n* `user:{emailid}`: An email address that represents a specific Google account. For example, `alice@example.com` .\n\n\n\n* `serviceAccount:{emailid}`: An email address that represents a service account. For example, `my-other-app@appspot.gserviceaccount.com`.\n\n* `group:{emailid}`: An email address that represents a Google group. For example, `admins@example.com`.\n\n* `deleted:user:{emailid}?uid={uniqueid}`: An email address (plus unique identifier) representing a user that has been recently deleted. For example,`alice@example.com?uid=123456789012345678901`. If the user is recovered, this value reverts to `user:{emailid}` and the recovered user retains the role in the binding.\n\n* `deleted:serviceAccount:{emailid}?uid={uniqueid}`: An email address (plus unique identifier) representing a service account that has been recently deleted. For example, `my-other-app@appspot.gserviceaccount.com?uid=123456789012345678901`. If the service account is undeleted, this value reverts to `serviceAccount:{emailid}` and the undeleted service account retains the role in the binding.\n\n* `deleted:group:{emailid}?uid={uniqueid}`: An email address (plus unique identifier) representing a Google group that has been recently deleted. For example, `admins@example.com?uid=123456789012345678901`. If the group is recovered, this value reverts to `group:{emailid}` and the recovered group retains the role in the binding.\n\n\n\n* `domain:{domain}`: The G Suite domain (primary) that represents all the users of that domain. For example, `google.com` or `example.com`.",
      "items": {
       "type": "string"
      }
@@ -2735,27 +2758,27 @@
    "properties": {
     "maxConnections": {
      "type": "integer",
-     "description": "The maximum number of connections to the backend cluster. If not specified, the default is 1024.",
+     "description": "The maximum number of connections to the backend service. If not specified, there is no limit.",
      "format": "int32"
     },
     "maxPendingRequests": {
      "type": "integer",
-     "description": "The maximum number of pending requests allowed to the backend cluster. If not specified, the default is 1024.",
+     "description": "The maximum number of pending requests allowed to the backend service. If not specified, there is no limit.",
      "format": "int32"
     },
     "maxRequests": {
      "type": "integer",
-     "description": "The maximum number of parallel requests that allowed to the backend cluster. If not specified, the default is 1024.",
+     "description": "The maximum number of parallel requests that allowed to the backend service. If not specified, there is no limit.",
      "format": "int32"
     },
     "maxRequestsPerConnection": {
      "type": "integer",
-     "description": "Maximum requests for a single backend connection. This parameter is respected by both the HTTP/1.1 and HTTP/2 implementations. If not specified, there is no limit. Setting this parameter to 1 will effectively disable keep alive.",
+     "description": "Maximum requests for a single connection to the backend service. This parameter is respected by both the HTTP/1.1 and HTTP/2 implementations. If not specified, there is no limit. Setting this parameter to 1 will effectively disable keep alive.",
      "format": "int32"
     },
     "maxRetries": {
      "type": "integer",
-     "description": "The maximum number of parallel retries allowed to the backend cluster. If not specified, the default is 3.",
+     "description": "The maximum number of parallel retries allowed to the backend cluster. If not specified, the default is 1.",
      "format": "int32"
     }
    }
@@ -4260,7 +4283,7 @@
    "properties": {
     "resourcePolicies": {
      "type": "array",
-     "description": "Resource policies to be added to this disk.",
+     "description": "Resource policies to be added to this disk. Currently you can only specify one policy here.",
      "items": {
       "type": "string"
      }
@@ -4438,6 +4461,154 @@
      "type": "string",
      "description": "Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive. Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years",
      "format": "int64"
+    }
+   }
+  },
+  "ExchangedPeeringRoute": {
+   "id": "ExchangedPeeringRoute",
+   "type": "object",
+   "properties": {
+    "destRange": {
+     "type": "string",
+     "description": "The destination range of the route."
+    },
+    "imported": {
+     "type": "boolean",
+     "description": "True if the peering route has been imported from a peer. The actual import happens if the field networkPeering.importCustomRoutes is true for this network, and networkPeering.exportCustomRoutes is true for the peer network, and the import does not result in a route conflict."
+    },
+    "nextHopRegion": {
+     "type": "string",
+     "description": "The region of peering route next hop, only applies to dynamic routes."
+    },
+    "priority": {
+     "type": "integer",
+     "description": "The priority of the peering route.",
+     "format": "uint32"
+    },
+    "type": {
+     "type": "string",
+     "description": "The type of the peering route.",
+     "enum": [
+      "DYNAMIC_PEERING_ROUTE",
+      "STATIC_PEERING_ROUTE",
+      "SUBNET_PEERING_ROUTE"
+     ],
+     "enumDescriptions": [
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  "ExchangedPeeringRoutesList": {
+   "id": "ExchangedPeeringRoutesList",
+   "type": "object",
+   "properties": {
+    "id": {
+     "type": "string",
+     "description": "[Output Only] Unique identifier for the resource; defined by the server."
+    },
+    "items": {
+     "type": "array",
+     "description": "A list of ExchangedPeeringRoute resources.",
+     "items": {
+      "$ref": "ExchangedPeeringRoute"
+     }
+    },
+    "kind": {
+     "type": "string",
+     "description": "[Output Only] Type of resource. Always compute#exchangedPeeringRoutesList for exchanged peering routes lists.",
+     "default": "compute#exchangedPeeringRoutesList"
+    },
+    "nextPageToken": {
+     "type": "string",
+     "description": "[Output Only] This token allows you to get the next page of results for list requests. If the number of results is larger than maxResults, use the nextPageToken as a value for the query parameter pageToken in the next list request. Subsequent list requests will have their own nextPageToken to continue paging through the results."
+    },
+    "selfLink": {
+     "type": "string",
+     "description": "[Output Only] Server-defined URL for this resource."
+    },
+    "warning": {
+     "type": "object",
+     "description": "[Output Only] Informational warning message.",
+     "properties": {
+      "code": {
+       "type": "string",
+       "description": "[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.",
+       "enum": [
+        "CLEANUP_FAILED",
+        "DEPRECATED_RESOURCE_USED",
+        "DEPRECATED_TYPE_USED",
+        "DISK_SIZE_LARGER_THAN_IMAGE_SIZE",
+        "EXPERIMENTAL_TYPE_USED",
+        "EXTERNAL_API_WARNING",
+        "FIELD_VALUE_OVERRIDEN",
+        "INJECTED_KERNELS_DEPRECATED",
+        "MISSING_TYPE_DEPENDENCY",
+        "NEXT_HOP_ADDRESS_NOT_ASSIGNED",
+        "NEXT_HOP_CANNOT_IP_FORWARD",
+        "NEXT_HOP_INSTANCE_NOT_FOUND",
+        "NEXT_HOP_INSTANCE_NOT_ON_NETWORK",
+        "NEXT_HOP_NOT_RUNNING",
+        "NOT_CRITICAL_ERROR",
+        "NO_RESULTS_ON_PAGE",
+        "REQUIRED_TOS_AGREEMENT",
+        "RESOURCE_IN_USE_BY_OTHER_RESOURCE_WARNING",
+        "RESOURCE_NOT_DELETED",
+        "SCHEMA_VALIDATION_IGNORED",
+        "SINGLE_INSTANCE_PROPERTY_TEMPLATE",
+        "UNDECLARED_PROPERTIES",
+        "UNREACHABLE"
+       ],
+       "enumDescriptions": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+       ]
+      },
+      "data": {
+       "type": "array",
+       "description": "[Output Only] Metadata about this warning in key: value format. For example:\n\"data\": [ { \"key\": \"scope\", \"value\": \"zones/us-east1-d\" }",
+       "items": {
+        "type": "object",
+        "properties": {
+         "key": {
+          "type": "string",
+          "description": "[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding)."
+         },
+         "value": {
+          "type": "string",
+          "description": "[Output Only] A warning data value corresponding to the key."
+         }
+        }
+       }
+      },
+      "message": {
+       "type": "string",
+       "description": "[Output Only] A human-readable description of the warning code."
+      }
+     }
     }
    }
   },
@@ -4966,7 +5137,7 @@
   "ForwardingRule": {
    "id": "ForwardingRule",
    "type": "object",
-   "description": "Represents a Forwarding Rule resource.\n\n\n\nA forwardingRules resource represents a regional forwarding rule.\n\nRegional external forwarding rules can reference any of the following resources:\n \n- A target instance \n- A Cloud VPN Classic gateway (targetVpnGateway),  \n- A target pool for a Network Load Balancer \n- A global target HTTP(S) proxy for an HTTP(S) load balancer using Standard Tier \n- A target SSL proxy for a SSL Proxy load balancer using Standard Tier \n- A target TCP proxy for a TCP Proxy load balancer using Standard Tier.  \n\nRegional internal forwarding rules can reference the backend service of an internal TCP/UDP load balancer.\n\nFor regional internal forwarding rules, the following applies:  \n- If the loadBalancingScheme for the load balancer is INTERNAL, then the forwarding rule references a regional internal backend service. \n- If the loadBalancingScheme for the load balancer is INTERNAL_MANAGED, then the forwarding rule must reference a regional target HTTP(S) proxy.  \n\nFor more information, read Using Forwarding rules.\n\nA globalForwardingRules resource represents a global forwarding rule.\n\nGlobal forwarding rules are only used by load balancers that use Premium Tier. (== resource_for beta.forwardingRules ==) (== resource_for v1.forwardingRules ==) (== resource_for beta.globalForwardingRules ==) (== resource_for v1.globalForwardingRules ==) (== resource_for beta.regionForwardingRules ==) (== resource_for v1.regionForwardingRules ==)",
+   "description": "Represents a Forwarding Rule resource.\n\nA forwarding rule and its corresponding IP address represent the frontend configuration of a Google Cloud Platform load balancer. Forwarding rules can also reference target instances and Cloud VPN Classic gateways (targetVpnGateway).\n\nFor more information, read Forwarding rule concepts and Using protocol forwarding.\n\n(== resource_for beta.forwardingRules ==) (== resource_for v1.forwardingRules ==) (== resource_for beta.globalForwardingRules ==) (== resource_for v1.globalForwardingRules ==) (== resource_for beta.regionForwardingRules ==) (== resource_for v1.regionForwardingRules ==)",
    "properties": {
     "IPAddress": {
      "type": "string",
@@ -4974,7 +5145,7 @@
     },
     "IPProtocol": {
      "type": "string",
-     "description": "The IP protocol to which this rule applies. Valid options are TCP, UDP, ESP, AH, SCTP or ICMP.\n\nWhen the load balancing scheme is INTERNAL, only TCP and UDP are valid. When the load balancing scheme is INTERNAL_SELF_MANAGED, only TCPis valid.",
+     "description": "The IP protocol to which this rule applies. For protocol forwarding, valid options are TCP, UDP, ESP, AH, SCTP or ICMP.\n\nFor Internal TCP/UDP Load Balancing, the load balancing scheme is INTERNAL, and one of TCP or UDP are valid. For Traffic Director, the load balancing scheme is INTERNAL_SELF_MANAGED, and only TCPis valid. For Internal HTTP(S) Load Balancing, the load balancing scheme is INTERNAL_MANAGED, and only TCP is valid. For HTTP(S), SSL Proxy, and TCP Proxy Load Balancing, the load balancing scheme is EXTERNAL and only TCP is valid. For Network TCP/UDP Load Balancing, the load balancing scheme is EXTERNAL, and one of TCP or UDP is valid.",
      "enum": [
       "AH",
       "ESP",
@@ -5034,7 +5205,7 @@
     },
     "loadBalancingScheme": {
      "type": "string",
-     "description": "This signifies what the ForwardingRule will be used for and can only take the following values: INTERNAL, INTERNAL_SELF_MANAGED, EXTERNAL. The value of INTERNAL means that this will be used for Internal Network Load Balancing (TCP, UDP). The value of INTERNAL_SELF_MANAGED means that this will be used for Internal Global HTTP(S) LB. The value of EXTERNAL means that this will be used for External Load Balancing (HTTP(S) LB, External TCP/UDP LB, SSL Proxy)",
+     "description": "Specifies the forwarding rule type. EXTERNAL is used for: - Classic Cloud VPN gateways - Protocol forwarding to VMs from an external IP address - The following load balancers: HTTP(S), SSL Proxy, TCP Proxy, and Network TCP/UDP.\n\nINTERNAL is used for: - Protocol forwarding to VMs from an internal IP address - Internal TCP/UDP load balancers\n\nINTERNAL_MANAGED is used for: - Internal HTTP(S) load balancers\n\nINTERNAL_SELF_MANAGED is used for: - Traffic Director\n\nFor more information about forwarding rules, refer to Forwarding rule concepts.",
      "enum": [
       "EXTERNAL",
       "INTERNAL",
@@ -5052,7 +5223,7 @@
     },
     "metadataFilters": {
      "type": "array",
-     "description": "Opaque filter criteria used by Loadbalancer to restrict routing configuration to a limited set xDS compliant clients. In their xDS requests to Loadbalancer, xDS clients present node metadata. If a match takes place, the relevant routing configuration is made available to those proxies.\nFor each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with corresponding labels in the provided metadata.\nmetadataFilters specified here can be overridden by those specified in the UrlMap that this ForwardingRule references.\nmetadataFilters only applies to Loadbalancers that have their loadBalancingScheme set to INTERNAL_SELF_MANAGED.",
+     "description": "Opaque filter criteria used by Loadbalancer to restrict routing configuration to a limited set of xDS compliant clients. In their xDS requests to Loadbalancer, xDS clients present node metadata. If a match takes place, the relevant configuration is made available to those proxies. Otherwise, all the resources (e.g. TargetHttpProxy, UrlMap) referenced by the ForwardingRule will not be visible to those proxies.\nFor each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with corresponding labels provided in the metadata.\nmetadataFilters specified here will be applifed before those specified in the UrlMap that this ForwardingRule references.\nmetadataFilters only applies to Loadbalancers that have their loadBalancingScheme set to INTERNAL_SELF_MANAGED.",
      "items": {
       "$ref": "MetadataFilter"
      }
@@ -5080,11 +5251,11 @@
     },
     "portRange": {
      "type": "string",
-     "description": "This field is deprecated. See the port\nfield."
+     "description": "When the load balancing scheme is EXTERNAL, INTERNAL_SELF_MANAGED and INTERNAL_MANAGED, you can specify a port_range. Use with a forwarding rule that points to a target proxy or a target pool. Do not use with a forwarding rule that points to a backend service. This field is used along with the target field for TargetHttpProxy, TargetHttpsProxy, TargetSslProxy, TargetTcpProxy, TargetVpnGateway, TargetPool, TargetInstance.\n\nApplicable only when IPProtocol is TCP, UDP, or SCTP, only packets addressed to ports in the specified range will be forwarded to target. Forwarding rules with the same [IPAddress, IPProtocol] pair must have disjoint port ranges.\n\nSome types of forwarding target have constraints on the acceptable ports:  \n- TargetHttpProxy: 80, 8080 \n- TargetHttpsProxy: 443 \n- TargetTcpProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995, 1688, 1883, 5222 \n- TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995, 1688, 1883, 5222 \n- TargetVpnGateway: 500, 4500"
     },
     "ports": {
      "type": "array",
-     "description": "List of comma-separated ports. The forwarding rule forwards packets with matching destination ports. If the forwarding rule's loadBalancingScheme is EXTERNAL, and the forwarding rule references a target pool, specifying ports is optional. You can specify an unlimited number of ports, but they must be contiguous. If you omit ports, GCP forwards traffic on any port of the forwarding rule's protocol.\n\nIf the forwarding rule's loadBalancingScheme is EXTERNAL, and the forwarding rule references a target HTTP proxy, target HTTPS proxy, target TCP proxy, target SSL proxy, or target VPN gateway, you must specify ports using the following constraints:\n\n \n- TargetHttpProxy: 80, 8080 \n- TargetHttpsProxy: 443 \n- TargetTcpProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995, 1688, 1883, 5222 \n- TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995, 1688, 1883, 5222 \n- TargetVpnGateway: 500, 4500  \n\nIf the forwarding rule's loadBalancingScheme is INTERNAL, you must specify ports in one of the following ways:\n\n* A list of up to five ports, which can be non-contiguous * Keyword ALL, which causes the forwarding rule to forward traffic on any port of the forwarding rule's protocol.\n\nThe ports field is used along with the target field for TargetHttpProxy, TargetHttpsProxy, TargetSslProxy, TargetTcpProxy, TargetVpnGateway, TargetPool, TargetInstance.\n\nApplicable only when IPProtocol is TCP, UDP, or SCTP. Forwarding rules with the same [IPAddress, IPProtocol] pair must have disjoint port ranges.",
+     "description": "This field is used along with the backend_service field for internal load balancing.\n\nWhen the load balancing scheme is INTERNAL, a list of ports can be configured, for example, ['80'], ['8000','9000']. Only packets addressed to these ports are forwarded to the backends configured with the forwarding rule.\n\nIf the forwarding rule's loadBalancingScheme is INTERNAL, you can specify ports in one of the following ways:\n\n* A list of up to five ports, which can be non-contiguous * Keyword ALL, which causes the forwarding rule to forward traffic on any port of the forwarding rule's protocol.",
      "items": {
       "type": "string"
      }
@@ -5495,7 +5666,7 @@
     },
     "queryPath": {
      "type": "string",
-     "description": "The path to be queried. This can be the default namespace ('/') or a nested namespace ('//') or a specified key ('//')"
+     "description": "The path to be queried. This can be the default namespace ('/') or a nested namespace ('/\\/') or a specified key ('/\\/\\')"
     },
     "queryValue": {
      "$ref": "GuestAttributesValue",
@@ -6347,7 +6518,7 @@
     },
     "presentMatch": {
      "type": "boolean",
-     "description": "A header with the contents of headerName must exist. The match takes place whether or not the request's header has a value or not.\nOnly one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set."
+     "description": "A header with the contents of headerName must exist. The match takes place whether or not the request's header has a value.\nOnly one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set."
     },
     "rangeMatch": {
      "$ref": "Int64RangeMatch",
@@ -6568,7 +6739,7 @@
    "properties": {
     "exactMatch": {
      "type": "string",
-     "description": "The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch.\nOnly one of presentMatch, exactMatch and regexMatch must be set."
+     "description": "The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch.\nOnly one of presentMatch, exactMatch or regexMatch must be set."
     },
     "name": {
      "type": "string",
@@ -6576,11 +6747,11 @@
     },
     "presentMatch": {
      "type": "boolean",
-     "description": "Specifies that the queryParameterMatch matches if the request contains the query parameter, irrespective of whether the parameter has a value or not.\nOnly one of presentMatch, exactMatch and regexMatch must be set."
+     "description": "Specifies that the queryParameterMatch matches if the request contains the query parameter, irrespective of whether the parameter has a value or not.\nOnly one of presentMatch, exactMatch or regexMatch must be set."
     },
     "regexMatch": {
      "type": "string",
-     "description": "The queryParameterMatch matches if the value of the parameter matches the regular expression specified by regexMatch. For the regular expression grammar, please see en.cppreference.com/w/cpp/regex/ecmascript \nOnly one of presentMatch, exactMatch and regexMatch must be set."
+     "description": "The queryParameterMatch matches if the value of the parameter matches the regular expression specified by regexMatch. For the regular expression grammar, please see en.cppreference.com/w/cpp/regex/ecmascript \nOnly one of presentMatch, exactMatch or regexMatch must be set."
     }
    }
   },
@@ -6636,12 +6807,12 @@
    "properties": {
     "numRetries": {
      "type": "integer",
-     "description": "Specifies the allowed number retries. This number must be \u003e 0.",
+     "description": "Specifies the allowed number retries. This number must be \u003e 0. If not specified, defaults to 1.",
      "format": "uint32"
     },
     "perTryTimeout": {
      "$ref": "Duration",
-     "description": "Specifies a non-zero timeout per retry attempt."
+     "description": "Specifies a non-zero timeout per retry attempt.\nIf not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set, will use the largest timeout among all backend services associated with the route."
     },
     "retryConditions": {
      "type": "array",
@@ -6674,11 +6845,11 @@
     },
     "timeout": {
      "$ref": "Duration",
-     "description": "Specifies the timeout for the selected route. Timeout is computed from the time the request is has been fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.\nIf not specified, the default value is 15 seconds."
+     "description": "Specifies the timeout for the selected route. Timeout is computed from the time the request has been fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.\nIf not specified, will use the largest timeout among all backend services associated with the route."
     },
     "urlRewrite": {
      "$ref": "UrlRewrite",
-     "description": "The spec to modify the URL of the request, prior to forwarding the request to the matched service"
+     "description": "The spec to modify the URL of the request, prior to forwarding the request to the matched service."
     },
     "weightedBackendServices": {
      "type": "array",
@@ -6694,6 +6865,10 @@
    "type": "object",
    "description": "An HttpRouteRule specifies how to match an HTTP request and the corresponding routing action that load balancing proxies will perform.",
    "properties": {
+    "description": {
+     "type": "string",
+     "description": "The short description conveying the intent of this routeRule.\nThe description can have a maximum length of 1024 characters."
+    },
     "headerAction": {
      "$ref": "HttpHeaderAction",
      "description": "Specifies changes to request and response headers that need to take effect for the selected backendService.\nThe headerAction specified here are applied before the matching pathMatchers[].headerAction and after pathMatchers[].routeRules[].routeAction.weightedBackendService.backendServiceWeightAction[].headerAction"
@@ -6704,9 +6879,14 @@
       "$ref": "HttpRouteRuleMatch"
      }
     },
+    "priority": {
+     "type": "integer",
+     "description": "For routeRules within a given pathMatcher, priority determines the order in which load balancer will interpret routeRules. RouteRules are evaluated in order of priority, from the lowest to highest number. The priority of a rule decreases as its number increases (1, 2, 3, N+1). The first rule that matches the request is applied.\nYou cannot configure two or more routeRules with the same priority. Priority for each rule must be set to a number between 0 and 2147483647 inclusive.\nPriority numbers can have gaps, which enable you to add or remove rules in the future without affecting the rest of the rules. For example, 1, 2, 3, 4, 5, 9, 12, 16 is a valid series of priority numbers to which you could add rules numbered from 6 to 8, 10 to 11, and 13 to 15 in the future without any impact on existing rules.",
+     "format": "int32"
+    },
     "routeAction": {
      "$ref": "HttpRouteAction",
-     "description": "In response to a matching matchRule, the load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If  routeAction specifies any  weightedBackendServices, service must not be set. Conversely if service is set, routeAction cannot contain any  weightedBackendServices.\nOnly one of routeAction or urlRedirect must be set."
+     "description": "In response to a matching matchRule, the load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If  routeAction specifies any  weightedBackendServices, service must not be set. Conversely if service is set, routeAction cannot contain any  weightedBackendServices.\nOnly one of urlRedirect, service or routeAction.weightedBackendService must be set."
     },
     "service": {
      "type": "string",
@@ -6725,7 +6905,7 @@
    "properties": {
     "fullPathMatch": {
      "type": "string",
-     "description": "For satifying the matchRule condition, the path of the request must exactly match the value specified in fullPathMatch after removing any query parameters and anchor that may be part of the original URL.\nFullPathMatch must be between 1 and 1024 characters.\nOnly one of prefixMatch, fullPathMatch or regexMatch must be specified."
+     "description": "For satisfying the matchRule condition, the path of the request must exactly match the value specified in fullPathMatch after removing any query parameters and anchor that may be part of the original URL.\nfullPathMatch must be between 1 and 1024 characters.\nOnly one of prefixMatch, fullPathMatch or regexMatch must be specified."
     },
     "headerMatches": {
      "type": "array",
@@ -6736,18 +6916,18 @@
     },
     "ignoreCase": {
      "type": "boolean",
-     "description": "Specifies that prefixMatch and fullPathMatch matches are case sensitive.\nThe default value is false.\ncaseSensitive must not be used with regexMatch."
+     "description": "Specifies that prefixMatch and fullPathMatch matches are case sensitive.\nThe default value is false.\nignoreCase must not be used with regexMatch."
     },
     "metadataFilters": {
      "type": "array",
-     "description": "Opaque filter criteria used by Loadbalancer to restrict routing configuration to a limited set xDS compliant clients. In their xDS requests to Loadbalancer, xDS clients present node metadata. If a match takes place, the relevant routing configuration is made available to those proxies.\nFor each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with corresponding labels in the provided metadata.\nmetadataFilters specified here can be overrides those specified in ForwardingRule that refers to this UrlMap.\nmetadataFilters only applies to Loadbalancers that have their loadBalancingScheme set to INTERNAL_SELF_MANAGED.",
+     "description": "Opaque filter criteria used by Loadbalancer to restrict routing configuration to a limited set of xDS compliant clients. In their xDS requests to Loadbalancer, xDS clients present node metadata. If a match takes place, the relevant routing configuration is made available to those proxies.\nFor each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with corresponding labels provided in the metadata.\nmetadataFilters specified here will be applied after those specified in ForwardingRule that refers to the UrlMap this HttpRouteRuleMatch belongs to.\nmetadataFilters only applies to Loadbalancers that have their loadBalancingScheme set to INTERNAL_SELF_MANAGED.",
      "items": {
       "$ref": "MetadataFilter"
      }
     },
     "prefixMatch": {
      "type": "string",
-     "description": "For satifying the matchRule condition, the request's path must begin with the specified prefixMatch. prefixMatch must begin with a /.\nThe value must be between 1 and 1024 characters.\nOnly one of prefixMatch, fullPathMatch or regexMatch must be specified."
+     "description": "For satisfying the matchRule condition, the request's path must begin with the specified prefixMatch. prefixMatch must begin with a /.\nThe value must be between 1 and 1024 characters.\nOnly one of prefixMatch, fullPathMatch or regexMatch must be specified."
     },
     "queryParameterMatches": {
      "type": "array",
@@ -6758,7 +6938,7 @@
     },
     "regexMatch": {
      "type": "string",
-     "description": "For satifying the matchRule condition, the path of the request must satisfy the regular expression specified in regexMatch after removing any query parameters and anchor supplied with the original URL. For regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript \nOnly one of prefixMatch, fullPathMatch or regexMatch must be specified."
+     "description": "For satisfying the matchRule condition, the path of the request must satisfy the regular expression specified in regexMatch after removing any query parameters and anchor supplied with the original URL. For regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript \nOnly one of prefixMatch, fullPathMatch or regexMatch must be specified."
     }
    }
   },
@@ -7126,6 +7306,13 @@
       "",
       ""
      ]
+    },
+    "storageLocations": {
+     "type": "array",
+     "description": "Cloud Storage bucket storage location of the image (regional or multi-regional).",
+     "items": {
+      "type": "string"
+     }
     }
    }
   },
@@ -7528,7 +7715,7 @@
   "InstanceGroup": {
    "id": "InstanceGroup",
    "type": "object",
-   "description": "Represents an unmanaged Instance Group resource.\n\nUse unmanaged instance groups if you need to apply load balancing to groups of heterogeneous instances or if you need to manage the instances yourself. For more information, read  Instance groups.\n\nFor zonal unmanaged Instance Group, use instanceGroups resource.\n\nFor regional unmanaged Instance Group, use regionInstanceGroups resource. (== resource_for beta.instanceGroups ==) (== resource_for v1.instanceGroups ==) (== resource_for beta.regionInstanceGroups ==) (== resource_for v1.regionInstanceGroups ==)",
+   "description": "Represents an Instance Group resource.\n\nInstance Groups can be used to configure a target for load balancing.\n\nInstance groups can either be managed or unmanaged.\n\nTo create  managed instance groups, use the instanceGroupManager or regionInstanceGroupManager resource instead.\n\nUse zonal unmanaged instance groups if you need to apply load balancing to groups of heterogeneous instances or if you need to manage the instances yourself. You cannot create regional unmanaged instance groups.\n\nFor more information, read Instance groups.\n\n(== resource_for beta.instanceGroups ==) (== resource_for v1.instanceGroups ==) (== resource_for beta.regionInstanceGroups ==) (== resource_for v1.regionInstanceGroups ==)",
    "properties": {
     "creationTimestamp": {
      "type": "string",
@@ -8245,6 +8432,20 @@
     "isStable": {
      "type": "boolean",
      "description": "[Output Only] A bit indicating whether the managed instance group is in a stable state. A stable state means that: none of the instances in the managed instance group is currently undergoing any type of change (for example, creation, restart, or deletion); no future changes are scheduled for instances in the managed instance group; and the managed instance group itself is not being modified."
+    },
+    "versionTarget": {
+     "$ref": "InstanceGroupManagerStatusVersionTarget",
+     "description": "[Output Only] A status of consistency of Instances' versions with their target version specified by version field on Instance Group Manager."
+    }
+   }
+  },
+  "InstanceGroupManagerStatusVersionTarget": {
+   "id": "InstanceGroupManagerStatusVersionTarget",
+   "type": "object",
+   "properties": {
+    "isReached": {
+     "type": "boolean",
+     "description": "[Output Only] A bit indicating whether version target has been reached in this managed instance group, i.e. all instances are in their target version. Instances' target version are specified by version field on Instance Group Manager."
     }
    }
   },
@@ -8252,6 +8453,18 @@
    "id": "InstanceGroupManagerUpdatePolicy",
    "type": "object",
    "properties": {
+    "instanceRedistributionType": {
+     "type": "string",
+     "description": "The  instance redistribution policy for regional managed instance groups. Valid values are:  \n- PROACTIVE (default): The group attempts to maintain an even distribution of VM instances across zones in the region. \n- NONE: For non-autoscaled groups, proactive redistribution is disabled.",
+     "enum": [
+      "NONE",
+      "PROACTIVE"
+     ],
+     "enumDescriptions": [
+      "",
+      ""
+     ]
+    },
     "maxSurge": {
      "$ref": "FixedOrPercent",
      "description": "The maximum number of instances that can be created above the specified targetSize during the update process. By default, a fixed value of 1 is used. This value can be either a fixed number or a percentage if the instance group has 10 or more instances. If you set a percentage, the number of instances will be rounded up if necessary.\n\nAt least one of either maxSurge or maxUnavailable must be greater than 0. Learn more about maxSurge."
@@ -8313,6 +8526,20 @@
      "description": "The URLs of one or more instances to abandon. This can be a full URL or a partial URL, such as zones/[ZONE]/instances/[INSTANCE_NAME].",
      "items": {
       "type": "string"
+     }
+    }
+   }
+  },
+  "InstanceGroupManagersCreateInstancesRequest": {
+   "id": "InstanceGroupManagersCreateInstancesRequest",
+   "type": "object",
+   "description": "InstanceGroupManagers.createInstances",
+   "properties": {
+    "instances": {
+     "type": "array",
+     "description": "[Required] List of specifications of per-instance configs.",
+     "items": {
+      "$ref": "PerInstanceConfig"
      }
     }
    }
@@ -11053,8 +11280,15 @@
   "LogConfigCounterOptions": {
    "id": "LogConfigCounterOptions",
    "type": "object",
-   "description": "Increment a streamz counter with the specified metric and field names.\n\nMetric names should start with a '/', generally be lowercase-only, and end in \"_count\". Field names should not contain an initial slash. The actual exported metric names will have \"/iam/policy\" prepended.\n\nField names correspond to IAM request parameters and field values are their respective values.\n\nSupported field names: - \"authority\", which is \"[token]\" if IAMContext.token is present, otherwise the value of IAMContext.authority_selector if present, and otherwise a representation of IAMContext.principal; or - \"iam_principal\", a representation of IAMContext.principal even if a token or authority selector is present; or - \"\" (empty string), resulting in a counter with no fields.\n\nExamples: counter { metric: \"/debug_access_count\" field: \"iam_principal\" } ==\u003e increment counter /iam/policy/backend_debug_access_count {iam_principal=[value of IAMContext.principal]}\n\nAt this time we do not support multiple field names (though this may be supported in the future).",
+   "description": "Increment a streamz counter with the specified metric and field names.\n\nMetric names should start with a '/', generally be lowercase-only, and end in \"_count\". Field names should not contain an initial slash. The actual exported metric names will have \"/iam/policy\" prepended.\n\nField names correspond to IAM request parameters and field values are their respective values.\n\nSupported field names: - \"authority\", which is \"[token]\" if IAMContext.token is present, otherwise the value of IAMContext.authority_selector if present, and otherwise a representation of IAMContext.principal; or - \"iam_principal\", a representation of IAMContext.principal even if a token or authority selector is present; or - \"\" (empty string), resulting in a counter with no fields.\n\nExamples: counter { metric: \"/debug_access_count\" field: \"iam_principal\" } ==\u003e increment counter /iam/policy/debug_access_count {iam_principal=[value of IAMContext.principal]}\n\nTODO(b/141846426): Consider supporting \"authority\" and \"iam_principal\" fields in the same counter.",
    "properties": {
+    "customFields": {
+     "type": "array",
+     "description": "Custom fields.",
+     "items": {
+      "$ref": "LogConfigCounterOptionsCustomField"
+     }
+    },
     "field": {
      "type": "string",
      "description": "The field value to attribute."
@@ -11062,6 +11296,21 @@
     "metric": {
      "type": "string",
      "description": "The metric to update."
+    }
+   }
+  },
+  "LogConfigCounterOptionsCustomField": {
+   "id": "LogConfigCounterOptionsCustomField",
+   "type": "object",
+   "description": "Custom fields. These can be used to create a counter with arbitrary field/value pairs. See: go/rpcsp-custom-fields.",
+   "properties": {
+    "name": {
+     "type": "string",
+     "description": "Name is the field name."
+    },
+    "value": {
+     "type": "string",
+     "description": "Value is the field value. It is important that in contrast to the CounterOptions.field, the value here is a constant that is not derived from the IAMContext."
     }
    }
   },
@@ -11660,7 +11909,7 @@
   "MetadataFilter": {
    "id": "MetadataFilter",
    "type": "object",
-   "description": "Opaque filter criteria used by loadbalancers to restrict routing configuration to a limited set of loadbalancing proxies. Proxies and sidecars involved in loadbalancing would typically present metadata to the loadbalancers which need to match criteria specified here. If a match takes place, the relevant routing configuration is made available to those proxies.\nFor each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with corresponding labels in the provided metadata.\nAn example for using metadataFilters would be: if loadbalancing involves  Envoys, they will only receive routing configuration when values in metadataFilters match values supplied in \u003ca href=\"https://www.envoyproxy.io/docs/envoy/latest/api-v2/api/v2/core/base.proto#envoy-api-msg-core-node\" Node metadata of their XDS requests to loadbalancers.",
+   "description": "Opaque filter criteria used by loadbalancers to restrict routing configuration to a limited set of loadbalancing proxies. Proxies and sidecars involved in loadbalancing would typically present metadata to the loadbalancers which need to match criteria specified here. If a match takes place, the relevant configuration is made available to those proxies.\nFor each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with corresponding labels provided in the metadata.\nAn example for using metadataFilters would be: if loadbalancing involves  Envoys, they will only receive routing configuration when values in metadataFilters match values supplied in \u003ca href=\"https://www.envoyproxy.io/docs/envoy/latest/api-v2/api/v2/core/base.proto#envoy-api-msg-core-node\" Node metadata of their XDS requests to loadbalancers.",
    "properties": {
     "filterLabels": {
      "type": "array",
@@ -11755,7 +12004,7 @@
     },
     "name": {
      "type": "string",
-     "description": "Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?. The first character must be a lowercase letter, and all following characters (except for the last character) must be a dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.",
+     "description": "Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all following characters (except for the last character) must be a dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.",
      "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?",
      "annotations": {
       "required": [
@@ -11790,7 +12039,7 @@
   "NetworkEndpoint": {
    "id": "NetworkEndpoint",
    "type": "object",
-   "description": "The network endpoint.",
+   "description": "The network endpoint. Next ID: 7",
    "properties": {
     "instance": {
      "type": "string",
@@ -11810,7 +12059,7 @@
   "NetworkEndpointGroup": {
    "id": "NetworkEndpointGroup",
    "type": "object",
-   "description": "Represents a collection of network endpoints.",
+   "description": "Represents a collection of network endpoints.\n\nFor more information read Setting up network endpoint groups in load balancing. (== resource_for v1.networkEndpointGroups ==) (== resource_for beta.networkEndpointGroups ==) Next ID: 21",
    "properties": {
     "creationTimestamp": {
      "type": "string",
@@ -12631,7 +12880,7 @@
   "NodeGroup": {
    "id": "NodeGroup",
    "type": "object",
-   "description": "Represent a sole-tenant Node Group resource.\n\nA sole-tenant node is a physical server that is dedicated to hosting VM instances only for your specific project. Use sole-tenant nodes to keep your instances physically separated from instances in other projects, or to group your instances together on the same host hardware. For more information, read Sole-tenant nodes. (== resource_for beta.nodeGroups ==) (== resource_for v1.nodeGroups ==) NextID: 15",
+   "description": "Represent a sole-tenant Node Group resource.\n\nA sole-tenant node is a physical server that is dedicated to hosting VM instances only for your specific project. Use sole-tenant nodes to keep your instances physically separated from instances in other projects, or to group your instances together on the same host hardware. For more information, read Sole-tenant nodes. (== resource_for beta.nodeGroups ==) (== resource_for v1.nodeGroups ==)",
    "properties": {
     "creationTimestamp": {
      "type": "string",
@@ -13197,7 +13446,7 @@
   "NodeTemplate": {
    "id": "NodeTemplate",
    "type": "object",
-   "description": "Represent a sole-tenant Node Template resource.\n\nYou can use a template to define properties for nodes in a node group. For more information, read Creating node groups and instances. (== resource_for beta.nodeTemplates ==) (== resource_for v1.nodeTemplates ==) (== NextID: 16 ==)",
+   "description": "Represent a sole-tenant Node Template resource.\n\nYou can use a template to define properties for nodes in a node group. For more information, read Creating node groups and instances. (== resource_for beta.nodeTemplates ==) (== resource_for v1.nodeTemplates ==)",
    "properties": {
     "creationTimestamp": {
      "type": "string",
@@ -14520,11 +14769,11 @@
   "OutlierDetection": {
    "id": "OutlierDetection",
    "type": "object",
-   "description": "Settings controlling eviction of unhealthy hosts from the load balancing pool.",
+   "description": "Settings controlling the eviction of unhealthy hosts from the load balancing pool for the backend service.",
    "properties": {
     "baseEjectionTime": {
      "$ref": "Duration",
-     "description": "The base time that a host is ejected for. The real time is equal to the base time multiplied by the number of times the host has been ejected. Defaults to 30000ms or 30s."
+     "description": "The base time that a host is ejected for. The real ejection time is equal to the base ejection time multiplied by the number of times the host has been ejected. Defaults to 30000ms or 30s."
     },
     "consecutiveErrors": {
      "type": "integer",
@@ -14533,17 +14782,17 @@
     },
     "consecutiveGatewayFailure": {
      "type": "integer",
-     "description": "The number of consecutive gateway failures (502, 503, 504 status or connection errors that are mapped to one of those status codes) before a consecutive gateway failure ejection occurs. Defaults to 5.",
+     "description": "The number of consecutive gateway failures (502, 503, 504 status or connection errors that are mapped to one of those status codes) before a consecutive gateway failure ejection occurs. Defaults to 3.",
      "format": "int32"
     },
     "enforcingConsecutiveErrors": {
      "type": "integer",
-     "description": "The percentage chance that a host will be actually ejected when an outlier status is detected through consecutive 5xx. This setting can be used to disable ejection or to ramp it up slowly. Defaults to 100.",
+     "description": "The percentage chance that a host will be actually ejected when an outlier status is detected through consecutive 5xx. This setting can be used to disable ejection or to ramp it up slowly. Defaults to 0.",
      "format": "int32"
     },
     "enforcingConsecutiveGatewayFailure": {
      "type": "integer",
-     "description": "The percentage chance that a host will be actually ejected when an outlier status is detected through consecutive gateway failures. This setting can be used to disable ejection or to ramp it up slowly. Defaults to 0.",
+     "description": "The percentage chance that a host will be actually ejected when an outlier status is detected through consecutive gateway failures. This setting can be used to disable ejection or to ramp it up slowly. Defaults to 100.",
      "format": "int32"
     },
     "enforcingSuccessRate": {
@@ -14553,11 +14802,11 @@
     },
     "interval": {
      "$ref": "Duration",
-     "description": "Time interval between ejection sweep analysis. This can result in both new ejections as well as hosts being returned to service. Defaults to 10 seconds."
+     "description": "Time interval between ejection analysis sweeps. This can result in both new ejections as well as hosts being returned to service. Defaults to 1 second."
     },
     "maxEjectionPercent": {
      "type": "integer",
-     "description": "Maximum percentage of hosts in the load balancing pool for the backend service that can be ejected. Defaults to 10%.",
+     "description": "Maximum percentage of hosts in the load balancing pool for the backend service that can be ejected. Defaults to 50%.",
      "format": "int32"
     },
     "successRateMinimumHosts": {
@@ -14592,7 +14841,7 @@
     },
     "defaultUrlRedirect": {
      "$ref": "HttpRedirectAction",
-     "description": "When when none of the specified pathRules or routeRules match, the request is redirected to a URL specified by defaultUrlRedirect.\nIf defaultUrlRedirect is specified, defaultService or defaultRouteAction must not be set."
+     "description": "When none of the specified pathRules or routeRules match, the request is redirected to a URL specified by defaultUrlRedirect.\nIf defaultUrlRedirect is specified, defaultService or defaultRouteAction must not be set."
     },
     "description": {
      "type": "string",
@@ -14615,7 +14864,7 @@
     },
     "routeRules": {
      "type": "array",
-     "description": "The list of ordered HTTP route rules. Use this list instead of pathRules when advanced route matching and routing actions are desired. The order of specifying routeRules matters: the first rule that matches will cause its specified routing action to take effect.\nWithin a given pathMatcher, only one of pathRules or routeRules must be set.\nrouteRules are not supported in UrlMaps intended for External Load balancers.",
+     "description": "The list of HTTP route rules. Use this list instead of pathRules when advanced route matching and routing actions are desired. routeRules are evaluated in order of priority, from the lowest to highest number.\nWithin a given pathMatcher, only one of pathRules or routeRules must be set.\nrouteRules are not supported in UrlMaps intended for External Load balancers.",
      "items": {
       "$ref": "HttpRouteRule"
      }
@@ -14648,10 +14897,25 @@
     }
    }
   },
+  "PerInstanceConfig": {
+   "id": "PerInstanceConfig",
+   "type": "object",
+   "properties": {
+    "fingerprint": {
+     "type": "string",
+     "description": "Fingerprint of this per-instance config. This field may be used in optimistic locking. It will be ignored when inserting a per-instance config. An up-to-date fingerprint must be provided in order to update an existing per-instance config or the field needs to be unset.",
+     "format": "byte"
+    },
+    "name": {
+     "type": "string",
+     "description": "The name of the per-instance config and the corresponding instance. Serves as a merge key during UpdatePerInstanceConfigs operation, i.e. if per-instance config with the same name exists then it will be updated, otherwise a new one will be created for the VM instance with the same name. An attempt to create a per-instance config for a VM instance that either doesn't exist or is not part of the group will result in a failure."
+    }
+   }
+  },
   "Policy": {
    "id": "Policy",
    "type": "object",
-   "description": "Defines an Identity and Access Management (IAM) policy. It is used to specify access control policies for Cloud Platform resources.\n\n\n\nA `Policy` consists of a list of `bindings`. A `binding` binds a list of `members` to a `role`, where the members can be user accounts, Google groups, Google domains, and service accounts. A `role` is a named list of permissions defined by IAM.\n\n**JSON Example**\n\n{ \"bindings\": [ { \"role\": \"roles/owner\", \"members\": [ \"user:mike@example.com\", \"group:admins@example.com\", \"domain:google.com\", \"serviceAccount:my-other-app@appspot.gserviceaccount.com\" ] }, { \"role\": \"roles/viewer\", \"members\": [\"user:sean@example.com\"] } ] }\n\n**YAML Example**\n\nbindings: - members: - user:mike@example.com - group:admins@example.com - domain:google.com - serviceAccount:my-other-app@appspot.gserviceaccount.com role: roles/owner - members: - user:sean@example.com role: roles/viewer\n\n\n\nFor a description of IAM and its features, see the [IAM developer's guide](https://cloud.google.com/iam/docs).",
+   "description": "An Identity and Access Management (IAM) policy, which specifies access controls for Google Cloud resources.\n\n\n\nA `Policy` is a collection of `bindings`. A `binding` binds one or more `members` to a single `role`. Members can be user accounts, service accounts, Google groups, and domains (such as G Suite). A `role` is a named list of permissions; each `role` can be an IAM predefined role or a user-created custom role.\n\nOptionally, a `binding` can specify a `condition`, which is a logical expression that allows access to a resource only if the expression evaluates to `true`. A condition can add constraints based on attributes of the request, the resource, or both.\n\n**JSON example:**\n\n{ \"bindings\": [ { \"role\": \"roles/resourcemanager.organizationAdmin\", \"members\": [ \"user:mike@example.com\", \"group:admins@example.com\", \"domain:google.com\", \"serviceAccount:my-project-id@appspot.gserviceaccount.com\" ] }, { \"role\": \"roles/resourcemanager.organizationViewer\", \"members\": [\"user:eve@example.com\"], \"condition\": { \"title\": \"expirable access\", \"description\": \"Does not grant access after Sep 2020\", \"expression\": \"request.time \u003c timestamp('2020-10-01T00:00:00.000Z')\", } } ], \"etag\": \"BwWWja0YfJA=\", \"version\": 3 }\n\n**YAML example:**\n\nbindings: - members: - user:mike@example.com - group:admins@example.com - domain:google.com - serviceAccount:my-project-id@appspot.gserviceaccount.com role: roles/resourcemanager.organizationAdmin - members: - user:eve@example.com role: roles/resourcemanager.organizationViewer condition: title: expirable access description: Does not grant access after Sep 2020 expression: request.time \u003c timestamp('2020-10-01T00:00:00.000Z') - etag: BwWWja0YfJA= - version: 3\n\nFor a description of IAM and its features, see the [IAM documentation](https://cloud.google.com/iam/docs/).",
    "properties": {
     "auditConfigs": {
      "type": "array",
@@ -14662,14 +14926,14 @@
     },
     "bindings": {
      "type": "array",
-     "description": "Associates a list of `members` to a `role`. `bindings` with no members will result in an error.",
+     "description": "Associates a list of `members` to a `role`. Optionally, may specify a `condition` that determines how and when the `bindings` are applied. Each of the `bindings` must contain at least one member.",
      "items": {
       "$ref": "Binding"
      }
     },
     "etag": {
      "type": "string",
-     "description": "`etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other. It is strongly suggested that systems make use of the `etag` in the read-modify-write cycle to perform policy updates in order to avoid race conditions: An `etag` is returned in the response to `getIamPolicy`, and systems are expected to put that etag in the request to `setIamPolicy` to ensure that their change will be applied to the same version of the policy.\n\nIf no `etag` is provided in the call to `setIamPolicy`, then the existing policy is overwritten.",
+     "description": "`etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other. It is strongly suggested that systems make use of the `etag` in the read-modify-write cycle to perform policy updates in order to avoid race conditions: An `etag` is returned in the response to `getIamPolicy`, and systems are expected to put that etag in the request to `setIamPolicy` to ensure that their change will be applied to the same version of the policy.\n\n**Important:** If you use IAM Conditions, you must include the `etag` field whenever you call `setIamPolicy`. If you omit this field, then IAM allows you to overwrite a version `3` policy with a version `1` policy, and all of the conditions in the version `3` policy are lost.",
      "format": "byte"
     },
     "iamOwned": {
@@ -14685,7 +14949,7 @@
     },
     "version": {
      "type": "integer",
-     "description": "Specifies the format of the policy.\n\nValid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.\n\nPolicies with any conditional bindings must specify version 3. Policies without any conditional bindings may specify any valid value or leave the field unset.",
+     "description": "Specifies the format of the policy.\n\nValid values are `0`, `1`, and `3`. Requests that specify an invalid value are rejected.\n\nAny operation that affects conditional role bindings must specify version `3`. This requirement applies to the following operations:\n\n* Getting a policy that includes a conditional role binding * Adding a conditional role binding to a policy * Changing a conditional role binding in a policy * Removing any role binding, with or without a condition, from a policy that includes conditions\n\n**Important:** If you use IAM Conditions, you must include the `etag` field whenever you call `setIamPolicy`. If you omit this field, then IAM allows you to overwrite a version `3` policy with a version `1` policy, and all of the conditions in the version `3` policy are lost.\n\nIf a policy does not include any conditions, operations on that policy may specify any valid version or leave the field unset.",
      "format": "int32"
     }
    }
@@ -14888,11 +15152,13 @@
       "INTERCONNECTS",
       "INTERCONNECT_ATTACHMENTS_PER_REGION",
       "INTERCONNECT_ATTACHMENTS_TOTAL_MBPS",
+      "INTERCONNECT_TOTAL_GBPS",
       "INTERNAL_ADDRESSES",
       "IN_USE_ADDRESSES",
       "IN_USE_BACKUP_SCHEDULES",
       "IN_USE_SNAPSHOT_SCHEDULES",
       "LOCAL_SSD_TOTAL_GB",
+      "MACHINE_IMAGES",
       "N2_CPUS",
       "NETWORKS",
       "NETWORK_ENDPOINT_GROUPS",
@@ -14939,6 +15205,8 @@
       "VPN_TUNNELS"
      ],
      "enumDescriptions": [
+      "",
+      "",
       "",
       "",
       "",
@@ -15616,6 +15884,20 @@
     }
    }
   },
+  "RegionInstanceGroupManagersCreateInstancesRequest": {
+   "id": "RegionInstanceGroupManagersCreateInstancesRequest",
+   "type": "object",
+   "description": "RegionInstanceGroupManagers.createInstances",
+   "properties": {
+    "instances": {
+     "type": "array",
+     "description": "[Required] List of specifications of per-instance configs.",
+     "items": {
+      "$ref": "PerInstanceConfig"
+     }
+    }
+   }
+  },
   "RegionInstanceGroupManagersDeleteInstancesRequest": {
    "id": "RegionInstanceGroupManagersDeleteInstancesRequest",
    "type": "object",
@@ -16028,7 +16310,7 @@
    "properties": {
     "commitment": {
      "type": "string",
-     "description": "[OutputOnly] Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment."
+     "description": "[Output Only] Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment."
     },
     "creationTimestamp": {
      "type": "string",
@@ -17118,6 +17400,10 @@
      "type": "string",
      "description": "The URL to a gateway that should handle matching packets. You can only specify the internet gateway using a full or partial valid URL:  projects/project/global/gateways/default-internet-gateway"
     },
+    "nextHopIlb": {
+     "type": "string",
+     "description": "The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching packets. You can only specify the forwarding rule as a partial or full URL. For example, the following are all valid URLs:  \n- https://www.googleapis.com/compute/v1/projects/project/regions/region/forwardingRules/forwardingRule \n- regions/region/forwardingRules/forwardingRule"
+    },
     "nextHopInstance": {
      "type": "string",
      "description": "The URL to an instance that should handle matching packets. You can specify this as a full or partial URL. For example:\nhttps://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/"
@@ -17854,6 +18140,13 @@
    "type": "object",
    "description": "Represents a Nat resource. It enables the VMs within the specified subnetworks to access Internet without external IP addresses. It specifies a list of subnetworks (and the ranges within) that want to use NAT. Customers can also provide the external IPs that would be used for NAT. GCP would auto-allocate ephemeral IPs if no external IPs are provided.",
    "properties": {
+    "drainNatIps": {
+     "type": "array",
+     "description": "A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT only.",
+     "items": {
+      "type": "string"
+     }
+    },
     "icmpIdleTimeoutSec": {
      "type": "integer",
      "description": "Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.",
@@ -17941,7 +18234,7 @@
     },
     "filter": {
      "type": "string",
-     "description": "Specifies the desired filtering of logs on this NAT. If unspecified, logs are exported for all connections handled by this NAT.",
+     "description": "Specify the desired filtering of logs on this NAT. If unspecified, logs are exported for all connections handled by this NAT. This option can take one of the following values: \n- ERRORS_ONLY: Export logs only for connection failures. \n- TRANSLATIONS_ONLY: Export logs only for successful connections. \n- ALL: Export logs for all connections, successful and unsuccessful.",
      "enum": [
       "ALL",
       "ERRORS_ONLY",
@@ -18094,6 +18387,20 @@
     "autoAllocatedNatIps": {
      "type": "array",
      "description": "A list of IPs auto-allocated for NAT. Example: [\"1.1.1.1\", \"129.2.16.89\"]",
+     "items": {
+      "type": "string"
+     }
+    },
+    "drainAutoAllocatedNatIps": {
+     "type": "array",
+     "description": "A list of IPs auto-allocated for NAT that are in drain mode. Example: [\"1.1.1.1\", \"179.12.26.133\"].",
+     "items": {
+      "type": "string"
+     }
+    },
+    "drainUserAllocatedNatIps": {
+     "type": "array",
+     "description": "A list of IPs user-allocated for NAT that are in drain mode. Example: [\"1.1.1.1\", \"179.12.26.133\"].",
      "items": {
       "type": "string"
      }
@@ -18749,7 +19056,7 @@
    "properties": {
     "encryptionKey": {
      "$ref": "ShieldedInstanceIdentityEntry",
-     "description": "An Endorsement Key (EK) issued to the Shielded Instance's vTPM."
+     "description": "An Endorsement Key (EK) made by the RSA 2048 algorithm issued to the Shielded Instance's vTPM."
     },
     "kind": {
      "type": "string",
@@ -18758,7 +19065,7 @@
     },
     "signingKey": {
      "$ref": "ShieldedInstanceIdentityEntry",
-     "description": "An Attestation Key (AK) issued to the Shielded Instance's vTPM."
+     "description": "An Attestation Key (AK) made by the RSA 2048 algorithm issued to the Shielded Instance's vTPM."
     }
    }
   },
@@ -18811,7 +19118,7 @@
    "properties": {
     "autoCreated": {
      "type": "boolean",
-     "description": "[Output Only] Set to true if snapshots are automatically by applying resource policy on the target disk."
+     "description": "[Output Only] Set to true if snapshots are automatically created by applying resource policy on the target disk."
     },
     "creationTimestamp": {
      "type": "string",
@@ -18823,7 +19130,7 @@
     },
     "diskSizeGb": {
      "type": "string",
-     "description": "[Output Only] Size of the snapshot, specified in GB.",
+     "description": "[Output Only] Size of the source disk, specified in GB.",
      "format": "int64"
     },
     "id": {
@@ -19061,7 +19368,7 @@
   "SslCertificate": {
    "id": "SslCertificate",
    "type": "object",
-   "description": "Represents an SSL Certificate resource.\n\nThis SSL certificate resource also contains a private key. You can use SSL keys and certificates to secure connections to a load balancer. For more information, read  Creating and Using SSL Certificates. (== resource_for beta.sslCertificates ==) (== resource_for v1.sslCertificates ==)",
+   "description": "Represents an SSL Certificate resource.\n\nThis SSL certificate resource also contains a private key. You can use SSL keys and certificates to secure connections to a load balancer. For more information, read  Creating and Using SSL Certificates. (== resource_for beta.sslCertificates ==) (== resource_for v1.sslCertificates ==) (== resource_for beta.regionSslCertificates ==) (== resource_for v1.regionSslCertificates ==) Next ID: 17",
    "properties": {
     "certificate": {
      "type": "string",
@@ -20399,7 +20706,7 @@
   "TargetHttpProxy": {
    "id": "TargetHttpProxy",
    "type": "object",
-   "description": "Represents a Target HTTP Proxy resource.\n\nA target HTTP proxy is a component of certain types of load balancers. Global forwarding rules reference a target HTTP proxy, and the target proxy then references a URL map. For more information, read Using Target Proxies. (== resource_for beta.targetHttpProxies ==) (== resource_for v1.targetHttpProxies ==)",
+   "description": "Represents a Target HTTP Proxy resource.\n\nA target HTTP proxy is a component of GCP HTTP load balancers. Forwarding rules reference a target HTTP proxy, and the target proxy then references a URL map. For more information, read Using Target Proxies and  Forwarding rule concepts. (== resource_for beta.targetHttpProxies ==) (== resource_for v1.targetHttpProxies ==) (== resource_for beta.regionTargetHttpProxies ==) (== resource_for v1.regionTargetHttpProxies ==)",
    "properties": {
     "creationTimestamp": {
      "type": "string",
@@ -20711,7 +21018,7 @@
   "TargetHttpsProxy": {
    "id": "TargetHttpsProxy",
    "type": "object",
-   "description": "Represents a Target HTTPS Proxy resource.\n\nA target HTTPS proxy is a component of certain types of load balancers. Global forwarding rules reference a target HTTPS proxy, and the target proxy then references a URL map. For more information, read Using Target Proxies. (== resource_for beta.targetHttpsProxies ==) (== resource_for v1.targetHttpsProxies ==)",
+   "description": "Represents a Target HTTPS Proxy resource.\n\nA target HTTPS proxy is a component of GCP HTTPS load balancers. Forwarding rules reference a target HTTPS proxy, and the target proxy then references a URL map. For more information, read Using Target Proxies and  Forwarding rule concepts. (== resource_for beta.targetHttpsProxies ==) (== resource_for v1.targetHttpsProxies ==) (== resource_for beta.regionTargetHttpsProxies ==) (== resource_for v1.regionTargetHttpsProxies ==)",
    "properties": {
     "creationTimestamp": {
      "type": "string",
@@ -20738,7 +21045,7 @@
     },
     "quicOverride": {
      "type": "string",
-     "description": "Specifies the QUIC override policy for this TargetHttpsProxy resource. This determines whether the load balancer will attempt to negotiate QUIC with clients or not. Can specify one of NONE, ENABLE, or DISABLE. Specify ENABLE to always enable QUIC, Enables QUIC when set to ENABLE, and disables QUIC when set to DISABLE. If NONE is specified, uses the QUIC policy with no user overrides, which is equivalent to DISABLE. Not specifying this field is equivalent to specifying NONE.",
+     "description": "Specifies the QUIC override policy for this TargetHttpsProxy resource. This setting determines whether the load balancer attempts to negotiate QUIC with clients. You can specify NONE, ENABLE, or DISABLE.  \n- When quic-override is set to NONE, Google manages whether QUIC is used. \n- When quic-override is set to ENABLE, the load balancer uses QUIC when possible. \n- When quic-override is set to DISABLE, the load balancer doesn't use QUIC. \n- If the quic-override flag is not specified, NONE is implied.\n-",
      "enum": [
       "DISABLE",
       "ENABLE",
@@ -20767,7 +21074,7 @@
     },
     "sslPolicy": {
      "type": "string",
-     "description": "URL of SslPolicy resource that will be associated with the TargetHttpsProxy resource. If not set, the TargetHttpsProxy resource will not have any SSL policy configured."
+     "description": "URL of SslPolicy resource that will be associated with the TargetHttpsProxy resource. If not set, the TargetHttpsProxy resource has no SSL policy configured."
     },
     "urlMap": {
      "type": "string",
@@ -23376,12 +23683,24 @@
    "type": "object",
    "description": "Contain information of Nat mapping for an interface of this endpoint.",
    "properties": {
+    "drainNatIpPortRanges": {
+     "type": "array",
+     "description": "List of all drain IP:port-range mappings assigned to this interface. These ranges are inclusive, that is, both the first and the last ports can be used for NAT. Example: [\"2.2.2.2:12345-12355\", \"1.1.1.1:2234-2234\"].",
+     "items": {
+      "type": "string"
+     }
+    },
     "natIpPortRanges": {
      "type": "array",
      "description": "A list of all IP:port-range mappings assigned to this interface. These ranges are inclusive, that is, both the first and the last ports can be used for NAT. Example: [\"2.2.2.2:12345-12355\", \"1.1.1.1:2234-2234\"].",
      "items": {
       "type": "string"
      }
+    },
+    "numTotalDrainNatPorts": {
+     "type": "integer",
+     "description": "Total number of drain ports across all NAT IPs allocated to this interface. It equals to the aggregated port number in the field drain_nat_ip_port_ranges.",
+     "format": "int32"
     },
     "numTotalNatPorts": {
      "type": "integer",
@@ -23513,7 +23832,7 @@
   "VpnGateway": {
    "id": "VpnGateway",
    "type": "object",
-   "description": "Represents a VPN gateway resource.",
+   "description": "Represents a VPN gateway resource. Next ID: 13",
    "properties": {
     "creationTimestamp": {
      "type": "string",
@@ -24108,7 +24427,7 @@
     },
     "status": {
      "type": "string",
-     "description": "[Output Only] The status of the VPN tunnel, which can be one of the following: \n- PROVISIONING: Resource is being allocated for the VPN tunnel. \n- WAITING_FOR_FULL_CONFIG: Waiting to receive all VPN-related configs from the user. Network, TargetVpnGateway, VpnTunnel, ForwardingRule, and Route resources are needed to setup the VPN tunnel. \n- FIRST_HANDSHAKE: Successful first handshake with the peer VPN. \n- ESTABLISHED: Secure session is successfully established with the peer VPN. \n- NETWORK_ERROR: Deprecated, replaced by NO_INCOMING_PACKETS \n- AUTHORIZATION_ERROR: Auth error (for example, bad shared secret). \n- NEGOTIATION_FAILURE: Handshake failed. \n- DEPROVISIONING: Resources are being deallocated for the VPN tunnel. \n- FAILED: Tunnel creation has failed and the tunnel is not ready to be used.",
+     "description": "[Output Only] The status of the VPN tunnel, which can be one of the following: \n- PROVISIONING: Resource is being allocated for the VPN tunnel. \n- WAITING_FOR_FULL_CONFIG: Waiting to receive all VPN-related configs from the user. Network, TargetVpnGateway, VpnTunnel, ForwardingRule, and Route resources are needed to setup the VPN tunnel. \n- FIRST_HANDSHAKE: Successful first handshake with the peer VPN. \n- ESTABLISHED: Secure session is successfully established with the peer VPN. \n- NETWORK_ERROR: Deprecated, replaced by NO_INCOMING_PACKETS \n- AUTHORIZATION_ERROR: Auth error (for example, bad shared secret). \n- NEGOTIATION_FAILURE: Handshake failed. \n- DEPROVISIONING: Resources are being deallocated for the VPN tunnel. \n- FAILED: Tunnel creation has failed and the tunnel is not ready to be used. \n- NO_INCOMING_PACKETS: No incoming packets from peer. \n- REJECTED: Tunnel configuration was rejected, can be result of being blacklisted. \n- ALLOCATING_RESOURCES: Cloud VPN is in the process of allocating all required resources. \n- STOPPED: Tunnel is stopped due to its Forwarding Rules being deleted for Classic VPN tunnels or the project is in frozen state. \n- PEER_IDENTITY_MISMATCH: Peer identity does not match peer IP, probably behind NAT. \n- TS_NARROWING_NOT_ALLOWED: Traffic selector narrowing not allowed for an HA-VPN tunnel.",
      "enum": [
       "ALLOCATING_RESOURCES",
       "AUTHORIZATION_ERROR",
@@ -27546,7 +27865,7 @@
      "id": "compute.firewalls.update",
      "path": "{project}/global/firewalls/{firewall}",
      "httpMethod": "PUT",
-     "description": "Updates the specified firewall rule with the data included in the request. The PUT method can only update the following fields of firewall rule: allowed, description, sourceRanges, sourceTags, targetTags.",
+     "description": "Updates the specified firewall rule with the data included in the request. Note that all fields will be updated if using PUT, even fields that are not specified. To update individual fields, please use PATCH instead.",
      "parameters": {
       "firewall": {
        "type": "string",
@@ -28387,6 +28706,40 @@
      ],
      "response": {
       "$ref": "OperationList"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute",
+      "https://www.googleapis.com/auth/compute.readonly"
+     ]
+    },
+    "wait": {
+     "id": "compute.globalOperations.wait",
+     "path": "{project}/global/operations/{operation}/wait",
+     "httpMethod": "POST",
+     "description": "Waits for the specified Operations resource until it is done or timeout, and retrieves the specified Operations resource. 1. Immediately returns when the operation is already done. 2. Waits for no more than the default deadline (2 minutes, subject to change) and then returns the current state of the operation, which may be DONE or still in progress. 3. Is best-effort: a. The server can wait less than the default deadline or zero seconds, in overload situations. b. There is no guarantee that the operation is actually done when returns. 4. User should be prepared to retry if the operation is not DONE.",
+     "parameters": {
+      "operation": {
+       "type": "string",
+       "description": "Name of the Operations resource to return.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}",
+       "location": "path"
+      },
+      "project": {
+       "type": "string",
+       "description": "Project ID for this request.",
+       "required": true,
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "project",
+      "operation"
+     ],
+     "response": {
+      "$ref": "Operation"
      },
      "scopes": [
       "https://www.googleapis.com/auth/cloud-platform",
@@ -29645,6 +29998,53 @@
       "https://www.googleapis.com/auth/cloud-platform",
       "https://www.googleapis.com/auth/compute",
       "https://www.googleapis.com/auth/compute.readonly"
+     ]
+    },
+    "createInstances": {
+     "id": "compute.instanceGroupManagers.createInstances",
+     "path": "{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/createInstances",
+     "httpMethod": "POST",
+     "description": "Creates instances with per-instance configs in this managed instance group. Instances are created using the current instance template. The create instances operation is marked DONE if the createInstances request is successful. The underlying actions take additional time. You must separately verify the status of the creating or actions with the listmanagedinstances method.",
+     "parameters": {
+      "instanceGroupManager": {
+       "type": "string",
+       "description": "The name of the managed instance group. It should conform to RFC1035.",
+       "required": true,
+       "location": "path"
+      },
+      "project": {
+       "type": "string",
+       "description": "Project ID for this request.",
+       "required": true,
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "location": "path"
+      },
+      "requestId": {
+       "type": "string",
+       "description": "An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed.\n\nFor example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request.\n\nThe request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).",
+       "location": "query"
+      },
+      "zone": {
+       "type": "string",
+       "description": "The name of the zone where the managed instance group is located. It should conform to RFC1035.",
+       "required": true,
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "project",
+      "zone",
+      "instanceGroupManager"
+     ],
+     "request": {
+      "$ref": "InstanceGroupManagersCreateInstancesRequest"
+     },
+     "response": {
+      "$ref": "Operation"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute"
      ]
     },
     "delete": {
@@ -32853,6 +33253,11 @@
        "type": "string",
        "description": "An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed.\n\nFor example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments.\n\nThe request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).",
        "location": "query"
+      },
+      "validateOnly": {
+       "type": "boolean",
+       "description": "If true, the request will not be committed.",
+       "location": "query"
       }
      },
      "parameterOrder": [
@@ -34421,6 +34826,86 @@
      ],
      "response": {
       "$ref": "NetworkList"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute",
+      "https://www.googleapis.com/auth/compute.readonly"
+     ]
+    },
+    "listPeeringRoutes": {
+     "id": "compute.networks.listPeeringRoutes",
+     "path": "{project}/global/networks/{network}/listPeeringRoutes",
+     "httpMethod": "GET",
+     "description": "Lists the peering routes exchanged over peering connection.",
+     "parameters": {
+      "direction": {
+       "type": "string",
+       "description": "The direction of the exchanged routes.",
+       "enum": [
+        "INCOMING",
+        "OUTGOING"
+       ],
+       "enumDescriptions": [
+        "",
+        ""
+       ],
+       "location": "query"
+      },
+      "filter": {
+       "type": "string",
+       "description": "A filter expression that filters resources listed in the response. The expression must specify the field name, a comparison operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The comparison operator must be either =, !=, \u003e, or \u003c.\n\nFor example, if you are filtering Compute Engine instances, you can exclude instances named example-instance by specifying name != example-instance.\n\nYou can also filter nested fields. For example, you could specify scheduling.automaticRestart = false to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels.\n\nTo filter on multiple expressions, provide each separate expression within parentheses. For example, (scheduling.automaticRestart = true) (cpuPlatform = \"Intel Skylake\"). By default, each expression is an AND expression. However, you can include AND and OR expressions explicitly. For example, (cpuPlatform = \"Intel Skylake\") OR (cpuPlatform = \"Intel Broadwell\") AND (scheduling.automaticRestart = true).",
+       "location": "query"
+      },
+      "maxResults": {
+       "type": "integer",
+       "description": "The maximum number of results per page that should be returned. If the number of available results is larger than maxResults, Compute Engine returns a nextPageToken that can be used to get the next page of results in subsequent list requests. Acceptable values are 0 to 500, inclusive. (Default: 500)",
+       "default": "500",
+       "format": "uint32",
+       "minimum": "0",
+       "location": "query"
+      },
+      "network": {
+       "type": "string",
+       "description": "Name of the network for this request.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?",
+       "location": "path"
+      },
+      "orderBy": {
+       "type": "string",
+       "description": "Sorts list results by a certain order. By default, results are returned in alphanumerical order based on the resource name.\n\nYou can also sort results in descending order based on the creation timestamp using orderBy=\"creationTimestamp desc\". This sorts results based on the creationTimestamp field in reverse chronological order (newest result first). Use this to sort resources like operations so that the newest operation is returned first.\n\nCurrently, only sorting by name or creationTimestamp desc is supported.",
+       "location": "query"
+      },
+      "pageToken": {
+       "type": "string",
+       "description": "Specifies a page token to use. Set pageToken to the nextPageToken returned by a previous list request to get the next page of results.",
+       "location": "query"
+      },
+      "peeringName": {
+       "type": "string",
+       "description": "The response will show routes exchanged over the given peering connection.",
+       "location": "query"
+      },
+      "project": {
+       "type": "string",
+       "description": "Project ID for this request.",
+       "required": true,
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "location": "path"
+      },
+      "region": {
+       "type": "string",
+       "description": "The region of the request. The response will include all subnet routes, static routes and dynamic routes in the region.",
+       "location": "query"
+      }
+     },
+     "parameterOrder": [
+      "project",
+      "network"
+     ],
+     "response": {
+      "$ref": "ExchangedPeeringRoutesList"
      },
      "scopes": [
       "https://www.googleapis.com/auth/cloud-platform",
@@ -37884,6 +38369,53 @@
       "https://www.googleapis.com/auth/compute"
      ]
     },
+    "createInstances": {
+     "id": "compute.regionInstanceGroupManagers.createInstances",
+     "path": "{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/createInstances",
+     "httpMethod": "POST",
+     "description": "Creates instances with per-instance configs in this regional managed instance group. Instances are created using the current instance template. The create instances operation is marked DONE if the createInstances request is successful. The underlying actions take additional time. You must separately verify the status of the creating or actions with the listmanagedinstances method.",
+     "parameters": {
+      "instanceGroupManager": {
+       "type": "string",
+       "description": "The name of the managed instance group. It should conform to RFC1035.",
+       "required": true,
+       "location": "path"
+      },
+      "project": {
+       "type": "string",
+       "description": "Project ID for this request.",
+       "required": true,
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "location": "path"
+      },
+      "region": {
+       "type": "string",
+       "description": "The name of the region where the managed instance group is located. It should conform to RFC1035.",
+       "required": true,
+       "location": "path"
+      },
+      "requestId": {
+       "type": "string",
+       "description": "An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed.\n\nFor example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request.\n\nThe request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).",
+       "location": "query"
+      }
+     },
+     "parameterOrder": [
+      "project",
+      "region",
+      "instanceGroupManager"
+     ],
+     "request": {
+      "$ref": "RegionInstanceGroupManagersCreateInstancesRequest"
+     },
+     "response": {
+      "$ref": "Operation"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute"
+     ]
+    },
     "delete": {
      "id": "compute.regionInstanceGroupManagers.delete",
      "path": "{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}",
@@ -38762,6 +39294,48 @@
      ],
      "response": {
       "$ref": "OperationList"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute",
+      "https://www.googleapis.com/auth/compute.readonly"
+     ]
+    },
+    "wait": {
+     "id": "compute.regionOperations.wait",
+     "path": "{project}/regions/{region}/operations/{operation}/wait",
+     "httpMethod": "POST",
+     "description": "Waits for the specified region-specific Operations resource until it is done or timeout, and retrieves the specified Operations resource. 1. Immediately returns when the operation is already done. 2. Waits for no more than the default deadline (2 minutes, subject to change) and then returns the current state of the operation, which may be DONE or still in progress. 3. Is best-effort: a. The server can wait less than the default deadline or zero seconds, in overload situations. b. There is no guarantee that the operation is actually done when returns. 4. User should be prepared to retry if the operation is not DONE.",
+     "parameters": {
+      "operation": {
+       "type": "string",
+       "description": "Name of the Operations resource to return.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}",
+       "location": "path"
+      },
+      "project": {
+       "type": "string",
+       "description": "Project ID for this request.",
+       "required": true,
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "location": "path"
+      },
+      "region": {
+       "type": "string",
+       "description": "Name of the region for this request.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?",
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "project",
+      "region",
+      "operation"
+     ],
+     "response": {
+      "$ref": "Operation"
      },
      "scopes": [
       "https://www.googleapis.com/auth/cloud-platform",
@@ -42802,6 +43376,12 @@
      "httpMethod": "PATCH",
      "description": "Patches the specified subnetwork with the data included in the request. Only certain fields can up updated with a patch request as indicated in the field descriptions. You must specify the current fingeprint of the subnetwork resource being patched.",
      "parameters": {
+      "drainTimeoutSeconds": {
+       "type": "integer",
+       "description": "The drain timeout specifies the upper bound in seconds on the amount of time allowed to drain connections from the current ACTIVE subnetwork to the current BACKUP subnetwork. The drain timeout is only applicable when the following conditions are true: - the subnetwork being patched has purpose = INTERNAL_HTTPS_LOAD_BALANCER - the subnetwork being patched has role = BACKUP - the patch request is setting the role to ACTIVE. Note that after this patch operation the roles of the ACTIVE and BACKUP subnetworks will be swapped.",
+       "format": "int32",
+       "location": "query"
+      },
       "project": {
        "type": "string",
        "description": "Project ID for this request.",
@@ -46288,6 +46868,48 @@
      ],
      "response": {
       "$ref": "OperationList"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute",
+      "https://www.googleapis.com/auth/compute.readonly"
+     ]
+    },
+    "wait": {
+     "id": "compute.zoneOperations.wait",
+     "path": "{project}/zones/{zone}/operations/{operation}/wait",
+     "httpMethod": "POST",
+     "description": "Waits for the specified zone-specific Operations resource until it is done or timeout, and retrieves the specified Operations resource. 1. Immediately returns when the operation is already done. 2. Waits for no more than the default deadline (2 minutes, subject to change) and then returns the current state of the operation, which may be DONE or still in progress. 3. Is best-effort: a. The server can wait less than the default deadline or zero seconds, in overload situations. b. There is no guarantee that the operation is actually done when returns. 4. User should be prepared to retry if the operation is not DONE.",
+     "parameters": {
+      "operation": {
+       "type": "string",
+       "description": "Name of the Operations resource to return.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}",
+       "location": "path"
+      },
+      "project": {
+       "type": "string",
+       "description": "Project ID for this request.",
+       "required": true,
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "location": "path"
+      },
+      "zone": {
+       "type": "string",
+       "description": "Name of the zone for this request.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?",
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "project",
+      "zone",
+      "operation"
+     ],
+     "response": {
+      "$ref": "Operation"
      },
      "scopes": [
       "https://www.googleapis.com/auth/cloud-platform",

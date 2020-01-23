@@ -72,6 +72,14 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private CustomerEncryptionKey diskEncryptionKey;
 
   /**
+   * Specifies whether the disk restored from a source snapshot should erase Windows specific VSS
+   * signature.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean eraseWindowsVssSignature;
+
+  /**
    * A list of features to enable on the guest operating system. Applicable only for bootable
    * images. Read  Enabling guest operating system features to see a list of available options.
    * The value may be {@code null}.
@@ -390,6 +398,25 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    */
   public Disk setDiskEncryptionKey(CustomerEncryptionKey diskEncryptionKey) {
     this.diskEncryptionKey = diskEncryptionKey;
+    return this;
+  }
+
+  /**
+   * Specifies whether the disk restored from a source snapshot should erase Windows specific VSS
+   * signature.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEraseWindowsVssSignature() {
+    return eraseWindowsVssSignature;
+  }
+
+  /**
+   * Specifies whether the disk restored from a source snapshot should erase Windows specific VSS
+   * signature.
+   * @param eraseWindowsVssSignature eraseWindowsVssSignature or {@code null} for none
+   */
+  public Disk setEraseWindowsVssSignature(java.lang.Boolean eraseWindowsVssSignature) {
+    this.eraseWindowsVssSignature = eraseWindowsVssSignature;
     return this;
   }
 

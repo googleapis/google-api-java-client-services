@@ -17,7 +17,8 @@
 package com.google.api.services.compute.model;
 
 /**
- * Settings controlling eviction of unhealthy hosts from the load balancing pool.
+ * Settings controlling the eviction of unhealthy hosts from the load balancing pool for the backend
+ * service.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -30,8 +31,8 @@ package com.google.api.services.compute.model;
 public final class OutlierDetection extends com.google.api.client.json.GenericJson {
 
   /**
-   * The base time that a host is ejected for. The real time is equal to the base time multiplied by
-   * the number of times the host has been ejected. Defaults to 30000ms or 30s.
+   * The base time that a host is ejected for. The real ejection time is equal to the base ejection
+   * time multiplied by the number of times the host has been ejected. Defaults to 30000ms or 30s.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +49,7 @@ public final class OutlierDetection extends com.google.api.client.json.GenericJs
   /**
    * The number of consecutive gateway failures (502, 503, 504 status or connection errors that are
    * mapped to one of those status codes) before a consecutive gateway failure ejection occurs.
-   * Defaults to 5.
+   * Defaults to 3.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,7 +58,7 @@ public final class OutlierDetection extends com.google.api.client.json.GenericJs
   /**
    * The percentage chance that a host will be actually ejected when an outlier status is detected
    * through consecutive 5xx. This setting can be used to disable ejection or to ramp it up slowly.
-   * Defaults to 100.
+   * Defaults to 0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +67,7 @@ public final class OutlierDetection extends com.google.api.client.json.GenericJs
   /**
    * The percentage chance that a host will be actually ejected when an outlier status is detected
    * through consecutive gateway failures. This setting can be used to disable ejection or to ramp
-   * it up slowly. Defaults to 0.
+   * it up slowly. Defaults to 100.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,8 +83,8 @@ public final class OutlierDetection extends com.google.api.client.json.GenericJs
   private java.lang.Integer enforcingSuccessRate;
 
   /**
-   * Time interval between ejection sweep analysis. This can result in both new ejections as well as
-   * hosts being returned to service. Defaults to 10 seconds.
+   * Time interval between ejection analysis sweeps. This can result in both new ejections as well
+   * as hosts being returned to service. Defaults to 1 second.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +92,7 @@ public final class OutlierDetection extends com.google.api.client.json.GenericJs
 
   /**
    * Maximum percentage of hosts in the load balancing pool for the backend service that can be
-   * ejected. Defaults to 10%.
+   * ejected. Defaults to 50%.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,8 +129,8 @@ public final class OutlierDetection extends com.google.api.client.json.GenericJs
   private java.lang.Integer successRateStdevFactor;
 
   /**
-   * The base time that a host is ejected for. The real time is equal to the base time multiplied by
-   * the number of times the host has been ejected. Defaults to 30000ms or 30s.
+   * The base time that a host is ejected for. The real ejection time is equal to the base ejection
+   * time multiplied by the number of times the host has been ejected. Defaults to 30000ms or 30s.
    * @return value or {@code null} for none
    */
   public Duration getBaseEjectionTime() {
@@ -137,8 +138,8 @@ public final class OutlierDetection extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The base time that a host is ejected for. The real time is equal to the base time multiplied by
-   * the number of times the host has been ejected. Defaults to 30000ms or 30s.
+   * The base time that a host is ejected for. The real ejection time is equal to the base ejection
+   * time multiplied by the number of times the host has been ejected. Defaults to 30000ms or 30s.
    * @param baseEjectionTime baseEjectionTime or {@code null} for none
    */
   public OutlierDetection setBaseEjectionTime(Duration baseEjectionTime) {
@@ -168,7 +169,7 @@ public final class OutlierDetection extends com.google.api.client.json.GenericJs
   /**
    * The number of consecutive gateway failures (502, 503, 504 status or connection errors that are
    * mapped to one of those status codes) before a consecutive gateway failure ejection occurs.
-   * Defaults to 5.
+   * Defaults to 3.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getConsecutiveGatewayFailure() {
@@ -178,7 +179,7 @@ public final class OutlierDetection extends com.google.api.client.json.GenericJs
   /**
    * The number of consecutive gateway failures (502, 503, 504 status or connection errors that are
    * mapped to one of those status codes) before a consecutive gateway failure ejection occurs.
-   * Defaults to 5.
+   * Defaults to 3.
    * @param consecutiveGatewayFailure consecutiveGatewayFailure or {@code null} for none
    */
   public OutlierDetection setConsecutiveGatewayFailure(java.lang.Integer consecutiveGatewayFailure) {
@@ -189,7 +190,7 @@ public final class OutlierDetection extends com.google.api.client.json.GenericJs
   /**
    * The percentage chance that a host will be actually ejected when an outlier status is detected
    * through consecutive 5xx. This setting can be used to disable ejection or to ramp it up slowly.
-   * Defaults to 100.
+   * Defaults to 0.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getEnforcingConsecutiveErrors() {
@@ -199,7 +200,7 @@ public final class OutlierDetection extends com.google.api.client.json.GenericJs
   /**
    * The percentage chance that a host will be actually ejected when an outlier status is detected
    * through consecutive 5xx. This setting can be used to disable ejection or to ramp it up slowly.
-   * Defaults to 100.
+   * Defaults to 0.
    * @param enforcingConsecutiveErrors enforcingConsecutiveErrors or {@code null} for none
    */
   public OutlierDetection setEnforcingConsecutiveErrors(java.lang.Integer enforcingConsecutiveErrors) {
@@ -210,7 +211,7 @@ public final class OutlierDetection extends com.google.api.client.json.GenericJs
   /**
    * The percentage chance that a host will be actually ejected when an outlier status is detected
    * through consecutive gateway failures. This setting can be used to disable ejection or to ramp
-   * it up slowly. Defaults to 0.
+   * it up slowly. Defaults to 100.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getEnforcingConsecutiveGatewayFailure() {
@@ -220,7 +221,7 @@ public final class OutlierDetection extends com.google.api.client.json.GenericJs
   /**
    * The percentage chance that a host will be actually ejected when an outlier status is detected
    * through consecutive gateway failures. This setting can be used to disable ejection or to ramp
-   * it up slowly. Defaults to 0.
+   * it up slowly. Defaults to 100.
    * @param enforcingConsecutiveGatewayFailure enforcingConsecutiveGatewayFailure or {@code null} for none
    */
   public OutlierDetection setEnforcingConsecutiveGatewayFailure(java.lang.Integer enforcingConsecutiveGatewayFailure) {
@@ -250,8 +251,8 @@ public final class OutlierDetection extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Time interval between ejection sweep analysis. This can result in both new ejections as well as
-   * hosts being returned to service. Defaults to 10 seconds.
+   * Time interval between ejection analysis sweeps. This can result in both new ejections as well
+   * as hosts being returned to service. Defaults to 1 second.
    * @return value or {@code null} for none
    */
   public Duration getInterval() {
@@ -259,8 +260,8 @@ public final class OutlierDetection extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Time interval between ejection sweep analysis. This can result in both new ejections as well as
-   * hosts being returned to service. Defaults to 10 seconds.
+   * Time interval between ejection analysis sweeps. This can result in both new ejections as well
+   * as hosts being returned to service. Defaults to 1 second.
    * @param interval interval or {@code null} for none
    */
   public OutlierDetection setInterval(Duration interval) {
@@ -270,7 +271,7 @@ public final class OutlierDetection extends com.google.api.client.json.GenericJs
 
   /**
    * Maximum percentage of hosts in the load balancing pool for the backend service that can be
-   * ejected. Defaults to 10%.
+   * ejected. Defaults to 50%.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxEjectionPercent() {
@@ -279,7 +280,7 @@ public final class OutlierDetection extends com.google.api.client.json.GenericJs
 
   /**
    * Maximum percentage of hosts in the load balancing pool for the backend service that can be
-   * ejected. Defaults to 10%.
+   * ejected. Defaults to 50%.
    * @param maxEjectionPercent maxEjectionPercent or {@code null} for none
    */
   public OutlierDetection setMaxEjectionPercent(java.lang.Integer maxEjectionPercent) {

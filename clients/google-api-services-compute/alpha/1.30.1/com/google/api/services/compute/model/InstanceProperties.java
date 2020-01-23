@@ -41,6 +41,13 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   private java.lang.Boolean canIpForward;
 
   /**
+   * Specifies the Confidential Instance options.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ConfidentialInstanceConfig confidentialInstanceConfig;
+
+  /**
    * An optional text description for the instances that are created from this instance template.
    * The value may be {@code null}.
    */
@@ -137,6 +144,13 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   private ReservationAffinity reservationAffinity;
 
   /**
+   * Resource policies (names, not ULRs) applied to instances created from this templae.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> resourcePolicies;
+
+  /**
    * Specifies the scheduling options for the instances that are created from this template.
    * The value may be {@code null}.
    */
@@ -196,6 +210,23 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
    */
   public InstanceProperties setCanIpForward(java.lang.Boolean canIpForward) {
     this.canIpForward = canIpForward;
+    return this;
+  }
+
+  /**
+   * Specifies the Confidential Instance options.
+   * @return value or {@code null} for none
+   */
+  public ConfidentialInstanceConfig getConfidentialInstanceConfig() {
+    return confidentialInstanceConfig;
+  }
+
+  /**
+   * Specifies the Confidential Instance options.
+   * @param confidentialInstanceConfig confidentialInstanceConfig or {@code null} for none
+   */
+  public InstanceProperties setConfidentialInstanceConfig(ConfidentialInstanceConfig confidentialInstanceConfig) {
+    this.confidentialInstanceConfig = confidentialInstanceConfig;
     return this;
   }
 
@@ -397,6 +428,23 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
    */
   public InstanceProperties setReservationAffinity(ReservationAffinity reservationAffinity) {
     this.reservationAffinity = reservationAffinity;
+    return this;
+  }
+
+  /**
+   * Resource policies (names, not ULRs) applied to instances created from this templae.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getResourcePolicies() {
+    return resourcePolicies;
+  }
+
+  /**
+   * Resource policies (names, not ULRs) applied to instances created from this templae.
+   * @param resourcePolicies resourcePolicies or {@code null} for none
+   */
+  public InstanceProperties setResourcePolicies(java.util.List<java.lang.String> resourcePolicies) {
+    this.resourcePolicies = resourcePolicies;
     return this;
   }
 

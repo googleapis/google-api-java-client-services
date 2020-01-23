@@ -22,6 +22,8 @@ package com.google.api.services.compute.model;
  * This SSL certificate resource also contains a private key. You can use SSL keys and certificates
  * to secure connections to a load balancer. For more information, read  Creating and Using SSL
  * Certificates. (== resource_for beta.sslCertificates ==) (== resource_for v1.sslCertificates ==)
+ * (== resource_for beta.regionSslCertificates ==) (== resource_for v1.regionSslCertificates ==)
+ * Next ID: 17
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

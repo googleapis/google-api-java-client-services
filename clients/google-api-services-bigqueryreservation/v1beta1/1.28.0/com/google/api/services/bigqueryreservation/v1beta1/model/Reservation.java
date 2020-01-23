@@ -32,8 +32,8 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
 
   /**
    * If false, any query using this reservation will use idle slots from other reservations within
-   * the same admin project. If true, a query using this reservation will execute with the maximum
-   * slot capacity as specified above.
+   * the same admin project. If true, a query using this reservation will execute with the slot
+   * capacity specified above at most.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,11 +47,11 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Maximum slots available to this reservation. A slot is a unit of computational power in
-   * BigQuery, and serves as the unit of parallelism. In a scan of a multi-partitioned table, a
-   * single slot operates on a single partition of the table. If the new reservation's slot capacity
-   * exceed the parent's slot capacity or if total slot capacity of the new reservation and its
-   * siblings exceeds the parent's slot capacity, the request will fail with
+   * Minimum slots available to this reservation. A slot is a unit of computational power in
+   * BigQuery, and serves as the unit of parallelism. Queries using this reservation might use more
+   * slots during runtime if ignore_idle_slots is set to false. If the new reservation's slot
+   * capacity exceed the parent's slot capacity or if total slot capacity of the new reservation and
+   * its siblings exceeds the parent's slot capacity, the request will fail with
    * `google.rpc.Code.RESOURCE_EXHAUSTED`.
    * The value may be {@code null}.
    */
@@ -60,8 +60,8 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
 
   /**
    * If false, any query using this reservation will use idle slots from other reservations within
-   * the same admin project. If true, a query using this reservation will execute with the maximum
-   * slot capacity as specified above.
+   * the same admin project. If true, a query using this reservation will execute with the slot
+   * capacity specified above at most.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIgnoreIdleSlots() {
@@ -70,8 +70,8 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
 
   /**
    * If false, any query using this reservation will use idle slots from other reservations within
-   * the same admin project. If true, a query using this reservation will execute with the maximum
-   * slot capacity as specified above.
+   * the same admin project. If true, a query using this reservation will execute with the slot
+   * capacity specified above at most.
    * @param ignoreIdleSlots ignoreIdleSlots or {@code null} for none
    */
   public Reservation setIgnoreIdleSlots(java.lang.Boolean ignoreIdleSlots) {
@@ -97,11 +97,11 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Maximum slots available to this reservation. A slot is a unit of computational power in
-   * BigQuery, and serves as the unit of parallelism. In a scan of a multi-partitioned table, a
-   * single slot operates on a single partition of the table. If the new reservation's slot capacity
-   * exceed the parent's slot capacity or if total slot capacity of the new reservation and its
-   * siblings exceeds the parent's slot capacity, the request will fail with
+   * Minimum slots available to this reservation. A slot is a unit of computational power in
+   * BigQuery, and serves as the unit of parallelism. Queries using this reservation might use more
+   * slots during runtime if ignore_idle_slots is set to false. If the new reservation's slot
+   * capacity exceed the parent's slot capacity or if total slot capacity of the new reservation and
+   * its siblings exceeds the parent's slot capacity, the request will fail with
    * `google.rpc.Code.RESOURCE_EXHAUSTED`.
    * @return value or {@code null} for none
    */
@@ -110,11 +110,11 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Maximum slots available to this reservation. A slot is a unit of computational power in
-   * BigQuery, and serves as the unit of parallelism. In a scan of a multi-partitioned table, a
-   * single slot operates on a single partition of the table. If the new reservation's slot capacity
-   * exceed the parent's slot capacity or if total slot capacity of the new reservation and its
-   * siblings exceeds the parent's slot capacity, the request will fail with
+   * Minimum slots available to this reservation. A slot is a unit of computational power in
+   * BigQuery, and serves as the unit of parallelism. Queries using this reservation might use more
+   * slots during runtime if ignore_idle_slots is set to false. If the new reservation's slot
+   * capacity exceed the parent's slot capacity or if total slot capacity of the new reservation and
+   * its siblings exceeds the parent's slot capacity, the request will fail with
    * `google.rpc.Code.RESOURCE_EXHAUSTED`.
    * @param slotCapacity slotCapacity or {@code null} for none
    */

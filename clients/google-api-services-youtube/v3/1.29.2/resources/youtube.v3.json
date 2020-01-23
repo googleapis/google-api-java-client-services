@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"LYADMvHWYH2ul9D6m9UT9gT77YM/4f4w4quSc5g0uHUVyQ0dS5LjLqo\"",
+ "etag": "\"LYADMvHWYH2ul9D6m9UT9gT77YM/FvGCP4PWblWUASImsiM0Esh60RM\"",
  "discoveryVersion": "v1",
  "id": "youtube:v3",
  "name": "youtube",
  "canonicalName": "YouTube",
  "version": "v3",
- "revision": "20200102",
+ "revision": "20200109",
  "title": "YouTube Data API",
  "description": "Supports core YouTube features, such as uploading videos, creating and managing playlists, searching for content, and much more.",
  "ownerDomain": "google.com",
@@ -1463,6 +1463,9 @@
       ""
      ]
     },
+    "madeForKids": {
+     "type": "boolean"
+    },
     "privacyStatus": {
      "type": "string",
      "description": "Privacy status of the channel.",
@@ -1476,6 +1479,9 @@
       "",
       ""
      ]
+    },
+    "selfDeclaredMadeForKids": {
+     "type": "boolean"
     }
    }
   },
@@ -7483,6 +7489,9 @@
       ""
      ]
     },
+    "madeForKids": {
+     "type": "boolean"
+    },
     "privacyStatus": {
      "type": "string",
      "description": "The video's privacy status.",
@@ -7533,6 +7542,10 @@
       "",
       ""
      ]
+    },
+    "selfDeclaredMadeForKids": {
+     "type": "boolean",
+     "description": "Allows clients to set the Crosswalk self_declared state for a Video. This maps to VAPI.Video.creator_flags.is_crosswalk_self_declared() and VAPI.Video.creator_flags.is_not_crosswalk_self_declared()."
     },
     "uploadStatus": {
      "type": "string",

@@ -45,11 +45,23 @@ public final class ChannelStatus extends com.google.api.client.json.GenericJson 
   private java.lang.String longUploadsStatus;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean madeForKids;
+
+  /**
    * Privacy status of the channel.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String privacyStatus;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean selfDeclaredMadeForKids;
 
   /**
    * If true, then the user is linked to either a YouTube username or G+ account. Otherwise, the
@@ -88,6 +100,21 @@ public final class ChannelStatus extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getMadeForKids() {
+    return madeForKids;
+  }
+
+  /**
+   * @param madeForKids madeForKids or {@code null} for none
+   */
+  public ChannelStatus setMadeForKids(java.lang.Boolean madeForKids) {
+    this.madeForKids = madeForKids;
+    return this;
+  }
+
+  /**
    * Privacy status of the channel.
    * @return value or {@code null} for none
    */
@@ -101,6 +128,21 @@ public final class ChannelStatus extends com.google.api.client.json.GenericJson 
    */
   public ChannelStatus setPrivacyStatus(java.lang.String privacyStatus) {
     this.privacyStatus = privacyStatus;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSelfDeclaredMadeForKids() {
+    return selfDeclaredMadeForKids;
+  }
+
+  /**
+   * @param selfDeclaredMadeForKids selfDeclaredMadeForKids or {@code null} for none
+   */
+  public ChannelStatus setSelfDeclaredMadeForKids(java.lang.Boolean selfDeclaredMadeForKids) {
+    this.selfDeclaredMadeForKids = selfDeclaredMadeForKids;
     return this;
   }
 

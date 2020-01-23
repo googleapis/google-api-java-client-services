@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- see http://mojo.codehaus.org/clirr-maven-plugin/examples/ignored-differences.html -->
+<differences>
+  <difference>
+    <className>com/google/api/services/iam/v1/model/LintPolicyRequest</className>
+    <method>com.google.api.services.iam.v1.model.Binding getBinding()</method>
+    <differenceType>7002</differenceType>
+  </difference>
+  <difference>
+    <className>com/google/api/services/iam/v1/model/LintPolicyRequest</className>
+    <method>java.util.Map getContext()</method>
+    <differenceType>7002</differenceType>
+  </difference>
+  <difference>
+    <className>com/google/api/services/iam/v1/model/LintPolicyRequest</className>
+    <method>com.google.api.services.iam.v1.model.Policy getPolicy()</method>
+    <differenceType>7002</differenceType>
+  </difference>
+  <difference>
+    <className>com/google/api/services/iam/v1/model/LintPolicyRequest</className>
+    <method>com.google.api.services.iam.v1.model.LintPolicyRequest setBinding(com.google.api.services.iam.v1.model.Binding)</method>
+    <differenceType>7002</differenceType>
+  </difference>
+  <difference>
+    <className>com/google/api/services/iam/v1/model/LintPolicyRequest</className>
+    <method>com.google.api.services.iam.v1.model.LintPolicyRequest setContext(java.util.Map)</method>
+    <differenceType>7002</differenceType>
+  </difference>
+  <difference>
+    <className>com/google/api/services/iam/v1/model/LintPolicyRequest</className>
+    <method>com.google.api.services.iam.v1.model.LintPolicyRequest setPolicy(com.google.api.services.iam.v1.model.Policy)</method>
+    <differenceType>7002</differenceType>
+  </difference>
+  <difference>
+    <className>com/google/api/services/iam/v1/model/LintResult</className>
+    <method>java.lang.Integer getBindingOrdinal()</method>
+    <differenceType>7002</differenceType>
+  </difference>
+  <difference>
+    <className>com/google/api/services/iam/v1/model/LintResult</className>
+    <method>com.google.api.services.iam.v1.model.LintResult setBindingOrdinal(java.lang.Integer)</method>
+    <differenceType>7002</differenceType>
+  </difference>
+</differences>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- see http://mojo.codehaus.org/clirr-maven-plugin/examples/ignored-differences.html -->
+<differences>
+    <difference>
+        <className> com/google/api/services/games/Games</className>
+        <method>com.google.api.services.games.Games* questMilestones()</method>
+        <differenceType>7002</differenceType>
+    </difference>
+    <difference>
+        <className> com/google/api/services/games/Games</className>
+        <method>com.google.api.services.games.Games* quests()</method>
+        <differenceType>7002</differenceType>
+    </difference>
+    <difference>
+        <className> com/google/api/services/games/Games$QuestMilestones</className>
+        <differenceType>8001</differenceType>
+    </difference>
+    <difference>
+        <className> com/google/api/services/games/Games$QuestMilestones$Claim</className>
+        <differenceType>8001</differenceType>
+    </difference>
+    <difference>
+        <className> com/google/api/services/games/Games$Quests</className>
+        <differenceType>8001</differenceType>
+    </difference>
+    <difference>
+        <className> com/google/api/services/games/Games$Quests$Accept</className>
+        <differenceType>8001</differenceType>
+    </difference>
+    <difference>
+        <className> com/google/api/services/games/Games$Quests$List</className>
+        <differenceType>8001</differenceType>
+    </difference>
+</differences>

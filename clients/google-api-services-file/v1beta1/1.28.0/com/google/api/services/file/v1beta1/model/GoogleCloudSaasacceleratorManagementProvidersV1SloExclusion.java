@@ -17,7 +17,7 @@
 package com.google.api.services.file.v1beta1.model;
 
 /**
- * SloExclusion represents an excusion in SLI calculation applies to all SLOs.
+ * SloExclusion represents an exclusion in SLI calculation applies to all SLOs.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Filestore API. For a detailed explanation see:
@@ -40,14 +40,7 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion e
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private String exclusionDuration;
-
-  /**
-   * Start time of the exclusion. No alignment (e.g. to a full minute) needed.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private String exclusionStartTime;
+  private String duration;
 
   /**
    * Human-readable reason for the exclusion. This should be a static string (e.g. "Disruptive
@@ -67,6 +60,13 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion e
   private java.lang.String sliName;
 
   /**
+   * Start time of the exclusion. No alignment (e.g. to a full minute) needed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String startTime;
+
+  /**
    * Exclusion duration. No restrictions on the possible values.
    *
    * When an ongoing operation is taking longer than initially expected, an existing entry in the
@@ -76,8 +76,8 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion e
    * exclusion application in the exported timeseries.
    * @return value or {@code null} for none
    */
-  public String getExclusionDuration() {
-    return exclusionDuration;
+  public String getDuration() {
+    return duration;
   }
 
   /**
@@ -88,27 +88,10 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion e
    * exporting eligibility data as long as such extension is committed at least 10 minutes before
    * the original exclusion expiration - otherwise it is possible that there will be "gaps" in the
    * exclusion application in the exported timeseries.
-   * @param exclusionDuration exclusionDuration or {@code null} for none
+   * @param duration duration or {@code null} for none
    */
-  public GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion setExclusionDuration(String exclusionDuration) {
-    this.exclusionDuration = exclusionDuration;
-    return this;
-  }
-
-  /**
-   * Start time of the exclusion. No alignment (e.g. to a full minute) needed.
-   * @return value or {@code null} for none
-   */
-  public String getExclusionStartTime() {
-    return exclusionStartTime;
-  }
-
-  /**
-   * Start time of the exclusion. No alignment (e.g. to a full minute) needed.
-   * @param exclusionStartTime exclusionStartTime or {@code null} for none
-   */
-  public GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion setExclusionStartTime(String exclusionStartTime) {
-    this.exclusionStartTime = exclusionStartTime;
+  public GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion setDuration(String duration) {
+    this.duration = duration;
     return this;
   }
 
@@ -149,6 +132,23 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion e
    */
   public GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion setSliName(java.lang.String sliName) {
     this.sliName = sliName;
+    return this;
+  }
+
+  /**
+   * Start time of the exclusion. No alignment (e.g. to a full minute) needed.
+   * @return value or {@code null} for none
+   */
+  public String getStartTime() {
+    return startTime;
+  }
+
+  /**
+   * Start time of the exclusion. No alignment (e.g. to a full minute) needed.
+   * @param startTime startTime or {@code null} for none
+   */
+  public GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion setStartTime(String startTime) {
+    this.startTime = startTime;
     return this;
   }
 

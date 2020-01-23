@@ -130,6 +130,15 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1Instance exten
   private java.util.Map<String, GoogleCloudSaasacceleratorManagementProvidersV1RolloutMetadata> rolloutMetadata;
 
   /**
+   * Link to the SLM instance template. Only populated when updating SLM instances via SSA's
+   * Actuation service adaptor. Service producers with custom control plane (e.g. Cloud SQL) doesn't
+   * need to populate this field. Instead they should use software_versions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String slmInstanceTemplate;
+
+  /**
    * Output only. SLO metadata for instance classification in the Standardized dataplane SLO
    * platform. See go/cloud-ssa-standard-slo for feature description.
    * The value may be {@code null}.
@@ -343,6 +352,27 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1Instance exten
    */
   public GoogleCloudSaasacceleratorManagementProvidersV1Instance setRolloutMetadata(java.util.Map<String, GoogleCloudSaasacceleratorManagementProvidersV1RolloutMetadata> rolloutMetadata) {
     this.rolloutMetadata = rolloutMetadata;
+    return this;
+  }
+
+  /**
+   * Link to the SLM instance template. Only populated when updating SLM instances via SSA's
+   * Actuation service adaptor. Service producers with custom control plane (e.g. Cloud SQL) doesn't
+   * need to populate this field. Instead they should use software_versions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSlmInstanceTemplate() {
+    return slmInstanceTemplate;
+  }
+
+  /**
+   * Link to the SLM instance template. Only populated when updating SLM instances via SSA's
+   * Actuation service adaptor. Service producers with custom control plane (e.g. Cloud SQL) doesn't
+   * need to populate this field. Instead they should use software_versions.
+   * @param slmInstanceTemplate slmInstanceTemplate or {@code null} for none
+   */
+  public GoogleCloudSaasacceleratorManagementProvidersV1Instance setSlmInstanceTemplate(java.lang.String slmInstanceTemplate) {
+    this.slmInstanceTemplate = slmInstanceTemplate;
     return this;
   }
 

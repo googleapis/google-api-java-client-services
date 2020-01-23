@@ -51,7 +51,6 @@
     <method>java.lang.Float getViolenceConfidence()</method>
     <differenceType>7002</differenceType>
   </difference>
-
   <difference>
     <className>com/google/api/services/vision/v1p2beta1/model/GoogleCloudVisionV1p4beta1SafeSearchAnnotation</className>
     <method>com.google.api.services.vision.v1p2beta1.model.GoogleCloudVisionV1p4beta1SafeSearchAnnotation setAdultConfidence(java.lang.Float)</method>
@@ -82,7 +81,6 @@
     <method>com.google.api.services.vision.v1p2beta1.model.GoogleCloudVisionV1p4beta1SafeSearchAnnotation setViolenceConfidence(java.lang.Float)</method>
     <differenceType>7002</differenceType>
   </difference>
-
   <difference>
     <className>com/google/api/services/vision/v1p2beta1/model/SafeSearchAnnotation</className>
     <method>java.lang.Float getAdultConfidence()</method>

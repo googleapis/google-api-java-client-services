@@ -39,10 +39,10 @@ public final class DataSet extends com.google.api.client.json.GenericJson {
   private java.lang.String legendTemplate;
 
   /**
-   * Optional. The lower bound on data point frequency for this data set implemented by specifying
-   * the minimum alignment period to use in a time series query. For example, if the data is
-   * published once every 10 minutes it would not make sense to fetch and align data at one minute
-   * intervals.
+   * Optional. The lower bound on data point frequency for this data set, implemented by specifying
+   * the minimum alignment period to use in a time series query For example, if the data is
+   * published once every 10 minutes, the min_alignment_period should be at least 10 minutes. It
+   * would not make sense to fetch and align data at one minute intervals.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,10 +82,10 @@ public final class DataSet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The lower bound on data point frequency for this data set implemented by specifying
-   * the minimum alignment period to use in a time series query. For example, if the data is
-   * published once every 10 minutes it would not make sense to fetch and align data at one minute
-   * intervals.
+   * Optional. The lower bound on data point frequency for this data set, implemented by specifying
+   * the minimum alignment period to use in a time series query For example, if the data is
+   * published once every 10 minutes, the min_alignment_period should be at least 10 minutes. It
+   * would not make sense to fetch and align data at one minute intervals.
    * @return value or {@code null} for none
    */
   public String getMinAlignmentPeriod() {
@@ -93,10 +93,10 @@ public final class DataSet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The lower bound on data point frequency for this data set implemented by specifying
-   * the minimum alignment period to use in a time series query. For example, if the data is
-   * published once every 10 minutes it would not make sense to fetch and align data at one minute
-   * intervals.
+   * Optional. The lower bound on data point frequency for this data set, implemented by specifying
+   * the minimum alignment period to use in a time series query For example, if the data is
+   * published once every 10 minutes, the min_alignment_period should be at least 10 minutes. It
+   * would not make sense to fetch and align data at one minute intervals.
    * @param minAlignmentPeriod minAlignmentPeriod or {@code null} for none
    */
   public DataSet setMinAlignmentPeriod(String minAlignmentPeriod) {

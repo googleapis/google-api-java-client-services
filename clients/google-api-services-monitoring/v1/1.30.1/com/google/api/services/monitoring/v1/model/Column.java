@@ -31,8 +31,9 @@ package com.google.api.services.monitoring.v1.model;
 public final class Column extends com.google.api.client.json.GenericJson {
 
   /**
-   * The relative weight of this column. The column weight is used to adjust the height of rows on
-   * the screen (relative to peers). If omitted, a value of 1 is used.
+   * The relative weight of this column. The column weight is used to adjust the width of columns on
+   * the screen (relative to peers). Greater the weight, greater the width of the column on the
+   * screen. If omitted, a value of 1 is used while rendering.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -46,8 +47,9 @@ public final class Column extends com.google.api.client.json.GenericJson {
   private java.util.List<Widget> widgets;
 
   /**
-   * The relative weight of this column. The column weight is used to adjust the height of rows on
-   * the screen (relative to peers). If omitted, a value of 1 is used.
+   * The relative weight of this column. The column weight is used to adjust the width of columns on
+   * the screen (relative to peers). Greater the weight, greater the width of the column on the
+   * screen. If omitted, a value of 1 is used while rendering.
    * @return value or {@code null} for none
    */
   public java.lang.Long getWeight() {
@@ -55,8 +57,9 @@ public final class Column extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The relative weight of this column. The column weight is used to adjust the height of rows on
-   * the screen (relative to peers). If omitted, a value of 1 is used.
+   * The relative weight of this column. The column weight is used to adjust the width of columns on
+   * the screen (relative to peers). Greater the weight, greater the width of the column on the
+   * screen. If omitted, a value of 1 is used while rendering.
    * @param weight weight or {@code null} for none
    */
   public Column setWeight(java.lang.Long weight) {

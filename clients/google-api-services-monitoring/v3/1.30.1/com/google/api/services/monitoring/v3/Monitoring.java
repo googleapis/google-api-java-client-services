@@ -3136,7 +3136,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         private static final String REST_PATH = "v3/{+name}";
 
         private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^projects/[^/]+/monitoredResourceDescriptors/[^/]+$");
+            java.util.regex.Pattern.compile("^projects/[^/]+/monitoredResourceDescriptors/.+$");
 
         /**
          * Gets a single monitored resource descriptor. This method does not require a Stackdriver
@@ -3160,7 +3160,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/monitoredResourceDescriptors/[^/]+$");
+                "^projects/[^/]+/monitoredResourceDescriptors/.+$");
           }
         }
 
@@ -3254,7 +3254,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/monitoredResourceDescriptors/[^/]+$");
+                "^projects/[^/]+/monitoredResourceDescriptors/.+$");
           }
           this.name = name;
           return this;
@@ -6839,7 +6839,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
      * This request holds the parameters needed by the monitoring server.  After setting any optional
      * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
-     * @param name Resource name of the Service to delete. Of the form projects/{project_id}/service/{service_id}.
+     * @param name Resource name of the Service to delete. Of the form projects/{project_id}/services/{service_id}.
      * @return the request
      */
     public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -6866,7 +6866,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Resource name of the Service to delete. Of the form projects/{project_id}/service/{service_id}.
+       * @param name Resource name of the Service to delete. Of the form projects/{project_id}/services/{service_id}.
        * @since 1.13
        */
       protected Delete(java.lang.String name) {
@@ -6936,12 +6936,12 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
 
       /**
        * Resource name of the Service to delete. Of the form
-       * projects/{project_id}/service/{service_id}.
+       * projects/{project_id}/services/{service_id}.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Resource name of the Service to delete. Of the form projects/{project_id}/service/{service_id}.
+      /** Resource name of the Service to delete. Of the form projects/{project_id}/services/{service_id}.
        */
       public java.lang.String getName() {
         return name;
@@ -6949,7 +6949,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
 
       /**
        * Resource name of the Service to delete. Of the form
-       * projects/{project_id}/service/{service_id}.
+       * projects/{project_id}/services/{service_id}.
        */
       public Delete setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {

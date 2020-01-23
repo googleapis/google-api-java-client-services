@@ -64,23 +64,23 @@ public final class XyChart extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The duration used to display a comparison chart. A comparison chart shows values from two time
-   * periods simultaneously (e.g., week-over-week metrics). The duration must be positive, and it
-   * can only be applied to charts with data sets of LINE plot type.
+   * The duration used to display a comparison chart. A comparison chart simultaneously shows values
+   * from two similar-length time periods (e.g., week-over-week metrics). The duration must be
+   * positive, and it can only be applied to charts with data sets of LINE plot type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String timeshiftDuration;
 
   /**
-   * The X axis properties.
+   * The properties applied to the X axis.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Axis xAxis;
 
   /**
-   * The primary Y axis properties.
+   * The properties applied to the Y axis.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,9 +138,9 @@ public final class XyChart extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The duration used to display a comparison chart. A comparison chart shows values from two time
-   * periods simultaneously (e.g., week-over-week metrics). The duration must be positive, and it
-   * can only be applied to charts with data sets of LINE plot type.
+   * The duration used to display a comparison chart. A comparison chart simultaneously shows values
+   * from two similar-length time periods (e.g., week-over-week metrics). The duration must be
+   * positive, and it can only be applied to charts with data sets of LINE plot type.
    * @return value or {@code null} for none
    */
   public String getTimeshiftDuration() {
@@ -148,9 +148,9 @@ public final class XyChart extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The duration used to display a comparison chart. A comparison chart shows values from two time
-   * periods simultaneously (e.g., week-over-week metrics). The duration must be positive, and it
-   * can only be applied to charts with data sets of LINE plot type.
+   * The duration used to display a comparison chart. A comparison chart simultaneously shows values
+   * from two similar-length time periods (e.g., week-over-week metrics). The duration must be
+   * positive, and it can only be applied to charts with data sets of LINE plot type.
    * @param timeshiftDuration timeshiftDuration or {@code null} for none
    */
   public XyChart setTimeshiftDuration(String timeshiftDuration) {
@@ -159,7 +159,7 @@ public final class XyChart extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The X axis properties.
+   * The properties applied to the X axis.
    * @return value or {@code null} for none
    */
   public Axis getXAxis() {
@@ -167,7 +167,7 @@ public final class XyChart extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The X axis properties.
+   * The properties applied to the X axis.
    * @param xAxis xAxis or {@code null} for none
    */
   public XyChart setXAxis(Axis xAxis) {
@@ -176,7 +176,7 @@ public final class XyChart extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The primary Y axis properties.
+   * The properties applied to the Y axis.
    * @return value or {@code null} for none
    */
   public Axis getYAxis() {
@@ -184,7 +184,7 @@ public final class XyChart extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The primary Y axis properties.
+   * The properties applied to the Y axis.
    * @param yAxis yAxis or {@code null} for none
    */
   public XyChart setYAxis(Axis yAxis) {

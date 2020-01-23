@@ -32,7 +32,8 @@ public final class Row extends com.google.api.client.json.GenericJson {
 
   /**
    * The relative weight of this row. The row weight is used to adjust the height of rows on the
-   * screen (relative to peers). If omitted, a value of 1 is used.
+   * screen (relative to peers). Greater the weight, greater the height of the row on the screen. If
+   * omitted, a value of 1 is used while rendering.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -47,7 +48,8 @@ public final class Row extends com.google.api.client.json.GenericJson {
 
   /**
    * The relative weight of this row. The row weight is used to adjust the height of rows on the
-   * screen (relative to peers). If omitted, a value of 1 is used.
+   * screen (relative to peers). Greater the weight, greater the height of the row on the screen. If
+   * omitted, a value of 1 is used while rendering.
    * @return value or {@code null} for none
    */
   public java.lang.Long getWeight() {
@@ -56,7 +58,8 @@ public final class Row extends com.google.api.client.json.GenericJson {
 
   /**
    * The relative weight of this row. The row weight is used to adjust the height of rows on the
-   * screen (relative to peers). If omitted, a value of 1 is used.
+   * screen (relative to peers). Greater the weight, greater the height of the row on the screen. If
+   * omitted, a value of 1 is used while rendering.
    * @param weight weight or {@code null} for none
    */
   public Row setWeight(java.lang.Long weight) {

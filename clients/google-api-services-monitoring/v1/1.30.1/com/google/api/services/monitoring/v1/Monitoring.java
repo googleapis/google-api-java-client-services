@@ -172,8 +172,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent The project on which to execute the request. The format is "projects/{project_id_or_number}". The
-       *        {project_id_or_number} must match the dashboard resource name.
+       * @param parent Required. The project on which to execute the request. The format is
+       *        "projects/{project_id_or_number}". The {project_id_or_number} must match the dashboard
+       *        resource name.
        * @param content the {@link com.google.api.services.monitoring.v1.model.Dashboard}
        * @return the request
        */
@@ -203,8 +204,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The project on which to execute the request. The format is "projects/{project_id_or_number}". The
-       *        {project_id_or_number} must match the dashboard resource name.
+         * @param parent Required. The project on which to execute the request. The format is
+       *        "projects/{project_id_or_number}". The {project_id_or_number} must match the dashboard
+       *        resource name.
          * @param content the {@link com.google.api.services.monitoring.v1.model.Dashboard}
          * @since 1.13
          */
@@ -274,22 +276,23 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * The project on which to execute the request. The format is
+         * Required. The project on which to execute the request. The format is
          * "projects/{project_id_or_number}". The {project_id_or_number} must match the dashboard
          * resource name.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The project on which to execute the request. The format is "projects/{project_id_or_number}". The
-       {project_id_or_number} must match the dashboard resource name.
+        /** Required. The project on which to execute the request. The format is
+       "projects/{project_id_or_number}". The {project_id_or_number} must match the dashboard resource
+       name.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The project on which to execute the request. The format is
+         * Required. The project on which to execute the request. The format is
          * "projects/{project_id_or_number}". The {project_id_or_number} must match the dashboard
          * resource name.
          */
@@ -318,7 +321,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name The resource name of the Dashboard. The format is
+       * @param name Required. The resource name of the Dashboard. The format is
        *        "projects/{project_id_or_number}/dashboards/{dashboard_id}".
        * @return the request
        */
@@ -348,7 +351,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The resource name of the Dashboard. The format is
+         * @param name Required. The resource name of the Dashboard. The format is
        *        "projects/{project_id_or_number}/dashboards/{dashboard_id}".
          * @since 1.13
          */
@@ -418,13 +421,13 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * The resource name of the Dashboard. The format is
+         * Required. The resource name of the Dashboard. The format is
          * "projects/{project_id_or_number}/dashboards/{dashboard_id}".
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The resource name of the Dashboard. The format is
+        /** Required. The resource name of the Dashboard. The format is
        "projects/{project_id_or_number}/dashboards/{dashboard_id}".
          */
         public java.lang.String getName() {
@@ -432,7 +435,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * The resource name of the Dashboard. The format is
+         * Required. The resource name of the Dashboard. The format is
          * "projects/{project_id_or_number}/dashboards/{dashboard_id}".
          */
         public Delete setName(java.lang.String name) {
@@ -459,9 +462,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The resource name of the Dashboard. The format is one of "dashboards/{dashboard_id}" (for system
-       *        dashboards) or "projects/{project_id_or_number}/dashboards/{dashboard_id}" (for custom
-       *        dashboards).
+       * @param name Required. The resource name of the Dashboard. The format is one of "dashboards/{dashboard_id}" (for
+       *        system dashboards) or "projects/{project_id_or_number}/dashboards/{dashboard_id}" (for
+       *        custom dashboards).
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -489,9 +492,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The resource name of the Dashboard. The format is one of "dashboards/{dashboard_id}" (for system
-       *        dashboards) or "projects/{project_id_or_number}/dashboards/{dashboard_id}" (for custom
-       *        dashboards).
+         * @param name Required. The resource name of the Dashboard. The format is one of "dashboards/{dashboard_id}" (for
+       *        system dashboards) or "projects/{project_id_or_number}/dashboards/{dashboard_id}" (for
+       *        custom dashboards).
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -570,24 +573,25 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * The resource name of the Dashboard. The format is one of "dashboards/{dashboard_id}" (for
-         * system dashboards) or "projects/{project_id_or_number}/dashboards/{dashboard_id}" (for
-         * custom dashboards).
+         * Required. The resource name of the Dashboard. The format is one of
+         * "dashboards/{dashboard_id}" (for system dashboards) or
+         * "projects/{project_id_or_number}/dashboards/{dashboard_id}" (for custom dashboards).
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The resource name of the Dashboard. The format is one of "dashboards/{dashboard_id}" (for system
-       dashboards) or "projects/{project_id_or_number}/dashboards/{dashboard_id}" (for custom dashboards).
+        /** Required. The resource name of the Dashboard. The format is one of "dashboards/{dashboard_id}" (for
+       system dashboards) or "projects/{project_id_or_number}/dashboards/{dashboard_id}" (for custom
+       dashboards).
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The resource name of the Dashboard. The format is one of "dashboards/{dashboard_id}" (for
-         * system dashboards) or "projects/{project_id_or_number}/dashboards/{dashboard_id}" (for
-         * custom dashboards).
+         * Required. The resource name of the Dashboard. The format is one of
+         * "dashboards/{dashboard_id}" (for system dashboards) or
+         * "projects/{project_id_or_number}/dashboards/{dashboard_id}" (for custom dashboards).
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -613,7 +617,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent The scope of the dashboards to list. A project scope must be specified in the form of
+       * @param parent Required. The scope of the dashboards to list. A project scope must be specified in the form of
        *        "projects/{project_id_or_number}".
        * @return the request
        */
@@ -642,7 +646,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The scope of the dashboards to list. A project scope must be specified in the form of
+         * @param parent Required. The scope of the dashboards to list. A project scope must be specified in the form of
        *        "projects/{project_id_or_number}".
          * @since 1.13
          */
@@ -722,13 +726,13 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * The scope of the dashboards to list. A project scope must be specified in the form of
-         * "projects/{project_id_or_number}".
+         * Required. The scope of the dashboards to list. A project scope must be specified in the
+         * form of "projects/{project_id_or_number}".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The scope of the dashboards to list. A project scope must be specified in the form of
+        /** Required. The scope of the dashboards to list. A project scope must be specified in the form of
        "projects/{project_id_or_number}".
          */
         public java.lang.String getParent() {
@@ -736,8 +740,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * The scope of the dashboards to list. A project scope must be specified in the form of
-         * "projects/{project_id_or_number}".
+         * Required. The scope of the dashboards to list. A project scope must be specified in the
+         * form of "projects/{project_id_or_number}".
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {

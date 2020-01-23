@@ -3730,7 +3730,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
          *
          * @param name Required. Resource name of the ProductSet to get.
         Format is:
-         *        `projects/PROJECT_ID/locations/LOG_ID/productSets/PRODUCT_SET_ID`
+         *        `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -3762,7 +3762,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            *
            * @param name Required. Resource name of the ProductSet to get.
         Format is:
-         *        `projects/PROJECT_ID/locations/LOG_ID/productSets/PRODUCT_SET_ID`
+         *        `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -3843,14 +3843,14 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           /**
            * Required. Resource name of the ProductSet to get.
            *
-           * Format is: `projects/PROJECT_ID/locations/LOG_ID/productSets/PRODUCT_SET_ID`
+           * Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Resource name of the ProductSet to get.
 
-         Format is: `projects/PROJECT_ID/locations/LOG_ID/productSets/PRODUCT_SET_ID`
+         Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
            */
           public java.lang.String getName() {
             return name;
@@ -3859,7 +3859,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           /**
            * Required. Resource name of the ProductSet to get.
            *
-           * Format is: `projects/PROJECT_ID/locations/LOG_ID/productSets/PRODUCT_SET_ID`
+           * Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

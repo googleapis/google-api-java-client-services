@@ -108,6 +108,15 @@ public final class GoogleCloudVisionV1p4beta1FaceAnnotation extends com.google.a
   private java.lang.Float panAngle;
 
   /**
+   * Additional recognition information. Only computed if image_context.face_recognition_params is
+   * provided, **and** a match is found to a Celebrity in the input CelebritySet. This field is
+   * sorted in order of decreasing confidence values.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudVisionV1p4beta1FaceRecognitionResult> recognitionResult;
+
+  /**
    * Roll angle, which indicates the amount of clockwise/anti-clockwise rotation of the face
    * relative to the image vertical about the axis perpendicular to the face. Range [-180,180].
    * The value may be {@code null}.
@@ -327,6 +336,27 @@ public final class GoogleCloudVisionV1p4beta1FaceAnnotation extends com.google.a
    */
   public GoogleCloudVisionV1p4beta1FaceAnnotation setPanAngle(java.lang.Float panAngle) {
     this.panAngle = panAngle;
+    return this;
+  }
+
+  /**
+   * Additional recognition information. Only computed if image_context.face_recognition_params is
+   * provided, **and** a match is found to a Celebrity in the input CelebritySet. This field is
+   * sorted in order of decreasing confidence values.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudVisionV1p4beta1FaceRecognitionResult> getRecognitionResult() {
+    return recognitionResult;
+  }
+
+  /**
+   * Additional recognition information. Only computed if image_context.face_recognition_params is
+   * provided, **and** a match is found to a Celebrity in the input CelebritySet. This field is
+   * sorted in order of decreasing confidence values.
+   * @param recognitionResult recognitionResult or {@code null} for none
+   */
+  public GoogleCloudVisionV1p4beta1FaceAnnotation setRecognitionResult(java.util.List<GoogleCloudVisionV1p4beta1FaceRecognitionResult> recognitionResult) {
+    this.recognitionResult = recognitionResult;
     return this;
   }
 

@@ -38,6 +38,18 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
   private NodeManagement management;
 
   /**
+   * Minimum CPU platform to be used for NAP created node pools. The instance may be scheduled on
+   * the specified or newer CPU platform. Applicable values are the friendly names of CPU platforms,
+   * such as minCpuPlatform: Intel Haswell or minCpuPlatform: Intel Sandy Bridge. For more
+   * information, read [how to specify min CPU
+   * platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform) To unset
+   * the min cpu platform field pass "automatic" as field value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String minCpuPlatform;
+
+  /**
    * Scopes that are used by NAP when creating node pools. If oauth_scopes are specified,
    * service_account should be empty.
    * The value may be {@code null}.
@@ -74,6 +86,33 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
    */
   public AutoprovisioningNodePoolDefaults setManagement(NodeManagement management) {
     this.management = management;
+    return this;
+  }
+
+  /**
+   * Minimum CPU platform to be used for NAP created node pools. The instance may be scheduled on
+   * the specified or newer CPU platform. Applicable values are the friendly names of CPU platforms,
+   * such as minCpuPlatform: Intel Haswell or minCpuPlatform: Intel Sandy Bridge. For more
+   * information, read [how to specify min CPU
+   * platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform) To unset
+   * the min cpu platform field pass "automatic" as field value.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMinCpuPlatform() {
+    return minCpuPlatform;
+  }
+
+  /**
+   * Minimum CPU platform to be used for NAP created node pools. The instance may be scheduled on
+   * the specified or newer CPU platform. Applicable values are the friendly names of CPU platforms,
+   * such as minCpuPlatform: Intel Haswell or minCpuPlatform: Intel Sandy Bridge. For more
+   * information, read [how to specify min CPU
+   * platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform) To unset
+   * the min cpu platform field pass "automatic" as field value.
+   * @param minCpuPlatform minCpuPlatform or {@code null} for none
+   */
+  public AutoprovisioningNodePoolDefaults setMinCpuPlatform(java.lang.String minCpuPlatform) {
+    this.minCpuPlatform = minCpuPlatform;
     return this;
   }
 

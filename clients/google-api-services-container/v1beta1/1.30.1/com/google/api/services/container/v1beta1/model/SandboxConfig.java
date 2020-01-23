@@ -38,6 +38,13 @@ public final class SandboxConfig extends com.google.api.client.json.GenericJson 
   private java.lang.String sandboxType;
 
   /**
+   * Type of the sandbox to use for the node.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String type;
+
+  /**
    * Type of the sandbox to use for the node (e.g. 'gvisor')
    * @return value or {@code null} for none
    */
@@ -51,6 +58,23 @@ public final class SandboxConfig extends com.google.api.client.json.GenericJson 
    */
   public SandboxConfig setSandboxType(java.lang.String sandboxType) {
     this.sandboxType = sandboxType;
+    return this;
+  }
+
+  /**
+   * Type of the sandbox to use for the node.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getType() {
+    return type;
+  }
+
+  /**
+   * Type of the sandbox to use for the node.
+   * @param type type or {@code null} for none
+   */
+  public SandboxConfig setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 

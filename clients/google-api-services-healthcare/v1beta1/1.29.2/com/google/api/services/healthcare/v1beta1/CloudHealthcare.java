@@ -1948,6 +1948,513 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
         }
 
         /**
+         * An accessor for creating requests from the AnnotationStores collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code CloudHealthcare healthcare = new CloudHealthcare(...);}
+         *   {@code CloudHealthcare.AnnotationStores.List request = healthcare.annotationStores().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public AnnotationStores annotationStores() {
+          return new AnnotationStores();
+        }
+
+        /**
+         * The "annotationStores" collection of methods.
+         */
+        public class AnnotationStores {
+
+          /**
+           * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
+           * does not have a policy set.
+           *
+           * Create a request for the method "annotationStores.getIamPolicy".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
+           *
+           * @param resource REQUIRED: The resource for which the policy is being requested.
+          See the operation documentation for
+           *        the appropriate value for this field.
+           * @return the request
+           */
+          public GetIamPolicy getIamPolicy(java.lang.String resource) throws java.io.IOException {
+            GetIamPolicy result = new GetIamPolicy(resource);
+            initialize(result);
+            return result;
+          }
+
+          public class GetIamPolicy extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Policy> {
+
+            private static final String REST_PATH = "v1beta1/{+resource}:getIamPolicy";
+
+            private final java.util.regex.Pattern RESOURCE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+
+            /**
+             * Gets the access control policy for a resource. Returns an empty policy if the resource exists
+             * and does not have a policy set.
+             *
+             * Create a request for the method "annotationStores.getIamPolicy".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param resource REQUIRED: The resource for which the policy is being requested.
+          See the operation documentation for
+           *        the appropriate value for this field.
+             * @since 1.13
+             */
+            protected GetIamPolicy(java.lang.String resource) {
+              super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.Policy.class);
+              this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public GetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+              return (GetIamPolicy) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public GetIamPolicy setAccessToken(java.lang.String accessToken) {
+              return (GetIamPolicy) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public GetIamPolicy setAlt(java.lang.String alt) {
+              return (GetIamPolicy) super.setAlt(alt);
+            }
+
+            @Override
+            public GetIamPolicy setCallback(java.lang.String callback) {
+              return (GetIamPolicy) super.setCallback(callback);
+            }
+
+            @Override
+            public GetIamPolicy setFields(java.lang.String fields) {
+              return (GetIamPolicy) super.setFields(fields);
+            }
+
+            @Override
+            public GetIamPolicy setKey(java.lang.String key) {
+              return (GetIamPolicy) super.setKey(key);
+            }
+
+            @Override
+            public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
+              return (GetIamPolicy) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public GetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (GetIamPolicy) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public GetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+              return (GetIamPolicy) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public GetIamPolicy setUploadType(java.lang.String uploadType) {
+              return (GetIamPolicy) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public GetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+              return (GetIamPolicy) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy is being requested. See the operation
+             * documentation for the appropriate value for this field.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String resource;
+
+            /** REQUIRED: The resource for which the policy is being requested. See the operation documentation for
+           the appropriate value for this field.
+             */
+            public java.lang.String getResource() {
+              return resource;
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy is being requested. See the operation
+             * documentation for the appropriate value for this field.
+             */
+            public GetIamPolicy setResource(java.lang.String resource) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+              }
+              this.resource = resource;
+              return this;
+            }
+
+            /**
+             * Optional. The policy format version to be returned.
+             *
+             * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
+             *
+             * Requests for policies with any conditional bindings must specify version 3. Policies
+             * without any conditional bindings may specify any valid value or leave the field
+             * unset.
+             */
+            @com.google.api.client.util.Key("options.requestedPolicyVersion")
+            private java.lang.Integer optionsRequestedPolicyVersion;
+
+            /** Optional. The policy format version to be returned.
+
+           Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
+
+           Requests for policies with any conditional bindings must specify version 3. Policies without any
+           conditional bindings may specify any valid value or leave the field unset.
+             */
+            public java.lang.Integer getOptionsRequestedPolicyVersion() {
+              return optionsRequestedPolicyVersion;
+            }
+
+            /**
+             * Optional. The policy format version to be returned.
+             *
+             * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
+             *
+             * Requests for policies with any conditional bindings must specify version 3. Policies
+             * without any conditional bindings may specify any valid value or leave the field
+             * unset.
+             */
+            public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
+              this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+              return this;
+            }
+
+            @Override
+            public GetIamPolicy set(String parameterName, Object value) {
+              return (GetIamPolicy) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Sets the access control policy on the specified resource. Replaces any existing policy.
+           *
+           * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+           *
+           * Create a request for the method "annotationStores.setIamPolicy".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
+           *
+           * @param resource REQUIRED: The resource for which the policy is being specified.
+          See the operation documentation for
+           *        the appropriate value for this field.
+           * @param content the {@link com.google.api.services.healthcare.v1beta1.model.SetIamPolicyRequest}
+           * @return the request
+           */
+          public SetIamPolicy setIamPolicy(java.lang.String resource, com.google.api.services.healthcare.v1beta1.model.SetIamPolicyRequest content) throws java.io.IOException {
+            SetIamPolicy result = new SetIamPolicy(resource, content);
+            initialize(result);
+            return result;
+          }
+
+          public class SetIamPolicy extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Policy> {
+
+            private static final String REST_PATH = "v1beta1/{+resource}:setIamPolicy";
+
+            private final java.util.regex.Pattern RESOURCE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+
+            /**
+             * Sets the access control policy on the specified resource. Replaces any existing policy.
+             *
+             * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+             *
+             * Create a request for the method "annotationStores.setIamPolicy".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param resource REQUIRED: The resource for which the policy is being specified.
+          See the operation documentation for
+           *        the appropriate value for this field.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.SetIamPolicyRequest}
+             * @since 1.13
+             */
+            protected SetIamPolicy(java.lang.String resource, com.google.api.services.healthcare.v1beta1.model.SetIamPolicyRequest content) {
+              super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.Policy.class);
+              this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public SetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+              return (SetIamPolicy) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SetIamPolicy setAccessToken(java.lang.String accessToken) {
+              return (SetIamPolicy) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SetIamPolicy setAlt(java.lang.String alt) {
+              return (SetIamPolicy) super.setAlt(alt);
+            }
+
+            @Override
+            public SetIamPolicy setCallback(java.lang.String callback) {
+              return (SetIamPolicy) super.setCallback(callback);
+            }
+
+            @Override
+            public SetIamPolicy setFields(java.lang.String fields) {
+              return (SetIamPolicy) super.setFields(fields);
+            }
+
+            @Override
+            public SetIamPolicy setKey(java.lang.String key) {
+              return (SetIamPolicy) super.setKey(key);
+            }
+
+            @Override
+            public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
+              return (SetIamPolicy) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SetIamPolicy) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+              return (SetIamPolicy) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SetIamPolicy setUploadType(java.lang.String uploadType) {
+              return (SetIamPolicy) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SetIamPolicy) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy is being specified. See the operation
+             * documentation for the appropriate value for this field.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String resource;
+
+            /** REQUIRED: The resource for which the policy is being specified. See the operation documentation for
+           the appropriate value for this field.
+             */
+            public java.lang.String getResource() {
+              return resource;
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy is being specified. See the operation
+             * documentation for the appropriate value for this field.
+             */
+            public SetIamPolicy setResource(java.lang.String resource) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+              }
+              this.resource = resource;
+              return this;
+            }
+
+            @Override
+            public SetIamPolicy set(String parameterName, Object value) {
+              return (SetIamPolicy) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Returns permissions that a caller has on the specified resource. If the resource does not exist,
+           * this will return an empty set of permissions, not a NOT_FOUND error.
+           *
+           * Note: This operation is designed to be used for building permission-aware UIs and command-line
+           * tools, not for authorization checking. This operation may "fail open" without warning.
+           *
+           * Create a request for the method "annotationStores.testIamPermissions".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
+           *
+           * @param resource REQUIRED: The resource for which the policy detail is being requested.
+          See the operation
+           *        documentation for the appropriate value for this field.
+           * @param content the {@link com.google.api.services.healthcare.v1beta1.model.TestIamPermissionsRequest}
+           * @return the request
+           */
+          public TestIamPermissions testIamPermissions(java.lang.String resource, com.google.api.services.healthcare.v1beta1.model.TestIamPermissionsRequest content) throws java.io.IOException {
+            TestIamPermissions result = new TestIamPermissions(resource, content);
+            initialize(result);
+            return result;
+          }
+
+          public class TestIamPermissions extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.TestIamPermissionsResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+resource}:testIamPermissions";
+
+            private final java.util.regex.Pattern RESOURCE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+
+            /**
+             * Returns permissions that a caller has on the specified resource. If the resource does not
+             * exist, this will return an empty set of permissions, not a NOT_FOUND error.
+             *
+             * Note: This operation is designed to be used for building permission-aware UIs and command-line
+             * tools, not for authorization checking. This operation may "fail open" without warning.
+             *
+             * Create a request for the method "annotationStores.testIamPermissions".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
+             * operation. <p> {@link TestIamPermissions#initialize(com.google.api.client.googleapis.services.A
+             * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param resource REQUIRED: The resource for which the policy detail is being requested.
+          See the operation
+           *        documentation for the appropriate value for this field.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.TestIamPermissionsRequest}
+             * @since 1.13
+             */
+            protected TestIamPermissions(java.lang.String resource, com.google.api.services.healthcare.v1beta1.model.TestIamPermissionsRequest content) {
+              super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.TestIamPermissionsResponse.class);
+              this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public TestIamPermissions set$Xgafv(java.lang.String $Xgafv) {
+              return (TestIamPermissions) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public TestIamPermissions setAccessToken(java.lang.String accessToken) {
+              return (TestIamPermissions) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public TestIamPermissions setAlt(java.lang.String alt) {
+              return (TestIamPermissions) super.setAlt(alt);
+            }
+
+            @Override
+            public TestIamPermissions setCallback(java.lang.String callback) {
+              return (TestIamPermissions) super.setCallback(callback);
+            }
+
+            @Override
+            public TestIamPermissions setFields(java.lang.String fields) {
+              return (TestIamPermissions) super.setFields(fields);
+            }
+
+            @Override
+            public TestIamPermissions setKey(java.lang.String key) {
+              return (TestIamPermissions) super.setKey(key);
+            }
+
+            @Override
+            public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
+              return (TestIamPermissions) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public TestIamPermissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (TestIamPermissions) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public TestIamPermissions setQuotaUser(java.lang.String quotaUser) {
+              return (TestIamPermissions) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public TestIamPermissions setUploadType(java.lang.String uploadType) {
+              return (TestIamPermissions) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public TestIamPermissions setUploadProtocol(java.lang.String uploadProtocol) {
+              return (TestIamPermissions) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy detail is being requested. See the
+             * operation documentation for the appropriate value for this field.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String resource;
+
+            /** REQUIRED: The resource for which the policy detail is being requested. See the operation
+           documentation for the appropriate value for this field.
+             */
+            public java.lang.String getResource() {
+              return resource;
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy detail is being requested. See the
+             * operation documentation for the appropriate value for this field.
+             */
+            public TestIamPermissions setResource(java.lang.String resource) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+              }
+              this.resource = resource;
+              return this;
+            }
+
+            @Override
+            public TestIamPermissions set(String parameterName, Object value) {
+              return (TestIamPermissions) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
          * An accessor for creating requests from the DicomStores collection.
          *
          * <p>The typical use is:</p>
@@ -9489,8 +9996,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * Retrieves the N most recent `Observation` resources for a subject matching search criteria
              * specified as query parameters, grouped by `Observation.code`, sorted from most recent to oldest.
              *
-             * Implements the FHIR extended operation [Observation-
-             * lastn](http://hl7.org/implement/standards/fhir/STU3/observation-operations.html#lastn).
+             * Implements the FHIR extended operation Observation-lastn
+             * ([STU3](http://hl7.org/implement/standards/fhir/STU3/observation-operations.html#lastn)).
+             *
+             * DSTU2 doesn't define the Observation-lastn method, but the server supports it the same way it
+             * supports STU3.
              *
              * Search terms are provided as query parameters following the same pattern as the search method.
              * The following search parameters must be provided:
@@ -9538,8 +10048,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * specified as query parameters, grouped by `Observation.code`, sorted from most recent to
                * oldest.
                *
-               * Implements the FHIR extended operation [Observation-
-               * lastn](http://hl7.org/implement/standards/fhir/STU3/observation-operations.html#lastn).
+               * Implements the FHIR extended operation Observation-lastn
+               * ([STU3](http://hl7.org/implement/standards/fhir/STU3/observation-operations.html#lastn)).
+               *
+               * DSTU2 doesn't define the Observation-lastn method, but the server supports it the same way it
+               * supports STU3.
                *
                * Search terms are provided as query parameters following the same pattern as the search method.
                * The following search parameters must be provided:
@@ -10054,12 +10567,15 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
             }
             /**
-             * Gets the FHIR [capability
-             * statement](http://hl7.org/implement/standards/fhir/STU3/capabilitystatement.html) for the store,
-             * which contains a description of functionality supported by the server.
+             * Gets the FHIR capability statement
+             * ([STU3](http://hl7.org/implement/standards/fhir/STU3/capabilitystatement.html)), or the
+             * [conformance statement](http://hl7.org/implement/standards/fhir/DSTU2/conformance.html) in the
+             * DSTU2 case for the store, which contains a description of functionality supported by the server.
              *
-             * Implements the FHIR standard [capabilities
-             * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#capabilities).
+             * Implements the FHIR standard capabilities interaction
+             * ([STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#capabilities)), or the
+             * [conformance interaction](http://hl7.org/implement/standards/fhir/DSTU2/http.html#conformance) in
+             * the DSTU2 case.
              *
              * On success, the response body will contain a JSON-encoded representation of a
              * `CapabilityStatement` resource.
@@ -10086,12 +10602,16 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
 
               /**
-               * Gets the FHIR [capability
-               * statement](http://hl7.org/implement/standards/fhir/STU3/capabilitystatement.html) for the
-               * store, which contains a description of functionality supported by the server.
+               * Gets the FHIR capability statement
+               * ([STU3](http://hl7.org/implement/standards/fhir/STU3/capabilitystatement.html)), or the
+               * [conformance statement](http://hl7.org/implement/standards/fhir/DSTU2/conformance.html) in the
+               * DSTU2 case for the store, which contains a description of functionality supported by the
+               * server.
                *
-               * Implements the FHIR standard [capabilities
-               * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#capabilities).
+               * Implements the FHIR standard capabilities interaction
+               * ([STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#capabilities)), or the
+               * [conformance interaction](http://hl7.org/implement/standards/fhir/DSTU2/http.html#conformance)
+               * in the DSTU2 case.
                *
                * On success, the response body will contain a JSON-encoded representation of a
                * `CapabilityStatement` resource.
@@ -10211,8 +10731,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             /**
              * Deletes FHIR resources that match a search query.
              *
-             * Implements the FHIR standard [conditional delete
-             * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#2.21.0.13.1). If multiple
+             * Implements the FHIR standard conditional delete interaction
+             * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#2.1.0.12.1),
+             * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#2.21.0.13.1)). If multiple
              * resources match, all of them will be deleted.
              *
              * Search terms are provided as query parameters following the same pattern as the search method.
@@ -10228,9 +10749,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              *
              * @param parent The name of the FHIR store this resource belongs to.
              * @param type The FHIR resource type to delete, such as Patient or Observation. For a
-            complete list, see the [FHIR
-             *        Resource
-            Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html).
+            complete list, see the FHIR
+             *        Resource Index
+            ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+             *        [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html)).
              * @return the request
              */
             public ConditionalDelete conditionalDelete(java.lang.String parent, java.lang.String type) throws java.io.IOException {
@@ -10252,8 +10774,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * Deletes FHIR resources that match a search query.
                *
-               * Implements the FHIR standard [conditional delete
-               * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#2.21.0.13.1). If multiple
+               * Implements the FHIR standard conditional delete interaction
+               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#2.1.0.12.1),
+               * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#2.21.0.13.1)). If multiple
                * resources match, all of them will be deleted.
                *
                * Search terms are provided as query parameters following the same pattern as the search method.
@@ -10272,9 +10795,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                *
                * @param parent The name of the FHIR store this resource belongs to.
                * @param type The FHIR resource type to delete, such as Patient or Observation. For a
-            complete list, see the [FHIR
-             *        Resource
-            Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html).
+            complete list, see the FHIR
+             *        Resource Index
+            ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+             *        [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html)).
                * @since 1.13
                */
               protected ConditionalDelete(java.lang.String parent, java.lang.String type) {
@@ -10371,14 +10895,16 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * The FHIR resource type to delete, such as Patient or Observation. For a complete
-               * list, see the [FHIR Resource
-               * Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html).
+               * list, see the FHIR Resource Index
+               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+               * [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html)).
                */
               @com.google.api.client.util.Key
               private java.lang.String type;
 
-              /** The FHIR resource type to delete, such as Patient or Observation. For a complete list, see the
-             [FHIR Resource Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html).
+              /** The FHIR resource type to delete, such as Patient or Observation. For a complete list, see the FHIR
+             Resource Index ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+             [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html)).
                */
               public java.lang.String getType() {
                 return type;
@@ -10386,8 +10912,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * The FHIR resource type to delete, such as Patient or Observation. For a complete
-               * list, see the [FHIR Resource
-               * Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html).
+               * list, see the FHIR Resource Index
+               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+               * [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html)).
                */
               public ConditionalDelete setType(java.lang.String type) {
                 if (!getSuppressPatternChecks()) {
@@ -10409,8 +10936,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * part of that resource by applying the operations specified in a [JSON
              * Patch](http://jsonpatch.com/) document.
              *
-             * Implements the FHIR standard [conditional patch
-             * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#patch).
+             * Implements the FHIR standard conditional patch interaction
+             * ([STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#patch)).
+             *
+             * DSTU2 doesn't define a conditional patch method, but the server supports it in the same way it
+             * supports STU3.
              *
              * Search terms are provided as query parameters following the same pattern as the search method.
              *
@@ -10432,9 +10962,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              *
              * @param parent The name of the FHIR store this resource belongs to.
              * @param type The FHIR resource type to update, such as Patient or Observation. For a
-            complete list, see the [FHIR
-             *        Resource
-            Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html).
+            complete list, see the FHIR
+             *        Resource Index
+            ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+             *        [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html)).
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
              * @return the request
              */
@@ -10459,8 +10990,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * part of that resource by applying the operations specified in a [JSON
                * Patch](http://jsonpatch.com/) document.
                *
-               * Implements the FHIR standard [conditional patch
-               * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#patch).
+               * Implements the FHIR standard conditional patch interaction
+               * ([STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#patch)).
+               *
+               * DSTU2 doesn't define a conditional patch method, but the server supports it in the same way it
+               * supports STU3.
                *
                * Search terms are provided as query parameters following the same pattern as the search method.
                *
@@ -10486,9 +11020,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                *
                * @param parent The name of the FHIR store this resource belongs to.
                * @param type The FHIR resource type to update, such as Patient or Observation. For a
-            complete list, see the [FHIR
-             *        Resource
-            Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html).
+            complete list, see the FHIR
+             *        Resource Index
+            ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+             *        [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html)).
                * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
                * @since 1.13
                */
@@ -10586,14 +11121,16 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * The FHIR resource type to update, such as Patient or Observation. For a complete
-               * list, see the [FHIR Resource
-               * Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html).
+               * list, see the FHIR Resource Index
+               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+               * [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html)).
                */
               @com.google.api.client.util.Key
               private java.lang.String type;
 
-              /** The FHIR resource type to update, such as Patient or Observation. For a complete list, see the
-             [FHIR Resource Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html).
+              /** The FHIR resource type to update, such as Patient or Observation. For a complete list, see the FHIR
+             Resource Index ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+             [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html)).
                */
               public java.lang.String getType() {
                 return type;
@@ -10601,8 +11138,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * The FHIR resource type to update, such as Patient or Observation. For a complete
-               * list, see the [FHIR Resource
-               * Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html).
+               * list, see the FHIR Resource Index
+               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+               * [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html)).
                */
               public ConditionalPatch setType(java.lang.String type) {
                 if (!getSuppressPatternChecks()) {
@@ -10623,8 +11161,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * If a resource is found based on the search criteria specified in the query parameters, updates
              * the entire contents of that resource.
              *
-             * Implements the FHIR standard [conditional update
-             * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#cond-update).
+             * Implements the FHIR standard conditional update interaction
+             * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#2.1.0.10.2),
+             * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#cond-update)).
              *
              * Search terms are provided as query parameters following the same pattern as the search method.
              *
@@ -10650,11 +11189,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              *
              * @param parent The name of the FHIR store this resource belongs to.
              * @param type The FHIR resource type to update, such as Patient or Observation. For a
-            complete list, see the [FHIR
-             *        Resource
-            Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html).
-            Must
-             *        match the resource type in the provided content.
+            complete list, see the FHIR
+             *        Resource Index
+            ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+             *        [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html)).
+            Must match the
+             *        resource type in the provided content.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
              * @return the request
              */
@@ -10678,8 +11218,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * If a resource is found based on the search criteria specified in the query parameters, updates
                * the entire contents of that resource.
                *
-               * Implements the FHIR standard [conditional update
-               * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#cond-update).
+               * Implements the FHIR standard conditional update interaction
+               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#2.1.0.10.2),
+               * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#cond-update)).
                *
                * Search terms are provided as query parameters following the same pattern as the search method.
                *
@@ -10709,11 +11250,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                *
                * @param parent The name of the FHIR store this resource belongs to.
                * @param type The FHIR resource type to update, such as Patient or Observation. For a
-            complete list, see the [FHIR
-             *        Resource
-            Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html).
-            Must
-             *        match the resource type in the provided content.
+            complete list, see the FHIR
+             *        Resource Index
+            ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+             *        [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html)).
+            Must match the
+             *        resource type in the provided content.
                * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
                * @since 1.13
                */
@@ -10811,16 +11353,18 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * The FHIR resource type to update, such as Patient or Observation. For a complete
-               * list, see the [FHIR Resource
-               * Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html). Must match
+               * list, see the FHIR Resource Index
+               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+               * [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html)). Must match
                * the resource type in the provided content.
                */
               @com.google.api.client.util.Key
               private java.lang.String type;
 
-              /** The FHIR resource type to update, such as Patient or Observation. For a complete list, see the
-             [FHIR Resource Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html). Must match
-             the resource type in the provided content.
+              /** The FHIR resource type to update, such as Patient or Observation. For a complete list, see the FHIR
+             Resource Index ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+             [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html)). Must match the resource
+             type in the provided content.
                */
               public java.lang.String getType() {
                 return type;
@@ -10828,8 +11372,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * The FHIR resource type to update, such as Patient or Observation. For a complete
-               * list, see the [FHIR Resource
-               * Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html). Must match
+               * list, see the FHIR Resource Index
+               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+               * [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html)). Must match
                * the resource type in the provided content.
                */
               public ConditionalUpdate setType(java.lang.String type) {
@@ -10850,14 +11395,16 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             /**
              * Creates a FHIR resource.
              *
-             * Implements the FHIR standard [create
-             * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#create), which creates a new
+             * Implements the FHIR standard create interaction
+             * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#create),
+             * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#create)), which creates a new
              * resource with a server-assigned resource ID.
              *
-             * Also supports the FHIR standard [conditional create
-             * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#ccreate), specified by
-             * supplying an `If-None-Exist` header containing a FHIR search query. If no resources match this
-             * search query, the server processes the create operation as normal.
+             * Also supports the FHIR standard conditional create interaction
+             * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#ccreate),
+             * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#ccreate)), specified by supplying
+             * an `If-None-Exist` header containing a FHIR search query. If no resources match this search
+             * query, the server processes the create operation as normal.
              *
              * The request body must contain a JSON-encoded FHIR resource, and the request headers must contain
              * `Content-Type: application/fhir+json`.
@@ -10875,11 +11422,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              *
              * @param parent The name of the FHIR store this resource belongs to.
              * @param type The FHIR resource type to create, such as Patient or Observation. For a
-            complete list, see the [FHIR
-             *        Resource
-            Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html).
-            Must
-             *        match the resource type in the provided content.
+            complete list, see the FHIR
+             *        Resource Index
+            ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+             *        [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html)).
+            Must match the
+             *        resource type in the provided content.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
              * @return the request
              */
@@ -10902,14 +11450,16 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * Creates a FHIR resource.
                *
-               * Implements the FHIR standard [create
-               * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#create), which creates a
-               * new resource with a server-assigned resource ID.
+               * Implements the FHIR standard create interaction
+               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#create),
+               * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#create)), which creates a new
+               * resource with a server-assigned resource ID.
                *
-               * Also supports the FHIR standard [conditional create
-               * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#ccreate), specified by
-               * supplying an `If-None-Exist` header containing a FHIR search query. If no resources match this
-               * search query, the server processes the create operation as normal.
+               * Also supports the FHIR standard conditional create interaction
+               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#ccreate),
+               * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#ccreate)), specified by supplying
+               * an `If-None-Exist` header containing a FHIR search query. If no resources match this search
+               * query, the server processes the create operation as normal.
                *
                * The request body must contain a JSON-encoded FHIR resource, and the request headers must
                * contain `Content-Type: application/fhir+json`.
@@ -10930,11 +11480,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                *
                * @param parent The name of the FHIR store this resource belongs to.
                * @param type The FHIR resource type to create, such as Patient or Observation. For a
-            complete list, see the [FHIR
-             *        Resource
-            Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html).
-            Must
-             *        match the resource type in the provided content.
+            complete list, see the FHIR
+             *        Resource Index
+            ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+             *        [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html)).
+            Must match the
+             *        resource type in the provided content.
                * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
                * @since 1.13
                */
@@ -11032,16 +11583,18 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * The FHIR resource type to create, such as Patient or Observation. For a complete
-               * list, see the [FHIR Resource
-               * Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html). Must match
+               * list, see the FHIR Resource Index
+               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+               * [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html)). Must match
                * the resource type in the provided content.
                */
               @com.google.api.client.util.Key
               private java.lang.String type;
 
-              /** The FHIR resource type to create, such as Patient or Observation. For a complete list, see the
-             [FHIR Resource Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html). Must match
-             the resource type in the provided content.
+              /** The FHIR resource type to create, such as Patient or Observation. For a complete list, see the FHIR
+             Resource Index ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+             [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html)). Must match the resource
+             type in the provided content.
                */
               public java.lang.String getType() {
                 return type;
@@ -11049,8 +11602,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * The FHIR resource type to create, such as Patient or Observation. For a complete
-               * list, see the [FHIR Resource
-               * Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html). Must match
+               * list, see the FHIR Resource Index
+               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+               * [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html)). Must match
                * the resource type in the provided content.
                */
               public Create setType(java.lang.String type) {
@@ -11071,8 +11625,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             /**
              * Deletes a FHIR resource.
              *
-             * Implements the FHIR standard [delete
-             * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#delete).
+             * Implements the FHIR standard delete interaction
+             * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#delete),
+             * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#delete)).
              *
              * Note: Unless resource versioning is disabled by setting the disable_resource_versioning flag on
              * the FHIR store, the deleted resources will be moved to a history repository that can still be
@@ -11102,8 +11657,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * Deletes a FHIR resource.
                *
-               * Implements the FHIR standard [delete
-               * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#delete).
+               * Implements the FHIR standard delete interaction
+               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#delete),
+               * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#delete)).
                *
                * Note: Unless resource versioning is disabled by setting the disable_resource_versioning flag on
                * the FHIR store, the deleted resources will be moved to a history repository that can still be
@@ -11214,13 +11770,16 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             /**
              * Executes all the requests in the given Bundle.
              *
-             * Implements the FHIR standard [batch/transaction
-             * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#transaction).
+             * Implements the FHIR standard batch/transaction interaction
+             * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#transaction),
+             * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#transaction)).
              *
              * Supports all interactions within a bundle, except search. This method accepts Bundles of type
-             * `batch` and `transaction`, processing them according to the [batch processing
-             * rules](http://hl7.org/implement/standards/fhir/STU3/http.html#2.21.0.17.1) and [transaction
-             * processing rules](http://hl7.org/implement/standards/fhir/STU3/http.html#2.21.0.17.2).
+             * `batch` and `transaction`, processing them according to the batch processing rules
+             * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#2.1.0.16.1),
+             * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#2.21.0.17.1)) and transaction
+             * processing rules ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#2.1.0.16.2),
+             * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#2.21.0.17.2)).
              *
              * The request body must contain a JSON-encoded FHIR `Bundle` resource, and the request headers must
              * contain `Content-Type: application/fhir+json`.
@@ -11257,13 +11816,16 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * Executes all the requests in the given Bundle.
                *
-               * Implements the FHIR standard [batch/transaction
-               * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#transaction).
+               * Implements the FHIR standard batch/transaction interaction
+               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#transaction),
+               * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#transaction)).
                *
                * Supports all interactions within a bundle, except search. This method accepts Bundles of type
-               * `batch` and `transaction`, processing them according to the [batch processing
-               * rules](http://hl7.org/implement/standards/fhir/STU3/http.html#2.21.0.17.1) and [transaction
-               * processing rules](http://hl7.org/implement/standards/fhir/STU3/http.html#2.21.0.17.2).
+               * `batch` and `transaction`, processing them according to the batch processing rules
+               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#2.1.0.16.1),
+               * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#2.21.0.17.1)) and transaction
+               * processing rules ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#2.1.0.16.2),
+               * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#2.21.0.17.2)).
                *
                * The request body must contain a JSON-encoded FHIR `Bundle` resource, and the request headers
                * must contain `Content-Type: application/fhir+json`.
@@ -11382,8 +11944,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * Lists all the versions of a resource (including the current version and deleted versions) from
              * the FHIR store.
              *
-             * Implements the per-resource form of the FHIR standard [history
-             * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#history).
+             * Implements the per-resource form of the FHIR standard history interaction
+             * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#history),
+             * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#history)).
              *
              * On success, the response body will contain a JSON-encoded representation of a `Bundle` resource
              * of type `history`, containing the version history sorted from most recent to oldest versions.
@@ -11416,8 +11979,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Lists all the versions of a resource (including the current version and deleted versions) from
                * the FHIR store.
                *
-               * Implements the per-resource form of the FHIR standard [history
-               * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#history).
+               * Implements the per-resource form of the FHIR standard history interaction
+               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#history),
+               * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#history)).
                *
                * On success, the response body will contain a JSON-encoded representation of a `Bundle` resource
                * of type `history`, containing the version history sorted from most recent to oldest versions.
@@ -11660,8 +12224,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * Updates part of an existing resource by applying the operations specified in a [JSON
              * Patch](http://jsonpatch.com/) document.
              *
-             * Implements the FHIR standard [patch
-             * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#patch).
+             * Implements the FHIR standard patch interaction
+             * ([STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#patch)).
+             *
+             * DSTU2 doesn't define a patch method, but the server supports it in the same way it supports STU3.
              *
              * The request body must contain a JSON Patch document, and the request headers must contain
              * `Content-Type: application/json-patch+json`.
@@ -11697,8 +12263,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Updates part of an existing resource by applying the operations specified in a [JSON
                * Patch](http://jsonpatch.com/) document.
                *
-               * Implements the FHIR standard [patch
-               * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#patch).
+               * Implements the FHIR standard patch interaction
+               * ([STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#patch)).
+               *
+               * DSTU2 doesn't define a patch method, but the server supports it in the same way it supports
+               * STU3.
                *
                * The request body must contain a JSON Patch document, and the request headers must contain
                * `Content-Type: application/json-patch+json`.
@@ -11815,12 +12384,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             /**
              * Gets the contents of a FHIR resource.
              *
-             * Implements the FHIR standard [read
-             * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#read).
+             * Implements the FHIR standard read interaction
+             * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#read),
+             * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#read)).
              *
-             * Also supports the FHIR standard [conditional read
-             * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#cread) specified by supplying
-             * an `If-Modified-Since` header with a date/time value or an `If-None-Match` header with an ETag
+             * Also supports the FHIR standard conditional read interaction
+             * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#cread),
+             * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#cread)) specified by supplying an
+             * `If-Modified-Since` header with a date/time value or an `If-None-Match` header with an ETag
              * value.
              *
              * On success, the response body will contain a JSON-encoded representation of the resource. Errors
@@ -11852,13 +12423,15 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * Gets the contents of a FHIR resource.
                *
-               * Implements the FHIR standard [read
-               * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#read).
+               * Implements the FHIR standard read interaction
+               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#read),
+               * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#read)).
                *
-               * Also supports the FHIR standard [conditional read
-               * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#cread) specified by
-               * supplying an `If-Modified-Since` header with a date/time value or an `If-None-Match` header
-               * with an ETag value.
+               * Also supports the FHIR standard conditional read interaction
+               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#cread),
+               * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#cread)) specified by supplying an
+               * `If-Modified-Since` header with a date/time value or an `If-None-Match` header with an ETag
+               * value.
                *
                * On success, the response body will contain a JSON-encoded representation of the resource.
                * Errors generated by the FHIR store will contain a JSON-encoded `OperationOutcome` resource
@@ -11980,10 +12553,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * Searches for resources in the given FHIR store according to criteria specified as query
              * parameters.
              *
-             * Implements the FHIR standard [search
-             * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#search) using the search
-             * semantics described in the [FHIR Search
-             * specification](http://hl7.org/implement/standards/fhir/STU3/search.html).
+             * Implements the FHIR standard search interaction
+             * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#search),
+             * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#search)) using the search semantics
+             * described in the FHIR Search specification
+             * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/search.html),
+             * [STU3](http://hl7.org/implement/standards/fhir/STU3/search.html)).
              *
              * Supports three methods of search defined by the specification:
              *
@@ -12000,10 +12575,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * the request cannot be mapped to a valid API method on a FHIR store, a generic GCP error might be
              * returned instead.
              *
-             * The server's capability statement, retrieved through capabilities, indicates the search
-             * parameters that are supported on each FHIR resource. For the list of search parameters for STU3,
-             * see the [STU3 FHIR Search Parameter Registry](http://hl7.org/implement/standards/fhir/STU3
-             * /searchparameter-registry.html).
+             * The server's capability statement, retrieved through capabilities, indicates what search
+             * parameters are supported on each FHIR resource. A list of all search parameters defined by the
+             * specification can be found in the FHIR Search Parameter Registry
+             * ([STU3](http://hl7.org/implement/standards/fhir/STU3/searchparameter-registry.html)). FHIR search
+             * parameters for DSTU2 can be found on each resource's definition page.
              *
              * Supported search modifiers: `:missing`, `:exact`, `:contains`, `:text`, `:in`, `:not-in`,
              * `:above`, `:below`, `:[type]`, `:not`, and `:recurse`.
@@ -12047,10 +12623,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Searches for resources in the given FHIR store according to criteria specified as query
                * parameters.
                *
-               * Implements the FHIR standard [search
-               * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#search) using the search
-               * semantics described in the [FHIR Search
-               * specification](http://hl7.org/implement/standards/fhir/STU3/search.html).
+               * Implements the FHIR standard search interaction
+               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#search),
+               * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#search)) using the search
+               * semantics described in the FHIR Search specification
+               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/search.html),
+               * [STU3](http://hl7.org/implement/standards/fhir/STU3/search.html)).
                *
                * Supports three methods of search defined by the specification:
                *
@@ -12068,10 +12646,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * the request cannot be mapped to a valid API method on a FHIR store, a generic GCP error might
                * be returned instead.
                *
-               * The server's capability statement, retrieved through capabilities, indicates the search
-               * parameters that are supported on each FHIR resource. For the list of search parameters for
-               * STU3, see the [STU3 FHIR Search Parameter
-               * Registry](http://hl7.org/implement/standards/fhir/STU3/searchparameter-registry.html).
+               * The server's capability statement, retrieved through capabilities, indicates what search
+               * parameters are supported on each FHIR resource. A list of all search parameters defined by the
+               * specification can be found in the FHIR Search Parameter Registry
+               * ([STU3](http://hl7.org/implement/standards/fhir/STU3/searchparameter-registry.html)). FHIR
+               * search parameters for DSTU2 can be found on each resource's definition page.
                *
                * Supported search modifiers: `:missing`, `:exact`, `:contains`, `:text`, `:in`, `:not-in`,
                * `:above`, `:below`, `:[type]`, `:not`, and `:recurse`.
@@ -12195,8 +12774,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             /**
              * Updates the entire contents of a resource.
              *
-             * Implements the FHIR standard [update
-             * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#update).
+             * Implements the FHIR standard update interaction
+             * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#update),
+             * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#update)).
              *
              * If the specified resource does not exist and the FHIR store has enable_update_create set, creates
              * the resource with the client-specified ID.
@@ -12235,8 +12815,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * Updates the entire contents of a resource.
                *
-               * Implements the FHIR standard [update
-               * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#update).
+               * Implements the FHIR standard update interaction
+               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#update),
+               * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#update)).
                *
                * If the specified resource does not exist and the FHIR store has enable_update_create set,
                * creates the resource with the client-specified ID.
@@ -12357,8 +12938,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             /**
              * Gets the contents of a version (current or historical) of a FHIR resource by version ID.
              *
-             * Implements the FHIR standard [vread
-             * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#vread).
+             * Implements the FHIR standard vread interaction
+             * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#vread),
+             * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#vread).
              *
              * On success, the response body will contain a JSON-encoded representation of the resource. Errors
              * generated by the FHIR store will contain a JSON-encoded `OperationOutcome` resource describing
@@ -12389,8 +12971,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * Gets the contents of a version (current or historical) of a FHIR resource by version ID.
                *
-               * Implements the FHIR standard [vread
-               * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#vread).
+               * Implements the FHIR standard vread interaction
+               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#vread),
+               * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#vread).
                *
                * On success, the response body will contain a JSON-encoded representation of the resource.
                * Errors generated by the FHIR store will contain a JSON-encoded `OperationOutcome` resource
@@ -14226,17 +14809,24 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return this;
               }
 
-              /** Specifies which parts of the Message resource to return in the response. */
+              /**
+               * Specifies which parts of the Message resource to return in the response. When
+               * unspecified, equivalent to FULL.
+               */
               @com.google.api.client.util.Key
               private java.lang.String view;
 
-              /** Specifies which parts of the Message resource to return in the response.
+              /** Specifies which parts of the Message resource to return in the response. When unspecified,
+             equivalent to FULL.
                */
               public java.lang.String getView() {
                 return view;
               }
 
-              /** Specifies which parts of the Message resource to return in the response. */
+              /**
+               * Specifies which parts of the Message resource to return in the response. When
+               * unspecified, equivalent to FULL.
+               */
               public Get setView(java.lang.String view) {
                 this.view = view;
                 return this;
@@ -14250,8 +14840,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             /**
              * Ingests a new HL7v2 message from the hospital and sends a notification to the Cloud Pub/Sub
              * topic. Return is an HL7v2 ACK message if the message was successfully stored. Otherwise an error
-             * is returned.  If an identical HL7v2 message is created twice only one resource is created on the
-             * server and no error is reported.
+             * is returned.
              *
              * Create a request for the method "messages.ingest".
              *
@@ -14278,8 +14867,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * Ingests a new HL7v2 message from the hospital and sends a notification to the Cloud Pub/Sub
                * topic. Return is an HL7v2 ACK message if the message was successfully stored. Otherwise an
-               * error is returned.  If an identical HL7v2 message is created twice only one resource is created
-               * on the server and no error is reported.
+               * error is returned.
                *
                * Create a request for the method "messages.ingest".
                *
@@ -14709,6 +15297,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             /**
              * Update the message.
              *
+             * The contents of the message in Message.data and data extracted from the contents such as
+             * Message.create_time cannot be altered. Only the Message.labels field is allowed to be updated.
+             * The labels in the request are merged with the existing set of labels. Existing labels with the
+             * same keys are updated.
+             *
              * Create a request for the method "messages.patch".
              *
              * This request holds the parameters needed by the healthcare server.  After setting any optional
@@ -14736,6 +15329,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * Update the message.
+               *
+               * The contents of the message in Message.data and data extracted from the contents such as
+               * Message.create_time cannot be altered. Only the Message.labels field is allowed to be updated.
+               * The labels in the request are merged with the existing set of labels. Existing labels with the
+               * same keys are updated.
                *
                * Create a request for the method "messages.patch".
                *
@@ -14849,17 +15447,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * The update mask applies to the resource. For the `FieldMask` definition, see
                * https://developers.google.com/protocol-
-               * buffers/docs/reference/google.protobuf#fieldmask Only the `labels` field is allowed
-               * to be updated. The labels in the request are merged with the existing set of
-               * labels. Existing labels with the same keys are updated.
+               * buffers/docs/reference/google.protobuf#fieldmask
                */
               @com.google.api.client.util.Key
               private String updateMask;
 
               /** The update mask applies to the resource. For the `FieldMask` definition, see
-             https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask Only the
-             `labels` field is allowed to be updated. The labels in the request are merged with the existing set
-             of labels. Existing labels with the same keys are updated.
+             https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
                */
               public String getUpdateMask() {
                 return updateMask;
@@ -14868,9 +15462,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * The update mask applies to the resource. For the `FieldMask` definition, see
                * https://developers.google.com/protocol-
-               * buffers/docs/reference/google.protobuf#fieldmask Only the `labels` field is allowed
-               * to be updated. The labels in the request are merged with the existing set of
-               * labels. Existing labels with the same keys are updated.
+               * buffers/docs/reference/google.protobuf#fieldmask
                */
               public Patch setUpdateMask(String updateMask) {
                 this.updateMask = updateMask;

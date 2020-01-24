@@ -20,7 +20,7 @@ package com.google.api.services.alertcenter.v1beta1.model;
  * Proto for all phishing alerts with common payload. Supported types are any of the following:
  *
  * * User reported phishing * User reported spam spike * Suspicious message reported * Phishing
- * reclassification * Malware reclassification
+ * reclassification * Malware reclassification * Gmail potential employee spoofing
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the G Suite Alert Center API. For a detailed explanation
@@ -66,6 +66,13 @@ public final class MailPhishing extends com.google.api.client.json.GenericJson {
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(GmailMessageInfo.class);
   }
+
+  /**
+   * System actions on the messages.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String systemActionType;
 
   /**
    * The domain ID.
@@ -132,6 +139,23 @@ public final class MailPhishing extends com.google.api.client.json.GenericJson {
    */
   public MailPhishing setMessages(java.util.List<GmailMessageInfo> messages) {
     this.messages = messages;
+    return this;
+  }
+
+  /**
+   * System actions on the messages.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSystemActionType() {
+    return systemActionType;
+  }
+
+  /**
+   * System actions on the messages.
+   * @param systemActionType systemActionType or {@code null} for none
+   */
+  public MailPhishing setSystemActionType(java.lang.String systemActionType) {
+    this.systemActionType = systemActionType;
     return this;
   }
 

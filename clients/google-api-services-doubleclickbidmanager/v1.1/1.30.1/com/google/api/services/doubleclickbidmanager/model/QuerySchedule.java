@@ -60,6 +60,13 @@ public final class QuerySchedule extends com.google.api.client.json.GenericJson 
   private java.lang.String nextRunTimezoneCode;
 
   /**
+   * When to start running the query. Not applicable to `ONE_TIME` frequency.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long startTimeMs;
+
+  /**
    * Datetime to periodically run the query until.
    * @return value or {@code null} for none
    */
@@ -126,6 +133,23 @@ public final class QuerySchedule extends com.google.api.client.json.GenericJson 
    */
   public QuerySchedule setNextRunTimezoneCode(java.lang.String nextRunTimezoneCode) {
     this.nextRunTimezoneCode = nextRunTimezoneCode;
+    return this;
+  }
+
+  /**
+   * When to start running the query. Not applicable to `ONE_TIME` frequency.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getStartTimeMs() {
+    return startTimeMs;
+  }
+
+  /**
+   * When to start running the query. Not applicable to `ONE_TIME` frequency.
+   * @param startTimeMs startTimeMs or {@code null} for none
+   */
+  public QuerySchedule setStartTimeMs(java.lang.Long startTimeMs) {
+    this.startTimeMs = startTimeMs;
     return this;
   }
 

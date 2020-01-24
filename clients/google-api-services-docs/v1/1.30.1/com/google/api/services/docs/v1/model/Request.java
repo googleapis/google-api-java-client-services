@@ -72,6 +72,20 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private DeleteContentRangeRequest deleteContentRange;
 
   /**
+   * Deletes a footer from the document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DeleteFooterRequest deleteFooter;
+
+  /**
+   * Deletes a header from the document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DeleteHeaderRequest deleteHeader;
+
+  /**
    * Deletes a named range.
    * The value may be {@code null}.
    */
@@ -338,6 +352,40 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   public Request setDeleteContentRange(DeleteContentRangeRequest deleteContentRange) {
     this.deleteContentRange = deleteContentRange;
+    return this;
+  }
+
+  /**
+   * Deletes a footer from the document.
+   * @return value or {@code null} for none
+   */
+  public DeleteFooterRequest getDeleteFooter() {
+    return deleteFooter;
+  }
+
+  /**
+   * Deletes a footer from the document.
+   * @param deleteFooter deleteFooter or {@code null} for none
+   */
+  public Request setDeleteFooter(DeleteFooterRequest deleteFooter) {
+    this.deleteFooter = deleteFooter;
+    return this;
+  }
+
+  /**
+   * Deletes a header from the document.
+   * @return value or {@code null} for none
+   */
+  public DeleteHeaderRequest getDeleteHeader() {
+    return deleteHeader;
+  }
+
+  /**
+   * Deletes a header from the document.
+   * @param deleteHeader deleteHeader or {@code null} for none
+   */
+  public Request setDeleteHeader(DeleteHeaderRequest deleteHeader) {
+    this.deleteHeader = deleteHeader;
     return this;
   }
 

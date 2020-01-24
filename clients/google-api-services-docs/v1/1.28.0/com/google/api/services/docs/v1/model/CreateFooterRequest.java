@@ -17,7 +17,8 @@
 package com.google.api.services.docs.v1.model;
 
 /**
- * Creates a Footer. The new footer is applied to the DocumentStyle.
+ * Creates a Footer. The new footer is applied to the SectionStyle at the location of the
+ * SectionBreak if specificed, otherwise it is applied to the DocumentStyle.
  *
  * If a footer of the specified type already exists, a 400 bad request error is returned.
  *
@@ -32,11 +33,41 @@ package com.google.api.services.docs.v1.model;
 public final class CreateFooterRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * The location of the SectionBreak immediately preceding the section whose SectionStyle this
+   * footer should belong to. If this is unset or refers to the first section break in the document,
+   * the footer applies to the document style.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Location sectionBreakLocation;
+
+  /**
    * The type of footer to create.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * The location of the SectionBreak immediately preceding the section whose SectionStyle this
+   * footer should belong to. If this is unset or refers to the first section break in the document,
+   * the footer applies to the document style.
+   * @return value or {@code null} for none
+   */
+  public Location getSectionBreakLocation() {
+    return sectionBreakLocation;
+  }
+
+  /**
+   * The location of the SectionBreak immediately preceding the section whose SectionStyle this
+   * footer should belong to. If this is unset or refers to the first section break in the document,
+   * the footer applies to the document style.
+   * @param sectionBreakLocation sectionBreakLocation or {@code null} for none
+   */
+  public CreateFooterRequest setSectionBreakLocation(Location sectionBreakLocation) {
+    this.sectionBreakLocation = sectionBreakLocation;
+    return this;
+  }
 
   /**
    * The type of footer to create.

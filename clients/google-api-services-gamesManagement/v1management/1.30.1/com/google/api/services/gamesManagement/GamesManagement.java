@@ -779,8 +779,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
 
     /**
      * Resets all player progress on the event with the given ID for the currently authenticated player.
-     * This method is only accessible to whitelisted tester accounts for your application. All quests
-     * for this player that use the event will also be reset.
+     * This method is only accessible to whitelisted tester accounts for your application.
      *
      * Create a request for the method "events.reset".
      *
@@ -802,8 +801,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
 
       /**
        * Resets all player progress on the event with the given ID for the currently authenticated
-       * player. This method is only accessible to whitelisted tester accounts for your application. All
-       * quests for this player that use the event will also be reset.
+       * player. This method is only accessible to whitelisted tester accounts for your application.
        *
        * Create a request for the method "events.reset".
        *
@@ -879,8 +877,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
     }
     /**
      * Resets all player progress on all events for the currently authenticated player. This method is
-     * only accessible to whitelisted tester accounts for your application. All quests for this player
-     * will also be reset.
+     * only accessible to whitelisted tester accounts for your application.
      *
      * Create a request for the method "events.resetAll".
      *
@@ -901,8 +898,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
 
       /**
        * Resets all player progress on all events for the currently authenticated player. This method is
-       * only accessible to whitelisted tester accounts for your application. All quests for this player
-       * will also be reset.
+       * only accessible to whitelisted tester accounts for your application.
        *
        * Create a request for the method "events.resetAll".
        *
@@ -960,7 +956,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
     }
     /**
      * Resets all draft events for all players. This method is only available to user accounts for your
-     * developer console. All quests that use any of these events will also be reset.
+     * developer console.
      *
      * Create a request for the method "events.resetAllForAllPlayers".
      *
@@ -982,7 +978,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
 
       /**
        * Resets all draft events for all players. This method is only available to user accounts for
-       * your developer console. All quests that use any of these events will also be reset.
+       * your developer console.
        *
        * Create a request for the method "events.resetAllForAllPlayers".
        *
@@ -1040,8 +1036,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
     }
     /**
      * Resets the event with the given ID for all players. This method is only available to user
-     * accounts for your developer console. Only draft events can be reset. All quests that use the
-     * event will also be reset.
+     * accounts for your developer console. Only draft events can be reset.
      *
      * Create a request for the method "events.resetForAllPlayers".
      *
@@ -1064,8 +1059,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
 
       /**
        * Resets the event with the given ID for all players. This method is only available to user
-       * accounts for your developer console. Only draft events can be reset. All quests that use the
-       * event will also be reset.
+       * accounts for your developer console. Only draft events can be reset.
        *
        * Create a request for the method "events.resetForAllPlayers".
        *
@@ -1141,8 +1135,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
     }
     /**
      * Resets events with the given IDs for all players. This method is only available to user accounts
-     * for your developer console. Only draft events may be reset. All quests that use any of the events
-     * will also be reset.
+     * for your developer console. Only draft events may be reset.
      *
      * Create a request for the method "events.resetMultipleForAllPlayers".
      *
@@ -1165,8 +1158,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
 
       /**
        * Resets events with the given IDs for all players. This method is only available to user
-       * accounts for your developer console. Only draft events may be reset. All quests that use any of
-       * the events will also be reset.
+       * accounts for your developer console. Only draft events may be reset.
        *
        * Create a request for the method "events.resetMultipleForAllPlayers".
        *

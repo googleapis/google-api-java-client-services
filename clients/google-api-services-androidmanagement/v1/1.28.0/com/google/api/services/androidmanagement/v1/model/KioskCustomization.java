@@ -32,6 +32,13 @@ package com.google.api.services.androidmanagement.v1.model;
 public final class KioskCustomization extends com.google.api.client.json.GenericJson {
 
   /**
+   * Specifies whether the Settings app is allowed in kiosk mode.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String deviceSettings;
+
+  /**
    * Sets the behavior of a device in kiosk mode when a user presses and holds (long-presses) the
    * Power button.
    * The value may be {@code null}.
@@ -61,6 +68,23 @@ public final class KioskCustomization extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private java.lang.String systemNavigation;
+
+  /**
+   * Specifies whether the Settings app is allowed in kiosk mode.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDeviceSettings() {
+    return deviceSettings;
+  }
+
+  /**
+   * Specifies whether the Settings app is allowed in kiosk mode.
+   * @param deviceSettings deviceSettings or {@code null} for none
+   */
+  public KioskCustomization setDeviceSettings(java.lang.String deviceSettings) {
+    this.deviceSettings = deviceSettings;
+    return this;
+  }
 
   /**
    * Sets the behavior of a device in kiosk mode when a user presses and holds (long-presses) the

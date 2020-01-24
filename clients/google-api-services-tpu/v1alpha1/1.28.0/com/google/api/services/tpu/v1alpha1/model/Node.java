@@ -42,7 +42,7 @@ public final class Node extends com.google.api.client.json.GenericJson {
    * would be wasteful (a node can only consume one IP address). Errors will occur if the CIDR block
    * has already been used for a currently existing TPU node, the CIDR block conflicts with any
    * subnetworks in the user's provided network, or the provided network is peered with another
-   * network that is using that CIDR block. Required.
+   * network that is using that CIDR block.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -182,7 +182,7 @@ public final class Node extends com.google.api.client.json.GenericJson {
    * would be wasteful (a node can only consume one IP address). Errors will occur if the CIDR block
    * has already been used for a currently existing TPU node, the CIDR block conflicts with any
    * subnetworks in the user's provided network, or the provided network is peered with another
-   * network that is using that CIDR block. Required.
+   * network that is using that CIDR block.
    * @return value or {@code null} for none
    */
   public java.lang.String getCidrBlock() {
@@ -195,7 +195,7 @@ public final class Node extends com.google.api.client.json.GenericJson {
    * would be wasteful (a node can only consume one IP address). Errors will occur if the CIDR block
    * has already been used for a currently existing TPU node, the CIDR block conflicts with any
    * subnetworks in the user's provided network, or the provided network is peered with another
-   * network that is using that CIDR block. Required.
+   * network that is using that CIDR block.
    * @param cidrBlock cidrBlock or {@code null} for none
    */
   public Node setCidrBlock(java.lang.String cidrBlock) {

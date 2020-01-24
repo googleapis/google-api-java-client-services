@@ -181,8 +181,6 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
 
   /**
    * Indicates whether to use the even page header / footer IDs for the even pages.
-   *
-   * This property is read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -190,8 +188,6 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
 
   /**
    * Indicates whether to use the first page header / footer IDs for the first page.
-   *
-   * This property is read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -547,8 +543,6 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
 
   /**
    * Indicates whether to use the even page header / footer IDs for the even pages.
-   *
-   * This property is read-only.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseEvenPageHeaderFooter() {
@@ -557,8 +551,6 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
 
   /**
    * Indicates whether to use the even page header / footer IDs for the even pages.
-   *
-   * This property is read-only.
    * @param useEvenPageHeaderFooter useEvenPageHeaderFooter or {@code null} for none
    */
   public DocumentStyle setUseEvenPageHeaderFooter(java.lang.Boolean useEvenPageHeaderFooter) {
@@ -568,8 +560,6 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
 
   /**
    * Indicates whether to use the first page header / footer IDs for the first page.
-   *
-   * This property is read-only.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseFirstPageHeaderFooter() {
@@ -578,8 +568,6 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
 
   /**
    * Indicates whether to use the first page header / footer IDs for the first page.
-   *
-   * This property is read-only.
    * @param useFirstPageHeaderFooter useFirstPageHeaderFooter or {@code null} for none
    */
   public DocumentStyle setUseFirstPageHeaderFooter(java.lang.Boolean useFirstPageHeaderFooter) {

@@ -17,7 +17,8 @@
 package com.google.api.services.docs.v1.model;
 
 /**
- * Creates a Header. The new header is applied to the DocumentStyle.
+ * Creates a Header. The new header is applied to the SectionStyle at the location of the
+ * SectionBreak if specificed, otherwise it is applied to the DocumentStyle.
  *
  * If a header of the specified type already exists, a 400 bad request error is returned.
  *
@@ -32,11 +33,41 @@ package com.google.api.services.docs.v1.model;
 public final class CreateHeaderRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * The location of the SectionBreak which begins the section this header should belong to. If
+   * `section_break_location' is unset or if it refers to the first section break in the document
+   * body, the header applies to the DocumentStyle
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Location sectionBreakLocation;
+
+  /**
    * The type of header to create.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * The location of the SectionBreak which begins the section this header should belong to. If
+   * `section_break_location' is unset or if it refers to the first section break in the document
+   * body, the header applies to the DocumentStyle
+   * @return value or {@code null} for none
+   */
+  public Location getSectionBreakLocation() {
+    return sectionBreakLocation;
+  }
+
+  /**
+   * The location of the SectionBreak which begins the section this header should belong to. If
+   * `section_break_location' is unset or if it refers to the first section break in the document
+   * body, the header applies to the DocumentStyle
+   * @param sectionBreakLocation sectionBreakLocation or {@code null} for none
+   */
+  public CreateHeaderRequest setSectionBreakLocation(Location sectionBreakLocation) {
+    this.sectionBreakLocation = sectionBreakLocation;
+    return this;
+  }
 
   /**
    * The type of header to create.

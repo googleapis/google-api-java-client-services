@@ -37,7 +37,7 @@ public final class SectionColumnProperties extends com.google.api.client.json.Ge
   private Dimension paddingEnd;
 
   /**
-   * The width of the column.
+   * Output only. The width of the column.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class SectionColumnProperties extends com.google.api.client.json.Ge
   }
 
   /**
-   * The width of the column.
+   * Output only. The width of the column.
    * @return value or {@code null} for none
    */
   public Dimension getWidth() {
@@ -69,7 +69,7 @@ public final class SectionColumnProperties extends com.google.api.client.json.Ge
   }
 
   /**
-   * The width of the column.
+   * Output only. The width of the column.
    * @param width width or {@code null} for none
    */
   public SectionColumnProperties setWidth(Dimension width) {

@@ -32,7 +32,11 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   /**
    * The section's columns properties.
    *
-   * If empty, the section contains one column with the default properties in the Docs editor.
+   * If empty, the section contains one column with the default properties in the Docs editor. A
+   * section can be updated to have no more than three columns.
+   *
+   * When updating this property, setting a concrete value is required. Unsetting this property will
+   * result in a 400 bad request error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,6 +52,9 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
    * The style of column separators.
    *
    * This style can be set even when there is one column in the section.
+   *
+   * When updating this property, setting a concrete value is required. Unsetting this property
+   * results in a 400 bad request error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,10 +62,89 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
 
   /**
    * The content direction of this section. If unset, the value defaults to LEFT_TO_RIGHT.
+   *
+   * When updating this property, setting a concrete value is required. Unsetting this property
+   * results in a 400 bad request error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String contentDirection;
+
+  /**
+   * The ID of the default footer. If unset, the value inherits from the previous SectionBreak's
+   * SectionStyle. If the value is unset in the first SectionBreak, it inherits from DocumentStyle's
+   * default_footer_id.
+   *
+   * This property is read-only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String defaultFooterId;
+
+  /**
+   * The ID of the default header. If unset, the value inherits from the previous SectionBreak's
+   * SectionStyle. If the value is unset in the first SectionBreak, it inherits from DocumentStyle's
+   * default_header_id.
+   *
+   * This property is read-only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String defaultHeaderId;
+
+  /**
+   * The ID of the footer used only for even pages. If the value of DocumentStyle's
+   * use_even_page_header_footer is true, this value is used for the footers on even pages in the
+   * section. If it is false, the footers on even pages uses the default_footer_id. If unset, the
+   * value inherits from the previous SectionBreak's SectionStyle. If the value is unset in the
+   * first SectionBreak, it inherits from DocumentStyle's even_page_footer_id.
+   *
+   * This property is read-only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String evenPageFooterId;
+
+  /**
+   * The ID of the header used only for even pages. If the value of DocumentStyle's
+   * use_even_page_header_footer is true, this value is used for the headers on even pages in the
+   * section. If it is false, the headers on even pages uses the default_header_id. If unset, the
+   * value inherits from the previous SectionBreak's SectionStyle. If the value is unset in the
+   * first SectionBreak, it inherits from DocumentStyle's even_page_header_id.
+   *
+   * This property is read-only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String evenPageHeaderId;
+
+  /**
+   * The ID of the footer used only for the first page of the section. If
+   * use_first_page_header_footer is true, this value is used for the footer on the first page of
+   * the section. If it is false, the footer on the first page of the section uses the
+   * default_footer_id. If unset, the value inherits from the previous SectionBreak's SectionStyle.
+   * If the value is unset in the first SectionBreak, it inherits from DocumentStyle's
+   * first_page_footer_id.
+   *
+   * This property is read-only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String firstPageFooterId;
+
+  /**
+   * The ID of the header used only for the first page of the section. If
+   * use_first_page_header_footer is true, this value is used for the header on the first page of
+   * the section. If it is false, the header on the first page of the section uses the
+   * default_header_id. If unset, the value inherits from the previous SectionBreak's SectionStyle.
+   * If the value is unset in the first SectionBreak, it inherits from DocumentStyle's
+   * first_page_header_id.
+   *
+   * This property is read-only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String firstPageHeaderId;
 
   /**
    * The bottom page margin of the section. If unset, uses margin_bottom from DocumentStyle.
@@ -138,9 +224,25 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   private java.lang.String sectionType;
 
   /**
+   * Indicates whether to use the first page header / footer IDs for the first page of the section.
+   * If unset, it inherits from DocumentStyle's use_first_page_header_footer for the first section.
+   * If the value is unset for subsequent sectors, it should be interpreted as false.
+   *
+   * When updating this property, setting a concrete value is required. Unsetting this property
+   * results in a 400 bad request error.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean useFirstPageHeaderFooter;
+
+  /**
    * The section's columns properties.
    *
-   * If empty, the section contains one column with the default properties in the Docs editor.
+   * If empty, the section contains one column with the default properties in the Docs editor. A
+   * section can be updated to have no more than three columns.
+   *
+   * When updating this property, setting a concrete value is required. Unsetting this property will
+   * result in a 400 bad request error.
    * @return value or {@code null} for none
    */
   public java.util.List<SectionColumnProperties> getColumnProperties() {
@@ -150,7 +252,11 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   /**
    * The section's columns properties.
    *
-   * If empty, the section contains one column with the default properties in the Docs editor.
+   * If empty, the section contains one column with the default properties in the Docs editor. A
+   * section can be updated to have no more than three columns.
+   *
+   * When updating this property, setting a concrete value is required. Unsetting this property will
+   * result in a 400 bad request error.
    * @param columnProperties columnProperties or {@code null} for none
    */
   public SectionStyle setColumnProperties(java.util.List<SectionColumnProperties> columnProperties) {
@@ -162,6 +268,9 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
    * The style of column separators.
    *
    * This style can be set even when there is one column in the section.
+   *
+   * When updating this property, setting a concrete value is required. Unsetting this property
+   * results in a 400 bad request error.
    * @return value or {@code null} for none
    */
   public java.lang.String getColumnSeparatorStyle() {
@@ -172,6 +281,9 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
    * The style of column separators.
    *
    * This style can be set even when there is one column in the section.
+   *
+   * When updating this property, setting a concrete value is required. Unsetting this property
+   * results in a 400 bad request error.
    * @param columnSeparatorStyle columnSeparatorStyle or {@code null} for none
    */
   public SectionStyle setColumnSeparatorStyle(java.lang.String columnSeparatorStyle) {
@@ -181,6 +293,9 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
 
   /**
    * The content direction of this section. If unset, the value defaults to LEFT_TO_RIGHT.
+   *
+   * When updating this property, setting a concrete value is required. Unsetting this property
+   * results in a 400 bad request error.
    * @return value or {@code null} for none
    */
   public java.lang.String getContentDirection() {
@@ -189,10 +304,183 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
 
   /**
    * The content direction of this section. If unset, the value defaults to LEFT_TO_RIGHT.
+   *
+   * When updating this property, setting a concrete value is required. Unsetting this property
+   * results in a 400 bad request error.
    * @param contentDirection contentDirection or {@code null} for none
    */
   public SectionStyle setContentDirection(java.lang.String contentDirection) {
     this.contentDirection = contentDirection;
+    return this;
+  }
+
+  /**
+   * The ID of the default footer. If unset, the value inherits from the previous SectionBreak's
+   * SectionStyle. If the value is unset in the first SectionBreak, it inherits from DocumentStyle's
+   * default_footer_id.
+   *
+   * This property is read-only.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDefaultFooterId() {
+    return defaultFooterId;
+  }
+
+  /**
+   * The ID of the default footer. If unset, the value inherits from the previous SectionBreak's
+   * SectionStyle. If the value is unset in the first SectionBreak, it inherits from DocumentStyle's
+   * default_footer_id.
+   *
+   * This property is read-only.
+   * @param defaultFooterId defaultFooterId or {@code null} for none
+   */
+  public SectionStyle setDefaultFooterId(java.lang.String defaultFooterId) {
+    this.defaultFooterId = defaultFooterId;
+    return this;
+  }
+
+  /**
+   * The ID of the default header. If unset, the value inherits from the previous SectionBreak's
+   * SectionStyle. If the value is unset in the first SectionBreak, it inherits from DocumentStyle's
+   * default_header_id.
+   *
+   * This property is read-only.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDefaultHeaderId() {
+    return defaultHeaderId;
+  }
+
+  /**
+   * The ID of the default header. If unset, the value inherits from the previous SectionBreak's
+   * SectionStyle. If the value is unset in the first SectionBreak, it inherits from DocumentStyle's
+   * default_header_id.
+   *
+   * This property is read-only.
+   * @param defaultHeaderId defaultHeaderId or {@code null} for none
+   */
+  public SectionStyle setDefaultHeaderId(java.lang.String defaultHeaderId) {
+    this.defaultHeaderId = defaultHeaderId;
+    return this;
+  }
+
+  /**
+   * The ID of the footer used only for even pages. If the value of DocumentStyle's
+   * use_even_page_header_footer is true, this value is used for the footers on even pages in the
+   * section. If it is false, the footers on even pages uses the default_footer_id. If unset, the
+   * value inherits from the previous SectionBreak's SectionStyle. If the value is unset in the
+   * first SectionBreak, it inherits from DocumentStyle's even_page_footer_id.
+   *
+   * This property is read-only.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEvenPageFooterId() {
+    return evenPageFooterId;
+  }
+
+  /**
+   * The ID of the footer used only for even pages. If the value of DocumentStyle's
+   * use_even_page_header_footer is true, this value is used for the footers on even pages in the
+   * section. If it is false, the footers on even pages uses the default_footer_id. If unset, the
+   * value inherits from the previous SectionBreak's SectionStyle. If the value is unset in the
+   * first SectionBreak, it inherits from DocumentStyle's even_page_footer_id.
+   *
+   * This property is read-only.
+   * @param evenPageFooterId evenPageFooterId or {@code null} for none
+   */
+  public SectionStyle setEvenPageFooterId(java.lang.String evenPageFooterId) {
+    this.evenPageFooterId = evenPageFooterId;
+    return this;
+  }
+
+  /**
+   * The ID of the header used only for even pages. If the value of DocumentStyle's
+   * use_even_page_header_footer is true, this value is used for the headers on even pages in the
+   * section. If it is false, the headers on even pages uses the default_header_id. If unset, the
+   * value inherits from the previous SectionBreak's SectionStyle. If the value is unset in the
+   * first SectionBreak, it inherits from DocumentStyle's even_page_header_id.
+   *
+   * This property is read-only.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEvenPageHeaderId() {
+    return evenPageHeaderId;
+  }
+
+  /**
+   * The ID of the header used only for even pages. If the value of DocumentStyle's
+   * use_even_page_header_footer is true, this value is used for the headers on even pages in the
+   * section. If it is false, the headers on even pages uses the default_header_id. If unset, the
+   * value inherits from the previous SectionBreak's SectionStyle. If the value is unset in the
+   * first SectionBreak, it inherits from DocumentStyle's even_page_header_id.
+   *
+   * This property is read-only.
+   * @param evenPageHeaderId evenPageHeaderId or {@code null} for none
+   */
+  public SectionStyle setEvenPageHeaderId(java.lang.String evenPageHeaderId) {
+    this.evenPageHeaderId = evenPageHeaderId;
+    return this;
+  }
+
+  /**
+   * The ID of the footer used only for the first page of the section. If
+   * use_first_page_header_footer is true, this value is used for the footer on the first page of
+   * the section. If it is false, the footer on the first page of the section uses the
+   * default_footer_id. If unset, the value inherits from the previous SectionBreak's SectionStyle.
+   * If the value is unset in the first SectionBreak, it inherits from DocumentStyle's
+   * first_page_footer_id.
+   *
+   * This property is read-only.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFirstPageFooterId() {
+    return firstPageFooterId;
+  }
+
+  /**
+   * The ID of the footer used only for the first page of the section. If
+   * use_first_page_header_footer is true, this value is used for the footer on the first page of
+   * the section. If it is false, the footer on the first page of the section uses the
+   * default_footer_id. If unset, the value inherits from the previous SectionBreak's SectionStyle.
+   * If the value is unset in the first SectionBreak, it inherits from DocumentStyle's
+   * first_page_footer_id.
+   *
+   * This property is read-only.
+   * @param firstPageFooterId firstPageFooterId or {@code null} for none
+   */
+  public SectionStyle setFirstPageFooterId(java.lang.String firstPageFooterId) {
+    this.firstPageFooterId = firstPageFooterId;
+    return this;
+  }
+
+  /**
+   * The ID of the header used only for the first page of the section. If
+   * use_first_page_header_footer is true, this value is used for the header on the first page of
+   * the section. If it is false, the header on the first page of the section uses the
+   * default_header_id. If unset, the value inherits from the previous SectionBreak's SectionStyle.
+   * If the value is unset in the first SectionBreak, it inherits from DocumentStyle's
+   * first_page_header_id.
+   *
+   * This property is read-only.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFirstPageHeaderId() {
+    return firstPageHeaderId;
+  }
+
+  /**
+   * The ID of the header used only for the first page of the section. If
+   * use_first_page_header_footer is true, this value is used for the header on the first page of
+   * the section. If it is false, the header on the first page of the section uses the
+   * default_header_id. If unset, the value inherits from the previous SectionBreak's SectionStyle.
+   * If the value is unset in the first SectionBreak, it inherits from DocumentStyle's
+   * first_page_header_id.
+   *
+   * This property is read-only.
+   * @param firstPageHeaderId firstPageHeaderId or {@code null} for none
+   */
+  public SectionStyle setFirstPageHeaderId(java.lang.String firstPageHeaderId) {
+    this.firstPageHeaderId = firstPageHeaderId;
     return this;
   }
 
@@ -368,6 +656,33 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
    */
   public SectionStyle setSectionType(java.lang.String sectionType) {
     this.sectionType = sectionType;
+    return this;
+  }
+
+  /**
+   * Indicates whether to use the first page header / footer IDs for the first page of the section.
+   * If unset, it inherits from DocumentStyle's use_first_page_header_footer for the first section.
+   * If the value is unset for subsequent sectors, it should be interpreted as false.
+   *
+   * When updating this property, setting a concrete value is required. Unsetting this property
+   * results in a 400 bad request error.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUseFirstPageHeaderFooter() {
+    return useFirstPageHeaderFooter;
+  }
+
+  /**
+   * Indicates whether to use the first page header / footer IDs for the first page of the section.
+   * If unset, it inherits from DocumentStyle's use_first_page_header_footer for the first section.
+   * If the value is unset for subsequent sectors, it should be interpreted as false.
+   *
+   * When updating this property, setting a concrete value is required. Unsetting this property
+   * results in a 400 bad request error.
+   * @param useFirstPageHeaderFooter useFirstPageHeaderFooter or {@code null} for none
+   */
+  public SectionStyle setUseFirstPageHeaderFooter(java.lang.Boolean useFirstPageHeaderFooter) {
+    this.useFirstPageHeaderFooter = useFirstPageHeaderFooter;
     return this;
   }
 

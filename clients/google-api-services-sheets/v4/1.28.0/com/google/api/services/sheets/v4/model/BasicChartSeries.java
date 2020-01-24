@@ -39,6 +39,14 @@ public final class BasicChartSeries extends com.google.api.client.json.GenericJs
   private Color color;
 
   /**
+   * The color for elements (i.e. bars, lines, points) associated with this series.  If empty, a
+   * default color is used. If color is also set, this field takes precedence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ColorStyle colorStyle;
+
+  /**
    * The line style of this series. Valid only if the chartType is AREA, LINE, or SCATTER. COMBO
    * charts are also supported if the series chart type is AREA or LINE.
    * The value may be {@code null}.
@@ -87,6 +95,25 @@ public final class BasicChartSeries extends com.google.api.client.json.GenericJs
    */
   public BasicChartSeries setColor(Color color) {
     this.color = color;
+    return this;
+  }
+
+  /**
+   * The color for elements (i.e. bars, lines, points) associated with this series.  If empty, a
+   * default color is used. If color is also set, this field takes precedence.
+   * @return value or {@code null} for none
+   */
+  public ColorStyle getColorStyle() {
+    return colorStyle;
+  }
+
+  /**
+   * The color for elements (i.e. bars, lines, points) associated with this series.  If empty, a
+   * default color is used. If color is also set, this field takes precedence.
+   * @param colorStyle colorStyle or {@code null} for none
+   */
+  public BasicChartSeries setColorStyle(ColorStyle colorStyle) {
+    this.colorStyle = colorStyle;
     return this;
   }
 

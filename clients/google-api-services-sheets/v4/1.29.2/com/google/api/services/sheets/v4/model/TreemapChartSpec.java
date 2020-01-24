@@ -61,6 +61,14 @@ public final class TreemapChartSpec extends com.google.api.client.json.GenericJs
   private Color headerColor;
 
   /**
+   * The background color for header cells. If header_color is also set, this field takes
+   * precedence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ColorStyle headerColorStyle;
+
+  /**
    * True to hide tooltips.
    * The value may be {@code null}.
    */
@@ -201,6 +209,25 @@ public final class TreemapChartSpec extends com.google.api.client.json.GenericJs
    */
   public TreemapChartSpec setHeaderColor(Color headerColor) {
     this.headerColor = headerColor;
+    return this;
+  }
+
+  /**
+   * The background color for header cells. If header_color is also set, this field takes
+   * precedence.
+   * @return value or {@code null} for none
+   */
+  public ColorStyle getHeaderColorStyle() {
+    return headerColorStyle;
+  }
+
+  /**
+   * The background color for header cells. If header_color is also set, this field takes
+   * precedence.
+   * @param headerColorStyle headerColorStyle or {@code null} for none
+   */
+  public TreemapChartSpec setHeaderColorStyle(ColorStyle headerColorStyle) {
+    this.headerColorStyle = headerColorStyle;
     return this;
   }
 

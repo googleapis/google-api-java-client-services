@@ -37,6 +37,13 @@ public final class WaterfallChartColumnStyle extends com.google.api.client.json.
   private Color color;
 
   /**
+   * The color of the column. If color is also set, this field takes precedence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ColorStyle colorStyle;
+
+  /**
    * The label of the column's legend.
    * The value may be {@code null}.
    */
@@ -57,6 +64,23 @@ public final class WaterfallChartColumnStyle extends com.google.api.client.json.
    */
   public WaterfallChartColumnStyle setColor(Color color) {
     this.color = color;
+    return this;
+  }
+
+  /**
+   * The color of the column. If color is also set, this field takes precedence.
+   * @return value or {@code null} for none
+   */
+  public ColorStyle getColorStyle() {
+    return colorStyle;
+  }
+
+  /**
+   * The color of the column. If color is also set, this field takes precedence.
+   * @param colorStyle colorStyle or {@code null} for none
+   */
+  public WaterfallChartColumnStyle setColorStyle(ColorStyle colorStyle) {
+    this.colorStyle = colorStyle;
     return this;
   }
 

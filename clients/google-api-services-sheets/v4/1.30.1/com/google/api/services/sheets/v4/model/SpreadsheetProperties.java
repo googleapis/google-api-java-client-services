@@ -46,7 +46,7 @@ public final class SpreadsheetProperties extends com.google.api.client.json.Gene
 
   /**
    * Determines whether and how circular references are resolved with iterative calculation.
-   * Absence of this field means that circular references will result in calculation errors.
+   * Absence of this field means that circular references result in calculation errors.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -127,7 +127,7 @@ public final class SpreadsheetProperties extends com.google.api.client.json.Gene
 
   /**
    * Determines whether and how circular references are resolved with iterative calculation.
-   * Absence of this field means that circular references will result in calculation errors.
+   * Absence of this field means that circular references result in calculation errors.
    * @return value or {@code null} for none
    */
   public IterativeCalculationSettings getIterativeCalculationSettings() {
@@ -136,7 +136,7 @@ public final class SpreadsheetProperties extends com.google.api.client.json.Gene
 
   /**
    * Determines whether and how circular references are resolved with iterative calculation.
-   * Absence of this field means that circular references will result in calculation errors.
+   * Absence of this field means that circular references result in calculation errors.
    * @param iterativeCalculationSettings iterativeCalculationSettings or {@code null} for none
    */
   public SpreadsheetProperties setIterativeCalculationSettings(IterativeCalculationSettings iterativeCalculationSettings) {

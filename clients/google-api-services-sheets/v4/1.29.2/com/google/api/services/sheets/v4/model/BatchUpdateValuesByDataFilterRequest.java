@@ -31,7 +31,7 @@ public final class BatchUpdateValuesByDataFilterRequest extends com.google.api.c
 
   /**
    * The new values to apply to the spreadsheet.  If more than one range is matched by the specified
-   * DataFilter the specified values will be applied to all of those ranges.
+   * DataFilter the specified values are applied to all of those ranges.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,9 +40,9 @@ public final class BatchUpdateValuesByDataFilterRequest extends com.google.api.c
   /**
    * Determines if the update response should include the values of the cells that were updated. By
    * default, responses do not include the updated values. The `updatedData` field within each of
-   * the BatchUpdateValuesResponse.responses will contain the updated values. If the range to write
-   * was larger than than the range actually written, the response will include all values in the
-   * requested range (excluding trailing empty rows and columns).
+   * the BatchUpdateValuesResponse.responses contains the updated values. If the range to write was
+   * larger than the range actually written, the response includes all values in the requested range
+   * (excluding trailing empty rows and columns).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,7 +74,7 @@ public final class BatchUpdateValuesByDataFilterRequest extends com.google.api.c
 
   /**
    * The new values to apply to the spreadsheet.  If more than one range is matched by the specified
-   * DataFilter the specified values will be applied to all of those ranges.
+   * DataFilter the specified values are applied to all of those ranges.
    * @return value or {@code null} for none
    */
   public java.util.List<DataFilterValueRange> getData() {
@@ -83,7 +83,7 @@ public final class BatchUpdateValuesByDataFilterRequest extends com.google.api.c
 
   /**
    * The new values to apply to the spreadsheet.  If more than one range is matched by the specified
-   * DataFilter the specified values will be applied to all of those ranges.
+   * DataFilter the specified values are applied to all of those ranges.
    * @param data data or {@code null} for none
    */
   public BatchUpdateValuesByDataFilterRequest setData(java.util.List<DataFilterValueRange> data) {
@@ -94,9 +94,9 @@ public final class BatchUpdateValuesByDataFilterRequest extends com.google.api.c
   /**
    * Determines if the update response should include the values of the cells that were updated. By
    * default, responses do not include the updated values. The `updatedData` field within each of
-   * the BatchUpdateValuesResponse.responses will contain the updated values. If the range to write
-   * was larger than than the range actually written, the response will include all values in the
-   * requested range (excluding trailing empty rows and columns).
+   * the BatchUpdateValuesResponse.responses contains the updated values. If the range to write was
+   * larger than the range actually written, the response includes all values in the requested range
+   * (excluding trailing empty rows and columns).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIncludeValuesInResponse() {
@@ -106,9 +106,9 @@ public final class BatchUpdateValuesByDataFilterRequest extends com.google.api.c
   /**
    * Determines if the update response should include the values of the cells that were updated. By
    * default, responses do not include the updated values. The `updatedData` field within each of
-   * the BatchUpdateValuesResponse.responses will contain the updated values. If the range to write
-   * was larger than than the range actually written, the response will include all values in the
-   * requested range (excluding trailing empty rows and columns).
+   * the BatchUpdateValuesResponse.responses contains the updated values. If the range to write was
+   * larger than the range actually written, the response includes all values in the requested range
+   * (excluding trailing empty rows and columns).
    * @param includeValuesInResponse includeValuesInResponse or {@code null} for none
    */
   public BatchUpdateValuesByDataFilterRequest setIncludeValuesInResponse(java.lang.Boolean includeValuesInResponse) {

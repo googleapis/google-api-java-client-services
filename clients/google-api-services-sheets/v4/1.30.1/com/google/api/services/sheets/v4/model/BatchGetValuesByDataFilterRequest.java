@@ -30,8 +30,8 @@ package com.google.api.services.sheets.v4.model;
 public final class BatchGetValuesByDataFilterRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The data filters used to match the ranges of values to retrieve.  Ranges that match any of the
-   * specified data filters will be included in the response.
+   * The data filters used to match the ranges of values to retrieve. Ranges that match any of the
+   * specified data filters are included in the response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,8 +50,8 @@ public final class BatchGetValuesByDataFilterRequest extends com.google.api.clie
    * The major dimension that results should use.
    *
    * For example, if the spreadsheet data is: `A1=1,B1=2,A2=3,B2=4`, then a request that selects
-   * that range and sets `majorDimension=ROWS` will return `[[1,2],[3,4]]`, whereas a request that
-   * sets `majorDimension=COLUMNS` will return `[[1,3],[2,4]]`.
+   * that range and sets `majorDimension=ROWS` returns `[[1,2],[3,4]]`, whereas a request that sets
+   * `majorDimension=COLUMNS` returns `[[1,3],[2,4]]`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,8 +66,8 @@ public final class BatchGetValuesByDataFilterRequest extends com.google.api.clie
   private java.lang.String valueRenderOption;
 
   /**
-   * The data filters used to match the ranges of values to retrieve.  Ranges that match any of the
-   * specified data filters will be included in the response.
+   * The data filters used to match the ranges of values to retrieve. Ranges that match any of the
+   * specified data filters are included in the response.
    * @return value or {@code null} for none
    */
   public java.util.List<DataFilter> getDataFilters() {
@@ -75,8 +75,8 @@ public final class BatchGetValuesByDataFilterRequest extends com.google.api.clie
   }
 
   /**
-   * The data filters used to match the ranges of values to retrieve.  Ranges that match any of the
-   * specified data filters will be included in the response.
+   * The data filters used to match the ranges of values to retrieve. Ranges that match any of the
+   * specified data filters are included in the response.
    * @param dataFilters dataFilters or {@code null} for none
    */
   public BatchGetValuesByDataFilterRequest setDataFilters(java.util.List<DataFilter> dataFilters) {
@@ -109,8 +109,8 @@ public final class BatchGetValuesByDataFilterRequest extends com.google.api.clie
    * The major dimension that results should use.
    *
    * For example, if the spreadsheet data is: `A1=1,B1=2,A2=3,B2=4`, then a request that selects
-   * that range and sets `majorDimension=ROWS` will return `[[1,2],[3,4]]`, whereas a request that
-   * sets `majorDimension=COLUMNS` will return `[[1,3],[2,4]]`.
+   * that range and sets `majorDimension=ROWS` returns `[[1,2],[3,4]]`, whereas a request that sets
+   * `majorDimension=COLUMNS` returns `[[1,3],[2,4]]`.
    * @return value or {@code null} for none
    */
   public java.lang.String getMajorDimension() {
@@ -121,8 +121,8 @@ public final class BatchGetValuesByDataFilterRequest extends com.google.api.clie
    * The major dimension that results should use.
    *
    * For example, if the spreadsheet data is: `A1=1,B1=2,A2=3,B2=4`, then a request that selects
-   * that range and sets `majorDimension=ROWS` will return `[[1,2],[3,4]]`, whereas a request that
-   * sets `majorDimension=COLUMNS` will return `[[1,3],[2,4]]`.
+   * that range and sets `majorDimension=ROWS` returns `[[1,2],[3,4]]`, whereas a request that sets
+   * `majorDimension=COLUMNS` returns `[[1,3],[2,4]]`.
    * @param majorDimension majorDimension or {@code null} for none
    */
   public BatchGetValuesByDataFilterRequest setMajorDimension(java.lang.String majorDimension) {

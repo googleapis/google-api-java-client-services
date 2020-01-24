@@ -37,7 +37,7 @@ public final class SpreadsheetTheme extends com.google.api.client.json.GenericJs
   private java.lang.String primaryFontFamily;
 
   /**
-   * The spreadsheet theme color pairs. For update users need to give all pairs of theme colors.
+   * The spreadsheet theme color pairs. To update you must provide all theme color pairs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class SpreadsheetTheme extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The spreadsheet theme color pairs. For update users need to give all pairs of theme colors.
+   * The spreadsheet theme color pairs. To update you must provide all theme color pairs.
    * @return value or {@code null} for none
    */
   public java.util.List<ThemeColorPair> getThemeColors() {
@@ -69,7 +69,7 @@ public final class SpreadsheetTheme extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The spreadsheet theme color pairs. For update users need to give all pairs of theme colors.
+   * The spreadsheet theme color pairs. To update you must provide all theme color pairs.
    * @param themeColors themeColors or {@code null} for none
    */
   public SpreadsheetTheme setThemeColors(java.util.List<ThemeColorPair> themeColors) {

@@ -51,6 +51,13 @@ public final class OrgChartSpec extends com.google.api.client.json.GenericJson {
   private Color nodeColor;
 
   /**
+   * The color of the org chart nodes. If node_color is also set, this field takes precedence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ColorStyle nodeColorStyle;
+
+  /**
    * The size of the org chart nodes.
    * The value may be {@code null}.
    */
@@ -71,6 +78,14 @@ public final class OrgChartSpec extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private Color selectedNodeColor;
+
+  /**
+   * The color of the selected org chart nodes. If selected_node_color is also set, this field takes
+   * precedence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ColorStyle selectedNodeColorStyle;
 
   /**
    * The data containing the tooltip for the corresponding node.  A blank value results in no
@@ -111,6 +126,23 @@ public final class OrgChartSpec extends com.google.api.client.json.GenericJson {
    */
   public OrgChartSpec setNodeColor(Color nodeColor) {
     this.nodeColor = nodeColor;
+    return this;
+  }
+
+  /**
+   * The color of the org chart nodes. If node_color is also set, this field takes precedence.
+   * @return value or {@code null} for none
+   */
+  public ColorStyle getNodeColorStyle() {
+    return nodeColorStyle;
+  }
+
+  /**
+   * The color of the org chart nodes. If node_color is also set, this field takes precedence.
+   * @param nodeColorStyle nodeColorStyle or {@code null} for none
+   */
+  public OrgChartSpec setNodeColorStyle(ColorStyle nodeColorStyle) {
+    this.nodeColorStyle = nodeColorStyle;
     return this;
   }
 
@@ -164,6 +196,25 @@ public final class OrgChartSpec extends com.google.api.client.json.GenericJson {
    */
   public OrgChartSpec setSelectedNodeColor(Color selectedNodeColor) {
     this.selectedNodeColor = selectedNodeColor;
+    return this;
+  }
+
+  /**
+   * The color of the selected org chart nodes. If selected_node_color is also set, this field takes
+   * precedence.
+   * @return value or {@code null} for none
+   */
+  public ColorStyle getSelectedNodeColorStyle() {
+    return selectedNodeColorStyle;
+  }
+
+  /**
+   * The color of the selected org chart nodes. If selected_node_color is also set, this field takes
+   * precedence.
+   * @param selectedNodeColorStyle selectedNodeColorStyle or {@code null} for none
+   */
+  public OrgChartSpec setSelectedNodeColorStyle(ColorStyle selectedNodeColorStyle) {
+    this.selectedNodeColorStyle = selectedNodeColorStyle;
     return this;
   }
 

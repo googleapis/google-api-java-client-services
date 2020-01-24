@@ -52,6 +52,14 @@ public final class BaselineValueFormat extends com.google.api.client.json.Generi
   private Color negativeColor;
 
   /**
+   * Color to be used, in case baseline value represents a negative change for key value. This field
+   * is optional. If negative_color is also set, this field takes precedence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ColorStyle negativeColorStyle;
+
+  /**
    * Specifies the horizontal text positioning of baseline value. This field is optional. If not
    * specified, default positioning is used.
    * The value may be {@code null}.
@@ -66,6 +74,14 @@ public final class BaselineValueFormat extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private Color positiveColor;
+
+  /**
+   * Color to be used, in case baseline value represents a positive change for key value. This field
+   * is optional. If positive_color is also set, this field takes precedence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ColorStyle positiveColorStyle;
 
   /**
    * Text formatting options for baseline value.
@@ -128,6 +144,25 @@ public final class BaselineValueFormat extends com.google.api.client.json.Generi
   }
 
   /**
+   * Color to be used, in case baseline value represents a negative change for key value. This field
+   * is optional. If negative_color is also set, this field takes precedence.
+   * @return value or {@code null} for none
+   */
+  public ColorStyle getNegativeColorStyle() {
+    return negativeColorStyle;
+  }
+
+  /**
+   * Color to be used, in case baseline value represents a negative change for key value. This field
+   * is optional. If negative_color is also set, this field takes precedence.
+   * @param negativeColorStyle negativeColorStyle or {@code null} for none
+   */
+  public BaselineValueFormat setNegativeColorStyle(ColorStyle negativeColorStyle) {
+    this.negativeColorStyle = negativeColorStyle;
+    return this;
+  }
+
+  /**
    * Specifies the horizontal text positioning of baseline value. This field is optional. If not
    * specified, default positioning is used.
    * @return value or {@code null} for none
@@ -162,6 +197,25 @@ public final class BaselineValueFormat extends com.google.api.client.json.Generi
    */
   public BaselineValueFormat setPositiveColor(Color positiveColor) {
     this.positiveColor = positiveColor;
+    return this;
+  }
+
+  /**
+   * Color to be used, in case baseline value represents a positive change for key value. This field
+   * is optional. If positive_color is also set, this field takes precedence.
+   * @return value or {@code null} for none
+   */
+  public ColorStyle getPositiveColorStyle() {
+    return positiveColorStyle;
+  }
+
+  /**
+   * Color to be used, in case baseline value represents a positive change for key value. This field
+   * is optional. If positive_color is also set, this field takes precedence.
+   * @param positiveColorStyle positiveColorStyle or {@code null} for none
+   */
+  public BaselineValueFormat setPositiveColorStyle(ColorStyle positiveColorStyle) {
+    this.positiveColorStyle = positiveColorStyle;
     return this;
   }
 

@@ -44,8 +44,8 @@ public final class CustomRankingInfo extends com.google.api.client.json.GenericJ
 
   /**
    * Required. Controls over how job documents get ranked on top of existing relevance score
-   * (determined by API algorithm). The product of ranking expression and relevance score is used to
-   * determine job's final ranking position.
+   * (determined by API algorithm). A combination of the ranking expression and relevance score is
+   * used to determine job's final ranking position.
    *
    * The syntax for this expression is a subset of Google SQL syntax.
    *
@@ -55,6 +55,10 @@ public final class CustomRankingInfo extends com.google.api.client.json.GenericJ
    *
    * Parenthesis are supported to adjust calculation precedence. The expression must be < 100
    * characters in length.
+   *
+   * The expression is considered invalid for a job if the expression references custom attributes
+   * that are not populated on the job or if the expression results in a divide by zero. If an
+   * expression is invalid for a job, that job is demoted to the end of the results.
    *
    * Sample ranking expression (year + 25) * 0.25 - (freshness / 0.5)
    * The value may be {@code null}.
@@ -87,8 +91,8 @@ public final class CustomRankingInfo extends com.google.api.client.json.GenericJ
 
   /**
    * Required. Controls over how job documents get ranked on top of existing relevance score
-   * (determined by API algorithm). The product of ranking expression and relevance score is used to
-   * determine job's final ranking position.
+   * (determined by API algorithm). A combination of the ranking expression and relevance score is
+   * used to determine job's final ranking position.
    *
    * The syntax for this expression is a subset of Google SQL syntax.
    *
@@ -98,6 +102,10 @@ public final class CustomRankingInfo extends com.google.api.client.json.GenericJ
    *
    * Parenthesis are supported to adjust calculation precedence. The expression must be < 100
    * characters in length.
+   *
+   * The expression is considered invalid for a job if the expression references custom attributes
+   * that are not populated on the job or if the expression results in a divide by zero. If an
+   * expression is invalid for a job, that job is demoted to the end of the results.
    *
    * Sample ranking expression (year + 25) * 0.25 - (freshness / 0.5)
    * @return value or {@code null} for none
@@ -108,8 +116,8 @@ public final class CustomRankingInfo extends com.google.api.client.json.GenericJ
 
   /**
    * Required. Controls over how job documents get ranked on top of existing relevance score
-   * (determined by API algorithm). The product of ranking expression and relevance score is used to
-   * determine job's final ranking position.
+   * (determined by API algorithm). A combination of the ranking expression and relevance score is
+   * used to determine job's final ranking position.
    *
    * The syntax for this expression is a subset of Google SQL syntax.
    *
@@ -119,6 +127,10 @@ public final class CustomRankingInfo extends com.google.api.client.json.GenericJ
    *
    * Parenthesis are supported to adjust calculation precedence. The expression must be < 100
    * characters in length.
+   *
+   * The expression is considered invalid for a job if the expression references custom attributes
+   * that are not populated on the job or if the expression results in a divide by zero. If an
+   * expression is invalid for a job, that job is demoted to the end of the results.
    *
    * Sample ranking expression (year + 25) * 0.25 - (freshness / 0.5)
    * @param rankingExpression rankingExpression or {@code null} for none

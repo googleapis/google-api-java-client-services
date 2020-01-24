@@ -30,8 +30,6 @@ package com.google.api.services.drive.model;
 public final class Revision extends com.google.api.client.json.GenericJson {
 
   /**
-   * Short term download URL for the file. This will only be populated on files with content stored
-   * in Drive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -167,8 +165,6 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
-   * Short term download URL for the file. This will only be populated on files with content stored
-   * in Drive.
    * @return value or {@code null} for none
    */
   public java.lang.String getDownloadUrl() {
@@ -176,8 +172,6 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Short term download URL for the file. This will only be populated on files with content stored
-   * in Drive.
    * @param downloadUrl downloadUrl or {@code null} for none
    */
   public Revision setDownloadUrl(java.lang.String downloadUrl) {

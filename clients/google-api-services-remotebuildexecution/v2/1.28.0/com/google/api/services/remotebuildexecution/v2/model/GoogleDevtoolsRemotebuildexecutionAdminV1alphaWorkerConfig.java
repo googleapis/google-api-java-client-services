@@ -74,6 +74,13 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig ex
   private java.lang.String machineType;
 
   /**
+   * The maximum number of actions a worker can execute concurrently.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long maxConcurrentActions;
+
+  /**
    * Minimum CPU platform to use when creating the worker. See [CPU
    * Platforms](https://cloud.google.com/compute/docs/cpu-platforms).
    * The value may be {@code null}.
@@ -199,6 +206,23 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig ex
    */
   public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig setMachineType(java.lang.String machineType) {
     this.machineType = machineType;
+    return this;
+  }
+
+  /**
+   * The maximum number of actions a worker can execute concurrently.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMaxConcurrentActions() {
+    return maxConcurrentActions;
+  }
+
+  /**
+   * The maximum number of actions a worker can execute concurrently.
+   * @param maxConcurrentActions maxConcurrentActions or {@code null} for none
+   */
+  public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig setMaxConcurrentActions(java.lang.Long maxConcurrentActions) {
+    this.maxConcurrentActions = maxConcurrentActions;
     return this;
   }
 

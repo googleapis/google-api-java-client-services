@@ -116,6 +116,13 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String distributionChannel;
 
   /**
+   * Noteworthy features (if any) of this product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> features;
+
+  /**
    * A link to an image that can be used as an icon for the product. This image is suitable for use
    * at up to 512px x 512px.
    * The value may be {@code null}.
@@ -392,6 +399,23 @@ public final class Product extends com.google.api.client.json.GenericJson {
    */
   public Product setDistributionChannel(java.lang.String distributionChannel) {
     this.distributionChannel = distributionChannel;
+    return this;
+  }
+
+  /**
+   * Noteworthy features (if any) of this product.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getFeatures() {
+    return features;
+  }
+
+  /**
+   * Noteworthy features (if any) of this product.
+   * @param features features or {@code null} for none
+   */
+  public Product setFeatures(java.util.List<java.lang.String> features) {
+    this.features = features;
     return this;
   }
 

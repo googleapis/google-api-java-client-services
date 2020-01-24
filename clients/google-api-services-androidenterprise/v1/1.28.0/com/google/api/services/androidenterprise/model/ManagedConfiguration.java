@@ -40,6 +40,7 @@ public final class ManagedConfiguration extends com.google.api.client.json.Gener
   private ConfigurationVariables configurationVariables;
 
   /**
+   * Deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,6 +80,7 @@ public final class ManagedConfiguration extends com.google.api.client.json.Gener
   }
 
   /**
+   * Deprecated.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -86,6 +88,7 @@ public final class ManagedConfiguration extends com.google.api.client.json.Gener
   }
 
   /**
+   * Deprecated.
    * @param kind kind or {@code null} for none
    */
   public ManagedConfiguration setKind(java.lang.String kind) {

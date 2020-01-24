@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"LYADMvHWYH2ul9D6m9UT9gT77YM/GyRe0AEoUkCQbMaOCH4kg8ftTBc\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/czPxRRvGHykWb4txNH0hToSOO5E\"",
  "discoveryVersion": "v1",
  "id": "androidenterprise:v1",
  "name": "androidenterprise",
  "canonicalName": "Android Enterprise",
  "version": "v1",
- "revision": "20191211",
+ "revision": "20200115",
  "title": "Google Play EMM API",
  "description": "Manages the deployment of apps to Android for Work users.",
  "ownerDomain": "google.com",
@@ -896,7 +896,7 @@
     },
     "kind": {
      "type": "string",
-     "default": "androidenterprise#managedConfiguration"
+     "description": "Deprecated."
     },
     "managedProperty": {
      "type": "array",
@@ -1297,6 +1297,13 @@
     "distributionChannel": {
      "type": "string",
      "description": "How and to whom the package is made available. The value publicGoogleHosted means that the package is available through the Play store and not restricted to a specific enterprise. The value privateGoogleHosted means that the package is a private app (restricted to an enterprise) but hosted by Google. The value privateSelfHosted means that the package is a private app (restricted to an enterprise) and is privately hosted."
+    },
+    "features": {
+     "type": "array",
+     "description": "Noteworthy features (if any) of this product.",
+     "items": {
+      "type": "string"
+     }
     },
     "iconUrl": {
      "type": "string",

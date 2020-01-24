@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.container.v1beta1.model;
+package com.google.api.services.container.model;
 
 /**
  * SandboxConfig contains configurations of the sandbox to use for the node.
@@ -31,35 +31,11 @@ package com.google.api.services.container.v1beta1.model;
 public final class SandboxConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Type of the sandbox to use for the node (e.g. 'gvisor')
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String sandboxType;
-
-  /**
    * Type of the sandbox to use for the node.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
-
-  /**
-   * Type of the sandbox to use for the node (e.g. 'gvisor')
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getSandboxType() {
-    return sandboxType;
-  }
-
-  /**
-   * Type of the sandbox to use for the node (e.g. 'gvisor')
-   * @param sandboxType sandboxType or {@code null} for none
-   */
-  public SandboxConfig setSandboxType(java.lang.String sandboxType) {
-    this.sandboxType = sandboxType;
-    return this;
-  }
 
   /**
    * Type of the sandbox to use for the node.

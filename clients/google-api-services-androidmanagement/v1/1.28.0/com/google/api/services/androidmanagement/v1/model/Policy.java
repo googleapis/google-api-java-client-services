@@ -293,7 +293,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   /**
    * Whether the kiosk custom launcher is enabled. This replaces the home screen with a launcher
    * that locks down the device to the apps installed via the applications setting. Apps appear on a
-   * single page in alphabetical order. The status bar is disabled when this is set.
+   * single page in alphabetical order. Use kioskCustomization to further configure the kiosk device
+   * behavior.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1256,7 +1257,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   /**
    * Whether the kiosk custom launcher is enabled. This replaces the home screen with a launcher
    * that locks down the device to the apps installed via the applications setting. Apps appear on a
-   * single page in alphabetical order. The status bar is disabled when this is set.
+   * single page in alphabetical order. Use kioskCustomization to further configure the kiosk device
+   * behavior.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getKioskCustomLauncherEnabled() {
@@ -1266,7 +1268,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   /**
    * Whether the kiosk custom launcher is enabled. This replaces the home screen with a launcher
    * that locks down the device to the apps installed via the applications setting. Apps appear on a
-   * single page in alphabetical order. The status bar is disabled when this is set.
+   * single page in alphabetical order. Use kioskCustomization to further configure the kiosk device
+   * behavior.
    * @param kioskCustomLauncherEnabled kioskCustomLauncherEnabled or {@code null} for none
    */
   public Policy setKioskCustomLauncherEnabled(java.lang.Boolean kioskCustomLauncherEnabled) {

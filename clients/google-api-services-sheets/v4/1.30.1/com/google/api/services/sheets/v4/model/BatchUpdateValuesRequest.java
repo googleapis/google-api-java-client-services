@@ -39,9 +39,9 @@ public final class BatchUpdateValuesRequest extends com.google.api.client.json.G
   /**
    * Determines if the update response should include the values of the cells that were updated. By
    * default, responses do not include the updated values. The `updatedData` field within each of
-   * the BatchUpdateValuesResponse.responses will contain the updated values. If the range to write
-   * was larger than than the range actually written, the response will include all values in the
-   * requested range (excluding trailing empty rows and columns).
+   * the BatchUpdateValuesResponse.responses contains the updated values. If the range to write was
+   * larger than the range actually written, the response includes all values in the requested range
+   * (excluding trailing empty rows and columns).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,9 +91,9 @@ public final class BatchUpdateValuesRequest extends com.google.api.client.json.G
   /**
    * Determines if the update response should include the values of the cells that were updated. By
    * default, responses do not include the updated values. The `updatedData` field within each of
-   * the BatchUpdateValuesResponse.responses will contain the updated values. If the range to write
-   * was larger than than the range actually written, the response will include all values in the
-   * requested range (excluding trailing empty rows and columns).
+   * the BatchUpdateValuesResponse.responses contains the updated values. If the range to write was
+   * larger than the range actually written, the response includes all values in the requested range
+   * (excluding trailing empty rows and columns).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIncludeValuesInResponse() {
@@ -103,9 +103,9 @@ public final class BatchUpdateValuesRequest extends com.google.api.client.json.G
   /**
    * Determines if the update response should include the values of the cells that were updated. By
    * default, responses do not include the updated values. The `updatedData` field within each of
-   * the BatchUpdateValuesResponse.responses will contain the updated values. If the range to write
-   * was larger than than the range actually written, the response will include all values in the
-   * requested range (excluding trailing empty rows and columns).
+   * the BatchUpdateValuesResponse.responses contains the updated values. If the range to write was
+   * larger than the range actually written, the response includes all values in the requested range
+   * (excluding trailing empty rows and columns).
    * @param includeValuesInResponse includeValuesInResponse or {@code null} for none
    */
   public BatchUpdateValuesRequest setIncludeValuesInResponse(java.lang.Boolean includeValuesInResponse) {

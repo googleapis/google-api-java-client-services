@@ -37,6 +37,13 @@ public final class BubbleChartSpec extends com.google.api.client.json.GenericJso
   private Color bubbleBorderColor;
 
   /**
+   * The bubble border color. If bubble_border_color is also set, this field takes precedence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ColorStyle bubbleBorderColorStyle;
+
+  /**
    * The data containing the bubble labels.  These do not need to be unique.
    * The value may be {@code null}.
    */
@@ -128,6 +135,23 @@ public final class BubbleChartSpec extends com.google.api.client.json.GenericJso
    */
   public BubbleChartSpec setBubbleBorderColor(Color bubbleBorderColor) {
     this.bubbleBorderColor = bubbleBorderColor;
+    return this;
+  }
+
+  /**
+   * The bubble border color. If bubble_border_color is also set, this field takes precedence.
+   * @return value or {@code null} for none
+   */
+  public ColorStyle getBubbleBorderColorStyle() {
+    return bubbleBorderColorStyle;
+  }
+
+  /**
+   * The bubble border color. If bubble_border_color is also set, this field takes precedence.
+   * @param bubbleBorderColorStyle bubbleBorderColorStyle or {@code null} for none
+   */
+  public BubbleChartSpec setBubbleBorderColorStyle(ColorStyle bubbleBorderColorStyle) {
+    this.bubbleBorderColorStyle = bubbleBorderColorStyle;
     return this;
   }
 

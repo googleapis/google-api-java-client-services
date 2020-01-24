@@ -1215,8 +1215,8 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
        *
        * @param spreadsheetId The ID of the spreadsheet to update.
        * @param range The A1 notation of a range to search for a logical table of data.
-      Values will be appended after the
-       *        last row of the table.
+      Values are appended after the last
+       *        row of the table.
        * @param content the {@link com.google.api.services.sheets.v4.model.ValueRange}
        * @return the request
        */
@@ -1250,8 +1250,8 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
          *
          * @param spreadsheetId The ID of the spreadsheet to update.
          * @param range The A1 notation of a range to search for a logical table of data.
-      Values will be appended after the
-       *        last row of the table.
+      Values are appended after the last
+       *        row of the table.
          * @param content the {@link com.google.api.services.sheets.v4.model.ValueRange}
          * @since 1.13
          */
@@ -1333,13 +1333,13 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * The A1 notation of a range to search for a logical table of data. Values will be appended
+         * The A1 notation of a range to search for a logical table of data. Values are appended
          * after the last row of the table.
          */
         @com.google.api.client.util.Key
         private java.lang.String range;
 
-        /** The A1 notation of a range to search for a logical table of data. Values will be appended after the
+        /** The A1 notation of a range to search for a logical table of data. Values are appended after the
        last row of the table.
          */
         public java.lang.String getRange() {
@@ -1347,7 +1347,7 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * The A1 notation of a range to search for a logical table of data. Values will be appended
+         * The A1 notation of a range to search for a logical table of data. Values are appended
          * after the last row of the table.
          */
         public Append setRange(java.lang.String range) {
@@ -1864,8 +1864,8 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
          * The major dimension that results should use.
          *
          * For example, if the spreadsheet data is: `A1=1,B1=2,A2=3,B2=4`, then requesting
-         * `range=A1:B2,majorDimension=ROWS` will return `[[1,2],[3,4]]`, whereas requesting
-         * `range=A1:B2,majorDimension=COLUMNS` will return `[[1,3],[2,4]]`.
+         * `range=A1:B2,majorDimension=ROWS` returns `[[1,2],[3,4]]`, whereas requesting
+         * `range=A1:B2,majorDimension=COLUMNS` returns `[[1,3],[2,4]]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String majorDimension;
@@ -1873,8 +1873,8 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
         /** The major dimension that results should use.
 
        For example, if the spreadsheet data is: `A1=1,B1=2,A2=3,B2=4`, then requesting
-       `range=A1:B2,majorDimension=ROWS` will return `[[1,2],[3,4]]`, whereas requesting
-       `range=A1:B2,majorDimension=COLUMNS` will return `[[1,3],[2,4]]`.
+       `range=A1:B2,majorDimension=ROWS` returns `[[1,2],[3,4]]`, whereas requesting
+       `range=A1:B2,majorDimension=COLUMNS` returns `[[1,3],[2,4]]`.
          */
         public java.lang.String getMajorDimension() {
           return majorDimension;
@@ -1884,8 +1884,8 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
          * The major dimension that results should use.
          *
          * For example, if the spreadsheet data is: `A1=1,B1=2,A2=3,B2=4`, then requesting
-         * `range=A1:B2,majorDimension=ROWS` will return `[[1,2],[3,4]]`, whereas requesting
-         * `range=A1:B2,majorDimension=COLUMNS` will return `[[1,3],[2,4]]`.
+         * `range=A1:B2,majorDimension=ROWS` returns `[[1,2],[3,4]]`, whereas requesting
+         * `range=A1:B2,majorDimension=COLUMNS` returns `[[1,3],[2,4]]`.
          */
         public BatchGet setMajorDimension(java.lang.String majorDimension) {
           this.majorDimension = majorDimension;
@@ -2611,8 +2611,8 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
          * The major dimension that results should use.
          *
          * For example, if the spreadsheet data is: `A1=1,B1=2,A2=3,B2=4`, then requesting
-         * `range=A1:B2,majorDimension=ROWS` will return `[[1,2],[3,4]]`, whereas requesting
-         * `range=A1:B2,majorDimension=COLUMNS` will return `[[1,3],[2,4]]`.
+         * `range=A1:B2,majorDimension=ROWS` returns `[[1,2],[3,4]]`, whereas requesting
+         * `range=A1:B2,majorDimension=COLUMNS` returns `[[1,3],[2,4]]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String majorDimension;
@@ -2620,8 +2620,8 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
         /** The major dimension that results should use.
 
        For example, if the spreadsheet data is: `A1=1,B1=2,A2=3,B2=4`, then requesting
-       `range=A1:B2,majorDimension=ROWS` will return `[[1,2],[3,4]]`, whereas requesting
-       `range=A1:B2,majorDimension=COLUMNS` will return `[[1,3],[2,4]]`.
+       `range=A1:B2,majorDimension=ROWS` returns `[[1,2],[3,4]]`, whereas requesting
+       `range=A1:B2,majorDimension=COLUMNS` returns `[[1,3],[2,4]]`.
          */
         public java.lang.String getMajorDimension() {
           return majorDimension;
@@ -2631,8 +2631,8 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
          * The major dimension that results should use.
          *
          * For example, if the spreadsheet data is: `A1=1,B1=2,A2=3,B2=4`, then requesting
-         * `range=A1:B2,majorDimension=ROWS` will return `[[1,2],[3,4]]`, whereas requesting
-         * `range=A1:B2,majorDimension=COLUMNS` will return `[[1,3],[2,4]]`.
+         * `range=A1:B2,majorDimension=ROWS` returns `[[1,2],[3,4]]`, whereas requesting
+         * `range=A1:B2,majorDimension=COLUMNS` returns `[[1,3],[2,4]]`.
          */
         public Get setMajorDimension(java.lang.String majorDimension) {
           this.majorDimension = majorDimension;
@@ -2803,16 +2803,16 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
         /**
          * Determines if the update response should include the values of the cells that were
          * updated. By default, responses do not include the updated values. If the range to write
-         * was larger than than the range actually written, the response will include all values in
-         * the requested range (excluding trailing empty rows and columns).
+         * was larger than the range actually written, the response includes all values in the
+         * requested range (excluding trailing empty rows and columns).
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean includeValuesInResponse;
 
         /** Determines if the update response should include the values of the cells that were updated. By
-       default, responses do not include the updated values. If the range to write was larger than than
-       the range actually written, the response will include all values in the requested range (excluding
-       trailing empty rows and columns).
+       default, responses do not include the updated values. If the range to write was larger than the
+       range actually written, the response includes all values in the requested range (excluding trailing
+       empty rows and columns).
          */
         public java.lang.Boolean getIncludeValuesInResponse() {
           return includeValuesInResponse;
@@ -2821,8 +2821,8 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
         /**
          * Determines if the update response should include the values of the cells that were
          * updated. By default, responses do not include the updated values. If the range to write
-         * was larger than than the range actually written, the response will include all values in
-         * the requested range (excluding trailing empty rows and columns).
+         * was larger than the range actually written, the response includes all values in the
+         * requested range (excluding trailing empty rows and columns).
          */
         public Update setIncludeValuesInResponse(java.lang.Boolean includeValuesInResponse) {
           this.includeValuesInResponse = includeValuesInResponse;

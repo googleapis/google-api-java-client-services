@@ -38,12 +38,29 @@ public final class TreemapChartColorScale extends com.google.api.client.json.Gen
   private Color maxValueColor;
 
   /**
+   * The background color for cells with a color value greater than or equal to maxValue. Defaults
+   * to #109618 if not specified. If max_value_color is also set, this field takes precedence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ColorStyle maxValueColorStyle;
+
+  /**
    * The background color for cells with a color value at the midpoint between minValue and
    * maxValue. Defaults to #efe6dc if not specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Color midValueColor;
+
+  /**
+   * The background color for cells with a color value at the midpoint between minValue and
+   * maxValue. Defaults to #efe6dc if not specified. If mid_value_color is also set, this field
+   * takes precedence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ColorStyle midValueColorStyle;
 
   /**
    * The background color for cells with a color value less than or equal to minValue. Defaults to
@@ -54,12 +71,28 @@ public final class TreemapChartColorScale extends com.google.api.client.json.Gen
   private Color minValueColor;
 
   /**
+   * The background color for cells with a color value less than or equal to minValue. Defaults to
+   * #dc3912 if not specified. If min_value_color is also set, this field takes precedence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ColorStyle minValueColorStyle;
+
+  /**
    * The background color for cells that have no color data associated with them. Defaults to
    * #000000 if not specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Color noDataColor;
+
+  /**
+   * The background color for cells that have no color data associated with them. Defaults to
+   * #000000 if not specified. If no_data_color is also set, this field takes precedence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ColorStyle noDataColorStyle;
 
   /**
    * The background color for cells with a color value greater than or equal to maxValue. Defaults
@@ -77,6 +110,25 @@ public final class TreemapChartColorScale extends com.google.api.client.json.Gen
    */
   public TreemapChartColorScale setMaxValueColor(Color maxValueColor) {
     this.maxValueColor = maxValueColor;
+    return this;
+  }
+
+  /**
+   * The background color for cells with a color value greater than or equal to maxValue. Defaults
+   * to #109618 if not specified. If max_value_color is also set, this field takes precedence.
+   * @return value or {@code null} for none
+   */
+  public ColorStyle getMaxValueColorStyle() {
+    return maxValueColorStyle;
+  }
+
+  /**
+   * The background color for cells with a color value greater than or equal to maxValue. Defaults
+   * to #109618 if not specified. If max_value_color is also set, this field takes precedence.
+   * @param maxValueColorStyle maxValueColorStyle or {@code null} for none
+   */
+  public TreemapChartColorScale setMaxValueColorStyle(ColorStyle maxValueColorStyle) {
+    this.maxValueColorStyle = maxValueColorStyle;
     return this;
   }
 
@@ -100,6 +152,27 @@ public final class TreemapChartColorScale extends com.google.api.client.json.Gen
   }
 
   /**
+   * The background color for cells with a color value at the midpoint between minValue and
+   * maxValue. Defaults to #efe6dc if not specified. If mid_value_color is also set, this field
+   * takes precedence.
+   * @return value or {@code null} for none
+   */
+  public ColorStyle getMidValueColorStyle() {
+    return midValueColorStyle;
+  }
+
+  /**
+   * The background color for cells with a color value at the midpoint between minValue and
+   * maxValue. Defaults to #efe6dc if not specified. If mid_value_color is also set, this field
+   * takes precedence.
+   * @param midValueColorStyle midValueColorStyle or {@code null} for none
+   */
+  public TreemapChartColorScale setMidValueColorStyle(ColorStyle midValueColorStyle) {
+    this.midValueColorStyle = midValueColorStyle;
+    return this;
+  }
+
+  /**
    * The background color for cells with a color value less than or equal to minValue. Defaults to
    * #dc3912 if not specified.
    * @return value or {@code null} for none
@@ -119,6 +192,25 @@ public final class TreemapChartColorScale extends com.google.api.client.json.Gen
   }
 
   /**
+   * The background color for cells with a color value less than or equal to minValue. Defaults to
+   * #dc3912 if not specified. If min_value_color is also set, this field takes precedence.
+   * @return value or {@code null} for none
+   */
+  public ColorStyle getMinValueColorStyle() {
+    return minValueColorStyle;
+  }
+
+  /**
+   * The background color for cells with a color value less than or equal to minValue. Defaults to
+   * #dc3912 if not specified. If min_value_color is also set, this field takes precedence.
+   * @param minValueColorStyle minValueColorStyle or {@code null} for none
+   */
+  public TreemapChartColorScale setMinValueColorStyle(ColorStyle minValueColorStyle) {
+    this.minValueColorStyle = minValueColorStyle;
+    return this;
+  }
+
+  /**
    * The background color for cells that have no color data associated with them. Defaults to
    * #000000 if not specified.
    * @return value or {@code null} for none
@@ -134,6 +226,25 @@ public final class TreemapChartColorScale extends com.google.api.client.json.Gen
    */
   public TreemapChartColorScale setNoDataColor(Color noDataColor) {
     this.noDataColor = noDataColor;
+    return this;
+  }
+
+  /**
+   * The background color for cells that have no color data associated with them. Defaults to
+   * #000000 if not specified. If no_data_color is also set, this field takes precedence.
+   * @return value or {@code null} for none
+   */
+  public ColorStyle getNoDataColorStyle() {
+    return noDataColorStyle;
+  }
+
+  /**
+   * The background color for cells that have no color data associated with them. Defaults to
+   * #000000 if not specified. If no_data_color is also set, this field takes precedence.
+   * @param noDataColorStyle noDataColorStyle or {@code null} for none
+   */
+  public TreemapChartColorScale setNoDataColorStyle(ColorStyle noDataColorStyle) {
+    this.noDataColorStyle = noDataColorStyle;
     return this;
   }
 

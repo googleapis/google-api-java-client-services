@@ -37,6 +37,14 @@ public final class HistogramSeries extends com.google.api.client.json.GenericJso
   private Color barColor;
 
   /**
+   * The color of the column representing this series in each bucket. This field is optional. If
+   * bar_color is also set, this field takes precedence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ColorStyle barColorStyle;
+
+  /**
    * The data for this histogram series.
    * The value may be {@code null}.
    */
@@ -57,6 +65,25 @@ public final class HistogramSeries extends com.google.api.client.json.GenericJso
    */
   public HistogramSeries setBarColor(Color barColor) {
     this.barColor = barColor;
+    return this;
+  }
+
+  /**
+   * The color of the column representing this series in each bucket. This field is optional. If
+   * bar_color is also set, this field takes precedence.
+   * @return value or {@code null} for none
+   */
+  public ColorStyle getBarColorStyle() {
+    return barColorStyle;
+  }
+
+  /**
+   * The color of the column representing this series in each bucket. This field is optional. If
+   * bar_color is also set, this field takes precedence.
+   * @param barColorStyle barColorStyle or {@code null} for none
+   */
+  public HistogramSeries setBarColorStyle(ColorStyle barColorStyle) {
+    this.barColorStyle = barColorStyle;
     return this;
   }
 

@@ -44,6 +44,14 @@ public final class ChartSpec extends com.google.api.client.json.GenericJson {
   private Color backgroundColor;
 
   /**
+   * The background color of the entire chart. Not applicable to Org charts. If background_color is
+   * also set, this field takes precedence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ColorStyle backgroundColorStyle;
+
+  /**
    * A basic chart specification, can be one of many kinds of charts. See BasicChartType for the
    * list of all charts this supports.
    * The value may be {@code null}.
@@ -203,6 +211,25 @@ public final class ChartSpec extends com.google.api.client.json.GenericJson {
    */
   public ChartSpec setBackgroundColor(Color backgroundColor) {
     this.backgroundColor = backgroundColor;
+    return this;
+  }
+
+  /**
+   * The background color of the entire chart. Not applicable to Org charts. If background_color is
+   * also set, this field takes precedence.
+   * @return value or {@code null} for none
+   */
+  public ColorStyle getBackgroundColorStyle() {
+    return backgroundColorStyle;
+  }
+
+  /**
+   * The background color of the entire chart. Not applicable to Org charts. If background_color is
+   * also set, this field takes precedence.
+   * @param backgroundColorStyle backgroundColorStyle or {@code null} for none
+   */
+  public ChartSpec setBackgroundColorStyle(ColorStyle backgroundColorStyle) {
+    this.backgroundColorStyle = backgroundColorStyle;
     return this;
   }
 

@@ -52,6 +52,12 @@ public final class VideoStatus extends com.google.api.client.json.GenericJson {
   private java.lang.String license;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean madeForKids;
+
+  /**
    * The video's privacy status.
    * The value may be {@code null}.
    */
@@ -82,6 +88,15 @@ public final class VideoStatus extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String rejectionReason;
+
+  /**
+   * Allows clients to set the Crosswalk self_declared state for a Video. This maps to
+   * VAPI.Video.creator_flags.is_crosswalk_self_declared() and
+   * VAPI.Video.creator_flags.is_not_crosswalk_self_declared().
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean selfDeclaredMadeForKids;
 
   /**
    * The status of the uploaded video.
@@ -140,6 +155,21 @@ public final class VideoStatus extends com.google.api.client.json.GenericJson {
    */
   public VideoStatus setLicense(java.lang.String license) {
     this.license = license;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getMadeForKids() {
+    return madeForKids;
+  }
+
+  /**
+   * @param madeForKids madeForKids or {@code null} for none
+   */
+  public VideoStatus setMadeForKids(java.lang.Boolean madeForKids) {
+    this.madeForKids = madeForKids;
     return this;
   }
 
@@ -216,6 +246,27 @@ public final class VideoStatus extends com.google.api.client.json.GenericJson {
    */
   public VideoStatus setRejectionReason(java.lang.String rejectionReason) {
     this.rejectionReason = rejectionReason;
+    return this;
+  }
+
+  /**
+   * Allows clients to set the Crosswalk self_declared state for a Video. This maps to
+   * VAPI.Video.creator_flags.is_crosswalk_self_declared() and
+   * VAPI.Video.creator_flags.is_not_crosswalk_self_declared().
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSelfDeclaredMadeForKids() {
+    return selfDeclaredMadeForKids;
+  }
+
+  /**
+   * Allows clients to set the Crosswalk self_declared state for a Video. This maps to
+   * VAPI.Video.creator_flags.is_crosswalk_self_declared() and
+   * VAPI.Video.creator_flags.is_not_crosswalk_self_declared().
+   * @param selfDeclaredMadeForKids selfDeclaredMadeForKids or {@code null} for none
+   */
+  public VideoStatus setSelfDeclaredMadeForKids(java.lang.Boolean selfDeclaredMadeForKids) {
+    this.selfDeclaredMadeForKids = selfDeclaredMadeForKids;
     return this;
   }
 

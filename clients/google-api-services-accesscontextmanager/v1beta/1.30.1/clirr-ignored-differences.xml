@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- see http://mojo.codehaus.org/clirr-maven-plugin/examples/ignored-differences.html -->
+<differences>
+    <difference>
+        <className>com/google/api/services/accesscontextmanager/v1beta/model/ServicePerimeterConfig</className>
+        <method>com.google.api.services.accesscontextmanager.v1beta.model.BridgeServiceRestriction getBridgeServiceRestriction()</method>
+        <differenceType>7002</differenceType>
+    </difference>
+    <difference>
+        <className>com/google/api/services/accesscontextmanager/v1beta/model/ServicePerimeterConfig</className>
+        <method>com.google.api.services.accesscontextmanager.v1beta.model.IngressServiceRestriction getIngressServiceRestriction()</method>
+        <differenceType>7002</differenceType>
+    </difference>
+    <difference>
+        <className>com/google/api/services/accesscontextmanager/v1beta/model/ServicePerimeterConfig</className>
+        <method>com.google.api.services.accesscontextmanager.v1beta.model.ServicePerimeterConfig setBridgeServiceRestriction(com.google.api.services.accesscontextmanager.v1beta.model.BridgeServiceRestriction)</method>
+        <differenceType>7002</differenceType>
+    </difference>
+    <difference>
+        <className>com/google/api/services/accesscontextmanager/v1beta/model/ServicePerimeterConfig</className>
+        <method>com.google.api.services.accesscontextmanager.v1beta.model.ServicePerimeterConfig setIngressServiceRestriction(com.google.api.services.accesscontextmanager.v1beta.model.IngressServiceRestriction)</method>
+        <differenceType>7002</differenceType>
+    </difference>
+</differences>

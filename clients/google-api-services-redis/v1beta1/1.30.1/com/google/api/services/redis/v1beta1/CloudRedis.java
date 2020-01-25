@@ -1901,6 +1901,153 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
             return (Patch) super.set(parameterName, value);
           }
         }
+        /**
+         * Upgrades Redis instance to the newer Redis version specified in the request.
+         *
+         * Create a request for the method "instances.upgrade".
+         *
+         * This request holds the parameters needed by the redis server.  After setting any optional
+         * parameters, call the {@link Upgrade#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Redis instance resource name using the form:
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        where
+         *        `location_id` refers to a GCP region.
+         * @param content the {@link com.google.api.services.redis.v1beta1.model.UpgradeInstanceRequest}
+         * @return the request
+         */
+        public Upgrade upgrade(java.lang.String name, com.google.api.services.redis.v1beta1.model.UpgradeInstanceRequest content) throws java.io.IOException {
+          Upgrade result = new Upgrade(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Upgrade extends CloudRedisRequest<com.google.api.services.redis.v1beta1.model.Operation> {
+
+          private static final String REST_PATH = "v1beta1/{+name}:upgrade";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Upgrades Redis instance to the newer Redis version specified in the request.
+           *
+           * Create a request for the method "instances.upgrade".
+           *
+           * This request holds the parameters needed by the the redis server.  After setting any optional
+           * parameters, call the {@link Upgrade#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * Upgrade#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Redis instance resource name using the form:
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        where
+         *        `location_id` refers to a GCP region.
+           * @param content the {@link com.google.api.services.redis.v1beta1.model.UpgradeInstanceRequest}
+           * @since 1.13
+           */
+          protected Upgrade(java.lang.String name, com.google.api.services.redis.v1beta1.model.UpgradeInstanceRequest content) {
+            super(CloudRedis.this, "POST", REST_PATH, content, com.google.api.services.redis.v1beta1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public Upgrade set$Xgafv(java.lang.String $Xgafv) {
+            return (Upgrade) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Upgrade setAccessToken(java.lang.String accessToken) {
+            return (Upgrade) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Upgrade setAlt(java.lang.String alt) {
+            return (Upgrade) super.setAlt(alt);
+          }
+
+          @Override
+          public Upgrade setCallback(java.lang.String callback) {
+            return (Upgrade) super.setCallback(callback);
+          }
+
+          @Override
+          public Upgrade setFields(java.lang.String fields) {
+            return (Upgrade) super.setFields(fields);
+          }
+
+          @Override
+          public Upgrade setKey(java.lang.String key) {
+            return (Upgrade) super.setKey(key);
+          }
+
+          @Override
+          public Upgrade setOauthToken(java.lang.String oauthToken) {
+            return (Upgrade) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Upgrade setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Upgrade) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Upgrade setQuotaUser(java.lang.String quotaUser) {
+            return (Upgrade) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Upgrade setUploadType(java.lang.String uploadType) {
+            return (Upgrade) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Upgrade setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Upgrade) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Redis instance resource name using the form:
+           * `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
+           * `location_id` refers to a GCP region.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Redis instance resource name using the form:
+         `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where `location_id` refers
+         to a GCP region.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Redis instance resource name using the form:
+           * `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
+           * `location_id` refers to a GCP region.
+           */
+          public Upgrade setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Upgrade set(String parameterName, Object value) {
+            return (Upgrade) super.set(parameterName, value);
+          }
+        }
 
       }
       /**

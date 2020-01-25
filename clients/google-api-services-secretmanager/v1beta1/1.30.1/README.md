@@ -1,6 +1,6 @@
 # Secret Manager API Client Library for Java
 
-Stores, manages, and secures access to application secrets.
+Stores and manages access to application secrets. Provides convenience while improving security.
 
 
 This page contains information about getting started with the Secret Manager API
@@ -23,7 +23,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-secretmanager</artifactId>
-      <version>v1beta1-rev20191210-1.30.3</version>
+      <version>v1beta1-rev20200118-1.30.3</version>
     </dependency>
   </dependencies>
 </project>
@@ -36,7 +36,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-secretmanager:v1beta1-rev20191210-1.30.3'
+  compile 'com.google.apis:google-api-services-secretmanager:v1beta1-rev20200118-1.30.3'
 }
 ```
 

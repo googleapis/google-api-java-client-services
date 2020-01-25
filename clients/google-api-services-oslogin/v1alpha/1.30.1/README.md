@@ -1,6 +1,6 @@
 # Cloud OS Login API Client Library for Java
 
-You can use OS Login to manage access to your VM instances using IAM roles. For more information, read [OS Login](/compute/docs/oslogin/).
+You can use OS Login to manage access to your VM instances using IAM roles.
 
 This page contains information about getting started with the Cloud OS Login API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-oslogin</artifactId>
-      <version>v1alpha-rev20190921-1.30.3</version>
+      <version>v1alpha-rev20200120-1.30.3</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-oslogin:v1alpha-rev20190921-1.30.3'
+  compile 'com.google.apis:google-api-services-oslogin:v1alpha-rev20200120-1.30.3'
 }
 ```
 

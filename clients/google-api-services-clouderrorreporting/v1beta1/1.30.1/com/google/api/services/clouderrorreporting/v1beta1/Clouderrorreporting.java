@@ -1408,7 +1408,7 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
        * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
        *
        * @param name The group resource name.
-      Example: projects/my-project-123/groups/my-groupid
+      Example: projects/my-project-123/groups/CNSgkpnppqKCUw
        * @param content the {@link com.google.api.services.clouderrorreporting.v1beta1.model.ErrorGroup}
        * @return the request
        */
@@ -1437,7 +1437,7 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name The group resource name.
-      Example: projects/my-project-123/groups/my-groupid
+      Example: projects/my-project-123/groups/CNSgkpnppqKCUw
          * @param content the {@link com.google.api.services.clouderrorreporting.v1beta1.model.ErrorGroup}
          * @since 1.13
          */
@@ -1507,19 +1507,19 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * The group resource name. Example: projects/my-project-123/groups/my-groupid
+         * The group resource name. Example: projects/my-project-123/groups/CNSgkpnppqKCUw
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The group resource name. Example: projects/my-project-123/groups/my-groupid
+        /** The group resource name. Example: projects/my-project-123/groups/CNSgkpnppqKCUw
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The group resource name. Example: projects/my-project-123/groups/my-groupid
+         * The group resource name. Example: projects/my-project-123/groups/CNSgkpnppqKCUw
          */
         public Update setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {

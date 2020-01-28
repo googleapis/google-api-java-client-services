@@ -17,8 +17,8 @@
 package com.google.api.services.dataproc.model;
 
 /**
- * Optional. The config settings for Compute Engine resources in an instance group, such as a master
- * or worker group.
+ * The config settings for Compute Engine resources in an instance group, such as a master or worker
+ * group.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataproc API. For a detailed explanation see:

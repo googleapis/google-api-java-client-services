@@ -168,7 +168,6 @@ packages on [Maven Central][maven-search].
 | Search Ads 360 API | [v2](clients/google-api-services-doubleclicksearch/v2) |
 | Search Console API | [v3](clients/google-api-services-webmasters/v3) |
 | Secret Manager API | [v1beta1](clients/google-api-services-secretmanager/v1beta1) |
-| Service Broker API | [v1](clients/google-api-services-servicebroker/v1), [v1alpha1](clients/google-api-services-servicebroker/v1alpha1), [v1beta1](clients/google-api-services-servicebroker/v1beta1) |
 | Service Consumer Management API | [v1](clients/google-api-services-serviceconsumermanagement/v1) |
 | Service Control API | [v1](clients/google-api-services-servicecontrol/v1) |
 | Service Management API | [v1](clients/google-api-services-servicemanagement/v1) |

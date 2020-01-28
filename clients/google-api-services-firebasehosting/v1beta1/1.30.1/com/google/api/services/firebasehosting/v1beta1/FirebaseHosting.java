@@ -123,6 +123,190 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
   }
 
   /**
+   * An accessor for creating requests from the Projects collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code FirebaseHosting firebasehosting = new FirebaseHosting(...);}
+   *   {@code FirebaseHosting.Projects.List request = firebasehosting.projects().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Projects projects() {
+    return new Projects();
+  }
+
+  /**
+   * The "projects" collection of methods.
+   */
+  public class Projects {
+
+    /**
+     * An accessor for creating requests from the Operations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code FirebaseHosting firebasehosting = new FirebaseHosting(...);}
+     *   {@code FirebaseHosting.Operations.List request = firebasehosting.operations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Operations operations() {
+      return new Operations();
+    }
+
+    /**
+     * The "operations" collection of methods.
+     */
+    public class Operations {
+
+      /**
+       * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+       * operation result at intervals as recommended by the API service.
+       *
+       * Create a request for the method "operations.get".
+       *
+       * This request holds the parameters needed by the firebasehosting server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name The name of the operation resource.
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.Operation> {
+
+        private static final String REST_PATH = "v1beta1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/operations/[^/]+$");
+
+        /**
+         * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+         * operation result at intervals as recommended by the API service.
+         *
+         * Create a request for the method "operations.get".
+         *
+         * This request holds the parameters needed by the the firebasehosting server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The name of the operation resource.
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(FirebaseHosting.this, "GET", REST_PATH, null, com.google.api.services.firebasehosting.v1beta1.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/operations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** The name of the operation resource. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The name of the operation resource.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** The name of the operation resource. */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/operations/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+
+    }
+  }
+
+  /**
    * An accessor for creating requests from the Sites collection.
    *
    * <p>The typical use is:</p>
@@ -1590,6 +1774,145 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
      */
     public class Versions {
 
+      /**
+       * Creates a new version on the target site using the content of the specified version.
+       *
+       * Create a request for the method "versions.clone".
+       *
+       * This request holds the parameters needed by the firebasehosting server.  After setting any
+       * optional parameters, call the {@link Clone#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The target site where the cloned version will reside,
+      in the format: `sites/{site}`
+       * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.CloneVersionRequest}
+       * @return the request
+       */
+      public Clone clone(java.lang.String parent, com.google.api.services.firebasehosting.v1beta1.model.CloneVersionRequest content) throws java.io.IOException {
+        Clone result = new Clone(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Clone extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.Operation> {
+
+        private static final String REST_PATH = "v1beta1/{+parent}/versions:clone";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^sites/[^/]+$");
+
+        /**
+         * Creates a new version on the target site using the content of the specified version.
+         *
+         * Create a request for the method "versions.clone".
+         *
+         * This request holds the parameters needed by the the firebasehosting server.  After setting any
+         * optional parameters, call the {@link Clone#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Clone#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The target site where the cloned version will reside,
+      in the format: `sites/{site}`
+         * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.CloneVersionRequest}
+         * @since 1.13
+         */
+        protected Clone(java.lang.String parent, com.google.api.services.firebasehosting.v1beta1.model.CloneVersionRequest content) {
+          super(FirebaseHosting.this, "POST", REST_PATH, content, com.google.api.services.firebasehosting.v1beta1.model.Operation.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^sites/[^/]+$");
+          }
+        }
+
+        @Override
+        public Clone set$Xgafv(java.lang.String $Xgafv) {
+          return (Clone) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Clone setAccessToken(java.lang.String accessToken) {
+          return (Clone) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Clone setAlt(java.lang.String alt) {
+          return (Clone) super.setAlt(alt);
+        }
+
+        @Override
+        public Clone setCallback(java.lang.String callback) {
+          return (Clone) super.setCallback(callback);
+        }
+
+        @Override
+        public Clone setFields(java.lang.String fields) {
+          return (Clone) super.setFields(fields);
+        }
+
+        @Override
+        public Clone setKey(java.lang.String key) {
+          return (Clone) super.setKey(key);
+        }
+
+        @Override
+        public Clone setOauthToken(java.lang.String oauthToken) {
+          return (Clone) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Clone setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Clone) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Clone setQuotaUser(java.lang.String quotaUser) {
+          return (Clone) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Clone setUploadType(java.lang.String uploadType) {
+          return (Clone) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Clone setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Clone) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The target site where the cloned version will reside, in the format:
+         * `sites/{site}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The target site where the cloned version will reside, in the format: `sites/{site}`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The target site where the cloned version will reside, in the format:
+         * `sites/{site}`
+         */
+        public Clone setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^sites/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Clone set(String parameterName, Object value) {
+          return (Clone) super.set(parameterName, value);
+        }
+      }
       /**
        * Creates a new version for a site.
        *

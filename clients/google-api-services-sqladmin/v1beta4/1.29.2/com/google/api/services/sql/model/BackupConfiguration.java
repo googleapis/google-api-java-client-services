@@ -63,6 +63,13 @@ public final class BackupConfiguration extends com.google.api.client.json.Generi
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.Boolean pointInTimeRecoveryEnabled;
+
+  /**
+   * Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.Boolean replicationLogArchivingEnabled;
 
   /**
@@ -139,6 +146,23 @@ public final class BackupConfiguration extends com.google.api.client.json.Generi
    */
   public BackupConfiguration setLocation(java.lang.String location) {
     this.location = location;
+    return this;
+  }
+
+  /**
+   * Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPointInTimeRecoveryEnabled() {
+    return pointInTimeRecoveryEnabled;
+  }
+
+  /**
+   * Reserved for future use.
+   * @param pointInTimeRecoveryEnabled pointInTimeRecoveryEnabled or {@code null} for none
+   */
+  public BackupConfiguration setPointInTimeRecoveryEnabled(java.lang.Boolean pointInTimeRecoveryEnabled) {
+    this.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
     return this;
   }
 

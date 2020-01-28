@@ -5497,7 +5497,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * transaction internally, and count toward the one transaction limit.
            *
            * Active sessions use additional server resources, so it is a good idea to delete idle and unneeded
-           * sessions. Aside from explicit deletes, Cloud Spanner can delete sessions for which no operations
+           * sessions. Aside from explicit deletes, Cloud Spanner may delete sessions for which no operations
            * are sent for more than an hour. If a session is deleted, requests to it return `NOT_FOUND`.
            *
            * Idle sessions can be kept alive by sending a trivial SQL query periodically, e.g., `"SELECT 1"`.
@@ -5534,7 +5534,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
              * a transaction internally, and count toward the one transaction limit.
              *
              * Active sessions use additional server resources, so it is a good idea to delete idle and
-             * unneeded sessions. Aside from explicit deletes, Cloud Spanner can delete sessions for which no
+             * unneeded sessions. Aside from explicit deletes, Cloud Spanner may delete sessions for which no
              * operations are sent for more than an hour. If a session is deleted, requests to it return
              * `NOT_FOUND`.
              *

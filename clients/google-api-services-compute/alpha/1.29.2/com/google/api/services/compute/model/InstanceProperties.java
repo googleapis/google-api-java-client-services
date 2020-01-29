@@ -41,6 +41,13 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   private java.lang.Boolean canIpForward;
 
   /**
+   * Specifies the Confidential Instance options.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ConfidentialInstanceConfig confidentialInstanceConfig;
+
+  /**
    * An optional text description for the instances that are created from this instance template.
    * The value may be {@code null}.
    */
@@ -196,6 +203,23 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
    */
   public InstanceProperties setCanIpForward(java.lang.Boolean canIpForward) {
     this.canIpForward = canIpForward;
+    return this;
+  }
+
+  /**
+   * Specifies the Confidential Instance options.
+   * @return value or {@code null} for none
+   */
+  public ConfidentialInstanceConfig getConfidentialInstanceConfig() {
+    return confidentialInstanceConfig;
+  }
+
+  /**
+   * Specifies the Confidential Instance options.
+   * @param confidentialInstanceConfig confidentialInstanceConfig or {@code null} for none
+   */
+  public InstanceProperties setConfidentialInstanceConfig(ConfidentialInstanceConfig confidentialInstanceConfig) {
+    this.confidentialInstanceConfig = confidentialInstanceConfig;
     return this;
   }
 

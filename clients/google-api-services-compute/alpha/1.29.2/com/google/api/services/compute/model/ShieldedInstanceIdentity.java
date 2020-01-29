@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class ShieldedInstanceIdentity extends com.google.api.client.json.GenericJson {
 
   /**
-   * An Endorsement Key (EK) issued to the Shielded Instance's vTPM.
+   * An Endorsement Key (EK) made by the RSA 2048 algorithm issued to the Shielded Instance's vTPM.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,14 +45,14 @@ public final class ShieldedInstanceIdentity extends com.google.api.client.json.G
   private java.lang.String kind;
 
   /**
-   * An Attestation Key (AK) issued to the Shielded Instance's vTPM.
+   * An Attestation Key (AK) made by the RSA 2048 algorithm issued to the Shielded Instance's vTPM.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ShieldedInstanceIdentityEntry signingKey;
 
   /**
-   * An Endorsement Key (EK) issued to the Shielded Instance's vTPM.
+   * An Endorsement Key (EK) made by the RSA 2048 algorithm issued to the Shielded Instance's vTPM.
    * @return value or {@code null} for none
    */
   public ShieldedInstanceIdentityEntry getEncryptionKey() {
@@ -60,7 +60,7 @@ public final class ShieldedInstanceIdentity extends com.google.api.client.json.G
   }
 
   /**
-   * An Endorsement Key (EK) issued to the Shielded Instance's vTPM.
+   * An Endorsement Key (EK) made by the RSA 2048 algorithm issued to the Shielded Instance's vTPM.
    * @param encryptionKey encryptionKey or {@code null} for none
    */
   public ShieldedInstanceIdentity setEncryptionKey(ShieldedInstanceIdentityEntry encryptionKey) {
@@ -88,7 +88,7 @@ public final class ShieldedInstanceIdentity extends com.google.api.client.json.G
   }
 
   /**
-   * An Attestation Key (AK) issued to the Shielded Instance's vTPM.
+   * An Attestation Key (AK) made by the RSA 2048 algorithm issued to the Shielded Instance's vTPM.
    * @return value or {@code null} for none
    */
   public ShieldedInstanceIdentityEntry getSigningKey() {
@@ -96,7 +96,7 @@ public final class ShieldedInstanceIdentity extends com.google.api.client.json.G
   }
 
   /**
-   * An Attestation Key (AK) issued to the Shielded Instance's vTPM.
+   * An Attestation Key (AK) made by the RSA 2048 algorithm issued to the Shielded Instance's vTPM.
    * @param signingKey signingKey or {@code null} for none
    */
   public ShieldedInstanceIdentity setSigningKey(ShieldedInstanceIdentityEntry signingKey) {

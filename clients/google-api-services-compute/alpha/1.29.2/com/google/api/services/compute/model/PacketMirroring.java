@@ -92,9 +92,8 @@ public final class PacketMirroring extends com.google.api.client.json.GenericJso
   private java.lang.String kind;
 
   /**
-   * PacketMirroring mirroredResourceInfos. Each mirroredResourceInfo specifies a set of mirrored VM
-   * instances and/or a set of subnetworks for which traffic from/to all VM instances will be
-   * mirrored.
+   * PacketMirroring mirroredResourceInfos. MirroredResourceInfo specifies a set of mirrored VM
+   * instances, subnetworks and/or tags for which traffic from/to all VM instances will be mirrored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -309,9 +308,8 @@ public final class PacketMirroring extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * PacketMirroring mirroredResourceInfos. Each mirroredResourceInfo specifies a set of mirrored VM
-   * instances and/or a set of subnetworks for which traffic from/to all VM instances will be
-   * mirrored.
+   * PacketMirroring mirroredResourceInfos. MirroredResourceInfo specifies a set of mirrored VM
+   * instances, subnetworks and/or tags for which traffic from/to all VM instances will be mirrored.
    * @return value or {@code null} for none
    */
   public PacketMirroringMirroredResourceInfo getMirroredResources() {
@@ -319,9 +317,8 @@ public final class PacketMirroring extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * PacketMirroring mirroredResourceInfos. Each mirroredResourceInfo specifies a set of mirrored VM
-   * instances and/or a set of subnetworks for which traffic from/to all VM instances will be
-   * mirrored.
+   * PacketMirroring mirroredResourceInfos. MirroredResourceInfo specifies a set of mirrored VM
+   * instances, subnetworks and/or tags for which traffic from/to all VM instances will be mirrored.
    * @param mirroredResources mirroredResources or {@code null} for none
    */
   public PacketMirroring setMirroredResources(PacketMirroringMirroredResourceInfo mirroredResources) {

@@ -37,32 +37,31 @@ public final class CircuitBreakers extends com.google.api.client.json.GenericJso
   private Duration connectTimeout;
 
   /**
-   * The maximum number of connections to the backend cluster. If not specified, the default is
-   * 1024.
+   * The maximum number of connections to the backend service. If not specified, there is no limit.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxConnections;
 
   /**
-   * The maximum number of pending requests allowed to the backend cluster. If not specified, the
-   * default is 1024.
+   * The maximum number of pending requests allowed to the backend service. If not specified, there
+   * is no limit.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxPendingRequests;
 
   /**
-   * The maximum number of parallel requests that allowed to the backend cluster. If not specified,
-   * the default is 1024.
+   * The maximum number of parallel requests that allowed to the backend service. If not specified,
+   * there is no limit.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxRequests;
 
   /**
-   * Maximum requests for a single backend connection. This parameter is respected by both the
-   * HTTP/1.1 and HTTP/2 implementations. If not specified, there is no limit. Setting this
+   * Maximum requests for a single connection to the backend service. This parameter is respected by
+   * both the HTTP/1.1 and HTTP/2 implementations. If not specified, there is no limit. Setting this
    * parameter to 1 will effectively disable keep alive.
    * The value may be {@code null}.
    */
@@ -71,7 +70,7 @@ public final class CircuitBreakers extends com.google.api.client.json.GenericJso
 
   /**
    * The maximum number of parallel retries allowed to the backend cluster. If not specified, the
-   * default is 3.
+   * default is 1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,8 +94,7 @@ public final class CircuitBreakers extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The maximum number of connections to the backend cluster. If not specified, the default is
-   * 1024.
+   * The maximum number of connections to the backend service. If not specified, there is no limit.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxConnections() {
@@ -104,8 +102,7 @@ public final class CircuitBreakers extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The maximum number of connections to the backend cluster. If not specified, the default is
-   * 1024.
+   * The maximum number of connections to the backend service. If not specified, there is no limit.
    * @param maxConnections maxConnections or {@code null} for none
    */
   public CircuitBreakers setMaxConnections(java.lang.Integer maxConnections) {
@@ -114,8 +111,8 @@ public final class CircuitBreakers extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The maximum number of pending requests allowed to the backend cluster. If not specified, the
-   * default is 1024.
+   * The maximum number of pending requests allowed to the backend service. If not specified, there
+   * is no limit.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxPendingRequests() {
@@ -123,8 +120,8 @@ public final class CircuitBreakers extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The maximum number of pending requests allowed to the backend cluster. If not specified, the
-   * default is 1024.
+   * The maximum number of pending requests allowed to the backend service. If not specified, there
+   * is no limit.
    * @param maxPendingRequests maxPendingRequests or {@code null} for none
    */
   public CircuitBreakers setMaxPendingRequests(java.lang.Integer maxPendingRequests) {
@@ -133,8 +130,8 @@ public final class CircuitBreakers extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The maximum number of parallel requests that allowed to the backend cluster. If not specified,
-   * the default is 1024.
+   * The maximum number of parallel requests that allowed to the backend service. If not specified,
+   * there is no limit.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxRequests() {
@@ -142,8 +139,8 @@ public final class CircuitBreakers extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The maximum number of parallel requests that allowed to the backend cluster. If not specified,
-   * the default is 1024.
+   * The maximum number of parallel requests that allowed to the backend service. If not specified,
+   * there is no limit.
    * @param maxRequests maxRequests or {@code null} for none
    */
   public CircuitBreakers setMaxRequests(java.lang.Integer maxRequests) {
@@ -152,8 +149,8 @@ public final class CircuitBreakers extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Maximum requests for a single backend connection. This parameter is respected by both the
-   * HTTP/1.1 and HTTP/2 implementations. If not specified, there is no limit. Setting this
+   * Maximum requests for a single connection to the backend service. This parameter is respected by
+   * both the HTTP/1.1 and HTTP/2 implementations. If not specified, there is no limit. Setting this
    * parameter to 1 will effectively disable keep alive.
    * @return value or {@code null} for none
    */
@@ -162,8 +159,8 @@ public final class CircuitBreakers extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Maximum requests for a single backend connection. This parameter is respected by both the
-   * HTTP/1.1 and HTTP/2 implementations. If not specified, there is no limit. Setting this
+   * Maximum requests for a single connection to the backend service. This parameter is respected by
+   * both the HTTP/1.1 and HTTP/2 implementations. If not specified, there is no limit. Setting this
    * parameter to 1 will effectively disable keep alive.
    * @param maxRequestsPerConnection maxRequestsPerConnection or {@code null} for none
    */
@@ -174,7 +171,7 @@ public final class CircuitBreakers extends com.google.api.client.json.GenericJso
 
   /**
    * The maximum number of parallel retries allowed to the backend cluster. If not specified, the
-   * default is 3.
+   * default is 1.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxRetries() {
@@ -183,7 +180,7 @@ public final class CircuitBreakers extends com.google.api.client.json.GenericJso
 
   /**
    * The maximum number of parallel retries allowed to the backend cluster. If not specified, the
-   * default is 3.
+   * default is 1.
    * @param maxRetries maxRetries or {@code null} for none
    */
   public CircuitBreakers setMaxRetries(java.lang.Integer maxRetries) {

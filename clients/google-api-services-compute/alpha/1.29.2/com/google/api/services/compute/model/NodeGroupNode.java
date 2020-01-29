@@ -71,6 +71,13 @@ public final class NodeGroupNode extends com.google.api.client.json.GenericJson 
   private ServerBinding serverBinding;
 
   /**
+   * Server ID associated with this node.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serverId;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,6 +165,23 @@ public final class NodeGroupNode extends com.google.api.client.json.GenericJson 
    */
   public NodeGroupNode setServerBinding(ServerBinding serverBinding) {
     this.serverBinding = serverBinding;
+    return this;
+  }
+
+  /**
+   * Server ID associated with this node.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServerId() {
+    return serverId;
+  }
+
+  /**
+   * Server ID associated with this node.
+   * @param serverId serverId or {@code null} for none
+   */
+  public NodeGroupNode setServerId(java.lang.String serverId) {
+    this.serverId = serverId;
     return this;
   }
 

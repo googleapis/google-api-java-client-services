@@ -31,6 +31,22 @@ package com.google.api.services.compute.model;
 public final class ResourcePolicyGroupPlacementPolicy extends com.google.api.client.json.GenericJson {
 
   /**
+   * The number of availability domains instances will be spread across. If two instances are in
+   * different availability domain, they will not be put in the same low latency network
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer availabilityDomainCount;
+
+  /**
+   * Distribution specifies how the instances are placed at host level. If set to SPREAD, no two
+   * instances will be put on the same host
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String distribution;
+
+  /**
    * Specifies network locality
    * The value may be {@code null}.
    */
@@ -50,6 +66,44 @@ public final class ResourcePolicyGroupPlacementPolicy extends com.google.api.cli
    */
   @com.google.api.client.util.Key
   private java.lang.Integer vmCount;
+
+  /**
+   * The number of availability domains instances will be spread across. If two instances are in
+   * different availability domain, they will not be put in the same low latency network
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getAvailabilityDomainCount() {
+    return availabilityDomainCount;
+  }
+
+  /**
+   * The number of availability domains instances will be spread across. If two instances are in
+   * different availability domain, they will not be put in the same low latency network
+   * @param availabilityDomainCount availabilityDomainCount or {@code null} for none
+   */
+  public ResourcePolicyGroupPlacementPolicy setAvailabilityDomainCount(java.lang.Integer availabilityDomainCount) {
+    this.availabilityDomainCount = availabilityDomainCount;
+    return this;
+  }
+
+  /**
+   * Distribution specifies how the instances are placed at host level. If set to SPREAD, no two
+   * instances will be put on the same host
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDistribution() {
+    return distribution;
+  }
+
+  /**
+   * Distribution specifies how the instances are placed at host level. If set to SPREAD, no two
+   * instances will be put on the same host
+   * @param distribution distribution or {@code null} for none
+   */
+  public ResourcePolicyGroupPlacementPolicy setDistribution(java.lang.String distribution) {
+    this.distribution = distribution;
+    return this;
+  }
 
   /**
    * Specifies network locality

@@ -60,6 +60,13 @@ public final class CloneContext extends com.google.api.client.json.GenericJson {
   private java.lang.Long pitrTimestampMs;
 
   /**
+   * Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String pointInTime;
+
+  /**
    * Binary log coordinates, if specified, identify the position up to which the source instance
    * should be cloned. If not specified, the source instance is cloned up to the most recent binary
    * log coordinates.
@@ -128,6 +135,23 @@ public final class CloneContext extends com.google.api.client.json.GenericJson {
    */
   public CloneContext setPitrTimestampMs(java.lang.Long pitrTimestampMs) {
     this.pitrTimestampMs = pitrTimestampMs;
+    return this;
+  }
+
+  /**
+   * Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public String getPointInTime() {
+    return pointInTime;
+  }
+
+  /**
+   * Reserved for future use.
+   * @param pointInTime pointInTime or {@code null} for none
+   */
+  public CloneContext setPointInTime(String pointInTime) {
+    this.pointInTime = pointInTime;
     return this;
   }
 

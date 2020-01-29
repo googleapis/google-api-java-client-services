@@ -30,6 +30,13 @@ package com.google.api.services.file.v1.model;
 public final class GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional: user-defined instance eligibility.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudSaasacceleratorManagementProvidersV1SloEligibility eligibility;
+
+  /**
    * List of SLO exclusion windows. When multiple entries in the list match (matching the exclusion
    * time-window against current time point) the exclusion reason used in the first matching entry
    * will be published.
@@ -40,8 +47,8 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata ex
    * current state).
    *
    * This field can be used to mark the instance as temporary ineligible for the purpose of SLO
-   * calculation. For permanent instance SLO exclusion, a dedicated tier name can be used that does
-   * not have targets specified in the service SLO configuration.
+   * calculation. For permanent instance SLO exclusion, use of custom instance eligibility is
+   * recommended. See 'eligibility' field below.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,6 +86,23 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata ex
   private java.lang.String tier;
 
   /**
+   * Optional: user-defined instance eligibility.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudSaasacceleratorManagementProvidersV1SloEligibility getEligibility() {
+    return eligibility;
+  }
+
+  /**
+   * Optional: user-defined instance eligibility.
+   * @param eligibility eligibility or {@code null} for none
+   */
+  public GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata setEligibility(GoogleCloudSaasacceleratorManagementProvidersV1SloEligibility eligibility) {
+    this.eligibility = eligibility;
+    return this;
+  }
+
+  /**
    * List of SLO exclusion windows. When multiple entries in the list match (matching the exclusion
    * time-window against current time point) the exclusion reason used in the first matching entry
    * will be published.
@@ -89,8 +113,8 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata ex
    * current state).
    *
    * This field can be used to mark the instance as temporary ineligible for the purpose of SLO
-   * calculation. For permanent instance SLO exclusion, a dedicated tier name can be used that does
-   * not have targets specified in the service SLO configuration.
+   * calculation. For permanent instance SLO exclusion, use of custom instance eligibility is
+   * recommended. See 'eligibility' field below.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion> getExclusions() {
@@ -108,8 +132,8 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata ex
    * current state).
    *
    * This field can be used to mark the instance as temporary ineligible for the purpose of SLO
-   * calculation. For permanent instance SLO exclusion, a dedicated tier name can be used that does
-   * not have targets specified in the service SLO configuration.
+   * calculation. For permanent instance SLO exclusion, use of custom instance eligibility is
+   * recommended. See 'eligibility' field below.
    * @param exclusions exclusions or {@code null} for none
    */
   public GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata setExclusions(java.util.List<GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion> exclusions) {

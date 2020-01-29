@@ -55,9 +55,9 @@ public final class SpeechRecognitionResult extends com.google.api.client.json.Ge
   private java.lang.Integer channelTag;
 
   /**
-   * The [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag of the language in this
-   * result. This language code was detected to have the most likelihood of being spoken in the
-   * audio.
+   * Output only. The [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag of the
+   * language in this result. This language code was detected to have the most likelihood of being
+   * spoken in the audio.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,9 +106,9 @@ public final class SpeechRecognitionResult extends com.google.api.client.json.Ge
   }
 
   /**
-   * The [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag of the language in this
-   * result. This language code was detected to have the most likelihood of being spoken in the
-   * audio.
+   * Output only. The [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag of the
+   * language in this result. This language code was detected to have the most likelihood of being
+   * spoken in the audio.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -116,9 +116,9 @@ public final class SpeechRecognitionResult extends com.google.api.client.json.Ge
   }
 
   /**
-   * The [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag of the language in this
-   * result. This language code was detected to have the most likelihood of being spoken in the
-   * audio.
+   * Output only. The [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag of the
+   * language in this result. This language code was detected to have the most likelihood of being
+   * spoken in the audio.
    * @param languageCode languageCode or {@code null} for none
    */
   public SpeechRecognitionResult setLanguageCode(java.lang.String languageCode) {

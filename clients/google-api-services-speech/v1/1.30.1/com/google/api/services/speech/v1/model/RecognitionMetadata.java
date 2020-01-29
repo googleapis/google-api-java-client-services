@@ -61,14 +61,6 @@ public final class RecognitionMetadata extends com.google.api.client.json.Generi
   private java.lang.String microphoneDistance;
 
   /**
-   * Obfuscated (privacy-protected) ID of the user, to identify number of unique users using the
-   * service.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long obfuscatedId;
-
-  /**
    * The original media the speech was recorded on.
    * The value may be {@code null}.
    */
@@ -168,25 +160,6 @@ public final class RecognitionMetadata extends com.google.api.client.json.Generi
    */
   public RecognitionMetadata setMicrophoneDistance(java.lang.String microphoneDistance) {
     this.microphoneDistance = microphoneDistance;
-    return this;
-  }
-
-  /**
-   * Obfuscated (privacy-protected) ID of the user, to identify number of unique users using the
-   * service.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Long getObfuscatedId() {
-    return obfuscatedId;
-  }
-
-  /**
-   * Obfuscated (privacy-protected) ID of the user, to identify number of unique users using the
-   * service.
-   * @param obfuscatedId obfuscatedId or {@code null} for none
-   */
-  public RecognitionMetadata setObfuscatedId(java.lang.Long obfuscatedId) {
-    this.obfuscatedId = obfuscatedId;
     return this;
   }
 

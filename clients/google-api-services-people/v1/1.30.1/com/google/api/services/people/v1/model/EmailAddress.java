@@ -37,8 +37,8 @@ public final class EmailAddress extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
-   * The read-only type of the email address translated and formatted in the viewer's account locale
-   * or the `Accept-Language` HTTP header locale.
+   * Output only. The type of the email address translated and formatted in the viewer's account
+   * locale or the `Accept-Language` HTTP header locale.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,8 +85,8 @@ public final class EmailAddress extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The read-only type of the email address translated and formatted in the viewer's account locale
-   * or the `Accept-Language` HTTP header locale.
+   * Output only. The type of the email address translated and formatted in the viewer's account
+   * locale or the `Accept-Language` HTTP header locale.
    * @return value or {@code null} for none
    */
   public java.lang.String getFormattedType() {
@@ -94,8 +94,8 @@ public final class EmailAddress extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The read-only type of the email address translated and formatted in the viewer's account locale
-   * or the `Accept-Language` HTTP header locale.
+   * Output only. The type of the email address translated and formatted in the viewer's account
+   * locale or the `Accept-Language` HTTP header locale.
    * @param formattedType formattedType or {@code null} for none
    */
   public EmailAddress setFormattedType(java.lang.String formattedType) {

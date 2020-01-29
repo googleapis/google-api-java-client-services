@@ -17,8 +17,8 @@
 package com.google.api.services.people.v1.model;
 
 /**
- * A person's read-only cover photo. A large image shown on the person's profile page that
- * represents who they are or what they care about.
+ * A person's cover photo. A large image shown on the person's profile page that represents who they
+ * are or what they care about.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the People API. For a detailed explanation see:

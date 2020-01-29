@@ -58,7 +58,7 @@ public final class Address extends com.google.api.client.json.GenericJson {
   private java.lang.String extendedAddress;
 
   /**
-   * The read-only type of the address translated and formatted in the viewer's account locale or
+   * Output only. The type of the address translated and formatted in the viewer's account locale or
    * the `Accept-Language` HTTP header locale.
    * The value may be {@code null}.
    */
@@ -186,7 +186,7 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The read-only type of the address translated and formatted in the viewer's account locale or
+   * Output only. The type of the address translated and formatted in the viewer's account locale or
    * the `Accept-Language` HTTP header locale.
    * @return value or {@code null} for none
    */
@@ -195,7 +195,7 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The read-only type of the address translated and formatted in the viewer's account locale or
+   * Output only. The type of the address translated and formatted in the viewer's account locale or
    * the `Accept-Language` HTTP header locale.
    * @param formattedType formattedType or {@code null} for none
    */

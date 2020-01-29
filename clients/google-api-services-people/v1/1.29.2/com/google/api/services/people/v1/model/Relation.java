@@ -30,8 +30,8 @@ package com.google.api.services.people.v1.model;
 public final class Relation extends com.google.api.client.json.GenericJson {
 
   /**
-   * The type of the relation translated and formatted in the viewer's account locale or the locale
-   * specified in the Accept-Language HTTP header.
+   * Output only. The type of the relation translated and formatted in the viewer's account locale
+   * or the locale specified in the Accept-Language HTTP header.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,8 +63,8 @@ public final class Relation extends com.google.api.client.json.GenericJson {
   private java.lang.String type;
 
   /**
-   * The type of the relation translated and formatted in the viewer's account locale or the locale
-   * specified in the Accept-Language HTTP header.
+   * Output only. The type of the relation translated and formatted in the viewer's account locale
+   * or the locale specified in the Accept-Language HTTP header.
    * @return value or {@code null} for none
    */
   public java.lang.String getFormattedType() {
@@ -72,8 +72,8 @@ public final class Relation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the relation translated and formatted in the viewer's account locale or the locale
-   * specified in the Accept-Language HTTP header.
+   * Output only. The type of the relation translated and formatted in the viewer's account locale
+   * or the locale specified in the Accept-Language HTTP header.
    * @param formattedType formattedType or {@code null} for none
    */
   public Relation setFormattedType(java.lang.String formattedType) {

@@ -30,14 +30,14 @@ package com.google.api.services.people.v1.model;
 public final class CreateContactGroupRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The contact group to create.
+   * Required. The contact group to create.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ContactGroup contactGroup;
 
   /**
-   * The contact group to create.
+   * Required. The contact group to create.
    * @return value or {@code null} for none
    */
   public ContactGroup getContactGroup() {
@@ -45,7 +45,7 @@ public final class CreateContactGroupRequest extends com.google.api.client.json.
   }
 
   /**
-   * The contact group to create.
+   * Required. The contact group to create.
    * @param contactGroup contactGroup or {@code null} for none
    */
   public CreateContactGroupRequest setContactGroup(ContactGroup contactGroup) {

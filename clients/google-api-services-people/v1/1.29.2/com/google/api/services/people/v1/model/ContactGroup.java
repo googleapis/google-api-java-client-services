@@ -38,7 +38,7 @@ public final class ContactGroup extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * The read-only name translated and formatted in the viewer's account locale or the `Accept-
+   * Output only. The name translated and formatted in the viewer's account locale or the `Accept-
    * Language` HTTP header locale for system groups names. Group names set by the owner are the same
    * as name.
    * The value may be {@code null}.
@@ -47,23 +47,23 @@ public final class ContactGroup extends com.google.api.client.json.GenericJson {
   private java.lang.String formattedName;
 
   /**
-   * The read-only contact group type.
+   * Output only. The contact group type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String groupType;
 
   /**
-   * The total number of contacts in the group irrespective of max members in specified in the
-   * request.
+   * Output only. The total number of contacts in the group irrespective of max members in specified
+   * in the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer memberCount;
 
   /**
-   * The list of contact person resource names that are members of the contact group. The field is
-   * not populated for LIST requests and can only be updated through the
+   * Output only. The list of contact person resource names that are members of the contact group.
+   * The field is not populated for LIST requests and can only be updated through the
    * [ModifyContactGroupMembers](/people/api/rest/v1/contactgroups/members/modify).
    * The value may be {@code null}.
    */
@@ -71,7 +71,7 @@ public final class ContactGroup extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> memberResourceNames;
 
   /**
-   * Metadata about the contact group.
+   * Output only. Metadata about the contact group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,7 +112,7 @@ public final class ContactGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The read-only name translated and formatted in the viewer's account locale or the `Accept-
+   * Output only. The name translated and formatted in the viewer's account locale or the `Accept-
    * Language` HTTP header locale for system groups names. Group names set by the owner are the same
    * as name.
    * @return value or {@code null} for none
@@ -122,7 +122,7 @@ public final class ContactGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The read-only name translated and formatted in the viewer's account locale or the `Accept-
+   * Output only. The name translated and formatted in the viewer's account locale or the `Accept-
    * Language` HTTP header locale for system groups names. Group names set by the owner are the same
    * as name.
    * @param formattedName formattedName or {@code null} for none
@@ -133,7 +133,7 @@ public final class ContactGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The read-only contact group type.
+   * Output only. The contact group type.
    * @return value or {@code null} for none
    */
   public java.lang.String getGroupType() {
@@ -141,7 +141,7 @@ public final class ContactGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The read-only contact group type.
+   * Output only. The contact group type.
    * @param groupType groupType or {@code null} for none
    */
   public ContactGroup setGroupType(java.lang.String groupType) {
@@ -150,8 +150,8 @@ public final class ContactGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The total number of contacts in the group irrespective of max members in specified in the
-   * request.
+   * Output only. The total number of contacts in the group irrespective of max members in specified
+   * in the request.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMemberCount() {
@@ -159,8 +159,8 @@ public final class ContactGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The total number of contacts in the group irrespective of max members in specified in the
-   * request.
+   * Output only. The total number of contacts in the group irrespective of max members in specified
+   * in the request.
    * @param memberCount memberCount or {@code null} for none
    */
   public ContactGroup setMemberCount(java.lang.Integer memberCount) {
@@ -169,8 +169,8 @@ public final class ContactGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of contact person resource names that are members of the contact group. The field is
-   * not populated for LIST requests and can only be updated through the
+   * Output only. The list of contact person resource names that are members of the contact group.
+   * The field is not populated for LIST requests and can only be updated through the
    * [ModifyContactGroupMembers](/people/api/rest/v1/contactgroups/members/modify).
    * @return value or {@code null} for none
    */
@@ -179,8 +179,8 @@ public final class ContactGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of contact person resource names that are members of the contact group. The field is
-   * not populated for LIST requests and can only be updated through the
+   * Output only. The list of contact person resource names that are members of the contact group.
+   * The field is not populated for LIST requests and can only be updated through the
    * [ModifyContactGroupMembers](/people/api/rest/v1/contactgroups/members/modify).
    * @param memberResourceNames memberResourceNames or {@code null} for none
    */
@@ -190,7 +190,7 @@ public final class ContactGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Metadata about the contact group.
+   * Output only. Metadata about the contact group.
    * @return value or {@code null} for none
    */
   public ContactGroupMetadata getMetadata() {
@@ -198,7 +198,7 @@ public final class ContactGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Metadata about the contact group.
+   * Output only. Metadata about the contact group.
    * @param metadata metadata or {@code null} for none
    */
   public ContactGroup setMetadata(ContactGroupMetadata metadata) {

@@ -30,7 +30,7 @@ package com.google.api.services.people.v1.model;
 public final class ImClient extends com.google.api.client.json.GenericJson {
 
   /**
-   * The read-only protocol of the IM client formatted in the viewer's account locale or the
+   * Output only. The protocol of the IM client formatted in the viewer's account locale or the
    * `Accept-Language` HTTP header locale.
    * The value may be {@code null}.
    */
@@ -38,8 +38,8 @@ public final class ImClient extends com.google.api.client.json.GenericJson {
   private java.lang.String formattedProtocol;
 
   /**
-   * The read-only type of the IM client translated and formatted in the viewer's account locale or
-   * the `Accept-Language` HTTP header locale.
+   * Output only. The type of the IM client translated and formatted in the viewer's account locale
+   * or the `Accept-Language` HTTP header locale.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,7 +78,7 @@ public final class ImClient extends com.google.api.client.json.GenericJson {
   private java.lang.String username;
 
   /**
-   * The read-only protocol of the IM client formatted in the viewer's account locale or the
+   * Output only. The protocol of the IM client formatted in the viewer's account locale or the
    * `Accept-Language` HTTP header locale.
    * @return value or {@code null} for none
    */
@@ -87,7 +87,7 @@ public final class ImClient extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The read-only protocol of the IM client formatted in the viewer's account locale or the
+   * Output only. The protocol of the IM client formatted in the viewer's account locale or the
    * `Accept-Language` HTTP header locale.
    * @param formattedProtocol formattedProtocol or {@code null} for none
    */
@@ -97,8 +97,8 @@ public final class ImClient extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The read-only type of the IM client translated and formatted in the viewer's account locale or
-   * the `Accept-Language` HTTP header locale.
+   * Output only. The type of the IM client translated and formatted in the viewer's account locale
+   * or the `Accept-Language` HTTP header locale.
    * @return value or {@code null} for none
    */
   public java.lang.String getFormattedType() {
@@ -106,8 +106,8 @@ public final class ImClient extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The read-only type of the IM client translated and formatted in the viewer's account locale or
-   * the `Accept-Language` HTTP header locale.
+   * Output only. The type of the IM client translated and formatted in the viewer's account locale
+   * or the `Accept-Language` HTTP header locale.
    * @param formattedType formattedType or {@code null} for none
    */
   public ImClient setFormattedType(java.lang.String formattedType) {

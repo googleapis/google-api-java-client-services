@@ -30,16 +30,16 @@ package com.google.api.services.people.v1.model;
 public final class Name extends com.google.api.client.json.GenericJson {
 
   /**
-   * The read-only display name formatted according to the locale specified by the viewer's account
-   * or the `Accept-Language` HTTP header.
+   * Output only. The display name formatted according to the locale specified by the viewer's
+   * account or the `Accept-Language` HTTP header.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * The read-only display name with the last name first formatted according to the locale specified
-   * by the viewer's account or the `Accept-Language` HTTP header.
+   * Output only. The display name with the last name first formatted according to the locale
+   * specified by the viewer's account or the `Accept-Language` HTTP header.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,8 +130,8 @@ public final class Name extends com.google.api.client.json.GenericJson {
   private java.lang.String phoneticMiddleName;
 
   /**
-   * The read-only display name formatted according to the locale specified by the viewer's account
-   * or the `Accept-Language` HTTP header.
+   * Output only. The display name formatted according to the locale specified by the viewer's
+   * account or the `Accept-Language` HTTP header.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -139,8 +139,8 @@ public final class Name extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The read-only display name formatted according to the locale specified by the viewer's account
-   * or the `Accept-Language` HTTP header.
+   * Output only. The display name formatted according to the locale specified by the viewer's
+   * account or the `Accept-Language` HTTP header.
    * @param displayName displayName or {@code null} for none
    */
   public Name setDisplayName(java.lang.String displayName) {
@@ -149,8 +149,8 @@ public final class Name extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The read-only display name with the last name first formatted according to the locale specified
-   * by the viewer's account or the `Accept-Language` HTTP header.
+   * Output only. The display name with the last name first formatted according to the locale
+   * specified by the viewer's account or the `Accept-Language` HTTP header.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayNameLastFirst() {
@@ -158,8 +158,8 @@ public final class Name extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The read-only display name with the last name first formatted according to the locale specified
-   * by the viewer's account or the `Accept-Language` HTTP header.
+   * Output only. The display name with the last name first formatted according to the locale
+   * specified by the viewer's account or the `Accept-Language` HTTP header.
    * @param displayNameLastFirst displayNameLastFirst or {@code null} for none
    */
   public Name setDisplayNameLastFirst(java.lang.String displayNameLastFirst) {

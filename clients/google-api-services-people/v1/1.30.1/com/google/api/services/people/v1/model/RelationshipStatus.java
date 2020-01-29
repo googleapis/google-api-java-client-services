@@ -17,7 +17,7 @@
 package com.google.api.services.people.v1.model;
 
 /**
- * A person's read-only relationship status.
+ * A person's relationship status.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the People API. For a detailed explanation see:
@@ -30,8 +30,8 @@ package com.google.api.services.people.v1.model;
 public final class RelationshipStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * The read-only value of the relationship status translated and formatted in the viewer's account
-   * locale or the `Accept-Language` HTTP header locale.
+   * Output only. The value of the relationship status translated and formatted in the viewer's
+   * account locale or the `Accept-Language` HTTP header locale.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,8 +55,8 @@ public final class RelationshipStatus extends com.google.api.client.json.Generic
   private java.lang.String value;
 
   /**
-   * The read-only value of the relationship status translated and formatted in the viewer's account
-   * locale or the `Accept-Language` HTTP header locale.
+   * Output only. The value of the relationship status translated and formatted in the viewer's
+   * account locale or the `Accept-Language` HTTP header locale.
    * @return value or {@code null} for none
    */
   public java.lang.String getFormattedValue() {
@@ -64,8 +64,8 @@ public final class RelationshipStatus extends com.google.api.client.json.Generic
   }
 
   /**
-   * The read-only value of the relationship status translated and formatted in the viewer's account
-   * locale or the `Accept-Language` HTTP header locale.
+   * Output only. The value of the relationship status translated and formatted in the viewer's
+   * account locale or the `Accept-Language` HTTP header locale.
    * @param formattedValue formattedValue or {@code null} for none
    */
   public RelationshipStatus setFormattedValue(java.lang.String formattedValue) {

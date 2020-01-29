@@ -246,33 +246,40 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
         return (BatchGet) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Specifies the maximum number of members to return for each group. */
+      /**
+       * Optional. Specifies the maximum number of members to return for each group. Defaults to 0
+       * if not set, which will return zero members.
+       */
       @com.google.api.client.util.Key
       private java.lang.Integer maxMembers;
 
-      /** Specifies the maximum number of members to return for each group.
+      /** Optional. Specifies the maximum number of members to return for each group. Defaults to 0 if not
+     set, which will return zero members.
        */
       public java.lang.Integer getMaxMembers() {
         return maxMembers;
       }
 
-      /** Specifies the maximum number of members to return for each group. */
+      /**
+       * Optional. Specifies the maximum number of members to return for each group. Defaults to 0
+       * if not set, which will return zero members.
+       */
       public BatchGet setMaxMembers(java.lang.Integer maxMembers) {
         this.maxMembers = maxMembers;
         return this;
       }
 
-      /** The resource names of the contact groups to get. */
+      /** Required. The resource names of the contact groups to get. */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> resourceNames;
 
-      /** The resource names of the contact groups to get.
+      /** Required. The resource names of the contact groups to get.
        */
       public java.util.List<java.lang.String> getResourceNames() {
         return resourceNames;
       }
 
-      /** The resource names of the contact groups to get. */
+      /** Required. The resource names of the contact groups to get. */
       public BatchGet setResourceNames(java.util.List<java.lang.String> resourceNames) {
         this.resourceNames = resourceNames;
         return this;
@@ -390,7 +397,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
      * This request holds the parameters needed by the people server.  After setting any optional
      * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
-     * @param resourceName The resource name of the contact group to delete.
+     * @param resourceName Required. The resource name of the contact group to delete.
      * @return the request
      */
     public Delete delete(java.lang.String resourceName) throws java.io.IOException {
@@ -417,7 +424,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
        * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param resourceName The resource name of the contact group to delete.
+       * @param resourceName Required. The resource name of the contact group to delete.
        * @since 1.13
        */
       protected Delete(java.lang.String resourceName) {
@@ -485,17 +492,17 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
         return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** The resource name of the contact group to delete. */
+      /** Required. The resource name of the contact group to delete. */
       @com.google.api.client.util.Key
       private java.lang.String resourceName;
 
-      /** The resource name of the contact group to delete.
+      /** Required. The resource name of the contact group to delete.
        */
       public java.lang.String getResourceName() {
         return resourceName;
       }
 
-      /** The resource name of the contact group to delete. */
+      /** Required. The resource name of the contact group to delete. */
       public Delete setResourceName(java.lang.String resourceName) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(RESOURCE_NAME_PATTERN.matcher(resourceName).matches(),
@@ -506,17 +513,17 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
         return this;
       }
 
-      /** Set to true to also delete the contacts in the specified group. */
+      /** Optional. Set to true to also delete the contacts in the specified group. */
       @com.google.api.client.util.Key
       private java.lang.Boolean deleteContacts;
 
-      /** Set to true to also delete the contacts in the specified group.
+      /** Optional. Set to true to also delete the contacts in the specified group.
        */
       public java.lang.Boolean getDeleteContacts() {
         return deleteContacts;
       }
 
-      /** Set to true to also delete the contacts in the specified group. */
+      /** Optional. Set to true to also delete the contacts in the specified group. */
       public Delete setDeleteContacts(java.lang.Boolean deleteContacts) {
         this.deleteContacts = deleteContacts;
         return this;
@@ -536,7 +543,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
      * This request holds the parameters needed by the people server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param resourceName The resource name of the contact group to get.
+     * @param resourceName Required. The resource name of the contact group to get.
      * @return the request
      */
     public Get get(java.lang.String resourceName) throws java.io.IOException {
@@ -563,7 +570,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param resourceName The resource name of the contact group to get.
+       * @param resourceName Required. The resource name of the contact group to get.
        * @since 1.13
        */
       protected Get(java.lang.String resourceName) {
@@ -641,17 +648,17 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** The resource name of the contact group to get. */
+      /** Required. The resource name of the contact group to get. */
       @com.google.api.client.util.Key
       private java.lang.String resourceName;
 
-      /** The resource name of the contact group to get.
+      /** Required. The resource name of the contact group to get.
        */
       public java.lang.String getResourceName() {
         return resourceName;
       }
 
-      /** The resource name of the contact group to get. */
+      /** Required. The resource name of the contact group to get. */
       public Get setResourceName(java.lang.String resourceName) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(RESOURCE_NAME_PATTERN.matcher(resourceName).matches(),
@@ -662,17 +669,24 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
         return this;
       }
 
-      /** Specifies the maximum number of members to return. */
+      /**
+       * Optional. Specifies the maximum number of members to return. Defaults to 0 if not set,
+       * which will return zero members.
+       */
       @com.google.api.client.util.Key
       private java.lang.Integer maxMembers;
 
-      /** Specifies the maximum number of members to return.
+      /** Optional. Specifies the maximum number of members to return. Defaults to 0 if not set, which will
+     return zero members.
        */
       public java.lang.Integer getMaxMembers() {
         return maxMembers;
       }
 
-      /** Specifies the maximum number of members to return. */
+      /**
+       * Optional. Specifies the maximum number of members to return. Defaults to 0 if not set,
+       * which will return zero members.
+       */
       public Get setMaxMembers(java.lang.Integer maxMembers) {
         this.maxMembers = maxMembers;
         return this;
@@ -786,17 +800,24 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** The maximum number of resources to return. */
+      /**
+       * Optional. The maximum number of resources to return. Valid values are between 1 and 1000,
+       * inclusive. Defaults to 30 if not set or set to 0.
+       */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** The maximum number of resources to return.
+      /** Optional. The maximum number of resources to return. Valid values are between 1 and 1000,
+     inclusive. Defaults to 30 if not set or set to 0.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
-      /** The maximum number of resources to return. */
+      /**
+       * Optional. The maximum number of resources to return. Valid values are between 1 and 1000,
+       * inclusive. Defaults to 30 if not set or set to 0.
+       */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -1029,7 +1050,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
        * This request holds the parameters needed by the people server.  After setting any optional
        * parameters, call the {@link Modify#execute()} method to invoke the remote operation.
        *
-       * @param resourceName The resource name of the contact group to modify.
+       * @param resourceName Required. The resource name of the contact group to modify.
        * @param content the {@link com.google.api.services.people.v1.model.ModifyContactGroupMembersRequest}
        * @return the request
        */
@@ -1060,7 +1081,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
          * Modify#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resourceName The resource name of the contact group to modify.
+         * @param resourceName Required. The resource name of the contact group to modify.
          * @param content the {@link com.google.api.services.people.v1.model.ModifyContactGroupMembersRequest}
          * @since 1.13
          */
@@ -1129,17 +1150,17 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
           return (Modify) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** The resource name of the contact group to modify. */
+        /** Required. The resource name of the contact group to modify. */
         @com.google.api.client.util.Key
         private java.lang.String resourceName;
 
-        /** The resource name of the contact group to modify.
+        /** Required. The resource name of the contact group to modify.
          */
         public java.lang.String getResourceName() {
           return resourceName;
         }
 
-        /** The resource name of the contact group to modify. */
+        /** Required. The resource name of the contact group to modify. */
         public Modify setResourceName(java.lang.String resourceName) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(RESOURCE_NAME_PATTERN.matcher(resourceName).matches(),
@@ -1273,22 +1294,6 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
         return (CreateContact) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** The resource name of the owning person resource. */
-      @com.google.api.client.util.Key
-      private java.lang.String parent;
-
-      /** The resource name of the owning person resource.
-       */
-      public java.lang.String getParent() {
-        return parent;
-      }
-
-      /** The resource name of the owning person resource. */
-      public CreateContact setParent(java.lang.String parent) {
-        this.parent = parent;
-        return this;
-      }
-
       @Override
       public CreateContact set(String parameterName, Object value) {
         return (CreateContact) super.set(parameterName, value);
@@ -1302,7 +1307,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
      * This request holds the parameters needed by the people server.  After setting any optional
      * parameters, call the {@link DeleteContact#execute()} method to invoke the remote operation.
      *
-     * @param resourceName The resource name of the contact to delete.
+     * @param resourceName Required. The resource name of the contact to delete.
      * @return the request
      */
     public DeleteContact deleteContact(java.lang.String resourceName) throws java.io.IOException {
@@ -1329,7 +1334,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
        * equest)} must be called to initialize this instance immediately after invoking the constructor.
        * </p>
        *
-       * @param resourceName The resource name of the contact to delete.
+       * @param resourceName Required. The resource name of the contact to delete.
        * @since 1.13
        */
       protected DeleteContact(java.lang.String resourceName) {
@@ -1397,17 +1402,17 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
         return (DeleteContact) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** The resource name of the contact to delete. */
+      /** Required. The resource name of the contact to delete. */
       @com.google.api.client.util.Key
       private java.lang.String resourceName;
 
-      /** The resource name of the contact to delete.
+      /** Required. The resource name of the contact to delete.
        */
       public java.lang.String getResourceName() {
         return resourceName;
       }
 
-      /** The resource name of the contact to delete. */
+      /** Required. The resource name of the contact to delete. */
       public DeleteContact setResourceName(java.lang.String resourceName) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(RESOURCE_NAME_PATTERN.matcher(resourceName).matches(),
@@ -1431,7 +1436,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
      * This request holds the parameters needed by the people server.  After setting any optional
      * parameters, call the {@link DeleteContactPhoto#execute()} method to invoke the remote operation.
      *
-     * @param resourceName The resource name of the contact whose photo will be deleted.
+     * @param resourceName Required. The resource name of the contact whose photo will be deleted.
      * @return the request
      */
     public DeleteContactPhoto deleteContactPhoto(java.lang.String resourceName) throws java.io.IOException {
@@ -1458,7 +1463,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
        * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param resourceName The resource name of the contact whose photo will be deleted.
+       * @param resourceName Required. The resource name of the contact whose photo will be deleted.
        * @since 1.13
        */
       protected DeleteContactPhoto(java.lang.String resourceName) {
@@ -1526,17 +1531,17 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
         return (DeleteContactPhoto) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** The resource name of the contact whose photo will be deleted. */
+      /** Required. The resource name of the contact whose photo will be deleted. */
       @com.google.api.client.util.Key
       private java.lang.String resourceName;
 
-      /** The resource name of the contact whose photo will be deleted.
+      /** Required. The resource name of the contact whose photo will be deleted.
        */
       public java.lang.String getResourceName() {
         return resourceName;
       }
 
-      /** The resource name of the contact whose photo will be deleted. */
+      /** Required. The resource name of the contact whose photo will be deleted. */
       public DeleteContactPhoto setResourceName(java.lang.String resourceName) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(RESOURCE_NAME_PATTERN.matcher(resourceName).matches(),
@@ -1548,9 +1553,9 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * **Optional.** Not specifying any fields will skip the post mutate read. A field mask to
-       * restrict which fields on the person are returned. Multiple fields can be specified by
-       * separating them with commas. Valid values are:
+       * Optional. A field mask to restrict which fields on the person are returned. Multiple fields
+       * can be specified by separating them with commas. Defaults to empty if not set, which will
+       * skip the post mutate get. Valid values are:
        *
        * * addresses * ageRanges * biographies * birthdays * braggingRights * coverPhotos *
        * emailAddresses * events * genders * imClients * interests * locales * memberships *
@@ -1561,25 +1566,23 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       @com.google.api.client.util.Key
       private String personFields;
 
-      /**** Optional.** Not specifying any fields will skip the post mutate read. A field mask to restrict
-    ** which fields on the person are returned. Multiple fields can be specified by separating them with
-    ** commas. Valid values are:
-    **
-    ** * addresses * ageRanges * biographies * birthdays * braggingRights * coverPhotos * emailAddresses
-    ** * events * genders * imClients * interests * locales * memberships * metadata * names * nicknames
-    ** * occupations * organizations * phoneNumbers * photos * relations * relationshipInterests *
-    ** relationshipStatuses * residences * sipAddresses * skills * taglines * urls * userDefined
-    **
+      /** Optional. A field mask to restrict which fields on the person are returned. Multiple fields can be
+     specified by separating them with commas. Defaults to empty if not set, which will skip the post
+     mutate get. Valid values are:
 
+     * addresses * ageRanges * biographies * birthdays * braggingRights * coverPhotos * emailAddresses *
+     events * genders * imClients * interests * locales * memberships * metadata * names * nicknames *
+     occupations * organizations * phoneNumbers * photos * relations * relationshipInterests *
+     relationshipStatuses * residences * sipAddresses * skills * taglines * urls * userDefined
        */
       public String getPersonFields() {
         return personFields;
       }
 
       /**
-       * **Optional.** Not specifying any fields will skip the post mutate read. A field mask to
-       * restrict which fields on the person are returned. Multiple fields can be specified by
-       * separating them with commas. Valid values are:
+       * Optional. A field mask to restrict which fields on the person are returned. Multiple fields
+       * can be specified by separating them with commas. Defaults to empty if not set, which will
+       * skip the post mutate get. Valid values are:
        *
        * * addresses * ageRanges * biographies * birthdays * braggingRights * coverPhotos *
        * emailAddresses * events * genders * imClients * interests * locales * memberships *
@@ -1608,9 +1611,9 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
      * This request holds the parameters needed by the people server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param resourceName The resource name of the person to provide information about.
-    - To get information about the
-     *        authenticated user, specify `people/me`.
+     * @param resourceName Required. The resource name of the person to provide information about.
+    - To get information about
+     *        the authenticated user, specify `people/me`.
     - To get information about a google account,
      *        specify
      `people/`account_id.
@@ -1646,9 +1649,9 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param resourceName The resource name of the person to provide information about.
-    - To get information about the
-     *        authenticated user, specify `people/me`.
+       * @param resourceName Required. The resource name of the person to provide information about.
+    - To get information about
+     *        the authenticated user, specify `people/me`.
     - To get information about a google account,
      *        specify
      `people/`account_id.
@@ -1734,7 +1737,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * The resource name of the person to provide information about.
+       * Required. The resource name of the person to provide information about.
        *
        * - To get information about the authenticated user, specify `people/me`. - To get
        * information about a google account, specify `people/`account_id. - To get information about
@@ -1744,7 +1747,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       @com.google.api.client.util.Key
       private java.lang.String resourceName;
 
-      /** The resource name of the person to provide information about.
+      /** Required. The resource name of the person to provide information about.
 
      - To get information about the authenticated user, specify `people/me`. - To get information about
      a google account, specify `people/`account_id. - To get information about a contact, specify the
@@ -1756,7 +1759,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * The resource name of the person to provide information about.
+       * Required. The resource name of the person to provide information about.
        *
        * - To get information about the authenticated user, specify `people/me`. - To get
        * information about a google account, specify `people/`account_id. - To get information about
@@ -1774,8 +1777,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * **Required.** A field mask to restrict which fields on the person are returned. Multiple
-       * fields can be specified by separating them with commas. Valid values are:
+       * Required. A field mask to restrict which fields on the person are returned. Multiple fields
+       * can be specified by separating them with commas. Valid values are:
        *
        * * addresses * ageRanges * biographies * birthdays * braggingRights * coverPhotos *
        * emailAddresses * events * genders * imClients * interests * locales * memberships *
@@ -1786,23 +1789,21 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       @com.google.api.client.util.Key
       private String personFields;
 
-      /**** Required.** A field mask to restrict which fields on the person are returned. Multiple fields can
-    ** be specified by separating them with commas. Valid values are:
-    **
-    ** * addresses * ageRanges * biographies * birthdays * braggingRights * coverPhotos * emailAddresses
-    ** * events * genders * imClients * interests * locales * memberships * metadata * names * nicknames
-    ** * occupations * organizations * phoneNumbers * photos * relations * relationshipInterests *
-    ** relationshipStatuses * residences * sipAddresses * skills * taglines * urls * userDefined
-    **
+      /** Required. A field mask to restrict which fields on the person are returned. Multiple fields can be
+     specified by separating them with commas. Valid values are:
 
+     * addresses * ageRanges * biographies * birthdays * braggingRights * coverPhotos * emailAddresses *
+     events * genders * imClients * interests * locales * memberships * metadata * names * nicknames *
+     occupations * organizations * phoneNumbers * photos * relations * relationshipInterests *
+     relationshipStatuses * residences * sipAddresses * skills * taglines * urls * userDefined
        */
       public String getPersonFields() {
         return personFields;
       }
 
       /**
-       * **Required.** A field mask to restrict which fields on the person are returned. Multiple
-       * fields can be specified by separating them with commas. Valid values are:
+       * Required. A field mask to restrict which fields on the person are returned. Multiple fields
+       * can be specified by separating them with commas. Valid values are:
        *
        * * addresses * ageRanges * biographies * birthdays * braggingRights * coverPhotos *
        * emailAddresses * events * genders * imClients * interests * locales * memberships *
@@ -1816,24 +1817,22 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * **Required.** Comma-separated list of person fields to be included in the response. Each
-       * path should start with `person.`: for example, `person.names` or `person.photos`.
+       * Required. Comma-separated list of person fields to be included in the response. Each path
+       * should start with `person.`: for example, `person.names` or `person.photos`.
        */
       @com.google.api.client.util.Key("requestMask.includeField")
       private String requestMaskIncludeField;
 
-      /**** Required.** Comma-separated list of person fields to be included in the response. Each path
-    ** should start with `person.`: for example, `person.names` or `person.photos`.
-    **
-
+      /** Required. Comma-separated list of person fields to be included in the response. Each path should
+     start with `person.`: for example, `person.names` or `person.photos`.
        */
       public String getRequestMaskIncludeField() {
         return requestMaskIncludeField;
       }
 
       /**
-       * **Required.** Comma-separated list of person fields to be included in the response. Each
-       * path should start with `person.`: for example, `person.names` or `person.photos`.
+       * Required. Comma-separated list of person fields to be included in the response. Each path
+       * should start with `person.`: for example, `person.names` or `person.photos`.
        */
       public Get setRequestMaskIncludeField(String requestMaskIncludeField) {
         this.requestMaskIncludeField = requestMaskIncludeField;
@@ -1954,7 +1953,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * **Required.** A field mask to restrict which fields on each person are returned. Multiple
+       * Required. A field mask to restrict which fields on each person are returned. Multiple
        * fields can be specified by separating them with commas. Valid values are:
        *
        * * addresses * ageRanges * biographies * birthdays * braggingRights * coverPhotos *
@@ -1966,22 +1965,20 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       @com.google.api.client.util.Key
       private String personFields;
 
-      /**** Required.** A field mask to restrict which fields on each person are returned. Multiple fields
-    ** can be specified by separating them with commas. Valid values are:
-    **
-    ** * addresses * ageRanges * biographies * birthdays * braggingRights * coverPhotos * emailAddresses
-    ** * events * genders * imClients * interests * locales * memberships * metadata * names * nicknames
-    ** * occupations * organizations * phoneNumbers * photos * relations * relationshipInterests *
-    ** relationshipStatuses * residences * sipAddresses * skills * taglines * urls * userDefined
-    **
+      /** Required. A field mask to restrict which fields on each person are returned. Multiple fields can be
+     specified by separating them with commas. Valid values are:
 
+     * addresses * ageRanges * biographies * birthdays * braggingRights * coverPhotos * emailAddresses *
+     events * genders * imClients * interests * locales * memberships * metadata * names * nicknames *
+     occupations * organizations * phoneNumbers * photos * relations * relationshipInterests *
+     relationshipStatuses * residences * sipAddresses * skills * taglines * urls * userDefined
        */
       public String getPersonFields() {
         return personFields;
       }
 
       /**
-       * **Required.** A field mask to restrict which fields on each person are returned. Multiple
+       * Required. A field mask to restrict which fields on each person are returned. Multiple
        * fields can be specified by separating them with commas. Valid values are:
        *
        * * addresses * ageRanges * biographies * birthdays * braggingRights * coverPhotos *
@@ -1996,24 +1993,22 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * **Required.** Comma-separated list of person fields to be included in the response. Each
-       * path should start with `person.`: for example, `person.names` or `person.photos`.
+       * Required. Comma-separated list of person fields to be included in the response. Each path
+       * should start with `person.`: for example, `person.names` or `person.photos`.
        */
       @com.google.api.client.util.Key("requestMask.includeField")
       private String requestMaskIncludeField;
 
-      /**** Required.** Comma-separated list of person fields to be included in the response. Each path
-    ** should start with `person.`: for example, `person.names` or `person.photos`.
-    **
-
+      /** Required. Comma-separated list of person fields to be included in the response. Each path should
+     start with `person.`: for example, `person.names` or `person.photos`.
        */
       public String getRequestMaskIncludeField() {
         return requestMaskIncludeField;
       }
 
       /**
-       * **Required.** Comma-separated list of person fields to be included in the response. Each
-       * path should start with `person.`: for example, `person.names` or `person.photos`.
+       * Required. Comma-separated list of person fields to be included in the response. Each path
+       * should start with `person.`: for example, `person.names` or `person.photos`.
        */
       public GetBatchGet setRequestMaskIncludeField(String requestMaskIncludeField) {
         this.requestMaskIncludeField = requestMaskIncludeField;
@@ -2021,7 +2016,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * The resource names of the people to provide information about.
+       * Required. The resource names of the people to provide information about.
        *
        * - To get information about the authenticated user, specify `people/me`. - To get
        * information about a google account, specify `people/`account_id. - To get information about
@@ -2033,7 +2028,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> resourceNames;
 
-      /** The resource names of the people to provide information about.
+      /** Required. The resource names of the people to provide information about.
 
      - To get information about the authenticated user, specify `people/me`. - To get information about
      a google account, specify `people/`account_id. - To get information about a contact, specify the
@@ -2047,7 +2042,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * The resource names of the people to provide information about.
+       * Required. The resource names of the people to provide information about.
        *
        * - To get information about the authenticated user, specify `people/me`. - To get
        * information about a google account, specify `people/`account_id. - To get information about
@@ -2226,9 +2221,9 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * **Required.** A field mask to restrict which fields on the person are updated. Multiple
-       * fields can be specified by separating them with commas. All updated fields will be
-       * replaced. Valid values are:
+       * Required. A field mask to restrict which fields on the person are updated. Multiple fields
+       * can be specified by separating them with commas. All updated fields will be replaced. Valid
+       * values are:
        *
        * * addresses * biographies * birthdays * emailAddresses * events * genders * imClients *
        * interests * locales * memberships * names * nicknames * occupations * organizations *
@@ -2237,24 +2232,21 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       @com.google.api.client.util.Key
       private String updatePersonFields;
 
-      /**** Required.** A field mask to restrict which fields on the person are updated. Multiple fields can
-    ** be specified by separating them with commas. All updated fields will be replaced. Valid values
-    ** are:
-    **
-    ** * addresses * biographies * birthdays * emailAddresses * events * genders * imClients * interests
-    ** * locales * memberships * names * nicknames * occupations * organizations * phoneNumbers *
-    ** relations * residences * sipAddresses * urls * userDefined
-    **
+      /** Required. A field mask to restrict which fields on the person are updated. Multiple fields can be
+     specified by separating them with commas. All updated fields will be replaced. Valid values are:
 
+     * addresses * biographies * birthdays * emailAddresses * events * genders * imClients * interests *
+     locales * memberships * names * nicknames * occupations * organizations * phoneNumbers * relations
+     * residences * sipAddresses * urls * userDefined
        */
       public String getUpdatePersonFields() {
         return updatePersonFields;
       }
 
       /**
-       * **Required.** A field mask to restrict which fields on the person are updated. Multiple
-       * fields can be specified by separating them with commas. All updated fields will be
-       * replaced. Valid values are:
+       * Required. A field mask to restrict which fields on the person are updated. Multiple fields
+       * can be specified by separating them with commas. All updated fields will be replaced. Valid
+       * values are:
        *
        * * addresses * biographies * birthdays * emailAddresses * events * genders * imClients *
        * interests * locales * memberships * names * nicknames * occupations * organizations *
@@ -2278,7 +2270,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
      * This request holds the parameters needed by the people server.  After setting any optional
      * parameters, call the {@link UpdateContactPhoto#execute()} method to invoke the remote operation.
      *
-     * @param resourceName Person resource name
+     * @param resourceName Required. Person resource name
      * @param content the {@link com.google.api.services.people.v1.model.UpdateContactPhotoRequest}
      * @return the request
      */
@@ -2306,7 +2298,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
        * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param resourceName Person resource name
+       * @param resourceName Required. Person resource name
        * @param content the {@link com.google.api.services.people.v1.model.UpdateContactPhotoRequest}
        * @since 1.13
        */
@@ -2375,17 +2367,17 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
         return (UpdateContactPhoto) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Person resource name */
+      /** Required. Person resource name */
       @com.google.api.client.util.Key
       private java.lang.String resourceName;
 
-      /** Person resource name
+      /** Required. Person resource name
        */
       public java.lang.String getResourceName() {
         return resourceName;
       }
 
-      /** Person resource name */
+      /** Required. Person resource name */
       public UpdateContactPhoto setResourceName(java.lang.String resourceName) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(RESOURCE_NAME_PATTERN.matcher(resourceName).matches(),
@@ -2432,7 +2424,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
        * This request holds the parameters needed by the people server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param resourceName The resource name to return connections for. Only `people/me` is valid.
+       * @param resourceName Required. The resource name to return connections for. Only `people/me` is valid.
        * @return the request
        */
       public List list(java.lang.String resourceName) throws java.io.IOException {
@@ -2460,7 +2452,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resourceName The resource name to return connections for. Only `people/me` is valid.
+         * @param resourceName Required. The resource name to return connections for. Only `people/me` is valid.
          * @since 1.13
          */
         protected List(java.lang.String resourceName) {
@@ -2538,17 +2530,17 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** The resource name to return connections for. Only `people/me` is valid. */
+        /** Required. The resource name to return connections for. Only `people/me` is valid. */
         @com.google.api.client.util.Key
         private java.lang.String resourceName;
 
-        /** The resource name to return connections for. Only `people/me` is valid.
+        /** Required. The resource name to return connections for. Only `people/me` is valid.
          */
         public java.lang.String getResourceName() {
           return resourceName;
         }
 
-        /** The resource name to return connections for. Only `people/me` is valid. */
+        /** Required. The resource name to return connections for. Only `people/me` is valid. */
         public List setResourceName(java.lang.String resourceName) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(RESOURCE_NAME_PATTERN.matcher(resourceName).matches(),
@@ -2560,22 +2552,22 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * The number of connections to include in the response. Valid values are between 1 and
-         * 2000, inclusive. Defaults to 100.
+         * Optional. The number of connections to include in the response. Valid values are between
+         * 1 and 2000, inclusive. Defaults to 100 if not set or set to 0.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The number of connections to include in the response. Valid values are between 1 and 2000,
-       inclusive. Defaults to 100.
+        /** Optional. The number of connections to include in the response. Valid values are between 1 and
+       2000, inclusive. Defaults to 100 if not set or set to 0.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
         /**
-         * The number of connections to include in the response. Valid values are between 1 and
-         * 2000, inclusive. Defaults to 100.
+         * Optional. The number of connections to include in the response. Valid values are between
+         * 1 and 2000, inclusive. Defaults to 100 if not set or set to 0.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -2599,7 +2591,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * **Required.** A field mask to restrict which fields on each person are returned. Multiple
+         * Required. A field mask to restrict which fields on each person are returned. Multiple
          * fields can be specified by separating them with commas. Valid values are:
          *
          * * addresses * ageRanges * biographies * birthdays * braggingRights * coverPhotos *
@@ -2611,22 +2603,20 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
         @com.google.api.client.util.Key
         private String personFields;
 
-        /**** Required.** A field mask to restrict which fields on each person are returned. Multiple fields
-      ** can be specified by separating them with commas. Valid values are:
-      **
-      ** * addresses * ageRanges * biographies * birthdays * braggingRights * coverPhotos * emailAddresses
-      ** * events * genders * imClients * interests * locales * memberships * metadata * names * nicknames
-      ** * occupations * organizations * phoneNumbers * photos * relations * relationshipInterests *
-      ** relationshipStatuses * residences * sipAddresses * skills * taglines * urls * userDefined
-      **
+        /** Required. A field mask to restrict which fields on each person are returned. Multiple fields can be
+       specified by separating them with commas. Valid values are:
 
+       * addresses * ageRanges * biographies * birthdays * braggingRights * coverPhotos * emailAddresses *
+       events * genders * imClients * interests * locales * memberships * metadata * names * nicknames *
+       occupations * organizations * phoneNumbers * photos * relations * relationshipInterests *
+       relationshipStatuses * residences * sipAddresses * skills * taglines * urls * userDefined
          */
         public String getPersonFields() {
           return personFields;
         }
 
         /**
-         * **Required.** A field mask to restrict which fields on each person are returned. Multiple
+         * Required. A field mask to restrict which fields on each person are returned. Multiple
          * fields can be specified by separating them with commas. Valid values are:
          *
          * * addresses * ageRanges * biographies * birthdays * braggingRights * coverPhotos *
@@ -2641,24 +2631,22 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * **Required.** Comma-separated list of person fields to be included in the response. Each
-         * path should start with `person.`: for example, `person.names` or `person.photos`.
+         * Required. Comma-separated list of person fields to be included in the response. Each path
+         * should start with `person.`: for example, `person.names` or `person.photos`.
          */
         @com.google.api.client.util.Key("requestMask.includeField")
         private String requestMaskIncludeField;
 
-        /**** Required.** Comma-separated list of person fields to be included in the response. Each path
-      ** should start with `person.`: for example, `person.names` or `person.photos`.
-      **
-
+        /** Required. Comma-separated list of person fields to be included in the response. Each path should
+       start with `person.`: for example, `person.names` or `person.photos`.
          */
         public String getRequestMaskIncludeField() {
           return requestMaskIncludeField;
         }
 
         /**
-         * **Required.** Comma-separated list of person fields to be included in the response. Each
-         * path should start with `person.`: for example, `person.names` or `person.photos`.
+         * Required. Comma-separated list of person fields to be included in the response. Each path
+         * should start with `person.`: for example, `person.names` or `person.photos`.
          */
         public List setRequestMaskIncludeField(String requestMaskIncludeField) {
           this.requestMaskIncludeField = requestMaskIncludeField;

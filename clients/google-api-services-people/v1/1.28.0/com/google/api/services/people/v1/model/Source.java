@@ -47,7 +47,7 @@ public final class Source extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
-   * **Only populated in `person.metadata.sources`.**
+   * Output only. **Only populated in `person.metadata.sources`.**
    *
    * Metadata about a source of type PROFILE.
    * The value may be {@code null}.
@@ -63,7 +63,7 @@ public final class Source extends com.google.api.client.json.GenericJson {
   private java.lang.String type;
 
   /**
-   * **Only populated in `person.metadata.sources`.**
+   * Output only. **Only populated in `person.metadata.sources`.**
    *
    * Last update timestamp of this source.
    * The value may be {@code null}.
@@ -112,7 +112,7 @@ public final class Source extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * **Only populated in `person.metadata.sources`.**
+   * Output only. **Only populated in `person.metadata.sources`.**
    *
    * Metadata about a source of type PROFILE.
    * @return value or {@code null} for none
@@ -122,7 +122,7 @@ public final class Source extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * **Only populated in `person.metadata.sources`.**
+   * Output only. **Only populated in `person.metadata.sources`.**
    *
    * Metadata about a source of type PROFILE.
    * @param profileMetadata profileMetadata or {@code null} for none
@@ -150,7 +150,7 @@ public final class Source extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * **Only populated in `person.metadata.sources`.**
+   * Output only. **Only populated in `person.metadata.sources`.**
    *
    * Last update timestamp of this source.
    * @return value or {@code null} for none
@@ -160,7 +160,7 @@ public final class Source extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * **Only populated in `person.metadata.sources`.**
+   * Output only. **Only populated in `person.metadata.sources`.**
    *
    * Last update timestamp of this source.
    * @param updateTime updateTime or {@code null} for none

@@ -30,7 +30,7 @@ package com.google.api.services.people.v1.model;
 public final class Gender extends com.google.api.client.json.GenericJson {
 
   /**
-   * The read-only value of the gender translated and formatted in the viewer's account locale or
+   * Output only. The value of the gender translated and formatted in the viewer's account locale or
    * the `Accept-Language` HTTP header locale.
    * The value may be {@code null}.
    */
@@ -54,7 +54,7 @@ public final class Gender extends com.google.api.client.json.GenericJson {
   private java.lang.String value;
 
   /**
-   * The read-only value of the gender translated and formatted in the viewer's account locale or
+   * Output only. The value of the gender translated and formatted in the viewer's account locale or
    * the `Accept-Language` HTTP header locale.
    * @return value or {@code null} for none
    */
@@ -63,7 +63,7 @@ public final class Gender extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The read-only value of the gender translated and formatted in the viewer's account locale or
+   * Output only. The value of the gender translated and formatted in the viewer's account locale or
    * the `Accept-Language` HTTP header locale.
    * @param formattedValue formattedValue or {@code null} for none
    */

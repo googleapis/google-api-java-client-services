@@ -37,7 +37,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   private ContactGroupMembership contactGroupMembership;
 
   /**
-   * The read-only domain membership.
+   * Output only. The domain membership.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The read-only domain membership.
+   * Output only. The domain membership.
    * @return value or {@code null} for none
    */
   public DomainMembership getDomainMembership() {
@@ -76,7 +76,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The read-only domain membership.
+   * Output only. The domain membership.
    * @param domainMembership domainMembership or {@code null} for none
    */
   public Membership setDomainMembership(DomainMembership domainMembership) {

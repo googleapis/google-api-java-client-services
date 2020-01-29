@@ -45,21 +45,6 @@ public final class ServicePerimeterConfig extends com.google.api.client.json.Gen
   private java.util.List<java.lang.String> accessLevels;
 
   /**
-   * Alpha. Configuration for what services are accessible via the Bridge Perimeter. Must be empty
-   * for non-Bridge Perimeters.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private BridgeServiceRestriction bridgeServiceRestriction;
-
-  /**
-   * Alpha. Configuration for which services may be used with Access Levels.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private IngressServiceRestriction ingressServiceRestriction;
-
-  /**
    * A list of GCP resources that are inside of the service perimeter. Currently only projects are
    * allowed. Format: `projects/{project_number}`
    * The value may be {@code null}.
@@ -120,42 +105,6 @@ public final class ServicePerimeterConfig extends com.google.api.client.json.Gen
    */
   public ServicePerimeterConfig setAccessLevels(java.util.List<java.lang.String> accessLevels) {
     this.accessLevels = accessLevels;
-    return this;
-  }
-
-  /**
-   * Alpha. Configuration for what services are accessible via the Bridge Perimeter. Must be empty
-   * for non-Bridge Perimeters.
-   * @return value or {@code null} for none
-   */
-  public BridgeServiceRestriction getBridgeServiceRestriction() {
-    return bridgeServiceRestriction;
-  }
-
-  /**
-   * Alpha. Configuration for what services are accessible via the Bridge Perimeter. Must be empty
-   * for non-Bridge Perimeters.
-   * @param bridgeServiceRestriction bridgeServiceRestriction or {@code null} for none
-   */
-  public ServicePerimeterConfig setBridgeServiceRestriction(BridgeServiceRestriction bridgeServiceRestriction) {
-    this.bridgeServiceRestriction = bridgeServiceRestriction;
-    return this;
-  }
-
-  /**
-   * Alpha. Configuration for which services may be used with Access Levels.
-   * @return value or {@code null} for none
-   */
-  public IngressServiceRestriction getIngressServiceRestriction() {
-    return ingressServiceRestriction;
-  }
-
-  /**
-   * Alpha. Configuration for which services may be used with Access Levels.
-   * @param ingressServiceRestriction ingressServiceRestriction or {@code null} for none
-   */
-  public ServicePerimeterConfig setIngressServiceRestriction(IngressServiceRestriction ingressServiceRestriction) {
-    this.ingressServiceRestriction = ingressServiceRestriction;
     return this;
   }
 

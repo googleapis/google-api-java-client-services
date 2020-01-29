@@ -207,14 +207,14 @@ public final class StreetSegment extends com.google.api.client.json.GenericJson 
   /**
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long startLatE7;
+  @com.google.api.client.util.Key
+  private java.lang.Integer startLatE7;
 
   /**
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long startLngE7;
+  @com.google.api.client.util.Key
+  private java.lang.Integer startLngE7;
 
   /**
    * The value may be {@code null}.
@@ -729,14 +729,14 @@ public final class StreetSegment extends com.google.api.client.json.GenericJson 
   /**
    * @return value or {@code null} for none
    */
-  public java.lang.Long getStartLatE7() {
+  public java.lang.Integer getStartLatE7() {
     return startLatE7;
   }
 
   /**
    * @param startLatE7 startLatE7 or {@code null} for none
    */
-  public StreetSegment setStartLatE7(java.lang.Long startLatE7) {
+  public StreetSegment setStartLatE7(java.lang.Integer startLatE7) {
     this.startLatE7 = startLatE7;
     return this;
   }
@@ -744,14 +744,14 @@ public final class StreetSegment extends com.google.api.client.json.GenericJson 
   /**
    * @return value or {@code null} for none
    */
-  public java.lang.Long getStartLngE7() {
+  public java.lang.Integer getStartLngE7() {
     return startLngE7;
   }
 
   /**
    * @param startLngE7 startLngE7 or {@code null} for none
    */
-  public StreetSegment setStartLngE7(java.lang.Long startLngE7) {
+  public StreetSegment setStartLngE7(java.lang.Integer startLngE7) {
     this.startLngE7 = startLngE7;
     return this;
   }

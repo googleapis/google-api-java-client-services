@@ -49,12 +49,6 @@ public final class PointProto extends com.google.api.client.json.GenericJson {
   private FieldMetadataProto metadata;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private MessageSet temporaryData;
-
-  /**
    * @return value or {@code null} for none
    */
   public java.lang.Long getLatE7() {
@@ -96,21 +90,6 @@ public final class PointProto extends com.google.api.client.json.GenericJson {
    */
   public PointProto setMetadata(FieldMetadataProto metadata) {
     this.metadata = metadata;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public MessageSet getTemporaryData() {
-    return temporaryData;
-  }
-
-  /**
-   * @param temporaryData temporaryData or {@code null} for none
-   */
-  public PointProto setTemporaryData(MessageSet temporaryData) {
-    this.temporaryData = temporaryData;
     return this;
   }
 

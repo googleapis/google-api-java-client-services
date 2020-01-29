@@ -20,7 +20,7 @@ package com.google.api.services.secretmanager.v1beta1;
  * Service definition for SecretManager (v1beta1).
  *
  * <p>
- * Stores, manages, and secures access to application secrets.
+ * Stores and manages access to application secrets. Provides convenience while improving security.
 
  * </p>
  *

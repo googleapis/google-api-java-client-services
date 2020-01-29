@@ -86,7 +86,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private java.lang.String protocol;
 
   /**
-   * The HTTP URL query in the format of `name1=value`=value2`, as it appears in the first line of
+   * The HTTP URL query in the format of `name1=value1=value2`, as it appears in the first line of
    * the HTTP request. No decoding is performed.
    * The value may be {@code null}.
    */
@@ -254,7 +254,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The HTTP URL query in the format of `name1=value`=value2`, as it appears in the first line of
+   * The HTTP URL query in the format of `name1=value1=value2`, as it appears in the first line of
    * the HTTP request. No decoding is performed.
    * @return value or {@code null} for none
    */
@@ -263,7 +263,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The HTTP URL query in the format of `name1=value`=value2`, as it appears in the first line of
+   * The HTTP URL query in the format of `name1=value1=value2`, as it appears in the first line of
    * the HTTP request. No decoding is performed.
    * @param query query or {@code null} for none
    */

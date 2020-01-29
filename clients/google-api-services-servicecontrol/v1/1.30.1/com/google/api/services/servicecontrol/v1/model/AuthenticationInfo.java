@@ -47,6 +47,14 @@ public final class AuthenticationInfo extends com.google.api.client.json.Generic
   private java.lang.String principalEmail;
 
   /**
+   * String representation of identity of requesting party. Populated for both first and third party
+   * identities.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String principalSubject;
+
+  /**
    * Identity delegation history of an authenticated service account that makes the request. It
    * contains information on the real authorities that try to access GCP resources by delegating on
    * a service account. When multiple authorities present, they are guaranteed to be sorted based on
@@ -113,6 +121,25 @@ public final class AuthenticationInfo extends com.google.api.client.json.Generic
    */
   public AuthenticationInfo setPrincipalEmail(java.lang.String principalEmail) {
     this.principalEmail = principalEmail;
+    return this;
+  }
+
+  /**
+   * String representation of identity of requesting party. Populated for both first and third party
+   * identities.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPrincipalSubject() {
+    return principalSubject;
+  }
+
+  /**
+   * String representation of identity of requesting party. Populated for both first and third party
+   * identities.
+   * @param principalSubject principalSubject or {@code null} for none
+   */
+  public AuthenticationInfo setPrincipalSubject(java.lang.String principalSubject) {
+    this.principalSubject = principalSubject;
     return this;
   }
 

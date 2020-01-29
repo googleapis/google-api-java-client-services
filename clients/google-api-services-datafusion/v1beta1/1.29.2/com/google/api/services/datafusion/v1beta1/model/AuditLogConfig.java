@@ -46,12 +46,6 @@ public final class AuditLogConfig extends com.google.api.client.json.GenericJson
   private java.util.List<java.lang.String> exemptedMembers;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean ignoreChildExemptions;
-
-  /**
    * The log type that this config enables.
    * The value may be {@code null}.
    */
@@ -74,21 +68,6 @@ public final class AuditLogConfig extends com.google.api.client.json.GenericJson
    */
   public AuditLogConfig setExemptedMembers(java.util.List<java.lang.String> exemptedMembers) {
     this.exemptedMembers = exemptedMembers;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getIgnoreChildExemptions() {
-    return ignoreChildExemptions;
-  }
-
-  /**
-   * @param ignoreChildExemptions ignoreChildExemptions or {@code null} for none
-   */
-  public AuditLogConfig setIgnoreChildExemptions(java.lang.Boolean ignoreChildExemptions) {
-    this.ignoreChildExemptions = ignoreChildExemptions;
     return this;
   }
 

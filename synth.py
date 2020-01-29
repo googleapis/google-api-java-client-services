@@ -34,8 +34,6 @@ logging.basicConfig(level=logging.DEBUG)
 VERSION_REGEX = r"([^\.]*)\.(.+)\.json$"
 
 TEMPLATE_VERSIONS = [
-    "1.28.0",
-    "1.29.2",
     "1.30.1",
 ]
 discovery_url = "https://github.com/googleapis/discovery-artifact-manager.git"

@@ -47,7 +47,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. **DEPRECATED** (Please use `person.ageRanges` instead)**
+   * Output only. **DEPRECATED** (Please use `person.ageRanges` instead)
    *
    * The person's age range.
    * The value may be {@code null}.
@@ -322,7 +322,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource name for the person, assigned by the server. An ASCII string with a max length of
-   * 27 characters, in the form of `people/`person_id.
+   * 27 characters, in the form of `people/{person_id}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -381,7 +381,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. **DEPRECATED** (Please use `person.ageRanges` instead)**
+   * Output only. **DEPRECATED** (Please use `person.ageRanges` instead)
    *
    * The person's age range.
    * @return value or {@code null} for none
@@ -391,7 +391,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. **DEPRECATED** (Please use `person.ageRanges` instead)**
+   * Output only. **DEPRECATED** (Please use `person.ageRanges` instead)
    *
    * The person's age range.
    * @param ageRange ageRange or {@code null} for none
@@ -813,7 +813,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource name for the person, assigned by the server. An ASCII string with a max length of
-   * 27 characters, in the form of `people/`person_id.
+   * 27 characters, in the form of `people/{person_id}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceName() {
@@ -822,7 +822,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource name for the person, assigned by the server. An ASCII string with a max length of
-   * 27 characters, in the form of `people/`person_id.
+   * 27 characters, in the form of `people/{person_id}`.
    * @param resourceName resourceName or {@code null} for none
    */
   public Person setResourceName(java.lang.String resourceName) {

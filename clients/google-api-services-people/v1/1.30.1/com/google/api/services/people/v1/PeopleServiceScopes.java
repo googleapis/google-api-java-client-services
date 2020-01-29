@@ -38,6 +38,9 @@ public class PeopleServiceScopes {
   /** View your email addresses. */
   public static final String USER_EMAILS_READ = "https://www.googleapis.com/auth/user.emails.read";
 
+  /** See your education, work history and org info. */
+  public static final String USER_ORGANIZATION_READ = "https://www.googleapis.com/auth/user.organization.read";
+
   /** View your phone numbers. */
   public static final String USER_PHONENUMBERS_READ = "https://www.googleapis.com/auth/user.phonenumbers.read";
 
@@ -59,6 +62,7 @@ public class PeopleServiceScopes {
     set.add(USER_ADDRESSES_READ);
     set.add(USER_BIRTHDAY_READ);
     set.add(USER_EMAILS_READ);
+    set.add(USER_ORGANIZATION_READ);
     set.add(USER_PHONENUMBERS_READ);
     set.add(USERINFO_EMAIL);
     set.add(USERINFO_PROFILE);

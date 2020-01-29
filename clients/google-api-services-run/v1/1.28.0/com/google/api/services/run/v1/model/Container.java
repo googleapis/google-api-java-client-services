@@ -34,7 +34,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   /**
    * (Optional)
    *
-   * Cloud Run fully managed: not supported
+   * Cloud Run fully managed: supported
    *
    * Cloud Run for Anthos: supported
    *
@@ -42,9 +42,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
    * references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be
    * resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be
    * escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
-   * regardless of whether the variable exists or not. Cannot be updated. More info:
-   * https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-
-   * container/#running-a-command-in-a-shell
+   * regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks
+   * /inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,7 +62,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
    *
    * Cloud Run for Anthos: supported
    *
-   * List of environment variables to set in the container. Cannot be updated.
+   * List of environment variables to set in the container.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,7 +104,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
    * Cloud Run for Anthos: supported
    *
    * Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is
-   * specified, or IfNotPresent otherwise. Cannot be updated. More info:
+   * specified, or IfNotPresent otherwise. More info:
    * https://kubernetes.io/docs/concepts/containers/images#updating-images
    * The value may be {@code null}.
    */
@@ -119,9 +118,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
    *
    * Cloud Run for Anthos: supported
    *
-   * Periodic probe of container liveness. Container will be restarted if the probe fails. Cannot be
-   * updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-
-   * probes
+   * Periodic probe of container liveness. Container will be restarted if the probe fails. More
+   * info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -147,7 +145,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
    * information about the network connections a container uses, but is primarily informational. Not
    * specifying a port here DOES NOT prevent that port from being exposed. Any port which is
    * listening on the default "0.0.0.0" address inside a container will be accessible from the
-   * network. Cannot be updated.
+   * network.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -161,8 +159,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
    * Cloud Run for Anthos: supported
    *
    * Periodic probe of container service readiness. Container will be removed from service endpoints
-   * if the probe fails. Cannot be updated. More info:
-   * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+   * if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle
+   * #container-probes
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -175,7 +173,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
    *
    * Cloud Run for Anthos: supported
    *
-   * Compute Resources required by this container. Cannot be updated. More info:
+   * Compute Resources required by this container. More info:
    * https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
    * The value may be {@code null}.
    */
@@ -208,7 +206,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
    * into the container's filesystem. Message written is intended to be brief final status, such as
    * an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The
    * total message length across all containers will be limited to 12kb. Defaults to /dev
-   * /termination-log. Cannot be updated.
+   * /termination-log.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -238,7 +236,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
    *
    * Cloud Run for Anthos: supported
    *
-   * Pod volumes to mount into the container's filesystem. Cannot be updated.
+   * Pod volumes to mount into the container's filesystem.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -252,7 +250,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
    * Cloud Run for Anthos: supported
    *
    * Container's working directory. If not specified, the container runtime's default will be used,
-   * which might be configured in the container image. Cannot be updated.
+   * which might be configured in the container image.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -261,7 +259,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   /**
    * (Optional)
    *
-   * Cloud Run fully managed: not supported
+   * Cloud Run fully managed: supported
    *
    * Cloud Run for Anthos: supported
    *
@@ -269,9 +267,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
    * references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be
    * resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be
    * escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
-   * regardless of whether the variable exists or not. Cannot be updated. More info:
-   * https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-
-   * container/#running-a-command-in-a-shell
+   * regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks
+   * /inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getArgs() {
@@ -281,7 +278,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   /**
    * (Optional)
    *
-   * Cloud Run fully managed: not supported
+   * Cloud Run fully managed: supported
    *
    * Cloud Run for Anthos: supported
    *
@@ -289,9 +286,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
    * references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be
    * resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be
    * escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
-   * regardless of whether the variable exists or not. Cannot be updated. More info:
-   * https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-
-   * container/#running-a-command-in-a-shell
+   * regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks
+   * /inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
    * @param args args or {@code null} for none
    */
   public Container setArgs(java.util.List<java.lang.String> args) {
@@ -321,7 +317,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
    *
    * Cloud Run for Anthos: supported
    *
-   * List of environment variables to set in the container. Cannot be updated.
+   * List of environment variables to set in the container.
    * @return value or {@code null} for none
    */
   public java.util.List<EnvVar> getEnv() {
@@ -335,7 +331,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
    *
    * Cloud Run for Anthos: supported
    *
-   * List of environment variables to set in the container. Cannot be updated.
+   * List of environment variables to set in the container.
    * @param env env or {@code null} for none
    */
   public Container setEnv(java.util.List<EnvVar> env) {
@@ -413,7 +409,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
    * Cloud Run for Anthos: supported
    *
    * Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is
-   * specified, or IfNotPresent otherwise. Cannot be updated. More info:
+   * specified, or IfNotPresent otherwise. More info:
    * https://kubernetes.io/docs/concepts/containers/images#updating-images
    * @return value or {@code null} for none
    */
@@ -429,7 +425,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
    * Cloud Run for Anthos: supported
    *
    * Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is
-   * specified, or IfNotPresent otherwise. Cannot be updated. More info:
+   * specified, or IfNotPresent otherwise. More info:
    * https://kubernetes.io/docs/concepts/containers/images#updating-images
    * @param imagePullPolicy imagePullPolicy or {@code null} for none
    */
@@ -445,9 +441,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
    *
    * Cloud Run for Anthos: supported
    *
-   * Periodic probe of container liveness. Container will be restarted if the probe fails. Cannot be
-   * updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-
-   * probes
+   * Periodic probe of container liveness. Container will be restarted if the probe fails. More
+   * info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
    * @return value or {@code null} for none
    */
   public Probe getLivenessProbe() {
@@ -461,9 +456,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
    *
    * Cloud Run for Anthos: supported
    *
-   * Periodic probe of container liveness. Container will be restarted if the probe fails. Cannot be
-   * updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-
-   * probes
+   * Periodic probe of container liveness. Container will be restarted if the probe fails. More
+   * info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
    * @param livenessProbe livenessProbe or {@code null} for none
    */
   public Container setLivenessProbe(Probe livenessProbe) {
@@ -503,7 +497,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
    * information about the network connections a container uses, but is primarily informational. Not
    * specifying a port here DOES NOT prevent that port from being exposed. Any port which is
    * listening on the default "0.0.0.0" address inside a container will be accessible from the
-   * network. Cannot be updated.
+   * network.
    * @return value or {@code null} for none
    */
   public java.util.List<ContainerPort> getPorts() {
@@ -521,7 +515,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
    * information about the network connections a container uses, but is primarily informational. Not
    * specifying a port here DOES NOT prevent that port from being exposed. Any port which is
    * listening on the default "0.0.0.0" address inside a container will be accessible from the
-   * network. Cannot be updated.
+   * network.
    * @param ports ports or {@code null} for none
    */
   public Container setPorts(java.util.List<ContainerPort> ports) {
@@ -537,8 +531,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
    * Cloud Run for Anthos: supported
    *
    * Periodic probe of container service readiness. Container will be removed from service endpoints
-   * if the probe fails. Cannot be updated. More info:
-   * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+   * if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle
+   * #container-probes
    * @return value or {@code null} for none
    */
   public Probe getReadinessProbe() {
@@ -553,8 +547,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
    * Cloud Run for Anthos: supported
    *
    * Periodic probe of container service readiness. Container will be removed from service endpoints
-   * if the probe fails. Cannot be updated. More info:
-   * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+   * if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle
+   * #container-probes
    * @param readinessProbe readinessProbe or {@code null} for none
    */
   public Container setReadinessProbe(Probe readinessProbe) {
@@ -569,7 +563,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
    *
    * Cloud Run for Anthos: supported
    *
-   * Compute Resources required by this container. Cannot be updated. More info:
+   * Compute Resources required by this container. More info:
    * https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
    * @return value or {@code null} for none
    */
@@ -584,7 +578,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
    *
    * Cloud Run for Anthos: supported
    *
-   * Compute Resources required by this container. Cannot be updated. More info:
+   * Compute Resources required by this container. More info:
    * https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
    * @param resources resources or {@code null} for none
    */
@@ -637,7 +631,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
    * into the container's filesystem. Message written is intended to be brief final status, such as
    * an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The
    * total message length across all containers will be limited to 12kb. Defaults to /dev
-   * /termination-log. Cannot be updated.
+   * /termination-log.
    * @return value or {@code null} for none
    */
   public java.lang.String getTerminationMessagePath() {
@@ -655,7 +649,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
    * into the container's filesystem. Message written is intended to be brief final status, such as
    * an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The
    * total message length across all containers will be limited to 12kb. Defaults to /dev
-   * /termination-log. Cannot be updated.
+   * /termination-log.
    * @param terminationMessagePath terminationMessagePath or {@code null} for none
    */
   public Container setTerminationMessagePath(java.lang.String terminationMessagePath) {
@@ -707,7 +701,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
    *
    * Cloud Run for Anthos: supported
    *
-   * Pod volumes to mount into the container's filesystem. Cannot be updated.
+   * Pod volumes to mount into the container's filesystem.
    * @return value or {@code null} for none
    */
   public java.util.List<VolumeMount> getVolumeMounts() {
@@ -721,7 +715,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
    *
    * Cloud Run for Anthos: supported
    *
-   * Pod volumes to mount into the container's filesystem. Cannot be updated.
+   * Pod volumes to mount into the container's filesystem.
    * @param volumeMounts volumeMounts or {@code null} for none
    */
   public Container setVolumeMounts(java.util.List<VolumeMount> volumeMounts) {
@@ -737,7 +731,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
    * Cloud Run for Anthos: supported
    *
    * Container's working directory. If not specified, the container runtime's default will be used,
-   * which might be configured in the container image. Cannot be updated.
+   * which might be configured in the container image.
    * @return value or {@code null} for none
    */
   public java.lang.String getWorkingDir() {
@@ -752,7 +746,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
    * Cloud Run for Anthos: supported
    *
    * Container's working directory. If not specified, the container runtime's default will be used,
-   * which might be configured in the container image. Cannot be updated.
+   * which might be configured in the container image.
    * @param workingDir workingDir or {@code null} for none
    */
   public Container setWorkingDir(java.lang.String workingDir) {

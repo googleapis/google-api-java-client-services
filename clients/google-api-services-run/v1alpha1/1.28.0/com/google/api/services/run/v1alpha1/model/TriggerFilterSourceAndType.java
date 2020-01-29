@@ -17,8 +17,8 @@
 package com.google.api.services.run.v1alpha1.model;
 
 /**
- * TriggerFilterSourceAndType filters events based on exact matches on the cloud event's type and
- * source attributes. Only exact matches will pass the filter.
+ * TriggerFilterSourceAndType is DEPRECATED. Filters are now contained in the map of attributes in
+ * TriggerFilter proto.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run API. For a detailed explanation see:

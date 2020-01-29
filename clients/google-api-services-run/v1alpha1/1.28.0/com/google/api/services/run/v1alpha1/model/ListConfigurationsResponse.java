@@ -64,14 +64,6 @@ public final class ListConfigurationsResponse extends com.google.api.client.json
   private ListMeta metadata;
 
   /**
-   * Details for the regions used during a global call including any failures. This is not populated
-   * when targeting a specific region.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.Map<String, RegionDetails> regionDetails;
-
-  /**
    * Locations that could not be reached.
    * The value may be {@code null}.
    */
@@ -143,25 +135,6 @@ public final class ListConfigurationsResponse extends com.google.api.client.json
    */
   public ListConfigurationsResponse setMetadata(ListMeta metadata) {
     this.metadata = metadata;
-    return this;
-  }
-
-  /**
-   * Details for the regions used during a global call including any failures. This is not populated
-   * when targeting a specific region.
-   * @return value or {@code null} for none
-   */
-  public java.util.Map<String, RegionDetails> getRegionDetails() {
-    return regionDetails;
-  }
-
-  /**
-   * Details for the regions used during a global call including any failures. This is not populated
-   * when targeting a specific region.
-   * @param regionDetails regionDetails or {@code null} for none
-   */
-  public ListConfigurationsResponse setRegionDetails(java.util.Map<String, RegionDetails> regionDetails) {
-    this.regionDetails = regionDetails;
     return this;
   }
 

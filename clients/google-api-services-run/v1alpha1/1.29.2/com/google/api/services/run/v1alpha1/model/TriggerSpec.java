@@ -48,8 +48,7 @@ public final class TriggerSpec extends com.google.api.client.json.GenericJson {
   private TriggerFilter filter;
 
   /**
-   * Specification of the importers that will provide events to the trigger. Note, for Cloud Run,
-   * the importers will only be used if a filter is not specified.
+   * Deprecated, importer specification will be replaced by information stored in GcpImporterDao.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,8 +114,7 @@ public final class TriggerSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specification of the importers that will provide events to the trigger. Note, for Cloud Run,
-   * the importers will only be used if a filter is not specified.
+   * Deprecated, importer specification will be replaced by information stored in GcpImporterDao.
    * @return value or {@code null} for none
    */
   public java.util.List<TriggerImporterSpec> getImporters() {
@@ -124,8 +122,7 @@ public final class TriggerSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specification of the importers that will provide events to the trigger. Note, for Cloud Run,
-   * the importers will only be used if a filter is not specified.
+   * Deprecated, importer specification will be replaced by information stored in GcpImporterDao.
    * @param importers importers or {@code null} for none
    */
   public TriggerSpec setImporters(java.util.List<TriggerImporterSpec> importers) {

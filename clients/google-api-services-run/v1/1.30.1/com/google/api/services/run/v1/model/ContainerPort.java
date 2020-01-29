@@ -36,12 +36,11 @@ public final class ContainerPort extends com.google.api.client.json.GenericJson 
   /**
    * (Optional)
    *
-   * Cloud Run fully managed: not supported
+   * Cloud Run fully managed: supported
    *
    * Cloud Run for Anthos: supported
    *
-   * Number of port to expose on the pod's IP address. This must be a valid port number, 0 < x <
-   * 65536.
+   * Port number the container listens on. This must be a valid port number, 0 < x < 65536.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,12 +75,11 @@ public final class ContainerPort extends com.google.api.client.json.GenericJson 
   /**
    * (Optional)
    *
-   * Cloud Run fully managed: not supported
+   * Cloud Run fully managed: supported
    *
    * Cloud Run for Anthos: supported
    *
-   * Number of port to expose on the pod's IP address. This must be a valid port number, 0 < x <
-   * 65536.
+   * Port number the container listens on. This must be a valid port number, 0 < x < 65536.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getContainerPort() {
@@ -91,12 +89,11 @@ public final class ContainerPort extends com.google.api.client.json.GenericJson 
   /**
    * (Optional)
    *
-   * Cloud Run fully managed: not supported
+   * Cloud Run fully managed: supported
    *
    * Cloud Run for Anthos: supported
    *
-   * Number of port to expose on the pod's IP address. This must be a valid port number, 0 < x <
-   * 65536.
+   * Port number the container listens on. This must be a valid port number, 0 < x < 65536.
    * @param containerPort containerPort or {@code null} for none
    */
   public ContainerPort setContainerPort(java.lang.Integer containerPort) {

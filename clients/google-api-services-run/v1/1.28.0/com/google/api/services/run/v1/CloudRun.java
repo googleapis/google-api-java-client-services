@@ -335,948 +335,6 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
     }
     /**
-     * An accessor for creating requests from the Autodomainmappings collection.
-     *
-     * <p>The typical use is:</p>
-     * <pre>
-     *   {@code CloudRun run = new CloudRun(...);}
-     *   {@code CloudRun.Autodomainmappings.List request = run.autodomainmappings().list(parameters ...)}
-     * </pre>
-     *
-     * @return the resource collection
-     */
-    public Autodomainmappings autodomainmappings() {
-      return new Autodomainmappings();
-    }
-
-    /**
-     * The "autodomainmappings" collection of methods.
-     */
-    public class Autodomainmappings {
-
-      /**
-       * Creates a new auto domain mapping.
-       *
-       * Create a request for the method "autodomainmappings.create".
-       *
-       * This request holds the parameters needed by the run server.  After setting any optional
-       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
-       *
-       * @param parent The project ID or project number in which this auto domain mapping should
-      be created.
-       * @param content the {@link com.google.api.services.run.v1.model.AutoDomainMapping}
-       * @return the request
-       */
-      public Create create(java.lang.String parent, com.google.api.services.run.v1.model.AutoDomainMapping content) throws java.io.IOException {
-        Create result = new Create(parent, content);
-        initialize(result);
-        return result;
-      }
-
-      public class Create extends CloudRunRequest<com.google.api.services.run.v1.model.AutoDomainMapping> {
-
-        private static final String REST_PATH = "apis/domains.cloudrun.com/v1/{+parent}/autodomainmappings";
-
-        private final java.util.regex.Pattern PARENT_PATTERN =
-            java.util.regex.Pattern.compile("^namespaces/[^/]+$");
-
-        /**
-         * Creates a new auto domain mapping.
-         *
-         * Create a request for the method "autodomainmappings.create".
-         *
-         * This request holds the parameters needed by the the run server.  After setting any optional
-         * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
-         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-         * be called to initialize this instance immediately after invoking the constructor. </p>
-         *
-         * @param parent The project ID or project number in which this auto domain mapping should
-      be created.
-         * @param content the {@link com.google.api.services.run.v1.model.AutoDomainMapping}
-         * @since 1.13
-         */
-        protected Create(java.lang.String parent, com.google.api.services.run.v1.model.AutoDomainMapping content) {
-          super(CloudRun.this, "POST", REST_PATH, content, com.google.api.services.run.v1.model.AutoDomainMapping.class);
-          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                "Parameter parent must conform to the pattern " +
-                "^namespaces/[^/]+$");
-          }
-        }
-
-        @Override
-        public Create set$Xgafv(java.lang.String $Xgafv) {
-          return (Create) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public Create setAccessToken(java.lang.String accessToken) {
-          return (Create) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public Create setAlt(java.lang.String alt) {
-          return (Create) super.setAlt(alt);
-        }
-
-        @Override
-        public Create setCallback(java.lang.String callback) {
-          return (Create) super.setCallback(callback);
-        }
-
-        @Override
-        public Create setFields(java.lang.String fields) {
-          return (Create) super.setFields(fields);
-        }
-
-        @Override
-        public Create setKey(java.lang.String key) {
-          return (Create) super.setKey(key);
-        }
-
-        @Override
-        public Create setOauthToken(java.lang.String oauthToken) {
-          return (Create) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (Create) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public Create setQuotaUser(java.lang.String quotaUser) {
-          return (Create) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public Create setUploadType(java.lang.String uploadType) {
-          return (Create) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public Create setUploadProtocol(java.lang.String uploadProtocol) {
-          return (Create) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /**
-         * The project ID or project number in which this auto domain mapping should be created.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String parent;
-
-        /** The project ID or project number in which this auto domain mapping should be created.
-         */
-        public java.lang.String getParent() {
-          return parent;
-        }
-
-        /**
-         * The project ID or project number in which this auto domain mapping should be created.
-         */
-        public Create setParent(java.lang.String parent) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                "Parameter parent must conform to the pattern " +
-                "^namespaces/[^/]+$");
-          }
-          this.parent = parent;
-          return this;
-        }
-
-        @Override
-        public Create set(String parameterName, Object value) {
-          return (Create) super.set(parameterName, value);
-        }
-      }
-      /**
-       * Delete an auto domain mapping.
-       *
-       * Create a request for the method "autodomainmappings.delete".
-       *
-       * This request holds the parameters needed by the run server.  After setting any optional
-       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
-       *
-       * @param name The name of the auto domain mapping being deleted. If needed, replace
-      {namespace_id} with the
-       *        project ID.
-       * @return the request
-       */
-      public Delete delete(java.lang.String name) throws java.io.IOException {
-        Delete result = new Delete(name);
-        initialize(result);
-        return result;
-      }
-
-      public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status> {
-
-        private static final String REST_PATH = "apis/domains.cloudrun.com/v1/{+name}";
-
-        private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^namespaces/[^/]+/autodomainmappings/[^/]+$");
-
-        /**
-         * Delete an auto domain mapping.
-         *
-         * Create a request for the method "autodomainmappings.delete".
-         *
-         * This request holds the parameters needed by the the run server.  After setting any optional
-         * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
-         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-         * be called to initialize this instance immediately after invoking the constructor. </p>
-         *
-         * @param name The name of the auto domain mapping being deleted. If needed, replace
-      {namespace_id} with the
-       *        project ID.
-         * @since 1.13
-         */
-        protected Delete(java.lang.String name) {
-          super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status.class);
-          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^namespaces/[^/]+/autodomainmappings/[^/]+$");
-          }
-        }
-
-        @Override
-        public Delete set$Xgafv(java.lang.String $Xgafv) {
-          return (Delete) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public Delete setAccessToken(java.lang.String accessToken) {
-          return (Delete) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public Delete setAlt(java.lang.String alt) {
-          return (Delete) super.setAlt(alt);
-        }
-
-        @Override
-        public Delete setCallback(java.lang.String callback) {
-          return (Delete) super.setCallback(callback);
-        }
-
-        @Override
-        public Delete setFields(java.lang.String fields) {
-          return (Delete) super.setFields(fields);
-        }
-
-        @Override
-        public Delete setKey(java.lang.String key) {
-          return (Delete) super.setKey(key);
-        }
-
-        @Override
-        public Delete setOauthToken(java.lang.String oauthToken) {
-          return (Delete) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (Delete) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public Delete setQuotaUser(java.lang.String quotaUser) {
-          return (Delete) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public Delete setUploadType(java.lang.String uploadType) {
-          return (Delete) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
-          return (Delete) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /**
-         * The name of the auto domain mapping being deleted. If needed, replace {namespace_id} with
-         * the project ID.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String name;
-
-        /** The name of the auto domain mapping being deleted. If needed, replace {namespace_id} with the
-       project ID.
-         */
-        public java.lang.String getName() {
-          return name;
-        }
-
-        /**
-         * The name of the auto domain mapping being deleted. If needed, replace {namespace_id} with
-         * the project ID.
-         */
-        public Delete setName(java.lang.String name) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^namespaces/[^/]+/autodomainmappings/[^/]+$");
-          }
-          this.name = name;
-          return this;
-        }
-
-        /** Cloud Run currently ignores this parameter. */
-        @com.google.api.client.util.Key
-        private java.lang.String apiVersion;
-
-        /** Cloud Run currently ignores this parameter.
-         */
-        public java.lang.String getApiVersion() {
-          return apiVersion;
-        }
-
-        /** Cloud Run currently ignores this parameter. */
-        public Delete setApiVersion(java.lang.String apiVersion) {
-          this.apiVersion = apiVersion;
-          return this;
-        }
-
-        /** Cloud Run currently ignores this parameter. */
-        @com.google.api.client.util.Key
-        private java.lang.String kind;
-
-        /** Cloud Run currently ignores this parameter.
-         */
-        public java.lang.String getKind() {
-          return kind;
-        }
-
-        /** Cloud Run currently ignores this parameter. */
-        public Delete setKind(java.lang.String kind) {
-          this.kind = kind;
-          return this;
-        }
-
-        /**
-         * Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and
-         * deletes in the background. Please see kubernetes.io/docs/concepts/workloads/controllers
-         * /garbage-collection/ for more information.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String propagationPolicy;
-
-        /** Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and deletes
-       in the background. Please see kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/
-       for more information.
-         */
-        public java.lang.String getPropagationPolicy() {
-          return propagationPolicy;
-        }
-
-        /**
-         * Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and
-         * deletes in the background. Please see kubernetes.io/docs/concepts/workloads/controllers
-         * /garbage-collection/ for more information.
-         */
-        public Delete setPropagationPolicy(java.lang.String propagationPolicy) {
-          this.propagationPolicy = propagationPolicy;
-          return this;
-        }
-
-        @Override
-        public Delete set(String parameterName, Object value) {
-          return (Delete) super.set(parameterName, value);
-        }
-      }
-      /**
-       * Get information about an auto domain mapping.
-       *
-       * Create a request for the method "autodomainmappings.get".
-       *
-       * This request holds the parameters needed by the run server.  After setting any optional
-       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
-       *
-       * @param name The name of the auto domain mapping being retrieved. If needed, replace
-      {namespace_id} with the
-       *        project ID.
-       * @return the request
-       */
-      public Get get(java.lang.String name) throws java.io.IOException {
-        Get result = new Get(name);
-        initialize(result);
-        return result;
-      }
-
-      public class Get extends CloudRunRequest<com.google.api.services.run.v1.model.AutoDomainMapping> {
-
-        private static final String REST_PATH = "apis/domains.cloudrun.com/v1/{+name}";
-
-        private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^namespaces/[^/]+/autodomainmappings/[^/]+$");
-
-        /**
-         * Get information about an auto domain mapping.
-         *
-         * Create a request for the method "autodomainmappings.get".
-         *
-         * This request holds the parameters needed by the the run server.  After setting any optional
-         * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
-         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
-         * called to initialize this instance immediately after invoking the constructor. </p>
-         *
-         * @param name The name of the auto domain mapping being retrieved. If needed, replace
-      {namespace_id} with the
-       *        project ID.
-         * @since 1.13
-         */
-        protected Get(java.lang.String name) {
-          super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v1.model.AutoDomainMapping.class);
-          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^namespaces/[^/]+/autodomainmappings/[^/]+$");
-          }
-        }
-
-        @Override
-        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-          return super.executeUsingHead();
-        }
-
-        @Override
-        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-          return super.buildHttpRequestUsingHead();
-        }
-
-        @Override
-        public Get set$Xgafv(java.lang.String $Xgafv) {
-          return (Get) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public Get setAccessToken(java.lang.String accessToken) {
-          return (Get) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public Get setAlt(java.lang.String alt) {
-          return (Get) super.setAlt(alt);
-        }
-
-        @Override
-        public Get setCallback(java.lang.String callback) {
-          return (Get) super.setCallback(callback);
-        }
-
-        @Override
-        public Get setFields(java.lang.String fields) {
-          return (Get) super.setFields(fields);
-        }
-
-        @Override
-        public Get setKey(java.lang.String key) {
-          return (Get) super.setKey(key);
-        }
-
-        @Override
-        public Get setOauthToken(java.lang.String oauthToken) {
-          return (Get) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (Get) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public Get setQuotaUser(java.lang.String quotaUser) {
-          return (Get) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public Get setUploadType(java.lang.String uploadType) {
-          return (Get) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public Get setUploadProtocol(java.lang.String uploadProtocol) {
-          return (Get) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /**
-         * The name of the auto domain mapping being retrieved. If needed, replace {namespace_id}
-         * with the project ID.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String name;
-
-        /** The name of the auto domain mapping being retrieved. If needed, replace {namespace_id} with the
-       project ID.
-         */
-        public java.lang.String getName() {
-          return name;
-        }
-
-        /**
-         * The name of the auto domain mapping being retrieved. If needed, replace {namespace_id}
-         * with the project ID.
-         */
-        public Get setName(java.lang.String name) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^namespaces/[^/]+/autodomainmappings/[^/]+$");
-          }
-          this.name = name;
-          return this;
-        }
-
-        @Override
-        public Get set(String parameterName, Object value) {
-          return (Get) super.set(parameterName, value);
-        }
-      }
-      /**
-       * List auto domain mappings.
-       *
-       * Create a request for the method "autodomainmappings.list".
-       *
-       * This request holds the parameters needed by the run server.  After setting any optional
-       * parameters, call the {@link List#execute()} method to invoke the remote operation.
-       *
-       * @param parent The project ID or project number from which the auto domain mappings should
-      be listed.
-       * @return the request
-       */
-      public List list(java.lang.String parent) throws java.io.IOException {
-        List result = new List(parent);
-        initialize(result);
-        return result;
-      }
-
-      public class List extends CloudRunRequest<com.google.api.services.run.v1.model.ListAutoDomainMappingsResponse> {
-
-        private static final String REST_PATH = "apis/domains.cloudrun.com/v1/{+parent}/autodomainmappings";
-
-        private final java.util.regex.Pattern PARENT_PATTERN =
-            java.util.regex.Pattern.compile("^namespaces/[^/]+$");
-
-        /**
-         * List auto domain mappings.
-         *
-         * Create a request for the method "autodomainmappings.list".
-         *
-         * This request holds the parameters needed by the the run server.  After setting any optional
-         * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
-         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
-         * called to initialize this instance immediately after invoking the constructor. </p>
-         *
-         * @param parent The project ID or project number from which the auto domain mappings should
-      be listed.
-         * @since 1.13
-         */
-        protected List(java.lang.String parent) {
-          super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v1.model.ListAutoDomainMappingsResponse.class);
-          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                "Parameter parent must conform to the pattern " +
-                "^namespaces/[^/]+$");
-          }
-        }
-
-        @Override
-        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-          return super.executeUsingHead();
-        }
-
-        @Override
-        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-          return super.buildHttpRequestUsingHead();
-        }
-
-        @Override
-        public List set$Xgafv(java.lang.String $Xgafv) {
-          return (List) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public List setAccessToken(java.lang.String accessToken) {
-          return (List) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public List setAlt(java.lang.String alt) {
-          return (List) super.setAlt(alt);
-        }
-
-        @Override
-        public List setCallback(java.lang.String callback) {
-          return (List) super.setCallback(callback);
-        }
-
-        @Override
-        public List setFields(java.lang.String fields) {
-          return (List) super.setFields(fields);
-        }
-
-        @Override
-        public List setKey(java.lang.String key) {
-          return (List) super.setKey(key);
-        }
-
-        @Override
-        public List setOauthToken(java.lang.String oauthToken) {
-          return (List) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (List) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public List setQuotaUser(java.lang.String quotaUser) {
-          return (List) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public List setUploadType(java.lang.String uploadType) {
-          return (List) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public List setUploadProtocol(java.lang.String uploadProtocol) {
-          return (List) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /**
-         * The project ID or project number from which the auto domain mappings should be listed.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String parent;
-
-        /** The project ID or project number from which the auto domain mappings should be listed.
-         */
-        public java.lang.String getParent() {
-          return parent;
-        }
-
-        /**
-         * The project ID or project number from which the auto domain mappings should be listed.
-         */
-        public List setParent(java.lang.String parent) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                "Parameter parent must conform to the pattern " +
-                "^namespaces/[^/]+$");
-          }
-          this.parent = parent;
-          return this;
-        }
-
-        /** Optional encoded string to continue paging. */
-        @com.google.api.client.util.Key("continue")
-        private java.lang.String continue__;
-
-        /** Optional encoded string to continue paging.
-         */
-        public java.lang.String getContinue() {
-          return continue__;
-        }
-
-        /** Optional encoded string to continue paging. */
-        public List setContinue(java.lang.String continue__) {
-          this.continue__ = continue__;
-          return this;
-        }
-
-        /**
-         * Allows to filter resources based on a specific value for a field name. Send this in a
-         * query string format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String fieldSelector;
-
-        /** Allows to filter resources based on a specific value for a field name. Send this in a query string
-       format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
-         */
-        public java.lang.String getFieldSelector() {
-          return fieldSelector;
-        }
-
-        /**
-         * Allows to filter resources based on a specific value for a field name. Send this in a
-         * query string format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
-         */
-        public List setFieldSelector(java.lang.String fieldSelector) {
-          this.fieldSelector = fieldSelector;
-          return this;
-        }
-
-        /** Not currently used by Cloud Run. */
-        @com.google.api.client.util.Key
-        private java.lang.Boolean includeUninitialized;
-
-        /** Not currently used by Cloud Run.
-         */
-        public java.lang.Boolean getIncludeUninitialized() {
-          return includeUninitialized;
-        }
-
-        /** Not currently used by Cloud Run. */
-        public List setIncludeUninitialized(java.lang.Boolean includeUninitialized) {
-          this.includeUninitialized = includeUninitialized;
-          return this;
-        }
-
-        /**
-         * Allows to filter resources based on a label. Supported operations are =, !=, exists, in,
-         * and notIn.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String labelSelector;
-
-        /** Allows to filter resources based on a label. Supported operations are =, !=, exists, in, and notIn.
-         */
-        public java.lang.String getLabelSelector() {
-          return labelSelector;
-        }
-
-        /**
-         * Allows to filter resources based on a label. Supported operations are =, !=, exists, in,
-         * and notIn.
-         */
-        public List setLabelSelector(java.lang.String labelSelector) {
-          this.labelSelector = labelSelector;
-          return this;
-        }
-
-        /** The maximum number of records that should be returned. */
-        @com.google.api.client.util.Key
-        private java.lang.Integer limit;
-
-        /** The maximum number of records that should be returned.
-         */
-        public java.lang.Integer getLimit() {
-          return limit;
-        }
-
-        /** The maximum number of records that should be returned. */
-        public List setLimit(java.lang.Integer limit) {
-          this.limit = limit;
-          return this;
-        }
-
-        /**
-         * The baseline resource version from which the list or watch operation should start. Not
-         * currently used by Cloud Run.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String resourceVersion;
-
-        /** The baseline resource version from which the list or watch operation should start. Not currently
-       used by Cloud Run.
-         */
-        public java.lang.String getResourceVersion() {
-          return resourceVersion;
-        }
-
-        /**
-         * The baseline resource version from which the list or watch operation should start. Not
-         * currently used by Cloud Run.
-         */
-        public List setResourceVersion(java.lang.String resourceVersion) {
-          this.resourceVersion = resourceVersion;
-          return this;
-        }
-
-        /**
-         * Flag that indicates that the client expects to watch this resource as well. Not currently
-         * used by Cloud Run.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.Boolean watch;
-
-        /** Flag that indicates that the client expects to watch this resource as well. Not currently used by
-       Cloud Run.
-         */
-        public java.lang.Boolean getWatch() {
-          return watch;
-        }
-
-        /**
-         * Flag that indicates that the client expects to watch this resource as well. Not currently
-         * used by Cloud Run.
-         */
-        public List setWatch(java.lang.Boolean watch) {
-          this.watch = watch;
-          return this;
-        }
-
-        @Override
-        public List set(String parameterName, Object value) {
-          return (List) super.set(parameterName, value);
-        }
-      }
-      /**
-       * Replace an auto domain mapping.
-       *
-       * Only the spec and metadata labels and annotations are modifiable. After the Update request, Cloud
-       * Run will work to make the 'status' match the requested 'spec'.
-       *
-       * May provide metadata.resourceVersion to enforce update from last read for optimistic concurrency
-       * control.
-       *
-       * Create a request for the method "autodomainmappings.replaceAutoDomainMapping".
-       *
-       * This request holds the parameters needed by the run server.  After setting any optional
-       * parameters, call the {@link ReplaceAutoDomainMapping#execute()} method to invoke the remote
-       * operation.
-       *
-       * @param name The name of the auto domain mapping being retrieved. If needed, replace
-      {namespace_id} with the
-       *        project ID.
-       * @param content the {@link com.google.api.services.run.v1.model.AutoDomainMapping}
-       * @return the request
-       */
-      public ReplaceAutoDomainMapping replaceAutoDomainMapping(java.lang.String name, com.google.api.services.run.v1.model.AutoDomainMapping content) throws java.io.IOException {
-        ReplaceAutoDomainMapping result = new ReplaceAutoDomainMapping(name, content);
-        initialize(result);
-        return result;
-      }
-
-      public class ReplaceAutoDomainMapping extends CloudRunRequest<com.google.api.services.run.v1.model.AutoDomainMapping> {
-
-        private static final String REST_PATH = "apis/domains.cloudrun.com/v1/{+name}";
-
-        private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^namespaces/[^/]+/autodomainmappings/[^/]+$");
-
-        /**
-         * Replace an auto domain mapping.
-         *
-         * Only the spec and metadata labels and annotations are modifiable. After the Update request,
-         * Cloud Run will work to make the 'status' match the requested 'spec'.
-         *
-         * May provide metadata.resourceVersion to enforce update from last read for optimistic
-         * concurrency control.
-         *
-         * Create a request for the method "autodomainmappings.replaceAutoDomainMapping".
-         *
-         * This request holds the parameters needed by the the run server.  After setting any optional
-         * parameters, call the {@link ReplaceAutoDomainMapping#execute()} method to invoke the remote
-         * operation. <p> {@link ReplaceAutoDomainMapping#initialize(com.google.api.client.googleapis.serv
-         * ices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
-         * invoking the constructor. </p>
-         *
-         * @param name The name of the auto domain mapping being retrieved. If needed, replace
-      {namespace_id} with the
-       *        project ID.
-         * @param content the {@link com.google.api.services.run.v1.model.AutoDomainMapping}
-         * @since 1.13
-         */
-        protected ReplaceAutoDomainMapping(java.lang.String name, com.google.api.services.run.v1.model.AutoDomainMapping content) {
-          super(CloudRun.this, "PUT", REST_PATH, content, com.google.api.services.run.v1.model.AutoDomainMapping.class);
-          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^namespaces/[^/]+/autodomainmappings/[^/]+$");
-          }
-        }
-
-        @Override
-        public ReplaceAutoDomainMapping set$Xgafv(java.lang.String $Xgafv) {
-          return (ReplaceAutoDomainMapping) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public ReplaceAutoDomainMapping setAccessToken(java.lang.String accessToken) {
-          return (ReplaceAutoDomainMapping) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public ReplaceAutoDomainMapping setAlt(java.lang.String alt) {
-          return (ReplaceAutoDomainMapping) super.setAlt(alt);
-        }
-
-        @Override
-        public ReplaceAutoDomainMapping setCallback(java.lang.String callback) {
-          return (ReplaceAutoDomainMapping) super.setCallback(callback);
-        }
-
-        @Override
-        public ReplaceAutoDomainMapping setFields(java.lang.String fields) {
-          return (ReplaceAutoDomainMapping) super.setFields(fields);
-        }
-
-        @Override
-        public ReplaceAutoDomainMapping setKey(java.lang.String key) {
-          return (ReplaceAutoDomainMapping) super.setKey(key);
-        }
-
-        @Override
-        public ReplaceAutoDomainMapping setOauthToken(java.lang.String oauthToken) {
-          return (ReplaceAutoDomainMapping) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public ReplaceAutoDomainMapping setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (ReplaceAutoDomainMapping) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public ReplaceAutoDomainMapping setQuotaUser(java.lang.String quotaUser) {
-          return (ReplaceAutoDomainMapping) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public ReplaceAutoDomainMapping setUploadType(java.lang.String uploadType) {
-          return (ReplaceAutoDomainMapping) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public ReplaceAutoDomainMapping setUploadProtocol(java.lang.String uploadProtocol) {
-          return (ReplaceAutoDomainMapping) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /**
-         * The name of the auto domain mapping being retrieved. If needed, replace {namespace_id}
-         * with the project ID.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String name;
-
-        /** The name of the auto domain mapping being retrieved. If needed, replace {namespace_id} with the
-       project ID.
-         */
-        public java.lang.String getName() {
-          return name;
-        }
-
-        /**
-         * The name of the auto domain mapping being retrieved. If needed, replace {namespace_id}
-         * with the project ID.
-         */
-        public ReplaceAutoDomainMapping setName(java.lang.String name) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^namespaces/[^/]+/autodomainmappings/[^/]+$");
-          }
-          this.name = name;
-          return this;
-        }
-
-        @Override
-        public ReplaceAutoDomainMapping set(String parameterName, Object value) {
-          return (ReplaceAutoDomainMapping) super.set(parameterName, value);
-        }
-      }
-
-    }
-    /**
      * An accessor for creating requests from the Configurations collection.
      *
      * <p>The typical use is:</p>
@@ -1297,340 +355,6 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
     public class Configurations {
 
       /**
-       * Create a configuration.
-       *
-       * Create a request for the method "configurations.create".
-       *
-       * This request holds the parameters needed by the run server.  After setting any optional
-       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
-       *
-       * @param parent The project ID or project number in which this configuration should be
-      created.
-       * @param content the {@link com.google.api.services.run.v1.model.Configuration}
-       * @return the request
-       */
-      public Create create(java.lang.String parent, com.google.api.services.run.v1.model.Configuration content) throws java.io.IOException {
-        Create result = new Create(parent, content);
-        initialize(result);
-        return result;
-      }
-
-      public class Create extends CloudRunRequest<com.google.api.services.run.v1.model.Configuration> {
-
-        private static final String REST_PATH = "apis/serving.knative.dev/v1/{+parent}/configurations";
-
-        private final java.util.regex.Pattern PARENT_PATTERN =
-            java.util.regex.Pattern.compile("^namespaces/[^/]+$");
-
-        /**
-         * Create a configuration.
-         *
-         * Create a request for the method "configurations.create".
-         *
-         * This request holds the parameters needed by the the run server.  After setting any optional
-         * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
-         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-         * be called to initialize this instance immediately after invoking the constructor. </p>
-         *
-         * @param parent The project ID or project number in which this configuration should be
-      created.
-         * @param content the {@link com.google.api.services.run.v1.model.Configuration}
-         * @since 1.13
-         */
-        protected Create(java.lang.String parent, com.google.api.services.run.v1.model.Configuration content) {
-          super(CloudRun.this, "POST", REST_PATH, content, com.google.api.services.run.v1.model.Configuration.class);
-          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                "Parameter parent must conform to the pattern " +
-                "^namespaces/[^/]+$");
-          }
-        }
-
-        @Override
-        public Create set$Xgafv(java.lang.String $Xgafv) {
-          return (Create) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public Create setAccessToken(java.lang.String accessToken) {
-          return (Create) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public Create setAlt(java.lang.String alt) {
-          return (Create) super.setAlt(alt);
-        }
-
-        @Override
-        public Create setCallback(java.lang.String callback) {
-          return (Create) super.setCallback(callback);
-        }
-
-        @Override
-        public Create setFields(java.lang.String fields) {
-          return (Create) super.setFields(fields);
-        }
-
-        @Override
-        public Create setKey(java.lang.String key) {
-          return (Create) super.setKey(key);
-        }
-
-        @Override
-        public Create setOauthToken(java.lang.String oauthToken) {
-          return (Create) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (Create) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public Create setQuotaUser(java.lang.String quotaUser) {
-          return (Create) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public Create setUploadType(java.lang.String uploadType) {
-          return (Create) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public Create setUploadProtocol(java.lang.String uploadProtocol) {
-          return (Create) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /**
-         * The project ID or project number in which this configuration should be created.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String parent;
-
-        /** The project ID or project number in which this configuration should be created.
-         */
-        public java.lang.String getParent() {
-          return parent;
-        }
-
-        /**
-         * The project ID or project number in which this configuration should be created.
-         */
-        public Create setParent(java.lang.String parent) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                "Parameter parent must conform to the pattern " +
-                "^namespaces/[^/]+$");
-          }
-          this.parent = parent;
-          return this;
-        }
-
-        @Override
-        public Create set(String parameterName, Object value) {
-          return (Create) super.set(parameterName, value);
-        }
-      }
-      /**
-       * delete a configuration. This will cause the configuration to delete all child revisions. Prior to
-       * calling this, any route referencing the configuration (or revision from the configuration) must
-       * be deleted.
-       *
-       * Create a request for the method "configurations.delete".
-       *
-       * This request holds the parameters needed by the run server.  After setting any optional
-       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
-       *
-       * @param name The name of the configuration being deleted. If needed, replace
-      {namespace_id} with the project ID.
-       * @return the request
-       */
-      public Delete delete(java.lang.String name) throws java.io.IOException {
-        Delete result = new Delete(name);
-        initialize(result);
-        return result;
-      }
-
-      public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status> {
-
-        private static final String REST_PATH = "apis/serving.knative.dev/v1/{+name}";
-
-        private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^namespaces/[^/]+/configurations/[^/]+$");
-
-        /**
-         * delete a configuration. This will cause the configuration to delete all child revisions. Prior
-         * to calling this, any route referencing the configuration (or revision from the configuration)
-         * must be deleted.
-         *
-         * Create a request for the method "configurations.delete".
-         *
-         * This request holds the parameters needed by the the run server.  After setting any optional
-         * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
-         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-         * be called to initialize this instance immediately after invoking the constructor. </p>
-         *
-         * @param name The name of the configuration being deleted. If needed, replace
-      {namespace_id} with the project ID.
-         * @since 1.13
-         */
-        protected Delete(java.lang.String name) {
-          super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status.class);
-          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^namespaces/[^/]+/configurations/[^/]+$");
-          }
-        }
-
-        @Override
-        public Delete set$Xgafv(java.lang.String $Xgafv) {
-          return (Delete) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public Delete setAccessToken(java.lang.String accessToken) {
-          return (Delete) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public Delete setAlt(java.lang.String alt) {
-          return (Delete) super.setAlt(alt);
-        }
-
-        @Override
-        public Delete setCallback(java.lang.String callback) {
-          return (Delete) super.setCallback(callback);
-        }
-
-        @Override
-        public Delete setFields(java.lang.String fields) {
-          return (Delete) super.setFields(fields);
-        }
-
-        @Override
-        public Delete setKey(java.lang.String key) {
-          return (Delete) super.setKey(key);
-        }
-
-        @Override
-        public Delete setOauthToken(java.lang.String oauthToken) {
-          return (Delete) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (Delete) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public Delete setQuotaUser(java.lang.String quotaUser) {
-          return (Delete) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public Delete setUploadType(java.lang.String uploadType) {
-          return (Delete) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
-          return (Delete) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /**
-         * The name of the configuration being deleted. If needed, replace {namespace_id} with the
-         * project ID.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String name;
-
-        /** The name of the configuration being deleted. If needed, replace {namespace_id} with the project ID.
-         */
-        public java.lang.String getName() {
-          return name;
-        }
-
-        /**
-         * The name of the configuration being deleted. If needed, replace {namespace_id} with the
-         * project ID.
-         */
-        public Delete setName(java.lang.String name) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^namespaces/[^/]+/configurations/[^/]+$");
-          }
-          this.name = name;
-          return this;
-        }
-
-        /** Cloud Run currently ignores this parameter. */
-        @com.google.api.client.util.Key
-        private java.lang.String apiVersion;
-
-        /** Cloud Run currently ignores this parameter.
-         */
-        public java.lang.String getApiVersion() {
-          return apiVersion;
-        }
-
-        /** Cloud Run currently ignores this parameter. */
-        public Delete setApiVersion(java.lang.String apiVersion) {
-          this.apiVersion = apiVersion;
-          return this;
-        }
-
-        /** Cloud Run currently ignores this parameter. */
-        @com.google.api.client.util.Key
-        private java.lang.String kind;
-
-        /** Cloud Run currently ignores this parameter.
-         */
-        public java.lang.String getKind() {
-          return kind;
-        }
-
-        /** Cloud Run currently ignores this parameter. */
-        public Delete setKind(java.lang.String kind) {
-          this.kind = kind;
-          return this;
-        }
-
-        /**
-         * Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and
-         * deletes in the background. Please see kubernetes.io/docs/concepts/workloads/controllers
-         * /garbage-collection/ for more information.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String propagationPolicy;
-
-        /** Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and deletes
-       in the background. Please see kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/
-       for more information.
-         */
-        public java.lang.String getPropagationPolicy() {
-          return propagationPolicy;
-        }
-
-        /**
-         * Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and
-         * deletes in the background. Please see kubernetes.io/docs/concepts/workloads/controllers
-         * /garbage-collection/ for more information.
-         */
-        public Delete setPropagationPolicy(java.lang.String propagationPolicy) {
-          this.propagationPolicy = propagationPolicy;
-          return this;
-        }
-
-        @Override
-        public Delete set(String parameterName, Object value) {
-          return (Delete) super.set(parameterName, value);
-        }
-      }
-      /**
        * Get information about a configuration.
        *
        * Create a request for the method "configurations.get".
@@ -1638,9 +362,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the configuration being retrieved. If needed, replace
-      {namespace_id} with the project
-       *        ID.
+       * @param name The name of the configuration to retrieve.
+      For Cloud Run (fully managed), replace {namespace_id}
+       *        with the project ID
+      or number.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -1666,9 +391,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the configuration being retrieved. If needed, replace
-      {namespace_id} with the project
-       *        ID.
+         * @param name The name of the configuration to retrieve.
+      For Cloud Run (fully managed), replace {namespace_id}
+       *        with the project ID
+      or number.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -1747,22 +473,22 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * The name of the configuration being retrieved. If needed, replace {namespace_id} with the
-         * project ID.
+         * The name of the configuration to retrieve. For Cloud Run (fully managed), replace
+         * {namespace_id} with the project ID or number.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the configuration being retrieved. If needed, replace {namespace_id} with the project
-       ID.
+        /** The name of the configuration to retrieve. For Cloud Run (fully managed), replace {namespace_id}
+       with the project ID or number.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The name of the configuration being retrieved. If needed, replace {namespace_id} with the
-         * project ID.
+         * The name of the configuration to retrieve. For Cloud Run (fully managed), replace
+         * {namespace_id} with the project ID or number.
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -1787,8 +513,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent The project ID or project number from which the configurations should be
-      listed.
+       * @param parent The namespace from which the configurations should be listed.
+      For Cloud Run (fully managed), replace
+       *        {namespace_id} with the project ID
+      or number.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -1814,8 +542,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The project ID or project number from which the configurations should be
-      listed.
+         * @param parent The namespace from which the configurations should be listed.
+      For Cloud Run (fully managed), replace
+       *        {namespace_id} with the project ID
+      or number.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -1894,19 +624,22 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * The project ID or project number from which the configurations should be listed.
+         * The namespace from which the configurations should be listed. For Cloud Run (fully
+         * managed), replace {namespace_id} with the project ID or number.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The project ID or project number from which the configurations should be listed.
+        /** The namespace from which the configurations should be listed. For Cloud Run (fully managed),
+       replace {namespace_id} with the project ID or number.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The project ID or project number from which the configurations should be listed.
+         * The namespace from which the configurations should be listed. For Cloud Run (fully
+         * managed), replace {namespace_id} with the project ID or number.
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -2062,161 +795,6 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return (List) super.set(parameterName, value);
         }
       }
-      /**
-       * Replace a configuration.
-       *
-       * Only the spec and metadata labels and annotations are modifiable. After the Update request, Cloud
-       * Run will work to make the 'status' match the requested 'spec'.
-       *
-       * May provide metadata.resourceVersion to enforce update from last read for optimistic concurrency
-       * control.
-       *
-       * Create a request for the method "configurations.replaceConfiguration".
-       *
-       * This request holds the parameters needed by the run server.  After setting any optional
-       * parameters, call the {@link ReplaceConfiguration#execute()} method to invoke the remote
-       * operation.
-       *
-       * @param name The name of the configuration being retrieved. If needed, replace
-      {namespace_id} with the project
-       *        ID.
-       * @param content the {@link com.google.api.services.run.v1.model.Configuration}
-       * @return the request
-       */
-      public ReplaceConfiguration replaceConfiguration(java.lang.String name, com.google.api.services.run.v1.model.Configuration content) throws java.io.IOException {
-        ReplaceConfiguration result = new ReplaceConfiguration(name, content);
-        initialize(result);
-        return result;
-      }
-
-      public class ReplaceConfiguration extends CloudRunRequest<com.google.api.services.run.v1.model.Configuration> {
-
-        private static final String REST_PATH = "apis/serving.knative.dev/v1/{+name}";
-
-        private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^namespaces/[^/]+/configurations/[^/]+$");
-
-        /**
-         * Replace a configuration.
-         *
-         * Only the spec and metadata labels and annotations are modifiable. After the Update request,
-         * Cloud Run will work to make the 'status' match the requested 'spec'.
-         *
-         * May provide metadata.resourceVersion to enforce update from last read for optimistic
-         * concurrency control.
-         *
-         * Create a request for the method "configurations.replaceConfiguration".
-         *
-         * This request holds the parameters needed by the the run server.  After setting any optional
-         * parameters, call the {@link ReplaceConfiguration#execute()} method to invoke the remote
-         * operation. <p> {@link ReplaceConfiguration#initialize(com.google.api.client.googleapis.services
-         * .AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
-         * invoking the constructor. </p>
-         *
-         * @param name The name of the configuration being retrieved. If needed, replace
-      {namespace_id} with the project
-       *        ID.
-         * @param content the {@link com.google.api.services.run.v1.model.Configuration}
-         * @since 1.13
-         */
-        protected ReplaceConfiguration(java.lang.String name, com.google.api.services.run.v1.model.Configuration content) {
-          super(CloudRun.this, "PUT", REST_PATH, content, com.google.api.services.run.v1.model.Configuration.class);
-          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^namespaces/[^/]+/configurations/[^/]+$");
-          }
-        }
-
-        @Override
-        public ReplaceConfiguration set$Xgafv(java.lang.String $Xgafv) {
-          return (ReplaceConfiguration) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public ReplaceConfiguration setAccessToken(java.lang.String accessToken) {
-          return (ReplaceConfiguration) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public ReplaceConfiguration setAlt(java.lang.String alt) {
-          return (ReplaceConfiguration) super.setAlt(alt);
-        }
-
-        @Override
-        public ReplaceConfiguration setCallback(java.lang.String callback) {
-          return (ReplaceConfiguration) super.setCallback(callback);
-        }
-
-        @Override
-        public ReplaceConfiguration setFields(java.lang.String fields) {
-          return (ReplaceConfiguration) super.setFields(fields);
-        }
-
-        @Override
-        public ReplaceConfiguration setKey(java.lang.String key) {
-          return (ReplaceConfiguration) super.setKey(key);
-        }
-
-        @Override
-        public ReplaceConfiguration setOauthToken(java.lang.String oauthToken) {
-          return (ReplaceConfiguration) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public ReplaceConfiguration setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (ReplaceConfiguration) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public ReplaceConfiguration setQuotaUser(java.lang.String quotaUser) {
-          return (ReplaceConfiguration) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public ReplaceConfiguration setUploadType(java.lang.String uploadType) {
-          return (ReplaceConfiguration) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public ReplaceConfiguration setUploadProtocol(java.lang.String uploadProtocol) {
-          return (ReplaceConfiguration) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /**
-         * The name of the configuration being retrieved. If needed, replace {namespace_id} with the
-         * project ID.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String name;
-
-        /** The name of the configuration being retrieved. If needed, replace {namespace_id} with the project
-       ID.
-         */
-        public java.lang.String getName() {
-          return name;
-        }
-
-        /**
-         * The name of the configuration being retrieved. If needed, replace {namespace_id} with the
-         * project ID.
-         */
-        public ReplaceConfiguration setName(java.lang.String name) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^namespaces/[^/]+/configurations/[^/]+$");
-          }
-          this.name = name;
-          return this;
-        }
-
-        @Override
-        public ReplaceConfiguration set(String parameterName, Object value) {
-          return (ReplaceConfiguration) super.set(parameterName, value);
-        }
-      }
 
     }
     /**
@@ -2247,8 +825,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent The project ID or project number in which this domain mapping should be
-      created.
+       * @param parent The namespace in which the domain mapping should be created.
+      For Cloud Run (fully managed), replace
+       *        {namespace_id} with the project ID
+      or number.
        * @param content the {@link com.google.api.services.run.v1.model.DomainMapping}
        * @return the request
        */
@@ -2275,8 +855,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The project ID or project number in which this domain mapping should be
-      created.
+         * @param parent The namespace in which the domain mapping should be created.
+      For Cloud Run (fully managed), replace
+       *        {namespace_id} with the project ID
+      or number.
          * @param content the {@link com.google.api.services.run.v1.model.DomainMapping}
          * @since 1.13
          */
@@ -2346,19 +928,22 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * The project ID or project number in which this domain mapping should be created.
+         * The namespace in which the domain mapping should be created. For Cloud Run (fully
+         * managed), replace {namespace_id} with the project ID or number.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The project ID or project number in which this domain mapping should be created.
+        /** The namespace in which the domain mapping should be created. For Cloud Run (fully managed), replace
+       {namespace_id} with the project ID or number.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The project ID or project number in which this domain mapping should be created.
+         * The namespace in which the domain mapping should be created. For Cloud Run (fully
+         * managed), replace {namespace_id} with the project ID or number.
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -2383,8 +968,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the domain mapping being deleted. If needed, replace
-      {namespace_id} with the project ID.
+       * @param name The name of the domain mapping to delete.
+      For Cloud Run (fully managed), replace {namespace_id} with
+       *        the project ID
+      or number.
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -2393,7 +980,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         return result;
       }
 
-      public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status> {
+      public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.Status> {
 
         private static final String REST_PATH = "apis/domains.cloudrun.com/v1/{+name}";
 
@@ -2410,12 +997,14 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the domain mapping being deleted. If needed, replace
-      {namespace_id} with the project ID.
+         * @param name The name of the domain mapping to delete.
+      For Cloud Run (fully managed), replace {namespace_id} with
+       *        the project ID
+      or number.
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
-          super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status.class);
+          super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.Status.class);
           this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2480,22 +1069,22 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * The name of the domain mapping being deleted. If needed, replace {namespace_id} with the
-         * project ID.
+         * The name of the domain mapping to delete. For Cloud Run (fully managed), replace
+         * {namespace_id} with the project ID or number.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the domain mapping being deleted. If needed, replace {namespace_id} with the project
-       ID.
+        /** The name of the domain mapping to delete. For Cloud Run (fully managed), replace {namespace_id}
+       with the project ID or number.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The name of the domain mapping being deleted. If needed, replace {namespace_id} with the
-         * project ID.
+         * The name of the domain mapping to delete. For Cloud Run (fully managed), replace
+         * {namespace_id} with the project ID or number.
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -2578,9 +1167,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the domain mapping being retrieved. If needed, replace
-      {namespace_id} with the project
-       *        ID.
+       * @param name The name of the domain mapping to retrieve.
+      For Cloud Run (fully managed), replace {namespace_id}
+       *        with the project ID
+      or number.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -2606,9 +1196,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the domain mapping being retrieved. If needed, replace
-      {namespace_id} with the project
-       *        ID.
+         * @param name The name of the domain mapping to retrieve.
+      For Cloud Run (fully managed), replace {namespace_id}
+       *        with the project ID
+      or number.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -2687,22 +1278,22 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * The name of the domain mapping being retrieved. If needed, replace {namespace_id} with
-         * the project ID.
+         * The name of the domain mapping to retrieve. For Cloud Run (fully managed), replace
+         * {namespace_id} with the project ID or number.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the domain mapping being retrieved. If needed, replace {namespace_id} with the project
-       ID.
+        /** The name of the domain mapping to retrieve. For Cloud Run (fully managed), replace {namespace_id}
+       with the project ID or number.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The name of the domain mapping being retrieved. If needed, replace {namespace_id} with
-         * the project ID.
+         * The name of the domain mapping to retrieve. For Cloud Run (fully managed), replace
+         * {namespace_id} with the project ID or number.
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -2727,8 +1318,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent The project ID or project number from which the domain mappings should be
-      listed.
+       * @param parent The namespace from which the domain mappings should be listed.
+      For Cloud Run (fully managed),
+       *        replace {namespace_id} with the project ID
+      or number.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -2754,8 +1347,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The project ID or project number from which the domain mappings should be
-      listed.
+         * @param parent The namespace from which the domain mappings should be listed.
+      For Cloud Run (fully managed),
+       *        replace {namespace_id} with the project ID
+      or number.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -2834,19 +1429,22 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * The project ID or project number from which the domain mappings should be listed.
+         * The namespace from which the domain mappings should be listed. For Cloud Run (fully
+         * managed), replace {namespace_id} with the project ID or number.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The project ID or project number from which the domain mappings should be listed.
+        /** The namespace from which the domain mappings should be listed. For Cloud Run (fully managed),
+       replace {namespace_id} with the project ID or number.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The project ID or project number from which the domain mappings should be listed.
+         * The namespace from which the domain mappings should be listed. For Cloud Run (fully
+         * managed), replace {namespace_id} with the project ID or number.
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -3002,161 +1600,6 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return (List) super.set(parameterName, value);
         }
       }
-      /**
-       * Replace a domain mapping.
-       *
-       * Only the spec and metadata labels and annotations are modifiable. After the Update request, Cloud
-       * Run will work to make the 'status' match the requested 'spec'.
-       *
-       * May provide metadata.resourceVersion to enforce update from last read for optimistic concurrency
-       * control.
-       *
-       * Create a request for the method "domainmappings.replaceDomainMapping".
-       *
-       * This request holds the parameters needed by the run server.  After setting any optional
-       * parameters, call the {@link ReplaceDomainMapping#execute()} method to invoke the remote
-       * operation.
-       *
-       * @param name The name of the domain mapping being retrieved. If needed, replace
-      {namespace_id} with the project
-       *        ID.
-       * @param content the {@link com.google.api.services.run.v1.model.DomainMapping}
-       * @return the request
-       */
-      public ReplaceDomainMapping replaceDomainMapping(java.lang.String name, com.google.api.services.run.v1.model.DomainMapping content) throws java.io.IOException {
-        ReplaceDomainMapping result = new ReplaceDomainMapping(name, content);
-        initialize(result);
-        return result;
-      }
-
-      public class ReplaceDomainMapping extends CloudRunRequest<com.google.api.services.run.v1.model.DomainMapping> {
-
-        private static final String REST_PATH = "apis/domains.cloudrun.com/v1/{+name}";
-
-        private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^namespaces/[^/]+/domainmappings/[^/]+$");
-
-        /**
-         * Replace a domain mapping.
-         *
-         * Only the spec and metadata labels and annotations are modifiable. After the Update request,
-         * Cloud Run will work to make the 'status' match the requested 'spec'.
-         *
-         * May provide metadata.resourceVersion to enforce update from last read for optimistic
-         * concurrency control.
-         *
-         * Create a request for the method "domainmappings.replaceDomainMapping".
-         *
-         * This request holds the parameters needed by the the run server.  After setting any optional
-         * parameters, call the {@link ReplaceDomainMapping#execute()} method to invoke the remote
-         * operation. <p> {@link ReplaceDomainMapping#initialize(com.google.api.client.googleapis.services
-         * .AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
-         * invoking the constructor. </p>
-         *
-         * @param name The name of the domain mapping being retrieved. If needed, replace
-      {namespace_id} with the project
-       *        ID.
-         * @param content the {@link com.google.api.services.run.v1.model.DomainMapping}
-         * @since 1.13
-         */
-        protected ReplaceDomainMapping(java.lang.String name, com.google.api.services.run.v1.model.DomainMapping content) {
-          super(CloudRun.this, "PUT", REST_PATH, content, com.google.api.services.run.v1.model.DomainMapping.class);
-          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^namespaces/[^/]+/domainmappings/[^/]+$");
-          }
-        }
-
-        @Override
-        public ReplaceDomainMapping set$Xgafv(java.lang.String $Xgafv) {
-          return (ReplaceDomainMapping) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public ReplaceDomainMapping setAccessToken(java.lang.String accessToken) {
-          return (ReplaceDomainMapping) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public ReplaceDomainMapping setAlt(java.lang.String alt) {
-          return (ReplaceDomainMapping) super.setAlt(alt);
-        }
-
-        @Override
-        public ReplaceDomainMapping setCallback(java.lang.String callback) {
-          return (ReplaceDomainMapping) super.setCallback(callback);
-        }
-
-        @Override
-        public ReplaceDomainMapping setFields(java.lang.String fields) {
-          return (ReplaceDomainMapping) super.setFields(fields);
-        }
-
-        @Override
-        public ReplaceDomainMapping setKey(java.lang.String key) {
-          return (ReplaceDomainMapping) super.setKey(key);
-        }
-
-        @Override
-        public ReplaceDomainMapping setOauthToken(java.lang.String oauthToken) {
-          return (ReplaceDomainMapping) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public ReplaceDomainMapping setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (ReplaceDomainMapping) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public ReplaceDomainMapping setQuotaUser(java.lang.String quotaUser) {
-          return (ReplaceDomainMapping) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public ReplaceDomainMapping setUploadType(java.lang.String uploadType) {
-          return (ReplaceDomainMapping) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public ReplaceDomainMapping setUploadProtocol(java.lang.String uploadProtocol) {
-          return (ReplaceDomainMapping) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /**
-         * The name of the domain mapping being retrieved. If needed, replace {namespace_id} with
-         * the project ID.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String name;
-
-        /** The name of the domain mapping being retrieved. If needed, replace {namespace_id} with the project
-       ID.
-         */
-        public java.lang.String getName() {
-          return name;
-        }
-
-        /**
-         * The name of the domain mapping being retrieved. If needed, replace {namespace_id} with
-         * the project ID.
-         */
-        public ReplaceDomainMapping setName(java.lang.String name) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^namespaces/[^/]+/domainmappings/[^/]+$");
-          }
-          this.name = name;
-          return this;
-        }
-
-        @Override
-        public ReplaceDomainMapping set(String parameterName, Object value) {
-          return (ReplaceDomainMapping) super.set(parameterName, value);
-        }
-      }
 
     }
     /**
@@ -3187,8 +1630,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the revision being deleted. If needed, replace
-      {namespace_id} with the project ID.
+       * @param name The name of the revision to delete.
+      For Cloud Run (fully managed), replace {namespace_id} with the
+       *        project ID
+      or number.
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -3197,7 +1642,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         return result;
       }
 
-      public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status> {
+      public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.Status> {
 
         private static final String REST_PATH = "apis/serving.knative.dev/v1/{+name}";
 
@@ -3214,12 +1659,14 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the revision being deleted. If needed, replace
-      {namespace_id} with the project ID.
+         * @param name The name of the revision to delete.
+      For Cloud Run (fully managed), replace {namespace_id} with the
+       *        project ID
+      or number.
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
-          super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status.class);
+          super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.Status.class);
           this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3284,21 +1731,22 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * The name of the revision being deleted. If needed, replace {namespace_id} with the
-         * project ID.
+         * The name of the revision to delete. For Cloud Run (fully managed), replace {namespace_id}
+         * with the project ID or number.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the revision being deleted. If needed, replace {namespace_id} with the project ID.
+        /** The name of the revision to delete. For Cloud Run (fully managed), replace {namespace_id} with the
+       project ID or number.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The name of the revision being deleted. If needed, replace {namespace_id} with the
-         * project ID.
+         * The name of the revision to delete. For Cloud Run (fully managed), replace {namespace_id}
+         * with the project ID or number.
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -3381,8 +1829,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the revision being retrieved. If needed, replace
-      {namespace_id} with the project ID.
+       * @param name The name of the revision to retrieve.
+      For Cloud Run (fully managed), replace {namespace_id} with the
+       *        project ID
+      or number.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -3408,8 +1858,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the revision being retrieved. If needed, replace
-      {namespace_id} with the project ID.
+         * @param name The name of the revision to retrieve.
+      For Cloud Run (fully managed), replace {namespace_id} with the
+       *        project ID
+      or number.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -3488,21 +1940,22 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * The name of the revision being retrieved. If needed, replace {namespace_id} with the
-         * project ID.
+         * The name of the revision to retrieve. For Cloud Run (fully managed), replace
+         * {namespace_id} with the project ID or number.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the revision being retrieved. If needed, replace {namespace_id} with the project ID.
+        /** The name of the revision to retrieve. For Cloud Run (fully managed), replace {namespace_id} with
+       the project ID or number.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The name of the revision being retrieved. If needed, replace {namespace_id} with the
-         * project ID.
+         * The name of the revision to retrieve. For Cloud Run (fully managed), replace
+         * {namespace_id} with the project ID or number.
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -3527,7 +1980,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent The project ID or project number from which the revisions should be listed.
+       * @param parent The namespace from which the revisions should be listed.
+      For Cloud Run (fully managed), replace
+       *        {namespace_id} with the project ID
+      or number.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -3553,7 +2009,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The project ID or project number from which the revisions should be listed.
+         * @param parent The namespace from which the revisions should be listed.
+      For Cloud Run (fully managed), replace
+       *        {namespace_id} with the project ID
+      or number.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -3631,17 +2090,24 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** The project ID or project number from which the revisions should be listed. */
+        /**
+         * The namespace from which the revisions should be listed. For Cloud Run (fully managed),
+         * replace {namespace_id} with the project ID or number.
+         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The project ID or project number from which the revisions should be listed.
+        /** The namespace from which the revisions should be listed. For Cloud Run (fully managed), replace
+       {namespace_id} with the project ID or number.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** The project ID or project number from which the revisions should be listed. */
+        /**
+         * The namespace from which the revisions should be listed. For Cloud Run (fully managed),
+         * replace {namespace_id} with the project ID or number.
+         */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -3819,330 +2285,6 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
     public class Routes {
 
       /**
-       * Create a route.
-       *
-       * Create a request for the method "routes.create".
-       *
-       * This request holds the parameters needed by the run server.  After setting any optional
-       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
-       *
-       * @param parent The project ID or project number in which this route should be created.
-       * @param content the {@link com.google.api.services.run.v1.model.Route}
-       * @return the request
-       */
-      public Create create(java.lang.String parent, com.google.api.services.run.v1.model.Route content) throws java.io.IOException {
-        Create result = new Create(parent, content);
-        initialize(result);
-        return result;
-      }
-
-      public class Create extends CloudRunRequest<com.google.api.services.run.v1.model.Route> {
-
-        private static final String REST_PATH = "apis/serving.knative.dev/v1/{+parent}/routes";
-
-        private final java.util.regex.Pattern PARENT_PATTERN =
-            java.util.regex.Pattern.compile("^namespaces/[^/]+$");
-
-        /**
-         * Create a route.
-         *
-         * Create a request for the method "routes.create".
-         *
-         * This request holds the parameters needed by the the run server.  After setting any optional
-         * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
-         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-         * be called to initialize this instance immediately after invoking the constructor. </p>
-         *
-         * @param parent The project ID or project number in which this route should be created.
-         * @param content the {@link com.google.api.services.run.v1.model.Route}
-         * @since 1.13
-         */
-        protected Create(java.lang.String parent, com.google.api.services.run.v1.model.Route content) {
-          super(CloudRun.this, "POST", REST_PATH, content, com.google.api.services.run.v1.model.Route.class);
-          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                "Parameter parent must conform to the pattern " +
-                "^namespaces/[^/]+$");
-          }
-        }
-
-        @Override
-        public Create set$Xgafv(java.lang.String $Xgafv) {
-          return (Create) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public Create setAccessToken(java.lang.String accessToken) {
-          return (Create) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public Create setAlt(java.lang.String alt) {
-          return (Create) super.setAlt(alt);
-        }
-
-        @Override
-        public Create setCallback(java.lang.String callback) {
-          return (Create) super.setCallback(callback);
-        }
-
-        @Override
-        public Create setFields(java.lang.String fields) {
-          return (Create) super.setFields(fields);
-        }
-
-        @Override
-        public Create setKey(java.lang.String key) {
-          return (Create) super.setKey(key);
-        }
-
-        @Override
-        public Create setOauthToken(java.lang.String oauthToken) {
-          return (Create) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (Create) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public Create setQuotaUser(java.lang.String quotaUser) {
-          return (Create) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public Create setUploadType(java.lang.String uploadType) {
-          return (Create) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public Create setUploadProtocol(java.lang.String uploadProtocol) {
-          return (Create) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /** The project ID or project number in which this route should be created. */
-        @com.google.api.client.util.Key
-        private java.lang.String parent;
-
-        /** The project ID or project number in which this route should be created.
-         */
-        public java.lang.String getParent() {
-          return parent;
-        }
-
-        /** The project ID or project number in which this route should be created. */
-        public Create setParent(java.lang.String parent) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                "Parameter parent must conform to the pattern " +
-                "^namespaces/[^/]+$");
-          }
-          this.parent = parent;
-          return this;
-        }
-
-        @Override
-        public Create set(String parameterName, Object value) {
-          return (Create) super.set(parameterName, value);
-        }
-      }
-      /**
-       * Delete a route. This will cause the route to stop serving traffic.
-       *
-       * Create a request for the method "routes.delete".
-       *
-       * This request holds the parameters needed by the run server.  After setting any optional
-       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
-       *
-       * @param name The name of the route being deleted. If needed, replace
-      {namespace_id} with the project ID.
-       * @return the request
-       */
-      public Delete delete(java.lang.String name) throws java.io.IOException {
-        Delete result = new Delete(name);
-        initialize(result);
-        return result;
-      }
-
-      public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status> {
-
-        private static final String REST_PATH = "apis/serving.knative.dev/v1/{+name}";
-
-        private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^namespaces/[^/]+/routes/[^/]+$");
-
-        /**
-         * Delete a route. This will cause the route to stop serving traffic.
-         *
-         * Create a request for the method "routes.delete".
-         *
-         * This request holds the parameters needed by the the run server.  After setting any optional
-         * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
-         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-         * be called to initialize this instance immediately after invoking the constructor. </p>
-         *
-         * @param name The name of the route being deleted. If needed, replace
-      {namespace_id} with the project ID.
-         * @since 1.13
-         */
-        protected Delete(java.lang.String name) {
-          super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status.class);
-          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^namespaces/[^/]+/routes/[^/]+$");
-          }
-        }
-
-        @Override
-        public Delete set$Xgafv(java.lang.String $Xgafv) {
-          return (Delete) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public Delete setAccessToken(java.lang.String accessToken) {
-          return (Delete) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public Delete setAlt(java.lang.String alt) {
-          return (Delete) super.setAlt(alt);
-        }
-
-        @Override
-        public Delete setCallback(java.lang.String callback) {
-          return (Delete) super.setCallback(callback);
-        }
-
-        @Override
-        public Delete setFields(java.lang.String fields) {
-          return (Delete) super.setFields(fields);
-        }
-
-        @Override
-        public Delete setKey(java.lang.String key) {
-          return (Delete) super.setKey(key);
-        }
-
-        @Override
-        public Delete setOauthToken(java.lang.String oauthToken) {
-          return (Delete) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (Delete) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public Delete setQuotaUser(java.lang.String quotaUser) {
-          return (Delete) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public Delete setUploadType(java.lang.String uploadType) {
-          return (Delete) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
-          return (Delete) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /**
-         * The name of the route being deleted. If needed, replace {namespace_id} with the project
-         * ID.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String name;
-
-        /** The name of the route being deleted. If needed, replace {namespace_id} with the project ID.
-         */
-        public java.lang.String getName() {
-          return name;
-        }
-
-        /**
-         * The name of the route being deleted. If needed, replace {namespace_id} with the project
-         * ID.
-         */
-        public Delete setName(java.lang.String name) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^namespaces/[^/]+/routes/[^/]+$");
-          }
-          this.name = name;
-          return this;
-        }
-
-        /** Cloud Run currently ignores this parameter. */
-        @com.google.api.client.util.Key
-        private java.lang.String apiVersion;
-
-        /** Cloud Run currently ignores this parameter.
-         */
-        public java.lang.String getApiVersion() {
-          return apiVersion;
-        }
-
-        /** Cloud Run currently ignores this parameter. */
-        public Delete setApiVersion(java.lang.String apiVersion) {
-          this.apiVersion = apiVersion;
-          return this;
-        }
-
-        /** Cloud Run currently ignores this parameter. */
-        @com.google.api.client.util.Key
-        private java.lang.String kind;
-
-        /** Cloud Run currently ignores this parameter.
-         */
-        public java.lang.String getKind() {
-          return kind;
-        }
-
-        /** Cloud Run currently ignores this parameter. */
-        public Delete setKind(java.lang.String kind) {
-          this.kind = kind;
-          return this;
-        }
-
-        /**
-         * Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and
-         * deletes in the background. Please see kubernetes.io/docs/concepts/workloads/controllers
-         * /garbage-collection/ for more information.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String propagationPolicy;
-
-        /** Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and deletes
-       in the background. Please see kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/
-       for more information.
-         */
-        public java.lang.String getPropagationPolicy() {
-          return propagationPolicy;
-        }
-
-        /**
-         * Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and
-         * deletes in the background. Please see kubernetes.io/docs/concepts/workloads/controllers
-         * /garbage-collection/ for more information.
-         */
-        public Delete setPropagationPolicy(java.lang.String propagationPolicy) {
-          this.propagationPolicy = propagationPolicy;
-          return this;
-        }
-
-        @Override
-        public Delete set(String parameterName, Object value) {
-          return (Delete) super.set(parameterName, value);
-        }
-      }
-      /**
        * Get information about a route.
        *
        * Create a request for the method "routes.get".
@@ -4150,8 +2292,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the route being retrieved. If needed, replace
-      {namespace_id} with the project ID.
+       * @param name The name of the route to retrieve.
+      For Cloud Run (fully managed), replace {namespace_id} with the
+       *        project ID
+      or number.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -4177,8 +2321,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the route being retrieved. If needed, replace
-      {namespace_id} with the project ID.
+         * @param name The name of the route to retrieve.
+      For Cloud Run (fully managed), replace {namespace_id} with the
+       *        project ID
+      or number.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -4257,21 +2403,22 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * The name of the route being retrieved. If needed, replace {namespace_id} with the project
-         * ID.
+         * The name of the route to retrieve. For Cloud Run (fully managed), replace {namespace_id}
+         * with the project ID or number.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the route being retrieved. If needed, replace {namespace_id} with the project ID.
+        /** The name of the route to retrieve. For Cloud Run (fully managed), replace {namespace_id} with the
+       project ID or number.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The name of the route being retrieved. If needed, replace {namespace_id} with the project
-         * ID.
+         * The name of the route to retrieve. For Cloud Run (fully managed), replace {namespace_id}
+         * with the project ID or number.
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -4296,7 +2443,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent The project ID or project number from which the routes should be listed.
+       * @param parent The namespace from which the routes should be listed.
+      For Cloud Run (fully managed), replace
+       *        {namespace_id} with the project ID
+      or number.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -4322,7 +2472,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The project ID or project number from which the routes should be listed.
+         * @param parent The namespace from which the routes should be listed.
+      For Cloud Run (fully managed), replace
+       *        {namespace_id} with the project ID
+      or number.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -4400,17 +2553,24 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** The project ID or project number from which the routes should be listed. */
+        /**
+         * The namespace from which the routes should be listed. For Cloud Run (fully managed),
+         * replace {namespace_id} with the project ID or number.
+         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The project ID or project number from which the routes should be listed.
+        /** The namespace from which the routes should be listed. For Cloud Run (fully managed), replace
+       {namespace_id} with the project ID or number.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** The project ID or project number from which the routes should be listed. */
+        /**
+         * The namespace from which the routes should be listed. For Cloud Run (fully managed),
+         * replace {namespace_id} with the project ID or number.
+         */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -4565,157 +2725,6 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return (List) super.set(parameterName, value);
         }
       }
-      /**
-       * Replace a route.
-       *
-       * Only the spec and metadata labels and annotations are modifiable. After the Update request, Cloud
-       * Run will work to make the 'status' match the requested 'spec'.
-       *
-       * May provide metadata.resourceVersion to enforce update from last read for optimistic concurrency
-       * control.
-       *
-       * Create a request for the method "routes.replaceRoute".
-       *
-       * This request holds the parameters needed by the run server.  After setting any optional
-       * parameters, call the {@link ReplaceRoute#execute()} method to invoke the remote operation.
-       *
-       * @param name The name of the route being replaced. If needed, replace
-      {namespace_id} with the project ID.
-       * @param content the {@link com.google.api.services.run.v1.model.Route}
-       * @return the request
-       */
-      public ReplaceRoute replaceRoute(java.lang.String name, com.google.api.services.run.v1.model.Route content) throws java.io.IOException {
-        ReplaceRoute result = new ReplaceRoute(name, content);
-        initialize(result);
-        return result;
-      }
-
-      public class ReplaceRoute extends CloudRunRequest<com.google.api.services.run.v1.model.Route> {
-
-        private static final String REST_PATH = "apis/serving.knative.dev/v1/{+name}";
-
-        private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^namespaces/[^/]+/routes/[^/]+$");
-
-        /**
-         * Replace a route.
-         *
-         * Only the spec and metadata labels and annotations are modifiable. After the Update request,
-         * Cloud Run will work to make the 'status' match the requested 'spec'.
-         *
-         * May provide metadata.resourceVersion to enforce update from last read for optimistic
-         * concurrency control.
-         *
-         * Create a request for the method "routes.replaceRoute".
-         *
-         * This request holds the parameters needed by the the run server.  After setting any optional
-         * parameters, call the {@link ReplaceRoute#execute()} method to invoke the remote operation. <p>
-         * {@link
-         * ReplaceRoute#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-         * must be called to initialize this instance immediately after invoking the constructor. </p>
-         *
-         * @param name The name of the route being replaced. If needed, replace
-      {namespace_id} with the project ID.
-         * @param content the {@link com.google.api.services.run.v1.model.Route}
-         * @since 1.13
-         */
-        protected ReplaceRoute(java.lang.String name, com.google.api.services.run.v1.model.Route content) {
-          super(CloudRun.this, "PUT", REST_PATH, content, com.google.api.services.run.v1.model.Route.class);
-          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^namespaces/[^/]+/routes/[^/]+$");
-          }
-        }
-
-        @Override
-        public ReplaceRoute set$Xgafv(java.lang.String $Xgafv) {
-          return (ReplaceRoute) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public ReplaceRoute setAccessToken(java.lang.String accessToken) {
-          return (ReplaceRoute) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public ReplaceRoute setAlt(java.lang.String alt) {
-          return (ReplaceRoute) super.setAlt(alt);
-        }
-
-        @Override
-        public ReplaceRoute setCallback(java.lang.String callback) {
-          return (ReplaceRoute) super.setCallback(callback);
-        }
-
-        @Override
-        public ReplaceRoute setFields(java.lang.String fields) {
-          return (ReplaceRoute) super.setFields(fields);
-        }
-
-        @Override
-        public ReplaceRoute setKey(java.lang.String key) {
-          return (ReplaceRoute) super.setKey(key);
-        }
-
-        @Override
-        public ReplaceRoute setOauthToken(java.lang.String oauthToken) {
-          return (ReplaceRoute) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public ReplaceRoute setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (ReplaceRoute) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public ReplaceRoute setQuotaUser(java.lang.String quotaUser) {
-          return (ReplaceRoute) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public ReplaceRoute setUploadType(java.lang.String uploadType) {
-          return (ReplaceRoute) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public ReplaceRoute setUploadProtocol(java.lang.String uploadProtocol) {
-          return (ReplaceRoute) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /**
-         * The name of the route being replaced. If needed, replace {namespace_id} with the project
-         * ID.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String name;
-
-        /** The name of the route being replaced. If needed, replace {namespace_id} with the project ID.
-         */
-        public java.lang.String getName() {
-          return name;
-        }
-
-        /**
-         * The name of the route being replaced. If needed, replace {namespace_id} with the project
-         * ID.
-         */
-        public ReplaceRoute setName(java.lang.String name) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^namespaces/[^/]+/routes/[^/]+$");
-          }
-          this.name = name;
-          return this;
-        }
-
-        @Override
-        public ReplaceRoute set(String parameterName, Object value) {
-          return (ReplaceRoute) super.set(parameterName, value);
-        }
-      }
 
     }
     /**
@@ -4746,7 +2755,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent The project ID or project number in which this service should be created.
+       * @param parent The namespace in which the service should be created.
+      For Cloud Run (fully managed), replace
+       *        {namespace_id} with the project ID
+      or number.
        * @param content the {@link com.google.api.services.run.v1.model.Service}
        * @return the request
        */
@@ -4773,7 +2785,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The project ID or project number in which this service should be created.
+         * @param parent The namespace in which the service should be created.
+      For Cloud Run (fully managed), replace
+       *        {namespace_id} with the project ID
+      or number.
          * @param content the {@link com.google.api.services.run.v1.model.Service}
          * @since 1.13
          */
@@ -4842,17 +2857,24 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** The project ID or project number in which this service should be created. */
+        /**
+         * The namespace in which the service should be created. For Cloud Run (fully managed),
+         * replace {namespace_id} with the project ID or number.
+         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The project ID or project number in which this service should be created.
+        /** The namespace in which the service should be created. For Cloud Run (fully managed), replace
+       {namespace_id} with the project ID or number.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** The project ID or project number in which this service should be created. */
+        /**
+         * The namespace in which the service should be created. For Cloud Run (fully managed),
+         * replace {namespace_id} with the project ID or number.
+         */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -4877,8 +2899,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the service being deleted. If needed, replace
-      {namespace_id} with the project ID.
+       * @param name The name of the service to delete.
+      For Cloud Run (fully managed), replace {namespace_id} with the
+       *        project ID
+      or number.
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -4887,7 +2911,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         return result;
       }
 
-      public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status> {
+      public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.Status> {
 
         private static final String REST_PATH = "apis/serving.knative.dev/v1/{+name}";
 
@@ -4905,12 +2929,14 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the service being deleted. If needed, replace
-      {namespace_id} with the project ID.
+         * @param name The name of the service to delete.
+      For Cloud Run (fully managed), replace {namespace_id} with the
+       *        project ID
+      or number.
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
-          super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status.class);
+          super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.Status.class);
           this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4975,21 +3001,22 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * The name of the service being deleted. If needed, replace {namespace_id} with the project
-         * ID.
+         * The name of the service to delete. For Cloud Run (fully managed), replace {namespace_id}
+         * with the project ID or number.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the service being deleted. If needed, replace {namespace_id} with the project ID.
+        /** The name of the service to delete. For Cloud Run (fully managed), replace {namespace_id} with the
+       project ID or number.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The name of the service being deleted. If needed, replace {namespace_id} with the project
-         * ID.
+         * The name of the service to delete. For Cloud Run (fully managed), replace {namespace_id}
+         * with the project ID or number.
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -5072,8 +3099,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the service being retrieved. If needed, replace
-      {namespace_id} with the project ID.
+       * @param name The name of the service to retrieve.
+      For Cloud Run (fully managed), replace {namespace_id} with the
+       *        project ID
+      or number.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -5099,8 +3128,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the service being retrieved. If needed, replace
-      {namespace_id} with the project ID.
+         * @param name The name of the service to retrieve.
+      For Cloud Run (fully managed), replace {namespace_id} with the
+       *        project ID
+      or number.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -5179,21 +3210,22 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * The name of the service being retrieved. If needed, replace {namespace_id} with the
-         * project ID.
+         * The name of the service to retrieve. For Cloud Run (fully managed), replace
+         * {namespace_id} with the project ID or number.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the service being retrieved. If needed, replace {namespace_id} with the project ID.
+        /** The name of the service to retrieve. For Cloud Run (fully managed), replace {namespace_id} with the
+       project ID or number.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The name of the service being retrieved. If needed, replace {namespace_id} with the
-         * project ID.
+         * The name of the service to retrieve. For Cloud Run (fully managed), replace
+         * {namespace_id} with the project ID or number.
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -5218,7 +3250,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent The project ID or project number from which the services should be listed.
+       * @param parent The namespace from which the services should be listed.
+      For Cloud Run (fully managed), replace
+       *        {namespace_id} with the project ID
+      or number.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -5244,7 +3279,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The project ID or project number from which the services should be listed.
+         * @param parent The namespace from which the services should be listed.
+      For Cloud Run (fully managed), replace
+       *        {namespace_id} with the project ID
+      or number.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -5322,17 +3360,24 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** The project ID or project number from which the services should be listed. */
+        /**
+         * The namespace from which the services should be listed. For Cloud Run (fully managed),
+         * replace {namespace_id} with the project ID or number.
+         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The project ID or project number from which the services should be listed.
+        /** The namespace from which the services should be listed. For Cloud Run (fully managed), replace
+       {namespace_id} with the project ID or number.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** The project ID or project number from which the services should be listed. */
+        /**
+         * The namespace from which the services should be listed. For Cloud Run (fully managed),
+         * replace {namespace_id} with the project ID or number.
+         */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -5501,8 +3546,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link ReplaceService#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the service being replaced. If needed, replace
-      {namespace_id} with the project ID.
+       * @param name The name of the service being replaced.
+      For Cloud Run (fully managed), replace {namespace_id} with
+       *        the project ID
+      or number.
        * @param content the {@link com.google.api.services.run.v1.model.Service}
        * @return the request
        */
@@ -5536,8 +3583,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * ientRequest)} must be called to initialize this instance immediately after invoking the
          * constructor. </p>
          *
-         * @param name The name of the service being replaced. If needed, replace
-      {namespace_id} with the project ID.
+         * @param name The name of the service being replaced.
+      For Cloud Run (fully managed), replace {namespace_id} with
+       *        the project ID
+      or number.
          * @param content the {@link com.google.api.services.run.v1.model.Service}
          * @since 1.13
          */
@@ -5607,21 +3656,22 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * The name of the service being replaced. If needed, replace {namespace_id} with the
-         * project ID.
+         * The name of the service being replaced. For Cloud Run (fully managed), replace
+         * {namespace_id} with the project ID or number.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the service being replaced. If needed, replace {namespace_id} with the project ID.
+        /** The name of the service being replaced. For Cloud Run (fully managed), replace {namespace_id} with
+       the project ID or number.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The name of the service being replaced. If needed, replace {namespace_id} with the
-         * project ID.
+         * The name of the service being replaced. For Cloud Run (fully managed), replace
+         * {namespace_id} with the project ID or number.
          */
         public ReplaceService setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -6200,950 +4250,6 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
       }
       /**
-       * An accessor for creating requests from the Autodomainmappings collection.
-       *
-       * <p>The typical use is:</p>
-       * <pre>
-       *   {@code CloudRun run = new CloudRun(...);}
-       *   {@code CloudRun.Autodomainmappings.List request = run.autodomainmappings().list(parameters ...)}
-       * </pre>
-       *
-       * @return the resource collection
-       */
-      public Autodomainmappings autodomainmappings() {
-        return new Autodomainmappings();
-      }
-
-      /**
-       * The "autodomainmappings" collection of methods.
-       */
-      public class Autodomainmappings {
-
-        /**
-         * Creates a new auto domain mapping.
-         *
-         * Create a request for the method "autodomainmappings.create".
-         *
-         * This request holds the parameters needed by the run server.  After setting any optional
-         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
-         *
-         * @param parent The project ID or project number in which this auto domain mapping should
-        be created.
-         * @param content the {@link com.google.api.services.run.v1.model.AutoDomainMapping}
-         * @return the request
-         */
-        public Create create(java.lang.String parent, com.google.api.services.run.v1.model.AutoDomainMapping content) throws java.io.IOException {
-          Create result = new Create(parent, content);
-          initialize(result);
-          return result;
-        }
-
-        public class Create extends CloudRunRequest<com.google.api.services.run.v1.model.AutoDomainMapping> {
-
-          private static final String REST_PATH = "v1/{+parent}/autodomainmappings";
-
-          private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
-
-          /**
-           * Creates a new auto domain mapping.
-           *
-           * Create a request for the method "autodomainmappings.create".
-           *
-           * This request holds the parameters needed by the the run server.  After setting any optional
-           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
-           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-           * be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param parent The project ID or project number in which this auto domain mapping should
-        be created.
-           * @param content the {@link com.google.api.services.run.v1.model.AutoDomainMapping}
-           * @since 1.13
-           */
-          protected Create(java.lang.String parent, com.google.api.services.run.v1.model.AutoDomainMapping content) {
-            super(CloudRun.this, "POST", REST_PATH, content, com.google.api.services.run.v1.model.AutoDomainMapping.class);
-            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+$");
-            }
-          }
-
-          @Override
-          public Create set$Xgafv(java.lang.String $Xgafv) {
-            return (Create) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public Create setAccessToken(java.lang.String accessToken) {
-            return (Create) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public Create setAlt(java.lang.String alt) {
-            return (Create) super.setAlt(alt);
-          }
-
-          @Override
-          public Create setCallback(java.lang.String callback) {
-            return (Create) super.setCallback(callback);
-          }
-
-          @Override
-          public Create setFields(java.lang.String fields) {
-            return (Create) super.setFields(fields);
-          }
-
-          @Override
-          public Create setKey(java.lang.String key) {
-            return (Create) super.setKey(key);
-          }
-
-          @Override
-          public Create setOauthToken(java.lang.String oauthToken) {
-            return (Create) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (Create) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public Create setQuotaUser(java.lang.String quotaUser) {
-            return (Create) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public Create setUploadType(java.lang.String uploadType) {
-            return (Create) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public Create setUploadProtocol(java.lang.String uploadProtocol) {
-            return (Create) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * The project ID or project number in which this auto domain mapping should be created.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String parent;
-
-          /** The project ID or project number in which this auto domain mapping should be created.
-           */
-          public java.lang.String getParent() {
-            return parent;
-          }
-
-          /**
-           * The project ID or project number in which this auto domain mapping should be created.
-           */
-          public Create setParent(java.lang.String parent) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+$");
-            }
-            this.parent = parent;
-            return this;
-          }
-
-          @Override
-          public Create set(String parameterName, Object value) {
-            return (Create) super.set(parameterName, value);
-          }
-        }
-        /**
-         * Delete an auto domain mapping.
-         *
-         * Create a request for the method "autodomainmappings.delete".
-         *
-         * This request holds the parameters needed by the run server.  After setting any optional
-         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
-         *
-         * @param name The name of the auto domain mapping being deleted. If needed, replace
-        {namespace_id} with the
-         *        project ID.
-         * @return the request
-         */
-        public Delete delete(java.lang.String name) throws java.io.IOException {
-          Delete result = new Delete(name);
-          initialize(result);
-          return result;
-        }
-
-        public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status> {
-
-          private static final String REST_PATH = "v1/{+name}";
-
-          private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/autodomainmappings/[^/]+$");
-
-          /**
-           * Delete an auto domain mapping.
-           *
-           * Create a request for the method "autodomainmappings.delete".
-           *
-           * This request holds the parameters needed by the the run server.  After setting any optional
-           * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
-           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-           * be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param name The name of the auto domain mapping being deleted. If needed, replace
-        {namespace_id} with the
-         *        project ID.
-           * @since 1.13
-           */
-          protected Delete(java.lang.String name) {
-            super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status.class);
-            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/autodomainmappings/[^/]+$");
-            }
-          }
-
-          @Override
-          public Delete set$Xgafv(java.lang.String $Xgafv) {
-            return (Delete) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public Delete setAccessToken(java.lang.String accessToken) {
-            return (Delete) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public Delete setAlt(java.lang.String alt) {
-            return (Delete) super.setAlt(alt);
-          }
-
-          @Override
-          public Delete setCallback(java.lang.String callback) {
-            return (Delete) super.setCallback(callback);
-          }
-
-          @Override
-          public Delete setFields(java.lang.String fields) {
-            return (Delete) super.setFields(fields);
-          }
-
-          @Override
-          public Delete setKey(java.lang.String key) {
-            return (Delete) super.setKey(key);
-          }
-
-          @Override
-          public Delete setOauthToken(java.lang.String oauthToken) {
-            return (Delete) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (Delete) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public Delete setQuotaUser(java.lang.String quotaUser) {
-            return (Delete) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public Delete setUploadType(java.lang.String uploadType) {
-            return (Delete) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
-            return (Delete) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * The name of the auto domain mapping being deleted. If needed, replace {namespace_id}
-           * with the project ID.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String name;
-
-          /** The name of the auto domain mapping being deleted. If needed, replace {namespace_id} with the
-         project ID.
-           */
-          public java.lang.String getName() {
-            return name;
-          }
-
-          /**
-           * The name of the auto domain mapping being deleted. If needed, replace {namespace_id}
-           * with the project ID.
-           */
-          public Delete setName(java.lang.String name) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/autodomainmappings/[^/]+$");
-            }
-            this.name = name;
-            return this;
-          }
-
-          /** Cloud Run currently ignores this parameter. */
-          @com.google.api.client.util.Key
-          private java.lang.String apiVersion;
-
-          /** Cloud Run currently ignores this parameter.
-           */
-          public java.lang.String getApiVersion() {
-            return apiVersion;
-          }
-
-          /** Cloud Run currently ignores this parameter. */
-          public Delete setApiVersion(java.lang.String apiVersion) {
-            this.apiVersion = apiVersion;
-            return this;
-          }
-
-          /** Cloud Run currently ignores this parameter. */
-          @com.google.api.client.util.Key
-          private java.lang.String kind;
-
-          /** Cloud Run currently ignores this parameter.
-           */
-          public java.lang.String getKind() {
-            return kind;
-          }
-
-          /** Cloud Run currently ignores this parameter. */
-          public Delete setKind(java.lang.String kind) {
-            this.kind = kind;
-            return this;
-          }
-
-          /**
-           * Specifies the propagation policy of delete. Cloud Run currently ignores this setting,
-           * and deletes in the background. Please see
-           * kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/ for more
-           * information.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String propagationPolicy;
-
-          /** Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and deletes
-         in the background. Please see kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/
-         for more information.
-           */
-          public java.lang.String getPropagationPolicy() {
-            return propagationPolicy;
-          }
-
-          /**
-           * Specifies the propagation policy of delete. Cloud Run currently ignores this setting,
-           * and deletes in the background. Please see
-           * kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/ for more
-           * information.
-           */
-          public Delete setPropagationPolicy(java.lang.String propagationPolicy) {
-            this.propagationPolicy = propagationPolicy;
-            return this;
-          }
-
-          @Override
-          public Delete set(String parameterName, Object value) {
-            return (Delete) super.set(parameterName, value);
-          }
-        }
-        /**
-         * Get information about an auto domain mapping.
-         *
-         * Create a request for the method "autodomainmappings.get".
-         *
-         * This request holds the parameters needed by the run server.  After setting any optional
-         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
-         *
-         * @param name The name of the auto domain mapping being retrieved. If needed, replace
-        {namespace_id} with the
-         *        project ID.
-         * @return the request
-         */
-        public Get get(java.lang.String name) throws java.io.IOException {
-          Get result = new Get(name);
-          initialize(result);
-          return result;
-        }
-
-        public class Get extends CloudRunRequest<com.google.api.services.run.v1.model.AutoDomainMapping> {
-
-          private static final String REST_PATH = "v1/{+name}";
-
-          private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/autodomainmappings/[^/]+$");
-
-          /**
-           * Get information about an auto domain mapping.
-           *
-           * Create a request for the method "autodomainmappings.get".
-           *
-           * This request holds the parameters needed by the the run server.  After setting any optional
-           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
-           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
-           * called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param name The name of the auto domain mapping being retrieved. If needed, replace
-        {namespace_id} with the
-         *        project ID.
-           * @since 1.13
-           */
-          protected Get(java.lang.String name) {
-            super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v1.model.AutoDomainMapping.class);
-            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/autodomainmappings/[^/]+$");
-            }
-          }
-
-          @Override
-          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-            return super.executeUsingHead();
-          }
-
-          @Override
-          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-            return super.buildHttpRequestUsingHead();
-          }
-
-          @Override
-          public Get set$Xgafv(java.lang.String $Xgafv) {
-            return (Get) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public Get setAccessToken(java.lang.String accessToken) {
-            return (Get) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public Get setAlt(java.lang.String alt) {
-            return (Get) super.setAlt(alt);
-          }
-
-          @Override
-          public Get setCallback(java.lang.String callback) {
-            return (Get) super.setCallback(callback);
-          }
-
-          @Override
-          public Get setFields(java.lang.String fields) {
-            return (Get) super.setFields(fields);
-          }
-
-          @Override
-          public Get setKey(java.lang.String key) {
-            return (Get) super.setKey(key);
-          }
-
-          @Override
-          public Get setOauthToken(java.lang.String oauthToken) {
-            return (Get) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (Get) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public Get setQuotaUser(java.lang.String quotaUser) {
-            return (Get) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public Get setUploadType(java.lang.String uploadType) {
-            return (Get) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public Get setUploadProtocol(java.lang.String uploadProtocol) {
-            return (Get) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * The name of the auto domain mapping being retrieved. If needed, replace {namespace_id}
-           * with the project ID.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String name;
-
-          /** The name of the auto domain mapping being retrieved. If needed, replace {namespace_id} with the
-         project ID.
-           */
-          public java.lang.String getName() {
-            return name;
-          }
-
-          /**
-           * The name of the auto domain mapping being retrieved. If needed, replace {namespace_id}
-           * with the project ID.
-           */
-          public Get setName(java.lang.String name) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/autodomainmappings/[^/]+$");
-            }
-            this.name = name;
-            return this;
-          }
-
-          @Override
-          public Get set(String parameterName, Object value) {
-            return (Get) super.set(parameterName, value);
-          }
-        }
-        /**
-         * List auto domain mappings.
-         *
-         * Create a request for the method "autodomainmappings.list".
-         *
-         * This request holds the parameters needed by the run server.  After setting any optional
-         * parameters, call the {@link List#execute()} method to invoke the remote operation.
-         *
-         * @param parent The project ID or project number from which the auto domain mappings should
-        be listed.
-         * @return the request
-         */
-        public List list(java.lang.String parent) throws java.io.IOException {
-          List result = new List(parent);
-          initialize(result);
-          return result;
-        }
-
-        public class List extends CloudRunRequest<com.google.api.services.run.v1.model.ListAutoDomainMappingsResponse> {
-
-          private static final String REST_PATH = "v1/{+parent}/autodomainmappings";
-
-          private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
-
-          /**
-           * List auto domain mappings.
-           *
-           * Create a request for the method "autodomainmappings.list".
-           *
-           * This request holds the parameters needed by the the run server.  After setting any optional
-           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
-           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
-           * called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param parent The project ID or project number from which the auto domain mappings should
-        be listed.
-           * @since 1.13
-           */
-          protected List(java.lang.String parent) {
-            super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v1.model.ListAutoDomainMappingsResponse.class);
-            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+$");
-            }
-          }
-
-          @Override
-          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-            return super.executeUsingHead();
-          }
-
-          @Override
-          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-            return super.buildHttpRequestUsingHead();
-          }
-
-          @Override
-          public List set$Xgafv(java.lang.String $Xgafv) {
-            return (List) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public List setAccessToken(java.lang.String accessToken) {
-            return (List) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public List setAlt(java.lang.String alt) {
-            return (List) super.setAlt(alt);
-          }
-
-          @Override
-          public List setCallback(java.lang.String callback) {
-            return (List) super.setCallback(callback);
-          }
-
-          @Override
-          public List setFields(java.lang.String fields) {
-            return (List) super.setFields(fields);
-          }
-
-          @Override
-          public List setKey(java.lang.String key) {
-            return (List) super.setKey(key);
-          }
-
-          @Override
-          public List setOauthToken(java.lang.String oauthToken) {
-            return (List) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (List) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public List setQuotaUser(java.lang.String quotaUser) {
-            return (List) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public List setUploadType(java.lang.String uploadType) {
-            return (List) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public List setUploadProtocol(java.lang.String uploadProtocol) {
-            return (List) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * The project ID or project number from which the auto domain mappings should be listed.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String parent;
-
-          /** The project ID or project number from which the auto domain mappings should be listed.
-           */
-          public java.lang.String getParent() {
-            return parent;
-          }
-
-          /**
-           * The project ID or project number from which the auto domain mappings should be listed.
-           */
-          public List setParent(java.lang.String parent) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+$");
-            }
-            this.parent = parent;
-            return this;
-          }
-
-          /** Optional encoded string to continue paging. */
-          @com.google.api.client.util.Key("continue")
-          private java.lang.String continue__;
-
-          /** Optional encoded string to continue paging.
-           */
-          public java.lang.String getContinue() {
-            return continue__;
-          }
-
-          /** Optional encoded string to continue paging. */
-          public List setContinue(java.lang.String continue__) {
-            this.continue__ = continue__;
-            return this;
-          }
-
-          /**
-           * Allows to filter resources based on a specific value for a field name. Send this in a
-           * query string format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String fieldSelector;
-
-          /** Allows to filter resources based on a specific value for a field name. Send this in a query string
-         format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
-           */
-          public java.lang.String getFieldSelector() {
-            return fieldSelector;
-          }
-
-          /**
-           * Allows to filter resources based on a specific value for a field name. Send this in a
-           * query string format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
-           */
-          public List setFieldSelector(java.lang.String fieldSelector) {
-            this.fieldSelector = fieldSelector;
-            return this;
-          }
-
-          /** Not currently used by Cloud Run. */
-          @com.google.api.client.util.Key
-          private java.lang.Boolean includeUninitialized;
-
-          /** Not currently used by Cloud Run.
-           */
-          public java.lang.Boolean getIncludeUninitialized() {
-            return includeUninitialized;
-          }
-
-          /** Not currently used by Cloud Run. */
-          public List setIncludeUninitialized(java.lang.Boolean includeUninitialized) {
-            this.includeUninitialized = includeUninitialized;
-            return this;
-          }
-
-          /**
-           * Allows to filter resources based on a label. Supported operations are =, !=, exists,
-           * in, and notIn.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String labelSelector;
-
-          /** Allows to filter resources based on a label. Supported operations are =, !=, exists, in, and notIn.
-           */
-          public java.lang.String getLabelSelector() {
-            return labelSelector;
-          }
-
-          /**
-           * Allows to filter resources based on a label. Supported operations are =, !=, exists,
-           * in, and notIn.
-           */
-          public List setLabelSelector(java.lang.String labelSelector) {
-            this.labelSelector = labelSelector;
-            return this;
-          }
-
-          /** The maximum number of records that should be returned. */
-          @com.google.api.client.util.Key
-          private java.lang.Integer limit;
-
-          /** The maximum number of records that should be returned.
-           */
-          public java.lang.Integer getLimit() {
-            return limit;
-          }
-
-          /** The maximum number of records that should be returned. */
-          public List setLimit(java.lang.Integer limit) {
-            this.limit = limit;
-            return this;
-          }
-
-          /**
-           * The baseline resource version from which the list or watch operation should start. Not
-           * currently used by Cloud Run.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String resourceVersion;
-
-          /** The baseline resource version from which the list or watch operation should start. Not currently
-         used by Cloud Run.
-           */
-          public java.lang.String getResourceVersion() {
-            return resourceVersion;
-          }
-
-          /**
-           * The baseline resource version from which the list or watch operation should start. Not
-           * currently used by Cloud Run.
-           */
-          public List setResourceVersion(java.lang.String resourceVersion) {
-            this.resourceVersion = resourceVersion;
-            return this;
-          }
-
-          /**
-           * Flag that indicates that the client expects to watch this resource as well. Not
-           * currently used by Cloud Run.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.Boolean watch;
-
-          /** Flag that indicates that the client expects to watch this resource as well. Not currently used by
-         Cloud Run.
-           */
-          public java.lang.Boolean getWatch() {
-            return watch;
-          }
-
-          /**
-           * Flag that indicates that the client expects to watch this resource as well. Not
-           * currently used by Cloud Run.
-           */
-          public List setWatch(java.lang.Boolean watch) {
-            this.watch = watch;
-            return this;
-          }
-
-          @Override
-          public List set(String parameterName, Object value) {
-            return (List) super.set(parameterName, value);
-          }
-        }
-        /**
-         * Replace an auto domain mapping.
-         *
-         * Only the spec and metadata labels and annotations are modifiable. After the Update request, Cloud
-         * Run will work to make the 'status' match the requested 'spec'.
-         *
-         * May provide metadata.resourceVersion to enforce update from last read for optimistic concurrency
-         * control.
-         *
-         * Create a request for the method "autodomainmappings.replaceAutoDomainMapping".
-         *
-         * This request holds the parameters needed by the run server.  After setting any optional
-         * parameters, call the {@link ReplaceAutoDomainMapping#execute()} method to invoke the remote
-         * operation.
-         *
-         * @param name The name of the auto domain mapping being retrieved. If needed, replace
-        {namespace_id} with the
-         *        project ID.
-         * @param content the {@link com.google.api.services.run.v1.model.AutoDomainMapping}
-         * @return the request
-         */
-        public ReplaceAutoDomainMapping replaceAutoDomainMapping(java.lang.String name, com.google.api.services.run.v1.model.AutoDomainMapping content) throws java.io.IOException {
-          ReplaceAutoDomainMapping result = new ReplaceAutoDomainMapping(name, content);
-          initialize(result);
-          return result;
-        }
-
-        public class ReplaceAutoDomainMapping extends CloudRunRequest<com.google.api.services.run.v1.model.AutoDomainMapping> {
-
-          private static final String REST_PATH = "v1/{+name}";
-
-          private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/autodomainmappings/[^/]+$");
-
-          /**
-           * Replace an auto domain mapping.
-           *
-           * Only the spec and metadata labels and annotations are modifiable. After the Update request,
-           * Cloud Run will work to make the 'status' match the requested 'spec'.
-           *
-           * May provide metadata.resourceVersion to enforce update from last read for optimistic
-           * concurrency control.
-           *
-           * Create a request for the method "autodomainmappings.replaceAutoDomainMapping".
-           *
-           * This request holds the parameters needed by the the run server.  After setting any optional
-           * parameters, call the {@link ReplaceAutoDomainMapping#execute()} method to invoke the remote
-           * operation. <p> {@link ReplaceAutoDomainMapping#initialize(com.google.api.client.googleapis.serv
-           * ices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
-           * invoking the constructor. </p>
-           *
-           * @param name The name of the auto domain mapping being retrieved. If needed, replace
-        {namespace_id} with the
-         *        project ID.
-           * @param content the {@link com.google.api.services.run.v1.model.AutoDomainMapping}
-           * @since 1.13
-           */
-          protected ReplaceAutoDomainMapping(java.lang.String name, com.google.api.services.run.v1.model.AutoDomainMapping content) {
-            super(CloudRun.this, "PUT", REST_PATH, content, com.google.api.services.run.v1.model.AutoDomainMapping.class);
-            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/autodomainmappings/[^/]+$");
-            }
-          }
-
-          @Override
-          public ReplaceAutoDomainMapping set$Xgafv(java.lang.String $Xgafv) {
-            return (ReplaceAutoDomainMapping) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public ReplaceAutoDomainMapping setAccessToken(java.lang.String accessToken) {
-            return (ReplaceAutoDomainMapping) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public ReplaceAutoDomainMapping setAlt(java.lang.String alt) {
-            return (ReplaceAutoDomainMapping) super.setAlt(alt);
-          }
-
-          @Override
-          public ReplaceAutoDomainMapping setCallback(java.lang.String callback) {
-            return (ReplaceAutoDomainMapping) super.setCallback(callback);
-          }
-
-          @Override
-          public ReplaceAutoDomainMapping setFields(java.lang.String fields) {
-            return (ReplaceAutoDomainMapping) super.setFields(fields);
-          }
-
-          @Override
-          public ReplaceAutoDomainMapping setKey(java.lang.String key) {
-            return (ReplaceAutoDomainMapping) super.setKey(key);
-          }
-
-          @Override
-          public ReplaceAutoDomainMapping setOauthToken(java.lang.String oauthToken) {
-            return (ReplaceAutoDomainMapping) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public ReplaceAutoDomainMapping setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (ReplaceAutoDomainMapping) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public ReplaceAutoDomainMapping setQuotaUser(java.lang.String quotaUser) {
-            return (ReplaceAutoDomainMapping) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public ReplaceAutoDomainMapping setUploadType(java.lang.String uploadType) {
-            return (ReplaceAutoDomainMapping) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public ReplaceAutoDomainMapping setUploadProtocol(java.lang.String uploadProtocol) {
-            return (ReplaceAutoDomainMapping) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * The name of the auto domain mapping being retrieved. If needed, replace {namespace_id}
-           * with the project ID.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String name;
-
-          /** The name of the auto domain mapping being retrieved. If needed, replace {namespace_id} with the
-         project ID.
-           */
-          public java.lang.String getName() {
-            return name;
-          }
-
-          /**
-           * The name of the auto domain mapping being retrieved. If needed, replace {namespace_id}
-           * with the project ID.
-           */
-          public ReplaceAutoDomainMapping setName(java.lang.String name) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/autodomainmappings/[^/]+$");
-            }
-            this.name = name;
-            return this;
-          }
-
-          @Override
-          public ReplaceAutoDomainMapping set(String parameterName, Object value) {
-            return (ReplaceAutoDomainMapping) super.set(parameterName, value);
-          }
-        }
-
-      }
-      /**
        * An accessor for creating requests from the Configurations collection.
        *
        * <p>The typical use is:</p>
@@ -7164,342 +4270,6 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
       public class Configurations {
 
         /**
-         * Create a configuration.
-         *
-         * Create a request for the method "configurations.create".
-         *
-         * This request holds the parameters needed by the run server.  After setting any optional
-         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
-         *
-         * @param parent The project ID or project number in which this configuration should be
-        created.
-         * @param content the {@link com.google.api.services.run.v1.model.Configuration}
-         * @return the request
-         */
-        public Create create(java.lang.String parent, com.google.api.services.run.v1.model.Configuration content) throws java.io.IOException {
-          Create result = new Create(parent, content);
-          initialize(result);
-          return result;
-        }
-
-        public class Create extends CloudRunRequest<com.google.api.services.run.v1.model.Configuration> {
-
-          private static final String REST_PATH = "v1/{+parent}/configurations";
-
-          private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
-
-          /**
-           * Create a configuration.
-           *
-           * Create a request for the method "configurations.create".
-           *
-           * This request holds the parameters needed by the the run server.  After setting any optional
-           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
-           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-           * be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param parent The project ID or project number in which this configuration should be
-        created.
-           * @param content the {@link com.google.api.services.run.v1.model.Configuration}
-           * @since 1.13
-           */
-          protected Create(java.lang.String parent, com.google.api.services.run.v1.model.Configuration content) {
-            super(CloudRun.this, "POST", REST_PATH, content, com.google.api.services.run.v1.model.Configuration.class);
-            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+$");
-            }
-          }
-
-          @Override
-          public Create set$Xgafv(java.lang.String $Xgafv) {
-            return (Create) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public Create setAccessToken(java.lang.String accessToken) {
-            return (Create) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public Create setAlt(java.lang.String alt) {
-            return (Create) super.setAlt(alt);
-          }
-
-          @Override
-          public Create setCallback(java.lang.String callback) {
-            return (Create) super.setCallback(callback);
-          }
-
-          @Override
-          public Create setFields(java.lang.String fields) {
-            return (Create) super.setFields(fields);
-          }
-
-          @Override
-          public Create setKey(java.lang.String key) {
-            return (Create) super.setKey(key);
-          }
-
-          @Override
-          public Create setOauthToken(java.lang.String oauthToken) {
-            return (Create) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (Create) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public Create setQuotaUser(java.lang.String quotaUser) {
-            return (Create) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public Create setUploadType(java.lang.String uploadType) {
-            return (Create) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public Create setUploadProtocol(java.lang.String uploadProtocol) {
-            return (Create) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * The project ID or project number in which this configuration should be created.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String parent;
-
-          /** The project ID or project number in which this configuration should be created.
-           */
-          public java.lang.String getParent() {
-            return parent;
-          }
-
-          /**
-           * The project ID or project number in which this configuration should be created.
-           */
-          public Create setParent(java.lang.String parent) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+$");
-            }
-            this.parent = parent;
-            return this;
-          }
-
-          @Override
-          public Create set(String parameterName, Object value) {
-            return (Create) super.set(parameterName, value);
-          }
-        }
-        /**
-         * delete a configuration. This will cause the configuration to delete all child revisions. Prior to
-         * calling this, any route referencing the configuration (or revision from the configuration) must
-         * be deleted.
-         *
-         * Create a request for the method "configurations.delete".
-         *
-         * This request holds the parameters needed by the run server.  After setting any optional
-         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
-         *
-         * @param name The name of the configuration being deleted. If needed, replace
-        {namespace_id} with the project ID.
-         * @return the request
-         */
-        public Delete delete(java.lang.String name) throws java.io.IOException {
-          Delete result = new Delete(name);
-          initialize(result);
-          return result;
-        }
-
-        public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status> {
-
-          private static final String REST_PATH = "v1/{+name}";
-
-          private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/configurations/[^/]+$");
-
-          /**
-           * delete a configuration. This will cause the configuration to delete all child revisions. Prior
-           * to calling this, any route referencing the configuration (or revision from the configuration)
-           * must be deleted.
-           *
-           * Create a request for the method "configurations.delete".
-           *
-           * This request holds the parameters needed by the the run server.  After setting any optional
-           * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
-           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-           * be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param name The name of the configuration being deleted. If needed, replace
-        {namespace_id} with the project ID.
-           * @since 1.13
-           */
-          protected Delete(java.lang.String name) {
-            super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status.class);
-            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/configurations/[^/]+$");
-            }
-          }
-
-          @Override
-          public Delete set$Xgafv(java.lang.String $Xgafv) {
-            return (Delete) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public Delete setAccessToken(java.lang.String accessToken) {
-            return (Delete) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public Delete setAlt(java.lang.String alt) {
-            return (Delete) super.setAlt(alt);
-          }
-
-          @Override
-          public Delete setCallback(java.lang.String callback) {
-            return (Delete) super.setCallback(callback);
-          }
-
-          @Override
-          public Delete setFields(java.lang.String fields) {
-            return (Delete) super.setFields(fields);
-          }
-
-          @Override
-          public Delete setKey(java.lang.String key) {
-            return (Delete) super.setKey(key);
-          }
-
-          @Override
-          public Delete setOauthToken(java.lang.String oauthToken) {
-            return (Delete) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (Delete) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public Delete setQuotaUser(java.lang.String quotaUser) {
-            return (Delete) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public Delete setUploadType(java.lang.String uploadType) {
-            return (Delete) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
-            return (Delete) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * The name of the configuration being deleted. If needed, replace {namespace_id} with the
-           * project ID.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String name;
-
-          /** The name of the configuration being deleted. If needed, replace {namespace_id} with the project ID.
-           */
-          public java.lang.String getName() {
-            return name;
-          }
-
-          /**
-           * The name of the configuration being deleted. If needed, replace {namespace_id} with the
-           * project ID.
-           */
-          public Delete setName(java.lang.String name) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/configurations/[^/]+$");
-            }
-            this.name = name;
-            return this;
-          }
-
-          /** Cloud Run currently ignores this parameter. */
-          @com.google.api.client.util.Key
-          private java.lang.String apiVersion;
-
-          /** Cloud Run currently ignores this parameter.
-           */
-          public java.lang.String getApiVersion() {
-            return apiVersion;
-          }
-
-          /** Cloud Run currently ignores this parameter. */
-          public Delete setApiVersion(java.lang.String apiVersion) {
-            this.apiVersion = apiVersion;
-            return this;
-          }
-
-          /** Cloud Run currently ignores this parameter. */
-          @com.google.api.client.util.Key
-          private java.lang.String kind;
-
-          /** Cloud Run currently ignores this parameter.
-           */
-          public java.lang.String getKind() {
-            return kind;
-          }
-
-          /** Cloud Run currently ignores this parameter. */
-          public Delete setKind(java.lang.String kind) {
-            this.kind = kind;
-            return this;
-          }
-
-          /**
-           * Specifies the propagation policy of delete. Cloud Run currently ignores this setting,
-           * and deletes in the background. Please see
-           * kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/ for more
-           * information.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String propagationPolicy;
-
-          /** Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and deletes
-         in the background. Please see kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/
-         for more information.
-           */
-          public java.lang.String getPropagationPolicy() {
-            return propagationPolicy;
-          }
-
-          /**
-           * Specifies the propagation policy of delete. Cloud Run currently ignores this setting,
-           * and deletes in the background. Please see
-           * kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/ for more
-           * information.
-           */
-          public Delete setPropagationPolicy(java.lang.String propagationPolicy) {
-            this.propagationPolicy = propagationPolicy;
-            return this;
-          }
-
-          @Override
-          public Delete set(String parameterName, Object value) {
-            return (Delete) super.set(parameterName, value);
-          }
-        }
-        /**
          * Get information about a configuration.
          *
          * Create a request for the method "configurations.get".
@@ -7507,9 +4277,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the configuration being retrieved. If needed, replace
-        {namespace_id} with the project
-         *        ID.
+         * @param name The name of the configuration to retrieve.
+        For Cloud Run (fully managed), replace {namespace_id}
+         *        with the project ID
+        or number.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -7535,9 +4306,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the configuration being retrieved. If needed, replace
-        {namespace_id} with the project
-         *        ID.
+           * @param name The name of the configuration to retrieve.
+        For Cloud Run (fully managed), replace {namespace_id}
+         *        with the project ID
+        or number.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -7616,22 +4388,22 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The name of the configuration being retrieved. If needed, replace {namespace_id} with
-           * the project ID.
+           * The name of the configuration to retrieve. For Cloud Run (fully managed), replace
+           * {namespace_id} with the project ID or number.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name of the configuration being retrieved. If needed, replace {namespace_id} with the project
-         ID.
+          /** The name of the configuration to retrieve. For Cloud Run (fully managed), replace {namespace_id}
+         with the project ID or number.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * The name of the configuration being retrieved. If needed, replace {namespace_id} with
-           * the project ID.
+           * The name of the configuration to retrieve. For Cloud Run (fully managed), replace
+           * {namespace_id} with the project ID or number.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -7656,8 +4428,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent The project ID or project number from which the configurations should be
-        listed.
+         * @param parent The namespace from which the configurations should be listed.
+        For Cloud Run (fully managed), replace
+         *        {namespace_id} with the project ID
+        or number.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -7683,8 +4457,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The project ID or project number from which the configurations should be
-        listed.
+           * @param parent The namespace from which the configurations should be listed.
+        For Cloud Run (fully managed), replace
+         *        {namespace_id} with the project ID
+        or number.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -7763,19 +4539,22 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The project ID or project number from which the configurations should be listed.
+           * The namespace from which the configurations should be listed. For Cloud Run (fully
+           * managed), replace {namespace_id} with the project ID or number.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The project ID or project number from which the configurations should be listed.
+          /** The namespace from which the configurations should be listed. For Cloud Run (fully managed),
+         replace {namespace_id} with the project ID or number.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * The project ID or project number from which the configurations should be listed.
+           * The namespace from which the configurations should be listed. For Cloud Run (fully
+           * managed), replace {namespace_id} with the project ID or number.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -7931,161 +4710,6 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             return (List) super.set(parameterName, value);
           }
         }
-        /**
-         * Replace a configuration.
-         *
-         * Only the spec and metadata labels and annotations are modifiable. After the Update request, Cloud
-         * Run will work to make the 'status' match the requested 'spec'.
-         *
-         * May provide metadata.resourceVersion to enforce update from last read for optimistic concurrency
-         * control.
-         *
-         * Create a request for the method "configurations.replaceConfiguration".
-         *
-         * This request holds the parameters needed by the run server.  After setting any optional
-         * parameters, call the {@link ReplaceConfiguration#execute()} method to invoke the remote
-         * operation.
-         *
-         * @param name The name of the configuration being retrieved. If needed, replace
-        {namespace_id} with the project
-         *        ID.
-         * @param content the {@link com.google.api.services.run.v1.model.Configuration}
-         * @return the request
-         */
-        public ReplaceConfiguration replaceConfiguration(java.lang.String name, com.google.api.services.run.v1.model.Configuration content) throws java.io.IOException {
-          ReplaceConfiguration result = new ReplaceConfiguration(name, content);
-          initialize(result);
-          return result;
-        }
-
-        public class ReplaceConfiguration extends CloudRunRequest<com.google.api.services.run.v1.model.Configuration> {
-
-          private static final String REST_PATH = "v1/{+name}";
-
-          private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/configurations/[^/]+$");
-
-          /**
-           * Replace a configuration.
-           *
-           * Only the spec and metadata labels and annotations are modifiable. After the Update request,
-           * Cloud Run will work to make the 'status' match the requested 'spec'.
-           *
-           * May provide metadata.resourceVersion to enforce update from last read for optimistic
-           * concurrency control.
-           *
-           * Create a request for the method "configurations.replaceConfiguration".
-           *
-           * This request holds the parameters needed by the the run server.  After setting any optional
-           * parameters, call the {@link ReplaceConfiguration#execute()} method to invoke the remote
-           * operation. <p> {@link ReplaceConfiguration#initialize(com.google.api.client.googleapis.services
-           * .AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
-           * invoking the constructor. </p>
-           *
-           * @param name The name of the configuration being retrieved. If needed, replace
-        {namespace_id} with the project
-         *        ID.
-           * @param content the {@link com.google.api.services.run.v1.model.Configuration}
-           * @since 1.13
-           */
-          protected ReplaceConfiguration(java.lang.String name, com.google.api.services.run.v1.model.Configuration content) {
-            super(CloudRun.this, "PUT", REST_PATH, content, com.google.api.services.run.v1.model.Configuration.class);
-            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/configurations/[^/]+$");
-            }
-          }
-
-          @Override
-          public ReplaceConfiguration set$Xgafv(java.lang.String $Xgafv) {
-            return (ReplaceConfiguration) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public ReplaceConfiguration setAccessToken(java.lang.String accessToken) {
-            return (ReplaceConfiguration) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public ReplaceConfiguration setAlt(java.lang.String alt) {
-            return (ReplaceConfiguration) super.setAlt(alt);
-          }
-
-          @Override
-          public ReplaceConfiguration setCallback(java.lang.String callback) {
-            return (ReplaceConfiguration) super.setCallback(callback);
-          }
-
-          @Override
-          public ReplaceConfiguration setFields(java.lang.String fields) {
-            return (ReplaceConfiguration) super.setFields(fields);
-          }
-
-          @Override
-          public ReplaceConfiguration setKey(java.lang.String key) {
-            return (ReplaceConfiguration) super.setKey(key);
-          }
-
-          @Override
-          public ReplaceConfiguration setOauthToken(java.lang.String oauthToken) {
-            return (ReplaceConfiguration) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public ReplaceConfiguration setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (ReplaceConfiguration) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public ReplaceConfiguration setQuotaUser(java.lang.String quotaUser) {
-            return (ReplaceConfiguration) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public ReplaceConfiguration setUploadType(java.lang.String uploadType) {
-            return (ReplaceConfiguration) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public ReplaceConfiguration setUploadProtocol(java.lang.String uploadProtocol) {
-            return (ReplaceConfiguration) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * The name of the configuration being retrieved. If needed, replace {namespace_id} with
-           * the project ID.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String name;
-
-          /** The name of the configuration being retrieved. If needed, replace {namespace_id} with the project
-         ID.
-           */
-          public java.lang.String getName() {
-            return name;
-          }
-
-          /**
-           * The name of the configuration being retrieved. If needed, replace {namespace_id} with
-           * the project ID.
-           */
-          public ReplaceConfiguration setName(java.lang.String name) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/configurations/[^/]+$");
-            }
-            this.name = name;
-            return this;
-          }
-
-          @Override
-          public ReplaceConfiguration set(String parameterName, Object value) {
-            return (ReplaceConfiguration) super.set(parameterName, value);
-          }
-        }
 
       }
       /**
@@ -8116,8 +4740,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent The project ID or project number in which this domain mapping should be
-        created.
+         * @param parent The namespace in which the domain mapping should be created.
+        For Cloud Run (fully managed), replace
+         *        {namespace_id} with the project ID
+        or number.
          * @param content the {@link com.google.api.services.run.v1.model.DomainMapping}
          * @return the request
          */
@@ -8144,8 +4770,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The project ID or project number in which this domain mapping should be
-        created.
+           * @param parent The namespace in which the domain mapping should be created.
+        For Cloud Run (fully managed), replace
+         *        {namespace_id} with the project ID
+        or number.
            * @param content the {@link com.google.api.services.run.v1.model.DomainMapping}
            * @since 1.13
            */
@@ -8215,19 +4843,22 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The project ID or project number in which this domain mapping should be created.
+           * The namespace in which the domain mapping should be created. For Cloud Run (fully
+           * managed), replace {namespace_id} with the project ID or number.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The project ID or project number in which this domain mapping should be created.
+          /** The namespace in which the domain mapping should be created. For Cloud Run (fully managed), replace
+         {namespace_id} with the project ID or number.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * The project ID or project number in which this domain mapping should be created.
+           * The namespace in which the domain mapping should be created. For Cloud Run (fully
+           * managed), replace {namespace_id} with the project ID or number.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -8252,8 +4883,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the domain mapping being deleted. If needed, replace
-        {namespace_id} with the project ID.
+         * @param name The name of the domain mapping to delete.
+        For Cloud Run (fully managed), replace {namespace_id} with
+         *        the project ID
+        or number.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -8262,7 +4895,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return result;
         }
 
-        public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status> {
+        public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.Status> {
 
           private static final String REST_PATH = "v1/{+name}";
 
@@ -8279,12 +4912,14 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the domain mapping being deleted. If needed, replace
-        {namespace_id} with the project ID.
+           * @param name The name of the domain mapping to delete.
+        For Cloud Run (fully managed), replace {namespace_id} with
+         *        the project ID
+        or number.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
-            super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status.class);
+            super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.Status.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -8349,22 +4984,22 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The name of the domain mapping being deleted. If needed, replace {namespace_id} with
-           * the project ID.
+           * The name of the domain mapping to delete. For Cloud Run (fully managed), replace
+           * {namespace_id} with the project ID or number.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name of the domain mapping being deleted. If needed, replace {namespace_id} with the project
-         ID.
+          /** The name of the domain mapping to delete. For Cloud Run (fully managed), replace {namespace_id}
+         with the project ID or number.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * The name of the domain mapping being deleted. If needed, replace {namespace_id} with
-           * the project ID.
+           * The name of the domain mapping to delete. For Cloud Run (fully managed), replace
+           * {namespace_id} with the project ID or number.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -8449,9 +5084,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the domain mapping being retrieved. If needed, replace
-        {namespace_id} with the project
-         *        ID.
+         * @param name The name of the domain mapping to retrieve.
+        For Cloud Run (fully managed), replace {namespace_id}
+         *        with the project ID
+        or number.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -8477,9 +5113,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the domain mapping being retrieved. If needed, replace
-        {namespace_id} with the project
-         *        ID.
+           * @param name The name of the domain mapping to retrieve.
+        For Cloud Run (fully managed), replace {namespace_id}
+         *        with the project ID
+        or number.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -8558,22 +5195,22 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The name of the domain mapping being retrieved. If needed, replace {namespace_id} with
-           * the project ID.
+           * The name of the domain mapping to retrieve. For Cloud Run (fully managed), replace
+           * {namespace_id} with the project ID or number.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name of the domain mapping being retrieved. If needed, replace {namespace_id} with the project
-         ID.
+          /** The name of the domain mapping to retrieve. For Cloud Run (fully managed), replace {namespace_id}
+         with the project ID or number.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * The name of the domain mapping being retrieved. If needed, replace {namespace_id} with
-           * the project ID.
+           * The name of the domain mapping to retrieve. For Cloud Run (fully managed), replace
+           * {namespace_id} with the project ID or number.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -8598,8 +5235,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent The project ID or project number from which the domain mappings should be
-        listed.
+         * @param parent The namespace from which the domain mappings should be listed.
+        For Cloud Run (fully managed),
+         *        replace {namespace_id} with the project ID
+        or number.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -8625,8 +5264,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The project ID or project number from which the domain mappings should be
-        listed.
+           * @param parent The namespace from which the domain mappings should be listed.
+        For Cloud Run (fully managed),
+         *        replace {namespace_id} with the project ID
+        or number.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -8705,19 +5346,22 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The project ID or project number from which the domain mappings should be listed.
+           * The namespace from which the domain mappings should be listed. For Cloud Run (fully
+           * managed), replace {namespace_id} with the project ID or number.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The project ID or project number from which the domain mappings should be listed.
+          /** The namespace from which the domain mappings should be listed. For Cloud Run (fully managed),
+         replace {namespace_id} with the project ID or number.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * The project ID or project number from which the domain mappings should be listed.
+           * The namespace from which the domain mappings should be listed. For Cloud Run (fully
+           * managed), replace {namespace_id} with the project ID or number.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -8873,161 +5517,6 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             return (List) super.set(parameterName, value);
           }
         }
-        /**
-         * Replace a domain mapping.
-         *
-         * Only the spec and metadata labels and annotations are modifiable. After the Update request, Cloud
-         * Run will work to make the 'status' match the requested 'spec'.
-         *
-         * May provide metadata.resourceVersion to enforce update from last read for optimistic concurrency
-         * control.
-         *
-         * Create a request for the method "domainmappings.replaceDomainMapping".
-         *
-         * This request holds the parameters needed by the run server.  After setting any optional
-         * parameters, call the {@link ReplaceDomainMapping#execute()} method to invoke the remote
-         * operation.
-         *
-         * @param name The name of the domain mapping being retrieved. If needed, replace
-        {namespace_id} with the project
-         *        ID.
-         * @param content the {@link com.google.api.services.run.v1.model.DomainMapping}
-         * @return the request
-         */
-        public ReplaceDomainMapping replaceDomainMapping(java.lang.String name, com.google.api.services.run.v1.model.DomainMapping content) throws java.io.IOException {
-          ReplaceDomainMapping result = new ReplaceDomainMapping(name, content);
-          initialize(result);
-          return result;
-        }
-
-        public class ReplaceDomainMapping extends CloudRunRequest<com.google.api.services.run.v1.model.DomainMapping> {
-
-          private static final String REST_PATH = "v1/{+name}";
-
-          private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/domainmappings/[^/]+$");
-
-          /**
-           * Replace a domain mapping.
-           *
-           * Only the spec and metadata labels and annotations are modifiable. After the Update request,
-           * Cloud Run will work to make the 'status' match the requested 'spec'.
-           *
-           * May provide metadata.resourceVersion to enforce update from last read for optimistic
-           * concurrency control.
-           *
-           * Create a request for the method "domainmappings.replaceDomainMapping".
-           *
-           * This request holds the parameters needed by the the run server.  After setting any optional
-           * parameters, call the {@link ReplaceDomainMapping#execute()} method to invoke the remote
-           * operation. <p> {@link ReplaceDomainMapping#initialize(com.google.api.client.googleapis.services
-           * .AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
-           * invoking the constructor. </p>
-           *
-           * @param name The name of the domain mapping being retrieved. If needed, replace
-        {namespace_id} with the project
-         *        ID.
-           * @param content the {@link com.google.api.services.run.v1.model.DomainMapping}
-           * @since 1.13
-           */
-          protected ReplaceDomainMapping(java.lang.String name, com.google.api.services.run.v1.model.DomainMapping content) {
-            super(CloudRun.this, "PUT", REST_PATH, content, com.google.api.services.run.v1.model.DomainMapping.class);
-            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/domainmappings/[^/]+$");
-            }
-          }
-
-          @Override
-          public ReplaceDomainMapping set$Xgafv(java.lang.String $Xgafv) {
-            return (ReplaceDomainMapping) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public ReplaceDomainMapping setAccessToken(java.lang.String accessToken) {
-            return (ReplaceDomainMapping) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public ReplaceDomainMapping setAlt(java.lang.String alt) {
-            return (ReplaceDomainMapping) super.setAlt(alt);
-          }
-
-          @Override
-          public ReplaceDomainMapping setCallback(java.lang.String callback) {
-            return (ReplaceDomainMapping) super.setCallback(callback);
-          }
-
-          @Override
-          public ReplaceDomainMapping setFields(java.lang.String fields) {
-            return (ReplaceDomainMapping) super.setFields(fields);
-          }
-
-          @Override
-          public ReplaceDomainMapping setKey(java.lang.String key) {
-            return (ReplaceDomainMapping) super.setKey(key);
-          }
-
-          @Override
-          public ReplaceDomainMapping setOauthToken(java.lang.String oauthToken) {
-            return (ReplaceDomainMapping) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public ReplaceDomainMapping setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (ReplaceDomainMapping) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public ReplaceDomainMapping setQuotaUser(java.lang.String quotaUser) {
-            return (ReplaceDomainMapping) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public ReplaceDomainMapping setUploadType(java.lang.String uploadType) {
-            return (ReplaceDomainMapping) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public ReplaceDomainMapping setUploadProtocol(java.lang.String uploadProtocol) {
-            return (ReplaceDomainMapping) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * The name of the domain mapping being retrieved. If needed, replace {namespace_id} with
-           * the project ID.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String name;
-
-          /** The name of the domain mapping being retrieved. If needed, replace {namespace_id} with the project
-         ID.
-           */
-          public java.lang.String getName() {
-            return name;
-          }
-
-          /**
-           * The name of the domain mapping being retrieved. If needed, replace {namespace_id} with
-           * the project ID.
-           */
-          public ReplaceDomainMapping setName(java.lang.String name) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/domainmappings/[^/]+$");
-            }
-            this.name = name;
-            return this;
-          }
-
-          @Override
-          public ReplaceDomainMapping set(String parameterName, Object value) {
-            return (ReplaceDomainMapping) super.set(parameterName, value);
-          }
-        }
 
       }
       /**
@@ -9058,8 +5547,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the revision being deleted. If needed, replace
-        {namespace_id} with the project ID.
+         * @param name The name of the revision to delete.
+        For Cloud Run (fully managed), replace {namespace_id} with the
+         *        project ID
+        or number.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -9068,7 +5559,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return result;
         }
 
-        public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status> {
+        public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.Status> {
 
           private static final String REST_PATH = "v1/{+name}";
 
@@ -9085,12 +5576,14 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the revision being deleted. If needed, replace
-        {namespace_id} with the project ID.
+           * @param name The name of the revision to delete.
+        For Cloud Run (fully managed), replace {namespace_id} with the
+         *        project ID
+        or number.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
-            super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status.class);
+            super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.Status.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -9155,21 +5648,22 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The name of the revision being deleted. If needed, replace {namespace_id} with the
-           * project ID.
+           * The name of the revision to delete. For Cloud Run (fully managed), replace
+           * {namespace_id} with the project ID or number.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name of the revision being deleted. If needed, replace {namespace_id} with the project ID.
+          /** The name of the revision to delete. For Cloud Run (fully managed), replace {namespace_id} with the
+         project ID or number.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * The name of the revision being deleted. If needed, replace {namespace_id} with the
-           * project ID.
+           * The name of the revision to delete. For Cloud Run (fully managed), replace
+           * {namespace_id} with the project ID or number.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -9254,8 +5748,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the revision being retrieved. If needed, replace
-        {namespace_id} with the project ID.
+         * @param name The name of the revision to retrieve.
+        For Cloud Run (fully managed), replace {namespace_id} with the
+         *        project ID
+        or number.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -9281,8 +5777,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the revision being retrieved. If needed, replace
-        {namespace_id} with the project ID.
+           * @param name The name of the revision to retrieve.
+        For Cloud Run (fully managed), replace {namespace_id} with the
+         *        project ID
+        or number.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -9361,21 +5859,22 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The name of the revision being retrieved. If needed, replace {namespace_id} with the
-           * project ID.
+           * The name of the revision to retrieve. For Cloud Run (fully managed), replace
+           * {namespace_id} with the project ID or number.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name of the revision being retrieved. If needed, replace {namespace_id} with the project ID.
+          /** The name of the revision to retrieve. For Cloud Run (fully managed), replace {namespace_id} with
+         the project ID or number.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * The name of the revision being retrieved. If needed, replace {namespace_id} with the
-           * project ID.
+           * The name of the revision to retrieve. For Cloud Run (fully managed), replace
+           * {namespace_id} with the project ID or number.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -9400,7 +5899,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent The project ID or project number from which the revisions should be listed.
+         * @param parent The namespace from which the revisions should be listed.
+        For Cloud Run (fully managed), replace
+         *        {namespace_id} with the project ID
+        or number.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -9426,7 +5928,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The project ID or project number from which the revisions should be listed.
+           * @param parent The namespace from which the revisions should be listed.
+        For Cloud Run (fully managed), replace
+         *        {namespace_id} with the project ID
+        or number.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -9504,17 +6009,24 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The project ID or project number from which the revisions should be listed. */
+          /**
+           * The namespace from which the revisions should be listed. For Cloud Run (fully managed),
+           * replace {namespace_id} with the project ID or number.
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The project ID or project number from which the revisions should be listed.
+          /** The namespace from which the revisions should be listed. For Cloud Run (fully managed), replace
+         {namespace_id} with the project ID or number.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** The project ID or project number from which the revisions should be listed. */
+          /**
+           * The namespace from which the revisions should be listed. For Cloud Run (fully managed),
+           * replace {namespace_id} with the project ID or number.
+           */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -9692,332 +6204,6 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
       public class Routes {
 
         /**
-         * Create a route.
-         *
-         * Create a request for the method "routes.create".
-         *
-         * This request holds the parameters needed by the run server.  After setting any optional
-         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
-         *
-         * @param parent The project ID or project number in which this route should be created.
-         * @param content the {@link com.google.api.services.run.v1.model.Route}
-         * @return the request
-         */
-        public Create create(java.lang.String parent, com.google.api.services.run.v1.model.Route content) throws java.io.IOException {
-          Create result = new Create(parent, content);
-          initialize(result);
-          return result;
-        }
-
-        public class Create extends CloudRunRequest<com.google.api.services.run.v1.model.Route> {
-
-          private static final String REST_PATH = "v1/{+parent}/routes";
-
-          private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
-
-          /**
-           * Create a route.
-           *
-           * Create a request for the method "routes.create".
-           *
-           * This request holds the parameters needed by the the run server.  After setting any optional
-           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
-           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-           * be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param parent The project ID or project number in which this route should be created.
-           * @param content the {@link com.google.api.services.run.v1.model.Route}
-           * @since 1.13
-           */
-          protected Create(java.lang.String parent, com.google.api.services.run.v1.model.Route content) {
-            super(CloudRun.this, "POST", REST_PATH, content, com.google.api.services.run.v1.model.Route.class);
-            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+$");
-            }
-          }
-
-          @Override
-          public Create set$Xgafv(java.lang.String $Xgafv) {
-            return (Create) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public Create setAccessToken(java.lang.String accessToken) {
-            return (Create) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public Create setAlt(java.lang.String alt) {
-            return (Create) super.setAlt(alt);
-          }
-
-          @Override
-          public Create setCallback(java.lang.String callback) {
-            return (Create) super.setCallback(callback);
-          }
-
-          @Override
-          public Create setFields(java.lang.String fields) {
-            return (Create) super.setFields(fields);
-          }
-
-          @Override
-          public Create setKey(java.lang.String key) {
-            return (Create) super.setKey(key);
-          }
-
-          @Override
-          public Create setOauthToken(java.lang.String oauthToken) {
-            return (Create) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (Create) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public Create setQuotaUser(java.lang.String quotaUser) {
-            return (Create) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public Create setUploadType(java.lang.String uploadType) {
-            return (Create) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public Create setUploadProtocol(java.lang.String uploadProtocol) {
-            return (Create) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /** The project ID or project number in which this route should be created. */
-          @com.google.api.client.util.Key
-          private java.lang.String parent;
-
-          /** The project ID or project number in which this route should be created.
-           */
-          public java.lang.String getParent() {
-            return parent;
-          }
-
-          /** The project ID or project number in which this route should be created. */
-          public Create setParent(java.lang.String parent) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+$");
-            }
-            this.parent = parent;
-            return this;
-          }
-
-          @Override
-          public Create set(String parameterName, Object value) {
-            return (Create) super.set(parameterName, value);
-          }
-        }
-        /**
-         * Delete a route. This will cause the route to stop serving traffic.
-         *
-         * Create a request for the method "routes.delete".
-         *
-         * This request holds the parameters needed by the run server.  After setting any optional
-         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
-         *
-         * @param name The name of the route being deleted. If needed, replace
-        {namespace_id} with the project ID.
-         * @return the request
-         */
-        public Delete delete(java.lang.String name) throws java.io.IOException {
-          Delete result = new Delete(name);
-          initialize(result);
-          return result;
-        }
-
-        public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status> {
-
-          private static final String REST_PATH = "v1/{+name}";
-
-          private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/routes/[^/]+$");
-
-          /**
-           * Delete a route. This will cause the route to stop serving traffic.
-           *
-           * Create a request for the method "routes.delete".
-           *
-           * This request holds the parameters needed by the the run server.  After setting any optional
-           * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
-           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-           * be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param name The name of the route being deleted. If needed, replace
-        {namespace_id} with the project ID.
-           * @since 1.13
-           */
-          protected Delete(java.lang.String name) {
-            super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status.class);
-            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/routes/[^/]+$");
-            }
-          }
-
-          @Override
-          public Delete set$Xgafv(java.lang.String $Xgafv) {
-            return (Delete) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public Delete setAccessToken(java.lang.String accessToken) {
-            return (Delete) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public Delete setAlt(java.lang.String alt) {
-            return (Delete) super.setAlt(alt);
-          }
-
-          @Override
-          public Delete setCallback(java.lang.String callback) {
-            return (Delete) super.setCallback(callback);
-          }
-
-          @Override
-          public Delete setFields(java.lang.String fields) {
-            return (Delete) super.setFields(fields);
-          }
-
-          @Override
-          public Delete setKey(java.lang.String key) {
-            return (Delete) super.setKey(key);
-          }
-
-          @Override
-          public Delete setOauthToken(java.lang.String oauthToken) {
-            return (Delete) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (Delete) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public Delete setQuotaUser(java.lang.String quotaUser) {
-            return (Delete) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public Delete setUploadType(java.lang.String uploadType) {
-            return (Delete) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
-            return (Delete) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * The name of the route being deleted. If needed, replace {namespace_id} with the project
-           * ID.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String name;
-
-          /** The name of the route being deleted. If needed, replace {namespace_id} with the project ID.
-           */
-          public java.lang.String getName() {
-            return name;
-          }
-
-          /**
-           * The name of the route being deleted. If needed, replace {namespace_id} with the project
-           * ID.
-           */
-          public Delete setName(java.lang.String name) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/routes/[^/]+$");
-            }
-            this.name = name;
-            return this;
-          }
-
-          /** Cloud Run currently ignores this parameter. */
-          @com.google.api.client.util.Key
-          private java.lang.String apiVersion;
-
-          /** Cloud Run currently ignores this parameter.
-           */
-          public java.lang.String getApiVersion() {
-            return apiVersion;
-          }
-
-          /** Cloud Run currently ignores this parameter. */
-          public Delete setApiVersion(java.lang.String apiVersion) {
-            this.apiVersion = apiVersion;
-            return this;
-          }
-
-          /** Cloud Run currently ignores this parameter. */
-          @com.google.api.client.util.Key
-          private java.lang.String kind;
-
-          /** Cloud Run currently ignores this parameter.
-           */
-          public java.lang.String getKind() {
-            return kind;
-          }
-
-          /** Cloud Run currently ignores this parameter. */
-          public Delete setKind(java.lang.String kind) {
-            this.kind = kind;
-            return this;
-          }
-
-          /**
-           * Specifies the propagation policy of delete. Cloud Run currently ignores this setting,
-           * and deletes in the background. Please see
-           * kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/ for more
-           * information.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String propagationPolicy;
-
-          /** Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and deletes
-         in the background. Please see kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/
-         for more information.
-           */
-          public java.lang.String getPropagationPolicy() {
-            return propagationPolicy;
-          }
-
-          /**
-           * Specifies the propagation policy of delete. Cloud Run currently ignores this setting,
-           * and deletes in the background. Please see
-           * kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/ for more
-           * information.
-           */
-          public Delete setPropagationPolicy(java.lang.String propagationPolicy) {
-            this.propagationPolicy = propagationPolicy;
-            return this;
-          }
-
-          @Override
-          public Delete set(String parameterName, Object value) {
-            return (Delete) super.set(parameterName, value);
-          }
-        }
-        /**
          * Get information about a route.
          *
          * Create a request for the method "routes.get".
@@ -10025,8 +6211,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the route being retrieved. If needed, replace
-        {namespace_id} with the project ID.
+         * @param name The name of the route to retrieve.
+        For Cloud Run (fully managed), replace {namespace_id} with the
+         *        project ID
+        or number.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -10052,8 +6240,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the route being retrieved. If needed, replace
-        {namespace_id} with the project ID.
+           * @param name The name of the route to retrieve.
+        For Cloud Run (fully managed), replace {namespace_id} with the
+         *        project ID
+        or number.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -10132,21 +6322,22 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The name of the route being retrieved. If needed, replace {namespace_id} with the
-           * project ID.
+           * The name of the route to retrieve. For Cloud Run (fully managed), replace
+           * {namespace_id} with the project ID or number.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name of the route being retrieved. If needed, replace {namespace_id} with the project ID.
+          /** The name of the route to retrieve. For Cloud Run (fully managed), replace {namespace_id} with the
+         project ID or number.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * The name of the route being retrieved. If needed, replace {namespace_id} with the
-           * project ID.
+           * The name of the route to retrieve. For Cloud Run (fully managed), replace
+           * {namespace_id} with the project ID or number.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -10171,7 +6362,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent The project ID or project number from which the routes should be listed.
+         * @param parent The namespace from which the routes should be listed.
+        For Cloud Run (fully managed), replace
+         *        {namespace_id} with the project ID
+        or number.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -10197,7 +6391,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The project ID or project number from which the routes should be listed.
+           * @param parent The namespace from which the routes should be listed.
+        For Cloud Run (fully managed), replace
+         *        {namespace_id} with the project ID
+        or number.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -10275,17 +6472,24 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The project ID or project number from which the routes should be listed. */
+          /**
+           * The namespace from which the routes should be listed. For Cloud Run (fully managed),
+           * replace {namespace_id} with the project ID or number.
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The project ID or project number from which the routes should be listed.
+          /** The namespace from which the routes should be listed. For Cloud Run (fully managed), replace
+         {namespace_id} with the project ID or number.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** The project ID or project number from which the routes should be listed. */
+          /**
+           * The namespace from which the routes should be listed. For Cloud Run (fully managed),
+           * replace {namespace_id} with the project ID or number.
+           */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -10440,157 +6644,6 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             return (List) super.set(parameterName, value);
           }
         }
-        /**
-         * Replace a route.
-         *
-         * Only the spec and metadata labels and annotations are modifiable. After the Update request, Cloud
-         * Run will work to make the 'status' match the requested 'spec'.
-         *
-         * May provide metadata.resourceVersion to enforce update from last read for optimistic concurrency
-         * control.
-         *
-         * Create a request for the method "routes.replaceRoute".
-         *
-         * This request holds the parameters needed by the run server.  After setting any optional
-         * parameters, call the {@link ReplaceRoute#execute()} method to invoke the remote operation.
-         *
-         * @param name The name of the route being replaced. If needed, replace
-        {namespace_id} with the project ID.
-         * @param content the {@link com.google.api.services.run.v1.model.Route}
-         * @return the request
-         */
-        public ReplaceRoute replaceRoute(java.lang.String name, com.google.api.services.run.v1.model.Route content) throws java.io.IOException {
-          ReplaceRoute result = new ReplaceRoute(name, content);
-          initialize(result);
-          return result;
-        }
-
-        public class ReplaceRoute extends CloudRunRequest<com.google.api.services.run.v1.model.Route> {
-
-          private static final String REST_PATH = "v1/{+name}";
-
-          private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/routes/[^/]+$");
-
-          /**
-           * Replace a route.
-           *
-           * Only the spec and metadata labels and annotations are modifiable. After the Update request,
-           * Cloud Run will work to make the 'status' match the requested 'spec'.
-           *
-           * May provide metadata.resourceVersion to enforce update from last read for optimistic
-           * concurrency control.
-           *
-           * Create a request for the method "routes.replaceRoute".
-           *
-           * This request holds the parameters needed by the the run server.  After setting any optional
-           * parameters, call the {@link ReplaceRoute#execute()} method to invoke the remote operation. <p>
-           * {@link
-           * ReplaceRoute#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-           * must be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param name The name of the route being replaced. If needed, replace
-        {namespace_id} with the project ID.
-           * @param content the {@link com.google.api.services.run.v1.model.Route}
-           * @since 1.13
-           */
-          protected ReplaceRoute(java.lang.String name, com.google.api.services.run.v1.model.Route content) {
-            super(CloudRun.this, "PUT", REST_PATH, content, com.google.api.services.run.v1.model.Route.class);
-            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/routes/[^/]+$");
-            }
-          }
-
-          @Override
-          public ReplaceRoute set$Xgafv(java.lang.String $Xgafv) {
-            return (ReplaceRoute) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public ReplaceRoute setAccessToken(java.lang.String accessToken) {
-            return (ReplaceRoute) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public ReplaceRoute setAlt(java.lang.String alt) {
-            return (ReplaceRoute) super.setAlt(alt);
-          }
-
-          @Override
-          public ReplaceRoute setCallback(java.lang.String callback) {
-            return (ReplaceRoute) super.setCallback(callback);
-          }
-
-          @Override
-          public ReplaceRoute setFields(java.lang.String fields) {
-            return (ReplaceRoute) super.setFields(fields);
-          }
-
-          @Override
-          public ReplaceRoute setKey(java.lang.String key) {
-            return (ReplaceRoute) super.setKey(key);
-          }
-
-          @Override
-          public ReplaceRoute setOauthToken(java.lang.String oauthToken) {
-            return (ReplaceRoute) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public ReplaceRoute setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (ReplaceRoute) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public ReplaceRoute setQuotaUser(java.lang.String quotaUser) {
-            return (ReplaceRoute) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public ReplaceRoute setUploadType(java.lang.String uploadType) {
-            return (ReplaceRoute) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public ReplaceRoute setUploadProtocol(java.lang.String uploadProtocol) {
-            return (ReplaceRoute) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * The name of the route being replaced. If needed, replace {namespace_id} with the
-           * project ID.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String name;
-
-          /** The name of the route being replaced. If needed, replace {namespace_id} with the project ID.
-           */
-          public java.lang.String getName() {
-            return name;
-          }
-
-          /**
-           * The name of the route being replaced. If needed, replace {namespace_id} with the
-           * project ID.
-           */
-          public ReplaceRoute setName(java.lang.String name) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/routes/[^/]+$");
-            }
-            this.name = name;
-            return this;
-          }
-
-          @Override
-          public ReplaceRoute set(String parameterName, Object value) {
-            return (ReplaceRoute) super.set(parameterName, value);
-          }
-        }
 
       }
       /**
@@ -10621,7 +6674,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent The project ID or project number in which this service should be created.
+         * @param parent The namespace in which the service should be created.
+        For Cloud Run (fully managed), replace
+         *        {namespace_id} with the project ID
+        or number.
          * @param content the {@link com.google.api.services.run.v1.model.Service}
          * @return the request
          */
@@ -10648,7 +6704,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The project ID or project number in which this service should be created.
+           * @param parent The namespace in which the service should be created.
+        For Cloud Run (fully managed), replace
+         *        {namespace_id} with the project ID
+        or number.
            * @param content the {@link com.google.api.services.run.v1.model.Service}
            * @since 1.13
            */
@@ -10717,17 +6776,24 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The project ID or project number in which this service should be created. */
+          /**
+           * The namespace in which the service should be created. For Cloud Run (fully managed),
+           * replace {namespace_id} with the project ID or number.
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The project ID or project number in which this service should be created.
+          /** The namespace in which the service should be created. For Cloud Run (fully managed), replace
+         {namespace_id} with the project ID or number.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** The project ID or project number in which this service should be created. */
+          /**
+           * The namespace in which the service should be created. For Cloud Run (fully managed),
+           * replace {namespace_id} with the project ID or number.
+           */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -10752,8 +6818,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the service being deleted. If needed, replace
-        {namespace_id} with the project ID.
+         * @param name The name of the service to delete.
+        For Cloud Run (fully managed), replace {namespace_id} with the
+         *        project ID
+        or number.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -10762,7 +6830,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return result;
         }
 
-        public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status> {
+        public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.Status> {
 
           private static final String REST_PATH = "v1/{+name}";
 
@@ -10780,12 +6848,14 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the service being deleted. If needed, replace
-        {namespace_id} with the project ID.
+           * @param name The name of the service to delete.
+        For Cloud Run (fully managed), replace {namespace_id} with the
+         *        project ID
+        or number.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
-            super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.K8sIoApimachineryPkgApisMetaV1Status.class);
+            super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.Status.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -10850,21 +6920,22 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The name of the service being deleted. If needed, replace {namespace_id} with the
-           * project ID.
+           * The name of the service to delete. For Cloud Run (fully managed), replace
+           * {namespace_id} with the project ID or number.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name of the service being deleted. If needed, replace {namespace_id} with the project ID.
+          /** The name of the service to delete. For Cloud Run (fully managed), replace {namespace_id} with the
+         project ID or number.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * The name of the service being deleted. If needed, replace {namespace_id} with the
-           * project ID.
+           * The name of the service to delete. For Cloud Run (fully managed), replace
+           * {namespace_id} with the project ID or number.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -10949,8 +7020,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the service being retrieved. If needed, replace
-        {namespace_id} with the project ID.
+         * @param name The name of the service to retrieve.
+        For Cloud Run (fully managed), replace {namespace_id} with the
+         *        project ID
+        or number.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -10976,8 +7049,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the service being retrieved. If needed, replace
-        {namespace_id} with the project ID.
+           * @param name The name of the service to retrieve.
+        For Cloud Run (fully managed), replace {namespace_id} with the
+         *        project ID
+        or number.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -11056,21 +7131,22 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The name of the service being retrieved. If needed, replace {namespace_id} with the
-           * project ID.
+           * The name of the service to retrieve. For Cloud Run (fully managed), replace
+           * {namespace_id} with the project ID or number.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name of the service being retrieved. If needed, replace {namespace_id} with the project ID.
+          /** The name of the service to retrieve. For Cloud Run (fully managed), replace {namespace_id} with the
+         project ID or number.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * The name of the service being retrieved. If needed, replace {namespace_id} with the
-           * project ID.
+           * The name of the service to retrieve. For Cloud Run (fully managed), replace
+           * {namespace_id} with the project ID or number.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -11282,7 +7358,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent The project ID or project number from which the services should be listed.
+         * @param parent The namespace from which the services should be listed.
+        For Cloud Run (fully managed), replace
+         *        {namespace_id} with the project ID
+        or number.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -11308,7 +7387,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The project ID or project number from which the services should be listed.
+           * @param parent The namespace from which the services should be listed.
+        For Cloud Run (fully managed), replace
+         *        {namespace_id} with the project ID
+        or number.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -11386,17 +7468,24 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The project ID or project number from which the services should be listed. */
+          /**
+           * The namespace from which the services should be listed. For Cloud Run (fully managed),
+           * replace {namespace_id} with the project ID or number.
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The project ID or project number from which the services should be listed.
+          /** The namespace from which the services should be listed. For Cloud Run (fully managed), replace
+         {namespace_id} with the project ID or number.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** The project ID or project number from which the services should be listed. */
+          /**
+           * The namespace from which the services should be listed. For Cloud Run (fully managed),
+           * replace {namespace_id} with the project ID or number.
+           */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -11565,8 +7654,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link ReplaceService#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the service being replaced. If needed, replace
-        {namespace_id} with the project ID.
+         * @param name The name of the service being replaced.
+        For Cloud Run (fully managed), replace {namespace_id} with
+         *        the project ID
+        or number.
          * @param content the {@link com.google.api.services.run.v1.model.Service}
          * @return the request
          */
@@ -11600,8 +7691,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * ientRequest)} must be called to initialize this instance immediately after invoking the
            * constructor. </p>
            *
-           * @param name The name of the service being replaced. If needed, replace
-        {namespace_id} with the project ID.
+           * @param name The name of the service being replaced.
+        For Cloud Run (fully managed), replace {namespace_id} with
+         *        the project ID
+        or number.
            * @param content the {@link com.google.api.services.run.v1.model.Service}
            * @since 1.13
            */
@@ -11671,21 +7764,22 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The name of the service being replaced. If needed, replace {namespace_id} with the
-           * project ID.
+           * The name of the service being replaced. For Cloud Run (fully managed), replace
+           * {namespace_id} with the project ID or number.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name of the service being replaced. If needed, replace {namespace_id} with the project ID.
+          /** The name of the service being replaced. For Cloud Run (fully managed), replace {namespace_id} with
+         the project ID or number.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * The name of the service being replaced. If needed, replace {namespace_id} with the
-           * project ID.
+           * The name of the service being replaced. For Cloud Run (fully managed), replace
+           * {namespace_id} with the project ID or number.
            */
           public ReplaceService setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

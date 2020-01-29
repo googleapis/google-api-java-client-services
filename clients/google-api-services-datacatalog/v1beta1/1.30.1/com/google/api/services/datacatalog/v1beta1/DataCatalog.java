@@ -439,7 +439,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
        *
        * * `cloud_pubsub.project_id.topic_id` * ``pubsub.project_id.`topic.id.with.dots` `` *
        * `bigquery.table.project_id.dataset_id.table_id` * `bigquery.dataset.project_id.dataset_id`
-       * * `datacatalog.project_id.location_id.entry_group_id.entry_id`
+       * * `datacatalog.entry.project_id.location_id.entry_group_id.entry_id`
        *
        * `*_id`s shoud satisfy the standard SQL rules for identifiers.
        * https://cloud.google.com/bigquery/docs/reference/standard-sql/lexical.
@@ -453,7 +453,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
 
      * `cloud_pubsub.project_id.topic_id` * ``pubsub.project_id.`topic.id.with.dots` `` *
      `bigquery.table.project_id.dataset_id.table_id` * `bigquery.dataset.project_id.dataset_id` *
-     `datacatalog.project_id.location_id.entry_group_id.entry_id`
+     `datacatalog.entry.project_id.location_id.entry_group_id.entry_id`
 
      `*_id`s shoud satisfy the standard SQL rules for identifiers.
      https://cloud.google.com/bigquery/docs/reference/standard-sql/lexical.
@@ -469,7 +469,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
        *
        * * `cloud_pubsub.project_id.topic_id` * ``pubsub.project_id.`topic.id.with.dots` `` *
        * `bigquery.table.project_id.dataset_id.table_id` * `bigquery.dataset.project_id.dataset_id`
-       * * `datacatalog.project_id.location_id.entry_group_id.entry_id`
+       * * `datacatalog.entry.project_id.location_id.entry_group_id.entry_id`
        *
        * `*_id`s shoud satisfy the standard SQL rules for identifiers.
        * https://cloud.google.com/bigquery/docs/reference/standard-sql/lexical.
@@ -2425,162 +2425,6 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             @Override
             public Patch set(String parameterName, Object value) {
               return (Patch) super.set(parameterName, value);
-            }
-          }
-          /**
-           * Sets the access control policy for a resource. Replaces any existing policy. Supported resources
-           * are:   - Tag templates.   - Entries.   - Entry groups. Note, this method cannot be used to manage
-           * policies for BigQuery, Cloud Pub/Sub and any external Google Cloud Platform resources synced to
-           * Cloud Data Catalog.
-           *
-           * Callers must have following Google IAM permission   - `datacatalog.tagTemplates.setIamPolicy` to
-           * set policies on tag     templates.   - `datacatalog.entries.setIamPolicy` to set policies on
-           * entries.   - `datacatalog.entryGroups.setIamPolicy` to set policies on entry groups.
-           *
-           * Create a request for the method "entries.setIamPolicy".
-           *
-           * This request holds the parameters needed by the datacatalog server.  After setting any optional
-           * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
-           *
-           * @param resource REQUIRED: The resource for which the policy is being specified.
-          See the operation documentation for
-           *        the appropriate value for this field.
-           * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.SetIamPolicyRequest}
-           * @return the request
-           */
-          public SetIamPolicy setIamPolicy(java.lang.String resource, com.google.api.services.datacatalog.v1beta1.model.SetIamPolicyRequest content) throws java.io.IOException {
-            SetIamPolicy result = new SetIamPolicy(resource, content);
-            initialize(result);
-            return result;
-          }
-
-          public class SetIamPolicy extends DataCatalogRequest<com.google.api.services.datacatalog.v1beta1.model.Policy> {
-
-            private static final String REST_PATH = "v1beta1/{+resource}:setIamPolicy";
-
-            private final java.util.regex.Pattern RESOURCE_PATTERN =
-                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entries/[^/]+$");
-
-            /**
-             * Sets the access control policy for a resource. Replaces any existing policy. Supported
-             * resources are:   - Tag templates.   - Entries.   - Entry groups. Note, this method cannot be
-             * used to manage policies for BigQuery, Cloud Pub/Sub and any external Google Cloud Platform
-             * resources synced to Cloud Data Catalog.
-             *
-             * Callers must have following Google IAM permission   - `datacatalog.tagTemplates.setIamPolicy`
-             * to set policies on tag     templates.   - `datacatalog.entries.setIamPolicy` to set policies on
-             * entries.   - `datacatalog.entryGroups.setIamPolicy` to set policies on entry groups.
-             *
-             * Create a request for the method "entries.setIamPolicy".
-             *
-             * This request holds the parameters needed by the the datacatalog server.  After setting any
-             * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
-             * operation. <p> {@link
-             * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-             * must be called to initialize this instance immediately after invoking the constructor. </p>
-             *
-             * @param resource REQUIRED: The resource for which the policy is being specified.
-          See the operation documentation for
-           *        the appropriate value for this field.
-             * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.SetIamPolicyRequest}
-             * @since 1.13
-             */
-            protected SetIamPolicy(java.lang.String resource, com.google.api.services.datacatalog.v1beta1.model.SetIamPolicyRequest content) {
-              super(DataCatalog.this, "POST", REST_PATH, content, com.google.api.services.datacatalog.v1beta1.model.Policy.class);
-              this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
-                    "Parameter resource must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entries/[^/]+$");
-              }
-            }
-
-            @Override
-            public SetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
-              return (SetIamPolicy) super.set$Xgafv($Xgafv);
-            }
-
-            @Override
-            public SetIamPolicy setAccessToken(java.lang.String accessToken) {
-              return (SetIamPolicy) super.setAccessToken(accessToken);
-            }
-
-            @Override
-            public SetIamPolicy setAlt(java.lang.String alt) {
-              return (SetIamPolicy) super.setAlt(alt);
-            }
-
-            @Override
-            public SetIamPolicy setCallback(java.lang.String callback) {
-              return (SetIamPolicy) super.setCallback(callback);
-            }
-
-            @Override
-            public SetIamPolicy setFields(java.lang.String fields) {
-              return (SetIamPolicy) super.setFields(fields);
-            }
-
-            @Override
-            public SetIamPolicy setKey(java.lang.String key) {
-              return (SetIamPolicy) super.setKey(key);
-            }
-
-            @Override
-            public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
-              return (SetIamPolicy) super.setOauthToken(oauthToken);
-            }
-
-            @Override
-            public SetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
-              return (SetIamPolicy) super.setPrettyPrint(prettyPrint);
-            }
-
-            @Override
-            public SetIamPolicy setQuotaUser(java.lang.String quotaUser) {
-              return (SetIamPolicy) super.setQuotaUser(quotaUser);
-            }
-
-            @Override
-            public SetIamPolicy setUploadType(java.lang.String uploadType) {
-              return (SetIamPolicy) super.setUploadType(uploadType);
-            }
-
-            @Override
-            public SetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
-              return (SetIamPolicy) super.setUploadProtocol(uploadProtocol);
-            }
-
-            /**
-             * REQUIRED: The resource for which the policy is being specified. See the operation
-             * documentation for the appropriate value for this field.
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String resource;
-
-            /** REQUIRED: The resource for which the policy is being specified. See the operation documentation for
-           the appropriate value for this field.
-             */
-            public java.lang.String getResource() {
-              return resource;
-            }
-
-            /**
-             * REQUIRED: The resource for which the policy is being specified. See the operation
-             * documentation for the appropriate value for this field.
-             */
-            public SetIamPolicy setResource(java.lang.String resource) {
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
-                    "Parameter resource must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entries/[^/]+$");
-              }
-              this.resource = resource;
-              return this;
-            }
-
-            @Override
-            public SetIamPolicy set(String parameterName, Object value) {
-              return (SetIamPolicy) super.set(parameterName, value);
             }
           }
           /**

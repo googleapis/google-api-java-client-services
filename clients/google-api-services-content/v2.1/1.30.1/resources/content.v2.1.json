@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"9eZ1uxVRThTDhLJCZHhqs3eQWz4/vR4mJ0lje_vHuAdPQodBU68W9NU\"",
+ "etag": "\"F5McR9eEaw0XRpaO3M9gbIugkbs/v0t2LdM_U2ycnPJjAl_f-4DBbiA\"",
  "discoveryVersion": "v1",
  "id": "content:v2.1",
  "name": "content",
  "canonicalName": "Shopping Content",
  "version": "v2.1",
- "revision": "20190905",
+ "revision": "20191126",
  "title": "Content API for Shopping",
  "description": "Manages product items, inventory, and Merchant Center accounts for Google Shopping.",
  "ownerDomain": "google.com",
@@ -80,7 +80,7 @@
   "Account": {
    "id": "Account",
    "type": "object",
-   "description": "Account data. After the creation of a new account it may take a few minutes before it is fully operational. The methods delete, insert, patch, and update require the admin role.",
+   "description": "Account data. After the creation of a new account it may take a few minutes before it is fully operational. The methods delete, insert, and update require the admin role.",
    "properties": {
     "adsLinks": {
      "type": "array",
@@ -1313,7 +1313,7 @@
     },
     "includedDestinations": {
      "type": "array",
-     "description": "The list of destinations to include for this target (corresponds to checked check boxes in Merchant Center). Default destinations are always included unless provided in excludedDestinations.",
+     "description": "The list of destinations to include for this target (corresponds to checked check boxes in Merchant Center). Default destinations are always included unless provided in excludedDestinations.\n\nList of supported destinations (if available to the account):  \n- DisplayAds \n- Shopping \n- ShoppingActions \n- SurfacesAcrossGoogle",
      "items": {
       "type": "string"
      }
@@ -2265,7 +2265,7 @@
   "Order": {
    "id": "Order",
    "type": "object",
-   "description": "Order. All methods require the order manager role.",
+   "description": "Order. Production access (all methods) requires the order manager role. Sandbox access does not.",
    "properties": {
     "acknowledged": {
      "type": "boolean",
@@ -2429,7 +2429,7 @@
     },
     "reason": {
      "type": "string",
-     "description": "The reason for the cancellation. Orders that are cancelled with a noInventory reason will lead to the removal of the product from Shopping Actions until you make an update to that product. This will not affect your Shopping ads."
+     "description": "The reason for the cancellation. Orders that are canceled with a noInventory reason will lead to the removal of the product from Shopping Actions until you make an update to that product. This will not affect your Shopping ads."
     },
     "reasonText": {
      "type": "string",
@@ -2447,7 +2447,7 @@
     },
     "invoiceReceivingEmail": {
      "type": "string",
-     "description": "Email address for receiving merchant issued value-added tax or invoice documentation of this order."
+     "description": "Email address for the merchant to send value-added tax or invoice documentation of the order. This documentation is made available to the customer."
     },
     "loyaltyInfo": {
      "$ref": "OrderCustomerLoyaltyInfo",
@@ -2893,14 +2893,18 @@
     },
     "appliedItems": {
      "type": "array",
-     "description": "Items which this promotion have been applied to.",
+     "description": "Items which this promotion have been applied to. Do not provide for orders.createtestorder.",
      "items": {
       "$ref": "OrderPromotionItem"
      }
     },
+    "endTime": {
+     "type": "string",
+     "description": "Promotion end time in ISO 8601 format. Date, time, and offset required, e.g., \"2020-01-02T09:00:00+01:00\" or \"2020-01-02T09:00:00Z\"."
+    },
     "funder": {
      "type": "string",
-     "description": "The party funding the promotion.",
+     "description": "The party funding the promotion. Only merchant is supported for orders.createtestorder.",
      "annotations": {
       "required": [
        "content.orders.createtestorder"
@@ -2922,11 +2926,15 @@
     },
     "shortTitle": {
      "type": "string",
-     "description": "A short title of the promotion to be shown on the checkout page."
+     "description": "A short title of the promotion to be shown on the checkout page. Do not provide for orders.createtestorder."
+    },
+    "startTime": {
+     "type": "string",
+     "description": "Promotion start time in ISO 8601 format. Date, time, and offset required, e.g., \"2020-01-02T09:00:00+01:00\" or \"2020-01-02T09:00:00Z\"."
     },
     "subtype": {
      "type": "string",
-     "description": "The category of the promotion.",
+     "description": "The category of the promotion. Only moneyOff is supported for orders.createtestorder.",
      "annotations": {
       "required": [
        "content.orders.createtestorder"
@@ -2935,7 +2943,7 @@
     },
     "taxValue": {
      "$ref": "Price",
-     "description": "Estimated discount applied to tax (if allowed by law)."
+     "description": "Estimated discount applied to tax (if allowed by law). Do not provide for orders.createtestorder."
     },
     "title": {
      "type": "string",
@@ -2948,7 +2956,7 @@
     },
     "type": {
      "type": "string",
-     "description": "The scope of the promotion.",
+     "description": "The scope of the promotion. Only product is supported for orders.createtestorder.",
      "annotations": {
       "required": [
        "content.orders.createtestorder"
@@ -2962,19 +2970,25 @@
    "type": "object",
    "properties": {
     "lineItemId": {
-     "type": "string"
-    },
-    "productId": {
      "type": "string",
+     "description": "The line item ID of a product. Do not provide for orders.createtestorder."
+    },
+    "offerId": {
+     "type": "string",
+     "description": "Offer ID of a product. Only for orders.createtestorder.",
      "annotations": {
       "required": [
        "content.orders.createtestorder"
       ]
      }
     },
+    "productId": {
+     "type": "string",
+     "description": "orders.createtestorder."
+    },
     "quantity": {
      "type": "integer",
-     "description": "The quantity of the associated product.",
+     "description": "The quantity of the associated product. Do not provide for orders.createtestorder.",
      "format": "int32"
     }
    }
@@ -3109,7 +3123,7 @@
    "properties": {
     "carrier": {
      "type": "string",
-     "description": "The carrier handling the shipment.\n\nAcceptable values for US are:  \n- \"gsx\" \n- \"ups\" \n- \"usps\" \n- \"fedex\" \n- \"dhl\" \n- \"ecourier\" \n- \"cxt\" \n- \"google\" \n- \"ontrac\" \n- \"emsy\" \n- \"ont\" \n- \"deliv\" \n- \"dynamex\" \n- \"lasership\" \n- \"mpx\" \n- \"uds\" \n- \"efw\"  \n\nAcceptable values for FR are:  \n- \"colissimo\" \n- \"chronopost\" \n- \"gls\" \n- \"dpd\" \n- \"bpost\" \n- \"colis prive\" \n- \"boxtal\" \n- \"geodis\""
+     "description": "The carrier handling the shipment.\n\nFor supported carriers, Google includes the carrier name and tracking URL in emails to customers. For select supported carriers, Google also automatically updates the shipment status based on the provided shipment ID. Note: You can also use unsupported carriers, but emails to customers will not include the carrier name or tracking URL, and there will be no automatic order status updates. \nSupported carriers for US are:  \n- \"ups\" (United Parcel Service) automatic status updates \n- \"usps\" (United States Postal Service) automatic status updates \n- \"fedex\" (FedEx) automatic status updates  \n- \"dhl\" (DHL eCommerce) automatic status updates (US only) \n- \"ontrac\" (OnTrac) automatic status updates  \n- \"dhl express\" (DHL Express)\n- \"deliv\" (Deliv) \n- \"dynamex\" (TForce) \n- \"lasership\" (LaserShip) \n- \"mpx\" (Military Parcel Xpress) \n- \"uds\" (United Delivery Service) \n- \"efw\" (Estes Forwarding Worldwide) \n- \"jd logistics\" (JD Logistics) \n- \"yunexpress\" (YunExpress) \n- \"china post\" (China Post) \n- \"china ems\" (China Post Express Mail Service) \n- \"singapore post\" (Singapore Post) \n- \"pos malaysia\" (Pos Malaysia) \n- \"postnl\" (PostNL) \n- \"ptt\" (PTT Turkish Post) \n- \"eub\" (ePacket) \n- \"chukou1\" (Chukou1 Logistics)  \nSupported carriers for FR are:  \n- \"la poste\" (La Poste) automatic status updates  \n- \"colissimo\" (Colissimo by La Poste) automatic status updates \n- \"ups\" (United Parcel Service) automatic status updates  \n- \"chronopost\" (Chronopost by La Poste) \n- \"gls\" (General Logistics Systems France) \n- \"dpd\" (DPD Group by GeoPost) \n- \"bpost\" (Belgian Post Group) \n- \"colis prive\" (Colis Privé) \n- \"boxtal\" (Boxtal) \n- \"geodis\" (GEODIS) \n- \"tnt\" (TNT)"
     },
     "creationDate": {
      "type": "string",
@@ -3150,7 +3164,7 @@
    "properties": {
     "lineItemId": {
      "type": "string",
-     "description": "The ID of the line item that is shipped. Either lineItemId or productId is required."
+     "description": "The ID of the line item that is shipped. This value is assigned by Google when an order is created. Either lineItemId or productId is required."
     },
     "productId": {
      "type": "string",
@@ -4773,7 +4787,7 @@
     },
     "customAttributes": {
      "type": "array",
-     "description": "A list of custom (merchant-provided) attributes. It can also be used for submitting any attribute of the feed specification in its generic form (e.g., { \"name\": \"size type\", \"value\": \"regular\" }). This is useful for submitting attributes not explicitly exposed by the API.",
+     "description": "A list of custom (merchant-provided) attributes. It can also be used for submitting any attribute of the feed specification in its generic form (e.g., { \"name\": \"size type\", \"value\": \"regular\" }). This is useful for submitting attributes not explicitly exposed by the API, such as additional attributes used for Shopping Actions.",
      "items": {
       "$ref": "CustomAttribute"
      }
@@ -5013,7 +5027,7 @@
     },
     "sizes": {
      "type": "array",
-     "description": "Size of the item.",
+     "description": "Size of the item. Only one value is allowed. For variants with different sizes, insert a separate product for each size with the same itemGroupId value (see size definition).",
      "items": {
       "type": "string"
      }

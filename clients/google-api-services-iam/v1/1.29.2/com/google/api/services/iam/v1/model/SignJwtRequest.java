@@ -31,14 +31,14 @@ package com.google.api.services.iam.v1.model;
 public final class SignJwtRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The JWT payload to sign, a JSON JWT Claim set.
+   * Required. The JWT payload to sign, a JSON JWT Claim set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String payload;
 
   /**
-   * The JWT payload to sign, a JSON JWT Claim set.
+   * Required. The JWT payload to sign, a JSON JWT Claim set.
    * @return value or {@code null} for none
    */
   public java.lang.String getPayload() {
@@ -46,7 +46,7 @@ public final class SignJwtRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The JWT payload to sign, a JSON JWT Claim set.
+   * Required. The JWT payload to sign, a JSON JWT Claim set.
    * @param payload payload or {@code null} for none
    */
   public SignJwtRequest setPayload(java.lang.String payload) {

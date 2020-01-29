@@ -60,6 +60,13 @@ public final class GooglePrivacyDlpV2Action extends com.google.api.client.json.G
   private GooglePrivacyDlpV2PublishSummaryToCscc publishSummaryToCscc;
 
   /**
+   * Enable Stackdriver metric dlp.googleapis.com/finding_count.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2PublishToStackdriver publishToStackdriver;
+
+  /**
    * Save resulting findings in a provided location.
    * The value may be {@code null}.
    */
@@ -131,6 +138,23 @@ public final class GooglePrivacyDlpV2Action extends com.google.api.client.json.G
    */
   public GooglePrivacyDlpV2Action setPublishSummaryToCscc(GooglePrivacyDlpV2PublishSummaryToCscc publishSummaryToCscc) {
     this.publishSummaryToCscc = publishSummaryToCscc;
+    return this;
+  }
+
+  /**
+   * Enable Stackdriver metric dlp.googleapis.com/finding_count.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2PublishToStackdriver getPublishToStackdriver() {
+    return publishToStackdriver;
+  }
+
+  /**
+   * Enable Stackdriver metric dlp.googleapis.com/finding_count.
+   * @param publishToStackdriver publishToStackdriver or {@code null} for none
+   */
+  public GooglePrivacyDlpV2Action setPublishToStackdriver(GooglePrivacyDlpV2PublishToStackdriver publishToStackdriver) {
+    this.publishToStackdriver = publishToStackdriver;
     return this;
   }
 

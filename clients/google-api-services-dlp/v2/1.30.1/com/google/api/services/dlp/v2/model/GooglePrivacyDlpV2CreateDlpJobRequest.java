@@ -47,6 +47,13 @@ public final class GooglePrivacyDlpV2CreateDlpJobRequest extends com.google.api.
   private java.lang.String jobId;
 
   /**
+   * The geographic location to store and process the job. Reserved for future extensions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String locationId;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,6 +92,23 @@ public final class GooglePrivacyDlpV2CreateDlpJobRequest extends com.google.api.
    */
   public GooglePrivacyDlpV2CreateDlpJobRequest setJobId(java.lang.String jobId) {
     this.jobId = jobId;
+    return this;
+  }
+
+  /**
+   * The geographic location to store and process the job. Reserved for future extensions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocationId() {
+    return locationId;
+  }
+
+  /**
+   * The geographic location to store and process the job. Reserved for future extensions.
+   * @param locationId locationId or {@code null} for none
+   */
+  public GooglePrivacyDlpV2CreateDlpJobRequest setLocationId(java.lang.String locationId) {
+    this.locationId = locationId;
     return this;
   }
 

@@ -33,7 +33,7 @@ public final class GooglePrivacyDlpV2DateShiftConfig extends com.google.api.clie
 
   /**
    * Points to the field that contains the context, for example, an entity id. If set, must also set
-   * method. If set, shift will be consistent for the given context.
+   * cryptoKey. If set, shift will be consistent for the given context.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,7 +41,8 @@ public final class GooglePrivacyDlpV2DateShiftConfig extends com.google.api.clie
 
   /**
    * Causes the shift to be computed based on this key and the context. This results in the same
-   * shift for the same context and crypto_key.
+   * shift for the same context and crypto_key. If set, must also set context. Can only be applied
+   * to table items.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +68,7 @@ public final class GooglePrivacyDlpV2DateShiftConfig extends com.google.api.clie
 
   /**
    * Points to the field that contains the context, for example, an entity id. If set, must also set
-   * method. If set, shift will be consistent for the given context.
+   * cryptoKey. If set, shift will be consistent for the given context.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2FieldId getContext() {
@@ -76,7 +77,7 @@ public final class GooglePrivacyDlpV2DateShiftConfig extends com.google.api.clie
 
   /**
    * Points to the field that contains the context, for example, an entity id. If set, must also set
-   * method. If set, shift will be consistent for the given context.
+   * cryptoKey. If set, shift will be consistent for the given context.
    * @param context context or {@code null} for none
    */
   public GooglePrivacyDlpV2DateShiftConfig setContext(GooglePrivacyDlpV2FieldId context) {
@@ -86,7 +87,8 @@ public final class GooglePrivacyDlpV2DateShiftConfig extends com.google.api.clie
 
   /**
    * Causes the shift to be computed based on this key and the context. This results in the same
-   * shift for the same context and crypto_key.
+   * shift for the same context and crypto_key. If set, must also set context. Can only be applied
+   * to table items.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2CryptoKey getCryptoKey() {
@@ -95,7 +97,8 @@ public final class GooglePrivacyDlpV2DateShiftConfig extends com.google.api.clie
 
   /**
    * Causes the shift to be computed based on this key and the context. This results in the same
-   * shift for the same context and crypto_key.
+   * shift for the same context and crypto_key. If set, must also set context. Can only be applied
+   * to table items.
    * @param cryptoKey cryptoKey or {@code null} for none
    */
   public GooglePrivacyDlpV2DateShiftConfig setCryptoKey(GooglePrivacyDlpV2CryptoKey cryptoKey) {

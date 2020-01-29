@@ -38,6 +38,13 @@ public final class GooglePrivacyDlpV2CreateDeidentifyTemplateRequest extends com
   private GooglePrivacyDlpV2DeidentifyTemplate deidentifyTemplate;
 
   /**
+   * The geographic location to store the deidentification template. Reserved for future extensions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String locationId;
+
+  /**
    * The template id can contain uppercase and lowercase letters, numbers, and hyphens; that is, it
    * must match the regular expression: `[a-zA-Z\\d-_]+`. The maximum length is 100 characters. Can
    * be empty to allow the system to generate one.
@@ -60,6 +67,23 @@ public final class GooglePrivacyDlpV2CreateDeidentifyTemplateRequest extends com
    */
   public GooglePrivacyDlpV2CreateDeidentifyTemplateRequest setDeidentifyTemplate(GooglePrivacyDlpV2DeidentifyTemplate deidentifyTemplate) {
     this.deidentifyTemplate = deidentifyTemplate;
+    return this;
+  }
+
+  /**
+   * The geographic location to store the deidentification template. Reserved for future extensions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocationId() {
+    return locationId;
+  }
+
+  /**
+   * The geographic location to store the deidentification template. Reserved for future extensions.
+   * @param locationId locationId or {@code null} for none
+   */
+  public GooglePrivacyDlpV2CreateDeidentifyTemplateRequest setLocationId(java.lang.String locationId) {
+    this.locationId = locationId;
     return this;
   }
 

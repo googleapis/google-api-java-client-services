@@ -66,6 +66,13 @@ public final class GooglePrivacyDlpV2RedactImageRequest extends com.google.api.c
   private GooglePrivacyDlpV2InspectConfig inspectConfig;
 
   /**
+   * The geographic location to process the request. Reserved for future extensions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String locationId;
+
+  /**
    * The content must be PNG, JPEG, SVG or BMP.
    * @return value or {@code null} for none
    */
@@ -130,6 +137,23 @@ public final class GooglePrivacyDlpV2RedactImageRequest extends com.google.api.c
    */
   public GooglePrivacyDlpV2RedactImageRequest setInspectConfig(GooglePrivacyDlpV2InspectConfig inspectConfig) {
     this.inspectConfig = inspectConfig;
+    return this;
+  }
+
+  /**
+   * The geographic location to process the request. Reserved for future extensions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocationId() {
+    return locationId;
+  }
+
+  /**
+   * The geographic location to process the request. Reserved for future extensions.
+   * @param locationId locationId or {@code null} for none
+   */
+  public GooglePrivacyDlpV2RedactImageRequest setLocationId(java.lang.String locationId) {
+    this.locationId = locationId;
     return this;
   }
 

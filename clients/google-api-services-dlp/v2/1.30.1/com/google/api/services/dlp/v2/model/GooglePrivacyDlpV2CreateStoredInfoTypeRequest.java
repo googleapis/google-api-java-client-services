@@ -38,6 +38,13 @@ public final class GooglePrivacyDlpV2CreateStoredInfoTypeRequest extends com.goo
   private GooglePrivacyDlpV2StoredInfoTypeConfig config;
 
   /**
+   * The geographic location to store the stored infoType. Reserved for future extensions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String locationId;
+
+  /**
    * The storedInfoType ID can contain uppercase and lowercase letters, numbers, and hyphens; that
    * is, it must match the regular expression: `[a-zA-Z\\d-_]+`. The maximum length is 100
    * characters. Can be empty to allow the system to generate one.
@@ -60,6 +67,23 @@ public final class GooglePrivacyDlpV2CreateStoredInfoTypeRequest extends com.goo
    */
   public GooglePrivacyDlpV2CreateStoredInfoTypeRequest setConfig(GooglePrivacyDlpV2StoredInfoTypeConfig config) {
     this.config = config;
+    return this;
+  }
+
+  /**
+   * The geographic location to store the stored infoType. Reserved for future extensions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocationId() {
+    return locationId;
+  }
+
+  /**
+   * The geographic location to store the stored infoType. Reserved for future extensions.
+   * @param locationId locationId or {@code null} for none
+   */
+  public GooglePrivacyDlpV2CreateStoredInfoTypeRequest setLocationId(java.lang.String locationId) {
+    this.locationId = locationId;
     return this;
   }
 

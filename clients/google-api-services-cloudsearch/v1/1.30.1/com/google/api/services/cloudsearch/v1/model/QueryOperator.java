@@ -96,6 +96,14 @@ public final class QueryOperator extends com.google.api.client.json.GenericJson 
   private java.lang.String lessThanOperatorName;
 
   /**
+   * Name of the object corresponding to the operator. This field is only filled for schema-specific
+   * operators, and is unset for common operators.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String objectType;
+
+  /**
    * The name of the operator.
    * The value may be {@code null}.
    */
@@ -265,6 +273,25 @@ public final class QueryOperator extends com.google.api.client.json.GenericJson 
    */
   public QueryOperator setLessThanOperatorName(java.lang.String lessThanOperatorName) {
     this.lessThanOperatorName = lessThanOperatorName;
+    return this;
+  }
+
+  /**
+   * Name of the object corresponding to the operator. This field is only filled for schema-specific
+   * operators, and is unset for common operators.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getObjectType() {
+    return objectType;
+  }
+
+  /**
+   * Name of the object corresponding to the operator. This field is only filled for schema-specific
+   * operators, and is unset for common operators.
+   * @param objectType objectType or {@code null} for none
+   */
+  public QueryOperator setObjectType(java.lang.String objectType) {
+    this.objectType = objectType;
     return this;
   }
 

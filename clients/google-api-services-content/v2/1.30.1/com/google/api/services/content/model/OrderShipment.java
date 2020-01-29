@@ -50,7 +50,8 @@ public final class OrderShipment extends com.google.api.client.json.GenericJson 
    * - "colissimo" (Colissimo by La Poste) automatic status updates  - "ups" (United Parcel Service)
    * automatic status updates   - "chronopost" (Chronopost by La Poste)  - "gls" (General Logistics
    * Systems France)  - "dpd" (DPD Group by GeoPost)  - "bpost" (Belgian Post Group)  - "colis
-   * prive" (Colis Privé)  - "boxtal" (Boxtal)  - "geodis" (GEODIS)  - "tnt" (TNT)
+   * prive" (Colis Privé)  - "boxtal" (Boxtal)  - "geodis" (GEODIS)  - "tnt" (TNT)  - "db schenker"
+   * (DB Schenker)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,7 +120,8 @@ public final class OrderShipment extends com.google.api.client.json.GenericJson 
    * - "colissimo" (Colissimo by La Poste) automatic status updates  - "ups" (United Parcel Service)
    * automatic status updates   - "chronopost" (Chronopost by La Poste)  - "gls" (General Logistics
    * Systems France)  - "dpd" (DPD Group by GeoPost)  - "bpost" (Belgian Post Group)  - "colis
-   * prive" (Colis Privé)  - "boxtal" (Boxtal)  - "geodis" (GEODIS)  - "tnt" (TNT)
+   * prive" (Colis Privé)  - "boxtal" (Boxtal)  - "geodis" (GEODIS)  - "tnt" (TNT)  - "db schenker"
+   * (DB Schenker)
    * @return value or {@code null} for none
    */
   public java.lang.String getCarrier() {
@@ -146,7 +148,8 @@ public final class OrderShipment extends com.google.api.client.json.GenericJson 
    * - "colissimo" (Colissimo by La Poste) automatic status updates  - "ups" (United Parcel Service)
    * automatic status updates   - "chronopost" (Chronopost by La Poste)  - "gls" (General Logistics
    * Systems France)  - "dpd" (DPD Group by GeoPost)  - "bpost" (Belgian Post Group)  - "colis
-   * prive" (Colis Privé)  - "boxtal" (Boxtal)  - "geodis" (GEODIS)  - "tnt" (TNT)
+   * prive" (Colis Privé)  - "boxtal" (Boxtal)  - "geodis" (GEODIS)  - "tnt" (TNT)  - "db schenker"
+   * (DB Schenker)
    * @param carrier carrier or {@code null} for none
    */
   public OrderShipment setCarrier(java.lang.String carrier) {

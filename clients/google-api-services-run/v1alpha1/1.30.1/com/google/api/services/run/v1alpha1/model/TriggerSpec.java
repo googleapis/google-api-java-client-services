@@ -61,8 +61,15 @@ public final class TriggerSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Subscriber is the addressable that receives events from the Broker that pass the Filter. It is
-   * required.
+   * Sink is the addressable that will receive events.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Destination sink;
+
+  /**
+   * Deprecated, sink will be represented by Destination. Subscriber is the addressable that
+   * receives events from the Broker that pass the Filter. It is required.
    *
    * E.g. https://us-central1-myproject.cloudfunctions.net/myfunction or /namespaces/my-
    * project/services/my-service.
@@ -131,8 +138,25 @@ public final class TriggerSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Subscriber is the addressable that receives events from the Broker that pass the Filter. It is
-   * required.
+   * Sink is the addressable that will receive events.
+   * @return value or {@code null} for none
+   */
+  public Destination getSink() {
+    return sink;
+  }
+
+  /**
+   * Sink is the addressable that will receive events.
+   * @param sink sink or {@code null} for none
+   */
+  public TriggerSpec setSink(Destination sink) {
+    this.sink = sink;
+    return this;
+  }
+
+  /**
+   * Deprecated, sink will be represented by Destination. Subscriber is the addressable that
+   * receives events from the Broker that pass the Filter. It is required.
    *
    * E.g. https://us-central1-myproject.cloudfunctions.net/myfunction or /namespaces/my-
    * project/services/my-service.
@@ -143,8 +167,8 @@ public final class TriggerSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Subscriber is the addressable that receives events from the Broker that pass the Filter. It is
-   * required.
+   * Deprecated, sink will be represented by Destination. Subscriber is the addressable that
+   * receives events from the Broker that pass the Filter. It is required.
    *
    * E.g. https://us-central1-myproject.cloudfunctions.net/myfunction or /namespaces/my-
    * project/services/my-service.

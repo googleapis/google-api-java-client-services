@@ -14,11 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.run.v1beta1.model;
+package com.google.api.services.run.v1alpha1.model;
 
 /**
- * CustomResourceDefinition represents a resource that should be exposed on the API server.  Its
- * name MUST be in the format <.spec.name>.<.spec.group>.
+ * Model definition for CloudAuditLog.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run API. For a detailed explanation see:
@@ -28,38 +27,46 @@ package com.google.api.services.run.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class CustomResourceDefinition extends com.google.api.client.json.GenericJson {
+public final class CloudAuditLog extends com.google.api.client.json.GenericJson {
 
   /**
-   * The API version for this call such as "k8s.apiextensions.io/v1beta1".
+   * The API version for this call such as "events.cloud.google.com/v1alpha1".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String apiVersion;
 
   /**
-   * The kind of resource, in this case always "CustomResourceDefinition".
+   * The kind of resource, in this case "CloudAuditLog".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * Metadata associated with this CustomResourceDefinition.
+   * Metadata associated with this CloudAuditLog.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ObjectMeta metadata;
 
   /**
-   * Spec describes how the user wants the resources to appear
+   * Spec defines the desired state of the CloudAuditLog.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private CustomResourceDefinitionSpec spec;
+  private CloudAuditLogSpec spec;
 
   /**
-   * The API version for this call such as "k8s.apiextensions.io/v1beta1".
+   * Status represents the current state of the CloudAuditLog. This data may be out of date.
+   * +optional
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudAuditLogStatus status;
+
+  /**
+   * The API version for this call such as "events.cloud.google.com/v1alpha1".
    * @return value or {@code null} for none
    */
   public java.lang.String getApiVersion() {
@@ -67,16 +74,16 @@ public final class CustomResourceDefinition extends com.google.api.client.json.G
   }
 
   /**
-   * The API version for this call such as "k8s.apiextensions.io/v1beta1".
+   * The API version for this call such as "events.cloud.google.com/v1alpha1".
    * @param apiVersion apiVersion or {@code null} for none
    */
-  public CustomResourceDefinition setApiVersion(java.lang.String apiVersion) {
+  public CloudAuditLog setApiVersion(java.lang.String apiVersion) {
     this.apiVersion = apiVersion;
     return this;
   }
 
   /**
-   * The kind of resource, in this case always "CustomResourceDefinition".
+   * The kind of resource, in this case "CloudAuditLog".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -84,16 +91,16 @@ public final class CustomResourceDefinition extends com.google.api.client.json.G
   }
 
   /**
-   * The kind of resource, in this case always "CustomResourceDefinition".
+   * The kind of resource, in this case "CloudAuditLog".
    * @param kind kind or {@code null} for none
    */
-  public CustomResourceDefinition setKind(java.lang.String kind) {
+  public CloudAuditLog setKind(java.lang.String kind) {
     this.kind = kind;
     return this;
   }
 
   /**
-   * Metadata associated with this CustomResourceDefinition.
+   * Metadata associated with this CloudAuditLog.
    * @return value or {@code null} for none
    */
   public ObjectMeta getMetadata() {
@@ -101,39 +108,58 @@ public final class CustomResourceDefinition extends com.google.api.client.json.G
   }
 
   /**
-   * Metadata associated with this CustomResourceDefinition.
+   * Metadata associated with this CloudAuditLog.
    * @param metadata metadata or {@code null} for none
    */
-  public CustomResourceDefinition setMetadata(ObjectMeta metadata) {
+  public CloudAuditLog setMetadata(ObjectMeta metadata) {
     this.metadata = metadata;
     return this;
   }
 
   /**
-   * Spec describes how the user wants the resources to appear
+   * Spec defines the desired state of the CloudAuditLog.
    * @return value or {@code null} for none
    */
-  public CustomResourceDefinitionSpec getSpec() {
+  public CloudAuditLogSpec getSpec() {
     return spec;
   }
 
   /**
-   * Spec describes how the user wants the resources to appear
+   * Spec defines the desired state of the CloudAuditLog.
    * @param spec spec or {@code null} for none
    */
-  public CustomResourceDefinition setSpec(CustomResourceDefinitionSpec spec) {
+  public CloudAuditLog setSpec(CloudAuditLogSpec spec) {
     this.spec = spec;
     return this;
   }
 
-  @Override
-  public CustomResourceDefinition set(String fieldName, Object value) {
-    return (CustomResourceDefinition) super.set(fieldName, value);
+  /**
+   * Status represents the current state of the CloudAuditLog. This data may be out of date.
+   * +optional
+   * @return value or {@code null} for none
+   */
+  public CloudAuditLogStatus getStatus() {
+    return status;
+  }
+
+  /**
+   * Status represents the current state of the CloudAuditLog. This data may be out of date.
+   * +optional
+   * @param status status or {@code null} for none
+   */
+  public CloudAuditLog setStatus(CloudAuditLogStatus status) {
+    this.status = status;
+    return this;
   }
 
   @Override
-  public CustomResourceDefinition clone() {
-    return (CustomResourceDefinition) super.clone();
+  public CloudAuditLog set(String fieldName, Object value) {
+    return (CloudAuditLog) super.set(fieldName, value);
+  }
+
+  @Override
+  public CloudAuditLog clone() {
+    return (CloudAuditLog) super.clone();
   }
 
 }

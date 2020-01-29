@@ -14,11 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.run.v1beta1.model;
+package com.google.api.services.run.v1alpha1.model;
 
 /**
- * CustomResourceDefinition represents a resource that should be exposed on the API server.  Its
- * name MUST be in the format <.spec.name>.<.spec.group>.
+ * ListStoragesResponse is a list of Storage resources.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run API. For a detailed explanation see:
@@ -28,38 +27,45 @@ package com.google.api.services.run.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class CustomResourceDefinition extends com.google.api.client.json.GenericJson {
+public final class ListStoragesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The API version for this call such as "k8s.apiextensions.io/v1beta1".
+   * The API version for this call such as "events.cloud.google.com/v1alpha1".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String apiVersion;
 
   /**
-   * The kind of resource, in this case always "CustomResourceDefinition".
+   * List of Storages.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Storage> items;
+
+  /**
+   * The kind of this resource, in this case "StorageList".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * Metadata associated with this CustomResourceDefinition.
+   * Metadata associated with this Storage list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private ObjectMeta metadata;
+  private ListMeta metadata;
 
   /**
-   * Spec describes how the user wants the resources to appear
+   * Locations that could not be reached.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private CustomResourceDefinitionSpec spec;
+  private java.util.List<java.lang.String> unreachable;
 
   /**
-   * The API version for this call such as "k8s.apiextensions.io/v1beta1".
+   * The API version for this call such as "events.cloud.google.com/v1alpha1".
    * @return value or {@code null} for none
    */
   public java.lang.String getApiVersion() {
@@ -67,16 +73,33 @@ public final class CustomResourceDefinition extends com.google.api.client.json.G
   }
 
   /**
-   * The API version for this call such as "k8s.apiextensions.io/v1beta1".
+   * The API version for this call such as "events.cloud.google.com/v1alpha1".
    * @param apiVersion apiVersion or {@code null} for none
    */
-  public CustomResourceDefinition setApiVersion(java.lang.String apiVersion) {
+  public ListStoragesResponse setApiVersion(java.lang.String apiVersion) {
     this.apiVersion = apiVersion;
     return this;
   }
 
   /**
-   * The kind of resource, in this case always "CustomResourceDefinition".
+   * List of Storages.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Storage> getItems() {
+    return items;
+  }
+
+  /**
+   * List of Storages.
+   * @param items items or {@code null} for none
+   */
+  public ListStoragesResponse setItems(java.util.List<Storage> items) {
+    this.items = items;
+    return this;
+  }
+
+  /**
+   * The kind of this resource, in this case "StorageList".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -84,56 +107,56 @@ public final class CustomResourceDefinition extends com.google.api.client.json.G
   }
 
   /**
-   * The kind of resource, in this case always "CustomResourceDefinition".
+   * The kind of this resource, in this case "StorageList".
    * @param kind kind or {@code null} for none
    */
-  public CustomResourceDefinition setKind(java.lang.String kind) {
+  public ListStoragesResponse setKind(java.lang.String kind) {
     this.kind = kind;
     return this;
   }
 
   /**
-   * Metadata associated with this CustomResourceDefinition.
+   * Metadata associated with this Storage list.
    * @return value or {@code null} for none
    */
-  public ObjectMeta getMetadata() {
+  public ListMeta getMetadata() {
     return metadata;
   }
 
   /**
-   * Metadata associated with this CustomResourceDefinition.
+   * Metadata associated with this Storage list.
    * @param metadata metadata or {@code null} for none
    */
-  public CustomResourceDefinition setMetadata(ObjectMeta metadata) {
+  public ListStoragesResponse setMetadata(ListMeta metadata) {
     this.metadata = metadata;
     return this;
   }
 
   /**
-   * Spec describes how the user wants the resources to appear
+   * Locations that could not be reached.
    * @return value or {@code null} for none
    */
-  public CustomResourceDefinitionSpec getSpec() {
-    return spec;
+  public java.util.List<java.lang.String> getUnreachable() {
+    return unreachable;
   }
 
   /**
-   * Spec describes how the user wants the resources to appear
-   * @param spec spec or {@code null} for none
+   * Locations that could not be reached.
+   * @param unreachable unreachable or {@code null} for none
    */
-  public CustomResourceDefinition setSpec(CustomResourceDefinitionSpec spec) {
-    this.spec = spec;
+  public ListStoragesResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
+    this.unreachable = unreachable;
     return this;
   }
 
   @Override
-  public CustomResourceDefinition set(String fieldName, Object value) {
-    return (CustomResourceDefinition) super.set(fieldName, value);
+  public ListStoragesResponse set(String fieldName, Object value) {
+    return (ListStoragesResponse) super.set(fieldName, value);
   }
 
   @Override
-  public CustomResourceDefinition clone() {
-    return (CustomResourceDefinition) super.clone();
+  public ListStoragesResponse clone() {
+    return (ListStoragesResponse) super.clone();
   }
 
 }

@@ -39,14 +39,6 @@ public final class PacketMirroring extends com.google.api.client.json.GenericJso
   private PacketMirroringForwardingRuleInfo collectorIlb;
 
   /**
-   * PacketMirroring collectorInfos. Each collectorInfo specifies a set of collector VM instances,
-   * preferably in the same zone as the mirrored VM(s)
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private PacketMirroringCollectorInfo collectors;
-
-  /**
    * [Output Only] Creation timestamp in RFC3339 text format.
    * The value may be {@code null}.
    */
@@ -120,14 +112,6 @@ public final class PacketMirroring extends com.google.api.client.json.GenericJso
   private PacketMirroringNetworkInfo network;
 
   /**
-   * PacketMirroring packetMatchers. Each packetMatcher specifies a CIRD filter that will apply to
-   * the source or destination IP in the IP header for the mirrored VM traffic.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<PacketMirroringPacketMatcher> packetMatchers;
-
-  /**
    * The priority of applying this configuration. Priority is used to break ties in cases where
    * there is more than one matching rule. In the case of two rules that apply for a given Instance,
    * the one with the lowest-numbered priority value wins.
@@ -177,25 +161,6 @@ public final class PacketMirroring extends com.google.api.client.json.GenericJso
    */
   public PacketMirroring setCollectorIlb(PacketMirroringForwardingRuleInfo collectorIlb) {
     this.collectorIlb = collectorIlb;
-    return this;
-  }
-
-  /**
-   * PacketMirroring collectorInfos. Each collectorInfo specifies a set of collector VM instances,
-   * preferably in the same zone as the mirrored VM(s)
-   * @return value or {@code null} for none
-   */
-  public PacketMirroringCollectorInfo getCollectors() {
-    return collectors;
-  }
-
-  /**
-   * PacketMirroring collectorInfos. Each collectorInfo specifies a set of collector VM instances,
-   * preferably in the same zone as the mirrored VM(s)
-   * @param collectors collectors or {@code null} for none
-   */
-  public PacketMirroring setCollectors(PacketMirroringCollectorInfo collectors) {
-    this.collectors = collectors;
     return this;
   }
 
@@ -369,25 +334,6 @@ public final class PacketMirroring extends com.google.api.client.json.GenericJso
    */
   public PacketMirroring setNetwork(PacketMirroringNetworkInfo network) {
     this.network = network;
-    return this;
-  }
-
-  /**
-   * PacketMirroring packetMatchers. Each packetMatcher specifies a CIRD filter that will apply to
-   * the source or destination IP in the IP header for the mirrored VM traffic.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<PacketMirroringPacketMatcher> getPacketMatchers() {
-    return packetMatchers;
-  }
-
-  /**
-   * PacketMirroring packetMatchers. Each packetMatcher specifies a CIRD filter that will apply to
-   * the source or destination IP in the IP header for the mirrored VM traffic.
-   * @param packetMatchers packetMatchers or {@code null} for none
-   */
-  public PacketMirroring setPacketMatchers(java.util.List<PacketMirroringPacketMatcher> packetMatchers) {
-    this.packetMatchers = packetMatchers;
     return this;
   }
 

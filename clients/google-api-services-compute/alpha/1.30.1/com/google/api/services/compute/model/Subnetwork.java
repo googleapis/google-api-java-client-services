@@ -21,8 +21,7 @@ package com.google.api.services.compute.model;
  *
  * A subnetwork (also known as a subnet) is a logical partition of a Virtual Private Cloud network
  * with one primary IP range and zero or more secondary IP ranges. For more information, read
- * Virtual Private Cloud (VPC) Network. (== resource_for beta.subnetworks ==) (== resource_for
- * v1.subnetworks ==)
+ * Virtual Private Cloud (VPC) Network. (== resource_for {$api_version}.subnetworks ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -213,9 +212,10 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   private java.lang.String privateIpv6GoogleAccess;
 
   /**
-   * The service accounts can be used to selectively turn on Private IPv6 Google Access only on the
-   * VMs primary service account matching the value. This value only takes effect when
-   * PrivateIpv6GoogleAccess is ENABLE_OUTBOUND_VM_ACCESS_TO_GOOGLE_FOR_SERVICE_ACCOUNTS or
+   * Deprecated in favor of enable PrivateIpv6GoogleAccess on instance directly. The service
+   * accounts can be used to selectively turn on Private IPv6 Google Access only on the VMs primary
+   * service account matching the value. This value only takes effect when PrivateIpv6GoogleAccess
+   * is ENABLE_OUTBOUND_VM_ACCESS_TO_GOOGLE_FOR_SERVICE_ACCOUNTS or
    * ENABLE_BIDIRECTIONAL_ACCESS_TO_GOOGLE_FOR_SERVICE_ACCOUNTS.
    * The value may be {@code null}.
    */
@@ -746,9 +746,10 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The service accounts can be used to selectively turn on Private IPv6 Google Access only on the
-   * VMs primary service account matching the value. This value only takes effect when
-   * PrivateIpv6GoogleAccess is ENABLE_OUTBOUND_VM_ACCESS_TO_GOOGLE_FOR_SERVICE_ACCOUNTS or
+   * Deprecated in favor of enable PrivateIpv6GoogleAccess on instance directly. The service
+   * accounts can be used to selectively turn on Private IPv6 Google Access only on the VMs primary
+   * service account matching the value. This value only takes effect when PrivateIpv6GoogleAccess
+   * is ENABLE_OUTBOUND_VM_ACCESS_TO_GOOGLE_FOR_SERVICE_ACCOUNTS or
    * ENABLE_BIDIRECTIONAL_ACCESS_TO_GOOGLE_FOR_SERVICE_ACCOUNTS.
    * @return value or {@code null} for none
    */
@@ -757,9 +758,10 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The service accounts can be used to selectively turn on Private IPv6 Google Access only on the
-   * VMs primary service account matching the value. This value only takes effect when
-   * PrivateIpv6GoogleAccess is ENABLE_OUTBOUND_VM_ACCESS_TO_GOOGLE_FOR_SERVICE_ACCOUNTS or
+   * Deprecated in favor of enable PrivateIpv6GoogleAccess on instance directly. The service
+   * accounts can be used to selectively turn on Private IPv6 Google Access only on the VMs primary
+   * service account matching the value. This value only takes effect when PrivateIpv6GoogleAccess
+   * is ENABLE_OUTBOUND_VM_ACCESS_TO_GOOGLE_FOR_SERVICE_ACCOUNTS or
    * ENABLE_BIDIRECTIONAL_ACCESS_TO_GOOGLE_FOR_SERVICE_ACCOUNTS.
    * @param privateIpv6GoogleAccessServiceAccounts privateIpv6GoogleAccessServiceAccounts or {@code null} for none
    */

@@ -81,6 +81,13 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   private CustomerEncryptionKey diskEncryptionKey;
 
   /**
+   * The size of the disk in GB.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long diskSizeGb;
+
+  /**
    * A list of features to enable on the guest operating system. Applicable only for bootable
    * images. Read  Enabling guest operating system features to see a list of available options.
    * The value may be {@code null}.
@@ -274,6 +281,23 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
    */
   public AttachedDisk setDiskEncryptionKey(CustomerEncryptionKey diskEncryptionKey) {
     this.diskEncryptionKey = diskEncryptionKey;
+    return this;
+  }
+
+  /**
+   * The size of the disk in GB.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getDiskSizeGb() {
+    return diskSizeGb;
+  }
+
+  /**
+   * The size of the disk in GB.
+   * @param diskSizeGb diskSizeGb or {@code null} for none
+   */
+  public AttachedDisk setDiskSizeGb(java.lang.Long diskSizeGb) {
+    this.diskSizeGb = diskSizeGb;
     return this;
   }
 

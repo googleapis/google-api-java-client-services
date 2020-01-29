@@ -21,8 +21,8 @@ package com.google.api.services.compute.model;
  *
  * A target TCP proxy is a component of a TCP Proxy load balancer. Global forwarding rules reference
  * target TCP proxy, and the target proxy then references an external backend service. For more
- * information, read TCP Proxy Load Balancing Concepts. (== resource_for beta.targetTcpProxies ==)
- * (== resource_for v1.targetTcpProxies ==)
+ * information, read TCP Proxy Load Balancing Concepts. (== resource_for
+ * {$api_version}.targetTcpProxies ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

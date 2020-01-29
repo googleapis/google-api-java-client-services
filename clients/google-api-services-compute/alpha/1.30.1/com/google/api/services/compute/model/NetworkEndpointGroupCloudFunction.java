@@ -36,7 +36,7 @@ public final class NetworkEndpointGroupCloudFunction extends com.google.api.clie
   /**
    * A user-defined name of the Cloud Function.
    *
-   * The service name must be 1-63 characters long, and comply with RFC1035.
+   * The function name is case-sensitive and must be 1-63 characters long.
    *
    * Example value: "func1".
    * The value may be {@code null}.
@@ -59,7 +59,7 @@ public final class NetworkEndpointGroupCloudFunction extends com.google.api.clie
   /**
    * A user-defined name of the Cloud Function.
    *
-   * The service name must be 1-63 characters long, and comply with RFC1035.
+   * The function name is case-sensitive and must be 1-63 characters long.
    *
    * Example value: "func1".
    * @return value or {@code null} for none
@@ -71,7 +71,7 @@ public final class NetworkEndpointGroupCloudFunction extends com.google.api.clie
   /**
    * A user-defined name of the Cloud Function.
    *
-   * The service name must be 1-63 characters long, and comply with RFC1035.
+   * The function name is case-sensitive and must be 1-63 characters long.
    *
    * Example value: "func1".
    * @param function function or {@code null} for none

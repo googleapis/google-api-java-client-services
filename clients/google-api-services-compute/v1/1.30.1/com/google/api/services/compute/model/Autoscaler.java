@@ -19,14 +19,18 @@ package com.google.api.services.compute.model;
 /**
  * Represents an Autoscaler resource.
  *
+ * Google Compute Engine has two Autoscaler resources:
+ *
+ * * [Global](/compute/docs/reference/rest/latest/autoscalers) *
+ * [Regional](/compute/docs/reference/rest/latest/regionAutoscalers)
+ *
  * Use autoscalers to automatically add or delete instances from a managed instance group according
  * to your defined autoscaling policy. For more information, read Autoscaling Groups of Instances.
  *
  * For zonal managed instance groups resource, use the autoscaler resource.
  *
  * For regional managed instance groups, use the regionAutoscalers resource. (== resource_for
- * beta.autoscalers ==) (== resource_for v1.autoscalers ==) (== resource_for beta.regionAutoscalers
- * ==) (== resource_for v1.regionAutoscalers ==)
+ * {$api_version}.autoscalers ==) (== resource_for {$api_version}.regionAutoscalers ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -88,6 +92,16 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * [Output Only] Target recommended MIG size (number of instances) computed by autoscaler.
+   * Autoscaler calculates recommended MIG size even when autoscaling policy mode is different from
+   * ON. This field is empty when autoscaler is not connected to the existing managed instance group
+   * or autoscaler did not generate its prediction.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer recommendedSize;
 
   /**
    * [Output Only] URL of the region where the instance group resides (for autoscalers living in
@@ -257,6 +271,29 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
    */
   public Autoscaler setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * [Output Only] Target recommended MIG size (number of instances) computed by autoscaler.
+   * Autoscaler calculates recommended MIG size even when autoscaling policy mode is different from
+   * ON. This field is empty when autoscaler is not connected to the existing managed instance group
+   * or autoscaler did not generate its prediction.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getRecommendedSize() {
+    return recommendedSize;
+  }
+
+  /**
+   * [Output Only] Target recommended MIG size (number of instances) computed by autoscaler.
+   * Autoscaler calculates recommended MIG size even when autoscaling policy mode is different from
+   * ON. This field is empty when autoscaler is not connected to the existing managed instance group
+   * or autoscaler did not generate its prediction.
+   * @param recommendedSize recommendedSize or {@code null} for none
+   */
+  public Autoscaler setRecommendedSize(java.lang.Integer recommendedSize) {
+    this.recommendedSize = recommendedSize;
     return this;
   }
 

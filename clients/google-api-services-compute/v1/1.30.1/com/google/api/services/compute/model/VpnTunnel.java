@@ -19,8 +19,8 @@ package com.google.api.services.compute.model;
 /**
  * Represents a Cloud VPN Tunnel resource.
  *
- * For more information about VPN, read the the Cloud VPN Overview. (== resource_for beta.vpnTunnels
- * ==) (== resource_for v1.vpnTunnels ==)
+ * For more information about VPN, read the the Cloud VPN Overview. (== resource_for
+ * {$api_version}.vpnTunnels ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

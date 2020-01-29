@@ -40,7 +40,7 @@ public final class ExternalVpnGatewayInterface extends com.google.api.client.jso
 
   /**
    * IP address of the interface in the external VPN gateway. Only IPv4 is supported. This IP
-   * address can be either from your on-premise gateway or another Cloud provider?s VPN gateway, it
+   * address can be either from your on-premise gateway or another Cloud provider's VPN gateway, it
    * cannot be an IP address from Google Compute Engine.
    * The value may be {@code null}.
    */
@@ -70,7 +70,7 @@ public final class ExternalVpnGatewayInterface extends com.google.api.client.jso
 
   /**
    * IP address of the interface in the external VPN gateway. Only IPv4 is supported. This IP
-   * address can be either from your on-premise gateway or another Cloud provider?s VPN gateway, it
+   * address can be either from your on-premise gateway or another Cloud provider's VPN gateway, it
    * cannot be an IP address from Google Compute Engine.
    * @return value or {@code null} for none
    */
@@ -80,7 +80,7 @@ public final class ExternalVpnGatewayInterface extends com.google.api.client.jso
 
   /**
    * IP address of the interface in the external VPN gateway. Only IPv4 is supported. This IP
-   * address can be either from your on-premise gateway or another Cloud provider?s VPN gateway, it
+   * address can be either from your on-premise gateway or another Cloud provider's VPN gateway, it
    * cannot be an IP address from Google Compute Engine.
    * @param ipAddress ipAddress or {@code null} for none
    */

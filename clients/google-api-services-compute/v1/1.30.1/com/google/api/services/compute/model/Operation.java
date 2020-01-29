@@ -19,6 +19,12 @@ package com.google.api.services.compute.model;
 /**
  * Represents an Operation resource.
  *
+ * Google Compute Engine has three Operation resources:
+ *
+ * * [Global](/compute/docs/reference/rest/latest/globalOperations) *
+ * [Regional](/compute/docs/reference/rest/latest/regionOperations) *
+ * [Zonal](/compute/docs/reference/rest/latest/zoneOperations)
+ *
  * You can use an operation resource to manage asynchronous API requests. For more information, read
  * Handling API responses.
  *
@@ -27,9 +33,8 @@ package com.google.api.services.compute.model;
  * use the zonalOperations resource.
  *
  * For more information, read  Global, Regional, and Zonal Resources. (== resource_for
- * v1.globalOperations ==) (== resource_for beta.globalOperations ==) (== resource_for
- * v1.regionOperations ==) (== resource_for beta.regionOperations ==) (== resource_for
- * v1.zoneOperations ==) (== resource_for beta.zoneOperations ==)
+ * {$api_version}.globalOperations ==) (== resource_for {$api_version}.regionOperations ==) (==
+ * resource_for {$api_version}.zoneOperations ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

@@ -20,8 +20,8 @@ package com.google.api.services.compute.model;
  * Represent a sole-tenant Node Template resource.
  *
  * You can use a template to define properties for nodes in a node group. For more information, read
- * Creating node groups and instances. (== resource_for beta.nodeTemplates ==) (== resource_for
- * v1.nodeTemplates ==) (== NextID: 16 ==)
+ * Creating node groups and instances. (== resource_for {$api_version}.nodeTemplates ==) (== NextID:
+ * 18 ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -32,6 +32,18 @@ package com.google.api.services.compute.model;
  */
 @SuppressWarnings("javadoc")
 public final class NodeTemplate extends com.google.api.client.json.GenericJson {
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AcceleratorConfig> accelerators;
+
+  static {
+    // hack to force ProGuard to consider AcceleratorConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AcceleratorConfig.class);
+  }
 
   /**
    * [Output Only] Creation timestamp in RFC3339 text format.
@@ -155,6 +167,21 @@ public final class NodeTemplate extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String statusMessage;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AcceleratorConfig> getAccelerators() {
+    return accelerators;
+  }
+
+  /**
+   * @param accelerators accelerators or {@code null} for none
+   */
+  public NodeTemplate setAccelerators(java.util.List<AcceleratorConfig> accelerators) {
+    this.accelerators = accelerators;
+    return this;
+  }
 
   /**
    * [Output Only] Creation timestamp in RFC3339 text format.

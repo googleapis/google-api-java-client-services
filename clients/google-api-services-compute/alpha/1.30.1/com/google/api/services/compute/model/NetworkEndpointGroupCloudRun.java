@@ -37,7 +37,7 @@ public final class NetworkEndpointGroupCloudRun extends com.google.api.client.js
   /**
    * Cloud Run service is the main resource of Cloud Run.
    *
-   * The tag must be 1-63 characters long, and comply with RFC1035.
+   * The service must be 1-63 characters long, and comply with RFC1035.
    *
    * Example value: "run-service".
    * The value may be {@code null}.
@@ -74,7 +74,7 @@ public final class NetworkEndpointGroupCloudRun extends com.google.api.client.js
   /**
    * Cloud Run service is the main resource of Cloud Run.
    *
-   * The tag must be 1-63 characters long, and comply with RFC1035.
+   * The service must be 1-63 characters long, and comply with RFC1035.
    *
    * Example value: "run-service".
    * @return value or {@code null} for none
@@ -86,7 +86,7 @@ public final class NetworkEndpointGroupCloudRun extends com.google.api.client.js
   /**
    * Cloud Run service is the main resource of Cloud Run.
    *
-   * The tag must be 1-63 characters long, and comply with RFC1035.
+   * The service must be 1-63 characters long, and comply with RFC1035.
    *
    * Example value: "run-service".
    * @param service service or {@code null} for none

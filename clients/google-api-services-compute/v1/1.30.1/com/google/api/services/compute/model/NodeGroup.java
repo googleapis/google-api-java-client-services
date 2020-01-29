@@ -22,8 +22,7 @@ package com.google.api.services.compute.model;
  * A sole-tenant node is a physical server that is dedicated to hosting VM instances only for your
  * specific project. Use sole-tenant nodes to keep your instances physically separated from
  * instances in other projects, or to group your instances together on the same host hardware. For
- * more information, read Sole-tenant nodes. (== resource_for beta.nodeGroups ==) (== resource_for
- * v1.nodeGroups ==) NextID: 16
+ * more information, read Sole-tenant nodes. (== resource_for {$api_version}.nodeGroups ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

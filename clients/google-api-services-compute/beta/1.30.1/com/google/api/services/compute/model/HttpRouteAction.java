@@ -78,7 +78,7 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
 
   /**
    * The spec to modify the URL of the request, prior to forwarding the request to the matched
-   * service
+   * service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -207,7 +207,7 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
 
   /**
    * The spec to modify the URL of the request, prior to forwarding the request to the matched
-   * service
+   * service.
    * @return value or {@code null} for none
    */
   public UrlRewrite getUrlRewrite() {
@@ -216,7 +216,7 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
 
   /**
    * The spec to modify the URL of the request, prior to forwarding the request to the matched
-   * service
+   * service.
    * @param urlRewrite urlRewrite or {@code null} for none
    */
   public HttpRouteAction setUrlRewrite(UrlRewrite urlRewrite) {

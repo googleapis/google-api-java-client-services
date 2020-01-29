@@ -20,13 +20,12 @@ package com.google.api.services.compute.model;
  * Opaque filter criteria used by loadbalancers to restrict routing configuration to a limited set
  * of loadbalancing proxies. Proxies and sidecars involved in loadbalancing would typically present
  * metadata to the loadbalancers which need to match criteria specified here. If a match takes
- * place, the relevant routing configuration is made available to those proxies. For each
- * metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the
- * filterLabels must match the corresponding label provided in the metadata. If its
- * filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with
- * corresponding labels in the provided metadata. An example for using metadataFilters would be: if
- * loadbalancing involves  Envoys, they will only receive routing configuration when values in
- * metadataFilters match values supplied in
+ * place, the relevant configuration is made available to those proxies. For each metadataFilter in
+ * this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must
+ * match the corresponding label provided in the metadata. If its filterMatchCriteria is set to
+ * MATCH_ALL, then all of its filterLabels must match with corresponding labels provided in the
+ * metadata. An example for using metadataFilters would be: if loadbalancing involves  Envoys, they
+ * will only receive routing configuration when values in metadataFilters match values supplied in
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

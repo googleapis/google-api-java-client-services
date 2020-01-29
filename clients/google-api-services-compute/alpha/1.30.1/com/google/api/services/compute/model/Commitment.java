@@ -22,7 +22,7 @@ package com.google.api.services.compute.model;
  * Creating a commitment resource means that you are purchasing a committed use contract with an
  * explicit start and end time. You can create commitments based on vCPUs and memory usage and
  * receive discounted rates. For full details, read Signing Up for Committed Use Discounts. (==
- * resource_for beta.regionCommitments ==) (== resource_for v1.regionCommitments ==)
+ * resource_for {$api_version}.regionCommitments ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -80,11 +80,11 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * A list of commitment amounts for particular licenses.
+   * The license specification required as part of a license commitment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<LicenseResourceCommitment> licenseResources;
+  private LicenseResourceCommitment licenseResource;
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
@@ -280,19 +280,19 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of commitment amounts for particular licenses.
+   * The license specification required as part of a license commitment.
    * @return value or {@code null} for none
    */
-  public java.util.List<LicenseResourceCommitment> getLicenseResources() {
-    return licenseResources;
+  public LicenseResourceCommitment getLicenseResource() {
+    return licenseResource;
   }
 
   /**
-   * A list of commitment amounts for particular licenses.
-   * @param licenseResources licenseResources or {@code null} for none
+   * The license specification required as part of a license commitment.
+   * @param licenseResource licenseResource or {@code null} for none
    */
-  public Commitment setLicenseResources(java.util.List<LicenseResourceCommitment> licenseResources) {
-    this.licenseResources = licenseResources;
+  public Commitment setLicenseResource(LicenseResourceCommitment licenseResource) {
+    this.licenseResource = licenseResource;
     return this;
   }
 

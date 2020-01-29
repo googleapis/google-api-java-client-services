@@ -85,7 +85,7 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String publicPtrDomainName;
 
   /**
-   * Specifies whether a public DNS ?A? record should be created for the external IP address of this
+   * Specifies whether a public DNS 'A' record should be created for the external IP address of this
    * access configuration.
    * The value may be {@code null}.
    */
@@ -234,7 +234,7 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies whether a public DNS ?A? record should be created for the external IP address of this
+   * Specifies whether a public DNS 'A' record should be created for the external IP address of this
    * access configuration.
    * @return value or {@code null} for none
    */
@@ -243,7 +243,7 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies whether a public DNS ?A? record should be created for the external IP address of this
+   * Specifies whether a public DNS 'A' record should be created for the external IP address of this
    * access configuration.
    * @param setPublicDns setPublicDns or {@code null} for none
    */

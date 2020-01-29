@@ -20,7 +20,7 @@ package com.google.api.services.compute.model;
  * Represents a Persistent Disk Snapshot resource.
  *
  * You can use snapshots to back up data on a regular interval. For more information, read  Creating
- * persistent disk snapshots. (== resource_for beta.snapshots ==) (== resource_for v1.snapshots ==)
+ * persistent disk snapshots. (== resource_for {$api_version}.snapshots ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -60,6 +60,13 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long diskSizeGb;
+
+  /**
+   * [Output Only] Number of bytes downloaded to restore a snapshot to a disk.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long downloadBytes;
 
   /**
    * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
@@ -270,6 +277,23 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
    */
   public Snapshot setDiskSizeGb(java.lang.Long diskSizeGb) {
     this.diskSizeGb = diskSizeGb;
+    return this;
+  }
+
+  /**
+   * [Output Only] Number of bytes downloaded to restore a snapshot to a disk.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getDownloadBytes() {
+    return downloadBytes;
+  }
+
+  /**
+   * [Output Only] Number of bytes downloaded to restore a snapshot to a disk.
+   * @param downloadBytes downloadBytes or {@code null} for none
+   */
+  public Snapshot setDownloadBytes(java.lang.Long downloadBytes) {
+    this.downloadBytes = downloadBytes;
     return this;
   }
 

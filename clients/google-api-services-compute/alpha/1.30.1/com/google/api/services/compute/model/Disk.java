@@ -19,6 +19,11 @@ package com.google.api.services.compute.model;
 /**
  * Represents a Persistent Disk resource.
  *
+ * Google Compute Engine has two Disk resources:
+ *
+ * * [Global](/compute/docs/reference/rest/latest/disks) *
+ * [Regional](/compute/docs/reference/rest/latest/regionDisks)
+ *
  * Persistent disks are required for running your VM instances. Create both boot and non-boot (data)
  * persistent disks. For more information, read Persistent Disks. For more storage options, read
  * Storage options.
@@ -27,8 +32,8 @@ package com.google.api.services.compute.model;
  * persistent disks.
  *
  * The regionDisks resource represents a regional persistent disk. For more information, read
- * Regional resources. (== resource_for beta.disks ==) (== resource_for v1.disks ==) (==
- * resource_for v1.regionDisks ==) (== resource_for beta.regionDisks ==)
+ * Regional resources. (== resource_for {$api_version}.disks ==) (== resource_for
+ * {$api_version}.regionDisks ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -322,6 +327,15 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String sourceSnapshotId;
+
+  /**
+   * The full Google Cloud Storage URI where the disk image is stored. This file must be a gzip-
+   * compressed tarball whose name ends in .tar.gz or virtual machine disk whose name ends in vmdk.
+   * Valid URIs may start with gs:// or https://storage.googleapis.com/.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceStorageObject;
 
   /**
    * [Output Only] The status of disk creation. CREATING: Disk is provisioning. RESTORING: Source
@@ -1060,6 +1074,27 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    */
   public Disk setSourceSnapshotId(java.lang.String sourceSnapshotId) {
     this.sourceSnapshotId = sourceSnapshotId;
+    return this;
+  }
+
+  /**
+   * The full Google Cloud Storage URI where the disk image is stored. This file must be a gzip-
+   * compressed tarball whose name ends in .tar.gz or virtual machine disk whose name ends in vmdk.
+   * Valid URIs may start with gs:// or https://storage.googleapis.com/.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceStorageObject() {
+    return sourceStorageObject;
+  }
+
+  /**
+   * The full Google Cloud Storage URI where the disk image is stored. This file must be a gzip-
+   * compressed tarball whose name ends in .tar.gz or virtual machine disk whose name ends in vmdk.
+   * Valid URIs may start with gs:// or https://storage.googleapis.com/.
+   * @param sourceStorageObject sourceStorageObject or {@code null} for none
+   */
+  public Disk setSourceStorageObject(java.lang.String sourceStorageObject) {
+    this.sourceStorageObject = sourceStorageObject;
     return this;
   }
 

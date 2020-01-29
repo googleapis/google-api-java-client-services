@@ -20,7 +20,7 @@ package com.google.api.services.compute.model;
  * Represents a Region resource.
  *
  * A region is a geographical area where a resource is located. For more information, read Regions
- * and Zones. (== resource_for beta.regions ==) (== resource_for v1.regions ==)
+ * and Zones. (== resource_for {$api_version}.regions ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

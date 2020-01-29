@@ -21,7 +21,7 @@ package com.google.api.services.compute.model;
  *
  * Only external backend services used by HTTP or HTTPS load balancers can reference a Security
  * Policy. For more information, read read  Cloud Armor Security Policy Concepts. (== resource_for
- * beta.sslPolicies ==) (== resource_for v1.sslPolicies ==)
+ * {$api_version}.sslPolicies ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

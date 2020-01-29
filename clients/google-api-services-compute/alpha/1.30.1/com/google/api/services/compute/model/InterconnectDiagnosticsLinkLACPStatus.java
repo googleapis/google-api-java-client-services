@@ -30,14 +30,14 @@ package com.google.api.services.compute.model;
 public final class InterconnectDiagnosticsLinkLACPStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * System ID of the port on Google?s side of the LACP exchange.
+   * System ID of the port on Google's side of the LACP exchange.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String googleSystemId;
 
   /**
-   * System ID of the port on the neighbor?s side of the LACP exchange.
+   * System ID of the port on the neighbor's side of the LACP exchange.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +53,7 @@ public final class InterconnectDiagnosticsLinkLACPStatus extends com.google.api.
   private java.lang.String state;
 
   /**
-   * System ID of the port on Google?s side of the LACP exchange.
+   * System ID of the port on Google's side of the LACP exchange.
    * @return value or {@code null} for none
    */
   public java.lang.String getGoogleSystemId() {
@@ -61,7 +61,7 @@ public final class InterconnectDiagnosticsLinkLACPStatus extends com.google.api.
   }
 
   /**
-   * System ID of the port on Google?s side of the LACP exchange.
+   * System ID of the port on Google's side of the LACP exchange.
    * @param googleSystemId googleSystemId or {@code null} for none
    */
   public InterconnectDiagnosticsLinkLACPStatus setGoogleSystemId(java.lang.String googleSystemId) {
@@ -70,7 +70,7 @@ public final class InterconnectDiagnosticsLinkLACPStatus extends com.google.api.
   }
 
   /**
-   * System ID of the port on the neighbor?s side of the LACP exchange.
+   * System ID of the port on the neighbor's side of the LACP exchange.
    * @return value or {@code null} for none
    */
   public java.lang.String getNeighborSystemId() {
@@ -78,7 +78,7 @@ public final class InterconnectDiagnosticsLinkLACPStatus extends com.google.api.
   }
 
   /**
-   * System ID of the port on the neighbor?s side of the LACP exchange.
+   * System ID of the port on the neighbor's side of the LACP exchange.
    * @param neighborSystemId neighborSystemId or {@code null} for none
    */
   public InterconnectDiagnosticsLinkLACPStatus setNeighborSystemId(java.lang.String neighborSystemId) {

@@ -21,8 +21,7 @@ package com.google.api.services.compute.model;
  *
  * You can use Interconnect attachments (VLANS) to connect your Virtual Private Cloud networks to
  * your on-premises networks through an Interconnect. For more information, read  Creating VLAN
- * Attachments. (== resource_for beta.interconnectAttachments ==) (== resource_for
- * v1.interconnectAttachments ==)
+ * Attachments. (== resource_for {$api_version}.interconnectAttachments ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -59,7 +58,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * and customerRouterIpAddress for this attachment. All prefixes must be within link-local address
    * space (169.254.0.0/16) and must be /29 or shorter (/28, /27, etc). Google will attempt to
    * select an unused /29 from the supplied candidate prefix(es). The request will fail if all
-   * possible /29s are in use on Google?s edge. If not supplied, Google will randomly select an
+   * possible /29s are in use on Google's edge. If not supplied, Google will randomly select an
    * unused /29 from all of link-local space.
    * The value may be {@code null}.
    */
@@ -327,7 +326,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * and customerRouterIpAddress for this attachment. All prefixes must be within link-local address
    * space (169.254.0.0/16) and must be /29 or shorter (/28, /27, etc). Google will attempt to
    * select an unused /29 from the supplied candidate prefix(es). The request will fail if all
-   * possible /29s are in use on Google?s edge. If not supplied, Google will randomly select an
+   * possible /29s are in use on Google's edge. If not supplied, Google will randomly select an
    * unused /29 from all of link-local space.
    * @return value or {@code null} for none
    */
@@ -340,7 +339,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * and customerRouterIpAddress for this attachment. All prefixes must be within link-local address
    * space (169.254.0.0/16) and must be /29 or shorter (/28, /27, etc). Google will attempt to
    * select an unused /29 from the supplied candidate prefix(es). The request will fail if all
-   * possible /29s are in use on Google?s edge. If not supplied, Google will randomly select an
+   * possible /29s are in use on Google's edge. If not supplied, Google will randomly select an
    * unused /29 from all of link-local space.
    * @param candidateSubnets candidateSubnets or {@code null} for none
    */

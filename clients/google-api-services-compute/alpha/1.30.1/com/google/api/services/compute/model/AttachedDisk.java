@@ -81,7 +81,7 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   private CustomerEncryptionKey diskEncryptionKey;
 
   /**
-   * The size of the disk in base-2 GB. This supersedes disk_size_gb in InitializeParams.
+   * The size of the disk in GB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -301,7 +301,7 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The size of the disk in base-2 GB. This supersedes disk_size_gb in InitializeParams.
+   * The size of the disk in GB.
    * @return value or {@code null} for none
    */
   public java.lang.Long getDiskSizeGb() {
@@ -309,7 +309,7 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The size of the disk in base-2 GB. This supersedes disk_size_gb in InitializeParams.
+   * The size of the disk in GB.
    * @param diskSizeGb diskSizeGb or {@code null} for none
    */
   public AttachedDisk setDiskSizeGb(java.lang.Long diskSizeGb) {

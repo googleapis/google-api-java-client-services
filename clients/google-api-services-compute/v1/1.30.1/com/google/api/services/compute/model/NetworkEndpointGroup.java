@@ -20,7 +20,7 @@ package com.google.api.services.compute.model;
  * Represents a collection of network endpoints.
  *
  * For more information read Setting up network endpoint groups in load balancing. (== resource_for
- * v1.networkEndpointGroups ==) (== resource_for beta.networkEndpointGroups ==)
+ * {$api_version}.networkEndpointGroups ==) Next ID: 21
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

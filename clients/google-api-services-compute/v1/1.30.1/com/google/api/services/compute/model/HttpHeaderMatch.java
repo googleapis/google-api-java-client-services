@@ -65,8 +65,8 @@ public final class HttpHeaderMatch extends com.google.api.client.json.GenericJso
 
   /**
    * A header with the contents of headerName must exist. The match takes place whether or not the
-   * request's header has a value or not. Only one of exactMatch, prefixMatch, suffixMatch,
-   * regexMatch, presentMatch or rangeMatch must be set.
+   * request's header has a value. Only one of exactMatch, prefixMatch, suffixMatch, regexMatch,
+   * presentMatch or rangeMatch must be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -184,8 +184,8 @@ public final class HttpHeaderMatch extends com.google.api.client.json.GenericJso
 
   /**
    * A header with the contents of headerName must exist. The match takes place whether or not the
-   * request's header has a value or not. Only one of exactMatch, prefixMatch, suffixMatch,
-   * regexMatch, presentMatch or rangeMatch must be set.
+   * request's header has a value. Only one of exactMatch, prefixMatch, suffixMatch, regexMatch,
+   * presentMatch or rangeMatch must be set.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPresentMatch() {
@@ -194,8 +194,8 @@ public final class HttpHeaderMatch extends com.google.api.client.json.GenericJso
 
   /**
    * A header with the contents of headerName must exist. The match takes place whether or not the
-   * request's header has a value or not. Only one of exactMatch, prefixMatch, suffixMatch,
-   * regexMatch, presentMatch or rangeMatch must be set.
+   * request's header has a value. Only one of exactMatch, prefixMatch, suffixMatch, regexMatch,
+   * presentMatch or rangeMatch must be set.
    * @param presentMatch presentMatch or {@code null} for none
    */
   public HttpHeaderMatch setPresentMatch(java.lang.Boolean presentMatch) {

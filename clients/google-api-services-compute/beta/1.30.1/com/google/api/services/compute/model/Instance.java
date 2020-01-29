@@ -20,8 +20,7 @@ package com.google.api.services.compute.model;
  * Represents an Instance resource.
  *
  * An instance is a virtual machine that is hosted on Google Cloud Platform. For more information,
- * read Virtual Machine Instances. (== resource_for beta.instances ==) (== resource_for v1.instances
- * ==)
+ * read Virtual Machine Instances. (== resource_for {$api_version}.instances ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -216,6 +215,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private ReservationAffinity reservationAffinity;
+
+  /**
+   * Resource policies applied to this instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> resourcePolicies;
 
   /**
    * Sets the scheduling options for this instance.
@@ -760,6 +766,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setReservationAffinity(ReservationAffinity reservationAffinity) {
     this.reservationAffinity = reservationAffinity;
+    return this;
+  }
+
+  /**
+   * Resource policies applied to this instance.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getResourcePolicies() {
+    return resourcePolicies;
+  }
+
+  /**
+   * Resource policies applied to this instance.
+   * @param resourcePolicies resourcePolicies or {@code null} for none
+   */
+  public Instance setResourcePolicies(java.util.List<java.lang.String> resourcePolicies) {
+    this.resourcePolicies = resourcePolicies;
     return this;
   }
 

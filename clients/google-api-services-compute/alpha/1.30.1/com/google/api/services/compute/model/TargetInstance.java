@@ -21,8 +21,8 @@ package com.google.api.services.compute.model;
  *
  * You can use a target instance to handle traffic for one or more forwarding rules, which is ideal
  * for forwarding protocol traffic that is managed by a single source. For example, ESP, AH, TCP, or
- * UDP. For more information, read Target instances. (== resource_for beta.targetInstances ==) (==
- * resource_for v1.targetInstances ==)
+ * UDP. For more information, read Target instances. (== resource_for {$api_version}.targetInstances
+ * ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -91,6 +91,14 @@ public final class TargetInstance extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String natPolicy;
+
+  /**
+   * The URL of the network this target instance uses to forward traffic. If not specified, the
+   * traffic will be forwarded to the network that the default network interface belongs to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String network;
 
   /**
    * [Output Only] Server-defined URL for the resource.
@@ -248,6 +256,25 @@ public final class TargetInstance extends com.google.api.client.json.GenericJson
    */
   public TargetInstance setNatPolicy(java.lang.String natPolicy) {
     this.natPolicy = natPolicy;
+    return this;
+  }
+
+  /**
+   * The URL of the network this target instance uses to forward traffic. If not specified, the
+   * traffic will be forwarded to the network that the default network interface belongs to.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNetwork() {
+    return network;
+  }
+
+  /**
+   * The URL of the network this target instance uses to forward traffic. If not specified, the
+   * traffic will be forwarded to the network that the default network interface belongs to.
+   * @param network network or {@code null} for none
+   */
+  public TargetInstance setNetwork(java.lang.String network) {
+    this.network = network;
     return this;
   }
 

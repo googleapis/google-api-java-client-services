@@ -50,7 +50,8 @@ public final class ServiceLevelObjective extends com.google.api.client.json.Gene
   private java.lang.String displayName;
 
   /**
-   * The fraction of service that must be good in order for this objective to be met. 0 < goal <= 1.
+   * The fraction of service that must be good in order for this objective to be met. 0 < goal <=
+   * 0.999.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,7 +118,8 @@ public final class ServiceLevelObjective extends com.google.api.client.json.Gene
   }
 
   /**
-   * The fraction of service that must be good in order for this objective to be met. 0 < goal <= 1.
+   * The fraction of service that must be good in order for this objective to be met. 0 < goal <=
+   * 0.999.
    * @return value or {@code null} for none
    */
   public java.lang.Double getGoal() {
@@ -125,7 +127,8 @@ public final class ServiceLevelObjective extends com.google.api.client.json.Gene
   }
 
   /**
-   * The fraction of service that must be good in order for this objective to be met. 0 < goal <= 1.
+   * The fraction of service that must be good in order for this objective to be met. 0 < goal <=
+   * 0.999.
    * @param goal goal or {@code null} for none
    */
   public ServiceLevelObjective setGoal(java.lang.Double goal) {

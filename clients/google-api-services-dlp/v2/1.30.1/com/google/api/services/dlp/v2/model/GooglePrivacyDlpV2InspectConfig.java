@@ -91,6 +91,7 @@ public final class GooglePrivacyDlpV2InspectConfig extends com.google.api.client
   }
 
   /**
+   * Configuration to control the number of findings returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -223,6 +224,7 @@ public final class GooglePrivacyDlpV2InspectConfig extends com.google.api.client
   }
 
   /**
+   * Configuration to control the number of findings returned.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2FindingLimits getLimits() {
@@ -230,6 +232,7 @@ public final class GooglePrivacyDlpV2InspectConfig extends com.google.api.client
   }
 
   /**
+   * Configuration to control the number of findings returned.
    * @param limits limits or {@code null} for none
    */
   public GooglePrivacyDlpV2InspectConfig setLimits(GooglePrivacyDlpV2FindingLimits limits) {

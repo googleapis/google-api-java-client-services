@@ -32,12 +32,14 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2SummaryResult extends com.google.api.client.json.GenericJson {
 
   /**
+   * Outcome of the transformation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String code;
 
   /**
+   * Number of transformations counted by this result.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -51,6 +53,7 @@ public final class GooglePrivacyDlpV2SummaryResult extends com.google.api.client
   private java.lang.String details;
 
   /**
+   * Outcome of the transformation.
    * @return value or {@code null} for none
    */
   public java.lang.String getCode() {
@@ -58,6 +61,7 @@ public final class GooglePrivacyDlpV2SummaryResult extends com.google.api.client
   }
 
   /**
+   * Outcome of the transformation.
    * @param code code or {@code null} for none
    */
   public GooglePrivacyDlpV2SummaryResult setCode(java.lang.String code) {
@@ -66,6 +70,7 @@ public final class GooglePrivacyDlpV2SummaryResult extends com.google.api.client
   }
 
   /**
+   * Number of transformations counted by this result.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCount() {
@@ -73,6 +78,7 @@ public final class GooglePrivacyDlpV2SummaryResult extends com.google.api.client
   }
 
   /**
+   * Number of transformations counted by this result.
    * @param count count or {@code null} for none
    */
   public GooglePrivacyDlpV2SummaryResult setCount(java.lang.Long count) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * Model definition for GooglePrivacyDlpV2TaggedField.
+ * A column with a semantic tag attached.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Data Loss Prevention (DLP) API. For a detailed
@@ -39,7 +39,7 @@ public final class GooglePrivacyDlpV2TaggedField extends com.google.api.client.j
   private java.lang.String customTag;
 
   /**
-   * Identifies the column. [required]
+   * Required. Identifies the column.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +83,7 @@ public final class GooglePrivacyDlpV2TaggedField extends com.google.api.client.j
   }
 
   /**
-   * Identifies the column. [required]
+   * Required. Identifies the column.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2FieldId getField() {
@@ -91,7 +91,7 @@ public final class GooglePrivacyDlpV2TaggedField extends com.google.api.client.j
   }
 
   /**
-   * Identifies the column. [required]
+   * Required. Identifies the column.
    * @param field field or {@code null} for none
    */
   public GooglePrivacyDlpV2TaggedField setField(GooglePrivacyDlpV2FieldId field) {

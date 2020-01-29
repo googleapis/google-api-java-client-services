@@ -39,10 +39,10 @@ public final class GooglePrivacyDlpV2DeidentifyContentRequest extends com.google
   private GooglePrivacyDlpV2DeidentifyConfig deidentifyConfig;
 
   /**
-   * Optional template to use. Any configuration directly specified in deidentify_config will
-   * override those set in the template. Singular fields that are set in this request will replace
-   * their corresponding fields in the template. Repeated fields are appended. Singular sub-messages
-   * and groups are recursively merged.
+   * Template to use. Any configuration directly specified in deidentify_config will override those
+   * set in the template. Singular fields that are set in this request will replace their
+   * corresponding fields in the template. Repeated fields are appended. Singular sub-messages and
+   * groups are recursively merged.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,10 +57,10 @@ public final class GooglePrivacyDlpV2DeidentifyContentRequest extends com.google
   private GooglePrivacyDlpV2InspectConfig inspectConfig;
 
   /**
-   * Optional template to use. Any configuration directly specified in inspect_config will override
-   * those set in the template. Singular fields that are set in this request will replace their
-   * corresponding fields in the template. Repeated fields are appended. Singular sub-messages and
-   * groups are recursively merged.
+   * Template to use. Any configuration directly specified in inspect_config will override those set
+   * in the template. Singular fields that are set in this request will replace their corresponding
+   * fields in the template. Repeated fields are appended. Singular sub-messages and groups are
+   * recursively merged.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,10 +100,10 @@ public final class GooglePrivacyDlpV2DeidentifyContentRequest extends com.google
   }
 
   /**
-   * Optional template to use. Any configuration directly specified in deidentify_config will
-   * override those set in the template. Singular fields that are set in this request will replace
-   * their corresponding fields in the template. Repeated fields are appended. Singular sub-messages
-   * and groups are recursively merged.
+   * Template to use. Any configuration directly specified in deidentify_config will override those
+   * set in the template. Singular fields that are set in this request will replace their
+   * corresponding fields in the template. Repeated fields are appended. Singular sub-messages and
+   * groups are recursively merged.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeidentifyTemplateName() {
@@ -111,10 +111,10 @@ public final class GooglePrivacyDlpV2DeidentifyContentRequest extends com.google
   }
 
   /**
-   * Optional template to use. Any configuration directly specified in deidentify_config will
-   * override those set in the template. Singular fields that are set in this request will replace
-   * their corresponding fields in the template. Repeated fields are appended. Singular sub-messages
-   * and groups are recursively merged.
+   * Template to use. Any configuration directly specified in deidentify_config will override those
+   * set in the template. Singular fields that are set in this request will replace their
+   * corresponding fields in the template. Repeated fields are appended. Singular sub-messages and
+   * groups are recursively merged.
    * @param deidentifyTemplateName deidentifyTemplateName or {@code null} for none
    */
   public GooglePrivacyDlpV2DeidentifyContentRequest setDeidentifyTemplateName(java.lang.String deidentifyTemplateName) {
@@ -142,10 +142,10 @@ public final class GooglePrivacyDlpV2DeidentifyContentRequest extends com.google
   }
 
   /**
-   * Optional template to use. Any configuration directly specified in inspect_config will override
-   * those set in the template. Singular fields that are set in this request will replace their
-   * corresponding fields in the template. Repeated fields are appended. Singular sub-messages and
-   * groups are recursively merged.
+   * Template to use. Any configuration directly specified in inspect_config will override those set
+   * in the template. Singular fields that are set in this request will replace their corresponding
+   * fields in the template. Repeated fields are appended. Singular sub-messages and groups are
+   * recursively merged.
    * @return value or {@code null} for none
    */
   public java.lang.String getInspectTemplateName() {
@@ -153,10 +153,10 @@ public final class GooglePrivacyDlpV2DeidentifyContentRequest extends com.google
   }
 
   /**
-   * Optional template to use. Any configuration directly specified in inspect_config will override
-   * those set in the template. Singular fields that are set in this request will replace their
-   * corresponding fields in the template. Repeated fields are appended. Singular sub-messages and
-   * groups are recursively merged.
+   * Template to use. Any configuration directly specified in inspect_config will override those set
+   * in the template. Singular fields that are set in this request will replace their corresponding
+   * fields in the template. Repeated fields are appended. Singular sub-messages and groups are
+   * recursively merged.
    * @param inspectTemplateName inspectTemplateName or {@code null} for none
    */
   public GooglePrivacyDlpV2DeidentifyContentRequest setInspectTemplateName(java.lang.String inspectTemplateName) {

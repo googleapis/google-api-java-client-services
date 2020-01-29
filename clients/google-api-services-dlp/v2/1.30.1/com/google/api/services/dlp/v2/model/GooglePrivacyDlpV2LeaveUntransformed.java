@@ -17,8 +17,9 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * If set, the detailed findings will be persisted to the specified OutputStorageConfig. Only a
- * single instance of this action can be specified. Compatible with: Inspect, Risk
+ * Skips the data without modifying it if the requested transformation would cause an error. For
+ * example, if a `DateShift` transformation were applied an an IP address, this mode would leave the
+ * IP address unchanged in the response.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Data Loss Prevention (DLP) API. For a detailed
@@ -29,40 +30,16 @@ package com.google.api.services.dlp.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GooglePrivacyDlpV2SaveFindings extends com.google.api.client.json.GenericJson {
+public final class GooglePrivacyDlpV2LeaveUntransformed extends com.google.api.client.json.GenericJson {
 
-  /**
-   * Location to store findings outside of DLP.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GooglePrivacyDlpV2OutputStorageConfig outputConfig;
-
-  /**
-   * Location to store findings outside of DLP.
-   * @return value or {@code null} for none
-   */
-  public GooglePrivacyDlpV2OutputStorageConfig getOutputConfig() {
-    return outputConfig;
-  }
-
-  /**
-   * Location to store findings outside of DLP.
-   * @param outputConfig outputConfig or {@code null} for none
-   */
-  public GooglePrivacyDlpV2SaveFindings setOutputConfig(GooglePrivacyDlpV2OutputStorageConfig outputConfig) {
-    this.outputConfig = outputConfig;
-    return this;
+  @Override
+  public GooglePrivacyDlpV2LeaveUntransformed set(String fieldName, Object value) {
+    return (GooglePrivacyDlpV2LeaveUntransformed) super.set(fieldName, value);
   }
 
   @Override
-  public GooglePrivacyDlpV2SaveFindings set(String fieldName, Object value) {
-    return (GooglePrivacyDlpV2SaveFindings) super.set(fieldName, value);
-  }
-
-  @Override
-  public GooglePrivacyDlpV2SaveFindings clone() {
-    return (GooglePrivacyDlpV2SaveFindings) super.clone();
+  public GooglePrivacyDlpV2LeaveUntransformed clone() {
+    return (GooglePrivacyDlpV2LeaveUntransformed) super.clone();
   }
 
 }

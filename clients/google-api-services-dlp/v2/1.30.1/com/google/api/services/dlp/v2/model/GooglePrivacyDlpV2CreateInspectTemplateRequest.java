@@ -31,7 +31,7 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2CreateInspectTemplateRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The InspectTemplate to create.
+   * Required. The InspectTemplate to create.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +54,7 @@ public final class GooglePrivacyDlpV2CreateInspectTemplateRequest extends com.go
   private java.lang.String templateId;
 
   /**
-   * The InspectTemplate to create.
+   * Required. The InspectTemplate to create.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2InspectTemplate getInspectTemplate() {
@@ -62,7 +62,7 @@ public final class GooglePrivacyDlpV2CreateInspectTemplateRequest extends com.go
   }
 
   /**
-   * The InspectTemplate to create.
+   * Required. The InspectTemplate to create.
    * @param inspectTemplate inspectTemplate or {@code null} for none
    */
   public GooglePrivacyDlpV2CreateInspectTemplateRequest setInspectTemplate(GooglePrivacyDlpV2InspectTemplate inspectTemplate) {

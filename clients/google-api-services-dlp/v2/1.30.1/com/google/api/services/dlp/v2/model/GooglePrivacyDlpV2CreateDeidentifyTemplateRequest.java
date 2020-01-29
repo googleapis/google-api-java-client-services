@@ -31,7 +31,7 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2CreateDeidentifyTemplateRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The DeidentifyTemplate to create.
+   * Required. The DeidentifyTemplate to create.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +54,7 @@ public final class GooglePrivacyDlpV2CreateDeidentifyTemplateRequest extends com
   private java.lang.String templateId;
 
   /**
-   * The DeidentifyTemplate to create.
+   * Required. The DeidentifyTemplate to create.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2DeidentifyTemplate getDeidentifyTemplate() {
@@ -62,7 +62,7 @@ public final class GooglePrivacyDlpV2CreateDeidentifyTemplateRequest extends com
   }
 
   /**
-   * The DeidentifyTemplate to create.
+   * Required. The DeidentifyTemplate to create.
    * @param deidentifyTemplate deidentifyTemplate or {@code null} for none
    */
   public GooglePrivacyDlpV2CreateDeidentifyTemplateRequest setDeidentifyTemplate(GooglePrivacyDlpV2DeidentifyTemplate deidentifyTemplate) {

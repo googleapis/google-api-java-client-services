@@ -31,18 +31,21 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2CharsToIgnore extends com.google.api.client.json.GenericJson {
 
   /**
+   * Characters to not transform when masking.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String charactersToSkip;
 
   /**
+   * Common characters to not transform when masking. Useful to avoid removing punctuation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String commonCharactersToIgnore;
 
   /**
+   * Characters to not transform when masking.
    * @return value or {@code null} for none
    */
   public java.lang.String getCharactersToSkip() {
@@ -50,6 +53,7 @@ public final class GooglePrivacyDlpV2CharsToIgnore extends com.google.api.client
   }
 
   /**
+   * Characters to not transform when masking.
    * @param charactersToSkip charactersToSkip or {@code null} for none
    */
   public GooglePrivacyDlpV2CharsToIgnore setCharactersToSkip(java.lang.String charactersToSkip) {
@@ -58,6 +62,7 @@ public final class GooglePrivacyDlpV2CharsToIgnore extends com.google.api.client
   }
 
   /**
+   * Common characters to not transform when masking. Useful to avoid removing punctuation.
    * @return value or {@code null} for none
    */
   public java.lang.String getCommonCharactersToIgnore() {
@@ -65,6 +70,7 @@ public final class GooglePrivacyDlpV2CharsToIgnore extends com.google.api.client
   }
 
   /**
+   * Common characters to not transform when masking. Useful to avoid removing punctuation.
    * @param commonCharactersToIgnore commonCharactersToIgnore or {@code null} for none
    */
   public GooglePrivacyDlpV2CharsToIgnore setCommonCharactersToIgnore(java.lang.String commonCharactersToIgnore) {

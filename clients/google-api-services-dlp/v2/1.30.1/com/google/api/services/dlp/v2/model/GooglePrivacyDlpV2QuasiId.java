@@ -39,7 +39,7 @@ public final class GooglePrivacyDlpV2QuasiId extends com.google.api.client.json.
   private java.lang.String customTag;
 
   /**
-   * Identifies the column. [required]
+   * Required. Identifies the column.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +83,7 @@ public final class GooglePrivacyDlpV2QuasiId extends com.google.api.client.json.
   }
 
   /**
-   * Identifies the column. [required]
+   * Required. Identifies the column.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2FieldId getField() {
@@ -91,7 +91,7 @@ public final class GooglePrivacyDlpV2QuasiId extends com.google.api.client.json.
   }
 
   /**
-   * Identifies the column. [required]
+   * Required. Identifies the column.
    * @param field field or {@code null} for none
    */
   public GooglePrivacyDlpV2QuasiId setField(GooglePrivacyDlpV2FieldId field) {

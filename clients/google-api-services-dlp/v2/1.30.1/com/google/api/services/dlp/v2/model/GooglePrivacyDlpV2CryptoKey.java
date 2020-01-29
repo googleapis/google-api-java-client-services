@@ -33,24 +33,28 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2CryptoKey extends com.google.api.client.json.GenericJson {
 
   /**
+   * Kms wrapped key
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2KmsWrappedCryptoKey kmsWrapped;
 
   /**
+   * Transient crypto key
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("transient")
   private GooglePrivacyDlpV2TransientCryptoKey transient__;
 
   /**
+   * Unwrapped crypto key
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2UnwrappedCryptoKey unwrapped;
 
   /**
+   * Kms wrapped key
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2KmsWrappedCryptoKey getKmsWrapped() {
@@ -58,6 +62,7 @@ public final class GooglePrivacyDlpV2CryptoKey extends com.google.api.client.jso
   }
 
   /**
+   * Kms wrapped key
    * @param kmsWrapped kmsWrapped or {@code null} for none
    */
   public GooglePrivacyDlpV2CryptoKey setKmsWrapped(GooglePrivacyDlpV2KmsWrappedCryptoKey kmsWrapped) {
@@ -66,6 +71,7 @@ public final class GooglePrivacyDlpV2CryptoKey extends com.google.api.client.jso
   }
 
   /**
+   * Transient crypto key
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2TransientCryptoKey getTransient() {
@@ -73,6 +79,7 @@ public final class GooglePrivacyDlpV2CryptoKey extends com.google.api.client.jso
   }
 
   /**
+   * Transient crypto key
    * @param transient__ transient__ or {@code null} for none
    */
   public GooglePrivacyDlpV2CryptoKey setTransient(GooglePrivacyDlpV2TransientCryptoKey transient__) {
@@ -81,6 +88,7 @@ public final class GooglePrivacyDlpV2CryptoKey extends com.google.api.client.jso
   }
 
   /**
+   * Unwrapped crypto key
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2UnwrappedCryptoKey getUnwrapped() {
@@ -88,6 +96,7 @@ public final class GooglePrivacyDlpV2CryptoKey extends com.google.api.client.jso
   }
 
   /**
+   * Unwrapped crypto key
    * @param unwrapped unwrapped or {@code null} for none
    */
   public GooglePrivacyDlpV2CryptoKey setUnwrapped(GooglePrivacyDlpV2UnwrappedCryptoKey unwrapped) {

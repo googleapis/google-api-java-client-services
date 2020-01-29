@@ -34,54 +34,63 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2Value extends com.google.api.client.json.GenericJson {
 
   /**
+   * boolean
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean booleanValue;
 
   /**
+   * date
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleTypeDate dateValue;
 
   /**
+   * day of week
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dayOfWeekValue;
 
   /**
+   * float
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double floatValue;
 
   /**
+   * integer
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long integerValue;
 
   /**
+   * string
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String stringValue;
 
   /**
+   * time of day
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleTypeTimeOfDay timeValue;
 
   /**
+   * timestamp
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String timestampValue;
 
   /**
+   * boolean
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getBooleanValue() {
@@ -89,6 +98,7 @@ public final class GooglePrivacyDlpV2Value extends com.google.api.client.json.Ge
   }
 
   /**
+   * boolean
    * @param booleanValue booleanValue or {@code null} for none
    */
   public GooglePrivacyDlpV2Value setBooleanValue(java.lang.Boolean booleanValue) {
@@ -97,6 +107,7 @@ public final class GooglePrivacyDlpV2Value extends com.google.api.client.json.Ge
   }
 
   /**
+   * date
    * @return value or {@code null} for none
    */
   public GoogleTypeDate getDateValue() {
@@ -104,6 +115,7 @@ public final class GooglePrivacyDlpV2Value extends com.google.api.client.json.Ge
   }
 
   /**
+   * date
    * @param dateValue dateValue or {@code null} for none
    */
   public GooglePrivacyDlpV2Value setDateValue(GoogleTypeDate dateValue) {
@@ -112,6 +124,7 @@ public final class GooglePrivacyDlpV2Value extends com.google.api.client.json.Ge
   }
 
   /**
+   * day of week
    * @return value or {@code null} for none
    */
   public java.lang.String getDayOfWeekValue() {
@@ -119,6 +132,7 @@ public final class GooglePrivacyDlpV2Value extends com.google.api.client.json.Ge
   }
 
   /**
+   * day of week
    * @param dayOfWeekValue dayOfWeekValue or {@code null} for none
    */
   public GooglePrivacyDlpV2Value setDayOfWeekValue(java.lang.String dayOfWeekValue) {
@@ -127,6 +141,7 @@ public final class GooglePrivacyDlpV2Value extends com.google.api.client.json.Ge
   }
 
   /**
+   * float
    * @return value or {@code null} for none
    */
   public java.lang.Double getFloatValue() {
@@ -134,6 +149,7 @@ public final class GooglePrivacyDlpV2Value extends com.google.api.client.json.Ge
   }
 
   /**
+   * float
    * @param floatValue floatValue or {@code null} for none
    */
   public GooglePrivacyDlpV2Value setFloatValue(java.lang.Double floatValue) {
@@ -142,6 +158,7 @@ public final class GooglePrivacyDlpV2Value extends com.google.api.client.json.Ge
   }
 
   /**
+   * integer
    * @return value or {@code null} for none
    */
   public java.lang.Long getIntegerValue() {
@@ -149,6 +166,7 @@ public final class GooglePrivacyDlpV2Value extends com.google.api.client.json.Ge
   }
 
   /**
+   * integer
    * @param integerValue integerValue or {@code null} for none
    */
   public GooglePrivacyDlpV2Value setIntegerValue(java.lang.Long integerValue) {
@@ -157,6 +175,7 @@ public final class GooglePrivacyDlpV2Value extends com.google.api.client.json.Ge
   }
 
   /**
+   * string
    * @return value or {@code null} for none
    */
   public java.lang.String getStringValue() {
@@ -164,6 +183,7 @@ public final class GooglePrivacyDlpV2Value extends com.google.api.client.json.Ge
   }
 
   /**
+   * string
    * @param stringValue stringValue or {@code null} for none
    */
   public GooglePrivacyDlpV2Value setStringValue(java.lang.String stringValue) {
@@ -172,6 +192,7 @@ public final class GooglePrivacyDlpV2Value extends com.google.api.client.json.Ge
   }
 
   /**
+   * time of day
    * @return value or {@code null} for none
    */
   public GoogleTypeTimeOfDay getTimeValue() {
@@ -179,6 +200,7 @@ public final class GooglePrivacyDlpV2Value extends com.google.api.client.json.Ge
   }
 
   /**
+   * time of day
    * @param timeValue timeValue or {@code null} for none
    */
   public GooglePrivacyDlpV2Value setTimeValue(GoogleTypeTimeOfDay timeValue) {
@@ -187,6 +209,7 @@ public final class GooglePrivacyDlpV2Value extends com.google.api.client.json.Ge
   }
 
   /**
+   * timestamp
    * @return value or {@code null} for none
    */
   public String getTimestampValue() {
@@ -194,6 +217,7 @@ public final class GooglePrivacyDlpV2Value extends com.google.api.client.json.Ge
   }
 
   /**
+   * timestamp
    * @param timestampValue timestampValue or {@code null} for none
    */
   public GooglePrivacyDlpV2Value setTimestampValue(String timestampValue) {

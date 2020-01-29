@@ -33,7 +33,7 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2InspectTemplate extends com.google.api.client.json.GenericJson {
 
   /**
-   * The creation timestamp of an inspectTemplate, output only field.
+   * Output only. The creation timestamp of an inspectTemplate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,25 +61,25 @@ public final class GooglePrivacyDlpV2InspectTemplate extends com.google.api.clie
   private GooglePrivacyDlpV2InspectConfig inspectConfig;
 
   /**
-   * The template name. Output only.
+   * Output only. The template name.
    *
    * The template will have one of the following formats:
    * `projects/PROJECT_ID/inspectTemplates/TEMPLATE_ID` OR
-   * `organizations/ORGANIZATION_ID/inspectTemplates/TEMPLATE_ID`
+   * `organizations/ORGANIZATION_ID/inspectTemplates/TEMPLATE_ID`;
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The last update timestamp of an inspectTemplate, output only field.
+   * Output only. The last update timestamp of an inspectTemplate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * The creation timestamp of an inspectTemplate, output only field.
+   * Output only. The creation timestamp of an inspectTemplate.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -87,7 +87,7 @@ public final class GooglePrivacyDlpV2InspectTemplate extends com.google.api.clie
   }
 
   /**
-   * The creation timestamp of an inspectTemplate, output only field.
+   * Output only. The creation timestamp of an inspectTemplate.
    * @param createTime createTime or {@code null} for none
    */
   public GooglePrivacyDlpV2InspectTemplate setCreateTime(String createTime) {
@@ -147,11 +147,11 @@ public final class GooglePrivacyDlpV2InspectTemplate extends com.google.api.clie
   }
 
   /**
-   * The template name. Output only.
+   * Output only. The template name.
    *
    * The template will have one of the following formats:
    * `projects/PROJECT_ID/inspectTemplates/TEMPLATE_ID` OR
-   * `organizations/ORGANIZATION_ID/inspectTemplates/TEMPLATE_ID`
+   * `organizations/ORGANIZATION_ID/inspectTemplates/TEMPLATE_ID`;
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -159,11 +159,11 @@ public final class GooglePrivacyDlpV2InspectTemplate extends com.google.api.clie
   }
 
   /**
-   * The template name. Output only.
+   * Output only. The template name.
    *
    * The template will have one of the following formats:
    * `projects/PROJECT_ID/inspectTemplates/TEMPLATE_ID` OR
-   * `organizations/ORGANIZATION_ID/inspectTemplates/TEMPLATE_ID`
+   * `organizations/ORGANIZATION_ID/inspectTemplates/TEMPLATE_ID`;
    * @param name name or {@code null} for none
    */
   public GooglePrivacyDlpV2InspectTemplate setName(java.lang.String name) {
@@ -172,7 +172,7 @@ public final class GooglePrivacyDlpV2InspectTemplate extends com.google.api.clie
   }
 
   /**
-   * The last update timestamp of an inspectTemplate, output only field.
+   * Output only. The last update timestamp of an inspectTemplate.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -180,7 +180,7 @@ public final class GooglePrivacyDlpV2InspectTemplate extends com.google.api.clie
   }
 
   /**
-   * The last update timestamp of an inspectTemplate, output only field.
+   * Output only. The last update timestamp of an inspectTemplate.
    * @param updateTime updateTime or {@code null} for none
    */
   public GooglePrivacyDlpV2InspectTemplate setUpdateTime(String updateTime) {

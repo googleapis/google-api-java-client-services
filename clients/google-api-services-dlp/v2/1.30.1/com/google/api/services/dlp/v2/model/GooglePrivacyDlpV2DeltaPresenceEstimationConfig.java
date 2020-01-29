@@ -41,15 +41,15 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfig extends com.g
   private java.util.List<GooglePrivacyDlpV2StatisticalTable> auxiliaryTables;
 
   /**
-   * Fields considered to be quasi-identifiers. No two fields can have the same tag. [required]
+   * Required. Fields considered to be quasi-identifiers. No two fields can have the same tag.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2QuasiId> quasiIds;
 
   /**
-   * ISO 3166-1 alpha-2 region code to use in the statistical modeling. Required if no column is
-   * tagged with a region-specific InfoType (like US_ZIP_5) or a region code.
+   * ISO 3166-1 alpha-2 region code to use in the statistical modeling. Set if no column is tagged
+   * with a region-specific InfoType (like US_ZIP_5) or a region code.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +75,7 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfig extends com.g
   }
 
   /**
-   * Fields considered to be quasi-identifiers. No two fields can have the same tag. [required]
+   * Required. Fields considered to be quasi-identifiers. No two fields can have the same tag.
    * @return value or {@code null} for none
    */
   public java.util.List<GooglePrivacyDlpV2QuasiId> getQuasiIds() {
@@ -83,7 +83,7 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfig extends com.g
   }
 
   /**
-   * Fields considered to be quasi-identifiers. No two fields can have the same tag. [required]
+   * Required. Fields considered to be quasi-identifiers. No two fields can have the same tag.
    * @param quasiIds quasiIds or {@code null} for none
    */
   public GooglePrivacyDlpV2DeltaPresenceEstimationConfig setQuasiIds(java.util.List<GooglePrivacyDlpV2QuasiId> quasiIds) {
@@ -92,8 +92,8 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfig extends com.g
   }
 
   /**
-   * ISO 3166-1 alpha-2 region code to use in the statistical modeling. Required if no column is
-   * tagged with a region-specific InfoType (like US_ZIP_5) or a region code.
+   * ISO 3166-1 alpha-2 region code to use in the statistical modeling. Set if no column is tagged
+   * with a region-specific InfoType (like US_ZIP_5) or a region code.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegionCode() {
@@ -101,8 +101,8 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfig extends com.g
   }
 
   /**
-   * ISO 3166-1 alpha-2 region code to use in the statistical modeling. Required if no column is
-   * tagged with a region-specific InfoType (like US_ZIP_5) or a region code.
+   * ISO 3166-1 alpha-2 region code to use in the statistical modeling. Set if no column is tagged
+   * with a region-specific InfoType (like US_ZIP_5) or a region code.
    * @param regionCode regionCode or {@code null} for none
    */
   public GooglePrivacyDlpV2DeltaPresenceEstimationConfig setRegionCode(java.lang.String regionCode) {

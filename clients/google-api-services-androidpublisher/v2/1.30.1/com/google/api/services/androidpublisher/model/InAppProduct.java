@@ -84,14 +84,6 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
   private java.lang.String purchaseType;
 
   /**
-   * Definition of a season for a seasonal subscription. Can be defined only for yearly
-   * subscriptions.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private Season season;
-
-  /**
    * The stock-keeping-unit (SKU) of the product, unique within an app.
    * The value may be {@code null}.
    */
@@ -244,25 +236,6 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
    */
   public InAppProduct setPurchaseType(java.lang.String purchaseType) {
     this.purchaseType = purchaseType;
-    return this;
-  }
-
-  /**
-   * Definition of a season for a seasonal subscription. Can be defined only for yearly
-   * subscriptions.
-   * @return value or {@code null} for none
-   */
-  public Season getSeason() {
-    return season;
-  }
-
-  /**
-   * Definition of a season for a seasonal subscription. Can be defined only for yearly
-   * subscriptions.
-   * @param season season or {@code null} for none
-   */
-  public InAppProduct setSeason(Season season) {
-    this.season = season;
     return this;
   }
 

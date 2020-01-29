@@ -208,9 +208,26 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
   private java.lang.String profileName;
 
   /**
+   * The promotion code applied on this purchase. This field is only set if a vanity code promotion
+   * is applied when the subscription was purchased.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String promotionCode;
+
+  /**
+   * The type of promotion applied on this purchase. This field is only set if a promotion is
+   * applied when the subscription was purchased. Possible values are: - One time code  - Vanity
+   * code
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer promotionType;
+
+  /**
    * The type of purchase of the subscription. This field is only set if this purchase was not made
    * using the standard in-app billing flow. Possible values are: - Test (i.e. purchased from a
-   * license testing account)
+   * license testing account)  - Promo (i.e. purchased using a promo code)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -649,9 +666,49 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
   }
 
   /**
+   * The promotion code applied on this purchase. This field is only set if a vanity code promotion
+   * is applied when the subscription was purchased.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPromotionCode() {
+    return promotionCode;
+  }
+
+  /**
+   * The promotion code applied on this purchase. This field is only set if a vanity code promotion
+   * is applied when the subscription was purchased.
+   * @param promotionCode promotionCode or {@code null} for none
+   */
+  public SubscriptionPurchase setPromotionCode(java.lang.String promotionCode) {
+    this.promotionCode = promotionCode;
+    return this;
+  }
+
+  /**
+   * The type of promotion applied on this purchase. This field is only set if a promotion is
+   * applied when the subscription was purchased. Possible values are: - One time code  - Vanity
+   * code
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getPromotionType() {
+    return promotionType;
+  }
+
+  /**
+   * The type of promotion applied on this purchase. This field is only set if a promotion is
+   * applied when the subscription was purchased. Possible values are: - One time code  - Vanity
+   * code
+   * @param promotionType promotionType or {@code null} for none
+   */
+  public SubscriptionPurchase setPromotionType(java.lang.Integer promotionType) {
+    this.promotionType = promotionType;
+    return this;
+  }
+
+  /**
    * The type of purchase of the subscription. This field is only set if this purchase was not made
    * using the standard in-app billing flow. Possible values are: - Test (i.e. purchased from a
-   * license testing account)
+   * license testing account)  - Promo (i.e. purchased using a promo code)
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPurchaseType() {
@@ -661,7 +718,7 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
   /**
    * The type of purchase of the subscription. This field is only set if this purchase was not made
    * using the standard in-app billing flow. Possible values are: - Test (i.e. purchased from a
-   * license testing account)
+   * license testing account)  - Promo (i.e. purchased using a promo code)
    * @param purchaseType purchaseType or {@code null} for none
    */
   public SubscriptionPurchase setPurchaseType(java.lang.Integer purchaseType) {

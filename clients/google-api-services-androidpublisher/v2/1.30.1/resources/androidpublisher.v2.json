@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"9eZ1uxVRThTDhLJCZHhqs3eQWz4/_TjFdWvetKD4N1AdKqi9eovr8vY\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/Zc80I13MdlmrO7IOEArAhrUwoBI\"",
  "discoveryVersion": "v1",
  "id": "androidpublisher:v2",
  "name": "androidpublisher",
  "canonicalName": "Android Publisher",
  "version": "v2",
- "revision": "20190910",
+ "revision": "20200115",
  "title": "Google Play Developer API",
  "description": "Accesses Android application developers' Google Play accounts.",
  "ownerDomain": "google.com",
@@ -570,10 +570,6 @@
      "type": "string",
      "description": "Purchase type enum value. Unmodifiable after creation."
     },
-    "season": {
-     "$ref": "Season",
-     "description": "Definition of a season for a seasonal subscription. Can be defined only for yearly subscriptions."
-    },
     "sku": {
      "type": "string",
      "description": "The stock-keeping-unit (SKU) of the product, unique within an app."
@@ -669,22 +665,6 @@
     }
    }
   },
-  "MonthDay": {
-   "id": "MonthDay",
-   "type": "object",
-   "properties": {
-    "day": {
-     "type": "integer",
-     "description": "Day of a month, value in [1, 31] range. Valid range depends on the specified month.",
-     "format": "uint32"
-    },
-    "month": {
-     "type": "integer",
-     "description": "Month of a year. e.g. 1 = JAN, 2 = FEB etc.",
-     "format": "uint32"
-    }
-   }
-  },
   "PageInfo": {
    "id": "PageInfo",
    "type": "object",
@@ -757,20 +737,6 @@
     }
    }
   },
-  "Prorate": {
-   "id": "Prorate",
-   "type": "object",
-   "properties": {
-    "defaultPrice": {
-     "$ref": "Price",
-     "description": "Default price cannot be zero and must be less than the full subscription price. Default price is always in the developer's Checkout merchant currency. Targeted countries have their prices set automatically based on the default_price."
-    },
-    "start": {
-     "$ref": "MonthDay",
-     "description": "Defines the first day on which the price takes effect."
-    }
-   }
-  },
   "Review": {
    "id": "Review",
    "type": "object",
@@ -840,27 +806,6 @@
    "properties": {
     "result": {
      "$ref": "ReviewReplyResult"
-    }
-   }
-  },
-  "Season": {
-   "id": "Season",
-   "type": "object",
-   "properties": {
-    "end": {
-     "$ref": "MonthDay",
-     "description": "Inclusive end date of the recurrence period."
-    },
-    "prorations": {
-     "type": "array",
-     "description": "Optionally present list of prorations for the season. Each proration is a one-off discounted entry into a subscription. Each proration contains the first date on which the discount is available and the new pricing information.",
-     "items": {
-      "$ref": "Prorate"
-     }
-    },
-    "start": {
-     "$ref": "MonthDay",
-     "description": "Inclusive start date of the recurrence period."
     }
    }
   },
@@ -997,7 +942,7 @@
     },
     "purchaseType": {
      "type": "integer",
-     "description": "The type of purchase of the subscription. This field is only set if this purchase was not made using the standard in-app billing flow. Possible values are:  \n- Test (i.e. purchased from a license testing account)",
+     "description": "The type of purchase of the subscription. This field is only set if this purchase was not made using the standard in-app billing flow. Possible values are:  \n- Test (i.e. purchased from a license testing account) \n- Promo (i.e. purchased using a promo code)",
      "format": "int32"
     },
     "startTimeMillis": {

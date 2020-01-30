@@ -45,13 +45,6 @@ public final class IdentityAwareProxy extends com.google.api.client.json.Generic
   private java.lang.String oauth2ClientId;
 
   /**
-   * InputOnly OAuth client info required to generate client id to be used for IAP.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private OAuth2ClientInfo oauth2ClientInfo;
-
-  /**
    * OAuth2 client secret to use for the authentication flow.For security reasons, this value cannot
    * be retrieved via the API. Instead, the SHA-256 hash of the value is returned in the
    * oauth2_client_secret_sha256 field.@InputOnly
@@ -100,23 +93,6 @@ public final class IdentityAwareProxy extends com.google.api.client.json.Generic
    */
   public IdentityAwareProxy setOauth2ClientId(java.lang.String oauth2ClientId) {
     this.oauth2ClientId = oauth2ClientId;
-    return this;
-  }
-
-  /**
-   * InputOnly OAuth client info required to generate client id to be used for IAP.
-   * @return value or {@code null} for none
-   */
-  public OAuth2ClientInfo getOauth2ClientInfo() {
-    return oauth2ClientInfo;
-  }
-
-  /**
-   * InputOnly OAuth client info required to generate client id to be used for IAP.
-   * @param oauth2ClientInfo oauth2ClientInfo or {@code null} for none
-   */
-  public IdentityAwareProxy setOauth2ClientInfo(OAuth2ClientInfo oauth2ClientInfo) {
-    this.oauth2ClientInfo = oauth2ClientInfo;
     return this;
   }
 

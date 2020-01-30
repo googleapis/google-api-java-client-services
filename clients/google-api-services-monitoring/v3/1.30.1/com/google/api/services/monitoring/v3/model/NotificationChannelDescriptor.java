@@ -62,6 +62,13 @@ public final class NotificationChannelDescriptor extends com.google.api.client.j
   }
 
   /**
+   * The product launch stage for channels of this type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String launchStage;
+
+  /**
    * The full REST resource name for this descriptor. The syntax is:
    * projects/[PROJECT_ID]/notificationChannelDescriptors/[TYPE] In the above, [TYPE] is the value
    * of the type field.
@@ -69,14 +76,6 @@ public final class NotificationChannelDescriptor extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
-
-  /**
-   * The tiers that support this notification channel; the project service tier must be one of the
-   * supported_tiers.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> supportedTiers;
 
   /**
    * The type of notification channel, such as "email", "sms", etc. Notification channel types are
@@ -144,6 +143,23 @@ public final class NotificationChannelDescriptor extends com.google.api.client.j
   }
 
   /**
+   * The product launch stage for channels of this type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLaunchStage() {
+    return launchStage;
+  }
+
+  /**
+   * The product launch stage for channels of this type.
+   * @param launchStage launchStage or {@code null} for none
+   */
+  public NotificationChannelDescriptor setLaunchStage(java.lang.String launchStage) {
+    this.launchStage = launchStage;
+    return this;
+  }
+
+  /**
    * The full REST resource name for this descriptor. The syntax is:
    * projects/[PROJECT_ID]/notificationChannelDescriptors/[TYPE] In the above, [TYPE] is the value
    * of the type field.
@@ -161,25 +177,6 @@ public final class NotificationChannelDescriptor extends com.google.api.client.j
    */
   public NotificationChannelDescriptor setName(java.lang.String name) {
     this.name = name;
-    return this;
-  }
-
-  /**
-   * The tiers that support this notification channel; the project service tier must be one of the
-   * supported_tiers.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getSupportedTiers() {
-    return supportedTiers;
-  }
-
-  /**
-   * The tiers that support this notification channel; the project service tier must be one of the
-   * supported_tiers.
-   * @param supportedTiers supportedTiers or {@code null} for none
-   */
-  public NotificationChannelDescriptor setSupportedTiers(java.util.List<java.lang.String> supportedTiers) {
-    this.supportedTiers = supportedTiers;
     return this;
   }
 

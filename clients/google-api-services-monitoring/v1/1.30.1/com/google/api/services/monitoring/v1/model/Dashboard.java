@@ -57,7 +57,8 @@ public final class Dashboard extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * Content is arranged with a basic layout that re-flows a simple list of informational elements.
+   * Content is arranged with a basic layout that re-flows a simple list of informational elements
+   * like widgets or tiles.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,7 +138,8 @@ public final class Dashboard extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Content is arranged with a basic layout that re-flows a simple list of informational elements.
+   * Content is arranged with a basic layout that re-flows a simple list of informational elements
+   * like widgets or tiles.
    * @return value or {@code null} for none
    */
   public GridLayout getGridLayout() {
@@ -145,7 +147,8 @@ public final class Dashboard extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Content is arranged with a basic layout that re-flows a simple list of informational elements.
+   * Content is arranged with a basic layout that re-flows a simple list of informational elements
+   * like widgets or tiles.
    * @param gridLayout gridLayout or {@code null} for none
    */
   public Dashboard setGridLayout(GridLayout gridLayout) {

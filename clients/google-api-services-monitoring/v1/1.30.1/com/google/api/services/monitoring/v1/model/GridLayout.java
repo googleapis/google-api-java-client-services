@@ -33,7 +33,7 @@ public final class GridLayout extends com.google.api.client.json.GenericJson {
 
   /**
    * The number of columns into which the view's width is divided. If omitted or set to zero, a
-   * system default will be used.
+   * system default will be used while rendering.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -48,7 +48,7 @@ public final class GridLayout extends com.google.api.client.json.GenericJson {
 
   /**
    * The number of columns into which the view's width is divided. If omitted or set to zero, a
-   * system default will be used.
+   * system default will be used while rendering.
    * @return value or {@code null} for none
    */
   public java.lang.Long getColumns() {
@@ -57,7 +57,7 @@ public final class GridLayout extends com.google.api.client.json.GenericJson {
 
   /**
    * The number of columns into which the view's width is divided. If omitted or set to zero, a
-   * system default will be used.
+   * system default will be used while rendering.
    * @param columns columns or {@code null} for none
    */
   public GridLayout setColumns(java.lang.Long columns) {

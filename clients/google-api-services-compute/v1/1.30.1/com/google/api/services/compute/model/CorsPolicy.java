@@ -86,8 +86,8 @@ public final class CorsPolicy extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> exposeHeaders;
 
   /**
-   * Specifies how long the results of a preflight request can be cached. This translates to the
-   * content for the Access-Control-Max-Age header.
+   * Specifies how long results of a preflight request can be cached in seconds. This translates to
+   * the Access-Control-Max-Age header.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -225,8 +225,8 @@ public final class CorsPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies how long the results of a preflight request can be cached. This translates to the
-   * content for the Access-Control-Max-Age header.
+   * Specifies how long results of a preflight request can be cached in seconds. This translates to
+   * the Access-Control-Max-Age header.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxAge() {
@@ -234,8 +234,8 @@ public final class CorsPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies how long the results of a preflight request can be cached. This translates to the
-   * content for the Access-Control-Max-Age header.
+   * Specifies how long results of a preflight request can be cached in seconds. This translates to
+   * the Access-Control-Max-Age header.
    * @param maxAge maxAge or {@code null} for none
    */
   public CorsPolicy setMaxAge(java.lang.Integer maxAge) {

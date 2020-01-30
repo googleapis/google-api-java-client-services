@@ -21,7 +21,7 @@ package com.google.api.services.compute.model;
  *
  * An Interconnect resource is a dedicated connection between the GCP network and your on-premises
  * network. For more information, read the  Dedicated Interconnect Overview. (== resource_for
- * v1.interconnects ==) (== resource_for beta.interconnects ==)
+ * {$api_version}.interconnects ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

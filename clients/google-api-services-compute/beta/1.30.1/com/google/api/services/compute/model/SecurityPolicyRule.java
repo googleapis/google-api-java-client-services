@@ -54,7 +54,7 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
 
   /**
    * A match condition that incoming traffic is evaluated against. If it evaluates to true, the
-   * corresponding ?action? is enforced.
+   * corresponding 'action' is enforced.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -131,7 +131,7 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
 
   /**
    * A match condition that incoming traffic is evaluated against. If it evaluates to true, the
-   * corresponding ?action? is enforced.
+   * corresponding 'action' is enforced.
    * @return value or {@code null} for none
    */
   public SecurityPolicyRuleMatcher getMatch() {
@@ -140,7 +140,7 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
 
   /**
    * A match condition that incoming traffic is evaluated against. If it evaluates to true, the
-   * corresponding ?action? is enforced.
+   * corresponding 'action' is enforced.
    * @param match match or {@code null} for none
    */
   public SecurityPolicyRule setMatch(SecurityPolicyRuleMatcher match) {

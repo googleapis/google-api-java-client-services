@@ -43,6 +43,13 @@ public final class ResourcePolicy extends com.google.api.client.json.GenericJson
   private java.lang.String description;
 
   /**
+   * Resource policy for instacnes for placement configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ResourcePolicyGroupPlacementPolicy groupPlacementPolicy;
+
+  /**
    * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * The value may be {@code null}.
    */
@@ -123,6 +130,23 @@ public final class ResourcePolicy extends com.google.api.client.json.GenericJson
    */
   public ResourcePolicy setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Resource policy for instacnes for placement configuration.
+   * @return value or {@code null} for none
+   */
+  public ResourcePolicyGroupPlacementPolicy getGroupPlacementPolicy() {
+    return groupPlacementPolicy;
+  }
+
+  /**
+   * Resource policy for instacnes for placement configuration.
+   * @param groupPlacementPolicy groupPlacementPolicy or {@code null} for none
+   */
+  public ResourcePolicy setGroupPlacementPolicy(ResourcePolicyGroupPlacementPolicy groupPlacementPolicy) {
+    this.groupPlacementPolicy = groupPlacementPolicy;
     return this;
   }
 

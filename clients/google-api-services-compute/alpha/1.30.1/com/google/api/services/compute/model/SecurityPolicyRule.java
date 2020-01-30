@@ -73,7 +73,7 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
 
   /**
    * A match condition that incoming traffic is evaluated against. If it evaluates to true, the
-   * corresponding ?action? is enforced.
+   * corresponding 'action' is enforced.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,7 +112,7 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
 
   /**
    * A list of network resource URLs to which this rule applies. This field allows you to control
-   * which network?s VMs get this rule. If this field is left blank, all VMs within the organization
+   * which network's VMs get this rule. If this field is left blank, all VMs within the organization
    * will receive the rule.
    *
    * This field may only be specified when versioned_expr is set to FIREWALL.
@@ -220,7 +220,7 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
 
   /**
    * A match condition that incoming traffic is evaluated against. If it evaluates to true, the
-   * corresponding ?action? is enforced.
+   * corresponding 'action' is enforced.
    * @return value or {@code null} for none
    */
   public SecurityPolicyRuleMatcher getMatch() {
@@ -229,7 +229,7 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
 
   /**
    * A match condition that incoming traffic is evaluated against. If it evaluates to true, the
-   * corresponding ?action? is enforced.
+   * corresponding 'action' is enforced.
    * @param match match or {@code null} for none
    */
   public SecurityPolicyRule setMatch(SecurityPolicyRuleMatcher match) {
@@ -313,7 +313,7 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
 
   /**
    * A list of network resource URLs to which this rule applies. This field allows you to control
-   * which network?s VMs get this rule. If this field is left blank, all VMs within the organization
+   * which network's VMs get this rule. If this field is left blank, all VMs within the organization
    * will receive the rule.
    *
    * This field may only be specified when versioned_expr is set to FIREWALL.
@@ -325,7 +325,7 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
 
   /**
    * A list of network resource URLs to which this rule applies. This field allows you to control
-   * which network?s VMs get this rule. If this field is left blank, all VMs within the organization
+   * which network's VMs get this rule. If this field is left blank, all VMs within the organization
    * will receive the rule.
    *
    * This field may only be specified when versioned_expr is set to FIREWALL.

@@ -19,15 +19,20 @@ package com.google.api.services.compute.model;
 /**
  * Represents a Forwarding Rule resource.
  *
+ * Forwarding rule resources in GCP can be either regional or global in scope:
+ *
+ * * [Global](/compute/docs/reference/rest/latest/globalForwardingRules) *
+ * [Regional](/compute/docs/reference/rest/latest/forwardingRules)
+ *
  * A forwarding rule and its corresponding IP address represent the frontend configuration of a
  * Google Cloud Platform load balancer. Forwarding rules can also reference target instances and
  * Cloud VPN Classic gateways (targetVpnGateway).
  *
  * For more information, read Forwarding rule concepts and Using protocol forwarding.
  *
- * (== resource_for beta.forwardingRules ==) (== resource_for v1.forwardingRules ==) (==
- * resource_for beta.globalForwardingRules ==) (== resource_for v1.globalForwardingRules ==) (==
- * resource_for beta.regionForwardingRules ==) (== resource_for v1.regionForwardingRules ==)
+ * (== resource_for {$api_version}.forwardingRules ==) (== resource_for
+ * {$api_version}.globalForwardingRules ==) (== resource_for {$api_version}.regionForwardingRules
+ * ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -60,7 +65,8 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   private java.lang.String iPAddress;
 
   /**
-   * The IP protocol to which this rule applies. Valid options are TCP, UDP, ESP, AH, SCTP or ICMP.
+   * The IP protocol to which this rule applies. For protocol forwarding, valid options are TCP,
+   * UDP, ESP, AH, SCTP or ICMP.
    *
    * For Internal TCP/UDP Load Balancing, the load balancing scheme is INTERNAL, and one of TCP or
    * UDP are valid. For Traffic Director, the load balancing scheme is INTERNAL_SELF_MANAGED, and
@@ -87,6 +93,16 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   private java.lang.Boolean allPorts;
 
   /**
+   * This field is used along with the backend_service field for internal load balancing or with the
+   * target field for internal TargetInstance. If the field is set to TRUE, clients can access ILB
+   * from all regions. Otherwise only allows access from clients in the same region as the internal
+   * load balancer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean allowGlobalAccess;
+
+  /**
    * This field is only used for INTERNAL load balancing.
    *
    * For internal load balancing, this field identifies the BackendService resource to receive the
@@ -111,6 +127,18 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   private java.lang.String description;
 
   /**
+   * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
+   * in optimistic locking. This field will be ignored when inserting a ForwardingRule. Include the
+   * fingerprint in patch request to ensure that you do not overwrite changes that were applied from
+   * another concurrent request.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve a ForwardingRule.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String fingerprint;
+
+  /**
    * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * The value may be {@code null}.
    */
@@ -126,6 +154,16 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   private java.lang.String ipVersion;
 
   /**
+   * Indicates whether or not this load balancer can be used as a collector for packet mirroring. To
+   * prevent mirroring loops, instances behind this load balancer will not have their traffic
+   * mirrored even if a PacketMirroring rule applies to them. This can only be set to true for load
+   * balancers that have their loadBalancingScheme set to INTERNAL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isMirroringCollector;
+
+  /**
    * [Output Only] Type of the resource. Always compute#forwardingRule for Forwarding Rule
    * resources.
    * The value may be {@code null}.
@@ -134,16 +172,13 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   private java.lang.String kind;
 
   /**
-   * Specifies the forwarding rule type. EXTERNAL is used for: - Classic Cloud VPN gateways -
-   * Protocol forwarding to VMs from an external IP address - The following load balancers: HTTP(S),
-   * SSL Proxy, TCP Proxy, and Network TCP/UDP.
+   * Specifies the forwarding rule type.
    *
-   * INTERNAL is used for: - Protocol forwarding to VMs from an internal IP address - Internal
-   * TCP/UDP load balancers
-   *
-   * INTERNAL_MANAGED is used for: - Internal HTTP(S) load balancers
-   *
-   * INTERNAL_SELF_MANAGED is used for: - Traffic Director
+   *   - EXTERNAL is used for:   - Classic Cloud VPN gateways  - Protocol forwarding to VMs from an
+   * external IP address  - The following load balancers: HTTP(S), SSL Proxy, TCP Proxy, and Network
+   * TCP/UDP     - INTERNAL is used for:   - Protocol forwarding to VMs from an internal IP address
+   * - Internal TCP/UDP load balancers    - INTERNAL_MANAGED is used for:   - Internal HTTP(S) load
+   * balancers    - >INTERNAL_SELF_MANAGED is used for:   - Traffic Director
    *
    * For more information about forwarding rules, refer to Forwarding rule concepts.
    * The value may be {@code null}.
@@ -153,14 +188,16 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
 
   /**
    * Opaque filter criteria used by Loadbalancer to restrict routing configuration to a limited set
-   * xDS compliant clients. In their xDS requests to Loadbalancer, xDS clients present node
-   * metadata. If a match takes place, the relevant routing configuration is made available to those
-   * proxies. For each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY,
-   * at least one of the filterLabels must match the corresponding label provided in the metadata.
-   * If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with
-   * corresponding labels in the provided metadata. metadataFilters specified here can be overridden
-   * by those specified in the UrlMap that this ForwardingRule references. metadataFilters only
-   * applies to Loadbalancers that have their loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * of xDS compliant clients. In their xDS requests to Loadbalancer, xDS clients present node
+   * metadata. If a match takes place, the relevant configuration is made available to those
+   * proxies. Otherwise, all the resources (e.g. TargetHttpProxy, UrlMap) referenced by the
+   * ForwardingRule will not be visible to those proxies. For each metadataFilter in this list, if
+   * its filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the
+   * corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL,
+   * then all of its filterLabels must match with corresponding labels provided in the metadata.
+   * metadataFilters specified here will be applifed before those specified in the UrlMap that this
+   * ForwardingRule references. metadataFilters only applies to Loadbalancers that have their
+   * loadBalancingScheme set to INTERNAL_SELF_MANAGED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -203,38 +240,37 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   private java.lang.String networkTier;
 
   /**
-   * This field is deprecated. See the port field.
+   * When the load balancing scheme is EXTERNAL, INTERNAL_SELF_MANAGED and INTERNAL_MANAGED, you can
+   * specify a port_range. Use with a forwarding rule that points to a target proxy or a target
+   * pool. Do not use with a forwarding rule that points to a backend service. This field is used
+   * along with the target field for TargetHttpProxy, TargetHttpsProxy, TargetSslProxy,
+   * TargetTcpProxy, TargetVpnGateway, TargetPool, TargetInstance.
+   *
+   * Applicable only when IPProtocol is TCP, UDP, or SCTP, only packets addressed to ports in the
+   * specified range will be forwarded to target. Forwarding rules with the same [IPAddress,
+   * IPProtocol] pair must have disjoint port ranges.
+   *
+   * Some types of forwarding target have constraints on the acceptable ports:   - TargetHttpProxy:
+   * 80, 8080  - TargetHttpsProxy: 443  - TargetTcpProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700,
+   * 993, 995, 1688, 1883, 5222  - TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993,
+   * 995, 1688, 1883, 5222  - TargetVpnGateway: 500, 4500
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String portRange;
 
   /**
-   * List of comma-separated ports. The forwarding rule forwards packets with matching destination
-   * ports. If the forwarding rule's loadBalancingScheme is EXTERNAL, and the forwarding rule
-   * references a target pool, specifying ports is optional. You can specify an unlimited number of
-   * ports, but they must be contiguous. If you omit ports, GCP forwards traffic on any port of the
-   * forwarding rule's protocol.
+   * This field is used along with the backend_service field for internal load balancing.
    *
-   * If the forwarding rule's loadBalancingScheme is EXTERNAL, and the forwarding rule references a
-   * target HTTP proxy, target HTTPS proxy, target TCP proxy, target SSL proxy, or target VPN
-   * gateway, you must specify ports using the following constraints:
+   * When the load balancing scheme is INTERNAL, a list of ports can be configured, for example,
+   * ['80'], ['8000','9000']. Only packets addressed to these ports are forwarded to the backends
+   * configured with the forwarding rule.
    *
-   *   - TargetHttpProxy: 80, 8080  - TargetHttpsProxy: 443  - TargetTcpProxy: 25, 43, 110, 143,
-   * 195, 443, 465, 587, 700, 993, 995, 1688, 1883, 5222  - TargetSslProxy: 25, 43, 110, 143, 195,
-   * 443, 465, 587, 700, 993, 995, 1688, 1883, 5222  - TargetVpnGateway: 500, 4500
-   *
-   * If the forwarding rule's loadBalancingScheme is INTERNAL, you must specify ports in one of the
+   * If the forwarding rule's loadBalancingScheme is INTERNAL, you can specify ports in one of the
    * following ways:
    *
    * * A list of up to five ports, which can be non-contiguous * Keyword ALL, which causes the
    * forwarding rule to forward traffic on any port of the forwarding rule's protocol.
-   *
-   * The ports field is used along with the target field for TargetHttpProxy, TargetHttpsProxy,
-   * TargetSslProxy, TargetTcpProxy, TargetVpnGateway, TargetPool, TargetInstance.
-   *
-   * Applicable only when IPProtocol is TCP, UDP, or SCTP. Forwarding rules with the same
-   * [IPAddress, IPProtocol] pair must have disjoint port ranges.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -297,8 +333,8 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * The URL of the target resource to receive the matched traffic. For regional forwarding rules,
    * this target must live in the same region as the forwarding rule. For global forwarding rules,
    * this target must be a global load balancing resource. The forwarded traffic must be of a type
-   * appropriate to the target object. For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS
-   * targets are valid.
+   * appropriate to the target object. For INTERNAL_SELF_MANAGED load balancing, only
+   * targetHttpProxy is valid, not targetHttpsProxy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -348,7 +384,8 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The IP protocol to which this rule applies. Valid options are TCP, UDP, ESP, AH, SCTP or ICMP.
+   * The IP protocol to which this rule applies. For protocol forwarding, valid options are TCP,
+   * UDP, ESP, AH, SCTP or ICMP.
    *
    * For Internal TCP/UDP Load Balancing, the load balancing scheme is INTERNAL, and one of TCP or
    * UDP are valid. For Traffic Director, the load balancing scheme is INTERNAL_SELF_MANAGED, and
@@ -363,7 +400,8 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The IP protocol to which this rule applies. Valid options are TCP, UDP, ESP, AH, SCTP or ICMP.
+   * The IP protocol to which this rule applies. For protocol forwarding, valid options are TCP,
+   * UDP, ESP, AH, SCTP or ICMP.
    *
    * For Internal TCP/UDP Load Balancing, the load balancing scheme is INTERNAL, and one of TCP or
    * UDP are valid. For Traffic Director, the load balancing scheme is INTERNAL_SELF_MANAGED, and
@@ -404,6 +442,29 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    */
   public ForwardingRule setAllPorts(java.lang.Boolean allPorts) {
     this.allPorts = allPorts;
+    return this;
+  }
+
+  /**
+   * This field is used along with the backend_service field for internal load balancing or with the
+   * target field for internal TargetInstance. If the field is set to TRUE, clients can access ILB
+   * from all regions. Otherwise only allows access from clients in the same region as the internal
+   * load balancer.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAllowGlobalAccess() {
+    return allowGlobalAccess;
+  }
+
+  /**
+   * This field is used along with the backend_service field for internal load balancing or with the
+   * target field for internal TargetInstance. If the field is set to TRUE, clients can access ILB
+   * from all regions. Otherwise only allows access from clients in the same region as the internal
+   * load balancer.
+   * @param allowGlobalAccess allowGlobalAccess or {@code null} for none
+   */
+  public ForwardingRule setAllowGlobalAccess(java.lang.Boolean allowGlobalAccess) {
+    this.allowGlobalAccess = allowGlobalAccess;
     return this;
   }
 
@@ -465,6 +526,71 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
+   * in optimistic locking. This field will be ignored when inserting a ForwardingRule. Include the
+   * fingerprint in patch request to ensure that you do not overwrite changes that were applied from
+   * another concurrent request.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve a ForwardingRule.
+   * @see #decodeFingerprint()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFingerprint() {
+    return fingerprint;
+  }
+
+  /**
+   * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
+   * in optimistic locking. This field will be ignored when inserting a ForwardingRule. Include the
+   * fingerprint in patch request to ensure that you do not overwrite changes that were applied from
+   * another concurrent request.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve a ForwardingRule.
+   * @see #getFingerprint()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeFingerprint() {
+    return com.google.api.client.util.Base64.decodeBase64(fingerprint);
+  }
+
+  /**
+   * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
+   * in optimistic locking. This field will be ignored when inserting a ForwardingRule. Include the
+   * fingerprint in patch request to ensure that you do not overwrite changes that were applied from
+   * another concurrent request.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve a ForwardingRule.
+   * @see #encodeFingerprint()
+   * @param fingerprint fingerprint or {@code null} for none
+   */
+  public ForwardingRule setFingerprint(java.lang.String fingerprint) {
+    this.fingerprint = fingerprint;
+    return this;
+  }
+
+  /**
+   * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
+   * in optimistic locking. This field will be ignored when inserting a ForwardingRule. Include the
+   * fingerprint in patch request to ensure that you do not overwrite changes that were applied from
+   * another concurrent request.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve a ForwardingRule.
+   * @see #setFingerprint()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public ForwardingRule encodeFingerprint(byte[] fingerprint) {
+    this.fingerprint = com.google.api.client.util.Base64.encodeBase64URLSafeString(fingerprint);
+    return this;
+  }
+
+  /**
    * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * @return value or {@code null} for none
    */
@@ -501,6 +627,29 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Indicates whether or not this load balancer can be used as a collector for packet mirroring. To
+   * prevent mirroring loops, instances behind this load balancer will not have their traffic
+   * mirrored even if a PacketMirroring rule applies to them. This can only be set to true for load
+   * balancers that have their loadBalancingScheme set to INTERNAL.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsMirroringCollector() {
+    return isMirroringCollector;
+  }
+
+  /**
+   * Indicates whether or not this load balancer can be used as a collector for packet mirroring. To
+   * prevent mirroring loops, instances behind this load balancer will not have their traffic
+   * mirrored even if a PacketMirroring rule applies to them. This can only be set to true for load
+   * balancers that have their loadBalancingScheme set to INTERNAL.
+   * @param isMirroringCollector isMirroringCollector or {@code null} for none
+   */
+  public ForwardingRule setIsMirroringCollector(java.lang.Boolean isMirroringCollector) {
+    this.isMirroringCollector = isMirroringCollector;
+    return this;
+  }
+
+  /**
    * [Output Only] Type of the resource. Always compute#forwardingRule for Forwarding Rule
    * resources.
    * @return value or {@code null} for none
@@ -520,16 +669,13 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Specifies the forwarding rule type. EXTERNAL is used for: - Classic Cloud VPN gateways -
-   * Protocol forwarding to VMs from an external IP address - The following load balancers: HTTP(S),
-   * SSL Proxy, TCP Proxy, and Network TCP/UDP.
+   * Specifies the forwarding rule type.
    *
-   * INTERNAL is used for: - Protocol forwarding to VMs from an internal IP address - Internal
-   * TCP/UDP load balancers
-   *
-   * INTERNAL_MANAGED is used for: - Internal HTTP(S) load balancers
-   *
-   * INTERNAL_SELF_MANAGED is used for: - Traffic Director
+   *   - EXTERNAL is used for:   - Classic Cloud VPN gateways  - Protocol forwarding to VMs from an
+   * external IP address  - The following load balancers: HTTP(S), SSL Proxy, TCP Proxy, and Network
+   * TCP/UDP     - INTERNAL is used for:   - Protocol forwarding to VMs from an internal IP address
+   * - Internal TCP/UDP load balancers    - INTERNAL_MANAGED is used for:   - Internal HTTP(S) load
+   * balancers    - >INTERNAL_SELF_MANAGED is used for:   - Traffic Director
    *
    * For more information about forwarding rules, refer to Forwarding rule concepts.
    * @return value or {@code null} for none
@@ -539,16 +685,13 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Specifies the forwarding rule type. EXTERNAL is used for: - Classic Cloud VPN gateways -
-   * Protocol forwarding to VMs from an external IP address - The following load balancers: HTTP(S),
-   * SSL Proxy, TCP Proxy, and Network TCP/UDP.
+   * Specifies the forwarding rule type.
    *
-   * INTERNAL is used for: - Protocol forwarding to VMs from an internal IP address - Internal
-   * TCP/UDP load balancers
-   *
-   * INTERNAL_MANAGED is used for: - Internal HTTP(S) load balancers
-   *
-   * INTERNAL_SELF_MANAGED is used for: - Traffic Director
+   *   - EXTERNAL is used for:   - Classic Cloud VPN gateways  - Protocol forwarding to VMs from an
+   * external IP address  - The following load balancers: HTTP(S), SSL Proxy, TCP Proxy, and Network
+   * TCP/UDP     - INTERNAL is used for:   - Protocol forwarding to VMs from an internal IP address
+   * - Internal TCP/UDP load balancers    - INTERNAL_MANAGED is used for:   - Internal HTTP(S) load
+   * balancers    - >INTERNAL_SELF_MANAGED is used for:   - Traffic Director
    *
    * For more information about forwarding rules, refer to Forwarding rule concepts.
    * @param loadBalancingScheme loadBalancingScheme or {@code null} for none
@@ -560,14 +703,16 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
 
   /**
    * Opaque filter criteria used by Loadbalancer to restrict routing configuration to a limited set
-   * xDS compliant clients. In their xDS requests to Loadbalancer, xDS clients present node
-   * metadata. If a match takes place, the relevant routing configuration is made available to those
-   * proxies. For each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY,
-   * at least one of the filterLabels must match the corresponding label provided in the metadata.
-   * If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with
-   * corresponding labels in the provided metadata. metadataFilters specified here can be overridden
-   * by those specified in the UrlMap that this ForwardingRule references. metadataFilters only
-   * applies to Loadbalancers that have their loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * of xDS compliant clients. In their xDS requests to Loadbalancer, xDS clients present node
+   * metadata. If a match takes place, the relevant configuration is made available to those
+   * proxies. Otherwise, all the resources (e.g. TargetHttpProxy, UrlMap) referenced by the
+   * ForwardingRule will not be visible to those proxies. For each metadataFilter in this list, if
+   * its filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the
+   * corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL,
+   * then all of its filterLabels must match with corresponding labels provided in the metadata.
+   * metadataFilters specified here will be applifed before those specified in the UrlMap that this
+   * ForwardingRule references. metadataFilters only applies to Loadbalancers that have their
+   * loadBalancingScheme set to INTERNAL_SELF_MANAGED.
    * @return value or {@code null} for none
    */
   public java.util.List<MetadataFilter> getMetadataFilters() {
@@ -576,14 +721,16 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
 
   /**
    * Opaque filter criteria used by Loadbalancer to restrict routing configuration to a limited set
-   * xDS compliant clients. In their xDS requests to Loadbalancer, xDS clients present node
-   * metadata. If a match takes place, the relevant routing configuration is made available to those
-   * proxies. For each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY,
-   * at least one of the filterLabels must match the corresponding label provided in the metadata.
-   * If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with
-   * corresponding labels in the provided metadata. metadataFilters specified here can be overridden
-   * by those specified in the UrlMap that this ForwardingRule references. metadataFilters only
-   * applies to Loadbalancers that have their loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * of xDS compliant clients. In their xDS requests to Loadbalancer, xDS clients present node
+   * metadata. If a match takes place, the relevant configuration is made available to those
+   * proxies. Otherwise, all the resources (e.g. TargetHttpProxy, UrlMap) referenced by the
+   * ForwardingRule will not be visible to those proxies. For each metadataFilter in this list, if
+   * its filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the
+   * corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL,
+   * then all of its filterLabels must match with corresponding labels provided in the metadata.
+   * metadataFilters specified here will be applifed before those specified in the UrlMap that this
+   * ForwardingRule references. metadataFilters only applies to Loadbalancers that have their
+   * loadBalancingScheme set to INTERNAL_SELF_MANAGED.
    * @param metadataFilters metadataFilters or {@code null} for none
    */
   public ForwardingRule setMetadataFilters(java.util.List<MetadataFilter> metadataFilters) {
@@ -673,7 +820,20 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * This field is deprecated. See the port field.
+   * When the load balancing scheme is EXTERNAL, INTERNAL_SELF_MANAGED and INTERNAL_MANAGED, you can
+   * specify a port_range. Use with a forwarding rule that points to a target proxy or a target
+   * pool. Do not use with a forwarding rule that points to a backend service. This field is used
+   * along with the target field for TargetHttpProxy, TargetHttpsProxy, TargetSslProxy,
+   * TargetTcpProxy, TargetVpnGateway, TargetPool, TargetInstance.
+   *
+   * Applicable only when IPProtocol is TCP, UDP, or SCTP, only packets addressed to ports in the
+   * specified range will be forwarded to target. Forwarding rules with the same [IPAddress,
+   * IPProtocol] pair must have disjoint port ranges.
+   *
+   * Some types of forwarding target have constraints on the acceptable ports:   - TargetHttpProxy:
+   * 80, 8080  - TargetHttpsProxy: 443  - TargetTcpProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700,
+   * 993, 995, 1688, 1883, 5222  - TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993,
+   * 995, 1688, 1883, 5222  - TargetVpnGateway: 500, 4500
    * @return value or {@code null} for none
    */
   public java.lang.String getPortRange() {
@@ -681,7 +841,20 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * This field is deprecated. See the port field.
+   * When the load balancing scheme is EXTERNAL, INTERNAL_SELF_MANAGED and INTERNAL_MANAGED, you can
+   * specify a port_range. Use with a forwarding rule that points to a target proxy or a target
+   * pool. Do not use with a forwarding rule that points to a backend service. This field is used
+   * along with the target field for TargetHttpProxy, TargetHttpsProxy, TargetSslProxy,
+   * TargetTcpProxy, TargetVpnGateway, TargetPool, TargetInstance.
+   *
+   * Applicable only when IPProtocol is TCP, UDP, or SCTP, only packets addressed to ports in the
+   * specified range will be forwarded to target. Forwarding rules with the same [IPAddress,
+   * IPProtocol] pair must have disjoint port ranges.
+   *
+   * Some types of forwarding target have constraints on the acceptable ports:   - TargetHttpProxy:
+   * 80, 8080  - TargetHttpsProxy: 443  - TargetTcpProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700,
+   * 993, 995, 1688, 1883, 5222  - TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993,
+   * 995, 1688, 1883, 5222  - TargetVpnGateway: 500, 4500
    * @param portRange portRange or {@code null} for none
    */
   public ForwardingRule setPortRange(java.lang.String portRange) {
@@ -690,31 +863,17 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * List of comma-separated ports. The forwarding rule forwards packets with matching destination
-   * ports. If the forwarding rule's loadBalancingScheme is EXTERNAL, and the forwarding rule
-   * references a target pool, specifying ports is optional. You can specify an unlimited number of
-   * ports, but they must be contiguous. If you omit ports, GCP forwards traffic on any port of the
-   * forwarding rule's protocol.
+   * This field is used along with the backend_service field for internal load balancing.
    *
-   * If the forwarding rule's loadBalancingScheme is EXTERNAL, and the forwarding rule references a
-   * target HTTP proxy, target HTTPS proxy, target TCP proxy, target SSL proxy, or target VPN
-   * gateway, you must specify ports using the following constraints:
+   * When the load balancing scheme is INTERNAL, a list of ports can be configured, for example,
+   * ['80'], ['8000','9000']. Only packets addressed to these ports are forwarded to the backends
+   * configured with the forwarding rule.
    *
-   *   - TargetHttpProxy: 80, 8080  - TargetHttpsProxy: 443  - TargetTcpProxy: 25, 43, 110, 143,
-   * 195, 443, 465, 587, 700, 993, 995, 1688, 1883, 5222  - TargetSslProxy: 25, 43, 110, 143, 195,
-   * 443, 465, 587, 700, 993, 995, 1688, 1883, 5222  - TargetVpnGateway: 500, 4500
-   *
-   * If the forwarding rule's loadBalancingScheme is INTERNAL, you must specify ports in one of the
+   * If the forwarding rule's loadBalancingScheme is INTERNAL, you can specify ports in one of the
    * following ways:
    *
    * * A list of up to five ports, which can be non-contiguous * Keyword ALL, which causes the
    * forwarding rule to forward traffic on any port of the forwarding rule's protocol.
-   *
-   * The ports field is used along with the target field for TargetHttpProxy, TargetHttpsProxy,
-   * TargetSslProxy, TargetTcpProxy, TargetVpnGateway, TargetPool, TargetInstance.
-   *
-   * Applicable only when IPProtocol is TCP, UDP, or SCTP. Forwarding rules with the same
-   * [IPAddress, IPProtocol] pair must have disjoint port ranges.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPorts() {
@@ -722,31 +881,17 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * List of comma-separated ports. The forwarding rule forwards packets with matching destination
-   * ports. If the forwarding rule's loadBalancingScheme is EXTERNAL, and the forwarding rule
-   * references a target pool, specifying ports is optional. You can specify an unlimited number of
-   * ports, but they must be contiguous. If you omit ports, GCP forwards traffic on any port of the
-   * forwarding rule's protocol.
+   * This field is used along with the backend_service field for internal load balancing.
    *
-   * If the forwarding rule's loadBalancingScheme is EXTERNAL, and the forwarding rule references a
-   * target HTTP proxy, target HTTPS proxy, target TCP proxy, target SSL proxy, or target VPN
-   * gateway, you must specify ports using the following constraints:
+   * When the load balancing scheme is INTERNAL, a list of ports can be configured, for example,
+   * ['80'], ['8000','9000']. Only packets addressed to these ports are forwarded to the backends
+   * configured with the forwarding rule.
    *
-   *   - TargetHttpProxy: 80, 8080  - TargetHttpsProxy: 443  - TargetTcpProxy: 25, 43, 110, 143,
-   * 195, 443, 465, 587, 700, 993, 995, 1688, 1883, 5222  - TargetSslProxy: 25, 43, 110, 143, 195,
-   * 443, 465, 587, 700, 993, 995, 1688, 1883, 5222  - TargetVpnGateway: 500, 4500
-   *
-   * If the forwarding rule's loadBalancingScheme is INTERNAL, you must specify ports in one of the
+   * If the forwarding rule's loadBalancingScheme is INTERNAL, you can specify ports in one of the
    * following ways:
    *
    * * A list of up to five ports, which can be non-contiguous * Keyword ALL, which causes the
    * forwarding rule to forward traffic on any port of the forwarding rule's protocol.
-   *
-   * The ports field is used along with the target field for TargetHttpProxy, TargetHttpsProxy,
-   * TargetSslProxy, TargetTcpProxy, TargetVpnGateway, TargetPool, TargetInstance.
-   *
-   * Applicable only when IPProtocol is TCP, UDP, or SCTP. Forwarding rules with the same
-   * [IPAddress, IPProtocol] pair must have disjoint port ranges.
    * @param ports ports or {@code null} for none
    */
   public ForwardingRule setPorts(java.util.List<java.lang.String> ports) {
@@ -879,8 +1024,8 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * The URL of the target resource to receive the matched traffic. For regional forwarding rules,
    * this target must live in the same region as the forwarding rule. For global forwarding rules,
    * this target must be a global load balancing resource. The forwarded traffic must be of a type
-   * appropriate to the target object. For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS
-   * targets are valid.
+   * appropriate to the target object. For INTERNAL_SELF_MANAGED load balancing, only
+   * targetHttpProxy is valid, not targetHttpsProxy.
    * @return value or {@code null} for none
    */
   public java.lang.String getTarget() {
@@ -891,8 +1036,8 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * The URL of the target resource to receive the matched traffic. For regional forwarding rules,
    * this target must live in the same region as the forwarding rule. For global forwarding rules,
    * this target must be a global load balancing resource. The forwarded traffic must be of a type
-   * appropriate to the target object. For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS
-   * targets are valid.
+   * appropriate to the target object. For INTERNAL_SELF_MANAGED load balancing, only
+   * targetHttpProxy is valid, not targetHttpsProxy.
    * @param target target or {@code null} for none
    */
   public ForwardingRule setTarget(java.lang.String target) {

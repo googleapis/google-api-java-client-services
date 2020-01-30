@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class ResourcePolicySnapshotSchedulePolicySnapshotProperties extends com.google.api.client.json.GenericJson {
 
   /**
-   * Indication to perform a ?guest aware? snapshot.
+   * Indication to perform a 'guest aware' snapshot.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotProperties extend
   private java.util.List<java.lang.String> storageLocations;
 
   /**
-   * Indication to perform a ?guest aware? snapshot.
+   * Indication to perform a 'guest aware' snapshot.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getGuestFlush() {
@@ -60,7 +60,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotProperties extend
   }
 
   /**
-   * Indication to perform a ?guest aware? snapshot.
+   * Indication to perform a 'guest aware' snapshot.
    * @param guestFlush guestFlush or {@code null} for none
    */
   public ResourcePolicySnapshotSchedulePolicySnapshotProperties setGuestFlush(java.lang.Boolean guestFlush) {

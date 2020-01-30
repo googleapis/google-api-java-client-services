@@ -25,9 +25,8 @@ package com.google.api.services.compute.model;
  * For zonal Managed Instance Group, use the instanceGroupManagers resource.
  *
  * For regional Managed Instance Group, use the regionInstanceGroupManagers resource. (==
- * resource_for beta.instanceGroupManagers ==) (== resource_for v1.instanceGroupManagers ==) (==
- * resource_for beta.regionInstanceGroupManagers ==) (== resource_for v1.regionInstanceGroupManagers
- * ==)
+ * resource_for {$api_version}.instanceGroupManagers ==) (== resource_for
+ * {$api_version}.regionInstanceGroupManagers ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -183,6 +182,13 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.lang.String serviceAccount;
+
+  /**
+   * Stateful configuration for this Instanced Group Manager
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StatefulPolicy statefulPolicy;
 
   /**
    * [Output Only] The status of this managed instance group.
@@ -614,6 +620,23 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
    */
   public InstanceGroupManager setServiceAccount(java.lang.String serviceAccount) {
     this.serviceAccount = serviceAccount;
+    return this;
+  }
+
+  /**
+   * Stateful configuration for this Instanced Group Manager
+   * @return value or {@code null} for none
+   */
+  public StatefulPolicy getStatefulPolicy() {
+    return statefulPolicy;
+  }
+
+  /**
+   * Stateful configuration for this Instanced Group Manager
+   * @param statefulPolicy statefulPolicy or {@code null} for none
+   */
+  public InstanceGroupManager setStatefulPolicy(StatefulPolicy statefulPolicy) {
+    this.statefulPolicy = statefulPolicy;
     return this;
   }
 

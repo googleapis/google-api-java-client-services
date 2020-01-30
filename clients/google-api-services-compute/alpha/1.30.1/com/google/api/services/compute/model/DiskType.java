@@ -19,6 +19,11 @@ package com.google.api.services.compute.model;
 /**
  * Represents a Disk Type resource.
  *
+ * Google Compute Engine has two Disk Type resources:
+ *
+ * * [Global](/compute/docs/reference/rest/latest/diskTypes) *
+ * [Regional](/compute/docs/reference/rest/latest/regionDiskTypes)
+ *
  * You can choose from a variety of disk types based on your needs. For more information, read
  * Storage options.
  *
@@ -26,9 +31,8 @@ package com.google.api.services.compute.model;
  * read Zonal persistent disks.
  *
  * The regionDiskTypes resource represents disk types for a regional persistent disk. For more
- * information, read Regional persistent disks. (== resource_for beta.diskTypes ==) (== resource_for
- * v1.diskTypes ==) (== resource_for v1.regionDiskTypes ==) (== resource_for beta.regionDiskTypes
- * ==)
+ * information, read Regional persistent disks. (== resource_for {$api_version}.diskTypes ==) (==
+ * resource_for {$api_version}.regionDiskTypes ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

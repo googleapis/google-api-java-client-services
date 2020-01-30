@@ -39,12 +39,11 @@ public final class ResourcePolicyGroupPlacementPolicy extends com.google.api.cli
   private java.lang.Integer availabilityDomainCount;
 
   /**
-   * Distribution specifies how the instances are placed at host level. If set to SPREAD, no two
-   * instances will be put on the same host
+   * Specifies network collocation
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String distribution;
+  private java.lang.String collocation;
 
   /**
    * Specifies network locality
@@ -87,21 +86,19 @@ public final class ResourcePolicyGroupPlacementPolicy extends com.google.api.cli
   }
 
   /**
-   * Distribution specifies how the instances are placed at host level. If set to SPREAD, no two
-   * instances will be put on the same host
+   * Specifies network collocation
    * @return value or {@code null} for none
    */
-  public java.lang.String getDistribution() {
-    return distribution;
+  public java.lang.String getCollocation() {
+    return collocation;
   }
 
   /**
-   * Distribution specifies how the instances are placed at host level. If set to SPREAD, no two
-   * instances will be put on the same host
-   * @param distribution distribution or {@code null} for none
+   * Specifies network collocation
+   * @param collocation collocation or {@code null} for none
    */
-  public ResourcePolicyGroupPlacementPolicy setDistribution(java.lang.String distribution) {
-    this.distribution = distribution;
+  public ResourcePolicyGroupPlacementPolicy setCollocation(java.lang.String collocation) {
+    this.collocation = collocation;
     return this;
   }
 

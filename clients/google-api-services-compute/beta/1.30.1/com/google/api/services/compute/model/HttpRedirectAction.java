@@ -49,8 +49,9 @@ public final class HttpRedirectAction extends com.google.api.client.json.Generic
 
   /**
    * The path that will be used in the redirect response instead of the one that was supplied in the
-   * request. Only one of pathRedirect or prefixRedirect must be specified. The value must be
-   * between 1 and 1024 characters.
+   * request. pathRedirect cannot be supplied together with prefixRedirect. Supply one alone or
+   * neither. If neither is supplied, the path of the original request will be used for the
+   * redirect. The value must be between 1 and 1024 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +59,10 @@ public final class HttpRedirectAction extends com.google.api.client.json.Generic
 
   /**
    * The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch, retaining the
-   * remaining portion of the URL before redirecting the request.
+   * remaining portion of the URL before redirecting the request. prefixRedirect cannot be supplied
+   * together with pathRedirect. Supply one alone or neither. If neither is supplied, the path of
+   * the original request will be used for the redirect. The value must be between 1 and 1024
+   * characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,8 +132,9 @@ public final class HttpRedirectAction extends com.google.api.client.json.Generic
 
   /**
    * The path that will be used in the redirect response instead of the one that was supplied in the
-   * request. Only one of pathRedirect or prefixRedirect must be specified. The value must be
-   * between 1 and 1024 characters.
+   * request. pathRedirect cannot be supplied together with prefixRedirect. Supply one alone or
+   * neither. If neither is supplied, the path of the original request will be used for the
+   * redirect. The value must be between 1 and 1024 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getPathRedirect() {
@@ -138,8 +143,9 @@ public final class HttpRedirectAction extends com.google.api.client.json.Generic
 
   /**
    * The path that will be used in the redirect response instead of the one that was supplied in the
-   * request. Only one of pathRedirect or prefixRedirect must be specified. The value must be
-   * between 1 and 1024 characters.
+   * request. pathRedirect cannot be supplied together with prefixRedirect. Supply one alone or
+   * neither. If neither is supplied, the path of the original request will be used for the
+   * redirect. The value must be between 1 and 1024 characters.
    * @param pathRedirect pathRedirect or {@code null} for none
    */
   public HttpRedirectAction setPathRedirect(java.lang.String pathRedirect) {
@@ -149,7 +155,10 @@ public final class HttpRedirectAction extends com.google.api.client.json.Generic
 
   /**
    * The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch, retaining the
-   * remaining portion of the URL before redirecting the request.
+   * remaining portion of the URL before redirecting the request. prefixRedirect cannot be supplied
+   * together with pathRedirect. Supply one alone or neither. If neither is supplied, the path of
+   * the original request will be used for the redirect. The value must be between 1 and 1024
+   * characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrefixRedirect() {
@@ -158,7 +167,10 @@ public final class HttpRedirectAction extends com.google.api.client.json.Generic
 
   /**
    * The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch, retaining the
-   * remaining portion of the URL before redirecting the request.
+   * remaining portion of the URL before redirecting the request. prefixRedirect cannot be supplied
+   * together with pathRedirect. Supply one alone or neither. If neither is supplied, the path of
+   * the original request will be used for the redirect. The value must be between 1 and 1024
+   * characters.
    * @param prefixRedirect prefixRedirect or {@code null} for none
    */
   public HttpRedirectAction setPrefixRedirect(java.lang.String prefixRedirect) {

@@ -37,6 +37,14 @@ public final class FirewallLogConfig extends com.google.api.client.json.GenericJ
   private java.lang.Boolean enable;
 
   /**
+   * This field can only be specified for a particular firewall rule if logging is enabled for that
+   * rule. This field denotes whether to include or exclude metadata for firewall logs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String metadata;
+
+  /**
    * This field denotes whether to enable logging for a particular firewall rule.
    * @return value or {@code null} for none
    */
@@ -50,6 +58,25 @@ public final class FirewallLogConfig extends com.google.api.client.json.GenericJ
    */
   public FirewallLogConfig setEnable(java.lang.Boolean enable) {
     this.enable = enable;
+    return this;
+  }
+
+  /**
+   * This field can only be specified for a particular firewall rule if logging is enabled for that
+   * rule. This field denotes whether to include or exclude metadata for firewall logs.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMetadata() {
+    return metadata;
+  }
+
+  /**
+   * This field can only be specified for a particular firewall rule if logging is enabled for that
+   * rule. This field denotes whether to include or exclude metadata for firewall logs.
+   * @param metadata metadata or {@code null} for none
+   */
+  public FirewallLogConfig setMetadata(java.lang.String metadata) {
+    this.metadata = metadata;
     return this;
   }
 

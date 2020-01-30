@@ -19,6 +19,11 @@ package com.google.api.services.compute.model;
 /**
  * Represents a Persistent Disk resource.
  *
+ * Google Compute Engine has two Disk resources:
+ *
+ * * [Global](/compute/docs/reference/rest/latest/disks) *
+ * [Regional](/compute/docs/reference/rest/latest/regionDisks)
+ *
  * Persistent disks are required for running your VM instances. Create both boot and non-boot (data)
  * persistent disks. For more information, read Persistent Disks. For more storage options, read
  * Storage options.
@@ -27,8 +32,8 @@ package com.google.api.services.compute.model;
  * persistent disks.
  *
  * The regionDisks resource represents a regional persistent disk. For more information, read
- * Regional resources. (== resource_for beta.disks ==) (== resource_for v1.disks ==) (==
- * resource_for v1.regionDisks ==) (== resource_for beta.regionDisks ==)
+ * Regional resources. (== resource_for {$api_version}.disks ==) (== resource_for
+ * {$api_version}.regionDisks ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

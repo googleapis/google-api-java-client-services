@@ -19,9 +19,19 @@ package com.google.api.services.compute.model;
 /**
  * Represents an SSL Certificate resource.
  *
+ * Google Compute Engine has two SSL Certificate resources:
+ *
+ * * [Global](/compute/docs/reference/rest/latest/sslCertificates) *
+ * [Regional](/compute/docs/reference/rest/latest/regionSslCertificates)
+ *
+ * - sslCertificates are used by: - external HTTPS load balancers - SSL proxy load balancers
+ *
+ * - regionSslCertificates are used by: - internal HTTPS load balancers
+ *
  * This SSL certificate resource also contains a private key. You can use SSL keys and certificates
  * to secure connections to a load balancer. For more information, read  Creating and Using SSL
- * Certificates. (== resource_for beta.sslCertificates ==) (== resource_for v1.sslCertificates ==)
+ * Certificates. (== resource_for {$api_version}.sslCertificates ==) (== resource_for
+ * {$api_version}.regionSslCertificates ==) Next ID: 17
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

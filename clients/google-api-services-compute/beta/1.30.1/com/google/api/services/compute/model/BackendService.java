@@ -22,9 +22,14 @@ package com.google.api.services.compute.model;
  * A backend service contains configuration values for Google Cloud Platform load balancing
  * services.
  *
+ * Backend services in Google Compute Engine can be either regionally or globally scoped.
+ *
+ * * [Global](/compute/docs/reference/rest/latest/backendServices) *
+ * [Regional](/compute/docs/reference/rest/latest/regionBackendServices)
+ *
  * For more information, read Backend Services.
  *
- * (== resource_for v1.backendService ==) (== resource_for beta.backendService ==)
+ * (== resource_for {$api_version}.backendService ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -149,9 +154,10 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * The list of URLs to the HttpHealthCheck or HttpsHealthCheck resource for health checking this
-   * BackendService. Currently at most one health check can be specified, and a health check is
-   * required for Compute Engine backend services. A health check must not be specified for App
-   * Engine backend and Cloud Function backend.
+   * BackendService. Currently at most one health check can be specified. Health check is optional
+   * for Compute Engine backend services if there is no backend. A health check must not be
+   * specified when adding Internet Network Endpoint Group or Serverless Network Endpoint Group as
+   * backends. In all other cases, a health check is required for Compute Engine backend services.
    *
    * For internal load balancing, a URL to a HealthCheck resource must be specified instead.
    * The value may be {@code null}.
@@ -208,6 +214,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * This field is applicable to either:   - A regional backend service with the service_protocol
    * set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global
    * backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+   *
+   * If sessionAffinity is not NONE, and this field is not set to >MAGLEV or RING_HASH, session
+   * affinity settings will not take effect.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -318,8 +327,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * When the loadBalancingScheme is INTERNAL, possible values are NONE, CLIENT_IP, CLIENT_IP_PROTO,
    * or CLIENT_IP_PORT_PROTO.
    *
-   * When the loadBalancingScheme is INTERNAL_SELF_MANAGED, possible values are NONE, CLIENT_IP,
-   * GENERATED_COOKIE, HEADER_FIELD, or HTTP_COOKIE.
+   * When the loadBalancingScheme is INTERNAL_SELF_MANAGED, or INTERNAL_MANAGED, possible values are
+   * NONE, CLIENT_IP, GENERATED_COOKIE, HEADER_FIELD, or HTTP_COOKIE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -619,9 +628,10 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * The list of URLs to the HttpHealthCheck or HttpsHealthCheck resource for health checking this
-   * BackendService. Currently at most one health check can be specified, and a health check is
-   * required for Compute Engine backend services. A health check must not be specified for App
-   * Engine backend and Cloud Function backend.
+   * BackendService. Currently at most one health check can be specified. Health check is optional
+   * for Compute Engine backend services if there is no backend. A health check must not be
+   * specified when adding Internet Network Endpoint Group or Serverless Network Endpoint Group as
+   * backends. In all other cases, a health check is required for Compute Engine backend services.
    *
    * For internal load balancing, a URL to a HealthCheck resource must be specified instead.
    * @return value or {@code null} for none
@@ -632,9 +642,10 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * The list of URLs to the HttpHealthCheck or HttpsHealthCheck resource for health checking this
-   * BackendService. Currently at most one health check can be specified, and a health check is
-   * required for Compute Engine backend services. A health check must not be specified for App
-   * Engine backend and Cloud Function backend.
+   * BackendService. Currently at most one health check can be specified. Health check is optional
+   * for Compute Engine backend services if there is no backend. A health check must not be
+   * specified when adding Internet Network Endpoint Group or Serverless Network Endpoint Group as
+   * backends. In all other cases, a health check is required for Compute Engine backend services.
    *
    * For internal load balancing, a URL to a HealthCheck resource must be specified instead.
    * @param healthChecks healthChecks or {@code null} for none
@@ -736,6 +747,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * This field is applicable to either:   - A regional backend service with the service_protocol
    * set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global
    * backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+   *
+   * If sessionAffinity is not NONE, and this field is not set to >MAGLEV or RING_HASH, session
+   * affinity settings will not take effect.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocalityLbPolicy() {
@@ -760,6 +774,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * This field is applicable to either:   - A regional backend service with the service_protocol
    * set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global
    * backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+   *
+   * If sessionAffinity is not NONE, and this field is not set to >MAGLEV or RING_HASH, session
+   * affinity settings will not take effect.
    * @param localityLbPolicy localityLbPolicy or {@code null} for none
    */
   public BackendService setLocalityLbPolicy(java.lang.String localityLbPolicy) {
@@ -997,8 +1014,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * When the loadBalancingScheme is INTERNAL, possible values are NONE, CLIENT_IP, CLIENT_IP_PROTO,
    * or CLIENT_IP_PORT_PROTO.
    *
-   * When the loadBalancingScheme is INTERNAL_SELF_MANAGED, possible values are NONE, CLIENT_IP,
-   * GENERATED_COOKIE, HEADER_FIELD, or HTTP_COOKIE.
+   * When the loadBalancingScheme is INTERNAL_SELF_MANAGED, or INTERNAL_MANAGED, possible values are
+   * NONE, CLIENT_IP, GENERATED_COOKIE, HEADER_FIELD, or HTTP_COOKIE.
    * @return value or {@code null} for none
    */
   public java.lang.String getSessionAffinity() {
@@ -1015,8 +1032,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * When the loadBalancingScheme is INTERNAL, possible values are NONE, CLIENT_IP, CLIENT_IP_PROTO,
    * or CLIENT_IP_PORT_PROTO.
    *
-   * When the loadBalancingScheme is INTERNAL_SELF_MANAGED, possible values are NONE, CLIENT_IP,
-   * GENERATED_COOKIE, HEADER_FIELD, or HTTP_COOKIE.
+   * When the loadBalancingScheme is INTERNAL_SELF_MANAGED, or INTERNAL_MANAGED, possible values are
+   * NONE, CLIENT_IP, GENERATED_COOKIE, HEADER_FIELD, or HTTP_COOKIE.
    * @param sessionAffinity sessionAffinity or {@code null} for none
    */
   public BackendService setSessionAffinity(java.lang.String sessionAffinity) {

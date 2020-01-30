@@ -67,6 +67,14 @@ public final class SavedAttachedDisk extends com.google.api.client.json.GenericJ
   private java.lang.Long diskSizeGb;
 
   /**
+   * [Output Only] URL of the disk type resource. For example: projects/project/zones/zone/diskTypes
+   * /pd-standard or pd-ssd
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String diskType;
+
+  /**
    * A list of features to enable on the guest operating system. Applicable only for bootable
    * images. Read  Enabling guest operating system features to see a list of available options.
    * The value may be {@code null}.
@@ -232,6 +240,25 @@ public final class SavedAttachedDisk extends com.google.api.client.json.GenericJ
    */
   public SavedAttachedDisk setDiskSizeGb(java.lang.Long diskSizeGb) {
     this.diskSizeGb = diskSizeGb;
+    return this;
+  }
+
+  /**
+   * [Output Only] URL of the disk type resource. For example: projects/project/zones/zone/diskTypes
+   * /pd-standard or pd-ssd
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDiskType() {
+    return diskType;
+  }
+
+  /**
+   * [Output Only] URL of the disk type resource. For example: projects/project/zones/zone/diskTypes
+   * /pd-standard or pd-ssd
+   * @param diskType diskType or {@code null} for none
+   */
+  public SavedAttachedDisk setDiskType(java.lang.String diskType) {
+    this.diskType = diskType;
     return this;
   }
 

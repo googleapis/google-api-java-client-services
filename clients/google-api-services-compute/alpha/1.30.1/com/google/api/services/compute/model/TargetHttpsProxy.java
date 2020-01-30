@@ -19,10 +19,20 @@ package com.google.api.services.compute.model;
 /**
  * Represents a Target HTTPS Proxy resource.
  *
- * A target HTTPS proxy is a component of certain types of load balancers. Global forwarding rules
- * reference a target HTTPS proxy, and the target proxy then references a URL map. For more
- * information, read Using Target Proxies. (== resource_for beta.targetHttpsProxies ==) (==
- * resource_for v1.targetHttpsProxies ==)
+ * Google Compute Engine has two Target HTTPS Proxy resources:
+ *
+ * * [Global](/compute/docs/reference/rest/latest/targetHttpsProxies) *
+ * [Regional](/compute/docs/reference/rest/latest/regionTargetHttpsProxies)
+ *
+ * A target HTTPS proxy is a component of GCP HTTPS load balancers.
+ *
+ * * targetHttpsProxies are used by external HTTPS load balancers. * regionTargetHttpsProxies are
+ * used by internal HTTPS load balancers.
+ *
+ * Forwarding rules reference a target HTTPS proxy, and the target proxy then references a URL map.
+ * For more information, read Using Target Proxies and  Forwarding rule concepts. (== resource_for
+ * {$api_version}.targetHttpsProxies ==) (== resource_for {$api_version}.regionTargetHttpsProxies
+ * ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

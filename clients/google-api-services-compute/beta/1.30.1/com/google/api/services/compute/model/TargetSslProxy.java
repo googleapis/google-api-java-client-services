@@ -21,8 +21,7 @@ package com.google.api.services.compute.model;
  *
  * A target SSL proxy is a component of a SSL Proxy load balancer. Global forwarding rules reference
  * a target SSL proxy, and the target proxy then references an external backend service. For more
- * information, read Using Target Proxies. (== resource_for beta.targetSslProxies ==) (==
- * resource_for v1.targetSslProxies ==)
+ * information, read Using Target Proxies. (== resource_for {$api_version}.targetSslProxies ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

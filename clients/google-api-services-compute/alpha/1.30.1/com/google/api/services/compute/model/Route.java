@@ -21,7 +21,7 @@ package com.google.api.services.compute.model;
  *
  * A route defines a path from VM instances in the VPC network to a specific destination. This
  * destination can be inside or outside the VPC network. For more information, read the Routes
- * overview. (== resource_for beta.routes ==) (== resource_for v1.routes ==)
+ * overview. (== resource_for {$api_version}.routes ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

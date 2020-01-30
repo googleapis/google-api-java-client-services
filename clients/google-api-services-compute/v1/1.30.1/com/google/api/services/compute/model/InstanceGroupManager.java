@@ -25,9 +25,8 @@ package com.google.api.services.compute.model;
  * For zonal Managed Instance Group, use the instanceGroupManagers resource.
  *
  * For regional Managed Instance Group, use the regionInstanceGroupManagers resource. (==
- * resource_for beta.instanceGroupManagers ==) (== resource_for v1.instanceGroupManagers ==) (==
- * resource_for beta.regionInstanceGroupManagers ==) (== resource_for v1.regionInstanceGroupManagers
- * ==)
+ * resource_for {$api_version}.instanceGroupManagers ==) (== resource_for
+ * {$api_version}.regionInstanceGroupManagers ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

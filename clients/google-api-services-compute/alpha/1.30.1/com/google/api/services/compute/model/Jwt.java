@@ -47,7 +47,7 @@ public final class Jwt extends com.google.api.client.json.GenericJson {
   private java.lang.String issuer;
 
   /**
-   * The provider?s public key set to validate the signature of the JWT.
+   * The provider's public key set to validate the signature of the JWT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,7 +124,7 @@ public final class Jwt extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The provider?s public key set to validate the signature of the JWT.
+   * The provider's public key set to validate the signature of the JWT.
    * @return value or {@code null} for none
    */
   public java.lang.String getJwksPublicKeys() {
@@ -132,7 +132,7 @@ public final class Jwt extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The provider?s public key set to validate the signature of the JWT.
+   * The provider's public key set to validate the signature of the JWT.
    * @param jwksPublicKeys jwksPublicKeys or {@code null} for none
    */
   public Jwt setJwksPublicKeys(java.lang.String jwksPublicKeys) {

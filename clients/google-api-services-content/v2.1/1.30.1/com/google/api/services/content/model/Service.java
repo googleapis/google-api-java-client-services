@@ -82,6 +82,15 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * The carrier-service pair delivering items to collection points. The list of supported pickup
+   * services can be retrieved via the getSupportedPickupServices method. Required if and only if
+   * the service delivery type is pickup.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PickupCarrierService pickupService;
+
+  /**
    * Shipping rate group definitions. Only the last one is allowed to have an empty
    * applicableShippingLabels, which means "everything else". The other applicableShippingLabels
    * must not overlap.
@@ -95,6 +104,13 @@ public final class Service extends com.google.api.client.json.GenericJson {
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(RateGroup.class);
   }
+
+  /**
+   * Type of locations this service ships orders to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String shipmentType;
 
   /**
    * A boolean exposing the active status of the shipping service. Required.
@@ -220,6 +236,27 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The carrier-service pair delivering items to collection points. The list of supported pickup
+   * services can be retrieved via the getSupportedPickupServices method. Required if and only if
+   * the service delivery type is pickup.
+   * @return value or {@code null} for none
+   */
+  public PickupCarrierService getPickupService() {
+    return pickupService;
+  }
+
+  /**
+   * The carrier-service pair delivering items to collection points. The list of supported pickup
+   * services can be retrieved via the getSupportedPickupServices method. Required if and only if
+   * the service delivery type is pickup.
+   * @param pickupService pickupService or {@code null} for none
+   */
+  public Service setPickupService(PickupCarrierService pickupService) {
+    this.pickupService = pickupService;
+    return this;
+  }
+
+  /**
    * Shipping rate group definitions. Only the last one is allowed to have an empty
    * applicableShippingLabels, which means "everything else". The other applicableShippingLabels
    * must not overlap.
@@ -237,6 +274,23 @@ public final class Service extends com.google.api.client.json.GenericJson {
    */
   public Service setRateGroups(java.util.List<RateGroup> rateGroups) {
     this.rateGroups = rateGroups;
+    return this;
+  }
+
+  /**
+   * Type of locations this service ships orders to.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getShipmentType() {
+    return shipmentType;
+  }
+
+  /**
+   * Type of locations this service ships orders to.
+   * @param shipmentType shipmentType or {@code null} for none
+   */
+  public Service setShipmentType(java.lang.String shipmentType) {
+    this.shipmentType = shipmentType;
     return this;
   }
 

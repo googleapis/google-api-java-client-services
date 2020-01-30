@@ -44,9 +44,9 @@ public final class Photo extends com.google.api.client.json.GenericJson {
   private FieldMetadata metadata;
 
   /**
-   * The URL of the photo. You can change the desired size by appending a query parameter `sz=`size
-   * at the end of the url. Example: `https://lh3.googleusercontent.com/-T_wVWLlmg7w/AAAAAAAAAAI/AAA
-   * AAAAABa8/00gzXvDBYqw/s100/photo.jpg?sz=50`
+   * The URL of the photo. You can change the desired size by appending a query parameter
+   * `sz={size}` at the end of the url, where {size} is the size in pixels. Example: https://lh3.goo
+   * gleusercontent.com/-T_wVWLlmg7w/AAAAAAAAAAI/AAAAAAAABa8/00gzXvDBYqw/s100/photo.jpg?sz=50
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,9 +87,9 @@ public final class Photo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URL of the photo. You can change the desired size by appending a query parameter `sz=`size
-   * at the end of the url. Example: `https://lh3.googleusercontent.com/-T_wVWLlmg7w/AAAAAAAAAAI/AAA
-   * AAAAABa8/00gzXvDBYqw/s100/photo.jpg?sz=50`
+   * The URL of the photo. You can change the desired size by appending a query parameter
+   * `sz={size}` at the end of the url, where {size} is the size in pixels. Example: https://lh3.goo
+   * gleusercontent.com/-T_wVWLlmg7w/AAAAAAAAAAI/AAAAAAAABa8/00gzXvDBYqw/s100/photo.jpg?sz=50
    * @return value or {@code null} for none
    */
   public java.lang.String getUrl() {
@@ -97,9 +97,9 @@ public final class Photo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URL of the photo. You can change the desired size by appending a query parameter `sz=`size
-   * at the end of the url. Example: `https://lh3.googleusercontent.com/-T_wVWLlmg7w/AAAAAAAAAAI/AAA
-   * AAAAABa8/00gzXvDBYqw/s100/photo.jpg?sz=50`
+   * The URL of the photo. You can change the desired size by appending a query parameter
+   * `sz={size}` at the end of the url, where {size} is the size in pixels. Example: https://lh3.goo
+   * gleusercontent.com/-T_wVWLlmg7w/AAAAAAAAAAI/AAAAAAAABa8/00gzXvDBYqw/s100/photo.jpg?sz=50
    * @param url url or {@code null} for none
    */
   public Photo setUrl(java.lang.String url) {

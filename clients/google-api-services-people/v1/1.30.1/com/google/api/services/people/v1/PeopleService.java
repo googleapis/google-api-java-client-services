@@ -824,14 +824,14 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * The next_page_token value returned from a previous call to
+       * Optional. The next_page_token value returned from a previous call to
        * [ListContactGroups](/people/api/rest/v1/contactgroups/list). Requests the next page of
        * resources.
        */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** The next_page_token value returned from a previous call to
+      /** Optional. The next_page_token value returned from a previous call to
      [ListContactGroups](/people/api/rest/v1/contactgroups/list). Requests the next page of resources.
        */
       public java.lang.String getPageToken() {
@@ -839,7 +839,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * The next_page_token value returned from a previous call to
+       * Optional. The next_page_token value returned from a previous call to
        * [ListContactGroups](/people/api/rest/v1/contactgroups/list). Requests the next page of
        * resources.
        */
@@ -849,22 +849,22 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * A sync token, returned by a previous call to `contactgroups.list`. Only resources changed
-       * since the sync token was created will be returned.
+       * Optional. A sync token, returned by a previous call to `contactgroups.list`. Only resources
+       * changed since the sync token was created will be returned.
        */
       @com.google.api.client.util.Key
       private java.lang.String syncToken;
 
-      /** A sync token, returned by a previous call to `contactgroups.list`. Only resources changed since the
-     sync token was created will be returned.
+      /** Optional. A sync token, returned by a previous call to `contactgroups.list`. Only resources changed
+     since the sync token was created will be returned.
        */
       public java.lang.String getSyncToken() {
         return syncToken;
       }
 
       /**
-       * A sync token, returned by a previous call to `contactgroups.list`. Only resources changed
-       * since the sync token was created will be returned.
+       * Optional. A sync token, returned by a previous call to `contactgroups.list`. Only resources
+       * changed since the sync token was created will be returned.
        */
       public List setSyncToken(java.lang.String syncToken) {
         this.syncToken = syncToken;
@@ -886,7 +886,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
      *
      * @param resourceName The resource name for the contact group, assigned by the server. An ASCII
     string, in the form of
-     *        `contactGroups/`contact_group_id.
+     *        `contactGroups/{contact_group_id}`.
      * @param content the {@link com.google.api.services.people.v1.model.UpdateContactGroupRequest}
      * @return the request
      */
@@ -915,7 +915,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
        *
        * @param resourceName The resource name for the contact group, assigned by the server. An ASCII
     string, in the form of
-     *        `contactGroups/`contact_group_id.
+     *        `contactGroups/{contact_group_id}`.
        * @param content the {@link com.google.api.services.people.v1.model.UpdateContactGroupRequest}
        * @since 1.13
        */
@@ -986,13 +986,13 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
       /**
        * The resource name for the contact group, assigned by the server. An ASCII string, in the
-       * form of `contactGroups/`contact_group_id.
+       * form of `contactGroups/{contact_group_id}`.
        */
       @com.google.api.client.util.Key
       private java.lang.String resourceName;
 
       /** The resource name for the contact group, assigned by the server. An ASCII string, in the form of
-     `contactGroups/`contact_group_id.
+     `contactGroups/{contact_group_id}`.
        */
       public java.lang.String getResourceName() {
         return resourceName;
@@ -1000,7 +1000,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
       /**
        * The resource name for the contact group, assigned by the server. An ASCII string, in the
-       * form of `contactGroups/`contact_group_id.
+       * form of `contactGroups/{contact_group_id}`.
        */
       public Update setResourceName(java.lang.String resourceName) {
         if (!getSuppressPatternChecks()) {
@@ -1616,7 +1616,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
      *        the authenticated user, specify `people/me`.
     - To get information about a google account,
      *        specify
-     `people/`account_id.
+     `people/{account_id}`.
     - To get information about a contact, specify the resource
      *        name that
       identifies the contact as returned by
@@ -1654,7 +1654,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
      *        the authenticated user, specify `people/me`.
     - To get information about a google account,
      *        specify
-     `people/`account_id.
+     `people/{account_id}`.
     - To get information about a contact, specify the resource
      *        name that
       identifies the contact as returned by
@@ -1740,8 +1740,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
        * Required. The resource name of the person to provide information about.
        *
        * - To get information about the authenticated user, specify `people/me`. - To get
-       * information about a google account, specify `people/`account_id. - To get information about
-       * a contact, specify the resource name that identifies the contact as returned by
+       * information about a google account, specify `people/{account_id}`. - To get information
+       * about a contact, specify the resource name that identifies the contact as returned by
        * [`people.connections.list`](/people/api/rest/v1/people.connections/list).
        */
       @com.google.api.client.util.Key
@@ -1750,7 +1750,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       /** Required. The resource name of the person to provide information about.
 
      - To get information about the authenticated user, specify `people/me`. - To get information about
-     a google account, specify `people/`account_id. - To get information about a contact, specify the
+     a google account, specify `people/{account_id}`. - To get information about a contact, specify the
      resource name that identifies the contact as returned by
      [`people.connections.list`](/people/api/rest/v1/people.connections/list).
        */
@@ -1762,8 +1762,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
        * Required. The resource name of the person to provide information about.
        *
        * - To get information about the authenticated user, specify `people/me`. - To get
-       * information about a google account, specify `people/`account_id. - To get information about
-       * a contact, specify the resource name that identifies the contact as returned by
+       * information about a google account, specify `people/{account_id}`. - To get information
+       * about a contact, specify the resource name that identifies the contact as returned by
        * [`people.connections.list`](/people/api/rest/v1/people.connections/list).
        */
       public Get setResourceName(java.lang.String resourceName) {
@@ -2019,8 +2019,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
        * Required. The resource names of the people to provide information about.
        *
        * - To get information about the authenticated user, specify `people/me`. - To get
-       * information about a google account, specify `people/`account_id. - To get information about
-       * a contact, specify the resource name that identifies the contact as returned by
+       * information about a google account, specify `people/{account_id}`. - To get information
+       * about a contact, specify the resource name that identifies the contact as returned by
        * [`people.connections.list`](/people/api/rest/v1/people.connections/list).
        *
        * You can include up to 50 resource names in one request.
@@ -2031,7 +2031,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       /** Required. The resource names of the people to provide information about.
 
      - To get information about the authenticated user, specify `people/me`. - To get information about
-     a google account, specify `people/`account_id. - To get information about a contact, specify the
+     a google account, specify `people/{account_id}`. - To get information about a contact, specify the
      resource name that identifies the contact as returned by
      [`people.connections.list`](/people/api/rest/v1/people.connections/list).
 
@@ -2045,8 +2045,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
        * Required. The resource names of the people to provide information about.
        *
        * - To get information about the authenticated user, specify `people/me`. - To get
-       * information about a google account, specify `people/`account_id. - To get information about
-       * a contact, specify the resource name that identifies the contact as returned by
+       * information about a google account, specify `people/{account_id}`. - To get information
+       * about a contact, specify the resource name that identifies the contact as returned by
        * [`people.connections.list`](/people/api/rest/v1/people.connections/list).
        *
        * You can include up to 50 resource names in one request.
@@ -2082,7 +2082,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
      * @param resourceName The resource name for the person, assigned by the server. An ASCII string
     with a max length of 27
      *        characters, in the form of
-    `people/`person_id.
+    `people/{person_id}`.
      * @param content the {@link com.google.api.services.people.v1.model.Person}
      * @return the request
      */
@@ -2123,7 +2123,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
        * @param resourceName The resource name for the person, assigned by the server. An ASCII string
     with a max length of 27
      *        characters, in the form of
-    `people/`person_id.
+    `people/{person_id}`.
        * @param content the {@link com.google.api.services.people.v1.model.Person}
        * @since 1.13
        */
@@ -2194,13 +2194,13 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
       /**
        * The resource name for the person, assigned by the server. An ASCII string with a max length
-       * of 27 characters, in the form of `people/`person_id.
+       * of 27 characters, in the form of `people/{person_id}`.
        */
       @com.google.api.client.util.Key
       private java.lang.String resourceName;
 
       /** The resource name for the person, assigned by the server. An ASCII string with a max length of 27
-     characters, in the form of `people/`person_id.
+     characters, in the form of `people/{person_id}`.
        */
       public java.lang.String getResourceName() {
         return resourceName;
@@ -2208,7 +2208,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
       /**
        * The resource name for the person, assigned by the server. An ASCII string with a max length
-       * of 27 characters, in the form of `people/`person_id.
+       * of 27 characters, in the form of `people/{person_id}`.
        */
       public UpdateContact setResourceName(java.lang.String resourceName) {
         if (!getSuppressPatternChecks()) {
@@ -2574,17 +2574,17 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
           return this;
         }
 
-        /** The token of the page to be returned. */
+        /** Optional. The token of the page to be returned. */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** The token of the page to be returned.
+        /** Optional. The token of the page to be returned.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /** The token of the page to be returned. */
+        /** Optional. The token of the page to be returned. */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
@@ -2654,25 +2654,27 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * Whether the response should include a sync token, which can be used to get all changes
-         * since the last request. For subsequent sync requests use the `sync_token` param instead.
-         * Initial sync requests that specify `request_sync_token` have an additional rate limit.
+         * Optional. Whether the response should include a sync token, which can be used to get all
+         * changes since the last request. For subsequent sync requests use the `sync_token` param
+         * instead. Initial sync requests that specify `request_sync_token` have an additional rate
+         * limit.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean requestSyncToken;
 
-        /** Whether the response should include a sync token, which can be used to get all changes since the
-       last request. For subsequent sync requests use the `sync_token` param instead. Initial sync
-       requests that specify `request_sync_token` have an additional rate limit.
+        /** Optional. Whether the response should include a sync token, which can be used to get all changes
+       since the last request. For subsequent sync requests use the `sync_token` param instead. Initial
+       sync requests that specify `request_sync_token` have an additional rate limit.
          */
         public java.lang.Boolean getRequestSyncToken() {
           return requestSyncToken;
         }
 
         /**
-         * Whether the response should include a sync token, which can be used to get all changes
-         * since the last request. For subsequent sync requests use the `sync_token` param instead.
-         * Initial sync requests that specify `request_sync_token` have an additional rate limit.
+         * Optional. Whether the response should include a sync token, which can be used to get all
+         * changes since the last request. For subsequent sync requests use the `sync_token` param
+         * instead. Initial sync requests that specify `request_sync_token` have an additional rate
+         * limit.
          */
         public List setRequestSyncToken(java.lang.Boolean requestSyncToken) {
           this.requestSyncToken = requestSyncToken;
@@ -2680,20 +2682,21 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * The order in which the connections should be sorted. Defaults to
+         * Optional. The order in which the connections should be sorted. Defaults to
          * `LAST_MODIFIED_ASCENDING`.
          */
         @com.google.api.client.util.Key
         private java.lang.String sortOrder;
 
-        /** The order in which the connections should be sorted. Defaults to `LAST_MODIFIED_ASCENDING`.
+        /** Optional. The order in which the connections should be sorted. Defaults to
+       `LAST_MODIFIED_ASCENDING`.
          */
         public java.lang.String getSortOrder() {
           return sortOrder;
         }
 
         /**
-         * The order in which the connections should be sorted. Defaults to
+         * Optional. The order in which the connections should be sorted. Defaults to
          * `LAST_MODIFIED_ASCENDING`.
          */
         public List setSortOrder(java.lang.String sortOrder) {
@@ -2702,25 +2705,25 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * A sync token returned by a previous call to `people.connections.list`. Only resources
-         * changed since the sync token was created will be returned. Sync requests that specify
-         * `sync_token` have an additional rate limit.
+         * Optional. A sync token returned by a previous call to `people.connections.list`. Only
+         * resources changed since the sync token was created will be returned. Sync requests that
+         * specify `sync_token` have an additional rate limit.
          */
         @com.google.api.client.util.Key
         private java.lang.String syncToken;
 
-        /** A sync token returned by a previous call to `people.connections.list`. Only resources changed since
-       the sync token was created will be returned. Sync requests that specify `sync_token` have an
-       additional rate limit.
+        /** Optional. A sync token returned by a previous call to `people.connections.list`. Only resources
+       changed since the sync token was created will be returned. Sync requests that specify `sync_token`
+       have an additional rate limit.
          */
         public java.lang.String getSyncToken() {
           return syncToken;
         }
 
         /**
-         * A sync token returned by a previous call to `people.connections.list`. Only resources
-         * changed since the sync token was created will be returned. Sync requests that specify
-         * `sync_token` have an additional rate limit.
+         * Optional. A sync token returned by a previous call to `people.connections.list`. Only
+         * resources changed since the sync token was created will be returned. Sync requests that
+         * specify `sync_token` have an additional rate limit.
          */
         public List setSyncToken(java.lang.String syncToken) {
           this.syncToken = syncToken;

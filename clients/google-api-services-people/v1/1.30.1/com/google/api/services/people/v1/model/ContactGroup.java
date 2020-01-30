@@ -86,7 +86,7 @@ public final class ContactGroup extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource name for the contact group, assigned by the server. An ASCII string, in the form
-   * of `contactGroups/`contact_group_id.
+   * of `contactGroups/{contact_group_id}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -225,7 +225,7 @@ public final class ContactGroup extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource name for the contact group, assigned by the server. An ASCII string, in the form
-   * of `contactGroups/`contact_group_id.
+   * of `contactGroups/{contact_group_id}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceName() {
@@ -234,7 +234,7 @@ public final class ContactGroup extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource name for the contact group, assigned by the server. An ASCII string, in the form
-   * of `contactGroups/`contact_group_id.
+   * of `contactGroups/{contact_group_id}`.
    * @param resourceName resourceName or {@code null} for none
    */
   public ContactGroup setResourceName(java.lang.String resourceName) {

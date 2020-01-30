@@ -32,7 +32,7 @@ public final class GoogleCloudDatacatalogV1beta1GcsFilesetSpec extends com.googl
 
   /**
    * Required. Patterns to identify a set of files in Google Cloud Storage. See [Cloud Storage
-   * documentation](storage/docs/gsutil/addlhelp/WildcardNames) for more information. Note that
+   * documentation](/storage/docs/gsutil/addlhelp/WildcardNames) for more information. Note that
    * bucket wildcards are currently not supported.
    *
    * Examples of valid file_patterns:
@@ -64,7 +64,7 @@ public final class GoogleCloudDatacatalogV1beta1GcsFilesetSpec extends com.googl
 
   /**
    * Required. Patterns to identify a set of files in Google Cloud Storage. See [Cloud Storage
-   * documentation](storage/docs/gsutil/addlhelp/WildcardNames) for more information. Note that
+   * documentation](/storage/docs/gsutil/addlhelp/WildcardNames) for more information. Note that
    * bucket wildcards are currently not supported.
    *
    * Examples of valid file_patterns:
@@ -83,7 +83,7 @@ public final class GoogleCloudDatacatalogV1beta1GcsFilesetSpec extends com.googl
 
   /**
    * Required. Patterns to identify a set of files in Google Cloud Storage. See [Cloud Storage
-   * documentation](storage/docs/gsutil/addlhelp/WildcardNames) for more information. Note that
+   * documentation](/storage/docs/gsutil/addlhelp/WildcardNames) for more information. Note that
    * bucket wildcards are currently not supported.
    *
    * Examples of valid file_patterns:

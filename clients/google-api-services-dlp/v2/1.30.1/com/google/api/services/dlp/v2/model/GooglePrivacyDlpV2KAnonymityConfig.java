@@ -31,11 +31,11 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2KAnonymityConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional message indicating that multiple rows might be associated to a single individual. If
-   * the same entity_id is associated to multiple quasi-identifier tuples over distinct rows, we
-   * consider the entire collection of tuples as the composite quasi-identifier. This collection is
-   * a multiset: the order in which the different tuples appear in the dataset is ignored, but their
-   * frequency is taken into account.
+   * Message indicating that multiple rows might be associated to a single individual. If the same
+   * entity_id is associated to multiple quasi-identifier tuples over distinct rows, we consider the
+   * entire collection of tuples as the composite quasi-identifier. This collection is a multiset:
+   * the order in which the different tuples appear in the dataset is ignored, but their frequency
+   * is taken into account.
    *
    * Important note: a maximum of 1000 rows can be associated to a single entity ID. If more rows
    * are associated with the same entity ID, some might be ignored.
@@ -61,11 +61,11 @@ public final class GooglePrivacyDlpV2KAnonymityConfig extends com.google.api.cli
   }
 
   /**
-   * Optional message indicating that multiple rows might be associated to a single individual. If
-   * the same entity_id is associated to multiple quasi-identifier tuples over distinct rows, we
-   * consider the entire collection of tuples as the composite quasi-identifier. This collection is
-   * a multiset: the order in which the different tuples appear in the dataset is ignored, but their
-   * frequency is taken into account.
+   * Message indicating that multiple rows might be associated to a single individual. If the same
+   * entity_id is associated to multiple quasi-identifier tuples over distinct rows, we consider the
+   * entire collection of tuples as the composite quasi-identifier. This collection is a multiset:
+   * the order in which the different tuples appear in the dataset is ignored, but their frequency
+   * is taken into account.
    *
    * Important note: a maximum of 1000 rows can be associated to a single entity ID. If more rows
    * are associated with the same entity ID, some might be ignored.
@@ -76,11 +76,11 @@ public final class GooglePrivacyDlpV2KAnonymityConfig extends com.google.api.cli
   }
 
   /**
-   * Optional message indicating that multiple rows might be associated to a single individual. If
-   * the same entity_id is associated to multiple quasi-identifier tuples over distinct rows, we
-   * consider the entire collection of tuples as the composite quasi-identifier. This collection is
-   * a multiset: the order in which the different tuples appear in the dataset is ignored, but their
-   * frequency is taken into account.
+   * Message indicating that multiple rows might be associated to a single individual. If the same
+   * entity_id is associated to multiple quasi-identifier tuples over distinct rows, we consider the
+   * entire collection of tuples as the composite quasi-identifier. This collection is a multiset:
+   * the order in which the different tuples appear in the dataset is ignored, but their frequency
+   * is taken into account.
    *
    * Important note: a maximum of 1000 rows can be associated to a single entity ID. If more rows
    * are associated with the same entity ID, some might be ignored.

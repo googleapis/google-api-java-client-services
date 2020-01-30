@@ -246,13 +246,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       /**
-       * Optional filter to only return infoTypes supported by certain parts of the API. Defaults to
+       * filter to only return infoTypes supported by certain parts of the API. Defaults to
        * supported_by=INSPECT.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** Optional filter to only return infoTypes supported by certain parts of the API. Defaults to
+      /** filter to only return infoTypes supported by certain parts of the API. Defaults to
      supported_by=INSPECT.
        */
       public java.lang.String getFilter() {
@@ -260,7 +260,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       /**
-       * Optional filter to only return infoTypes supported by certain parts of the API. Defaults to
+       * filter to only return infoTypes supported by certain parts of the API. Defaults to
        * supported_by=INSPECT.
        */
       public List setFilter(java.lang.String filter) {
@@ -269,22 +269,22 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       /**
-       * Optional BCP-47 language code for localized infoType friendly names. If omitted, or if
-       * localized strings are not available, en-US strings will be returned.
+       * BCP-47 language code for localized infoType friendly names. If omitted, or if localized
+       * strings are not available, en-US strings will be returned.
        */
       @com.google.api.client.util.Key
       private java.lang.String languageCode;
 
-      /** Optional BCP-47 language code for localized infoType friendly names. If omitted, or if localized
-     strings are not available, en-US strings will be returned.
+      /** BCP-47 language code for localized infoType friendly names. If omitted, or if localized strings are
+     not available, en-US strings will be returned.
        */
       public java.lang.String getLanguageCode() {
         return languageCode;
       }
 
       /**
-       * Optional BCP-47 language code for localized infoType friendly names. If omitted, or if
-       * localized strings are not available, en-US strings will be returned.
+       * BCP-47 language code for localized infoType friendly names. If omitted, or if localized
+       * strings are not available, en-US strings will be returned.
        */
       public List setLanguageCode(java.lang.String languageCode) {
         this.languageCode = languageCode;
@@ -488,13 +488,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional filter to only return infoTypes supported by certain parts of the API. Defaults
-         * to supported_by=INSPECT.
+         * filter to only return infoTypes supported by certain parts of the API. Defaults to
+         * supported_by=INSPECT.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Optional filter to only return infoTypes supported by certain parts of the API. Defaults to
+        /** filter to only return infoTypes supported by certain parts of the API. Defaults to
        supported_by=INSPECT.
          */
         public java.lang.String getFilter() {
@@ -502,8 +502,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional filter to only return infoTypes supported by certain parts of the API. Defaults
-         * to supported_by=INSPECT.
+         * filter to only return infoTypes supported by certain parts of the API. Defaults to
+         * supported_by=INSPECT.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -511,22 +511,22 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional BCP-47 language code for localized infoType friendly names. If omitted, or if
-         * localized strings are not available, en-US strings will be returned.
+         * BCP-47 language code for localized infoType friendly names. If omitted, or if localized
+         * strings are not available, en-US strings will be returned.
          */
         @com.google.api.client.util.Key
         private java.lang.String languageCode;
 
-        /** Optional BCP-47 language code for localized infoType friendly names. If omitted, or if localized
-       strings are not available, en-US strings will be returned.
+        /** BCP-47 language code for localized infoType friendly names. If omitted, or if localized strings are
+       not available, en-US strings will be returned.
          */
         public java.lang.String getLanguageCode() {
           return languageCode;
         }
 
         /**
-         * Optional BCP-47 language code for localized infoType friendly names. If omitted, or if
-         * localized strings are not available, en-US strings will be returned.
+         * BCP-47 language code for localized infoType friendly names. If omitted, or if localized
+         * strings are not available, en-US strings will be returned.
          */
         public List setLanguageCode(java.lang.String languageCode) {
           this.languageCode = languageCode;
@@ -1197,9 +1197,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional comma separated list of fields to order by, followed by `asc` or `desc` postfix.
-         * This list is case-insensitive, default sorting order is ascending, redundant space
-         * characters are insignificant.
+         * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
+         * list is case-insensitive, default sorting order is ascending, redundant space characters
+         * are insignificant.
          *
          * Example: `name asc,update_time, create_time desc`
          *
@@ -1212,9 +1212,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
-        /** Optional comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list
-       is case-insensitive, default sorting order is ascending, redundant space characters are
-       insignificant.
+        /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case-
+       insensitive, default sorting order is ascending, redundant space characters are insignificant.
 
        Example: `name asc,update_time, create_time desc`
 
@@ -1229,9 +1228,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional comma separated list of fields to order by, followed by `asc` or `desc` postfix.
-         * This list is case-insensitive, default sorting order is ascending, redundant space
-         * characters are insignificant.
+         * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
+         * list is case-insensitive, default sorting order is ascending, redundant space characters
+         * are insignificant.
          *
          * Example: `name asc,update_time, create_time desc`
          *
@@ -1247,21 +1246,21 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional size of the page, can be limited by server. If zero server returns a page of max
-         * size 100.
+         * Size of the page, can be limited by server. If zero server returns a page of max size
+         * 100.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** Optional size of the page, can be limited by server. If zero server returns a page of max size 100.
+        /** Size of the page, can be limited by server. If zero server returns a page of max size 100.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
         /**
-         * Optional size of the page, can be limited by server. If zero server returns a page of max
-         * size 100.
+         * Size of the page, can be limited by server. If zero server returns a page of max size
+         * 100.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -1269,21 +1268,19 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional page token to continue retrieval. Comes from previous call to
-         * `ListDeidentifyTemplates`.
+         * Page token to continue retrieval. Comes from previous call to `ListDeidentifyTemplates`.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** Optional page token to continue retrieval. Comes from previous call to `ListDeidentifyTemplates`.
+        /** Page token to continue retrieval. Comes from previous call to `ListDeidentifyTemplates`.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
         /**
-         * Optional page token to continue retrieval. Comes from previous call to
-         * `ListDeidentifyTemplates`.
+         * Page token to continue retrieval. Comes from previous call to `ListDeidentifyTemplates`.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
@@ -2077,9 +2074,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional comma separated list of fields to order by, followed by `asc` or `desc` postfix.
-         * This list is case-insensitive, default sorting order is ascending, redundant space
-         * characters are insignificant.
+         * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
+         * list is case-insensitive, default sorting order is ascending, redundant space characters
+         * are insignificant.
          *
          * Example: `name asc,update_time, create_time desc`
          *
@@ -2092,9 +2089,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
-        /** Optional comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list
-       is case-insensitive, default sorting order is ascending, redundant space characters are
-       insignificant.
+        /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case-
+       insensitive, default sorting order is ascending, redundant space characters are insignificant.
 
        Example: `name asc,update_time, create_time desc`
 
@@ -2109,9 +2105,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional comma separated list of fields to order by, followed by `asc` or `desc` postfix.
-         * This list is case-insensitive, default sorting order is ascending, redundant space
-         * characters are insignificant.
+         * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
+         * list is case-insensitive, default sorting order is ascending, redundant space characters
+         * are insignificant.
          *
          * Example: `name asc,update_time, create_time desc`
          *
@@ -2127,21 +2123,21 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional size of the page, can be limited by server. If zero server returns a page of max
-         * size 100.
+         * Size of the page, can be limited by server. If zero server returns a page of max size
+         * 100.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** Optional size of the page, can be limited by server. If zero server returns a page of max size 100.
+        /** Size of the page, can be limited by server. If zero server returns a page of max size 100.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
         /**
-         * Optional size of the page, can be limited by server. If zero server returns a page of max
-         * size 100.
+         * Size of the page, can be limited by server. If zero server returns a page of max size
+         * 100.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -2149,21 +2145,19 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional page token to continue retrieval. Comes from previous call to
-         * `ListInspectTemplates`.
+         * Page token to continue retrieval. Comes from previous call to `ListInspectTemplates`.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** Optional page token to continue retrieval. Comes from previous call to `ListInspectTemplates`.
+        /** Page token to continue retrieval. Comes from previous call to `ListInspectTemplates`.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
         /**
-         * Optional page token to continue retrieval. Comes from previous call to
-         * `ListInspectTemplates`.
+         * Page token to continue retrieval. Comes from previous call to `ListInspectTemplates`.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
@@ -3016,9 +3010,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Optional comma separated list of fields to order by, followed by `asc` or `desc`
-           * postfix. This list is case-insensitive, default sorting order is ascending, redundant
-           * space characters are insignificant.
+           * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
+           * list is case-insensitive, default sorting order is ascending, redundant space
+           * characters are insignificant.
            *
            * Example: `name asc,update_time, create_time desc`
            *
@@ -3031,9 +3025,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Optional comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list
-         is case-insensitive, default sorting order is ascending, redundant space characters are
-         insignificant.
+          /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case-
+         insensitive, default sorting order is ascending, redundant space characters are insignificant.
 
          Example: `name asc,update_time, create_time desc`
 
@@ -3048,9 +3041,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Optional comma separated list of fields to order by, followed by `asc` or `desc`
-           * postfix. This list is case-insensitive, default sorting order is ascending, redundant
-           * space characters are insignificant.
+           * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
+           * list is case-insensitive, default sorting order is ascending, redundant space
+           * characters are insignificant.
            *
            * Example: `name asc,update_time, create_time desc`
            *
@@ -3066,21 +3059,21 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Optional size of the page, can be limited by server. If zero server returns a page of
-           * max size 100.
+           * Size of the page, can be limited by server. If zero server returns a page of max size
+           * 100.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Optional size of the page, can be limited by server. If zero server returns a page of max size 100.
+          /** Size of the page, can be limited by server. If zero server returns a page of max size 100.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
           /**
-           * Optional size of the page, can be limited by server. If zero server returns a page of
-           * max size 100.
+           * Size of the page, can be limited by server. If zero server returns a page of max size
+           * 100.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -3088,20 +3081,20 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Optional page token to continue retrieval. Comes from previous call to
+           * Page token to continue retrieval. Comes from previous call to
            * `ListDeidentifyTemplates`.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** Optional page token to continue retrieval. Comes from previous call to `ListDeidentifyTemplates`.
+          /** Page token to continue retrieval. Comes from previous call to `ListDeidentifyTemplates`.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * Optional page token to continue retrieval. Comes from previous call to
+           * Page token to continue retrieval. Comes from previous call to
            * `ListDeidentifyTemplates`.
            */
           public List setPageToken(java.lang.String pageToken) {
@@ -3930,9 +3923,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Optional comma separated list of fields to order by, followed by `asc` or `desc`
-           * postfix. This list is case-insensitive, default sorting order is ascending, redundant
-           * space characters are insignificant.
+           * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
+           * list is case-insensitive, default sorting order is ascending, redundant space
+           * characters are insignificant.
            *
            * Example: `name asc,update_time, create_time desc`
            *
@@ -3945,9 +3938,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Optional comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list
-         is case-insensitive, default sorting order is ascending, redundant space characters are
-         insignificant.
+          /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case-
+         insensitive, default sorting order is ascending, redundant space characters are insignificant.
 
          Example: `name asc,update_time, create_time desc`
 
@@ -3962,9 +3954,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Optional comma separated list of fields to order by, followed by `asc` or `desc`
-           * postfix. This list is case-insensitive, default sorting order is ascending, redundant
-           * space characters are insignificant.
+           * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
+           * list is case-insensitive, default sorting order is ascending, redundant space
+           * characters are insignificant.
            *
            * Example: `name asc,update_time, create_time desc`
            *
@@ -3980,21 +3972,21 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Optional size of the page, can be limited by server. If zero server returns a page of
-           * max size 100.
+           * Size of the page, can be limited by server. If zero server returns a page of max size
+           * 100.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Optional size of the page, can be limited by server. If zero server returns a page of max size 100.
+          /** Size of the page, can be limited by server. If zero server returns a page of max size 100.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
           /**
-           * Optional size of the page, can be limited by server. If zero server returns a page of
-           * max size 100.
+           * Size of the page, can be limited by server. If zero server returns a page of max size
+           * 100.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -4002,21 +3994,19 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Optional page token to continue retrieval. Comes from previous call to
-           * `ListInspectTemplates`.
+           * Page token to continue retrieval. Comes from previous call to `ListInspectTemplates`.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** Optional page token to continue retrieval. Comes from previous call to `ListInspectTemplates`.
+          /** Page token to continue retrieval. Comes from previous call to `ListInspectTemplates`.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * Optional page token to continue retrieval. Comes from previous call to
-           * `ListInspectTemplates`.
+           * Page token to continue retrieval. Comes from previous call to `ListInspectTemplates`.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -4845,9 +4835,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Optional comma separated list of fields to order by, followed by `asc` or `desc`
-           * postfix. This list is case-insensitive, default sorting order is ascending, redundant
-           * space characters are insignificant.
+           * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
+           * list is case-insensitive, default sorting order is ascending, redundant space
+           * characters are insignificant.
            *
            * Example: `name asc, display_name, create_time desc`
            *
@@ -4860,9 +4850,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Optional comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list
-         is case-insensitive, default sorting order is ascending, redundant space characters are
-         insignificant.
+          /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case-
+         insensitive, default sorting order is ascending, redundant space characters are insignificant.
 
          Example: `name asc, display_name, create_time desc`
 
@@ -4877,9 +4866,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Optional comma separated list of fields to order by, followed by `asc` or `desc`
-           * postfix. This list is case-insensitive, default sorting order is ascending, redundant
-           * space characters are insignificant.
+           * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
+           * list is case-insensitive, default sorting order is ascending, redundant space
+           * characters are insignificant.
            *
            * Example: `name asc, display_name, create_time desc`
            *
@@ -4895,21 +4884,21 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Optional size of the page, can be limited by server. If zero server returns a page of
-           * max size 100.
+           * Size of the page, can be limited by server. If zero server returns a page of max size
+           * 100.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Optional size of the page, can be limited by server. If zero server returns a page of max size 100.
+          /** Size of the page, can be limited by server. If zero server returns a page of max size 100.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
           /**
-           * Optional size of the page, can be limited by server. If zero server returns a page of
-           * max size 100.
+           * Size of the page, can be limited by server. If zero server returns a page of max size
+           * 100.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -4917,21 +4906,19 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Optional page token to continue retrieval. Comes from previous call to
-           * `ListStoredInfoTypes`.
+           * Page token to continue retrieval. Comes from previous call to `ListStoredInfoTypes`.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** Optional page token to continue retrieval. Comes from previous call to `ListStoredInfoTypes`.
+          /** Page token to continue retrieval. Comes from previous call to `ListStoredInfoTypes`.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * Optional page token to continue retrieval. Comes from previous call to
-           * `ListStoredInfoTypes`.
+           * Page token to continue retrieval. Comes from previous call to `ListStoredInfoTypes`.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -5731,9 +5718,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional comma separated list of fields to order by, followed by `asc` or `desc` postfix.
-         * This list is case-insensitive, default sorting order is ascending, redundant space
-         * characters are insignificant.
+         * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
+         * list is case-insensitive, default sorting order is ascending, redundant space characters
+         * are insignificant.
          *
          * Example: `name asc, display_name, create_time desc`
          *
@@ -5746,9 +5733,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
-        /** Optional comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list
-       is case-insensitive, default sorting order is ascending, redundant space characters are
-       insignificant.
+        /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case-
+       insensitive, default sorting order is ascending, redundant space characters are insignificant.
 
        Example: `name asc, display_name, create_time desc`
 
@@ -5763,9 +5749,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional comma separated list of fields to order by, followed by `asc` or `desc` postfix.
-         * This list is case-insensitive, default sorting order is ascending, redundant space
-         * characters are insignificant.
+         * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
+         * list is case-insensitive, default sorting order is ascending, redundant space characters
+         * are insignificant.
          *
          * Example: `name asc, display_name, create_time desc`
          *
@@ -5781,21 +5767,21 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional size of the page, can be limited by server. If zero server returns a page of max
-         * size 100.
+         * Size of the page, can be limited by server. If zero server returns a page of max size
+         * 100.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** Optional size of the page, can be limited by server. If zero server returns a page of max size 100.
+        /** Size of the page, can be limited by server. If zero server returns a page of max size 100.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
         /**
-         * Optional size of the page, can be limited by server. If zero server returns a page of max
-         * size 100.
+         * Size of the page, can be limited by server. If zero server returns a page of max size
+         * 100.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -5803,21 +5789,19 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional page token to continue retrieval. Comes from previous call to
-         * `ListStoredInfoTypes`.
+         * Page token to continue retrieval. Comes from previous call to `ListStoredInfoTypes`.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** Optional page token to continue retrieval. Comes from previous call to `ListStoredInfoTypes`.
+        /** Page token to continue retrieval. Comes from previous call to `ListStoredInfoTypes`.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
         /**
-         * Optional page token to continue retrieval. Comes from previous call to
-         * `ListStoredInfoTypes`.
+         * Page token to continue retrieval. Comes from previous call to `ListStoredInfoTypes`.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
@@ -7086,9 +7070,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional comma separated list of fields to order by, followed by `asc` or `desc` postfix.
-         * This list is case-insensitive, default sorting order is ascending, redundant space
-         * characters are insignificant.
+         * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
+         * list is case-insensitive, default sorting order is ascending, redundant space characters
+         * are insignificant.
          *
          * Example: `name asc,update_time, create_time desc`
          *
@@ -7101,9 +7085,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
-        /** Optional comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list
-       is case-insensitive, default sorting order is ascending, redundant space characters are
-       insignificant.
+        /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case-
+       insensitive, default sorting order is ascending, redundant space characters are insignificant.
 
        Example: `name asc,update_time, create_time desc`
 
@@ -7118,9 +7101,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional comma separated list of fields to order by, followed by `asc` or `desc` postfix.
-         * This list is case-insensitive, default sorting order is ascending, redundant space
-         * characters are insignificant.
+         * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
+         * list is case-insensitive, default sorting order is ascending, redundant space characters
+         * are insignificant.
          *
          * Example: `name asc,update_time, create_time desc`
          *
@@ -7136,21 +7119,21 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional size of the page, can be limited by server. If zero server returns a page of max
-         * size 100.
+         * Size of the page, can be limited by server. If zero server returns a page of max size
+         * 100.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** Optional size of the page, can be limited by server. If zero server returns a page of max size 100.
+        /** Size of the page, can be limited by server. If zero server returns a page of max size 100.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
         /**
-         * Optional size of the page, can be limited by server. If zero server returns a page of max
-         * size 100.
+         * Size of the page, can be limited by server. If zero server returns a page of max size
+         * 100.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -7158,21 +7141,19 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional page token to continue retrieval. Comes from previous call to
-         * `ListDeidentifyTemplates`.
+         * Page token to continue retrieval. Comes from previous call to `ListDeidentifyTemplates`.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** Optional page token to continue retrieval. Comes from previous call to `ListDeidentifyTemplates`.
+        /** Page token to continue retrieval. Comes from previous call to `ListDeidentifyTemplates`.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
         /**
-         * Optional page token to continue retrieval. Comes from previous call to
-         * `ListDeidentifyTemplates`.
+         * Page token to continue retrieval. Comes from previous call to `ListDeidentifyTemplates`.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
@@ -8042,20 +8023,20 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional. Allows filtering.
+         * Allows filtering.
          *
          * Supported syntax:
          *
          * * Filter expressions are made up of one or more restrictions. * Restrictions can be
          * combined by `AND` or `OR` logical operators. A sequence of restrictions implicitly uses
-         * `AND`. * A restriction has the form of `  `. * Supported fields/values for inspect jobs:
-         * - `state` - PENDING|RUNNING|CANCELED|FINISHED|FAILED - `inspected_storage` -
-         * DATASTORE|CLOUD_STORAGE|BIGQUERY - `trigger_name` - The resource name of the trigger that
-         * created job. - 'end_time` - Corresponds to time the job finished. - 'start_time` -
-         * Corresponds to time the job finished. * Supported fields for risk analysis jobs: -
-         * `state` - RUNNING|CANCELED|FINISHED|FAILED - 'end_time` - Corresponds to time the job
-         * finished. - 'start_time` - Corresponds to time the job finished. * The operator must be
-         * `=` or `!=`.
+         * `AND`. * A restriction has the form of `{field} {operator} {value}`. * Supported
+         * fields/values for inspect jobs: - `state` - PENDING|RUNNING|CANCELED|FINISHED|FAILED -
+         * `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY - `trigger_name` - The resource
+         * name of the trigger that created job. - 'end_time` - Corresponds to time the job
+         * finished. - 'start_time` - Corresponds to time the job finished. * Supported fields for
+         * risk analysis jobs: - `state` - RUNNING|CANCELED|FINISHED|FAILED - 'end_time` -
+         * Corresponds to time the job finished. - 'start_time` - Corresponds to time the job
+         * finished. * The operator must be `=` or `!=`.
          *
          * Examples:
          *
@@ -8068,15 +8049,15 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Optional. Allows filtering.
+        /** Allows filtering.
 
        Supported syntax:
 
        * Filter expressions are made up of one or more restrictions. * Restrictions can be combined by
        `AND` or `OR` logical operators. A sequence of restrictions implicitly uses `AND`. * A restriction
-       has the form of `  `. * Supported fields/values for inspect jobs: - `state` -
-       PENDING|RUNNING|CANCELED|FINISHED|FAILED - `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY -
-       `trigger_name` - The resource name of the trigger that created job. - 'end_time` - Corresponds to
+       has the form of `{field} {operator} {value}`. * Supported fields/values for inspect jobs: - `state`
+       - PENDING|RUNNING|CANCELED|FINISHED|FAILED - `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY
+       - `trigger_name` - The resource name of the trigger that created job. - 'end_time` - Corresponds to
        time the job finished. - 'start_time` - Corresponds to time the job finished. * Supported fields
        for risk analysis jobs: - `state` - RUNNING|CANCELED|FINISHED|FAILED - 'end_time` - Corresponds to
        time the job finished. - 'start_time` - Corresponds to time the job finished. * The operator must
@@ -8095,20 +8076,20 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional. Allows filtering.
+         * Allows filtering.
          *
          * Supported syntax:
          *
          * * Filter expressions are made up of one or more restrictions. * Restrictions can be
          * combined by `AND` or `OR` logical operators. A sequence of restrictions implicitly uses
-         * `AND`. * A restriction has the form of `  `. * Supported fields/values for inspect jobs:
-         * - `state` - PENDING|RUNNING|CANCELED|FINISHED|FAILED - `inspected_storage` -
-         * DATASTORE|CLOUD_STORAGE|BIGQUERY - `trigger_name` - The resource name of the trigger that
-         * created job. - 'end_time` - Corresponds to time the job finished. - 'start_time` -
-         * Corresponds to time the job finished. * Supported fields for risk analysis jobs: -
-         * `state` - RUNNING|CANCELED|FINISHED|FAILED - 'end_time` - Corresponds to time the job
-         * finished. - 'start_time` - Corresponds to time the job finished. * The operator must be
-         * `=` or `!=`.
+         * `AND`. * A restriction has the form of `{field} {operator} {value}`. * Supported
+         * fields/values for inspect jobs: - `state` - PENDING|RUNNING|CANCELED|FINISHED|FAILED -
+         * `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY - `trigger_name` - The resource
+         * name of the trigger that created job. - 'end_time` - Corresponds to time the job
+         * finished. - 'start_time` - Corresponds to time the job finished. * Supported fields for
+         * risk analysis jobs: - `state` - RUNNING|CANCELED|FINISHED|FAILED - 'end_time` -
+         * Corresponds to time the job finished. - 'start_time` - Corresponds to time the job
+         * finished. * The operator must be `=` or `!=`.
          *
          * Examples:
          *
@@ -8147,9 +8128,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional comma separated list of fields to order by, followed by `asc` or `desc` postfix.
-         * This list is case-insensitive, default sorting order is ascending, redundant space
-         * characters are insignificant.
+         * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
+         * list is case-insensitive, default sorting order is ascending, redundant space characters
+         * are insignificant.
          *
          * Example: `name asc, end_time asc, create_time desc`
          *
@@ -8162,9 +8143,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
-        /** Optional comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list
-       is case-insensitive, default sorting order is ascending, redundant space characters are
-       insignificant.
+        /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case-
+       insensitive, default sorting order is ascending, redundant space characters are insignificant.
 
        Example: `name asc, end_time asc, create_time desc`
 
@@ -8178,9 +8158,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional comma separated list of fields to order by, followed by `asc` or `desc` postfix.
-         * This list is case-insensitive, default sorting order is ascending, redundant space
-         * characters are insignificant.
+         * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
+         * list is case-insensitive, default sorting order is ascending, redundant space characters
+         * are insignificant.
          *
          * Example: `name asc, end_time asc, create_time desc`
          *
@@ -9044,9 +9024,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional comma separated list of fields to order by, followed by `asc` or `desc` postfix.
-         * This list is case-insensitive, default sorting order is ascending, redundant space
-         * characters are insignificant.
+         * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
+         * list is case-insensitive, default sorting order is ascending, redundant space characters
+         * are insignificant.
          *
          * Example: `name asc,update_time, create_time desc`
          *
@@ -9059,9 +9039,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
-        /** Optional comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list
-       is case-insensitive, default sorting order is ascending, redundant space characters are
-       insignificant.
+        /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case-
+       insensitive, default sorting order is ascending, redundant space characters are insignificant.
 
        Example: `name asc,update_time, create_time desc`
 
@@ -9076,9 +9055,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional comma separated list of fields to order by, followed by `asc` or `desc` postfix.
-         * This list is case-insensitive, default sorting order is ascending, redundant space
-         * characters are insignificant.
+         * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
+         * list is case-insensitive, default sorting order is ascending, redundant space characters
+         * are insignificant.
          *
          * Example: `name asc,update_time, create_time desc`
          *
@@ -9094,21 +9073,21 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional size of the page, can be limited by server. If zero server returns a page of max
-         * size 100.
+         * Size of the page, can be limited by server. If zero server returns a page of max size
+         * 100.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** Optional size of the page, can be limited by server. If zero server returns a page of max size 100.
+        /** Size of the page, can be limited by server. If zero server returns a page of max size 100.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
         /**
-         * Optional size of the page, can be limited by server. If zero server returns a page of max
-         * size 100.
+         * Size of the page, can be limited by server. If zero server returns a page of max size
+         * 100.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -9116,21 +9095,19 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional page token to continue retrieval. Comes from previous call to
-         * `ListInspectTemplates`.
+         * Page token to continue retrieval. Comes from previous call to `ListInspectTemplates`.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** Optional page token to continue retrieval. Comes from previous call to `ListInspectTemplates`.
+        /** Page token to continue retrieval. Comes from previous call to `ListInspectTemplates`.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
         /**
-         * Optional page token to continue retrieval. Comes from previous call to
-         * `ListInspectTemplates`.
+         * Page token to continue retrieval. Comes from previous call to `ListInspectTemplates`.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
@@ -10013,18 +9990,18 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional. Allows filtering.
+         * Allows filtering.
          *
          * Supported syntax:
          *
          * * Filter expressions are made up of one or more restrictions. * Restrictions can be
          * combined by `AND` or `OR` logical operators. A sequence of restrictions implicitly uses
-         * `AND`. * A restriction has the form of `  `. * Supported fields/values for inspect jobs:
-         * - `status` - HEALTHY|PAUSED|CANCELLED - `inspected_storage` -
-         * DATASTORE|CLOUD_STORAGE|BIGQUERY - 'last_run_time` - RFC 3339 formatted timestamp,
-         * surrounded by quotation marks. Nanoseconds are ignored. - 'error_count' - Number of
-         * errors that have occurred while running. * The operator must be `=` or `!=` for status
-         * and inspected_storage.
+         * `AND`. * A restriction has the form of `{field} {operator} {value}`. * Supported
+         * fields/values for inspect jobs: - `status` - HEALTHY|PAUSED|CANCELLED -
+         * `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY - 'last_run_time` - RFC 3339
+         * formatted timestamp, surrounded by quotation marks. Nanoseconds are ignored. -
+         * 'error_count' - Number of errors that have occurred while running. * The operator must be
+         * `=` or `!=` for status and inspected_storage.
          *
          * Examples:
          *
@@ -10037,17 +10014,17 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Optional. Allows filtering.
+        /** Allows filtering.
 
        Supported syntax:
 
        * Filter expressions are made up of one or more restrictions. * Restrictions can be combined by
        `AND` or `OR` logical operators. A sequence of restrictions implicitly uses `AND`. * A restriction
-       has the form of `  `. * Supported fields/values for inspect jobs: - `status` -
-       HEALTHY|PAUSED|CANCELLED - `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY - 'last_run_time`
-       - RFC 3339 formatted timestamp, surrounded by quotation marks. Nanoseconds are ignored. -
-       'error_count' - Number of errors that have occurred while running. * The operator must be `=` or
-       `!=` for status and inspected_storage.
+       has the form of `{field} {operator} {value}`. * Supported fields/values for inspect jobs: -
+       `status` - HEALTHY|PAUSED|CANCELLED - `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY -
+       'last_run_time` - RFC 3339 formatted timestamp, surrounded by quotation marks. Nanoseconds are
+       ignored. - 'error_count' - Number of errors that have occurred while running. * The operator must
+       be `=` or `!=` for status and inspected_storage.
 
        Examples:
 
@@ -10062,18 +10039,18 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional. Allows filtering.
+         * Allows filtering.
          *
          * Supported syntax:
          *
          * * Filter expressions are made up of one or more restrictions. * Restrictions can be
          * combined by `AND` or `OR` logical operators. A sequence of restrictions implicitly uses
-         * `AND`. * A restriction has the form of `  `. * Supported fields/values for inspect jobs:
-         * - `status` - HEALTHY|PAUSED|CANCELLED - `inspected_storage` -
-         * DATASTORE|CLOUD_STORAGE|BIGQUERY - 'last_run_time` - RFC 3339 formatted timestamp,
-         * surrounded by quotation marks. Nanoseconds are ignored. - 'error_count' - Number of
-         * errors that have occurred while running. * The operator must be `=` or `!=` for status
-         * and inspected_storage.
+         * `AND`. * A restriction has the form of `{field} {operator} {value}`. * Supported
+         * fields/values for inspect jobs: - `status` - HEALTHY|PAUSED|CANCELLED -
+         * `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY - 'last_run_time` - RFC 3339
+         * formatted timestamp, surrounded by quotation marks. Nanoseconds are ignored. -
+         * 'error_count' - Number of errors that have occurred while running. * The operator must be
+         * `=` or `!=` for status and inspected_storage.
          *
          * Examples:
          *
@@ -10112,9 +10089,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional comma separated list of triggeredJob fields to order by, followed by `asc` or
-         * `desc` postfix. This list is case-insensitive, default sorting order is ascending,
-         * redundant space characters are insignificant.
+         * Comma separated list of triggeredJob fields to order by, followed by `asc` or `desc`
+         * postfix. This list is case-insensitive, default sorting order is ascending, redundant
+         * space characters are insignificant.
          *
          * Example: `name asc,update_time, create_time desc`
          *
@@ -10129,9 +10106,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
-        /** Optional comma separated list of triggeredJob fields to order by, followed by `asc` or `desc`
-       postfix. This list is case-insensitive, default sorting order is ascending, redundant space
-       characters are insignificant.
+        /** Comma separated list of triggeredJob fields to order by, followed by `asc` or `desc` postfix. This
+       list is case-insensitive, default sorting order is ascending, redundant space characters are
+       insignificant.
 
        Example: `name asc,update_time, create_time desc`
 
@@ -10147,9 +10124,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional comma separated list of triggeredJob fields to order by, followed by `asc` or
-         * `desc` postfix. This list is case-insensitive, default sorting order is ascending,
-         * redundant space characters are insignificant.
+         * Comma separated list of triggeredJob fields to order by, followed by `asc` or `desc`
+         * postfix. This list is case-insensitive, default sorting order is ascending, redundant
+         * space characters are insignificant.
          *
          * Example: `name asc,update_time, create_time desc`
          *
@@ -10166,39 +10143,39 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return this;
         }
 
-        /** Optional size of the page, can be limited by a server. */
+        /** Size of the page, can be limited by a server. */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** Optional size of the page, can be limited by a server.
+        /** Size of the page, can be limited by a server.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /** Optional size of the page, can be limited by a server. */
+        /** Size of the page, can be limited by a server. */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
         /**
-         * Optional page token to continue retrieval. Comes from previous call to ListJobTriggers.
-         * `order_by` field must not change for subsequent calls.
+         * Page token to continue retrieval. Comes from previous call to ListJobTriggers. `order_by`
+         * field must not change for subsequent calls.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** Optional page token to continue retrieval. Comes from previous call to ListJobTriggers. `order_by`
-       field must not change for subsequent calls.
+        /** Page token to continue retrieval. Comes from previous call to ListJobTriggers. `order_by` field
+       must not change for subsequent calls.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
         /**
-         * Optional page token to continue retrieval. Comes from previous call to ListJobTriggers.
-         * `order_by` field must not change for subsequent calls.
+         * Page token to continue retrieval. Comes from previous call to ListJobTriggers. `order_by`
+         * field must not change for subsequent calls.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
@@ -11566,9 +11543,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Optional comma separated list of fields to order by, followed by `asc` or `desc`
-           * postfix. This list is case-insensitive, default sorting order is ascending, redundant
-           * space characters are insignificant.
+           * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
+           * list is case-insensitive, default sorting order is ascending, redundant space
+           * characters are insignificant.
            *
            * Example: `name asc,update_time, create_time desc`
            *
@@ -11581,9 +11558,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Optional comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list
-         is case-insensitive, default sorting order is ascending, redundant space characters are
-         insignificant.
+          /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case-
+         insensitive, default sorting order is ascending, redundant space characters are insignificant.
 
          Example: `name asc,update_time, create_time desc`
 
@@ -11598,9 +11574,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Optional comma separated list of fields to order by, followed by `asc` or `desc`
-           * postfix. This list is case-insensitive, default sorting order is ascending, redundant
-           * space characters are insignificant.
+           * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
+           * list is case-insensitive, default sorting order is ascending, redundant space
+           * characters are insignificant.
            *
            * Example: `name asc,update_time, create_time desc`
            *
@@ -11616,21 +11592,21 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Optional size of the page, can be limited by server. If zero server returns a page of
-           * max size 100.
+           * Size of the page, can be limited by server. If zero server returns a page of max size
+           * 100.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Optional size of the page, can be limited by server. If zero server returns a page of max size 100.
+          /** Size of the page, can be limited by server. If zero server returns a page of max size 100.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
           /**
-           * Optional size of the page, can be limited by server. If zero server returns a page of
-           * max size 100.
+           * Size of the page, can be limited by server. If zero server returns a page of max size
+           * 100.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -11638,20 +11614,20 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Optional page token to continue retrieval. Comes from previous call to
+           * Page token to continue retrieval. Comes from previous call to
            * `ListDeidentifyTemplates`.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** Optional page token to continue retrieval. Comes from previous call to `ListDeidentifyTemplates`.
+          /** Page token to continue retrieval. Comes from previous call to `ListDeidentifyTemplates`.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * Optional page token to continue retrieval. Comes from previous call to
+           * Page token to continue retrieval. Comes from previous call to
            * `ListDeidentifyTemplates`.
            */
           public List setPageToken(java.lang.String pageToken) {
@@ -12577,20 +12553,20 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Optional. Allows filtering.
+           * Allows filtering.
            *
            * Supported syntax:
            *
            * * Filter expressions are made up of one or more restrictions. * Restrictions can be
            * combined by `AND` or `OR` logical operators. A sequence of restrictions implicitly uses
-           * `AND`. * A restriction has the form of `  `. * Supported fields/values for inspect
-           * jobs: - `state` - PENDING|RUNNING|CANCELED|FINISHED|FAILED - `inspected_storage` -
-           * DATASTORE|CLOUD_STORAGE|BIGQUERY - `trigger_name` - The resource name of the trigger
-           * that created job. - 'end_time` - Corresponds to time the job finished. - 'start_time` -
-           * Corresponds to time the job finished. * Supported fields for risk analysis jobs: -
-           * `state` - RUNNING|CANCELED|FINISHED|FAILED - 'end_time` - Corresponds to time the job
-           * finished. - 'start_time` - Corresponds to time the job finished. * The operator must be
-           * `=` or `!=`.
+           * `AND`. * A restriction has the form of `{field} {operator} {value}`. * Supported
+           * fields/values for inspect jobs: - `state` - PENDING|RUNNING|CANCELED|FINISHED|FAILED -
+           * `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY - `trigger_name` - The resource
+           * name of the trigger that created job. - 'end_time` - Corresponds to time the job
+           * finished. - 'start_time` - Corresponds to time the job finished. * Supported fields for
+           * risk analysis jobs: - `state` - RUNNING|CANCELED|FINISHED|FAILED - 'end_time` -
+           * Corresponds to time the job finished. - 'start_time` - Corresponds to time the job
+           * finished. * The operator must be `=` or `!=`.
            *
            * Examples:
            *
@@ -12603,15 +12579,15 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. Allows filtering.
+          /** Allows filtering.
 
          Supported syntax:
 
          * Filter expressions are made up of one or more restrictions. * Restrictions can be combined by
          `AND` or `OR` logical operators. A sequence of restrictions implicitly uses `AND`. * A restriction
-         has the form of `  `. * Supported fields/values for inspect jobs: - `state` -
-         PENDING|RUNNING|CANCELED|FINISHED|FAILED - `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY -
-         `trigger_name` - The resource name of the trigger that created job. - 'end_time` - Corresponds to
+         has the form of `{field} {operator} {value}`. * Supported fields/values for inspect jobs: - `state`
+         - PENDING|RUNNING|CANCELED|FINISHED|FAILED - `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY
+         - `trigger_name` - The resource name of the trigger that created job. - 'end_time` - Corresponds to
          time the job finished. - 'start_time` - Corresponds to time the job finished. * Supported fields
          for risk analysis jobs: - `state` - RUNNING|CANCELED|FINISHED|FAILED - 'end_time` - Corresponds to
          time the job finished. - 'start_time` - Corresponds to time the job finished. * The operator must
@@ -12630,20 +12606,20 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Optional. Allows filtering.
+           * Allows filtering.
            *
            * Supported syntax:
            *
            * * Filter expressions are made up of one or more restrictions. * Restrictions can be
            * combined by `AND` or `OR` logical operators. A sequence of restrictions implicitly uses
-           * `AND`. * A restriction has the form of `  `. * Supported fields/values for inspect
-           * jobs: - `state` - PENDING|RUNNING|CANCELED|FINISHED|FAILED - `inspected_storage` -
-           * DATASTORE|CLOUD_STORAGE|BIGQUERY - `trigger_name` - The resource name of the trigger
-           * that created job. - 'end_time` - Corresponds to time the job finished. - 'start_time` -
-           * Corresponds to time the job finished. * Supported fields for risk analysis jobs: -
-           * `state` - RUNNING|CANCELED|FINISHED|FAILED - 'end_time` - Corresponds to time the job
-           * finished. - 'start_time` - Corresponds to time the job finished. * The operator must be
-           * `=` or `!=`.
+           * `AND`. * A restriction has the form of `{field} {operator} {value}`. * Supported
+           * fields/values for inspect jobs: - `state` - PENDING|RUNNING|CANCELED|FINISHED|FAILED -
+           * `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY - `trigger_name` - The resource
+           * name of the trigger that created job. - 'end_time` - Corresponds to time the job
+           * finished. - 'start_time` - Corresponds to time the job finished. * Supported fields for
+           * risk analysis jobs: - `state` - RUNNING|CANCELED|FINISHED|FAILED - 'end_time` -
+           * Corresponds to time the job finished. - 'start_time` - Corresponds to time the job
+           * finished. * The operator must be `=` or `!=`.
            *
            * Examples:
            *
@@ -12659,9 +12635,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Optional comma separated list of fields to order by, followed by `asc` or `desc`
-           * postfix. This list is case-insensitive, default sorting order is ascending, redundant
-           * space characters are insignificant.
+           * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
+           * list is case-insensitive, default sorting order is ascending, redundant space
+           * characters are insignificant.
            *
            * Example: `name asc, end_time asc, create_time desc`
            *
@@ -12674,9 +12650,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Optional comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list
-         is case-insensitive, default sorting order is ascending, redundant space characters are
-         insignificant.
+          /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case-
+         insensitive, default sorting order is ascending, redundant space characters are insignificant.
 
          Example: `name asc, end_time asc, create_time desc`
 
@@ -12690,9 +12665,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Optional comma separated list of fields to order by, followed by `asc` or `desc`
-           * postfix. This list is case-insensitive, default sorting order is ascending, redundant
-           * space characters are insignificant.
+           * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
+           * list is case-insensitive, default sorting order is ascending, redundant space
+           * characters are insignificant.
            *
            * Example: `name asc, end_time asc, create_time desc`
            *
@@ -13615,9 +13590,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Optional comma separated list of fields to order by, followed by `asc` or `desc`
-           * postfix. This list is case-insensitive, default sorting order is ascending, redundant
-           * space characters are insignificant.
+           * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
+           * list is case-insensitive, default sorting order is ascending, redundant space
+           * characters are insignificant.
            *
            * Example: `name asc,update_time, create_time desc`
            *
@@ -13630,9 +13605,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Optional comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list
-         is case-insensitive, default sorting order is ascending, redundant space characters are
-         insignificant.
+          /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case-
+         insensitive, default sorting order is ascending, redundant space characters are insignificant.
 
          Example: `name asc,update_time, create_time desc`
 
@@ -13647,9 +13621,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Optional comma separated list of fields to order by, followed by `asc` or `desc`
-           * postfix. This list is case-insensitive, default sorting order is ascending, redundant
-           * space characters are insignificant.
+           * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
+           * list is case-insensitive, default sorting order is ascending, redundant space
+           * characters are insignificant.
            *
            * Example: `name asc,update_time, create_time desc`
            *
@@ -13665,21 +13639,21 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Optional size of the page, can be limited by server. If zero server returns a page of
-           * max size 100.
+           * Size of the page, can be limited by server. If zero server returns a page of max size
+           * 100.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Optional size of the page, can be limited by server. If zero server returns a page of max size 100.
+          /** Size of the page, can be limited by server. If zero server returns a page of max size 100.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
           /**
-           * Optional size of the page, can be limited by server. If zero server returns a page of
-           * max size 100.
+           * Size of the page, can be limited by server. If zero server returns a page of max size
+           * 100.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -13687,21 +13661,19 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Optional page token to continue retrieval. Comes from previous call to
-           * `ListInspectTemplates`.
+           * Page token to continue retrieval. Comes from previous call to `ListInspectTemplates`.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** Optional page token to continue retrieval. Comes from previous call to `ListInspectTemplates`.
+          /** Page token to continue retrieval. Comes from previous call to `ListInspectTemplates`.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * Optional page token to continue retrieval. Comes from previous call to
-           * `ListInspectTemplates`.
+           * Page token to continue retrieval. Comes from previous call to `ListInspectTemplates`.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -14639,18 +14611,18 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Optional. Allows filtering.
+           * Allows filtering.
            *
            * Supported syntax:
            *
            * * Filter expressions are made up of one or more restrictions. * Restrictions can be
            * combined by `AND` or `OR` logical operators. A sequence of restrictions implicitly uses
-           * `AND`. * A restriction has the form of `  `. * Supported fields/values for inspect
-           * jobs: - `status` - HEALTHY|PAUSED|CANCELLED - `inspected_storage` -
-           * DATASTORE|CLOUD_STORAGE|BIGQUERY - 'last_run_time` - RFC 3339 formatted timestamp,
-           * surrounded by quotation marks. Nanoseconds are ignored. - 'error_count' - Number of
-           * errors that have occurred while running. * The operator must be `=` or `!=` for status
-           * and inspected_storage.
+           * `AND`. * A restriction has the form of `{field} {operator} {value}`. * Supported
+           * fields/values for inspect jobs: - `status` - HEALTHY|PAUSED|CANCELLED -
+           * `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY - 'last_run_time` - RFC 3339
+           * formatted timestamp, surrounded by quotation marks. Nanoseconds are ignored. -
+           * 'error_count' - Number of errors that have occurred while running. * The operator must
+           * be `=` or `!=` for status and inspected_storage.
            *
            * Examples:
            *
@@ -14663,17 +14635,17 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. Allows filtering.
+          /** Allows filtering.
 
          Supported syntax:
 
          * Filter expressions are made up of one or more restrictions. * Restrictions can be combined by
          `AND` or `OR` logical operators. A sequence of restrictions implicitly uses `AND`. * A restriction
-         has the form of `  `. * Supported fields/values for inspect jobs: - `status` -
-         HEALTHY|PAUSED|CANCELLED - `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY - 'last_run_time`
-         - RFC 3339 formatted timestamp, surrounded by quotation marks. Nanoseconds are ignored. -
-         'error_count' - Number of errors that have occurred while running. * The operator must be `=` or
-         `!=` for status and inspected_storage.
+         has the form of `{field} {operator} {value}`. * Supported fields/values for inspect jobs: -
+         `status` - HEALTHY|PAUSED|CANCELLED - `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY -
+         'last_run_time` - RFC 3339 formatted timestamp, surrounded by quotation marks. Nanoseconds are
+         ignored. - 'error_count' - Number of errors that have occurred while running. * The operator must
+         be `=` or `!=` for status and inspected_storage.
 
          Examples:
 
@@ -14688,18 +14660,18 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Optional. Allows filtering.
+           * Allows filtering.
            *
            * Supported syntax:
            *
            * * Filter expressions are made up of one or more restrictions. * Restrictions can be
            * combined by `AND` or `OR` logical operators. A sequence of restrictions implicitly uses
-           * `AND`. * A restriction has the form of `  `. * Supported fields/values for inspect
-           * jobs: - `status` - HEALTHY|PAUSED|CANCELLED - `inspected_storage` -
-           * DATASTORE|CLOUD_STORAGE|BIGQUERY - 'last_run_time` - RFC 3339 formatted timestamp,
-           * surrounded by quotation marks. Nanoseconds are ignored. - 'error_count' - Number of
-           * errors that have occurred while running. * The operator must be `=` or `!=` for status
-           * and inspected_storage.
+           * `AND`. * A restriction has the form of `{field} {operator} {value}`. * Supported
+           * fields/values for inspect jobs: - `status` - HEALTHY|PAUSED|CANCELLED -
+           * `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY - 'last_run_time` - RFC 3339
+           * formatted timestamp, surrounded by quotation marks. Nanoseconds are ignored. -
+           * 'error_count' - Number of errors that have occurred while running. * The operator must
+           * be `=` or `!=` for status and inspected_storage.
            *
            * Examples:
            *
@@ -14715,9 +14687,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Optional comma separated list of triggeredJob fields to order by, followed by `asc` or
-           * `desc` postfix. This list is case-insensitive, default sorting order is ascending,
-           * redundant space characters are insignificant.
+           * Comma separated list of triggeredJob fields to order by, followed by `asc` or `desc`
+           * postfix. This list is case-insensitive, default sorting order is ascending, redundant
+           * space characters are insignificant.
            *
            * Example: `name asc,update_time, create_time desc`
            *
@@ -14732,9 +14704,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Optional comma separated list of triggeredJob fields to order by, followed by `asc` or `desc`
-         postfix. This list is case-insensitive, default sorting order is ascending, redundant space
-         characters are insignificant.
+          /** Comma separated list of triggeredJob fields to order by, followed by `asc` or `desc` postfix. This
+         list is case-insensitive, default sorting order is ascending, redundant space characters are
+         insignificant.
 
          Example: `name asc,update_time, create_time desc`
 
@@ -14750,9 +14722,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Optional comma separated list of triggeredJob fields to order by, followed by `asc` or
-           * `desc` postfix. This list is case-insensitive, default sorting order is ascending,
-           * redundant space characters are insignificant.
+           * Comma separated list of triggeredJob fields to order by, followed by `asc` or `desc`
+           * postfix. This list is case-insensitive, default sorting order is ascending, redundant
+           * space characters are insignificant.
            *
            * Example: `name asc,update_time, create_time desc`
            *
@@ -14769,38 +14741,38 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             return this;
           }
 
-          /** Optional size of the page, can be limited by a server. */
+          /** Size of the page, can be limited by a server. */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Optional size of the page, can be limited by a server.
+          /** Size of the page, can be limited by a server.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /** Optional size of the page, can be limited by a server. */
+          /** Size of the page, can be limited by a server. */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
           /**
-           * Optional page token to continue retrieval. Comes from previous call to ListJobTriggers.
+           * Page token to continue retrieval. Comes from previous call to ListJobTriggers.
            * `order_by` field must not change for subsequent calls.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** Optional page token to continue retrieval. Comes from previous call to ListJobTriggers. `order_by`
-         field must not change for subsequent calls.
+          /** Page token to continue retrieval. Comes from previous call to ListJobTriggers. `order_by` field
+         must not change for subsequent calls.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * Optional page token to continue retrieval. Comes from previous call to ListJobTriggers.
+           * Page token to continue retrieval. Comes from previous call to ListJobTriggers.
            * `order_by` field must not change for subsequent calls.
            */
           public List setPageToken(java.lang.String pageToken) {
@@ -15622,9 +15594,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Optional comma separated list of fields to order by, followed by `asc` or `desc`
-           * postfix. This list is case-insensitive, default sorting order is ascending, redundant
-           * space characters are insignificant.
+           * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
+           * list is case-insensitive, default sorting order is ascending, redundant space
+           * characters are insignificant.
            *
            * Example: `name asc, display_name, create_time desc`
            *
@@ -15637,9 +15609,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Optional comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list
-         is case-insensitive, default sorting order is ascending, redundant space characters are
-         insignificant.
+          /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case-
+         insensitive, default sorting order is ascending, redundant space characters are insignificant.
 
          Example: `name asc, display_name, create_time desc`
 
@@ -15654,9 +15625,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Optional comma separated list of fields to order by, followed by `asc` or `desc`
-           * postfix. This list is case-insensitive, default sorting order is ascending, redundant
-           * space characters are insignificant.
+           * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
+           * list is case-insensitive, default sorting order is ascending, redundant space
+           * characters are insignificant.
            *
            * Example: `name asc, display_name, create_time desc`
            *
@@ -15672,21 +15643,21 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Optional size of the page, can be limited by server. If zero server returns a page of
-           * max size 100.
+           * Size of the page, can be limited by server. If zero server returns a page of max size
+           * 100.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Optional size of the page, can be limited by server. If zero server returns a page of max size 100.
+          /** Size of the page, can be limited by server. If zero server returns a page of max size 100.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
           /**
-           * Optional size of the page, can be limited by server. If zero server returns a page of
-           * max size 100.
+           * Size of the page, can be limited by server. If zero server returns a page of max size
+           * 100.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -15694,21 +15665,19 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Optional page token to continue retrieval. Comes from previous call to
-           * `ListStoredInfoTypes`.
+           * Page token to continue retrieval. Comes from previous call to `ListStoredInfoTypes`.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** Optional page token to continue retrieval. Comes from previous call to `ListStoredInfoTypes`.
+          /** Page token to continue retrieval. Comes from previous call to `ListStoredInfoTypes`.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * Optional page token to continue retrieval. Comes from previous call to
-           * `ListStoredInfoTypes`.
+           * Page token to continue retrieval. Comes from previous call to `ListStoredInfoTypes`.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -16508,9 +16477,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional comma separated list of fields to order by, followed by `asc` or `desc` postfix.
-         * This list is case-insensitive, default sorting order is ascending, redundant space
-         * characters are insignificant.
+         * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
+         * list is case-insensitive, default sorting order is ascending, redundant space characters
+         * are insignificant.
          *
          * Example: `name asc, display_name, create_time desc`
          *
@@ -16523,9 +16492,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
-        /** Optional comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list
-       is case-insensitive, default sorting order is ascending, redundant space characters are
-       insignificant.
+        /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case-
+       insensitive, default sorting order is ascending, redundant space characters are insignificant.
 
        Example: `name asc, display_name, create_time desc`
 
@@ -16540,9 +16508,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional comma separated list of fields to order by, followed by `asc` or `desc` postfix.
-         * This list is case-insensitive, default sorting order is ascending, redundant space
-         * characters are insignificant.
+         * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
+         * list is case-insensitive, default sorting order is ascending, redundant space characters
+         * are insignificant.
          *
          * Example: `name asc, display_name, create_time desc`
          *
@@ -16558,21 +16526,21 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional size of the page, can be limited by server. If zero server returns a page of max
-         * size 100.
+         * Size of the page, can be limited by server. If zero server returns a page of max size
+         * 100.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** Optional size of the page, can be limited by server. If zero server returns a page of max size 100.
+        /** Size of the page, can be limited by server. If zero server returns a page of max size 100.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
         /**
-         * Optional size of the page, can be limited by server. If zero server returns a page of max
-         * size 100.
+         * Size of the page, can be limited by server. If zero server returns a page of max size
+         * 100.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -16580,21 +16548,19 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional page token to continue retrieval. Comes from previous call to
-         * `ListStoredInfoTypes`.
+         * Page token to continue retrieval. Comes from previous call to `ListStoredInfoTypes`.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** Optional page token to continue retrieval. Comes from previous call to `ListStoredInfoTypes`.
+        /** Page token to continue retrieval. Comes from previous call to `ListStoredInfoTypes`.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
         /**
-         * Optional page token to continue retrieval. Comes from previous call to
-         * `ListStoredInfoTypes`.
+         * Page token to continue retrieval. Comes from previous call to `ListStoredInfoTypes`.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;

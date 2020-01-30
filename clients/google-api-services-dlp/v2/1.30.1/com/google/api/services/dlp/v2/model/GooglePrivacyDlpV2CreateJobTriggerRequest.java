@@ -31,7 +31,7 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2CreateJobTriggerRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The JobTrigger to create.
+   * Required. The JobTrigger to create.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +54,7 @@ public final class GooglePrivacyDlpV2CreateJobTriggerRequest extends com.google.
   private java.lang.String triggerId;
 
   /**
-   * The JobTrigger to create.
+   * Required. The JobTrigger to create.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2JobTrigger getJobTrigger() {
@@ -62,7 +62,7 @@ public final class GooglePrivacyDlpV2CreateJobTriggerRequest extends com.google.
   }
 
   /**
-   * The JobTrigger to create.
+   * Required. The JobTrigger to create.
    * @param jobTrigger jobTrigger or {@code null} for none
    */
   public GooglePrivacyDlpV2CreateJobTriggerRequest setJobTrigger(GooglePrivacyDlpV2JobTrigger jobTrigger) {

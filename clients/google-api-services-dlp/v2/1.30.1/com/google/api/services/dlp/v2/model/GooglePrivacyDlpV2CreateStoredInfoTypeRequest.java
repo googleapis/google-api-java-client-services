@@ -31,7 +31,7 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2CreateStoredInfoTypeRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Configuration of the storedInfoType to create.
+   * Required. Configuration of the storedInfoType to create.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +54,7 @@ public final class GooglePrivacyDlpV2CreateStoredInfoTypeRequest extends com.goo
   private java.lang.String storedInfoTypeId;
 
   /**
-   * Configuration of the storedInfoType to create.
+   * Required. Configuration of the storedInfoType to create.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2StoredInfoTypeConfig getConfig() {
@@ -62,7 +62,7 @@ public final class GooglePrivacyDlpV2CreateStoredInfoTypeRequest extends com.goo
   }
 
   /**
-   * Configuration of the storedInfoType to create.
+   * Required. Configuration of the storedInfoType to create.
    * @param config config or {@code null} for none
    */
   public GooglePrivacyDlpV2CreateStoredInfoTypeRequest setConfig(GooglePrivacyDlpV2StoredInfoTypeConfig config) {

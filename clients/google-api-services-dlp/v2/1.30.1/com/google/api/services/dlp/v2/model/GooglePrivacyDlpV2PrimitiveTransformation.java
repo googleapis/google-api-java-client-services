@@ -31,72 +31,84 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2PrimitiveTransformation extends com.google.api.client.json.GenericJson {
 
   /**
+   * Bucketing
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2BucketingConfig bucketingConfig;
 
   /**
+   * Mask
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2CharacterMaskConfig characterMaskConfig;
 
   /**
+   * Deterministic Crypto
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2CryptoDeterministicConfig cryptoDeterministicConfig;
 
   /**
+   * Crypto
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2CryptoHashConfig cryptoHashConfig;
 
   /**
+   * Ffx-Fpe
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2CryptoReplaceFfxFpeConfig cryptoReplaceFfxFpeConfig;
 
   /**
+   * Date Shift
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2DateShiftConfig dateShiftConfig;
 
   /**
+   * Fixed size bucketing
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2FixedSizeBucketingConfig fixedSizeBucketingConfig;
 
   /**
+   * Redact
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2RedactConfig redactConfig;
 
   /**
+   * Replace
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2ReplaceValueConfig replaceConfig;
 
   /**
+   * Replace with infotype
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2ReplaceWithInfoTypeConfig replaceWithInfoTypeConfig;
 
   /**
+   * Time extraction
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2TimePartConfig timePartConfig;
 
   /**
+   * Bucketing
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2BucketingConfig getBucketingConfig() {
@@ -104,6 +116,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformation extends com.google.
   }
 
   /**
+   * Bucketing
    * @param bucketingConfig bucketingConfig or {@code null} for none
    */
   public GooglePrivacyDlpV2PrimitiveTransformation setBucketingConfig(GooglePrivacyDlpV2BucketingConfig bucketingConfig) {
@@ -112,6 +125,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformation extends com.google.
   }
 
   /**
+   * Mask
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2CharacterMaskConfig getCharacterMaskConfig() {
@@ -119,6 +133,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformation extends com.google.
   }
 
   /**
+   * Mask
    * @param characterMaskConfig characterMaskConfig or {@code null} for none
    */
   public GooglePrivacyDlpV2PrimitiveTransformation setCharacterMaskConfig(GooglePrivacyDlpV2CharacterMaskConfig characterMaskConfig) {
@@ -127,6 +142,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformation extends com.google.
   }
 
   /**
+   * Deterministic Crypto
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2CryptoDeterministicConfig getCryptoDeterministicConfig() {
@@ -134,6 +150,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformation extends com.google.
   }
 
   /**
+   * Deterministic Crypto
    * @param cryptoDeterministicConfig cryptoDeterministicConfig or {@code null} for none
    */
   public GooglePrivacyDlpV2PrimitiveTransformation setCryptoDeterministicConfig(GooglePrivacyDlpV2CryptoDeterministicConfig cryptoDeterministicConfig) {
@@ -142,6 +159,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformation extends com.google.
   }
 
   /**
+   * Crypto
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2CryptoHashConfig getCryptoHashConfig() {
@@ -149,6 +167,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformation extends com.google.
   }
 
   /**
+   * Crypto
    * @param cryptoHashConfig cryptoHashConfig or {@code null} for none
    */
   public GooglePrivacyDlpV2PrimitiveTransformation setCryptoHashConfig(GooglePrivacyDlpV2CryptoHashConfig cryptoHashConfig) {
@@ -157,6 +176,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformation extends com.google.
   }
 
   /**
+   * Ffx-Fpe
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2CryptoReplaceFfxFpeConfig getCryptoReplaceFfxFpeConfig() {
@@ -164,6 +184,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformation extends com.google.
   }
 
   /**
+   * Ffx-Fpe
    * @param cryptoReplaceFfxFpeConfig cryptoReplaceFfxFpeConfig or {@code null} for none
    */
   public GooglePrivacyDlpV2PrimitiveTransformation setCryptoReplaceFfxFpeConfig(GooglePrivacyDlpV2CryptoReplaceFfxFpeConfig cryptoReplaceFfxFpeConfig) {
@@ -172,6 +193,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformation extends com.google.
   }
 
   /**
+   * Date Shift
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2DateShiftConfig getDateShiftConfig() {
@@ -179,6 +201,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformation extends com.google.
   }
 
   /**
+   * Date Shift
    * @param dateShiftConfig dateShiftConfig or {@code null} for none
    */
   public GooglePrivacyDlpV2PrimitiveTransformation setDateShiftConfig(GooglePrivacyDlpV2DateShiftConfig dateShiftConfig) {
@@ -187,6 +210,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformation extends com.google.
   }
 
   /**
+   * Fixed size bucketing
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2FixedSizeBucketingConfig getFixedSizeBucketingConfig() {
@@ -194,6 +218,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformation extends com.google.
   }
 
   /**
+   * Fixed size bucketing
    * @param fixedSizeBucketingConfig fixedSizeBucketingConfig or {@code null} for none
    */
   public GooglePrivacyDlpV2PrimitiveTransformation setFixedSizeBucketingConfig(GooglePrivacyDlpV2FixedSizeBucketingConfig fixedSizeBucketingConfig) {
@@ -202,6 +227,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformation extends com.google.
   }
 
   /**
+   * Redact
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2RedactConfig getRedactConfig() {
@@ -209,6 +235,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformation extends com.google.
   }
 
   /**
+   * Redact
    * @param redactConfig redactConfig or {@code null} for none
    */
   public GooglePrivacyDlpV2PrimitiveTransformation setRedactConfig(GooglePrivacyDlpV2RedactConfig redactConfig) {
@@ -217,6 +244,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformation extends com.google.
   }
 
   /**
+   * Replace
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2ReplaceValueConfig getReplaceConfig() {
@@ -224,6 +252,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformation extends com.google.
   }
 
   /**
+   * Replace
    * @param replaceConfig replaceConfig or {@code null} for none
    */
   public GooglePrivacyDlpV2PrimitiveTransformation setReplaceConfig(GooglePrivacyDlpV2ReplaceValueConfig replaceConfig) {
@@ -232,6 +261,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformation extends com.google.
   }
 
   /**
+   * Replace with infotype
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2ReplaceWithInfoTypeConfig getReplaceWithInfoTypeConfig() {
@@ -239,6 +269,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformation extends com.google.
   }
 
   /**
+   * Replace with infotype
    * @param replaceWithInfoTypeConfig replaceWithInfoTypeConfig or {@code null} for none
    */
   public GooglePrivacyDlpV2PrimitiveTransformation setReplaceWithInfoTypeConfig(GooglePrivacyDlpV2ReplaceWithInfoTypeConfig replaceWithInfoTypeConfig) {
@@ -247,6 +278,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformation extends com.google.
   }
 
   /**
+   * Time extraction
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2TimePartConfig getTimePartConfig() {
@@ -254,6 +286,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformation extends com.google.
   }
 
   /**
+   * Time extraction
    * @param timePartConfig timePartConfig or {@code null} for none
    */
   public GooglePrivacyDlpV2PrimitiveTransformation setTimePartConfig(GooglePrivacyDlpV2TimePartConfig timePartConfig) {

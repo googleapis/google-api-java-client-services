@@ -32,18 +32,23 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2QuasiIdentifierField extends com.google.api.client.json.GenericJson {
 
   /**
+   * A column can be tagged with a custom tag. In this case, the user must indicate an auxiliary
+   * table that contains statistical information on the possible values of this column (below).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String customTag;
 
   /**
+   * Identifies the column.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2FieldId field;
 
   /**
+   * A column can be tagged with a custom tag. In this case, the user must indicate an auxiliary
+   * table that contains statistical information on the possible values of this column (below).
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomTag() {
@@ -51,6 +56,8 @@ public final class GooglePrivacyDlpV2QuasiIdentifierField extends com.google.api
   }
 
   /**
+   * A column can be tagged with a custom tag. In this case, the user must indicate an auxiliary
+   * table that contains statistical information on the possible values of this column (below).
    * @param customTag customTag or {@code null} for none
    */
   public GooglePrivacyDlpV2QuasiIdentifierField setCustomTag(java.lang.String customTag) {
@@ -59,6 +66,7 @@ public final class GooglePrivacyDlpV2QuasiIdentifierField extends com.google.api
   }
 
   /**
+   * Identifies the column.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2FieldId getField() {
@@ -66,6 +74,7 @@ public final class GooglePrivacyDlpV2QuasiIdentifierField extends com.google.api
   }
 
   /**
+   * Identifies the column.
    * @param field field or {@code null} for none
    */
   public GooglePrivacyDlpV2QuasiIdentifierField setField(GooglePrivacyDlpV2FieldId field) {

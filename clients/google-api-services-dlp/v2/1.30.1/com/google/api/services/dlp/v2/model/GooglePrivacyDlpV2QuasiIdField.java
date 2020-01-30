@@ -32,18 +32,21 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2QuasiIdField extends com.google.api.client.json.GenericJson {
 
   /**
+   * A auxiliary field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String customTag;
 
   /**
+   * Identifies the column.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2FieldId field;
 
   /**
+   * A auxiliary field.
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomTag() {
@@ -51,6 +54,7 @@ public final class GooglePrivacyDlpV2QuasiIdField extends com.google.api.client.
   }
 
   /**
+   * A auxiliary field.
    * @param customTag customTag or {@code null} for none
    */
   public GooglePrivacyDlpV2QuasiIdField setCustomTag(java.lang.String customTag) {
@@ -59,6 +63,7 @@ public final class GooglePrivacyDlpV2QuasiIdField extends com.google.api.client.
   }
 
   /**
+   * Identifies the column.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2FieldId getField() {
@@ -66,6 +71,7 @@ public final class GooglePrivacyDlpV2QuasiIdField extends com.google.api.client.
   }
 
   /**
+   * Identifies the column.
    * @param field field or {@code null} for none
    */
   public GooglePrivacyDlpV2QuasiIdField setField(GooglePrivacyDlpV2FieldId field) {

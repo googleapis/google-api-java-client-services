@@ -31,36 +31,42 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails extends com.google.api.client.json.GenericJson {
 
   /**
+   * Categorical stats result
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2CategoricalStatsResult categoricalStatsResult;
 
   /**
+   * Delta-presence result
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2DeltaPresenceEstimationResult deltaPresenceEstimationResult;
 
   /**
+   * K-anonymity result
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2KAnonymityResult kAnonymityResult;
 
   /**
+   * K-map result
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2KMapEstimationResult kMapEstimationResult;
 
   /**
+   * L-divesity result
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2LDiversityResult lDiversityResult;
 
   /**
+   * Numerical stats result
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,6 +87,7 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails extends com.go
   private GooglePrivacyDlpV2BigQueryTable requestedSourceTable;
 
   /**
+   * Categorical stats result
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2CategoricalStatsResult getCategoricalStatsResult() {
@@ -88,6 +95,7 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails extends com.go
   }
 
   /**
+   * Categorical stats result
    * @param categoricalStatsResult categoricalStatsResult or {@code null} for none
    */
   public GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails setCategoricalStatsResult(GooglePrivacyDlpV2CategoricalStatsResult categoricalStatsResult) {
@@ -96,6 +104,7 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails extends com.go
   }
 
   /**
+   * Delta-presence result
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2DeltaPresenceEstimationResult getDeltaPresenceEstimationResult() {
@@ -103,6 +112,7 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails extends com.go
   }
 
   /**
+   * Delta-presence result
    * @param deltaPresenceEstimationResult deltaPresenceEstimationResult or {@code null} for none
    */
   public GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails setDeltaPresenceEstimationResult(GooglePrivacyDlpV2DeltaPresenceEstimationResult deltaPresenceEstimationResult) {
@@ -111,6 +121,7 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails extends com.go
   }
 
   /**
+   * K-anonymity result
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2KAnonymityResult getKAnonymityResult() {
@@ -118,6 +129,7 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails extends com.go
   }
 
   /**
+   * K-anonymity result
    * @param kAnonymityResult kAnonymityResult or {@code null} for none
    */
   public GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails setKAnonymityResult(GooglePrivacyDlpV2KAnonymityResult kAnonymityResult) {
@@ -126,6 +138,7 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails extends com.go
   }
 
   /**
+   * K-map result
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2KMapEstimationResult getKMapEstimationResult() {
@@ -133,6 +146,7 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails extends com.go
   }
 
   /**
+   * K-map result
    * @param kMapEstimationResult kMapEstimationResult or {@code null} for none
    */
   public GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails setKMapEstimationResult(GooglePrivacyDlpV2KMapEstimationResult kMapEstimationResult) {
@@ -141,6 +155,7 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails extends com.go
   }
 
   /**
+   * L-divesity result
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2LDiversityResult getLDiversityResult() {
@@ -148,6 +163,7 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails extends com.go
   }
 
   /**
+   * L-divesity result
    * @param lDiversityResult lDiversityResult or {@code null} for none
    */
   public GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails setLDiversityResult(GooglePrivacyDlpV2LDiversityResult lDiversityResult) {
@@ -156,6 +172,7 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails extends com.go
   }
 
   /**
+   * Numerical stats result
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2NumericalStatsResult getNumericalStatsResult() {
@@ -163,6 +180,7 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails extends com.go
   }
 
   /**
+   * Numerical stats result
    * @param numericalStatsResult numericalStatsResult or {@code null} for none
    */
   public GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails setNumericalStatsResult(GooglePrivacyDlpV2NumericalStatsResult numericalStatsResult) {

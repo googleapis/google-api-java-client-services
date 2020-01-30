@@ -18,7 +18,7 @@ package com.google.api.services.dlp.v2.model;
 
 /**
  * Details information about an error encountered during job execution or the results of an
- * unsuccessful activation of the JobTrigger. Output only field.
+ * unsuccessful activation of the JobTrigger.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Data Loss Prevention (DLP) API. For a detailed
@@ -32,6 +32,7 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2Error extends com.google.api.client.json.GenericJson {
 
   /**
+   * Detailed error codes and messages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,6 +46,7 @@ public final class GooglePrivacyDlpV2Error extends com.google.api.client.json.Ge
   private java.util.List<String> timestamps;
 
   /**
+   * Detailed error codes and messages.
    * @return value or {@code null} for none
    */
   public GoogleRpcStatus getDetails() {
@@ -52,6 +54,7 @@ public final class GooglePrivacyDlpV2Error extends com.google.api.client.json.Ge
   }
 
   /**
+   * Detailed error codes and messages.
    * @param details details or {@code null} for none
    */
   public GooglePrivacyDlpV2Error setDetails(GoogleRpcStatus details) {

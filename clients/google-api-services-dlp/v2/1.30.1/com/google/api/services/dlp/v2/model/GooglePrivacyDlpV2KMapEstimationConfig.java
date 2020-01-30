@@ -21,7 +21,7 @@ package com.google.api.services.dlp.v2.model;
  * risk" in the literature, except the attack dataset is statistically modeled instead of being
  * perfectly known. This can be done using publicly available data (like the US Census), or using a
  * custom statistical model (indicated as one or several BigQuery tables), or by extrapolating from
- * the distribution of values in the input dataset. A column with a semantic tag attached.
+ * the distribution of values in the input dataset.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Data Loss Prevention (DLP) API. For a detailed
@@ -49,15 +49,15 @@ public final class GooglePrivacyDlpV2KMapEstimationConfig extends com.google.api
   }
 
   /**
-   * Fields considered to be quasi-identifiers. No two columns can have the same tag. [required]
+   * Required. Fields considered to be quasi-identifiers. No two columns can have the same tag.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2TaggedField> quasiIds;
 
   /**
-   * ISO 3166-1 alpha-2 region code to use in the statistical modeling. Required if no column is
-   * tagged with a region-specific InfoType (like US_ZIP_5) or a region code.
+   * ISO 3166-1 alpha-2 region code to use in the statistical modeling. Set if no column is tagged
+   * with a region-specific InfoType (like US_ZIP_5) or a region code.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +83,7 @@ public final class GooglePrivacyDlpV2KMapEstimationConfig extends com.google.api
   }
 
   /**
-   * Fields considered to be quasi-identifiers. No two columns can have the same tag. [required]
+   * Required. Fields considered to be quasi-identifiers. No two columns can have the same tag.
    * @return value or {@code null} for none
    */
   public java.util.List<GooglePrivacyDlpV2TaggedField> getQuasiIds() {
@@ -91,7 +91,7 @@ public final class GooglePrivacyDlpV2KMapEstimationConfig extends com.google.api
   }
 
   /**
-   * Fields considered to be quasi-identifiers. No two columns can have the same tag. [required]
+   * Required. Fields considered to be quasi-identifiers. No two columns can have the same tag.
    * @param quasiIds quasiIds or {@code null} for none
    */
   public GooglePrivacyDlpV2KMapEstimationConfig setQuasiIds(java.util.List<GooglePrivacyDlpV2TaggedField> quasiIds) {
@@ -100,8 +100,8 @@ public final class GooglePrivacyDlpV2KMapEstimationConfig extends com.google.api
   }
 
   /**
-   * ISO 3166-1 alpha-2 region code to use in the statistical modeling. Required if no column is
-   * tagged with a region-specific InfoType (like US_ZIP_5) or a region code.
+   * ISO 3166-1 alpha-2 region code to use in the statistical modeling. Set if no column is tagged
+   * with a region-specific InfoType (like US_ZIP_5) or a region code.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegionCode() {
@@ -109,8 +109,8 @@ public final class GooglePrivacyDlpV2KMapEstimationConfig extends com.google.api
   }
 
   /**
-   * ISO 3166-1 alpha-2 region code to use in the statistical modeling. Required if no column is
-   * tagged with a region-specific InfoType (like US_ZIP_5) or a region code.
+   * ISO 3166-1 alpha-2 region code to use in the statistical modeling. Set if no column is tagged
+   * with a region-specific InfoType (like US_ZIP_5) or a region code.
    * @param regionCode regionCode or {@code null} for none
    */
   public GooglePrivacyDlpV2KMapEstimationConfig setRegionCode(java.lang.String regionCode) {

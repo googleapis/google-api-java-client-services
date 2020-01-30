@@ -34,7 +34,8 @@ public final class GooglePrivacyDlpV2ContentLocation extends com.google.api.clie
    * Name of the container where the finding is located. The top level name is the source file name
    * or table name. Names of some common storage containers are formatted as follows:
    *
-   * * BigQuery tables:  `:.` * Cloud Storage files: `gs:` * Datastore namespace:
+   * * BigQuery tables:  `{project_id}:{dataset_id}.{table_id}` * Cloud Storage files:
+   * `gs://{bucket}/{path}` * Datastore namespace: {namespace}
    *
    * Nested names could be absent if the embedded object has no string identifier (for an example an
    * image contained within a document).
@@ -84,7 +85,8 @@ public final class GooglePrivacyDlpV2ContentLocation extends com.google.api.clie
    * Name of the container where the finding is located. The top level name is the source file name
    * or table name. Names of some common storage containers are formatted as follows:
    *
-   * * BigQuery tables:  `:.` * Cloud Storage files: `gs:` * Datastore namespace:
+   * * BigQuery tables:  `{project_id}:{dataset_id}.{table_id}` * Cloud Storage files:
+   * `gs://{bucket}/{path}` * Datastore namespace: {namespace}
    *
    * Nested names could be absent if the embedded object has no string identifier (for an example an
    * image contained within a document).
@@ -98,7 +100,8 @@ public final class GooglePrivacyDlpV2ContentLocation extends com.google.api.clie
    * Name of the container where the finding is located. The top level name is the source file name
    * or table name. Names of some common storage containers are formatted as follows:
    *
-   * * BigQuery tables:  `:.` * Cloud Storage files: `gs:` * Datastore namespace:
+   * * BigQuery tables:  `{project_id}:{dataset_id}.{table_id}` * Cloud Storage files:
+   * `gs://{bucket}/{path}` * Datastore namespace: {namespace}
    *
    * Nested names could be absent if the embedded object has no string identifier (for an example an
    * image contained within a document).

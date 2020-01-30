@@ -40,6 +40,7 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Common alphabets.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +72,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfig extends com.googl
   private GooglePrivacyDlpV2FieldId context;
 
   /**
-   * The key used by the encryption algorithm. [required]
+   * Required. The key used by the encryption algorithm.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -120,6 +121,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfig extends com.googl
   private GooglePrivacyDlpV2InfoType surrogateInfoType;
 
   /**
+   * Common alphabets.
    * @return value or {@code null} for none
    */
   public java.lang.String getCommonAlphabet() {
@@ -127,6 +129,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfig extends com.googl
   }
 
   /**
+   * Common alphabets.
    * @param commonAlphabet commonAlphabet or {@code null} for none
    */
   public GooglePrivacyDlpV2CryptoReplaceFfxFpeConfig setCommonAlphabet(java.lang.String commonAlphabet) {
@@ -188,7 +191,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfig extends com.googl
   }
 
   /**
-   * The key used by the encryption algorithm. [required]
+   * Required. The key used by the encryption algorithm.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2CryptoKey getCryptoKey() {
@@ -196,7 +199,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfig extends com.googl
   }
 
   /**
-   * The key used by the encryption algorithm. [required]
+   * Required. The key used by the encryption algorithm.
    * @param cryptoKey cryptoKey or {@code null} for none
    */
   public GooglePrivacyDlpV2CryptoReplaceFfxFpeConfig setCryptoKey(GooglePrivacyDlpV2CryptoKey cryptoKey) {

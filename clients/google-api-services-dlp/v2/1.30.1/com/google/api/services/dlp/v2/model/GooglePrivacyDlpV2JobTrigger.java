@@ -32,7 +32,7 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2JobTrigger extends com.google.api.client.json.GenericJson {
 
   /**
-   * The creation timestamp of a triggeredJob, output only field.
+   * Output only. The creation timestamp of a triggeredJob.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,9 +53,9 @@ public final class GooglePrivacyDlpV2JobTrigger extends com.google.api.client.js
   private java.lang.String displayName;
 
   /**
-   * A stream of errors encountered when the trigger was activated. Repeated errors may result in
-   * the JobTrigger automatically being paused. Will return the last 100 errors. Whenever the
-   * JobTrigger is modified this list will be cleared. Output only field.
+   * Output only. A stream of errors encountered when the trigger was activated. Repeated errors may
+   * result in the JobTrigger automatically being paused. Will return the last 100 errors. Whenever
+   * the JobTrigger is modified this list will be cleared.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,13 +68,14 @@ public final class GooglePrivacyDlpV2JobTrigger extends com.google.api.client.js
   }
 
   /**
+   * For inspect jobs, a snapshot of the configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2InspectJobConfig inspectJob;
 
   /**
-   * The timestamp of the last time this trigger executed, output only field.
+   * Output only. The timestamp of the last time this trigger executed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,7 +90,7 @@ public final class GooglePrivacyDlpV2JobTrigger extends com.google.api.client.js
   private java.lang.String name;
 
   /**
-   * A status for this trigger. [required]
+   * Required. A status for this trigger.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,14 +106,14 @@ public final class GooglePrivacyDlpV2JobTrigger extends com.google.api.client.js
   private java.util.List<GooglePrivacyDlpV2Trigger> triggers;
 
   /**
-   * The last update timestamp of a triggeredJob, output only field.
+   * Output only. The last update timestamp of a triggeredJob.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * The creation timestamp of a triggeredJob, output only field.
+   * Output only. The creation timestamp of a triggeredJob.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -120,7 +121,7 @@ public final class GooglePrivacyDlpV2JobTrigger extends com.google.api.client.js
   }
 
   /**
-   * The creation timestamp of a triggeredJob, output only field.
+   * Output only. The creation timestamp of a triggeredJob.
    * @param createTime createTime or {@code null} for none
    */
   public GooglePrivacyDlpV2JobTrigger setCreateTime(String createTime) {
@@ -163,9 +164,9 @@ public final class GooglePrivacyDlpV2JobTrigger extends com.google.api.client.js
   }
 
   /**
-   * A stream of errors encountered when the trigger was activated. Repeated errors may result in
-   * the JobTrigger automatically being paused. Will return the last 100 errors. Whenever the
-   * JobTrigger is modified this list will be cleared. Output only field.
+   * Output only. A stream of errors encountered when the trigger was activated. Repeated errors may
+   * result in the JobTrigger automatically being paused. Will return the last 100 errors. Whenever
+   * the JobTrigger is modified this list will be cleared.
    * @return value or {@code null} for none
    */
   public java.util.List<GooglePrivacyDlpV2Error> getErrors() {
@@ -173,9 +174,9 @@ public final class GooglePrivacyDlpV2JobTrigger extends com.google.api.client.js
   }
 
   /**
-   * A stream of errors encountered when the trigger was activated. Repeated errors may result in
-   * the JobTrigger automatically being paused. Will return the last 100 errors. Whenever the
-   * JobTrigger is modified this list will be cleared. Output only field.
+   * Output only. A stream of errors encountered when the trigger was activated. Repeated errors may
+   * result in the JobTrigger automatically being paused. Will return the last 100 errors. Whenever
+   * the JobTrigger is modified this list will be cleared.
    * @param errors errors or {@code null} for none
    */
   public GooglePrivacyDlpV2JobTrigger setErrors(java.util.List<GooglePrivacyDlpV2Error> errors) {
@@ -184,6 +185,7 @@ public final class GooglePrivacyDlpV2JobTrigger extends com.google.api.client.js
   }
 
   /**
+   * For inspect jobs, a snapshot of the configuration.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2InspectJobConfig getInspectJob() {
@@ -191,6 +193,7 @@ public final class GooglePrivacyDlpV2JobTrigger extends com.google.api.client.js
   }
 
   /**
+   * For inspect jobs, a snapshot of the configuration.
    * @param inspectJob inspectJob or {@code null} for none
    */
   public GooglePrivacyDlpV2JobTrigger setInspectJob(GooglePrivacyDlpV2InspectJobConfig inspectJob) {
@@ -199,7 +202,7 @@ public final class GooglePrivacyDlpV2JobTrigger extends com.google.api.client.js
   }
 
   /**
-   * The timestamp of the last time this trigger executed, output only field.
+   * Output only. The timestamp of the last time this trigger executed.
    * @return value or {@code null} for none
    */
   public String getLastRunTime() {
@@ -207,7 +210,7 @@ public final class GooglePrivacyDlpV2JobTrigger extends com.google.api.client.js
   }
 
   /**
-   * The timestamp of the last time this trigger executed, output only field.
+   * Output only. The timestamp of the last time this trigger executed.
    * @param lastRunTime lastRunTime or {@code null} for none
    */
   public GooglePrivacyDlpV2JobTrigger setLastRunTime(String lastRunTime) {
@@ -235,7 +238,7 @@ public final class GooglePrivacyDlpV2JobTrigger extends com.google.api.client.js
   }
 
   /**
-   * A status for this trigger. [required]
+   * Required. A status for this trigger.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -243,7 +246,7 @@ public final class GooglePrivacyDlpV2JobTrigger extends com.google.api.client.js
   }
 
   /**
-   * A status for this trigger. [required]
+   * Required. A status for this trigger.
    * @param status status or {@code null} for none
    */
   public GooglePrivacyDlpV2JobTrigger setStatus(java.lang.String status) {
@@ -273,7 +276,7 @@ public final class GooglePrivacyDlpV2JobTrigger extends com.google.api.client.js
   }
 
   /**
-   * The last update timestamp of a triggeredJob, output only field.
+   * Output only. The last update timestamp of a triggeredJob.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -281,7 +284,7 @@ public final class GooglePrivacyDlpV2JobTrigger extends com.google.api.client.js
   }
 
   /**
-   * The last update timestamp of a triggeredJob, output only field.
+   * Output only. The last update timestamp of a triggeredJob.
    * @param updateTime updateTime or {@code null} for none
    */
   public GooglePrivacyDlpV2JobTrigger setUpdateTime(String updateTime) {

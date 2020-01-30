@@ -66,7 +66,8 @@ public final class MetricValue extends com.google.api.client.json.GenericJson {
 
   /**
    * The labels describing the metric value. See comments on
-   * google.api.servicecontrol.v1.Operation.labels for the overriding relationship.
+   * google.api.servicecontrol.v1.Operation.labels for the overriding relationship. Note that this
+   * map must not contain monitored resource labels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -182,7 +183,8 @@ public final class MetricValue extends com.google.api.client.json.GenericJson {
 
   /**
    * The labels describing the metric value. See comments on
-   * google.api.servicecontrol.v1.Operation.labels for the overriding relationship.
+   * google.api.servicecontrol.v1.Operation.labels for the overriding relationship. Note that this
+   * map must not contain monitored resource labels.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -191,7 +193,8 @@ public final class MetricValue extends com.google.api.client.json.GenericJson {
 
   /**
    * The labels describing the metric value. See comments on
-   * google.api.servicecontrol.v1.Operation.labels for the overriding relationship.
+   * google.api.servicecontrol.v1.Operation.labels for the overriding relationship. Note that this
+   * map must not contain monitored resource labels.
    * @param labels labels or {@code null} for none
    */
   public MetricValue setLabels(java.util.Map<String, java.lang.String> labels) {

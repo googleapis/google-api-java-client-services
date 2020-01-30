@@ -36,8 +36,9 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
    * a single request is allowed, but should be used only when multiple operations are natually
    * available at the time of the report.
    *
-   * If multiple operations are in a single request, the total request size should be no larger than
-   * 1MB. See ReportResponse.report_errors for partial failure behavior.
+   * There is no limit on the number of operations in the same ReportRequest, however the
+   * ReportRequest size should be no larger than 1MB. See ReportResponse.report_errors for partial
+   * failure behavior.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,8 +66,9 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
    * a single request is allowed, but should be used only when multiple operations are natually
    * available at the time of the report.
    *
-   * If multiple operations are in a single request, the total request size should be no larger than
-   * 1MB. See ReportResponse.report_errors for partial failure behavior.
+   * There is no limit on the number of operations in the same ReportRequest, however the
+   * ReportRequest size should be no larger than 1MB. See ReportResponse.report_errors for partial
+   * failure behavior.
    * @return value or {@code null} for none
    */
   public java.util.List<Operation> getOperations() {
@@ -80,8 +82,9 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
    * a single request is allowed, but should be used only when multiple operations are natually
    * available at the time of the report.
    *
-   * If multiple operations are in a single request, the total request size should be no larger than
-   * 1MB. See ReportResponse.report_errors for partial failure behavior.
+   * There is no limit on the number of operations in the same ReportRequest, however the
+   * ReportRequest size should be no larger than 1MB. See ReportResponse.report_errors for partial
+   * failure behavior.
    * @param operations operations or {@code null} for none
    */
   public ReportRequest setOperations(java.util.List<Operation> operations) {

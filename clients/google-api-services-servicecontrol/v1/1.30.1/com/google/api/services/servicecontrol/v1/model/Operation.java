@@ -151,6 +151,14 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private String startTime;
 
   /**
+   * Unimplemented. A list of Cloud Trace spans. The span names shall contain the id of the
+   * destination project which can be either the produce or the consumer project.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<TraceSpan> traceSpans;
+
+  /**
    * User defined labels for the resource that this operation is associated with. Only a combination
    * of 1000 user labels per consumer project are allowed.
    * The value may be {@code null}.
@@ -406,6 +414,25 @@ public final class Operation extends com.google.api.client.json.GenericJson {
    */
   public Operation setStartTime(String startTime) {
     this.startTime = startTime;
+    return this;
+  }
+
+  /**
+   * Unimplemented. A list of Cloud Trace spans. The span names shall contain the id of the
+   * destination project which can be either the produce or the consumer project.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<TraceSpan> getTraceSpans() {
+    return traceSpans;
+  }
+
+  /**
+   * Unimplemented. A list of Cloud Trace spans. The span names shall contain the id of the
+   * destination project which can be either the produce or the consumer project.
+   * @param traceSpans traceSpans or {@code null} for none
+   */
+  public Operation setTraceSpans(java.util.List<TraceSpan> traceSpans) {
+    this.traceSpans = traceSpans;
     return this;
   }
 

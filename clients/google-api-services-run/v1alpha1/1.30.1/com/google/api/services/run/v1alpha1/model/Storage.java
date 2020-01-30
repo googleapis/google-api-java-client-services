@@ -14,11 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.run.v1beta1.model;
+package com.google.api.services.run.v1alpha1.model;
 
 /**
- * CustomResourceDefinition represents a resource that should be exposed on the API server.  Its
- * name MUST be in the format <.spec.name>.<.spec.group>.
+ * Model definition for Storage.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run API. For a detailed explanation see:
@@ -28,38 +27,45 @@ package com.google.api.services.run.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class CustomResourceDefinition extends com.google.api.client.json.GenericJson {
+public final class Storage extends com.google.api.client.json.GenericJson {
 
   /**
-   * The API version for this call such as "k8s.apiextensions.io/v1beta1".
+   * The API version for this call such as "events.cloud.google.com/v1alpha1".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String apiVersion;
 
   /**
-   * The kind of resource, in this case always "CustomResourceDefinition".
+   * The kind of resource, in this case "Storage".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * Metadata associated with this CustomResourceDefinition.
+   * Metadata associated with this Storage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ObjectMeta metadata;
 
   /**
-   * Spec describes how the user wants the resources to appear
+   * Spec defines the desired state of the Storage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private CustomResourceDefinitionSpec spec;
+  private StorageSpec spec;
 
   /**
-   * The API version for this call such as "k8s.apiextensions.io/v1beta1".
+   * Status represents the current state of the Storage. This data may be out of date. +optional
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StorageStatus status;
+
+  /**
+   * The API version for this call such as "events.cloud.google.com/v1alpha1".
    * @return value or {@code null} for none
    */
   public java.lang.String getApiVersion() {
@@ -67,16 +73,16 @@ public final class CustomResourceDefinition extends com.google.api.client.json.G
   }
 
   /**
-   * The API version for this call such as "k8s.apiextensions.io/v1beta1".
+   * The API version for this call such as "events.cloud.google.com/v1alpha1".
    * @param apiVersion apiVersion or {@code null} for none
    */
-  public CustomResourceDefinition setApiVersion(java.lang.String apiVersion) {
+  public Storage setApiVersion(java.lang.String apiVersion) {
     this.apiVersion = apiVersion;
     return this;
   }
 
   /**
-   * The kind of resource, in this case always "CustomResourceDefinition".
+   * The kind of resource, in this case "Storage".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -84,16 +90,16 @@ public final class CustomResourceDefinition extends com.google.api.client.json.G
   }
 
   /**
-   * The kind of resource, in this case always "CustomResourceDefinition".
+   * The kind of resource, in this case "Storage".
    * @param kind kind or {@code null} for none
    */
-  public CustomResourceDefinition setKind(java.lang.String kind) {
+  public Storage setKind(java.lang.String kind) {
     this.kind = kind;
     return this;
   }
 
   /**
-   * Metadata associated with this CustomResourceDefinition.
+   * Metadata associated with this Storage.
    * @return value or {@code null} for none
    */
   public ObjectMeta getMetadata() {
@@ -101,39 +107,56 @@ public final class CustomResourceDefinition extends com.google.api.client.json.G
   }
 
   /**
-   * Metadata associated with this CustomResourceDefinition.
+   * Metadata associated with this Storage.
    * @param metadata metadata or {@code null} for none
    */
-  public CustomResourceDefinition setMetadata(ObjectMeta metadata) {
+  public Storage setMetadata(ObjectMeta metadata) {
     this.metadata = metadata;
     return this;
   }
 
   /**
-   * Spec describes how the user wants the resources to appear
+   * Spec defines the desired state of the Storage.
    * @return value or {@code null} for none
    */
-  public CustomResourceDefinitionSpec getSpec() {
+  public StorageSpec getSpec() {
     return spec;
   }
 
   /**
-   * Spec describes how the user wants the resources to appear
+   * Spec defines the desired state of the Storage.
    * @param spec spec or {@code null} for none
    */
-  public CustomResourceDefinition setSpec(CustomResourceDefinitionSpec spec) {
+  public Storage setSpec(StorageSpec spec) {
     this.spec = spec;
     return this;
   }
 
-  @Override
-  public CustomResourceDefinition set(String fieldName, Object value) {
-    return (CustomResourceDefinition) super.set(fieldName, value);
+  /**
+   * Status represents the current state of the Storage. This data may be out of date. +optional
+   * @return value or {@code null} for none
+   */
+  public StorageStatus getStatus() {
+    return status;
+  }
+
+  /**
+   * Status represents the current state of the Storage. This data may be out of date. +optional
+   * @param status status or {@code null} for none
+   */
+  public Storage setStatus(StorageStatus status) {
+    this.status = status;
+    return this;
   }
 
   @Override
-  public CustomResourceDefinition clone() {
-    return (CustomResourceDefinition) super.clone();
+  public Storage set(String fieldName, Object value) {
+    return (Storage) super.set(fieldName, value);
+  }
+
+  @Override
+  public Storage clone() {
+    return (Storage) super.clone();
   }
 
 }

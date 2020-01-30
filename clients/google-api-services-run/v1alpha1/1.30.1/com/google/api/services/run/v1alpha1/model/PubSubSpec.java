@@ -88,6 +88,15 @@ public final class PubSubSpec extends com.google.api.client.json.GenericJson {
   private SecretKeySelector secret;
 
   /**
+   * Email address of the IAM service account associated with the source. The service account
+   * represents the identity of the source, and determines what permissions the source has. If not
+   * provided, the source will use the project's Compute Engine default service account. +optional
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAccountName;
+
+  /**
    * Sink is a reference to an object that will resolve to a domain name or a URI directly to use as
    * the sink.
    * The value may be {@code null}.
@@ -238,6 +247,27 @@ public final class PubSubSpec extends com.google.api.client.json.GenericJson {
    */
   public PubSubSpec setSecret(SecretKeySelector secret) {
     this.secret = secret;
+    return this;
+  }
+
+  /**
+   * Email address of the IAM service account associated with the source. The service account
+   * represents the identity of the source, and determines what permissions the source has. If not
+   * provided, the source will use the project's Compute Engine default service account. +optional
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAccountName() {
+    return serviceAccountName;
+  }
+
+  /**
+   * Email address of the IAM service account associated with the source. The service account
+   * represents the identity of the source, and determines what permissions the source has. If not
+   * provided, the source will use the project's Compute Engine default service account. +optional
+   * @param serviceAccountName serviceAccountName or {@code null} for none
+   */
+  public PubSubSpec setServiceAccountName(java.lang.String serviceAccountName) {
+    this.serviceAccountName = serviceAccountName;
     return this;
   }
 

@@ -335,6 +335,945 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
     }
     /**
+     * An accessor for creating requests from the Cloudauditlogs collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code CloudRun run = new CloudRun(...);}
+     *   {@code CloudRun.Cloudauditlogs.List request = run.cloudauditlogs().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Cloudauditlogs cloudauditlogs() {
+      return new Cloudauditlogs();
+    }
+
+    /**
+     * The "cloudauditlogs" collection of methods.
+     */
+    public class Cloudauditlogs {
+
+      /**
+       * Creates a new cloudauditlog.
+       *
+       * Create a request for the method "cloudauditlogs.create".
+       *
+       * This request holds the parameters needed by the run server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent The project ID or project number in which this cloudauditlog should
+      be created.
+       * @param content the {@link com.google.api.services.run.v1alpha1.model.CloudAuditLog}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.run.v1alpha1.model.CloudAuditLog content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends CloudRunRequest<com.google.api.services.run.v1alpha1.model.CloudAuditLog> {
+
+        private static final String REST_PATH = "apis/events.cloud.google.com/v1alpha1/{+parent}/cloudauditlogs";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^namespaces/[^/]+$");
+
+        /**
+         * Creates a new cloudauditlog.
+         *
+         * Create a request for the method "cloudauditlogs.create".
+         *
+         * This request holds the parameters needed by the the run server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent The project ID or project number in which this cloudauditlog should
+      be created.
+         * @param content the {@link com.google.api.services.run.v1alpha1.model.CloudAuditLog}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.run.v1alpha1.model.CloudAuditLog content) {
+          super(CloudRun.this, "POST", REST_PATH, content, com.google.api.services.run.v1alpha1.model.CloudAuditLog.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^namespaces/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The project ID or project number in which this cloudauditlog should be created.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** The project ID or project number in which this cloudauditlog should be created.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * The project ID or project number in which this cloudauditlog should be created.
+         */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^namespaces/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Rpc to delete a cloudauditlog.
+       *
+       * Create a request for the method "cloudauditlogs.delete".
+       *
+       * This request holds the parameters needed by the run server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name The name of the cloudauditlog being deleted. If needed, replace
+      {namespace_id} with the project ID.
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends CloudRunRequest<com.google.api.services.run.v1alpha1.model.Empty> {
+
+        private static final String REST_PATH = "apis/events.cloud.google.com/v1alpha1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^namespaces/[^/]+/cloudauditlogs/[^/]+$");
+
+        /**
+         * Rpc to delete a cloudauditlog.
+         *
+         * Create a request for the method "cloudauditlogs.delete".
+         *
+         * This request holds the parameters needed by the the run server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The name of the cloudauditlog being deleted. If needed, replace
+      {namespace_id} with the project ID.
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1alpha1.model.Empty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^namespaces/[^/]+/cloudauditlogs/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The name of the cloudauditlog being deleted. If needed, replace {namespace_id} with the
+         * project ID.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The name of the cloudauditlog being deleted. If needed, replace {namespace_id} with the project ID.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * The name of the cloudauditlog being deleted. If needed, replace {namespace_id} with the
+         * project ID.
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^namespaces/[^/]+/cloudauditlogs/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** Cloud Run currently ignores this parameter. */
+        @com.google.api.client.util.Key
+        private java.lang.String apiVersion;
+
+        /** Cloud Run currently ignores this parameter.
+         */
+        public java.lang.String getApiVersion() {
+          return apiVersion;
+        }
+
+        /** Cloud Run currently ignores this parameter. */
+        public Delete setApiVersion(java.lang.String apiVersion) {
+          this.apiVersion = apiVersion;
+          return this;
+        }
+
+        /** Cloud Run currently ignores this parameter. */
+        @com.google.api.client.util.Key
+        private java.lang.String kind;
+
+        /** Cloud Run currently ignores this parameter.
+         */
+        public java.lang.String getKind() {
+          return kind;
+        }
+
+        /** Cloud Run currently ignores this parameter. */
+        public Delete setKind(java.lang.String kind) {
+          this.kind = kind;
+          return this;
+        }
+
+        /**
+         * Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and
+         * deletes in the background. Please see kubernetes.io/docs/concepts/workloads/controllers
+         * /garbage-collection/ for more information.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String propagationPolicy;
+
+        /** Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and deletes
+       in the background. Please see kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/
+       for more information.
+         */
+        public java.lang.String getPropagationPolicy() {
+          return propagationPolicy;
+        }
+
+        /**
+         * Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and
+         * deletes in the background. Please see kubernetes.io/docs/concepts/workloads/controllers
+         * /garbage-collection/ for more information.
+         */
+        public Delete setPropagationPolicy(java.lang.String propagationPolicy) {
+          this.propagationPolicy = propagationPolicy;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Rpc to get information about a cloudauditlog.
+       *
+       * Create a request for the method "cloudauditlogs.get".
+       *
+       * This request holds the parameters needed by the run server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name The name of the cloudauditlog being retrieved. If needed, replace
+      {namespace_id} with the project
+       *        ID.
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends CloudRunRequest<com.google.api.services.run.v1alpha1.model.CloudAuditLog> {
+
+        private static final String REST_PATH = "apis/events.cloud.google.com/v1alpha1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^namespaces/[^/]+/cloudauditlogs/[^/]+$");
+
+        /**
+         * Rpc to get information about a cloudauditlog.
+         *
+         * Create a request for the method "cloudauditlogs.get".
+         *
+         * This request holds the parameters needed by the the run server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The name of the cloudauditlog being retrieved. If needed, replace
+      {namespace_id} with the project
+       *        ID.
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v1alpha1.model.CloudAuditLog.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^namespaces/[^/]+/cloudauditlogs/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The name of the cloudauditlog being retrieved. If needed, replace {namespace_id} with the
+         * project ID.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The name of the cloudauditlog being retrieved. If needed, replace {namespace_id} with the project
+       ID.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * The name of the cloudauditlog being retrieved. If needed, replace {namespace_id} with the
+         * project ID.
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^namespaces/[^/]+/cloudauditlogs/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Rpc to list cloudauditlogs.
+       *
+       * Create a request for the method "cloudauditlogs.list".
+       *
+       * This request holds the parameters needed by the run server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent The project ID or project number from which the cloudauditlogs should
+      be listed.
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends CloudRunRequest<com.google.api.services.run.v1alpha1.model.ListCloudAuditLogsResponse> {
+
+        private static final String REST_PATH = "apis/events.cloud.google.com/v1alpha1/{+parent}/cloudauditlogs";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^namespaces/[^/]+$");
+
+        /**
+         * Rpc to list cloudauditlogs.
+         *
+         * Create a request for the method "cloudauditlogs.list".
+         *
+         * This request holds the parameters needed by the the run server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent The project ID or project number from which the cloudauditlogs should
+      be listed.
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v1alpha1.model.ListCloudAuditLogsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^namespaces/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The project ID or project number from which the cloudauditlogs should be listed.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** The project ID or project number from which the cloudauditlogs should be listed.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * The project ID or project number from which the cloudauditlogs should be listed.
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^namespaces/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /** Optional encoded string to continue paging. */
+        @com.google.api.client.util.Key("continue")
+        private java.lang.String continue__;
+
+        /** Optional encoded string to continue paging.
+         */
+        public java.lang.String getContinue() {
+          return continue__;
+        }
+
+        /** Optional encoded string to continue paging. */
+        public List setContinue(java.lang.String continue__) {
+          this.continue__ = continue__;
+          return this;
+        }
+
+        /**
+         * Allows to filter resources based on a specific value for a field name. Send this in a
+         * query string format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String fieldSelector;
+
+        /** Allows to filter resources based on a specific value for a field name. Send this in a query string
+       format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
+         */
+        public java.lang.String getFieldSelector() {
+          return fieldSelector;
+        }
+
+        /**
+         * Allows to filter resources based on a specific value for a field name. Send this in a
+         * query string format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
+         */
+        public List setFieldSelector(java.lang.String fieldSelector) {
+          this.fieldSelector = fieldSelector;
+          return this;
+        }
+
+        /** Not currently used by Cloud Run. */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean includeUninitialized;
+
+        /** Not currently used by Cloud Run.
+         */
+        public java.lang.Boolean getIncludeUninitialized() {
+          return includeUninitialized;
+        }
+
+        /** Not currently used by Cloud Run. */
+        public List setIncludeUninitialized(java.lang.Boolean includeUninitialized) {
+          this.includeUninitialized = includeUninitialized;
+          return this;
+        }
+
+        /**
+         * Allows to filter resources based on a label. Supported operations are =, !=, exists, in,
+         * and notIn.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String labelSelector;
+
+        /** Allows to filter resources based on a label. Supported operations are =, !=, exists, in, and notIn.
+         */
+        public java.lang.String getLabelSelector() {
+          return labelSelector;
+        }
+
+        /**
+         * Allows to filter resources based on a label. Supported operations are =, !=, exists, in,
+         * and notIn.
+         */
+        public List setLabelSelector(java.lang.String labelSelector) {
+          this.labelSelector = labelSelector;
+          return this;
+        }
+
+        /** The maximum number of records that should be returned. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer limit;
+
+        /** The maximum number of records that should be returned.
+         */
+        public java.lang.Integer getLimit() {
+          return limit;
+        }
+
+        /** The maximum number of records that should be returned. */
+        public List setLimit(java.lang.Integer limit) {
+          this.limit = limit;
+          return this;
+        }
+
+        /**
+         * The baseline resource version from which the list or watch operation should start. Not
+         * currently used by Cloud Run.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String resourceVersion;
+
+        /** The baseline resource version from which the list or watch operation should start. Not currently
+       used by Cloud Run.
+         */
+        public java.lang.String getResourceVersion() {
+          return resourceVersion;
+        }
+
+        /**
+         * The baseline resource version from which the list or watch operation should start. Not
+         * currently used by Cloud Run.
+         */
+        public List setResourceVersion(java.lang.String resourceVersion) {
+          this.resourceVersion = resourceVersion;
+          return this;
+        }
+
+        /**
+         * Flag that indicates that the client expects to watch this resource as well. Not currently
+         * used by Cloud Run.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean watch;
+
+        /** Flag that indicates that the client expects to watch this resource as well. Not currently used by
+       Cloud Run.
+         */
+        public java.lang.Boolean getWatch() {
+          return watch;
+        }
+
+        /**
+         * Flag that indicates that the client expects to watch this resource as well. Not currently
+         * used by Cloud Run.
+         */
+        public List setWatch(java.lang.Boolean watch) {
+          this.watch = watch;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Rpc to replace a cloudauditlog.
+       *
+       * Only the spec and metadata labels and annotations are modifiable. After the Update request, Cloud
+       * Run will work to make the 'status' match the requested 'spec'.
+       *
+       * May provide metadata.resourceVersion to enforce update from last read for optimistic concurrency
+       * control.
+       *
+       * Create a request for the method "cloudauditlogs.replaceCloudAuditLog".
+       *
+       * This request holds the parameters needed by the run server.  After setting any optional
+       * parameters, call the {@link ReplaceCloudAuditLog#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name The name of the cloudauditlog being retrieved. If needed, replace
+      {namespace_id} with the project
+       *        ID.
+       * @param content the {@link com.google.api.services.run.v1alpha1.model.CloudAuditLog}
+       * @return the request
+       */
+      public ReplaceCloudAuditLog replaceCloudAuditLog(java.lang.String name, com.google.api.services.run.v1alpha1.model.CloudAuditLog content) throws java.io.IOException {
+        ReplaceCloudAuditLog result = new ReplaceCloudAuditLog(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class ReplaceCloudAuditLog extends CloudRunRequest<com.google.api.services.run.v1alpha1.model.CloudAuditLog> {
+
+        private static final String REST_PATH = "apis/events.cloud.google.com/v1alpha1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^namespaces/[^/]+/cloudauditlogs/[^/]+$");
+
+        /**
+         * Rpc to replace a cloudauditlog.
+         *
+         * Only the spec and metadata labels and annotations are modifiable. After the Update request,
+         * Cloud Run will work to make the 'status' match the requested 'spec'.
+         *
+         * May provide metadata.resourceVersion to enforce update from last read for optimistic
+         * concurrency control.
+         *
+         * Create a request for the method "cloudauditlogs.replaceCloudAuditLog".
+         *
+         * This request holds the parameters needed by the the run server.  After setting any optional
+         * parameters, call the {@link ReplaceCloudAuditLog#execute()} method to invoke the remote
+         * operation. <p> {@link ReplaceCloudAuditLog#initialize(com.google.api.client.googleapis.services
+         * .AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name The name of the cloudauditlog being retrieved. If needed, replace
+      {namespace_id} with the project
+       *        ID.
+         * @param content the {@link com.google.api.services.run.v1alpha1.model.CloudAuditLog}
+         * @since 1.13
+         */
+        protected ReplaceCloudAuditLog(java.lang.String name, com.google.api.services.run.v1alpha1.model.CloudAuditLog content) {
+          super(CloudRun.this, "PUT", REST_PATH, content, com.google.api.services.run.v1alpha1.model.CloudAuditLog.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^namespaces/[^/]+/cloudauditlogs/[^/]+$");
+          }
+        }
+
+        @Override
+        public ReplaceCloudAuditLog set$Xgafv(java.lang.String $Xgafv) {
+          return (ReplaceCloudAuditLog) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ReplaceCloudAuditLog setAccessToken(java.lang.String accessToken) {
+          return (ReplaceCloudAuditLog) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ReplaceCloudAuditLog setAlt(java.lang.String alt) {
+          return (ReplaceCloudAuditLog) super.setAlt(alt);
+        }
+
+        @Override
+        public ReplaceCloudAuditLog setCallback(java.lang.String callback) {
+          return (ReplaceCloudAuditLog) super.setCallback(callback);
+        }
+
+        @Override
+        public ReplaceCloudAuditLog setFields(java.lang.String fields) {
+          return (ReplaceCloudAuditLog) super.setFields(fields);
+        }
+
+        @Override
+        public ReplaceCloudAuditLog setKey(java.lang.String key) {
+          return (ReplaceCloudAuditLog) super.setKey(key);
+        }
+
+        @Override
+        public ReplaceCloudAuditLog setOauthToken(java.lang.String oauthToken) {
+          return (ReplaceCloudAuditLog) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ReplaceCloudAuditLog setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ReplaceCloudAuditLog) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ReplaceCloudAuditLog setQuotaUser(java.lang.String quotaUser) {
+          return (ReplaceCloudAuditLog) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ReplaceCloudAuditLog setUploadType(java.lang.String uploadType) {
+          return (ReplaceCloudAuditLog) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ReplaceCloudAuditLog setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ReplaceCloudAuditLog) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The name of the cloudauditlog being retrieved. If needed, replace {namespace_id} with the
+         * project ID.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The name of the cloudauditlog being retrieved. If needed, replace {namespace_id} with the project
+       ID.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * The name of the cloudauditlog being retrieved. If needed, replace {namespace_id} with the
+         * project ID.
+         */
+        public ReplaceCloudAuditLog setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^namespaces/[^/]+/cloudauditlogs/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public ReplaceCloudAuditLog set(String parameterName, Object value) {
+          return (ReplaceCloudAuditLog) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the Configurations collection.
      *
      * <p>The typical use is:</p>
@@ -5047,6 +5986,938 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
     }
     /**
+     * An accessor for creating requests from the Storages collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code CloudRun run = new CloudRun(...);}
+     *   {@code CloudRun.Storages.List request = run.storages().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Storages storages() {
+      return new Storages();
+    }
+
+    /**
+     * The "storages" collection of methods.
+     */
+    public class Storages {
+
+      /**
+       * Creates a new storage.
+       *
+       * Create a request for the method "storages.create".
+       *
+       * This request holds the parameters needed by the run server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent The project ID or project number in which this storage should
+      be created.
+       * @param content the {@link com.google.api.services.run.v1alpha1.model.Storage}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.run.v1alpha1.model.Storage content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends CloudRunRequest<com.google.api.services.run.v1alpha1.model.Storage> {
+
+        private static final String REST_PATH = "apis/events.cloud.google.com/v1alpha1/{+parent}/storages";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^namespaces/[^/]+$");
+
+        /**
+         * Creates a new storage.
+         *
+         * Create a request for the method "storages.create".
+         *
+         * This request holds the parameters needed by the the run server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent The project ID or project number in which this storage should
+      be created.
+         * @param content the {@link com.google.api.services.run.v1alpha1.model.Storage}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.run.v1alpha1.model.Storage content) {
+          super(CloudRun.this, "POST", REST_PATH, content, com.google.api.services.run.v1alpha1.model.Storage.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^namespaces/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The project ID or project number in which this storage should be created.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** The project ID or project number in which this storage should be created.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * The project ID or project number in which this storage should be created.
+         */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^namespaces/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Rpc to delete a storage.
+       *
+       * Create a request for the method "storages.delete".
+       *
+       * This request holds the parameters needed by the run server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name The name of the storage being deleted. If needed, replace
+      {namespace_id} with the project ID.
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends CloudRunRequest<com.google.api.services.run.v1alpha1.model.Empty> {
+
+        private static final String REST_PATH = "apis/events.cloud.google.com/v1alpha1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^namespaces/[^/]+/storages/[^/]+$");
+
+        /**
+         * Rpc to delete a storage.
+         *
+         * Create a request for the method "storages.delete".
+         *
+         * This request holds the parameters needed by the the run server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The name of the storage being deleted. If needed, replace
+      {namespace_id} with the project ID.
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1alpha1.model.Empty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^namespaces/[^/]+/storages/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The name of the storage being deleted. If needed, replace {namespace_id} with the project
+         * ID.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The name of the storage being deleted. If needed, replace {namespace_id} with the project ID.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * The name of the storage being deleted. If needed, replace {namespace_id} with the project
+         * ID.
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^namespaces/[^/]+/storages/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** Cloud Run currently ignores this parameter. */
+        @com.google.api.client.util.Key
+        private java.lang.String apiVersion;
+
+        /** Cloud Run currently ignores this parameter.
+         */
+        public java.lang.String getApiVersion() {
+          return apiVersion;
+        }
+
+        /** Cloud Run currently ignores this parameter. */
+        public Delete setApiVersion(java.lang.String apiVersion) {
+          this.apiVersion = apiVersion;
+          return this;
+        }
+
+        /** Cloud Run currently ignores this parameter. */
+        @com.google.api.client.util.Key
+        private java.lang.String kind;
+
+        /** Cloud Run currently ignores this parameter.
+         */
+        public java.lang.String getKind() {
+          return kind;
+        }
+
+        /** Cloud Run currently ignores this parameter. */
+        public Delete setKind(java.lang.String kind) {
+          this.kind = kind;
+          return this;
+        }
+
+        /**
+         * Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and
+         * deletes in the background. Please see kubernetes.io/docs/concepts/workloads/controllers
+         * /garbage-collection/ for more information.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String propagationPolicy;
+
+        /** Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and deletes
+       in the background. Please see kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/
+       for more information.
+         */
+        public java.lang.String getPropagationPolicy() {
+          return propagationPolicy;
+        }
+
+        /**
+         * Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and
+         * deletes in the background. Please see kubernetes.io/docs/concepts/workloads/controllers
+         * /garbage-collection/ for more information.
+         */
+        public Delete setPropagationPolicy(java.lang.String propagationPolicy) {
+          this.propagationPolicy = propagationPolicy;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Rpc to get information about a storage.
+       *
+       * Create a request for the method "storages.get".
+       *
+       * This request holds the parameters needed by the run server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name The name of the storage being retrieved. If needed, replace
+      {namespace_id} with the project ID.
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends CloudRunRequest<com.google.api.services.run.v1alpha1.model.Storage> {
+
+        private static final String REST_PATH = "apis/events.cloud.google.com/v1alpha1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^namespaces/[^/]+/storages/[^/]+$");
+
+        /**
+         * Rpc to get information about a storage.
+         *
+         * Create a request for the method "storages.get".
+         *
+         * This request holds the parameters needed by the the run server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The name of the storage being retrieved. If needed, replace
+      {namespace_id} with the project ID.
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v1alpha1.model.Storage.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^namespaces/[^/]+/storages/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The name of the storage being retrieved. If needed, replace {namespace_id} with the
+         * project ID.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The name of the storage being retrieved. If needed, replace {namespace_id} with the project ID.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * The name of the storage being retrieved. If needed, replace {namespace_id} with the
+         * project ID.
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^namespaces/[^/]+/storages/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Rpc to list storages.
+       *
+       * Create a request for the method "storages.list".
+       *
+       * This request holds the parameters needed by the run server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent The project ID or project number from which the storages should
+      be listed.
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends CloudRunRequest<com.google.api.services.run.v1alpha1.model.ListStoragesResponse> {
+
+        private static final String REST_PATH = "apis/events.cloud.google.com/v1alpha1/{+parent}/storages";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^namespaces/[^/]+$");
+
+        /**
+         * Rpc to list storages.
+         *
+         * Create a request for the method "storages.list".
+         *
+         * This request holds the parameters needed by the the run server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent The project ID or project number from which the storages should
+      be listed.
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v1alpha1.model.ListStoragesResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^namespaces/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The project ID or project number from which the storages should be listed.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** The project ID or project number from which the storages should be listed.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * The project ID or project number from which the storages should be listed.
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^namespaces/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /** Optional encoded string to continue paging. */
+        @com.google.api.client.util.Key("continue")
+        private java.lang.String continue__;
+
+        /** Optional encoded string to continue paging.
+         */
+        public java.lang.String getContinue() {
+          return continue__;
+        }
+
+        /** Optional encoded string to continue paging. */
+        public List setContinue(java.lang.String continue__) {
+          this.continue__ = continue__;
+          return this;
+        }
+
+        /**
+         * Allows to filter resources based on a specific value for a field name. Send this in a
+         * query string format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String fieldSelector;
+
+        /** Allows to filter resources based on a specific value for a field name. Send this in a query string
+       format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
+         */
+        public java.lang.String getFieldSelector() {
+          return fieldSelector;
+        }
+
+        /**
+         * Allows to filter resources based on a specific value for a field name. Send this in a
+         * query string format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
+         */
+        public List setFieldSelector(java.lang.String fieldSelector) {
+          this.fieldSelector = fieldSelector;
+          return this;
+        }
+
+        /** Not currently used by Cloud Run. */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean includeUninitialized;
+
+        /** Not currently used by Cloud Run.
+         */
+        public java.lang.Boolean getIncludeUninitialized() {
+          return includeUninitialized;
+        }
+
+        /** Not currently used by Cloud Run. */
+        public List setIncludeUninitialized(java.lang.Boolean includeUninitialized) {
+          this.includeUninitialized = includeUninitialized;
+          return this;
+        }
+
+        /**
+         * Allows to filter resources based on a label. Supported operations are =, !=, exists, in,
+         * and notIn.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String labelSelector;
+
+        /** Allows to filter resources based on a label. Supported operations are =, !=, exists, in, and notIn.
+         */
+        public java.lang.String getLabelSelector() {
+          return labelSelector;
+        }
+
+        /**
+         * Allows to filter resources based on a label. Supported operations are =, !=, exists, in,
+         * and notIn.
+         */
+        public List setLabelSelector(java.lang.String labelSelector) {
+          this.labelSelector = labelSelector;
+          return this;
+        }
+
+        /** The maximum number of records that should be returned. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer limit;
+
+        /** The maximum number of records that should be returned.
+         */
+        public java.lang.Integer getLimit() {
+          return limit;
+        }
+
+        /** The maximum number of records that should be returned. */
+        public List setLimit(java.lang.Integer limit) {
+          this.limit = limit;
+          return this;
+        }
+
+        /**
+         * The baseline resource version from which the list or watch operation should start. Not
+         * currently used by Cloud Run.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String resourceVersion;
+
+        /** The baseline resource version from which the list or watch operation should start. Not currently
+       used by Cloud Run.
+         */
+        public java.lang.String getResourceVersion() {
+          return resourceVersion;
+        }
+
+        /**
+         * The baseline resource version from which the list or watch operation should start. Not
+         * currently used by Cloud Run.
+         */
+        public List setResourceVersion(java.lang.String resourceVersion) {
+          this.resourceVersion = resourceVersion;
+          return this;
+        }
+
+        /**
+         * Flag that indicates that the client expects to watch this resource as well. Not currently
+         * used by Cloud Run.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean watch;
+
+        /** Flag that indicates that the client expects to watch this resource as well. Not currently used by
+       Cloud Run.
+         */
+        public java.lang.Boolean getWatch() {
+          return watch;
+        }
+
+        /**
+         * Flag that indicates that the client expects to watch this resource as well. Not currently
+         * used by Cloud Run.
+         */
+        public List setWatch(java.lang.Boolean watch) {
+          this.watch = watch;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Rpc to replace a storage.
+       *
+       * Only the spec and metadata labels and annotations are modifiable. After the Update request, Cloud
+       * Run will work to make the 'status' match the requested 'spec'.
+       *
+       * May provide metadata.resourceVersion to enforce update from last read for optimistic concurrency
+       * control.
+       *
+       * Create a request for the method "storages.replaceStorage".
+       *
+       * This request holds the parameters needed by the run server.  After setting any optional
+       * parameters, call the {@link ReplaceStorage#execute()} method to invoke the remote operation.
+       *
+       * @param name The name of the storage being retrieved. If needed, replace
+      {namespace_id} with the project ID.
+       * @param content the {@link com.google.api.services.run.v1alpha1.model.Storage}
+       * @return the request
+       */
+      public ReplaceStorage replaceStorage(java.lang.String name, com.google.api.services.run.v1alpha1.model.Storage content) throws java.io.IOException {
+        ReplaceStorage result = new ReplaceStorage(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class ReplaceStorage extends CloudRunRequest<com.google.api.services.run.v1alpha1.model.Storage> {
+
+        private static final String REST_PATH = "apis/events.cloud.google.com/v1alpha1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^namespaces/[^/]+/storages/[^/]+$");
+
+        /**
+         * Rpc to replace a storage.
+         *
+         * Only the spec and metadata labels and annotations are modifiable. After the Update request,
+         * Cloud Run will work to make the 'status' match the requested 'spec'.
+         *
+         * May provide metadata.resourceVersion to enforce update from last read for optimistic
+         * concurrency control.
+         *
+         * Create a request for the method "storages.replaceStorage".
+         *
+         * This request holds the parameters needed by the the run server.  After setting any optional
+         * parameters, call the {@link ReplaceStorage#execute()} method to invoke the remote operation.
+         * <p> {@link ReplaceStorage#initialize(com.google.api.client.googleapis.services.AbstractGoogleCl
+         * ientRequest)} must be called to initialize this instance immediately after invoking the
+         * constructor. </p>
+         *
+         * @param name The name of the storage being retrieved. If needed, replace
+      {namespace_id} with the project ID.
+         * @param content the {@link com.google.api.services.run.v1alpha1.model.Storage}
+         * @since 1.13
+         */
+        protected ReplaceStorage(java.lang.String name, com.google.api.services.run.v1alpha1.model.Storage content) {
+          super(CloudRun.this, "PUT", REST_PATH, content, com.google.api.services.run.v1alpha1.model.Storage.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^namespaces/[^/]+/storages/[^/]+$");
+          }
+        }
+
+        @Override
+        public ReplaceStorage set$Xgafv(java.lang.String $Xgafv) {
+          return (ReplaceStorage) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ReplaceStorage setAccessToken(java.lang.String accessToken) {
+          return (ReplaceStorage) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ReplaceStorage setAlt(java.lang.String alt) {
+          return (ReplaceStorage) super.setAlt(alt);
+        }
+
+        @Override
+        public ReplaceStorage setCallback(java.lang.String callback) {
+          return (ReplaceStorage) super.setCallback(callback);
+        }
+
+        @Override
+        public ReplaceStorage setFields(java.lang.String fields) {
+          return (ReplaceStorage) super.setFields(fields);
+        }
+
+        @Override
+        public ReplaceStorage setKey(java.lang.String key) {
+          return (ReplaceStorage) super.setKey(key);
+        }
+
+        @Override
+        public ReplaceStorage setOauthToken(java.lang.String oauthToken) {
+          return (ReplaceStorage) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ReplaceStorage setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ReplaceStorage) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ReplaceStorage setQuotaUser(java.lang.String quotaUser) {
+          return (ReplaceStorage) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ReplaceStorage setUploadType(java.lang.String uploadType) {
+          return (ReplaceStorage) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ReplaceStorage setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ReplaceStorage) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The name of the storage being retrieved. If needed, replace {namespace_id} with the
+         * project ID.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The name of the storage being retrieved. If needed, replace {namespace_id} with the project ID.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * The name of the storage being retrieved. If needed, replace {namespace_id} with the
+         * project ID.
+         */
+        public ReplaceStorage setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^namespaces/[^/]+/storages/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public ReplaceStorage set(String parameterName, Object value) {
+          return (ReplaceStorage) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the Triggers collection.
      *
      * <p>The typical use is:</p>
@@ -6395,6 +8266,947 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the Cloudauditlogs collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudRun run = new CloudRun(...);}
+       *   {@code CloudRun.Cloudauditlogs.List request = run.cloudauditlogs().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Cloudauditlogs cloudauditlogs() {
+        return new Cloudauditlogs();
+      }
+
+      /**
+       * The "cloudauditlogs" collection of methods.
+       */
+      public class Cloudauditlogs {
+
+        /**
+         * Creates a new cloudauditlog.
+         *
+         * Create a request for the method "cloudauditlogs.create".
+         *
+         * This request holds the parameters needed by the run server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent The project ID or project number in which this cloudauditlog should
+        be created.
+         * @param content the {@link com.google.api.services.run.v1alpha1.model.CloudAuditLog}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.run.v1alpha1.model.CloudAuditLog content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends CloudRunRequest<com.google.api.services.run.v1alpha1.model.CloudAuditLog> {
+
+          private static final String REST_PATH = "v1alpha1/{+parent}/cloudauditlogs";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new cloudauditlog.
+           *
+           * Create a request for the method "cloudauditlogs.create".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent The project ID or project number in which this cloudauditlog should
+        be created.
+           * @param content the {@link com.google.api.services.run.v1alpha1.model.CloudAuditLog}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.run.v1alpha1.model.CloudAuditLog content) {
+            super(CloudRun.this, "POST", REST_PATH, content, com.google.api.services.run.v1alpha1.model.CloudAuditLog.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The project ID or project number in which this cloudauditlog should be created.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** The project ID or project number in which this cloudauditlog should be created.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * The project ID or project number in which this cloudauditlog should be created.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Rpc to delete a cloudauditlog.
+         *
+         * Create a request for the method "cloudauditlogs.delete".
+         *
+         * This request holds the parameters needed by the run server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the cloudauditlog being deleted. If needed, replace
+        {namespace_id} with the project ID.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends CloudRunRequest<com.google.api.services.run.v1alpha1.model.Empty> {
+
+          private static final String REST_PATH = "v1alpha1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/cloudauditlogs/[^/]+$");
+
+          /**
+           * Rpc to delete a cloudauditlog.
+           *
+           * Create a request for the method "cloudauditlogs.delete".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the cloudauditlog being deleted. If needed, replace
+        {namespace_id} with the project ID.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1alpha1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/cloudauditlogs/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The name of the cloudauditlog being deleted. If needed, replace {namespace_id} with the
+           * project ID.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the cloudauditlog being deleted. If needed, replace {namespace_id} with the project ID.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The name of the cloudauditlog being deleted. If needed, replace {namespace_id} with the
+           * project ID.
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/cloudauditlogs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Cloud Run currently ignores this parameter. */
+          @com.google.api.client.util.Key
+          private java.lang.String apiVersion;
+
+          /** Cloud Run currently ignores this parameter.
+           */
+          public java.lang.String getApiVersion() {
+            return apiVersion;
+          }
+
+          /** Cloud Run currently ignores this parameter. */
+          public Delete setApiVersion(java.lang.String apiVersion) {
+            this.apiVersion = apiVersion;
+            return this;
+          }
+
+          /** Cloud Run currently ignores this parameter. */
+          @com.google.api.client.util.Key
+          private java.lang.String kind;
+
+          /** Cloud Run currently ignores this parameter.
+           */
+          public java.lang.String getKind() {
+            return kind;
+          }
+
+          /** Cloud Run currently ignores this parameter. */
+          public Delete setKind(java.lang.String kind) {
+            this.kind = kind;
+            return this;
+          }
+
+          /**
+           * Specifies the propagation policy of delete. Cloud Run currently ignores this setting,
+           * and deletes in the background. Please see
+           * kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/ for more
+           * information.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String propagationPolicy;
+
+          /** Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and deletes
+         in the background. Please see kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/
+         for more information.
+           */
+          public java.lang.String getPropagationPolicy() {
+            return propagationPolicy;
+          }
+
+          /**
+           * Specifies the propagation policy of delete. Cloud Run currently ignores this setting,
+           * and deletes in the background. Please see
+           * kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/ for more
+           * information.
+           */
+          public Delete setPropagationPolicy(java.lang.String propagationPolicy) {
+            this.propagationPolicy = propagationPolicy;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Rpc to get information about a cloudauditlog.
+         *
+         * Create a request for the method "cloudauditlogs.get".
+         *
+         * This request holds the parameters needed by the run server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the cloudauditlog being retrieved. If needed, replace
+        {namespace_id} with the project
+         *        ID.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends CloudRunRequest<com.google.api.services.run.v1alpha1.model.CloudAuditLog> {
+
+          private static final String REST_PATH = "v1alpha1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/cloudauditlogs/[^/]+$");
+
+          /**
+           * Rpc to get information about a cloudauditlog.
+           *
+           * Create a request for the method "cloudauditlogs.get".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the cloudauditlog being retrieved. If needed, replace
+        {namespace_id} with the project
+         *        ID.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v1alpha1.model.CloudAuditLog.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/cloudauditlogs/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The name of the cloudauditlog being retrieved. If needed, replace {namespace_id} with
+           * the project ID.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the cloudauditlog being retrieved. If needed, replace {namespace_id} with the project
+         ID.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The name of the cloudauditlog being retrieved. If needed, replace {namespace_id} with
+           * the project ID.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/cloudauditlogs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Rpc to list cloudauditlogs.
+         *
+         * Create a request for the method "cloudauditlogs.list".
+         *
+         * This request holds the parameters needed by the run server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent The project ID or project number from which the cloudauditlogs should
+        be listed.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends CloudRunRequest<com.google.api.services.run.v1alpha1.model.ListCloudAuditLogsResponse> {
+
+          private static final String REST_PATH = "v1alpha1/{+parent}/cloudauditlogs";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Rpc to list cloudauditlogs.
+           *
+           * Create a request for the method "cloudauditlogs.list".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent The project ID or project number from which the cloudauditlogs should
+        be listed.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v1alpha1.model.ListCloudAuditLogsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The project ID or project number from which the cloudauditlogs should be listed.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** The project ID or project number from which the cloudauditlogs should be listed.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * The project ID or project number from which the cloudauditlogs should be listed.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional encoded string to continue paging. */
+          @com.google.api.client.util.Key("continue")
+          private java.lang.String continue__;
+
+          /** Optional encoded string to continue paging.
+           */
+          public java.lang.String getContinue() {
+            return continue__;
+          }
+
+          /** Optional encoded string to continue paging. */
+          public List setContinue(java.lang.String continue__) {
+            this.continue__ = continue__;
+            return this;
+          }
+
+          /**
+           * Allows to filter resources based on a specific value for a field name. Send this in a
+           * query string format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String fieldSelector;
+
+          /** Allows to filter resources based on a specific value for a field name. Send this in a query string
+         format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
+           */
+          public java.lang.String getFieldSelector() {
+            return fieldSelector;
+          }
+
+          /**
+           * Allows to filter resources based on a specific value for a field name. Send this in a
+           * query string format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
+           */
+          public List setFieldSelector(java.lang.String fieldSelector) {
+            this.fieldSelector = fieldSelector;
+            return this;
+          }
+
+          /** Not currently used by Cloud Run. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean includeUninitialized;
+
+          /** Not currently used by Cloud Run.
+           */
+          public java.lang.Boolean getIncludeUninitialized() {
+            return includeUninitialized;
+          }
+
+          /** Not currently used by Cloud Run. */
+          public List setIncludeUninitialized(java.lang.Boolean includeUninitialized) {
+            this.includeUninitialized = includeUninitialized;
+            return this;
+          }
+
+          /**
+           * Allows to filter resources based on a label. Supported operations are =, !=, exists,
+           * in, and notIn.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String labelSelector;
+
+          /** Allows to filter resources based on a label. Supported operations are =, !=, exists, in, and notIn.
+           */
+          public java.lang.String getLabelSelector() {
+            return labelSelector;
+          }
+
+          /**
+           * Allows to filter resources based on a label. Supported operations are =, !=, exists,
+           * in, and notIn.
+           */
+          public List setLabelSelector(java.lang.String labelSelector) {
+            this.labelSelector = labelSelector;
+            return this;
+          }
+
+          /** The maximum number of records that should be returned. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer limit;
+
+          /** The maximum number of records that should be returned.
+           */
+          public java.lang.Integer getLimit() {
+            return limit;
+          }
+
+          /** The maximum number of records that should be returned. */
+          public List setLimit(java.lang.Integer limit) {
+            this.limit = limit;
+            return this;
+          }
+
+          /**
+           * The baseline resource version from which the list or watch operation should start. Not
+           * currently used by Cloud Run.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resourceVersion;
+
+          /** The baseline resource version from which the list or watch operation should start. Not currently
+         used by Cloud Run.
+           */
+          public java.lang.String getResourceVersion() {
+            return resourceVersion;
+          }
+
+          /**
+           * The baseline resource version from which the list or watch operation should start. Not
+           * currently used by Cloud Run.
+           */
+          public List setResourceVersion(java.lang.String resourceVersion) {
+            this.resourceVersion = resourceVersion;
+            return this;
+          }
+
+          /**
+           * Flag that indicates that the client expects to watch this resource as well. Not
+           * currently used by Cloud Run.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean watch;
+
+          /** Flag that indicates that the client expects to watch this resource as well. Not currently used by
+         Cloud Run.
+           */
+          public java.lang.Boolean getWatch() {
+            return watch;
+          }
+
+          /**
+           * Flag that indicates that the client expects to watch this resource as well. Not
+           * currently used by Cloud Run.
+           */
+          public List setWatch(java.lang.Boolean watch) {
+            this.watch = watch;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Rpc to replace a cloudauditlog.
+         *
+         * Only the spec and metadata labels and annotations are modifiable. After the Update request, Cloud
+         * Run will work to make the 'status' match the requested 'spec'.
+         *
+         * May provide metadata.resourceVersion to enforce update from last read for optimistic concurrency
+         * control.
+         *
+         * Create a request for the method "cloudauditlogs.replaceCloudAuditLog".
+         *
+         * This request holds the parameters needed by the run server.  After setting any optional
+         * parameters, call the {@link ReplaceCloudAuditLog#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name The name of the cloudauditlog being retrieved. If needed, replace
+        {namespace_id} with the project
+         *        ID.
+         * @param content the {@link com.google.api.services.run.v1alpha1.model.CloudAuditLog}
+         * @return the request
+         */
+        public ReplaceCloudAuditLog replaceCloudAuditLog(java.lang.String name, com.google.api.services.run.v1alpha1.model.CloudAuditLog content) throws java.io.IOException {
+          ReplaceCloudAuditLog result = new ReplaceCloudAuditLog(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ReplaceCloudAuditLog extends CloudRunRequest<com.google.api.services.run.v1alpha1.model.CloudAuditLog> {
+
+          private static final String REST_PATH = "v1alpha1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/cloudauditlogs/[^/]+$");
+
+          /**
+           * Rpc to replace a cloudauditlog.
+           *
+           * Only the spec and metadata labels and annotations are modifiable. After the Update request,
+           * Cloud Run will work to make the 'status' match the requested 'spec'.
+           *
+           * May provide metadata.resourceVersion to enforce update from last read for optimistic
+           * concurrency control.
+           *
+           * Create a request for the method "cloudauditlogs.replaceCloudAuditLog".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link ReplaceCloudAuditLog#execute()} method to invoke the remote
+           * operation. <p> {@link ReplaceCloudAuditLog#initialize(com.google.api.client.googleapis.services
+           * .AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name The name of the cloudauditlog being retrieved. If needed, replace
+        {namespace_id} with the project
+         *        ID.
+           * @param content the {@link com.google.api.services.run.v1alpha1.model.CloudAuditLog}
+           * @since 1.13
+           */
+          protected ReplaceCloudAuditLog(java.lang.String name, com.google.api.services.run.v1alpha1.model.CloudAuditLog content) {
+            super(CloudRun.this, "PUT", REST_PATH, content, com.google.api.services.run.v1alpha1.model.CloudAuditLog.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/cloudauditlogs/[^/]+$");
+            }
+          }
+
+          @Override
+          public ReplaceCloudAuditLog set$Xgafv(java.lang.String $Xgafv) {
+            return (ReplaceCloudAuditLog) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ReplaceCloudAuditLog setAccessToken(java.lang.String accessToken) {
+            return (ReplaceCloudAuditLog) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ReplaceCloudAuditLog setAlt(java.lang.String alt) {
+            return (ReplaceCloudAuditLog) super.setAlt(alt);
+          }
+
+          @Override
+          public ReplaceCloudAuditLog setCallback(java.lang.String callback) {
+            return (ReplaceCloudAuditLog) super.setCallback(callback);
+          }
+
+          @Override
+          public ReplaceCloudAuditLog setFields(java.lang.String fields) {
+            return (ReplaceCloudAuditLog) super.setFields(fields);
+          }
+
+          @Override
+          public ReplaceCloudAuditLog setKey(java.lang.String key) {
+            return (ReplaceCloudAuditLog) super.setKey(key);
+          }
+
+          @Override
+          public ReplaceCloudAuditLog setOauthToken(java.lang.String oauthToken) {
+            return (ReplaceCloudAuditLog) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ReplaceCloudAuditLog setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ReplaceCloudAuditLog) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ReplaceCloudAuditLog setQuotaUser(java.lang.String quotaUser) {
+            return (ReplaceCloudAuditLog) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ReplaceCloudAuditLog setUploadType(java.lang.String uploadType) {
+            return (ReplaceCloudAuditLog) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ReplaceCloudAuditLog setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ReplaceCloudAuditLog) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The name of the cloudauditlog being retrieved. If needed, replace {namespace_id} with
+           * the project ID.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the cloudauditlog being retrieved. If needed, replace {namespace_id} with the project
+         ID.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The name of the cloudauditlog being retrieved. If needed, replace {namespace_id} with
+           * the project ID.
+           */
+          public ReplaceCloudAuditLog setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/cloudauditlogs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public ReplaceCloudAuditLog set(String parameterName, Object value) {
+            return (ReplaceCloudAuditLog) super.set(parameterName, value);
           }
         }
 
@@ -11590,6 +14402,940 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public TestIamPermissions set(String parameterName, Object value) {
             return (TestIamPermissions) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the Storages collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudRun run = new CloudRun(...);}
+       *   {@code CloudRun.Storages.List request = run.storages().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Storages storages() {
+        return new Storages();
+      }
+
+      /**
+       * The "storages" collection of methods.
+       */
+      public class Storages {
+
+        /**
+         * Creates a new storage.
+         *
+         * Create a request for the method "storages.create".
+         *
+         * This request holds the parameters needed by the run server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent The project ID or project number in which this storage should
+        be created.
+         * @param content the {@link com.google.api.services.run.v1alpha1.model.Storage}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.run.v1alpha1.model.Storage content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends CloudRunRequest<com.google.api.services.run.v1alpha1.model.Storage> {
+
+          private static final String REST_PATH = "v1alpha1/{+parent}/storages";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new storage.
+           *
+           * Create a request for the method "storages.create".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent The project ID or project number in which this storage should
+        be created.
+           * @param content the {@link com.google.api.services.run.v1alpha1.model.Storage}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.run.v1alpha1.model.Storage content) {
+            super(CloudRun.this, "POST", REST_PATH, content, com.google.api.services.run.v1alpha1.model.Storage.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The project ID or project number in which this storage should be created.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** The project ID or project number in which this storage should be created.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * The project ID or project number in which this storage should be created.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Rpc to delete a storage.
+         *
+         * Create a request for the method "storages.delete".
+         *
+         * This request holds the parameters needed by the run server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the storage being deleted. If needed, replace
+        {namespace_id} with the project ID.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends CloudRunRequest<com.google.api.services.run.v1alpha1.model.Empty> {
+
+          private static final String REST_PATH = "v1alpha1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/storages/[^/]+$");
+
+          /**
+           * Rpc to delete a storage.
+           *
+           * Create a request for the method "storages.delete".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the storage being deleted. If needed, replace
+        {namespace_id} with the project ID.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1alpha1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/storages/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The name of the storage being deleted. If needed, replace {namespace_id} with the
+           * project ID.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the storage being deleted. If needed, replace {namespace_id} with the project ID.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The name of the storage being deleted. If needed, replace {namespace_id} with the
+           * project ID.
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/storages/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Cloud Run currently ignores this parameter. */
+          @com.google.api.client.util.Key
+          private java.lang.String apiVersion;
+
+          /** Cloud Run currently ignores this parameter.
+           */
+          public java.lang.String getApiVersion() {
+            return apiVersion;
+          }
+
+          /** Cloud Run currently ignores this parameter. */
+          public Delete setApiVersion(java.lang.String apiVersion) {
+            this.apiVersion = apiVersion;
+            return this;
+          }
+
+          /** Cloud Run currently ignores this parameter. */
+          @com.google.api.client.util.Key
+          private java.lang.String kind;
+
+          /** Cloud Run currently ignores this parameter.
+           */
+          public java.lang.String getKind() {
+            return kind;
+          }
+
+          /** Cloud Run currently ignores this parameter. */
+          public Delete setKind(java.lang.String kind) {
+            this.kind = kind;
+            return this;
+          }
+
+          /**
+           * Specifies the propagation policy of delete. Cloud Run currently ignores this setting,
+           * and deletes in the background. Please see
+           * kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/ for more
+           * information.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String propagationPolicy;
+
+          /** Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and deletes
+         in the background. Please see kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/
+         for more information.
+           */
+          public java.lang.String getPropagationPolicy() {
+            return propagationPolicy;
+          }
+
+          /**
+           * Specifies the propagation policy of delete. Cloud Run currently ignores this setting,
+           * and deletes in the background. Please see
+           * kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/ for more
+           * information.
+           */
+          public Delete setPropagationPolicy(java.lang.String propagationPolicy) {
+            this.propagationPolicy = propagationPolicy;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Rpc to get information about a storage.
+         *
+         * Create a request for the method "storages.get".
+         *
+         * This request holds the parameters needed by the run server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the storage being retrieved. If needed, replace
+        {namespace_id} with the project ID.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends CloudRunRequest<com.google.api.services.run.v1alpha1.model.Storage> {
+
+          private static final String REST_PATH = "v1alpha1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/storages/[^/]+$");
+
+          /**
+           * Rpc to get information about a storage.
+           *
+           * Create a request for the method "storages.get".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the storage being retrieved. If needed, replace
+        {namespace_id} with the project ID.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v1alpha1.model.Storage.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/storages/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The name of the storage being retrieved. If needed, replace {namespace_id} with the
+           * project ID.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the storage being retrieved. If needed, replace {namespace_id} with the project ID.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The name of the storage being retrieved. If needed, replace {namespace_id} with the
+           * project ID.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/storages/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Rpc to list storages.
+         *
+         * Create a request for the method "storages.list".
+         *
+         * This request holds the parameters needed by the run server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent The project ID or project number from which the storages should
+        be listed.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends CloudRunRequest<com.google.api.services.run.v1alpha1.model.ListStoragesResponse> {
+
+          private static final String REST_PATH = "v1alpha1/{+parent}/storages";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Rpc to list storages.
+           *
+           * Create a request for the method "storages.list".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent The project ID or project number from which the storages should
+        be listed.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v1alpha1.model.ListStoragesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The project ID or project number from which the storages should be listed.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** The project ID or project number from which the storages should be listed.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * The project ID or project number from which the storages should be listed.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional encoded string to continue paging. */
+          @com.google.api.client.util.Key("continue")
+          private java.lang.String continue__;
+
+          /** Optional encoded string to continue paging.
+           */
+          public java.lang.String getContinue() {
+            return continue__;
+          }
+
+          /** Optional encoded string to continue paging. */
+          public List setContinue(java.lang.String continue__) {
+            this.continue__ = continue__;
+            return this;
+          }
+
+          /**
+           * Allows to filter resources based on a specific value for a field name. Send this in a
+           * query string format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String fieldSelector;
+
+          /** Allows to filter resources based on a specific value for a field name. Send this in a query string
+         format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
+           */
+          public java.lang.String getFieldSelector() {
+            return fieldSelector;
+          }
+
+          /**
+           * Allows to filter resources based on a specific value for a field name. Send this in a
+           * query string format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
+           */
+          public List setFieldSelector(java.lang.String fieldSelector) {
+            this.fieldSelector = fieldSelector;
+            return this;
+          }
+
+          /** Not currently used by Cloud Run. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean includeUninitialized;
+
+          /** Not currently used by Cloud Run.
+           */
+          public java.lang.Boolean getIncludeUninitialized() {
+            return includeUninitialized;
+          }
+
+          /** Not currently used by Cloud Run. */
+          public List setIncludeUninitialized(java.lang.Boolean includeUninitialized) {
+            this.includeUninitialized = includeUninitialized;
+            return this;
+          }
+
+          /**
+           * Allows to filter resources based on a label. Supported operations are =, !=, exists,
+           * in, and notIn.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String labelSelector;
+
+          /** Allows to filter resources based on a label. Supported operations are =, !=, exists, in, and notIn.
+           */
+          public java.lang.String getLabelSelector() {
+            return labelSelector;
+          }
+
+          /**
+           * Allows to filter resources based on a label. Supported operations are =, !=, exists,
+           * in, and notIn.
+           */
+          public List setLabelSelector(java.lang.String labelSelector) {
+            this.labelSelector = labelSelector;
+            return this;
+          }
+
+          /** The maximum number of records that should be returned. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer limit;
+
+          /** The maximum number of records that should be returned.
+           */
+          public java.lang.Integer getLimit() {
+            return limit;
+          }
+
+          /** The maximum number of records that should be returned. */
+          public List setLimit(java.lang.Integer limit) {
+            this.limit = limit;
+            return this;
+          }
+
+          /**
+           * The baseline resource version from which the list or watch operation should start. Not
+           * currently used by Cloud Run.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resourceVersion;
+
+          /** The baseline resource version from which the list or watch operation should start. Not currently
+         used by Cloud Run.
+           */
+          public java.lang.String getResourceVersion() {
+            return resourceVersion;
+          }
+
+          /**
+           * The baseline resource version from which the list or watch operation should start. Not
+           * currently used by Cloud Run.
+           */
+          public List setResourceVersion(java.lang.String resourceVersion) {
+            this.resourceVersion = resourceVersion;
+            return this;
+          }
+
+          /**
+           * Flag that indicates that the client expects to watch this resource as well. Not
+           * currently used by Cloud Run.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean watch;
+
+          /** Flag that indicates that the client expects to watch this resource as well. Not currently used by
+         Cloud Run.
+           */
+          public java.lang.Boolean getWatch() {
+            return watch;
+          }
+
+          /**
+           * Flag that indicates that the client expects to watch this resource as well. Not
+           * currently used by Cloud Run.
+           */
+          public List setWatch(java.lang.Boolean watch) {
+            this.watch = watch;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Rpc to replace a storage.
+         *
+         * Only the spec and metadata labels and annotations are modifiable. After the Update request, Cloud
+         * Run will work to make the 'status' match the requested 'spec'.
+         *
+         * May provide metadata.resourceVersion to enforce update from last read for optimistic concurrency
+         * control.
+         *
+         * Create a request for the method "storages.replaceStorage".
+         *
+         * This request holds the parameters needed by the run server.  After setting any optional
+         * parameters, call the {@link ReplaceStorage#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the storage being retrieved. If needed, replace
+        {namespace_id} with the project ID.
+         * @param content the {@link com.google.api.services.run.v1alpha1.model.Storage}
+         * @return the request
+         */
+        public ReplaceStorage replaceStorage(java.lang.String name, com.google.api.services.run.v1alpha1.model.Storage content) throws java.io.IOException {
+          ReplaceStorage result = new ReplaceStorage(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ReplaceStorage extends CloudRunRequest<com.google.api.services.run.v1alpha1.model.Storage> {
+
+          private static final String REST_PATH = "v1alpha1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/storages/[^/]+$");
+
+          /**
+           * Rpc to replace a storage.
+           *
+           * Only the spec and metadata labels and annotations are modifiable. After the Update request,
+           * Cloud Run will work to make the 'status' match the requested 'spec'.
+           *
+           * May provide metadata.resourceVersion to enforce update from last read for optimistic
+           * concurrency control.
+           *
+           * Create a request for the method "storages.replaceStorage".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link ReplaceStorage#execute()} method to invoke the remote operation.
+           * <p> {@link ReplaceStorage#initialize(com.google.api.client.googleapis.services.AbstractGoogleCl
+           * ientRequest)} must be called to initialize this instance immediately after invoking the
+           * constructor. </p>
+           *
+           * @param name The name of the storage being retrieved. If needed, replace
+        {namespace_id} with the project ID.
+           * @param content the {@link com.google.api.services.run.v1alpha1.model.Storage}
+           * @since 1.13
+           */
+          protected ReplaceStorage(java.lang.String name, com.google.api.services.run.v1alpha1.model.Storage content) {
+            super(CloudRun.this, "PUT", REST_PATH, content, com.google.api.services.run.v1alpha1.model.Storage.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/storages/[^/]+$");
+            }
+          }
+
+          @Override
+          public ReplaceStorage set$Xgafv(java.lang.String $Xgafv) {
+            return (ReplaceStorage) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ReplaceStorage setAccessToken(java.lang.String accessToken) {
+            return (ReplaceStorage) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ReplaceStorage setAlt(java.lang.String alt) {
+            return (ReplaceStorage) super.setAlt(alt);
+          }
+
+          @Override
+          public ReplaceStorage setCallback(java.lang.String callback) {
+            return (ReplaceStorage) super.setCallback(callback);
+          }
+
+          @Override
+          public ReplaceStorage setFields(java.lang.String fields) {
+            return (ReplaceStorage) super.setFields(fields);
+          }
+
+          @Override
+          public ReplaceStorage setKey(java.lang.String key) {
+            return (ReplaceStorage) super.setKey(key);
+          }
+
+          @Override
+          public ReplaceStorage setOauthToken(java.lang.String oauthToken) {
+            return (ReplaceStorage) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ReplaceStorage setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ReplaceStorage) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ReplaceStorage setQuotaUser(java.lang.String quotaUser) {
+            return (ReplaceStorage) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ReplaceStorage setUploadType(java.lang.String uploadType) {
+            return (ReplaceStorage) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ReplaceStorage setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ReplaceStorage) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The name of the storage being retrieved. If needed, replace {namespace_id} with the
+           * project ID.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the storage being retrieved. If needed, replace {namespace_id} with the project ID.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The name of the storage being retrieved. If needed, replace {namespace_id} with the
+           * project ID.
+           */
+          public ReplaceStorage setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/storages/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public ReplaceStorage set(String parameterName, Object value) {
+            return (ReplaceStorage) super.set(parameterName, value);
           }
         }
 

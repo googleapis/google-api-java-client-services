@@ -216,6 +216,14 @@ public final class HttpRule extends com.google.api.client.json.GenericJson {
   private java.util.List<HttpRule> additionalBindings;
 
   /**
+   * When this flag is set to true, HTTP requests will be allowed to invoke a half-duplex streaming
+   * method.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean allowHalfDuplex;
+
+  /**
    * The name of the request field whose value is mapped to the HTTP request body, or `*` for
    * mapping all request fields not captured by the path pattern to the HTTP body, or omitted for
    * not having any HTTP request body.
@@ -305,6 +313,25 @@ public final class HttpRule extends com.google.api.client.json.GenericJson {
    */
   public HttpRule setAdditionalBindings(java.util.List<HttpRule> additionalBindings) {
     this.additionalBindings = additionalBindings;
+    return this;
+  }
+
+  /**
+   * When this flag is set to true, HTTP requests will be allowed to invoke a half-duplex streaming
+   * method.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAllowHalfDuplex() {
+    return allowHalfDuplex;
+  }
+
+  /**
+   * When this flag is set to true, HTTP requests will be allowed to invoke a half-duplex streaming
+   * method.
+   * @param allowHalfDuplex allowHalfDuplex or {@code null} for none
+   */
+  public HttpRule setAllowHalfDuplex(java.lang.Boolean allowHalfDuplex) {
+    this.allowHalfDuplex = allowHalfDuplex;
     return this;
   }
 

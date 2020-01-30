@@ -42,7 +42,7 @@ public final class GoogleCloudMlV1RequestLoggingConfig extends com.google.api.cl
    * Required. Fully qualified BigQuery table name in the following format:
    * "project_id.dataset_name.table_name"
    *
-   * The specifcied table must already exist, and the "Cloud ML Service Agent" for your project must
+   * The specified table must already exist, and the "Cloud ML Service Agent" for your project must
    * have permission to write to it. The table must have the following
    * [schema](/bigquery/docs/schemas):
    *
@@ -67,7 +67,7 @@ public final class GoogleCloudMlV1RequestLoggingConfig extends com.google.api.cl
    * Required. Fully qualified BigQuery table name in the following format:
    * "project_id.dataset_name.table_name"
    *
-   * The specifcied table must already exist, and the "Cloud ML Service Agent" for your project must
+   * The specified table must already exist, and the "Cloud ML Service Agent" for your project must
    * have permission to write to it. The table must have the following
    * [schema](/bigquery/docs/schemas):
    *
@@ -84,7 +84,7 @@ public final class GoogleCloudMlV1RequestLoggingConfig extends com.google.api.cl
    * Required. Fully qualified BigQuery table name in the following format:
    * "project_id.dataset_name.table_name"
    *
-   * The specifcied table must already exist, and the "Cloud ML Service Agent" for your project must
+   * The specified table must already exist, and the "Cloud ML Service Agent" for your project must
    * have permission to write to it. The table must have the following
    * [schema](/bigquery/docs/schemas):
    *

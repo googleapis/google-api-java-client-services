@@ -184,7 +184,7 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
   /**
    * The type of purchase of the subscription. This field is only set if this purchase was not made
    * using the standard in-app billing flow. Possible values are: - Test (i.e. purchased from a
-   * license testing account)
+   * license testing account)  - Promo (i.e. purchased using a promo code)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -564,7 +564,7 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
   /**
    * The type of purchase of the subscription. This field is only set if this purchase was not made
    * using the standard in-app billing flow. Possible values are: - Test (i.e. purchased from a
-   * license testing account)
+   * license testing account)  - Promo (i.e. purchased using a promo code)
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPurchaseType() {
@@ -574,7 +574,7 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
   /**
    * The type of purchase of the subscription. This field is only set if this purchase was not made
    * using the standard in-app billing flow. Possible values are: - Test (i.e. purchased from a
-   * license testing account)
+   * license testing account)  - Promo (i.e. purchased using a promo code)
    * @param purchaseType purchaseType or {@code null} for none
    */
   public SubscriptionPurchase setPurchaseType(java.lang.Integer purchaseType) {

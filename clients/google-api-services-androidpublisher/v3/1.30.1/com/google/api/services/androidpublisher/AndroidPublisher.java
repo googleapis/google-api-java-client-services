@@ -8931,6 +8931,601 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
   }
 
   /**
+   * An accessor for creating requests from the Systemapks collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code AndroidPublisher androidpublisher = new AndroidPublisher(...);}
+   *   {@code AndroidPublisher.Systemapks.List request = androidpublisher.systemapks().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Systemapks systemapks() {
+    return new Systemapks();
+  }
+
+  /**
+   * The "systemapks" collection of methods.
+   */
+  public class Systemapks {
+
+    /**
+     * An accessor for creating requests from the Variants collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code AndroidPublisher androidpublisher = new AndroidPublisher(...);}
+     *   {@code AndroidPublisher.Variants.List request = androidpublisher.variants().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Variants variants() {
+      return new Variants();
+    }
+
+    /**
+     * The "variants" collection of methods.
+     */
+    public class Variants {
+
+      /**
+       * Creates a new variant of APK which is suitable for inclusion in a system image.
+       *
+       * Create a request for the method "variants.create".
+       *
+       * This request holds the parameters needed by the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param packageName Unique identifier for the Android app; for example, "com.spiffygame".
+       * @param versionCode The version code of the App Bundle.
+       * @param content the {@link com.google.api.services.androidpublisher.model.SystemApkVariantsCreateRequest}
+       * @return the request
+       */
+      public Create create(java.lang.String packageName, java.lang.Long versionCode, com.google.api.services.androidpublisher.model.SystemApkVariantsCreateRequest content) throws java.io.IOException {
+        Create result = new Create(packageName, versionCode, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.Variant> {
+
+        private static final String REST_PATH = "{packageName}/systemApks/{versionCode}/variants";
+
+        /**
+         * Creates a new variant of APK which is suitable for inclusion in a system image.
+         *
+         * Create a request for the method "variants.create".
+         *
+         * This request holds the parameters needed by the the androidpublisher server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param packageName Unique identifier for the Android app; for example, "com.spiffygame".
+         * @param versionCode The version code of the App Bundle.
+         * @param content the {@link com.google.api.services.androidpublisher.model.SystemApkVariantsCreateRequest}
+         * @since 1.13
+         */
+        protected Create(java.lang.String packageName, java.lang.Long versionCode, com.google.api.services.androidpublisher.model.SystemApkVariantsCreateRequest content) {
+          super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.Variant.class);
+          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+          this.versionCode = com.google.api.client.util.Preconditions.checkNotNull(versionCode, "Required parameter versionCode must be specified.");
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUserIp(java.lang.String userIp) {
+          return (Create) super.setUserIp(userIp);
+        }
+
+        /** Unique identifier for the Android app; for example, "com.spiffygame". */
+        @com.google.api.client.util.Key
+        private java.lang.String packageName;
+
+        /** Unique identifier for the Android app; for example, "com.spiffygame".
+         */
+        public java.lang.String getPackageName() {
+          return packageName;
+        }
+
+        /** Unique identifier for the Android app; for example, "com.spiffygame". */
+        public Create setPackageName(java.lang.String packageName) {
+          this.packageName = packageName;
+          return this;
+        }
+
+        /** The version code of the App Bundle. */
+        @com.google.api.client.util.Key
+        private java.lang.Long versionCode;
+
+        /** The version code of the App Bundle.
+         */
+        public java.lang.Long getVersionCode() {
+          return versionCode;
+        }
+
+        /** The version code of the App Bundle. */
+        public Create setVersionCode(java.lang.Long versionCode) {
+          this.versionCode = versionCode;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Download a previously created APK which is suitable for inclusion in a system image.
+       *
+       * Create a request for the method "variants.download".
+       *
+       * This request holds the parameters needed by the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Download#execute()} method to invoke the remote operation.
+       *
+       * @param packageName Unique identifier for the Android app; for example, "com.spiffygame".
+       * @param versionCode The version code of the App Bundle.
+       * @param variantId
+       * @return the request
+       */
+      public Download download(java.lang.String packageName, java.lang.Long versionCode, java.lang.Long variantId) throws java.io.IOException {
+        Download result = new Download(packageName, versionCode, variantId);
+        initialize(result);
+        return result;
+      }
+
+      public class Download extends AndroidPublisherRequest<Void> {
+
+        private static final String REST_PATH = "{packageName}/systemApks/{versionCode}/variants/{variantId}:download";
+
+        /**
+         * Download a previously created APK which is suitable for inclusion in a system image.
+         *
+         * Create a request for the method "variants.download".
+         *
+         * This request holds the parameters needed by the the androidpublisher server.  After setting any
+         * optional parameters, call the {@link Download#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Download#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param packageName Unique identifier for the Android app; for example, "com.spiffygame".
+         * @param versionCode The version code of the App Bundle.
+         * @param variantId
+         * @since 1.13
+         */
+        protected Download(java.lang.String packageName, java.lang.Long versionCode, java.lang.Long variantId) {
+          super(AndroidPublisher.this, "GET", REST_PATH, null, Void.class);
+          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+          this.versionCode = com.google.api.client.util.Preconditions.checkNotNull(versionCode, "Required parameter versionCode must be specified.");
+          this.variantId = com.google.api.client.util.Preconditions.checkNotNull(variantId, "Required parameter variantId must be specified.");
+          initializeMediaDownload();
+        }
+
+        @Override
+        public void executeMediaAndDownloadTo(java.io.OutputStream outputStream) throws java.io.IOException {
+          super.executeMediaAndDownloadTo(outputStream);
+        }
+
+        @Override
+        public java.io.InputStream executeMediaAsInputStream() throws java.io.IOException {
+          return super.executeMediaAsInputStream();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeMedia() throws java.io.IOException {
+          return super.executeMedia();
+        }
+
+        @Override
+        public com.google.api.client.http.GenericUrl buildHttpRequestUrl() {
+          java.lang.String baseUrl = ("media".equals(get("alt")) && getMediaHttpUploader() == null)
+              ? getRootUrl() + "download/" + getServicePath() : getBaseUrl();
+          return new com.google.api.client.http.GenericUrl(
+              com.google.api.client.http.UriTemplate.expand(baseUrl, getUriTemplate(), this, true));
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Download setAlt(java.lang.String alt) {
+          return (Download) super.setAlt(alt);
+        }
+
+        @Override
+        public Download setFields(java.lang.String fields) {
+          return (Download) super.setFields(fields);
+        }
+
+        @Override
+        public Download setKey(java.lang.String key) {
+          return (Download) super.setKey(key);
+        }
+
+        @Override
+        public Download setOauthToken(java.lang.String oauthToken) {
+          return (Download) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Download setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Download) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Download setQuotaUser(java.lang.String quotaUser) {
+          return (Download) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Download setUserIp(java.lang.String userIp) {
+          return (Download) super.setUserIp(userIp);
+        }
+
+        /** Unique identifier for the Android app; for example, "com.spiffygame". */
+        @com.google.api.client.util.Key
+        private java.lang.String packageName;
+
+        /** Unique identifier for the Android app; for example, "com.spiffygame".
+         */
+        public java.lang.String getPackageName() {
+          return packageName;
+        }
+
+        /** Unique identifier for the Android app; for example, "com.spiffygame". */
+        public Download setPackageName(java.lang.String packageName) {
+          this.packageName = packageName;
+          return this;
+        }
+
+        /** The version code of the App Bundle. */
+        @com.google.api.client.util.Key
+        private java.lang.Long versionCode;
+
+        /** The version code of the App Bundle.
+         */
+        public java.lang.Long getVersionCode() {
+          return versionCode;
+        }
+
+        /** The version code of the App Bundle. */
+        public Download setVersionCode(java.lang.Long versionCode) {
+          this.versionCode = versionCode;
+          return this;
+        }
+
+        @com.google.api.client.util.Key
+        private java.lang.Long variantId;
+
+        /**
+
+         */
+        public java.lang.Long getVariantId() {
+          return variantId;
+        }
+
+        public Download setVariantId(java.lang.Long variantId) {
+          this.variantId = variantId;
+          return this;
+        }
+
+        @Override
+        public Download set(String parameterName, Object value) {
+          return (Download) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Returns a previously created system APK variant.
+       *
+       * Create a request for the method "variants.get".
+       *
+       * This request holds the parameters needed by the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param packageName Unique identifier for the Android app; for example, "com.spiffygame".
+       * @param versionCode The version code of the App Bundle.
+       * @param variantId Unique identifier for this variant.
+       * @return the request
+       */
+      public Get get(java.lang.String packageName, java.lang.Long versionCode, java.lang.Long variantId) throws java.io.IOException {
+        Get result = new Get(packageName, versionCode, variantId);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.Variant> {
+
+        private static final String REST_PATH = "{packageName}/systemApks/{versionCode}/variants/{variantId}";
+
+        /**
+         * Returns a previously created system APK variant.
+         *
+         * Create a request for the method "variants.get".
+         *
+         * This request holds the parameters needed by the the androidpublisher server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param packageName Unique identifier for the Android app; for example, "com.spiffygame".
+         * @param versionCode The version code of the App Bundle.
+         * @param variantId Unique identifier for this variant.
+         * @since 1.13
+         */
+        protected Get(java.lang.String packageName, java.lang.Long versionCode, java.lang.Long variantId) {
+          super(AndroidPublisher.this, "GET", REST_PATH, null, com.google.api.services.androidpublisher.model.Variant.class);
+          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+          this.versionCode = com.google.api.client.util.Preconditions.checkNotNull(versionCode, "Required parameter versionCode must be specified.");
+          this.variantId = com.google.api.client.util.Preconditions.checkNotNull(variantId, "Required parameter variantId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUserIp(java.lang.String userIp) {
+          return (Get) super.setUserIp(userIp);
+        }
+
+        /** Unique identifier for the Android app; for example, "com.spiffygame". */
+        @com.google.api.client.util.Key
+        private java.lang.String packageName;
+
+        /** Unique identifier for the Android app; for example, "com.spiffygame".
+         */
+        public java.lang.String getPackageName() {
+          return packageName;
+        }
+
+        /** Unique identifier for the Android app; for example, "com.spiffygame". */
+        public Get setPackageName(java.lang.String packageName) {
+          this.packageName = packageName;
+          return this;
+        }
+
+        /** The version code of the App Bundle. */
+        @com.google.api.client.util.Key
+        private java.lang.Long versionCode;
+
+        /** The version code of the App Bundle.
+         */
+        public java.lang.Long getVersionCode() {
+          return versionCode;
+        }
+
+        /** The version code of the App Bundle. */
+        public Get setVersionCode(java.lang.Long versionCode) {
+          this.versionCode = versionCode;
+          return this;
+        }
+
+        /** Unique identifier for this variant. */
+        @com.google.api.client.util.Key
+        private java.lang.Long variantId;
+
+        /** Unique identifier for this variant.
+         */
+        public java.lang.Long getVariantId() {
+          return variantId;
+        }
+
+        /** Unique identifier for this variant. */
+        public Get setVariantId(java.lang.Long variantId) {
+          this.variantId = variantId;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Returns the list of previously created system APK variants.
+       *
+       * Create a request for the method "variants.list".
+       *
+       * This request holds the parameters needed by the androidpublisher server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param packageName Unique identifier for the Android app; for example, "com.spiffygame".
+       * @param versionCode The version code of the App Bundle.
+       * @return the request
+       */
+      public List list(java.lang.String packageName, java.lang.Long versionCode) throws java.io.IOException {
+        List result = new List(packageName, versionCode);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.SystemApkVariantsListResponse> {
+
+        private static final String REST_PATH = "{packageName}/systemApks/{versionCode}/variants";
+
+        /**
+         * Returns the list of previously created system APK variants.
+         *
+         * Create a request for the method "variants.list".
+         *
+         * This request holds the parameters needed by the the androidpublisher server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param packageName Unique identifier for the Android app; for example, "com.spiffygame".
+         * @param versionCode The version code of the App Bundle.
+         * @since 1.13
+         */
+        protected List(java.lang.String packageName, java.lang.Long versionCode) {
+          super(AndroidPublisher.this, "GET", REST_PATH, null, com.google.api.services.androidpublisher.model.SystemApkVariantsListResponse.class);
+          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+          this.versionCode = com.google.api.client.util.Preconditions.checkNotNull(versionCode, "Required parameter versionCode must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUserIp(java.lang.String userIp) {
+          return (List) super.setUserIp(userIp);
+        }
+
+        /** Unique identifier for the Android app; for example, "com.spiffygame". */
+        @com.google.api.client.util.Key
+        private java.lang.String packageName;
+
+        /** Unique identifier for the Android app; for example, "com.spiffygame".
+         */
+        public java.lang.String getPackageName() {
+          return packageName;
+        }
+
+        /** Unique identifier for the Android app; for example, "com.spiffygame". */
+        public List setPackageName(java.lang.String packageName) {
+          this.packageName = packageName;
+          return this;
+        }
+
+        /** The version code of the App Bundle. */
+        @com.google.api.client.util.Key
+        private java.lang.Long versionCode;
+
+        /** The version code of the App Bundle.
+         */
+        public java.lang.Long getVersionCode() {
+          return versionCode;
+        }
+
+        /** The version code of the App Bundle. */
+        public List setVersionCode(java.lang.Long versionCode) {
+          this.versionCode = versionCode;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
+  }
+
+  /**
    * Builder for {@link AndroidPublisher}.
    *
    * <p>

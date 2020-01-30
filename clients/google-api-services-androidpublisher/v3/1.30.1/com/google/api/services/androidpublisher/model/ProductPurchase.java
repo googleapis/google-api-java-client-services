@@ -106,6 +106,13 @@ public final class ProductPurchase extends com.google.api.client.json.GenericJso
   private java.lang.Integer purchaseType;
 
   /**
+   * The quantity associated with the purchase of the inapp product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer quantity;
+
+  /**
    * The acknowledgement state of the inapp product. Possible values are: - Yet to be acknowledged
    * - Acknowledged
    * @return value or {@code null} for none
@@ -282,6 +289,23 @@ public final class ProductPurchase extends com.google.api.client.json.GenericJso
    */
   public ProductPurchase setPurchaseType(java.lang.Integer purchaseType) {
     this.purchaseType = purchaseType;
+    return this;
+  }
+
+  /**
+   * The quantity associated with the purchase of the inapp product.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getQuantity() {
+    return quantity;
+  }
+
+  /**
+   * The quantity associated with the purchase of the inapp product.
+   * @param quantity quantity or {@code null} for none
+   */
+  public ProductPurchase setQuantity(java.lang.Integer quantity) {
+    this.quantity = quantity;
     return this;
   }
 

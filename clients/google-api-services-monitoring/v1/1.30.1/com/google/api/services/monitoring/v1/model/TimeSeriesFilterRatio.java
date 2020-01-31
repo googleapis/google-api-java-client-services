@@ -60,13 +60,6 @@ public final class TimeSeriesFilterRatio extends com.google.api.client.json.Gene
   private Aggregation secondaryAggregation;
 
   /**
-   * Statistics based time series filter.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private StatisticalTimeSeriesFilter statisticalTimeSeriesFilter;
-
-  /**
    * The denominator of the ratio.
    * @return value or {@code null} for none
    */
@@ -131,23 +124,6 @@ public final class TimeSeriesFilterRatio extends com.google.api.client.json.Gene
    */
   public TimeSeriesFilterRatio setSecondaryAggregation(Aggregation secondaryAggregation) {
     this.secondaryAggregation = secondaryAggregation;
-    return this;
-  }
-
-  /**
-   * Statistics based time series filter.
-   * @return value or {@code null} for none
-   */
-  public StatisticalTimeSeriesFilter getStatisticalTimeSeriesFilter() {
-    return statisticalTimeSeriesFilter;
-  }
-
-  /**
-   * Statistics based time series filter.
-   * @param statisticalTimeSeriesFilter statisticalTimeSeriesFilter or {@code null} for none
-   */
-  public TimeSeriesFilterRatio setStatisticalTimeSeriesFilter(StatisticalTimeSeriesFilter statisticalTimeSeriesFilter) {
-    this.statisticalTimeSeriesFilter = statisticalTimeSeriesFilter;
     return this;
   }
 

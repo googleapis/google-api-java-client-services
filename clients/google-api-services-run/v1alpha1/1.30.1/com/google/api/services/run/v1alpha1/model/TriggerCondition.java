@@ -30,28 +30,28 @@ package com.google.api.services.run.v1alpha1.model;
 public final class TriggerCondition extends com.google.api.client.json.GenericJson {
 
   /**
-   * Last time the condition transitioned from one status to another. +optional
+   * Optional. Last time the condition transitioned from one status to another.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String lastTransitionTime;
 
   /**
-   * Human readable message indicating details about the current status. +optional
+   * Optional. Human readable message indicating details about the current status.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String message;
 
   /**
-   * One-word CamelCase reason for the condition's current status. +optional
+   * Optional. One-word CamelCase reason for the condition's current status.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String reason;
 
   /**
-   * How to interpret failures of this condition, one of Error, Warning, Info +optional
+   * Optional. How to interpret failures of this condition, one of Error, Warning, Info
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +72,7 @@ public final class TriggerCondition extends com.google.api.client.json.GenericJs
   private java.lang.String type;
 
   /**
-   * Last time the condition transitioned from one status to another. +optional
+   * Optional. Last time the condition transitioned from one status to another.
    * @return value or {@code null} for none
    */
   public String getLastTransitionTime() {
@@ -80,7 +80,7 @@ public final class TriggerCondition extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Last time the condition transitioned from one status to another. +optional
+   * Optional. Last time the condition transitioned from one status to another.
    * @param lastTransitionTime lastTransitionTime or {@code null} for none
    */
   public TriggerCondition setLastTransitionTime(String lastTransitionTime) {
@@ -89,7 +89,7 @@ public final class TriggerCondition extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Human readable message indicating details about the current status. +optional
+   * Optional. Human readable message indicating details about the current status.
    * @return value or {@code null} for none
    */
   public java.lang.String getMessage() {
@@ -97,7 +97,7 @@ public final class TriggerCondition extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Human readable message indicating details about the current status. +optional
+   * Optional. Human readable message indicating details about the current status.
    * @param message message or {@code null} for none
    */
   public TriggerCondition setMessage(java.lang.String message) {
@@ -106,7 +106,7 @@ public final class TriggerCondition extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * One-word CamelCase reason for the condition's current status. +optional
+   * Optional. One-word CamelCase reason for the condition's current status.
    * @return value or {@code null} for none
    */
   public java.lang.String getReason() {
@@ -114,7 +114,7 @@ public final class TriggerCondition extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * One-word CamelCase reason for the condition's current status. +optional
+   * Optional. One-word CamelCase reason for the condition's current status.
    * @param reason reason or {@code null} for none
    */
   public TriggerCondition setReason(java.lang.String reason) {
@@ -123,7 +123,7 @@ public final class TriggerCondition extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * How to interpret failures of this condition, one of Error, Warning, Info +optional
+   * Optional. How to interpret failures of this condition, one of Error, Warning, Info
    * @return value or {@code null} for none
    */
   public java.lang.String getSeverity() {
@@ -131,7 +131,7 @@ public final class TriggerCondition extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * How to interpret failures of this condition, one of Error, Warning, Info +optional
+   * Optional. How to interpret failures of this condition, one of Error, Warning, Info
    * @param severity severity or {@code null} for none
    */
   public TriggerCondition setSeverity(java.lang.String severity) {

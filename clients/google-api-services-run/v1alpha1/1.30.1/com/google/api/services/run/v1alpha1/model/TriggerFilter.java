@@ -30,41 +30,26 @@ package com.google.api.services.run.v1alpha1.model;
 public final class TriggerFilter extends com.google.api.client.json.GenericJson {
 
   /**
-   * Cloud Run fully managed: not supported
+   * Optional. Attributes filters events by exact match on event context attributes. Each key in the
+   * map is compared with the equivalent key in the event context. An event passes the filter if all
+   * values are equal to the specified values.
    *
-   * Cloud Run on GKE: supported
-   *
-   * Attributes filters events by exact match on event context attributes. Each key in the map is
-   * compared with the equivalent key in the event context. An event passes the filter if all values
-   * are equal to the specified values.
-   *
-   * Nested context attributes are not supported as keys. Only string values are supported.
-   *
-   * +optional
+   * Nested context attributes are not supported as keys. Only string values are supported. Note
+   * that this field is optional in knative. In fully managed, 'type' attribute is required due to
+   * different broker implementation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> attributes;
 
   /**
-   * SourceAndType is DEPRECATED and replaced by the Attributes field.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private TriggerFilterSourceAndType sourceAndType;
-
-  /**
-   * Cloud Run fully managed: not supported
+   * Optional. Attributes filters events by exact match on event context attributes. Each key in the
+   * map is compared with the equivalent key in the event context. An event passes the filter if all
+   * values are equal to the specified values.
    *
-   * Cloud Run on GKE: supported
-   *
-   * Attributes filters events by exact match on event context attributes. Each key in the map is
-   * compared with the equivalent key in the event context. An event passes the filter if all values
-   * are equal to the specified values.
-   *
-   * Nested context attributes are not supported as keys. Only string values are supported.
-   *
-   * +optional
+   * Nested context attributes are not supported as keys. Only string values are supported. Note
+   * that this field is optional in knative. In fully managed, 'type' attribute is required due to
+   * different broker implementation.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAttributes() {
@@ -72,38 +57,17 @@ public final class TriggerFilter extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Cloud Run fully managed: not supported
+   * Optional. Attributes filters events by exact match on event context attributes. Each key in the
+   * map is compared with the equivalent key in the event context. An event passes the filter if all
+   * values are equal to the specified values.
    *
-   * Cloud Run on GKE: supported
-   *
-   * Attributes filters events by exact match on event context attributes. Each key in the map is
-   * compared with the equivalent key in the event context. An event passes the filter if all values
-   * are equal to the specified values.
-   *
-   * Nested context attributes are not supported as keys. Only string values are supported.
-   *
-   * +optional
+   * Nested context attributes are not supported as keys. Only string values are supported. Note
+   * that this field is optional in knative. In fully managed, 'type' attribute is required due to
+   * different broker implementation.
    * @param attributes attributes or {@code null} for none
    */
   public TriggerFilter setAttributes(java.util.Map<String, java.lang.String> attributes) {
     this.attributes = attributes;
-    return this;
-  }
-
-  /**
-   * SourceAndType is DEPRECATED and replaced by the Attributes field.
-   * @return value or {@code null} for none
-   */
-  public TriggerFilterSourceAndType getSourceAndType() {
-    return sourceAndType;
-  }
-
-  /**
-   * SourceAndType is DEPRECATED and replaced by the Attributes field.
-   * @param sourceAndType sourceAndType or {@code null} for none
-   */
-  public TriggerFilter setSourceAndType(TriggerFilterSourceAndType sourceAndType) {
-    this.sourceAndType = sourceAndType;
     return this;
   }
 

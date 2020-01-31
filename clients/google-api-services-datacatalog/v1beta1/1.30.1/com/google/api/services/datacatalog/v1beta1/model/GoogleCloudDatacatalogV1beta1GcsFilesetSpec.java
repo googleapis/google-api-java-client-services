@@ -40,9 +40,17 @@ public final class GoogleCloudDatacatalogV1beta1GcsFilesetSpec extends com.googl
    *  * `gs://bucket_name/dir`: matches all files within `bucket_name/dir`
    * directory.  * `gs://bucket_name/dir*`: matches all files in `bucket_name/dir`
    * spanning all subdirectories.  * `gs://bucket_name/file*`: matches files prefixed by `file` in
-   * `bucket_name`  * `gs://bucket_name/a/b`: matches all files in `bucket_name` that match
-   * `a/b` pattern, such as `a/c/b`, `a/d/b`  * `gs://another_bucket/a.txt`: matches
-   * `gs://another_bucket/a.txt`
+   * `bucket_name`  * `gs://bucket_name/??.txt`: matches files with two characters followed by
+   * `.txt` in `bucket_name`  * `gs://bucket_name/[aeiou].txt`: matches files that contain a single
+   * vowel character followed by `.txt` in                                    `bucket_name`  *
+   * `gs://bucket_name/[a-m].txt`: matches files that contain `a`, `b`, ...
+   * or `m` followed by `.txt` in `bucket_name`  * `gs://bucket_name/a/b`: matches all files in
+   * `bucket_name` that match                              `a/b` pattern, such as `a/c/b`, `a/d/b`
+   * * `gs://another_bucket/a.txt`: matches `gs://another_bucket/a.txt`
+   *
+   * You can combine wildcards to provide more powerful matches, for example:
+   *
+   *  * `gs://bucket_name/[a-m]??.j*g`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,9 +80,17 @@ public final class GoogleCloudDatacatalogV1beta1GcsFilesetSpec extends com.googl
    *  * `gs://bucket_name/dir`: matches all files within `bucket_name/dir`
    * directory.  * `gs://bucket_name/dir*`: matches all files in `bucket_name/dir`
    * spanning all subdirectories.  * `gs://bucket_name/file*`: matches files prefixed by `file` in
-   * `bucket_name`  * `gs://bucket_name/a/b`: matches all files in `bucket_name` that match
-   * `a/b` pattern, such as `a/c/b`, `a/d/b`  * `gs://another_bucket/a.txt`: matches
-   * `gs://another_bucket/a.txt`
+   * `bucket_name`  * `gs://bucket_name/??.txt`: matches files with two characters followed by
+   * `.txt` in `bucket_name`  * `gs://bucket_name/[aeiou].txt`: matches files that contain a single
+   * vowel character followed by `.txt` in                                    `bucket_name`  *
+   * `gs://bucket_name/[a-m].txt`: matches files that contain `a`, `b`, ...
+   * or `m` followed by `.txt` in `bucket_name`  * `gs://bucket_name/a/b`: matches all files in
+   * `bucket_name` that match                              `a/b` pattern, such as `a/c/b`, `a/d/b`
+   * * `gs://another_bucket/a.txt`: matches `gs://another_bucket/a.txt`
+   *
+   * You can combine wildcards to provide more powerful matches, for example:
+   *
+   *  * `gs://bucket_name/[a-m]??.j*g`
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getFilePatterns() {
@@ -91,9 +107,17 @@ public final class GoogleCloudDatacatalogV1beta1GcsFilesetSpec extends com.googl
    *  * `gs://bucket_name/dir`: matches all files within `bucket_name/dir`
    * directory.  * `gs://bucket_name/dir*`: matches all files in `bucket_name/dir`
    * spanning all subdirectories.  * `gs://bucket_name/file*`: matches files prefixed by `file` in
-   * `bucket_name`  * `gs://bucket_name/a/b`: matches all files in `bucket_name` that match
-   * `a/b` pattern, such as `a/c/b`, `a/d/b`  * `gs://another_bucket/a.txt`: matches
-   * `gs://another_bucket/a.txt`
+   * `bucket_name`  * `gs://bucket_name/??.txt`: matches files with two characters followed by
+   * `.txt` in `bucket_name`  * `gs://bucket_name/[aeiou].txt`: matches files that contain a single
+   * vowel character followed by `.txt` in                                    `bucket_name`  *
+   * `gs://bucket_name/[a-m].txt`: matches files that contain `a`, `b`, ...
+   * or `m` followed by `.txt` in `bucket_name`  * `gs://bucket_name/a/b`: matches all files in
+   * `bucket_name` that match                              `a/b` pattern, such as `a/c/b`, `a/d/b`
+   * * `gs://another_bucket/a.txt`: matches `gs://another_bucket/a.txt`
+   *
+   * You can combine wildcards to provide more powerful matches, for example:
+   *
+   *  * `gs://bucket_name/[a-m]??.j*g`
    * @param filePatterns filePatterns or {@code null} for none
    */
   public GoogleCloudDatacatalogV1beta1GcsFilesetSpec setFilePatterns(java.util.List<java.lang.String> filePatterns) {

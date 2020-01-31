@@ -27,6 +27,7 @@ packages on [Maven Central][maven-search].
 | Ad Exchange Buyer API | [v1.2](clients/google-api-services-adexchangebuyer/v1.2), [v1.3](clients/google-api-services-adexchangebuyer/v1.3), [v1.4](clients/google-api-services-adexchangebuyer/v1.4) |
 | Ad Exchange Buyer API II | [v2beta1](clients/google-api-services-adexchangebuyer2/v2beta1) |
 | Ad Experience Report API | [v1](clients/google-api-services-adexperiencereport/v1) |
+| AdMob API | [v1](clients/google-api-services-admob/v1) |
 | AdSense Host API | [v4.1](clients/google-api-services-adsensehost/v4.1) |
 | AdSense Management API | [v1.4](clients/google-api-services-adsense/v1.4) |
 | Admin Data Transfer API | [datatransfer_v1](clients/google-api-services-admin/datatransfer_v1) |
@@ -65,6 +66,7 @@ packages on [Maven Central][maven-search].
 | Cloud Key Management Service (KMS) API | [v1](clients/google-api-services-cloudkms/v1) |
 | Cloud Life Sciences API | [v2beta](clients/google-api-services-lifesciences/v2beta) |
 | Cloud Natural Language API | [v1](clients/google-api-services-language/v1), [v1beta1](clients/google-api-services-language/v1beta1), [v1beta2](clients/google-api-services-language/v1beta2) |
+| Cloud OS Config API | [v1beta](clients/google-api-services-osconfig/v1beta) |
 | Cloud OS Login API | [v1](clients/google-api-services-oslogin/v1), [v1alpha](clients/google-api-services-oslogin/v1alpha), [v1beta](clients/google-api-services-oslogin/v1beta) |
 | Cloud Private Catalog API | [v1beta1](clients/google-api-services-cloudprivatecatalog/v1beta1) |
 | Cloud Private Catalog Producer API | [v1beta1](clients/google-api-services-cloudprivatecatalogproducer/v1beta1) |
@@ -140,7 +142,6 @@ packages on [Maven Central][maven-search].
 | Google Site Verification API | [v1](clients/google-api-services-siteVerification/v1) |
 | Google Slides API | [v1](clients/google-api-services-slides/v1) |
 | Google+ API | [v1](clients/google-api-services-plus/v1) |
-| Google+ Domains API | [v1](clients/google-api-services-plusDomains/v1) |
 | Groups Migration API | [v1](clients/google-api-services-groupsmigration/v1) |
 | Groups Settings API | [v1](clients/google-api-services-groupssettings/v1) |
 | Hangouts Chat API | [v1](clients/google-api-services-chat/v1) |
@@ -161,7 +162,6 @@ packages on [Maven Central][maven-search].
 | Proximity Beacon API | [v1beta1](clients/google-api-services-proximitybeacon/v1beta1) |
 | Recommender API | [v1beta1](clients/google-api-services-recommender/v1beta1) |
 | Remote Build Execution API | [v1](clients/google-api-services-remotebuildexecution/v1), [v1alpha](clients/google-api-services-remotebuildexecution/v1alpha), [v2](clients/google-api-services-remotebuildexecution/v2) |
-| Replica Pool API | [v1beta1](clients/google-api-services-replicapool/v1beta1) |
 | SAS Portal API | [v1alpha1](clients/google-api-services-sasportal/v1alpha1) |
 | SAS Portal API (Testing) | [v1alpha1](clients/google-api-services-prod_tt_sasportal/v1alpha1) |
 | Safe Browsing API | [v4](clients/google-api-services-safebrowsing/v4) |

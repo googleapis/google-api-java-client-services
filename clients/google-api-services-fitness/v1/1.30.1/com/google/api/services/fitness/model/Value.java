@@ -20,7 +20,7 @@ package com.google.api.services.fitness.model;
  * Holder object for the value of a single field in a data point.
  *
  * A field value has a particular format and is only ever set to one of an integer or a floating
- * point value. LINT.IfChange
+ * point value.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Fitness. For a detailed explanation see:

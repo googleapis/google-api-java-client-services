@@ -62,6 +62,9 @@ public final class Device extends com.google.api.client.json.GenericJson {
    * The serial number or other unique ID for the hardware. This field is obfuscated when read by
    * any REST or Android client that did not create the data source. Only the data source creator
    * will see the uid field in clear and normal form.
+   *
+   * The obfuscation preserves equality; that is, given two IDs, if id1 == id2, obfuscated(id1) ==
+   * obfuscated(id2).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,6 +132,9 @@ public final class Device extends com.google.api.client.json.GenericJson {
    * The serial number or other unique ID for the hardware. This field is obfuscated when read by
    * any REST or Android client that did not create the data source. Only the data source creator
    * will see the uid field in clear and normal form.
+   *
+   * The obfuscation preserves equality; that is, given two IDs, if id1 == id2, obfuscated(id1) ==
+   * obfuscated(id2).
    * @return value or {@code null} for none
    */
   public java.lang.String getUid() {
@@ -139,6 +145,9 @@ public final class Device extends com.google.api.client.json.GenericJson {
    * The serial number or other unique ID for the hardware. This field is obfuscated when read by
    * any REST or Android client that did not create the data source. Only the data source creator
    * will see the uid field in clear and normal form.
+   *
+   * The obfuscation preserves equality; that is, given two IDs, if id1 == id2, obfuscated(id1) ==
+   * obfuscated(id2).
    * @param uid uid or {@code null} for none
    */
   public Device setUid(java.lang.String uid) {

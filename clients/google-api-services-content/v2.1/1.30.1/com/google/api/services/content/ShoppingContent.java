@@ -1134,6 +1134,176 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
+     * Returns the list of accounts linked to your Merchant Center account.
+     *
+     * Create a request for the method "accounts.listlinks".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Listlinks#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
+     *        must be a multi-client account and accountId must be the ID of a sub-account of this
+     *        account.
+     * @param accountId The ID of the account for which to list links.
+     * @return the request
+     */
+    public Listlinks listlinks(java.math.BigInteger merchantId, java.math.BigInteger accountId) throws java.io.IOException {
+      Listlinks result = new Listlinks(merchantId, accountId);
+      initialize(result);
+      return result;
+    }
+
+    public class Listlinks extends ShoppingContentRequest<com.google.api.services.content.model.AccountsListLinksResponse> {
+
+      private static final String REST_PATH = "{merchantId}/accounts/{accountId}/listlinks";
+
+      /**
+       * Returns the list of accounts linked to your Merchant Center account.
+       *
+       * Create a request for the method "accounts.listlinks".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Listlinks#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * Listlinks#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId The ID of the managing account. If this parameter is not the same as accountId, then this account
+     *        must be a multi-client account and accountId must be the ID of a sub-account of this
+     *        account.
+       * @param accountId The ID of the account for which to list links.
+       * @since 1.13
+       */
+      protected Listlinks(java.math.BigInteger merchantId, java.math.BigInteger accountId) {
+        super(ShoppingContent.this, "GET", REST_PATH, null, com.google.api.services.content.model.AccountsListLinksResponse.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+        this.accountId = com.google.api.client.util.Preconditions.checkNotNull(accountId, "Required parameter accountId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Listlinks setAlt(java.lang.String alt) {
+        return (Listlinks) super.setAlt(alt);
+      }
+
+      @Override
+      public Listlinks setFields(java.lang.String fields) {
+        return (Listlinks) super.setFields(fields);
+      }
+
+      @Override
+      public Listlinks setKey(java.lang.String key) {
+        return (Listlinks) super.setKey(key);
+      }
+
+      @Override
+      public Listlinks setOauthToken(java.lang.String oauthToken) {
+        return (Listlinks) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Listlinks setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Listlinks) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Listlinks setQuotaUser(java.lang.String quotaUser) {
+        return (Listlinks) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Listlinks setUserIp(java.lang.String userIp) {
+        return (Listlinks) super.setUserIp(userIp);
+      }
+
+      /**
+       * The ID of the managing account. If this parameter is not the same as accountId, then this
+       * account must be a multi-client account and accountId must be the ID of a sub-account of
+       * this account.
+       */
+      @com.google.api.client.util.Key
+      private java.math.BigInteger merchantId;
+
+      /** The ID of the managing account. If this parameter is not the same as accountId, then this account
+     must be a multi-client account and accountId must be the ID of a sub-account of this account.
+       */
+      public java.math.BigInteger getMerchantId() {
+        return merchantId;
+      }
+
+      /**
+       * The ID of the managing account. If this parameter is not the same as accountId, then this
+       * account must be a multi-client account and accountId must be the ID of a sub-account of
+       * this account.
+       */
+      public Listlinks setMerchantId(java.math.BigInteger merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /** The ID of the account for which to list links. */
+      @com.google.api.client.util.Key
+      private java.math.BigInteger accountId;
+
+      /** The ID of the account for which to list links.
+       */
+      public java.math.BigInteger getAccountId() {
+        return accountId;
+      }
+
+      /** The ID of the account for which to list links. */
+      public Listlinks setAccountId(java.math.BigInteger accountId) {
+        this.accountId = accountId;
+        return this;
+      }
+
+      /** The maximum number of links to return in the response, used for pagination. */
+      @com.google.api.client.util.Key
+      private java.lang.Long maxResults;
+
+      /** The maximum number of links to return in the response, used for pagination.
+       */
+      public java.lang.Long getMaxResults() {
+        return maxResults;
+      }
+
+      /** The maximum number of links to return in the response, used for pagination. */
+      public Listlinks setMaxResults(java.lang.Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+      }
+
+      /** The token returned by the previous request. */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** The token returned by the previous request.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /** The token returned by the previous request. */
+      public Listlinks setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public Listlinks set(String parameterName, Object value) {
+        return (Listlinks) super.set(parameterName, value);
+      }
+    }
+    /**
      * Updates a Merchant Center account.
      *
      * Create a request for the method "accounts.update".

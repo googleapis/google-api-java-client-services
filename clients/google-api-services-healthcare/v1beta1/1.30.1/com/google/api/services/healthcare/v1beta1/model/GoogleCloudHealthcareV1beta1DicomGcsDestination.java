@@ -35,7 +35,7 @@ public final class GoogleCloudHealthcareV1beta1DicomGcsDestination extends com.g
    * component exists only for multi-frame instances.
    *
    * Refer to the DICOM conformance statement for permissible MIME types:
-   * https://cloud.google.com/healthcare/docs/dicom#wado-rs
+   * https://cloud.google.com/healthcare/docs/dicom#retrieve_transaction
    *
    * The following extensions are used for output files:   application/dicom -> .dcm   image/jpeg ->
    * .jpg   image/png -> .png
@@ -64,7 +64,7 @@ public final class GoogleCloudHealthcareV1beta1DicomGcsDestination extends com.g
    * component exists only for multi-frame instances.
    *
    * Refer to the DICOM conformance statement for permissible MIME types:
-   * https://cloud.google.com/healthcare/docs/dicom#wado-rs
+   * https://cloud.google.com/healthcare/docs/dicom#retrieve_transaction
    *
    * The following extensions are used for output files:   application/dicom -> .dcm   image/jpeg ->
    * .jpg   image/png -> .png
@@ -82,7 +82,7 @@ public final class GoogleCloudHealthcareV1beta1DicomGcsDestination extends com.g
    * component exists only for multi-frame instances.
    *
    * Refer to the DICOM conformance statement for permissible MIME types:
-   * https://cloud.google.com/healthcare/docs/dicom#wado-rs
+   * https://cloud.google.com/healthcare/docs/dicom#retrieve_transaction
    *
    * The following extensions are used for output files:   application/dicom -> .dcm   image/jpeg ->
    * .jpg   image/png -> .png

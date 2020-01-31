@@ -1500,12 +1500,13 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
 
           /**
            * The reservation ID. This field must only contain lower case alphanumeric characters or
-           * dash.
+           * dash. Max length is 64 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String reservationId;
 
-          /** The reservation ID. This field must only contain lower case alphanumeric characters or dash.
+          /** The reservation ID. This field must only contain lower case alphanumeric characters or dash. Max
+         length is 64 characters.
            */
           public java.lang.String getReservationId() {
             return reservationId;
@@ -1513,7 +1514,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
 
           /**
            * The reservation ID. This field must only contain lower case alphanumeric characters or
-           * dash.
+           * dash. Max length is 64 characters.
            */
           public Create setReservationId(java.lang.String reservationId) {
             this.reservationId = reservationId;

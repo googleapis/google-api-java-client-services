@@ -74,6 +74,14 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> instanceGroupUrls;
 
   /**
+   * The list of Google Compute Engine [zones](/compute/docs/zones#available) in which the
+   * NodePool's nodes should be located.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> locations;
+
+  /**
    * NodeManagement configuration for this NodePool.
    * The value may be {@code null}.
    */
@@ -123,6 +131,13 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String statusMessage;
+
+  /**
+   * Upgrade settings control disruption and speed of the upgrade.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UpgradeSettings upgradeSettings;
 
   /**
    * The version of the Kubernetes of this node.
@@ -221,6 +236,25 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
    */
   public NodePool setInstanceGroupUrls(java.util.List<java.lang.String> instanceGroupUrls) {
     this.instanceGroupUrls = instanceGroupUrls;
+    return this;
+  }
+
+  /**
+   * The list of Google Compute Engine [zones](/compute/docs/zones#available) in which the
+   * NodePool's nodes should be located.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getLocations() {
+    return locations;
+  }
+
+  /**
+   * The list of Google Compute Engine [zones](/compute/docs/zones#available) in which the
+   * NodePool's nodes should be located.
+   * @param locations locations or {@code null} for none
+   */
+  public NodePool setLocations(java.util.List<java.lang.String> locations) {
+    this.locations = locations;
     return this;
   }
 
@@ -344,6 +378,23 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
    */
   public NodePool setStatusMessage(java.lang.String statusMessage) {
     this.statusMessage = statusMessage;
+    return this;
+  }
+
+  /**
+   * Upgrade settings control disruption and speed of the upgrade.
+   * @return value or {@code null} for none
+   */
+  public UpgradeSettings getUpgradeSettings() {
+    return upgradeSettings;
+  }
+
+  /**
+   * Upgrade settings control disruption and speed of the upgrade.
+   * @param upgradeSettings upgradeSettings or {@code null} for none
+   */
+  public NodePool setUpgradeSettings(UpgradeSettings upgradeSettings) {
+    this.upgradeSettings = upgradeSettings;
     return this;
   }
 

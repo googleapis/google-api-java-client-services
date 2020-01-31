@@ -53,6 +53,20 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   private java.lang.Integer ackDeadlineSeconds;
 
   /**
+   * A policy that specifies the conditions for dead lettering messages in this subscription. If
+   * dead_letter_policy is not set, dead lettering is disabled.
+   *
+   * The Cloud Pub/Sub service account associated with this subscriptions's parent project (i.e.,
+   * service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to
+   * Acknowledge() messages on this subscription. EXPERIMENTAL: This feature is part of a closed
+   * alpha release. This API might be changed in backward-incompatible ways and is not recommended
+   * for production use. It is not subject to any SLA or deprecation policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DeadLetterPolicy deadLetterPolicy;
+
+  /**
    * A policy that specifies the conditions for this subscription's expiration. A subscription is
    * considered active as long as any connected subscriber is successfully consuming messages from
    * the subscription or is issuing operations on the subscription. If `expiration_policy` is not
@@ -165,6 +179,37 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    */
   public Subscription setAckDeadlineSeconds(java.lang.Integer ackDeadlineSeconds) {
     this.ackDeadlineSeconds = ackDeadlineSeconds;
+    return this;
+  }
+
+  /**
+   * A policy that specifies the conditions for dead lettering messages in this subscription. If
+   * dead_letter_policy is not set, dead lettering is disabled.
+   *
+   * The Cloud Pub/Sub service account associated with this subscriptions's parent project (i.e.,
+   * service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to
+   * Acknowledge() messages on this subscription. EXPERIMENTAL: This feature is part of a closed
+   * alpha release. This API might be changed in backward-incompatible ways and is not recommended
+   * for production use. It is not subject to any SLA or deprecation policy.
+   * @return value or {@code null} for none
+   */
+  public DeadLetterPolicy getDeadLetterPolicy() {
+    return deadLetterPolicy;
+  }
+
+  /**
+   * A policy that specifies the conditions for dead lettering messages in this subscription. If
+   * dead_letter_policy is not set, dead lettering is disabled.
+   *
+   * The Cloud Pub/Sub service account associated with this subscriptions's parent project (i.e.,
+   * service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to
+   * Acknowledge() messages on this subscription. EXPERIMENTAL: This feature is part of a closed
+   * alpha release. This API might be changed in backward-incompatible ways and is not recommended
+   * for production use. It is not subject to any SLA or deprecation policy.
+   * @param deadLetterPolicy deadLetterPolicy or {@code null} for none
+   */
+  public Subscription setDeadLetterPolicy(DeadLetterPolicy deadLetterPolicy) {
+    this.deadLetterPolicy = deadLetterPolicy;
     return this;
   }
 

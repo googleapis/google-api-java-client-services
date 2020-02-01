@@ -40,9 +40,10 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   /**
    * Optional. A unique identifier for the log entry. If you provide a value, then Logging considers
    * other log entries in the same project, with the same timestamp, and with the same insert_id to
-   * be duplicates which can be removed. If omitted in new log entries, then Logging assigns its own
-   * unique identifier. The insert_id is also used to order log entries that have the same timestamp
-   * value.
+   * be duplicates which are removed in a single query result. However, there are no guarantees of
+   * de-duplication in the export of logs.If the insert_id is omitted when writing a log entry, the
+   * Logging API  assigns its own unique identifier in this field.In queries, the insert_id is also
+   * used to order log entries that have the same log_name and timestamp values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -211,9 +212,10 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   /**
    * Optional. A unique identifier for the log entry. If you provide a value, then Logging considers
    * other log entries in the same project, with the same timestamp, and with the same insert_id to
-   * be duplicates which can be removed. If omitted in new log entries, then Logging assigns its own
-   * unique identifier. The insert_id is also used to order log entries that have the same timestamp
-   * value.
+   * be duplicates which are removed in a single query result. However, there are no guarantees of
+   * de-duplication in the export of logs.If the insert_id is omitted when writing a log entry, the
+   * Logging API  assigns its own unique identifier in this field.In queries, the insert_id is also
+   * used to order log entries that have the same log_name and timestamp values.
    * @return value or {@code null} for none
    */
   public java.lang.String getInsertId() {
@@ -223,9 +225,10 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   /**
    * Optional. A unique identifier for the log entry. If you provide a value, then Logging considers
    * other log entries in the same project, with the same timestamp, and with the same insert_id to
-   * be duplicates which can be removed. If omitted in new log entries, then Logging assigns its own
-   * unique identifier. The insert_id is also used to order log entries that have the same timestamp
-   * value.
+   * be duplicates which are removed in a single query result. However, there are no guarantees of
+   * de-duplication in the export of logs.If the insert_id is omitted when writing a log entry, the
+   * Logging API  assigns its own unique identifier in this field.In queries, the insert_id is also
+   * used to order log entries that have the same log_name and timestamp values.
    * @param insertId insertId or {@code null} for none
    */
   public LogEntry setInsertId(java.lang.String insertId) {

@@ -41,6 +41,17 @@ public final class BigQueryOptions extends com.google.api.client.json.GenericJso
   private java.lang.Boolean usePartitionedTables;
 
   /**
+   * Output only. True if new timestamp column based partitioning is in use, false if legacy
+   * ingestion-time partitioning is in use. All new sinks will have this field set true and will use
+   * timestamp column based partitioning. If use_partitioned_tables is false, this value has no
+   * meaning and will be false. Legacy sinks using partitioned tables will have this field set to
+   * false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean usesTimestampColumnPartitioning;
+
+  /**
    * Optional. Whether to use BigQuery's partition tables. By default, Logging creates dated tables
    * based on the log entries' timestamps, e.g. syslog_20170523. With partitioned tables the date
    * suffix is no longer present and special query syntax has to be used instead. In both cases,
@@ -60,6 +71,31 @@ public final class BigQueryOptions extends com.google.api.client.json.GenericJso
    */
   public BigQueryOptions setUsePartitionedTables(java.lang.Boolean usePartitionedTables) {
     this.usePartitionedTables = usePartitionedTables;
+    return this;
+  }
+
+  /**
+   * Output only. True if new timestamp column based partitioning is in use, false if legacy
+   * ingestion-time partitioning is in use. All new sinks will have this field set true and will use
+   * timestamp column based partitioning. If use_partitioned_tables is false, this value has no
+   * meaning and will be false. Legacy sinks using partitioned tables will have this field set to
+   * false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUsesTimestampColumnPartitioning() {
+    return usesTimestampColumnPartitioning;
+  }
+
+  /**
+   * Output only. True if new timestamp column based partitioning is in use, false if legacy
+   * ingestion-time partitioning is in use. All new sinks will have this field set true and will use
+   * timestamp column based partitioning. If use_partitioned_tables is false, this value has no
+   * meaning and will be false. Legacy sinks using partitioned tables will have this field set to
+   * false.
+   * @param usesTimestampColumnPartitioning usesTimestampColumnPartitioning or {@code null} for none
+   */
+  public BigQueryOptions setUsesTimestampColumnPartitioning(java.lang.Boolean usesTimestampColumnPartitioning) {
+    this.usesTimestampColumnPartitioning = usesTimestampColumnPartitioning;
     return this;
   }
 

@@ -17,8 +17,7 @@
 package com.google.api.services.accesscontextmanager.v1beta.model;
 
 /**
- * Alpha. Specifies how APIs are allowed to communicate within the Service Perimeter. This message
- * is DEPRECATED and had been renamed to VpcAccessibleServices
+ * Specifies how APIs are allowed to communicate within the Service Perimeter.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Access Context Manager API. For a detailed
@@ -29,7 +28,7 @@ package com.google.api.services.accesscontextmanager.v1beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class VpcServiceRestriction extends com.google.api.client.json.GenericJson {
+public final class VpcAccessibleServices extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of APIs usable within the Service Perimeter. Must be empty unless 'enable_restriction'
@@ -61,7 +60,7 @@ public final class VpcServiceRestriction extends com.google.api.client.json.Gene
    * is True.
    * @param allowedServices allowedServices or {@code null} for none
    */
-  public VpcServiceRestriction setAllowedServices(java.util.List<java.lang.String> allowedServices) {
+  public VpcAccessibleServices setAllowedServices(java.util.List<java.lang.String> allowedServices) {
     this.allowedServices = allowedServices;
     return this;
   }
@@ -80,19 +79,19 @@ public final class VpcServiceRestriction extends com.google.api.client.json.Gene
    * 'allowed_services'.
    * @param enableRestriction enableRestriction or {@code null} for none
    */
-  public VpcServiceRestriction setEnableRestriction(java.lang.Boolean enableRestriction) {
+  public VpcAccessibleServices setEnableRestriction(java.lang.Boolean enableRestriction) {
     this.enableRestriction = enableRestriction;
     return this;
   }
 
   @Override
-  public VpcServiceRestriction set(String fieldName, Object value) {
-    return (VpcServiceRestriction) super.set(fieldName, value);
+  public VpcAccessibleServices set(String fieldName, Object value) {
+    return (VpcAccessibleServices) super.set(fieldName, value);
   }
 
   @Override
-  public VpcServiceRestriction clone() {
-    return (VpcServiceRestriction) super.clone();
+  public VpcAccessibleServices clone() {
+    return (VpcAccessibleServices) super.clone();
   }
 
 }

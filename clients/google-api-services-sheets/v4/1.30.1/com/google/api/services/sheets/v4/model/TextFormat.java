@@ -58,6 +58,13 @@ public final class TextFormat extends com.google.api.client.json.GenericJson {
   private Color foregroundColor;
 
   /**
+   * The foreground color of the text. If foreground_color is also set, this field takes precedence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ColorStyle foregroundColorStyle;
+
+  /**
    * True if the text is italicized.
    * The value may be {@code null}.
    */
@@ -143,6 +150,23 @@ public final class TextFormat extends com.google.api.client.json.GenericJson {
    */
   public TextFormat setForegroundColor(Color foregroundColor) {
     this.foregroundColor = foregroundColor;
+    return this;
+  }
+
+  /**
+   * The foreground color of the text. If foreground_color is also set, this field takes precedence.
+   * @return value or {@code null} for none
+   */
+  public ColorStyle getForegroundColorStyle() {
+    return foregroundColorStyle;
+  }
+
+  /**
+   * The foreground color of the text. If foreground_color is also set, this field takes precedence.
+   * @param foregroundColorStyle foregroundColorStyle or {@code null} for none
+   */
+  public TextFormat setForegroundColorStyle(ColorStyle foregroundColorStyle) {
+    this.foregroundColorStyle = foregroundColorStyle;
     return this;
   }
 

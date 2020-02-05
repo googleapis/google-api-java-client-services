@@ -87,6 +87,13 @@ public final class SheetProperties extends com.google.api.client.json.GenericJso
   private Color tabColor;
 
   /**
+   * The color of the tab in the UI. If tab_color is also set, this field takes precedence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ColorStyle tabColorStyle;
+
+  /**
    * The name of the sheet.
    * The value may be {@code null}.
    */
@@ -225,6 +232,23 @@ public final class SheetProperties extends com.google.api.client.json.GenericJso
    */
   public SheetProperties setTabColor(Color tabColor) {
     this.tabColor = tabColor;
+    return this;
+  }
+
+  /**
+   * The color of the tab in the UI. If tab_color is also set, this field takes precedence.
+   * @return value or {@code null} for none
+   */
+  public ColorStyle getTabColorStyle() {
+    return tabColorStyle;
+  }
+
+  /**
+   * The color of the tab in the UI. If tab_color is also set, this field takes precedence.
+   * @param tabColorStyle tabColorStyle or {@code null} for none
+   */
+  public SheetProperties setTabColorStyle(ColorStyle tabColorStyle) {
+    this.tabColorStyle = tabColorStyle;
     return this;
   }
 

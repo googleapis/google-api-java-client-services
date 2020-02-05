@@ -47,6 +47,14 @@ public final class BandingProperties extends com.google.api.client.json.GenericJ
   private Color firstBandColor;
 
   /**
+   * The first color that is alternating. (Required) If first_band_color is also set, this field
+   * takes precedence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ColorStyle firstBandColorStyle;
+
+  /**
    * The color of the last row or column. If this field is not set, the last row or column will be
    * filled with either first_band_color or second_band_color, depending on the color of the
    * previous row or column.
@@ -54,6 +62,15 @@ public final class BandingProperties extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private Color footerColor;
+
+  /**
+   * The color of the last row or column. If this field is not set, the last row or column will be
+   * filled with either first_band_color or second_band_color, depending on the color of the
+   * previous row or column. If footer_color is also set, this field takes precedence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ColorStyle footerColorStyle;
 
   /**
    * The color of the first row or column. If this field is set, the first row or column will be
@@ -67,11 +84,30 @@ public final class BandingProperties extends com.google.api.client.json.GenericJ
   private Color headerColor;
 
   /**
+   * The color of the first row or column. If this field is set, the first row or column will be
+   * filled with this color and the colors will alternate between first_band_color and
+   * second_band_color starting from the second row or column. Otherwise, the first row or column
+   * will be filled with first_band_color and the colors will proceed to alternate as they normally
+   * would. If header_color is also set, this field takes precedence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ColorStyle headerColorStyle;
+
+  /**
    * The second color that is alternating. (Required)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Color secondBandColor;
+
+  /**
+   * The second color that is alternating. (Required) If second_band_color is also set, this field
+   * takes precedence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ColorStyle secondBandColorStyle;
 
   /**
    * The first color that is alternating. (Required)
@@ -87,6 +123,25 @@ public final class BandingProperties extends com.google.api.client.json.GenericJ
    */
   public BandingProperties setFirstBandColor(Color firstBandColor) {
     this.firstBandColor = firstBandColor;
+    return this;
+  }
+
+  /**
+   * The first color that is alternating. (Required) If first_band_color is also set, this field
+   * takes precedence.
+   * @return value or {@code null} for none
+   */
+  public ColorStyle getFirstBandColorStyle() {
+    return firstBandColorStyle;
+  }
+
+  /**
+   * The first color that is alternating. (Required) If first_band_color is also set, this field
+   * takes precedence.
+   * @param firstBandColorStyle firstBandColorStyle or {@code null} for none
+   */
+  public BandingProperties setFirstBandColorStyle(ColorStyle firstBandColorStyle) {
+    this.firstBandColorStyle = firstBandColorStyle;
     return this;
   }
 
@@ -108,6 +163,27 @@ public final class BandingProperties extends com.google.api.client.json.GenericJ
    */
   public BandingProperties setFooterColor(Color footerColor) {
     this.footerColor = footerColor;
+    return this;
+  }
+
+  /**
+   * The color of the last row or column. If this field is not set, the last row or column will be
+   * filled with either first_band_color or second_band_color, depending on the color of the
+   * previous row or column. If footer_color is also set, this field takes precedence.
+   * @return value or {@code null} for none
+   */
+  public ColorStyle getFooterColorStyle() {
+    return footerColorStyle;
+  }
+
+  /**
+   * The color of the last row or column. If this field is not set, the last row or column will be
+   * filled with either first_band_color or second_band_color, depending on the color of the
+   * previous row or column. If footer_color is also set, this field takes precedence.
+   * @param footerColorStyle footerColorStyle or {@code null} for none
+   */
+  public BandingProperties setFooterColorStyle(ColorStyle footerColorStyle) {
+    this.footerColorStyle = footerColorStyle;
     return this;
   }
 
@@ -137,6 +213,31 @@ public final class BandingProperties extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * The color of the first row or column. If this field is set, the first row or column will be
+   * filled with this color and the colors will alternate between first_band_color and
+   * second_band_color starting from the second row or column. Otherwise, the first row or column
+   * will be filled with first_band_color and the colors will proceed to alternate as they normally
+   * would. If header_color is also set, this field takes precedence.
+   * @return value or {@code null} for none
+   */
+  public ColorStyle getHeaderColorStyle() {
+    return headerColorStyle;
+  }
+
+  /**
+   * The color of the first row or column. If this field is set, the first row or column will be
+   * filled with this color and the colors will alternate between first_band_color and
+   * second_band_color starting from the second row or column. Otherwise, the first row or column
+   * will be filled with first_band_color and the colors will proceed to alternate as they normally
+   * would. If header_color is also set, this field takes precedence.
+   * @param headerColorStyle headerColorStyle or {@code null} for none
+   */
+  public BandingProperties setHeaderColorStyle(ColorStyle headerColorStyle) {
+    this.headerColorStyle = headerColorStyle;
+    return this;
+  }
+
+  /**
    * The second color that is alternating. (Required)
    * @return value or {@code null} for none
    */
@@ -150,6 +251,25 @@ public final class BandingProperties extends com.google.api.client.json.GenericJ
    */
   public BandingProperties setSecondBandColor(Color secondBandColor) {
     this.secondBandColor = secondBandColor;
+    return this;
+  }
+
+  /**
+   * The second color that is alternating. (Required) If second_band_color is also set, this field
+   * takes precedence.
+   * @return value or {@code null} for none
+   */
+  public ColorStyle getSecondBandColorStyle() {
+    return secondBandColorStyle;
+  }
+
+  /**
+   * The second color that is alternating. (Required) If second_band_color is also set, this field
+   * takes precedence.
+   * @param secondBandColorStyle secondBandColorStyle or {@code null} for none
+   */
+  public BandingProperties setSecondBandColorStyle(ColorStyle secondBandColorStyle) {
+    this.secondBandColorStyle = secondBandColorStyle;
     return this;
   }
 

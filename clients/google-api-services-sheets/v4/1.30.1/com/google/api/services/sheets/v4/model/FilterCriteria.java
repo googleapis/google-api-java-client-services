@@ -54,6 +54,16 @@ public final class FilterCriteria extends com.google.api.client.json.GenericJson
   private Color visibleBackgroundColor;
 
   /**
+   * The background fill color to filter by; only cells with this fill color are shown. Mutually
+   * exclusive with all other filter criteria. Requests to set this field will fail with a 400 error
+   * if any other filter criteria field is set. If visible_background_color is also set, this field
+   * takes precedence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ColorStyle visibleBackgroundColorStyle;
+
+  /**
    * The text color to filter by; only cells with this text color are shown. Mutually exclusive with
    * all other filter criteria. Requests to set this field will fail with a 400 error if any other
    * filter criteria field is set.
@@ -61,6 +71,16 @@ public final class FilterCriteria extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private Color visibleForegroundColor;
+
+  /**
+   * The text color to filter by; only cells with this text color are shown. Mutually exclusive with
+   * all other filter criteria. Requests to set this field will fail with a 400 error if any other
+   * filter criteria field is set. If visible_foreground_color is also set, this field takes
+   * precedence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ColorStyle visibleForegroundColorStyle;
 
   /**
    * A condition that must be true for values to be shown. (This does not override hidden_values --
@@ -120,6 +140,29 @@ public final class FilterCriteria extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * The background fill color to filter by; only cells with this fill color are shown. Mutually
+   * exclusive with all other filter criteria. Requests to set this field will fail with a 400 error
+   * if any other filter criteria field is set. If visible_background_color is also set, this field
+   * takes precedence.
+   * @return value or {@code null} for none
+   */
+  public ColorStyle getVisibleBackgroundColorStyle() {
+    return visibleBackgroundColorStyle;
+  }
+
+  /**
+   * The background fill color to filter by; only cells with this fill color are shown. Mutually
+   * exclusive with all other filter criteria. Requests to set this field will fail with a 400 error
+   * if any other filter criteria field is set. If visible_background_color is also set, this field
+   * takes precedence.
+   * @param visibleBackgroundColorStyle visibleBackgroundColorStyle or {@code null} for none
+   */
+  public FilterCriteria setVisibleBackgroundColorStyle(ColorStyle visibleBackgroundColorStyle) {
+    this.visibleBackgroundColorStyle = visibleBackgroundColorStyle;
+    return this;
+  }
+
+  /**
    * The text color to filter by; only cells with this text color are shown. Mutually exclusive with
    * all other filter criteria. Requests to set this field will fail with a 400 error if any other
    * filter criteria field is set.
@@ -137,6 +180,29 @@ public final class FilterCriteria extends com.google.api.client.json.GenericJson
    */
   public FilterCriteria setVisibleForegroundColor(Color visibleForegroundColor) {
     this.visibleForegroundColor = visibleForegroundColor;
+    return this;
+  }
+
+  /**
+   * The text color to filter by; only cells with this text color are shown. Mutually exclusive with
+   * all other filter criteria. Requests to set this field will fail with a 400 error if any other
+   * filter criteria field is set. If visible_foreground_color is also set, this field takes
+   * precedence.
+   * @return value or {@code null} for none
+   */
+  public ColorStyle getVisibleForegroundColorStyle() {
+    return visibleForegroundColorStyle;
+  }
+
+  /**
+   * The text color to filter by; only cells with this text color are shown. Mutually exclusive with
+   * all other filter criteria. Requests to set this field will fail with a 400 error if any other
+   * filter criteria field is set. If visible_foreground_color is also set, this field takes
+   * precedence.
+   * @param visibleForegroundColorStyle visibleForegroundColorStyle or {@code null} for none
+   */
+  public FilterCriteria setVisibleForegroundColorStyle(ColorStyle visibleForegroundColorStyle) {
+    this.visibleForegroundColorStyle = visibleForegroundColorStyle;
     return this;
   }
 

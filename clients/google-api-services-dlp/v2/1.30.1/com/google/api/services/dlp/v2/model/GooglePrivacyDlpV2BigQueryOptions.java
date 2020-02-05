@@ -39,8 +39,11 @@ public final class GooglePrivacyDlpV2BigQueryOptions extends com.google.api.clie
   private java.util.List<GooglePrivacyDlpV2FieldId> excludedFields;
 
   /**
-   * References to fields uniquely identifying rows within the table. Nested fields in the format,
-   * like `person.birthdate.year`, are allowed.
+   * Table fields that may uniquely identify a row within the table. When
+   * `actions.saveFindings.outputConfig.table` is specified, the values of columns specified here
+   * are available in the output table under
+   * `location.content_locations.record_location.record_key.id_values`. Nested fields such as
+   * `person.birthdate.year` are allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,8 +101,11 @@ public final class GooglePrivacyDlpV2BigQueryOptions extends com.google.api.clie
   }
 
   /**
-   * References to fields uniquely identifying rows within the table. Nested fields in the format,
-   * like `person.birthdate.year`, are allowed.
+   * Table fields that may uniquely identify a row within the table. When
+   * `actions.saveFindings.outputConfig.table` is specified, the values of columns specified here
+   * are available in the output table under
+   * `location.content_locations.record_location.record_key.id_values`. Nested fields such as
+   * `person.birthdate.year` are allowed.
    * @return value or {@code null} for none
    */
   public java.util.List<GooglePrivacyDlpV2FieldId> getIdentifyingFields() {
@@ -107,8 +113,11 @@ public final class GooglePrivacyDlpV2BigQueryOptions extends com.google.api.clie
   }
 
   /**
-   * References to fields uniquely identifying rows within the table. Nested fields in the format,
-   * like `person.birthdate.year`, are allowed.
+   * Table fields that may uniquely identify a row within the table. When
+   * `actions.saveFindings.outputConfig.table` is specified, the values of columns specified here
+   * are available in the output table under
+   * `location.content_locations.record_location.record_key.id_values`. Nested fields such as
+   * `person.birthdate.year` are allowed.
    * @param identifyingFields identifyingFields or {@code null} for none
    */
   public GooglePrivacyDlpV2BigQueryOptions setIdentifyingFields(java.util.List<GooglePrivacyDlpV2FieldId> identifyingFields) {

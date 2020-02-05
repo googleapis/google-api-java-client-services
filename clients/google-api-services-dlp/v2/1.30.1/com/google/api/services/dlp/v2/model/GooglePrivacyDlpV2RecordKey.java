@@ -43,8 +43,8 @@ public final class GooglePrivacyDlpV2RecordKey extends com.google.api.client.jso
   private GooglePrivacyDlpV2DatastoreKey datastoreKey;
 
   /**
-   * Values of identifying columns in the given row. Order of values matches the order of field
-   * identifiers specified in the scanning request.
+   * Values of identifying columns in the given row. Order of values matches the order of
+   * `identifying_fields` specified in the scanning request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,8 +81,8 @@ public final class GooglePrivacyDlpV2RecordKey extends com.google.api.client.jso
   }
 
   /**
-   * Values of identifying columns in the given row. Order of values matches the order of field
-   * identifiers specified in the scanning request.
+   * Values of identifying columns in the given row. Order of values matches the order of
+   * `identifying_fields` specified in the scanning request.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getIdValues() {
@@ -90,8 +90,8 @@ public final class GooglePrivacyDlpV2RecordKey extends com.google.api.client.jso
   }
 
   /**
-   * Values of identifying columns in the given row. Order of values matches the order of field
-   * identifiers specified in the scanning request.
+   * Values of identifying columns in the given row. Order of values matches the order of
+   * `identifying_fields` specified in the scanning request.
    * @param idValues idValues or {@code null} for none
    */
   public GooglePrivacyDlpV2RecordKey setIdValues(java.util.List<java.lang.String> idValues) {

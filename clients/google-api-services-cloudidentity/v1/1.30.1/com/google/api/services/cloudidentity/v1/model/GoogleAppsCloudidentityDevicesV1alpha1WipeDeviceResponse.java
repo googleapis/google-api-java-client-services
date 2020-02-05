@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.cloudidentity.v1beta1.model;
+package com.google.api.services.cloudidentity.v1.model;
 
 /**
- * The response message for GroupsService.LookupGroupName.
+ * Response message for wiping all data on the device.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Identity API. For a detailed explanation see:
@@ -27,43 +27,43 @@ package com.google.api.services.cloudidentity.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class LookupGroupNameResponse extends com.google.api.client.json.GenericJson {
+public final class GoogleAppsCloudidentityDevicesV1alpha1WipeDeviceResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
-   * looked-up `Group`.
+   * Resultant Device object for the action. Note that asset tags will not be returned in the device
+   * object.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String name;
+  private GoogleAppsCloudidentityDevicesV1alpha1Device device;
 
   /**
-   * Output only. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
-   * looked-up `Group`.
+   * Resultant Device object for the action. Note that asset tags will not be returned in the device
+   * object.
    * @return value or {@code null} for none
    */
-  public java.lang.String getName() {
-    return name;
+  public GoogleAppsCloudidentityDevicesV1alpha1Device getDevice() {
+    return device;
   }
 
   /**
-   * Output only. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
-   * looked-up `Group`.
-   * @param name name or {@code null} for none
+   * Resultant Device object for the action. Note that asset tags will not be returned in the device
+   * object.
+   * @param device device or {@code null} for none
    */
-  public LookupGroupNameResponse setName(java.lang.String name) {
-    this.name = name;
+  public GoogleAppsCloudidentityDevicesV1alpha1WipeDeviceResponse setDevice(GoogleAppsCloudidentityDevicesV1alpha1Device device) {
+    this.device = device;
     return this;
   }
 
   @Override
-  public LookupGroupNameResponse set(String fieldName, Object value) {
-    return (LookupGroupNameResponse) super.set(fieldName, value);
+  public GoogleAppsCloudidentityDevicesV1alpha1WipeDeviceResponse set(String fieldName, Object value) {
+    return (GoogleAppsCloudidentityDevicesV1alpha1WipeDeviceResponse) super.set(fieldName, value);
   }
 
   @Override
-  public LookupGroupNameResponse clone() {
-    return (LookupGroupNameResponse) super.clone();
+  public GoogleAppsCloudidentityDevicesV1alpha1WipeDeviceResponse clone() {
+    return (GoogleAppsCloudidentityDevicesV1alpha1WipeDeviceResponse) super.clone();
   }
 
 }

@@ -17,7 +17,7 @@
 package com.google.api.services.cloudidentity.v1beta1.model;
 
 /**
- * The response message for GroupsService.LookupGroupName.
+ * The response message for MembershipsService.ModifyMembershipRoles.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Identity API. For a detailed explanation see:
@@ -27,43 +27,40 @@ package com.google.api.services.cloudidentity.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class LookupGroupNameResponse extends com.google.api.client.json.GenericJson {
+public final class ModifyMembershipRolesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
-   * looked-up `Group`.
+   * The `Membership` resource after modifying its `MembershipRole`s.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String name;
+  private Membership membership;
 
   /**
-   * Output only. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
-   * looked-up `Group`.
+   * The `Membership` resource after modifying its `MembershipRole`s.
    * @return value or {@code null} for none
    */
-  public java.lang.String getName() {
-    return name;
+  public Membership getMembership() {
+    return membership;
   }
 
   /**
-   * Output only. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
-   * looked-up `Group`.
-   * @param name name or {@code null} for none
+   * The `Membership` resource after modifying its `MembershipRole`s.
+   * @param membership membership or {@code null} for none
    */
-  public LookupGroupNameResponse setName(java.lang.String name) {
-    this.name = name;
+  public ModifyMembershipRolesResponse setMembership(Membership membership) {
+    this.membership = membership;
     return this;
   }
 
   @Override
-  public LookupGroupNameResponse set(String fieldName, Object value) {
-    return (LookupGroupNameResponse) super.set(fieldName, value);
+  public ModifyMembershipRolesResponse set(String fieldName, Object value) {
+    return (ModifyMembershipRolesResponse) super.set(fieldName, value);
   }
 
   @Override
-  public LookupGroupNameResponse clone() {
-    return (LookupGroupNameResponse) super.clone();
+  public ModifyMembershipRolesResponse clone() {
+    return (ModifyMembershipRolesResponse) super.clone();
   }
 
 }

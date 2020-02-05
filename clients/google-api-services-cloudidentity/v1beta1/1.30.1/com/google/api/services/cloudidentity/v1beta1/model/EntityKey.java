@@ -36,7 +36,7 @@ public final class EntityKey extends com.google.api.client.json.GenericJson {
   /**
    * The ID of the entity.
    *
-   * For Google-managed entities, the `id` must be the email address of a group or user.
+   * For Google-managed entities, the `id` must be the email address of an existing group or user.
    *
    * For external-identity-mapped entities, the `id` must be a string conforming to the Identity
    * Source's requirements.
@@ -63,7 +63,7 @@ public final class EntityKey extends com.google.api.client.json.GenericJson {
   /**
    * The ID of the entity.
    *
-   * For Google-managed entities, the `id` must be the email address of a group or user.
+   * For Google-managed entities, the `id` must be the email address of an existing group or user.
    *
    * For external-identity-mapped entities, the `id` must be a string conforming to the Identity
    * Source's requirements.
@@ -78,7 +78,7 @@ public final class EntityKey extends com.google.api.client.json.GenericJson {
   /**
    * The ID of the entity.
    *
-   * For Google-managed entities, the `id` must be the email address of a group or user.
+   * For Google-managed entities, the `id` must be the email address of an existing group or user.
    *
    * For external-identity-mapped entities, the `id` must be a string conforming to the Identity
    * Source's requirements.

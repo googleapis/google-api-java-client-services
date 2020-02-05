@@ -77,9 +77,9 @@ public final class Group extends com.google.api.client.json.GenericJson {
   /**
    * Required. The labels that apply to the `Group`.
    *
-   * Must not contain more than one entry. Must contain the entry `'system/groups/external': ''` if
-   * the `Group` is an external-identity-mapped group or
-   * `'cloudidentity.googleapis.com/groups.discussion_forum': ''` if the `Group` is a Google Group.
+   * Must not contain more than one entry. Must contain the entry
+   * `'cloudidentity.googleapis.com/groups.discussion_forum': ''` if the `Group` is a Google Group
+   * or `'system/groups/external': ''` if the `Group` is an external-identity-mapped group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -205,9 +205,9 @@ public final class Group extends com.google.api.client.json.GenericJson {
   /**
    * Required. The labels that apply to the `Group`.
    *
-   * Must not contain more than one entry. Must contain the entry `'system/groups/external': ''` if
-   * the `Group` is an external-identity-mapped group or
-   * `'cloudidentity.googleapis.com/groups.discussion_forum': ''` if the `Group` is a Google Group.
+   * Must not contain more than one entry. Must contain the entry
+   * `'cloudidentity.googleapis.com/groups.discussion_forum': ''` if the `Group` is a Google Group
+   * or `'system/groups/external': ''` if the `Group` is an external-identity-mapped group.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -217,9 +217,9 @@ public final class Group extends com.google.api.client.json.GenericJson {
   /**
    * Required. The labels that apply to the `Group`.
    *
-   * Must not contain more than one entry. Must contain the entry `'system/groups/external': ''` if
-   * the `Group` is an external-identity-mapped group or
-   * `'cloudidentity.googleapis.com/groups.discussion_forum': ''` if the `Group` is a Google Group.
+   * Must not contain more than one entry. Must contain the entry
+   * `'cloudidentity.googleapis.com/groups.discussion_forum': ''` if the `Group` is a Google Group
+   * or `'system/groups/external': ''` if the `Group` is an external-identity-mapped group.
    * @param labels labels or {@code null} for none
    */
   public Group setLabels(java.util.Map<String, java.lang.String> labels) {

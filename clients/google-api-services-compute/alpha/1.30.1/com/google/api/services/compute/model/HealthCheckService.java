@@ -45,6 +45,17 @@ public final class HealthCheckService extends com.google.api.client.json.Generic
   private java.lang.String description;
 
   /**
+   * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
+   * in optimistic locking. This field will be ignored when inserting a HealthCheckService. An up-
+   * to-date fingerprint must be provided in order to patch/update the HealthCheckService;
+   * Otherwise, the request will fail with error 412 conditionNotMet. To see the latest fingerprint,
+   * make a get() request to retrieve the HealthCheckService.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String fingerprint;
+
+  /**
    * List of URLs to the HealthCheck resources. Must have at least one HealthCheck, and not more
    * than 10. HealthCheck resources must have portSpecification=USE_SERVING_PORT. For regional
    * HealthCheckService, the HealthCheck must be regional and in the same region. For global
@@ -175,6 +186,67 @@ public final class HealthCheckService extends com.google.api.client.json.Generic
    */
   public HealthCheckService setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
+   * in optimistic locking. This field will be ignored when inserting a HealthCheckService. An up-
+   * to-date fingerprint must be provided in order to patch/update the HealthCheckService;
+   * Otherwise, the request will fail with error 412 conditionNotMet. To see the latest fingerprint,
+   * make a get() request to retrieve the HealthCheckService.
+   * @see #decodeFingerprint()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFingerprint() {
+    return fingerprint;
+  }
+
+  /**
+   * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
+   * in optimistic locking. This field will be ignored when inserting a HealthCheckService. An up-
+   * to-date fingerprint must be provided in order to patch/update the HealthCheckService;
+   * Otherwise, the request will fail with error 412 conditionNotMet. To see the latest fingerprint,
+   * make a get() request to retrieve the HealthCheckService.
+   * @see #getFingerprint()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeFingerprint() {
+    return com.google.api.client.util.Base64.decodeBase64(fingerprint);
+  }
+
+  /**
+   * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
+   * in optimistic locking. This field will be ignored when inserting a HealthCheckService. An up-
+   * to-date fingerprint must be provided in order to patch/update the HealthCheckService;
+   * Otherwise, the request will fail with error 412 conditionNotMet. To see the latest fingerprint,
+   * make a get() request to retrieve the HealthCheckService.
+   * @see #encodeFingerprint()
+   * @param fingerprint fingerprint or {@code null} for none
+   */
+  public HealthCheckService setFingerprint(java.lang.String fingerprint) {
+    this.fingerprint = fingerprint;
+    return this;
+  }
+
+  /**
+   * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
+   * in optimistic locking. This field will be ignored when inserting a HealthCheckService. An up-
+   * to-date fingerprint must be provided in order to patch/update the HealthCheckService;
+   * Otherwise, the request will fail with error 412 conditionNotMet. To see the latest fingerprint,
+   * make a get() request to retrieve the HealthCheckService.
+   * @see #setFingerprint()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public HealthCheckService encodeFingerprint(byte[] fingerprint) {
+    this.fingerprint = com.google.api.client.util.Base64.encodeBase64URLSafeString(fingerprint);
     return this;
   }
 

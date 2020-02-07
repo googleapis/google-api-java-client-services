@@ -2042,7 +2042,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
-         * Sets the locations for a specific cluster.
+         * Sets the locations for a specific cluster. Deprecated. Use [projects.locations.clusters.update
+         * ](/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.update) instead.
          *
          * Create a request for the method "clusters.setLocations".
          *
@@ -2069,7 +2070,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
 
           /**
-           * Sets the locations for a specific cluster.
+           * Sets the locations for a specific cluster. Deprecated. Use [projects.locations.clusters.update
+           * ](/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.update) instead.
            *
            * Create a request for the method "clusters.setLocations".
            *
@@ -7532,7 +7534,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
-         * Sets the locations for a specific cluster.
+         * Sets the locations for a specific cluster. Deprecated. Use [projects.locations.clusters.update
+         * ](/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.update) instead.
          *
          * Create a request for the method "clusters.locations".
          *
@@ -7565,7 +7568,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           private static final String REST_PATH = "v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/locations";
 
           /**
-           * Sets the locations for a specific cluster.
+           * Sets the locations for a specific cluster. Deprecated. Use [projects.locations.clusters.update
+           * ](/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.update) instead.
            *
            * Create a request for the method "clusters.locations".
            *

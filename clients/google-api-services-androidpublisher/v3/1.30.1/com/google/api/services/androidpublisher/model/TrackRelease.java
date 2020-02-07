@@ -49,6 +49,16 @@ public final class TrackRelease extends com.google.api.client.json.GenericJson {
   private CountryTargeting countryTargeting;
 
   /**
+   * In-app update priority of the release. All newly added APKs in the release will be considered
+   * at this priority. in_app_update_priority can take values between [0, 5]. 5 is the highest
+   * priority. Default priority is 0. See https://developer.android.com/guide/playcore/in-app-
+   * updates.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer inAppUpdatePriority;
+
+  /**
    * The release name, used to identify this release in the Play Console UI. Not required to be
    * unique. This is optional, if not set it will be generated from the version_name in the APKs.
    * The value may be {@code null}.
@@ -126,6 +136,29 @@ public final class TrackRelease extends com.google.api.client.json.GenericJson {
    */
   public TrackRelease setCountryTargeting(CountryTargeting countryTargeting) {
     this.countryTargeting = countryTargeting;
+    return this;
+  }
+
+  /**
+   * In-app update priority of the release. All newly added APKs in the release will be considered
+   * at this priority. in_app_update_priority can take values between [0, 5]. 5 is the highest
+   * priority. Default priority is 0. See https://developer.android.com/guide/playcore/in-app-
+   * updates.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getInAppUpdatePriority() {
+    return inAppUpdatePriority;
+  }
+
+  /**
+   * In-app update priority of the release. All newly added APKs in the release will be considered
+   * at this priority. in_app_update_priority can take values between [0, 5]. 5 is the highest
+   * priority. Default priority is 0. See https://developer.android.com/guide/playcore/in-app-
+   * updates.
+   * @param inAppUpdatePriority inAppUpdatePriority or {@code null} for none
+   */
+  public TrackRelease setInAppUpdatePriority(java.lang.Integer inAppUpdatePriority) {
+    this.inAppUpdatePriority = inAppUpdatePriority;
     return this;
   }
 

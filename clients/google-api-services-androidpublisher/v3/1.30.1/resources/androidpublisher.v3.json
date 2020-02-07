@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/8HRjMsMAUZjbDTub8sPcjVrJuEA\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/-2EPUzGo8AUggd3leJgv-tzSEr8\"",
  "discoveryVersion": "v1",
  "id": "androidpublisher:v3",
  "name": "androidpublisher",
  "canonicalName": "Android Publisher",
  "version": "v3",
- "revision": "20200115",
+ "revision": "20200126",
  "title": "Google Play Developer API",
  "description": "Accesses Android application developers' Google Play accounts.",
  "ownerDomain": "google.com",
@@ -1048,6 +1048,10 @@
      "description": "Time at which the subscription will expire, in milliseconds since the Epoch.",
      "format": "int64"
     },
+    "externalAccountId": {
+     "type": "string",
+     "description": "User account identifier in the third-party service. Only present if account linking happened as part of the subscription purchase flow."
+    },
     "familyName": {
      "type": "string",
      "description": "The family name of the user when the subscription was purchased. Only present for purchases made with 'Subscribe with Google'."
@@ -1245,6 +1249,11 @@
     },
     "countryTargeting": {
      "$ref": "CountryTargeting"
+    },
+    "inAppUpdatePriority": {
+     "type": "integer",
+     "description": "In-app update priority of the release. All newly added APKs in the release will be considered at this priority. in_app_update_priority can take values between [0, 5]. 5 is the highest priority. Default priority is 0. See https://developer.android.com/guide/playcore/in-app-updates.",
+     "format": "int32"
     },
     "name": {
      "type": "string",

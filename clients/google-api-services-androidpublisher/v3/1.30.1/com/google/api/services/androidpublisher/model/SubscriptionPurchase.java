@@ -102,6 +102,14 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
   private java.lang.Long expiryTimeMillis;
 
   /**
+   * User account identifier in the third-party service. Only present if account linking happened as
+   * part of the subscription purchase flow.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String externalAccountId;
+
+  /**
    * The family name of the user when the subscription was purchased. Only present for purchases
    * made with 'Subscribe with Google'.
    * The value may be {@code null}.
@@ -414,6 +422,25 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
    */
   public SubscriptionPurchase setExpiryTimeMillis(java.lang.Long expiryTimeMillis) {
     this.expiryTimeMillis = expiryTimeMillis;
+    return this;
+  }
+
+  /**
+   * User account identifier in the third-party service. Only present if account linking happened as
+   * part of the subscription purchase flow.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExternalAccountId() {
+    return externalAccountId;
+  }
+
+  /**
+   * User account identifier in the third-party service. Only present if account linking happened as
+   * part of the subscription purchase flow.
+   * @param externalAccountId externalAccountId or {@code null} for none
+   */
+  public SubscriptionPurchase setExternalAccountId(java.lang.String externalAccountId) {
+    this.externalAccountId = externalAccountId;
     return this;
   }
 

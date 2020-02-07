@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"LYADMvHWYH2ul9D6m9UT9gT77YM/biPj-qvDzX0_ipa_lLA3mLLQS0E\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/QSxpgMPn1uiC-sHeW8W2cNtPnAA\"",
  "discoveryVersion": "v1",
  "id": "content:v2.1",
  "name": "content",
  "canonicalName": "Shopping Content",
  "version": "v2.1",
- "revision": "20200110",
+ "revision": "20200117",
  "title": "Content API for Shopping",
  "description": "Manages product items, inventory, and Merchant Center accounts for Google Shopping.",
  "ownerDomain": "google.com",
@@ -706,6 +706,28 @@
      "type": "string",
      "description": "Identifies what kind of resource this is. Value: the fixed string \"content#accountsLinkResponse\".",
      "default": "content#accountsLinkResponse"
+    }
+   }
+  },
+  "AccountsListLinksResponse": {
+   "id": "AccountsListLinksResponse",
+   "type": "object",
+   "properties": {
+    "kind": {
+     "type": "string",
+     "description": "Identifies what kind of resource this is. Value: the fixed string \"content#accountsListLinksResponse\".",
+     "default": "content#accountsListLinksResponse"
+    },
+    "links": {
+     "type": "array",
+     "description": "The list of available links.",
+     "items": {
+      "$ref": "LinkedAccount"
+     }
+    },
+    "nextPageToken": {
+     "type": "string",
+     "description": "The token for the retrieval of the next page of links."
     }
    }
   },
@@ -2183,6 +2205,37 @@
      "type": "string",
      "description": "Identifies what kind of resource this is. Value: the fixed string \"content#liasettingsSetPosDataProviderResponse\".",
      "default": "content#liasettingsSetPosDataProviderResponse"
+    }
+   }
+  },
+  "LinkService": {
+   "id": "LinkService",
+   "type": "object",
+   "properties": {
+    "service": {
+     "type": "string",
+     "description": "Service provided to or by the linked account."
+    },
+    "status": {
+     "type": "string",
+     "description": "Status of the link"
+    }
+   }
+  },
+  "LinkedAccount": {
+   "id": "LinkedAccount",
+   "type": "object",
+   "properties": {
+    "linkedAccountId": {
+     "type": "string",
+     "description": "The ID of the linked account."
+    },
+    "services": {
+     "type": "array",
+     "description": "List of provided services.",
+     "items": {
+      "$ref": "LinkService"
+     }
     }
    }
   },
@@ -7148,6 +7201,49 @@
      ],
      "response": {
       "$ref": "AccountsListResponse"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/content"
+     ]
+    },
+    "listlinks": {
+     "id": "content.accounts.listlinks",
+     "path": "{merchantId}/accounts/{accountId}/listlinks",
+     "httpMethod": "GET",
+     "description": "Returns the list of accounts linked to your Merchant Center account.",
+     "parameters": {
+      "accountId": {
+       "type": "string",
+       "description": "The ID of the account for which to list links.",
+       "required": true,
+       "format": "uint64",
+       "location": "path"
+      },
+      "maxResults": {
+       "type": "integer",
+       "description": "The maximum number of links to return in the response, used for pagination.",
+       "format": "uint32",
+       "location": "query"
+      },
+      "merchantId": {
+       "type": "string",
+       "description": "The ID of the managing account. If this parameter is not the same as accountId, then this account must be a multi-client account and accountId must be the ID of a sub-account of this account.",
+       "required": true,
+       "format": "uint64",
+       "location": "path"
+      },
+      "pageToken": {
+       "type": "string",
+       "description": "The token returned by the previous request.",
+       "location": "query"
+      }
+     },
+     "parameterOrder": [
+      "merchantId",
+      "accountId"
+     ],
+     "response": {
+      "$ref": "AccountsListLinksResponse"
      },
      "scopes": [
       "https://www.googleapis.com/auth/content"

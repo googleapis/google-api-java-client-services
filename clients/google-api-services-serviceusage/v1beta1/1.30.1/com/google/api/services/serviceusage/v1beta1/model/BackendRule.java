@@ -37,8 +37,8 @@ public final class BackendRule extends com.google.api.client.json.GenericJson {
   private java.lang.String address;
 
   /**
-   * The number of seconds to wait for a response from a request.  The default deadline for gRPC is
-   * infinite (no deadline) and HTTP requests is 5 seconds.
+   * The number of seconds to wait for a response from a request. The default varies based on the
+   * request protocol and deployment environment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,8 +114,8 @@ public final class BackendRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of seconds to wait for a response from a request.  The default deadline for gRPC is
-   * infinite (no deadline) and HTTP requests is 5 seconds.
+   * The number of seconds to wait for a response from a request. The default varies based on the
+   * request protocol and deployment environment.
    * @return value or {@code null} for none
    */
   public java.lang.Double getDeadline() {
@@ -123,8 +123,8 @@ public final class BackendRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of seconds to wait for a response from a request.  The default deadline for gRPC is
-   * infinite (no deadline) and HTTP requests is 5 seconds.
+   * The number of seconds to wait for a response from a request. The default varies based on the
+   * request protocol and deployment environment.
    * @param deadline deadline or {@code null} for none
    */
   public BackendRule setDeadline(java.lang.Double deadline) {

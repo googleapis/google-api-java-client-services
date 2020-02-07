@@ -178,8 +178,9 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private SandboxConfig sandboxConfig;
 
   /**
-   * The Google Cloud Platform Service Account to be used by the node VMs. If no Service Account is
-   * specified, the "default" service account is used.
+   * The Google Cloud Platform Service Account to be used by the node VMs. Specify the email address
+   * of the Service Account; otherwise, if no Service Account is specified, the "default" service
+   * account is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -533,8 +534,9 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Google Cloud Platform Service Account to be used by the node VMs. If no Service Account is
-   * specified, the "default" service account is used.
+   * The Google Cloud Platform Service Account to be used by the node VMs. Specify the email address
+   * of the Service Account; otherwise, if no Service Account is specified, the "default" service
+   * account is used.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -542,8 +544,9 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Google Cloud Platform Service Account to be used by the node VMs. If no Service Account is
-   * specified, the "default" service account is used.
+   * The Google Cloud Platform Service Account to be used by the node VMs. Specify the email address
+   * of the Service Account; otherwise, if no Service Account is specified, the "default" service
+   * account is used.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public NodeConfig setServiceAccount(java.lang.String serviceAccount) {

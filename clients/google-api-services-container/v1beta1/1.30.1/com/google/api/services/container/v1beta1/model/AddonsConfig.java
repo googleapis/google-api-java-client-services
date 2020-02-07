@@ -47,6 +47,14 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
   private DnsCacheConfig dnsCacheConfig;
 
   /**
+   * Configuration for the GCE PD CSI driver. This option can only be enabled at cluster creation
+   * time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GcePersistentDiskCsiDriverConfig gcePersistentDiskCsiDriverConfig;
+
+  /**
    * Configuration for the horizontal pod autoscaling feature, which increases or decreases the
    * number of replica pods a replication controller has based on the resource usage of the existing
    * pods.
@@ -128,6 +136,25 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
    */
   public AddonsConfig setDnsCacheConfig(DnsCacheConfig dnsCacheConfig) {
     this.dnsCacheConfig = dnsCacheConfig;
+    return this;
+  }
+
+  /**
+   * Configuration for the GCE PD CSI driver. This option can only be enabled at cluster creation
+   * time.
+   * @return value or {@code null} for none
+   */
+  public GcePersistentDiskCsiDriverConfig getGcePersistentDiskCsiDriverConfig() {
+    return gcePersistentDiskCsiDriverConfig;
+  }
+
+  /**
+   * Configuration for the GCE PD CSI driver. This option can only be enabled at cluster creation
+   * time.
+   * @param gcePersistentDiskCsiDriverConfig gcePersistentDiskCsiDriverConfig or {@code null} for none
+   */
+  public AddonsConfig setGcePersistentDiskCsiDriverConfig(GcePersistentDiskCsiDriverConfig gcePersistentDiskCsiDriverConfig) {
+    this.gcePersistentDiskCsiDriverConfig = gcePersistentDiskCsiDriverConfig;
     return this;
   }
 

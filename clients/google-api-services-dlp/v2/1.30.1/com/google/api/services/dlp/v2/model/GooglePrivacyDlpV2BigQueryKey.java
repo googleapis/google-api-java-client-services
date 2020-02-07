@@ -31,7 +31,9 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2BigQueryKey extends com.google.api.client.json.GenericJson {
 
   /**
-   * Absolute number of the row from the beginning of the table at the time of scanning.
+   * Row number inferred at the time the table was scanned. This value is nondeterministic, cannot
+   * be queried, and may be null for inspection jobs. To locate findings within a table, specify
+   * `inspect_job.storage_config.big_query_options.identifying_fields` in `CreateDlpJobRequest`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -45,7 +47,9 @@ public final class GooglePrivacyDlpV2BigQueryKey extends com.google.api.client.j
   private GooglePrivacyDlpV2BigQueryTable tableReference;
 
   /**
-   * Absolute number of the row from the beginning of the table at the time of scanning.
+   * Row number inferred at the time the table was scanned. This value is nondeterministic, cannot
+   * be queried, and may be null for inspection jobs. To locate findings within a table, specify
+   * `inspect_job.storage_config.big_query_options.identifying_fields` in `CreateDlpJobRequest`.
    * @return value or {@code null} for none
    */
   public java.lang.Long getRowNumber() {
@@ -53,7 +57,9 @@ public final class GooglePrivacyDlpV2BigQueryKey extends com.google.api.client.j
   }
 
   /**
-   * Absolute number of the row from the beginning of the table at the time of scanning.
+   * Row number inferred at the time the table was scanned. This value is nondeterministic, cannot
+   * be queried, and may be null for inspection jobs. To locate findings within a table, specify
+   * `inspect_job.storage_config.big_query_options.identifying_fields` in `CreateDlpJobRequest`.
    * @param rowNumber rowNumber or {@code null} for none
    */
   public GooglePrivacyDlpV2BigQueryKey setRowNumber(java.lang.Long rowNumber) {

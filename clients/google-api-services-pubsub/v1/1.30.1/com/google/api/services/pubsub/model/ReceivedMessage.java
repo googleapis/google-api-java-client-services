@@ -37,6 +37,26 @@ public final class ReceivedMessage extends com.google.api.client.json.GenericJso
   private java.lang.String ackId;
 
   /**
+   * Delivery attempt counter is 1 + (the sum of number of NACKs and number of ack_deadline exceeds)
+   * for this message.
+   *
+   * A NACK is any call to ModifyAckDeadline with a 0 deadline. An ack_deadline exceeds event is
+   * whenever a message is not acknowledged within ack_deadline. Note that ack_deadline is initially
+   * Subscription.ackDeadlineSeconds, but may get extended automatically by the client library.
+   *
+   * The first delivery of a given message will have this value as 1. The value is calculated at
+   * best effort and is approximate.
+   *
+   * If a DeadLetterPolicy is not set on the subscription, this will be 0. EXPERIMENTAL: This
+   * feature is part of a closed alpha release. This API might be changed in backward-incompatible
+   * ways and is not recommended for production use. It is not subject to any SLA or deprecation
+   * policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer deliveryAttempt;
+
+  /**
    * The message.
    * The value may be {@code null}.
    */
@@ -57,6 +77,49 @@ public final class ReceivedMessage extends com.google.api.client.json.GenericJso
    */
   public ReceivedMessage setAckId(java.lang.String ackId) {
     this.ackId = ackId;
+    return this;
+  }
+
+  /**
+   * Delivery attempt counter is 1 + (the sum of number of NACKs and number of ack_deadline exceeds)
+   * for this message.
+   *
+   * A NACK is any call to ModifyAckDeadline with a 0 deadline. An ack_deadline exceeds event is
+   * whenever a message is not acknowledged within ack_deadline. Note that ack_deadline is initially
+   * Subscription.ackDeadlineSeconds, but may get extended automatically by the client library.
+   *
+   * The first delivery of a given message will have this value as 1. The value is calculated at
+   * best effort and is approximate.
+   *
+   * If a DeadLetterPolicy is not set on the subscription, this will be 0. EXPERIMENTAL: This
+   * feature is part of a closed alpha release. This API might be changed in backward-incompatible
+   * ways and is not recommended for production use. It is not subject to any SLA or deprecation
+   * policy.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getDeliveryAttempt() {
+    return deliveryAttempt;
+  }
+
+  /**
+   * Delivery attempt counter is 1 + (the sum of number of NACKs and number of ack_deadline exceeds)
+   * for this message.
+   *
+   * A NACK is any call to ModifyAckDeadline with a 0 deadline. An ack_deadline exceeds event is
+   * whenever a message is not acknowledged within ack_deadline. Note that ack_deadline is initially
+   * Subscription.ackDeadlineSeconds, but may get extended automatically by the client library.
+   *
+   * The first delivery of a given message will have this value as 1. The value is calculated at
+   * best effort and is approximate.
+   *
+   * If a DeadLetterPolicy is not set on the subscription, this will be 0. EXPERIMENTAL: This
+   * feature is part of a closed alpha release. This API might be changed in backward-incompatible
+   * ways and is not recommended for production use. It is not subject to any SLA or deprecation
+   * policy.
+   * @param deliveryAttempt deliveryAttempt or {@code null} for none
+   */
+  public ReceivedMessage setDeliveryAttempt(java.lang.Integer deliveryAttempt) {
+    this.deliveryAttempt = deliveryAttempt;
     return this;
   }
 

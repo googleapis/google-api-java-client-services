@@ -32,8 +32,12 @@ package com.google.api.services.translate.v3.model;
 public final class TranslateTextGlossaryConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Specifies the glossary used for this translation. Use this format:
-   * projects/locations/glossaries
+   * Required. The `glossary` to be applied for this translation.
+   *
+   * The format depends on glossary:
+   *
+   * - User provided custom glossary:   `projects/{project-number-or-id}/locations/{location-
+   * id}/glossaries/{glossary-id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,8 +51,12 @@ public final class TranslateTextGlossaryConfig extends com.google.api.client.jso
   private java.lang.Boolean ignoreCase;
 
   /**
-   * Required. Specifies the glossary used for this translation. Use this format:
-   * projects/locations/glossaries
+   * Required. The `glossary` to be applied for this translation.
+   *
+   * The format depends on glossary:
+   *
+   * - User provided custom glossary:   `projects/{project-number-or-id}/locations/{location-
+   * id}/glossaries/{glossary-id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getGlossary() {
@@ -56,8 +64,12 @@ public final class TranslateTextGlossaryConfig extends com.google.api.client.jso
   }
 
   /**
-   * Required. Specifies the glossary used for this translation. Use this format:
-   * projects/locations/glossaries
+   * Required. The `glossary` to be applied for this translation.
+   *
+   * The format depends on glossary:
+   *
+   * - User provided custom glossary:   `projects/{project-number-or-id}/locations/{location-
+   * id}/glossaries/{glossary-id}`
    * @param glossary glossary or {@code null} for none
    */
   public TranslateTextGlossaryConfig setGlossary(java.lang.String glossary) {

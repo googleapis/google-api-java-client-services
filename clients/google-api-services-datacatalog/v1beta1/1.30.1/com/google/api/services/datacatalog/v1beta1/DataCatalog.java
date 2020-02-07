@@ -150,9 +150,9 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
      * the complete resource, only the resource identifier and high level fields. Clients can
      * subsequentally call `Get` methods.
      *
-     * Note that searches do not have full recall. There may be results that match your query but are
-     * not returned, even in subsequent pages of results. These missing results may vary across repeated
-     * calls to search. Do not rely on this method if you need to guarantee full recall.
+     * Note that Data Catalog search queries do not guarantee full recall. Query results that match your
+     * query may not be returned, even in subsequent result pages. Also note that results returned (and
+     * not returned) can vary across repeated search queries.
      *
      * See [Data Catalog Search Syntax](/data-catalog/docs/how-to/search-reference) for more
      * information.
@@ -182,9 +182,9 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
        * return the complete resource, only the resource identifier and high level fields. Clients can
        * subsequentally call `Get` methods.
        *
-       * Note that searches do not have full recall. There may be results that match your query but are
-       * not returned, even in subsequent pages of results. These missing results may vary across
-       * repeated calls to search. Do not rely on this method if you need to guarantee full recall.
+       * Note that Data Catalog search queries do not guarantee full recall. Query results that match
+       * your query may not be returned, even in subsequent result pages. Also note that results
+       * returned (and not returned) can vary across repeated search queries.
        *
        * See [Data Catalog Search Syntax](/data-catalog/docs/how-to/search-reference) for more
        * information.

@@ -1,6 +1,6 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"LYADMvHWYH2ul9D6m9UT9gT77YM/ixfzKMtbPrXr2JZa6kNrC2MjA78\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/1nXB4dbk0lw3Xe_A6xBKVeN3Y7U\"",
  "discoveryVersion": "v1",
  "id": "storage:v1",
  "name": "storage",
@@ -19,9 +19,9 @@
   "labs"
  ],
  "protocol": "rest",
- "baseUrl": "https://www.googleapis.com/storage/v1/",
+ "baseUrl": "https://storage.googleapis.com/storage/v1/",
  "basePath": "/storage/v1/",
- "rootUrl": "https://www.googleapis.com/",
+ "rootUrl": "https://storage.googleapis.com/",
  "servicePath": "storage/v1/",
  "batchPath": "batch/storage/v1",
  "parameters": {

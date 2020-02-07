@@ -73,7 +73,15 @@ public final class ServicePerimeterConfig extends com.google.api.client.json.Gen
   private java.util.List<java.lang.String> unrestrictedServices;
 
   /**
-   * Alpha. Configuration for within Perimeter allowed APIs.
+   * Beta. Configuration for within Perimeter allowed APIs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VpcAccessibleServices vpcAccessibleServices;
+
+  /**
+   * Alpha. Configuration for within Perimeter allowed APIs. Deprecated. The field had been renamed
+   * to vpc_accessible_services
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -174,7 +182,25 @@ public final class ServicePerimeterConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * Alpha. Configuration for within Perimeter allowed APIs.
+   * Beta. Configuration for within Perimeter allowed APIs.
+   * @return value or {@code null} for none
+   */
+  public VpcAccessibleServices getVpcAccessibleServices() {
+    return vpcAccessibleServices;
+  }
+
+  /**
+   * Beta. Configuration for within Perimeter allowed APIs.
+   * @param vpcAccessibleServices vpcAccessibleServices or {@code null} for none
+   */
+  public ServicePerimeterConfig setVpcAccessibleServices(VpcAccessibleServices vpcAccessibleServices) {
+    this.vpcAccessibleServices = vpcAccessibleServices;
+    return this;
+  }
+
+  /**
+   * Alpha. Configuration for within Perimeter allowed APIs. Deprecated. The field had been renamed
+   * to vpc_accessible_services
    * @return value or {@code null} for none
    */
   public VpcServiceRestriction getVpcServiceRestriction() {
@@ -182,7 +208,8 @@ public final class ServicePerimeterConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * Alpha. Configuration for within Perimeter allowed APIs.
+   * Alpha. Configuration for within Perimeter allowed APIs. Deprecated. The field had been renamed
+   * to vpc_accessible_services
    * @param vpcServiceRestriction vpcServiceRestriction or {@code null} for none
    */
   public ServicePerimeterConfig setVpcServiceRestriction(VpcServiceRestriction vpcServiceRestriction) {

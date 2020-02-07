@@ -236,6 +236,22 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         return (Create) super.setUploadProtocol(uploadProtocol);
       }
 
+      /** Required. The initial configuration option for the `Group`. */
+      @com.google.api.client.util.Key
+      private java.lang.String initialGroupConfig;
+
+      /** Required. The initial configuration option for the `Group`.
+       */
+      public java.lang.String getInitialGroupConfig() {
+        return initialGroupConfig;
+      }
+
+      /** Required. The initial configuration option for the `Group`. */
+      public Create setInitialGroupConfig(java.lang.String initialGroupConfig) {
+        this.initialGroupConfig = initialGroupConfig;
+        return this;
+      }
+
       @Override
       public Create set(String parameterName, Object value) {
         return (Create) super.set(parameterName, value);
@@ -249,9 +265,10 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
      * This request holds the parameters needed by the cloudidentity server.  After setting any optional
      * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
-     * @param name The [resource name](https://cloud.google.com/apis/design/resource_names) of
-    the `Group` to retrieve.
-     *        Must be of the form `groups/{group_id}`.
+     * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of
+    the `Group` to
+     *        retrieve.
+    Must be of the form `groups/{group_id}`.
      * @return the request
      */
     public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -278,9 +295,10 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name The [resource name](https://cloud.google.com/apis/design/resource_names) of
-    the `Group` to retrieve.
-     *        Must be of the form `groups/{group_id}`.
+       * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of
+    the `Group` to
+     *        retrieve.
+    Must be of the form `groups/{group_id}`.
        * @since 1.13
        */
       protected Delete(java.lang.String name) {
@@ -349,16 +367,16 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * The [resource name](https://cloud.google.com/apis/design/resource_names) of the `Group` to
-       * retrieve.
+       * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * `Group` to retrieve.
        *
        * Must be of the form `groups/{group_id}`.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The [resource name](https://cloud.google.com/apis/design/resource_names) of the `Group` to
-     retrieve.
+      /** Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the `Group`
+     to retrieve.
 
      Must be of the form `groups/{group_id}`.
        */
@@ -367,8 +385,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * The [resource name](https://cloud.google.com/apis/design/resource_names) of the `Group` to
-       * retrieve.
+       * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * `Group` to retrieve.
        *
        * Must be of the form `groups/{group_id}`.
        */
@@ -395,9 +413,10 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
      * This request holds the parameters needed by the cloudidentity server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param name The [resource name](https://cloud.google.com/apis/design/resource_names) of
-    the `Group` to retrieve.
-     *        Must be of the form `groups/{group_id}`.
+     * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of
+    the `Group` to
+     *        retrieve.
+    Must be of the form `groups/{group_id}`.
      * @return the request
      */
     public Get get(java.lang.String name) throws java.io.IOException {
@@ -423,9 +442,10 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name The [resource name](https://cloud.google.com/apis/design/resource_names) of
-    the `Group` to retrieve.
-     *        Must be of the form `groups/{group_id}`.
+       * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of
+    the `Group` to
+     *        retrieve.
+    Must be of the form `groups/{group_id}`.
        * @since 1.13
        */
       protected Get(java.lang.String name) {
@@ -504,16 +524,16 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * The [resource name](https://cloud.google.com/apis/design/resource_names) of the `Group` to
-       * retrieve.
+       * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * `Group` to retrieve.
        *
        * Must be of the form `groups/{group_id}`.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The [resource name](https://cloud.google.com/apis/design/resource_names) of the `Group` to
-     retrieve.
+      /** Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the `Group`
+     to retrieve.
 
      Must be of the form `groups/{group_id}`.
        */
@@ -522,8 +542,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * The [resource name](https://cloud.google.com/apis/design/resource_names) of the `Group` to
-       * retrieve.
+       * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * `Group` to retrieve.
        *
        * Must be of the form `groups/{group_id}`.
        */
@@ -540,6 +560,227 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       @Override
       public Get set(String parameterName, Object value) {
         return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Lists the `Group`s within a customer or namespace.
+     *
+     * Create a request for the method "groups.list".
+     *
+     * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public List list() throws java.io.IOException {
+      List result = new List();
+      initialize(result);
+      return result;
+    }
+
+    public class List extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1beta1.model.ListGroupsResponse> {
+
+      private static final String REST_PATH = "v1beta1/groups";
+
+      /**
+       * Lists the `Group`s within a customer or namespace.
+       *
+       * Create a request for the method "groups.list".
+       *
+       * This request holds the parameters needed by the the cloudidentity server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+       * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected List() {
+        super(CloudIdentity.this, "GET", REST_PATH, null, com.google.api.services.cloudidentity.v1beta1.model.ListGroupsResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * The maximum number of results to return.
+       *
+       * Note that the number of results returned may be less than this value even if there are more
+       * available results. To fetch all results, clients must continue calling this method
+       * repeatedly until the response no longer contains a `next_page_token`.
+       *
+       * If unspecified, defaults to 200 for `View.BASIC` and to 50 for `View.FULL`.
+       *
+       * Must not be greater than 1000 for `View.BASIC` or 500 for `View.FULL`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** The maximum number of results to return.
+
+     Note that the number of results returned may be less than this value even if there are more
+     available results. To fetch all results, clients must continue calling this method repeatedly until
+     the response no longer contains a `next_page_token`.
+
+     If unspecified, defaults to 200 for `View.BASIC` and to 50 for `View.FULL`.
+
+     Must not be greater than 1000 for `View.BASIC` or 500 for `View.FULL`.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * The maximum number of results to return.
+       *
+       * Note that the number of results returned may be less than this value even if there are more
+       * available results. To fetch all results, clients must continue calling this method
+       * repeatedly until the response no longer contains a `next_page_token`.
+       *
+       * If unspecified, defaults to 200 for `View.BASIC` and to 50 for `View.FULL`.
+       *
+       * Must not be greater than 1000 for `View.BASIC` or 500 for `View.FULL`.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /** The `next_page_token` value returned from a previous list request, if any. */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** The `next_page_token` value returned from a previous list request, if any.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /** The `next_page_token` value returned from a previous list request, if any. */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      /**
+       * Required. The parent resource under which to list all `Group`s.
+       *
+       * Must be of the form `identitysources/{identity_source_id}` for external- identity-mapped
+       * groups or `customers/{customer_id}` for Google Groups.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Required. The parent resource under which to list all `Group`s.
+
+     Must be of the form `identitysources/{identity_source_id}` for external- identity-mapped groups or
+     `customers/{customer_id}` for Google Groups.
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /**
+       * Required. The parent resource under which to list all `Group`s.
+       *
+       * Must be of the form `identitysources/{identity_source_id}` for external- identity-mapped
+       * groups or `customers/{customer_id}` for Google Groups.
+       */
+      public List setParent(java.lang.String parent) {
+        this.parent = parent;
+        return this;
+      }
+
+      /**
+       * The level of detail to be returned.
+       *
+       * If unspecified, defaults to `View.BASIC`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String view;
+
+      /** The level of detail to be returned.
+
+     If unspecified, defaults to `View.BASIC`.
+       */
+      public java.lang.String getView() {
+        return view;
+      }
+
+      /**
+       * The level of detail to be returned.
+       *
+       * If unspecified, defaults to `View.BASIC`.
+       */
+      public List setView(java.lang.String view) {
+        this.view = view;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
       }
     }
     /**
@@ -649,7 +890,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       /**
        * The ID of the entity.
        *
-       * For Google-managed entities, the `id` must be the email address of a group or user.
+       * For Google-managed entities, the `id` must be the email address of an existing group or
+       * user.
        *
        * For external-identity-mapped entities, the `id` must be a string conforming to the Identity
        * Source's requirements.
@@ -661,7 +903,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
       /** The ID of the entity.
 
-     For Google-managed entities, the `id` must be the email address of a group or user.
+     For Google-managed entities, the `id` must be the email address of an existing group or user.
 
      For external-identity-mapped entities, the `id` must be a string conforming to the Identity
      Source's requirements.
@@ -675,7 +917,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       /**
        * The ID of the entity.
        *
-       * For Google-managed entities, the `id` must be the email address of a group or user.
+       * For Google-managed entities, the `id` must be the email address of an existing group or
+       * user.
        *
        * For external-identity-mapped entities, the `id` must be a string conforming to the Identity
        * Source's requirements.
@@ -876,14 +1119,14 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * The fully-qualified names of fields to update.
+       * Required. The fully-qualified names of fields to update.
        *
        * May only contain the following fields: `display_name`, `description`.
        */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** The fully-qualified names of fields to update.
+      /** Required. The fully-qualified names of fields to update.
 
      May only contain the following fields: `display_name`, `description`.
        */
@@ -892,7 +1135,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * The fully-qualified names of fields to update.
+       * Required. The fully-qualified names of fields to update.
        *
        * May only contain the following fields: `display_name`, `description`.
        */
@@ -1073,39 +1316,33 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * The search query.
-       *
-       * Only queries on the parent and labels of `Group`s are supported.
+       * Required. The search query.
        *
        * Must be specified in [Common Expression Language](https://opensource.google/projects/cel).
-       * May only contain equality operators on the parent (e.g. `parent ==
-       * 'customers/{customer_id}'`) and inclusion operators on labels (e.g.,
-       * `'cloudidentity.googleapis.com/groups.discussion_forum' in labels`).
+       * May only contain equality operators on the parent and inclusion operators on labels (e.g.,
+       * `parent == 'customers/{customer_id}' &&
+       * 'cloudidentity.googleapis.com/groups.discussion_forum' in labels`).
        */
       @com.google.api.client.util.Key
       private java.lang.String query;
 
-      /** The search query.
-
-     Only queries on the parent and labels of `Group`s are supported.
+      /** Required. The search query.
 
      Must be specified in [Common Expression Language](https://opensource.google/projects/cel). May only
-     contain equality operators on the parent (e.g. `parent == 'customers/{customer_id}'`) and inclusion
-     operators on labels (e.g., `'cloudidentity.googleapis.com/groups.discussion_forum' in labels`).
+     contain equality operators on the parent and inclusion operators on labels (e.g., `parent ==
+     'customers/{customer_id}' && 'cloudidentity.googleapis.com/groups.discussion_forum' in labels`).
        */
       public java.lang.String getQuery() {
         return query;
       }
 
       /**
-       * The search query.
-       *
-       * Only queries on the parent and labels of `Group`s are supported.
+       * Required. The search query.
        *
        * Must be specified in [Common Expression Language](https://opensource.google/projects/cel).
-       * May only contain equality operators on the parent (e.g. `parent ==
-       * 'customers/{customer_id}'`) and inclusion operators on labels (e.g.,
-       * `'cloudidentity.googleapis.com/groups.discussion_forum' in labels`).
+       * May only contain equality operators on the parent and inclusion operators on labels (e.g.,
+       * `parent == 'customers/{customer_id}' &&
+       * 'cloudidentity.googleapis.com/groups.discussion_forum' in labels`).
        */
       public Search setQuery(java.lang.String query) {
         this.query = query;
@@ -1172,7 +1409,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * This request holds the parameters needed by the cloudidentity server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent The parent `Group` resource under which to create the `Membership`.
+       * @param parent Required. The parent `Group` resource under which to create the `Membership`.
       Must be of the form
        *        `groups/{group_id}`.
        * @param content the {@link com.google.api.services.cloudidentity.v1beta1.model.Membership}
@@ -1202,7 +1439,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The parent `Group` resource under which to create the `Membership`.
+         * @param parent Required. The parent `Group` resource under which to create the `Membership`.
       Must be of the form
        *        `groups/{group_id}`.
          * @param content the {@link com.google.api.services.cloudidentity.v1beta1.model.Membership}
@@ -1274,14 +1511,14 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * The parent `Group` resource under which to create the `Membership`.
+         * Required. The parent `Group` resource under which to create the `Membership`.
          *
          * Must be of the form `groups/{group_id}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The parent `Group` resource under which to create the `Membership`.
+        /** Required. The parent `Group` resource under which to create the `Membership`.
 
        Must be of the form `groups/{group_id}`.
          */
@@ -1290,7 +1527,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * The parent `Group` resource under which to create the `Membership`.
+         * Required. The parent `Group` resource under which to create the `Membership`.
          *
          * Must be of the form `groups/{group_id}`.
          */
@@ -1317,10 +1554,11 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * This request holds the parameters needed by the cloudidentity server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name The [resource name](https://cloud.google.com/apis/design/resource_names) of
-      the `Membership` to
-       *        delete.
-      Must be of the form `groups/{group_id}/memberships/{membership_id}`.
+       * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of
+      the
+       *        `Membership` to delete.
+      Must be of the form
+       *        `groups/{group_id}/memberships/{membership_id}`.
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -1347,10 +1585,11 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The [resource name](https://cloud.google.com/apis/design/resource_names) of
-      the `Membership` to
-       *        delete.
-      Must be of the form `groups/{group_id}/memberships/{membership_id}`.
+         * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of
+      the
+       *        `Membership` to delete.
+      Must be of the form
+       *        `groups/{group_id}/memberships/{membership_id}`.
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -1419,7 +1658,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
          * `Membership` to delete.
          *
          * Must be of the form `groups/{group_id}/memberships/{membership_id}`.
@@ -1427,8 +1666,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The [resource name](https://cloud.google.com/apis/design/resource_names) of the `Membership` to
-       delete.
+        /** Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+       `Membership` to delete.
 
        Must be of the form `groups/{group_id}/memberships/{membership_id}`.
          */
@@ -1437,7 +1676,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
          * `Membership` to delete.
          *
          * Must be of the form `groups/{group_id}/memberships/{membership_id}`.
@@ -1465,10 +1704,11 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * This request holds the parameters needed by the cloudidentity server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The [resource name](https://cloud.google.com/apis/design/resource_names) of
-      the `Membership` to
-       *        retrieve.
-      Must be of the form `groups/{group_id}/memberships/{membership_id}`.
+       * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of
+      the
+       *        `Membership` to retrieve.
+      Must be of the form
+       *        `groups/{group_id}/memberships/{membership_id}`.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -1494,10 +1734,11 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The [resource name](https://cloud.google.com/apis/design/resource_names) of
-      the `Membership` to
-       *        retrieve.
-      Must be of the form `groups/{group_id}/memberships/{membership_id}`.
+         * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of
+      the
+       *        `Membership` to retrieve.
+      Must be of the form
+       *        `groups/{group_id}/memberships/{membership_id}`.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -1576,7 +1817,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
          * `Membership` to retrieve.
          *
          * Must be of the form `groups/{group_id}/memberships/{membership_id}`.
@@ -1584,8 +1825,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The [resource name](https://cloud.google.com/apis/design/resource_names) of the `Membership` to
-       retrieve.
+        /** Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+       `Membership` to retrieve.
 
        Must be of the form `groups/{group_id}/memberships/{membership_id}`.
          */
@@ -1594,7 +1835,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
          * `Membership` to retrieve.
          *
          * Must be of the form `groups/{group_id}/memberships/{membership_id}`.
@@ -1622,9 +1863,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * This request holds the parameters needed by the cloudidentity server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent The parent `Group` resource under which to lookup the `Membership` name.
-      Must be of the form
-       *        `groups/{group_id}`.
+       * @param parent Required. The parent `Group` resource under which to lookup the `Membership` name.
+      Must be of the
+       *        form `groups/{group_id}`.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -1650,9 +1891,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The parent `Group` resource under which to lookup the `Membership` name.
-      Must be of the form
-       *        `groups/{group_id}`.
+         * @param parent Required. The parent `Group` resource under which to lookup the `Membership` name.
+      Must be of the
+       *        form `groups/{group_id}`.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -1731,14 +1972,14 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * The parent `Group` resource under which to lookup the `Membership` name.
+         * Required. The parent `Group` resource under which to lookup the `Membership` name.
          *
          * Must be of the form `groups/{group_id}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The parent `Group` resource under which to lookup the `Membership` name.
+        /** Required. The parent `Group` resource under which to lookup the `Membership` name.
 
        Must be of the form `groups/{group_id}`.
          */
@@ -1747,7 +1988,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * The parent `Group` resource under which to lookup the `Membership` name.
+         * Required. The parent `Group` resource under which to lookup the `Membership` name.
          *
          * Must be of the form `groups/{group_id}`.
          */
@@ -1865,9 +2106,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * This request holds the parameters needed by the cloudidentity server.  After setting any optional
        * parameters, call the {@link Lookup#execute()} method to invoke the remote operation.
        *
-       * @param parent The parent `Group` resource under which to lookup the `Membership` name.
-      Must be of the form
-       *        `groups/{group_id}`.
+       * @param parent Required. The parent `Group` resource under which to lookup the `Membership` name.
+      Must be of the
+       *        form `groups/{group_id}`.
        * @return the request
        */
       public Lookup lookup(java.lang.String parent) throws java.io.IOException {
@@ -1895,9 +2136,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * Lookup#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The parent `Group` resource under which to lookup the `Membership` name.
-      Must be of the form
-       *        `groups/{group_id}`.
+         * @param parent Required. The parent `Group` resource under which to lookup the `Membership` name.
+      Must be of the
+       *        form `groups/{group_id}`.
          * @since 1.13
          */
         protected Lookup(java.lang.String parent) {
@@ -1976,14 +2217,14 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * The parent `Group` resource under which to lookup the `Membership` name.
+         * Required. The parent `Group` resource under which to lookup the `Membership` name.
          *
          * Must be of the form `groups/{group_id}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The parent `Group` resource under which to lookup the `Membership` name.
+        /** Required. The parent `Group` resource under which to lookup the `Membership` name.
 
        Must be of the form `groups/{group_id}`.
          */
@@ -1992,7 +2233,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * The parent `Group` resource under which to lookup the `Membership` name.
+         * Required. The parent `Group` resource under which to lookup the `Membership` name.
          *
          * Must be of the form `groups/{group_id}`.
          */
@@ -2009,7 +2250,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         /**
          * The ID of the entity.
          *
-         * For Google-managed entities, the `id` must be the email address of a group or user.
+         * For Google-managed entities, the `id` must be the email address of an existing group or
+         * user.
          *
          * For external-identity-mapped entities, the `id` must be a string conforming to the
          * Identity Source's requirements.
@@ -2021,7 +2263,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
         /** The ID of the entity.
 
-       For Google-managed entities, the `id` must be the email address of a group or user.
+       For Google-managed entities, the `id` must be the email address of an existing group or user.
 
        For external-identity-mapped entities, the `id` must be a string conforming to the Identity
        Source's requirements.
@@ -2035,7 +2277,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         /**
          * The ID of the entity.
          *
-         * For Google-managed entities, the `id` must be the email address of a group or user.
+         * For Google-managed entities, the `id` must be the email address of an existing group or
+         * user.
          *
          * For external-identity-mapped entities, the `id` must be a string conforming to the
          * Identity Source's requirements.
@@ -2088,6 +2331,159 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         @Override
         public Lookup set(String parameterName, Object value) {
           return (Lookup) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Modifies the `MembershipRole`s of a `Membership`.
+       *
+       * Create a request for the method "memberships.modifyMembershipRoles".
+       *
+       * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+       * parameters, call the {@link ModifyMembershipRoles#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of
+      the
+       *        `Membership` whose roles are to be modified.
+      Must be of the form
+       *        `groups/{group_id}/memberships/{membership_id}`.
+       * @param content the {@link com.google.api.services.cloudidentity.v1beta1.model.ModifyMembershipRolesRequest}
+       * @return the request
+       */
+      public ModifyMembershipRoles modifyMembershipRoles(java.lang.String name, com.google.api.services.cloudidentity.v1beta1.model.ModifyMembershipRolesRequest content) throws java.io.IOException {
+        ModifyMembershipRoles result = new ModifyMembershipRoles(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class ModifyMembershipRoles extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1beta1.model.ModifyMembershipRolesResponse> {
+
+        private static final String REST_PATH = "v1beta1/{+name}:modifyMembershipRoles";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^groups/[^/]+/memberships/[^/]+$");
+
+        /**
+         * Modifies the `MembershipRole`s of a `Membership`.
+         *
+         * Create a request for the method "memberships.modifyMembershipRoles".
+         *
+         * This request holds the parameters needed by the the cloudidentity server.  After setting any
+         * optional parameters, call the {@link ModifyMembershipRoles#execute()} method to invoke the
+         * remote operation. <p> {@link ModifyMembershipRoles#initialize(com.google.api.client.googleapis.
+         * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of
+      the
+       *        `Membership` whose roles are to be modified.
+      Must be of the form
+       *        `groups/{group_id}/memberships/{membership_id}`.
+         * @param content the {@link com.google.api.services.cloudidentity.v1beta1.model.ModifyMembershipRolesRequest}
+         * @since 1.13
+         */
+        protected ModifyMembershipRoles(java.lang.String name, com.google.api.services.cloudidentity.v1beta1.model.ModifyMembershipRolesRequest content) {
+          super(CloudIdentity.this, "POST", REST_PATH, content, com.google.api.services.cloudidentity.v1beta1.model.ModifyMembershipRolesResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^groups/[^/]+/memberships/[^/]+$");
+          }
+        }
+
+        @Override
+        public ModifyMembershipRoles set$Xgafv(java.lang.String $Xgafv) {
+          return (ModifyMembershipRoles) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ModifyMembershipRoles setAccessToken(java.lang.String accessToken) {
+          return (ModifyMembershipRoles) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ModifyMembershipRoles setAlt(java.lang.String alt) {
+          return (ModifyMembershipRoles) super.setAlt(alt);
+        }
+
+        @Override
+        public ModifyMembershipRoles setCallback(java.lang.String callback) {
+          return (ModifyMembershipRoles) super.setCallback(callback);
+        }
+
+        @Override
+        public ModifyMembershipRoles setFields(java.lang.String fields) {
+          return (ModifyMembershipRoles) super.setFields(fields);
+        }
+
+        @Override
+        public ModifyMembershipRoles setKey(java.lang.String key) {
+          return (ModifyMembershipRoles) super.setKey(key);
+        }
+
+        @Override
+        public ModifyMembershipRoles setOauthToken(java.lang.String oauthToken) {
+          return (ModifyMembershipRoles) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ModifyMembershipRoles setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ModifyMembershipRoles) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ModifyMembershipRoles setQuotaUser(java.lang.String quotaUser) {
+          return (ModifyMembershipRoles) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ModifyMembershipRoles setUploadType(java.lang.String uploadType) {
+          return (ModifyMembershipRoles) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ModifyMembershipRoles setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ModifyMembershipRoles) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * `Membership` whose roles are to be modified.
+         *
+         * Must be of the form `groups/{group_id}/memberships/{membership_id}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+       `Membership` whose roles are to be modified.
+
+       Must be of the form `groups/{group_id}/memberships/{membership_id}`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * `Membership` whose roles are to be modified.
+         *
+         * Must be of the form `groups/{group_id}/memberships/{membership_id}`.
+         */
+        public ModifyMembershipRoles setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^groups/[^/]+/memberships/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public ModifyMembershipRoles set(String parameterName, Object value) {
+          return (ModifyMembershipRoles) super.set(parameterName, value);
         }
       }
 

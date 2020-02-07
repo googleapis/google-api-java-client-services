@@ -17,7 +17,7 @@
 package com.google.api.services.cloudidentity.v1beta1.model;
 
 /**
- * The response message for GroupsService.LookupGroupName.
+ * Response message for approving the device to access user data.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Identity API. For a detailed explanation see:
@@ -27,43 +27,40 @@ package com.google.api.services.cloudidentity.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class LookupGroupNameResponse extends com.google.api.client.json.GenericJson {
+public final class GoogleAppsCloudidentityDevicesV1alpha1ApproveDeviceUserResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
-   * looked-up `Group`.
+   * Resultant DeviceUser object for the action.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String name;
+  private GoogleAppsCloudidentityDevicesV1alpha1DeviceUser deviceUser;
 
   /**
-   * Output only. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
-   * looked-up `Group`.
+   * Resultant DeviceUser object for the action.
    * @return value or {@code null} for none
    */
-  public java.lang.String getName() {
-    return name;
+  public GoogleAppsCloudidentityDevicesV1alpha1DeviceUser getDeviceUser() {
+    return deviceUser;
   }
 
   /**
-   * Output only. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
-   * looked-up `Group`.
-   * @param name name or {@code null} for none
+   * Resultant DeviceUser object for the action.
+   * @param deviceUser deviceUser or {@code null} for none
    */
-  public LookupGroupNameResponse setName(java.lang.String name) {
-    this.name = name;
+  public GoogleAppsCloudidentityDevicesV1alpha1ApproveDeviceUserResponse setDeviceUser(GoogleAppsCloudidentityDevicesV1alpha1DeviceUser deviceUser) {
+    this.deviceUser = deviceUser;
     return this;
   }
 
   @Override
-  public LookupGroupNameResponse set(String fieldName, Object value) {
-    return (LookupGroupNameResponse) super.set(fieldName, value);
+  public GoogleAppsCloudidentityDevicesV1alpha1ApproveDeviceUserResponse set(String fieldName, Object value) {
+    return (GoogleAppsCloudidentityDevicesV1alpha1ApproveDeviceUserResponse) super.set(fieldName, value);
   }
 
   @Override
-  public LookupGroupNameResponse clone() {
-    return (LookupGroupNameResponse) super.clone();
+  public GoogleAppsCloudidentityDevicesV1alpha1ApproveDeviceUserResponse clone() {
+    return (GoogleAppsCloudidentityDevicesV1alpha1ApproveDeviceUserResponse) super.clone();
   }
 
 }

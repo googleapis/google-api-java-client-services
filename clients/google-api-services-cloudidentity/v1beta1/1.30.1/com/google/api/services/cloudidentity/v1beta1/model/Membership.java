@@ -60,6 +60,16 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Required. Immutable. The `EntityKey` of the member.
+   *
+   * Either `member_key` or `preferred_member_key` must be set when calling
+   * MembershipsService.CreateMembership but not both; both shall be set when returned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EntityKey preferredMemberKey;
+
+  /**
    * The `MembershipRole`s that apply to the `Membership`.
    *
    * If unspecified, defaults to a single `MembershipRole` with `name` `MEMBER`.
@@ -137,6 +147,29 @@ public final class Membership extends com.google.api.client.json.GenericJson {
    */
   public Membership setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Required. Immutable. The `EntityKey` of the member.
+   *
+   * Either `member_key` or `preferred_member_key` must be set when calling
+   * MembershipsService.CreateMembership but not both; both shall be set when returned.
+   * @return value or {@code null} for none
+   */
+  public EntityKey getPreferredMemberKey() {
+    return preferredMemberKey;
+  }
+
+  /**
+   * Required. Immutable. The `EntityKey` of the member.
+   *
+   * Either `member_key` or `preferred_member_key` must be set when calling
+   * MembershipsService.CreateMembership but not both; both shall be set when returned.
+   * @param preferredMemberKey preferredMemberKey or {@code null} for none
+   */
+  public Membership setPreferredMemberKey(EntityKey preferredMemberKey) {
+    this.preferredMemberKey = preferredMemberKey;
     return this;
   }
 

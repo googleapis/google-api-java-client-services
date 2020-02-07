@@ -31,7 +31,7 @@ package com.google.api.services.monitoring.v3.model;
 public final class VerifyNotificationChannelRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The verification code that was delivered to the channel as a result of invoking the
+   * Required. The verification code that was delivered to the channel as a result of invoking the
    * SendNotificationChannelVerificationCode API method or that was retrieved from a verified
    * channel via GetNotificationChannelVerificationCode. For example, one might have "G-123456" or
    * "TKNZGhhd2EyN3I1MnRnMjRv" (in general, one is only guaranteed that the code is valid UTF-8; one
@@ -42,7 +42,7 @@ public final class VerifyNotificationChannelRequest extends com.google.api.clien
   private java.lang.String code;
 
   /**
-   * The verification code that was delivered to the channel as a result of invoking the
+   * Required. The verification code that was delivered to the channel as a result of invoking the
    * SendNotificationChannelVerificationCode API method or that was retrieved from a verified
    * channel via GetNotificationChannelVerificationCode. For example, one might have "G-123456" or
    * "TKNZGhhd2EyN3I1MnRnMjRv" (in general, one is only guaranteed that the code is valid UTF-8; one
@@ -54,7 +54,7 @@ public final class VerifyNotificationChannelRequest extends com.google.api.clien
   }
 
   /**
-   * The verification code that was delivered to the channel as a result of invoking the
+   * Required. The verification code that was delivered to the channel as a result of invoking the
    * SendNotificationChannelVerificationCode API method or that was retrieved from a verified
    * channel via GetNotificationChannelVerificationCode. For example, one might have "G-123456" or
    * "TKNZGhhd2EyN3I1MnRnMjRv" (in general, one is only guaranteed that the code is valid UTF-8; one

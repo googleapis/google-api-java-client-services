@@ -18,8 +18,10 @@ package com.google.api.services.monitoring.v1.model;
 
 /**
  * Describes a ranking-based time series filter. Each input time series is ranked with an aligner.
- * The filter lets through up to num_time_series time series, selecting them based on the relative
- * ranking.
+ * The filter will allow up to num_time_series time series to pass through it, selecting them based
+ * on the relative ranking.For example, if ranking_method is METHOD_MEAN,direction is BOTTOM, and
+ * num_time_series is 3, then the 3 times series with the lowest mean values will pass through the
+ * filter.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Stackdriver Monitoring API. For a detailed
@@ -40,14 +42,14 @@ public final class PickTimeSeriesFilter extends com.google.api.client.json.Gener
   private java.lang.String direction;
 
   /**
-   * How many time series to return.
+   * How many time series to allow to pass through the filter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer numTimeSeries;
 
   /**
-   * rankingMethod is applied to each time series independently to produce the value which will be
+   * ranking_method is applied to each time series independently to produce the value which will be
    * used to compare the time series to other time series.
    * The value may be {@code null}.
    */
@@ -72,7 +74,7 @@ public final class PickTimeSeriesFilter extends com.google.api.client.json.Gener
   }
 
   /**
-   * How many time series to return.
+   * How many time series to allow to pass through the filter.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNumTimeSeries() {
@@ -80,7 +82,7 @@ public final class PickTimeSeriesFilter extends com.google.api.client.json.Gener
   }
 
   /**
-   * How many time series to return.
+   * How many time series to allow to pass through the filter.
    * @param numTimeSeries numTimeSeries or {@code null} for none
    */
   public PickTimeSeriesFilter setNumTimeSeries(java.lang.Integer numTimeSeries) {
@@ -89,7 +91,7 @@ public final class PickTimeSeriesFilter extends com.google.api.client.json.Gener
   }
 
   /**
-   * rankingMethod is applied to each time series independently to produce the value which will be
+   * ranking_method is applied to each time series independently to produce the value which will be
    * used to compare the time series to other time series.
    * @return value or {@code null} for none
    */
@@ -98,7 +100,7 @@ public final class PickTimeSeriesFilter extends com.google.api.client.json.Gener
   }
 
   /**
-   * rankingMethod is applied to each time series independently to produce the value which will be
+   * ranking_method is applied to each time series independently to produce the value which will be
    * used to compare the time series to other time series.
    * @param rankingMethod rankingMethod or {@code null} for none
    */

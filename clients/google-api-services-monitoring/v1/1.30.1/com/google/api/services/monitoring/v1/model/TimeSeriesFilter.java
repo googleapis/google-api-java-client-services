@@ -55,13 +55,6 @@ public final class TimeSeriesFilter extends com.google.api.client.json.GenericJs
   private PickTimeSeriesFilter pickTimeSeriesFilter;
 
   /**
-   * Statistics based time series filter.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private StatisticalTimeSeriesFilter statisticalTimeSeriesFilter;
-
-  /**
    * By default, the raw time series data is returned. Use this field to combine multiple time
    * series for different views of the data.
    * @return value or {@code null} for none
@@ -113,23 +106,6 @@ public final class TimeSeriesFilter extends com.google.api.client.json.GenericJs
    */
   public TimeSeriesFilter setPickTimeSeriesFilter(PickTimeSeriesFilter pickTimeSeriesFilter) {
     this.pickTimeSeriesFilter = pickTimeSeriesFilter;
-    return this;
-  }
-
-  /**
-   * Statistics based time series filter.
-   * @return value or {@code null} for none
-   */
-  public StatisticalTimeSeriesFilter getStatisticalTimeSeriesFilter() {
-    return statisticalTimeSeriesFilter;
-  }
-
-  /**
-   * Statistics based time series filter.
-   * @param statisticalTimeSeriesFilter statisticalTimeSeriesFilter or {@code null} for none
-   */
-  public TimeSeriesFilter setStatisticalTimeSeriesFilter(StatisticalTimeSeriesFilter statisticalTimeSeriesFilter) {
-    this.statisticalTimeSeriesFilter = statisticalTimeSeriesFilter;
     return this;
   }
 

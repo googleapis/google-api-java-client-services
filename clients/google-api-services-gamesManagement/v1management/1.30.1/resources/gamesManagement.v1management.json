@@ -1,20 +1,12 @@
 {
  "kind": "discovery#restDescription",
-<<<<<<< HEAD
  "etag": "\"LYADMvHWYH2ul9D6m9UT9gT77YM/sFFviHLGRCfVlmoquWCKc5oVeNY\"",
-=======
- "etag": "\"F5McR9eEaw0XRpaO3M9gbIugkbs/Pz9GyYu_8JNRzx2eHJe1Z5c6Oik\"",
->>>>>>> Regenerate games client
  "discoveryVersion": "v1",
  "id": "gamesManagement:v1management",
  "name": "gamesManagement",
  "canonicalName": "Games Management",
  "version": "v1management",
-<<<<<<< HEAD
  "revision": "20191205",
-=======
- "revision": "20191017",
->>>>>>> Regenerate games client
  "title": "Google Play Game Services Management API",
  "description": "The Management API for Google Play Game Services.",
  "ownerDomain": "google.com",

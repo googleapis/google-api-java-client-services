@@ -45,6 +45,14 @@ public final class TransferRun extends com.google.api.client.json.GenericJson {
   private java.lang.String destinationDatasetId;
 
   /**
+   * Output only. Email notifications will be sent according to these preferences to the email
+   * address of the user who owns the transfer config this run was derived from.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EmailPreferences emailPreferences;
+
+  /**
    * Output only. Time when transfer run ended. Parameter ignored by server for input requests.
    * The value may be {@code null}.
    */
@@ -66,6 +74,13 @@ public final class TransferRun extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Output only. Pub/Sub topic where a notification will be sent after this transfer run finishes
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String notificationPubsubTopic;
 
   /**
    * Output only. Data transfer specific parameters.
@@ -162,6 +177,25 @@ public final class TransferRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Email notifications will be sent according to these preferences to the email
+   * address of the user who owns the transfer config this run was derived from.
+   * @return value or {@code null} for none
+   */
+  public EmailPreferences getEmailPreferences() {
+    return emailPreferences;
+  }
+
+  /**
+   * Output only. Email notifications will be sent according to these preferences to the email
+   * address of the user who owns the transfer config this run was derived from.
+   * @param emailPreferences emailPreferences or {@code null} for none
+   */
+  public TransferRun setEmailPreferences(EmailPreferences emailPreferences) {
+    this.emailPreferences = emailPreferences;
+    return this;
+  }
+
+  /**
    * Output only. Time when transfer run ended. Parameter ignored by server for input requests.
    * @return value or {@code null} for none
    */
@@ -213,6 +247,23 @@ public final class TransferRun extends com.google.api.client.json.GenericJson {
    */
   public TransferRun setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. Pub/Sub topic where a notification will be sent after this transfer run finishes
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNotificationPubsubTopic() {
+    return notificationPubsubTopic;
+  }
+
+  /**
+   * Output only. Pub/Sub topic where a notification will be sent after this transfer run finishes
+   * @param notificationPubsubTopic notificationPubsubTopic or {@code null} for none
+   */
+  public TransferRun setNotificationPubsubTopic(java.lang.String notificationPubsubTopic) {
+    this.notificationPubsubTopic = notificationPubsubTopic;
     return this;
   }
 

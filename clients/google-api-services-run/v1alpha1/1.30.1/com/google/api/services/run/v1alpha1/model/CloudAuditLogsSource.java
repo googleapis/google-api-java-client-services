@@ -17,7 +17,7 @@
 package com.google.api.services.run.v1alpha1.model;
 
 /**
- * Model definition for Trigger.
+ * Model definition for CloudAuditLogsSource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run API. For a detailed explanation see:
@@ -27,45 +27,46 @@ package com.google.api.services.run.v1alpha1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Trigger extends com.google.api.client.json.GenericJson {
+public final class CloudAuditLogsSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * The API version for this call such as "eventing.knative.dev/v1alpha1".
+   * The API version for this call such as "events.cloud.google.com/v1alpha1".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String apiVersion;
 
   /**
-   * The kind of resource, in this case "Trigger".
+   * The kind of resource, in this case "CloudAuditLogsSource".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * Metadata associated with this Trigger.
+   * Metadata associated with this CloudAuditLogsSource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ObjectMeta metadata;
 
   /**
-   * Spec defines the desired state of the Trigger.
+   * Spec defines the desired state of the CloudAuditLogsSource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private TriggerSpec spec;
+  private CloudAuditLogsSourceSpec spec;
 
   /**
-   * Optional. Status represents the current state of the Trigger. This data may be out of date.
+   * Status represents the current state of the CloudAuditLogsSource. This data may be out of date.
+   * +optional
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private TriggerStatus status;
+  private CloudAuditLogsSourceStatus status;
 
   /**
-   * The API version for this call such as "eventing.knative.dev/v1alpha1".
+   * The API version for this call such as "events.cloud.google.com/v1alpha1".
    * @return value or {@code null} for none
    */
   public java.lang.String getApiVersion() {
@@ -73,16 +74,16 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The API version for this call such as "eventing.knative.dev/v1alpha1".
+   * The API version for this call such as "events.cloud.google.com/v1alpha1".
    * @param apiVersion apiVersion or {@code null} for none
    */
-  public Trigger setApiVersion(java.lang.String apiVersion) {
+  public CloudAuditLogsSource setApiVersion(java.lang.String apiVersion) {
     this.apiVersion = apiVersion;
     return this;
   }
 
   /**
-   * The kind of resource, in this case "Trigger".
+   * The kind of resource, in this case "CloudAuditLogsSource".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -90,16 +91,16 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The kind of resource, in this case "Trigger".
+   * The kind of resource, in this case "CloudAuditLogsSource".
    * @param kind kind or {@code null} for none
    */
-  public Trigger setKind(java.lang.String kind) {
+  public CloudAuditLogsSource setKind(java.lang.String kind) {
     this.kind = kind;
     return this;
   }
 
   /**
-   * Metadata associated with this Trigger.
+   * Metadata associated with this CloudAuditLogsSource.
    * @return value or {@code null} for none
    */
   public ObjectMeta getMetadata() {
@@ -107,56 +108,58 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Metadata associated with this Trigger.
+   * Metadata associated with this CloudAuditLogsSource.
    * @param metadata metadata or {@code null} for none
    */
-  public Trigger setMetadata(ObjectMeta metadata) {
+  public CloudAuditLogsSource setMetadata(ObjectMeta metadata) {
     this.metadata = metadata;
     return this;
   }
 
   /**
-   * Spec defines the desired state of the Trigger.
+   * Spec defines the desired state of the CloudAuditLogsSource.
    * @return value or {@code null} for none
    */
-  public TriggerSpec getSpec() {
+  public CloudAuditLogsSourceSpec getSpec() {
     return spec;
   }
 
   /**
-   * Spec defines the desired state of the Trigger.
+   * Spec defines the desired state of the CloudAuditLogsSource.
    * @param spec spec or {@code null} for none
    */
-  public Trigger setSpec(TriggerSpec spec) {
+  public CloudAuditLogsSource setSpec(CloudAuditLogsSourceSpec spec) {
     this.spec = spec;
     return this;
   }
 
   /**
-   * Optional. Status represents the current state of the Trigger. This data may be out of date.
+   * Status represents the current state of the CloudAuditLogsSource. This data may be out of date.
+   * +optional
    * @return value or {@code null} for none
    */
-  public TriggerStatus getStatus() {
+  public CloudAuditLogsSourceStatus getStatus() {
     return status;
   }
 
   /**
-   * Optional. Status represents the current state of the Trigger. This data may be out of date.
+   * Status represents the current state of the CloudAuditLogsSource. This data may be out of date.
+   * +optional
    * @param status status or {@code null} for none
    */
-  public Trigger setStatus(TriggerStatus status) {
+  public CloudAuditLogsSource setStatus(CloudAuditLogsSourceStatus status) {
     this.status = status;
     return this;
   }
 
   @Override
-  public Trigger set(String fieldName, Object value) {
-    return (Trigger) super.set(fieldName, value);
+  public CloudAuditLogsSource set(String fieldName, Object value) {
+    return (CloudAuditLogsSource) super.set(fieldName, value);
   }
 
   @Override
-  public Trigger clone() {
-    return (Trigger) super.clone();
+  public CloudAuditLogsSource clone() {
+    return (CloudAuditLogsSource) super.clone();
   }
 
 }

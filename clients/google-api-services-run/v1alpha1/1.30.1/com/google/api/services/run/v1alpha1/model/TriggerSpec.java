@@ -40,43 +40,20 @@ public final class TriggerSpec extends com.google.api.client.json.GenericJson {
   private java.lang.String broker;
 
   /**
-   * Filter is the filter to apply against all events from the Broker. Only events that pass this
-   * filter will be sent to the Subscriber.
+   * Optional. Filter is the filter to apply against all events from the Broker. Only events that
+   * pass this filter will be sent to the Subscriber. Note that filter is optional in knative and is
+   * only required in fully managed due to different broker implementation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TriggerFilter filter;
 
   /**
-   * Deprecated, importer specification will be replaced by information stored in GcpImporterDao.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<TriggerImporterSpec> importers;
-
-  static {
-    // hack to force ProGuard to consider TriggerImporterSpec used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(TriggerImporterSpec.class);
-  }
-
-  /**
    * Sink is the addressable that will receive events.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Destination sink;
-
-  /**
-   * Deprecated, sink will be represented by Destination. Subscriber is the addressable that
-   * receives events from the Broker that pass the Filter. It is required.
-   *
-   * E.g. https://us-central1-myproject.cloudfunctions.net/myfunction or /namespaces/my-
-   * project/services/my-service.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private SubscriberSpec subscriber;
+  private Destination subscriber;
 
   /**
    * Broker is the broker that this trigger receives events from. If not specified, will default to
@@ -102,8 +79,9 @@ public final class TriggerSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Filter is the filter to apply against all events from the Broker. Only events that pass this
-   * filter will be sent to the Subscriber.
+   * Optional. Filter is the filter to apply against all events from the Broker. Only events that
+   * pass this filter will be sent to the Subscriber. Note that filter is optional in knative and is
+   * only required in fully managed due to different broker implementation.
    * @return value or {@code null} for none
    */
   public TriggerFilter getFilter() {
@@ -111,8 +89,9 @@ public final class TriggerSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Filter is the filter to apply against all events from the Broker. Only events that pass this
-   * filter will be sent to the Subscriber.
+   * Optional. Filter is the filter to apply against all events from the Broker. Only events that
+   * pass this filter will be sent to the Subscriber. Note that filter is optional in knative and is
+   * only required in fully managed due to different broker implementation.
    * @param filter filter or {@code null} for none
    */
   public TriggerSpec setFilter(TriggerFilter filter) {
@@ -121,60 +100,18 @@ public final class TriggerSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deprecated, importer specification will be replaced by information stored in GcpImporterDao.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<TriggerImporterSpec> getImporters() {
-    return importers;
-  }
-
-  /**
-   * Deprecated, importer specification will be replaced by information stored in GcpImporterDao.
-   * @param importers importers or {@code null} for none
-   */
-  public TriggerSpec setImporters(java.util.List<TriggerImporterSpec> importers) {
-    this.importers = importers;
-    return this;
-  }
-
-  /**
    * Sink is the addressable that will receive events.
    * @return value or {@code null} for none
    */
-  public Destination getSink() {
-    return sink;
-  }
-
-  /**
-   * Sink is the addressable that will receive events.
-   * @param sink sink or {@code null} for none
-   */
-  public TriggerSpec setSink(Destination sink) {
-    this.sink = sink;
-    return this;
-  }
-
-  /**
-   * Deprecated, sink will be represented by Destination. Subscriber is the addressable that
-   * receives events from the Broker that pass the Filter. It is required.
-   *
-   * E.g. https://us-central1-myproject.cloudfunctions.net/myfunction or /namespaces/my-
-   * project/services/my-service.
-   * @return value or {@code null} for none
-   */
-  public SubscriberSpec getSubscriber() {
+  public Destination getSubscriber() {
     return subscriber;
   }
 
   /**
-   * Deprecated, sink will be represented by Destination. Subscriber is the addressable that
-   * receives events from the Broker that pass the Filter. It is required.
-   *
-   * E.g. https://us-central1-myproject.cloudfunctions.net/myfunction or /namespaces/my-
-   * project/services/my-service.
+   * Sink is the addressable that will receive events.
    * @param subscriber subscriber or {@code null} for none
    */
-  public TriggerSpec setSubscriber(SubscriberSpec subscriber) {
+  public TriggerSpec setSubscriber(Destination subscriber) {
     this.subscriber = subscriber;
     return this;
   }

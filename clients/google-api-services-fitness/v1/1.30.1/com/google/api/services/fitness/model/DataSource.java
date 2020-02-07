@@ -78,9 +78,10 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
    * omitted from the data stream ID. The minimum viable data stream ID would be:
    * type:dataType.name:developer project number
    *
-   * Finally, the developer project number is obfuscated when read by any REST or Android client
-   * that did not create the data source. Only the data source creator will see the developer
-   * project number in clear and normal form.
+   * Finally, the developer project number and device UID are obfuscated when read by any REST or
+   * Android client that did not create the data source. Only the data source creator will see the
+   * developer project number in clear and normal form. This means a client will see a different set
+   * of data_stream_ids than another client with different credentials.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -185,9 +186,10 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
    * omitted from the data stream ID. The minimum viable data stream ID would be:
    * type:dataType.name:developer project number
    *
-   * Finally, the developer project number is obfuscated when read by any REST or Android client
-   * that did not create the data source. Only the data source creator will see the developer
-   * project number in clear and normal form.
+   * Finally, the developer project number and device UID are obfuscated when read by any REST or
+   * Android client that did not create the data source. Only the data source creator will see the
+   * developer project number in clear and normal form. This means a client will see a different set
+   * of data_stream_ids than another client with different credentials.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataStreamId() {
@@ -217,9 +219,10 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
    * omitted from the data stream ID. The minimum viable data stream ID would be:
    * type:dataType.name:developer project number
    *
-   * Finally, the developer project number is obfuscated when read by any REST or Android client
-   * that did not create the data source. Only the data source creator will see the developer
-   * project number in clear and normal form.
+   * Finally, the developer project number and device UID are obfuscated when read by any REST or
+   * Android client that did not create the data source. Only the data source creator will see the
+   * developer project number in clear and normal form. This means a client will see a different set
+   * of data_stream_ids than another client with different credentials.
    * @param dataStreamId dataStreamId or {@code null} for none
    */
   public DataSource setDataStreamId(java.lang.String dataStreamId) {

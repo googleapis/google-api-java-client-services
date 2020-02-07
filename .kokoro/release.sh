@@ -41,9 +41,10 @@ deploy_library() {
   LIBRARY_VERSION=$4
   echo "Releasing artifact for ${SERVICE}, ${API_VERSION}, ${REVISION}, ${LIBRARY_VERSION}."
 
-  mvn clean install -B
+  mvn clean install -Dclirr.skip=true -B
   mvn deploy \
     --settings ${MAVEN_SETTINGS_FILE} \
+    -Dclirr.skip=true \
     -DperformRelease=true \
     -Dgpg.executable=gpg \
     -Dgpg.passphrase=${GPG_PASSPHRASE} \

@@ -25,7 +25,7 @@ do
     # skipping tests
     echo "No difference from master, skipping tests."
   else
-    mvn clean verify package -B
+    mvn clean verify package -Dclirr.skip=true -B
     es=$?
     if [ $es -ne 0 ]; then
         EXIT_STATUS=$es

@@ -17,7 +17,7 @@
 package com.google.api.services.reports.model;
 
 /**
- * JSON template for a collection of usage reports.
+ * Model definition for UsageReports.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Admin Reports API. For a detailed explanation see:
@@ -37,14 +37,16 @@ public final class UsageReports extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * The kind of object.
+   * The type of API resource. For a usage report, the value is admin#reports#usageReports.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * Token for retrieving the next page
+   * Token to specify next page. A report with multiple pages has a nextPageToken property in the
+   * response. For your follow-on requests getting all of the report's pages, enter the
+   * nextPageToken value in the pageToken query string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +66,7 @@ public final class UsageReports extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Warnings if any.
+   * Warnings, if any.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +96,7 @@ public final class UsageReports extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The kind of object.
+   * The type of API resource. For a usage report, the value is admin#reports#usageReports.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -102,7 +104,7 @@ public final class UsageReports extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The kind of object.
+   * The type of API resource. For a usage report, the value is admin#reports#usageReports.
    * @param kind kind or {@code null} for none
    */
   public UsageReports setKind(java.lang.String kind) {
@@ -111,7 +113,9 @@ public final class UsageReports extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Token for retrieving the next page
+   * Token to specify next page. A report with multiple pages has a nextPageToken property in the
+   * response. For your follow-on requests getting all of the report's pages, enter the
+   * nextPageToken value in the pageToken query string.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -119,7 +123,9 @@ public final class UsageReports extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Token for retrieving the next page
+   * Token to specify next page. A report with multiple pages has a nextPageToken property in the
+   * response. For your follow-on requests getting all of the report's pages, enter the
+   * nextPageToken value in the pageToken query string.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public UsageReports setNextPageToken(java.lang.String nextPageToken) {
@@ -145,7 +151,7 @@ public final class UsageReports extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Warnings if any.
+   * Warnings, if any.
    * @return value or {@code null} for none
    */
   public java.util.List<Warnings> getWarnings() {
@@ -153,7 +159,7 @@ public final class UsageReports extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Warnings if any.
+   * Warnings, if any.
    * @param warnings warnings or {@code null} for none
    */
   public UsageReports setWarnings(java.util.List<Warnings> warnings) {
@@ -177,14 +183,14 @@ public final class UsageReports extends com.google.api.client.json.GenericJson {
   public static final class Warnings extends com.google.api.client.json.GenericJson {
 
     /**
-     * Machine readable code / warning type.
+     * Machine readable code or warning type. The warning code value is 200.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String code;
 
     /**
-     * Key-Value pairs to give detailed information on the warning.
+     * Key-value pairs to give detailed information on the warning.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -197,14 +203,17 @@ public final class UsageReports extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Human readable message for the warning.
+     * The human readable messages for a warning are: - Data is not available warning - Sorry, data
+     * for date yyyy-mm-dd for application "application name" is not available.   - Partial data is
+     * available warning - Data for date yyyy-mm-dd for application "application name" is not
+     * available right now, please try again after a few hours.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String message;
 
     /**
-     * Machine readable code / warning type.
+     * Machine readable code or warning type. The warning code value is 200.
      * @return value or {@code null} for none
      */
     public java.lang.String getCode() {
@@ -212,7 +221,7 @@ public final class UsageReports extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Machine readable code / warning type.
+     * Machine readable code or warning type. The warning code value is 200.
      * @param code code or {@code null} for none
      */
     public Warnings setCode(java.lang.String code) {
@@ -221,7 +230,7 @@ public final class UsageReports extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Key-Value pairs to give detailed information on the warning.
+     * Key-value pairs to give detailed information on the warning.
      * @return value or {@code null} for none
      */
     public java.util.List<Data> getData() {
@@ -229,7 +238,7 @@ public final class UsageReports extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Key-Value pairs to give detailed information on the warning.
+     * Key-value pairs to give detailed information on the warning.
      * @param data data or {@code null} for none
      */
     public Warnings setData(java.util.List<Data> data) {
@@ -238,7 +247,10 @@ public final class UsageReports extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Human readable message for the warning.
+     * The human readable messages for a warning are: - Data is not available warning - Sorry, data
+     * for date yyyy-mm-dd for application "application name" is not available.   - Partial data is
+     * available warning - Data for date yyyy-mm-dd for application "application name" is not
+     * available right now, please try again after a few hours.
      * @return value or {@code null} for none
      */
     public java.lang.String getMessage() {
@@ -246,7 +258,10 @@ public final class UsageReports extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Human readable message for the warning.
+     * The human readable messages for a warning are: - Data is not available warning - Sorry, data
+     * for date yyyy-mm-dd for application "application name" is not available.   - Partial data is
+     * available warning - Data for date yyyy-mm-dd for application "application name" is not
+     * available right now, please try again after a few hours.
      * @param message message or {@code null} for none
      */
     public Warnings setMessage(java.lang.String message) {

@@ -37,7 +37,7 @@ public final class NestedParameter extends com.google.api.client.json.GenericJso
   private java.lang.Boolean boolValue;
 
   /**
-   * Integral value of the parameter.
+   * Integer value of the parameter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -51,7 +51,7 @@ public final class NestedParameter extends com.google.api.client.json.GenericJso
   private java.util.List<java.lang.Boolean> multiBoolValue;
 
   /**
-   * Multiple integral values of the parameter.
+   * Multiple integer values of the parameter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -96,7 +96,7 @@ public final class NestedParameter extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Integral value of the parameter.
+   * Integer value of the parameter.
    * @return value or {@code null} for none
    */
   public java.lang.Long getIntValue() {
@@ -104,7 +104,7 @@ public final class NestedParameter extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Integral value of the parameter.
+   * Integer value of the parameter.
    * @param intValue intValue or {@code null} for none
    */
   public NestedParameter setIntValue(java.lang.Long intValue) {
@@ -130,7 +130,7 @@ public final class NestedParameter extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Multiple integral values of the parameter.
+   * Multiple integer values of the parameter.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Long> getMultiIntValue() {
@@ -138,7 +138,7 @@ public final class NestedParameter extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Multiple integral values of the parameter.
+   * Multiple integer values of the parameter.
    * @param multiIntValue multiIntValue or {@code null} for none
    */
   public NestedParameter setMultiIntValue(java.util.List<java.lang.Long> multiIntValue) {

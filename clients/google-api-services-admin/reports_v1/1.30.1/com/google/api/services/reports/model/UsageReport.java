@@ -30,7 +30,7 @@ package com.google.api.services.reports.model;
 public final class UsageReport extends com.google.api.client.json.GenericJson {
 
   /**
-   * The date to which the record belongs.
+   * The date of the report request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,14 +51,15 @@ public final class UsageReport extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * The kind of object.
+   * The type of API resource. For a usage report, the value is admin#reports#usageReport.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * Parameter value pairs for various applications.
+   * Parameter value pairs for various applications. For the Customers usage report parameters and
+   * values, see the customer usage parameters reference.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +72,7 @@ public final class UsageReport extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The date to which the record belongs.
+   * The date of the report request.
    * @return value or {@code null} for none
    */
   public java.lang.String getDate() {
@@ -79,7 +80,7 @@ public final class UsageReport extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The date to which the record belongs.
+   * The date of the report request.
    * @param date date or {@code null} for none
    */
   public UsageReport setDate(java.lang.String date) {
@@ -122,7 +123,7 @@ public final class UsageReport extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The kind of object.
+   * The type of API resource. For a usage report, the value is admin#reports#usageReport.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -130,7 +131,7 @@ public final class UsageReport extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The kind of object.
+   * The type of API resource. For a usage report, the value is admin#reports#usageReport.
    * @param kind kind or {@code null} for none
    */
   public UsageReport setKind(java.lang.String kind) {
@@ -139,7 +140,8 @@ public final class UsageReport extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Parameter value pairs for various applications.
+   * Parameter value pairs for various applications. For the Customers usage report parameters and
+   * values, see the customer usage parameters reference.
    * @return value or {@code null} for none
    */
   public java.util.List<Parameters> getParameters() {
@@ -147,7 +149,8 @@ public final class UsageReport extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Parameter value pairs for various applications.
+   * Parameter value pairs for various applications. For the Customers usage report parameters and
+   * values, see the customer usage parameters reference.
    * @param parameters parameters or {@code null} for none
    */
   public UsageReport setParameters(java.util.List<Parameters> parameters) {
@@ -171,7 +174,7 @@ public final class UsageReport extends com.google.api.client.json.GenericJson {
   public static final class Entity extends com.google.api.client.json.GenericJson {
 
     /**
-     * Obfuscated customer id for the record.
+     * The unique identifier of the customer's account.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -186,28 +189,28 @@ public final class UsageReport extends com.google.api.client.json.GenericJson {
     private java.lang.String entityId;
 
     /**
-     * Obfuscated user id for the record.
+     * The user's immutable G Suite profile identifier.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String profileId;
 
     /**
-     * The type of item, can be customer, user, or entity (aka. object).
+     * The type of item. The value is customer.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String type;
 
     /**
-     * user's email. Only relevant if entity.type = "USER"
+     * The user's email address. Only relevant if entity.type = "USER"
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String userEmail;
 
     /**
-     * Obfuscated customer id for the record.
+     * The unique identifier of the customer's account.
      * @return value or {@code null} for none
      */
     public java.lang.String getCustomerId() {
@@ -215,7 +218,7 @@ public final class UsageReport extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Obfuscated customer id for the record.
+     * The unique identifier of the customer's account.
      * @param customerId customerId or {@code null} for none
      */
     public Entity setCustomerId(java.lang.String customerId) {
@@ -243,7 +246,7 @@ public final class UsageReport extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Obfuscated user id for the record.
+     * The user's immutable G Suite profile identifier.
      * @return value or {@code null} for none
      */
     public java.lang.String getProfileId() {
@@ -251,7 +254,7 @@ public final class UsageReport extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Obfuscated user id for the record.
+     * The user's immutable G Suite profile identifier.
      * @param profileId profileId or {@code null} for none
      */
     public Entity setProfileId(java.lang.String profileId) {
@@ -260,7 +263,7 @@ public final class UsageReport extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The type of item, can be customer, user, or entity (aka. object).
+     * The type of item. The value is customer.
      * @return value or {@code null} for none
      */
     public java.lang.String getType() {
@@ -268,7 +271,7 @@ public final class UsageReport extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The type of item, can be customer, user, or entity (aka. object).
+     * The type of item. The value is customer.
      * @param type type or {@code null} for none
      */
     public Entity setType(java.lang.String type) {
@@ -277,7 +280,7 @@ public final class UsageReport extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * user's email. Only relevant if entity.type = "USER"
+     * The user's email address. Only relevant if entity.type = "USER"
      * @return value or {@code null} for none
      */
     public java.lang.String getUserEmail() {
@@ -285,7 +288,7 @@ public final class UsageReport extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * user's email. Only relevant if entity.type = "USER"
+     * The user's email address. Only relevant if entity.type = "USER"
      * @param userEmail userEmail or {@code null} for none
      */
     public Entity setUserEmail(java.lang.String userEmail) {
@@ -318,14 +321,14 @@ public final class UsageReport extends com.google.api.client.json.GenericJson {
     private java.lang.Boolean boolValue;
 
     /**
-     * RFC 3339 formatted value of the parameter.
+     * The RFC 3339 formatted value of the parameter, for example 2010-10-28T10:26:35.000Z.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private com.google.api.client.util.DateTime datetimeValue;
 
     /**
-     * Integral value of the parameter.
+     * Integer value of the parameter.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -339,7 +342,6 @@ public final class UsageReport extends com.google.api.client.json.GenericJson {
     private java.util.List<java.util.Map<String, java.lang.Object>> msgValue;
 
     /**
-     * The name of the parameter.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -370,7 +372,7 @@ public final class UsageReport extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * RFC 3339 formatted value of the parameter.
+     * The RFC 3339 formatted value of the parameter, for example 2010-10-28T10:26:35.000Z.
      * @return value or {@code null} for none
      */
     public com.google.api.client.util.DateTime getDatetimeValue() {
@@ -378,7 +380,7 @@ public final class UsageReport extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * RFC 3339 formatted value of the parameter.
+     * The RFC 3339 formatted value of the parameter, for example 2010-10-28T10:26:35.000Z.
      * @param datetimeValue datetimeValue or {@code null} for none
      */
     public Parameters setDatetimeValue(com.google.api.client.util.DateTime datetimeValue) {
@@ -387,7 +389,7 @@ public final class UsageReport extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Integral value of the parameter.
+     * Integer value of the parameter.
      * @return value or {@code null} for none
      */
     public java.lang.Long getIntValue() {
@@ -395,7 +397,7 @@ public final class UsageReport extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Integral value of the parameter.
+     * Integer value of the parameter.
      * @param intValue intValue or {@code null} for none
      */
     public Parameters setIntValue(java.lang.Long intValue) {
@@ -421,7 +423,6 @@ public final class UsageReport extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The name of the parameter.
      * @return value or {@code null} for none
      */
     public java.lang.String getName() {
@@ -429,7 +430,6 @@ public final class UsageReport extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The name of the parameter.
      * @param name name or {@code null} for none
      */
     public Parameters setName(java.lang.String name) {

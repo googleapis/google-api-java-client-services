@@ -44,7 +44,7 @@ public final class Activity extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * Activity events.
+   * Activity events in the report.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,21 +64,25 @@ public final class Activity extends com.google.api.client.json.GenericJson {
   private Id id;
 
   /**
-   * IP Address of the user doing the action.
+   * IP address of the user doing the action. This is the Internet Protocol (IP) address of the user
+   * when logging into G Suite which may or may not reflect the user's physical location. For
+   * example, the IP address can be the user's proxy server's address or a virtual private network
+   * (VPN) address. The API supports IPv4 and IPv6.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ipAddress;
 
   /**
-   * Kind of resource this is.
+   * The type of API resource. For an activity report, the value is audit#activity.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * Domain of source customer.
+   * This is the domain that is affected by the report's event. For example domain of Admin console
+   * or the Drive application's document owner.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,7 +123,7 @@ public final class Activity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Activity events.
+   * Activity events in the report.
    * @return value or {@code null} for none
    */
   public java.util.List<Events> getEvents() {
@@ -127,7 +131,7 @@ public final class Activity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Activity events.
+   * Activity events in the report.
    * @param events events or {@code null} for none
    */
   public Activity setEvents(java.util.List<Events> events) {
@@ -153,7 +157,10 @@ public final class Activity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * IP Address of the user doing the action.
+   * IP address of the user doing the action. This is the Internet Protocol (IP) address of the user
+   * when logging into G Suite which may or may not reflect the user's physical location. For
+   * example, the IP address can be the user's proxy server's address or a virtual private network
+   * (VPN) address. The API supports IPv4 and IPv6.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpAddress() {
@@ -161,7 +168,10 @@ public final class Activity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * IP Address of the user doing the action.
+   * IP address of the user doing the action. This is the Internet Protocol (IP) address of the user
+   * when logging into G Suite which may or may not reflect the user's physical location. For
+   * example, the IP address can be the user's proxy server's address or a virtual private network
+   * (VPN) address. The API supports IPv4 and IPv6.
    * @param ipAddress ipAddress or {@code null} for none
    */
   public Activity setIpAddress(java.lang.String ipAddress) {
@@ -170,7 +180,7 @@ public final class Activity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Kind of resource this is.
+   * The type of API resource. For an activity report, the value is audit#activity.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -178,7 +188,7 @@ public final class Activity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Kind of resource this is.
+   * The type of API resource. For an activity report, the value is audit#activity.
    * @param kind kind or {@code null} for none
    */
   public Activity setKind(java.lang.String kind) {
@@ -187,7 +197,8 @@ public final class Activity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Domain of source customer.
+   * This is the domain that is affected by the report's event. For example domain of Admin console
+   * or the Drive application's document owner.
    * @return value or {@code null} for none
    */
   public java.lang.String getOwnerDomain() {
@@ -195,7 +206,8 @@ public final class Activity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Domain of source customer.
+   * This is the domain that is affected by the report's event. For example domain of Admin console
+   * or the Drive application's document owner.
    * @param ownerDomain ownerDomain or {@code null} for none
    */
   public Activity setOwnerDomain(java.lang.String ownerDomain) {
@@ -219,35 +231,37 @@ public final class Activity extends com.google.api.client.json.GenericJson {
   public static final class Actor extends com.google.api.client.json.GenericJson {
 
     /**
-     * User or OAuth 2LO request.
+     * The type of actor.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String callerType;
 
     /**
-     * Email address of the user.
+     * The primary email address of the actor. May be absent if there is no email address associated
+     * with the actor.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String email;
 
     /**
-     * For OAuth 2LO API requests, consumer_key of the requestor.
+     * Only present when callerType is KEY. Can be the consumer_key of the requestor for OAuth 2LO API
+     * requests or an identifier for robot accounts.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String key;
 
     /**
-     * Obfuscated user id of the user.
+     * The unique G Suite profile ID of the actor. May be absent if the actor is not a G Suite user.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String profileId;
 
     /**
-     * User or OAuth 2LO request.
+     * The type of actor.
      * @return value or {@code null} for none
      */
     public java.lang.String getCallerType() {
@@ -255,7 +269,7 @@ public final class Activity extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * User or OAuth 2LO request.
+     * The type of actor.
      * @param callerType callerType or {@code null} for none
      */
     public Actor setCallerType(java.lang.String callerType) {
@@ -264,7 +278,8 @@ public final class Activity extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Email address of the user.
+     * The primary email address of the actor. May be absent if there is no email address associated
+     * with the actor.
      * @return value or {@code null} for none
      */
     public java.lang.String getEmail() {
@@ -272,7 +287,8 @@ public final class Activity extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Email address of the user.
+     * The primary email address of the actor. May be absent if there is no email address associated
+     * with the actor.
      * @param email email or {@code null} for none
      */
     public Actor setEmail(java.lang.String email) {
@@ -281,7 +297,8 @@ public final class Activity extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * For OAuth 2LO API requests, consumer_key of the requestor.
+     * Only present when callerType is KEY. Can be the consumer_key of the requestor for OAuth 2LO API
+     * requests or an identifier for robot accounts.
      * @return value or {@code null} for none
      */
     public java.lang.String getKey() {
@@ -289,7 +306,8 @@ public final class Activity extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * For OAuth 2LO API requests, consumer_key of the requestor.
+     * Only present when callerType is KEY. Can be the consumer_key of the requestor for OAuth 2LO API
+     * requests or an identifier for robot accounts.
      * @param key key or {@code null} for none
      */
     public Actor setKey(java.lang.String key) {
@@ -298,7 +316,7 @@ public final class Activity extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Obfuscated user id of the user.
+     * The unique G Suite profile ID of the actor. May be absent if the actor is not a G Suite user.
      * @return value or {@code null} for none
      */
     public java.lang.String getProfileId() {
@@ -306,7 +324,7 @@ public final class Activity extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Obfuscated user id of the user.
+     * The unique G Suite profile ID of the actor. May be absent if the actor is not a G Suite user.
      * @param profileId profileId or {@code null} for none
      */
     public Actor setProfileId(java.lang.String profileId) {
@@ -332,14 +350,22 @@ public final class Activity extends com.google.api.client.json.GenericJson {
   public static final class Events extends com.google.api.client.json.GenericJson {
 
     /**
-     * Name of event.
+     * Name of the event. This is the specific name of the activity reported by the API. And each
+     * eventName is related to a specific G Suite service or feature which the API organizes into
+     * types of events. For eventName request parameters in general:   - If no eventName is given, the
+     * report returns all possible instances of an eventName.   - When you request an eventName, the
+     * API's response returns all activities which contain that eventName. It is possible that the
+     * returned activities will have other eventName properties in addition to the one requested.
+     * For more information about eventName properties, see the list of event names for various
+     * applications above in applicationName.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String name;
 
     /**
-     * Parameter value pairs for various applications.
+     * Parameter value pairs for various applications. For more information about eventName
+     * parameters, see the list of event names for various applications above in applicationName.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -352,14 +378,24 @@ public final class Activity extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Type of event.
+     * Type of event. The G Suite service or feature that an administrator changes is identified in
+     * the type property which identifies an event using the eventName property. For a full list of
+     * the API's type categories, see the list of event names for various applications above in
+     * applicationName.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String type;
 
     /**
-     * Name of event.
+     * Name of the event. This is the specific name of the activity reported by the API. And each
+     * eventName is related to a specific G Suite service or feature which the API organizes into
+     * types of events. For eventName request parameters in general:   - If no eventName is given, the
+     * report returns all possible instances of an eventName.   - When you request an eventName, the
+     * API's response returns all activities which contain that eventName. It is possible that the
+     * returned activities will have other eventName properties in addition to the one requested.
+     * For more information about eventName properties, see the list of event names for various
+     * applications above in applicationName.
      * @return value or {@code null} for none
      */
     public java.lang.String getName() {
@@ -367,7 +403,14 @@ public final class Activity extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Name of event.
+     * Name of the event. This is the specific name of the activity reported by the API. And each
+     * eventName is related to a specific G Suite service or feature which the API organizes into
+     * types of events. For eventName request parameters in general:   - If no eventName is given, the
+     * report returns all possible instances of an eventName.   - When you request an eventName, the
+     * API's response returns all activities which contain that eventName. It is possible that the
+     * returned activities will have other eventName properties in addition to the one requested.
+     * For more information about eventName properties, see the list of event names for various
+     * applications above in applicationName.
      * @param name name or {@code null} for none
      */
     public Events setName(java.lang.String name) {
@@ -376,7 +419,8 @@ public final class Activity extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Parameter value pairs for various applications.
+     * Parameter value pairs for various applications. For more information about eventName
+     * parameters, see the list of event names for various applications above in applicationName.
      * @return value or {@code null} for none
      */
     public java.util.List<Parameters> getParameters() {
@@ -384,7 +428,8 @@ public final class Activity extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Parameter value pairs for various applications.
+     * Parameter value pairs for various applications. For more information about eventName
+     * parameters, see the list of event names for various applications above in applicationName.
      * @param parameters parameters or {@code null} for none
      */
     public Events setParameters(java.util.List<Parameters> parameters) {
@@ -393,7 +438,10 @@ public final class Activity extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Type of event.
+     * Type of event. The G Suite service or feature that an administrator changes is identified in
+     * the type property which identifies an event using the eventName property. For a full list of
+     * the API's type categories, see the list of event names for various applications above in
+     * applicationName.
      * @return value or {@code null} for none
      */
     public java.lang.String getType() {
@@ -401,7 +449,10 @@ public final class Activity extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Type of event.
+     * Type of event. The G Suite service or feature that an administrator changes is identified in
+     * the type property which identifies an event using the eventName property. For a full list of
+     * the API's type categories, see the list of event names for various applications above in
+     * applicationName.
      * @param type type or {@code null} for none
      */
     public Events setType(java.lang.String type) {
@@ -432,28 +483,30 @@ public final class Activity extends com.google.api.client.json.GenericJson {
       private java.lang.Boolean boolValue;
 
       /**
-       * Integral value of the parameter.
+       * Integer value of the parameter.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key @com.google.api.client.json.JsonString
       private java.lang.Long intValue;
 
       /**
-       * Nested value of the parameter.
+       * Nested parameter value pairs associated with this parameter. Complex value type for a parameter
+       * are returned as a list of parameter values. For example, the address parameter may have a value
+       * as [{parameter: [{name: city, value: abc}]}]
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
       private MessageValue messageValue;
 
       /**
-       * Multi-int value of the parameter.
+       * Integer values of the parameter.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key @com.google.api.client.json.JsonString
       private java.util.List<java.lang.Long> multiIntValue;
 
       /**
-       * Nested values of the parameter.
+       * List of messageValue objects.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -466,7 +519,7 @@ public final class Activity extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Multi-string value of the parameter.
+       * String values of the parameter.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -504,7 +557,7 @@ public final class Activity extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Integral value of the parameter.
+       * Integer value of the parameter.
        * @return value or {@code null} for none
        */
       public java.lang.Long getIntValue() {
@@ -512,7 +565,7 @@ public final class Activity extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Integral value of the parameter.
+       * Integer value of the parameter.
        * @param intValue intValue or {@code null} for none
        */
       public Parameters setIntValue(java.lang.Long intValue) {
@@ -521,7 +574,9 @@ public final class Activity extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Nested value of the parameter.
+       * Nested parameter value pairs associated with this parameter. Complex value type for a parameter
+       * are returned as a list of parameter values. For example, the address parameter may have a value
+       * as [{parameter: [{name: city, value: abc}]}]
        * @return value or {@code null} for none
        */
       public MessageValue getMessageValue() {
@@ -529,7 +584,9 @@ public final class Activity extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Nested value of the parameter.
+       * Nested parameter value pairs associated with this parameter. Complex value type for a parameter
+       * are returned as a list of parameter values. For example, the address parameter may have a value
+       * as [{parameter: [{name: city, value: abc}]}]
        * @param messageValue messageValue or {@code null} for none
        */
       public Parameters setMessageValue(MessageValue messageValue) {
@@ -538,7 +595,7 @@ public final class Activity extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Multi-int value of the parameter.
+       * Integer values of the parameter.
        * @return value or {@code null} for none
        */
       public java.util.List<java.lang.Long> getMultiIntValue() {
@@ -546,7 +603,7 @@ public final class Activity extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Multi-int value of the parameter.
+       * Integer values of the parameter.
        * @param multiIntValue multiIntValue or {@code null} for none
        */
       public Parameters setMultiIntValue(java.util.List<java.lang.Long> multiIntValue) {
@@ -555,7 +612,7 @@ public final class Activity extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Nested values of the parameter.
+       * List of messageValue objects.
        * @return value or {@code null} for none
        */
       public java.util.List<MultiMessageValue> getMultiMessageValue() {
@@ -563,7 +620,7 @@ public final class Activity extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Nested values of the parameter.
+       * List of messageValue objects.
        * @param multiMessageValue multiMessageValue or {@code null} for none
        */
       public Parameters setMultiMessageValue(java.util.List<MultiMessageValue> multiMessageValue) {
@@ -572,7 +629,7 @@ public final class Activity extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Multi-string value of the parameter.
+       * String values of the parameter.
        * @return value or {@code null} for none
        */
       public java.util.List<java.lang.String> getMultiValue() {
@@ -580,7 +637,7 @@ public final class Activity extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Multi-string value of the parameter.
+       * String values of the parameter.
        * @param multiValue multiValue or {@code null} for none
        */
       public Parameters setMultiValue(java.util.List<java.lang.String> multiValue) {
@@ -633,19 +690,21 @@ public final class Activity extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Nested value of the parameter.
+       * Nested parameter value pairs associated with this parameter. Complex value type for a parameter
+       * are returned as a list of parameter values. For example, the address parameter may have a value
+       * as [{parameter: [{name: city, value: abc}]}]
        */
       public static final class MessageValue extends com.google.api.client.json.GenericJson {
 
         /**
-         * Looping to get parameter values.
+         * Parameter values
          * The value may be {@code null}.
          */
         @com.google.api.client.util.Key
         private java.util.List<NestedParameter> parameter;
 
         /**
-         * Looping to get parameter values.
+         * Parameter values
          * @return value or {@code null} for none
          */
         public java.util.List<NestedParameter> getParameter() {
@@ -653,7 +712,7 @@ public final class Activity extends com.google.api.client.json.GenericJson {
         }
 
         /**
-         * Looping to get parameter values.
+         * Parameter values
          * @param parameter parameter or {@code null} for none
          */
         public MessageValue setParameter(java.util.List<NestedParameter> parameter) {
@@ -678,14 +737,14 @@ public final class Activity extends com.google.api.client.json.GenericJson {
       public static final class MultiMessageValue extends com.google.api.client.json.GenericJson {
 
         /**
-         * Parameter value.
+         * Parameter values
          * The value may be {@code null}.
          */
         @com.google.api.client.util.Key
         private java.util.List<NestedParameter> parameter;
 
         /**
-         * Parameter value.
+         * Parameter values
          * @return value or {@code null} for none
          */
         public java.util.List<NestedParameter> getParameter() {
@@ -693,7 +752,7 @@ public final class Activity extends com.google.api.client.json.GenericJson {
         }
 
         /**
-         * Parameter value.
+         * Parameter values
          * @param parameter parameter or {@code null} for none
          */
         public MultiMessageValue setParameter(java.util.List<NestedParameter> parameter) {
@@ -721,21 +780,22 @@ public final class Activity extends com.google.api.client.json.GenericJson {
   public static final class Id extends com.google.api.client.json.GenericJson {
 
     /**
-     * Application name to which the event belongs.
+     * Application name to which the event belongs. For possible values see the list of applications
+     * above in applicationName.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String applicationName;
 
     /**
-     * Obfuscated customer ID of the source customer.
+     * The unique identifier for a G suite account.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String customerId;
 
     /**
-     * Time of occurrence of the activity.
+     * Time of occurrence of the activity. This is in UNIX epoch time in seconds.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -749,7 +809,8 @@ public final class Activity extends com.google.api.client.json.GenericJson {
     private java.lang.Long uniqueQualifier;
 
     /**
-     * Application name to which the event belongs.
+     * Application name to which the event belongs. For possible values see the list of applications
+     * above in applicationName.
      * @return value or {@code null} for none
      */
     public java.lang.String getApplicationName() {
@@ -757,7 +818,8 @@ public final class Activity extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Application name to which the event belongs.
+     * Application name to which the event belongs. For possible values see the list of applications
+     * above in applicationName.
      * @param applicationName applicationName or {@code null} for none
      */
     public Id setApplicationName(java.lang.String applicationName) {
@@ -766,7 +828,7 @@ public final class Activity extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Obfuscated customer ID of the source customer.
+     * The unique identifier for a G suite account.
      * @return value or {@code null} for none
      */
     public java.lang.String getCustomerId() {
@@ -774,7 +836,7 @@ public final class Activity extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Obfuscated customer ID of the source customer.
+     * The unique identifier for a G suite account.
      * @param customerId customerId or {@code null} for none
      */
     public Id setCustomerId(java.lang.String customerId) {
@@ -783,7 +845,7 @@ public final class Activity extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Time of occurrence of the activity.
+     * Time of occurrence of the activity. This is in UNIX epoch time in seconds.
      * @return value or {@code null} for none
      */
     public com.google.api.client.util.DateTime getTime() {
@@ -791,7 +853,7 @@ public final class Activity extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Time of occurrence of the activity.
+     * Time of occurrence of the activity. This is in UNIX epoch time in seconds.
      * @param time time or {@code null} for none
      */
     public Id setTime(com.google.api.client.util.DateTime time) {

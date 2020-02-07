@@ -38,7 +38,7 @@ public final class ApplicationTransferParam extends com.google.api.client.json.G
   private java.lang.String key;
 
   /**
-   * The value of the coressponding transfer parameter. eg: 'PRIVATE' or 'SHARED'
+   * The value of the corresponding transfer parameter. eg: 'PRIVATE' or 'SHARED'
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class ApplicationTransferParam extends com.google.api.client.json.G
   }
 
   /**
-   * The value of the coressponding transfer parameter. eg: 'PRIVATE' or 'SHARED'
+   * The value of the corresponding transfer parameter. eg: 'PRIVATE' or 'SHARED'
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getValue() {
@@ -70,7 +70,7 @@ public final class ApplicationTransferParam extends com.google.api.client.json.G
   }
 
   /**
-   * The value of the coressponding transfer parameter. eg: 'PRIVATE' or 'SHARED'
+   * The value of the corresponding transfer parameter. eg: 'PRIVATE' or 'SHARED'
    * @param value value or {@code null} for none
    */
   public ApplicationTransferParam setValue(java.util.List<java.lang.String> value) {

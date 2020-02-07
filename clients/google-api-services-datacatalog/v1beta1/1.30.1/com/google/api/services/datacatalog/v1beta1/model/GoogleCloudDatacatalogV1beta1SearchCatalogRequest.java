@@ -33,8 +33,7 @@ public final class GoogleCloudDatacatalogV1beta1SearchCatalogRequest extends com
   /**
    * Specifies the ordering of results, currently supported case-sensitive choices are:
    *
-   *   * `relevance`, only supports desecending   * `last_access_timestamp [asc|desc]`, defaults to
-   * descending if not     specified   * `last_modified_timestamp [asc|desc]`, defaults to
+   *   * `relevance`, only supports descending   * `last_modified_timestamp [asc|desc]`, defaults to
    * descending if not     specified
    *
    * If not specified, defaults to `relevance` descending.
@@ -85,8 +84,7 @@ public final class GoogleCloudDatacatalogV1beta1SearchCatalogRequest extends com
   /**
    * Specifies the ordering of results, currently supported case-sensitive choices are:
    *
-   *   * `relevance`, only supports desecending   * `last_access_timestamp [asc|desc]`, defaults to
-   * descending if not     specified   * `last_modified_timestamp [asc|desc]`, defaults to
+   *   * `relevance`, only supports descending   * `last_modified_timestamp [asc|desc]`, defaults to
    * descending if not     specified
    *
    * If not specified, defaults to `relevance` descending.
@@ -99,8 +97,7 @@ public final class GoogleCloudDatacatalogV1beta1SearchCatalogRequest extends com
   /**
    * Specifies the ordering of results, currently supported case-sensitive choices are:
    *
-   *   * `relevance`, only supports desecending   * `last_access_timestamp [asc|desc]`, defaults to
-   * descending if not     specified   * `last_modified_timestamp [asc|desc]`, defaults to
+   *   * `relevance`, only supports descending   * `last_modified_timestamp [asc|desc]`, defaults to
    * descending if not     specified
    *
    * If not specified, defaults to `relevance` descending.

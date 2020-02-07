@@ -76,13 +76,24 @@ public final class GoogleCloudDatacatalogV1beta1Entry extends com.google.api.cli
   private GoogleCloudDatacatalogV1beta1GcsFilesetSpec gcsFilesetSpec;
 
   /**
-   * Output only. The resource this metadata entry refers to.
+   * Output only. This field indicates the entry's source system that Data Catalog integrates with,
+   * such as BigQuery or Cloud Pub/Sub.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String integratedSystem;
+
+  /**
+   * The resource this metadata entry refers to.
    *
    * For Google Cloud Platform resources, `linked_resource` is the [full name of the
    * resource](https://cloud.google.com/apis/design/resource_names#full_resource_name). For example,
    * the `linked_resource` for a table resource from BigQuery is:
    *
    * * //bigquery.googleapis.com/projects/projectId/datasets/datasetId/tables/tableId
+   *
+   * Output only when Entry is of type in the EntryType enum. For entries with user_specified_type,
+   * this field is optional and defaults to an empty string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,19 +119,45 @@ public final class GoogleCloudDatacatalogV1beta1Entry extends com.google.api.cli
   private GoogleCloudDatacatalogV1beta1Schema schema;
 
   /**
-   * Output only. Timestamps about the underlying Google Cloud Platform resource, not about this
-   * Data Catalog Entry.
+   * Output only. Timestamps about the underlying resource, not about this Data Catalog entry.
+   * Output only when Entry is of type in the EntryType enum. For entries with user_specified_type,
+   * this field is optional and defaults to an empty timestamp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDatacatalogV1beta1SystemTimestamps sourceSystemTimestamps;
 
   /**
-   * The type of the entry.
+   * The type of the entry. Only used for Entries with types in the EntryType enum.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * This field indicates the entry's source system that Data Catalog does not integrate with.
+   * `user_specified_system` strings must begin with a letter or underscore and can only contain
+   * letters, numbers, and underscores; are case insensitive; must be at least 1 character and at
+   * most 64 characters long.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String userSpecifiedSystem;
+
+  /**
+   * Entry type if it does not fit any of the input-allowed values listed in `EntryType` enum above.
+   * When creating an entry, users should check the enum values first, if nothing matches the entry
+   * to be created, then provide a custom value, for example "my_special_type".
+   * `user_specified_type` strings must begin with a letter or underscore and can only contain
+   * letters, numbers, and underscores; are case insensitive; must be at least 1 character and at
+   * most 64 characters long.
+   *
+   * Currently, only FILESET enum value is allowed. All other entries created through Data Catalog
+   * must use `user_specified_type`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String userSpecifiedType;
 
   /**
    * Specification for a group of BigQuery tables with name pattern `[prefix]YYYYMMDD`. Context:
@@ -216,13 +253,35 @@ public final class GoogleCloudDatacatalogV1beta1Entry extends com.google.api.cli
   }
 
   /**
-   * Output only. The resource this metadata entry refers to.
+   * Output only. This field indicates the entry's source system that Data Catalog integrates with,
+   * such as BigQuery or Cloud Pub/Sub.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIntegratedSystem() {
+    return integratedSystem;
+  }
+
+  /**
+   * Output only. This field indicates the entry's source system that Data Catalog integrates with,
+   * such as BigQuery or Cloud Pub/Sub.
+   * @param integratedSystem integratedSystem or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1beta1Entry setIntegratedSystem(java.lang.String integratedSystem) {
+    this.integratedSystem = integratedSystem;
+    return this;
+  }
+
+  /**
+   * The resource this metadata entry refers to.
    *
    * For Google Cloud Platform resources, `linked_resource` is the [full name of the
    * resource](https://cloud.google.com/apis/design/resource_names#full_resource_name). For example,
    * the `linked_resource` for a table resource from BigQuery is:
    *
    * * //bigquery.googleapis.com/projects/projectId/datasets/datasetId/tables/tableId
+   *
+   * Output only when Entry is of type in the EntryType enum. For entries with user_specified_type,
+   * this field is optional and defaults to an empty string.
    * @return value or {@code null} for none
    */
   public java.lang.String getLinkedResource() {
@@ -230,13 +289,16 @@ public final class GoogleCloudDatacatalogV1beta1Entry extends com.google.api.cli
   }
 
   /**
-   * Output only. The resource this metadata entry refers to.
+   * The resource this metadata entry refers to.
    *
    * For Google Cloud Platform resources, `linked_resource` is the [full name of the
    * resource](https://cloud.google.com/apis/design/resource_names#full_resource_name). For example,
    * the `linked_resource` for a table resource from BigQuery is:
    *
    * * //bigquery.googleapis.com/projects/projectId/datasets/datasetId/tables/tableId
+   *
+   * Output only when Entry is of type in the EntryType enum. For entries with user_specified_type,
+   * this field is optional and defaults to an empty string.
    * @param linkedResource linkedResource or {@code null} for none
    */
   public GoogleCloudDatacatalogV1beta1Entry setLinkedResource(java.lang.String linkedResource) {
@@ -289,8 +351,9 @@ public final class GoogleCloudDatacatalogV1beta1Entry extends com.google.api.cli
   }
 
   /**
-   * Output only. Timestamps about the underlying Google Cloud Platform resource, not about this
-   * Data Catalog Entry.
+   * Output only. Timestamps about the underlying resource, not about this Data Catalog entry.
+   * Output only when Entry is of type in the EntryType enum. For entries with user_specified_type,
+   * this field is optional and defaults to an empty timestamp.
    * @return value or {@code null} for none
    */
   public GoogleCloudDatacatalogV1beta1SystemTimestamps getSourceSystemTimestamps() {
@@ -298,8 +361,9 @@ public final class GoogleCloudDatacatalogV1beta1Entry extends com.google.api.cli
   }
 
   /**
-   * Output only. Timestamps about the underlying Google Cloud Platform resource, not about this
-   * Data Catalog Entry.
+   * Output only. Timestamps about the underlying resource, not about this Data Catalog entry.
+   * Output only when Entry is of type in the EntryType enum. For entries with user_specified_type,
+   * this field is optional and defaults to an empty timestamp.
    * @param sourceSystemTimestamps sourceSystemTimestamps or {@code null} for none
    */
   public GoogleCloudDatacatalogV1beta1Entry setSourceSystemTimestamps(GoogleCloudDatacatalogV1beta1SystemTimestamps sourceSystemTimestamps) {
@@ -308,7 +372,7 @@ public final class GoogleCloudDatacatalogV1beta1Entry extends com.google.api.cli
   }
 
   /**
-   * The type of the entry.
+   * The type of the entry. Only used for Entries with types in the EntryType enum.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -316,11 +380,67 @@ public final class GoogleCloudDatacatalogV1beta1Entry extends com.google.api.cli
   }
 
   /**
-   * The type of the entry.
+   * The type of the entry. Only used for Entries with types in the EntryType enum.
    * @param type type or {@code null} for none
    */
   public GoogleCloudDatacatalogV1beta1Entry setType(java.lang.String type) {
     this.type = type;
+    return this;
+  }
+
+  /**
+   * This field indicates the entry's source system that Data Catalog does not integrate with.
+   * `user_specified_system` strings must begin with a letter or underscore and can only contain
+   * letters, numbers, and underscores; are case insensitive; must be at least 1 character and at
+   * most 64 characters long.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUserSpecifiedSystem() {
+    return userSpecifiedSystem;
+  }
+
+  /**
+   * This field indicates the entry's source system that Data Catalog does not integrate with.
+   * `user_specified_system` strings must begin with a letter or underscore and can only contain
+   * letters, numbers, and underscores; are case insensitive; must be at least 1 character and at
+   * most 64 characters long.
+   * @param userSpecifiedSystem userSpecifiedSystem or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1beta1Entry setUserSpecifiedSystem(java.lang.String userSpecifiedSystem) {
+    this.userSpecifiedSystem = userSpecifiedSystem;
+    return this;
+  }
+
+  /**
+   * Entry type if it does not fit any of the input-allowed values listed in `EntryType` enum above.
+   * When creating an entry, users should check the enum values first, if nothing matches the entry
+   * to be created, then provide a custom value, for example "my_special_type".
+   * `user_specified_type` strings must begin with a letter or underscore and can only contain
+   * letters, numbers, and underscores; are case insensitive; must be at least 1 character and at
+   * most 64 characters long.
+   *
+   * Currently, only FILESET enum value is allowed. All other entries created through Data Catalog
+   * must use `user_specified_type`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUserSpecifiedType() {
+    return userSpecifiedType;
+  }
+
+  /**
+   * Entry type if it does not fit any of the input-allowed values listed in `EntryType` enum above.
+   * When creating an entry, users should check the enum values first, if nothing matches the entry
+   * to be created, then provide a custom value, for example "my_special_type".
+   * `user_specified_type` strings must begin with a letter or underscore and can only contain
+   * letters, numbers, and underscores; are case insensitive; must be at least 1 character and at
+   * most 64 characters long.
+   *
+   * Currently, only FILESET enum value is allowed. All other entries created through Data Catalog
+   * must use `user_specified_type`.
+   * @param userSpecifiedType userSpecifiedType or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1beta1Entry setUserSpecifiedType(java.lang.String userSpecifiedType) {
+    this.userSpecifiedType = userSpecifiedType;
     return this;
   }
 

@@ -31,11 +31,35 @@ package com.google.api.services.cloudkms.v1.model;
 public final class LocationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * Indicates whether CryptoKeys with protection_level EXTERNAL can be created in this location.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean ekmAvailable;
+
+  /**
    * Indicates whether CryptoKeys with protection_level HSM can be created in this location.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean hsmAvailable;
+
+  /**
+   * Indicates whether CryptoKeys with protection_level EXTERNAL can be created in this location.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEkmAvailable() {
+    return ekmAvailable;
+  }
+
+  /**
+   * Indicates whether CryptoKeys with protection_level EXTERNAL can be created in this location.
+   * @param ekmAvailable ekmAvailable or {@code null} for none
+   */
+  public LocationMetadata setEkmAvailable(java.lang.Boolean ekmAvailable) {
+    this.ekmAvailable = ekmAvailable;
+    return this;
+  }
 
   /**
    * Indicates whether CryptoKeys with protection_level HSM can be created in this location.

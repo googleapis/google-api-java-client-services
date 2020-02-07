@@ -79,6 +79,14 @@ public final class TransferConfig extends com.google.api.client.json.GenericJson
   private java.lang.String displayName;
 
   /**
+   * Email notifications will be sent according to these preferences to the email address of the
+   * user who owns this transfer config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EmailPreferences emailPreferences;
+
+  /**
    * The resource name of the transfer config. Transfer config names have the form of
    * `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`. The name is
    * automatically generated based on the config_id specified in CreateTransferConfigRequest along
@@ -95,6 +103,14 @@ public final class TransferConfig extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private String nextRunTime;
+
+  /**
+   * Pub/Sub topic where notifications will be sent after transfer runs associated with this
+   * transfer config finish.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String notificationPubsubTopic;
 
   /**
    * Data transfer specific parameters.
@@ -252,6 +268,25 @@ public final class TransferConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Email notifications will be sent according to these preferences to the email address of the
+   * user who owns this transfer config.
+   * @return value or {@code null} for none
+   */
+  public EmailPreferences getEmailPreferences() {
+    return emailPreferences;
+  }
+
+  /**
+   * Email notifications will be sent according to these preferences to the email address of the
+   * user who owns this transfer config.
+   * @param emailPreferences emailPreferences or {@code null} for none
+   */
+  public TransferConfig setEmailPreferences(EmailPreferences emailPreferences) {
+    this.emailPreferences = emailPreferences;
+    return this;
+  }
+
+  /**
    * The resource name of the transfer config. Transfer config names have the form of
    * `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`. The name is
    * automatically generated based on the config_id specified in CreateTransferConfigRequest along
@@ -290,6 +325,25 @@ public final class TransferConfig extends com.google.api.client.json.GenericJson
    */
   public TransferConfig setNextRunTime(String nextRunTime) {
     this.nextRunTime = nextRunTime;
+    return this;
+  }
+
+  /**
+   * Pub/Sub topic where notifications will be sent after transfer runs associated with this
+   * transfer config finish.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNotificationPubsubTopic() {
+    return notificationPubsubTopic;
+  }
+
+  /**
+   * Pub/Sub topic where notifications will be sent after transfer runs associated with this
+   * transfer config finish.
+   * @param notificationPubsubTopic notificationPubsubTopic or {@code null} for none
+   */
+  public TransferConfig setNotificationPubsubTopic(java.lang.String notificationPubsubTopic) {
+    this.notificationPubsubTopic = notificationPubsubTopic;
     return this;
   }
 

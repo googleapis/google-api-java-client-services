@@ -213,6 +213,13 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   private java.lang.String scaleTier;
 
   /**
+   * Optional. Scheduling options for a training job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudMlV1Scheduling scheduling;
+
+  /**
    * Optional. Use 'chief' instead of 'master' in TF_CONFIG when Custom Container is used and
    * evaluator is not specified.
    *
@@ -666,6 +673,23 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    */
   public GoogleCloudMlV1TrainingInput setScaleTier(java.lang.String scaleTier) {
     this.scaleTier = scaleTier;
+    return this;
+  }
+
+  /**
+   * Optional. Scheduling options for a training job.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudMlV1Scheduling getScheduling() {
+    return scheduling;
+  }
+
+  /**
+   * Optional. Scheduling options for a training job.
+   * @param scheduling scheduling or {@code null} for none
+   */
+  public GoogleCloudMlV1TrainingInput setScheduling(GoogleCloudMlV1Scheduling scheduling) {
+    this.scheduling = scheduling;
     return this;
   }
 

@@ -68,14 +68,14 @@ public final class DataTransfer extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * ID of the user to whom the data is being transfered.
+   * ID of the user to whom the data is being transferred.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String newOwnerUserId;
 
   /**
-   * ID of the user whose data is being transfered.
+   * ID of the user whose data is being transferred.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -170,7 +170,7 @@ public final class DataTransfer extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * ID of the user to whom the data is being transfered.
+   * ID of the user to whom the data is being transferred.
    * @return value or {@code null} for none
    */
   public java.lang.String getNewOwnerUserId() {
@@ -178,7 +178,7 @@ public final class DataTransfer extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * ID of the user to whom the data is being transfered.
+   * ID of the user to whom the data is being transferred.
    * @param newOwnerUserId newOwnerUserId or {@code null} for none
    */
   public DataTransfer setNewOwnerUserId(java.lang.String newOwnerUserId) {
@@ -187,7 +187,7 @@ public final class DataTransfer extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * ID of the user whose data is being transfered.
+   * ID of the user whose data is being transferred.
    * @return value or {@code null} for none
    */
   public java.lang.String getOldOwnerUserId() {
@@ -195,7 +195,7 @@ public final class DataTransfer extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * ID of the user whose data is being transfered.
+   * ID of the user whose data is being transferred.
    * @param oldOwnerUserId oldOwnerUserId or {@code null} for none
    */
   public DataTransfer setOldOwnerUserId(java.lang.String oldOwnerUserId) {

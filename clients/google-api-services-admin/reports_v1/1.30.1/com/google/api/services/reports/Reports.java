@@ -25,7 +25,7 @@ package com.google.api.services.reports;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://developers.google.com/admin-sdk/reports/" target="_blank">API Documentation</a>
+ * <a href="/admin-sdk/reports/" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>
@@ -46,7 +46,7 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.3 of the Admin Reports API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.8 of the Admin Reports API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -143,15 +143,19 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
   public class Activities {
 
     /**
-     * Retrieves a list of activities for a specific customer and application.
+     * Retrieves a list of activities for a specific customer's account and application such as the
+     * Admin console application or the Google Drive application. For more information, see the guides
+     * for administrator and Google Drive activity reports. For more information about the activity
+     * report's parameters, see the activity parameters reference guides.
      *
      * Create a request for the method "activities.list".
      *
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param userKey Represents the profile id or the user email for which the data should be filtered. When 'all' is
-     *        specified as the userKey, it returns usageReports for all users.
+     * @param userKey Represents the profile ID or the user email for which the data should be filtered. Can be all for
+     *        all information, or userKey for a user's unique G Suite profile ID or their primary email
+     *        address.
      * @param applicationName Application name for which the events are to be retrieved.
      * @return the request
      */
@@ -166,7 +170,7 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
       private static final String REST_PATH = "activity/users/{userKey}/applications/{applicationName}";
 
       private final java.util.regex.Pattern APPLICATION_NAME_PATTERN =
-          java.util.regex.Pattern.compile("(admin)|(calendar)|(drive)|(login)|(mobile)|(token)|(groups)|(saml)|(chat)|(gplus)|(rules)|(jamboard)|(meet)|(user_accounts)|(access_transparency)|(groups_enterprise)");
+          java.util.regex.Pattern.compile("(admin)|(calendar)|(drive)|(login)|(mobile)|(token)|(groups)|(saml)|(chat)|(gplus)|(rules)|(jamboard)|(meet)|(user_accounts)|(access_transparency)|(groups_enterprise)|(gcp)");
 
       private final java.util.regex.Pattern CUSTOMER_ID_PATTERN =
           java.util.regex.Pattern.compile("C.+");
@@ -184,7 +188,10 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("(\\d\\d\\d\\d)-(\\d\\d)-(\\d\\d)T(\\d\\d):(\\d\\d):(\\d\\d)(?:\\.(\\d+))?(?:(Z)|([-+])(\\d\\d):(\\d\\d))");
 
       /**
-       * Retrieves a list of activities for a specific customer and application.
+       * Retrieves a list of activities for a specific customer's account and application such as the
+       * Admin console application or the Google Drive application. For more information, see the guides
+       * for administrator and Google Drive activity reports. For more information about the activity
+       * report's parameters, see the activity parameters reference guides.
        *
        * Create a request for the method "activities.list".
        *
@@ -193,8 +200,9 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
        * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param userKey Represents the profile id or the user email for which the data should be filtered. When 'all' is
-     *        specified as the userKey, it returns usageReports for all users.
+       * @param userKey Represents the profile ID or the user email for which the data should be filtered. Can be all for
+     *        all information, or userKey for a user's unique G Suite profile ID or their primary email
+     *        address.
        * @param applicationName Application name for which the events are to be retrieved.
        * @since 1.13
        */
@@ -205,7 +213,7 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(APPLICATION_NAME_PATTERN.matcher(applicationName).matches(),
               "Parameter applicationName must conform to the pattern " +
-              "(admin)|(calendar)|(drive)|(login)|(mobile)|(token)|(groups)|(saml)|(chat)|(gplus)|(rules)|(jamboard)|(meet)|(user_accounts)|(access_transparency)|(groups_enterprise)");
+              "(admin)|(calendar)|(drive)|(login)|(mobile)|(token)|(groups)|(saml)|(chat)|(gplus)|(rules)|(jamboard)|(meet)|(user_accounts)|(access_transparency)|(groups_enterprise)|(gcp)");
         }
       }
 
@@ -255,22 +263,24 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
-       * Represents the profile id or the user email for which the data should be filtered. When
-       * 'all' is specified as the userKey, it returns usageReports for all users.
+       * Represents the profile ID or the user email for which the data should be filtered. Can be
+       * all for all information, or userKey for a user's unique G Suite profile ID or their primary
+       * email address.
        */
       @com.google.api.client.util.Key
       private java.lang.String userKey;
 
-      /** Represents the profile id or the user email for which the data should be filtered. When 'all' is
-     specified as the userKey, it returns usageReports for all users.
+      /** Represents the profile ID or the user email for which the data should be filtered. Can be all for
+     all information, or userKey for a user's unique G Suite profile ID or their primary email address.
        */
       public java.lang.String getUserKey() {
         return userKey;
       }
 
       /**
-       * Represents the profile id or the user email for which the data should be filtered. When
-       * 'all' is specified as the userKey, it returns usageReports for all users.
+       * Represents the profile ID or the user email for which the data should be filtered. Can be
+       * all for all information, or userKey for a user's unique G Suite profile ID or their primary
+       * email address.
        */
       public List setUserKey(java.lang.String userKey) {
         this.userKey = userKey;
@@ -292,43 +302,55 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(APPLICATION_NAME_PATTERN.matcher(applicationName).matches(),
               "Parameter applicationName must conform to the pattern " +
-              "(admin)|(calendar)|(drive)|(login)|(mobile)|(token)|(groups)|(saml)|(chat)|(gplus)|(rules)|(jamboard)|(meet)|(user_accounts)|(access_transparency)|(groups_enterprise)");
+              "(admin)|(calendar)|(drive)|(login)|(mobile)|(token)|(groups)|(saml)|(chat)|(gplus)|(rules)|(jamboard)|(meet)|(user_accounts)|(access_transparency)|(groups_enterprise)|(gcp)");
         }
         this.applicationName = applicationName;
         return this;
       }
 
       /**
-       * IP Address of host where the event was performed. Supports both IPv4 and IPv6 addresses.
+       * The Internet Protocol (IP) Address of host where the event was performed. This is an
+       * additional way to filter a report's summary using the IP address of the user whose activity
+       * is being reported. This IP address may or may not reflect the user's physical location. For
+       * example, the IP address can be the user's proxy server's address or a virtual private
+       * network (VPN) address. This parameter supports both IPv4 and IPv6 address versions.
        */
       @com.google.api.client.util.Key
       private java.lang.String actorIpAddress;
 
-      /** IP Address of host where the event was performed. Supports both IPv4 and IPv6 addresses.
+      /** The Internet Protocol (IP) Address of host where the event was performed. This is an additional way
+     to filter a report's summary using the IP address of the user whose activity is being reported.
+     This IP address may or may not reflect the user's physical location. For example, the IP address
+     can be the user's proxy server's address or a virtual private network (VPN) address. This parameter
+     supports both IPv4 and IPv6 address versions.
        */
       public java.lang.String getActorIpAddress() {
         return actorIpAddress;
       }
 
       /**
-       * IP Address of host where the event was performed. Supports both IPv4 and IPv6 addresses.
+       * The Internet Protocol (IP) Address of host where the event was performed. This is an
+       * additional way to filter a report's summary using the IP address of the user whose activity
+       * is being reported. This IP address may or may not reflect the user's physical location. For
+       * example, the IP address can be the user's proxy server's address or a virtual private
+       * network (VPN) address. This parameter supports both IPv4 and IPv6 address versions.
        */
       public List setActorIpAddress(java.lang.String actorIpAddress) {
         this.actorIpAddress = actorIpAddress;
         return this;
       }
 
-      /** Represents the customer for which the data is to be fetched. */
+      /** The unique ID of the customer to retrieve data for. */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Represents the customer for which the data is to be fetched.
+      /** The unique ID of the customer to retrieve data for.
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
-      /** Represents the customer for which the data is to be fetched. */
+      /** The unique ID of the customer to retrieve data for. */
       public List setCustomerId(java.lang.String customerId) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_ID_PATTERN.matcher(customerId).matches(),
@@ -339,17 +361,50 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /** Return events which occurred at or before this time. */
+      /**
+       * Sets the end of the range of time shown in the report. The date is in the RFC 3339 format,
+       * for example 2010-10-28T10:26:35.000Z. The default value is the approximate time of the API
+       * request. An API report has three basic time concepts: - Date of the API's request for a
+       * report: When the API created and retrieved the report. - Report's start time: The beginning
+       * of the timespan shown in the report. The startTime must be before the endTime (if
+       * specified) and the current time when the request is made, or the API returns an error. -
+       * Report's end time: The end of the timespan shown in the report. For example, the timespan
+       * of events summarized in a report can start in April and end in May. The report itself can
+       * be requested in August.  If the endTime is not specified, the report returns all activities
+       * from the startTime until the current time or the most recent 180 days if the startTime is
+       * more than 180 days in the past.
+       */
       @com.google.api.client.util.Key
       private java.lang.String endTime;
 
-      /** Return events which occurred at or before this time.
+      /** Sets the end of the range of time shown in the report. The date is in the RFC 3339 format, for
+     example 2010-10-28T10:26:35.000Z. The default value is the approximate time of the API request. An
+     API report has three basic time concepts: - Date of the API's request for a report: When the API
+     created and retrieved the report. - Report's start time: The beginning of the timespan shown in the
+     report. The startTime must be before the endTime (if specified) and the current time when the
+     request is made, or the API returns an error. - Report's end time: The end of the timespan shown in
+     the report. For example, the timespan of events summarized in a report can start in April and end
+     in May. The report itself can be requested in August.  If the endTime is not specified, the report
+     returns all activities from the startTime until the current time or the most recent 180 days if the
+     startTime is more than 180 days in the past.
        */
       public java.lang.String getEndTime() {
         return endTime;
       }
 
-      /** Return events which occurred at or before this time. */
+      /**
+       * Sets the end of the range of time shown in the report. The date is in the RFC 3339 format,
+       * for example 2010-10-28T10:26:35.000Z. The default value is the approximate time of the API
+       * request. An API report has three basic time concepts: - Date of the API's request for a
+       * report: When the API created and retrieved the report. - Report's start time: The beginning
+       * of the timespan shown in the report. The startTime must be before the endTime (if
+       * specified) and the current time when the request is made, or the API returns an error. -
+       * Report's end time: The end of the timespan shown in the report. For example, the timespan
+       * of events summarized in a report can start in April and end in May. The report itself can
+       * be requested in August.  If the endTime is not specified, the report returns all activities
+       * from the startTime until the current time or the most recent 180 days if the startTime is
+       * more than 180 days in the past.
+       */
       public List setEndTime(java.lang.String endTime) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(END_TIME_PATTERN.matcher(endTime).matches(),
@@ -360,39 +415,143 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /** Name of the event being queried. */
+      /**
+       * The name of the event being queried by the API. Each eventName is related to a specific G
+       * Suite service or feature which the API organizes into types of events. An example is the
+       * Google Calendar events in the Admin console application's reports. The Calendar Settings
+       * type structure has all of the Calendar eventName activities reported by the API. When an
+       * administrator changes a Calendar setting, the API reports this activity in the Calendar
+       * Settings type and eventName parameters. For more information about eventName query strings
+       * and parameters, see the list of event names for various applications above in
+       * applicationName.
+       */
       @com.google.api.client.util.Key
       private java.lang.String eventName;
 
-      /** Name of the event being queried.
+      /** The name of the event being queried by the API. Each eventName is related to a specific G Suite
+     service or feature which the API organizes into types of events. An example is the Google Calendar
+     events in the Admin console application's reports. The Calendar Settings type structure has all of
+     the Calendar eventName activities reported by the API. When an administrator changes a Calendar
+     setting, the API reports this activity in the Calendar Settings type and eventName parameters. For
+     more information about eventName query strings and parameters, see the list of event names for
+     various applications above in applicationName.
        */
       public java.lang.String getEventName() {
         return eventName;
       }
 
-      /** Name of the event being queried. */
+      /**
+       * The name of the event being queried by the API. Each eventName is related to a specific G
+       * Suite service or feature which the API organizes into types of events. An example is the
+       * Google Calendar events in the Admin console application's reports. The Calendar Settings
+       * type structure has all of the Calendar eventName activities reported by the API. When an
+       * administrator changes a Calendar setting, the API reports this activity in the Calendar
+       * Settings type and eventName parameters. For more information about eventName query strings
+       * and parameters, see the list of event names for various applications above in
+       * applicationName.
+       */
       public List setEventName(java.lang.String eventName) {
         this.eventName = eventName;
         return this;
       }
 
       /**
-       * Event parameters in the form [parameter1 name][operator][parameter1 value],[parameter2
-       * name][operator][parameter2 value],...
+       * The filters query string is a comma-separated list. The list is composed of event
+       * parameters that are manipulated by relational operators. Event parameters are in the form
+       * [parameter1 name][relational operator][parameter1 value],[parameter2 name][relational
+       * operator][parameter2 value],... These event parameters are associated with a specific
+       * eventName. An empty report is returned if the filtered request's parameter does not belong
+       * to the eventName. For more information about eventName parameters, see the list of event
+       * names for various applications above in applicationName.
+       *
+       * In the following Admin Activity example, the <> operator is URL-encoded in the request's
+       * query string (%3C%3E): GET...=CHANGE_CALENDAR_SETTING =NEW_VALUE%3C%3EREAD_ONLY_ACCESS
+       *
+       * In the following Drive example, the list can be a view or edit event's doc_id parameter
+       * with a value that is manipulated by an 'equal to' (==) or 'not equal to' (<>) relational
+       * operator. In the first example, the report returns each edited document's doc_id. In the
+       * second example, the report returns each viewed document's doc_id that equals the value
+       * 12345 and does not return any viewed document's which have a doc_id value of 98765. The <>
+       * operator is URL-encoded in the request's query string (%3C%3E):
+       *
+       * GET...=edit=doc_id GET...=view=doc_id==12345,doc_id%3C%3E98765
+       *
+       * The relational operators include: - == - 'equal to'. - <> - 'not equal to'. It is URL-
+       * encoded (%3C%3E). - < - 'less than'. It is URL-encoded (%3C). - <= - 'less than or equal
+       * to'. It is URL-encoded (%3C=). - > - 'greater than'. It is URL-encoded (%3E). - >= -
+       * 'greater than or equal to'. It is URL-encoded (%3E=). Note: The API doesn't accept multiple
+       * values of a parameter. If a particular parameter is supplied more than once in the API
+       * request, the API only accepts the last value of that request parameter. In addition, if an
+       * invalid request parameter is supplied in the API request, the API ignores that request
+       * parameter and returns the response corresponding to the remaining valid request parameters.
+       * If no parameters are requested, all parameters are returned.
        */
       @com.google.api.client.util.Key
       private java.lang.String filters;
 
-      /** Event parameters in the form [parameter1 name][operator][parameter1 value],[parameter2
-     name][operator][parameter2 value],...
+      /** The filters query string is a comma-separated list. The list is composed of event parameters that
+     are manipulated by relational operators. Event parameters are in the form [parameter1
+     name][relational operator][parameter1 value],[parameter2 name][relational operator][parameter2
+     value],... These event parameters are associated with a specific eventName. An empty report is
+     returned if the filtered request's parameter does not belong to the eventName. For more information
+     about eventName parameters, see the list of event names for various applications above in
+     applicationName.
+
+     In the following Admin Activity example, the <> operator is URL-encoded in the request's query
+     string (%3C%3E): GET...=CHANGE_CALENDAR_SETTING =NEW_VALUE%3C%3EREAD_ONLY_ACCESS
+
+     In the following Drive example, the list can be a view or edit event's doc_id parameter with a
+     value that is manipulated by an 'equal to' (==) or 'not equal to' (<>) relational operator. In the
+     first example, the report returns each edited document's doc_id. In the second example, the report
+     returns each viewed document's doc_id that equals the value 12345 and does not return any viewed
+     document's which have a doc_id value of 98765. The <> operator is URL-encoded in the request's
+     query string (%3C%3E):
+
+     GET...=edit=doc_id GET...=view=doc_id==12345,doc_id%3C%3E98765
+
+     The relational operators include: - == - 'equal to'. - <> - 'not equal to'. It is URL-encoded
+     (%3C%3E). - < - 'less than'. It is URL-encoded (%3C). - <= - 'less than or equal to'. It is URL-
+     encoded (%3C=). - > - 'greater than'. It is URL-encoded (%3E). - >= - 'greater than or equal to'.
+     It is URL-encoded (%3E=). Note: The API doesn't accept multiple values of a parameter. If a
+     particular parameter is supplied more than once in the API request, the API only accepts the last
+     value of that request parameter. In addition, if an invalid request parameter is supplied in the
+     API request, the API ignores that request parameter and returns the response corresponding to the
+     remaining valid request parameters. If no parameters are requested, all parameters are returned.
        */
       public java.lang.String getFilters() {
         return filters;
       }
 
       /**
-       * Event parameters in the form [parameter1 name][operator][parameter1 value],[parameter2
-       * name][operator][parameter2 value],...
+       * The filters query string is a comma-separated list. The list is composed of event
+       * parameters that are manipulated by relational operators. Event parameters are in the form
+       * [parameter1 name][relational operator][parameter1 value],[parameter2 name][relational
+       * operator][parameter2 value],... These event parameters are associated with a specific
+       * eventName. An empty report is returned if the filtered request's parameter does not belong
+       * to the eventName. For more information about eventName parameters, see the list of event
+       * names for various applications above in applicationName.
+       *
+       * In the following Admin Activity example, the <> operator is URL-encoded in the request's
+       * query string (%3C%3E): GET...=CHANGE_CALENDAR_SETTING =NEW_VALUE%3C%3EREAD_ONLY_ACCESS
+       *
+       * In the following Drive example, the list can be a view or edit event's doc_id parameter
+       * with a value that is manipulated by an 'equal to' (==) or 'not equal to' (<>) relational
+       * operator. In the first example, the report returns each edited document's doc_id. In the
+       * second example, the report returns each viewed document's doc_id that equals the value
+       * 12345 and does not return any viewed document's which have a doc_id value of 98765. The <>
+       * operator is URL-encoded in the request's query string (%3C%3E):
+       *
+       * GET...=edit=doc_id GET...=view=doc_id==12345,doc_id%3C%3E98765
+       *
+       * The relational operators include: - == - 'equal to'. - <> - 'not equal to'. It is URL-
+       * encoded (%3C%3E). - < - 'less than'. It is URL-encoded (%3C). - <= - 'less than or equal
+       * to'. It is URL-encoded (%3C=). - > - 'greater than'. It is URL-encoded (%3E). - >= -
+       * 'greater than or equal to'. It is URL-encoded (%3E=). Note: The API doesn't accept multiple
+       * values of a parameter. If a particular parameter is supplied more than once in the API
+       * request, the API only accepts the last value of that request parameter. In addition, if an
+       * invalid request parameter is supplied in the API request, the API ignores that request
+       * parameter and returns the response corresponding to the remaining valid request parameters.
+       * If no parameters are requested, all parameters are returned.
        */
       public List setFilters(java.lang.String filters) {
         if (!getSuppressPatternChecks()) {
@@ -404,41 +563,55 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /** Number of activity records to be shown in each page. */
+      /**
+       * Determines how many activity records are shown on each response page. For example, if the
+       * request sets maxResults=1 and the report has two activities, the report has two pages. The
+       * response's nextPageToken property has the token to the second page. The maxResults query
+       * string is optional in the request. The default value is 1000.
+       */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Number of activity records to be shown in each page.
-
-     [minimum: 1] [maximum: 1000]
+      /** Determines how many activity records are shown on each response page. For example, if the request
+     sets maxResults=1 and the report has two activities, the report has two pages. The response's
+     nextPageToken property has the token to the second page. The maxResults query string is optional in
+     the request. The default value is 1000. [default: 1000] [minimum: 1] [maximum: 1000]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
       }
 
-      /** Number of activity records to be shown in each page. */
+      /**
+       * Determines how many activity records are shown on each response page. For example, if the
+       * request sets maxResults=1 and the report has two activities, the report has two pages. The
+       * response's nextPageToken property has the token to the second page. The maxResults query
+       * string is optional in the request. The default value is 1000.
+       */
       public List setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;
         return this;
       }
 
       /**
-       * the organizational unit's(OU) ID to filter activities from users belonging to a specific OU
-       * or one of its sub-OU(s)
+       * ID of the organizational unit to report on. Activity records will be shown only for users
+       * who belong to the specified organizational unit. Data before Dec 17, 2018 doesn't appear in
+       * the filtered results.
        */
       @com.google.api.client.util.Key
       private java.lang.String orgUnitID;
 
-      /** the organizational unit's(OU) ID to filter activities from users belonging to a specific OU or one
-     of its sub-OU(s)
+      /** ID of the organizational unit to report on. Activity records will be shown only for users who
+     belong to the specified organizational unit. Data before Dec 17, 2018 doesn't appear in the
+     filtered results.
        */
       public java.lang.String getOrgUnitID() {
         return orgUnitID;
       }
 
       /**
-       * the organizational unit's(OU) ID to filter activities from users belonging to a specific OU
-       * or one of its sub-OU(s)
+       * ID of the organizational unit to report on. Activity records will be shown only for users
+       * who belong to the specified organizational unit. Data before Dec 17, 2018 doesn't appear in
+       * the filtered results.
        */
       public List setOrgUnitID(java.lang.String orgUnitID) {
         if (!getSuppressPatternChecks()) {
@@ -450,33 +623,56 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /** Token to specify next page. */
+      /**
+       * The token to specify next page. A report with multiple pages has a nextPageToken property
+       * in the response. In your follow-on request getting the next page of the report, enter the
+       * nextPageToken value in the pageToken query string.
+       */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** Token to specify next page.
+      /** The token to specify next page. A report with multiple pages has a nextPageToken property in the
+     response. In your follow-on request getting the next page of the report, enter the nextPageToken
+     value in the pageToken query string.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
-      /** Token to specify next page. */
+      /**
+       * The token to specify next page. A report with multiple pages has a nextPageToken property
+       * in the response. In your follow-on request getting the next page of the report, enter the
+       * nextPageToken value in the pageToken query string.
+       */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
         return this;
       }
 
-      /** Return events which occurred at or after this time. */
+      /**
+       * Sets the beginning of the range of time shown in the report. The date is in the RFC 3339
+       * format, for example 2010-10-28T10:26:35.000Z. The report returns all activities from
+       * startTime until endTime. The startTime must be before the endTime (if specified) and the
+       * current time when the request is made, or the API returns an error.
+       */
       @com.google.api.client.util.Key
       private java.lang.String startTime;
 
-      /** Return events which occurred at or after this time.
+      /** Sets the beginning of the range of time shown in the report. The date is in the RFC 3339 format,
+     for example 2010-10-28T10:26:35.000Z. The report returns all activities from startTime until
+     endTime. The startTime must be before the endTime (if specified) and the current time when the
+     request is made, or the API returns an error.
        */
       public java.lang.String getStartTime() {
         return startTime;
       }
 
-      /** Return events which occurred at or after this time. */
+      /**
+       * Sets the beginning of the range of time shown in the report. The date is in the RFC 3339
+       * format, for example 2010-10-28T10:26:35.000Z. The report returns all activities from
+       * startTime until endTime. The startTime must be before the endTime (if specified) and the
+       * current time when the request is made, or the API returns an error.
+       */
       public List setStartTime(java.lang.String startTime) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(START_TIME_PATTERN.matcher(startTime).matches(),
@@ -493,15 +689,17 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
-     * Push changes to activities
+     * Start receiving notifications for account activities. For more information, see Receiving Push
+     * Notifications.
      *
      * Create a request for the method "activities.watch".
      *
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link Watch#execute()} method to invoke the remote operation.
      *
-     * @param userKey Represents the profile id or the user email for which the data should be filtered. When 'all' is
-     *        specified as the userKey, it returns usageReports for all users.
+     * @param userKey Represents the profile ID or the user email for which the data should be filtered. Can be all for
+     *        all information, or userKey for a user's unique G Suite profile ID or their primary email
+     *        address.
      * @param applicationName Application name for which the events are to be retrieved.
      * @param content the {@link com.google.api.services.reports.model.Channel}
      * @return the request
@@ -517,7 +715,7 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
       private static final String REST_PATH = "activity/users/{userKey}/applications/{applicationName}/watch";
 
       private final java.util.regex.Pattern APPLICATION_NAME_PATTERN =
-          java.util.regex.Pattern.compile("(admin)|(calendar)|(drive)|(login)|(mobile)|(token)|(groups)|(saml)|(chat)|(gplus)|(rules)|(jamboard)|(meet)|(user_accounts)|(access_transparency)|(groups_enterprise)");
+          java.util.regex.Pattern.compile("(admin)|(calendar)|(drive)|(login)|(mobile)|(token)|(groups)|(saml)|(chat)|(gplus)|(rules)|(jamboard)|(meet)|(user_accounts)|(access_transparency)|(groups_enterprise)|(gcp)");
 
       private final java.util.regex.Pattern CUSTOMER_ID_PATTERN =
           java.util.regex.Pattern.compile("C.+");
@@ -535,7 +733,8 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("(\\d\\d\\d\\d)-(\\d\\d)-(\\d\\d)T(\\d\\d):(\\d\\d):(\\d\\d)(?:\\.(\\d+))?(?:(Z)|([-+])(\\d\\d):(\\d\\d))");
 
       /**
-       * Push changes to activities
+       * Start receiving notifications for account activities. For more information, see Receiving Push
+       * Notifications.
        *
        * Create a request for the method "activities.watch".
        *
@@ -544,8 +743,9 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
        * Watch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param userKey Represents the profile id or the user email for which the data should be filtered. When 'all' is
-     *        specified as the userKey, it returns usageReports for all users.
+       * @param userKey Represents the profile ID or the user email for which the data should be filtered. Can be all for
+     *        all information, or userKey for a user's unique G Suite profile ID or their primary email
+     *        address.
        * @param applicationName Application name for which the events are to be retrieved.
        * @param content the {@link com.google.api.services.reports.model.Channel}
        * @since 1.13
@@ -557,7 +757,7 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(APPLICATION_NAME_PATTERN.matcher(applicationName).matches(),
               "Parameter applicationName must conform to the pattern " +
-              "(admin)|(calendar)|(drive)|(login)|(mobile)|(token)|(groups)|(saml)|(chat)|(gplus)|(rules)|(jamboard)|(meet)|(user_accounts)|(access_transparency)|(groups_enterprise)");
+              "(admin)|(calendar)|(drive)|(login)|(mobile)|(token)|(groups)|(saml)|(chat)|(gplus)|(rules)|(jamboard)|(meet)|(user_accounts)|(access_transparency)|(groups_enterprise)|(gcp)");
         }
       }
 
@@ -597,22 +797,24 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
-       * Represents the profile id or the user email for which the data should be filtered. When
-       * 'all' is specified as the userKey, it returns usageReports for all users.
+       * Represents the profile ID or the user email for which the data should be filtered. Can be
+       * all for all information, or userKey for a user's unique G Suite profile ID or their primary
+       * email address.
        */
       @com.google.api.client.util.Key
       private java.lang.String userKey;
 
-      /** Represents the profile id or the user email for which the data should be filtered. When 'all' is
-     specified as the userKey, it returns usageReports for all users.
+      /** Represents the profile ID or the user email for which the data should be filtered. Can be all for
+     all information, or userKey for a user's unique G Suite profile ID or their primary email address.
        */
       public java.lang.String getUserKey() {
         return userKey;
       }
 
       /**
-       * Represents the profile id or the user email for which the data should be filtered. When
-       * 'all' is specified as the userKey, it returns usageReports for all users.
+       * Represents the profile ID or the user email for which the data should be filtered. Can be
+       * all for all information, or userKey for a user's unique G Suite profile ID or their primary
+       * email address.
        */
       public Watch setUserKey(java.lang.String userKey) {
         this.userKey = userKey;
@@ -634,43 +836,55 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(APPLICATION_NAME_PATTERN.matcher(applicationName).matches(),
               "Parameter applicationName must conform to the pattern " +
-              "(admin)|(calendar)|(drive)|(login)|(mobile)|(token)|(groups)|(saml)|(chat)|(gplus)|(rules)|(jamboard)|(meet)|(user_accounts)|(access_transparency)|(groups_enterprise)");
+              "(admin)|(calendar)|(drive)|(login)|(mobile)|(token)|(groups)|(saml)|(chat)|(gplus)|(rules)|(jamboard)|(meet)|(user_accounts)|(access_transparency)|(groups_enterprise)|(gcp)");
         }
         this.applicationName = applicationName;
         return this;
       }
 
       /**
-       * IP Address of host where the event was performed. Supports both IPv4 and IPv6 addresses.
+       * The Internet Protocol (IP) Address of host where the event was performed. This is an
+       * additional way to filter a report's summary using the IP address of the user whose activity
+       * is being reported. This IP address may or may not reflect the user's physical location. For
+       * example, the IP address can be the user's proxy server's address or a virtual private
+       * network (VPN) address. This parameter supports both IPv4 and IPv6 address versions.
        */
       @com.google.api.client.util.Key
       private java.lang.String actorIpAddress;
 
-      /** IP Address of host where the event was performed. Supports both IPv4 and IPv6 addresses.
+      /** The Internet Protocol (IP) Address of host where the event was performed. This is an additional way
+     to filter a report's summary using the IP address of the user whose activity is being reported.
+     This IP address may or may not reflect the user's physical location. For example, the IP address
+     can be the user's proxy server's address or a virtual private network (VPN) address. This parameter
+     supports both IPv4 and IPv6 address versions.
        */
       public java.lang.String getActorIpAddress() {
         return actorIpAddress;
       }
 
       /**
-       * IP Address of host where the event was performed. Supports both IPv4 and IPv6 addresses.
+       * The Internet Protocol (IP) Address of host where the event was performed. This is an
+       * additional way to filter a report's summary using the IP address of the user whose activity
+       * is being reported. This IP address may or may not reflect the user's physical location. For
+       * example, the IP address can be the user's proxy server's address or a virtual private
+       * network (VPN) address. This parameter supports both IPv4 and IPv6 address versions.
        */
       public Watch setActorIpAddress(java.lang.String actorIpAddress) {
         this.actorIpAddress = actorIpAddress;
         return this;
       }
 
-      /** Represents the customer for which the data is to be fetched. */
+      /** The unique ID of the customer to retrieve data for. */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Represents the customer for which the data is to be fetched.
+      /** The unique ID of the customer to retrieve data for.
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
-      /** Represents the customer for which the data is to be fetched. */
+      /** The unique ID of the customer to retrieve data for. */
       public Watch setCustomerId(java.lang.String customerId) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_ID_PATTERN.matcher(customerId).matches(),
@@ -681,17 +895,50 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /** Return events which occurred at or before this time. */
+      /**
+       * Sets the end of the range of time shown in the report. The date is in the RFC 3339 format,
+       * for example 2010-10-28T10:26:35.000Z. The default value is the approximate time of the API
+       * request. An API report has three basic time concepts: - Date of the API's request for a
+       * report: When the API created and retrieved the report. - Report's start time: The beginning
+       * of the timespan shown in the report. The startTime must be before the endTime (if
+       * specified) and the current time when the request is made, or the API returns an error. -
+       * Report's end time: The end of the timespan shown in the report. For example, the timespan
+       * of events summarized in a report can start in April and end in May. The report itself can
+       * be requested in August.  If the endTime is not specified, the report returns all activities
+       * from the startTime until the current time or the most recent 180 days if the startTime is
+       * more than 180 days in the past.
+       */
       @com.google.api.client.util.Key
       private java.lang.String endTime;
 
-      /** Return events which occurred at or before this time.
+      /** Sets the end of the range of time shown in the report. The date is in the RFC 3339 format, for
+     example 2010-10-28T10:26:35.000Z. The default value is the approximate time of the API request. An
+     API report has three basic time concepts: - Date of the API's request for a report: When the API
+     created and retrieved the report. - Report's start time: The beginning of the timespan shown in the
+     report. The startTime must be before the endTime (if specified) and the current time when the
+     request is made, or the API returns an error. - Report's end time: The end of the timespan shown in
+     the report. For example, the timespan of events summarized in a report can start in April and end
+     in May. The report itself can be requested in August.  If the endTime is not specified, the report
+     returns all activities from the startTime until the current time or the most recent 180 days if the
+     startTime is more than 180 days in the past.
        */
       public java.lang.String getEndTime() {
         return endTime;
       }
 
-      /** Return events which occurred at or before this time. */
+      /**
+       * Sets the end of the range of time shown in the report. The date is in the RFC 3339 format,
+       * for example 2010-10-28T10:26:35.000Z. The default value is the approximate time of the API
+       * request. An API report has three basic time concepts: - Date of the API's request for a
+       * report: When the API created and retrieved the report. - Report's start time: The beginning
+       * of the timespan shown in the report. The startTime must be before the endTime (if
+       * specified) and the current time when the request is made, or the API returns an error. -
+       * Report's end time: The end of the timespan shown in the report. For example, the timespan
+       * of events summarized in a report can start in April and end in May. The report itself can
+       * be requested in August.  If the endTime is not specified, the report returns all activities
+       * from the startTime until the current time or the most recent 180 days if the startTime is
+       * more than 180 days in the past.
+       */
       public Watch setEndTime(java.lang.String endTime) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(END_TIME_PATTERN.matcher(endTime).matches(),
@@ -702,39 +949,143 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /** Name of the event being queried. */
+      /**
+       * The name of the event being queried by the API. Each eventName is related to a specific G
+       * Suite service or feature which the API organizes into types of events. An example is the
+       * Google Calendar events in the Admin console application's reports. The Calendar Settings
+       * type structure has all of the Calendar eventName activities reported by the API. When an
+       * administrator changes a Calendar setting, the API reports this activity in the Calendar
+       * Settings type and eventName parameters. For more information about eventName query strings
+       * and parameters, see the list of event names for various applications above in
+       * applicationName.
+       */
       @com.google.api.client.util.Key
       private java.lang.String eventName;
 
-      /** Name of the event being queried.
+      /** The name of the event being queried by the API. Each eventName is related to a specific G Suite
+     service or feature which the API organizes into types of events. An example is the Google Calendar
+     events in the Admin console application's reports. The Calendar Settings type structure has all of
+     the Calendar eventName activities reported by the API. When an administrator changes a Calendar
+     setting, the API reports this activity in the Calendar Settings type and eventName parameters. For
+     more information about eventName query strings and parameters, see the list of event names for
+     various applications above in applicationName.
        */
       public java.lang.String getEventName() {
         return eventName;
       }
 
-      /** Name of the event being queried. */
+      /**
+       * The name of the event being queried by the API. Each eventName is related to a specific G
+       * Suite service or feature which the API organizes into types of events. An example is the
+       * Google Calendar events in the Admin console application's reports. The Calendar Settings
+       * type structure has all of the Calendar eventName activities reported by the API. When an
+       * administrator changes a Calendar setting, the API reports this activity in the Calendar
+       * Settings type and eventName parameters. For more information about eventName query strings
+       * and parameters, see the list of event names for various applications above in
+       * applicationName.
+       */
       public Watch setEventName(java.lang.String eventName) {
         this.eventName = eventName;
         return this;
       }
 
       /**
-       * Event parameters in the form [parameter1 name][operator][parameter1 value],[parameter2
-       * name][operator][parameter2 value],...
+       * The filters query string is a comma-separated list. The list is composed of event
+       * parameters that are manipulated by relational operators. Event parameters are in the form
+       * [parameter1 name][relational operator][parameter1 value],[parameter2 name][relational
+       * operator][parameter2 value],... These event parameters are associated with a specific
+       * eventName. An empty report is returned if the filtered request's parameter does not belong
+       * to the eventName. For more information about eventName parameters, see the list of event
+       * names for various applications above in applicationName.
+       *
+       * In the following Admin Activity example, the <> operator is URL-encoded in the request's
+       * query string (%3C%3E): GET...=CHANGE_CALENDAR_SETTING =NEW_VALUE%3C%3EREAD_ONLY_ACCESS
+       *
+       * In the following Drive example, the list can be a view or edit event's doc_id parameter
+       * with a value that is manipulated by an 'equal to' (==) or 'not equal to' (<>) relational
+       * operator. In the first example, the report returns each edited document's doc_id. In the
+       * second example, the report returns each viewed document's doc_id that equals the value
+       * 12345 and does not return any viewed document's which have a doc_id value of 98765. The <>
+       * operator is URL-encoded in the request's query string (%3C%3E):
+       *
+       * GET...=edit=doc_id GET...=view=doc_id==12345,doc_id%3C%3E98765
+       *
+       * The relational operators include: - == - 'equal to'. - <> - 'not equal to'. It is URL-
+       * encoded (%3C%3E). - < - 'less than'. It is URL-encoded (%3C). - <= - 'less than or equal
+       * to'. It is URL-encoded (%3C=). - > - 'greater than'. It is URL-encoded (%3E). - >= -
+       * 'greater than or equal to'. It is URL-encoded (%3E=). Note: The API doesn't accept multiple
+       * values of a parameter. If a particular parameter is supplied more than once in the API
+       * request, the API only accepts the last value of that request parameter. In addition, if an
+       * invalid request parameter is supplied in the API request, the API ignores that request
+       * parameter and returns the response corresponding to the remaining valid request parameters.
+       * If no parameters are requested, all parameters are returned.
        */
       @com.google.api.client.util.Key
       private java.lang.String filters;
 
-      /** Event parameters in the form [parameter1 name][operator][parameter1 value],[parameter2
-     name][operator][parameter2 value],...
+      /** The filters query string is a comma-separated list. The list is composed of event parameters that
+     are manipulated by relational operators. Event parameters are in the form [parameter1
+     name][relational operator][parameter1 value],[parameter2 name][relational operator][parameter2
+     value],... These event parameters are associated with a specific eventName. An empty report is
+     returned if the filtered request's parameter does not belong to the eventName. For more information
+     about eventName parameters, see the list of event names for various applications above in
+     applicationName.
+
+     In the following Admin Activity example, the <> operator is URL-encoded in the request's query
+     string (%3C%3E): GET...=CHANGE_CALENDAR_SETTING =NEW_VALUE%3C%3EREAD_ONLY_ACCESS
+
+     In the following Drive example, the list can be a view or edit event's doc_id parameter with a
+     value that is manipulated by an 'equal to' (==) or 'not equal to' (<>) relational operator. In the
+     first example, the report returns each edited document's doc_id. In the second example, the report
+     returns each viewed document's doc_id that equals the value 12345 and does not return any viewed
+     document's which have a doc_id value of 98765. The <> operator is URL-encoded in the request's
+     query string (%3C%3E):
+
+     GET...=edit=doc_id GET...=view=doc_id==12345,doc_id%3C%3E98765
+
+     The relational operators include: - == - 'equal to'. - <> - 'not equal to'. It is URL-encoded
+     (%3C%3E). - < - 'less than'. It is URL-encoded (%3C). - <= - 'less than or equal to'. It is URL-
+     encoded (%3C=). - > - 'greater than'. It is URL-encoded (%3E). - >= - 'greater than or equal to'.
+     It is URL-encoded (%3E=). Note: The API doesn't accept multiple values of a parameter. If a
+     particular parameter is supplied more than once in the API request, the API only accepts the last
+     value of that request parameter. In addition, if an invalid request parameter is supplied in the
+     API request, the API ignores that request parameter and returns the response corresponding to the
+     remaining valid request parameters. If no parameters are requested, all parameters are returned.
        */
       public java.lang.String getFilters() {
         return filters;
       }
 
       /**
-       * Event parameters in the form [parameter1 name][operator][parameter1 value],[parameter2
-       * name][operator][parameter2 value],...
+       * The filters query string is a comma-separated list. The list is composed of event
+       * parameters that are manipulated by relational operators. Event parameters are in the form
+       * [parameter1 name][relational operator][parameter1 value],[parameter2 name][relational
+       * operator][parameter2 value],... These event parameters are associated with a specific
+       * eventName. An empty report is returned if the filtered request's parameter does not belong
+       * to the eventName. For more information about eventName parameters, see the list of event
+       * names for various applications above in applicationName.
+       *
+       * In the following Admin Activity example, the <> operator is URL-encoded in the request's
+       * query string (%3C%3E): GET...=CHANGE_CALENDAR_SETTING =NEW_VALUE%3C%3EREAD_ONLY_ACCESS
+       *
+       * In the following Drive example, the list can be a view or edit event's doc_id parameter
+       * with a value that is manipulated by an 'equal to' (==) or 'not equal to' (<>) relational
+       * operator. In the first example, the report returns each edited document's doc_id. In the
+       * second example, the report returns each viewed document's doc_id that equals the value
+       * 12345 and does not return any viewed document's which have a doc_id value of 98765. The <>
+       * operator is URL-encoded in the request's query string (%3C%3E):
+       *
+       * GET...=edit=doc_id GET...=view=doc_id==12345,doc_id%3C%3E98765
+       *
+       * The relational operators include: - == - 'equal to'. - <> - 'not equal to'. It is URL-
+       * encoded (%3C%3E). - < - 'less than'. It is URL-encoded (%3C). - <= - 'less than or equal
+       * to'. It is URL-encoded (%3C=). - > - 'greater than'. It is URL-encoded (%3E). - >= -
+       * 'greater than or equal to'. It is URL-encoded (%3E=). Note: The API doesn't accept multiple
+       * values of a parameter. If a particular parameter is supplied more than once in the API
+       * request, the API only accepts the last value of that request parameter. In addition, if an
+       * invalid request parameter is supplied in the API request, the API ignores that request
+       * parameter and returns the response corresponding to the remaining valid request parameters.
+       * If no parameters are requested, all parameters are returned.
        */
       public Watch setFilters(java.lang.String filters) {
         if (!getSuppressPatternChecks()) {
@@ -746,41 +1097,55 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /** Number of activity records to be shown in each page. */
+      /**
+       * Determines how many activity records are shown on each response page. For example, if the
+       * request sets maxResults=1 and the report has two activities, the report has two pages. The
+       * response's nextPageToken property has the token to the second page. The maxResults query
+       * string is optional in the request. The default value is 1000.
+       */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Number of activity records to be shown in each page.
-
-     [minimum: 1] [maximum: 1000]
+      /** Determines how many activity records are shown on each response page. For example, if the request
+     sets maxResults=1 and the report has two activities, the report has two pages. The response's
+     nextPageToken property has the token to the second page. The maxResults query string is optional in
+     the request. The default value is 1000. [default: 1000] [minimum: 1] [maximum: 1000]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
       }
 
-      /** Number of activity records to be shown in each page. */
+      /**
+       * Determines how many activity records are shown on each response page. For example, if the
+       * request sets maxResults=1 and the report has two activities, the report has two pages. The
+       * response's nextPageToken property has the token to the second page. The maxResults query
+       * string is optional in the request. The default value is 1000.
+       */
       public Watch setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;
         return this;
       }
 
       /**
-       * the organizational unit's(OU) ID to filter activities from users belonging to a specific OU
-       * or one of its sub-OU(s)
+       * ID of the organizational unit to report on. Activity records will be shown only for users
+       * who belong to the specified organizational unit. Data before Dec 17, 2018 doesn't appear in
+       * the filtered results.
        */
       @com.google.api.client.util.Key
       private java.lang.String orgUnitID;
 
-      /** the organizational unit's(OU) ID to filter activities from users belonging to a specific OU or one
-     of its sub-OU(s)
+      /** ID of the organizational unit to report on. Activity records will be shown only for users who
+     belong to the specified organizational unit. Data before Dec 17, 2018 doesn't appear in the
+     filtered results.
        */
       public java.lang.String getOrgUnitID() {
         return orgUnitID;
       }
 
       /**
-       * the organizational unit's(OU) ID to filter activities from users belonging to a specific OU
-       * or one of its sub-OU(s)
+       * ID of the organizational unit to report on. Activity records will be shown only for users
+       * who belong to the specified organizational unit. Data before Dec 17, 2018 doesn't appear in
+       * the filtered results.
        */
       public Watch setOrgUnitID(java.lang.String orgUnitID) {
         if (!getSuppressPatternChecks()) {
@@ -792,33 +1157,56 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /** Token to specify next page. */
+      /**
+       * The token to specify next page. A report with multiple pages has a nextPageToken property
+       * in the response. In your follow-on request getting the next page of the report, enter the
+       * nextPageToken value in the pageToken query string.
+       */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** Token to specify next page.
+      /** The token to specify next page. A report with multiple pages has a nextPageToken property in the
+     response. In your follow-on request getting the next page of the report, enter the nextPageToken
+     value in the pageToken query string.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
-      /** Token to specify next page. */
+      /**
+       * The token to specify next page. A report with multiple pages has a nextPageToken property
+       * in the response. In your follow-on request getting the next page of the report, enter the
+       * nextPageToken value in the pageToken query string.
+       */
       public Watch setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
         return this;
       }
 
-      /** Return events which occurred at or after this time. */
+      /**
+       * Sets the beginning of the range of time shown in the report. The date is in the RFC 3339
+       * format, for example 2010-10-28T10:26:35.000Z. The report returns all activities from
+       * startTime until endTime. The startTime must be before the endTime (if specified) and the
+       * current time when the request is made, or the API returns an error.
+       */
       @com.google.api.client.util.Key
       private java.lang.String startTime;
 
-      /** Return events which occurred at or after this time.
+      /** Sets the beginning of the range of time shown in the report. The date is in the RFC 3339 format,
+     for example 2010-10-28T10:26:35.000Z. The report returns all activities from startTime until
+     endTime. The startTime must be before the endTime (if specified) and the current time when the
+     request is made, or the API returns an error.
        */
       public java.lang.String getStartTime() {
         return startTime;
       }
 
-      /** Return events which occurred at or after this time. */
+      /**
+       * Sets the beginning of the range of time shown in the report. The date is in the RFC 3339
+       * format, for example 2010-10-28T10:26:35.000Z. The report returns all activities from
+       * startTime until endTime. The startTime must be before the endTime (if specified) and the
+       * current time when the request is made, or the API returns an error.
+       */
       public Watch setStartTime(java.lang.String startTime) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(START_TIME_PATTERN.matcher(startTime).matches(),
@@ -959,14 +1347,17 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
   public class CustomerUsageReports {
 
     /**
-     * Retrieves a report which is a collection of properties / statistics for a specific customer.
+     * Retrieves a report which is a collection of properties and statistics for a specific customer's
+     * account. For more information, see the Customers Usage Report guide. For more information about
+     * the customer report's parameters, see the Customers Usage parameters reference guides.
      *
      * Create a request for the method "customerUsageReports.get".
      *
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param date Represents the date in yyyy-mm-dd format for which the data is to be fetched.
+     * @param date Represents the date the usage occurred. The timestamp is in the ISO 8601 format, yyyy-mm-dd. We
+     *        recommend you use your account's time zone for this.
      * @return the request
      */
     public Get get(java.lang.String date) throws java.io.IOException {
@@ -989,7 +1380,9 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("(((accounts)|(app_maker)|(apps_scripts)|(classroom)|(cros)|(gmail)|(calendar)|(docs)|(gplus)|(sites)|(device_management)|(drive)|(meet)):[^,]+,)*(((accounts)|(app_maker)|(apps_scripts)|(classroom)|(cros)|(gmail)|(calendar)|(docs)|(gplus)|(sites)|(device_management)|(drive)|(meet)):[^,]+)");
 
       /**
-       * Retrieves a report which is a collection of properties / statistics for a specific customer.
+       * Retrieves a report which is a collection of properties and statistics for a specific customer's
+       * account. For more information, see the Customers Usage Report guide. For more information about
+       * the customer report's parameters, see the Customers Usage parameters reference guides.
        *
        * Create a request for the method "customerUsageReports.get".
        *
@@ -998,7 +1391,8 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param date Represents the date in yyyy-mm-dd format for which the data is to be fetched.
+       * @param date Represents the date the usage occurred. The timestamp is in the ISO 8601 format, yyyy-mm-dd. We
+     *        recommend you use your account's time zone for this.
        * @since 1.13
        */
       protected Get(java.lang.String date) {
@@ -1056,17 +1450,24 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
         return (Get) super.setUserIp(userIp);
       }
 
-      /** Represents the date in yyyy-mm-dd format for which the data is to be fetched. */
+      /**
+       * Represents the date the usage occurred. The timestamp is in the ISO 8601 format, yyyy-mm-
+       * dd. We recommend you use your account's time zone for this.
+       */
       @com.google.api.client.util.Key
       private java.lang.String date;
 
-      /** Represents the date in yyyy-mm-dd format for which the data is to be fetched.
+      /** Represents the date the usage occurred. The timestamp is in the ISO 8601 format, yyyy-mm-dd. We
+     recommend you use your account's time zone for this.
        */
       public java.lang.String getDate() {
         return date;
       }
 
-      /** Represents the date in yyyy-mm-dd format for which the data is to be fetched. */
+      /**
+       * Represents the date the usage occurred. The timestamp is in the ISO 8601 format, yyyy-mm-
+       * dd. We recommend you use your account's time zone for this.
+       */
       public Get setDate(java.lang.String date) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(DATE_PATTERN.matcher(date).matches(),
@@ -1077,17 +1478,17 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /** Represents the customer for which the data is to be fetched. */
+      /** The unique ID of the customer to retrieve data for. */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Represents the customer for which the data is to be fetched.
+      /** The unique ID of the customer to retrieve data for.
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
-      /** Represents the customer for which the data is to be fetched. */
+      /** The unique ID of the customer to retrieve data for. */
       public Get setCustomerId(java.lang.String customerId) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_ID_PATTERN.matcher(customerId).matches(),
@@ -1098,39 +1499,81 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /** Token to specify next page. */
+      /**
+       * Token to specify next page. A report with multiple pages has a nextPageToken property in
+       * the response. For your follow-on requests getting all of the report's pages, enter the
+       * nextPageToken value in the pageToken query string.
+       */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** Token to specify next page.
+      /** Token to specify next page. A report with multiple pages has a nextPageToken property in the
+     response. For your follow-on requests getting all of the report's pages, enter the nextPageToken
+     value in the pageToken query string.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
-      /** Token to specify next page. */
+      /**
+       * Token to specify next page. A report with multiple pages has a nextPageToken property in
+       * the response. For your follow-on requests getting all of the report's pages, enter the
+       * nextPageToken value in the pageToken query string.
+       */
       public Get setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
         return this;
       }
 
       /**
-       * Represents the application name, parameter name pairs to fetch in csv as
-       * app_name1:param_name1, app_name2:param_name2.
+       * The parameters query string is a comma-separated list of event parameters that refine a
+       * report's results. The parameter is associated with a specific application. The application
+       * values for the Customers usage report include accounts, app_maker, apps_scripts, calendar,
+       * classroom, cros, docs, gmail, gplus, device_management, meet, and sites. A parameters query
+       * string is in the CSV form of app_name1:param_name1, app_name2:param_name2. Note: The API
+       * doesn't accept multiple values of a parameter. If a particular parameter is supplied more
+       * than once in the API request, the API only accepts the last value of that request
+       * parameter. In addition, if an invalid request parameter is supplied in the API request, the
+       * API ignores that request parameter and returns the response corresponding to the remaining
+       * valid request parameters.
+       *
+       * An example of an invalid request parameter is one that does not belong to the application.
+       * If no parameters are requested, all parameters are returned.
        */
       @com.google.api.client.util.Key
       private java.lang.String parameters;
 
-      /** Represents the application name, parameter name pairs to fetch in csv as app_name1:param_name1,
-     app_name2:param_name2.
+      /** The parameters query string is a comma-separated list of event parameters that refine a report's
+     results. The parameter is associated with a specific application. The application values for the
+     Customers usage report include accounts, app_maker, apps_scripts, calendar, classroom, cros, docs,
+     gmail, gplus, device_management, meet, and sites. A parameters query string is in the CSV form of
+     app_name1:param_name1, app_name2:param_name2. Note: The API doesn't accept multiple values of a
+     parameter. If a particular parameter is supplied more than once in the API request, the API only
+     accepts the last value of that request parameter. In addition, if an invalid request parameter is
+     supplied in the API request, the API ignores that request parameter and returns the response
+     corresponding to the remaining valid request parameters.
+
+     An example of an invalid request parameter is one that does not belong to the application. If no
+     parameters are requested, all parameters are returned.
        */
       public java.lang.String getParameters() {
         return parameters;
       }
 
       /**
-       * Represents the application name, parameter name pairs to fetch in csv as
-       * app_name1:param_name1, app_name2:param_name2.
+       * The parameters query string is a comma-separated list of event parameters that refine a
+       * report's results. The parameter is associated with a specific application. The application
+       * values for the Customers usage report include accounts, app_maker, apps_scripts, calendar,
+       * classroom, cros, docs, gmail, gplus, device_management, meet, and sites. A parameters query
+       * string is in the CSV form of app_name1:param_name1, app_name2:param_name2. Note: The API
+       * doesn't accept multiple values of a parameter. If a particular parameter is supplied more
+       * than once in the API request, the API only accepts the last value of that request
+       * parameter. In addition, if an invalid request parameter is supplied in the API request, the
+       * API ignores that request parameter and returns the response corresponding to the remaining
+       * valid request parameters.
+       *
+       * An example of an invalid request parameter is one that does not belong to the application.
+       * If no parameters are requested, all parameters are returned.
        */
       public Get setParameters(java.lang.String parameters) {
         if (!getSuppressPatternChecks()) {
@@ -1171,16 +1614,20 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
   public class EntityUsageReports {
 
     /**
-     * Retrieves a report which is a collection of properties / statistics for a set of objects.
+     * Retrieves a report which is a collection of properties and statistics for entities used by users
+     * within the account. For more information, see the Entities Usage Report guide. For more
+     * information about the entities report's parameters, see the Entities Usage parameters reference
+     * guides.
      *
      * Create a request for the method "entityUsageReports.get".
      *
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param entityType Type of object. Should be one of - gplus_communities.
-     * @param entityKey Represents the key of object for which the data should be filtered.
-     * @param date Represents the date in yyyy-mm-dd format for which the data is to be fetched.
+     * @param entityType Represents the type of entity for the report.
+     * @param entityKey Represents the key of the object to filter the data with.
+     * @param date Represents the date the usage occurred. The timestamp is in the ISO 8601 format, yyyy-mm-dd. We
+     *        recommend you use your account's time zone for this.
      * @return the request
      */
     public Get get(java.lang.String entityType, java.lang.String entityKey, java.lang.String date) throws java.io.IOException {
@@ -1209,7 +1656,10 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("(((gplus)):[^,]+,)*(((gplus)):[^,]+)");
 
       /**
-       * Retrieves a report which is a collection of properties / statistics for a set of objects.
+       * Retrieves a report which is a collection of properties and statistics for entities used by
+       * users within the account. For more information, see the Entities Usage Report guide. For more
+       * information about the entities report's parameters, see the Entities Usage parameters reference
+       * guides.
        *
        * Create a request for the method "entityUsageReports.get".
        *
@@ -1218,9 +1668,10 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param entityType Type of object. Should be one of - gplus_communities.
-       * @param entityKey Represents the key of object for which the data should be filtered.
-       * @param date Represents the date in yyyy-mm-dd format for which the data is to be fetched.
+       * @param entityType Represents the type of entity for the report.
+       * @param entityKey Represents the key of the object to filter the data with.
+       * @param date Represents the date the usage occurred. The timestamp is in the ISO 8601 format, yyyy-mm-dd. We
+     *        recommend you use your account's time zone for this.
        * @since 1.13
        */
       protected Get(java.lang.String entityType, java.lang.String entityKey, java.lang.String date) {
@@ -1285,17 +1736,17 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
         return (Get) super.setUserIp(userIp);
       }
 
-      /** Type of object. Should be one of - gplus_communities. */
+      /** Represents the type of entity for the report. */
       @com.google.api.client.util.Key
       private java.lang.String entityType;
 
-      /** Type of object. Should be one of - gplus_communities.
+      /** Represents the type of entity for the report.
        */
       public java.lang.String getEntityType() {
         return entityType;
       }
 
-      /** Type of object. Should be one of - gplus_communities. */
+      /** Represents the type of entity for the report. */
       public Get setEntityType(java.lang.String entityType) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(ENTITY_TYPE_PATTERN.matcher(entityType).matches(),
@@ -1306,33 +1757,40 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /** Represents the key of object for which the data should be filtered. */
+      /** Represents the key of the object to filter the data with. */
       @com.google.api.client.util.Key
       private java.lang.String entityKey;
 
-      /** Represents the key of object for which the data should be filtered.
+      /** Represents the key of the object to filter the data with.
        */
       public java.lang.String getEntityKey() {
         return entityKey;
       }
 
-      /** Represents the key of object for which the data should be filtered. */
+      /** Represents the key of the object to filter the data with. */
       public Get setEntityKey(java.lang.String entityKey) {
         this.entityKey = entityKey;
         return this;
       }
 
-      /** Represents the date in yyyy-mm-dd format for which the data is to be fetched. */
+      /**
+       * Represents the date the usage occurred. The timestamp is in the ISO 8601 format, yyyy-mm-
+       * dd. We recommend you use your account's time zone for this.
+       */
       @com.google.api.client.util.Key
       private java.lang.String date;
 
-      /** Represents the date in yyyy-mm-dd format for which the data is to be fetched.
+      /** Represents the date the usage occurred. The timestamp is in the ISO 8601 format, yyyy-mm-dd. We
+     recommend you use your account's time zone for this.
        */
       public java.lang.String getDate() {
         return date;
       }
 
-      /** Represents the date in yyyy-mm-dd format for which the data is to be fetched. */
+      /**
+       * Represents the date the usage occurred. The timestamp is in the ISO 8601 format, yyyy-mm-
+       * dd. We recommend you use your account's time zone for this.
+       */
       public Get setDate(java.lang.String date) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(DATE_PATTERN.matcher(date).matches(),
@@ -1343,17 +1801,17 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /** Represents the customer for which the data is to be fetched. */
+      /** The unique ID of the customer to retrieve data for. */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Represents the customer for which the data is to be fetched.
+      /** The unique ID of the customer to retrieve data for.
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
-      /** Represents the customer for which the data is to be fetched. */
+      /** The unique ID of the customer to retrieve data for. */
       public Get setCustomerId(java.lang.String customerId) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_ID_PATTERN.matcher(customerId).matches(),
@@ -1364,17 +1822,67 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /** Represents the set of filters including parameter operator value. */
+      /**
+       * The filters query string is a comma-separated list of an application's event parameters
+       * where the parameter's value is manipulated by a relational operator. The filters query
+       * string includes the name of the application whose usage is returned in the report. The
+       * application values for the Entities usage report include accounts, docs, and gmail. Filters
+       * are in the form [application name]:[parameter name][relational operator][parameter
+       * value],....
+       *
+       * In this example, the <> 'not equal to' operator is URL-encoded in the request's query
+       * string (%3C%3E): GET
+       * https://www.googleapis.com/admin/reports/v1/usage/gplus_communities/all/dates/2017-12-01
+       * ?parameters=gplus:community_name,gplus:num_total_members =gplus:num_total_members>0
+       *
+       * The relational operators include: - == - 'equal to'. - <> - 'not equal to'. It is URL-
+       * encoded (%3C%3E). - < - 'less than'. It is URL-encoded (%3C). - <= - 'less than or equal
+       * to'. It is URL-encoded (%3C=). - > - 'greater than'. It is URL-encoded (%3E). - >= -
+       * 'greater than or equal to'. It is URL-encoded (%3E=).  Filters can only be applied to
+       * numeric parameters.
+       */
       @com.google.api.client.util.Key
       private java.lang.String filters;
 
-      /** Represents the set of filters including parameter operator value.
+      /** The filters query string is a comma-separated list of an application's event parameters where the
+     parameter's value is manipulated by a relational operator. The filters query string includes the
+     name of the application whose usage is returned in the report. The application values for the
+     Entities usage report include accounts, docs, and gmail. Filters are in the form [application
+     name]:[parameter name][relational operator][parameter value],....
+
+     In this example, the <> 'not equal to' operator is URL-encoded in the request's query string
+     (%3C%3E): GET
+     https://www.googleapis.com/admin/reports/v1/usage/gplus_communities/all/dates/2017-12-01
+     ?parameters=gplus:community_name,gplus:num_total_members =gplus:num_total_members>0
+
+     The relational operators include: - == - 'equal to'. - <> - 'not equal to'. It is URL-encoded
+     (%3C%3E). - < - 'less than'. It is URL-encoded (%3C). - <= - 'less than or equal to'. It is URL-
+     encoded (%3C=). - > - 'greater than'. It is URL-encoded (%3E). - >= - 'greater than or equal to'.
+     It is URL-encoded (%3E=).  Filters can only be applied to numeric parameters.
        */
       public java.lang.String getFilters() {
         return filters;
       }
 
-      /** Represents the set of filters including parameter operator value. */
+      /**
+       * The filters query string is a comma-separated list of an application's event parameters
+       * where the parameter's value is manipulated by a relational operator. The filters query
+       * string includes the name of the application whose usage is returned in the report. The
+       * application values for the Entities usage report include accounts, docs, and gmail. Filters
+       * are in the form [application name]:[parameter name][relational operator][parameter
+       * value],....
+       *
+       * In this example, the <> 'not equal to' operator is URL-encoded in the request's query
+       * string (%3C%3E): GET
+       * https://www.googleapis.com/admin/reports/v1/usage/gplus_communities/all/dates/2017-12-01
+       * ?parameters=gplus:community_name,gplus:num_total_members =gplus:num_total_members>0
+       *
+       * The relational operators include: - == - 'equal to'. - <> - 'not equal to'. It is URL-
+       * encoded (%3C%3E). - < - 'less than'. It is URL-encoded (%3C). - <= - 'less than or equal
+       * to'. It is URL-encoded (%3C=). - > - 'greater than'. It is URL-encoded (%3E). - >= -
+       * 'greater than or equal to'. It is URL-encoded (%3E=).  Filters can only be applied to
+       * numeric parameters.
+       */
       public Get setFilters(java.lang.String filters) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(FILTERS_PATTERN.matcher(filters).matches(),
@@ -1385,57 +1893,103 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /** Maximum number of results to return. Maximum allowed is 1000 */
+      /**
+       * Determines how many activity records are shown on each response page. For example, if the
+       * request sets maxResults=1 and the report has two activities, the report has two pages. The
+       * response's nextPageToken property has the token to the second page.
+       */
       @com.google.api.client.util.Key
       private java.lang.Long maxResults;
 
-      /** Maximum number of results to return. Maximum allowed is 1000
-
-     [maximum: 1000]
+      /** Determines how many activity records are shown on each response page. For example, if the request
+     sets maxResults=1 and the report has two activities, the report has two pages. The response's
+     nextPageToken property has the token to the second page. [default: 1000] [minimum: 1] [maximum:
+     1000]
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
       }
 
-      /** Maximum number of results to return. Maximum allowed is 1000 */
+      /**
+       * Determines how many activity records are shown on each response page. For example, if the
+       * request sets maxResults=1 and the report has two activities, the report has two pages. The
+       * response's nextPageToken property has the token to the second page.
+       */
       public Get setMaxResults(java.lang.Long maxResults) {
         this.maxResults = maxResults;
         return this;
       }
 
-      /** Token to specify next page. */
+      /**
+       * Token to specify next page. A report with multiple pages has a nextPageToken property in
+       * the response. In your follow-on request getting the next page of the report, enter the
+       * nextPageToken value in the pageToken query string.
+       */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** Token to specify next page.
+      /** Token to specify next page. A report with multiple pages has a nextPageToken property in the
+     response. In your follow-on request getting the next page of the report, enter the nextPageToken
+     value in the pageToken query string.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
-      /** Token to specify next page. */
+      /**
+       * Token to specify next page. A report with multiple pages has a nextPageToken property in
+       * the response. In your follow-on request getting the next page of the report, enter the
+       * nextPageToken value in the pageToken query string.
+       */
       public Get setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
         return this;
       }
 
       /**
-       * Represents the application name, parameter name pairs to fetch in csv as
-       * app_name1:param_name1, app_name2:param_name2.
+       * The parameters query string is a comma-separated list of event parameters that refine a
+       * report's results. The parameter is associated with a specific application. The application
+       * values for the Entities usage report are only gplus. A parameter query string is in the CSV
+       * form of [app_name1:param_name1], [app_name2:param_name2].... Note: The API doesn't accept
+       * multiple values of a parameter. If a particular parameter is supplied more than once in the
+       * API request, the API only accepts the last value of that request parameter. In addition, if
+       * an invalid request parameter is supplied in the API request, the API ignores that request
+       * parameter and returns the response corresponding to the remaining valid request parameters.
+       *
+       * An example of an invalid request parameter is one that does not belong to the application.
+       * If no parameters are requested, all parameters are returned.
        */
       @com.google.api.client.util.Key
       private java.lang.String parameters;
 
-      /** Represents the application name, parameter name pairs to fetch in csv as app_name1:param_name1,
-     app_name2:param_name2.
+      /** The parameters query string is a comma-separated list of event parameters that refine a report's
+     results. The parameter is associated with a specific application. The application values for the
+     Entities usage report are only gplus. A parameter query string is in the CSV form of
+     [app_name1:param_name1], [app_name2:param_name2].... Note: The API doesn't accept multiple values
+     of a parameter. If a particular parameter is supplied more than once in the API request, the API
+     only accepts the last value of that request parameter. In addition, if an invalid request parameter
+     is supplied in the API request, the API ignores that request parameter and returns the response
+     corresponding to the remaining valid request parameters.
+
+     An example of an invalid request parameter is one that does not belong to the application. If no
+     parameters are requested, all parameters are returned.
        */
       public java.lang.String getParameters() {
         return parameters;
       }
 
       /**
-       * Represents the application name, parameter name pairs to fetch in csv as
-       * app_name1:param_name1, app_name2:param_name2.
+       * The parameters query string is a comma-separated list of event parameters that refine a
+       * report's results. The parameter is associated with a specific application. The application
+       * values for the Entities usage report are only gplus. A parameter query string is in the CSV
+       * form of [app_name1:param_name1], [app_name2:param_name2].... Note: The API doesn't accept
+       * multiple values of a parameter. If a particular parameter is supplied more than once in the
+       * API request, the API only accepts the last value of that request parameter. In addition, if
+       * an invalid request parameter is supplied in the API request, the API ignores that request
+       * parameter and returns the response corresponding to the remaining valid request parameters.
+       *
+       * An example of an invalid request parameter is one that does not belong to the application.
+       * If no parameters are requested, all parameters are returned.
        */
       public Get setParameters(java.lang.String parameters) {
         if (!getSuppressPatternChecks()) {
@@ -1476,15 +2030,20 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
   public class UserUsageReport {
 
     /**
-     * Retrieves a report which is a collection of properties / statistics for a set of users.
+     * Retrieves a report which is a collection of properties and statistics for a set of users with the
+     * account. For more information, see the User Usage Report guide. For more information about the
+     * user report's parameters, see the Users Usage parameters reference guides.
      *
      * Create a request for the method "userUsageReport.get".
      *
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param userKey Represents the profile id or the user email for which the data should be filtered.
-     * @param date Represents the date in yyyy-mm-dd format for which the data is to be fetched.
+     * @param userKey Represents the profile ID or the user email for which the data should be filtered. Can be all for
+     *        all information, or userKey for a user's unique G Suite profile ID or their primary email
+     *        address.
+     * @param date Represents the date the usage occurred. The timestamp is in the ISO 8601 format, yyyy-mm-dd. We
+     *        recommend you use your account's time zone for this.
      * @return the request
      */
     public Get get(java.lang.String userKey, java.lang.String date) throws java.io.IOException {
@@ -1513,7 +2072,9 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("(((accounts)|(classroom)|(cros)|(gmail)|(calendar)|(docs)|(gplus)|(sites)|(device_management)|(drive)):[^,]+,)*(((accounts)|(classroom)|(cros)|(gmail)|(calendar)|(docs)|(gplus)|(sites)|(device_management)|(drive)):[^,]+)");
 
       /**
-       * Retrieves a report which is a collection of properties / statistics for a set of users.
+       * Retrieves a report which is a collection of properties and statistics for a set of users with
+       * the account. For more information, see the User Usage Report guide. For more information about
+       * the user report's parameters, see the Users Usage parameters reference guides.
        *
        * Create a request for the method "userUsageReport.get".
        *
@@ -1522,8 +2083,11 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param userKey Represents the profile id or the user email for which the data should be filtered.
-       * @param date Represents the date in yyyy-mm-dd format for which the data is to be fetched.
+       * @param userKey Represents the profile ID or the user email for which the data should be filtered. Can be all for
+     *        all information, or userKey for a user's unique G Suite profile ID or their primary email
+     *        address.
+       * @param date Represents the date the usage occurred. The timestamp is in the ISO 8601 format, yyyy-mm-dd. We
+     *        recommend you use your account's time zone for this.
        * @since 1.13
        */
       protected Get(java.lang.String userKey, java.lang.String date) {
@@ -1582,33 +2146,49 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
         return (Get) super.setUserIp(userIp);
       }
 
-      /** Represents the profile id or the user email for which the data should be filtered. */
+      /**
+       * Represents the profile ID or the user email for which the data should be filtered. Can be
+       * all for all information, or userKey for a user's unique G Suite profile ID or their primary
+       * email address.
+       */
       @com.google.api.client.util.Key
       private java.lang.String userKey;
 
-      /** Represents the profile id or the user email for which the data should be filtered.
+      /** Represents the profile ID or the user email for which the data should be filtered. Can be all for
+     all information, or userKey for a user's unique G Suite profile ID or their primary email address.
        */
       public java.lang.String getUserKey() {
         return userKey;
       }
 
-      /** Represents the profile id or the user email for which the data should be filtered. */
+      /**
+       * Represents the profile ID or the user email for which the data should be filtered. Can be
+       * all for all information, or userKey for a user's unique G Suite profile ID or their primary
+       * email address.
+       */
       public Get setUserKey(java.lang.String userKey) {
         this.userKey = userKey;
         return this;
       }
 
-      /** Represents the date in yyyy-mm-dd format for which the data is to be fetched. */
+      /**
+       * Represents the date the usage occurred. The timestamp is in the ISO 8601 format, yyyy-mm-
+       * dd. We recommend you use your account's time zone for this.
+       */
       @com.google.api.client.util.Key
       private java.lang.String date;
 
-      /** Represents the date in yyyy-mm-dd format for which the data is to be fetched.
+      /** Represents the date the usage occurred. The timestamp is in the ISO 8601 format, yyyy-mm-dd. We
+     recommend you use your account's time zone for this.
        */
       public java.lang.String getDate() {
         return date;
       }
 
-      /** Represents the date in yyyy-mm-dd format for which the data is to be fetched. */
+      /**
+       * Represents the date the usage occurred. The timestamp is in the ISO 8601 format, yyyy-mm-
+       * dd. We recommend you use your account's time zone for this.
+       */
       public Get setDate(java.lang.String date) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(DATE_PATTERN.matcher(date).matches(),
@@ -1619,17 +2199,17 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /** Represents the customer for which the data is to be fetched. */
+      /** The unique ID of the customer to retrieve data for. */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Represents the customer for which the data is to be fetched.
+      /** The unique ID of the customer to retrieve data for.
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
-      /** Represents the customer for which the data is to be fetched. */
+      /** The unique ID of the customer to retrieve data for. */
       public Get setCustomerId(java.lang.String customerId) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_ID_PATTERN.matcher(customerId).matches(),
@@ -1640,17 +2220,64 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /** Represents the set of filters including parameter operator value. */
+      /**
+       * The filters query string is a comma-separated list of an application's event parameters
+       * where the parameter's value is manipulated by a relational operator. The filters query
+       * string includes the name of the application whose usage is returned in the report. The
+       * application values for the Users Usage Report include accounts, docs, and gmail. Filters
+       * are in the form [application name]:[parameter name][relational operator][parameter
+       * value],....
+       *
+       * In this example, the <> 'not equal to' operator is URL-encoded in the request's query
+       * string (%3C%3E): GET
+       * https://www.googleapis.com/admin/reports/v1/usage/users/all/dates/2013-03-03
+       * ?parameters=accounts:last_login_time =accounts:last_login_time>2010-10-28T10:26:35.000Z
+       *
+       * The relational operators include: - == - 'equal to'. - <> - 'not equal to'. It is URL-
+       * encoded (%3C%3E). - < - 'less than'. It is URL-encoded (%3C). - <= - 'less than or equal
+       * to'. It is URL-encoded (%3C=). - > - 'greater than'. It is URL-encoded (%3E). - >= -
+       * 'greater than or equal to'. It is URL-encoded (%3E=).
+       */
       @com.google.api.client.util.Key
       private java.lang.String filters;
 
-      /** Represents the set of filters including parameter operator value.
+      /** The filters query string is a comma-separated list of an application's event parameters where the
+     parameter's value is manipulated by a relational operator. The filters query string includes the
+     name of the application whose usage is returned in the report. The application values for the Users
+     Usage Report include accounts, docs, and gmail. Filters are in the form [application
+     name]:[parameter name][relational operator][parameter value],....
+
+     In this example, the <> 'not equal to' operator is URL-encoded in the request's query string
+     (%3C%3E): GET https://www.googleapis.com/admin/reports/v1/usage/users/all/dates/2013-03-03
+     ?parameters=accounts:last_login_time =accounts:last_login_time>2010-10-28T10:26:35.000Z
+
+     The relational operators include: - == - 'equal to'. - <> - 'not equal to'. It is URL-encoded
+     (%3C%3E). - < - 'less than'. It is URL-encoded (%3C). - <= - 'less than or equal to'. It is URL-
+     encoded (%3C=). - > - 'greater than'. It is URL-encoded (%3E). - >= - 'greater than or equal to'.
+     It is URL-encoded (%3E=).
        */
       public java.lang.String getFilters() {
         return filters;
       }
 
-      /** Represents the set of filters including parameter operator value. */
+      /**
+       * The filters query string is a comma-separated list of an application's event parameters
+       * where the parameter's value is manipulated by a relational operator. The filters query
+       * string includes the name of the application whose usage is returned in the report. The
+       * application values for the Users Usage Report include accounts, docs, and gmail. Filters
+       * are in the form [application name]:[parameter name][relational operator][parameter
+       * value],....
+       *
+       * In this example, the <> 'not equal to' operator is URL-encoded in the request's query
+       * string (%3C%3E): GET
+       * https://www.googleapis.com/admin/reports/v1/usage/users/all/dates/2013-03-03
+       * ?parameters=accounts:last_login_time =accounts:last_login_time>2010-10-28T10:26:35.000Z
+       *
+       * The relational operators include: - == - 'equal to'. - <> - 'not equal to'. It is URL-
+       * encoded (%3C%3E). - < - 'less than'. It is URL-encoded (%3C). - <= - 'less than or equal
+       * to'. It is URL-encoded (%3C=). - > - 'greater than'. It is URL-encoded (%3E). - >= -
+       * 'greater than or equal to'. It is URL-encoded (%3E=).
+       */
       public Get setFilters(java.lang.String filters) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(FILTERS_PATTERN.matcher(filters).matches(),
@@ -1661,41 +2288,55 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /** Maximum number of results to return. Maximum allowed is 1000 */
+      /**
+       * Determines how many activity records are shown on each response page. For example, if the
+       * request sets maxResults=1 and the report has two activities, the report has two pages. The
+       * response's nextPageToken property has the token to the second page. The maxResults query
+       * string is optional.
+       */
       @com.google.api.client.util.Key
       private java.lang.Long maxResults;
 
-      /** Maximum number of results to return. Maximum allowed is 1000
-
-     [maximum: 1000]
+      /** Determines how many activity records are shown on each response page. For example, if the request
+     sets maxResults=1 and the report has two activities, the report has two pages. The response's
+     nextPageToken property has the token to the second page. The maxResults query string is optional.
+     [default: 1000] [minimum: 1] [maximum: 1000]
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
       }
 
-      /** Maximum number of results to return. Maximum allowed is 1000 */
+      /**
+       * Determines how many activity records are shown on each response page. For example, if the
+       * request sets maxResults=1 and the report has two activities, the report has two pages. The
+       * response's nextPageToken property has the token to the second page. The maxResults query
+       * string is optional.
+       */
       public Get setMaxResults(java.lang.Long maxResults) {
         this.maxResults = maxResults;
         return this;
       }
 
       /**
-       * the organizational unit's ID to filter usage parameters from users belonging to a specific
-       * OU or one of its sub-OU(s).
+       * ID of the organizational unit to report on. User activity will be shown only for users who
+       * belong to the specified organizational unit. Data before Dec 17, 2018 doesn't appear in the
+       * filtered results.
        */
       @com.google.api.client.util.Key
       private java.lang.String orgUnitID;
 
-      /** the organizational unit's ID to filter usage parameters from users belonging to a specific OU or
-     one of its sub-OU(s).
+      /** ID of the organizational unit to report on. User activity will be shown only for users who belong
+     to the specified organizational unit. Data before Dec 17, 2018 doesn't appear in the filtered
+     results.
        */
       public java.lang.String getOrgUnitID() {
         return orgUnitID;
       }
 
       /**
-       * the organizational unit's ID to filter usage parameters from users belonging to a specific
-       * OU or one of its sub-OU(s).
+       * ID of the organizational unit to report on. User activity will be shown only for users who
+       * belong to the specified organizational unit. Data before Dec 17, 2018 doesn't appear in the
+       * filtered results.
        */
       public Get setOrgUnitID(java.lang.String orgUnitID) {
         if (!getSuppressPatternChecks()) {
@@ -1707,39 +2348,81 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /** Token to specify next page. */
+      /**
+       * Token to specify next page. A report with multiple pages has a nextPageToken property in
+       * the response. In your follow-on request getting the next page of the report, enter the
+       * nextPageToken value in the pageToken query string.
+       */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** Token to specify next page.
+      /** Token to specify next page. A report with multiple pages has a nextPageToken property in the
+     response. In your follow-on request getting the next page of the report, enter the nextPageToken
+     value in the pageToken query string.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
-      /** Token to specify next page. */
+      /**
+       * Token to specify next page. A report with multiple pages has a nextPageToken property in
+       * the response. In your follow-on request getting the next page of the report, enter the
+       * nextPageToken value in the pageToken query string.
+       */
       public Get setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
         return this;
       }
 
       /**
-       * Represents the application name, parameter name pairs to fetch in csv as
-       * app_name1:param_name1, app_name2:param_name2.
+       * The parameters query string is a comma-separated list of event parameters that refine a
+       * report's results. The parameter is associated with a specific application. The application
+       * values for the Customers usage report include accounts, app_maker, apps_scripts, calendar,
+       * classroom, cros, docs, gmail, gplus, device_management, meet, and sites. A parameters query
+       * string is in the CSV form of app_name1:param_name1, app_name2:param_name2. Note: The API
+       * doesn't accept multiple values of a parameter. If a particular parameter is supplied more
+       * than once in the API request, the API only accepts the last value of that request
+       * parameter. In addition, if an invalid request parameter is supplied in the API request, the
+       * API ignores that request parameter and returns the response corresponding to the remaining
+       * valid request parameters.
+       *
+       * An example of an invalid request parameter is one that does not belong to the application.
+       * If no parameters are requested, all parameters are returned.
        */
       @com.google.api.client.util.Key
       private java.lang.String parameters;
 
-      /** Represents the application name, parameter name pairs to fetch in csv as app_name1:param_name1,
-     app_name2:param_name2.
+      /** The parameters query string is a comma-separated list of event parameters that refine a report's
+     results. The parameter is associated with a specific application. The application values for the
+     Customers usage report include accounts, app_maker, apps_scripts, calendar, classroom, cros, docs,
+     gmail, gplus, device_management, meet, and sites. A parameters query string is in the CSV form of
+     app_name1:param_name1, app_name2:param_name2. Note: The API doesn't accept multiple values of a
+     parameter. If a particular parameter is supplied more than once in the API request, the API only
+     accepts the last value of that request parameter. In addition, if an invalid request parameter is
+     supplied in the API request, the API ignores that request parameter and returns the response
+     corresponding to the remaining valid request parameters.
+
+     An example of an invalid request parameter is one that does not belong to the application. If no
+     parameters are requested, all parameters are returned.
        */
       public java.lang.String getParameters() {
         return parameters;
       }
 
       /**
-       * Represents the application name, parameter name pairs to fetch in csv as
-       * app_name1:param_name1, app_name2:param_name2.
+       * The parameters query string is a comma-separated list of event parameters that refine a
+       * report's results. The parameter is associated with a specific application. The application
+       * values for the Customers usage report include accounts, app_maker, apps_scripts, calendar,
+       * classroom, cros, docs, gmail, gplus, device_management, meet, and sites. A parameters query
+       * string is in the CSV form of app_name1:param_name1, app_name2:param_name2. Note: The API
+       * doesn't accept multiple values of a parameter. If a particular parameter is supplied more
+       * than once in the API request, the API only accepts the last value of that request
+       * parameter. In addition, if an invalid request parameter is supplied in the API request, the
+       * API ignores that request parameter and returns the response corresponding to the remaining
+       * valid request parameters.
+       *
+       * An example of an invalid request parameter is one that does not belong to the application.
+       * If no parameters are requested, all parameters are returned.
        */
       public Get setParameters(java.lang.String parameters) {
         if (!getSuppressPatternChecks()) {

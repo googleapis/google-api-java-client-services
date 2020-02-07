@@ -37,21 +37,22 @@ public final class Activities extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * Each record in read response.
+   * Each activity record in the response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Activity> items;
 
   /**
-   * Kind of list response this is.
+   * The type of API resource. For an activity report, the value is reports#activities.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * Token for retrieving the next page
+   * Token for retrieving the follow-on next page of the report. The nextPageToken value is used in
+   * the request's pageToken query string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +76,7 @@ public final class Activities extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Each record in read response.
+   * Each activity record in the response.
    * @return value or {@code null} for none
    */
   public java.util.List<Activity> getItems() {
@@ -83,7 +84,7 @@ public final class Activities extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Each record in read response.
+   * Each activity record in the response.
    * @param items items or {@code null} for none
    */
   public Activities setItems(java.util.List<Activity> items) {
@@ -92,7 +93,7 @@ public final class Activities extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Kind of list response this is.
+   * The type of API resource. For an activity report, the value is reports#activities.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -100,7 +101,7 @@ public final class Activities extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Kind of list response this is.
+   * The type of API resource. For an activity report, the value is reports#activities.
    * @param kind kind or {@code null} for none
    */
   public Activities setKind(java.lang.String kind) {
@@ -109,7 +110,8 @@ public final class Activities extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Token for retrieving the next page
+   * Token for retrieving the follow-on next page of the report. The nextPageToken value is used in
+   * the request's pageToken query string.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -117,7 +119,8 @@ public final class Activities extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Token for retrieving the next page
+   * Token for retrieving the follow-on next page of the report. The nextPageToken value is used in
+   * the request's pageToken query string.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public Activities setNextPageToken(java.lang.String nextPageToken) {

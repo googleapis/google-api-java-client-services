@@ -46,7 +46,7 @@ public class DataTransfer extends com.google.api.client.googleapis.services.json
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.3 of the Admin Data Transfer API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.8 of the Admin Data Transfer API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -328,17 +328,17 @@ public class DataTransfer extends com.google.api.client.googleapis.services.json
         return (List) super.setUserIp(userIp);
       }
 
-      /** Immutable ID of the Google Apps account. */
+      /** Immutable ID of the G Suite account. */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Immutable ID of the Google Apps account.
+      /** Immutable ID of the G Suite account.
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
-      /** Immutable ID of the Google Apps account. */
+      /** Immutable ID of the G Suite account. */
       public List setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
         return this;
@@ -676,17 +676,17 @@ public class DataTransfer extends com.google.api.client.googleapis.services.json
         return (List) super.setUserIp(userIp);
       }
 
-      /** Immutable ID of the Google Apps account. */
+      /** Immutable ID of the G Suite account. */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Immutable ID of the Google Apps account.
+      /** Immutable ID of the G Suite account.
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
-      /** Immutable ID of the Google Apps account. */
+      /** Immutable ID of the G Suite account. */
       public List setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
         return this;

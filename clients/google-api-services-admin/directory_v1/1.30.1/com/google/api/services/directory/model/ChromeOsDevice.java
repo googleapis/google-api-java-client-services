@@ -152,7 +152,7 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   /**
    * (Read-only) MAC address used by the Chromebook’s internal ethernet port, and for onboard
    * network (ethernet) interface. The format is twelve (12) hexadecimal digits without any
-   * delimiter (uppercase letters). This is only relevant for Dell devices.
+   * delimiter (uppercase letters). This is only relevant for some devices.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -202,7 +202,8 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   private java.lang.String manufactureDate;
 
   /**
-   * Mobile Equipment identifier for the 3G mobile card in the Chromebook (Read-only)
+   * Contains either the Mobile Equipment identifier (MEID) or the International Mobile Equipment
+   * Identity (IMEI) for the 3G mobile card in the Chromebook (Read-only)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -552,7 +553,7 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   /**
    * (Read-only) MAC address used by the Chromebook’s internal ethernet port, and for onboard
    * network (ethernet) interface. The format is twelve (12) hexadecimal digits without any
-   * delimiter (uppercase letters). This is only relevant for Dell devices.
+   * delimiter (uppercase letters). This is only relevant for some devices.
    * @return value or {@code null} for none
    */
   public java.lang.String getEthernetMacAddress0() {
@@ -562,7 +563,7 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   /**
    * (Read-only) MAC address used by the Chromebook’s internal ethernet port, and for onboard
    * network (ethernet) interface. The format is twelve (12) hexadecimal digits without any
-   * delimiter (uppercase letters). This is only relevant for Dell devices.
+   * delimiter (uppercase letters). This is only relevant for some devices.
    * @param ethernetMacAddress0 ethernetMacAddress0 or {@code null} for none
    */
   public ChromeOsDevice setEthernetMacAddress0(java.lang.String ethernetMacAddress0) {
@@ -675,7 +676,8 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Mobile Equipment identifier for the 3G mobile card in the Chromebook (Read-only)
+   * Contains either the Mobile Equipment identifier (MEID) or the International Mobile Equipment
+   * Identity (IMEI) for the 3G mobile card in the Chromebook (Read-only)
    * @return value or {@code null} for none
    */
   public java.lang.String getMeid() {
@@ -683,7 +685,8 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Mobile Equipment identifier for the 3G mobile card in the Chromebook (Read-only)
+   * Contains either the Mobile Equipment identifier (MEID) or the International Mobile Equipment
+   * Identity (IMEI) for the 3G mobile card in the Chromebook (Read-only)
    * @param meid meid or {@code null} for none
    */
   public ChromeOsDevice setMeid(java.lang.String meid) {

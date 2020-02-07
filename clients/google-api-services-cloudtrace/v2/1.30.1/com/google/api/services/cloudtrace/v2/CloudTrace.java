@@ -47,7 +47,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.3 of the Stackdriver Trace API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.8 of the Stackdriver Trace API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -165,7 +165,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
 
       /**
        * Sends new spans to new or existing traces. You cannot update existing spans. In this case,
-       * writing traces is not consider an active developer method since traces are machine generated.
+       * writing traces is not considered an active developer method since traces are machine generated.
        *
        * Create a request for the method "traces.batchWrite".
        *
@@ -192,7 +192,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Sends new spans to new or existing traces. You cannot update existing spans. In this case,
-         * writing traces is not consider an active developer method since traces are machine generated.
+         * writing traces is not considered an active developer method since traces are machine generated.
          *
          * Create a request for the method "traces.batchWrite".
          *
@@ -326,8 +326,8 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
       public class Spans {
 
         /**
-         * Creates a new span. In this case, writing traces is not consider an active developer method since
-         * traces are machine generated.
+         * Creates a new span. In this case, writing traces is not considered an active developer method
+         * since traces are machine generated.
          *
          * Create a request for the method "spans.createSpan".
          *
@@ -359,7 +359,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/traces/[^/]+/spans/[^/]+$");
 
           /**
-           * Creates a new span. In this case, writing traces is not consider an active developer method
+           * Creates a new span. In this case, writing traces is not considered an active developer method
            * since traces are machine generated.
            *
            * Create a request for the method "spans.createSpan".

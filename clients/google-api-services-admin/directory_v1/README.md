@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-admin-directory</artifactId>
-      <version>directory_v1-rev20190806-1.30.3</version>
+      <version>directory_v1-rev20191003-1.30.8</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,10 +35,10 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-admin-directory:directory_v1-rev20190806-1.30.3'
+  compile 'com.google.apis:google-api-services-admin-directory:directory_v1-rev20191003-1.30.8'
 }
 ```
 
 [javadoc]: https://googleapis.dev/java/google-api-services-admin-directory/latest/index.html
 [google-api-client]: https://github.com/googleapis/google-api-java-client/
-[api-explorer]: https://developers.google.com/apis-explorer/#p/abusiveexperiencereport/v1/
+[api-explorer]: https://developers.google.com/apis-explorer/#p/admin/v1/

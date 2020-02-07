@@ -104,6 +104,9 @@ public class DirectoryScopes {
   /** View user schemas on your domain. */
   public static final String ADMIN_DIRECTORY_USERSCHEMA_READONLY = "https://www.googleapis.com/auth/admin.directory.userschema.readonly";
 
+  /** View and manage your data across Google Cloud Platform services. */
+  public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
+
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
    *
@@ -138,6 +141,7 @@ public class DirectoryScopes {
     set.add(ADMIN_DIRECTORY_USER_SECURITY);
     set.add(ADMIN_DIRECTORY_USERSCHEMA);
     set.add(ADMIN_DIRECTORY_USERSCHEMA_READONLY);
+    set.add(CLOUD_PLATFORM);
     return java.util.Collections.unmodifiableSet(set);
   }
 

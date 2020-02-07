@@ -39,7 +39,7 @@ public final class ApplicationDataTransfer extends com.google.api.client.json.Ge
 
   /**
    * The transfer parameters for the application. These parameters are used to select the data which
-   * will get transfered in context of this application.
+   * will get transferred in context of this application.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +71,7 @@ public final class ApplicationDataTransfer extends com.google.api.client.json.Ge
 
   /**
    * The transfer parameters for the application. These parameters are used to select the data which
-   * will get transfered in context of this application.
+   * will get transferred in context of this application.
    * @return value or {@code null} for none
    */
   public java.util.List<ApplicationTransferParam> getApplicationTransferParams() {
@@ -80,7 +80,7 @@ public final class ApplicationDataTransfer extends com.google.api.client.json.Ge
 
   /**
    * The transfer parameters for the application. These parameters are used to select the data which
-   * will get transfered in context of this application.
+   * will get transferred in context of this application.
    * @param applicationTransferParams applicationTransferParams or {@code null} for none
    */
   public ApplicationDataTransfer setApplicationTransferParams(java.util.List<ApplicationTransferParam> applicationTransferParams) {

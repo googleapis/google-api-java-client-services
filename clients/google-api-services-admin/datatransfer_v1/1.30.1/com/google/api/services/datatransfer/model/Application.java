@@ -60,7 +60,7 @@ public final class Application extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of all possible transfer parameters for this application. These parameters can be used
-   * to select the data of the user in this application to be transfered.
+   * to select the data of the user in this application to be transferred.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -136,7 +136,7 @@ public final class Application extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of all possible transfer parameters for this application. These parameters can be used
-   * to select the data of the user in this application to be transfered.
+   * to select the data of the user in this application to be transferred.
    * @return value or {@code null} for none
    */
   public java.util.List<ApplicationTransferParam> getTransferParams() {
@@ -145,7 +145,7 @@ public final class Application extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of all possible transfer parameters for this application. These parameters can be used
-   * to select the data of the user in this application to be transfered.
+   * to select the data of the user in this application to be transferred.
    * @param transferParams transferParams or {@code null} for none
    */
   public Application setTransferParams(java.util.List<ApplicationTransferParam> transferParams) {

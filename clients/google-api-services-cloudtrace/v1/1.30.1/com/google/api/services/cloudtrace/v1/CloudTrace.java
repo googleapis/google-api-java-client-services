@@ -47,7 +47,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.3 of the Stackdriver Trace API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.8 of the Stackdriver Trace API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -148,7 +148,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
      * send matches that of an existing trace, any fields in the existing trace and its spans are
      * overwritten by the provided values, and any new fields provided are merged with the existing
      * trace data. If the ID does not match, a new trace is created. In this case, writing traces is not
-     * consider an active developer method since traces are machine generated.
+     * considered an active developer method since traces are machine generated.
      *
      * Create a request for the method "projects.patchTraces".
      *
@@ -174,7 +174,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
        * send matches that of an existing trace, any fields in the existing trace and its spans are
        * overwritten by the provided values, and any new fields provided are merged with the existing
        * trace data. If the ID does not match, a new trace is created. In this case, writing traces is
-       * not consider an active developer method since traces are machine generated.
+       * not considered an active developer method since traces are machine generated.
        *
        * Create a request for the method "projects.patchTraces".
        *

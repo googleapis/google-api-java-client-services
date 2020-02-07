@@ -37,6 +37,13 @@ public final class Border extends com.google.api.client.json.GenericJson {
   private Color color;
 
   /**
+   * The color of the border. If color is also set, this field takes precedence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ColorStyle colorStyle;
+
+  /**
    * The style of the border.
    * The value may be {@code null}.
    */
@@ -64,6 +71,23 @@ public final class Border extends com.google.api.client.json.GenericJson {
    */
   public Border setColor(Color color) {
     this.color = color;
+    return this;
+  }
+
+  /**
+   * The color of the border. If color is also set, this field takes precedence.
+   * @return value or {@code null} for none
+   */
+  public ColorStyle getColorStyle() {
+    return colorStyle;
+  }
+
+  /**
+   * The color of the border. If color is also set, this field takes precedence.
+   * @param colorStyle colorStyle or {@code null} for none
+   */
+  public Border setColorStyle(ColorStyle colorStyle) {
+    this.colorStyle = colorStyle;
     return this;
   }
 

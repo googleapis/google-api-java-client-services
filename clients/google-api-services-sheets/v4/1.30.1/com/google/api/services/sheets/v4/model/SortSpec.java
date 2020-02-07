@@ -38,6 +38,15 @@ public final class SortSpec extends com.google.api.client.json.GenericJson {
   private Color backgroundColor;
 
   /**
+   * The background fill color to sort by. Mutually exclusive with sorting by text color. Requests
+   * to set this field will fail with a 400 error if foreground color is also set. If
+   * background_color is also set, this field takes precedence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ColorStyle backgroundColorStyle;
+
+  /**
    * The dimension the sort should be applied to.
    * The value may be {@code null}.
    */
@@ -51,6 +60,15 @@ public final class SortSpec extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private Color foregroundColor;
+
+  /**
+   * The text color to sort by. Mutually exclusive with sorting by background fill color. Requests
+   * to set this field will fail with a 400 error if background color is also set. If
+   * foreground_color is also set, this field takes precedence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ColorStyle foregroundColorStyle;
 
   /**
    * The order data should be sorted.
@@ -75,6 +93,27 @@ public final class SortSpec extends com.google.api.client.json.GenericJson {
    */
   public SortSpec setBackgroundColor(Color backgroundColor) {
     this.backgroundColor = backgroundColor;
+    return this;
+  }
+
+  /**
+   * The background fill color to sort by. Mutually exclusive with sorting by text color. Requests
+   * to set this field will fail with a 400 error if foreground color is also set. If
+   * background_color is also set, this field takes precedence.
+   * @return value or {@code null} for none
+   */
+  public ColorStyle getBackgroundColorStyle() {
+    return backgroundColorStyle;
+  }
+
+  /**
+   * The background fill color to sort by. Mutually exclusive with sorting by text color. Requests
+   * to set this field will fail with a 400 error if foreground color is also set. If
+   * background_color is also set, this field takes precedence.
+   * @param backgroundColorStyle backgroundColorStyle or {@code null} for none
+   */
+  public SortSpec setBackgroundColorStyle(ColorStyle backgroundColorStyle) {
+    this.backgroundColorStyle = backgroundColorStyle;
     return this;
   }
 
@@ -111,6 +150,27 @@ public final class SortSpec extends com.google.api.client.json.GenericJson {
    */
   public SortSpec setForegroundColor(Color foregroundColor) {
     this.foregroundColor = foregroundColor;
+    return this;
+  }
+
+  /**
+   * The text color to sort by. Mutually exclusive with sorting by background fill color. Requests
+   * to set this field will fail with a 400 error if background color is also set. If
+   * foreground_color is also set, this field takes precedence.
+   * @return value or {@code null} for none
+   */
+  public ColorStyle getForegroundColorStyle() {
+    return foregroundColorStyle;
+  }
+
+  /**
+   * The text color to sort by. Mutually exclusive with sorting by background fill color. Requests
+   * to set this field will fail with a 400 error if background color is also set. If
+   * foreground_color is also set, this field takes precedence.
+   * @param foregroundColorStyle foregroundColorStyle or {@code null} for none
+   */
+  public SortSpec setForegroundColorStyle(ColorStyle foregroundColorStyle) {
+    this.foregroundColorStyle = foregroundColorStyle;
     return this;
   }
 

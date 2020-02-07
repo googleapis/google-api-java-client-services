@@ -44,6 +44,14 @@ public final class SlicerSpec extends com.google.api.client.json.GenericJson {
   private Color backgroundColor;
 
   /**
+   * The background color of the slicer. If background_color is also set, this field takes
+   * precedence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ColorStyle backgroundColorStyle;
+
+  /**
    * The column index in the data table on which the filter is applied to.
    * The value may be {@code null}.
    */
@@ -116,6 +124,25 @@ public final class SlicerSpec extends com.google.api.client.json.GenericJson {
    */
   public SlicerSpec setBackgroundColor(Color backgroundColor) {
     this.backgroundColor = backgroundColor;
+    return this;
+  }
+
+  /**
+   * The background color of the slicer. If background_color is also set, this field takes
+   * precedence.
+   * @return value or {@code null} for none
+   */
+  public ColorStyle getBackgroundColorStyle() {
+    return backgroundColorStyle;
+  }
+
+  /**
+   * The background color of the slicer. If background_color is also set, this field takes
+   * precedence.
+   * @param backgroundColorStyle backgroundColorStyle or {@code null} for none
+   */
+  public SlicerSpec setBackgroundColorStyle(ColorStyle backgroundColorStyle) {
+    this.backgroundColorStyle = backgroundColorStyle;
     return this;
   }
 

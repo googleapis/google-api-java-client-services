@@ -32,7 +32,8 @@ public final class SearchResourcesRequest extends com.google.api.client.json.Gen
   /**
    * The FHIR resource type to search, such as Patient or Observation. For a complete list, see the
    * FHIR Resource Index ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
-   * [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html)).
+   * [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
+   * [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,7 +42,8 @@ public final class SearchResourcesRequest extends com.google.api.client.json.Gen
   /**
    * The FHIR resource type to search, such as Patient or Observation. For a complete list, see the
    * FHIR Resource Index ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
-   * [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html)).
+   * [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
+   * [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceType() {
@@ -51,7 +53,8 @@ public final class SearchResourcesRequest extends com.google.api.client.json.Gen
   /**
    * The FHIR resource type to search, such as Patient or Observation. For a complete list, see the
    * FHIR Resource Index ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
-   * [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html)).
+   * [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
+   * [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
    * @param resourceType resourceType or {@code null} for none
    */
   public SearchResourcesRequest setResourceType(java.lang.String resourceType) {

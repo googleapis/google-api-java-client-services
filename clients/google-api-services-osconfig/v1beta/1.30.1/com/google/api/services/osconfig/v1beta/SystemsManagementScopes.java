@@ -26,9 +26,6 @@ public class SystemsManagementScopes {
   /** View and manage your data across Google Cloud Platform services. */
   public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
 
-  /** View and manage your Google Compute Engine resources. */
-  public static final String COMPUTE = "https://www.googleapis.com/auth/compute";
-
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
    *
@@ -37,7 +34,6 @@ public class SystemsManagementScopes {
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(CLOUD_PLATFORM);
-    set.add(COMPUTE);
     return java.util.Collections.unmodifiableSet(set);
   }
 

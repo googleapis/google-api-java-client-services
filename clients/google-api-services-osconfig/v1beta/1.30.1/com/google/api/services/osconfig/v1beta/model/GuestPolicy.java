@@ -38,23 +38,10 @@ public final class GuestPolicy extends com.google.api.client.json.GenericJson {
    *
    * If left empty, all VM instances underneath this policy are targeted.
    *
-   * Conflict Management
-   *
    * At the same level in the resource hierarchy (that is within a project), the service prevents
-   * the creation of multiple policies that conflict with each other. If there are multiple policies
-   * that specify the same config (eg. package, software recipe, repository, etc.), the service
-   * ensures that no VM instance could potentially receive instructions from both policies. To
-   * create multiple policies that specify different versions of a package or different configs for
-   * different operating systems, each policy must be mutually exclusive in their targeting
-   * according to labels, OS, or other criteria.
-   *
-   * Different configs are identified for conflicts in different ways. Packages are identified by
-   * their name and the package manager(s) they target. Package repositories are identified by their
-   * unique id where applicable. Some package managers don't have a unique identifier for
-   * repositories and where that's the case, no uniqueness is validated by the service.
-   *
-   * Note that if OS Inventory is disabled, a VM instance cannot assign a policy that targets by OS
-   * because the service sees the OS as unknown.
+   * the creation of multiple policies that conflict with each other. For more information, see how
+   * the service [handles assignment conflicts](/compute/docs/os-config-management/create-guest-
+   * policy#handle-conflicts).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,23 +113,10 @@ public final class GuestPolicy extends com.google.api.client.json.GenericJson {
    *
    * If left empty, all VM instances underneath this policy are targeted.
    *
-   * Conflict Management
-   *
    * At the same level in the resource hierarchy (that is within a project), the service prevents
-   * the creation of multiple policies that conflict with each other. If there are multiple policies
-   * that specify the same config (eg. package, software recipe, repository, etc.), the service
-   * ensures that no VM instance could potentially receive instructions from both policies. To
-   * create multiple policies that specify different versions of a package or different configs for
-   * different operating systems, each policy must be mutually exclusive in their targeting
-   * according to labels, OS, or other criteria.
-   *
-   * Different configs are identified for conflicts in different ways. Packages are identified by
-   * their name and the package manager(s) they target. Package repositories are identified by their
-   * unique id where applicable. Some package managers don't have a unique identifier for
-   * repositories and where that's the case, no uniqueness is validated by the service.
-   *
-   * Note that if OS Inventory is disabled, a VM instance cannot assign a policy that targets by OS
-   * because the service sees the OS as unknown.
+   * the creation of multiple policies that conflict with each other. For more information, see how
+   * the service [handles assignment conflicts](/compute/docs/os-config-management/create-guest-
+   * policy#handle-conflicts).
    * @return value or {@code null} for none
    */
   public Assignment getAssignment() {
@@ -156,23 +130,10 @@ public final class GuestPolicy extends com.google.api.client.json.GenericJson {
    *
    * If left empty, all VM instances underneath this policy are targeted.
    *
-   * Conflict Management
-   *
    * At the same level in the resource hierarchy (that is within a project), the service prevents
-   * the creation of multiple policies that conflict with each other. If there are multiple policies
-   * that specify the same config (eg. package, software recipe, repository, etc.), the service
-   * ensures that no VM instance could potentially receive instructions from both policies. To
-   * create multiple policies that specify different versions of a package or different configs for
-   * different operating systems, each policy must be mutually exclusive in their targeting
-   * according to labels, OS, or other criteria.
-   *
-   * Different configs are identified for conflicts in different ways. Packages are identified by
-   * their name and the package manager(s) they target. Package repositories are identified by their
-   * unique id where applicable. Some package managers don't have a unique identifier for
-   * repositories and where that's the case, no uniqueness is validated by the service.
-   *
-   * Note that if OS Inventory is disabled, a VM instance cannot assign a policy that targets by OS
-   * because the service sees the OS as unknown.
+   * the creation of multiple policies that conflict with each other. For more information, see how
+   * the service [handles assignment conflicts](/compute/docs/os-config-management/create-guest-
+   * policy#handle-conflicts).
    * @param assignment assignment or {@code null} for none
    */
   public GuestPolicy setAssignment(Assignment assignment) {

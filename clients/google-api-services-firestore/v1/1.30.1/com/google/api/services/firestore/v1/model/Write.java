@@ -47,8 +47,7 @@ public final class Write extends com.google.api.client.json.GenericJson {
   private java.lang.String delete;
 
   /**
-   * Applies a transformation to a document. At most one `transform` per document is allowed in a
-   * given request. An `update` cannot follow a `transform` on the same document in a given request.
+   * Applies a transformation to a document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,8 +114,7 @@ public final class Write extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Applies a transformation to a document. At most one `transform` per document is allowed in a
-   * given request. An `update` cannot follow a `transform` on the same document in a given request.
+   * Applies a transformation to a document.
    * @return value or {@code null} for none
    */
   public DocumentTransform getTransform() {
@@ -124,8 +122,7 @@ public final class Write extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Applies a transformation to a document. At most one `transform` per document is allowed in a
-   * given request. An `update` cannot follow a `transform` on the same document in a given request.
+   * Applies a transformation to a document.
    * @param transform transform or {@code null} for none
    */
   public Write setTransform(DocumentTransform transform) {

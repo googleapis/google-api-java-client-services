@@ -54,7 +54,7 @@ artifact_exists() {
   API_VERSION=$2
   REVISION=$3
   LIBRARY_VERSION=$4
-  RESPONSE=$(curl --silent -I http://repo1.maven.org/maven2/com/google/apis/${ARTIFACT_ID}/${API_VERSION}-${REVISION}-${LIBRARY_VERSION}/${ARTIFACT_ID}-${API_VERSION}-${REVISION}-${LIBRARY_VERSION}.pom | head -n 1 | cut -d$' ' -f2)
+  RESPONSE=$(curl --silent -I https://repo1.maven.org/maven2/com/google/apis/${ARTIFACT_ID}/${API_VERSION}-${REVISION}-${LIBRARY_VERSION}/${ARTIFACT_ID}-${API_VERSION}-${REVISION}-${LIBRARY_VERSION}.pom | head -n 1 | cut -d$' ' -f2)
   if [ $RESPONSE == "200" ]
   then
     echo "true"

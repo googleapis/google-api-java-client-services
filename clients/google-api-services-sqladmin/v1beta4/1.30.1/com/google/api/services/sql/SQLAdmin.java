@@ -6146,6 +6146,371 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
           return (RescheduleMaintenance) super.set(parameterName, value);
         }
       }
+      /**
+       * Start External master migration.
+       *
+       * Create a request for the method "instances.startExternalSync".
+       *
+       * This request holds the parameters needed by the sql server.  After setting any optional
+       * parameters, call the {@link StartExternalSync#execute()} method to invoke the remote operation.
+       *
+       * @param project ID of the project that contains the first generation instance.
+       * @param instance Cloud SQL instance ID. This does not include the project ID.
+       * @return the request
+       */
+      public StartExternalSync startExternalSync(java.lang.String project, java.lang.String instance) throws java.io.IOException {
+        StartExternalSync result = new StartExternalSync(project, instance);
+        initialize(result);
+        return result;
+      }
+
+      public class StartExternalSync extends SQLAdminRequest<com.google.api.services.sql.model.Operation> {
+
+        private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/startExternalSync";
+
+        /**
+         * Start External master migration.
+         *
+         * Create a request for the method "instances.startExternalSync".
+         *
+         * This request holds the parameters needed by the the sql server.  After setting any optional
+         * parameters, call the {@link StartExternalSync#execute()} method to invoke the remote operation.
+         * <p> {@link StartExternalSync#initialize(com.google.api.client.googleapis.services.AbstractGoogl
+         * eClientRequest)} must be called to initialize this instance immediately after invoking the
+         * constructor. </p>
+         *
+         * @param project ID of the project that contains the first generation instance.
+         * @param instance Cloud SQL instance ID. This does not include the project ID.
+         * @since 1.13
+         */
+        protected StartExternalSync(java.lang.String project, java.lang.String instance) {
+          super(SQLAdmin.this, "POST", REST_PATH, null, com.google.api.services.sql.model.Operation.class);
+          this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+          this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
+        }
+
+        @Override
+        public StartExternalSync set$Xgafv(java.lang.String $Xgafv) {
+          return (StartExternalSync) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public StartExternalSync setAccessToken(java.lang.String accessToken) {
+          return (StartExternalSync) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public StartExternalSync setAlt(java.lang.String alt) {
+          return (StartExternalSync) super.setAlt(alt);
+        }
+
+        @Override
+        public StartExternalSync setCallback(java.lang.String callback) {
+          return (StartExternalSync) super.setCallback(callback);
+        }
+
+        @Override
+        public StartExternalSync setFields(java.lang.String fields) {
+          return (StartExternalSync) super.setFields(fields);
+        }
+
+        @Override
+        public StartExternalSync setKey(java.lang.String key) {
+          return (StartExternalSync) super.setKey(key);
+        }
+
+        @Override
+        public StartExternalSync setOauthToken(java.lang.String oauthToken) {
+          return (StartExternalSync) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public StartExternalSync setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (StartExternalSync) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public StartExternalSync setQuotaUser(java.lang.String quotaUser) {
+          return (StartExternalSync) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public StartExternalSync setUploadType(java.lang.String uploadType) {
+          return (StartExternalSync) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public StartExternalSync setUploadProtocol(java.lang.String uploadProtocol) {
+          return (StartExternalSync) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** ID of the project that contains the first generation instance. */
+        @com.google.api.client.util.Key
+        private java.lang.String project;
+
+        /** ID of the project that contains the first generation instance.
+         */
+        public java.lang.String getProject() {
+          return project;
+        }
+
+        /** ID of the project that contains the first generation instance. */
+        public StartExternalSync setProject(java.lang.String project) {
+          this.project = project;
+          return this;
+        }
+
+        /** Cloud SQL instance ID. This does not include the project ID. */
+        @com.google.api.client.util.Key
+        private java.lang.String instance;
+
+        /** Cloud SQL instance ID. This does not include the project ID.
+         */
+        public java.lang.String getInstance() {
+          return instance;
+        }
+
+        /** Cloud SQL instance ID. This does not include the project ID. */
+        public StartExternalSync setInstance(java.lang.String instance) {
+          this.instance = instance;
+          return this;
+        }
+
+        /**
+         * The parent resource where Cloud SQL starts this database instance external sync. Format:
+         * projects/{project}/locations/{location}/instances/{instance}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** The parent resource where Cloud SQL starts this database instance external sync. Format:
+       projects/{project}/locations/{location}/instances/{instance}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * The parent resource where Cloud SQL starts this database instance external sync. Format:
+         * projects/{project}/locations/{location}/instances/{instance}
+         */
+        public StartExternalSync setParent(java.lang.String parent) {
+          this.parent = parent;
+          return this;
+        }
+
+        /** External sync mode */
+        @com.google.api.client.util.Key
+        private java.lang.String syncMode;
+
+        /** External sync mode
+         */
+        public java.lang.String getSyncMode() {
+          return syncMode;
+        }
+
+        /** External sync mode */
+        public StartExternalSync setSyncMode(java.lang.String syncMode) {
+          this.syncMode = syncMode;
+          return this;
+        }
+
+        @Override
+        public StartExternalSync set(String parameterName, Object value) {
+          return (StartExternalSync) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Verify External master external sync settings.
+       *
+       * Create a request for the method "instances.verifyExternalSyncSettings".
+       *
+       * This request holds the parameters needed by the sql server.  After setting any optional
+       * parameters, call the {@link VerifyExternalSyncSettings#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param project Project ID of the project that contains the instance.
+       * @param instance Cloud SQL instance ID. This does not include the project ID.
+       * @return the request
+       */
+      public VerifyExternalSyncSettings verifyExternalSyncSettings(java.lang.String project, java.lang.String instance) throws java.io.IOException {
+        VerifyExternalSyncSettings result = new VerifyExternalSyncSettings(project, instance);
+        initialize(result);
+        return result;
+      }
+
+      public class VerifyExternalSyncSettings extends SQLAdminRequest<com.google.api.services.sql.model.SqlInstancesVerifyExternalSyncSettingsResponse> {
+
+        private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/verifyExternalSyncSettings";
+
+        /**
+         * Verify External master external sync settings.
+         *
+         * Create a request for the method "instances.verifyExternalSyncSettings".
+         *
+         * This request holds the parameters needed by the the sql server.  After setting any optional
+         * parameters, call the {@link VerifyExternalSyncSettings#execute()} method to invoke the remote
+         * operation. <p> {@link VerifyExternalSyncSettings#initialize(com.google.api.client.googleapis.se
+         * rvices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param project Project ID of the project that contains the instance.
+         * @param instance Cloud SQL instance ID. This does not include the project ID.
+         * @since 1.13
+         */
+        protected VerifyExternalSyncSettings(java.lang.String project, java.lang.String instance) {
+          super(SQLAdmin.this, "POST", REST_PATH, null, com.google.api.services.sql.model.SqlInstancesVerifyExternalSyncSettingsResponse.class);
+          this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+          this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
+        }
+
+        @Override
+        public VerifyExternalSyncSettings set$Xgafv(java.lang.String $Xgafv) {
+          return (VerifyExternalSyncSettings) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public VerifyExternalSyncSettings setAccessToken(java.lang.String accessToken) {
+          return (VerifyExternalSyncSettings) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public VerifyExternalSyncSettings setAlt(java.lang.String alt) {
+          return (VerifyExternalSyncSettings) super.setAlt(alt);
+        }
+
+        @Override
+        public VerifyExternalSyncSettings setCallback(java.lang.String callback) {
+          return (VerifyExternalSyncSettings) super.setCallback(callback);
+        }
+
+        @Override
+        public VerifyExternalSyncSettings setFields(java.lang.String fields) {
+          return (VerifyExternalSyncSettings) super.setFields(fields);
+        }
+
+        @Override
+        public VerifyExternalSyncSettings setKey(java.lang.String key) {
+          return (VerifyExternalSyncSettings) super.setKey(key);
+        }
+
+        @Override
+        public VerifyExternalSyncSettings setOauthToken(java.lang.String oauthToken) {
+          return (VerifyExternalSyncSettings) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public VerifyExternalSyncSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (VerifyExternalSyncSettings) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public VerifyExternalSyncSettings setQuotaUser(java.lang.String quotaUser) {
+          return (VerifyExternalSyncSettings) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public VerifyExternalSyncSettings setUploadType(java.lang.String uploadType) {
+          return (VerifyExternalSyncSettings) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public VerifyExternalSyncSettings setUploadProtocol(java.lang.String uploadProtocol) {
+          return (VerifyExternalSyncSettings) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Project ID of the project that contains the instance. */
+        @com.google.api.client.util.Key
+        private java.lang.String project;
+
+        /** Project ID of the project that contains the instance.
+         */
+        public java.lang.String getProject() {
+          return project;
+        }
+
+        /** Project ID of the project that contains the instance. */
+        public VerifyExternalSyncSettings setProject(java.lang.String project) {
+          this.project = project;
+          return this;
+        }
+
+        /** Cloud SQL instance ID. This does not include the project ID. */
+        @com.google.api.client.util.Key
+        private java.lang.String instance;
+
+        /** Cloud SQL instance ID. This does not include the project ID.
+         */
+        public java.lang.String getInstance() {
+          return instance;
+        }
+
+        /** Cloud SQL instance ID. This does not include the project ID. */
+        public VerifyExternalSyncSettings setInstance(java.lang.String instance) {
+          this.instance = instance;
+          return this;
+        }
+
+        /**
+         * The parent resource where Cloud SQL verifies this database instance external sync
+         * settings. Format: projects/{project}/locations/{location}/instances/{instance}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** The parent resource where Cloud SQL verifies this database instance external sync settings. Format:
+       projects/{project}/locations/{location}/instances/{instance}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * The parent resource where Cloud SQL verifies this database instance external sync
+         * settings. Format: projects/{project}/locations/{location}/instances/{instance}
+         */
+        public VerifyExternalSyncSettings setParent(java.lang.String parent) {
+          this.parent = parent;
+          return this;
+        }
+
+        /** External sync mode */
+        @com.google.api.client.util.Key
+        private java.lang.String syncMode;
+
+        /** External sync mode
+         */
+        public java.lang.String getSyncMode() {
+          return syncMode;
+        }
+
+        /** External sync mode */
+        public VerifyExternalSyncSettings setSyncMode(java.lang.String syncMode) {
+          this.syncMode = syncMode;
+          return this;
+        }
+
+        /** Flag to enable verifying connection only */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean verifyConnectionOnly;
+
+        /** Flag to enable verifying connection only
+         */
+        public java.lang.Boolean getVerifyConnectionOnly() {
+          return verifyConnectionOnly;
+        }
+
+        /** Flag to enable verifying connection only */
+        public VerifyExternalSyncSettings setVerifyConnectionOnly(java.lang.Boolean verifyConnectionOnly) {
+          this.verifyConnectionOnly = verifyConnectionOnly;
+          return this;
+        }
+
+        @Override
+        public VerifyExternalSyncSettings set(String parameterName, Object value) {
+          return (VerifyExternalSyncSettings) super.set(parameterName, value);
+        }
+      }
 
     }
     /**
@@ -6361,6 +6726,399 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public RescheduleMaintenance set(String parameterName, Object value) {
             return (RescheduleMaintenance) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Start External master migration.
+         *
+         * Create a request for the method "instances.startExternalSync".
+         *
+         * This request holds the parameters needed by the sql server.  After setting any optional
+         * parameters, call the {@link StartExternalSync#execute()} method to invoke the remote operation.
+         *
+         * @param parent The parent resource where Cloud SQL starts this database instance
+        external sync. Format:
+         *        projects/{project}/locations/{location}/instances/{instance}
+         * @return the request
+         */
+        public StartExternalSync startExternalSync(java.lang.String parent) throws java.io.IOException {
+          StartExternalSync result = new StartExternalSync(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class StartExternalSync extends SQLAdminRequest<com.google.api.services.sql.model.Operation> {
+
+          private static final String REST_PATH = "sql/v1beta4/{+parent}/startExternalSync";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Start External master migration.
+           *
+           * Create a request for the method "instances.startExternalSync".
+           *
+           * This request holds the parameters needed by the the sql server.  After setting any optional
+           * parameters, call the {@link StartExternalSync#execute()} method to invoke the remote operation.
+           * <p> {@link StartExternalSync#initialize(com.google.api.client.googleapis.services.AbstractGoogl
+           * eClientRequest)} must be called to initialize this instance immediately after invoking the
+           * constructor. </p>
+           *
+           * @param parent The parent resource where Cloud SQL starts this database instance
+        external sync. Format:
+         *        projects/{project}/locations/{location}/instances/{instance}
+           * @since 1.13
+           */
+          protected StartExternalSync(java.lang.String parent) {
+            super(SQLAdmin.this, "POST", REST_PATH, null, com.google.api.services.sql.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public StartExternalSync set$Xgafv(java.lang.String $Xgafv) {
+            return (StartExternalSync) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public StartExternalSync setAccessToken(java.lang.String accessToken) {
+            return (StartExternalSync) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public StartExternalSync setAlt(java.lang.String alt) {
+            return (StartExternalSync) super.setAlt(alt);
+          }
+
+          @Override
+          public StartExternalSync setCallback(java.lang.String callback) {
+            return (StartExternalSync) super.setCallback(callback);
+          }
+
+          @Override
+          public StartExternalSync setFields(java.lang.String fields) {
+            return (StartExternalSync) super.setFields(fields);
+          }
+
+          @Override
+          public StartExternalSync setKey(java.lang.String key) {
+            return (StartExternalSync) super.setKey(key);
+          }
+
+          @Override
+          public StartExternalSync setOauthToken(java.lang.String oauthToken) {
+            return (StartExternalSync) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public StartExternalSync setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (StartExternalSync) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public StartExternalSync setQuotaUser(java.lang.String quotaUser) {
+            return (StartExternalSync) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public StartExternalSync setUploadType(java.lang.String uploadType) {
+            return (StartExternalSync) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public StartExternalSync setUploadProtocol(java.lang.String uploadProtocol) {
+            return (StartExternalSync) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The parent resource where Cloud SQL starts this database instance external sync.
+           * Format: projects/{project}/locations/{location}/instances/{instance}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** The parent resource where Cloud SQL starts this database instance external sync. Format:
+         projects/{project}/locations/{location}/instances/{instance}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * The parent resource where Cloud SQL starts this database instance external sync.
+           * Format: projects/{project}/locations/{location}/instances/{instance}
+           */
+          public StartExternalSync setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Cloud SQL instance ID. This does not include the project ID. */
+          @com.google.api.client.util.Key
+          private java.lang.String instance;
+
+          /** Cloud SQL instance ID. This does not include the project ID.
+           */
+          public java.lang.String getInstance() {
+            return instance;
+          }
+
+          /** Cloud SQL instance ID. This does not include the project ID. */
+          public StartExternalSync setInstance(java.lang.String instance) {
+            this.instance = instance;
+            return this;
+          }
+
+          /** ID of the project that contains the first generation instance. */
+          @com.google.api.client.util.Key
+          private java.lang.String project;
+
+          /** ID of the project that contains the first generation instance.
+           */
+          public java.lang.String getProject() {
+            return project;
+          }
+
+          /** ID of the project that contains the first generation instance. */
+          public StartExternalSync setProject(java.lang.String project) {
+            this.project = project;
+            return this;
+          }
+
+          /** External sync mode */
+          @com.google.api.client.util.Key
+          private java.lang.String syncMode;
+
+          /** External sync mode
+           */
+          public java.lang.String getSyncMode() {
+            return syncMode;
+          }
+
+          /** External sync mode */
+          public StartExternalSync setSyncMode(java.lang.String syncMode) {
+            this.syncMode = syncMode;
+            return this;
+          }
+
+          @Override
+          public StartExternalSync set(String parameterName, Object value) {
+            return (StartExternalSync) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Verify External master external sync settings.
+         *
+         * Create a request for the method "instances.verifyExternalSyncSettings".
+         *
+         * This request holds the parameters needed by the sql server.  After setting any optional
+         * parameters, call the {@link VerifyExternalSyncSettings#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param parent The parent resource where Cloud SQL verifies this database instance
+        external sync settings. Format:
+         *        projects/{project}/locations/{location}/instances/{instance}
+         * @return the request
+         */
+        public VerifyExternalSyncSettings verifyExternalSyncSettings(java.lang.String parent) throws java.io.IOException {
+          VerifyExternalSyncSettings result = new VerifyExternalSyncSettings(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class VerifyExternalSyncSettings extends SQLAdminRequest<com.google.api.services.sql.model.SqlInstancesVerifyExternalSyncSettingsResponse> {
+
+          private static final String REST_PATH = "sql/v1beta4/{+parent}/verifyExternalSyncSettings";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Verify External master external sync settings.
+           *
+           * Create a request for the method "instances.verifyExternalSyncSettings".
+           *
+           * This request holds the parameters needed by the the sql server.  After setting any optional
+           * parameters, call the {@link VerifyExternalSyncSettings#execute()} method to invoke the remote
+           * operation. <p> {@link VerifyExternalSyncSettings#initialize(com.google.api.client.googleapis.se
+           * rvices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param parent The parent resource where Cloud SQL verifies this database instance
+        external sync settings. Format:
+         *        projects/{project}/locations/{location}/instances/{instance}
+           * @since 1.13
+           */
+          protected VerifyExternalSyncSettings(java.lang.String parent) {
+            super(SQLAdmin.this, "POST", REST_PATH, null, com.google.api.services.sql.model.SqlInstancesVerifyExternalSyncSettingsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public VerifyExternalSyncSettings set$Xgafv(java.lang.String $Xgafv) {
+            return (VerifyExternalSyncSettings) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public VerifyExternalSyncSettings setAccessToken(java.lang.String accessToken) {
+            return (VerifyExternalSyncSettings) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public VerifyExternalSyncSettings setAlt(java.lang.String alt) {
+            return (VerifyExternalSyncSettings) super.setAlt(alt);
+          }
+
+          @Override
+          public VerifyExternalSyncSettings setCallback(java.lang.String callback) {
+            return (VerifyExternalSyncSettings) super.setCallback(callback);
+          }
+
+          @Override
+          public VerifyExternalSyncSettings setFields(java.lang.String fields) {
+            return (VerifyExternalSyncSettings) super.setFields(fields);
+          }
+
+          @Override
+          public VerifyExternalSyncSettings setKey(java.lang.String key) {
+            return (VerifyExternalSyncSettings) super.setKey(key);
+          }
+
+          @Override
+          public VerifyExternalSyncSettings setOauthToken(java.lang.String oauthToken) {
+            return (VerifyExternalSyncSettings) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public VerifyExternalSyncSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (VerifyExternalSyncSettings) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public VerifyExternalSyncSettings setQuotaUser(java.lang.String quotaUser) {
+            return (VerifyExternalSyncSettings) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public VerifyExternalSyncSettings setUploadType(java.lang.String uploadType) {
+            return (VerifyExternalSyncSettings) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public VerifyExternalSyncSettings setUploadProtocol(java.lang.String uploadProtocol) {
+            return (VerifyExternalSyncSettings) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The parent resource where Cloud SQL verifies this database instance external sync
+           * settings. Format: projects/{project}/locations/{location}/instances/{instance}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** The parent resource where Cloud SQL verifies this database instance external sync settings. Format:
+         projects/{project}/locations/{location}/instances/{instance}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * The parent resource where Cloud SQL verifies this database instance external sync
+           * settings. Format: projects/{project}/locations/{location}/instances/{instance}
+           */
+          public VerifyExternalSyncSettings setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Cloud SQL instance ID. This does not include the project ID. */
+          @com.google.api.client.util.Key
+          private java.lang.String instance;
+
+          /** Cloud SQL instance ID. This does not include the project ID.
+           */
+          public java.lang.String getInstance() {
+            return instance;
+          }
+
+          /** Cloud SQL instance ID. This does not include the project ID. */
+          public VerifyExternalSyncSettings setInstance(java.lang.String instance) {
+            this.instance = instance;
+            return this;
+          }
+
+          /** Project ID of the project that contains the instance. */
+          @com.google.api.client.util.Key
+          private java.lang.String project;
+
+          /** Project ID of the project that contains the instance.
+           */
+          public java.lang.String getProject() {
+            return project;
+          }
+
+          /** Project ID of the project that contains the instance. */
+          public VerifyExternalSyncSettings setProject(java.lang.String project) {
+            this.project = project;
+            return this;
+          }
+
+          /** External sync mode */
+          @com.google.api.client.util.Key
+          private java.lang.String syncMode;
+
+          /** External sync mode
+           */
+          public java.lang.String getSyncMode() {
+            return syncMode;
+          }
+
+          /** External sync mode */
+          public VerifyExternalSyncSettings setSyncMode(java.lang.String syncMode) {
+            this.syncMode = syncMode;
+            return this;
+          }
+
+          /** Flag to enable verifying connection only */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean verifyConnectionOnly;
+
+          /** Flag to enable verifying connection only
+           */
+          public java.lang.Boolean getVerifyConnectionOnly() {
+            return verifyConnectionOnly;
+          }
+
+          /** Flag to enable verifying connection only */
+          public VerifyExternalSyncSettings setVerifyConnectionOnly(java.lang.Boolean verifyConnectionOnly) {
+            this.verifyConnectionOnly = verifyConnectionOnly;
+            return this;
+          }
+
+          @Override
+          public VerifyExternalSyncSettings set(String parameterName, Object value) {
+            return (VerifyExternalSyncSettings) super.set(parameterName, value);
           }
         }
 

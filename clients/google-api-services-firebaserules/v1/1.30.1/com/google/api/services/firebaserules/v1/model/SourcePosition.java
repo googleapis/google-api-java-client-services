@@ -38,6 +38,20 @@ public final class SourcePosition extends com.google.api.client.json.GenericJson
   private java.lang.Integer column;
 
   /**
+   * Start position relative to the beginning of the file.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer currentOffset;
+
+  /**
+   * End position relative to the beginning of the file.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer endOffset;
+
+  /**
    * Name of the `File`.
    * The value may be {@code null}.
    */
@@ -65,6 +79,40 @@ public final class SourcePosition extends com.google.api.client.json.GenericJson
    */
   public SourcePosition setColumn(java.lang.Integer column) {
     this.column = column;
+    return this;
+  }
+
+  /**
+   * Start position relative to the beginning of the file.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getCurrentOffset() {
+    return currentOffset;
+  }
+
+  /**
+   * Start position relative to the beginning of the file.
+   * @param currentOffset currentOffset or {@code null} for none
+   */
+  public SourcePosition setCurrentOffset(java.lang.Integer currentOffset) {
+    this.currentOffset = currentOffset;
+    return this;
+  }
+
+  /**
+   * End position relative to the beginning of the file.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getEndOffset() {
+    return endOffset;
+  }
+
+  /**
+   * End position relative to the beginning of the file.
+   * @param endOffset endOffset or {@code null} for none
+   */
+  public SourcePosition setEndOffset(java.lang.Integer endOffset) {
+    this.endOffset = endOffset;
     return this;
   }
 

@@ -52,6 +52,13 @@ public final class OnPremisesConfiguration extends com.google.api.client.json.Ge
   private java.lang.String clientKey;
 
   /**
+   * The dump file to create the Cloud SQL replica.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dumpFilePath;
+
+  /**
    * The host and port of the on-premises instance in host:port format
    * The value may be {@code null}.
    */
@@ -64,6 +71,20 @@ public final class OnPremisesConfiguration extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
+
+  /**
+   * The password for connecting to on-premises instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String password;
+
+  /**
+   * The username for connecting to on-premises instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String username;
 
   /**
    * PEM representation of the trusted CA's x509 certificate.
@@ -119,6 +140,23 @@ public final class OnPremisesConfiguration extends com.google.api.client.json.Ge
   }
 
   /**
+   * The dump file to create the Cloud SQL replica.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDumpFilePath() {
+    return dumpFilePath;
+  }
+
+  /**
+   * The dump file to create the Cloud SQL replica.
+   * @param dumpFilePath dumpFilePath or {@code null} for none
+   */
+  public OnPremisesConfiguration setDumpFilePath(java.lang.String dumpFilePath) {
+    this.dumpFilePath = dumpFilePath;
+    return this;
+  }
+
+  /**
    * The host and port of the on-premises instance in host:port format
    * @return value or {@code null} for none
    */
@@ -149,6 +187,40 @@ public final class OnPremisesConfiguration extends com.google.api.client.json.Ge
    */
   public OnPremisesConfiguration setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * The password for connecting to on-premises instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPassword() {
+    return password;
+  }
+
+  /**
+   * The password for connecting to on-premises instance.
+   * @param password password or {@code null} for none
+   */
+  public OnPremisesConfiguration setPassword(java.lang.String password) {
+    this.password = password;
+    return this;
+  }
+
+  /**
+   * The username for connecting to on-premises instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUsername() {
+    return username;
+  }
+
+  /**
+   * The username for connecting to on-premises instance.
+   * @param username username or {@code null} for none
+   */
+  public OnPremisesConfiguration setUsername(java.lang.String username) {
+    this.username = username;
     return this;
   }
 

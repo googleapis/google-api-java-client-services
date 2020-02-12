@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-firebasehosting</artifactId>
-  <version>v1beta1-rev20200127-1.30.8</version>
-  <name>Firebase Hosting API v1beta1-rev20200127-1.30.8</name>
+  <version>v1beta1-rev20200210-1.30.8</version>
+  <name>Firebase Hosting API v1beta1-rev20200210-1.30.8</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

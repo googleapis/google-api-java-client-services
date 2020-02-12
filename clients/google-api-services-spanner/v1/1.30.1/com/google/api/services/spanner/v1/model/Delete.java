@@ -30,8 +30,10 @@ package com.google.api.services.spanner.v1.model;
 public final class Delete extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The primary keys of the rows within table to delete. Delete is idempotent. The
-   * transaction will succeed even if some or all rows do not exist.
+   * Required. The primary keys of the rows within table to delete.  The primary keys must be
+   * specified in the order in which they appear in the `PRIMARY KEY()` clause of the table's
+   * equivalent DDL statement (the DDL statement used to create the table). Delete is idempotent.
+   * The transaction will succeed even if some or all rows do not exist.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,8 +47,10 @@ public final class Delete extends com.google.api.client.json.GenericJson {
   private java.lang.String table;
 
   /**
-   * Required. The primary keys of the rows within table to delete. Delete is idempotent. The
-   * transaction will succeed even if some or all rows do not exist.
+   * Required. The primary keys of the rows within table to delete.  The primary keys must be
+   * specified in the order in which they appear in the `PRIMARY KEY()` clause of the table's
+   * equivalent DDL statement (the DDL statement used to create the table). Delete is idempotent.
+   * The transaction will succeed even if some or all rows do not exist.
    * @return value or {@code null} for none
    */
   public KeySet getKeySet() {
@@ -54,8 +58,10 @@ public final class Delete extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The primary keys of the rows within table to delete. Delete is idempotent. The
-   * transaction will succeed even if some or all rows do not exist.
+   * Required. The primary keys of the rows within table to delete.  The primary keys must be
+   * specified in the order in which they appear in the `PRIMARY KEY()` clause of the table's
+   * equivalent DDL statement (the DDL statement used to create the table). Delete is idempotent.
+   * The transaction will succeed even if some or all rows do not exist.
    * @param keySet keySet or {@code null} for none
    */
   public Delete setKeySet(KeySet keySet) {

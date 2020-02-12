@@ -217,6 +217,18 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
   private Dimension marginTop;
 
   /**
+   * The page number from which to start counting the number of pages for this section. If unset,
+   * page numbering continues from the previous section. If the value is unset in the first
+   * SectionBreak, refer to DocumentStyle's page_number_start.
+   *
+   * When updating this property, setting a concrete value is required. Unsetting this property
+   * results in a 400 bad request error.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer pageNumberStart;
+
+  /**
    * Output only. The type of section.
    * The value may be {@code null}.
    */
@@ -639,6 +651,33 @@ public final class SectionStyle extends com.google.api.client.json.GenericJson {
    */
   public SectionStyle setMarginTop(Dimension marginTop) {
     this.marginTop = marginTop;
+    return this;
+  }
+
+  /**
+   * The page number from which to start counting the number of pages for this section. If unset,
+   * page numbering continues from the previous section. If the value is unset in the first
+   * SectionBreak, refer to DocumentStyle's page_number_start.
+   *
+   * When updating this property, setting a concrete value is required. Unsetting this property
+   * results in a 400 bad request error.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getPageNumberStart() {
+    return pageNumberStart;
+  }
+
+  /**
+   * The page number from which to start counting the number of pages for this section. If unset,
+   * page numbering continues from the previous section. If the value is unset in the first
+   * SectionBreak, refer to DocumentStyle's page_number_start.
+   *
+   * When updating this property, setting a concrete value is required. Unsetting this property
+   * results in a 400 bad request error.
+   * @param pageNumberStart pageNumberStart or {@code null} for none
+   */
+  public SectionStyle setPageNumberStart(java.lang.Integer pageNumberStart) {
+    this.pageNumberStart = pageNumberStart;
     return this;
   }
 

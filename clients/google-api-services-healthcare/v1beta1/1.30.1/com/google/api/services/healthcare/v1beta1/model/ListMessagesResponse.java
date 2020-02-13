@@ -30,7 +30,16 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class ListMessagesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The returned message names. Won't be more values than the value of page_size in the request.
+   * The returned Messages. Won't be more Messages than the value of page_size in the request. See
+   * view for populated fields.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Message> hl7V2Messages;
+
+  /**
+   * Deprecated. Use `hl7_v2_messages` instead. The returned message names. Won't be more values
+   * than the value of page_size in the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +53,27 @@ public final class ListMessagesResponse extends com.google.api.client.json.Gener
   private java.lang.String nextPageToken;
 
   /**
-   * The returned message names. Won't be more values than the value of page_size in the request.
+   * The returned Messages. Won't be more Messages than the value of page_size in the request. See
+   * view for populated fields.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Message> getHl7V2Messages() {
+    return hl7V2Messages;
+  }
+
+  /**
+   * The returned Messages. Won't be more Messages than the value of page_size in the request. See
+   * view for populated fields.
+   * @param hl7V2Messages hl7V2Messages or {@code null} for none
+   */
+  public ListMessagesResponse setHl7V2Messages(java.util.List<Message> hl7V2Messages) {
+    this.hl7V2Messages = hl7V2Messages;
+    return this;
+  }
+
+  /**
+   * Deprecated. Use `hl7_v2_messages` instead. The returned message names. Won't be more values
+   * than the value of page_size in the request.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getMessages() {
@@ -52,7 +81,8 @@ public final class ListMessagesResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * The returned message names. Won't be more values than the value of page_size in the request.
+   * Deprecated. Use `hl7_v2_messages` instead. The returned message names. Won't be more values
+   * than the value of page_size in the request.
    * @param messages messages or {@code null} for none
    */
   public ListMessagesResponse setMessages(java.util.List<java.lang.String> messages) {

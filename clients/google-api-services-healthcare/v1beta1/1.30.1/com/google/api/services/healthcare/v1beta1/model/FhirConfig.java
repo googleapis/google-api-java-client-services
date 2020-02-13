@@ -32,7 +32,8 @@ public final class FhirConfig extends com.google.api.client.json.GenericJson {
   /**
    * Specifies FHIR paths to match and how to transform them. Any field that is not matched by a
    * FieldMetadata is passed through to the output dataset unmodified. All extensions are removed in
-   * the output.
+   * the output. If a field can be matched by more than one FieldMetadata, the first
+   * FieldMetadata.Action is applied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,7 +42,8 @@ public final class FhirConfig extends com.google.api.client.json.GenericJson {
   /**
    * Specifies FHIR paths to match and how to transform them. Any field that is not matched by a
    * FieldMetadata is passed through to the output dataset unmodified. All extensions are removed in
-   * the output.
+   * the output. If a field can be matched by more than one FieldMetadata, the first
+   * FieldMetadata.Action is applied.
    * @return value or {@code null} for none
    */
   public java.util.List<FieldMetadata> getFieldMetadataList() {
@@ -51,7 +53,8 @@ public final class FhirConfig extends com.google.api.client.json.GenericJson {
   /**
    * Specifies FHIR paths to match and how to transform them. Any field that is not matched by a
    * FieldMetadata is passed through to the output dataset unmodified. All extensions are removed in
-   * the output.
+   * the output. If a field can be matched by more than one FieldMetadata, the first
+   * FieldMetadata.Action is applied.
    * @param fieldMetadataList fieldMetadataList or {@code null} for none
    */
   public FhirConfig setFieldMetadataList(java.util.List<FieldMetadata> fieldMetadataList) {

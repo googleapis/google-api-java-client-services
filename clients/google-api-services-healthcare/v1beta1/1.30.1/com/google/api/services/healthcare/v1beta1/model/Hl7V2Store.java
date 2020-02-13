@@ -70,6 +70,19 @@ public final class Hl7V2Store extends com.google.api.client.json.GenericJson {
   private ParserConfig parserConfig;
 
   /**
+   * Determines whether duplicate messages should be rejected. A duplicate message is a message with
+   * the same raw bytes as a message that has already been ingested/created in this HL7v2 store. The
+   * default value is false, meaning that the store accepts the duplicate messages and it also
+   * returns the same ACK message in the IngestMessageResponse as has been returned previously. Note
+   * that only one resource is created in the store. When this field is set to true,
+   * CreateMessage/IngestMessage requests with a duplicate message will be rejected by the store,
+   * and IngestMessageErrorDetail returns a NACK message upon rejection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean rejectDuplicateMessage;
+
+  /**
    * User-supplied key-value pairs used to organize HL7v2 stores.
    *
    * Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
@@ -158,6 +171,35 @@ public final class Hl7V2Store extends com.google.api.client.json.GenericJson {
    */
   public Hl7V2Store setParserConfig(ParserConfig parserConfig) {
     this.parserConfig = parserConfig;
+    return this;
+  }
+
+  /**
+   * Determines whether duplicate messages should be rejected. A duplicate message is a message with
+   * the same raw bytes as a message that has already been ingested/created in this HL7v2 store. The
+   * default value is false, meaning that the store accepts the duplicate messages and it also
+   * returns the same ACK message in the IngestMessageResponse as has been returned previously. Note
+   * that only one resource is created in the store. When this field is set to true,
+   * CreateMessage/IngestMessage requests with a duplicate message will be rejected by the store,
+   * and IngestMessageErrorDetail returns a NACK message upon rejection.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRejectDuplicateMessage() {
+    return rejectDuplicateMessage;
+  }
+
+  /**
+   * Determines whether duplicate messages should be rejected. A duplicate message is a message with
+   * the same raw bytes as a message that has already been ingested/created in this HL7v2 store. The
+   * default value is false, meaning that the store accepts the duplicate messages and it also
+   * returns the same ACK message in the IngestMessageResponse as has been returned previously. Note
+   * that only one resource is created in the store. When this field is set to true,
+   * CreateMessage/IngestMessage requests with a duplicate message will be rejected by the store,
+   * and IngestMessageErrorDetail returns a NACK message upon rejection.
+   * @param rejectDuplicateMessage rejectDuplicateMessage or {@code null} for none
+   */
+  public Hl7V2Store setRejectDuplicateMessage(java.lang.Boolean rejectDuplicateMessage) {
+    this.rejectDuplicateMessage = rejectDuplicateMessage;
     return this;
   }
 

@@ -1,42 +1,18 @@
 {
   "ownerName": "Google",
+  "discoveryVersion": "v1",
+  "version_module": true,
   "resources": {},
   "parameters": {
-    "access_token": {
-      "location": "query",
-      "description": "OAuth access token.",
-      "type": "string"
-    },
-    "key": {
-      "type": "string",
-      "location": "query",
-      "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token."
-    },
-    "upload_protocol": {
-      "location": "query",
-      "description": "Upload protocol for media (e.g. \"raw\", \"multipart\").",
-      "type": "string"
-    },
-    "quotaUser": {
-      "location": "query",
-      "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.",
-      "type": "string"
-    },
-    "prettyPrint": {
-      "description": "Returns response with indentations and line breaks.",
-      "type": "boolean",
-      "default": "true",
-      "location": "query"
-    },
     "fields": {
       "location": "query",
       "description": "Selector specifying which fields to include in a partial response.",
       "type": "string"
     },
     "uploadType": {
+      "type": "string",
       "location": "query",
-      "description": "Legacy upload protocol for media (e.g. \"media\", \"multipart\").",
-      "type": "string"
+      "description": "Legacy upload protocol for media (e.g. \"media\", \"multipart\")."
     },
     "callback": {
       "location": "query",
@@ -44,9 +20,9 @@
       "type": "string"
     },
     "oauth_token": {
-      "type": "string",
       "location": "query",
-      "description": "OAuth 2.0 token for the current user."
+      "description": "OAuth 2.0 token for the current user.",
+      "type": "string"
     },
     "$.xgafv": {
       "type": "string",
@@ -62,6 +38,12 @@
       "description": "V1 error format."
     },
     "alt": {
+      "enum": [
+        "json",
+        "media",
+        "proto"
+      ],
+      "type": "string",
       "enumDescriptions": [
         "Responses with Content-Type of application/json",
         "Media download with context-dependent Content-Type",
@@ -69,38 +51,47 @@
       ],
       "location": "query",
       "description": "Data format for response.",
-      "default": "json",
-      "enum": [
-        "json",
-        "media",
-        "proto"
-      ],
+      "default": "json"
+    },
+    "access_token": {
+      "type": "string",
+      "location": "query",
+      "description": "OAuth access token."
+    },
+    "key": {
+      "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
+      "type": "string",
+      "location": "query"
+    },
+    "upload_protocol": {
+      "location": "query",
+      "description": "Upload protocol for media (e.g. \"raw\", \"multipart\").",
       "type": "string"
+    },
+    "quotaUser": {
+      "type": "string",
+      "location": "query",
+      "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters."
+    },
+    "prettyPrint": {
+      "location": "query",
+      "description": "Returns response with indentations and line breaks.",
+      "type": "boolean",
+      "default": "true"
     }
   },
-  "version": "v1",
-  "baseUrl": "https://toolresults.googleapis.com/",
-  "servicePath": "",
-  "description": "API to publish and access results from developer tools.",
-  "kind": "discovery#restDescription",
-  "basePath": "",
-  "documentationLink": "https://firebase.google.com/docs/test-lab/",
-  "revision": "20200210",
-  "id": "toolresults:v1",
-  "discoveryVersion": "v1",
-  "version_module": true,
   "schemas": {
     "NonSdkApiInsight": {
       "description": "Non-SDK API insights (to address debugging solutions).",
       "type": "object",
       "properties": {
         "matcherId": {
-          "type": "string",
-          "description": "A unique ID, to be used for determining the effectiveness of this\nparticular insight in the context of a matcher. (required)"
+          "description": "A unique ID, to be used for determining the effectiveness of this\nparticular insight in the context of a matcher. (required)",
+          "type": "string"
         },
         "pendingGoogleUpdateInsight": {
-          "$ref": "PendingGoogleUpdateInsight",
-          "description": "An insight indicating that the hidden API usage originates from a\nGoogle-provided library."
+          "description": "An insight indicating that the hidden API usage originates from a\nGoogle-provided library.",
+          "$ref": "PendingGoogleUpdateInsight"
         },
         "upgradeInsight": {
           "$ref": "UpgradeInsight",
@@ -117,10 +108,13 @@
       "id": "NonSdkApiInsight"
     },
     "UIElementTooDeep": {
-      "id": "UIElementTooDeep",
       "description": "A warning that the screen hierarchy is deeper than the recommended threshold.",
       "type": "object",
       "properties": {
+        "screenId": {
+          "description": "The screen id of the element",
+          "type": "string"
+        },
         "depth": {
           "description": "The depth of the screen element",
           "format": "int32",
@@ -129,12 +123,9 @@
         "screenStateId": {
           "description": "The screen state id of the element",
           "type": "string"
-        },
-        "screenId": {
-          "description": "The screen id of the element",
-          "type": "string"
         }
-      }
+      },
+      "id": "UIElementTooDeep"
     },
     "UnspecifiedWarning": {
       "description": "Default unspecified warning.",
@@ -143,6 +134,7 @@
       "id": "UnspecifiedWarning"
     },
     "NonSdkApiUsageViolation": {
+      "description": "Additional details for a non-sdk API usage violation.",
       "type": "object",
       "properties": {
         "uniqueApis": {
@@ -151,72 +143,71 @@
           "type": "integer"
         },
         "apiSignatures": {
-          "description": "Signatures of a subset of those hidden API's.",
           "type": "array",
           "items": {
             "type": "string"
-          }
+          },
+          "description": "Signatures of a subset of those hidden API's."
         }
       },
-      "id": "NonSdkApiUsageViolation",
-      "description": "Additional details for a non-sdk API usage violation."
+      "id": "NonSdkApiUsageViolation"
     },
     "UpgradeInsight": {
+      "id": "UpgradeInsight",
       "description": "This insight is a recommendation to upgrade a given library to the specified\nversion, in order to avoid dependencies on non-SDK APIs.",
       "type": "object",
       "properties": {
+        "packageName": {
+          "type": "string",
+          "description": "The name of the package to be upgraded."
+        },
         "upgradeToVersion": {
           "description": "The suggested version to upgrade to.\nOptional: In case we are not sure which version solves this problem",
-          "type": "string"
-        },
-        "packageName": {
-          "description": "The name of the package to be upgraded.",
-          "type": "string"
-        }
-      },
-      "id": "UpgradeInsight"
-    },
-    "StartActivityNotFound": {
-      "id": "StartActivityNotFound",
-      "description": "User provided intent failed to resolve to an activity.",
-      "type": "object",
-      "properties": {
-        "action": {
-          "type": "string"
-        },
-        "uri": {
           "type": "string"
         }
       }
     },
     "AvailableDeepLinks": {
+      "description": "A suggestion to use deep links for a Robo run.",
       "type": "object",
       "properties": {},
-      "id": "AvailableDeepLinks",
-      "description": "A suggestion to use deep links for a Robo run."
+      "id": "AvailableDeepLinks"
     },
-    "InAppPurchasesFound": {
+    "StartActivityNotFound": {
+      "description": "User provided intent failed to resolve to an activity.",
       "type": "object",
       "properties": {
+        "uri": {
+          "type": "string"
+        },
+        "action": {
+          "type": "string"
+        }
+      },
+      "id": "StartActivityNotFound"
+    },
+    "InAppPurchasesFound": {
+      "description": "Additional details of in-app purchases encountered during the crawl.",
+      "type": "object",
+      "properties": {
+        "inAppPurchasesFlowsStarted": {
+          "description": "The total number of in-app purchases flows started.",
+          "format": "int32",
+          "type": "integer"
+        },
         "inAppPurchasesFlowsExplored": {
           "description": "The total number of in-app purchases flows explored: how many times the\nrobo tries to buy a SKU.",
           "format": "int32",
           "type": "integer"
-        },
-        "inAppPurchasesFlowsStarted": {
-          "type": "integer",
-          "description": "The total number of in-app purchases flows started.",
-          "format": "int32"
         }
       },
-      "id": "InAppPurchasesFound",
-      "description": "Additional details of in-app purchases encountered during the crawl."
+      "id": "InAppPurchasesFound"
     },
     "FailedToInstall": {
-      "description": "Failed to install the APK.",
       "type": "object",
       "properties": {},
-      "id": "FailedToInstall"
+      "id": "FailedToInstall",
+      "description": "Failed to install the APK."
     },
     "RoboScriptExecution": {
       "description": "Execution stats for a user-provided Robo script.",
@@ -236,15 +227,26 @@
       "id": "RoboScriptExecution"
     },
     "ANR": {
-      "description": "Additional details for an ANR crash.",
       "type": "object",
       "properties": {
         "stackTrace": {
-          "description": "The stack trace of the ANR crash.\nOptional.",
-          "$ref": "StackTrace"
+          "$ref": "StackTrace",
+          "description": "The stack trace of the ANR crash.\nOptional."
         }
       },
-      "id": "ANR"
+      "id": "ANR",
+      "description": "Additional details for an ANR crash."
+    },
+    "StackTrace": {
+      "type": "object",
+      "properties": {
+        "exception": {
+          "description": "The stack trace message.\n\nRequired",
+          "type": "string"
+        }
+      },
+      "id": "StackTrace",
+      "description": "A stacktrace."
     },
     "UsedRoboIgnoreDirective": {
       "description": "Additional details of a used Robo directive with an ignore action.\nNote: This is a different scenario than unused directive.",
@@ -257,34 +259,23 @@
       },
       "id": "UsedRoboIgnoreDirective"
     },
-    "StackTrace": {
-      "id": "StackTrace",
-      "description": "A stacktrace.",
-      "type": "object",
-      "properties": {
-        "exception": {
-          "description": "The stack trace message.\n\nRequired",
-          "type": "string"
-        }
-      }
-    },
     "OverlappingUIElements": {
+      "id": "OverlappingUIElements",
+      "description": "A warning that Robo encountered a screen that has overlapping clickable\nelements; this may indicate a potential UI issue.",
       "type": "object",
       "properties": {
-        "screenId": {
-          "type": "string",
-          "description": "The screen id of the elements"
-        },
         "resourceName": {
+          "description": "Resource names of the overlapping screen elements",
           "type": "array",
           "items": {
             "type": "string"
-          },
-          "description": "Resource names of the overlapping screen elements"
+          }
+        },
+        "screenId": {
+          "description": "The screen id of the elements",
+          "type": "string"
         }
-      },
-      "id": "OverlappingUIElements",
-      "description": "A warning that Robo encountered a screen that has overlapping clickable\nelements; this may indicate a potential UI issue."
+      }
     },
     "EncounteredNonAndroidUiWidgetScreen": {
       "id": "EncounteredNonAndroidUiWidgetScreen",
@@ -305,19 +296,7 @@
         }
       }
     },
-    "BlankScreen": {
-      "id": "BlankScreen",
-      "description": "A warning that Robo encountered a screen that was mostly blank; this may\nindicate a problem with the app.",
-      "type": "object",
-      "properties": {
-        "screenId": {
-          "type": "string",
-          "description": "The screen id of the element"
-        }
-      }
-    },
     "EncounteredLoginScreen": {
-      "id": "EncounteredLoginScreen",
       "description": "Additional details about encountered login screens.",
       "type": "object",
       "properties": {
@@ -333,9 +312,22 @@
           "format": "int32",
           "type": "integer"
         }
-      }
+      },
+      "id": "EncounteredLoginScreen"
+    },
+    "BlankScreen": {
+      "description": "A warning that Robo encountered a screen that was mostly blank; this may\nindicate a problem with the app.",
+      "type": "object",
+      "properties": {
+        "screenId": {
+          "description": "The screen id of the element",
+          "type": "string"
+        }
+      },
+      "id": "BlankScreen"
     },
     "PendingGoogleUpdateInsight": {
+      "description": "This insight indicates that the hidden API usage originates from a\nGoogle-provided library. Users need not take any action.",
       "type": "object",
       "properties": {
         "nameOfGoogleLibrary": {
@@ -343,11 +335,9 @@
           "type": "string"
         }
       },
-      "id": "PendingGoogleUpdateInsight",
-      "description": "This insight indicates that the hidden API usage originates from a\nGoogle-provided library. Users need not take any action."
+      "id": "PendingGoogleUpdateInsight"
     },
     "IosAppCrashed": {
-      "id": "IosAppCrashed",
       "description": "Additional details for an iOS app crash.",
       "type": "object",
       "properties": {
@@ -355,16 +345,17 @@
           "$ref": "StackTrace",
           "description": "The stack trace, if one is available.\nOptional."
         }
-      }
+      },
+      "id": "IosAppCrashed"
     },
     "NonSdkApiUsageViolationReport": {
       "description": "Contains a summary and examples of non-sdk API usage violations.",
       "type": "object",
       "properties": {
         "targetSdkVersion": {
+          "type": "integer",
           "description": "Specifies the API Level on which the application is designed to run.",
-          "format": "int32",
-          "type": "integer"
+          "format": "int32"
         },
         "exampleApis": {
           "description": "Examples of the detected API usages.",
@@ -379,29 +370,41 @@
           "type": "integer"
         },
         "minSdkVersion": {
+          "type": "integer",
           "description": "Minimum API level required for the application to run.",
-          "format": "int32",
-          "type": "integer"
+          "format": "int32"
         }
       },
       "id": "NonSdkApiUsageViolationReport"
     },
     "NativeCrash": {
-      "id": "NativeCrash",
       "description": "Additional details for a native crash.",
       "type": "object",
       "properties": {
         "stackTrace": {
-          "$ref": "StackTrace",
-          "description": "The stack trace of the native crash.\nOptional."
+          "description": "The stack trace of the native crash.\nOptional.",
+          "$ref": "StackTrace"
         }
-      }
+      },
+      "id": "NativeCrash"
     },
     "PerformedGoogleLogin": {
-      "description": "A notification that Robo signed in with Google.",
       "type": "object",
       "properties": {},
-      "id": "PerformedGoogleLogin"
+      "id": "PerformedGoogleLogin",
+      "description": "A notification that Robo signed in with Google."
+    },
+    "PerformedMonkeyActions": {
+      "description": "A notification that Robo performed some monkey actions.",
+      "type": "object",
+      "properties": {
+        "totalActions": {
+          "description": "The total number of monkey actions performed during the crawl.",
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "id": "PerformedMonkeyActions"
     },
     "FatalException": {
       "type": "object",
@@ -414,28 +417,16 @@
       "id": "FatalException",
       "description": "Additional details for a fatal exception."
     },
-    "PerformedMonkeyActions": {
-      "type": "object",
-      "properties": {
-        "totalActions": {
-          "description": "The total number of monkey actions performed during the crawl.",
-          "format": "int32",
-          "type": "integer"
-        }
-      },
-      "id": "PerformedMonkeyActions",
-      "description": "A notification that Robo performed some monkey actions."
-    },
     "UnusedRoboDirective": {
+      "id": "UnusedRoboDirective",
+      "description": "Additional details of an unused robodirective.",
       "type": "object",
       "properties": {
         "resourceName": {
-          "type": "string",
-          "description": "The name of the resource that was unused."
+          "description": "The name of the resource that was unused.",
+          "type": "string"
         }
-      },
-      "id": "UnusedRoboDirective",
-      "description": "Additional details of an unused robodirective."
+      }
     },
     "LauncherActivityNotFound": {
       "description": "Failed to find the launcher activity of an app.",
@@ -444,20 +435,19 @@
       "id": "LauncherActivityNotFound"
     },
     "NonSdkApi": {
+      "description": "A non-sdk API and examples of it being called along with other metadata\nSee\nhttps://developer.android.com/distribute/best-practices/develop/restrictions-non-sdk-interfaces",
       "type": "object",
       "properties": {
-        "exampleStackTraces": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "Example stack traces of this API being called."
-        },
-        "apiSignature": {
-          "type": "string",
-          "description": "The signature of the Non-SDK API"
-        },
         "list": {
+          "enum": [
+            "NONE",
+            "WHITE",
+            "BLACK",
+            "GREY",
+            "GREY_MAX_O",
+            "GREY_MAX_P",
+            "GREY_MAX_Q"
+          ],
           "description": "Which list this API appears on",
           "type": "string",
           "enumDescriptions": [
@@ -468,43 +458,33 @@
             "",
             "",
             ""
-          ],
-          "enum": [
-            "NONE",
-            "WHITE",
-            "BLACK",
-            "GREY",
-            "GREY_MAX_O",
-            "GREY_MAX_P",
-            "GREY_MAX_Q"
           ]
         },
         "insights": {
-          "description": "Optional debugging insights for non-SDK API violations.",
           "type": "array",
           "items": {
             "$ref": "NonSdkApiInsight"
-          }
+          },
+          "description": "Optional debugging insights for non-SDK API violations."
         },
         "invocationCount": {
+          "type": "integer",
           "description": "The total number of times this API was observed to have been called.",
-          "format": "int32",
-          "type": "integer"
-        }
-      },
-      "id": "NonSdkApi",
-      "description": "A non-sdk API and examples of it being called along with other metadata\nSee\nhttps://developer.android.com/distribute/best-practices/develop/restrictions-non-sdk-interfaces"
-    },
-    "CrashDialogError": {
-      "description": "Crash dialog was detected during the test execution",
-      "type": "object",
-      "properties": {
-        "crashPackage": {
+          "format": "int32"
+        },
+        "exampleStackTraces": {
+          "description": "Example stack traces of this API being called.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "apiSignature": {
           "type": "string",
-          "description": "The name of the package that caused the dialog."
+          "description": "The signature of the Non-SDK API"
         }
       },
-      "id": "CrashDialogError"
+      "id": "NonSdkApi"
     },
     "UsedRoboDirective": {
       "description": "Additional details of a used Robo directive.",
@@ -517,23 +497,42 @@
       },
       "id": "UsedRoboDirective"
     },
-    "InsufficientCoverage": {
-      "id": "InsufficientCoverage",
-      "description": "A warning that Robo did not crawl potentially important parts of the app.",
+    "CrashDialogError": {
+      "description": "Crash dialog was detected during the test execution",
       "type": "object",
-      "properties": {}
+      "properties": {
+        "crashPackage": {
+          "type": "string",
+          "description": "The name of the package that caused the dialog."
+        }
+      },
+      "id": "CrashDialogError"
+    },
+    "InsufficientCoverage": {
+      "type": "object",
+      "properties": {},
+      "id": "InsufficientCoverage",
+      "description": "A warning that Robo did not crawl potentially important parts of the app."
     }
   },
   "protocol": "rest",
   "icons": {
-    "x16": "http://www.google.com/images/icons/product/search-16.gif",
-    "x32": "http://www.google.com/images/icons/product/search-32.gif"
+    "x32": "http://www.google.com/images/icons/product/search-32.gif",
+    "x16": "http://www.google.com/images/icons/product/search-16.gif"
   },
+  "version": "v1",
+  "baseUrl": "https://toolresults.googleapis.com/",
   "canonicalName": "Tool Results",
+  "kind": "discovery#restDescription",
+  "description": "API to publish and access results from developer tools.",
+  "servicePath": "",
   "rootUrl": "https://toolresults.googleapis.com/",
+  "basePath": "",
   "ownerDomain": "google.com",
   "name": "toolresults",
-  "mtlsRootUrl": "https://toolresults.mtls.googleapis.com/",
   "batchPath": "batch",
+  "revision": "20200212",
+  "documentationLink": "https://firebase.google.com/docs/test-lab/",
+  "id": "toolresults:v1",
   "title": "Cloud Tool Results API"
 }

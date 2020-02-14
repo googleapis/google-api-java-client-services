@@ -44,8 +44,9 @@ public final class Constraints extends com.google.api.client.json.GenericJson {
   private java.lang.String language;
 
   /**
-   * Sets the maximum number of entries that the client is willing to have in the local database.
-   * This should be a power of 2 between 2**10 and 2**20. If zero, no database size limit is set.
+   * Sets the maximum number of entries that the client is willing to have in the local database for
+   * the specified list. This should be a power of 2 between 2**10 and 2**20. If zero, no database
+   * size limit is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,8 +111,9 @@ public final class Constraints extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Sets the maximum number of entries that the client is willing to have in the local database.
-   * This should be a power of 2 between 2**10 and 2**20. If zero, no database size limit is set.
+   * Sets the maximum number of entries that the client is willing to have in the local database for
+   * the specified list. This should be a power of 2 between 2**10 and 2**20. If zero, no database
+   * size limit is set.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxDatabaseEntries() {
@@ -119,8 +121,9 @@ public final class Constraints extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Sets the maximum number of entries that the client is willing to have in the local database.
-   * This should be a power of 2 between 2**10 and 2**20. If zero, no database size limit is set.
+   * Sets the maximum number of entries that the client is willing to have in the local database for
+   * the specified list. This should be a power of 2 between 2**10 and 2**20. If zero, no database
+   * size limit is set.
    * @param maxDatabaseEntries maxDatabaseEntries or {@code null} for none
    */
   public Constraints setMaxDatabaseEntries(java.lang.Integer maxDatabaseEntries) {

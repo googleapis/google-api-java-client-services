@@ -17,7 +17,7 @@
 package com.google.api.services.monitoring.v3.model;
 
 /**
- * Istio service scoped to a single Kubernetes cluster. Learn more at http://istio.io.
+ * Istio service scoped to an Istio mesh
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Stackdriver Monitoring API. For a detailed
@@ -28,23 +28,15 @@ package com.google.api.services.monitoring.v3.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ClusterIstio extends com.google.api.client.json.GenericJson {
+public final class MeshIstio extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the Kubernetes cluster in which this Istio service is defined. Corresponds to the
-   * cluster_name resource label in k8s_cluster resources.
+   * Identifier for the mesh in which this Istio service is defined. Corresponds to the mesh_uid
+   * metric label in Istio metrics.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String clusterName;
-
-  /**
-   * The location of the Kubernetes cluster in which this Istio service is defined. Corresponds to
-   * the location resource label in k8s_cluster resources.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String location;
+  private java.lang.String meshUid;
 
   /**
    * The name of the Istio service underlying this service. Corresponds to the
@@ -63,40 +55,21 @@ public final class ClusterIstio extends com.google.api.client.json.GenericJson {
   private java.lang.String serviceNamespace;
 
   /**
-   * The name of the Kubernetes cluster in which this Istio service is defined. Corresponds to the
-   * cluster_name resource label in k8s_cluster resources.
+   * Identifier for the mesh in which this Istio service is defined. Corresponds to the mesh_uid
+   * metric label in Istio metrics.
    * @return value or {@code null} for none
    */
-  public java.lang.String getClusterName() {
-    return clusterName;
+  public java.lang.String getMeshUid() {
+    return meshUid;
   }
 
   /**
-   * The name of the Kubernetes cluster in which this Istio service is defined. Corresponds to the
-   * cluster_name resource label in k8s_cluster resources.
-   * @param clusterName clusterName or {@code null} for none
+   * Identifier for the mesh in which this Istio service is defined. Corresponds to the mesh_uid
+   * metric label in Istio metrics.
+   * @param meshUid meshUid or {@code null} for none
    */
-  public ClusterIstio setClusterName(java.lang.String clusterName) {
-    this.clusterName = clusterName;
-    return this;
-  }
-
-  /**
-   * The location of the Kubernetes cluster in which this Istio service is defined. Corresponds to
-   * the location resource label in k8s_cluster resources.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getLocation() {
-    return location;
-  }
-
-  /**
-   * The location of the Kubernetes cluster in which this Istio service is defined. Corresponds to
-   * the location resource label in k8s_cluster resources.
-   * @param location location or {@code null} for none
-   */
-  public ClusterIstio setLocation(java.lang.String location) {
-    this.location = location;
+  public MeshIstio setMeshUid(java.lang.String meshUid) {
+    this.meshUid = meshUid;
     return this;
   }
 
@@ -114,7 +87,7 @@ public final class ClusterIstio extends com.google.api.client.json.GenericJson {
    * destination_service_name metric label in Istio metrics.
    * @param serviceName serviceName or {@code null} for none
    */
-  public ClusterIstio setServiceName(java.lang.String serviceName) {
+  public MeshIstio setServiceName(java.lang.String serviceName) {
     this.serviceName = serviceName;
     return this;
   }
@@ -133,19 +106,19 @@ public final class ClusterIstio extends com.google.api.client.json.GenericJson {
    * destination_service_namespace metric label in Istio metrics.
    * @param serviceNamespace serviceNamespace or {@code null} for none
    */
-  public ClusterIstio setServiceNamespace(java.lang.String serviceNamespace) {
+  public MeshIstio setServiceNamespace(java.lang.String serviceNamespace) {
     this.serviceNamespace = serviceNamespace;
     return this;
   }
 
   @Override
-  public ClusterIstio set(String fieldName, Object value) {
-    return (ClusterIstio) super.set(fieldName, value);
+  public MeshIstio set(String fieldName, Object value) {
+    return (MeshIstio) super.set(fieldName, value);
   }
 
   @Override
-  public ClusterIstio clone() {
-    return (ClusterIstio) super.clone();
+  public MeshIstio clone() {
+    return (MeshIstio) super.clone();
   }
 
 }

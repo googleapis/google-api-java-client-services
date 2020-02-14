@@ -72,9 +72,9 @@ public final class NotificationChannel extends com.google.api.client.json.Generi
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * The full REST resource name for this channel. The syntax is:
-   * projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID] The [CHANNEL_ID] is automatically
-   * assigned by the server on creation.
+   * The full REST resource name for this channel. The format is:
+   * projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID] The [CHANNEL_ID] is
+   * automatically assigned by the server on creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -204,9 +204,9 @@ public final class NotificationChannel extends com.google.api.client.json.Generi
   }
 
   /**
-   * The full REST resource name for this channel. The syntax is:
-   * projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID] The [CHANNEL_ID] is automatically
-   * assigned by the server on creation.
+   * The full REST resource name for this channel. The format is:
+   * projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID] The [CHANNEL_ID] is
+   * automatically assigned by the server on creation.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -214,9 +214,9 @@ public final class NotificationChannel extends com.google.api.client.json.Generi
   }
 
   /**
-   * The full REST resource name for this channel. The syntax is:
-   * projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID] The [CHANNEL_ID] is automatically
-   * assigned by the server on creation.
+   * The full REST resource name for this channel. The format is:
+   * projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID] The [CHANNEL_ID] is
+   * automatically assigned by the server on creation.
    * @param name name or {@code null} for none
    */
   public NotificationChannel setName(java.lang.String name) {

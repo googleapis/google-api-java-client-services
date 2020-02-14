@@ -68,19 +68,19 @@ public final class Group extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean isCluster;
 
   /**
-   * Output only. The name of this group. The format is
-   * "projects/{project_id_or_number}/groups/{group_id}". When creating a group, this field is
-   * ignored and a new name is created consisting of the project specified in the call to
-   * CreateGroup and a unique {group_id} that is generated automatically.
+   * Output only. The name of this group. The format is:
+   * projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID] When creating a group, this field is ignored
+   * and a new name is created consisting of the project specified in the call to CreateGroup and a
+   * unique [GROUP_ID] that is generated automatically.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The name of the group's parent, if it has one. The format is
-   * "projects/{project_id_or_number}/groups/{group_id}". For groups with no parent, parentName is
-   * the empty string, "".
+   * The name of the group's parent, if it has one. The format is:
+   * projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID] For groups with no parent, parent_name is the
+   * empty string, "".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -140,10 +140,10 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The name of this group. The format is
-   * "projects/{project_id_or_number}/groups/{group_id}". When creating a group, this field is
-   * ignored and a new name is created consisting of the project specified in the call to
-   * CreateGroup and a unique {group_id} that is generated automatically.
+   * Output only. The name of this group. The format is:
+   * projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID] When creating a group, this field is ignored
+   * and a new name is created consisting of the project specified in the call to CreateGroup and a
+   * unique [GROUP_ID] that is generated automatically.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -151,10 +151,10 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The name of this group. The format is
-   * "projects/{project_id_or_number}/groups/{group_id}". When creating a group, this field is
-   * ignored and a new name is created consisting of the project specified in the call to
-   * CreateGroup and a unique {group_id} that is generated automatically.
+   * Output only. The name of this group. The format is:
+   * projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID] When creating a group, this field is ignored
+   * and a new name is created consisting of the project specified in the call to CreateGroup and a
+   * unique [GROUP_ID] that is generated automatically.
    * @param name name or {@code null} for none
    */
   public Group setName(java.lang.String name) {
@@ -163,9 +163,9 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the group's parent, if it has one. The format is
-   * "projects/{project_id_or_number}/groups/{group_id}". For groups with no parent, parentName is
-   * the empty string, "".
+   * The name of the group's parent, if it has one. The format is:
+   * projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID] For groups with no parent, parent_name is the
+   * empty string, "".
    * @return value or {@code null} for none
    */
   public java.lang.String getParentName() {
@@ -173,9 +173,9 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the group's parent, if it has one. The format is
-   * "projects/{project_id_or_number}/groups/{group_id}". For groups with no parent, parentName is
-   * the empty string, "".
+   * The name of the group's parent, if it has one. The format is:
+   * projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID] For groups with no parent, parent_name is the
+   * empty string, "".
    * @param parentName parentName or {@code null} for none
    */
   public Group setParentName(java.lang.String parentName) {

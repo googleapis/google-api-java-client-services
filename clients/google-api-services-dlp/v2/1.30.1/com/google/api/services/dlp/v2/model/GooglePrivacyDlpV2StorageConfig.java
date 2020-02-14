@@ -31,21 +31,21 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2StorageConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * BigQuery options specification.
+   * BigQuery options.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2BigQueryOptions bigQueryOptions;
 
   /**
-   * Google Cloud Storage options specification.
+   * Google Cloud Storage options.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2CloudStorageOptions cloudStorageOptions;
 
   /**
-   * Google Cloud Datastore options specification.
+   * Google Cloud Datastore options.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class GooglePrivacyDlpV2StorageConfig extends com.google.api.client
   private GooglePrivacyDlpV2TimespanConfig timespanConfig;
 
   /**
-   * BigQuery options specification.
+   * BigQuery options.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2BigQueryOptions getBigQueryOptions() {
@@ -66,7 +66,7 @@ public final class GooglePrivacyDlpV2StorageConfig extends com.google.api.client
   }
 
   /**
-   * BigQuery options specification.
+   * BigQuery options.
    * @param bigQueryOptions bigQueryOptions or {@code null} for none
    */
   public GooglePrivacyDlpV2StorageConfig setBigQueryOptions(GooglePrivacyDlpV2BigQueryOptions bigQueryOptions) {
@@ -75,7 +75,7 @@ public final class GooglePrivacyDlpV2StorageConfig extends com.google.api.client
   }
 
   /**
-   * Google Cloud Storage options specification.
+   * Google Cloud Storage options.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2CloudStorageOptions getCloudStorageOptions() {
@@ -83,7 +83,7 @@ public final class GooglePrivacyDlpV2StorageConfig extends com.google.api.client
   }
 
   /**
-   * Google Cloud Storage options specification.
+   * Google Cloud Storage options.
    * @param cloudStorageOptions cloudStorageOptions or {@code null} for none
    */
   public GooglePrivacyDlpV2StorageConfig setCloudStorageOptions(GooglePrivacyDlpV2CloudStorageOptions cloudStorageOptions) {
@@ -92,7 +92,7 @@ public final class GooglePrivacyDlpV2StorageConfig extends com.google.api.client
   }
 
   /**
-   * Google Cloud Datastore options specification.
+   * Google Cloud Datastore options.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2DatastoreOptions getDatastoreOptions() {
@@ -100,7 +100,7 @@ public final class GooglePrivacyDlpV2StorageConfig extends com.google.api.client
   }
 
   /**
-   * Google Cloud Datastore options specification.
+   * Google Cloud Datastore options.
    * @param datastoreOptions datastoreOptions or {@code null} for none
    */
   public GooglePrivacyDlpV2StorageConfig setDatastoreOptions(GooglePrivacyDlpV2DatastoreOptions datastoreOptions) {

@@ -563,7 +563,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
     }
     /**
-     * Lists the `Group`s within a customer or namespace.
+     * Lists the `Group`s under a customer or namespace.
      *
      * Create a request for the method "groups.list".
      *
@@ -583,7 +583,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       private static final String REST_PATH = "v1beta1/groups";
 
       /**
-       * Lists the `Group`s within a customer or namespace.
+       * Lists the `Group`s under a customer or namespace.
        *
        * Create a request for the method "groups.list".
        *
@@ -936,8 +936,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * If not specified, the `EntityKey` represents a Google-managed entity such as a Google user
        * or a Google Group.
        *
-       * If specified, the `EntityKey` represents an external-identity-mapped group created through
-       * Admin Console. Must be of the form `identitysources/{identity_source_id}.
+       * If specified, the `EntityKey` represents an external-identity-mapped group. The namespace
+       * must correspond to an identity source created in Admin Console. Must be of the form
+       * `identitysources/{identity_source_id}.
        */
       @com.google.api.client.util.Key("groupKey.namespace")
       private java.lang.String groupKeyNamespace;
@@ -947,8 +948,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
      If not specified, the `EntityKey` represents a Google-managed entity such as a Google user or a
      Google Group.
 
-     If specified, the `EntityKey` represents an external-identity-mapped group created through Admin
-     Console. Must be of the form `identitysources/{identity_source_id}.
+     If specified, the `EntityKey` represents an external-identity-mapped group. The namespace must
+     correspond to an identity source created in Admin Console. Must be of the form
+     `identitysources/{identity_source_id}.
        */
       public java.lang.String getGroupKeyNamespace() {
         return groupKeyNamespace;
@@ -960,8 +962,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * If not specified, the `EntityKey` represents a Google-managed entity such as a Google user
        * or a Google Group.
        *
-       * If specified, the `EntityKey` represents an external-identity-mapped group created through
-       * Admin Console. Must be of the form `identitysources/{identity_source_id}.
+       * If specified, the `EntityKey` represents an external-identity-mapped group. The namespace
+       * must correspond to an identity source created in Admin Console. Must be of the form
+       * `identitysources/{identity_source_id}.
        */
       public Lookup setGroupKeyNamespace(java.lang.String groupKeyNamespace) {
         this.groupKeyNamespace = groupKeyNamespace;
@@ -2296,8 +2299,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * If not specified, the `EntityKey` represents a Google-managed entity such as a Google
          * user or a Google Group.
          *
-         * If specified, the `EntityKey` represents an external-identity-mapped group created
-         * through Admin Console. Must be of the form `identitysources/{identity_source_id}.
+         * If specified, the `EntityKey` represents an external-identity-mapped group. The namespace
+         * must correspond to an identity source created in Admin Console. Must be of the form
+         * `identitysources/{identity_source_id}.
          */
         @com.google.api.client.util.Key("memberKey.namespace")
         private java.lang.String memberKeyNamespace;
@@ -2307,8 +2311,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        If not specified, the `EntityKey` represents a Google-managed entity such as a Google user or a
        Google Group.
 
-       If specified, the `EntityKey` represents an external-identity-mapped group created through Admin
-       Console. Must be of the form `identitysources/{identity_source_id}.
+       If specified, the `EntityKey` represents an external-identity-mapped group. The namespace must
+       correspond to an identity source created in Admin Console. Must be of the form
+       `identitysources/{identity_source_id}.
          */
         public java.lang.String getMemberKeyNamespace() {
           return memberKeyNamespace;
@@ -2320,8 +2325,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * If not specified, the `EntityKey` represents a Google-managed entity such as a Google
          * user or a Google Group.
          *
-         * If specified, the `EntityKey` represents an external-identity-mapped group created
-         * through Admin Console. Must be of the form `identitysources/{identity_source_id}.
+         * If specified, the `EntityKey` represents an external-identity-mapped group. The namespace
+         * must correspond to an identity source created in Admin Console. Must be of the form
+         * `identitysources/{identity_source_id}.
          */
         public Lookup setMemberKeyNamespace(java.lang.String memberKeyNamespace) {
           this.memberKeyNamespace = memberKeyNamespace;

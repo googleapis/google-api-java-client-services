@@ -107,8 +107,7 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
   /**
    * The list of HTTP route rules. Use this list instead of pathRules when advanced route matching
    * and routing actions are desired. routeRules are evaluated in order of priority, from the lowest
-   * to highest number. Within a given pathMatcher, only one of pathRules or routeRules must be set.
-   * routeRules are not supported in UrlMaps intended for External Load balancers.
+   * to highest number. Within a given pathMatcher, you can set only one of pathRules or routeRules.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -292,8 +291,7 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
   /**
    * The list of HTTP route rules. Use this list instead of pathRules when advanced route matching
    * and routing actions are desired. routeRules are evaluated in order of priority, from the lowest
-   * to highest number. Within a given pathMatcher, only one of pathRules or routeRules must be set.
-   * routeRules are not supported in UrlMaps intended for External Load balancers.
+   * to highest number. Within a given pathMatcher, you can set only one of pathRules or routeRules.
    * @return value or {@code null} for none
    */
   public java.util.List<HttpRouteRule> getRouteRules() {
@@ -303,8 +301,7 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
   /**
    * The list of HTTP route rules. Use this list instead of pathRules when advanced route matching
    * and routing actions are desired. routeRules are evaluated in order of priority, from the lowest
-   * to highest number. Within a given pathMatcher, only one of pathRules or routeRules must be set.
-   * routeRules are not supported in UrlMaps intended for External Load balancers.
+   * to highest number. Within a given pathMatcher, you can set only one of pathRules or routeRules.
    * @param routeRules routeRules or {@code null} for none
    */
   public PathMatcher setRouteRules(java.util.List<HttpRouteRule> routeRules) {

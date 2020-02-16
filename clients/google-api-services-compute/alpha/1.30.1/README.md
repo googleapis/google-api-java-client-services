@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-compute</artifactId>
-      <version>alpha-rev20200106-1.30.8</version>
+      <version>alpha-rev20200114-1.30.8</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-compute:alpha-rev20200106-1.30.8'
+  compile 'com.google.apis:google-api-services-compute:alpha-rev20200114-1.30.8'
 }
 ```
 

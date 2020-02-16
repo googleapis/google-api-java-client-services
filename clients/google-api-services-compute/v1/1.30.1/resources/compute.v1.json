@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/3FZRKSfbBjRvlDtywlwqTRdFKKQ\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/MBOawpfIcpuSaIb9HvURGZunmPs\"",
  "discoveryVersion": "v1",
  "id": "compute:v1",
  "name": "compute",
  "version": "v1",
- "revision": "20200104",
+ "revision": "20200114",
  "title": "Compute Engine API",
  "description": "Creates and runs virtual machines on Google Cloud Platform.",
  "ownerDomain": "google.com",
@@ -6540,11 +6540,11 @@
     },
     "rangeMatch": {
      "$ref": "Int64RangeMatch",
-     "description": "The header value must be an integer and its value must be in the range specified in rangeMatch. If the header does not contain an integer, number or is empty, the match fails.\nFor example for a range [-5, 0]  \n- -3 will match. \n- 0 will not match. \n- 0.25 will not match. \n- -3someString will not match.  \nOnly one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set."
+     "description": "The header value must be an integer and its value must be in the range specified in rangeMatch. If the header does not contain an integer, number or is empty, the match fails.\nFor example for a range [-5, 0]  \n- -3 will match. \n- 0 will not match. \n- 0.25 will not match. \n- -3someString will not match.  \nOnly one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.\nNote that rangeMatch is not supported for Loadbalancers that have their loadBalancingScheme set to EXTERNAL."
     },
     "regexMatch": {
      "type": "string",
-     "description": "The value of the header must match the regualar expression specified in regexMatch. For regular expression grammar, please see:  en.cppreference.com/w/cpp/regex/ecmascript \nFor matching against a port specified in the HTTP request, use a headerMatch with headerName set to PORT and a regular expression that satisfies the RFC2616 Host header's port specifier.\nOnly one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set."
+     "description": "The value of the header must match the regular expression specified in regexMatch. For regular expression grammar, please see:  en.cppreference.com/w/cpp/regex/ecmascript \nFor matching against a port specified in the HTTP request, use a headerMatch with headerName set to PORT and a regular expression that satisfies the RFC2616 Host header's port specifier.\nOnly one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.\nNote that regexMatch only applies to Loadbalancers that have their loadBalancingScheme set to INTERNAL_SELF_MANAGED."
     },
     "suffixMatch": {
      "type": "string",
@@ -6769,7 +6769,7 @@
     },
     "regexMatch": {
      "type": "string",
-     "description": "The queryParameterMatch matches if the value of the parameter matches the regular expression specified by regexMatch. For the regular expression grammar, please see en.cppreference.com/w/cpp/regex/ecmascript \nOnly one of presentMatch, exactMatch or regexMatch must be set."
+     "description": "The queryParameterMatch matches if the value of the parameter matches the regular expression specified by regexMatch. For the regular expression grammar, please see en.cppreference.com/w/cpp/regex/ecmascript \nOnly one of presentMatch, exactMatch or regexMatch must be set.\nNote that regexMatch only applies when the loadBalancingScheme is set to INTERNAL_SELF_MANAGED."
     }
    }
   },
@@ -6956,7 +6956,7 @@
     },
     "regexMatch": {
      "type": "string",
-     "description": "For satisfying the matchRule condition, the path of the request must satisfy the regular expression specified in regexMatch after removing any query parameters and anchor supplied with the original URL. For regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript \nOnly one of prefixMatch, fullPathMatch or regexMatch must be specified."
+     "description": "For satisfying the matchRule condition, the path of the request must satisfy the regular expression specified in regexMatch after removing any query parameters and anchor supplied with the original URL. For regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript \nOnly one of prefixMatch, fullPathMatch or regexMatch must be specified.\nNote that regexMatch only applies to Loadbalancers that have their loadBalancingScheme set to INTERNAL_SELF_MANAGED."
     }
    }
   },
@@ -8545,6 +8545,44 @@
      "items": {
       "type": "string"
      }
+    }
+   }
+  },
+  "InstanceGroupManagersApplyUpdatesRequest": {
+   "id": "InstanceGroupManagersApplyUpdatesRequest",
+   "type": "object",
+   "description": "InstanceGroupManagers.applyUpdatesToInstances",
+   "properties": {
+    "instances": {
+     "type": "array",
+     "description": "The list of URLs of one or more instances for which you want to apply updates. Each URL can be a full URL or a partial URL, such as zones/[ZONE]/instances/[INSTANCE_NAME].",
+     "items": {
+      "type": "string"
+     }
+    },
+    "minimalAction": {
+     "type": "string",
+     "description": "The minimal action that you want to perform on each instance during the update:  \n- REPLACE: At minimum, delete the instance and create it again. \n- RESTART: Stop the instance and start it again. \n- REFRESH: Do not stop the instance. \n- NONE: Do not disrupt the instance at all.  By default, the minimum action is NONE. If your update requires a more disruptive action than you set with this flag, the necessary action is performed to execute the update.",
+     "enum": [
+      "REPLACE",
+      "RESTART"
+     ],
+     "enumDescriptions": [
+      "",
+      ""
+     ]
+    },
+    "mostDisruptiveAllowedAction": {
+     "type": "string",
+     "description": "The most disruptive action that you want to perform on each instance during the update:  \n- REPLACE: Delete the instance and create it again. \n- RESTART: Stop the instance and start it again. \n- REFRESH: Do not stop the instance. \n- NONE: Do not disrupt the instance at all.  By default, the most disruptive allowed action is REPLACE. If your update requires a more disruptive action than you set with this flag, the update request will fail.",
+     "enum": [
+      "REPLACE",
+      "RESTART"
+     ],
+     "enumDescriptions": [
+      "",
+      ""
+     ]
     }
    }
   },
@@ -15420,7 +15458,7 @@
     },
     "routeRules": {
      "type": "array",
-     "description": "The list of HTTP route rules. Use this list instead of pathRules when advanced route matching and routing actions are desired. routeRules are evaluated in order of priority, from the lowest to highest number.\nWithin a given pathMatcher, only one of pathRules or routeRules must be set.\nrouteRules are not supported in UrlMaps intended for External Load balancers.",
+     "description": "The list of HTTP route rules. Use this list instead of pathRules when advanced route matching and routing actions are desired. routeRules are evaluated in order of priority, from the lowest to highest number.\nWithin a given pathMatcher, you can set only one of pathRules or routeRules.",
      "items": {
       "$ref": "HttpRouteRule"
      }
@@ -16445,6 +16483,44 @@
      "items": {
       "type": "string"
      }
+    }
+   }
+  },
+  "RegionInstanceGroupManagersApplyUpdatesRequest": {
+   "id": "RegionInstanceGroupManagersApplyUpdatesRequest",
+   "type": "object",
+   "description": "InstanceGroupManagers.applyUpdatesToInstances",
+   "properties": {
+    "instances": {
+     "type": "array",
+     "description": "The list of URLs of one or more instances for which you want to apply updates. Each URL can be a full URL or a partial URL, such as zones/[ZONE]/instances/[INSTANCE_NAME].",
+     "items": {
+      "type": "string"
+     }
+    },
+    "minimalAction": {
+     "type": "string",
+     "description": "The minimal action that you want to perform on each instance during the update:  \n- REPLACE: At minimum, delete the instance and create it again. \n- RESTART: Stop the instance and start it again. \n- REFRESH: Do not stop the instance. \n- NONE: Do not disrupt the instance at all.  By default, the minimum action is NONE. If your update requires a more disruptive action than you set with this flag, the necessary action is performed to execute the update.",
+     "enum": [
+      "REPLACE",
+      "RESTART"
+     ],
+     "enumDescriptions": [
+      "",
+      ""
+     ]
+    },
+    "mostDisruptiveAllowedAction": {
+     "type": "string",
+     "description": "The most disruptive action that you want to perform on each instance during the update:  \n- REPLACE: Delete the instance and create it again. \n- RESTART: Stop the instance and start it again. \n- REFRESH: Do not stop the instance. \n- NONE: Do not disrupt the instance at all.  By default, the most disruptive allowed action is REPLACE. If your update requires a more disruptive action than you set with this flag, the update request will fail.",
+     "enum": [
+      "REPLACE",
+      "RESTART"
+     ],
+     "enumDescriptions": [
+      "",
+      ""
+     ]
     }
    }
   },
@@ -30659,6 +30735,48 @@
       "https://www.googleapis.com/auth/compute.readonly"
      ]
     },
+    "applyUpdatesToInstances": {
+     "id": "compute.instanceGroupManagers.applyUpdatesToInstances",
+     "path": "{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/applyUpdatesToInstances",
+     "httpMethod": "POST",
+     "description": "Apply changes to selected instances on the managed instance group. This method can be used to apply new overrides and/or new versions.",
+     "parameters": {
+      "instanceGroupManager": {
+       "type": "string",
+       "description": "The name of the managed instance group, should conform to RFC1035.",
+       "required": true,
+       "location": "path"
+      },
+      "project": {
+       "type": "string",
+       "description": "Project ID for this request.",
+       "required": true,
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "location": "path"
+      },
+      "zone": {
+       "type": "string",
+       "description": "The name of the zone where the managed instance group is located. Should conform to RFC1035.",
+       "required": true,
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "project",
+      "zone",
+      "instanceGroupManager"
+     ],
+     "request": {
+      "$ref": "InstanceGroupManagersApplyUpdatesRequest"
+     },
+     "response": {
+      "$ref": "Operation"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute"
+     ]
+    },
     "createInstances": {
      "id": "compute.instanceGroupManagers.createInstances",
      "path": "{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/createInstances",
@@ -39352,6 +39470,48 @@
      ],
      "request": {
       "$ref": "RegionInstanceGroupManagersAbandonInstancesRequest"
+     },
+     "response": {
+      "$ref": "Operation"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute"
+     ]
+    },
+    "applyUpdatesToInstances": {
+     "id": "compute.regionInstanceGroupManagers.applyUpdatesToInstances",
+     "path": "{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/applyUpdatesToInstances",
+     "httpMethod": "POST",
+     "description": "Apply updates to selected instances the managed instance group.",
+     "parameters": {
+      "instanceGroupManager": {
+       "type": "string",
+       "description": "The name of the managed instance group, should conform to RFC1035.",
+       "required": true,
+       "location": "path"
+      },
+      "project": {
+       "type": "string",
+       "description": "Project ID for this request.",
+       "required": true,
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "location": "path"
+      },
+      "region": {
+       "type": "string",
+       "description": "Name of the region scoping this request, should conform to RFC1035.",
+       "required": true,
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "project",
+      "region",
+      "instanceGroupManager"
+     ],
+     "request": {
+      "$ref": "RegionInstanceGroupManagersApplyUpdatesRequest"
      },
      "response": {
       "$ref": "Operation"

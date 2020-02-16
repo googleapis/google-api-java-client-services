@@ -77,18 +77,21 @@ public final class HttpHeaderMatch extends com.google.api.client.json.GenericJso
    * If the header does not contain an integer, number or is empty, the match fails. For example for
    * a range [-5, 0]   - -3 will match.  - 0 will not match.  - 0.25 will not match.  - -3someString
    * will not match.   Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or
-   * rangeMatch must be set.
+   * rangeMatch must be set. Note that rangeMatch is not supported for Loadbalancers that have their
+   * loadBalancingScheme set to EXTERNAL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Int64RangeMatch rangeMatch;
 
   /**
-   * The value of the header must match the regualar expression specified in regexMatch. For regular
+   * The value of the header must match the regular expression specified in regexMatch. For regular
    * expression grammar, please see:  en.cppreference.com/w/cpp/regex/ecmascript For matching
    * against a port specified in the HTTP request, use a headerMatch with headerName set to PORT and
    * a regular expression that satisfies the RFC2616 Host header's port specifier. Only one of
-   * exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.
+   * exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set. Note
+   * that regexMatch only applies to Loadbalancers that have their loadBalancingScheme set to
+   * INTERNAL_SELF_MANAGED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -208,7 +211,8 @@ public final class HttpHeaderMatch extends com.google.api.client.json.GenericJso
    * If the header does not contain an integer, number or is empty, the match fails. For example for
    * a range [-5, 0]   - -3 will match.  - 0 will not match.  - 0.25 will not match.  - -3someString
    * will not match.   Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or
-   * rangeMatch must be set.
+   * rangeMatch must be set. Note that rangeMatch is not supported for Loadbalancers that have their
+   * loadBalancingScheme set to EXTERNAL.
    * @return value or {@code null} for none
    */
   public Int64RangeMatch getRangeMatch() {
@@ -220,7 +224,8 @@ public final class HttpHeaderMatch extends com.google.api.client.json.GenericJso
    * If the header does not contain an integer, number or is empty, the match fails. For example for
    * a range [-5, 0]   - -3 will match.  - 0 will not match.  - 0.25 will not match.  - -3someString
    * will not match.   Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or
-   * rangeMatch must be set.
+   * rangeMatch must be set. Note that rangeMatch is not supported for Loadbalancers that have their
+   * loadBalancingScheme set to EXTERNAL.
    * @param rangeMatch rangeMatch or {@code null} for none
    */
   public HttpHeaderMatch setRangeMatch(Int64RangeMatch rangeMatch) {
@@ -229,11 +234,13 @@ public final class HttpHeaderMatch extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The value of the header must match the regualar expression specified in regexMatch. For regular
+   * The value of the header must match the regular expression specified in regexMatch. For regular
    * expression grammar, please see:  en.cppreference.com/w/cpp/regex/ecmascript For matching
    * against a port specified in the HTTP request, use a headerMatch with headerName set to PORT and
    * a regular expression that satisfies the RFC2616 Host header's port specifier. Only one of
-   * exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.
+   * exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set. Note
+   * that regexMatch only applies to Loadbalancers that have their loadBalancingScheme set to
+   * INTERNAL_SELF_MANAGED.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegexMatch() {
@@ -241,11 +248,13 @@ public final class HttpHeaderMatch extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The value of the header must match the regualar expression specified in regexMatch. For regular
+   * The value of the header must match the regular expression specified in regexMatch. For regular
    * expression grammar, please see:  en.cppreference.com/w/cpp/regex/ecmascript For matching
    * against a port specified in the HTTP request, use a headerMatch with headerName set to PORT and
    * a regular expression that satisfies the RFC2616 Host header's port specifier. Only one of
-   * exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.
+   * exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set. Note
+   * that regexMatch only applies to Loadbalancers that have their loadBalancingScheme set to
+   * INTERNAL_SELF_MANAGED.
    * @param regexMatch regexMatch or {@code null} for none
    */
   public HttpHeaderMatch setRegexMatch(java.lang.String regexMatch) {

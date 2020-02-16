@@ -26,6 +26,18 @@ public class GmailScopes {
   /** Read, compose, send, and permanently delete all your email from Gmail. */
   public static final String MAIL_GOOGLE_COM = "https://mail.google.com/";
 
+  /** Manage drafts and send emails when you interact with the add-on. */
+  public static final String GMAIL_ADDONS_CURRENT_ACTION_COMPOSE = "https://www.googleapis.com/auth/gmail.addons.current.action.compose";
+
+  /** View your email messages when you interact with the add-on. */
+  public static final String GMAIL_ADDONS_CURRENT_MESSAGE_ACTION = "https://www.googleapis.com/auth/gmail.addons.current.message.action";
+
+  /** View your email message metadata when the add-on is running. */
+  public static final String GMAIL_ADDONS_CURRENT_MESSAGE_METADATA = "https://www.googleapis.com/auth/gmail.addons.current.message.metadata";
+
+  /** View your email messages when the add-on is running. */
+  public static final String GMAIL_ADDONS_CURRENT_MESSAGE_READONLY = "https://www.googleapis.com/auth/gmail.addons.current.message.readonly";
+
   /** Manage drafts and send emails. */
   public static final String GMAIL_COMPOSE = "https://www.googleapis.com/auth/gmail.compose";
 
@@ -61,6 +73,10 @@ public class GmailScopes {
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(MAIL_GOOGLE_COM);
+    set.add(GMAIL_ADDONS_CURRENT_ACTION_COMPOSE);
+    set.add(GMAIL_ADDONS_CURRENT_MESSAGE_ACTION);
+    set.add(GMAIL_ADDONS_CURRENT_MESSAGE_METADATA);
+    set.add(GMAIL_ADDONS_CURRENT_MESSAGE_READONLY);
     set.add(GMAIL_COMPOSE);
     set.add(GMAIL_INSERT);
     set.add(GMAIL_LABELS);

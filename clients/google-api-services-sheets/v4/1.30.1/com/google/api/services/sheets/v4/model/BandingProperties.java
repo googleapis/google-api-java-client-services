@@ -55,40 +55,39 @@ public final class BandingProperties extends com.google.api.client.json.GenericJ
   private ColorStyle firstBandColorStyle;
 
   /**
-   * The color of the last row or column. If this field is not set, the last row or column will be
-   * filled with either first_band_color or second_band_color, depending on the color of the
-   * previous row or column.
+   * The color of the last row or column. If this field is not set, the last row or column is filled
+   * with either first_band_color or second_band_color, depending on the color of the previous row
+   * or column.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Color footerColor;
 
   /**
-   * The color of the last row or column. If this field is not set, the last row or column will be
-   * filled with either first_band_color or second_band_color, depending on the color of the
-   * previous row or column. If footer_color is also set, this field takes precedence.
+   * The color of the last row or column. If this field is not set, the last row or column is filled
+   * with either first_band_color or second_band_color, depending on the color of the previous row
+   * or column. If footer_color is also set, this field takes precedence.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ColorStyle footerColorStyle;
 
   /**
-   * The color of the first row or column. If this field is set, the first row or column will be
-   * filled with this color and the colors will alternate between first_band_color and
-   * second_band_color starting from the second row or column. Otherwise, the first row or column
-   * will be filled with first_band_color and the colors will proceed to alternate as they normally
-   * would.
+   * The color of the first row or column. If this field is set, the first row or column is filled
+   * with this color and the colors alternate between first_band_color and second_band_color
+   * starting from the second row or column. Otherwise, the first row or column is filled with
+   * first_band_color and the colors proceed to alternate as they normally would.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Color headerColor;
 
   /**
-   * The color of the first row or column. If this field is set, the first row or column will be
-   * filled with this color and the colors will alternate between first_band_color and
-   * second_band_color starting from the second row or column. Otherwise, the first row or column
-   * will be filled with first_band_color and the colors will proceed to alternate as they normally
-   * would. If header_color is also set, this field takes precedence.
+   * The color of the first row or column. If this field is set, the first row or column is filled
+   * with this color and the colors alternate between first_band_color and second_band_color
+   * starting from the second row or column. Otherwise, the first row or column is filled with
+   * first_band_color and the colors proceed to alternate as they normally would. If header_color is
+   * also set, this field takes precedence.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -146,9 +145,9 @@ public final class BandingProperties extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The color of the last row or column. If this field is not set, the last row or column will be
-   * filled with either first_band_color or second_band_color, depending on the color of the
-   * previous row or column.
+   * The color of the last row or column. If this field is not set, the last row or column is filled
+   * with either first_band_color or second_band_color, depending on the color of the previous row
+   * or column.
    * @return value or {@code null} for none
    */
   public Color getFooterColor() {
@@ -156,9 +155,9 @@ public final class BandingProperties extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The color of the last row or column. If this field is not set, the last row or column will be
-   * filled with either first_band_color or second_band_color, depending on the color of the
-   * previous row or column.
+   * The color of the last row or column. If this field is not set, the last row or column is filled
+   * with either first_band_color or second_band_color, depending on the color of the previous row
+   * or column.
    * @param footerColor footerColor or {@code null} for none
    */
   public BandingProperties setFooterColor(Color footerColor) {
@@ -167,9 +166,9 @@ public final class BandingProperties extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The color of the last row or column. If this field is not set, the last row or column will be
-   * filled with either first_band_color or second_band_color, depending on the color of the
-   * previous row or column. If footer_color is also set, this field takes precedence.
+   * The color of the last row or column. If this field is not set, the last row or column is filled
+   * with either first_band_color or second_band_color, depending on the color of the previous row
+   * or column. If footer_color is also set, this field takes precedence.
    * @return value or {@code null} for none
    */
   public ColorStyle getFooterColorStyle() {
@@ -177,9 +176,9 @@ public final class BandingProperties extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The color of the last row or column. If this field is not set, the last row or column will be
-   * filled with either first_band_color or second_band_color, depending on the color of the
-   * previous row or column. If footer_color is also set, this field takes precedence.
+   * The color of the last row or column. If this field is not set, the last row or column is filled
+   * with either first_band_color or second_band_color, depending on the color of the previous row
+   * or column. If footer_color is also set, this field takes precedence.
    * @param footerColorStyle footerColorStyle or {@code null} for none
    */
   public BandingProperties setFooterColorStyle(ColorStyle footerColorStyle) {
@@ -188,11 +187,10 @@ public final class BandingProperties extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The color of the first row or column. If this field is set, the first row or column will be
-   * filled with this color and the colors will alternate between first_band_color and
-   * second_band_color starting from the second row or column. Otherwise, the first row or column
-   * will be filled with first_band_color and the colors will proceed to alternate as they normally
-   * would.
+   * The color of the first row or column. If this field is set, the first row or column is filled
+   * with this color and the colors alternate between first_band_color and second_band_color
+   * starting from the second row or column. Otherwise, the first row or column is filled with
+   * first_band_color and the colors proceed to alternate as they normally would.
    * @return value or {@code null} for none
    */
   public Color getHeaderColor() {
@@ -200,11 +198,10 @@ public final class BandingProperties extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The color of the first row or column. If this field is set, the first row or column will be
-   * filled with this color and the colors will alternate between first_band_color and
-   * second_band_color starting from the second row or column. Otherwise, the first row or column
-   * will be filled with first_band_color and the colors will proceed to alternate as they normally
-   * would.
+   * The color of the first row or column. If this field is set, the first row or column is filled
+   * with this color and the colors alternate between first_band_color and second_band_color
+   * starting from the second row or column. Otherwise, the first row or column is filled with
+   * first_band_color and the colors proceed to alternate as they normally would.
    * @param headerColor headerColor or {@code null} for none
    */
   public BandingProperties setHeaderColor(Color headerColor) {
@@ -213,11 +210,11 @@ public final class BandingProperties extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The color of the first row or column. If this field is set, the first row or column will be
-   * filled with this color and the colors will alternate between first_band_color and
-   * second_band_color starting from the second row or column. Otherwise, the first row or column
-   * will be filled with first_band_color and the colors will proceed to alternate as they normally
-   * would. If header_color is also set, this field takes precedence.
+   * The color of the first row or column. If this field is set, the first row or column is filled
+   * with this color and the colors alternate between first_band_color and second_band_color
+   * starting from the second row or column. Otherwise, the first row or column is filled with
+   * first_band_color and the colors proceed to alternate as they normally would. If header_color is
+   * also set, this field takes precedence.
    * @return value or {@code null} for none
    */
   public ColorStyle getHeaderColorStyle() {
@@ -225,11 +222,11 @@ public final class BandingProperties extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The color of the first row or column. If this field is set, the first row or column will be
-   * filled with this color and the colors will alternate between first_band_color and
-   * second_band_color starting from the second row or column. Otherwise, the first row or column
-   * will be filled with first_band_color and the colors will proceed to alternate as they normally
-   * would. If header_color is also set, this field takes precedence.
+   * The color of the first row or column. If this field is set, the first row or column is filled
+   * with this color and the colors alternate between first_band_color and second_band_color
+   * starting from the second row or column. Otherwise, the first row or column is filled with
+   * first_band_color and the colors proceed to alternate as they normally would. If header_color is
+   * also set, this field takes precedence.
    * @param headerColorStyle headerColorStyle or {@code null} for none
    */
   public BandingProperties setHeaderColorStyle(ColorStyle headerColorStyle) {

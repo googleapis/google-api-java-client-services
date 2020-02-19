@@ -98,6 +98,15 @@ public final class TestSetup extends com.google.api.client.json.GenericJson {
   private java.lang.String networkProfile;
 
   /**
+   * Systrace configuration for the run. If set a systrace will be taken, starting on test start and
+   * lasting for the configured duration. The systrace file thus obtained is put in the results
+   * bucket together with the other artifacts from the run.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SystraceSetup systrace;
+
+  /**
    * The device will be logged in on this account for the duration of the test.
    * @return value or {@code null} for none
    */
@@ -212,6 +221,27 @@ public final class TestSetup extends com.google.api.client.json.GenericJson {
    */
   public TestSetup setNetworkProfile(java.lang.String networkProfile) {
     this.networkProfile = networkProfile;
+    return this;
+  }
+
+  /**
+   * Systrace configuration for the run. If set a systrace will be taken, starting on test start and
+   * lasting for the configured duration. The systrace file thus obtained is put in the results
+   * bucket together with the other artifacts from the run.
+   * @return value or {@code null} for none
+   */
+  public SystraceSetup getSystrace() {
+    return systrace;
+  }
+
+  /**
+   * Systrace configuration for the run. If set a systrace will be taken, starting on test start and
+   * lasting for the configured duration. The systrace file thus obtained is put in the results
+   * bucket together with the other artifacts from the run.
+   * @param systrace systrace or {@code null} for none
+   */
+  public TestSetup setSystrace(SystraceSetup systrace) {
+    this.systrace = systrace;
     return this;
   }
 

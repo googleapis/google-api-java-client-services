@@ -548,13 +548,11 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
       public class EntryGroups {
 
         /**
-         * Creates an EntryGroup.
-         *
-         * The user should enable the Data Catalog API in the project identified by the `parent` parameter
-         * (see [Data Catalog Resource Project] (/data-catalog/docs/concepts/resource-project) for more
-         * information).
-         *
          * A maximum of 10,000 entry groups may be created per organization across all locations.
+         *
+         * Users should enable the Data Catalog API in the project identified by the `parent` parameter (see
+         * [Data Catalog Resource Project] (/data-catalog/docs/concepts/resource-project) for more
+         * information).
          *
          * Create a request for the method "entryGroups.create".
          *
@@ -584,13 +582,11 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates an EntryGroup.
+           * A maximum of 10,000 entry groups may be created per organization across all locations.
            *
-           * The user should enable the Data Catalog API in the project identified by the `parent` parameter
+           * Users should enable the Data Catalog API in the project identified by the `parent` parameter
            * (see [Data Catalog Resource Project] (/data-catalog/docs/concepts/resource-project) for more
            * information).
-           *
-           * A maximum of 10,000 entry groups may be created per organization across all locations.
            *
            * Create a request for the method "entryGroups.create".
            *
@@ -745,9 +741,9 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
           }
         }
         /**
-         * Deletes an EntryGroup. Only entry groups that do not contain entries can be deleted. The user
-         * should enable the Data Catalog API in the project identified by the `name` parameter (see [Data
-         * Catalog Resource Project] (/data-catalog/docs/concepts/resource-project) for more information).
+         * Deletes an EntryGroup. Only entry groups that do not contain entries can be deleted. Users should
+         * enable the Data Catalog API in the project identified by the `name` parameter (see [Data Catalog
+         * Resource Project] (/data-catalog/docs/concepts/resource-project) for more information).
          *
          * Create a request for the method "entryGroups.delete".
          *
@@ -772,7 +768,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+$");
 
           /**
-           * Deletes an EntryGroup. Only entry groups that do not contain entries can be deleted. The user
+           * Deletes an EntryGroup. Only entry groups that do not contain entries can be deleted. Users
            * should enable the Data Catalog API in the project identified by the `name` parameter (see [Data
            * Catalog Resource Project] (/data-catalog/docs/concepts/resource-project) for more information).
            *
@@ -1953,8 +1949,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
           /**
            * Creates an entry. Only entries of 'FILESET' type or user-specified type can be created.
            *
-           * The user should enable the Data Catalog API in the project identified by the `parent` parameter
-           * (see [Data Catalog Resource Project] (/data-catalog/docs/concepts/resource-project) for more
+           * Users should enable the Data Catalog API in the project identified by the `parent` parameter (see
+           * [Data Catalog Resource Project] (/data-catalog/docs/concepts/resource-project) for more
            * information).
            *
            * A maximum of 100,000 entries may be created per entry group.
@@ -1989,7 +1985,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             /**
              * Creates an entry. Only entries of 'FILESET' type or user-specified type can be created.
              *
-             * The user should enable the Data Catalog API in the project identified by the `parent` parameter
+             * Users should enable the Data Catalog API in the project identified by the `parent` parameter
              * (see [Data Catalog Resource Project] (/data-catalog/docs/concepts/resource-project) for more
              * information).
              *
@@ -2139,10 +2135,9 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             }
           }
           /**
-           * Deletes an existing entry. Only entries created through CreateEntry method can be deleted. The
-           * user should enable the Data Catalog API in the project identified by the `name` parameter (see
-           * [Data Catalog Resource Project] (/data-catalog/docs/concepts/resource-project) for more
-           * information).
+           * Deletes an existing entry. Only entries created through CreateEntry method can be deleted. Users
+           * should enable the Data Catalog API in the project identified by the `name` parameter (see [Data
+           * Catalog Resource Project] (/data-catalog/docs/concepts/resource-project) for more information).
            *
            * Create a request for the method "entries.delete".
            *
@@ -2168,8 +2163,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entries/[^/]+$");
 
             /**
-             * Deletes an existing entry. Only entries created through CreateEntry method can be deleted. The
-             * user should enable the Data Catalog API in the project identified by the `name` parameter (see
+             * Deletes an existing entry. Only entries created through CreateEntry method can be deleted.
+             * Users should enable the Data Catalog API in the project identified by the `name` parameter (see
              * [Data Catalog Resource Project] (/data-catalog/docs/concepts/resource-project) for more
              * information).
              *
@@ -2300,12 +2295,6 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
            * @param name Required. The name of the entry. Example:
           *
            *        projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}
-           *        Entry groups are logical groupings of entries. Currently, users cannot
-          create/modify entry
-           *        groups. They are created by Data Catalog; they include
-          `@bigquery` for all BigQuery
-           *        entries, and `@pubsub` for all Cloud Pub/Sub
-          entries.
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -2334,12 +2323,6 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
              * @param name Required. The name of the entry. Example:
           *
            *        projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}
-           *        Entry groups are logical groupings of entries. Currently, users cannot
-          create/modify entry
-           *        groups. They are created by Data Catalog; they include
-          `@bigquery` for all BigQuery
-           *        entries, and `@pubsub` for all Cloud Pub/Sub
-          entries.
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -2422,10 +2405,6 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
              *
              * * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{en
              * try_id}
-             *
-             * Entry groups are logical groupings of entries. Currently, users cannot create/modify
-             * entry groups. They are created by Data Catalog; they include `@bigquery` for all
-             * BigQuery entries, and `@pubsub` for all Cloud Pub/Sub entries.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
@@ -2433,10 +2412,6 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             /** Required. The name of the entry. Example:
 
            * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}
-
-           Entry groups are logical groupings of entries. Currently, users cannot create/modify entry groups.
-           They are created by Data Catalog; they include `@bigquery` for all BigQuery entries, and `@pubsub`
-           for all Cloud Pub/Sub entries.
              */
             public java.lang.String getName() {
               return name;
@@ -2447,10 +2422,6 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
              *
              * * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{en
              * try_id}
-             *
-             * Entry groups are logical groupings of entries. Currently, users cannot create/modify
-             * entry groups. They are created by Data Catalog; they include `@bigquery` for all
-             * BigQuery entries, and `@pubsub` for all Cloud Pub/Sub entries.
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -2856,8 +2827,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             }
           }
           /**
-           * Updates an existing entry. The user should enable the Data Catalog API in the project identified
-           * by the `entry.name` parameter (see [Data Catalog Resource Project] (/data-catalog/docs/concepts
+           * Updates an existing entry. Users should enable the Data Catalog API in the project identified by
+           * the `entry.name` parameter (see [Data Catalog Resource Project] (/data-catalog/docs/concepts
            * /resource-project) for more information).
            *
            * Create a request for the method "entries.patch".
@@ -2888,9 +2859,9 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entries/[^/]+$");
 
             /**
-             * Updates an existing entry. The user should enable the Data Catalog API in the project
-             * identified by the `entry.name` parameter (see [Data Catalog Resource Project] (/data-
-             * catalog/docs/concepts/resource-project) for more information).
+             * Updates an existing entry. Users should enable the Data Catalog API in the project identified
+             * by the `entry.name` parameter (see [Data Catalog Resource Project] (/data-catalog/docs/concepts
+             * /resource-project) for more information).
              *
              * Create a request for the method "entries.patch".
              *
@@ -3022,7 +2993,10 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
              *
              * The following fields are modifiable: * For entries with type `DATA_STREAM`: *
              * `schema` * For entries with type `FILESET` * `schema` * `display_name` *
-             * `description` * `gcs_fileset_spec` * `gcs_fileset_spec.file_patterns`
+             * `description` * `gcs_fileset_spec` * `gcs_fileset_spec.file_patterns` * For entries
+             * with `user_specified_type` * `schema` * `display_name` * `description` *
+             * user_specified_type * user_specified_system * linked_resource *
+             * source_system_timestamps
              */
             @com.google.api.client.util.Key
             private String updateMask;
@@ -3031,7 +3005,9 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
 
            The following fields are modifiable: * For entries with type `DATA_STREAM`: * `schema` * For
            entries with type `FILESET` * `schema` * `display_name` * `description` * `gcs_fileset_spec` *
-           `gcs_fileset_spec.file_patterns`
+           `gcs_fileset_spec.file_patterns` * For entries with `user_specified_type` * `schema` *
+           `display_name` * `description` * user_specified_type * user_specified_system * linked_resource *
+           source_system_timestamps
              */
             public String getUpdateMask() {
               return updateMask;
@@ -3043,7 +3019,10 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
              *
              * The following fields are modifiable: * For entries with type `DATA_STREAM`: *
              * `schema` * For entries with type `FILESET` * `schema` * `display_name` *
-             * `description` * `gcs_fileset_spec` * `gcs_fileset_spec.file_patterns`
+             * `description` * `gcs_fileset_spec` * `gcs_fileset_spec.file_patterns` * For entries
+             * with `user_specified_type` * `schema` * `display_name` * `description` *
+             * user_specified_type * user_specified_system * linked_resource *
+             * source_system_timestamps
              */
             public Patch setUpdateMask(String updateMask) {
               this.updateMask = updateMask;
@@ -3559,8 +3538,15 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
              * This request holds the parameters needed by the datacatalog server.  After setting any optional
              * parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The name of the Data Catalog resource to list the tags of. The
-            resource could be an Entry.
+             * @param parent Required. The name of the Data Catalog resource to list the tags of. The resource
+            could be an Entry
+             *        or an
+            EntryGroup.
+            Examples:
+            *
+             *        projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}
+            *
+             *        projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -3586,8 +3572,15 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The name of the Data Catalog resource to list the tags of. The
-            resource could be an Entry.
+               * @param parent Required. The name of the Data Catalog resource to list the tags of. The resource
+            could be an Entry
+             *        or an
+            EntryGroup.
+            Examples:
+            *
+             *        projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}
+            *
+             *        projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -3667,13 +3660,23 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
 
               /**
                * Required. The name of the Data Catalog resource to list the tags of. The resource
-               * could be an Entry.
+               * could be an Entry or an EntryGroup.
+               *
+               * Examples:
+               *
+               * * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id} * project
+               * s/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The name of the Data Catalog resource to list the tags of. The resource could be an
-             Entry.
+              /** Required. The name of the Data Catalog resource to list the tags of. The resource could be an Entry
+             or an EntryGroup.
+
+             Examples:
+
+             * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id} *
+             projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}
                */
               public java.lang.String getParent() {
                 return parent;
@@ -3681,7 +3684,12 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
 
               /**
                * Required. The name of the Data Catalog resource to list the tags of. The resource
-               * could be an Entry.
+               * could be an Entry or an EntryGroup.
+               *
+               * Examples:
+               *
+               * * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id} * project
+               * s/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}
                */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -3925,6 +3933,747 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
 
           }
         }
+        /**
+         * An accessor for creating requests from the Tags collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code DataCatalog datacatalog = new DataCatalog(...);}
+         *   {@code DataCatalog.Tags.List request = datacatalog.tags().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Tags tags() {
+          return new Tags();
+        }
+
+        /**
+         * The "tags" collection of methods.
+         */
+        public class Tags {
+
+          /**
+           * Creates a tag on an Entry. Note: The project identified by the `parent` parameter for the [tag
+           * ](/data-catalog/docs/reference/rest/v1beta1/projects.locations.entryGroups.entries.tags/create
+           * #path-parameters) and the [tag template](/data-
+           * catalog/docs/reference/rest/v1beta1/projects.locations.tagTemplates/create#path-parameters) used
+           * to create the tag must be from the same organization.
+           *
+           * Create a request for the method "tags.create".
+           *
+           * This request holds the parameters needed by the datacatalog server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The name of the resource to attach this tag to. Tags can be attached to
+          Entries. Example:
+           *        *
+           *        projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}
+           *        Note that this Tag and its child resources may not actually be stored in
+          the location in
+           *        this name.
+           * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1Tag}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1Tag content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends DataCatalogRequest<com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1Tag> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/tags";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+$");
+
+            /**
+             * Creates a tag on an Entry. Note: The project identified by the `parent` parameter for the [tag
+             * ](/data-catalog/docs/reference/rest/v1beta1/projects.locations.entryGroups.entries.tags/create
+             * #path-parameters) and the [tag template](/data-
+             * catalog/docs/reference/rest/v1beta1/projects.locations.tagTemplates/create#path-parameters)
+             * used to create the tag must be from the same organization.
+             *
+             * Create a request for the method "tags.create".
+             *
+             * This request holds the parameters needed by the the datacatalog server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The name of the resource to attach this tag to. Tags can be attached to
+          Entries. Example:
+           *        *
+           *        projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}
+           *        Note that this Tag and its child resources may not actually be stored in
+          the location in
+           *        this name.
+             * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1Tag}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1Tag content) {
+              super(DataCatalog.this, "POST", REST_PATH, content, com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1Tag.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the resource to attach this tag to. Tags can be attached to
+             * Entries. Example:
+             *
+             * * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{en
+             * try_id}
+             *
+             * Note that this Tag and its child resources may not actually be stored in the location
+             * in this name.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The name of the resource to attach this tag to. Tags can be attached to Entries. Example:
+
+           * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}
+
+           Note that this Tag and its child resources may not actually be stored in the location in this name.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The name of the resource to attach this tag to. Tags can be attached to
+             * Entries. Example:
+             *
+             * * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{en
+             * try_id}
+             *
+             * Note that this Tag and its child resources may not actually be stored in the location
+             * in this name.
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a tag.
+           *
+           * Create a request for the method "tags.delete".
+           *
+           * This request holds the parameters needed by the datacatalog server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the tag to delete. Example:
+          * projects/{project_id}/locations/{location}/entry
+           *        Groups/{entry_group_id}/entries/{entry_id}/tags/{tag_id}
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends DataCatalogRequest<com.google.api.services.datacatalog.v1beta1.model.Empty> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/tags/[^/]+$");
+
+            /**
+             * Deletes a tag.
+             *
+             * Create a request for the method "tags.delete".
+             *
+             * This request holds the parameters needed by the the datacatalog server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the tag to delete. Example:
+          * projects/{project_id}/locations/{location}/entry
+           *        Groups/{entry_group_id}/entries/{entry_id}/tags/{tag_id}
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(DataCatalog.this, "DELETE", REST_PATH, null, com.google.api.services.datacatalog.v1beta1.model.Empty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/tags/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the tag to delete. Example:
+             *
+             * * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{en
+             * try_id}/tags/{tag_id}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the tag to delete. Example:
+
+           * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}/tags/{
+           tag_id}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the tag to delete. Example:
+             *
+             * * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{en
+             * try_id}/tags/{tag_id}
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/tags/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists the tags on an Entry.
+           *
+           * Create a request for the method "tags.list".
+           *
+           * This request holds the parameters needed by the datacatalog server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The name of the Data Catalog resource to list the tags of. The resource
+          could be an Entry
+           *        or an
+          EntryGroup.
+          Examples:
+          *
+           *        projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}
+          *
+           *        projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends DataCatalogRequest<com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1ListTagsResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/tags";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+$");
+
+            /**
+             * Lists the tags on an Entry.
+             *
+             * Create a request for the method "tags.list".
+             *
+             * This request holds the parameters needed by the the datacatalog server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The name of the Data Catalog resource to list the tags of. The resource
+          could be an Entry
+           *        or an
+          EntryGroup.
+          Examples:
+          *
+           *        projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}
+          *
+           *        projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(DataCatalog.this, "GET", REST_PATH, null, com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1ListTagsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the Data Catalog resource to list the tags of. The resource
+             * could be an Entry or an EntryGroup.
+             *
+             * Examples:
+             *
+             * * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id} * projects/
+             * {project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The name of the Data Catalog resource to list the tags of. The resource could be an Entry
+           or an EntryGroup.
+
+           Examples:
+
+           * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id} *
+           projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The name of the Data Catalog resource to list the tags of. The resource
+             * could be an Entry or an EntryGroup.
+             *
+             * Examples:
+             *
+             * * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id} * projects/
+             * {project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** The maximum number of tags to return. Default is 10. Max limit is 1000. */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** The maximum number of tags to return. Default is 10. Max limit is 1000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /** The maximum number of tags to return. Default is 10. Max limit is 1000. */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Token that specifies which page is requested. If empty, the first page is returned.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Token that specifies which page is requested. If empty, the first page is returned.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Token that specifies which page is requested. If empty, the first page is returned.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates an existing tag.
+           *
+           * Create a request for the method "tags.patch".
+           *
+           * This request holds the parameters needed by the datacatalog server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name The resource name of the tag in URL format. Example:
+          * projects/{project_id}/locations/{location}/en
+           *        trygroups/{entry_group_id}/entries/{entry_id}/tags/{tag_id}
+          where `tag_id` is a system-
+           *        generated identifier.
+          Note that this Tag may not actually be stored in the location in
+           *        this name.
+           * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1Tag}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1Tag content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends DataCatalogRequest<com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1Tag> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/tags/[^/]+$");
+
+            /**
+             * Updates an existing tag.
+             *
+             * Create a request for the method "tags.patch".
+             *
+             * This request holds the parameters needed by the the datacatalog server.  After setting any
+             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name The resource name of the tag in URL format. Example:
+          * projects/{project_id}/locations/{location}/en
+           *        trygroups/{entry_group_id}/entries/{entry_id}/tags/{tag_id}
+          where `tag_id` is a system-
+           *        generated identifier.
+          Note that this Tag may not actually be stored in the location in
+           *        this name.
+             * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1Tag}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1Tag content) {
+              super(DataCatalog.this, "PATCH", REST_PATH, content, com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1Tag.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/tags/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The resource name of the tag in URL format. Example:
+             *
+             * * projects/{project_id}/locations/{location}/entrygroups/{entry_group_id}/entries/{en
+             * try_id}/tags/{tag_id}
+             *
+             * where `tag_id` is a system-generated identifier. Note that this Tag may not actually
+             * be stored in the location in this name.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The resource name of the tag in URL format. Example:
+
+           * projects/{project_id}/locations/{location}/entrygroups/{entry_group_id}/entries/{entry_id}/tags/{
+           tag_id}
+
+           where `tag_id` is a system-generated identifier. Note that this Tag may not actually be stored in
+           the location in this name.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * The resource name of the tag in URL format. Example:
+             *
+             * * projects/{project_id}/locations/{location}/entrygroups/{entry_group_id}/entries/{en
+             * try_id}/tags/{tag_id}
+             *
+             * where `tag_id` is a system-generated identifier. Note that this Tag may not actually
+             * be stored in the location in this name.
+             */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/tags/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * The fields to update on the Tag. If absent or empty, all modifiable fields are
+             * updated. Currently the only modifiable field is the field `fields`.
+             */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** The fields to update on the Tag. If absent or empty, all modifiable fields are updated. Currently
+           the only modifiable field is the field `fields`.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /**
+             * The fields to update on the Tag. If absent or empty, all modifiable fields are
+             * updated. Currently the only modifiable field is the field `fields`.
+             */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
+            }
+          }
+
+        }
       }
       /**
        * An accessor for creating requests from the TagTemplates collection.
@@ -4131,9 +4880,9 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
           }
         }
         /**
-         * Deletes a tag template and all tags using the template. The user should enable the Data Catalog
-         * API in the project identified by the `name` parameter (see [Data Catalog Resource Project]
-         * (/data-catalog/docs/concepts/resource-project) for more information).
+         * Deletes a tag template and all tags using the template. Users should enable the Data Catalog API
+         * in the project identified by the `name` parameter (see [Data Catalog Resource Project] (/data-
+         * catalog/docs/concepts/resource-project) for more information).
          *
          * Create a request for the method "tagTemplates.delete".
          *
@@ -4159,7 +4908,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/tagTemplates/[^/]+$");
 
           /**
-           * Deletes a tag template and all tags using the template. The user should enable the Data Catalog
+           * Deletes a tag template and all tags using the template. Users should enable the Data Catalog
            * API in the project identified by the `name` parameter (see [Data Catalog Resource Project]
            * (/data-catalog/docs/concepts/resource-project) for more information).
            *
@@ -4619,8 +5368,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
         /**
          * Updates a tag template. This method cannot be used to update the fields of a template. The tag
          * template fields are represented as separate resources and should be updated using their own
-         * create/update/delete methods. The user should enable the Data Catalog API in the project
-         * identified by the `tag_template.name` parameter (see [Data Catalog Resource Project] (/data-
+         * create/update/delete methods. Users should enable the Data Catalog API in the project identified
+         * by the `tag_template.name` parameter (see [Data Catalog Resource Project] (/data-
          * catalog/docs/concepts/resource-project) for more information).
          *
          * Create a request for the method "tagTemplates.patch".
@@ -4654,7 +5403,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
           /**
            * Updates a tag template. This method cannot be used to update the fields of a template. The tag
            * template fields are represented as separate resources and should be updated using their own
-           * create/update/delete methods. The user should enable the Data Catalog API in the project
+           * create/update/delete methods. Users should enable the Data Catalog API in the project
            * identified by the `tag_template.name` parameter (see [Data Catalog Resource Project] (/data-
            * catalog/docs/concepts/resource-project) for more information).
            *
@@ -5355,7 +6104,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             }
           }
           /**
-           * Deletes a field in a tag template and all uses of that field. The user should enable the Data
+           * Deletes a field in a tag template and all uses of that field. Users should enable the Data
            * Catalog API in the project identified by the `name` parameter (see [Data Catalog Resource
            * Project] (/data-catalog/docs/concepts/resource-project) for more information).
            *
@@ -5383,7 +6132,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/tagTemplates/[^/]+/fields/[^/]+$");
 
             /**
-             * Deletes a field in a tag template and all uses of that field. The user should enable the Data
+             * Deletes a field in a tag template and all uses of that field. Users should enable the Data
              * Catalog API in the project identified by the `name` parameter (see [Data Catalog Resource
              * Project] (/data-catalog/docs/concepts/resource-project) for more information).
              *
@@ -5530,7 +6279,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             }
           }
           /**
-           * Updates a field in a tag template. This method cannot be used to update the field type. The user
+           * Updates a field in a tag template. This method cannot be used to update the field type. Users
            * should enable the Data Catalog API in the project identified by the `name` parameter (see [Data
            * Catalog Resource Project] (/data-catalog/docs/concepts/resource-project) for more information).
            *
@@ -5559,10 +6308,9 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/tagTemplates/[^/]+/fields/[^/]+$");
 
             /**
-             * Updates a field in a tag template. This method cannot be used to update the field type. The
-             * user should enable the Data Catalog API in the project identified by the `name` parameter (see
-             * [Data Catalog Resource Project] (/data-catalog/docs/concepts/resource-project) for more
-             * information).
+             * Updates a field in a tag template. This method cannot be used to update the field type. Users
+             * should enable the Data Catalog API in the project identified by the `name` parameter (see [Data
+             * Catalog Resource Project] (/data-catalog/docs/concepts/resource-project) for more information).
              *
              * Create a request for the method "fields.patch".
              *

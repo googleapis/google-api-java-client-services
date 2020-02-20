@@ -30,7 +30,7 @@ package com.google.api.services.file.v1.model;
 public final class GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional: user-defined instance eligibility.
+   * Optional. User-defined instance eligibility.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata ex
   }
 
   /**
-   * Optional: list of nodes. Some producers need to use per-node metadata to calculate SLO. This
+   * Optional. List of nodes. Some producers need to use per-node metadata to calculate SLO. This
    * field allows such producers to publish per-node SLO meta data, which will be consumed by SSA
    * Eligibility Exporter and published in the form of per node metric to Monarch.
    * The value may be {@code null}.
@@ -86,7 +86,7 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata ex
   private java.lang.String tier;
 
   /**
-   * Optional: user-defined instance eligibility.
+   * Optional. User-defined instance eligibility.
    * @return value or {@code null} for none
    */
   public GoogleCloudSaasacceleratorManagementProvidersV1SloEligibility getEligibility() {
@@ -94,7 +94,7 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata ex
   }
 
   /**
-   * Optional: user-defined instance eligibility.
+   * Optional. User-defined instance eligibility.
    * @param eligibility eligibility or {@code null} for none
    */
   public GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata setEligibility(GoogleCloudSaasacceleratorManagementProvidersV1SloEligibility eligibility) {
@@ -142,7 +142,7 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata ex
   }
 
   /**
-   * Optional: list of nodes. Some producers need to use per-node metadata to calculate SLO. This
+   * Optional. List of nodes. Some producers need to use per-node metadata to calculate SLO. This
    * field allows such producers to publish per-node SLO meta data, which will be consumed by SSA
    * Eligibility Exporter and published in the form of per node metric to Monarch.
    * @return value or {@code null} for none
@@ -152,7 +152,7 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata ex
   }
 
   /**
-   * Optional: list of nodes. Some producers need to use per-node metadata to calculate SLO. This
+   * Optional. List of nodes. Some producers need to use per-node metadata to calculate SLO. This
    * field allows such producers to publish per-node SLO meta data, which will be consumed by SSA
    * Eligibility Exporter and published in the form of per node metric to Monarch.
    * @param nodes nodes or {@code null} for none

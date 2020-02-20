@@ -17,7 +17,8 @@
 package com.google.api.services.file.v1.model;
 
 /**
- * RolloutMetadata for an actuation instance. It maps to a single RolloutType.
+ * This message has been deprecated. RolloutMetadata for an actuation instance. It maps to a single
+ * RolloutType.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Filestore API. For a detailed explanation see:

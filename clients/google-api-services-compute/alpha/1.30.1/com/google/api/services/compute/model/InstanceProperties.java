@@ -137,6 +137,14 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   private java.lang.String postKeyRevocationActionType;
 
   /**
+   * The private IPv6 google access type for the VM. If not specified, use  INHERIT_FROM_SUBNETWORK
+   * as default.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String privateIpv6GoogleAccess;
+
+  /**
    * Specifies the reservations that this instance can consume from.
    * The value may be {@code null}.
    */
@@ -411,6 +419,25 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
    */
   public InstanceProperties setPostKeyRevocationActionType(java.lang.String postKeyRevocationActionType) {
     this.postKeyRevocationActionType = postKeyRevocationActionType;
+    return this;
+  }
+
+  /**
+   * The private IPv6 google access type for the VM. If not specified, use  INHERIT_FROM_SUBNETWORK
+   * as default.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPrivateIpv6GoogleAccess() {
+    return privateIpv6GoogleAccess;
+  }
+
+  /**
+   * The private IPv6 google access type for the VM. If not specified, use  INHERIT_FROM_SUBNETWORK
+   * as default.
+   * @param privateIpv6GoogleAccess privateIpv6GoogleAccess or {@code null} for none
+   */
+  public InstanceProperties setPrivateIpv6GoogleAccess(java.lang.String privateIpv6GoogleAccess) {
+    this.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
     return this;
   }
 

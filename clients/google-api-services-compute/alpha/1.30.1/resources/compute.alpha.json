@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/SXzI50fZN9Ip-ZgGTRTjciBTGB0\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/_2NSgecmMGzz6OQ8gKpra0OzU08\"",
  "discoveryVersion": "v1",
  "id": "compute:alpha",
  "name": "compute",
  "version": "alpha",
- "revision": "20200106",
+ "revision": "20200114",
  "title": "Compute Engine API",
  "description": "Creates and runs virtual machines on Google Cloud Platform.",
  "ownerDomain": "google.com",
@@ -7693,11 +7693,11 @@
     },
     "rangeMatch": {
      "$ref": "Int64RangeMatch",
-     "description": "The header value must be an integer and its value must be in the range specified in rangeMatch. If the header does not contain an integer, number or is empty, the match fails.\nFor example for a range [-5, 0]  \n- -3 will match. \n- 0 will not match. \n- 0.25 will not match. \n- -3someString will not match.  \nOnly one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set."
+     "description": "The header value must be an integer and its value must be in the range specified in rangeMatch. If the header does not contain an integer, number or is empty, the match fails.\nFor example for a range [-5, 0]  \n- -3 will match. \n- 0 will not match. \n- 0.25 will not match. \n- -3someString will not match.  \nOnly one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.\nNote that rangeMatch is not supported for Loadbalancers that have their loadBalancingScheme set to EXTERNAL."
     },
     "regexMatch": {
      "type": "string",
-     "description": "The value of the header must match the regualar expression specified in regexMatch. For regular expression grammar, please see:  en.cppreference.com/w/cpp/regex/ecmascript \nFor matching against a port specified in the HTTP request, use a headerMatch with headerName set to PORT and a regular expression that satisfies the RFC2616 Host header's port specifier.\nOnly one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set."
+     "description": "The value of the header must match the regular expression specified in regexMatch. For regular expression grammar, please see:  en.cppreference.com/w/cpp/regex/ecmascript \nFor matching against a port specified in the HTTP request, use a headerMatch with headerName set to PORT and a regular expression that satisfies the RFC2616 Host header's port specifier.\nOnly one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.\nNote that regexMatch only applies to Loadbalancers that have their loadBalancingScheme set to INTERNAL_SELF_MANAGED."
     },
     "suffixMatch": {
      "type": "string",
@@ -7926,7 +7926,7 @@
     },
     "regexMatch": {
      "type": "string",
-     "description": "The queryParameterMatch matches if the value of the parameter matches the regular expression specified by regexMatch. For the regular expression grammar, please see en.cppreference.com/w/cpp/regex/ecmascript \nOnly one of presentMatch, exactMatch or regexMatch must be set."
+     "description": "The queryParameterMatch matches if the value of the parameter matches the regular expression specified by regexMatch. For the regular expression grammar, please see en.cppreference.com/w/cpp/regex/ecmascript \nOnly one of presentMatch, exactMatch or regexMatch must be set.\nNote that regexMatch only applies when the loadBalancingScheme is set to INTERNAL_SELF_MANAGED."
     }
    }
   },
@@ -8113,7 +8113,7 @@
     },
     "regexMatch": {
      "type": "string",
-     "description": "For satisfying the matchRule condition, the path of the request must satisfy the regular expression specified in regexMatch after removing any query parameters and anchor supplied with the original URL. For regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript \nOnly one of prefixMatch, fullPathMatch or regexMatch must be specified."
+     "description": "For satisfying the matchRule condition, the path of the request must satisfy the regular expression specified in regexMatch after removing any query parameters and anchor supplied with the original URL. For regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript \nOnly one of prefixMatch, fullPathMatch or regexMatch must be specified.\nNote that regexMatch only applies to Loadbalancers that have their loadBalancingScheme set to INTERNAL_SELF_MANAGED."
     }
    }
   },
@@ -8785,6 +8785,20 @@
      "description": "Total amount of preserved state for SUSPENDED instances. Read-only in the api.",
      "format": "int64"
     },
+    "privateIpv6GoogleAccess": {
+     "type": "string",
+     "description": "The private IPv6 google access type for the VM. If not specified, use  INHERIT_FROM_SUBNETWORK as default.",
+     "enum": [
+      "ENABLE_BIDIRECTIONAL_ACCESS_TO_GOOGLE",
+      "ENABLE_OUTBOUND_VM_ACCESS_TO_GOOGLE",
+      "INHERIT_FROM_SUBNETWORK"
+     ],
+     "enumDescriptions": [
+      "",
+      "",
+      ""
+     ]
+    },
     "reservationAffinity": {
      "$ref": "ReservationAffinity",
      "description": "Specifies the reservations that this instance can consume from."
@@ -8872,6 +8886,10 @@
     "tags": {
      "$ref": "Tags",
      "description": "Tags to apply to this instance. Tags are used to identify valid sources or targets for network firewalls and are specified by the client during instance creation. The tags can be later modified by the setTags method. Each tag within the list must comply with RFC1035. Multiple tags can be specified via the 'tags.items' field."
+    },
+    "upcomingMaintenance": {
+     "$ref": "UpcomingMaintenance",
+     "description": "[Output Only] Specifies upcoming maintenance for the instance."
     },
     "zone": {
      "type": "string",
@@ -10989,6 +11007,20 @@
       "NOOP",
       "SHUTDOWN",
       "UNSPECIFIED"
+     ],
+     "enumDescriptions": [
+      "",
+      "",
+      ""
+     ]
+    },
+    "privateIpv6GoogleAccess": {
+     "type": "string",
+     "description": "The private IPv6 google access type for the VM. If not specified, use  INHERIT_FROM_SUBNETWORK as default.",
+     "enum": [
+      "ENABLE_BIDIRECTIONAL_ACCESS_TO_GOOGLE",
+      "ENABLE_OUTBOUND_VM_ACCESS_TO_GOOGLE",
+      "INHERIT_FROM_SUBNETWORK"
      ],
      "enumDescriptions": [
       "",
@@ -18553,7 +18585,7 @@
     },
     "routeRules": {
      "type": "array",
-     "description": "The list of HTTP route rules. Use this list instead of pathRules when advanced route matching and routing actions are desired. routeRules are evaluated in order of priority, from the lowest to highest number.\nWithin a given pathMatcher, only one of pathRules or routeRules must be set.\nrouteRules are not supported in UrlMaps intended for External Load balancers.",
+     "description": "The list of HTTP route rules. Use this list instead of pathRules when advanced route matching and routing actions are desired. routeRules are evaluated in order of priority, from the lowest to highest number.\nWithin a given pathMatcher, you can set only one of pathRules or routeRules.",
      "items": {
       "$ref": "HttpRouteRule"
      }
@@ -29204,6 +29236,35 @@
     "response": {
      "type": "string",
      "description": "The bytes to match against the beginning of the response data. It is an error if this is empty. The response data can only be ASCII."
+    }
+   }
+  },
+  "UpcomingMaintenance": {
+   "id": "UpcomingMaintenance",
+   "type": "object",
+   "description": "Upcoming Maintenance notification information.",
+   "properties": {
+    "date": {
+     "type": "string",
+     "description": "[Output Only] The date when the maintenance will take place. This value is in RFC3339 text format."
+    },
+    "time": {
+     "type": "string",
+     "description": "[Output Only] The time when the maintenance will take place. This value is in RFC3339 text format."
+    },
+    "type": {
+     "type": "string",
+     "description": "Defines the type of maintenance.",
+     "enum": [
+      "SCHEDULED",
+      "UNKNOWN_TYPE",
+      "UNSCHEDULED"
+     ],
+     "enumDescriptions": [
+      "",
+      "",
+      ""
+     ]
     }
    }
   },

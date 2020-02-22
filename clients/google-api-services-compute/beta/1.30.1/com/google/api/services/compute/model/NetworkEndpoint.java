@@ -30,6 +30,13 @@ package com.google.api.services.compute.model;
 public final class NetworkEndpoint extends com.google.api.client.json.GenericJson {
 
   /**
+   * Metadata defined as annotations on the network endpoint.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> annotations;
+
+  /**
    * Optional fully qualified domain name of network endpoint. This can only be specified when
    * NetworkEndpointGroup.network_endpoint_type is NON_GCP_FQDN_PORT.
    * The value may be {@code null}.
@@ -66,6 +73,23 @@ public final class NetworkEndpoint extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.Integer port;
+
+  /**
+   * Metadata defined as annotations on the network endpoint.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getAnnotations() {
+    return annotations;
+  }
+
+  /**
+   * Metadata defined as annotations on the network endpoint.
+   * @param annotations annotations or {@code null} for none
+   */
+  public NetworkEndpoint setAnnotations(java.util.Map<String, java.lang.String> annotations) {
+    this.annotations = annotations;
+    return this;
+  }
 
   /**
    * Optional fully qualified domain name of network endpoint. This can only be specified when

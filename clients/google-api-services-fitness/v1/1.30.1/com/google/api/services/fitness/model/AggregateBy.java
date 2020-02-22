@@ -30,9 +30,11 @@ package com.google.api.services.fitness.model;
 public final class AggregateBy extends com.google.api.client.json.GenericJson {
 
   /**
-   * A data source ID to aggregate. Mutually exclusive of dataTypeName. Only data from the specified
-   * data source ID will be included in the aggregation. The dataset in the response will have the
-   * same data source ID.
+   * A data source ID to aggregate. Only data from the specified data source ID will be included in
+   * the aggregation. If specified, this data source must exist; the OAuth scopes in the supplied
+   * credentials must grant read access to this data type. The dataset in the response will have the
+   * same data source ID. Note: Data can be aggregated by either the dataTypeName or the
+   * dataSourceId, not both.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,16 +43,20 @@ public final class AggregateBy extends com.google.api.client.json.GenericJson {
   /**
    * The data type to aggregate. All data sources providing this data type will contribute data to
    * the aggregation. The response will contain a single dataset for this data type name. The
-   * dataset will have a data source ID of derived:com.google.:com.google.android.gms:aggregated
+   * dataset will have a data source ID of derived::com.google.android.gms:aggregated. If the user
+   * has no data for this data type, an empty data set will be returned. Note: Data can be
+   * aggregated by either the dataTypeName or the dataSourceId, not both.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dataTypeName;
 
   /**
-   * A data source ID to aggregate. Mutually exclusive of dataTypeName. Only data from the specified
-   * data source ID will be included in the aggregation. The dataset in the response will have the
-   * same data source ID.
+   * A data source ID to aggregate. Only data from the specified data source ID will be included in
+   * the aggregation. If specified, this data source must exist; the OAuth scopes in the supplied
+   * credentials must grant read access to this data type. The dataset in the response will have the
+   * same data source ID. Note: Data can be aggregated by either the dataTypeName or the
+   * dataSourceId, not both.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataSourceId() {
@@ -58,9 +64,11 @@ public final class AggregateBy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A data source ID to aggregate. Mutually exclusive of dataTypeName. Only data from the specified
-   * data source ID will be included in the aggregation. The dataset in the response will have the
-   * same data source ID.
+   * A data source ID to aggregate. Only data from the specified data source ID will be included in
+   * the aggregation. If specified, this data source must exist; the OAuth scopes in the supplied
+   * credentials must grant read access to this data type. The dataset in the response will have the
+   * same data source ID. Note: Data can be aggregated by either the dataTypeName or the
+   * dataSourceId, not both.
    * @param dataSourceId dataSourceId or {@code null} for none
    */
   public AggregateBy setDataSourceId(java.lang.String dataSourceId) {
@@ -71,7 +79,9 @@ public final class AggregateBy extends com.google.api.client.json.GenericJson {
   /**
    * The data type to aggregate. All data sources providing this data type will contribute data to
    * the aggregation. The response will contain a single dataset for this data type name. The
-   * dataset will have a data source ID of derived:com.google.:com.google.android.gms:aggregated
+   * dataset will have a data source ID of derived::com.google.android.gms:aggregated. If the user
+   * has no data for this data type, an empty data set will be returned. Note: Data can be
+   * aggregated by either the dataTypeName or the dataSourceId, not both.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataTypeName() {
@@ -81,7 +91,9 @@ public final class AggregateBy extends com.google.api.client.json.GenericJson {
   /**
    * The data type to aggregate. All data sources providing this data type will contribute data to
    * the aggregation. The response will contain a single dataset for this data type name. The
-   * dataset will have a data source ID of derived:com.google.:com.google.android.gms:aggregated
+   * dataset will have a data source ID of derived::com.google.android.gms:aggregated. If the user
+   * has no data for this data type, an empty data set will be returned. Note: Data can be
+   * aggregated by either the dataTypeName or the dataSourceId, not both.
    * @param dataTypeName dataTypeName or {@code null} for none
    */
   public AggregateBy setDataTypeName(java.lang.String dataTypeName) {

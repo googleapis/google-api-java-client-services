@@ -17,11 +17,11 @@
 package com.google.api.services.servicecontrol.v1.model;
 
 /**
- * The context of a span, attached to google.api.Distribution.Exemplars in google.api.Distribution
- * values during aggregation.
+ * The context of a span, attached to Exemplars in Distribution values during aggregation.
  *
  * It contains the name of a span with format:
- * projects/[PROJECT_ID]/traces/[TRACE_ID]/spans/[SPAN_ID]
+ *
+ *     projects/[PROJECT_ID_OR_NUMBER]/traces/[TRACE_ID]/spans/[SPAN_ID]
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Control API. For a detailed explanation see:
@@ -34,12 +34,14 @@ package com.google.api.services.servicecontrol.v1.model;
 public final class SpanContext extends com.google.api.client.json.GenericJson {
 
   /**
-   * The resource name of the span in the following format:
+   * The resource name of the span. The format is:
    *
-   *     projects/[PROJECT_ID]/traces/[TRACE_ID]/spans/SPAN_ID is a unique identifier for a trace
-   * within a project; it is a 32-character hexadecimal encoding of a 16-byte array.
+   *     projects/[PROJECT_ID_OR_NUMBER]/traces/[TRACE_ID]/spans/[SPAN_ID]
    *
-   * [SPAN_ID] is a unique identifier for a span within a trace; it is a 16-character hexadecimal
+   * `[TRACE_ID]` is a unique identifier for a trace within a project; it is a 32-character
+   * hexadecimal encoding of a 16-byte array.
+   *
+   * `[SPAN_ID]` is a unique identifier for a span within a trace; it is a 16-character hexadecimal
    * encoding of an 8-byte array.
    * The value may be {@code null}.
    */
@@ -47,12 +49,14 @@ public final class SpanContext extends com.google.api.client.json.GenericJson {
   private java.lang.String spanName;
 
   /**
-   * The resource name of the span in the following format:
+   * The resource name of the span. The format is:
    *
-   *     projects/[PROJECT_ID]/traces/[TRACE_ID]/spans/SPAN_ID is a unique identifier for a trace
-   * within a project; it is a 32-character hexadecimal encoding of a 16-byte array.
+   *     projects/[PROJECT_ID_OR_NUMBER]/traces/[TRACE_ID]/spans/[SPAN_ID]
    *
-   * [SPAN_ID] is a unique identifier for a span within a trace; it is a 16-character hexadecimal
+   * `[TRACE_ID]` is a unique identifier for a trace within a project; it is a 32-character
+   * hexadecimal encoding of a 16-byte array.
+   *
+   * `[SPAN_ID]` is a unique identifier for a span within a trace; it is a 16-character hexadecimal
    * encoding of an 8-byte array.
    * @return value or {@code null} for none
    */
@@ -61,12 +65,14 @@ public final class SpanContext extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the span in the following format:
+   * The resource name of the span. The format is:
    *
-   *     projects/[PROJECT_ID]/traces/[TRACE_ID]/spans/SPAN_ID is a unique identifier for a trace
-   * within a project; it is a 32-character hexadecimal encoding of a 16-byte array.
+   *     projects/[PROJECT_ID_OR_NUMBER]/traces/[TRACE_ID]/spans/[SPAN_ID]
    *
-   * [SPAN_ID] is a unique identifier for a span within a trace; it is a 16-character hexadecimal
+   * `[TRACE_ID]` is a unique identifier for a trace within a project; it is a 32-character
+   * hexadecimal encoding of a 16-byte array.
+   *
+   * `[SPAN_ID]` is a unique identifier for a span within a trace; it is a 16-character hexadecimal
    * encoding of an 8-byte array.
    * @param spanName spanName or {@code null} for none
    */

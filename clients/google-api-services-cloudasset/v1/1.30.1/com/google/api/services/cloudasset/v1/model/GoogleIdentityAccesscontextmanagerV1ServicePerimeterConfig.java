@@ -17,7 +17,7 @@
 package com.google.api.services.cloudasset.v1.model;
 
 /**
- * `ServicePerimeterConfig` specifies a set of GCP resources that describe specific Service
+ * `ServicePerimeterConfig` specifies a set of Google Cloud resources that describe specific Service
  * Perimeter configuration.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -34,8 +34,8 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig ex
    * A list of `AccessLevel` resource names that allow resources within the `ServicePerimeter` to be
    * accessed from the internet. `AccessLevels` listed must be in the same policy as this
    * `ServicePerimeter`. Referencing a nonexistent `AccessLevel` is a syntax error. If no
-   * `AccessLevel` names are listed, resources within the perimeter can only be accessed via GCP
-   * calls with request origins within the perimeter. Example:
+   * `AccessLevel` names are listed, resources within the perimeter can only be accessed via Google
+   * Cloud calls with request origins within the perimeter. Example:
    * `"accessPolicies/MY_POLICY/accessLevels/MY_LEVEL"`. For Service Perimeter Bridge, must be
    * empty.
    * The value may be {@code null}.
@@ -44,15 +44,15 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig ex
   private java.util.List<java.lang.String> accessLevels;
 
   /**
-   * A list of GCP resources that are inside of the service perimeter. Currently only projects are
-   * allowed. Format: `projects/{project_number}`
+   * A list of Google Cloud resources that are inside of the service perimeter. Currently only
+   * projects are allowed. Format: `projects/{project_number}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> resources;
 
   /**
-   * GCP services that are subject to the Service Perimeter restrictions. For example, if
+   * Google Cloud services that are subject to the Service Perimeter restrictions. For example, if
    * `storage.googleapis.com` is specified, access to the storage buckets inside the perimeter must
    * meet the perimeter's access restrictions.
    * The value may be {@code null}.
@@ -61,11 +61,18 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig ex
   private java.util.List<java.lang.String> restrictedServices;
 
   /**
+   * Configuration for within Perimeter allowed APIs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleIdentityAccesscontextmanagerV1VpcAccessibleServices vpcAccessibleServices;
+
+  /**
    * A list of `AccessLevel` resource names that allow resources within the `ServicePerimeter` to be
    * accessed from the internet. `AccessLevels` listed must be in the same policy as this
    * `ServicePerimeter`. Referencing a nonexistent `AccessLevel` is a syntax error. If no
-   * `AccessLevel` names are listed, resources within the perimeter can only be accessed via GCP
-   * calls with request origins within the perimeter. Example:
+   * `AccessLevel` names are listed, resources within the perimeter can only be accessed via Google
+   * Cloud calls with request origins within the perimeter. Example:
    * `"accessPolicies/MY_POLICY/accessLevels/MY_LEVEL"`. For Service Perimeter Bridge, must be
    * empty.
    * @return value or {@code null} for none
@@ -78,8 +85,8 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig ex
    * A list of `AccessLevel` resource names that allow resources within the `ServicePerimeter` to be
    * accessed from the internet. `AccessLevels` listed must be in the same policy as this
    * `ServicePerimeter`. Referencing a nonexistent `AccessLevel` is a syntax error. If no
-   * `AccessLevel` names are listed, resources within the perimeter can only be accessed via GCP
-   * calls with request origins within the perimeter. Example:
+   * `AccessLevel` names are listed, resources within the perimeter can only be accessed via Google
+   * Cloud calls with request origins within the perimeter. Example:
    * `"accessPolicies/MY_POLICY/accessLevels/MY_LEVEL"`. For Service Perimeter Bridge, must be
    * empty.
    * @param accessLevels accessLevels or {@code null} for none
@@ -90,8 +97,8 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig ex
   }
 
   /**
-   * A list of GCP resources that are inside of the service perimeter. Currently only projects are
-   * allowed. Format: `projects/{project_number}`
+   * A list of Google Cloud resources that are inside of the service perimeter. Currently only
+   * projects are allowed. Format: `projects/{project_number}`
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResources() {
@@ -99,8 +106,8 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig ex
   }
 
   /**
-   * A list of GCP resources that are inside of the service perimeter. Currently only projects are
-   * allowed. Format: `projects/{project_number}`
+   * A list of Google Cloud resources that are inside of the service perimeter. Currently only
+   * projects are allowed. Format: `projects/{project_number}`
    * @param resources resources or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig setResources(java.util.List<java.lang.String> resources) {
@@ -109,7 +116,7 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig ex
   }
 
   /**
-   * GCP services that are subject to the Service Perimeter restrictions. For example, if
+   * Google Cloud services that are subject to the Service Perimeter restrictions. For example, if
    * `storage.googleapis.com` is specified, access to the storage buckets inside the perimeter must
    * meet the perimeter's access restrictions.
    * @return value or {@code null} for none
@@ -119,13 +126,30 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig ex
   }
 
   /**
-   * GCP services that are subject to the Service Perimeter restrictions. For example, if
+   * Google Cloud services that are subject to the Service Perimeter restrictions. For example, if
    * `storage.googleapis.com` is specified, access to the storage buckets inside the perimeter must
    * meet the perimeter's access restrictions.
    * @param restrictedServices restrictedServices or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig setRestrictedServices(java.util.List<java.lang.String> restrictedServices) {
     this.restrictedServices = restrictedServices;
+    return this;
+  }
+
+  /**
+   * Configuration for within Perimeter allowed APIs.
+   * @return value or {@code null} for none
+   */
+  public GoogleIdentityAccesscontextmanagerV1VpcAccessibleServices getVpcAccessibleServices() {
+    return vpcAccessibleServices;
+  }
+
+  /**
+   * Configuration for within Perimeter allowed APIs.
+   * @param vpcAccessibleServices vpcAccessibleServices or {@code null} for none
+   */
+  public GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig setVpcAccessibleServices(GoogleIdentityAccesscontextmanagerV1VpcAccessibleServices vpcAccessibleServices) {
+    this.vpcAccessibleServices = vpcAccessibleServices;
     return this;
   }
 

@@ -182,7 +182,7 @@ public class HomeGraphService extends com.google.api.client.googleapis.services.
       private static final String REST_PATH = "v1/{+agentUserId}";
 
       private final java.util.regex.Pattern AGENT_USER_ID_PATTERN =
-          java.util.regex.Pattern.compile("^agentUsers/.+$");
+          java.util.regex.Pattern.compile("^agentUsers/.*$");
 
       /**
        * Unlinks an agent user from Google. As a result, all data related to this user will be deleted.
@@ -222,7 +222,7 @@ public class HomeGraphService extends com.google.api.client.googleapis.services.
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(AGENT_USER_ID_PATTERN.matcher(agentUserId).matches(),
               "Parameter agentUserId must conform to the pattern " +
-              "^agentUsers/.+$");
+              "^agentUsers/.*$");
         }
       }
 
@@ -296,7 +296,7 @@ public class HomeGraphService extends com.google.api.client.googleapis.services.
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(AGENT_USER_ID_PATTERN.matcher(agentUserId).matches(),
               "Parameter agentUserId must conform to the pattern " +
-              "^agentUsers/.+$");
+              "^agentUsers/.*$");
         }
         this.agentUserId = agentUserId;
         return this;

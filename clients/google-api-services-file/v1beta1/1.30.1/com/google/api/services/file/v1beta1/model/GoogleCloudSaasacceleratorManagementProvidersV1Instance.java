@@ -27,12 +27,6 @@ package com.google.api.services.file.v1beta1.model;
  * "bar"   },   "state": READY,   "software_versions": {     "software_update": "cloud-
  * sql-09-28-2018",   },   "maintenance_policy_names": {     "UpdatePolicy":
  * "projects/snapchat/locations/us-east1/maintenancePolicies/prod-update-policy",   }
- * "rollout_metadata": {     "projects/cloud-sql/locations/global/rolloutTypes/software_update": {
- * "release":       "projects/cloud-sql/locations/global/releases/cloud-sql-09-28-2018",
- * "rollout":       "projects/cloud-sql/locations/us-east1/rollouts/cloud-sql-09-28-2018-canary",
- * },     "projects/cloud-sql/locations/global/rolloutTypes/instance_restart": {       "release":
- * "projects/cloud-sql/locations/global/releases/cloud-sql-09-20-repair",       "rollout":
- * "projects/cloud-sql/locations/us-east1/rollouts/cloud-sql-09-20-repair-100-percent",     }   }
  * "tenant_project_id": "cloud-sql-test-tenant",   "producer_metadata": {     "cloud-sql-tier":
  * "basic",     "cloud-sql-instance-size": "1G",   },   "provisioned_resources": [     {
  * "resource-type": "compute-instance",       "resource-url":

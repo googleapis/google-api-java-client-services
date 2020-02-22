@@ -1222,7 +1222,7 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
          * @param name Output only. The resource name of the instance, in the format
-         *        projects/{project_id}/locations/{location_id}/instances/{instance_id}.
+         *        projects/{project}/locations/{location}/instances/{instance}.
          * @param content the {@link com.google.api.services.file.v1.model.Instance}
          * @return the request
          */
@@ -1250,7 +1250,7 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Output only. The resource name of the instance, in the format
-         *        projects/{project_id}/locations/{location_id}/instances/{instance_id}.
+         *        projects/{project}/locations/{location}/instances/{instance}.
            * @param content the {@link com.google.api.services.file.v1.model.Instance}
            * @since 1.13
            */
@@ -1321,13 +1321,13 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
 
           /**
            * Output only. The resource name of the instance, in the format
-           * projects/{project_id}/locations/{location_id}/instances/{instance_id}.
+           * projects/{project}/locations/{location}/instances/{instance}.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Output only. The resource name of the instance, in the format
-         projects/{project_id}/locations/{location_id}/instances/{instance_id}.
+         projects/{project}/locations/{location}/instances/{instance}.
            */
           public java.lang.String getName() {
             return name;
@@ -1335,7 +1335,7 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
 
           /**
            * Output only. The resource name of the instance, in the format
-           * projects/{project_id}/locations/{location_id}/instances/{instance_id}.
+           * projects/{project}/locations/{location}/instances/{instance}.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

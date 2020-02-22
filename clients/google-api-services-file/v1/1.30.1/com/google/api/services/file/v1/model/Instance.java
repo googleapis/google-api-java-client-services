@@ -37,7 +37,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * Optional. A description of the instance (2048 characters or less).
+   * Optional. The description of the instance (2048 characters or less).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +73,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The resource name of the instance, in the format
-   * projects/{project_id}/locations/{location_id}/instances/{instance_id}.
+   * projects/{project}/locations/{location}/instances/{instance}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,7 +126,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A description of the instance (2048 characters or less).
+   * Optional. The description of the instance (2048 characters or less).
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -134,7 +134,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A description of the instance (2048 characters or less).
+   * Optional. The description of the instance (2048 characters or less).
    * @param description description or {@code null} for none
    */
   public Instance setDescription(java.lang.String description) {
@@ -197,7 +197,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The resource name of the instance, in the format
-   * projects/{project_id}/locations/{location_id}/instances/{instance_id}.
+   * projects/{project}/locations/{location}/instances/{instance}.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -206,7 +206,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The resource name of the instance, in the format
-   * projects/{project_id}/locations/{location_id}/instances/{instance_id}.
+   * projects/{project}/locations/{location}/instances/{instance}.
    * @param name name or {@code null} for none
    */
   public Instance setName(java.lang.String name) {

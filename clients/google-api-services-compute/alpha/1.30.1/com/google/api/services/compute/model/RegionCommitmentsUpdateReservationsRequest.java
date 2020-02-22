@@ -30,14 +30,14 @@ package com.google.api.services.compute.model;
 public final class RegionCommitmentsUpdateReservationsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of two reservations to transfer GPUs and local SSD between.
+   * A list of two reservations to transfer GPUs and local SSD between.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Reservation> reservations;
 
   /**
-   * List of two reservations to transfer GPUs and local SSD between.
+   * A list of two reservations to transfer GPUs and local SSD between.
    * @return value or {@code null} for none
    */
   public java.util.List<Reservation> getReservations() {
@@ -45,7 +45,7 @@ public final class RegionCommitmentsUpdateReservationsRequest extends com.google
   }
 
   /**
-   * List of two reservations to transfer GPUs and local SSD between.
+   * A list of two reservations to transfer GPUs and local SSD between.
    * @param reservations reservations or {@code null} for none
    */
   public RegionCommitmentsUpdateReservationsRequest setReservations(java.util.List<Reservation> reservations) {

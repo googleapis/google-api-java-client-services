@@ -122,6 +122,13 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   private java.util.List<java.lang.String> targetResources;
 
   /**
+   * A list of service accounts indicating the sets of instances that are applied with this rule.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> targetServiceAccounts;
+
+  /**
    * The Action to preform when the client connection triggers the rule. Can currently be either
    * "allow" or "deny()" where valid values for status are 403, 404, and 502.
    * @return value or {@code null} for none
@@ -333,6 +340,23 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
    */
   public SecurityPolicyRule setTargetResources(java.util.List<java.lang.String> targetResources) {
     this.targetResources = targetResources;
+    return this;
+  }
+
+  /**
+   * A list of service accounts indicating the sets of instances that are applied with this rule.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getTargetServiceAccounts() {
+    return targetServiceAccounts;
+  }
+
+  /**
+   * A list of service accounts indicating the sets of instances that are applied with this rule.
+   * @param targetServiceAccounts targetServiceAccounts or {@code null} for none
+   */
+  public SecurityPolicyRule setTargetServiceAccounts(java.util.List<java.lang.String> targetServiceAccounts) {
+    this.targetServiceAccounts = targetServiceAccounts;
     return this;
   }
 

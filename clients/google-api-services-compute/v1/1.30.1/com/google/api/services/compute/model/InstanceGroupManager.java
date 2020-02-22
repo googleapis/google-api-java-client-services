@@ -171,8 +171,9 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   private java.util.List<java.lang.String> targetPools;
 
   /**
-   * The target number of running instances for this managed instance group. Deleting or abandoning
-   * instances reduces this number. Resizing the group changes this number.
+   * The target number of running instances for this managed instance group. You can reduce this
+   * number by using the instanceGroupManager deleteInstances or abandonInstances methods. Resizing
+   * the group also changes this number.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -560,8 +561,9 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * The target number of running instances for this managed instance group. Deleting or abandoning
-   * instances reduces this number. Resizing the group changes this number.
+   * The target number of running instances for this managed instance group. You can reduce this
+   * number by using the instanceGroupManager deleteInstances or abandonInstances methods. Resizing
+   * the group also changes this number.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTargetSize() {
@@ -569,8 +571,9 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * The target number of running instances for this managed instance group. Deleting or abandoning
-   * instances reduces this number. Resizing the group changes this number.
+   * The target number of running instances for this managed instance group. You can reduce this
+   * number by using the instanceGroupManager deleteInstances or abandonInstances methods. Resizing
+   * the group also changes this number.
    * @param targetSize targetSize or {@code null} for none
    */
   public InstanceGroupManager setTargetSize(java.lang.Integer targetSize) {

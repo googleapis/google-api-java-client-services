@@ -44,14 +44,14 @@ public final class HealthStatus extends com.google.api.client.json.GenericJson {
   private java.lang.String instance;
 
   /**
-   * The IP address represented by this resource.
+   * A forwarding rule IP address assigned to this instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ipAddress;
 
   /**
-   * The port on the instance.
+   * The named port of the instance group, not necessarily the port that is health-checked.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +92,7 @@ public final class HealthStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The IP address represented by this resource.
+   * A forwarding rule IP address assigned to this instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpAddress() {
@@ -100,7 +100,7 @@ public final class HealthStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The IP address represented by this resource.
+   * A forwarding rule IP address assigned to this instance.
    * @param ipAddress ipAddress or {@code null} for none
    */
   public HealthStatus setIpAddress(java.lang.String ipAddress) {
@@ -109,7 +109,7 @@ public final class HealthStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The port on the instance.
+   * The named port of the instance group, not necessarily the port that is health-checked.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPort() {
@@ -117,7 +117,7 @@ public final class HealthStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The port on the instance.
+   * The named port of the instance group, not necessarily the port that is health-checked.
    * @param port port or {@code null} for none
    */
   public HealthStatus setPort(java.lang.Integer port) {

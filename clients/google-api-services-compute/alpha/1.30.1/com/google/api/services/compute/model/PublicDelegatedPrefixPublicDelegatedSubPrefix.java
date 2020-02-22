@@ -77,7 +77,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefix extends com.goo
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Object status;
+  private java.lang.String status;
 
   /**
    * Name of the project scoping this PublicDelegatedSubPrefix.
@@ -187,7 +187,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefix extends com.goo
    * [Output Only] The status of the sub public delegated prefix.
    * @return value or {@code null} for none
    */
-  public java.lang.Object getStatus() {
+  public java.lang.String getStatus() {
     return status;
   }
 
@@ -195,7 +195,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefix extends com.goo
    * [Output Only] The status of the sub public delegated prefix.
    * @param status status or {@code null} for none
    */
-  public PublicDelegatedPrefixPublicDelegatedSubPrefix setStatus(java.lang.Object status) {
+  public PublicDelegatedPrefixPublicDelegatedSubPrefix setStatus(java.lang.String status) {
     this.status = status;
     return this;
   }

@@ -165,6 +165,21 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.Object> poolArgs;
 
   /**
+   * Set of SDK harness containers needed to execute this pipeline. This will only be set in the Fn
+   * API path. For non-cross-language pipelines this should have only one entry. Cross-language
+   * pipelines will have two or more entries.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SdkHarnessContainerImage> sdkHarnessContainerImages;
+
+  static {
+    // hack to force ProGuard to consider SdkHarnessContainerImage used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(SdkHarnessContainerImage.class);
+  }
+
+  /**
    * Subnetwork to which VMs will be assigned, if desired.  Expected to be of the form
    * "regions/REGION/subnetworks/SUBNETWORK".
    * The value may be {@code null}.
@@ -201,6 +216,8 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
   /**
    * Required. Docker container image that executes the Cloud Dataflow worker harness, residing in
    * Google Container Registry.
+   *
+   * Deprecated for the Fn API path. Use sdk_harness_container_images instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -503,6 +520,27 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Set of SDK harness containers needed to execute this pipeline. This will only be set in the Fn
+   * API path. For non-cross-language pipelines this should have only one entry. Cross-language
+   * pipelines will have two or more entries.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SdkHarnessContainerImage> getSdkHarnessContainerImages() {
+    return sdkHarnessContainerImages;
+  }
+
+  /**
+   * Set of SDK harness containers needed to execute this pipeline. This will only be set in the Fn
+   * API path. For non-cross-language pipelines this should have only one entry. Cross-language
+   * pipelines will have two or more entries.
+   * @param sdkHarnessContainerImages sdkHarnessContainerImages or {@code null} for none
+   */
+  public WorkerPool setSdkHarnessContainerImages(java.util.List<SdkHarnessContainerImage> sdkHarnessContainerImages) {
+    this.sdkHarnessContainerImages = sdkHarnessContainerImages;
+    return this;
+  }
+
+  /**
    * Subnetwork to which VMs will be assigned, if desired.  Expected to be of the form
    * "regions/REGION/subnetworks/SUBNETWORK".
    * @return value or {@code null} for none
@@ -582,6 +620,8 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
   /**
    * Required. Docker container image that executes the Cloud Dataflow worker harness, residing in
    * Google Container Registry.
+   *
+   * Deprecated for the Fn API path. Use sdk_harness_container_images instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getWorkerHarnessContainerImage() {
@@ -591,6 +631,8 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
   /**
    * Required. Docker container image that executes the Cloud Dataflow worker harness, residing in
    * Google Container Registry.
+   *
+   * Deprecated for the Fn API path. Use sdk_harness_container_images instead.
    * @param workerHarnessContainerImage workerHarnessContainerImage or {@code null} for none
    */
   public WorkerPool setWorkerHarnessContainerImage(java.lang.String workerHarnessContainerImage) {

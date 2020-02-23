@@ -143,6 +143,197 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
   public class BillingAccounts {
 
     /**
+     * An accessor for creating requests from the Buckets collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Logging logging = new Logging(...);}
+     *   {@code Logging.Buckets.List request = logging.buckets().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Buckets buckets() {
+      return new Buckets();
+    }
+
+    /**
+     * The "buckets" collection of methods.
+     */
+    public class Buckets {
+
+      /**
+       * Gets a bucket (Beta).
+       *
+       * Create a request for the method "buckets.get".
+       *
+       * This request holds the parameters needed by the logging server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name of the bucket:
+       *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+       *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+       *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+       *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+      Example: "projects/my-
+       *        project-id/locations/my-location/buckets/my-bucket-id".
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends LoggingRequest<com.google.api.services.logging.v2.model.LogBucket> {
+
+        private static final String REST_PATH = "v2/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^billingAccounts/[^/]+/buckets/[^/]+$");
+
+        /**
+         * Gets a bucket (Beta).
+         *
+         * Create a request for the method "buckets.get".
+         *
+         * This request holds the parameters needed by the the logging server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name of the bucket:
+       *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+       *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+       *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+       *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+      Example: "projects/my-
+       *        project-id/locations/my-location/buckets/my-bucket-id".
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Logging.this, "GET", REST_PATH, null, com.google.api.services.logging.v2.model.LogBucket.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^billingAccounts/[^/]+/buckets/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the bucket:
+         * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" Example: "projects/my-
+         * project-id/locations/my-location/buckets/my-bucket-id".
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the bucket:
+       "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+       "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+       "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+       "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" Example: "projects/my-project-
+       id/locations/my-location/buckets/my-bucket-id".
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The resource name of the bucket:
+         * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" Example: "projects/my-
+         * project-id/locations/my-location/buckets/my-bucket-id".
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^billingAccounts/[^/]+/buckets/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the Exclusions collection.
      *
      * <p>The typical use is:</p>
@@ -1042,6 +1233,483 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
       }
 
+    }
+    /**
+     * An accessor for creating requests from the Locations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Logging logging = new Logging(...);}
+     *   {@code Logging.Locations.List request = logging.locations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Locations locations() {
+      return new Locations();
+    }
+
+    /**
+     * The "locations" collection of methods.
+     */
+    public class Locations {
+
+      /**
+       * An accessor for creating requests from the Buckets collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Logging logging = new Logging(...);}
+       *   {@code Logging.Buckets.List request = logging.buckets().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Buckets buckets() {
+        return new Buckets();
+      }
+
+      /**
+       * The "buckets" collection of methods.
+       */
+      public class Buckets {
+
+        /**
+         * Lists buckets (Beta).
+         *
+         * Create a request for the method "buckets.list".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource whose buckets are to be listed:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]"
+        Note: The locations portion of the resource
+         *        is required, but supplying the character - in place of LOCATION_ID will return all
+         *        buckets.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends LoggingRequest<com.google.api.services.logging.v2.model.ListBucketsResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/buckets";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^billingAccounts/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists buckets (Beta).
+           *
+           * Create a request for the method "buckets.list".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource whose buckets are to be listed:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]"
+        Note: The locations portion of the resource
+         *        is required, but supplying the character - in place of LOCATION_ID will return all
+         *        buckets.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Logging.this, "GET", REST_PATH, null, com.google.api.services.logging.v2.model.ListBucketsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^billingAccounts/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource whose buckets are to be listed:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" Note: The locations portion of the
+           * resource is required, but supplying the character - in place of LOCATION_ID will return
+           * all buckets.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource whose buckets are to be listed:
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]" Note: The locations portion of the resource is
+         required, but supplying the character - in place of LOCATION_ID will return all buckets.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource whose buckets are to be listed:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" Note: The locations portion of the
+           * resource is required, but supplying the character - in place of LOCATION_ID will return
+           * all buckets.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^billingAccounts/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of results to return from this request. Non-positive
+           * values are ignored. The presence of nextPageToken in the response indicates that more
+           * results might be available.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of results to return from this request. Non-positive values are
+         ignored. The presence of nextPageToken in the response indicates that more results might be
+         available.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of results to return from this request. Non-positive
+           * values are ignored. The presence of nextPageToken in the response indicates that more
+           * results might be available.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. If present, then retrieve the next batch of results from the preceding call
+           * to this method. pageToken must be the value of nextPageToken from the previous
+           * response. The values of other method parameters should be identical to those in the
+           * previous call.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. If present, then retrieve the next batch of results from the preceding call to this
+         method. pageToken must be the value of nextPageToken from the previous response. The values of
+         other method parameters should be identical to those in the previous call.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. If present, then retrieve the next batch of results from the preceding call
+           * to this method. pageToken must be the value of nextPageToken from the previous
+           * response. The values of other method parameters should be identical to those in the
+           * previous call.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a bucket. This method replaces the following fields in the existing bucket with values
+         * from the new bucket: retention_periodIf the retention period is decreased and the bucket is
+         * locked, FAILED_PRECONDITION will be returned.If the bucket has a LifecycleState of
+         * DELETE_REQUESTED, FAILED_PRECONDITION will be returned.A buckets region may not be modified after
+         * it is created. This method is in Beta.
+         *
+         * Create a request for the method "buckets.patch".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The full resource name of the bucket to update.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+        Example: "projects/my-
+         *        project-id/locations/my-location/buckets/my-bucket-id". Also requires permission
+         *        "resourcemanager.projects.updateLiens" to set the locked property
+         * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.logging.v2.model.LogBucket content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends LoggingRequest<com.google.api.services.logging.v2.model.LogBucket> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^billingAccounts/[^/]+/locations/[^/]+/buckets/[^/]+$");
+
+          /**
+           * Updates a bucket. This method replaces the following fields in the existing bucket with values
+           * from the new bucket: retention_periodIf the retention period is decreased and the bucket is
+           * locked, FAILED_PRECONDITION will be returned.If the bucket has a LifecycleState of
+           * DELETE_REQUESTED, FAILED_PRECONDITION will be returned.A buckets region may not be modified
+           * after it is created. This method is in Beta.
+           *
+           * Create a request for the method "buckets.patch".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The full resource name of the bucket to update.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+        Example: "projects/my-
+         *        project-id/locations/my-location/buckets/my-bucket-id". Also requires permission
+         *        "resourcemanager.projects.updateLiens" to set the locked property
+           * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.logging.v2.model.LogBucket content) {
+            super(Logging.this, "PATCH", REST_PATH, content, com.google.api.services.logging.v2.model.LogBucket.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^billingAccounts/[^/]+/locations/[^/]+/buckets/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The full resource name of the bucket to update.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" Example: "projects
+           * /my-project-id/locations/my-location/buckets/my-bucket-id". Also requires permission
+           * "resourcemanager.projects.updateLiens" to set the locked property
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The full resource name of the bucket to update.
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" Example: "projects/my-project-
+         id/locations/my-location/buckets/my-bucket-id". Also requires permission
+         "resourcemanager.projects.updateLiens" to set the locked property
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The full resource name of the bucket to update.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" Example: "projects
+           * /my-project-id/locations/my-location/buckets/my-bucket-id". Also requires permission
+           * "resourcemanager.projects.updateLiens" to set the locked property
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^billingAccounts/[^/]+/locations/[^/]+/buckets/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Required. Field mask that specifies the fields in bucket that need an update. A bucket
+           * field will be overwritten if, and only if, it is in the update mask. name and output
+           * only fields cannot be updated.For a detailed FieldMask definition, see
+           * https://developers.google.com/protocol-
+           * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskExample:
+           * updateMask=retention_days.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. Field mask that specifies the fields in bucket that need an update. A bucket field will
+         be overwritten if, and only if, it is in the update mask. name and output only fields cannot be
+         updated.For a detailed FieldMask definition, see https://developers.google.com/protocol-
+         buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskExample: updateMask=retention_days.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Required. Field mask that specifies the fields in bucket that need an update. A bucket
+           * field will be overwritten if, and only if, it is in the update mask. name and output
+           * only fields cannot be updated.For a detailed FieldMask definition, see
+           * https://developers.google.com/protocol-
+           * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskExample:
+           * updateMask=retention_days.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
     /**
      * An accessor for creating requests from the Logs collection.
@@ -4713,6 +5381,652 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
     }
     /**
+     * An accessor for creating requests from the Locations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Logging logging = new Logging(...);}
+     *   {@code Logging.Locations.List request = logging.locations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Locations locations() {
+      return new Locations();
+    }
+
+    /**
+     * The "locations" collection of methods.
+     */
+    public class Locations {
+
+      /**
+       * An accessor for creating requests from the Buckets collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Logging logging = new Logging(...);}
+       *   {@code Logging.Buckets.List request = logging.buckets().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Buckets buckets() {
+        return new Buckets();
+      }
+
+      /**
+       * The "buckets" collection of methods.
+       */
+      public class Buckets {
+
+        /**
+         * Gets a bucket (Beta).
+         *
+         * Create a request for the method "buckets.get".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the bucket:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+        Example: "projects/my-
+         *        project-id/locations/my-location/buckets/my-bucket-id".
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends LoggingRequest<com.google.api.services.logging.v2.model.LogBucket> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+/buckets/[^/]+$");
+
+          /**
+           * Gets a bucket (Beta).
+           *
+           * Create a request for the method "buckets.get".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the bucket:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+        Example: "projects/my-
+         *        project-id/locations/my-location/buckets/my-bucket-id".
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Logging.this, "GET", REST_PATH, null, com.google.api.services.logging.v2.model.LogBucket.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+/buckets/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the bucket:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" Example: "projects
+           * /my-project-id/locations/my-location/buckets/my-bucket-id".
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the bucket:
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" Example: "projects/my-project-
+         id/locations/my-location/buckets/my-bucket-id".
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the bucket:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" Example: "projects
+           * /my-project-id/locations/my-location/buckets/my-bucket-id".
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+/buckets/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists buckets (Beta).
+         *
+         * Create a request for the method "buckets.list".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource whose buckets are to be listed:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]"
+        Note: The locations portion of the resource
+         *        is required, but supplying the character - in place of LOCATION_ID will return all
+         *        buckets.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends LoggingRequest<com.google.api.services.logging.v2.model.ListBucketsResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/buckets";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists buckets (Beta).
+           *
+           * Create a request for the method "buckets.list".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource whose buckets are to be listed:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]"
+        Note: The locations portion of the resource
+         *        is required, but supplying the character - in place of LOCATION_ID will return all
+         *        buckets.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Logging.this, "GET", REST_PATH, null, com.google.api.services.logging.v2.model.ListBucketsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource whose buckets are to be listed:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" Note: The locations portion of the
+           * resource is required, but supplying the character - in place of LOCATION_ID will return
+           * all buckets.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource whose buckets are to be listed:
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]" Note: The locations portion of the resource is
+         required, but supplying the character - in place of LOCATION_ID will return all buckets.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource whose buckets are to be listed:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" Note: The locations portion of the
+           * resource is required, but supplying the character - in place of LOCATION_ID will return
+           * all buckets.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of results to return from this request. Non-positive
+           * values are ignored. The presence of nextPageToken in the response indicates that more
+           * results might be available.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of results to return from this request. Non-positive values are
+         ignored. The presence of nextPageToken in the response indicates that more results might be
+         available.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of results to return from this request. Non-positive
+           * values are ignored. The presence of nextPageToken in the response indicates that more
+           * results might be available.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. If present, then retrieve the next batch of results from the preceding call
+           * to this method. pageToken must be the value of nextPageToken from the previous
+           * response. The values of other method parameters should be identical to those in the
+           * previous call.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. If present, then retrieve the next batch of results from the preceding call to this
+         method. pageToken must be the value of nextPageToken from the previous response. The values of
+         other method parameters should be identical to those in the previous call.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. If present, then retrieve the next batch of results from the preceding call
+           * to this method. pageToken must be the value of nextPageToken from the previous
+           * response. The values of other method parameters should be identical to those in the
+           * previous call.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a bucket. This method replaces the following fields in the existing bucket with values
+         * from the new bucket: retention_periodIf the retention period is decreased and the bucket is
+         * locked, FAILED_PRECONDITION will be returned.If the bucket has a LifecycleState of
+         * DELETE_REQUESTED, FAILED_PRECONDITION will be returned.A buckets region may not be modified after
+         * it is created. This method is in Beta.
+         *
+         * Create a request for the method "buckets.patch".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The full resource name of the bucket to update.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+        Example: "projects/my-
+         *        project-id/locations/my-location/buckets/my-bucket-id". Also requires permission
+         *        "resourcemanager.projects.updateLiens" to set the locked property
+         * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.logging.v2.model.LogBucket content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends LoggingRequest<com.google.api.services.logging.v2.model.LogBucket> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+/buckets/[^/]+$");
+
+          /**
+           * Updates a bucket. This method replaces the following fields in the existing bucket with values
+           * from the new bucket: retention_periodIf the retention period is decreased and the bucket is
+           * locked, FAILED_PRECONDITION will be returned.If the bucket has a LifecycleState of
+           * DELETE_REQUESTED, FAILED_PRECONDITION will be returned.A buckets region may not be modified
+           * after it is created. This method is in Beta.
+           *
+           * Create a request for the method "buckets.patch".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The full resource name of the bucket to update.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+        Example: "projects/my-
+         *        project-id/locations/my-location/buckets/my-bucket-id". Also requires permission
+         *        "resourcemanager.projects.updateLiens" to set the locked property
+           * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.logging.v2.model.LogBucket content) {
+            super(Logging.this, "PATCH", REST_PATH, content, com.google.api.services.logging.v2.model.LogBucket.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+/buckets/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The full resource name of the bucket to update.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" Example: "projects
+           * /my-project-id/locations/my-location/buckets/my-bucket-id". Also requires permission
+           * "resourcemanager.projects.updateLiens" to set the locked property
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The full resource name of the bucket to update.
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" Example: "projects/my-project-
+         id/locations/my-location/buckets/my-bucket-id". Also requires permission
+         "resourcemanager.projects.updateLiens" to set the locked property
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The full resource name of the bucket to update.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" Example: "projects
+           * /my-project-id/locations/my-location/buckets/my-bucket-id". Also requires permission
+           * "resourcemanager.projects.updateLiens" to set the locked property
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+/buckets/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Required. Field mask that specifies the fields in bucket that need an update. A bucket
+           * field will be overwritten if, and only if, it is in the update mask. name and output
+           * only fields cannot be updated.For a detailed FieldMask definition, see
+           * https://developers.google.com/protocol-
+           * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskExample:
+           * updateMask=retention_days.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. Field mask that specifies the fields in bucket that need an update. A bucket field will
+         be overwritten if, and only if, it is in the update mask. name and output only fields cannot be
+         updated.For a detailed FieldMask definition, see https://developers.google.com/protocol-
+         buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskExample: updateMask=retention_days.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Required. Field mask that specifies the fields in bucket that need an update. A bucket
+           * field will be overwritten if, and only if, it is in the update mask. name and output
+           * only fields cannot be updated.For a detailed FieldMask definition, see
+           * https://developers.google.com/protocol-
+           * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskExample:
+           * updateMask=retention_days.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+    /**
      * An accessor for creating requests from the Logs collection.
      *
      * <p>The typical use is:</p>
@@ -6324,6 +7638,651 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         @Override
         public Update set(String parameterName, Object value) {
           return (Update) super.set(parameterName, value);
+        }
+      }
+
+    }
+  }
+
+  /**
+   * An accessor for creating requests from the Locations collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Logging logging = new Logging(...);}
+   *   {@code Logging.Locations.List request = logging.locations().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Locations locations() {
+    return new Locations();
+  }
+
+  /**
+   * The "locations" collection of methods.
+   */
+  public class Locations {
+
+    /**
+     * An accessor for creating requests from the Buckets collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Logging logging = new Logging(...);}
+     *   {@code Logging.Buckets.List request = logging.buckets().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Buckets buckets() {
+      return new Buckets();
+    }
+
+    /**
+     * The "buckets" collection of methods.
+     */
+    public class Buckets {
+
+      /**
+       * Gets a bucket (Beta).
+       *
+       * Create a request for the method "buckets.get".
+       *
+       * This request holds the parameters needed by the logging server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name of the bucket:
+       *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+       *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+       *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+       *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+      Example: "projects/my-
+       *        project-id/locations/my-location/buckets/my-bucket-id".
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends LoggingRequest<com.google.api.services.logging.v2.model.LogBucket> {
+
+        private static final String REST_PATH = "v2/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+/[^/]+/locations/[^/]+/buckets/[^/]+$");
+
+        /**
+         * Gets a bucket (Beta).
+         *
+         * Create a request for the method "buckets.get".
+         *
+         * This request holds the parameters needed by the the logging server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name of the bucket:
+       *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+       *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+       *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+       *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+      Example: "projects/my-
+       *        project-id/locations/my-location/buckets/my-bucket-id".
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Logging.this, "GET", REST_PATH, null, com.google.api.services.logging.v2.model.LogBucket.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^[^/]+/[^/]+/locations/[^/]+/buckets/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the bucket:
+         * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" Example: "projects/my-
+         * project-id/locations/my-location/buckets/my-bucket-id".
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the bucket:
+       "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+       "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+       "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+       "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" Example: "projects/my-project-
+       id/locations/my-location/buckets/my-bucket-id".
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The resource name of the bucket:
+         * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" Example: "projects/my-
+         * project-id/locations/my-location/buckets/my-bucket-id".
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^[^/]+/[^/]+/locations/[^/]+/buckets/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists buckets (Beta).
+       *
+       * Create a request for the method "buckets.list".
+       *
+       * This request holds the parameters needed by the logging server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent resource whose buckets are to be listed:
+       *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+       *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+       *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+       *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]"
+      Note: The locations portion of the resource
+       *        is required, but supplying the character - in place of LOCATION_ID will return all
+       *        buckets.
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends LoggingRequest<com.google.api.services.logging.v2.model.ListBucketsResponse> {
+
+        private static final String REST_PATH = "v2/{+parent}/buckets";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+/[^/]+/locations/[^/]+$");
+
+        /**
+         * Lists buckets (Beta).
+         *
+         * Create a request for the method "buckets.list".
+         *
+         * This request holds the parameters needed by the the logging server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent resource whose buckets are to be listed:
+       *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+       *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+       *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+       *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]"
+      Note: The locations portion of the resource
+       *        is required, but supplying the character - in place of LOCATION_ID will return all
+       *        buckets.
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(Logging.this, "GET", REST_PATH, null, com.google.api.services.logging.v2.model.ListBucketsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^[^/]+/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent resource whose buckets are to be listed:
+         * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" Note: The locations portion of the resource
+         * is required, but supplying the character - in place of LOCATION_ID will return all
+         * buckets.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent resource whose buckets are to be listed:
+       "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+       "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+       "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+       "folders/[FOLDER_ID]/locations/[LOCATION_ID]" Note: The locations portion of the resource is
+       required, but supplying the character - in place of LOCATION_ID will return all buckets.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The parent resource whose buckets are to be listed:
+         * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" Note: The locations portion of the resource
+         * is required, but supplying the character - in place of LOCATION_ID will return all
+         * buckets.
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^[^/]+/[^/]+/locations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. The maximum number of results to return from this request. Non-positive values
+         * are ignored. The presence of nextPageToken in the response indicates that more results
+         * might be available.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of results to return from this request. Non-positive values are
+       ignored. The presence of nextPageToken in the response indicates that more results might be
+       available.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. The maximum number of results to return from this request. Non-positive values
+         * are ignored. The presence of nextPageToken in the response indicates that more results
+         * might be available.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. If present, then retrieve the next batch of results from the preceding call to
+         * this method. pageToken must be the value of nextPageToken from the previous response. The
+         * values of other method parameters should be identical to those in the previous call.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. If present, then retrieve the next batch of results from the preceding call to this
+       method. pageToken must be the value of nextPageToken from the previous response. The values of
+       other method parameters should be identical to those in the previous call.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. If present, then retrieve the next batch of results from the preceding call to
+         * this method. pageToken must be the value of nextPageToken from the previous response. The
+         * values of other method parameters should be identical to those in the previous call.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates a bucket. This method replaces the following fields in the existing bucket with values
+       * from the new bucket: retention_periodIf the retention period is decreased and the bucket is
+       * locked, FAILED_PRECONDITION will be returned.If the bucket has a LifecycleState of
+       * DELETE_REQUESTED, FAILED_PRECONDITION will be returned.A buckets region may not be modified after
+       * it is created. This method is in Beta.
+       *
+       * Create a request for the method "buckets.patch".
+       *
+       * This request holds the parameters needed by the logging server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The full resource name of the bucket to update.
+       *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+       *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+       *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+       *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+      Example: "projects/my-
+       *        project-id/locations/my-location/buckets/my-bucket-id". Also requires permission
+       *        "resourcemanager.projects.updateLiens" to set the locked property
+       * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.logging.v2.model.LogBucket content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends LoggingRequest<com.google.api.services.logging.v2.model.LogBucket> {
+
+        private static final String REST_PATH = "v2/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+/[^/]+/locations/[^/]+/buckets/[^/]+$");
+
+        /**
+         * Updates a bucket. This method replaces the following fields in the existing bucket with values
+         * from the new bucket: retention_periodIf the retention period is decreased and the bucket is
+         * locked, FAILED_PRECONDITION will be returned.If the bucket has a LifecycleState of
+         * DELETE_REQUESTED, FAILED_PRECONDITION will be returned.A buckets region may not be modified
+         * after it is created. This method is in Beta.
+         *
+         * Create a request for the method "buckets.patch".
+         *
+         * This request holds the parameters needed by the the logging server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The full resource name of the bucket to update.
+       *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+       *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+       *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+       *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+      Example: "projects/my-
+       *        project-id/locations/my-location/buckets/my-bucket-id". Also requires permission
+       *        "resourcemanager.projects.updateLiens" to set the locked property
+         * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.logging.v2.model.LogBucket content) {
+          super(Logging.this, "PATCH", REST_PATH, content, com.google.api.services.logging.v2.model.LogBucket.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^[^/]+/[^/]+/locations/[^/]+/buckets/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The full resource name of the bucket to update.
+         * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" Example: "projects/my-
+         * project-id/locations/my-location/buckets/my-bucket-id". Also requires permission
+         * "resourcemanager.projects.updateLiens" to set the locked property
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The full resource name of the bucket to update.
+       "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+       "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+       "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+       "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" Example: "projects/my-project-
+       id/locations/my-location/buckets/my-bucket-id". Also requires permission
+       "resourcemanager.projects.updateLiens" to set the locked property
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The full resource name of the bucket to update.
+         * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" Example: "projects/my-
+         * project-id/locations/my-location/buckets/my-bucket-id". Also requires permission
+         * "resourcemanager.projects.updateLiens" to set the locked property
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^[^/]+/[^/]+/locations/[^/]+/buckets/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Required. Field mask that specifies the fields in bucket that need an update. A bucket
+         * field will be overwritten if, and only if, it is in the update mask. name and output only
+         * fields cannot be updated.For a detailed FieldMask definition, see
+         * https://developers.google.com/protocol-
+         * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskExample:
+         * updateMask=retention_days.
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Required. Field mask that specifies the fields in bucket that need an update. A bucket field will
+       be overwritten if, and only if, it is in the update mask. name and output only fields cannot be
+       updated.For a detailed FieldMask definition, see https://developers.google.com/protocol-
+       buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskExample: updateMask=retention_days.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * Required. Field mask that specifies the fields in bucket that need an update. A bucket
+         * field will be overwritten if, and only if, it is in the update mask. name and output only
+         * fields cannot be updated.For a detailed FieldMask definition, see
+         * https://developers.google.com/protocol-
+         * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskExample:
+         * updateMask=retention_days.
+         */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
         }
       }
 
@@ -8203,6 +10162,652 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
       }
 
+    }
+    /**
+     * An accessor for creating requests from the Locations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Logging logging = new Logging(...);}
+     *   {@code Logging.Locations.List request = logging.locations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Locations locations() {
+      return new Locations();
+    }
+
+    /**
+     * The "locations" collection of methods.
+     */
+    public class Locations {
+
+      /**
+       * An accessor for creating requests from the Buckets collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Logging logging = new Logging(...);}
+       *   {@code Logging.Buckets.List request = logging.buckets().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Buckets buckets() {
+        return new Buckets();
+      }
+
+      /**
+       * The "buckets" collection of methods.
+       */
+      public class Buckets {
+
+        /**
+         * Gets a bucket (Beta).
+         *
+         * Create a request for the method "buckets.get".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the bucket:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+        Example: "projects/my-
+         *        project-id/locations/my-location/buckets/my-bucket-id".
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends LoggingRequest<com.google.api.services.logging.v2.model.LogBucket> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/buckets/[^/]+$");
+
+          /**
+           * Gets a bucket (Beta).
+           *
+           * Create a request for the method "buckets.get".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the bucket:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+        Example: "projects/my-
+         *        project-id/locations/my-location/buckets/my-bucket-id".
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Logging.this, "GET", REST_PATH, null, com.google.api.services.logging.v2.model.LogBucket.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/buckets/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the bucket:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" Example: "projects
+           * /my-project-id/locations/my-location/buckets/my-bucket-id".
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the bucket:
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" Example: "projects/my-project-
+         id/locations/my-location/buckets/my-bucket-id".
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the bucket:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" Example: "projects
+           * /my-project-id/locations/my-location/buckets/my-bucket-id".
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/buckets/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists buckets (Beta).
+         *
+         * Create a request for the method "buckets.list".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource whose buckets are to be listed:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]"
+        Note: The locations portion of the resource
+         *        is required, but supplying the character - in place of LOCATION_ID will return all
+         *        buckets.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends LoggingRequest<com.google.api.services.logging.v2.model.ListBucketsResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/buckets";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists buckets (Beta).
+           *
+           * Create a request for the method "buckets.list".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource whose buckets are to be listed:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]"
+        Note: The locations portion of the resource
+         *        is required, but supplying the character - in place of LOCATION_ID will return all
+         *        buckets.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Logging.this, "GET", REST_PATH, null, com.google.api.services.logging.v2.model.ListBucketsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource whose buckets are to be listed:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" Note: The locations portion of the
+           * resource is required, but supplying the character - in place of LOCATION_ID will return
+           * all buckets.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource whose buckets are to be listed:
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]" Note: The locations portion of the resource is
+         required, but supplying the character - in place of LOCATION_ID will return all buckets.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource whose buckets are to be listed:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" Note: The locations portion of the
+           * resource is required, but supplying the character - in place of LOCATION_ID will return
+           * all buckets.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of results to return from this request. Non-positive
+           * values are ignored. The presence of nextPageToken in the response indicates that more
+           * results might be available.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of results to return from this request. Non-positive values are
+         ignored. The presence of nextPageToken in the response indicates that more results might be
+         available.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of results to return from this request. Non-positive
+           * values are ignored. The presence of nextPageToken in the response indicates that more
+           * results might be available.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. If present, then retrieve the next batch of results from the preceding call
+           * to this method. pageToken must be the value of nextPageToken from the previous
+           * response. The values of other method parameters should be identical to those in the
+           * previous call.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. If present, then retrieve the next batch of results from the preceding call to this
+         method. pageToken must be the value of nextPageToken from the previous response. The values of
+         other method parameters should be identical to those in the previous call.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. If present, then retrieve the next batch of results from the preceding call
+           * to this method. pageToken must be the value of nextPageToken from the previous
+           * response. The values of other method parameters should be identical to those in the
+           * previous call.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a bucket. This method replaces the following fields in the existing bucket with values
+         * from the new bucket: retention_periodIf the retention period is decreased and the bucket is
+         * locked, FAILED_PRECONDITION will be returned.If the bucket has a LifecycleState of
+         * DELETE_REQUESTED, FAILED_PRECONDITION will be returned.A buckets region may not be modified after
+         * it is created. This method is in Beta.
+         *
+         * Create a request for the method "buckets.patch".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The full resource name of the bucket to update.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+        Example: "projects/my-
+         *        project-id/locations/my-location/buckets/my-bucket-id". Also requires permission
+         *        "resourcemanager.projects.updateLiens" to set the locked property
+         * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.logging.v2.model.LogBucket content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends LoggingRequest<com.google.api.services.logging.v2.model.LogBucket> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/buckets/[^/]+$");
+
+          /**
+           * Updates a bucket. This method replaces the following fields in the existing bucket with values
+           * from the new bucket: retention_periodIf the retention period is decreased and the bucket is
+           * locked, FAILED_PRECONDITION will be returned.If the bucket has a LifecycleState of
+           * DELETE_REQUESTED, FAILED_PRECONDITION will be returned.A buckets region may not be modified
+           * after it is created. This method is in Beta.
+           *
+           * Create a request for the method "buckets.patch".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The full resource name of the bucket to update.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+        Example: "projects/my-
+         *        project-id/locations/my-location/buckets/my-bucket-id". Also requires permission
+         *        "resourcemanager.projects.updateLiens" to set the locked property
+           * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.logging.v2.model.LogBucket content) {
+            super(Logging.this, "PATCH", REST_PATH, content, com.google.api.services.logging.v2.model.LogBucket.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/buckets/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The full resource name of the bucket to update.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" Example: "projects
+           * /my-project-id/locations/my-location/buckets/my-bucket-id". Also requires permission
+           * "resourcemanager.projects.updateLiens" to set the locked property
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The full resource name of the bucket to update.
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" Example: "projects/my-project-
+         id/locations/my-location/buckets/my-bucket-id". Also requires permission
+         "resourcemanager.projects.updateLiens" to set the locked property
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The full resource name of the bucket to update.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" Example: "projects
+           * /my-project-id/locations/my-location/buckets/my-bucket-id". Also requires permission
+           * "resourcemanager.projects.updateLiens" to set the locked property
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/buckets/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Required. Field mask that specifies the fields in bucket that need an update. A bucket
+           * field will be overwritten if, and only if, it is in the update mask. name and output
+           * only fields cannot be updated.For a detailed FieldMask definition, see
+           * https://developers.google.com/protocol-
+           * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskExample:
+           * updateMask=retention_days.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. Field mask that specifies the fields in bucket that need an update. A bucket field will
+         be overwritten if, and only if, it is in the update mask. name and output only fields cannot be
+         updated.For a detailed FieldMask definition, see https://developers.google.com/protocol-
+         buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskExample: updateMask=retention_days.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Required. Field mask that specifies the fields in bucket that need an update. A bucket
+           * field will be overwritten if, and only if, it is in the update mask. name and output
+           * only fields cannot be updated.For a detailed FieldMask definition, see
+           * https://developers.google.com/protocol-
+           * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskExample:
+           * updateMask=retention_days.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
     /**
      * An accessor for creating requests from the Logs collection.
@@ -10742,6 +13347,652 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
       }
 
+    }
+    /**
+     * An accessor for creating requests from the Locations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Logging logging = new Logging(...);}
+     *   {@code Logging.Locations.List request = logging.locations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Locations locations() {
+      return new Locations();
+    }
+
+    /**
+     * The "locations" collection of methods.
+     */
+    public class Locations {
+
+      /**
+       * An accessor for creating requests from the Buckets collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Logging logging = new Logging(...);}
+       *   {@code Logging.Buckets.List request = logging.buckets().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Buckets buckets() {
+        return new Buckets();
+      }
+
+      /**
+       * The "buckets" collection of methods.
+       */
+      public class Buckets {
+
+        /**
+         * Gets a bucket (Beta).
+         *
+         * Create a request for the method "buckets.get".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the bucket:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+        Example: "projects/my-
+         *        project-id/locations/my-location/buckets/my-bucket-id".
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends LoggingRequest<com.google.api.services.logging.v2.model.LogBucket> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/buckets/[^/]+$");
+
+          /**
+           * Gets a bucket (Beta).
+           *
+           * Create a request for the method "buckets.get".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the bucket:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+        Example: "projects/my-
+         *        project-id/locations/my-location/buckets/my-bucket-id".
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Logging.this, "GET", REST_PATH, null, com.google.api.services.logging.v2.model.LogBucket.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/buckets/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the bucket:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" Example: "projects
+           * /my-project-id/locations/my-location/buckets/my-bucket-id".
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the bucket:
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" Example: "projects/my-project-
+         id/locations/my-location/buckets/my-bucket-id".
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the bucket:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" Example: "projects
+           * /my-project-id/locations/my-location/buckets/my-bucket-id".
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/buckets/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists buckets (Beta).
+         *
+         * Create a request for the method "buckets.list".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource whose buckets are to be listed:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]"
+        Note: The locations portion of the resource
+         *        is required, but supplying the character - in place of LOCATION_ID will return all
+         *        buckets.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends LoggingRequest<com.google.api.services.logging.v2.model.ListBucketsResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/buckets";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists buckets (Beta).
+           *
+           * Create a request for the method "buckets.list".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource whose buckets are to be listed:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]"
+        Note: The locations portion of the resource
+         *        is required, but supplying the character - in place of LOCATION_ID will return all
+         *        buckets.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Logging.this, "GET", REST_PATH, null, com.google.api.services.logging.v2.model.ListBucketsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource whose buckets are to be listed:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" Note: The locations portion of the
+           * resource is required, but supplying the character - in place of LOCATION_ID will return
+           * all buckets.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource whose buckets are to be listed:
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]" Note: The locations portion of the resource is
+         required, but supplying the character - in place of LOCATION_ID will return all buckets.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource whose buckets are to be listed:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" Note: The locations portion of the
+           * resource is required, but supplying the character - in place of LOCATION_ID will return
+           * all buckets.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of results to return from this request. Non-positive
+           * values are ignored. The presence of nextPageToken in the response indicates that more
+           * results might be available.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of results to return from this request. Non-positive values are
+         ignored. The presence of nextPageToken in the response indicates that more results might be
+         available.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of results to return from this request. Non-positive
+           * values are ignored. The presence of nextPageToken in the response indicates that more
+           * results might be available.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. If present, then retrieve the next batch of results from the preceding call
+           * to this method. pageToken must be the value of nextPageToken from the previous
+           * response. The values of other method parameters should be identical to those in the
+           * previous call.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. If present, then retrieve the next batch of results from the preceding call to this
+         method. pageToken must be the value of nextPageToken from the previous response. The values of
+         other method parameters should be identical to those in the previous call.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. If present, then retrieve the next batch of results from the preceding call
+           * to this method. pageToken must be the value of nextPageToken from the previous
+           * response. The values of other method parameters should be identical to those in the
+           * previous call.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a bucket. This method replaces the following fields in the existing bucket with values
+         * from the new bucket: retention_periodIf the retention period is decreased and the bucket is
+         * locked, FAILED_PRECONDITION will be returned.If the bucket has a LifecycleState of
+         * DELETE_REQUESTED, FAILED_PRECONDITION will be returned.A buckets region may not be modified after
+         * it is created. This method is in Beta.
+         *
+         * Create a request for the method "buckets.patch".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The full resource name of the bucket to update.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+        Example: "projects/my-
+         *        project-id/locations/my-location/buckets/my-bucket-id". Also requires permission
+         *        "resourcemanager.projects.updateLiens" to set the locked property
+         * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.logging.v2.model.LogBucket content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends LoggingRequest<com.google.api.services.logging.v2.model.LogBucket> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/buckets/[^/]+$");
+
+          /**
+           * Updates a bucket. This method replaces the following fields in the existing bucket with values
+           * from the new bucket: retention_periodIf the retention period is decreased and the bucket is
+           * locked, FAILED_PRECONDITION will be returned.If the bucket has a LifecycleState of
+           * DELETE_REQUESTED, FAILED_PRECONDITION will be returned.A buckets region may not be modified
+           * after it is created. This method is in Beta.
+           *
+           * Create a request for the method "buckets.patch".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The full resource name of the bucket to update.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+        Example: "projects/my-
+         *        project-id/locations/my-location/buckets/my-bucket-id". Also requires permission
+         *        "resourcemanager.projects.updateLiens" to set the locked property
+           * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.logging.v2.model.LogBucket content) {
+            super(Logging.this, "PATCH", REST_PATH, content, com.google.api.services.logging.v2.model.LogBucket.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/buckets/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The full resource name of the bucket to update.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" Example: "projects
+           * /my-project-id/locations/my-location/buckets/my-bucket-id". Also requires permission
+           * "resourcemanager.projects.updateLiens" to set the locked property
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The full resource name of the bucket to update.
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" Example: "projects/my-project-
+         id/locations/my-location/buckets/my-bucket-id". Also requires permission
+         "resourcemanager.projects.updateLiens" to set the locked property
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The full resource name of the bucket to update.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" Example: "projects
+           * /my-project-id/locations/my-location/buckets/my-bucket-id". Also requires permission
+           * "resourcemanager.projects.updateLiens" to set the locked property
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/buckets/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Required. Field mask that specifies the fields in bucket that need an update. A bucket
+           * field will be overwritten if, and only if, it is in the update mask. name and output
+           * only fields cannot be updated.For a detailed FieldMask definition, see
+           * https://developers.google.com/protocol-
+           * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskExample:
+           * updateMask=retention_days.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. Field mask that specifies the fields in bucket that need an update. A bucket field will
+         be overwritten if, and only if, it is in the update mask. name and output only fields cannot be
+         updated.For a detailed FieldMask definition, see https://developers.google.com/protocol-
+         buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskExample: updateMask=retention_days.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Required. Field mask that specifies the fields in bucket that need an update. A bucket
+           * field will be overwritten if, and only if, it is in the update mask. name and output
+           * only fields cannot be updated.For a detailed FieldMask definition, see
+           * https://developers.google.com/protocol-
+           * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskExample:
+           * updateMask=retention_days.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
     /**
      * An accessor for creating requests from the Logs collection.

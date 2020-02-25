@@ -1384,7 +1384,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
           private static final String REST_PATH = "v1alpha2/{+parent}";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/reservations/.+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/reservations/.*$");
 
           /**
            * Creates a new reservation resource. Multiple reservations are created if the ancestor
@@ -1410,7 +1410,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/reservations/.+$");
+                  "^projects/[^/]+/locations/[^/]+/reservations/.*$");
             }
           }
 
@@ -1491,7 +1491,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/reservations/.+$");
+                  "^projects/[^/]+/locations/[^/]+/reservations/.*$");
             }
             this.parent = parent;
             return this;
@@ -1552,7 +1552,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
           private static final String REST_PATH = "v1alpha2/{+name}";
 
           private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/reservations/.+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/reservations/.*$");
 
           /**
            * Deletes a reservation. Returns `google.rpc.Code.FAILED_PRECONDITION` in the following cases:
@@ -1579,7 +1579,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                   "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/reservations/.+$");
+                  "^projects/[^/]+/locations/[^/]+/reservations/.*$");
             }
           }
 
@@ -1660,7 +1660,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                   "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/reservations/.+$");
+                  "^projects/[^/]+/locations/[^/]+/reservations/.*$");
             }
             this.name = name;
             return this;
@@ -1721,7 +1721,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
           private static final String REST_PATH = "v1alpha2/{+name}";
 
           private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/reservations/.+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/reservations/.*$");
 
           /**
            * Returns information about the reservation.
@@ -1745,7 +1745,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                   "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/reservations/.+$");
+                  "^projects/[^/]+/locations/[^/]+/reservations/.*$");
             }
           }
 
@@ -1836,7 +1836,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                   "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/reservations/.+$");
+                  "^projects/[^/]+/locations/[^/]+/reservations/.*$");
             }
             this.name = name;
             return this;
@@ -2084,7 +2084,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
           private static final String REST_PATH = "v1alpha2/{+name}";
 
           private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/reservations/[^/]+/.+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/reservations/[^/]+/.*$");
 
           /**
            * Updates an existing reservation resource. Applicable only for child reservations.
@@ -2111,7 +2111,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                   "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/reservations/[^/]+/.+$");
+                  "^projects/[^/]+/locations/[^/]+/reservations/[^/]+/.*$");
             }
           }
 
@@ -2197,7 +2197,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                   "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/reservations/[^/]+/.+$");
+                  "^projects/[^/]+/locations/[^/]+/reservations/[^/]+/.*$");
             }
             this.name = name;
             return this;

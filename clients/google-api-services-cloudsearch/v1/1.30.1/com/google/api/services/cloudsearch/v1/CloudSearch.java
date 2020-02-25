@@ -3862,7 +3862,10 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
      * from a user query.  The results can come from G Suite Apps, such as Gmail or Google Drive, or
      * they can come from data that you have indexed from a third party.
      *
-     * **Note:** This API requires a standard end user account to execute.
+     * **Note:** This API requires a standard end user account to execute. A service account can't
+     * perform Query API requests directly; to use a service account to perform queries, set up [G Suite
+     * domain-wide delegation of authority](https://developers.google.com/cloud-
+     * search/docs/guides/delegation/).
      *
      * Create a request for the method "query.search".
      *
@@ -3887,7 +3890,10 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
        * from a user query.  The results can come from G Suite Apps, such as Gmail or Google Drive, or
        * they can come from data that you have indexed from a third party.
        *
-       * **Note:** This API requires a standard end user account to execute.
+       * **Note:** This API requires a standard end user account to execute. A service account can't
+       * perform Query API requests directly; to use a service account to perform queries, set up [G
+       * Suite domain-wide delegation of authority](https://developers.google.com/cloud-
+       * search/docs/guides/delegation/).
        *
        * Create a request for the method "query.search".
        *
@@ -3967,7 +3973,10 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
     /**
      * Provides suggestions for autocompleting the query.
      *
-     * **Note:** This API requires a standard end user account to execute.
+     * **Note:** This API requires a standard end user account to execute. A service account can't
+     * perform Query API requests directly; to use a service account to perform queries, set up [G Suite
+     * domain-wide delegation of authority](https://developers.google.com/cloud-
+     * search/docs/guides/delegation/).
      *
      * Create a request for the method "query.suggest".
      *
@@ -3990,7 +3999,10 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       /**
        * Provides suggestions for autocompleting the query.
        *
-       * **Note:** This API requires a standard end user account to execute.
+       * **Note:** This API requires a standard end user account to execute. A service account can't
+       * perform Query API requests directly; to use a service account to perform queries, set up [G
+       * Suite domain-wide delegation of authority](https://developers.google.com/cloud-
+       * search/docs/guides/delegation/).
        *
        * Create a request for the method "query.suggest".
        *
@@ -4091,7 +4103,10 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       /**
        * Returns list of sources that user can use for Search and Suggest APIs.
        *
-       * **Note:** This API requires a standard end user account to execute.
+       * **Note:** This API requires a standard end user account to execute. A service account can't
+       * perform Query API requests directly; to use a service account to perform queries, set up [G Suite
+       * domain-wide delegation of authority](https://developers.google.com/cloud-
+       * search/docs/guides/delegation/).
        *
        * Create a request for the method "sources.list".
        *
@@ -4113,7 +4128,10 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         /**
          * Returns list of sources that user can use for Search and Suggest APIs.
          *
-         * **Note:** This API requires a standard end user account to execute.
+         * **Note:** This API requires a standard end user account to execute. A service account can't
+         * perform Query API requests directly; to use a service account to perform queries, set up [G
+         * Suite domain-wide delegation of authority](https://developers.google.com/cloud-
+         * search/docs/guides/delegation/).
          *
          * Create a request for the method "sources.list".
          *

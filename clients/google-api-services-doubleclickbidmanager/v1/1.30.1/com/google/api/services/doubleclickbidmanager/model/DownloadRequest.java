@@ -59,8 +59,7 @@ public final class DownloadRequest extends com.google.api.client.json.GenericJso
   private java.lang.String filterType;
 
   /**
-   * SDF Version (column names, types, order) in which the entities will be returned. Default to
-   * 3.1.
+   * SDF Version (column names, types, order) in which the entities will be returned. Default to 5.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,8 +129,7 @@ public final class DownloadRequest extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * SDF Version (column names, types, order) in which the entities will be returned. Default to
-   * 3.1.
+   * SDF Version (column names, types, order) in which the entities will be returned. Default to 5.
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -139,8 +137,7 @@ public final class DownloadRequest extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * SDF Version (column names, types, order) in which the entities will be returned. Default to
-   * 3.1.
+   * SDF Version (column names, types, order) in which the entities will be returned. Default to 5.
    * @param version version or {@code null} for none
    */
   public DownloadRequest setVersion(java.lang.String version) {

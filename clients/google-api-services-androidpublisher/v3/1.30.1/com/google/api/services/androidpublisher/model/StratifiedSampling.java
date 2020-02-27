@@ -17,7 +17,7 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * Model definition for Control.
+ * Model definition for StratifiedSampling.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play Developer API. For a detailed explanation
@@ -28,7 +28,7 @@ package com.google.api.services.androidpublisher.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Control extends com.google.api.client.json.GenericJson {
+public final class StratifiedSampling extends com.google.api.client.json.GenericJson {
 
   /**
    * The value may be {@code null}.
@@ -36,17 +36,17 @@ public final class Control extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<ModRange> modRanges;
 
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<StratifiedSampling> stratifiedSamplings;
+  static {
+    // hack to force ProGuard to consider ModRange used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ModRange.class);
+  }
 
   /**
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.util.List<java.lang.Long> versionCodes;
+  @com.google.api.client.util.Key
+  private Stratum stratum;
 
   /**
    * @return value or {@code null} for none
@@ -58,7 +58,7 @@ public final class Control extends com.google.api.client.json.GenericJson {
   /**
    * @param modRanges modRanges or {@code null} for none
    */
-  public Control setModRanges(java.util.List<ModRange> modRanges) {
+  public StratifiedSampling setModRanges(java.util.List<ModRange> modRanges) {
     this.modRanges = modRanges;
     return this;
   }
@@ -66,41 +66,26 @@ public final class Control extends com.google.api.client.json.GenericJson {
   /**
    * @return value or {@code null} for none
    */
-  public java.util.List<StratifiedSampling> getStratifiedSamplings() {
-    return stratifiedSamplings;
+  public Stratum getStratum() {
+    return stratum;
   }
 
   /**
-   * @param stratifiedSamplings stratifiedSamplings or {@code null} for none
+   * @param stratum stratum or {@code null} for none
    */
-  public Control setStratifiedSamplings(java.util.List<StratifiedSampling> stratifiedSamplings) {
-    this.stratifiedSamplings = stratifiedSamplings;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.Long> getVersionCodes() {
-    return versionCodes;
-  }
-
-  /**
-   * @param versionCodes versionCodes or {@code null} for none
-   */
-  public Control setVersionCodes(java.util.List<java.lang.Long> versionCodes) {
-    this.versionCodes = versionCodes;
+  public StratifiedSampling setStratum(Stratum stratum) {
+    this.stratum = stratum;
     return this;
   }
 
   @Override
-  public Control set(String fieldName, Object value) {
-    return (Control) super.set(fieldName, value);
+  public StratifiedSampling set(String fieldName, Object value) {
+    return (StratifiedSampling) super.set(fieldName, value);
   }
 
   @Override
-  public Control clone() {
-    return (Control) super.clone();
+  public StratifiedSampling clone() {
+    return (StratifiedSampling) super.clone();
   }
 
 }

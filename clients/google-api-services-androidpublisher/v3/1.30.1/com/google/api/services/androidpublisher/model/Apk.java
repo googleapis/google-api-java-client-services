@@ -38,6 +38,12 @@ public final class Apk extends com.google.api.client.json.GenericJson {
   private ApkBinary binary;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ApkBinary testBinary;
+
+  /**
    * The version code of the APK, as specified in the APK's manifest file.
    * The value may be {@code null}.
    */
@@ -58,6 +64,21 @@ public final class Apk extends com.google.api.client.json.GenericJson {
    */
   public Apk setBinary(ApkBinary binary) {
     this.binary = binary;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public ApkBinary getTestBinary() {
+    return testBinary;
+  }
+
+  /**
+   * @param testBinary testBinary or {@code null} for none
+   */
+  public Apk setTestBinary(ApkBinary testBinary) {
+    this.testBinary = testBinary;
     return this;
   }
 

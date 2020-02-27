@@ -17,7 +17,7 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * Model definition for Control.
+ * Model definition for TrackReleasePin.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play Developer API. For a detailed explanation
@@ -28,19 +28,13 @@ package com.google.api.services.androidpublisher.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Control extends com.google.api.client.json.GenericJson {
+public final class TrackReleasePin extends com.google.api.client.json.GenericJson {
 
   /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<ModRange> modRanges;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<StratifiedSampling> stratifiedSamplings;
+  private java.util.List<TrackReleasePinPinTargeting> targetings;
 
   /**
    * The value may be {@code null}.
@@ -51,30 +45,15 @@ public final class Control extends com.google.api.client.json.GenericJson {
   /**
    * @return value or {@code null} for none
    */
-  public java.util.List<ModRange> getModRanges() {
-    return modRanges;
+  public java.util.List<TrackReleasePinPinTargeting> getTargetings() {
+    return targetings;
   }
 
   /**
-   * @param modRanges modRanges or {@code null} for none
+   * @param targetings targetings or {@code null} for none
    */
-  public Control setModRanges(java.util.List<ModRange> modRanges) {
-    this.modRanges = modRanges;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.util.List<StratifiedSampling> getStratifiedSamplings() {
-    return stratifiedSamplings;
-  }
-
-  /**
-   * @param stratifiedSamplings stratifiedSamplings or {@code null} for none
-   */
-  public Control setStratifiedSamplings(java.util.List<StratifiedSampling> stratifiedSamplings) {
-    this.stratifiedSamplings = stratifiedSamplings;
+  public TrackReleasePin setTargetings(java.util.List<TrackReleasePinPinTargeting> targetings) {
+    this.targetings = targetings;
     return this;
   }
 
@@ -88,19 +67,19 @@ public final class Control extends com.google.api.client.json.GenericJson {
   /**
    * @param versionCodes versionCodes or {@code null} for none
    */
-  public Control setVersionCodes(java.util.List<java.lang.Long> versionCodes) {
+  public TrackReleasePin setVersionCodes(java.util.List<java.lang.Long> versionCodes) {
     this.versionCodes = versionCodes;
     return this;
   }
 
   @Override
-  public Control set(String fieldName, Object value) {
-    return (Control) super.set(fieldName, value);
+  public TrackReleasePin set(String fieldName, Object value) {
+    return (TrackReleasePin) super.set(fieldName, value);
   }
 
   @Override
-  public Control clone() {
-    return (Control) super.clone();
+  public TrackReleasePin clone() {
+    return (TrackReleasePin) super.clone();
   }
 
 }

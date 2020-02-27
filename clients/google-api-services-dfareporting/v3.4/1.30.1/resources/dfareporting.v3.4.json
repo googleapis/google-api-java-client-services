@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"F5McR9eEaw0XRpaO3M9gbIugkbs/V35Ldow5sR30j3EuoED6Qn8EWrA\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/gQnTYlSgJfc3uOvLoj3SdrLwqnM\"",
  "discoveryVersion": "v1",
  "id": "dfareporting:v3.4",
  "name": "dfareporting",
  "version": "v3.4",
- "revision": "20191127",
+ "revision": "20200121",
  "title": "DCM/DFA Reporting And Trafficking API",
  "description": "Manages your DoubleClick Campaign Manager ad campaigns and reports.",
  "ownerDomain": "google.com",
@@ -4899,10 +4899,6 @@
    "type": "object",
    "description": "DirectorySites contains properties of a website from the Site Directory. Sites need to be added to an account via the Sites resource before they can be assigned to a placement.",
    "properties": {
-    "active": {
-     "type": "boolean",
-     "description": "Whether this directory site is active."
-    },
     "id": {
      "type": "string",
      "description": "ID of this directory site. This is a read-only, auto-generated field.",

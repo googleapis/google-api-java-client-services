@@ -32,13 +32,6 @@ package com.google.api.services.dfareporting.model;
 public final class DirectorySite extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether this directory site is active.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean active;
-
-  /**
    * ID of this directory site. This is a read-only, auto-generated field.
    * The value may be {@code null}.
    */
@@ -99,23 +92,6 @@ public final class DirectorySite extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String url;
-
-  /**
-   * Whether this directory site is active.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getActive() {
-    return active;
-  }
-
-  /**
-   * Whether this directory site is active.
-   * @param active active or {@code null} for none
-   */
-  public DirectorySite setActive(java.lang.Boolean active) {
-    this.active = active;
-    return this;
-  }
 
   /**
    * ID of this directory site. This is a read-only, auto-generated field.

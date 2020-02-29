@@ -30,6 +30,15 @@ package com.google.api.services.dataproc.v1beta2.model;
 public final class Job extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Indicates whether the job is completed. If the value is false, the job is still in
+   * progress. If true, the job is completed, and status.state field will indicate if it was
+   * successful, failed, or cancelled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean done;
+
+  /**
    * Output only. If present, the location of miscellaneous control files which may be used as part
    * of job setup and handling. If not present, control files may be placed in the same location as
    * driver_output_uri.
@@ -164,6 +173,27 @@ public final class Job extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<YarnApplication> yarnApplications;
+
+  /**
+   * Output only. Indicates whether the job is completed. If the value is false, the job is still in
+   * progress. If true, the job is completed, and status.state field will indicate if it was
+   * successful, failed, or cancelled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDone() {
+    return done;
+  }
+
+  /**
+   * Output only. Indicates whether the job is completed. If the value is false, the job is still in
+   * progress. If true, the job is completed, and status.state field will indicate if it was
+   * successful, failed, or cancelled.
+   * @param done done or {@code null} for none
+   */
+  public Job setDone(java.lang.Boolean done) {
+    this.done = done;
+    return this;
+  }
 
   /**
    * Output only. If present, the location of miscellaneous control files which may be used as part

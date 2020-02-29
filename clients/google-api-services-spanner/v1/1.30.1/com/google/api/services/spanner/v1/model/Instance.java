@@ -46,19 +46,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
-   * Output only. A set of endpoint URIs based on your instance config that you can use instead of
-   * the global endpoint `spanner.googleapis.com`.
-   *
-   * For example, if your instance config is `us-central1` (a regional config in Iowa), then your
-   * instance specific endpoints may include `us-central1-spanner.googleapis.com`. By calling these
-   * endpoints instead of the global endpoint, you optimize network routing which could reduce
-   * network latency.
-   *
-   * The client libraries, JDBC drivers, and other SDK clients automatically call these instance
-   * specific endpoints.
-   *
-   * If you are using DNS whitelists, firewalls, or filtering to control access to endpoints, make
-   * sure you grant access to `*spanner.googleapis.com`.
+   * Deprecated. This field is not populated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -155,19 +143,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A set of endpoint URIs based on your instance config that you can use instead of
-   * the global endpoint `spanner.googleapis.com`.
-   *
-   * For example, if your instance config is `us-central1` (a regional config in Iowa), then your
-   * instance specific endpoints may include `us-central1-spanner.googleapis.com`. By calling these
-   * endpoints instead of the global endpoint, you optimize network routing which could reduce
-   * network latency.
-   *
-   * The client libraries, JDBC drivers, and other SDK clients automatically call these instance
-   * specific endpoints.
-   *
-   * If you are using DNS whitelists, firewalls, or filtering to control access to endpoints, make
-   * sure you grant access to `*spanner.googleapis.com`.
+   * Deprecated. This field is not populated.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEndpointUris() {
@@ -175,19 +151,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A set of endpoint URIs based on your instance config that you can use instead of
-   * the global endpoint `spanner.googleapis.com`.
-   *
-   * For example, if your instance config is `us-central1` (a regional config in Iowa), then your
-   * instance specific endpoints may include `us-central1-spanner.googleapis.com`. By calling these
-   * endpoints instead of the global endpoint, you optimize network routing which could reduce
-   * network latency.
-   *
-   * The client libraries, JDBC drivers, and other SDK clients automatically call these instance
-   * specific endpoints.
-   *
-   * If you are using DNS whitelists, firewalls, or filtering to control access to endpoints, make
-   * sure you grant access to `*spanner.googleapis.com`.
+   * Deprecated. This field is not populated.
    * @param endpointUris endpointUris or {@code null} for none
    */
   public Instance setEndpointUris(java.util.List<java.lang.String> endpointUris) {

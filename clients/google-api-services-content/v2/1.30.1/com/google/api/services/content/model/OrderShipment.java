@@ -51,7 +51,7 @@ public final class OrderShipment extends com.google.api.client.json.GenericJson 
    * automatic status updates   - "chronopost" (Chronopost by La Poste)  - "gls" (General Logistics
    * Systems France)  - "dpd" (DPD Group by GeoPost)  - "bpost" (Belgian Post Group)  - "colis
    * prive" (Colis Privé)  - "boxtal" (Boxtal)  - "geodis" (GEODIS)  - "tnt" (TNT)  - "db schenker"
-   * (DB Schenker)
+   * (DB Schenker)  - "aramex" (Aramex)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -121,7 +121,7 @@ public final class OrderShipment extends com.google.api.client.json.GenericJson 
    * automatic status updates   - "chronopost" (Chronopost by La Poste)  - "gls" (General Logistics
    * Systems France)  - "dpd" (DPD Group by GeoPost)  - "bpost" (Belgian Post Group)  - "colis
    * prive" (Colis Privé)  - "boxtal" (Boxtal)  - "geodis" (GEODIS)  - "tnt" (TNT)  - "db schenker"
-   * (DB Schenker)
+   * (DB Schenker)  - "aramex" (Aramex)
    * @return value or {@code null} for none
    */
   public java.lang.String getCarrier() {
@@ -149,7 +149,7 @@ public final class OrderShipment extends com.google.api.client.json.GenericJson 
    * automatic status updates   - "chronopost" (Chronopost by La Poste)  - "gls" (General Logistics
    * Systems France)  - "dpd" (DPD Group by GeoPost)  - "bpost" (Belgian Post Group)  - "colis
    * prive" (Colis Privé)  - "boxtal" (Boxtal)  - "geodis" (GEODIS)  - "tnt" (TNT)  - "db schenker"
-   * (DB Schenker)
+   * (DB Schenker)  - "aramex" (Aramex)
    * @param carrier carrier or {@code null} for none
    */
   public OrderShipment setCarrier(java.lang.String carrier) {

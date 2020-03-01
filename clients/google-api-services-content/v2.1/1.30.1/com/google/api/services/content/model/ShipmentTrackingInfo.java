@@ -31,18 +31,21 @@ package com.google.api.services.content.model;
 public final class ShipmentTrackingInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * The shipping carrier that handles the package.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String carrier;
 
   /**
+   * The tracking number for the package.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String trackingNumber;
 
   /**
+   * The shipping carrier that handles the package.
    * @return value or {@code null} for none
    */
   public java.lang.String getCarrier() {
@@ -50,6 +53,7 @@ public final class ShipmentTrackingInfo extends com.google.api.client.json.Gener
   }
 
   /**
+   * The shipping carrier that handles the package.
    * @param carrier carrier or {@code null} for none
    */
   public ShipmentTrackingInfo setCarrier(java.lang.String carrier) {
@@ -58,6 +62,7 @@ public final class ShipmentTrackingInfo extends com.google.api.client.json.Gener
   }
 
   /**
+   * The tracking number for the package.
    * @return value or {@code null} for none
    */
   public java.lang.String getTrackingNumber() {
@@ -65,6 +70,7 @@ public final class ShipmentTrackingInfo extends com.google.api.client.json.Gener
   }
 
   /**
+   * The tracking number for the package.
    * @param trackingNumber trackingNumber or {@code null} for none
    */
   public ShipmentTrackingInfo setTrackingNumber(java.lang.String trackingNumber) {

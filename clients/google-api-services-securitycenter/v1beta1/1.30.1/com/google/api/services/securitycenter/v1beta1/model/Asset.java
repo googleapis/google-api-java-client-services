@@ -73,7 +73,7 @@ public final class Asset extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private SecurityMarks securityMarks;
+  private GoogleCloudSecuritycenterV1beta1SecurityMarks securityMarks;
 
   /**
    * The time at which the asset was last updated, added, or deleted in Cloud SCC.
@@ -163,7 +163,7 @@ public final class Asset extends com.google.api.client.json.GenericJson {
    * SecurityMarks resource that belongs to the asset.
    * @return value or {@code null} for none
    */
-  public SecurityMarks getSecurityMarks() {
+  public GoogleCloudSecuritycenterV1beta1SecurityMarks getSecurityMarks() {
     return securityMarks;
   }
 
@@ -172,7 +172,7 @@ public final class Asset extends com.google.api.client.json.GenericJson {
    * SecurityMarks resource that belongs to the asset.
    * @param securityMarks securityMarks or {@code null} for none
    */
-  public Asset setSecurityMarks(SecurityMarks securityMarks) {
+  public Asset setSecurityMarks(GoogleCloudSecuritycenterV1beta1SecurityMarks securityMarks) {
     this.securityMarks = securityMarks;
     return this;
   }

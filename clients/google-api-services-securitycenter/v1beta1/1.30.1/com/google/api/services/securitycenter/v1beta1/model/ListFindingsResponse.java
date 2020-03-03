@@ -35,12 +35,12 @@ public final class ListFindingsResponse extends com.google.api.client.json.Gener
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Finding> findings;
+  private java.util.List<GoogleCloudSecuritycenterV1beta1Finding> findings;
 
   static {
-    // hack to force ProGuard to consider Finding used, since otherwise it would be stripped out
+    // hack to force ProGuard to consider GoogleCloudSecuritycenterV1beta1Finding used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Finding.class);
+    com.google.api.client.util.Data.nullOf(GoogleCloudSecuritycenterV1beta1Finding.class);
   }
 
   /**
@@ -68,7 +68,7 @@ public final class ListFindingsResponse extends com.google.api.client.json.Gener
    * Findings matching the list request.
    * @return value or {@code null} for none
    */
-  public java.util.List<Finding> getFindings() {
+  public java.util.List<GoogleCloudSecuritycenterV1beta1Finding> getFindings() {
     return findings;
   }
 
@@ -76,7 +76,7 @@ public final class ListFindingsResponse extends com.google.api.client.json.Gener
    * Findings matching the list request.
    * @param findings findings or {@code null} for none
    */
-  public ListFindingsResponse setFindings(java.util.List<Finding> findings) {
+  public ListFindingsResponse setFindings(java.util.List<GoogleCloudSecuritycenterV1beta1Finding> findings) {
     this.findings = findings;
     return this;
   }

@@ -1211,16 +1211,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       Examples:
        *        "organizations/{organization_id}/assets/{asset_id}/securityMarks"
        *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
-       * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.SecurityMarks}
+       * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.GoogleCloudSecuritycenterV1beta1SecurityMarks}
        * @return the request
        */
-      public UpdateSecurityMarks updateSecurityMarks(java.lang.String name, com.google.api.services.securitycenter.v1beta1.model.SecurityMarks content) throws java.io.IOException {
+      public UpdateSecurityMarks updateSecurityMarks(java.lang.String name, com.google.api.services.securitycenter.v1beta1.model.GoogleCloudSecuritycenterV1beta1SecurityMarks content) throws java.io.IOException {
         UpdateSecurityMarks result = new UpdateSecurityMarks(name, content);
         initialize(result);
         return result;
       }
 
-      public class UpdateSecurityMarks extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1beta1.model.SecurityMarks> {
+      public class UpdateSecurityMarks extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1beta1.model.GoogleCloudSecuritycenterV1beta1SecurityMarks> {
 
         private static final String REST_PATH = "v1beta1/{+name}";
 
@@ -1243,11 +1243,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       Examples:
        *        "organizations/{organization_id}/assets/{asset_id}/securityMarks"
        *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
-         * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.SecurityMarks}
+         * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.GoogleCloudSecuritycenterV1beta1SecurityMarks}
          * @since 1.13
          */
-        protected UpdateSecurityMarks(java.lang.String name, com.google.api.services.securitycenter.v1beta1.model.SecurityMarks content) {
-          super(SecurityCommandCenter.this, "PATCH", REST_PATH, content, com.google.api.services.securitycenter.v1beta1.model.SecurityMarks.class);
+        protected UpdateSecurityMarks(java.lang.String name, com.google.api.services.securitycenter.v1beta1.model.GoogleCloudSecuritycenterV1beta1SecurityMarks content) {
+          super(SecurityCommandCenter.this, "PATCH", REST_PATH, content, com.google.api.services.securitycenter.v1beta1.model.GoogleCloudSecuritycenterV1beta1SecurityMarks.class);
           this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3147,16 +3147,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          *
          * @param parent Required. Resource name of the new finding's parent. Its format should be
          *        "organizations/[organization_id]/sources/[source_id]".
-         * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.Finding}
+         * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.GoogleCloudSecuritycenterV1beta1Finding}
          * @return the request
          */
-        public Create create(java.lang.String parent, com.google.api.services.securitycenter.v1beta1.model.Finding content) throws java.io.IOException {
+        public Create create(java.lang.String parent, com.google.api.services.securitycenter.v1beta1.model.GoogleCloudSecuritycenterV1beta1Finding content) throws java.io.IOException {
           Create result = new Create(parent, content);
           initialize(result);
           return result;
         }
 
-        public class Create extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1beta1.model.Finding> {
+        public class Create extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1beta1.model.GoogleCloudSecuritycenterV1beta1Finding> {
 
           private static final String REST_PATH = "v1beta1/{+parent}/findings";
 
@@ -3176,11 +3176,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            *
            * @param parent Required. Resource name of the new finding's parent. Its format should be
          *        "organizations/[organization_id]/sources/[source_id]".
-           * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.Finding}
+           * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.GoogleCloudSecuritycenterV1beta1Finding}
            * @since 1.13
            */
-          protected Create(java.lang.String parent, com.google.api.services.securitycenter.v1beta1.model.Finding content) {
-            super(SecurityCommandCenter.this, "POST", REST_PATH, content, com.google.api.services.securitycenter.v1beta1.model.Finding.class);
+          protected Create(java.lang.String parent, com.google.api.services.securitycenter.v1beta1.model.GoogleCloudSecuritycenterV1beta1Finding content) {
+            super(SecurityCommandCenter.this, "POST", REST_PATH, content, com.google.api.services.securitycenter.v1beta1.model.GoogleCloudSecuritycenterV1beta1Finding.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -3844,16 +3844,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          *        https://cloud.google.com/apis/design/resource_names#relative_resource_name
         Example:
          *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
-         * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.Finding}
+         * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.GoogleCloudSecuritycenterV1beta1Finding}
          * @return the request
          */
-        public Patch patch(java.lang.String name, com.google.api.services.securitycenter.v1beta1.model.Finding content) throws java.io.IOException {
+        public Patch patch(java.lang.String name, com.google.api.services.securitycenter.v1beta1.model.GoogleCloudSecuritycenterV1beta1Finding content) throws java.io.IOException {
           Patch result = new Patch(name, content);
           initialize(result);
           return result;
         }
 
-        public class Patch extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1beta1.model.Finding> {
+        public class Patch extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1beta1.model.GoogleCloudSecuritycenterV1beta1Finding> {
 
           private static final String REST_PATH = "v1beta1/{+name}";
 
@@ -3876,11 +3876,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          *        https://cloud.google.com/apis/design/resource_names#relative_resource_name
         Example:
          *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
-           * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.Finding}
+           * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.GoogleCloudSecuritycenterV1beta1Finding}
            * @since 1.13
            */
-          protected Patch(java.lang.String name, com.google.api.services.securitycenter.v1beta1.model.Finding content) {
-            super(SecurityCommandCenter.this, "PATCH", REST_PATH, content, com.google.api.services.securitycenter.v1beta1.model.Finding.class);
+          protected Patch(java.lang.String name, com.google.api.services.securitycenter.v1beta1.model.GoogleCloudSecuritycenterV1beta1Finding content) {
+            super(SecurityCommandCenter.this, "PATCH", REST_PATH, content, com.google.api.services.securitycenter.v1beta1.model.GoogleCloudSecuritycenterV1beta1Finding.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4024,7 +4024,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return result;
         }
 
-        public class SetState extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1beta1.model.Finding> {
+        public class SetState extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1beta1.model.GoogleCloudSecuritycenterV1beta1Finding> {
 
           private static final String REST_PATH = "v1beta1/{+name}:setState";
 
@@ -4050,7 +4050,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * @since 1.13
            */
           protected SetState(java.lang.String name, com.google.api.services.securitycenter.v1beta1.model.SetFindingStateRequest content) {
-            super(SecurityCommandCenter.this, "POST", REST_PATH, content, com.google.api.services.securitycenter.v1beta1.model.Finding.class);
+            super(SecurityCommandCenter.this, "POST", REST_PATH, content, com.google.api.services.securitycenter.v1beta1.model.GoogleCloudSecuritycenterV1beta1Finding.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4164,16 +4164,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         Examples:
          *        "organizations/{organization_id}/assets/{asset_id}/securityMarks"
          *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
-         * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.SecurityMarks}
+         * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.GoogleCloudSecuritycenterV1beta1SecurityMarks}
          * @return the request
          */
-        public UpdateSecurityMarks updateSecurityMarks(java.lang.String name, com.google.api.services.securitycenter.v1beta1.model.SecurityMarks content) throws java.io.IOException {
+        public UpdateSecurityMarks updateSecurityMarks(java.lang.String name, com.google.api.services.securitycenter.v1beta1.model.GoogleCloudSecuritycenterV1beta1SecurityMarks content) throws java.io.IOException {
           UpdateSecurityMarks result = new UpdateSecurityMarks(name, content);
           initialize(result);
           return result;
         }
 
-        public class UpdateSecurityMarks extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1beta1.model.SecurityMarks> {
+        public class UpdateSecurityMarks extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1beta1.model.GoogleCloudSecuritycenterV1beta1SecurityMarks> {
 
           private static final String REST_PATH = "v1beta1/{+name}";
 
@@ -4196,11 +4196,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         Examples:
          *        "organizations/{organization_id}/assets/{asset_id}/securityMarks"
          *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
-           * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.SecurityMarks}
+           * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.GoogleCloudSecuritycenterV1beta1SecurityMarks}
            * @since 1.13
            */
-          protected UpdateSecurityMarks(java.lang.String name, com.google.api.services.securitycenter.v1beta1.model.SecurityMarks content) {
-            super(SecurityCommandCenter.this, "PATCH", REST_PATH, content, com.google.api.services.securitycenter.v1beta1.model.SecurityMarks.class);
+          protected UpdateSecurityMarks(java.lang.String name, com.google.api.services.securitycenter.v1beta1.model.GoogleCloudSecuritycenterV1beta1SecurityMarks content) {
+            super(SecurityCommandCenter.this, "PATCH", REST_PATH, content, com.google.api.services.securitycenter.v1beta1.model.GoogleCloudSecuritycenterV1beta1SecurityMarks.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

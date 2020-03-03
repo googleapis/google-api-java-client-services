@@ -46,36 +46,33 @@ public final class FilterCriteria extends com.google.api.client.json.GenericJson
 
   /**
    * The background fill color to filter by; only cells with this fill color are shown. Mutually
-   * exclusive with all other filter criteria. Requests to set this field fail with a 400 error if
-   * any other filter criteria field is set.
+   * exclusive with visible_foreground_color.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Color visibleBackgroundColor;
 
   /**
-   * The background fill color to filter by; only cells with this fill color are shown. Mutually
-   * exclusive with all other filter criteria. Requests to set this field fail with a 400 error if
-   * any other filter criteria field is set. If visible_background_color is also set, this field
-   * takes precedence.
+   * The background fill color to filter by; only cells with this fill color are shown. This field
+   * is mutually exclusive with visible_foreground_color, and must be set to an RGB-type color. If
+   * visible_background_color is also set, this field takes precedence.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ColorStyle visibleBackgroundColorStyle;
 
   /**
-   * The text color to filter by; only cells with this text color are shown. Mutually exclusive with
-   * all other filter criteria. Requests to set this field fail with a 400 error if any other filter
-   * criteria field is set.
+   * The foreground color to filter by; only cells with this foreground color are shown. Mutually
+   * exclusive with visible_background_color.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Color visibleForegroundColor;
 
   /**
-   * The text color to filter by; only cells with this text color are shown. Mutually exclusive with
-   * all other filter criteria. Requests to set this field fail with a 400 error if any other filter
-   * criteria field is set. If visible_foreground_color is also set, this field takes precedence.
+   * The foreground color to filter by; only cells with this foreground color are shown. This field
+   * is mutually exclusive with visible_background_color, and must be set to an RGB-type color. If
+   * visible_foreground_color is also set, this field takes precedence.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,8 +116,7 @@ public final class FilterCriteria extends com.google.api.client.json.GenericJson
 
   /**
    * The background fill color to filter by; only cells with this fill color are shown. Mutually
-   * exclusive with all other filter criteria. Requests to set this field fail with a 400 error if
-   * any other filter criteria field is set.
+   * exclusive with visible_foreground_color.
    * @return value or {@code null} for none
    */
   public Color getVisibleBackgroundColor() {
@@ -129,8 +125,7 @@ public final class FilterCriteria extends com.google.api.client.json.GenericJson
 
   /**
    * The background fill color to filter by; only cells with this fill color are shown. Mutually
-   * exclusive with all other filter criteria. Requests to set this field fail with a 400 error if
-   * any other filter criteria field is set.
+   * exclusive with visible_foreground_color.
    * @param visibleBackgroundColor visibleBackgroundColor or {@code null} for none
    */
   public FilterCriteria setVisibleBackgroundColor(Color visibleBackgroundColor) {
@@ -139,10 +134,9 @@ public final class FilterCriteria extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The background fill color to filter by; only cells with this fill color are shown. Mutually
-   * exclusive with all other filter criteria. Requests to set this field fail with a 400 error if
-   * any other filter criteria field is set. If visible_background_color is also set, this field
-   * takes precedence.
+   * The background fill color to filter by; only cells with this fill color are shown. This field
+   * is mutually exclusive with visible_foreground_color, and must be set to an RGB-type color. If
+   * visible_background_color is also set, this field takes precedence.
    * @return value or {@code null} for none
    */
   public ColorStyle getVisibleBackgroundColorStyle() {
@@ -150,10 +144,9 @@ public final class FilterCriteria extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The background fill color to filter by; only cells with this fill color are shown. Mutually
-   * exclusive with all other filter criteria. Requests to set this field fail with a 400 error if
-   * any other filter criteria field is set. If visible_background_color is also set, this field
-   * takes precedence.
+   * The background fill color to filter by; only cells with this fill color are shown. This field
+   * is mutually exclusive with visible_foreground_color, and must be set to an RGB-type color. If
+   * visible_background_color is also set, this field takes precedence.
    * @param visibleBackgroundColorStyle visibleBackgroundColorStyle or {@code null} for none
    */
   public FilterCriteria setVisibleBackgroundColorStyle(ColorStyle visibleBackgroundColorStyle) {
@@ -162,9 +155,8 @@ public final class FilterCriteria extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The text color to filter by; only cells with this text color are shown. Mutually exclusive with
-   * all other filter criteria. Requests to set this field fail with a 400 error if any other filter
-   * criteria field is set.
+   * The foreground color to filter by; only cells with this foreground color are shown. Mutually
+   * exclusive with visible_background_color.
    * @return value or {@code null} for none
    */
   public Color getVisibleForegroundColor() {
@@ -172,9 +164,8 @@ public final class FilterCriteria extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The text color to filter by; only cells with this text color are shown. Mutually exclusive with
-   * all other filter criteria. Requests to set this field fail with a 400 error if any other filter
-   * criteria field is set.
+   * The foreground color to filter by; only cells with this foreground color are shown. Mutually
+   * exclusive with visible_background_color.
    * @param visibleForegroundColor visibleForegroundColor or {@code null} for none
    */
   public FilterCriteria setVisibleForegroundColor(Color visibleForegroundColor) {
@@ -183,9 +174,9 @@ public final class FilterCriteria extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The text color to filter by; only cells with this text color are shown. Mutually exclusive with
-   * all other filter criteria. Requests to set this field fail with a 400 error if any other filter
-   * criteria field is set. If visible_foreground_color is also set, this field takes precedence.
+   * The foreground color to filter by; only cells with this foreground color are shown. This field
+   * is mutually exclusive with visible_background_color, and must be set to an RGB-type color. If
+   * visible_foreground_color is also set, this field takes precedence.
    * @return value or {@code null} for none
    */
   public ColorStyle getVisibleForegroundColorStyle() {
@@ -193,9 +184,9 @@ public final class FilterCriteria extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The text color to filter by; only cells with this text color are shown. Mutually exclusive with
-   * all other filter criteria. Requests to set this field fail with a 400 error if any other filter
-   * criteria field is set. If visible_foreground_color is also set, this field takes precedence.
+   * The foreground color to filter by; only cells with this foreground color are shown. This field
+   * is mutually exclusive with visible_background_color, and must be set to an RGB-type color. If
+   * visible_foreground_color is also set, this field takes precedence.
    * @param visibleForegroundColorStyle visibleForegroundColorStyle or {@code null} for none
    */
   public FilterCriteria setVisibleForegroundColorStyle(ColorStyle visibleForegroundColorStyle) {

@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-accesscontextmanager</artifactId>
-  <version>v1beta-rev20200128-1.30.8</version>
-  <name>Access Context Manager API v1beta-rev20200128-1.30.8</name>
+  <version>v1beta-rev20200210-1.30.8</version>
+  <name>Access Context Manager API v1beta-rev20200210-1.30.8</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

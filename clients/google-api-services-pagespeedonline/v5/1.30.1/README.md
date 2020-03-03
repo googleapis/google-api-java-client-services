@@ -23,7 +23,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-pagespeedonline</artifactId>
-      <version>v5-rev20200117-1.30.8</version>
+      <version>v5-rev20200303-1.30.8</version>
     </dependency>
   </dependencies>
 </project>
@@ -36,7 +36,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-pagespeedonline:v5-rev20200117-1.30.8'
+  compile 'com.google.apis:google-api-services-pagespeedonline:v5-rev20200303-1.30.8'
 }
 ```
 

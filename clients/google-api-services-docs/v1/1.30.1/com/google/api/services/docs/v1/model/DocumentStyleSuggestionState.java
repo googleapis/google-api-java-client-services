@@ -87,6 +87,20 @@ public final class DocumentStyleSuggestionState extends com.google.api.client.js
   private java.lang.Boolean marginBottomSuggested;
 
   /**
+   * Indicates if there was a suggested change to margin_footer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean marginFooterSuggested;
+
+  /**
+   * Indicates if there was a suggested change to margin_header.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean marginHeaderSuggested;
+
+  /**
    * Indicates if there was a suggested change to margin_left.
    * The value may be {@code null}.
    */
@@ -120,6 +134,13 @@ public final class DocumentStyleSuggestionState extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private SizeSuggestionState pageSizeSuggestionState;
+
+  /**
+   * Indicates if there was a suggested change to use_custom_header_footer_margins.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean useCustomHeaderFooterMarginsSuggested;
 
   /**
    * Indicates if there was a suggested change to use_even_page_header_footer.
@@ -272,6 +293,40 @@ public final class DocumentStyleSuggestionState extends com.google.api.client.js
   }
 
   /**
+   * Indicates if there was a suggested change to margin_footer.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getMarginFooterSuggested() {
+    return marginFooterSuggested;
+  }
+
+  /**
+   * Indicates if there was a suggested change to margin_footer.
+   * @param marginFooterSuggested marginFooterSuggested or {@code null} for none
+   */
+  public DocumentStyleSuggestionState setMarginFooterSuggested(java.lang.Boolean marginFooterSuggested) {
+    this.marginFooterSuggested = marginFooterSuggested;
+    return this;
+  }
+
+  /**
+   * Indicates if there was a suggested change to margin_header.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getMarginHeaderSuggested() {
+    return marginHeaderSuggested;
+  }
+
+  /**
+   * Indicates if there was a suggested change to margin_header.
+   * @param marginHeaderSuggested marginHeaderSuggested or {@code null} for none
+   */
+  public DocumentStyleSuggestionState setMarginHeaderSuggested(java.lang.Boolean marginHeaderSuggested) {
+    this.marginHeaderSuggested = marginHeaderSuggested;
+    return this;
+  }
+
+  /**
    * Indicates if there was a suggested change to margin_left.
    * @return value or {@code null} for none
    */
@@ -353,6 +408,23 @@ public final class DocumentStyleSuggestionState extends com.google.api.client.js
    */
   public DocumentStyleSuggestionState setPageSizeSuggestionState(SizeSuggestionState pageSizeSuggestionState) {
     this.pageSizeSuggestionState = pageSizeSuggestionState;
+    return this;
+  }
+
+  /**
+   * Indicates if there was a suggested change to use_custom_header_footer_margins.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUseCustomHeaderFooterMarginsSuggested() {
+    return useCustomHeaderFooterMarginsSuggested;
+  }
+
+  /**
+   * Indicates if there was a suggested change to use_custom_header_footer_margins.
+   * @param useCustomHeaderFooterMarginsSuggested useCustomHeaderFooterMarginsSuggested or {@code null} for none
+   */
+  public DocumentStyleSuggestionState setUseCustomHeaderFooterMarginsSuggested(java.lang.Boolean useCustomHeaderFooterMarginsSuggested) {
+    this.useCustomHeaderFooterMarginsSuggested = useCustomHeaderFooterMarginsSuggested;
     return this;
   }
 

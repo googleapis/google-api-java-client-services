@@ -37,6 +37,13 @@ public final class SecurityPolicyAssociation extends com.google.api.client.json.
   private java.lang.String attachmentId;
 
   /**
+   * [Output Only] The display name of the security policy of the association.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayName;
+
+  /**
    * The name for an association.
    * The value may be {@code null}.
    */
@@ -64,6 +71,23 @@ public final class SecurityPolicyAssociation extends com.google.api.client.json.
    */
   public SecurityPolicyAssociation setAttachmentId(java.lang.String attachmentId) {
     this.attachmentId = attachmentId;
+    return this;
+  }
+
+  /**
+   * [Output Only] The display name of the security policy of the association.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayName() {
+    return displayName;
+  }
+
+  /**
+   * [Output Only] The display name of the security policy of the association.
+   * @param displayName displayName or {@code null} for none
+   */
+  public SecurityPolicyAssociation setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
     return this;
   }
 

@@ -17,7 +17,11 @@
 package com.google.api.services.compute.model;
 
 /**
- * Machine image resource.
+ * Represents a machine image resource.
+ *
+ * A machine image is a Compute Engine resource that stores all the configuration, metadata,
+ * permissions, and data from one or more disks required to create a Virtual machine (VM) instance.
+ * For more information, see Machine images. (== resource_for {$api_version}.machineImages ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

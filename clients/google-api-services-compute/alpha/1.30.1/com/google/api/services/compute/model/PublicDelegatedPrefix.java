@@ -134,7 +134,7 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Object status;
+  private java.lang.String status;
 
   /**
    * [Output Only] Creation timestamp in RFC3339 text format.
@@ -408,7 +408,7 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
    * [Output Only] The status of the public delegated prefix.
    * @return value or {@code null} for none
    */
-  public java.lang.Object getStatus() {
+  public java.lang.String getStatus() {
     return status;
   }
 
@@ -416,7 +416,7 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
    * [Output Only] The status of the public delegated prefix.
    * @param status status or {@code null} for none
    */
-  public PublicDelegatedPrefix setStatus(java.lang.Object status) {
+  public PublicDelegatedPrefix setStatus(java.lang.String status) {
     this.status = status;
     return this;
   }

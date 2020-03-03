@@ -40,6 +40,14 @@ public final class SecurityPolicyRuleMatcher extends com.google.api.client.json.
   private SecurityPolicyRuleMatcherConfig config;
 
   /**
+   * User defined CEVAL expression. A CEVAL expression is used to specify match criteria such as
+   * origin.ip, source.region_code and contents in the request header.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Expr expr;
+
+  /**
    * Preconfigured versioned expression. If this field is specified, config must also be specified.
    * Available preconfigured expressions along with their requirements are: SRC_IPS_V1 - must
    * specify the corresponding src_ip_range field in config.
@@ -66,6 +74,25 @@ public final class SecurityPolicyRuleMatcher extends com.google.api.client.json.
    */
   public SecurityPolicyRuleMatcher setConfig(SecurityPolicyRuleMatcherConfig config) {
     this.config = config;
+    return this;
+  }
+
+  /**
+   * User defined CEVAL expression. A CEVAL expression is used to specify match criteria such as
+   * origin.ip, source.region_code and contents in the request header.
+   * @return value or {@code null} for none
+   */
+  public Expr getExpr() {
+    return expr;
+  }
+
+  /**
+   * User defined CEVAL expression. A CEVAL expression is used to specify match criteria such as
+   * origin.ip, source.region_code and contents in the request header.
+   * @param expr expr or {@code null} for none
+   */
+  public SecurityPolicyRuleMatcher setExpr(Expr expr) {
+    this.expr = expr;
     return this;
   }
 

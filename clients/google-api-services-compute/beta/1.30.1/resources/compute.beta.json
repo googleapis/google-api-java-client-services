@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/Q3_1yQ9G1VrjQnHBbKEkwfiO7hY\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/7watQ_aZGBblxSuoRT-OUKL2Qr4\"",
  "discoveryVersion": "v1",
  "id": "compute:beta",
  "name": "compute",
  "version": "beta",
- "revision": "20200114",
+ "revision": "20200120",
  "title": "Compute Engine API",
  "description": "Creates and runs virtual machines on Google Cloud Platform.",
  "ownerDomain": "google.com",
@@ -5021,23 +5021,23 @@
   "Expr": {
    "id": "Expr",
    "type": "object",
-   "description": "Represents an expression text. Example:\n\ntitle: \"User account presence\" description: \"Determines whether the request has a user account\" expression: \"size(request.user) \u003e 0\"",
+   "description": "Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language. The syntax and semantics of CEL are documented at https://github.com/google/cel-spec.\n\nExample (Comparison):\n\ntitle: \"Summary size limit\" description: \"Determines if a summary is less than 100 chars\" expression: \"document.summary.size() \u003c 100\"\n\nExample (Equality):\n\ntitle: \"Requestor is owner\" description: \"Determines if requestor is the document owner\" expression: \"document.owner == request.auth.claims.email\"\n\nExample (Logic):\n\ntitle: \"Public documents\" description: \"Determine whether the document should be publicly visible\" expression: \"document.type != 'private' && document.type != 'internal'\"\n\nExample (Data Manipulation):\n\ntitle: \"Notification string\" description: \"Create a notification string with a timestamp.\" expression: \"'New message received at ' + string(document.create_time)\"\n\nThe exact variables and functions that may be referenced within an expression are determined by the service that evaluates it. See the service documentation for additional information.",
    "properties": {
     "description": {
      "type": "string",
-     "description": "An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI."
+     "description": "Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI."
     },
     "expression": {
      "type": "string",
-     "description": "Textual representation of an expression in Common Expression Language syntax.\n\nThe application context of the containing message determines which well-known feature set of CEL is supported."
+     "description": "Textual representation of an expression in Common Expression Language syntax."
     },
     "location": {
      "type": "string",
-     "description": "An optional string indicating the location of the expression for error reporting, e.g. a file name and a position in the file."
+     "description": "Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file."
     },
     "title": {
      "type": "string",
-     "description": "An optional title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression."
+     "description": "Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression."
     }
    }
   },
@@ -7052,11 +7052,11 @@
     },
     "ipAddress": {
      "type": "string",
-     "description": "The IP address represented by this resource."
+     "description": "A forwarding rule IP address assigned to this instance."
     },
     "port": {
      "type": "integer",
-     "description": "The port on the instance.",
+     "description": "The named port of the instance group, not necessarily the port that is health-checked.",
      "format": "int32"
     }
    }
@@ -8862,7 +8862,7 @@
     },
     "targetSize": {
      "type": "integer",
-     "description": "The target number of running instances for this managed instance group. Deleting or abandoning instances reduces this number. Resizing the group changes this number.",
+     "description": "The target number of running instances for this managed instance group. You can reduce this number by using the instanceGroupManager deleteInstances or abandonInstances methods. Resizing the group also changes this number.",
      "format": "int32",
      "annotations": {
       "required": [
@@ -12517,7 +12517,7 @@
   "MachineImage": {
    "id": "MachineImage",
    "type": "object",
-   "description": "Machine image resource.",
+   "description": "Represents a machine image resource.\n\nA machine image is a Compute Engine resource that stores all the configuration, metadata, permissions, and data from one or more disks required to create a Virtual machine (VM) instance. For more information, see Machine images. (== resource_for {$api_version}.machineImages ==)",
    "properties": {
     "creationTimestamp": {
      "type": "string",
@@ -14245,9 +14245,17 @@
      "type": "boolean",
      "description": "Whether to export the custom routes to peer network."
     },
+    "exportSubnetRoutesWithPublicIp": {
+     "type": "boolean",
+     "description": "Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always exported to peers and are not controlled by this field."
+    },
     "importCustomRoutes": {
      "type": "boolean",
      "description": "Whether to import the custom routes from peer network."
+    },
+    "importSubnetRoutesWithPublicIp": {
+     "type": "boolean",
+     "description": "Whether subnet routes with public IP range are imported. The default value is false. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always imported from peers and are not controlled by this field."
     },
     "name": {
      "type": "string",
@@ -17466,6 +17474,7 @@
       "COMMITMENTS",
       "COMMITTED_C2_CPUS",
       "COMMITTED_CPUS",
+      "COMMITTED_LICENSES",
       "COMMITTED_LOCAL_SSD_TOTAL_GB",
       "COMMITTED_N2D_CPUS",
       "COMMITTED_N2_CPUS",
@@ -17548,6 +17557,7 @@
       "VPN_TUNNELS"
      ],
      "enumDescriptions": [
+      "",
       "",
       "",
       "",
@@ -17853,7 +17863,7 @@
    "properties": {
     "reservations": {
      "type": "array",
-     "description": "List of two reservations to transfer GPUs and local SSD between.",
+     "description": "A list of two reservations to transfer GPUs and local SSD between.",
      "items": {
       "$ref": "Reservation"
      }
@@ -43497,7 +43507,7 @@
      "id": "compute.regionCommitments.updateReservations",
      "path": "{project}/regions/{region}/commitments/{commitment}/updateReservations",
      "httpMethod": "POST",
-     "description": "Update the shape of reservations for GPUS/Local SSDs of reservations within the commitments.",
+     "description": "Transfers GPUs or local SSDs between reservations within commitments.",
      "parameters": {
       "commitment": {
        "type": "string",

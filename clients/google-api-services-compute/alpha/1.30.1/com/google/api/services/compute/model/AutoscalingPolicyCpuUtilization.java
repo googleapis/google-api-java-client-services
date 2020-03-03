@@ -30,6 +30,18 @@ package com.google.api.services.compute.model;
 public final class AutoscalingPolicyCpuUtilization extends com.google.api.client.json.GenericJson {
 
   /**
+   * Indicates which method of prediction is used for CPU utilization metric, if any. Current set of
+   * possible values: * NONE: No predictions are made based on the scaling metric when calculating
+   * the number of VM instances. * STANDARD: Standard predictive autoscaling predicts the future
+   * values of the scaling metric and then scales a MIG to ensure that new VM instances are ready in
+   * time to cover the predicted peak. New values might be added in the future. Some of the values
+   * might not be available in all API versions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String predictiveMethod;
+
+  /**
    * The target CPU utilization that the autoscaler should maintain. Must be a float value in the
    * range (0, 1]. If not specified, the default is 0.6.
    *
@@ -44,6 +56,33 @@ public final class AutoscalingPolicyCpuUtilization extends com.google.api.client
    */
   @com.google.api.client.util.Key
   private java.lang.Double utilizationTarget;
+
+  /**
+   * Indicates which method of prediction is used for CPU utilization metric, if any. Current set of
+   * possible values: * NONE: No predictions are made based on the scaling metric when calculating
+   * the number of VM instances. * STANDARD: Standard predictive autoscaling predicts the future
+   * values of the scaling metric and then scales a MIG to ensure that new VM instances are ready in
+   * time to cover the predicted peak. New values might be added in the future. Some of the values
+   * might not be available in all API versions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPredictiveMethod() {
+    return predictiveMethod;
+  }
+
+  /**
+   * Indicates which method of prediction is used for CPU utilization metric, if any. Current set of
+   * possible values: * NONE: No predictions are made based on the scaling metric when calculating
+   * the number of VM instances. * STANDARD: Standard predictive autoscaling predicts the future
+   * values of the scaling metric and then scales a MIG to ensure that new VM instances are ready in
+   * time to cover the predicted peak. New values might be added in the future. Some of the values
+   * might not be available in all API versions.
+   * @param predictiveMethod predictiveMethod or {@code null} for none
+   */
+  public AutoscalingPolicyCpuUtilization setPredictiveMethod(java.lang.String predictiveMethod) {
+    this.predictiveMethod = predictiveMethod;
+    return this;
+  }
 
   /**
    * The target CPU utilization that the autoscaler should maintain. Must be a float value in the

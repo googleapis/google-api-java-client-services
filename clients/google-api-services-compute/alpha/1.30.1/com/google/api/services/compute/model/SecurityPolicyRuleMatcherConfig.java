@@ -48,6 +48,15 @@ public final class SecurityPolicyRuleMatcherConfig extends com.google.api.client
   private java.util.List<SecurityPolicyRuleMatcherConfigDestinationPort> destPorts;
 
   /**
+   * Pairs of IP protocols and ports that the rule should match.
+   *
+   * This field may only be specified when versioned_expr is set to FIREWALL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SecurityPolicyRuleMatcherConfigLayer4Config> layer4Configs;
+
+  /**
    * CIDR IP address range.
    * The value may be {@code null}.
    */
@@ -93,6 +102,27 @@ public final class SecurityPolicyRuleMatcherConfig extends com.google.api.client
    */
   public SecurityPolicyRuleMatcherConfig setDestPorts(java.util.List<SecurityPolicyRuleMatcherConfigDestinationPort> destPorts) {
     this.destPorts = destPorts;
+    return this;
+  }
+
+  /**
+   * Pairs of IP protocols and ports that the rule should match.
+   *
+   * This field may only be specified when versioned_expr is set to FIREWALL.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SecurityPolicyRuleMatcherConfigLayer4Config> getLayer4Configs() {
+    return layer4Configs;
+  }
+
+  /**
+   * Pairs of IP protocols and ports that the rule should match.
+   *
+   * This field may only be specified when versioned_expr is set to FIREWALL.
+   * @param layer4Configs layer4Configs or {@code null} for none
+   */
+  public SecurityPolicyRuleMatcherConfig setLayer4Configs(java.util.List<SecurityPolicyRuleMatcherConfigLayer4Config> layer4Configs) {
+    this.layer4Configs = layer4Configs;
     return this;
   }
 

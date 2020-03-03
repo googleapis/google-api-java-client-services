@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"LYADMvHWYH2ul9D6m9UT9gT77YM/DbiOQpAC1VQkiHXoJ_isUi3ESE8\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/w_quvq82pzU5rXpQEUZ-IAPLomU\"",
  "discoveryVersion": "v1",
  "id": "doubleclickbidmanager:v1",
  "name": "doubleclickbidmanager",
  "canonicalName": "DoubleClick Bid Manager",
  "version": "v1",
- "revision": "20191210",
+ "revision": "20200220",
  "title": "DoubleClick Bid Manager API",
  "description": "API for viewing and managing your reports in DoubleClick Bid Manager.",
  "ownerDomain": "google.com",
@@ -198,7 +198,7 @@
     },
     "version": {
      "type": "string",
-     "description": "SDF Version (column names, types, order) in which the entities will be returned. Default to 3.1."
+     "description": "SDF Version (column names, types, order) in which the entities will be returned. Default to 5."
     }
    }
   },

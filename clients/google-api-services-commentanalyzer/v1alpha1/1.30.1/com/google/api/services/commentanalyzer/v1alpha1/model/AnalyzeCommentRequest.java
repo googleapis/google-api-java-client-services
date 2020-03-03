@@ -87,7 +87,8 @@ public final class AnalyzeCommentRequest extends com.google.api.client.json.Gene
    * different on each RFE installation, and can be seen by calling ListAttributes (see above). For
    * the prod installation, known as Perspective API, at blade:commentanalyzer-esf and
    * commentanalyzer.googleapis.com, see go/checker-models (internal) and
-   * https://github.com/conversationai/perspectiveapi/blob/master/api_reference.md#models.
+   * https://github.com/conversationai/perspectiveapi/blob/master/2-api/models.md#all-attribute-
+   * types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -236,7 +237,8 @@ public final class AnalyzeCommentRequest extends com.google.api.client.json.Gene
    * different on each RFE installation, and can be seen by calling ListAttributes (see above). For
    * the prod installation, known as Perspective API, at blade:commentanalyzer-esf and
    * commentanalyzer.googleapis.com, see go/checker-models (internal) and
-   * https://github.com/conversationai/perspectiveapi/blob/master/api_reference.md#models.
+   * https://github.com/conversationai/perspectiveapi/blob/master/2-api/models.md#all-attribute-
+   * types.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, AttributeParameters> getRequestedAttributes() {
@@ -249,7 +251,8 @@ public final class AnalyzeCommentRequest extends com.google.api.client.json.Gene
    * different on each RFE installation, and can be seen by calling ListAttributes (see above). For
    * the prod installation, known as Perspective API, at blade:commentanalyzer-esf and
    * commentanalyzer.googleapis.com, see go/checker-models (internal) and
-   * https://github.com/conversationai/perspectiveapi/blob/master/api_reference.md#models.
+   * https://github.com/conversationai/perspectiveapi/blob/master/2-api/models.md#all-attribute-
+   * types.
    * @param requestedAttributes requestedAttributes or {@code null} for none
    */
   public AnalyzeCommentRequest setRequestedAttributes(java.util.Map<String, AttributeParameters> requestedAttributes) {

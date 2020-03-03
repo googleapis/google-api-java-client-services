@@ -1099,7 +1099,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
      * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
-     * @param name The name/identifier of the Lien to delete.
+     * @param name Required. The name/identifier of the Lien to delete.
      * @return the request
      */
     public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -1113,7 +1113,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       private static final String REST_PATH = "v1/{+name}";
 
       private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^liens/.+$");
+          java.util.regex.Pattern.compile("^liens/.*$");
 
       /**
        * Delete a Lien by `name`.
@@ -1129,7 +1129,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name The name/identifier of the Lien to delete.
+       * @param name Required. The name/identifier of the Lien to delete.
        * @since 1.13
        */
       protected Delete(java.lang.String name) {
@@ -1138,7 +1138,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^liens/.+$");
+              "^liens/.*$");
         }
       }
 
@@ -1197,22 +1197,22 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
         return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** The name/identifier of the Lien to delete. */
+      /** Required. The name/identifier of the Lien to delete. */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The name/identifier of the Lien to delete.
+      /** Required. The name/identifier of the Lien to delete.
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /** The name/identifier of the Lien to delete. */
+      /** Required. The name/identifier of the Lien to delete. */
       public Delete setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^liens/.+$");
+              "^liens/.*$");
         }
         this.name = name;
         return this;
@@ -1235,7 +1235,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
      * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param name The name/identifier of the Lien.
+     * @param name Required. The name/identifier of the Lien.
      * @return the request
      */
     public Get get(java.lang.String name) throws java.io.IOException {
@@ -1249,7 +1249,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       private static final String REST_PATH = "v1/{+name}";
 
       private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^liens/.+$");
+          java.util.regex.Pattern.compile("^liens/.*$");
 
       /**
        * Retrieve a Lien by `name`.
@@ -1266,7 +1266,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name The name/identifier of the Lien.
+       * @param name Required. The name/identifier of the Lien.
        * @since 1.13
        */
       protected Get(java.lang.String name) {
@@ -1275,7 +1275,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^liens/.+$");
+              "^liens/.*$");
         }
       }
 
@@ -1344,22 +1344,22 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** The name/identifier of the Lien. */
+      /** Required. The name/identifier of the Lien. */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The name/identifier of the Lien.
+      /** Required. The name/identifier of the Lien.
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /** The name/identifier of the Lien. */
+      /** Required. The name/identifier of the Lien. */
       public Get setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^liens/.+$");
+              "^liens/.*$");
         }
         this.name = name;
         return this;
@@ -1511,19 +1511,21 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * The name of the resource to list all attached Liens. For example, `projects/1234`.
+       * Required. The name of the resource to list all attached Liens. For example,
+       * `projects/1234`.
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** The name of the resource to list all attached Liens. For example, `projects/1234`.
+      /** Required. The name of the resource to list all attached Liens. For example, `projects/1234`.
        */
       public java.lang.String getParent() {
         return parent;
       }
 
       /**
-       * The name of the resource to list all attached Liens. For example, `projects/1234`.
+       * Required. The name of the resource to list all attached Liens. For example,
+       * `projects/1234`.
        */
       public List setParent(java.lang.String parent) {
         this.parent = parent;
@@ -1581,7 +1583,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       private static final String REST_PATH = "v1/{+name}";
 
       private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^operations/.+$");
+          java.util.regex.Pattern.compile("^operations/.*$");
 
       /**
        * Gets the latest state of a long-running operation.  Clients can use this method to poll the
@@ -1604,7 +1606,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^operations/.+$");
+              "^operations/.*$");
         }
       }
 
@@ -1688,7 +1690,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^operations/.+$");
+              "^operations/.*$");
         }
         this.name = name;
         return this;

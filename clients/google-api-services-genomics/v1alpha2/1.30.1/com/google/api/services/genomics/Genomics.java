@@ -171,7 +171,7 @@ public class Genomics extends com.google.api.client.googleapis.services.json.Abs
       private static final String REST_PATH = "v1alpha2/{+name}:cancel";
 
       private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^operations/.+$");
+          java.util.regex.Pattern.compile("^operations/.*$");
 
       /**
        * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
@@ -200,7 +200,7 @@ public class Genomics extends com.google.api.client.googleapis.services.json.Abs
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^operations/.+$");
+              "^operations/.*$");
         }
       }
 
@@ -274,7 +274,7 @@ public class Genomics extends com.google.api.client.googleapis.services.json.Abs
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^operations/.+$");
+              "^operations/.*$");
         }
         this.name = name;
         return this;
@@ -311,7 +311,7 @@ public class Genomics extends com.google.api.client.googleapis.services.json.Abs
       private static final String REST_PATH = "v1alpha2/{+name}";
 
       private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^operations/.+$");
+          java.util.regex.Pattern.compile("^operations/.*$");
 
       /**
        * Gets the latest state of a long-running operation. Clients can use this method to poll the
@@ -336,7 +336,7 @@ public class Genomics extends com.google.api.client.googleapis.services.json.Abs
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^operations/.+$");
+              "^operations/.*$");
         }
       }
 
@@ -420,7 +420,7 @@ public class Genomics extends com.google.api.client.googleapis.services.json.Abs
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^operations/.+$");
+              "^operations/.*$");
         }
         this.name = name;
         return this;

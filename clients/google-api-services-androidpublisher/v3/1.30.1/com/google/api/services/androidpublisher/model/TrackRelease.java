@@ -67,6 +67,12 @@ public final class TrackRelease extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<TrackReleasePin> pinnedVersions;
+
+  /**
    * The description of what is new in the app in this release.
    * The value may be {@code null}.
    */
@@ -78,6 +84,12 @@ public final class TrackRelease extends com.google.api.client.json.GenericJson {
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(LocalizedText.class);
   }
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean rollbackEnabled;
 
   /**
    * The value may be {@code null}.
@@ -182,6 +194,21 @@ public final class TrackRelease extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<TrackReleasePin> getPinnedVersions() {
+    return pinnedVersions;
+  }
+
+  /**
+   * @param pinnedVersions pinnedVersions or {@code null} for none
+   */
+  public TrackRelease setPinnedVersions(java.util.List<TrackReleasePin> pinnedVersions) {
+    this.pinnedVersions = pinnedVersions;
+    return this;
+  }
+
+  /**
    * The description of what is new in the app in this release.
    * @return value or {@code null} for none
    */
@@ -195,6 +222,21 @@ public final class TrackRelease extends com.google.api.client.json.GenericJson {
    */
   public TrackRelease setReleaseNotes(java.util.List<LocalizedText> releaseNotes) {
     this.releaseNotes = releaseNotes;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRollbackEnabled() {
+    return rollbackEnabled;
+  }
+
+  /**
+   * @param rollbackEnabled rollbackEnabled or {@code null} for none
+   */
+  public TrackRelease setRollbackEnabled(java.lang.Boolean rollbackEnabled) {
+    this.rollbackEnabled = rollbackEnabled;
     return this;
   }
 

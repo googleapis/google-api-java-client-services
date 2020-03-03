@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/-2EPUzGo8AUggd3leJgv-tzSEr8\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/BD94sc-dTZbQlj3kncdlRya8SqE\"",
  "discoveryVersion": "v1",
  "id": "androidpublisher:v3",
  "name": "androidpublisher",
  "canonicalName": "Android Publisher",
  "version": "v3",
- "revision": "20200126",
+ "revision": "20200223",
  "title": "Google Play Developer API",
  "description": "Accesses Android application developers' Google Play accounts.",
  "ownerDomain": "google.com",
@@ -84,6 +84,9 @@
     "binary": {
      "$ref": "ApkBinary",
      "description": "Information about the binary payload of this APK."
+    },
+    "testBinary": {
+     "$ref": "ApkBinary"
     },
     "versionCode": {
      "type": "integer",
@@ -239,6 +242,12 @@
      "type": "array",
      "items": {
       "$ref": "ModRange"
+     }
+    },
+    "stratifiedSamplings": {
+     "type": "array",
+     "items": {
+      "$ref": "StratifiedSampling"
      }
     },
     "versionCodes": {
@@ -951,6 +960,39 @@
     "salt": {
      "type": "integer",
      "format": "int32"
+    },
+    "stratifiedSamplings": {
+     "type": "array",
+     "items": {
+      "$ref": "StratifiedSampling"
+     }
+    },
+    "useAndroidId": {
+     "type": "boolean"
+    }
+   }
+  },
+  "StratifiedSampling": {
+   "id": "StratifiedSampling",
+   "type": "object",
+   "properties": {
+    "modRanges": {
+     "type": "array",
+     "items": {
+      "$ref": "ModRange"
+     }
+    },
+    "stratum": {
+     "$ref": "Stratum"
+    }
+   }
+  },
+  "Stratum": {
+   "id": "Stratum",
+   "type": "object",
+   "properties": {
+    "brand": {
+     "type": "string"
     }
    }
   },
@@ -1185,6 +1227,24 @@
    "id": "Testers",
    "type": "object",
    "properties": {
+    "autoEnrolledAndroidGroups": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
+    "autoEnrolledGoogleGroups": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
+    "excludedGoogleGroups": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
     "googleGroups": {
      "type": "array",
      "description": "A list of all Google Groups, as email addresses, that define testers for this track.",
@@ -1259,12 +1319,21 @@
      "type": "string",
      "description": "The release name, used to identify this release in the Play Console UI. Not required to be unique. This is optional, if not set it will be generated from the version_name in the APKs."
     },
+    "pinnedVersions": {
+     "type": "array",
+     "items": {
+      "$ref": "TrackReleasePin"
+     }
+    },
     "releaseNotes": {
      "type": "array",
      "description": "The description of what is new in the app in this release.",
      "items": {
       "$ref": "LocalizedText"
      }
+    },
+    "rollbackEnabled": {
+     "type": "boolean"
     },
     "sampling": {
      "$ref": "Sampling"
@@ -1285,6 +1354,72 @@
       "type": "string",
       "format": "int64"
      }
+    }
+   }
+  },
+  "TrackReleasePin": {
+   "id": "TrackReleasePin",
+   "type": "object",
+   "properties": {
+    "targetings": {
+     "type": "array",
+     "items": {
+      "$ref": "TrackReleasePinPinTargeting"
+     }
+    },
+    "versionCodes": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "format": "int64"
+     }
+    }
+   }
+  },
+  "TrackReleasePinPinTargeting": {
+   "id": "TrackReleasePinPinTargeting",
+   "type": "object",
+   "properties": {
+    "countryCodes": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
+    "devices": {
+     "type": "array",
+     "items": {
+      "$ref": "TrackReleasePinPinTargetingDevicePin"
+     }
+    },
+    "phoneskyVersions": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "format": "int64"
+     }
+    },
+    "sdkVersions": {
+     "type": "array",
+     "items": {
+      "type": "integer",
+      "format": "int32"
+     }
+    }
+   }
+  },
+  "TrackReleasePinPinTargetingDevicePin": {
+   "id": "TrackReleasePinPinTargetingDevicePin",
+   "type": "object",
+   "properties": {
+    "brand": {
+     "type": "string"
+    },
+    "device": {
+     "type": "string"
+    },
+    "product": {
+     "type": "string"
     }
    }
   },
@@ -2213,6 +2348,8 @@
          "type": "string",
          "required": true,
          "enum": [
+          "automotiveScreenshots",
+          "daydreamStereoImage",
           "featureGraphic",
           "icon",
           "phoneScreenshots",
@@ -2224,6 +2361,8 @@
           "wearScreenshots"
          ],
          "enumDescriptions": [
+          "",
+          "",
           "",
           "",
           "",
@@ -2276,6 +2415,8 @@
          "type": "string",
          "required": true,
          "enum": [
+          "automotiveScreenshots",
+          "daydreamStereoImage",
           "featureGraphic",
           "icon",
           "phoneScreenshots",
@@ -2287,6 +2428,8 @@
           "wearScreenshots"
          ],
          "enumDescriptions": [
+          "",
+          "",
           "",
           "",
           "",
@@ -2341,6 +2484,8 @@
          "type": "string",
          "required": true,
          "enum": [
+          "automotiveScreenshots",
+          "daydreamStereoImage",
           "featureGraphic",
           "icon",
           "phoneScreenshots",
@@ -2352,6 +2497,8 @@
           "wearScreenshots"
          ],
          "enumDescriptions": [
+          "",
+          "",
           "",
           "",
           "",
@@ -2406,6 +2553,8 @@
          "type": "string",
          "required": true,
          "enum": [
+          "automotiveScreenshots",
+          "daydreamStereoImage",
           "featureGraphic",
           "icon",
           "phoneScreenshots",
@@ -2417,6 +2566,8 @@
           "wearScreenshots"
          ],
          "enumDescriptions": [
+          "",
+          "",
           "",
           "",
           "",

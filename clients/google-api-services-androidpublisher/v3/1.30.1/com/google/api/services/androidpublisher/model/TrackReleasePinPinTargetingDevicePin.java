@@ -17,7 +17,7 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * Model definition for Control.
+ * Model definition for TrackReleasePinPinTargetingDevicePin.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play Developer API. For a detailed explanation
@@ -28,79 +28,79 @@ package com.google.api.services.androidpublisher.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Control extends com.google.api.client.json.GenericJson {
+public final class TrackReleasePinPinTargetingDevicePin extends com.google.api.client.json.GenericJson {
 
   /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<ModRange> modRanges;
+  private java.lang.String brand;
 
   /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<StratifiedSampling> stratifiedSamplings;
+  private java.lang.String device;
 
   /**
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.util.List<java.lang.Long> versionCodes;
+  @com.google.api.client.util.Key
+  private java.lang.String product;
 
   /**
    * @return value or {@code null} for none
    */
-  public java.util.List<ModRange> getModRanges() {
-    return modRanges;
+  public java.lang.String getBrand() {
+    return brand;
   }
 
   /**
-   * @param modRanges modRanges or {@code null} for none
+   * @param brand brand or {@code null} for none
    */
-  public Control setModRanges(java.util.List<ModRange> modRanges) {
-    this.modRanges = modRanges;
+  public TrackReleasePinPinTargetingDevicePin setBrand(java.lang.String brand) {
+    this.brand = brand;
     return this;
   }
 
   /**
    * @return value or {@code null} for none
    */
-  public java.util.List<StratifiedSampling> getStratifiedSamplings() {
-    return stratifiedSamplings;
+  public java.lang.String getDevice() {
+    return device;
   }
 
   /**
-   * @param stratifiedSamplings stratifiedSamplings or {@code null} for none
+   * @param device device or {@code null} for none
    */
-  public Control setStratifiedSamplings(java.util.List<StratifiedSampling> stratifiedSamplings) {
-    this.stratifiedSamplings = stratifiedSamplings;
+  public TrackReleasePinPinTargetingDevicePin setDevice(java.lang.String device) {
+    this.device = device;
     return this;
   }
 
   /**
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.Long> getVersionCodes() {
-    return versionCodes;
+  public java.lang.String getProduct() {
+    return product;
   }
 
   /**
-   * @param versionCodes versionCodes or {@code null} for none
+   * @param product product or {@code null} for none
    */
-  public Control setVersionCodes(java.util.List<java.lang.Long> versionCodes) {
-    this.versionCodes = versionCodes;
+  public TrackReleasePinPinTargetingDevicePin setProduct(java.lang.String product) {
+    this.product = product;
     return this;
   }
 
   @Override
-  public Control set(String fieldName, Object value) {
-    return (Control) super.set(fieldName, value);
+  public TrackReleasePinPinTargetingDevicePin set(String fieldName, Object value) {
+    return (TrackReleasePinPinTargetingDevicePin) super.set(fieldName, value);
   }
 
   @Override
-  public Control clone() {
-    return (Control) super.clone();
+  public TrackReleasePinPinTargetingDevicePin clone() {
+    return (TrackReleasePinPinTargetingDevicePin) super.clone();
   }
 
 }

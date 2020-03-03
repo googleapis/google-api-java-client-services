@@ -31,11 +31,74 @@ package com.google.api.services.androidpublisher.model;
 public final class Testers extends com.google.api.client.json.GenericJson {
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> autoEnrolledAndroidGroups;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> autoEnrolledGoogleGroups;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> excludedGoogleGroups;
+
+  /**
    * A list of all Google Groups, as email addresses, that define testers for this track.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> googleGroups;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAutoEnrolledAndroidGroups() {
+    return autoEnrolledAndroidGroups;
+  }
+
+  /**
+   * @param autoEnrolledAndroidGroups autoEnrolledAndroidGroups or {@code null} for none
+   */
+  public Testers setAutoEnrolledAndroidGroups(java.util.List<java.lang.String> autoEnrolledAndroidGroups) {
+    this.autoEnrolledAndroidGroups = autoEnrolledAndroidGroups;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAutoEnrolledGoogleGroups() {
+    return autoEnrolledGoogleGroups;
+  }
+
+  /**
+   * @param autoEnrolledGoogleGroups autoEnrolledGoogleGroups or {@code null} for none
+   */
+  public Testers setAutoEnrolledGoogleGroups(java.util.List<java.lang.String> autoEnrolledGoogleGroups) {
+    this.autoEnrolledGoogleGroups = autoEnrolledGoogleGroups;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getExcludedGoogleGroups() {
+    return excludedGoogleGroups;
+  }
+
+  /**
+   * @param excludedGoogleGroups excludedGoogleGroups or {@code null} for none
+   */
+  public Testers setExcludedGoogleGroups(java.util.List<java.lang.String> excludedGoogleGroups) {
+    this.excludedGoogleGroups = excludedGoogleGroups;
+    return this;
+  }
 
   /**
    * A list of all Google Groups, as email addresses, that define testers for this track.

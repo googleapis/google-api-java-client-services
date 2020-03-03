@@ -55,6 +55,18 @@ public final class Sampling extends com.google.api.client.json.GenericJson {
   private java.lang.Integer salt;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<StratifiedSampling> stratifiedSamplings;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean useAndroidId;
+
+  /**
    * @return value or {@code null} for none
    */
   public java.util.List<ModRange> getModRanges() {
@@ -96,6 +108,36 @@ public final class Sampling extends com.google.api.client.json.GenericJson {
    */
   public Sampling setSalt(java.lang.Integer salt) {
     this.salt = salt;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<StratifiedSampling> getStratifiedSamplings() {
+    return stratifiedSamplings;
+  }
+
+  /**
+   * @param stratifiedSamplings stratifiedSamplings or {@code null} for none
+   */
+  public Sampling setStratifiedSamplings(java.util.List<StratifiedSampling> stratifiedSamplings) {
+    this.stratifiedSamplings = stratifiedSamplings;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUseAndroidId() {
+    return useAndroidId;
+  }
+
+  /**
+   * @param useAndroidId useAndroidId or {@code null} for none
+   */
+  public Sampling setUseAndroidId(java.lang.Boolean useAndroidId) {
+    this.useAndroidId = useAndroidId;
     return this;
   }
 

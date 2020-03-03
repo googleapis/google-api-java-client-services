@@ -927,7 +927,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           private static final String REST_PATH = "v1beta1/{+parent}/{collectionId}";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+/documents/.+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+/documents/.*$");
 
           /**
            * Creates a new document.
@@ -953,7 +953,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/databases/[^/]+/documents/.+$");
+                  "^projects/[^/]+/databases/[^/]+/documents/.*$");
             }
             this.collectionId = com.google.api.client.util.Preconditions.checkNotNull(collectionId, "Required parameter collectionId must be specified.");
           }
@@ -1038,7 +1038,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/databases/[^/]+/documents/.+$");
+                  "^projects/[^/]+/databases/[^/]+/documents/.*$");
             }
             this.parent = parent;
             return this;
@@ -1140,7 +1140,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           private static final String REST_PATH = "v1beta1/{+name}";
 
           private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+/documents/[^/]+/.+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+/documents/[^/]+/.*$");
 
           /**
            * Deletes a document.
@@ -1163,7 +1163,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                   "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/databases/[^/]+/documents/[^/]+/.+$");
+                  "^projects/[^/]+/databases/[^/]+/documents/[^/]+/.*$");
             }
           }
 
@@ -1244,7 +1244,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                   "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/databases/[^/]+/documents/[^/]+/.+$");
+                  "^projects/[^/]+/databases/[^/]+/documents/[^/]+/.*$");
             }
             this.name = name;
             return this;
@@ -1321,7 +1321,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           private static final String REST_PATH = "v1beta1/{+name}";
 
           private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+/documents/[^/]+/.+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+/documents/[^/]+/.*$");
 
           /**
            * Gets a single document.
@@ -1343,7 +1343,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                   "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/databases/[^/]+/documents/[^/]+/.+$");
+                  "^projects/[^/]+/databases/[^/]+/documents/[^/]+/.*$");
             }
           }
 
@@ -1434,7 +1434,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                   "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/databases/[^/]+/documents/[^/]+/.+$");
+                  "^projects/[^/]+/databases/[^/]+/documents/[^/]+/.*$");
             }
             this.name = name;
             return this;
@@ -1535,7 +1535,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           private static final String REST_PATH = "v1beta1/{+parent}/{collectionId}";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+/documents/[^/]+/.+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+/documents/[^/]+/.*$");
 
           /**
            * Lists documents.
@@ -1564,7 +1564,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/databases/[^/]+/documents/[^/]+/.+$");
+                  "^projects/[^/]+/databases/[^/]+/documents/[^/]+/.*$");
             }
             this.collectionId = com.google.api.client.util.Preconditions.checkNotNull(collectionId, "Required parameter collectionId must be specified.");
           }
@@ -1665,7 +1665,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/databases/[^/]+/documents/[^/]+/.+$");
+                  "^projects/[^/]+/databases/[^/]+/documents/[^/]+/.*$");
             }
             this.parent = parent;
             return this;
@@ -1862,7 +1862,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           private static final String REST_PATH = "v1beta1/{+parent}:listCollectionIds";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+/documents/[^/]+/.+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+/documents/[^/]+/.*$");
 
           /**
            * Lists all the collection IDs underneath a document.
@@ -1888,7 +1888,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/databases/[^/]+/documents/[^/]+/.+$");
+                  "^projects/[^/]+/databases/[^/]+/documents/[^/]+/.*$");
             }
           }
 
@@ -1972,7 +1972,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/databases/[^/]+/documents/[^/]+/.+$");
+                  "^projects/[^/]+/databases/[^/]+/documents/[^/]+/.*$");
             }
             this.parent = parent;
             return this;
@@ -2146,7 +2146,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           private static final String REST_PATH = "v1beta1/{+name}";
 
           private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+/documents/[^/]+/.+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+/documents/[^/]+/.*$");
 
           /**
            * Updates or inserts a document.
@@ -2170,7 +2170,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                   "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/databases/[^/]+/documents/[^/]+/.+$");
+                  "^projects/[^/]+/databases/[^/]+/documents/[^/]+/.*$");
             }
           }
 
@@ -2251,7 +2251,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                   "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/databases/[^/]+/documents/[^/]+/.+$");
+                  "^projects/[^/]+/databases/[^/]+/documents/[^/]+/.*$");
             }
             this.name = name;
             return this;
@@ -2517,7 +2517,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           private static final String REST_PATH = "v1beta1/{+parent}:runQuery";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+/documents/[^/]+/.+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+/documents/[^/]+/.*$");
 
           /**
            * Runs a query.
@@ -2546,7 +2546,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/databases/[^/]+/documents/[^/]+/.+$");
+                  "^projects/[^/]+/databases/[^/]+/documents/[^/]+/.*$");
             }
           }
 
@@ -2636,7 +2636,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/databases/[^/]+/documents/[^/]+/.+$");
+                  "^projects/[^/]+/databases/[^/]+/documents/[^/]+/.*$");
             }
             this.parent = parent;
             return this;

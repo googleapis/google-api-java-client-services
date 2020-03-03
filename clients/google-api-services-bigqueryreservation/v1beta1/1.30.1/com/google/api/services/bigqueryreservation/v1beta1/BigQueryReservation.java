@@ -171,7 +171,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
        * optional parameters, call the {@link GetBiReservation#execute()} method to invoke the remote
        * operation.
        *
-       * @param name Name of the requested reservation, for example:
+       * @param name Required. Name of the requested reservation, for example:
        *        `projects/{project_id}/locations/{location_id}/bireservation`
        * @return the request
        */
@@ -199,7 +199,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
          * ces.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param name Name of the requested reservation, for example:
+         * @param name Required. Name of the requested reservation, for example:
        *        `projects/{project_id}/locations/{location_id}/bireservation`
          * @since 1.13
          */
@@ -279,13 +279,13 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Name of the requested reservation, for example:
+         * Required. Name of the requested reservation, for example:
          * `projects/{project_id}/locations/{location_id}/bireservation`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Name of the requested reservation, for example:
+        /** Required. Name of the requested reservation, for example:
        `projects/{project_id}/locations/{location_id}/bireservation`
          */
         public java.lang.String getName() {
@@ -293,7 +293,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Name of the requested reservation, for example:
+         * Required. Name of the requested reservation, for example:
          * `projects/{project_id}/locations/{location_id}/bireservation`
          */
         public GetBiReservation setName(java.lang.String name) {
@@ -328,7 +328,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
        * optional parameters, call the {@link SearchAssignments#execute()} method to invoke the remote
        * operation.
        *
-       * @param parent The resource name of the admin project(containing project and location),
+       * @param parent Required. The resource name of the admin project(containing project and location),
       e.g.:
        *        "projects/myproject/locations/US".
        * @return the request
@@ -366,7 +366,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
          * ices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param parent The resource name of the admin project(containing project and location),
+         * @param parent Required. The resource name of the admin project(containing project and location),
       e.g.:
        *        "projects/myproject/locations/US".
          * @since 1.13
@@ -447,13 +447,13 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * The resource name of the admin project(containing project and location), e.g.:
+         * Required. The resource name of the admin project(containing project and location), e.g.:
          * "projects/myproject/locations/US".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The resource name of the admin project(containing project and location), e.g.:
+        /** Required. The resource name of the admin project(containing project and location), e.g.:
        "projects/myproject/locations/US".
          */
         public java.lang.String getParent() {
@@ -461,7 +461,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * The resource name of the admin project(containing project and location), e.g.:
+         * Required. The resource name of the admin project(containing project and location), e.g.:
          * "projects/myproject/locations/US".
          */
         public SearchAssignments setParent(java.lang.String parent) {
@@ -728,7 +728,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the bigqueryreservation server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Resource name of the parent reservation. E.g.,
+         * @param parent Required. Resource name of the parent reservation. E.g.,
            projects/myproject/locations/US
          * @param content the {@link com.google.api.services.bigqueryreservation.v1beta1.model.CapacityCommitment}
          * @return the request
@@ -757,7 +757,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Resource name of the parent reservation. E.g.,
+           * @param parent Required. Resource name of the parent reservation. E.g.,
            projects/myproject/locations/US
            * @param content the {@link com.google.api.services.bigqueryreservation.v1beta1.model.CapacityCommitment}
            * @since 1.13
@@ -828,19 +828,21 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * Resource name of the parent reservation. E.g., projects/myproject/locations/US
+           * Required. Resource name of the parent reservation. E.g.,
+           * projects/myproject/locations/US
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Resource name of the parent reservation. E.g., projects/myproject/locations/US
+          /** Required. Resource name of the parent reservation. E.g., projects/myproject/locations/US
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Resource name of the parent reservation. E.g., projects/myproject/locations/US
+           * Required. Resource name of the parent reservation. E.g.,
+           * projects/myproject/locations/US
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -888,7 +890,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the bigqueryreservation server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Resource name of the capacity commitment to delete. E.g.,
+         * @param name Required. Resource name of the capacity commitment to delete. E.g.,
          *        projects/myproject/locations/US/capacityCommitments/123
          * @return the request
          */
@@ -917,7 +919,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Resource name of the capacity commitment to delete. E.g.,
+           * @param name Required. Resource name of the capacity commitment to delete. E.g.,
          *        projects/myproject/locations/US/capacityCommitments/123
            * @since 1.13
            */
@@ -987,13 +989,13 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * Resource name of the capacity commitment to delete. E.g.,
+           * Required. Resource name of the capacity commitment to delete. E.g.,
            * projects/myproject/locations/US/capacityCommitments/123
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Resource name of the capacity commitment to delete. E.g.,
+          /** Required. Resource name of the capacity commitment to delete. E.g.,
          projects/myproject/locations/US/capacityCommitments/123
            */
           public java.lang.String getName() {
@@ -1001,7 +1003,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * Resource name of the capacity commitment to delete. E.g.,
+           * Required. Resource name of the capacity commitment to delete. E.g.,
            * projects/myproject/locations/US/capacityCommitments/123
            */
           public Delete setName(java.lang.String name) {
@@ -1027,7 +1029,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the bigqueryreservation server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Resource name of the capacity commitment to retrieve. E.g.,
+         * @param name Required. Resource name of the capacity commitment to retrieve. E.g.,
          *        projects/myproject/locations/US/capacityCommitments/123
          * @return the request
          */
@@ -1055,7 +1057,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Resource name of the capacity commitment to retrieve. E.g.,
+           * @param name Required. Resource name of the capacity commitment to retrieve. E.g.,
          *        projects/myproject/locations/US/capacityCommitments/123
            * @since 1.13
            */
@@ -1135,13 +1137,13 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * Resource name of the capacity commitment to retrieve. E.g.,
+           * Required. Resource name of the capacity commitment to retrieve. E.g.,
            * projects/myproject/locations/US/capacityCommitments/123
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Resource name of the capacity commitment to retrieve. E.g.,
+          /** Required. Resource name of the capacity commitment to retrieve. E.g.,
          projects/myproject/locations/US/capacityCommitments/123
            */
           public java.lang.String getName() {
@@ -1149,7 +1151,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * Resource name of the capacity commitment to retrieve. E.g.,
+           * Required. Resource name of the capacity commitment to retrieve. E.g.,
            * projects/myproject/locations/US/capacityCommitments/123
            */
           public Get setName(java.lang.String name) {
@@ -1175,7 +1177,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the bigqueryreservation server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Resource name of the parent reservation. E.g.,
+         * @param parent Required. Resource name of the parent reservation. E.g.,
            projects/myproject/locations/US
          * @return the request
          */
@@ -1203,7 +1205,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Resource name of the parent reservation. E.g.,
+           * @param parent Required. Resource name of the parent reservation. E.g.,
            projects/myproject/locations/US
            * @since 1.13
            */
@@ -1283,19 +1285,21 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * Resource name of the parent reservation. E.g., projects/myproject/locations/US
+           * Required. Resource name of the parent reservation. E.g.,
+           * projects/myproject/locations/US
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Resource name of the parent reservation. E.g., projects/myproject/locations/US
+          /** Required. Resource name of the parent reservation. E.g., projects/myproject/locations/US
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Resource name of the parent reservation. E.g., projects/myproject/locations/US
+           * Required. Resource name of the parent reservation. E.g.,
+           * projects/myproject/locations/US
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -1374,7 +1378,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the bigqueryreservation server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Project, location. E.g.,
+         * @param parent Required. Project, location. E.g.,
            projects/myproject/locations/US
          * @param content the {@link com.google.api.services.bigqueryreservation.v1beta1.model.Reservation}
          * @return the request
@@ -1403,7 +1407,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Project, location. E.g.,
+           * @param parent Required. Project, location. E.g.,
            projects/myproject/locations/US
            * @param content the {@link com.google.api.services.bigqueryreservation.v1beta1.model.Reservation}
            * @since 1.13
@@ -1474,19 +1478,19 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * Project, location. E.g., projects/myproject/locations/US
+           * Required. Project, location. E.g., projects/myproject/locations/US
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Project, location. E.g., projects/myproject/locations/US
+          /** Required. Project, location. E.g., projects/myproject/locations/US
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Project, location. E.g., projects/myproject/locations/US
+           * Required. Project, location. E.g., projects/myproject/locations/US
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -1535,7 +1539,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the bigqueryreservation server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Resource name of the reservation to retrieve. E.g.,
+         * @param name Required. Resource name of the reservation to retrieve. E.g.,
          *        projects/myproject/locations/US/reservations/team1-prod
          * @return the request
          */
@@ -1564,7 +1568,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Resource name of the reservation to retrieve. E.g.,
+           * @param name Required. Resource name of the reservation to retrieve. E.g.,
          *        projects/myproject/locations/US/reservations/team1-prod
            * @since 1.13
            */
@@ -1634,13 +1638,13 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * Resource name of the reservation to retrieve. E.g.,
+           * Required. Resource name of the reservation to retrieve. E.g.,
            * projects/myproject/locations/US/reservations/team1-prod
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Resource name of the reservation to retrieve. E.g.,
+          /** Required. Resource name of the reservation to retrieve. E.g.,
          projects/myproject/locations/US/reservations/team1-prod
            */
           public java.lang.String getName() {
@@ -1648,7 +1652,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * Resource name of the reservation to retrieve. E.g.,
+           * Required. Resource name of the reservation to retrieve. E.g.,
            * projects/myproject/locations/US/reservations/team1-prod
            */
           public Delete setName(java.lang.String name) {
@@ -1674,7 +1678,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the bigqueryreservation server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Resource name of the reservation to retrieve. E.g.,
+         * @param name Required. Resource name of the reservation to retrieve. E.g.,
          *        projects/myproject/locations/US/reservations/team1-prod
          * @return the request
          */
@@ -1702,7 +1706,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Resource name of the reservation to retrieve. E.g.,
+           * @param name Required. Resource name of the reservation to retrieve. E.g.,
          *        projects/myproject/locations/US/reservations/team1-prod
            * @since 1.13
            */
@@ -1782,13 +1786,13 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * Resource name of the reservation to retrieve. E.g.,
+           * Required. Resource name of the reservation to retrieve. E.g.,
            * projects/myproject/locations/US/reservations/team1-prod
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Resource name of the reservation to retrieve. E.g.,
+          /** Required. Resource name of the reservation to retrieve. E.g.,
          projects/myproject/locations/US/reservations/team1-prod
            */
           public java.lang.String getName() {
@@ -1796,7 +1800,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * Resource name of the reservation to retrieve. E.g.,
+           * Required. Resource name of the reservation to retrieve. E.g.,
            * projects/myproject/locations/US/reservations/team1-prod
            */
           public Get setName(java.lang.String name) {
@@ -1822,8 +1826,8 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the bigqueryreservation server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent The parent resource name containing project and location, e.g.:
-          "projects/myproject/locations/US"
+         * @param parent Required. The parent resource name containing project and location, e.g.:
+         *        "projects/myproject/locations/US"
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1850,8 +1854,8 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The parent resource name containing project and location, e.g.:
-          "projects/myproject/locations/US"
+           * @param parent Required. The parent resource name containing project and location, e.g.:
+         *        "projects/myproject/locations/US"
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1930,20 +1934,21 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * The parent resource name containing project and location, e.g.:
+           * Required. The parent resource name containing project and location, e.g.:
            * "projects/myproject/locations/US"
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The parent resource name containing project and location, e.g.: "projects/myproject/locations/US"
+          /** Required. The parent resource name containing project and location, e.g.:
+         "projects/myproject/locations/US"
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * The parent resource name containing project and location, e.g.:
+           * Required. The parent resource name containing project and location, e.g.:
            * "projects/myproject/locations/US"
            */
           public List setParent(java.lang.String parent) {
@@ -2208,7 +2213,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
            * This request holds the parameters needed by the bigqueryreservation server.  After setting any
            * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent The parent resource name of the assignment
+           * @param parent Required. The parent resource name of the assignment
           E.g.:
            *        projects/myproject/locations/US/reservations/team1-prod
            * @param content the {@link com.google.api.services.bigqueryreservation.v1beta1.model.Assignment}
@@ -2241,7 +2246,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent The parent resource name of the assignment
+             * @param parent Required. The parent resource name of the assignment
           E.g.:
            *        projects/myproject/locations/US/reservations/team1-prod
              * @param content the {@link com.google.api.services.bigqueryreservation.v1beta1.model.Assignment}
@@ -2313,13 +2318,13 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
             }
 
             /**
-             * The parent resource name of the assignment E.g.:
+             * Required. The parent resource name of the assignment E.g.:
              * projects/myproject/locations/US/reservations/team1-prod
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** The parent resource name of the assignment E.g.:
+            /** Required. The parent resource name of the assignment E.g.:
            projects/myproject/locations/US/reservations/team1-prod
              */
             public java.lang.String getParent() {
@@ -2327,7 +2332,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
             }
 
             /**
-             * The parent resource name of the assignment E.g.:
+             * Required. The parent resource name of the assignment E.g.:
              * projects/myproject/locations/US/reservations/team1-prod
              */
             public Create setParent(java.lang.String parent) {
@@ -2356,7 +2361,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
            * This request holds the parameters needed by the bigqueryreservation server.  After setting any
            * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Name of the resource, e.g.:
+           * @param name Required. Name of the resource, e.g.:
            *        projects/myproject/locations/US/reservations/team1-prod/assignments/123
            * @return the request
            */
@@ -2387,7 +2392,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Name of the resource, e.g.:
+             * @param name Required. Name of the resource, e.g.:
            *        projects/myproject/locations/US/reservations/team1-prod/assignments/123
              * @since 1.13
              */
@@ -2457,20 +2462,21 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
             }
 
             /**
-             * Name of the resource, e.g.:
+             * Required. Name of the resource, e.g.:
              * projects/myproject/locations/US/reservations/team1-prod/assignments/123
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Name of the resource, e.g.: projects/myproject/locations/US/reservations/team1-prod/assignments/123
+            /** Required. Name of the resource, e.g.:
+           projects/myproject/locations/US/reservations/team1-prod/assignments/123
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Name of the resource, e.g.:
+             * Required. Name of the resource, e.g.:
              * projects/myproject/locations/US/reservations/team1-prod/assignments/123
              */
             public Delete setName(java.lang.String name) {
@@ -2501,7 +2507,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
            * This request holds the parameters needed by the bigqueryreservation server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent The parent resource name e.g.:
+           * @param parent Required. The parent resource name e.g.:
           projects/myproject/locations/US/reservations/team1-prod
           Or:
            *        projects/myproject/locations/US/reservations/-
@@ -2537,7 +2543,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
              * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent The parent resource name e.g.:
+             * @param parent Required. The parent resource name e.g.:
           projects/myproject/locations/US/reservations/team1-prod
           Or:
            *        projects/myproject/locations/US/reservations/-
@@ -2619,22 +2625,22 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
             }
 
             /**
-             * The parent resource name e.g.:
+             * Required. The parent resource name e.g.:
              * projects/myproject/locations/US/reservations/team1-prod Or:
              * projects/myproject/locations/US/reservations/-
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** The parent resource name e.g.: projects/myproject/locations/US/reservations/team1-prod Or:
-           projects/myproject/locations/US/reservations/-
+            /** Required. The parent resource name e.g.: projects/myproject/locations/US/reservations/team1-prod
+           Or: projects/myproject/locations/US/reservations/-
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * The parent resource name e.g.:
+             * Required. The parent resource name e.g.:
              * projects/myproject/locations/US/reservations/team1-prod Or:
              * projects/myproject/locations/US/reservations/-
              */
@@ -2697,7 +2703,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
            * This request holds the parameters needed by the bigqueryreservation server.  After setting any
            * optional parameters, call the {@link Move#execute()} method to invoke the remote operation.
            *
-           * @param name The resource name of the assignment,
+           * @param name Required. The resource name of the assignment,
           e.g.:
            *        projects/myproject/locations/US/reservations/team1-prod/assignments/123
            * @param content the {@link com.google.api.services.bigqueryreservation.v1beta1.model.MoveAssignmentRequest}
@@ -2731,7 +2737,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
              * Move#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The resource name of the assignment,
+             * @param name Required. The resource name of the assignment,
           e.g.:
            *        projects/myproject/locations/US/reservations/team1-prod/assignments/123
              * @param content the {@link com.google.api.services.bigqueryreservation.v1beta1.model.MoveAssignmentRequest}
@@ -2803,13 +2809,13 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
             }
 
             /**
-             * The resource name of the assignment, e.g.:
+             * Required. The resource name of the assignment, e.g.:
              * projects/myproject/locations/US/reservations/team1-prod/assignments/123
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The resource name of the assignment, e.g.:
+            /** Required. The resource name of the assignment, e.g.:
            projects/myproject/locations/US/reservations/team1-prod/assignments/123
              */
             public java.lang.String getName() {
@@ -2817,7 +2823,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
             }
 
             /**
-             * The resource name of the assignment, e.g.:
+             * Required. The resource name of the assignment, e.g.:
              * projects/myproject/locations/US/reservations/team1-prod/assignments/123
              */
             public Move setName(java.lang.String name) {

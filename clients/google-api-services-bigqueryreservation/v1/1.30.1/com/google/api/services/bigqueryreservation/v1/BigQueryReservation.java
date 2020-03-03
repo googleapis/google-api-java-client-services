@@ -166,7 +166,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
       private static final String REST_PATH = "v1/{+name}";
 
       private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^operations/.+$");
+          java.util.regex.Pattern.compile("^operations/.*$");
 
       /**
        * Deletes a long-running operation. This method indicates that the client is no longer interested
@@ -190,7 +190,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^operations/.+$");
+              "^operations/.*$");
         }
       }
 
@@ -264,7 +264,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^operations/.+$");
+              "^operations/.*$");
         }
         this.name = name;
         return this;

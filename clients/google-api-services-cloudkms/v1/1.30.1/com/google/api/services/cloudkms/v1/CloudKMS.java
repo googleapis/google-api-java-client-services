@@ -1923,7 +1923,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
             private static final String REST_PATH = "v1/{+name}:encrypt";
 
             private final java.util.regex.Pattern NAME_PATTERN =
-                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/keyRings/[^/]+/cryptoKeys/.+$");
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/keyRings/[^/]+/cryptoKeys/.*$");
 
             /**
              * Encrypts data, so that it can only be recovered by a call to Decrypt. The CryptoKey.purpose
@@ -1951,7 +1951,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                     "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/keyRings/[^/]+/cryptoKeys/.+$");
+                    "^projects/[^/]+/locations/[^/]+/keyRings/[^/]+/cryptoKeys/.*$");
               }
             }
 
@@ -2037,7 +2037,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                     "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/keyRings/[^/]+/cryptoKeys/.+$");
+                    "^projects/[^/]+/locations/[^/]+/keyRings/[^/]+/cryptoKeys/.*$");
               }
               this.name = name;
               return this;

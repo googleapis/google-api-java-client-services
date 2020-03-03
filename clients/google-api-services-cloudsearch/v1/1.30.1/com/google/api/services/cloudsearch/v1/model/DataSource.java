@@ -64,8 +64,7 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
    * are restricted to the union of users and groups included in this field. Note that, this does
    * not ensure access to a specific item, as users need to have ACL permissions on the contained
    * items. This ensures a high level access on the entire datasource, and that the individual items
-   * are not shared outside this visibility. This should not be set if anonymous search is enabled
-   * for the data source.
+   * are not shared outside this visibility.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -173,8 +172,7 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
    * are restricted to the union of users and groups included in this field. Note that, this does
    * not ensure access to a specific item, as users need to have ACL permissions on the contained
    * items. This ensures a high level access on the entire datasource, and that the individual items
-   * are not shared outside this visibility. This should not be set if anonymous search is enabled
-   * for the data source.
+   * are not shared outside this visibility.
    * @return value or {@code null} for none
    */
   public java.util.List<GSuitePrincipal> getItemsVisibility() {
@@ -186,8 +184,7 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
    * are restricted to the union of users and groups included in this field. Note that, this does
    * not ensure access to a specific item, as users need to have ACL permissions on the contained
    * items. This ensures a high level access on the entire datasource, and that the individual items
-   * are not shared outside this visibility. This should not be set if anonymous search is enabled
-   * for the data source.
+   * are not shared outside this visibility.
    * @param itemsVisibility itemsVisibility or {@code null} for none
    */
   public DataSource setItemsVisibility(java.util.List<GSuitePrincipal> itemsVisibility) {

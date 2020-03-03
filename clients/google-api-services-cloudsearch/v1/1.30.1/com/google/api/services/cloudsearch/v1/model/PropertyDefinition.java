@@ -124,8 +124,6 @@ public final class PropertyDefinition extends com.google.api.client.json.Generic
    * Indicates that users can perform wildcard search for this property. Only supported for Text
    * properties. IsReturnable must be true to set this option. In a given datasource maximum of 5
    * properties can be marked as is_wildcard_searchable.
-   *
-   * Note: This is an alpha feature and is enabled for whitelisted users only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -384,8 +382,6 @@ public final class PropertyDefinition extends com.google.api.client.json.Generic
    * Indicates that users can perform wildcard search for this property. Only supported for Text
    * properties. IsReturnable must be true to set this option. In a given datasource maximum of 5
    * properties can be marked as is_wildcard_searchable.
-   *
-   * Note: This is an alpha feature and is enabled for whitelisted users only.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsWildcardSearchable() {
@@ -396,8 +392,6 @@ public final class PropertyDefinition extends com.google.api.client.json.Generic
    * Indicates that users can perform wildcard search for this property. Only supported for Text
    * properties. IsReturnable must be true to set this option. In a given datasource maximum of 5
    * properties can be marked as is_wildcard_searchable.
-   *
-   * Note: This is an alpha feature and is enabled for whitelisted users only.
    * @param isWildcardSearchable isWildcardSearchable or {@code null} for none
    */
   public PropertyDefinition setIsWildcardSearchable(java.lang.Boolean isWildcardSearchable) {

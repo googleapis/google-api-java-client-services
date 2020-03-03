@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"VPK3KBfpaEgZ16pozGOoMYfKc0U/W-JRJm0Bex0eEJ4XYBVnRKTeRQ8\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/zG8qVEU9Oex8Y_g8HrcHwAALOOo\"",
  "discoveryVersion": "v1",
  "id": "oauth2:v2",
  "name": "oauth2",
  "version": "v2",
- "revision": "20190313",
+ "revision": "20200213",
  "title": "Google OAuth2 API",
  "description": "Obtains end-user authorization grants for use with other Google APIs.",
  "ownerDomain": "google.com",
@@ -82,41 +82,6 @@
   }
  },
  "schemas": {
-  "Jwk": {
-   "id": "Jwk",
-   "type": "object",
-   "properties": {
-    "keys": {
-     "type": "array",
-     "items": {
-      "type": "object",
-      "properties": {
-       "alg": {
-        "type": "string",
-        "default": "RS256"
-       },
-       "e": {
-        "type": "string"
-       },
-       "kid": {
-        "type": "string"
-       },
-       "kty": {
-        "type": "string",
-        "default": "RSA"
-       },
-       "n": {
-        "type": "string"
-       },
-       "use": {
-        "type": "string",
-        "default": "sig"
-       }
-      }
-     }
-    }
-   }
-  },
   "Tokeninfo": {
    "id": "Tokeninfo",
    "type": "object",
@@ -213,14 +178,6 @@
   }
  },
  "methods": {
-  "getCertForOpenIdConnect": {
-   "id": "oauth2.getCertForOpenIdConnect",
-   "path": "oauth2/v2/certs",
-   "httpMethod": "GET",
-   "response": {
-    "$ref": "Jwk"
-   }
-  },
   "tokeninfo": {
    "id": "oauth2.tokeninfo",
    "path": "oauth2/v2/tokeninfo",

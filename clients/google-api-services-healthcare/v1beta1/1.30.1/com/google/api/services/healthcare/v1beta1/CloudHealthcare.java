@@ -15349,6 +15349,29 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return this;
               }
 
+              /**
+               * Specifies the parts of the Message to return in the response. When unspecified,
+               * equivalent to BASIC.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String view;
+
+              /** Specifies the parts of the Message to return in the response. When unspecified, equivalent to
+             BASIC.
+               */
+              public java.lang.String getView() {
+                return view;
+              }
+
+              /**
+               * Specifies the parts of the Message to return in the response. When unspecified,
+               * equivalent to BASIC.
+               */
+              public List setView(java.lang.String view) {
+                this.view = view;
+                return this;
+              }
+
               @Override
               public List set(String parameterName, Object value) {
                 return (List) super.set(parameterName, value);

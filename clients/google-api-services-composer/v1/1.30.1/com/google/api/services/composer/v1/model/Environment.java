@@ -59,6 +59,9 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   /**
    * The resource name of the environment, in the form:
    * "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+   *
+   * EnvironmentId must start with a lowercase letter followed by up to 63 lowercase letters,
+   * numbers, or hyphens, and cannot end with a hyphen.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -152,6 +155,9 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   /**
    * The resource name of the environment, in the form:
    * "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+   *
+   * EnvironmentId must start with a lowercase letter followed by up to 63 lowercase letters,
+   * numbers, or hyphens, and cannot end with a hyphen.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -161,6 +167,9 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   /**
    * The resource name of the environment, in the form:
    * "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+   *
+   * EnvironmentId must start with a lowercase letter followed by up to 63 lowercase letters,
+   * numbers, or hyphens, and cannot end with a hyphen.
    * @param name name or {@code null} for none
    */
   public Environment setName(java.lang.String name) {

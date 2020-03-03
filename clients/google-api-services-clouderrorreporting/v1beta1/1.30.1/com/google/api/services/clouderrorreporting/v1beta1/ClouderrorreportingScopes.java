@@ -17,7 +17,7 @@
 package com.google.api.services.clouderrorreporting.v1beta1;
 
 /**
- * Available OAuth 2.0 scopes for use with the Stackdriver Error Reporting API.
+ * Available OAuth 2.0 scopes for use with the Error Reporting API.
  *
  * @since 1.4
  */

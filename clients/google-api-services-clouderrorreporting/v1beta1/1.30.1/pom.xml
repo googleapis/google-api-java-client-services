@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-clouderrorreporting</artifactId>
-  <version>v1beta1-rev20200122-1.30.8</version>
-  <name>Stackdriver Error Reporting API v1beta1-rev20200122-1.30.8</name>
+  <version>v1beta1-rev20200226-1.30.8</version>
+  <name>Error Reporting API v1beta1-rev20200226-1.30.8</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
@@ -86,8 +86,8 @@
         </executions>
         <configuration>
           <doclint>none</doclint>
-          <doctitle>Stackdriver Error Reporting API ${project.version}</doctitle>
-          <windowtitle>Stackdriver Error Reporting API ${project.version}</windowtitle>
+          <doctitle>Error Reporting API ${project.version}</doctitle>
+          <windowtitle>Error Reporting API ${project.version}</windowtitle>
           <links>
             <link>http://docs.oracle.com/javase/7/docs/api</link>
             <link>https://googleapis.dev/java/google-http-client/1.34.1/</link>

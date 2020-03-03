@@ -47,9 +47,10 @@ public final class InternalChecker extends com.google.api.client.json.GenericJso
   private java.lang.String gcpZone;
 
   /**
-   * A unique resource name for this InternalChecker. The format
-   * is:projects/[PROJECT_ID]/internalCheckers/[INTERNAL_CHECKER_ID].[PROJECT_ID] is the Stackdriver
-   * Workspace project for the Uptime check config associated with the internal checker.
+   * A unique resource name for this InternalChecker. The format is:
+   * projects/[PROJECT_ID_OR_NUMBER]/internalCheckers/[INTERNAL_CHECKER_ID] [PROJECT_ID_OR_NUMBER]
+   * is the Stackdriver Workspace project for the Uptime check config associated with the internal
+   * checker.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,9 +118,10 @@ public final class InternalChecker extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A unique resource name for this InternalChecker. The format
-   * is:projects/[PROJECT_ID]/internalCheckers/[INTERNAL_CHECKER_ID].[PROJECT_ID] is the Stackdriver
-   * Workspace project for the Uptime check config associated with the internal checker.
+   * A unique resource name for this InternalChecker. The format is:
+   * projects/[PROJECT_ID_OR_NUMBER]/internalCheckers/[INTERNAL_CHECKER_ID] [PROJECT_ID_OR_NUMBER]
+   * is the Stackdriver Workspace project for the Uptime check config associated with the internal
+   * checker.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -127,9 +129,10 @@ public final class InternalChecker extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A unique resource name for this InternalChecker. The format
-   * is:projects/[PROJECT_ID]/internalCheckers/[INTERNAL_CHECKER_ID].[PROJECT_ID] is the Stackdriver
-   * Workspace project for the Uptime check config associated with the internal checker.
+   * A unique resource name for this InternalChecker. The format is:
+   * projects/[PROJECT_ID_OR_NUMBER]/internalCheckers/[INTERNAL_CHECKER_ID] [PROJECT_ID_OR_NUMBER]
+   * is the Stackdriver Workspace project for the Uptime check config associated with the internal
+   * checker.
    * @param name name or {@code null} for none
    */
   public InternalChecker setName(java.lang.String name) {

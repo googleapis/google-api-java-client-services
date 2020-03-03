@@ -43,8 +43,8 @@ public final class AlertPolicy extends com.google.api.client.json.GenericJson {
   /**
    * A list of conditions for the policy. The conditions are combined by AND or OR according to the
    * combiner field. If the combined conditions evaluate to true, then an incident is created. A
-   * policy can have from one to six conditions. If |condition_time_series_uery_language| is
-   * present, it must be the only |condition|.
+   * policy can have from one to six conditions. If condition_time_series_query_language is present,
+   * it must be the only condition.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,9 +96,9 @@ public final class AlertPolicy extends com.google.api.client.json.GenericJson {
   private MutationRecord mutationRecord;
 
   /**
-   * Required if the policy exists. The resource name for this policy. The syntax is:
-   * projects/[PROJECT_ID]/alertPolicies/[ALERT_POLICY_ID] [ALERT_POLICY_ID] is assigned by
-   * Stackdriver Monitoring when the policy is created. When calling the alertPolicies.create
+   * Required if the policy exists. The resource name for this policy. The format is:
+   * projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID] [ALERT_POLICY_ID] is assigned
+   * by Stackdriver Monitoring when the policy is created. When calling the alertPolicies.create
    * method, do not include the name field in the alerting policy passed as part of the request.
    * The value may be {@code null}.
    */
@@ -109,8 +109,8 @@ public final class AlertPolicy extends com.google.api.client.json.GenericJson {
    * Identifies the notification channels to which notifications should be sent when incidents are
    * opened or closed or when new violations occur on an already opened incident. Each element of
    * this array corresponds to the name field in each of the NotificationChannel objects that are
-   * returned from the ListNotificationChannels method. The syntax of the entries in this field is:
-   * projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]
+   * returned from the ListNotificationChannels method. The format of the entries in this field is:
+   * projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID]
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -156,8 +156,8 @@ public final class AlertPolicy extends com.google.api.client.json.GenericJson {
   /**
    * A list of conditions for the policy. The conditions are combined by AND or OR according to the
    * combiner field. If the combined conditions evaluate to true, then an incident is created. A
-   * policy can have from one to six conditions. If |condition_time_series_uery_language| is
-   * present, it must be the only |condition|.
+   * policy can have from one to six conditions. If condition_time_series_query_language is present,
+   * it must be the only condition.
    * @return value or {@code null} for none
    */
   public java.util.List<Condition> getConditions() {
@@ -167,8 +167,8 @@ public final class AlertPolicy extends com.google.api.client.json.GenericJson {
   /**
    * A list of conditions for the policy. The conditions are combined by AND or OR according to the
    * combiner field. If the combined conditions evaluate to true, then an incident is created. A
-   * policy can have from one to six conditions. If |condition_time_series_uery_language| is
-   * present, it must be the only |condition|.
+   * policy can have from one to six conditions. If condition_time_series_query_language is present,
+   * it must be the only condition.
    * @param conditions conditions or {@code null} for none
    */
   public AlertPolicy setConditions(java.util.List<Condition> conditions) {
@@ -282,9 +282,9 @@ public final class AlertPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required if the policy exists. The resource name for this policy. The syntax is:
-   * projects/[PROJECT_ID]/alertPolicies/[ALERT_POLICY_ID] [ALERT_POLICY_ID] is assigned by
-   * Stackdriver Monitoring when the policy is created. When calling the alertPolicies.create
+   * Required if the policy exists. The resource name for this policy. The format is:
+   * projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID] [ALERT_POLICY_ID] is assigned
+   * by Stackdriver Monitoring when the policy is created. When calling the alertPolicies.create
    * method, do not include the name field in the alerting policy passed as part of the request.
    * @return value or {@code null} for none
    */
@@ -293,9 +293,9 @@ public final class AlertPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required if the policy exists. The resource name for this policy. The syntax is:
-   * projects/[PROJECT_ID]/alertPolicies/[ALERT_POLICY_ID] [ALERT_POLICY_ID] is assigned by
-   * Stackdriver Monitoring when the policy is created. When calling the alertPolicies.create
+   * Required if the policy exists. The resource name for this policy. The format is:
+   * projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID] [ALERT_POLICY_ID] is assigned
+   * by Stackdriver Monitoring when the policy is created. When calling the alertPolicies.create
    * method, do not include the name field in the alerting policy passed as part of the request.
    * @param name name or {@code null} for none
    */
@@ -308,8 +308,8 @@ public final class AlertPolicy extends com.google.api.client.json.GenericJson {
    * Identifies the notification channels to which notifications should be sent when incidents are
    * opened or closed or when new violations occur on an already opened incident. Each element of
    * this array corresponds to the name field in each of the NotificationChannel objects that are
-   * returned from the ListNotificationChannels method. The syntax of the entries in this field is:
-   * projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]
+   * returned from the ListNotificationChannels method. The format of the entries in this field is:
+   * projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID]
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getNotificationChannels() {
@@ -320,8 +320,8 @@ public final class AlertPolicy extends com.google.api.client.json.GenericJson {
    * Identifies the notification channels to which notifications should be sent when incidents are
    * opened or closed or when new violations occur on an already opened incident. Each element of
    * this array corresponds to the name field in each of the NotificationChannel objects that are
-   * returned from the ListNotificationChannels method. The syntax of the entries in this field is:
-   * projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]
+   * returned from the ListNotificationChannels method. The format of the entries in this field is:
+   * projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID]
    * @param notificationChannels notificationChannels or {@code null} for none
    */
   public AlertPolicy setNotificationChannels(java.util.List<java.lang.String> notificationChannels) {

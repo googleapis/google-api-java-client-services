@@ -32,7 +32,7 @@ public final class ListServicesResponse extends com.google.api.client.json.Gener
 
   /**
    * If there are more results than have been returned, then this field is set to a non-empty value.
-   * To see the additional results, use that value as pageToken in the next call to this method.
+   * To see the additional results, use that value as page_token in the next call to this method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +47,7 @@ public final class ListServicesResponse extends com.google.api.client.json.Gener
 
   /**
    * If there are more results than have been returned, then this field is set to a non-empty value.
-   * To see the additional results, use that value as pageToken in the next call to this method.
+   * To see the additional results, use that value as page_token in the next call to this method.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -56,7 +56,7 @@ public final class ListServicesResponse extends com.google.api.client.json.Gener
 
   /**
    * If there are more results than have been returned, then this field is set to a non-empty value.
-   * To see the additional results, use that value as pageToken in the next call to this method.
+   * To see the additional results, use that value as page_token in the next call to this method.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListServicesResponse setNextPageToken(java.lang.String nextPageToken) {

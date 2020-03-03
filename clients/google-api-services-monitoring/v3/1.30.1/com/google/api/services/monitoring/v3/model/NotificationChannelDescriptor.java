@@ -69,9 +69,9 @@ public final class NotificationChannelDescriptor extends com.google.api.client.j
   private java.lang.String launchStage;
 
   /**
-   * The full REST resource name for this descriptor. The syntax is:
-   * projects/[PROJECT_ID]/notificationChannelDescriptors/[TYPE] In the above, [TYPE] is the value
-   * of the type field.
+   * The full REST resource name for this descriptor. The format is:
+   * projects/[PROJECT_ID_OR_NUMBER]/notificationChannelDescriptors/[TYPE] In the above, [TYPE] is
+   * the value of the type field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -160,9 +160,9 @@ public final class NotificationChannelDescriptor extends com.google.api.client.j
   }
 
   /**
-   * The full REST resource name for this descriptor. The syntax is:
-   * projects/[PROJECT_ID]/notificationChannelDescriptors/[TYPE] In the above, [TYPE] is the value
-   * of the type field.
+   * The full REST resource name for this descriptor. The format is:
+   * projects/[PROJECT_ID_OR_NUMBER]/notificationChannelDescriptors/[TYPE] In the above, [TYPE] is
+   * the value of the type field.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -170,9 +170,9 @@ public final class NotificationChannelDescriptor extends com.google.api.client.j
   }
 
   /**
-   * The full REST resource name for this descriptor. The syntax is:
-   * projects/[PROJECT_ID]/notificationChannelDescriptors/[TYPE] In the above, [TYPE] is the value
-   * of the type field.
+   * The full REST resource name for this descriptor. The format is:
+   * projects/[PROJECT_ID_OR_NUMBER]/notificationChannelDescriptors/[TYPE] In the above, [TYPE] is
+   * the value of the type field.
    * @param name name or {@code null} for none
    */
   public NotificationChannelDescriptor setName(java.lang.String name) {

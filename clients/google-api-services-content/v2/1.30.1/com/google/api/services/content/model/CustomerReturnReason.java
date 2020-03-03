@@ -31,18 +31,21 @@ package com.google.api.services.content.model;
 public final class CustomerReturnReason extends com.google.api.client.json.GenericJson {
 
   /**
+   * Description of the reason.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
+   * Code of the return reason.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String reasonCode;
 
   /**
+   * Description of the reason.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -50,6 +53,7 @@ public final class CustomerReturnReason extends com.google.api.client.json.Gener
   }
 
   /**
+   * Description of the reason.
    * @param description description or {@code null} for none
    */
   public CustomerReturnReason setDescription(java.lang.String description) {
@@ -58,6 +62,7 @@ public final class CustomerReturnReason extends com.google.api.client.json.Gener
   }
 
   /**
+   * Code of the return reason.
    * @return value or {@code null} for none
    */
   public java.lang.String getReasonCode() {
@@ -65,6 +70,7 @@ public final class CustomerReturnReason extends com.google.api.client.json.Gener
   }
 
   /**
+   * Code of the return reason.
    * @param reasonCode reasonCode or {@code null} for none
    */
   public CustomerReturnReason setReasonCode(java.lang.String reasonCode) {

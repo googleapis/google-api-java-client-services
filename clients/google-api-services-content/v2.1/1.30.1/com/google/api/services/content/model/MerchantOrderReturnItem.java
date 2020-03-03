@@ -31,42 +31,50 @@ package com.google.api.services.content.model;
 public final class MerchantOrderReturnItem extends com.google.api.client.json.GenericJson {
 
   /**
+   * The reason that the customer chooses to return an item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CustomerReturnReason customerReturnReason;
 
   /**
+   * Product level item ID. If the returned items are of the same product, they will have the same
+   * ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String itemId;
 
   /**
+   * The reason that merchant chooses to accept a return item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private RefundReason merchantReturnReason;
 
   /**
+   * Product data from the time of the order placement.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private OrderLineItemProduct product;
 
   /**
+   * IDs of the return shipments that this return item belongs to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> returnShipmentIds;
 
   /**
+   * State of the item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
+   * The reason that the customer chooses to return an item.
    * @return value or {@code null} for none
    */
   public CustomerReturnReason getCustomerReturnReason() {
@@ -74,6 +82,7 @@ public final class MerchantOrderReturnItem extends com.google.api.client.json.Ge
   }
 
   /**
+   * The reason that the customer chooses to return an item.
    * @param customerReturnReason customerReturnReason or {@code null} for none
    */
   public MerchantOrderReturnItem setCustomerReturnReason(CustomerReturnReason customerReturnReason) {
@@ -82,6 +91,8 @@ public final class MerchantOrderReturnItem extends com.google.api.client.json.Ge
   }
 
   /**
+   * Product level item ID. If the returned items are of the same product, they will have the same
+   * ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getItemId() {
@@ -89,6 +100,8 @@ public final class MerchantOrderReturnItem extends com.google.api.client.json.Ge
   }
 
   /**
+   * Product level item ID. If the returned items are of the same product, they will have the same
+   * ID.
    * @param itemId itemId or {@code null} for none
    */
   public MerchantOrderReturnItem setItemId(java.lang.String itemId) {
@@ -97,6 +110,7 @@ public final class MerchantOrderReturnItem extends com.google.api.client.json.Ge
   }
 
   /**
+   * The reason that merchant chooses to accept a return item.
    * @return value or {@code null} for none
    */
   public RefundReason getMerchantReturnReason() {
@@ -104,6 +118,7 @@ public final class MerchantOrderReturnItem extends com.google.api.client.json.Ge
   }
 
   /**
+   * The reason that merchant chooses to accept a return item.
    * @param merchantReturnReason merchantReturnReason or {@code null} for none
    */
   public MerchantOrderReturnItem setMerchantReturnReason(RefundReason merchantReturnReason) {
@@ -112,6 +127,7 @@ public final class MerchantOrderReturnItem extends com.google.api.client.json.Ge
   }
 
   /**
+   * Product data from the time of the order placement.
    * @return value or {@code null} for none
    */
   public OrderLineItemProduct getProduct() {
@@ -119,6 +135,7 @@ public final class MerchantOrderReturnItem extends com.google.api.client.json.Ge
   }
 
   /**
+   * Product data from the time of the order placement.
    * @param product product or {@code null} for none
    */
   public MerchantOrderReturnItem setProduct(OrderLineItemProduct product) {
@@ -127,6 +144,7 @@ public final class MerchantOrderReturnItem extends com.google.api.client.json.Ge
   }
 
   /**
+   * IDs of the return shipments that this return item belongs to.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getReturnShipmentIds() {
@@ -134,6 +152,7 @@ public final class MerchantOrderReturnItem extends com.google.api.client.json.Ge
   }
 
   /**
+   * IDs of the return shipments that this return item belongs to.
    * @param returnShipmentIds returnShipmentIds or {@code null} for none
    */
   public MerchantOrderReturnItem setReturnShipmentIds(java.util.List<java.lang.String> returnShipmentIds) {
@@ -142,6 +161,7 @@ public final class MerchantOrderReturnItem extends com.google.api.client.json.Ge
   }
 
   /**
+   * State of the item.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -149,6 +169,7 @@ public final class MerchantOrderReturnItem extends com.google.api.client.json.Ge
   }
 
   /**
+   * State of the item.
    * @param state state or {@code null} for none
    */
   public MerchantOrderReturnItem setState(java.lang.String state) {

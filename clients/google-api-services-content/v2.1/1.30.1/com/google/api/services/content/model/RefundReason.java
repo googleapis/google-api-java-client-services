@@ -31,18 +31,21 @@ package com.google.api.services.content.model;
 public final class RefundReason extends com.google.api.client.json.GenericJson {
 
   /**
+   * Description of the reason.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
+   * Code of the refund reason.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String reasonCode;
 
   /**
+   * Description of the reason.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -50,6 +53,7 @@ public final class RefundReason extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Description of the reason.
    * @param description description or {@code null} for none
    */
   public RefundReason setDescription(java.lang.String description) {
@@ -58,6 +62,7 @@ public final class RefundReason extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Code of the refund reason.
    * @return value or {@code null} for none
    */
   public java.lang.String getReasonCode() {
@@ -65,6 +70,7 @@ public final class RefundReason extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Code of the refund reason.
    * @param reasonCode reasonCode or {@code null} for none
    */
   public RefundReason setReasonCode(java.lang.String reasonCode) {

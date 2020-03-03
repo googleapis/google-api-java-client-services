@@ -116,7 +116,7 @@ packages on [Maven Central][maven-search].
 | G Suite Vault API | [v1](clients/google-api-services-vault/v1) |
 | Genomics API | [v1](clients/google-api-services-genomics/v1), [v1alpha2](clients/google-api-services-genomics/v1alpha2), [v2alpha1](clients/google-api-services-genomics/v2alpha1) |
 | Gmail API | [v1](clients/google-api-services-gmail/v1) |
-| Google Analytics API | [v2.4](clients/google-api-services-analytics/v2.4), [v3](clients/google-api-services-analytics/v3) |
+| Google Analytics API | [v3](clients/google-api-services-analytics/v3) |
 | Google Civic Information API | [v2](clients/google-api-services-civicinfo/v2) |
 | Google Classroom API | [v1](clients/google-api-services-classroom/v1) |
 | Google Cloud DNS API | [v1](clients/google-api-services-dns/v1), [v1beta2](clients/google-api-services-dns/v1beta2), [v2beta1](clients/google-api-services-dns/v2beta1) |

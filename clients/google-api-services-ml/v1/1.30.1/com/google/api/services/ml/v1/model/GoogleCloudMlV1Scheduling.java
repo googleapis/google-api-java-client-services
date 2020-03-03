@@ -17,7 +17,7 @@
 package com.google.api.services.ml.v1.model;
 
 /**
- * All parameters related to queuing and scheduling of training jobs.
+ * All parameters related to scheduling of training jobs.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AI Platform Training & Prediction API. For a detailed
@@ -31,7 +31,8 @@ package com.google.api.services.ml.v1.model;
 public final class GoogleCloudMlV1Scheduling extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The maximum job running time, expressed in seconds. By default there is no limit.
+   * Optional. The maximum job running time, expressed in seconds. The field can contain up to nine
+   * fractional digits, terminated by `s`. By default there is no limit to the running time.
    *
    * If the training job is still running after this duration, AI Platform Training cancels it.
    *
@@ -39,8 +40,8 @@ public final class GoogleCloudMlV1Scheduling extends com.google.api.client.json.
    * `7200s` (2 hours * 60 minutes / hour * 60 seconds / minute).
    *
    * If you submit your training job using the `gcloud` tool, you can [provide this field in a
-   * `config.yaml` file](/ml-engine/docs/training-jobs#formatting_your_configuration_parameters).
-   * For example:
+   * `config.yaml` file](/ai-platform/training/docs/training-
+   * jobs#formatting_your_configuration_parameters). For example:
    *
    * ```yaml trainingInput:   ...   scheduling:     maxRunningTime: 7200s   ... ```
    * The value may be {@code null}.
@@ -49,7 +50,8 @@ public final class GoogleCloudMlV1Scheduling extends com.google.api.client.json.
   private String maxRunningTime;
 
   /**
-   * Optional. The maximum job running time, expressed in seconds. By default there is no limit.
+   * Optional. The maximum job running time, expressed in seconds. The field can contain up to nine
+   * fractional digits, terminated by `s`. By default there is no limit to the running time.
    *
    * If the training job is still running after this duration, AI Platform Training cancels it.
    *
@@ -57,8 +59,8 @@ public final class GoogleCloudMlV1Scheduling extends com.google.api.client.json.
    * `7200s` (2 hours * 60 minutes / hour * 60 seconds / minute).
    *
    * If you submit your training job using the `gcloud` tool, you can [provide this field in a
-   * `config.yaml` file](/ml-engine/docs/training-jobs#formatting_your_configuration_parameters).
-   * For example:
+   * `config.yaml` file](/ai-platform/training/docs/training-
+   * jobs#formatting_your_configuration_parameters). For example:
    *
    * ```yaml trainingInput:   ...   scheduling:     maxRunningTime: 7200s   ... ```
    * @return value or {@code null} for none
@@ -68,7 +70,8 @@ public final class GoogleCloudMlV1Scheduling extends com.google.api.client.json.
   }
 
   /**
-   * Optional. The maximum job running time, expressed in seconds. By default there is no limit.
+   * Optional. The maximum job running time, expressed in seconds. The field can contain up to nine
+   * fractional digits, terminated by `s`. By default there is no limit to the running time.
    *
    * If the training job is still running after this duration, AI Platform Training cancels it.
    *
@@ -76,8 +79,8 @@ public final class GoogleCloudMlV1Scheduling extends com.google.api.client.json.
    * `7200s` (2 hours * 60 minutes / hour * 60 seconds / minute).
    *
    * If you submit your training job using the `gcloud` tool, you can [provide this field in a
-   * `config.yaml` file](/ml-engine/docs/training-jobs#formatting_your_configuration_parameters).
-   * For example:
+   * `config.yaml` file](/ai-platform/training/docs/training-
+   * jobs#formatting_your_configuration_parameters). For example:
    *
    * ```yaml trainingInput:   ...   scheduling:     maxRunningTime: 7200s   ... ```
    * @param maxRunningTime maxRunningTime or {@code null} for none

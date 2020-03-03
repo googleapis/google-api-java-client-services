@@ -76,6 +76,13 @@ public final class ExecuteSqlRequest extends com.google.api.client.json.GenericJ
   private java.lang.String queryMode;
 
   /**
+   * Query optimizer configuration to use for the given query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private QueryOptions queryOptions;
+
+  /**
    * If this request is resuming a previously interrupted SQL statement execution, `resume_token`
    * should be copied from the last PartialResultSet yielded before the interruption. Doing this
    * enables the new SQL statement execution to resume where the last one left off. The rest of the
@@ -256,6 +263,23 @@ public final class ExecuteSqlRequest extends com.google.api.client.json.GenericJ
    */
   public ExecuteSqlRequest setQueryMode(java.lang.String queryMode) {
     this.queryMode = queryMode;
+    return this;
+  }
+
+  /**
+   * Query optimizer configuration to use for the given query.
+   * @return value or {@code null} for none
+   */
+  public QueryOptions getQueryOptions() {
+    return queryOptions;
+  }
+
+  /**
+   * Query optimizer configuration to use for the given query.
+   * @param queryOptions queryOptions or {@code null} for none
+   */
+  public ExecuteSqlRequest setQueryOptions(QueryOptions queryOptions) {
+    this.queryOptions = queryOptions;
     return this;
   }
 

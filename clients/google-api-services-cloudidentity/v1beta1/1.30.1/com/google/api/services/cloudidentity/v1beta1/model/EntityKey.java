@@ -53,8 +53,9 @@ public final class EntityKey extends com.google.api.client.json.GenericJson {
    * If not specified, the `EntityKey` represents a Google-managed entity such as a Google user or a
    * Google Group.
    *
-   * If specified, the `EntityKey` represents an external-identity-mapped group created through
-   * Admin Console. Must be of the form `identitysources/{identity_source_id}.
+   * If specified, the `EntityKey` represents an external-identity-mapped group. The namespace must
+   * correspond to an identity source created in Admin Console. Must be of the form
+   * `identitysources/{identity_source_id}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,8 +98,9 @@ public final class EntityKey extends com.google.api.client.json.GenericJson {
    * If not specified, the `EntityKey` represents a Google-managed entity such as a Google user or a
    * Google Group.
    *
-   * If specified, the `EntityKey` represents an external-identity-mapped group created through
-   * Admin Console. Must be of the form `identitysources/{identity_source_id}.
+   * If specified, the `EntityKey` represents an external-identity-mapped group. The namespace must
+   * correspond to an identity source created in Admin Console. Must be of the form
+   * `identitysources/{identity_source_id}.
    * @return value or {@code null} for none
    */
   public java.lang.String getNamespace() {
@@ -111,8 +113,9 @@ public final class EntityKey extends com.google.api.client.json.GenericJson {
    * If not specified, the `EntityKey` represents a Google-managed entity such as a Google user or a
    * Google Group.
    *
-   * If specified, the `EntityKey` represents an external-identity-mapped group created through
-   * Admin Console. Must be of the form `identitysources/{identity_source_id}.
+   * If specified, the `EntityKey` represents an external-identity-mapped group. The namespace must
+   * correspond to an identity source created in Admin Console. Must be of the form
+   * `identitysources/{identity_source_id}.
    * @param namespace namespace or {@code null} for none
    */
   public EntityKey setNamespace(java.lang.String namespace) {

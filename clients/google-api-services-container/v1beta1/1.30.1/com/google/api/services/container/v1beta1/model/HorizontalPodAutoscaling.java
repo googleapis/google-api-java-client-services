@@ -34,8 +34,7 @@ public final class HorizontalPodAutoscaling extends com.google.api.client.json.G
 
   /**
    * Whether the Horizontal Pod Autoscaling feature is enabled in the cluster. When enabled, it
-   * ensures that a Heapster pod is running in the cluster, which is also used by the Cloud
-   * Monitoring service.
+   * ensures that metrics are collected into Stackdriver Monitoring.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,8 +42,7 @@ public final class HorizontalPodAutoscaling extends com.google.api.client.json.G
 
   /**
    * Whether the Horizontal Pod Autoscaling feature is enabled in the cluster. When enabled, it
-   * ensures that a Heapster pod is running in the cluster, which is also used by the Cloud
-   * Monitoring service.
+   * ensures that metrics are collected into Stackdriver Monitoring.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisabled() {
@@ -53,8 +51,7 @@ public final class HorizontalPodAutoscaling extends com.google.api.client.json.G
 
   /**
    * Whether the Horizontal Pod Autoscaling feature is enabled in the cluster. When enabled, it
-   * ensures that a Heapster pod is running in the cluster, which is also used by the Cloud
-   * Monitoring service.
+   * ensures that metrics are collected into Stackdriver Monitoring.
    * @param disabled disabled or {@code null} for none
    */
   public HorizontalPodAutoscaling setDisabled(java.lang.Boolean disabled) {

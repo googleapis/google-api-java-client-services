@@ -40,6 +40,16 @@ public final class RangeReservation extends com.google.api.client.json.GenericJs
   private java.lang.Integer ipPrefixLength;
 
   /**
+   * Optional. DO NOT USE - Under development. The size of the desired secondary ranges for the
+   * subnet. Use usual CIDR range notation. For example, '30' to find unused x.x.x.x/30 CIDR range.
+   * The goal is to determine that the allocated ranges have enough free space for all the requested
+   * secondary ranges.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.Integer> secondaryRangeIpPrefixLengths;
+
+  /**
    * Required. The size of the desired subnet. Use usual CIDR range notation. For example, '30' to
    * find unused x.x.x.x/30 CIDR range. The goal is to determine if one of the allocated ranges has
    * enough free space for a subnet of the requested size.
@@ -57,6 +67,29 @@ public final class RangeReservation extends com.google.api.client.json.GenericJs
    */
   public RangeReservation setIpPrefixLength(java.lang.Integer ipPrefixLength) {
     this.ipPrefixLength = ipPrefixLength;
+    return this;
+  }
+
+  /**
+   * Optional. DO NOT USE - Under development. The size of the desired secondary ranges for the
+   * subnet. Use usual CIDR range notation. For example, '30' to find unused x.x.x.x/30 CIDR range.
+   * The goal is to determine that the allocated ranges have enough free space for all the requested
+   * secondary ranges.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Integer> getSecondaryRangeIpPrefixLengths() {
+    return secondaryRangeIpPrefixLengths;
+  }
+
+  /**
+   * Optional. DO NOT USE - Under development. The size of the desired secondary ranges for the
+   * subnet. Use usual CIDR range notation. For example, '30' to find unused x.x.x.x/30 CIDR range.
+   * The goal is to determine that the allocated ranges have enough free space for all the requested
+   * secondary ranges.
+   * @param secondaryRangeIpPrefixLengths secondaryRangeIpPrefixLengths or {@code null} for none
+   */
+  public RangeReservation setSecondaryRangeIpPrefixLengths(java.util.List<java.lang.Integer> secondaryRangeIpPrefixLengths) {
+    this.secondaryRangeIpPrefixLengths = secondaryRangeIpPrefixLengths;
     return this;
   }
 

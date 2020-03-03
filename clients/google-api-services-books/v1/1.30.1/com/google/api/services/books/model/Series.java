@@ -123,7 +123,19 @@ public final class Series extends com.google.api.client.json.GenericJson {
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
+    private java.lang.String seriesFormatType;
+
+    /**
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
     private java.lang.String seriesId;
+
+    /**
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private SeriesSubscriptionReleaseInfo seriesSubscriptionReleaseInfo;
 
     /**
      * The value may be {@code null}.
@@ -206,6 +218,21 @@ public final class Series extends com.google.api.client.json.GenericJson {
     /**
      * @return value or {@code null} for none
      */
+    public java.lang.String getSeriesFormatType() {
+      return seriesFormatType;
+    }
+
+    /**
+     * @param seriesFormatType seriesFormatType or {@code null} for none
+     */
+    public SeriesSeries setSeriesFormatType(java.lang.String seriesFormatType) {
+      this.seriesFormatType = seriesFormatType;
+      return this;
+    }
+
+    /**
+     * @return value or {@code null} for none
+     */
     public java.lang.String getSeriesId() {
       return seriesId;
     }
@@ -215,6 +242,21 @@ public final class Series extends com.google.api.client.json.GenericJson {
      */
     public SeriesSeries setSeriesId(java.lang.String seriesId) {
       this.seriesId = seriesId;
+      return this;
+    }
+
+    /**
+     * @return value or {@code null} for none
+     */
+    public SeriesSubscriptionReleaseInfo getSeriesSubscriptionReleaseInfo() {
+      return seriesSubscriptionReleaseInfo;
+    }
+
+    /**
+     * @param seriesSubscriptionReleaseInfo seriesSubscriptionReleaseInfo or {@code null} for none
+     */
+    public SeriesSeries setSeriesSubscriptionReleaseInfo(SeriesSubscriptionReleaseInfo seriesSubscriptionReleaseInfo) {
+      this.seriesSubscriptionReleaseInfo = seriesSubscriptionReleaseInfo;
       return this;
     }
 
@@ -273,6 +315,118 @@ public final class Series extends com.google.api.client.json.GenericJson {
       return (SeriesSeries) super.clone();
     }
 
+    /**
+     * Model definition for SeriesSeriesSeriesSubscriptionReleaseInfo.
+     */
+    public static final class SeriesSubscriptionReleaseInfo extends com.google.api.client.json.GenericJson {
+
+      /**
+       * Cancellation date of the series subscription (or when it ends).
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+      private java.lang.Long cancellationTimestampUs;
+
+      /**
+       * Release information for the last release.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private BooksSubscriptionReleaseInfo currentReleaseInfo;
+
+      /**
+       * Release information for the next release.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private BooksSubscriptionReleaseInfo nextReleaseInfo;
+
+      /**
+       * series subscription type.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String seriesSubscriptionType;
+
+      /**
+       * Cancellation date of the series subscription (or when it ends).
+       * @return value or {@code null} for none
+       */
+      public java.lang.Long getCancellationTimestampUs() {
+        return cancellationTimestampUs;
+      }
+
+      /**
+       * Cancellation date of the series subscription (or when it ends).
+       * @param cancellationTimestampUs cancellationTimestampUs or {@code null} for none
+       */
+      public SeriesSubscriptionReleaseInfo setCancellationTimestampUs(java.lang.Long cancellationTimestampUs) {
+        this.cancellationTimestampUs = cancellationTimestampUs;
+        return this;
+      }
+
+      /**
+       * Release information for the last release.
+       * @return value or {@code null} for none
+       */
+      public BooksSubscriptionReleaseInfo getCurrentReleaseInfo() {
+        return currentReleaseInfo;
+      }
+
+      /**
+       * Release information for the last release.
+       * @param currentReleaseInfo currentReleaseInfo or {@code null} for none
+       */
+      public SeriesSubscriptionReleaseInfo setCurrentReleaseInfo(BooksSubscriptionReleaseInfo currentReleaseInfo) {
+        this.currentReleaseInfo = currentReleaseInfo;
+        return this;
+      }
+
+      /**
+       * Release information for the next release.
+       * @return value or {@code null} for none
+       */
+      public BooksSubscriptionReleaseInfo getNextReleaseInfo() {
+        return nextReleaseInfo;
+      }
+
+      /**
+       * Release information for the next release.
+       * @param nextReleaseInfo nextReleaseInfo or {@code null} for none
+       */
+      public SeriesSubscriptionReleaseInfo setNextReleaseInfo(BooksSubscriptionReleaseInfo nextReleaseInfo) {
+        this.nextReleaseInfo = nextReleaseInfo;
+        return this;
+      }
+
+      /**
+       * series subscription type.
+       * @return value or {@code null} for none
+       */
+      public java.lang.String getSeriesSubscriptionType() {
+        return seriesSubscriptionType;
+      }
+
+      /**
+       * series subscription type.
+       * @param seriesSubscriptionType seriesSubscriptionType or {@code null} for none
+       */
+      public SeriesSubscriptionReleaseInfo setSeriesSubscriptionType(java.lang.String seriesSubscriptionType) {
+        this.seriesSubscriptionType = seriesSubscriptionType;
+        return this;
+      }
+
+      @Override
+      public SeriesSubscriptionReleaseInfo set(String fieldName, Object value) {
+        return (SeriesSubscriptionReleaseInfo) super.set(fieldName, value);
+      }
+
+      @Override
+      public SeriesSubscriptionReleaseInfo clone() {
+        return (SeriesSubscriptionReleaseInfo) super.clone();
+      }
+
+    }
   }
 
 }

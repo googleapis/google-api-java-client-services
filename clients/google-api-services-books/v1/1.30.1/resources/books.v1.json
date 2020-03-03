@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"F5McR9eEaw0XRpaO3M9gbIugkbs/xEE7LBCAnwVFSBRzFX62Z63Rkh4\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/IJLNBRdljvLuWJUzNqsxt7enycE\"",
  "discoveryVersion": "v1",
  "id": "books:v1",
  "name": "books",
  "version": "v1",
- "revision": "20191103",
+ "revision": "20200204",
  "title": "Books API",
  "description": "Searches for books and manages your Google Books library.",
  "ownerDomain": "google.com",
@@ -386,6 +386,30 @@
     },
     "volumeId": {
      "type": "string"
+    }
+   }
+  },
+  "BooksSubscriptionReleaseInfo": {
+   "id": "BooksSubscriptionReleaseInfo",
+   "type": "object",
+   "properties": {
+    "amountInMicros": {
+     "type": "string",
+     "description": "Amount in micros of the specified currency code.",
+     "format": "int64"
+    },
+    "currencyCode": {
+     "type": "string",
+     "description": "Currency code of the amount."
+    },
+    "releaseNumber": {
+     "type": "string",
+     "description": "The release number of this issue/volume/book."
+    },
+    "releaseTimestampUs": {
+     "type": "string",
+     "description": "The release date.",
+     "format": "int64"
     }
    }
   },
@@ -1435,8 +1459,33 @@
        "isComplete": {
         "type": "boolean"
        },
+       "seriesFormatType": {
+        "type": "string"
+       },
        "seriesId": {
         "type": "string"
+       },
+       "seriesSubscriptionReleaseInfo": {
+        "type": "object",
+        "properties": {
+         "cancellationTimestampUs": {
+          "type": "string",
+          "description": "Cancellation date of the series subscription (or when it ends).",
+          "format": "int64"
+         },
+         "currentReleaseInfo": {
+          "$ref": "BooksSubscriptionReleaseInfo",
+          "description": "Release information for the last release."
+         },
+         "nextReleaseInfo": {
+          "$ref": "BooksSubscriptionReleaseInfo",
+          "description": "Release information for the next release."
+         },
+         "seriesSubscriptionType": {
+          "type": "string",
+          "description": "series subscription type."
+         }
+        }
        },
        "seriesType": {
         "type": "string"

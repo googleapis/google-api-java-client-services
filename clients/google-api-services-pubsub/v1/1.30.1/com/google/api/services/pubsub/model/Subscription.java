@@ -95,7 +95,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   private String messageRetentionDuration;
 
   /**
-   * The name of the subscription. It must have the format
+   * Required. The name of the subscription. It must have the format
    * `"projects/{project}/subscriptions/{subscription}"`. `{subscription}` must start with a letter,
    * and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`), underscores (`_`),
    * periods (`.`), tildes (`~`), plus (`+`) or percent signs (`%`). It must be between 3 and 255
@@ -125,7 +125,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean retainAckedMessages;
 
   /**
-   * The name of the topic from which this subscription is receiving messages. Format is
+   * Required. The name of the topic from which this subscription is receiving messages. Format is
    * `projects/{project}/topics/{topic}`. The value of this field will be `_deleted-topic_` if the
    * topic has been deleted.
    * The value may be {@code null}.
@@ -279,7 +279,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the subscription. It must have the format
+   * Required. The name of the subscription. It must have the format
    * `"projects/{project}/subscriptions/{subscription}"`. `{subscription}` must start with a letter,
    * and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`), underscores (`_`),
    * periods (`.`), tildes (`~`), plus (`+`) or percent signs (`%`). It must be between 3 and 255
@@ -291,7 +291,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the subscription. It must have the format
+   * Required. The name of the subscription. It must have the format
    * `"projects/{project}/subscriptions/{subscription}"`. `{subscription}` must start with a letter,
    * and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`), underscores (`_`),
    * periods (`.`), tildes (`~`), plus (`+`) or percent signs (`%`). It must be between 3 and 255
@@ -348,7 +348,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the topic from which this subscription is receiving messages. Format is
+   * Required. The name of the topic from which this subscription is receiving messages. Format is
    * `projects/{project}/topics/{topic}`. The value of this field will be `_deleted-topic_` if the
    * topic has been deleted.
    * @return value or {@code null} for none
@@ -358,7 +358,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the topic from which this subscription is receiving messages. Format is
+   * Required. The name of the topic from which this subscription is receiving messages. Format is
    * `projects/{project}/topics/{topic}`. The value of this field will be `_deleted-topic_` if the
    * topic has been deleted.
    * @param topic topic or {@code null} for none

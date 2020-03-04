@@ -377,7 +377,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
       private static final String REST_PATH = "v1beta1a/subscriptions/{+subscription}";
 
       private final java.util.regex.Pattern SUBSCRIPTION_PATTERN =
-          java.util.regex.Pattern.compile("^.+$");
+          java.util.regex.Pattern.compile("^.*$");
 
       /**
        * Deletes an existing subscription. All pending messages in the subscription are immediately
@@ -399,7 +399,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(SUBSCRIPTION_PATTERN.matcher(subscription).matches(),
               "Parameter subscription must conform to the pattern " +
-              "^.+$");
+              "^.*$");
         }
       }
 
@@ -473,7 +473,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(SUBSCRIPTION_PATTERN.matcher(subscription).matches(),
               "Parameter subscription must conform to the pattern " +
-              "^.+$");
+              "^.*$");
         }
         this.subscription = subscription;
         return this;
@@ -506,7 +506,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
       private static final String REST_PATH = "v1beta1a/subscriptions/{+subscription}";
 
       private final java.util.regex.Pattern SUBSCRIPTION_PATTERN =
-          java.util.regex.Pattern.compile("^.+$");
+          java.util.regex.Pattern.compile("^.*$");
 
       /**
        * Gets the configuration details of a subscription.
@@ -527,7 +527,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(SUBSCRIPTION_PATTERN.matcher(subscription).matches(),
               "Parameter subscription must conform to the pattern " +
-              "^.+$");
+              "^.*$");
         }
       }
 
@@ -611,7 +611,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(SUBSCRIPTION_PATTERN.matcher(subscription).matches(),
               "Parameter subscription must conform to the pattern " +
-              "^.+$");
+              "^.*$");
         }
         this.subscription = subscription;
         return this;
@@ -1335,7 +1335,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
       private static final String REST_PATH = "v1beta1a/topics/{+topic}";
 
       private final java.util.regex.Pattern TOPIC_PATTERN =
-          java.util.regex.Pattern.compile("^.+$");
+          java.util.regex.Pattern.compile("^.*$");
 
       /**
        * Deletes the topic with the given name. Returns NOT_FOUND if the topic does not exist. After a
@@ -1357,7 +1357,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(TOPIC_PATTERN.matcher(topic).matches(),
               "Parameter topic must conform to the pattern " +
-              "^.+$");
+              "^.*$");
         }
       }
 
@@ -1431,7 +1431,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(TOPIC_PATTERN.matcher(topic).matches(),
               "Parameter topic must conform to the pattern " +
-              "^.+$");
+              "^.*$");
         }
         this.topic = topic;
         return this;
@@ -1466,7 +1466,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
       private static final String REST_PATH = "v1beta1a/topics/{+topic}";
 
       private final java.util.regex.Pattern TOPIC_PATTERN =
-          java.util.regex.Pattern.compile("^.+$");
+          java.util.regex.Pattern.compile("^.*$");
 
       /**
        * Gets the configuration of a topic. Since the topic only has the name attribute, this method is
@@ -1489,7 +1489,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(TOPIC_PATTERN.matcher(topic).matches(),
               "Parameter topic must conform to the pattern " +
-              "^.+$");
+              "^.*$");
         }
       }
 
@@ -1573,7 +1573,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(TOPIC_PATTERN.matcher(topic).matches(),
               "Parameter topic must conform to the pattern " +
-              "^.+$");
+              "^.*$");
         }
         this.topic = topic;
         return this;

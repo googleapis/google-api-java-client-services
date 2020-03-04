@@ -30,16 +30,16 @@ package com.google.api.services.pubsub.model;
 public final class AcknowledgeRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The acknowledgment ID for the messages being acknowledged that was returned by the Pub/Sub
-   * system in the `Pull` response. Must not be empty.
+   * Required. The acknowledgment ID for the messages being acknowledged that was returned by the
+   * Pub/Sub system in the `Pull` response. Must not be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> ackIds;
 
   /**
-   * The acknowledgment ID for the messages being acknowledged that was returned by the Pub/Sub
-   * system in the `Pull` response. Must not be empty.
+   * Required. The acknowledgment ID for the messages being acknowledged that was returned by the
+   * Pub/Sub system in the `Pull` response. Must not be empty.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAckIds() {
@@ -47,8 +47,8 @@ public final class AcknowledgeRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * The acknowledgment ID for the messages being acknowledged that was returned by the Pub/Sub
-   * system in the `Pull` response. Must not be empty.
+   * Required. The acknowledgment ID for the messages being acknowledged that was returned by the
+   * Pub/Sub system in the `Pull` response. Must not be empty.
    * @param ackIds ackIds or {@code null} for none
    */
   public AcknowledgeRequest setAckIds(java.util.List<java.lang.String> ackIds) {

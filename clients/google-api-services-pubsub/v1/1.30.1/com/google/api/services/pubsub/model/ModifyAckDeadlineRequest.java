@@ -30,8 +30,8 @@ package com.google.api.services.pubsub.model;
 public final class ModifyAckDeadlineRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The new ack deadline with respect to the time this request was sent to the Pub/Sub system. For
-   * example, if the value is 10, the new ack deadline will expire 10 seconds after the
+   * Required. The new ack deadline with respect to the time this request was sent to the Pub/Sub
+   * system. For example, if the value is 10, the new ack deadline will expire 10 seconds after the
    * `ModifyAckDeadline` call was made. Specifying zero might immediately make the message available
    * for delivery to another subscriber client. This typically results in an increase in the rate of
    * message redeliveries (that is, duplicates). The minimum deadline you can specify is 0 seconds.
@@ -42,15 +42,15 @@ public final class ModifyAckDeadlineRequest extends com.google.api.client.json.G
   private java.lang.Integer ackDeadlineSeconds;
 
   /**
-   * List of acknowledgment IDs.
+   * Required. List of acknowledgment IDs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> ackIds;
 
   /**
-   * The new ack deadline with respect to the time this request was sent to the Pub/Sub system. For
-   * example, if the value is 10, the new ack deadline will expire 10 seconds after the
+   * Required. The new ack deadline with respect to the time this request was sent to the Pub/Sub
+   * system. For example, if the value is 10, the new ack deadline will expire 10 seconds after the
    * `ModifyAckDeadline` call was made. Specifying zero might immediately make the message available
    * for delivery to another subscriber client. This typically results in an increase in the rate of
    * message redeliveries (that is, duplicates). The minimum deadline you can specify is 0 seconds.
@@ -62,8 +62,8 @@ public final class ModifyAckDeadlineRequest extends com.google.api.client.json.G
   }
 
   /**
-   * The new ack deadline with respect to the time this request was sent to the Pub/Sub system. For
-   * example, if the value is 10, the new ack deadline will expire 10 seconds after the
+   * Required. The new ack deadline with respect to the time this request was sent to the Pub/Sub
+   * system. For example, if the value is 10, the new ack deadline will expire 10 seconds after the
    * `ModifyAckDeadline` call was made. Specifying zero might immediately make the message available
    * for delivery to another subscriber client. This typically results in an increase in the rate of
    * message redeliveries (that is, duplicates). The minimum deadline you can specify is 0 seconds.
@@ -76,7 +76,7 @@ public final class ModifyAckDeadlineRequest extends com.google.api.client.json.G
   }
 
   /**
-   * List of acknowledgment IDs.
+   * Required. List of acknowledgment IDs.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAckIds() {
@@ -84,7 +84,7 @@ public final class ModifyAckDeadlineRequest extends com.google.api.client.json.G
   }
 
   /**
-   * List of acknowledgment IDs.
+   * Required. List of acknowledgment IDs.
    * @param ackIds ackIds or {@code null} for none
    */
   public ModifyAckDeadlineRequest setAckIds(java.util.List<java.lang.String> ackIds) {

@@ -30,16 +30,16 @@ package com.google.api.services.pubsub.model;
 public final class UpdateTopicRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The updated topic object.
+   * Required. The updated topic object.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Topic topic;
 
   /**
-   * Indicates which fields in the provided topic to update. Must be specified and non-empty. Note
-   * that if `update_mask` contains "message_storage_policy" then the new value will be determined
-   * based on the policy configured at the project or organization level. The
+   * Required. Indicates which fields in the provided topic to update. Must be specified and non-
+   * empty. Note that if `update_mask` contains "message_storage_policy" then the new value will be
+   * determined based on the policy configured at the project or organization level. The
    * `message_storage_policy` must not be set in the `topic` provided above.
    * The value may be {@code null}.
    */
@@ -47,7 +47,7 @@ public final class UpdateTopicRequest extends com.google.api.client.json.Generic
   private String updateMask;
 
   /**
-   * The updated topic object.
+   * Required. The updated topic object.
    * @return value or {@code null} for none
    */
   public Topic getTopic() {
@@ -55,7 +55,7 @@ public final class UpdateTopicRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * The updated topic object.
+   * Required. The updated topic object.
    * @param topic topic or {@code null} for none
    */
   public UpdateTopicRequest setTopic(Topic topic) {
@@ -64,9 +64,9 @@ public final class UpdateTopicRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * Indicates which fields in the provided topic to update. Must be specified and non-empty. Note
-   * that if `update_mask` contains "message_storage_policy" then the new value will be determined
-   * based on the policy configured at the project or organization level. The
+   * Required. Indicates which fields in the provided topic to update. Must be specified and non-
+   * empty. Note that if `update_mask` contains "message_storage_policy" then the new value will be
+   * determined based on the policy configured at the project or organization level. The
    * `message_storage_policy` must not be set in the `topic` provided above.
    * @return value or {@code null} for none
    */
@@ -75,9 +75,9 @@ public final class UpdateTopicRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * Indicates which fields in the provided topic to update. Must be specified and non-empty. Note
-   * that if `update_mask` contains "message_storage_policy" then the new value will be determined
-   * based on the policy configured at the project or organization level. The
+   * Required. Indicates which fields in the provided topic to update. Must be specified and non-
+   * empty. Note that if `update_mask` contains "message_storage_policy" then the new value will be
+   * determined based on the policy configured at the project or organization level. The
    * `message_storage_policy` must not be set in the `topic` provided above.
    * @param updateMask updateMask or {@code null} for none
    */

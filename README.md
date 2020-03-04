@@ -89,6 +89,7 @@ packages on [Maven Central][maven-search].
 | Cloud Testing API | [v1](clients/google-api-services-testing/v1) |
 | Cloud Text-to-Speech API | [v1](clients/google-api-services-texttospeech/v1), [v1beta1](clients/google-api-services-texttospeech/v1beta1) |
 | Cloud Tool Results API | [v1](clients/google-api-services-toolresults/v1), [v1beta3](clients/google-api-services-toolresults/v1beta3) |
+| Cloud Trace API | [v1](clients/google-api-services-cloudtrace/v1), [v2](clients/google-api-services-cloudtrace/v2), [v2beta1](clients/google-api-services-cloudtrace/v2beta1) |
 | Cloud Translation API | [v3](clients/google-api-services-translate/v3), [v3beta1](clients/google-api-services-translate/v3beta1) |
 | Cloud Video Intelligence API | [v1](clients/google-api-services-videointelligence/v1), [v1beta2](clients/google-api-services-videointelligence/v1beta2), [v1p1beta1](clients/google-api-services-videointelligence/v1p1beta1), [v1p2beta1](clients/google-api-services-videointelligence/v1p2beta1), [v1p3beta1](clients/google-api-services-videointelligence/v1p3beta1) |
 | Cloud Vision API | [v1](clients/google-api-services-vision/v1), [v1p1beta1](clients/google-api-services-vision/v1p1beta1), [v1p2beta1](clients/google-api-services-vision/v1p2beta1) |
@@ -100,11 +101,13 @@ packages on [Maven Central][maven-search].
 | Dataflow API | [v1b3](clients/google-api-services-dataflow/v1b3) |
 | Dialogflow API | [v2](clients/google-api-services-dialogflow/v2), [v2beta1](clients/google-api-services-dialogflow/v2beta1) |
 | Digital Asset Links API | [v1](clients/google-api-services-digitalassetlinks/v1) |
+| Display & Video 360 API | [v1](clients/google-api-services-displayvideo/v1) |
 | Domains RDAP API | [v1](clients/google-api-services-domainsrdap/v1) |
 | DoubleClick Bid Manager API | [v1](clients/google-api-services-doubleclickbidmanager/v1), [v1.1](clients/google-api-services-doubleclickbidmanager/v1.1) |
 | Drive API | [v2](clients/google-api-services-drive/v2), [v3](clients/google-api-services-drive/v3) |
 | Drive Activity API | [v1](clients/google-api-services-appsactivity/v1), [v2](clients/google-api-services-driveactivity/v2) |
 | Enterprise Apps Reseller API | [v1](clients/google-api-services-reseller/v1) |
+| Error Reporting API | [v1beta1](clients/google-api-services-clouderrorreporting/v1beta1) |
 | Fact Check Tools API | [v1alpha1](clients/google-api-services-factchecktools/v1alpha1) |
 | Firebase Cloud Messaging API | [v1](clients/google-api-services-fcm/v1) |
 | Firebase Dynamic Links API | [v1](clients/google-api-services-firebasedynamiclinks/v1) |
@@ -153,6 +156,7 @@ packages on [Maven Central][maven-search].
 | Kubernetes Engine API | [v1](clients/google-api-services-container/v1), [v1beta1](clients/google-api-services-container/v1beta1) |
 | Library Agent API | [v1](clients/google-api-services-libraryagent/v1) |
 | Licensing API | [v1](clients/google-api-services-licensing/v1) |
+| Managed Service for Microsoft Active Directory API | [v1](clients/google-api-services-managedidentities/v1), [v1alpha1](clients/google-api-services-managedidentities/v1alpha1), [v1beta1](clients/google-api-services-managedidentities/v1beta1) |
 | Manufacturer Center API | [v1](clients/google-api-services-manufacturers/v1) |
 | PageSpeed Insights API | [v1](clients/google-api-services-pagespeedonline/v1), [v2](clients/google-api-services-pagespeedonline/v2), [v4](clients/google-api-services-pagespeedonline/v4), [v5](clients/google-api-services-pagespeedonline/v5) |
 | People API | [v1](clients/google-api-services-people/v1) |
@@ -167,18 +171,16 @@ packages on [Maven Central][maven-search].
 | Safe Browsing API | [v4](clients/google-api-services-safebrowsing/v4) |
 | Search Ads 360 API | [v2](clients/google-api-services-doubleclicksearch/v2) |
 | Search Console API | [v3](clients/google-api-services-webmasters/v3) |
-| Secret Manager API | [v1beta1](clients/google-api-services-secretmanager/v1beta1) |
+| Secret Manager API | [v1](clients/google-api-services-secretmanager/v1), [v1beta1](clients/google-api-services-secretmanager/v1beta1) |
 | Service Consumer Management API | [v1](clients/google-api-services-serviceconsumermanagement/v1) |
 | Service Control API | [v1](clients/google-api-services-servicecontrol/v1) |
 | Service Management API | [v1](clients/google-api-services-servicemanagement/v1) |
 | Service Networking API | [v1](clients/google-api-services-servicenetworking/v1), [v1beta](clients/google-api-services-servicenetworking/v1beta) |
 | Service Usage API | [v1](clients/google-api-services-serviceusage/v1), [v1beta1](clients/google-api-services-serviceusage/v1beta1) |
 | Stackdriver Debugger API | [v2](clients/google-api-services-clouddebugger/v2) |
-| Stackdriver Error Reporting API | [v1beta1](clients/google-api-services-clouderrorreporting/v1beta1) |
 | Stackdriver Logging API | [v2](clients/google-api-services-logging/v2) |
 | Stackdriver Monitoring API | [v1](clients/google-api-services-monitoring/v1), [v3](clients/google-api-services-monitoring/v3) |
 | Stackdriver Profiler API | [v2](clients/google-api-services-cloudprofiler/v2) |
-| Stackdriver Trace API | [v1](clients/google-api-services-cloudtrace/v1), [v2](clients/google-api-services-cloudtrace/v2) |
 | Storage Transfer API | [v1](clients/google-api-services-storagetransfer/v1) |
 | Street View Publish API | [v1](clients/google-api-services-streetviewpublish/v1) |
 | Tag Manager API | [v1](clients/google-api-services-tagmanager/v1), [v2](clients/google-api-services-tagmanager/v2) |

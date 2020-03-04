@@ -31,16 +31,18 @@ package com.google.api.services.storagetransfer.v1.model;
 public final class TransferOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether objects should be deleted from the source after they are transferred to the sink.  Note
-   * that this option and `deleteObjectsUniqueInSink` are mutually exclusive.
+   * Whether objects should be deleted from the source after they are transferred to the sink.
+   *
+   * **Note:** This option and delete_objects_unique_in_sink are mutually exclusive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean deleteObjectsFromSourceAfterTransfer;
 
   /**
-   * Whether objects that exist only in the sink should be deleted.  Note that this option and
-   * `deleteObjectsFromSourceAfterTransfer` are mutually exclusive.
+   * Whether objects that exist only in the sink should be deleted.
+   *
+   * **Note:** This option and delete_objects_from_source_after_transfer are mutually exclusive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,8 +56,9 @@ public final class TransferOptions extends com.google.api.client.json.GenericJso
   private java.lang.Boolean overwriteObjectsAlreadyExistingInSink;
 
   /**
-   * Whether objects should be deleted from the source after they are transferred to the sink.  Note
-   * that this option and `deleteObjectsUniqueInSink` are mutually exclusive.
+   * Whether objects should be deleted from the source after they are transferred to the sink.
+   *
+   * **Note:** This option and delete_objects_unique_in_sink are mutually exclusive.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDeleteObjectsFromSourceAfterTransfer() {
@@ -63,8 +66,9 @@ public final class TransferOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Whether objects should be deleted from the source after they are transferred to the sink.  Note
-   * that this option and `deleteObjectsUniqueInSink` are mutually exclusive.
+   * Whether objects should be deleted from the source after they are transferred to the sink.
+   *
+   * **Note:** This option and delete_objects_unique_in_sink are mutually exclusive.
    * @param deleteObjectsFromSourceAfterTransfer deleteObjectsFromSourceAfterTransfer or {@code null} for none
    */
   public TransferOptions setDeleteObjectsFromSourceAfterTransfer(java.lang.Boolean deleteObjectsFromSourceAfterTransfer) {
@@ -73,8 +77,9 @@ public final class TransferOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Whether objects that exist only in the sink should be deleted.  Note that this option and
-   * `deleteObjectsFromSourceAfterTransfer` are mutually exclusive.
+   * Whether objects that exist only in the sink should be deleted.
+   *
+   * **Note:** This option and delete_objects_from_source_after_transfer are mutually exclusive.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDeleteObjectsUniqueInSink() {
@@ -82,8 +87,9 @@ public final class TransferOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Whether objects that exist only in the sink should be deleted.  Note that this option and
-   * `deleteObjectsFromSourceAfterTransfer` are mutually exclusive.
+   * Whether objects that exist only in the sink should be deleted.
+   *
+   * **Note:** This option and delete_objects_from_source_after_transfer are mutually exclusive.
    * @param deleteObjectsUniqueInSink deleteObjectsUniqueInSink or {@code null} for none
    */
   public TransferOptions setDeleteObjectsUniqueInSink(java.lang.Boolean deleteObjectsUniqueInSink) {

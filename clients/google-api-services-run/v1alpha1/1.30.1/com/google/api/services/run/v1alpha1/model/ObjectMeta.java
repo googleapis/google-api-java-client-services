@@ -137,23 +137,6 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   private java.lang.Integer generation;
 
   /**
-   * Not currently supported by Cloud Run.
-   *
-   * An initializer is a controller which enforces some system invariant at object creation time.
-   * This field is a list of initializers that have not yet acted on this object. If nil or empty,
-   * this object has been completely initialized. Otherwise, the object is considered uninitialized
-   * and is hidden (in list/watch and get calls) from clients that haven't explicitly asked to
-   * observe uninitialized objects.
-   *
-   * When an object is created, the system will populate this list with the current set of
-   * initializers. Only privileged users may set or modify this list. Once it is empty, it may not
-   * be modified further by any user.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private Initializers initializers;
-
-  /**
    * Map of string keys and values that can be used to organize and categorize (scope and select)
    * objects. May match selectors of replication controllers and routes. More info:
    * http://kubernetes.io/docs/user-guide/labels +optional
@@ -456,43 +439,6 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    */
   public ObjectMeta setGeneration(java.lang.Integer generation) {
     this.generation = generation;
-    return this;
-  }
-
-  /**
-   * Not currently supported by Cloud Run.
-   *
-   * An initializer is a controller which enforces some system invariant at object creation time.
-   * This field is a list of initializers that have not yet acted on this object. If nil or empty,
-   * this object has been completely initialized. Otherwise, the object is considered uninitialized
-   * and is hidden (in list/watch and get calls) from clients that haven't explicitly asked to
-   * observe uninitialized objects.
-   *
-   * When an object is created, the system will populate this list with the current set of
-   * initializers. Only privileged users may set or modify this list. Once it is empty, it may not
-   * be modified further by any user.
-   * @return value or {@code null} for none
-   */
-  public Initializers getInitializers() {
-    return initializers;
-  }
-
-  /**
-   * Not currently supported by Cloud Run.
-   *
-   * An initializer is a controller which enforces some system invariant at object creation time.
-   * This field is a list of initializers that have not yet acted on this object. If nil or empty,
-   * this object has been completely initialized. Otherwise, the object is considered uninitialized
-   * and is hidden (in list/watch and get calls) from clients that haven't explicitly asked to
-   * observe uninitialized objects.
-   *
-   * When an object is created, the system will populate this list with the current set of
-   * initializers. Only privileged users may set or modify this list. Once it is empty, it may not
-   * be modified further by any user.
-   * @param initializers initializers or {@code null} for none
-   */
-  public ObjectMeta setInitializers(Initializers initializers) {
-    this.initializers = initializers;
     return this;
   }
 

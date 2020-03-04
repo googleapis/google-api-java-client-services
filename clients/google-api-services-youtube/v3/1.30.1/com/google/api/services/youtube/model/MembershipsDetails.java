@@ -30,70 +30,44 @@ package com.google.api.services.youtube.model;
 public final class MembershipsDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * All levels that the user has access to. This includes the currently active level and all other
-   * levels that are included because of a higher purchase.
+   * Ids of all levels that the user has access to. This includes the currently active level and all
+   * other levels that are included because of a higher purchase.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> accessibleLevels;
 
   /**
-   * The highest level that the user has access to at the moment.
+   * Id of the highest level that the user has access to at the moment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String highestAccessibleLevel;
 
   /**
-   * Display name for the highest level that the user has access to at the moment.
+   * Display name of the highest level that the user has access to at the moment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String highestAccessibleLevelDisplayName;
 
   /**
-   * The date and time when the user became a continuous member across all levels.
+   * Data about memberships duration without taking into consideration pricing levels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String memberSince;
+  private MembershipsDuration membershipsDuration;
 
   /**
-   * The date and time when the user started to continuously have access to the currently highest
-   * level.
+   * Data about memberships duration on particular pricing levels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String memberSinceCurrentLevel;
+  private java.util.List<MembershipsDurationAtLevel> membershipsDurationAtLevels;
 
   /**
-   * The cumulative time the user has been a member across all levels in complete months (the time
-   * is rounded down to the nearest integer).
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer memberTotalDuration;
-
-  /**
-   * The cumulative time the user has had access to the currently highest level in complete months
-   * (the time is rounded down to the nearest integer).
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer memberTotalDurationCurrentLevel;
-
-  /**
-   * The highest level that the user has access to at the moment. DEPRECATED -
-   * highest_accessible_level should be used instead. This will be removed after we make sure there
-   * are no 3rd parties relying on it.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String purchasedLevel;
-
-  /**
-   * All levels that the user has access to. This includes the currently active level and all other
-   * levels that are included because of a higher purchase.
+   * Ids of all levels that the user has access to. This includes the currently active level and all
+   * other levels that are included because of a higher purchase.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAccessibleLevels() {
@@ -101,8 +75,8 @@ public final class MembershipsDetails extends com.google.api.client.json.Generic
   }
 
   /**
-   * All levels that the user has access to. This includes the currently active level and all other
-   * levels that are included because of a higher purchase.
+   * Ids of all levels that the user has access to. This includes the currently active level and all
+   * other levels that are included because of a higher purchase.
    * @param accessibleLevels accessibleLevels or {@code null} for none
    */
   public MembershipsDetails setAccessibleLevels(java.util.List<java.lang.String> accessibleLevels) {
@@ -111,7 +85,7 @@ public final class MembershipsDetails extends com.google.api.client.json.Generic
   }
 
   /**
-   * The highest level that the user has access to at the moment.
+   * Id of the highest level that the user has access to at the moment.
    * @return value or {@code null} for none
    */
   public java.lang.String getHighestAccessibleLevel() {
@@ -119,7 +93,7 @@ public final class MembershipsDetails extends com.google.api.client.json.Generic
   }
 
   /**
-   * The highest level that the user has access to at the moment.
+   * Id of the highest level that the user has access to at the moment.
    * @param highestAccessibleLevel highestAccessibleLevel or {@code null} for none
    */
   public MembershipsDetails setHighestAccessibleLevel(java.lang.String highestAccessibleLevel) {
@@ -128,7 +102,7 @@ public final class MembershipsDetails extends com.google.api.client.json.Generic
   }
 
   /**
-   * Display name for the highest level that the user has access to at the moment.
+   * Display name of the highest level that the user has access to at the moment.
    * @return value or {@code null} for none
    */
   public java.lang.String getHighestAccessibleLevelDisplayName() {
@@ -136,7 +110,7 @@ public final class MembershipsDetails extends com.google.api.client.json.Generic
   }
 
   /**
-   * Display name for the highest level that the user has access to at the moment.
+   * Display name of the highest level that the user has access to at the moment.
    * @param highestAccessibleLevelDisplayName highestAccessibleLevelDisplayName or {@code null} for none
    */
   public MembershipsDetails setHighestAccessibleLevelDisplayName(java.lang.String highestAccessibleLevelDisplayName) {
@@ -145,97 +119,36 @@ public final class MembershipsDetails extends com.google.api.client.json.Generic
   }
 
   /**
-   * The date and time when the user became a continuous member across all levels.
+   * Data about memberships duration without taking into consideration pricing levels.
    * @return value or {@code null} for none
    */
-  public java.lang.String getMemberSince() {
-    return memberSince;
+  public MembershipsDuration getMembershipsDuration() {
+    return membershipsDuration;
   }
 
   /**
-   * The date and time when the user became a continuous member across all levels.
-   * @param memberSince memberSince or {@code null} for none
+   * Data about memberships duration without taking into consideration pricing levels.
+   * @param membershipsDuration membershipsDuration or {@code null} for none
    */
-  public MembershipsDetails setMemberSince(java.lang.String memberSince) {
-    this.memberSince = memberSince;
+  public MembershipsDetails setMembershipsDuration(MembershipsDuration membershipsDuration) {
+    this.membershipsDuration = membershipsDuration;
     return this;
   }
 
   /**
-   * The date and time when the user started to continuously have access to the currently highest
-   * level.
+   * Data about memberships duration on particular pricing levels.
    * @return value or {@code null} for none
    */
-  public java.lang.String getMemberSinceCurrentLevel() {
-    return memberSinceCurrentLevel;
+  public java.util.List<MembershipsDurationAtLevel> getMembershipsDurationAtLevels() {
+    return membershipsDurationAtLevels;
   }
 
   /**
-   * The date and time when the user started to continuously have access to the currently highest
-   * level.
-   * @param memberSinceCurrentLevel memberSinceCurrentLevel or {@code null} for none
+   * Data about memberships duration on particular pricing levels.
+   * @param membershipsDurationAtLevels membershipsDurationAtLevels or {@code null} for none
    */
-  public MembershipsDetails setMemberSinceCurrentLevel(java.lang.String memberSinceCurrentLevel) {
-    this.memberSinceCurrentLevel = memberSinceCurrentLevel;
-    return this;
-  }
-
-  /**
-   * The cumulative time the user has been a member across all levels in complete months (the time
-   * is rounded down to the nearest integer).
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getMemberTotalDuration() {
-    return memberTotalDuration;
-  }
-
-  /**
-   * The cumulative time the user has been a member across all levels in complete months (the time
-   * is rounded down to the nearest integer).
-   * @param memberTotalDuration memberTotalDuration or {@code null} for none
-   */
-  public MembershipsDetails setMemberTotalDuration(java.lang.Integer memberTotalDuration) {
-    this.memberTotalDuration = memberTotalDuration;
-    return this;
-  }
-
-  /**
-   * The cumulative time the user has had access to the currently highest level in complete months
-   * (the time is rounded down to the nearest integer).
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getMemberTotalDurationCurrentLevel() {
-    return memberTotalDurationCurrentLevel;
-  }
-
-  /**
-   * The cumulative time the user has had access to the currently highest level in complete months
-   * (the time is rounded down to the nearest integer).
-   * @param memberTotalDurationCurrentLevel memberTotalDurationCurrentLevel or {@code null} for none
-   */
-  public MembershipsDetails setMemberTotalDurationCurrentLevel(java.lang.Integer memberTotalDurationCurrentLevel) {
-    this.memberTotalDurationCurrentLevel = memberTotalDurationCurrentLevel;
-    return this;
-  }
-
-  /**
-   * The highest level that the user has access to at the moment. DEPRECATED -
-   * highest_accessible_level should be used instead. This will be removed after we make sure there
-   * are no 3rd parties relying on it.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getPurchasedLevel() {
-    return purchasedLevel;
-  }
-
-  /**
-   * The highest level that the user has access to at the moment. DEPRECATED -
-   * highest_accessible_level should be used instead. This will be removed after we make sure there
-   * are no 3rd parties relying on it.
-   * @param purchasedLevel purchasedLevel or {@code null} for none
-   */
-  public MembershipsDetails setPurchasedLevel(java.lang.String purchasedLevel) {
-    this.purchasedLevel = purchasedLevel;
+  public MembershipsDetails setMembershipsDurationAtLevels(java.util.List<MembershipsDurationAtLevel> membershipsDurationAtLevels) {
+    this.membershipsDurationAtLevels = membershipsDurationAtLevels;
     return this;
   }
 

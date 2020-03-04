@@ -17,7 +17,7 @@
 package com.google.api.services.datacatalog.v1beta1.model;
 
 /**
- * Model definition for GoogleCloudDatacatalogV1beta1SearchCatalogRequestScope.
+ * The criteria that select the subspace used for query matching.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Data Catalog API. For a detailed
@@ -40,20 +40,15 @@ public final class GoogleCloudDatacatalogV1beta1SearchCatalogRequestScope extend
   private java.lang.Boolean includeGcpPublicDatasets;
 
   /**
-   * Data Catalog tries to automatically choose the right corpus of data to search through. You can
-   * ensure an organization is included by adding it to `include_org_ids`. You can ensure a
-   * project's org is included with `include_project_ids`. You must specify at least one
-   * organization using `include_org_ids` or `include_project_ids` in all search requests.
-   *
-   * List of organization IDs to search within. To find your organization ID, follow instructions in
-   * https://cloud.google.com/resource-manager/docs/creating-managing-organization.
+   * The list of organization IDs to search within. To find your organization ID, follow
+   * instructions in https://cloud.google.com/resource-manager/docs/creating-managing-organization.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> includeOrgIds;
 
   /**
-   * List of project IDs to search within. To learn more about the distinction between project
+   * The list of project IDs to search within. To learn more about the distinction between project
    * names/IDs/numbers, go to https://cloud.google.com/docs/overview/#projects.
    * The value may be {@code null}.
    */
@@ -82,13 +77,8 @@ public final class GoogleCloudDatacatalogV1beta1SearchCatalogRequestScope extend
   }
 
   /**
-   * Data Catalog tries to automatically choose the right corpus of data to search through. You can
-   * ensure an organization is included by adding it to `include_org_ids`. You can ensure a
-   * project's org is included with `include_project_ids`. You must specify at least one
-   * organization using `include_org_ids` or `include_project_ids` in all search requests.
-   *
-   * List of organization IDs to search within. To find your organization ID, follow instructions in
-   * https://cloud.google.com/resource-manager/docs/creating-managing-organization.
+   * The list of organization IDs to search within. To find your organization ID, follow
+   * instructions in https://cloud.google.com/resource-manager/docs/creating-managing-organization.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getIncludeOrgIds() {
@@ -96,13 +86,8 @@ public final class GoogleCloudDatacatalogV1beta1SearchCatalogRequestScope extend
   }
 
   /**
-   * Data Catalog tries to automatically choose the right corpus of data to search through. You can
-   * ensure an organization is included by adding it to `include_org_ids`. You can ensure a
-   * project's org is included with `include_project_ids`. You must specify at least one
-   * organization using `include_org_ids` or `include_project_ids` in all search requests.
-   *
-   * List of organization IDs to search within. To find your organization ID, follow instructions in
-   * https://cloud.google.com/resource-manager/docs/creating-managing-organization.
+   * The list of organization IDs to search within. To find your organization ID, follow
+   * instructions in https://cloud.google.com/resource-manager/docs/creating-managing-organization.
    * @param includeOrgIds includeOrgIds or {@code null} for none
    */
   public GoogleCloudDatacatalogV1beta1SearchCatalogRequestScope setIncludeOrgIds(java.util.List<java.lang.String> includeOrgIds) {
@@ -111,7 +96,7 @@ public final class GoogleCloudDatacatalogV1beta1SearchCatalogRequestScope extend
   }
 
   /**
-   * List of project IDs to search within. To learn more about the distinction between project
+   * The list of project IDs to search within. To learn more about the distinction between project
    * names/IDs/numbers, go to https://cloud.google.com/docs/overview/#projects.
    * @return value or {@code null} for none
    */
@@ -120,7 +105,7 @@ public final class GoogleCloudDatacatalogV1beta1SearchCatalogRequestScope extend
   }
 
   /**
-   * List of project IDs to search within. To learn more about the distinction between project
+   * The list of project IDs to search within. To learn more about the distinction between project
    * names/IDs/numbers, go to https://cloud.google.com/docs/overview/#projects.
    * @param includeProjectIds includeProjectIds or {@code null} for none
    */

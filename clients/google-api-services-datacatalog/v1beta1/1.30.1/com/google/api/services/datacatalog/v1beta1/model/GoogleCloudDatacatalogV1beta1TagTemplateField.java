@@ -56,6 +56,15 @@ public final class GoogleCloudDatacatalogV1beta1TagTemplateField extends com.goo
   private java.lang.String name;
 
   /**
+   * The order of this field with respect to other fields in this tag template.  A higher value
+   * indicates a more important field. The value can be negative. Multiple fields can have the same
+   * order, and field orders within a tag do not have to be sequential.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer order;
+
+  /**
    * Required. The type of value this tag field can contain.
    * The value may be {@code null}.
    */
@@ -118,6 +127,27 @@ public final class GoogleCloudDatacatalogV1beta1TagTemplateField extends com.goo
    */
   public GoogleCloudDatacatalogV1beta1TagTemplateField setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * The order of this field with respect to other fields in this tag template.  A higher value
+   * indicates a more important field. The value can be negative. Multiple fields can have the same
+   * order, and field orders within a tag do not have to be sequential.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getOrder() {
+    return order;
+  }
+
+  /**
+   * The order of this field with respect to other fields in this tag template.  A higher value
+   * indicates a more important field. The value can be negative. Multiple fields can have the same
+   * order, and field orders within a tag do not have to be sequential.
+   * @param order order or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1beta1TagTemplateField setOrder(java.lang.Integer order) {
+    this.order = order;
     return this;
   }
 

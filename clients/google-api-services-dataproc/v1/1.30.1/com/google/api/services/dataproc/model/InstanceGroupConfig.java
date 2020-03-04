@@ -111,6 +111,13 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
   private java.lang.Integer numInstances;
 
   /**
+   * Optional. Specifies the preemptibility of the instance group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String preemptibility;
+
+  /**
    * Optional. The Compute Engine accelerator configuration for these instances.
    * @return value or {@code null} for none
    */
@@ -282,6 +289,23 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
    */
   public InstanceGroupConfig setNumInstances(java.lang.Integer numInstances) {
     this.numInstances = numInstances;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the preemptibility of the instance group.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPreemptibility() {
+    return preemptibility;
+  }
+
+  /**
+   * Optional. Specifies the preemptibility of the instance group.
+   * @param preemptibility preemptibility or {@code null} for none
+   */
+  public InstanceGroupConfig setPreemptibility(java.lang.String preemptibility) {
+    this.preemptibility = preemptibility;
     return this;
   }
 

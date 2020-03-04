@@ -21,8 +21,7 @@ package com.google.api.services.cloudtrace.v1.model;
  * set of spans, each of which represent a single timed event within the operation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Stackdriver Trace API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Cloud Trace API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *

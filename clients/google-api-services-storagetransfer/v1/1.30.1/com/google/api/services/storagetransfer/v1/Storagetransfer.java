@@ -432,7 +432,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "v1/{+jobName}";
 
       private final java.util.regex.Pattern JOB_NAME_PATTERN =
-          java.util.regex.Pattern.compile("^transferJobs/.+$");
+          java.util.regex.Pattern.compile("^transferJobs/.*$");
 
       /**
        * Gets a transfer job.
@@ -453,7 +453,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(JOB_NAME_PATTERN.matcher(jobName).matches(),
               "Parameter jobName must conform to the pattern " +
-              "^transferJobs/.+$");
+              "^transferJobs/.*$");
         }
       }
 
@@ -537,7 +537,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(JOB_NAME_PATTERN.matcher(jobName).matches(),
               "Parameter jobName must conform to the pattern " +
-              "^transferJobs/.+$");
+              "^transferJobs/.*$");
         }
         this.jobName = jobName;
         return this;
@@ -673,9 +673,9 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
        * Required. A list of query parameters specified as JSON text in the form of:
        * {"project_id":"my_project_id", "job_names":["jobid1","jobid2",...],
        * "job_statuses":["status1","status2",...]}. Since `job_names` and `job_statuses` support
-       * multiple values, their values must be specified with array notation. `project_id` is
-       * required. `job_names` and `job_statuses` are optional.  The valid values for `job_statuses`
-       * are case-insensitive: `ENABLED`, `DISABLED`, and `DELETED`.
+       * multiple values, their values must be specified with array notation. `project``_``id` is
+       * required.  `job_names` and `job_statuses` are optional.  The valid values for
+       * `job_statuses` are case-insensitive: ENABLED, DISABLED, and DELETED.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
@@ -683,9 +683,9 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
       /** Required. A list of query parameters specified as JSON text in the form of:
      {"project_id":"my_project_id", "job_names":["jobid1","jobid2",...],
      "job_statuses":["status1","status2",...]}. Since `job_names` and `job_statuses` support multiple
-     values, their values must be specified with array notation. `project_id` is required. `job_names`
-     and `job_statuses` are optional.  The valid values for `job_statuses` are case-insensitive:
-     `ENABLED`, `DISABLED`, and `DELETED`.
+     values, their values must be specified with array notation. `project``_``id` is required.
+     `job_names` and `job_statuses` are optional.  The valid values for `job_statuses` are case-
+     insensitive: ENABLED, DISABLED, and DELETED.
        */
       public java.lang.String getFilter() {
         return filter;
@@ -695,9 +695,9 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
        * Required. A list of query parameters specified as JSON text in the form of:
        * {"project_id":"my_project_id", "job_names":["jobid1","jobid2",...],
        * "job_statuses":["status1","status2",...]}. Since `job_names` and `job_statuses` support
-       * multiple values, their values must be specified with array notation. `project_id` is
-       * required. `job_names` and `job_statuses` are optional.  The valid values for `job_statuses`
-       * are case-insensitive: `ENABLED`, `DISABLED`, and `DELETED`.
+       * multiple values, their values must be specified with array notation. `project``_``id` is
+       * required.  `job_names` and `job_statuses` are optional.  The valid values for
+       * `job_statuses` are case-insensitive: ENABLED, DISABLED, and DELETED.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -745,8 +745,8 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
      * Updates a transfer job. Updating a job's transfer spec does not affect transfer operations that
      * are running already. Updating a job's schedule is not allowed.
      *
-     * Note: The job's `status` field can be modified using this RPC (for example, to set a job's status
-     * to `DELETED`, `DISABLED`, or `ENABLED`).
+     * **Note:** The job's status field can be modified using this RPC (for example, to set a job's
+     * status to DELETED, DISABLED, or ENABLED).
      *
      * Create a request for the method "transferJobs.patch".
      *
@@ -768,14 +768,14 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "v1/{+jobName}";
 
       private final java.util.regex.Pattern JOB_NAME_PATTERN =
-          java.util.regex.Pattern.compile("^transferJobs/.+$");
+          java.util.regex.Pattern.compile("^transferJobs/.*$");
 
       /**
        * Updates a transfer job. Updating a job's transfer spec does not affect transfer operations that
        * are running already. Updating a job's schedule is not allowed.
        *
-       * Note: The job's `status` field can be modified using this RPC (for example, to set a job's
-       * status to `DELETED`, `DISABLED`, or `ENABLED`).
+       * **Note:** The job's status field can be modified using this RPC (for example, to set a job's
+       * status to DELETED, DISABLED, or ENABLED).
        *
        * Create a request for the method "transferJobs.patch".
        *
@@ -795,7 +795,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(JOB_NAME_PATTERN.matcher(jobName).matches(),
               "Parameter jobName must conform to the pattern " +
-              "^transferJobs/.+$");
+              "^transferJobs/.*$");
         }
       }
 
@@ -869,7 +869,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(JOB_NAME_PATTERN.matcher(jobName).matches(),
               "Parameter jobName must conform to the pattern " +
-              "^transferJobs/.+$");
+              "^transferJobs/.*$");
         }
         this.jobName = jobName;
         return this;
@@ -926,7 +926,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "v1/{+name}:cancel";
 
       private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^transferOperations/.+$");
+          java.util.regex.Pattern.compile("^transferOperations/.*$");
 
       /**
        * Cancels a transfer. Use the get method to check whether the cancellation succeeded or whether
@@ -949,7 +949,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^transferOperations/.+$");
+              "^transferOperations/.*$");
         }
       }
 
@@ -1023,7 +1023,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^transferOperations/.+$");
+              "^transferOperations/.*$");
         }
         this.name = name;
         return this;
@@ -1057,7 +1057,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "v1/{+name}";
 
       private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^transferOperations/.+$");
+          java.util.regex.Pattern.compile("^transferOperations/.*$");
 
       /**
        * Gets the latest state of a long-running operation.  Clients can use this method to poll the
@@ -1079,7 +1079,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^transferOperations/.+$");
+              "^transferOperations/.*$");
         }
       }
 
@@ -1163,7 +1163,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^transferOperations/.+$");
+              "^transferOperations/.*$");
         }
         this.name = name;
         return this;
@@ -1312,10 +1312,10 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
        * {"project_id":"my_project_id", "job_names":["jobid1","jobid2",...],
        * "operation_names":["opid1","opid2",...], "transfer_statuses":["status1","status2",...]}.
        * Since `job_names`, `operation_names`, and `transfer_statuses` support multiple values, they
-       * must be specified with array notation. `project_id` is required. `job_names`,
+       * must be specified with array notation. `project``_``id` is required. `job_names`,
        * `operation_names`, and `transfer_statuses` are optional. The valid values for
-       * `transfer_statuses` are case-insensitive: `IN_PROGRESS`, `PAUSED`, `SUCCESS`, `FAILED`, and
-       * `ABORTED`.
+       * `transfer_statuses` are case-insensitive: IN_PROGRESS, PAUSED, SUCCESS, FAILED, and
+       * ABORTED.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
@@ -1324,9 +1324,9 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
      {"project_id":"my_project_id", "job_names":["jobid1","jobid2",...],
      "operation_names":["opid1","opid2",...], "transfer_statuses":["status1","status2",...]}. Since
      `job_names`, `operation_names`, and `transfer_statuses` support multiple values, they must be
-     specified with array notation. `project_id` is required. `job_names`, `operation_names`, and
+     specified with array notation. `project``_``id` is required. `job_names`, `operation_names`, and
      `transfer_statuses` are optional. The valid values for `transfer_statuses` are case-insensitive:
-     `IN_PROGRESS`, `PAUSED`, `SUCCESS`, `FAILED`, and `ABORTED`.
+     IN_PROGRESS, PAUSED, SUCCESS, FAILED, and ABORTED.
        */
       public java.lang.String getFilter() {
         return filter;
@@ -1337,10 +1337,10 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
        * {"project_id":"my_project_id", "job_names":["jobid1","jobid2",...],
        * "operation_names":["opid1","opid2",...], "transfer_statuses":["status1","status2",...]}.
        * Since `job_names`, `operation_names`, and `transfer_statuses` support multiple values, they
-       * must be specified with array notation. `project_id` is required. `job_names`,
+       * must be specified with array notation. `project``_``id` is required. `job_names`,
        * `operation_names`, and `transfer_statuses` are optional. The valid values for
-       * `transfer_statuses` are case-insensitive: `IN_PROGRESS`, `PAUSED`, `SUCCESS`, `FAILED`, and
-       * `ABORTED`.
+       * `transfer_statuses` are case-insensitive: IN_PROGRESS, PAUSED, SUCCESS, FAILED, and
+       * ABORTED.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -1407,7 +1407,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "v1/{+name}:pause";
 
       private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^transferOperations/.+$");
+          java.util.regex.Pattern.compile("^transferOperations/.*$");
 
       /**
        * Pauses a transfer operation.
@@ -1430,7 +1430,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^transferOperations/.+$");
+              "^transferOperations/.*$");
         }
       }
 
@@ -1504,7 +1504,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^transferOperations/.+$");
+              "^transferOperations/.*$");
         }
         this.name = name;
         return this;
@@ -1538,7 +1538,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "v1/{+name}:resume";
 
       private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^transferOperations/.+$");
+          java.util.regex.Pattern.compile("^transferOperations/.*$");
 
       /**
        * Resumes a transfer operation that is paused.
@@ -1561,7 +1561,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^transferOperations/.+$");
+              "^transferOperations/.*$");
         }
       }
 
@@ -1635,7 +1635,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^transferOperations/.+$");
+              "^transferOperations/.*$");
         }
         this.name = name;
         return this;

@@ -38,8 +38,8 @@ public final class UpdateTransferJobRequest extends com.google.api.client.json.G
 
   /**
    * Required. The job to update. `transferJob` is expected to specify only three fields:
-   * `description`, `transferSpec`, and `status`.  An UpdateTransferJobRequest that specifies other
-   * fields will be rejected with an error `INVALID_ARGUMENT`.
+   * description, transfer_spec, and status.  An `UpdateTransferJobRequest` that specifies other
+   * fields will be rejected with the error INVALID_ARGUMENT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,10 +47,10 @@ public final class UpdateTransferJobRequest extends com.google.api.client.json.G
 
   /**
    * The field mask of the fields in `transferJob` that are to be updated in this request.  Fields
-   * in `transferJob` that can be updated are: `description`, `transferSpec`, and `status`.  To
-   * update the `transferSpec` of the job, a complete transfer specification has to be provided. An
-   * incomplete specification which misses any required fields will be rejected with the error
-   * `INVALID_ARGUMENT`.
+   * in `transferJob` that can be updated are: description, transfer_spec, and status.  To update
+   * the `transfer_spec` of the job, a complete transfer specification must be provided. An
+   * incomplete specification missing any required fields will be rejected with the error
+   * INVALID_ARGUMENT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,8 +75,8 @@ public final class UpdateTransferJobRequest extends com.google.api.client.json.G
 
   /**
    * Required. The job to update. `transferJob` is expected to specify only three fields:
-   * `description`, `transferSpec`, and `status`.  An UpdateTransferJobRequest that specifies other
-   * fields will be rejected with an error `INVALID_ARGUMENT`.
+   * description, transfer_spec, and status.  An `UpdateTransferJobRequest` that specifies other
+   * fields will be rejected with the error INVALID_ARGUMENT.
    * @return value or {@code null} for none
    */
   public TransferJob getTransferJob() {
@@ -85,8 +85,8 @@ public final class UpdateTransferJobRequest extends com.google.api.client.json.G
 
   /**
    * Required. The job to update. `transferJob` is expected to specify only three fields:
-   * `description`, `transferSpec`, and `status`.  An UpdateTransferJobRequest that specifies other
-   * fields will be rejected with an error `INVALID_ARGUMENT`.
+   * description, transfer_spec, and status.  An `UpdateTransferJobRequest` that specifies other
+   * fields will be rejected with the error INVALID_ARGUMENT.
    * @param transferJob transferJob or {@code null} for none
    */
   public UpdateTransferJobRequest setTransferJob(TransferJob transferJob) {
@@ -96,10 +96,10 @@ public final class UpdateTransferJobRequest extends com.google.api.client.json.G
 
   /**
    * The field mask of the fields in `transferJob` that are to be updated in this request.  Fields
-   * in `transferJob` that can be updated are: `description`, `transferSpec`, and `status`.  To
-   * update the `transferSpec` of the job, a complete transfer specification has to be provided. An
-   * incomplete specification which misses any required fields will be rejected with the error
-   * `INVALID_ARGUMENT`.
+   * in `transferJob` that can be updated are: description, transfer_spec, and status.  To update
+   * the `transfer_spec` of the job, a complete transfer specification must be provided. An
+   * incomplete specification missing any required fields will be rejected with the error
+   * INVALID_ARGUMENT.
    * @return value or {@code null} for none
    */
   public String getUpdateTransferJobFieldMask() {
@@ -108,10 +108,10 @@ public final class UpdateTransferJobRequest extends com.google.api.client.json.G
 
   /**
    * The field mask of the fields in `transferJob` that are to be updated in this request.  Fields
-   * in `transferJob` that can be updated are: `description`, `transferSpec`, and `status`.  To
-   * update the `transferSpec` of the job, a complete transfer specification has to be provided. An
-   * incomplete specification which misses any required fields will be rejected with the error
-   * `INVALID_ARGUMENT`.
+   * in `transferJob` that can be updated are: description, transfer_spec, and status.  To update
+   * the `transfer_spec` of the job, a complete transfer specification must be provided. An
+   * incomplete specification missing any required fields will be rejected with the error
+   * INVALID_ARGUMENT.
    * @param updateTransferJobFieldMask updateTransferJobFieldMask or {@code null} for none
    */
   public UpdateTransferJobRequest setUpdateTransferJobFieldMask(String updateTransferJobFieldMask) {

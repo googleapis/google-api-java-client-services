@@ -17,7 +17,7 @@
 package com.google.api.services.storagetransfer.v1.model;
 
 /**
- * AWS access key (see [AWS Security Credentials](http://docs.aws.amazon.com/general/latest/gr/aws-
+ * AWS access key (see [AWS Security Credentials](https://docs.aws.amazon.com/general/latest/gr/aws-
  * security-credentials.html)).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

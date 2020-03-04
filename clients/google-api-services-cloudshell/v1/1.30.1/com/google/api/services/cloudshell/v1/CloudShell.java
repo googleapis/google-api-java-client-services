@@ -172,7 +172,7 @@ public class CloudShell extends com.google.api.client.googleapis.services.json.A
       private static final String REST_PATH = "v1/{+name}:cancel";
 
       private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^operations/.+$");
+          java.util.regex.Pattern.compile("^operations/.*$");
 
       /**
        * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort
@@ -201,7 +201,7 @@ public class CloudShell extends com.google.api.client.googleapis.services.json.A
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^operations/.+$");
+              "^operations/.*$");
         }
       }
 
@@ -275,7 +275,7 @@ public class CloudShell extends com.google.api.client.googleapis.services.json.A
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^operations/.+$");
+              "^operations/.*$");
         }
         this.name = name;
         return this;
@@ -310,7 +310,7 @@ public class CloudShell extends com.google.api.client.googleapis.services.json.A
       private static final String REST_PATH = "v1/{+name}";
 
       private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^operations/.+$");
+          java.util.regex.Pattern.compile("^operations/.*$");
 
       /**
        * Deletes a long-running operation. This method indicates that the client is no longer interested
@@ -334,7 +334,7 @@ public class CloudShell extends com.google.api.client.googleapis.services.json.A
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^operations/.+$");
+              "^operations/.*$");
         }
       }
 
@@ -408,7 +408,7 @@ public class CloudShell extends com.google.api.client.googleapis.services.json.A
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^operations/.+$");
+              "^operations/.*$");
         }
         this.name = name;
         return this;
@@ -442,7 +442,7 @@ public class CloudShell extends com.google.api.client.googleapis.services.json.A
       private static final String REST_PATH = "v1/{+name}";
 
       private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^operations/.+$");
+          java.util.regex.Pattern.compile("^operations/.*$");
 
       /**
        * Gets the latest state of a long-running operation.  Clients can use this method to poll the
@@ -464,7 +464,7 @@ public class CloudShell extends com.google.api.client.googleapis.services.json.A
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^operations/.+$");
+              "^operations/.*$");
         }
       }
 
@@ -548,7 +548,7 @@ public class CloudShell extends com.google.api.client.googleapis.services.json.A
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^operations/.+$");
+              "^operations/.*$");
         }
         this.name = name;
         return this;

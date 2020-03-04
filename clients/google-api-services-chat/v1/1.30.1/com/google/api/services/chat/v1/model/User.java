@@ -37,6 +37,13 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
+   * Obfuscated domain information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String domainId;
+
+  /**
    * Resource name, in the format "users".
    * The value may be {@code null}.
    */
@@ -64,6 +71,23 @@ public final class User extends com.google.api.client.json.GenericJson {
    */
   public User setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Obfuscated domain information.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDomainId() {
+    return domainId;
+  }
+
+  /**
+   * Obfuscated domain information.
+   * @param domainId domainId or {@code null} for none
+   */
+  public User setDomainId(java.lang.String domainId) {
+    this.domainId = domainId;
     return this;
   }
 

@@ -2,98 +2,10 @@
   "discoveryVersion": "v1",
   "version_module": true,
   "schemas": {
-    "CreateSdfDownloadTaskRequest": {
-      "id": "CreateSdfDownloadTaskRequest",
-      "description": "Request message for [SdfDownloadTaskService.CreateSdfDownloadTask].",
-      "type": "object",
-      "properties": {
-        "idFilter": {
-          "$ref": "IdFilter",
-          "description": "Filters on entities by their entity IDs."
-        },
-        "partnerId": {
-          "type": "string",
-          "description": "The ID of the partner to download SDF for.",
-          "format": "int64"
-        },
-        "version": {
-          "description": "Required. The SDF version of the downloaded file. If set to\n`SDF_VERSION_UNSPECIFIED`, this will default to the version specified by\nthe advertiser or partner identified by `root_id`. An advertiser inherits\nits SDF version from its partner unless configured otherwise.",
-          "type": "string",
-          "enumDescriptions": [
-            "SDF version value is not specified or is unknown in this version.",
-            "SDF version 3.1",
-            "SDF version 4",
-            "SDF version 4.1",
-            "SDF version 4.2",
-            "SDF version 5."
-          ],
-          "enum": [
-            "SDF_VERSION_UNSPECIFIED",
-            "SDF_VERSION_3_1",
-            "SDF_VERSION_4",
-            "SDF_VERSION_4_1",
-            "SDF_VERSION_4_2",
-            "SDF_VERSION_5"
-          ]
-        },
-        "inventorySourceFilter": {
-          "description": "Filters on Inventory Sources by their IDs.",
-          "$ref": "InventorySourceFilter"
-        },
-        "advertiserId": {
-          "description": "The ID of the advertiser to download SDF for.",
-          "format": "int64",
-          "type": "string"
-        },
-        "parentEntityFilter": {
-          "$ref": "ParentEntityFilter",
-          "description": "Filters on selected file types. The entities in each file are filtered\n by a chosen set of filter entities. The filter entities must be the same\n type as, or a parent type of, the selected file types."
-        }
-      }
-    },
-    "Status": {
-      "description": "The `Status` type defines a logical error model that is suitable for\ndifferent programming environments, including REST APIs and RPC APIs. It is\nused by [gRPC](https://github.com/grpc). Each `Status` message contains\nthree pieces of data: error code, error message, and error details.\n\nYou can find out more about this error model and how to work with it in the\n[API Design Guide](https://cloud.google.com/apis/design/errors).",
-      "type": "object",
-      "properties": {
-        "message": {
-          "description": "A developer-facing error message, which should be in English. Any\nuser-facing error message should be localized and sent in the\ngoogle.rpc.Status.details field, or localized by the client.",
-          "type": "string"
-        },
-        "details": {
-          "description": "A list of messages that carry the error details.  There is a common set of\nmessage types for APIs to use.",
-          "type": "array",
-          "items": {
-            "type": "object",
-            "additionalProperties": {
-              "description": "Properties of the object. Contains field @type with type URL.",
-              "type": "any"
-            }
-          }
-        },
-        "code": {
-          "description": "The status code, which should be an enum value of google.rpc.Code.",
-          "format": "int32",
-          "type": "integer"
-        }
-      },
-      "id": "Status"
-    },
-    "SdfDownloadTask": {
-      "id": "SdfDownloadTask",
-      "description": "Type for the response returned\nby [SdfDownloadTaskService.CreateSdfDownloadTask].",
-      "type": "object",
-      "properties": {
-        "resourceName": {
-          "type": "string",
-          "description": "A resource name to be used in\nmedia.download to Download the prepared\nfiles. Resource names have the format\n`download/sdfdownloadtasks/media/{media_id}`. `media_id` will be made\navailable by the long running operation service once the task status is\ndone."
-        }
-      }
-    },
     "SdfDownloadTaskMetadata": {
-      "description": "Type for the metadata returned\nby [SdfDownloadTaskService.CreateSdfDownloadTask].",
-      "type": "object",
       "properties": {
         "version": {
+          "description": "The SDF version used to execute this download task.",
           "type": "string",
           "enumDescriptions": [
             "SDF version value is not specified or is unknown in this version.",
@@ -101,7 +13,8 @@
             "SDF version 4",
             "SDF version 4.1",
             "SDF version 4.2",
-            "SDF version 5."
+            "SDF version 5.",
+            "SDF version 5.1"
           ],
           "enum": [
             "SDF_VERSION_UNSPECIFIED",
@@ -109,9 +22,9 @@
             "SDF_VERSION_4",
             "SDF_VERSION_4_1",
             "SDF_VERSION_4_2",
-            "SDF_VERSION_5"
-          ],
-          "description": "The SDF version used to execute this download task."
+            "SDF_VERSION_5",
+            "SDF_VERSION_5_1"
+          ]
         },
         "createTime": {
           "description": "The time when the operation was created.",
@@ -124,11 +37,49 @@
           "type": "string"
         }
       },
-      "id": "SdfDownloadTaskMetadata"
+      "id": "SdfDownloadTaskMetadata",
+      "description": "Type for the metadata returned\nby [SdfDownloadTaskService.CreateSdfDownloadTask].",
+      "type": "object"
+    },
+    "SdfDownloadTask": {
+      "description": "Type for the response returned\nby [SdfDownloadTaskService.CreateSdfDownloadTask].",
+      "type": "object",
+      "properties": {
+        "resourceName": {
+          "description": "A resource name to be used in\nmedia.download to Download the prepared\nfiles. Resource names have the format\n`download/sdfdownloadtasks/media/{media_id}`. `media_id` will be made\navailable by the long running operation service once the task status is\ndone.",
+          "type": "string"
+        }
+      },
+      "id": "SdfDownloadTask"
     },
     "ParentEntityFilter": {
       "type": "object",
       "properties": {
+        "fileType": {
+          "enumDescriptions": [
+            "Default value when type is unspecified or is unknown in this version.",
+            "Campaign.",
+            "Media Product.",
+            "Insertion Order.",
+            "Line Item.",
+            "TrueView Ad Group.",
+            "TrueView Ad."
+          ],
+          "description": "Required. File types that will be returned.",
+          "type": "array",
+          "items": {
+            "enum": [
+              "FILE_TYPE_UNSPECIFIED",
+              "FILE_TYPE_CAMPAIGN",
+              "FILE_TYPE_MEDIA_PRODUCT",
+              "FILE_TYPE_INSERTION_ORDER",
+              "FILE_TYPE_LINE_ITEM",
+              "FILE_TYPE_AD_GROUP",
+              "FILE_TYPE_AD"
+            ],
+            "type": "string"
+          }
+        },
         "filterType": {
           "enum": [
             "FILTER_TYPE_UNSPECIFIED",
@@ -152,43 +103,20 @@
           ]
         },
         "filterIds": {
-          "description": "The IDs of the specified filter type. This is used to filter entities to\nfetch. If filter type is not `FILTER_TYPE_NONE`, at least one ID must be\nspecified.",
           "type": "array",
           "items": {
             "format": "int64",
             "type": "string"
-          }
-        },
-        "fileType": {
-          "description": "Required. File types that will be returned.",
-          "type": "array",
-          "items": {
-            "type": "string",
-            "enum": [
-              "FILE_TYPE_UNSPECIFIED",
-              "FILE_TYPE_CAMPAIGN",
-              "FILE_TYPE_MEDIA_PRODUCT",
-              "FILE_TYPE_INSERTION_ORDER",
-              "FILE_TYPE_LINE_ITEM",
-              "FILE_TYPE_AD_GROUP",
-              "FILE_TYPE_AD"
-            ]
           },
-          "enumDescriptions": [
-            "Default value when type is unspecified or is unknown in this version.",
-            "Campaign.",
-            "Media Product.",
-            "Insertion Order.",
-            "Line Item.",
-            "TrueView Ad Group.",
-            "TrueView Ad."
-          ]
+          "description": "The IDs of the specified filter type. This is used to filter entities to\nfetch. If filter type is not `FILTER_TYPE_NONE`, at least one ID must be\nspecified."
         }
       },
       "id": "ParentEntityFilter",
       "description": "A filtering option that filters on selected file types belonging to a chosen\nset of filter entities."
     },
     "InventorySourceFilter": {
+      "id": "InventorySourceFilter",
+      "description": "A filtering option for filtering on Inventory Source entities.",
       "type": "object",
       "properties": {
         "inventorySourceIds": {
@@ -199,84 +127,30 @@
             "type": "string"
           }
         }
-      },
-      "id": "InventorySourceFilter",
-      "description": "A filtering option for filtering on Inventory Source entities."
+      }
     },
     "GoogleBytestreamMedia": {
-      "description": "Media resource.",
-      "type": "object",
       "properties": {
         "resourceName": {
           "description": "Name of the media resource.",
           "type": "string"
         }
       },
-      "id": "GoogleBytestreamMedia"
-    },
-    "Operation": {
-      "id": "Operation",
-      "description": "This resource represents a long-running operation that is the result of a\nnetwork API call.",
-      "type": "object",
-      "properties": {
-        "name": {
-          "description": "The server-assigned name, which is only unique within the same service that\noriginally returns it. If you use the default HTTP mapping, the\n`name` should be a resource name ending with `operations/{unique_id}`.",
-          "type": "string"
-        },
-        "error": {
-          "$ref": "Status",
-          "description": "The error result of the operation in case of failure or cancellation."
-        },
-        "metadata": {
-          "type": "object",
-          "additionalProperties": {
-            "description": "Properties of the object. Contains field @type with type URL.",
-            "type": "any"
-          },
-          "description": "Service-specific metadata associated with the operation.  It typically\ncontains progress information and common metadata such as create time.\nSome services might not provide such metadata.  Any method that returns a\nlong-running operation should document the metadata type, if any."
-        },
-        "done": {
-          "description": "If the value is `false`, it means the operation is still in progress.\nIf `true`, the operation is completed, and either `error` or `response` is\navailable.",
-          "type": "boolean"
-        },
-        "response": {
-          "type": "object",
-          "additionalProperties": {
-            "description": "Properties of the object. Contains field @type with type URL.",
-            "type": "any"
-          },
-          "description": "The normal response of the operation in case of success.  If the original\nmethod returns no data on success, such as `Delete`, the response is\n`google.protobuf.Empty`.  If the original method is standard\n`Get`/`Create`/`Update`, the response should be the resource.  For other\nmethods, the response should have the type `XxxResponse`, where `Xxx`\nis the original method name.  For example, if the original method name\nis `TakeSnapshot()`, the inferred response type is\n`TakeSnapshotResponse`."
-        }
-      }
+      "id": "GoogleBytestreamMedia",
+      "description": "Media resource.",
+      "type": "object"
     },
     "IdFilter": {
-      "id": "IdFilter",
       "description": "A filtering option that filters entities by their entity IDs.",
       "type": "object",
       "properties": {
-        "adGroupIds": {
-          "description": "TrueView Ad Groups to download by ID. All IDs must belong to the same\nAdvertiser or\nPartner specified in\nCreateSdfDownloadTaskRequest.",
-          "type": "array",
-          "items": {
-            "format": "int64",
-            "type": "string"
-          }
-        },
-        "campaignIds": {
-          "description": "Campaigns to download by ID. All IDs must belong to the same\nAdvertiser or\nPartner specified in\nCreateSdfDownloadTaskRequest.",
-          "type": "array",
-          "items": {
-            "format": "int64",
-            "type": "string"
-          }
-        },
         "insertionOrderIds": {
+          "description": "Insertion Orders to download by ID. All IDs must belong to the same\nAdvertiser or\nPartner specified in\nCreateSdfDownloadTaskRequest.",
           "type": "array",
           "items": {
             "format": "int64",
             "type": "string"
-          },
-          "description": "Insertion Orders to download by ID. All IDs must belong to the same\nAdvertiser or\nPartner specified in\nCreateSdfDownloadTaskRequest."
+          }
         },
         "mediaProductIds": {
           "description": "Media Products to download by ID. All IDs must belong to the same\nAdvertiser or\nPartner specified in\nCreateSdfDownloadTaskRequest.",
@@ -301,14 +175,144 @@
             "format": "int64",
             "type": "string"
           }
+        },
+        "adGroupIds": {
+          "description": "TrueView Ad Groups to download by ID. All IDs must belong to the same\nAdvertiser or\nPartner specified in\nCreateSdfDownloadTaskRequest.",
+          "type": "array",
+          "items": {
+            "format": "int64",
+            "type": "string"
+          }
+        },
+        "campaignIds": {
+          "description": "Campaigns to download by ID. All IDs must belong to the same\nAdvertiser or\nPartner specified in\nCreateSdfDownloadTaskRequest.",
+          "type": "array",
+          "items": {
+            "format": "int64",
+            "type": "string"
+          }
         }
-      }
+      },
+      "id": "IdFilter"
+    },
+    "Operation": {
+      "description": "This resource represents a long-running operation that is the result of a\nnetwork API call.",
+      "type": "object",
+      "properties": {
+        "metadata": {
+          "additionalProperties": {
+            "type": "any",
+            "description": "Properties of the object. Contains field @type with type URL."
+          },
+          "description": "Service-specific metadata associated with the operation.  It typically\ncontains progress information and common metadata such as create time.\nSome services might not provide such metadata.  Any method that returns a\nlong-running operation should document the metadata type, if any.",
+          "type": "object"
+        },
+        "done": {
+          "description": "If the value is `false`, it means the operation is still in progress.\nIf `true`, the operation is completed, and either `error` or `response` is\navailable.",
+          "type": "boolean"
+        },
+        "response": {
+          "description": "The normal response of the operation in case of success.  If the original\nmethod returns no data on success, such as `Delete`, the response is\n`google.protobuf.Empty`.  If the original method is standard\n`Get`/`Create`/`Update`, the response should be the resource.  For other\nmethods, the response should have the type `XxxResponse`, where `Xxx`\nis the original method name.  For example, if the original method name\nis `TakeSnapshot()`, the inferred response type is\n`TakeSnapshotResponse`.",
+          "type": "object",
+          "additionalProperties": {
+            "description": "Properties of the object. Contains field @type with type URL.",
+            "type": "any"
+          }
+        },
+        "name": {
+          "description": "The server-assigned name, which is only unique within the same service that\noriginally returns it. If you use the default HTTP mapping, the\n`name` should be a resource name ending with `operations/{unique_id}`.",
+          "type": "string"
+        },
+        "error": {
+          "description": "The error result of the operation in case of failure or cancellation.",
+          "$ref": "Status"
+        }
+      },
+      "id": "Operation"
+    },
+    "CreateSdfDownloadTaskRequest": {
+      "description": "Request message for [SdfDownloadTaskService.CreateSdfDownloadTask].",
+      "type": "object",
+      "properties": {
+        "partnerId": {
+          "description": "The ID of the partner to download SDF for.",
+          "format": "int64",
+          "type": "string"
+        },
+        "version": {
+          "type": "string",
+          "enumDescriptions": [
+            "SDF version value is not specified or is unknown in this version.",
+            "SDF version 3.1",
+            "SDF version 4",
+            "SDF version 4.1",
+            "SDF version 4.2",
+            "SDF version 5.",
+            "SDF version 5.1"
+          ],
+          "enum": [
+            "SDF_VERSION_UNSPECIFIED",
+            "SDF_VERSION_3_1",
+            "SDF_VERSION_4",
+            "SDF_VERSION_4_1",
+            "SDF_VERSION_4_2",
+            "SDF_VERSION_5",
+            "SDF_VERSION_5_1"
+          ],
+          "description": "Required. The SDF version of the downloaded file. If set to\n`SDF_VERSION_UNSPECIFIED`, this will default to the version specified by\nthe advertiser or partner identified by `root_id`. An advertiser inherits\nits SDF version from its partner unless configured otherwise."
+        },
+        "inventorySourceFilter": {
+          "$ref": "InventorySourceFilter",
+          "description": "Filters on Inventory Sources by their IDs."
+        },
+        "advertiserId": {
+          "type": "string",
+          "description": "The ID of the advertiser to download SDF for.",
+          "format": "int64"
+        },
+        "parentEntityFilter": {
+          "$ref": "ParentEntityFilter",
+          "description": "Filters on selected file types. The entities in each file are filtered\n by a chosen set of filter entities. The filter entities must be the same\n type as, or a parent type of, the selected file types."
+        },
+        "idFilter": {
+          "$ref": "IdFilter",
+          "description": "Filters on entities by their entity IDs."
+        }
+      },
+      "id": "CreateSdfDownloadTaskRequest"
+    },
+    "Status": {
+      "description": "The `Status` type defines a logical error model that is suitable for\ndifferent programming environments, including REST APIs and RPC APIs. It is\nused by [gRPC](https://github.com/grpc). Each `Status` message contains\nthree pieces of data: error code, error message, and error details.\n\nYou can find out more about this error model and how to work with it in the\n[API Design Guide](https://cloud.google.com/apis/design/errors).",
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "description": "The status code, which should be an enum value of google.rpc.Code.",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string",
+          "description": "A developer-facing error message, which should be in English. Any\nuser-facing error message should be localized and sent in the\ngoogle.rpc.Status.details field, or localized by the client."
+        },
+        "details": {
+          "description": "A list of messages that carry the error details.  There is a common set of\nmessage types for APIs to use.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": {
+              "description": "Properties of the object. Contains field @type with type URL.",
+              "type": "any"
+            }
+          }
+        }
+      },
+      "id": "Status"
     }
   },
   "protocol": "rest",
   "icons": {
-    "x16": "http://www.google.com/images/icons/product/search-16.gif",
-    "x32": "http://www.google.com/images/icons/product/search-32.gif"
+    "x32": "http://www.google.com/images/icons/product/search-32.gif",
+    "x16": "http://www.google.com/images/icons/product/search-16.gif"
   },
   "canonicalName": "Display Video",
   "auth": {
@@ -335,19 +339,19 @@
     "sdfdownloadtasks": {
       "methods": {
         "create": {
-          "description": "Creates an SDF Download Task. Returns an\nOperation.\n\nAn SDF Download Task is a long-running, asynchronous operation. The\nmetadata type of this operation is\nSdfDownloadTaskMetadata. If the request is successful, the\nresponse type of the operation is\nSdfDownloadTask. The response will not include the download files,\nwhich must be retrieved with\nmedia.download. The state of\noperation can be retrieved with\nsdfdownloadtask.operations.get.\n\nAny errors can be found in the\nerror.message. Note\nthat error.details is expected to be\nempty.",
           "request": {
             "$ref": "CreateSdfDownloadTaskRequest"
           },
+          "description": "Creates an SDF Download Task. Returns an\nOperation.\n\nAn SDF Download Task is a long-running, asynchronous operation. The\nmetadata type of this operation is\nSdfDownloadTaskMetadata. If the request is successful, the\nresponse type of the operation is\nSdfDownloadTask. The response will not include the download files,\nwhich must be retrieved with\nmedia.download. The state of\noperation can be retrieved with\nsdfdownloadtask.operations.get.\n\nAny errors can be found in the\nerror.message. Note\nthat error.details is expected to be\nempty.",
           "response": {
             "$ref": "Operation"
           },
           "parameterOrder": [],
           "httpMethod": "POST",
-          "parameters": {},
           "scopes": [
             "https://www.googleapis.com/auth/display-video"
           ],
+          "parameters": {},
           "flatPath": "v1/sdfdownloadtasks",
           "path": "v1/sdfdownloadtasks",
           "id": "displayvideo.sdfdownloadtasks.create"
@@ -357,7 +361,6 @@
         "operations": {
           "methods": {
             "get": {
-              "description": "Gets the latest state of an asynchronous SDF download task operation. Clients should poll this method at intervals of 30 seconds.",
               "response": {
                 "$ref": "Operation"
               },
@@ -365,22 +368,23 @@
                 "name"
               ],
               "httpMethod": "GET",
+              "parameters": {
+                "name": {
+                  "description": "The name of the operation resource.",
+                  "required": true,
+                  "type": "string",
+                  "pattern": "^sdfdownloadtasks/operations/[^/]+$",
+                  "location": "path"
+                }
+              },
               "scopes": [
                 "https://www.googleapis.com/auth/display-video",
                 "https://www.googleapis.com/auth/doubleclickbidmanager"
               ],
-              "parameters": {
-                "name": {
-                  "pattern": "^sdfdownloadtasks/operations/[^/]+$",
-                  "location": "path",
-                  "description": "The name of the operation resource.",
-                  "required": true,
-                  "type": "string"
-                }
-              },
               "flatPath": "v1/sdfdownloadtasks/operations/{operationsId}",
               "path": "v1/{+name}",
-              "id": "displayvideo.sdfdownloadtasks.operations.get"
+              "id": "displayvideo.sdfdownloadtasks.operations.get",
+              "description": "Gets the latest state of an asynchronous SDF download task operation. Clients should poll this method at intervals of 30 seconds."
             }
           }
         }
@@ -389,14 +393,6 @@
     "media": {
       "methods": {
         "download": {
-          "supportsMediaDownload": true,
-          "response": {
-            "$ref": "GoogleBytestreamMedia"
-          },
-          "parameterOrder": [
-            "resourceName"
-          ],
-          "httpMethod": "GET",
           "parameters": {
             "resourceName": {
               "location": "path",
@@ -413,70 +409,52 @@
           "flatPath": "download/{downloadId}",
           "path": "download/{+resourceName}",
           "id": "displayvideo.media.download",
-          "description": "Downloads media. Download is supported on the URI `/download/{resource_name=**}?alt=media.`\n\n**Note**: Download requests will not be successful without including `alt=media` query string."
+          "description": "Downloads media. Download is supported on the URI `/download/{resource_name=**}?alt=media.`\n\n**Note**: Download requests will not be successful without including `alt=media` query string.",
+          "supportsMediaDownload": true,
+          "response": {
+            "$ref": "GoogleBytestreamMedia"
+          },
+          "parameterOrder": [
+            "resourceName"
+          ],
+          "httpMethod": "GET"
         }
       }
     }
   },
   "parameters": {
-    "key": {
-      "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
-      "type": "string",
-      "location": "query"
-    },
-    "access_token": {
-      "description": "OAuth access token.",
-      "type": "string",
-      "location": "query"
-    },
-    "upload_protocol": {
+    "fields": {
       "location": "query",
-      "description": "Upload protocol for media (e.g. \"raw\", \"multipart\").",
+      "description": "Selector specifying which fields to include in a partial response.",
       "type": "string"
-    },
-    "prettyPrint": {
-      "location": "query",
-      "description": "Returns response with indentations and line breaks.",
-      "type": "boolean",
-      "default": "true"
-    },
-    "quotaUser": {
-      "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.",
-      "type": "string",
-      "location": "query"
     },
     "uploadType": {
       "location": "query",
       "description": "Legacy upload protocol for media (e.g. \"media\", \"multipart\").",
       "type": "string"
     },
-    "fields": {
-      "description": "Selector specifying which fields to include in a partial response.",
-      "type": "string",
-      "location": "query"
+    "callback": {
+      "location": "query",
+      "description": "JSONP",
+      "type": "string"
+    },
+    "oauth_token": {
+      "location": "query",
+      "description": "OAuth 2.0 token for the current user.",
+      "type": "string"
     },
     "$.xgafv": {
+      "location": "query",
+      "enum": [
+        "1",
+        "2"
+      ],
       "description": "V1 error format.",
       "type": "string",
       "enumDescriptions": [
         "v1 error format",
         "v2 error format"
-      ],
-      "location": "query",
-      "enum": [
-        "1",
-        "2"
       ]
-    },
-    "oauth_token": {
-      "description": "OAuth 2.0 token for the current user.",
-      "type": "string",
-      "location": "query"
-    },
-    "callback": {
-      "description": "JSONP",
-      "type": "string",
-      "location": "query"
     },
     "alt": {
       "enum": [
@@ -493,15 +471,41 @@
       "location": "query",
       "description": "Data format for response.",
       "default": "json"
+    },
+    "access_token": {
+      "location": "query",
+      "description": "OAuth access token.",
+      "type": "string"
+    },
+    "key": {
+      "type": "string",
+      "location": "query",
+      "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token."
+    },
+    "upload_protocol": {
+      "description": "Upload protocol for media (e.g. \"raw\", \"multipart\").",
+      "type": "string",
+      "location": "query"
+    },
+    "prettyPrint": {
+      "description": "Returns response with indentations and line breaks.",
+      "type": "boolean",
+      "default": "true",
+      "location": "query"
+    },
+    "quotaUser": {
+      "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.",
+      "type": "string",
+      "location": "query"
     }
   },
   "version": "v1",
   "baseUrl": "https://displayvideo.googleapis.com/",
-  "servicePath": "",
-  "description": "Display & Video 360 API allows users to manage and create campaigns and reports.",
   "kind": "discovery#restDescription",
+  "description": "Display & Video 360 API allows users to manage and create campaigns and reports.",
+  "servicePath": "",
   "basePath": "",
-  "documentationLink": "https://developers.google.com/display-video/",
+  "revision": "20200302",
   "id": "displayvideo:v1",
-  "revision": "20200226"
+  "documentationLink": "https://developers.google.com/display-video/"
 }

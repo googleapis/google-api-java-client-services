@@ -37,7 +37,8 @@ public final class GooglePrivacyDlpV2OutputStorageConfig extends com.google.api.
    * columns in the existing table will be deleted.
    *
    * If unspecified, then all available columns will be used for a new table or an (existing) table
-   * with no schema, and no changes will be made to an existing table that has a schema.
+   * with no schema, and no changes will be made to an existing table that has a schema. Only for
+   * use with external storage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +69,8 @@ public final class GooglePrivacyDlpV2OutputStorageConfig extends com.google.api.
    * columns in the existing table will be deleted.
    *
    * If unspecified, then all available columns will be used for a new table or an (existing) table
-   * with no schema, and no changes will be made to an existing table that has a schema.
+   * with no schema, and no changes will be made to an existing table that has a schema. Only for
+   * use with external storage.
    * @return value or {@code null} for none
    */
   public java.lang.String getOutputSchema() {
@@ -82,7 +84,8 @@ public final class GooglePrivacyDlpV2OutputStorageConfig extends com.google.api.
    * columns in the existing table will be deleted.
    *
    * If unspecified, then all available columns will be used for a new table or an (existing) table
-   * with no schema, and no changes will be made to an existing table that has a schema.
+   * with no schema, and no changes will be made to an existing table that has a schema. Only for
+   * use with external storage.
    * @param outputSchema outputSchema or {@code null} for none
    */
   public GooglePrivacyDlpV2OutputStorageConfig setOutputSchema(java.lang.String outputSchema) {

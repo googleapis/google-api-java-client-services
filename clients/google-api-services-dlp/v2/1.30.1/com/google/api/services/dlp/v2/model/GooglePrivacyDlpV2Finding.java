@@ -45,6 +45,20 @@ public final class GooglePrivacyDlpV2Finding extends com.google.api.client.json.
   private GooglePrivacyDlpV2InfoType infoType;
 
   /**
+   * Time the job started that produced this finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String jobCreateTime;
+
+  /**
+   * The job that stored the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String jobName;
+
+  /**
    * Confidence of how likely it is that the `info_type` is correct.
    * The value may be {@code null}.
    */
@@ -57,6 +71,14 @@ public final class GooglePrivacyDlpV2Finding extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2Location location;
+
+  /**
+   * Resource name in format projects/{id}/locations/{id}/inspectFindings/{id} Populated only when
+   * viewing persisted findings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
 
   /**
    * The content that was found. Even if the content is not textual, it may be converted to a
@@ -75,6 +97,20 @@ public final class GooglePrivacyDlpV2Finding extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2QuoteInfo quoteInfo;
+
+  /**
+   * The job that stored the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resourceName;
+
+  /**
+   * Job trigger name, if applicable, for this finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String triggerName;
 
   /**
    * Timestamp when finding was detected.
@@ -111,6 +147,40 @@ public final class GooglePrivacyDlpV2Finding extends com.google.api.client.json.
   }
 
   /**
+   * Time the job started that produced this finding.
+   * @return value or {@code null} for none
+   */
+  public String getJobCreateTime() {
+    return jobCreateTime;
+  }
+
+  /**
+   * Time the job started that produced this finding.
+   * @param jobCreateTime jobCreateTime or {@code null} for none
+   */
+  public GooglePrivacyDlpV2Finding setJobCreateTime(String jobCreateTime) {
+    this.jobCreateTime = jobCreateTime;
+    return this;
+  }
+
+  /**
+   * The job that stored the finding.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getJobName() {
+    return jobName;
+  }
+
+  /**
+   * The job that stored the finding.
+   * @param jobName jobName or {@code null} for none
+   */
+  public GooglePrivacyDlpV2Finding setJobName(java.lang.String jobName) {
+    this.jobName = jobName;
+    return this;
+  }
+
+  /**
    * Confidence of how likely it is that the `info_type` is correct.
    * @return value or {@code null} for none
    */
@@ -141,6 +211,25 @@ public final class GooglePrivacyDlpV2Finding extends com.google.api.client.json.
    */
   public GooglePrivacyDlpV2Finding setLocation(GooglePrivacyDlpV2Location location) {
     this.location = location;
+    return this;
+  }
+
+  /**
+   * Resource name in format projects/{id}/locations/{id}/inspectFindings/{id} Populated only when
+   * viewing persisted findings.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * Resource name in format projects/{id}/locations/{id}/inspectFindings/{id} Populated only when
+   * viewing persisted findings.
+   * @param name name or {@code null} for none
+   */
+  public GooglePrivacyDlpV2Finding setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 
@@ -183,6 +272,40 @@ public final class GooglePrivacyDlpV2Finding extends com.google.api.client.json.
    */
   public GooglePrivacyDlpV2Finding setQuoteInfo(GooglePrivacyDlpV2QuoteInfo quoteInfo) {
     this.quoteInfo = quoteInfo;
+    return this;
+  }
+
+  /**
+   * The job that stored the finding.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResourceName() {
+    return resourceName;
+  }
+
+  /**
+   * The job that stored the finding.
+   * @param resourceName resourceName or {@code null} for none
+   */
+  public GooglePrivacyDlpV2Finding setResourceName(java.lang.String resourceName) {
+    this.resourceName = resourceName;
+    return this;
+  }
+
+  /**
+   * Job trigger name, if applicable, for this finding.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTriggerName() {
+    return triggerName;
+  }
+
+  /**
+   * Job trigger name, if applicable, for this finding.
+   * @param triggerName triggerName or {@code null} for none
+   */
+  public GooglePrivacyDlpV2Finding setTriggerName(java.lang.String triggerName) {
+    this.triggerName = triggerName;
     return this;
   }
 

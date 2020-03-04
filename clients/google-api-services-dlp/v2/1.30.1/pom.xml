@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-dlp</artifactId>
-  <version>v2-rev20200212-1.30.8</version>
-  <name>Cloud Data Loss Prevention (DLP) API v2-rev20200212-1.30.8</name>
+  <version>v2-rev20200224-1.30.8</version>
+  <name>Cloud Data Loss Prevention (DLP) API v2-rev20200224-1.30.8</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

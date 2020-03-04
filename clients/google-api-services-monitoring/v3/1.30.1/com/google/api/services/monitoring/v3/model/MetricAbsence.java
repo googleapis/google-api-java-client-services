@@ -62,11 +62,12 @@ public final class MetricAbsence extends com.google.api.client.json.GenericJson 
   private String duration;
 
   /**
-   * A filter that identifies which time series should be compared with the threshold.The filter is
-   * similar to the one that is specified in the ListTimeSeries request (that call is useful to
-   * verify the time series that will be retrieved / processed) and must specify the metric type and
-   * optionally may contain restrictions on resource type, resource labels, and metric labels. This
-   * field may not exceed 2048 Unicode characters in length.
+   * A filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies which time series
+   * should be compared with the threshold.The filter is similar to the one that is specified in the
+   * ListTimeSeries request (that call is useful to verify the time series that will be retrieved /
+   * processed) and must specify the metric type and optionally may contain restrictions on resource
+   * type, resource labels, and metric labels. This field may not exceed 2048 Unicode characters in
+   * length.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -132,11 +133,12 @@ public final class MetricAbsence extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A filter that identifies which time series should be compared with the threshold.The filter is
-   * similar to the one that is specified in the ListTimeSeries request (that call is useful to
-   * verify the time series that will be retrieved / processed) and must specify the metric type and
-   * optionally may contain restrictions on resource type, resource labels, and metric labels. This
-   * field may not exceed 2048 Unicode characters in length.
+   * A filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies which time series
+   * should be compared with the threshold.The filter is similar to the one that is specified in the
+   * ListTimeSeries request (that call is useful to verify the time series that will be retrieved /
+   * processed) and must specify the metric type and optionally may contain restrictions on resource
+   * type, resource labels, and metric labels. This field may not exceed 2048 Unicode characters in
+   * length.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -144,11 +146,12 @@ public final class MetricAbsence extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A filter that identifies which time series should be compared with the threshold.The filter is
-   * similar to the one that is specified in the ListTimeSeries request (that call is useful to
-   * verify the time series that will be retrieved / processed) and must specify the metric type and
-   * optionally may contain restrictions on resource type, resource labels, and metric labels. This
-   * field may not exceed 2048 Unicode characters in length.
+   * A filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies which time series
+   * should be compared with the threshold.The filter is similar to the one that is specified in the
+   * ListTimeSeries request (that call is useful to verify the time series that will be retrieved /
+   * processed) and must specify the metric type and optionally may contain restrictions on resource
+   * type, resource labels, and metric labels. This field may not exceed 2048 Unicode characters in
+   * length.
    * @param filter filter or {@code null} for none
    */
   public MetricAbsence setFilter(java.lang.String filter) {

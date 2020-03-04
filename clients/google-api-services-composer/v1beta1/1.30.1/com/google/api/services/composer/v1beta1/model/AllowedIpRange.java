@@ -30,7 +30,7 @@ package com.google.api.services.composer.v1beta1.model;
 public final class AllowedIpRange extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. User-provided description.
+   * Optional. User-provided description. It must contain at most 300 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,7 +50,7 @@ public final class AllowedIpRange extends com.google.api.client.json.GenericJson
   private java.lang.String value;
 
   /**
-   * Optional. User-provided description.
+   * Optional. User-provided description. It must contain at most 300 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -58,7 +58,7 @@ public final class AllowedIpRange extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. User-provided description.
+   * Optional. User-provided description. It must contain at most 300 characters.
    * @param description description or {@code null} for none
    */
   public AllowedIpRange setDescription(java.lang.String description) {

@@ -341,7 +341,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
         private static final String REST_PATH = "v1beta1/{+name}";
 
         private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^folders/[^/]+/operations/[^/]+/.+$");
+            java.util.regex.Pattern.compile("^folders/[^/]+/operations/[^/]+/.*$");
 
         /**
          * Gets the latest state of a long-running operation.  Clients can use this method to poll the
@@ -363,7 +363,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
-                "^folders/[^/]+/operations/[^/]+/.+$");
+                "^folders/[^/]+/operations/[^/]+/.*$");
           }
         }
 
@@ -447,7 +447,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
-                "^folders/[^/]+/operations/[^/]+/.+$");
+                "^folders/[^/]+/operations/[^/]+/.*$");
           }
           this.name = name;
           return this;
@@ -936,7 +936,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
         private static final String REST_PATH = "v1beta1/{+name}";
 
         private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^organizations/[^/]+/operations/[^/]+/.+$");
+            java.util.regex.Pattern.compile("^organizations/[^/]+/operations/[^/]+/.*$");
 
         /**
          * Gets the latest state of a long-running operation.  Clients can use this method to poll the
@@ -958,7 +958,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
-                "^organizations/[^/]+/operations/[^/]+/.+$");
+                "^organizations/[^/]+/operations/[^/]+/.*$");
           }
         }
 
@@ -1042,7 +1042,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
-                "^organizations/[^/]+/operations/[^/]+/.+$");
+                "^organizations/[^/]+/operations/[^/]+/.*$");
           }
           this.name = name;
           return this;
@@ -1531,7 +1531,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
         private static final String REST_PATH = "v1beta1/{+name}";
 
         private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^projects/[^/]+/operations/[^/]+/.+$");
+            java.util.regex.Pattern.compile("^projects/[^/]+/operations/[^/]+/.*$");
 
         /**
          * Gets the latest state of a long-running operation.  Clients can use this method to poll the
@@ -1553,7 +1553,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/operations/[^/]+/.+$");
+                "^projects/[^/]+/operations/[^/]+/.*$");
           }
         }
 
@@ -1637,7 +1637,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/operations/[^/]+/.+$");
+                "^projects/[^/]+/operations/[^/]+/.*$");
           }
           this.name = name;
           return this;

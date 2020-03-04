@@ -1244,7 +1244,7 @@ public class YouTubeReporting extends com.google.api.client.googleapis.services.
       private static final String REST_PATH = "v1/media/{+resourceName}";
 
       private final java.util.regex.Pattern RESOURCE_NAME_PATTERN =
-          java.util.regex.Pattern.compile("^.+$");
+          java.util.regex.Pattern.compile("^.*$");
 
       /**
        * Method for media download. Download is supported on the URI `/v1/media/{+name}?alt=media`.
@@ -1266,7 +1266,7 @@ public class YouTubeReporting extends com.google.api.client.googleapis.services.
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(RESOURCE_NAME_PATTERN.matcher(resourceName).matches(),
               "Parameter resourceName must conform to the pattern " +
-              "^.+$");
+              "^.*$");
         }
         initializeMediaDownload();
       }
@@ -1374,7 +1374,7 @@ public class YouTubeReporting extends com.google.api.client.googleapis.services.
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(RESOURCE_NAME_PATTERN.matcher(resourceName).matches(),
               "Parameter resourceName must conform to the pattern " +
-              "^.+$");
+              "^.*$");
         }
         this.resourceName = resourceName;
         return this;

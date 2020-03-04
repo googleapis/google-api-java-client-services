@@ -46,7 +46,7 @@ public final class LogBucket extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * The bucket lifecycle state.Output only.
+   * Output only. The bucket lifecycle state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,7 +115,7 @@ public final class LogBucket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The bucket lifecycle state.Output only.
+   * Output only. The bucket lifecycle state.
    * @return value or {@code null} for none
    */
   public java.lang.String getLifecycleState() {
@@ -123,7 +123,7 @@ public final class LogBucket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The bucket lifecycle state.Output only.
+   * Output only. The bucket lifecycle state.
    * @param lifecycleState lifecycleState or {@code null} for none
    */
   public LogBucket setLifecycleState(java.lang.String lifecycleState) {

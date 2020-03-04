@@ -68,9 +68,9 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
    * Required. The resource name of the log to which this log entry belongs:
    * "projects/[PROJECT_ID]/logs/[LOG_ID]" "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
    * "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]" "folders/[FOLDER_ID]/logs/[LOG_ID]" A
-   * project number may optionally be used in place of PROJECT_ID. The project number is translated
-   * to its corresponding PROJECT_ID internally and the log_name field will contain PROJECT_ID in
-   * queries and exports.[LOG_ID] must be URL-encoded within log_name. Example:
+   * project number may be used in place of PROJECT_ID. The project number is translated to its
+   * corresponding PROJECT_ID internally and the log_name field will contain PROJECT_ID in queries
+   * and exports.[LOG_ID] must be URL-encoded within log_name. Example:
    * "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity". [LOG_ID] must
    * be less than 512 characters long and can only include the following characters: upper and lower
    * case alphanumeric characters, forward-slash, underscore, hyphen, and period.For backward
@@ -84,7 +84,7 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   private java.lang.String logName;
 
   /**
-   * Deprecated. Output only. Additional metadata about the monitored resource.Only k8s_container,
+   * Output only. Deprecated. Additional metadata about the monitored resource.Only k8s_container,
    * k8s_pod, and k8s_node MonitoredResources have this field populated for GKE versions older than
    * 1.12.6. For GKE versions 1.12.6 and above, the metadata field has been deprecated. The
    * Kubernetes pod labels that used to be in metadata.userLabels will now be present in the labels
@@ -145,7 +145,7 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The span ID within the trace associated with the log entry.For Trace spans, this is
    * the same format that the Trace API v2 uses: a 16-character hexadecimal encoding of an 8-byte
-   * array, such as "000000000000004a".
+   * array, such as 000000000000004a.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -276,9 +276,9 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
    * Required. The resource name of the log to which this log entry belongs:
    * "projects/[PROJECT_ID]/logs/[LOG_ID]" "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
    * "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]" "folders/[FOLDER_ID]/logs/[LOG_ID]" A
-   * project number may optionally be used in place of PROJECT_ID. The project number is translated
-   * to its corresponding PROJECT_ID internally and the log_name field will contain PROJECT_ID in
-   * queries and exports.[LOG_ID] must be URL-encoded within log_name. Example:
+   * project number may be used in place of PROJECT_ID. The project number is translated to its
+   * corresponding PROJECT_ID internally and the log_name field will contain PROJECT_ID in queries
+   * and exports.[LOG_ID] must be URL-encoded within log_name. Example:
    * "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity". [LOG_ID] must
    * be less than 512 characters long and can only include the following characters: upper and lower
    * case alphanumeric characters, forward-slash, underscore, hyphen, and period.For backward
@@ -296,9 +296,9 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
    * Required. The resource name of the log to which this log entry belongs:
    * "projects/[PROJECT_ID]/logs/[LOG_ID]" "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
    * "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]" "folders/[FOLDER_ID]/logs/[LOG_ID]" A
-   * project number may optionally be used in place of PROJECT_ID. The project number is translated
-   * to its corresponding PROJECT_ID internally and the log_name field will contain PROJECT_ID in
-   * queries and exports.[LOG_ID] must be URL-encoded within log_name. Example:
+   * project number may be used in place of PROJECT_ID. The project number is translated to its
+   * corresponding PROJECT_ID internally and the log_name field will contain PROJECT_ID in queries
+   * and exports.[LOG_ID] must be URL-encoded within log_name. Example:
    * "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity". [LOG_ID] must
    * be less than 512 characters long and can only include the following characters: upper and lower
    * case alphanumeric characters, forward-slash, underscore, hyphen, and period.For backward
@@ -314,7 +314,7 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deprecated. Output only. Additional metadata about the monitored resource.Only k8s_container,
+   * Output only. Deprecated. Additional metadata about the monitored resource.Only k8s_container,
    * k8s_pod, and k8s_node MonitoredResources have this field populated for GKE versions older than
    * 1.12.6. For GKE versions 1.12.6 and above, the metadata field has been deprecated. The
    * Kubernetes pod labels that used to be in metadata.userLabels will now be present in the labels
@@ -327,7 +327,7 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deprecated. Output only. Additional metadata about the monitored resource.Only k8s_container,
+   * Output only. Deprecated. Additional metadata about the monitored resource.Only k8s_container,
    * k8s_pod, and k8s_node MonitoredResources have this field populated for GKE versions older than
    * 1.12.6. For GKE versions 1.12.6 and above, the metadata field has been deprecated. The
    * Kubernetes pod labels that used to be in metadata.userLabels will now be present in the labels
@@ -455,7 +455,7 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The span ID within the trace associated with the log entry.For Trace spans, this is
    * the same format that the Trace API v2 uses: a 16-character hexadecimal encoding of an 8-byte
-   * array, such as "000000000000004a".
+   * array, such as 000000000000004a.
    * @return value or {@code null} for none
    */
   public java.lang.String getSpanId() {
@@ -465,7 +465,7 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The span ID within the trace associated with the log entry.For Trace spans, this is
    * the same format that the Trace API v2 uses: a 16-character hexadecimal encoding of an 8-byte
-   * array, such as "000000000000004a".
+   * array, such as 000000000000004a.
    * @param spanId spanId or {@code null} for none
    */
   public LogEntry setSpanId(java.lang.String spanId) {

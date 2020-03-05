@@ -772,13 +772,15 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
 
         /**
          * If provided, this field specifies the criteria that must be met by alert policies to be
-         * included in the response.For more details, see sorting and filtering.
+         * included in the response.For more details, see sorting and filtering
+         * (https://cloud.google.com/monitoring/api/v3/sorting-and-filtering).
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
         /** If provided, this field specifies the criteria that must be met by alert policies to be included in
-       the response.For more details, see sorting and filtering.
+       the response.For more details, see sorting and filtering
+       (https://cloud.google.com/monitoring/api/v3/sorting-and-filtering).
          */
         public java.lang.String getFilter() {
           return filter;
@@ -786,7 +788,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
 
         /**
          * If provided, this field specifies the criteria that must be met by alert policies to be
-         * included in the response.For more details, see sorting and filtering.
+         * included in the response.For more details, see sorting and filtering
+         * (https://cloud.google.com/monitoring/api/v3/sorting-and-filtering).
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -796,14 +799,16 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         /**
          * A comma-separated list of fields by which to sort the result. Supports the same set of
          * field references as the filter field. Entries can be prefixed with a minus sign to sort
-         * by the field in descending order.For more details, see sorting and filtering.
+         * by the field in descending order.For more details, see sorting and filtering
+         * (https://cloud.google.com/monitoring/api/v3/sorting-and-filtering).
          */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
         /** A comma-separated list of fields by which to sort the result. Supports the same set of field
        references as the filter field. Entries can be prefixed with a minus sign to sort by the field in
-       descending order.For more details, see sorting and filtering.
+       descending order.For more details, see sorting and filtering
+       (https://cloud.google.com/monitoring/api/v3/sorting-and-filtering).
          */
         public java.lang.String getOrderBy() {
           return orderBy;
@@ -812,7 +817,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         /**
          * A comma-separated list of fields by which to sort the result. Supports the same set of
          * field references as the filter field. Entries can be prefixed with a minus sign to sort
-         * by the field in descending order.For more details, see sorting and filtering.
+         * by the field in descending order.For more details, see sorting and filtering
+         * (https://cloud.google.com/monitoring/api/v3/sorting-and-filtering).
          */
         public List setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;
@@ -2330,28 +2336,30 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * An optional list filter describing the members to be returned. The filter may reference
-           * the type, labels, and metadata of monitored resources that comprise the group. For
-           * example, to return only resources representing Compute Engine VM instances, use this
-           * filter: `resource.type = "gce_instance"`
+           * An optional list filter (https://cloud.google.com/monitoring/api/learn_more#filtering)
+           * describing the members to be returned. The filter may reference the type, labels, and
+           * metadata of monitored resources that comprise the group. For example, to return only
+           * resources representing Compute Engine VM instances, use this filter: `resource.type =
+           * "gce_instance"`
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** An optional list filter describing the members to be returned. The filter may reference the type,
-         labels, and metadata of monitored resources that comprise the group. For example, to return only
-         resources representing Compute Engine VM instances, use this filter: `resource.type =
-         "gce_instance"`
+          /** An optional list filter (https://cloud.google.com/monitoring/api/learn_more#filtering) describing
+         the members to be returned. The filter may reference the type, labels, and metadata of monitored
+         resources that comprise the group. For example, to return only resources representing Compute
+         Engine VM instances, use this filter: `resource.type = "gce_instance"`
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
           /**
-           * An optional list filter describing the members to be returned. The filter may reference
-           * the type, labels, and metadata of monitored resources that comprise the group. For
-           * example, to return only resources representing Compute Engine VM instances, use this
-           * filter: `resource.type = "gce_instance"`
+           * An optional list filter (https://cloud.google.com/monitoring/api/learn_more#filtering)
+           * describing the members to be returned. The filter may reference the type, labels, and
+           * metadata of monitored resources that comprise the group. For example, to return only
+           * resources representing Compute Engine VM instances, use this filter: `resource.type =
+           * "gce_instance"`
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -2468,7 +2476,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
     public class MetricDescriptors {
 
       /**
-       * Creates a new metric descriptor. User-created metric descriptors define custom metrics.
+       * Creates a new metric descriptor. User-created metric descriptors define custom metrics
+       * (https://cloud.google.com/monitoring/custom-metrics).
        *
        * Create a request for the method "metricDescriptors.create".
        *
@@ -2494,7 +2503,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Creates a new metric descriptor. User-created metric descriptors define custom metrics.
+         * Creates a new metric descriptor. User-created metric descriptors define custom metrics
+         * (https://cloud.google.com/monitoring/custom-metrics).
          *
          * Create a request for the method "metricDescriptors.create".
          *
@@ -2608,7 +2618,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Deletes a metric descriptor. Only user-created custom metrics can be deleted.
+       * Deletes a metric descriptor. Only user-created custom metrics
+       * (https://cloud.google.com/monitoring/custom-metrics) can be deleted.
        *
        * Create a request for the method "metricDescriptors.delete".
        *
@@ -2632,10 +2643,11 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         private static final String REST_PATH = "v3/{+name}";
 
         private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^projects/[^/]+/metricDescriptors/.+$");
+            java.util.regex.Pattern.compile("^projects/[^/]+/metricDescriptors/.*$");
 
         /**
-         * Deletes a metric descriptor. Only user-created custom metrics can be deleted.
+         * Deletes a metric descriptor. Only user-created custom metrics
+         * (https://cloud.google.com/monitoring/custom-metrics) can be deleted.
          *
          * Create a request for the method "metricDescriptors.delete".
          *
@@ -2657,7 +2669,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/metricDescriptors/.+$");
+                "^projects/[^/]+/metricDescriptors/.*$");
           }
         }
 
@@ -2741,7 +2753,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/metricDescriptors/.+$");
+                "^projects/[^/]+/metricDescriptors/.*$");
           }
           this.name = name;
           return this;
@@ -2777,7 +2789,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         private static final String REST_PATH = "v3/{+name}";
 
         private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^projects/[^/]+/metricDescriptors/.+$");
+            java.util.regex.Pattern.compile("^projects/[^/]+/metricDescriptors/.*$");
 
         /**
          * Gets a single metric descriptor. This method does not require a Stackdriver account.
@@ -2801,7 +2813,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/metricDescriptors/.+$");
+                "^projects/[^/]+/metricDescriptors/.*$");
           }
         }
 
@@ -2895,7 +2907,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/metricDescriptors/.+$");
+                "^projects/[^/]+/metricDescriptors/.*$");
           }
           this.name = name;
           return this;
@@ -3051,16 +3063,19 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
 
         /**
          * If this field is empty, all custom and system-defined metric descriptors are returned.
-         * Otherwise, the filter specifies which metric descriptors are to be returned. For example,
-         * the following filter matches all custom metrics: metric.type =
+         * Otherwise, the filter (https://cloud.google.com/monitoring/api/v3/filters) specifies
+         * which metric descriptors are to be returned. For example, the following filter matches
+         * all custom metrics (https://cloud.google.com/monitoring/custom-metrics): metric.type =
          * starts_with("custom.googleapis.com/")
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
         /** If this field is empty, all custom and system-defined metric descriptors are returned. Otherwise,
-       the filter specifies which metric descriptors are to be returned. For example, the following filter
-       matches all custom metrics: metric.type = starts_with("custom.googleapis.com/")
+       the filter (https://cloud.google.com/monitoring/api/v3/filters) specifies which metric descriptors
+       are to be returned. For example, the following filter matches all custom metrics
+       (https://cloud.google.com/monitoring/custom-metrics): metric.type =
+       starts_with("custom.googleapis.com/")
          */
         public java.lang.String getFilter() {
           return filter;
@@ -3068,8 +3083,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
 
         /**
          * If this field is empty, all custom and system-defined metric descriptors are returned.
-         * Otherwise, the filter specifies which metric descriptors are to be returned. For example,
-         * the following filter matches all custom metrics: metric.type =
+         * Otherwise, the filter (https://cloud.google.com/monitoring/api/v3/filters) specifies
+         * which metric descriptors are to be returned. For example, the following filter matches
+         * all custom metrics (https://cloud.google.com/monitoring/custom-metrics): metric.type =
          * starts_with("custom.googleapis.com/")
          */
         public List setFilter(java.lang.String filter) {
@@ -3171,7 +3187,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         private static final String REST_PATH = "v3/{+name}";
 
         private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^projects/[^/]+/monitoredResourceDescriptors/.+$");
+            java.util.regex.Pattern.compile("^projects/[^/]+/monitoredResourceDescriptors/.*$");
 
         /**
          * Gets a single monitored resource descriptor. This method does not require a Stackdriver
@@ -3196,7 +3212,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/monitoredResourceDescriptors/.+$");
+                "^projects/[^/]+/monitoredResourceDescriptors/.*$");
           }
         }
 
@@ -3290,7 +3306,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/monitoredResourceDescriptors/.+$");
+                "^projects/[^/]+/monitoredResourceDescriptors/.*$");
           }
           this.name = name;
           return this;
@@ -3446,27 +3462,28 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * An optional filter describing the descriptors to be returned. The filter can reference
-         * the descriptor's type and labels. For example, the following filter returns only Google
-         * Compute Engine descriptors that have an id label: resource.type = starts_with("gce_") AND
-         * resource.label:id
+         * An optional filter (https://cloud.google.com/monitoring/api/v3/filters) describing the
+         * descriptors to be returned. The filter can reference the descriptor's type and labels.
+         * For example, the following filter returns only Google Compute Engine descriptors that
+         * have an id label: resource.type = starts_with("gce_") AND resource.label:id
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** An optional filter describing the descriptors to be returned. The filter can reference the
-       descriptor's type and labels. For example, the following filter returns only Google Compute Engine
-       descriptors that have an id label: resource.type = starts_with("gce_") AND resource.label:id
+        /** An optional filter (https://cloud.google.com/monitoring/api/v3/filters) describing the descriptors
+       to be returned. The filter can reference the descriptor's type and labels. For example, the
+       following filter returns only Google Compute Engine descriptors that have an id label:
+       resource.type = starts_with("gce_") AND resource.label:id
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
         /**
-         * An optional filter describing the descriptors to be returned. The filter can reference
-         * the descriptor's type and labels. For example, the following filter returns only Google
-         * Compute Engine descriptors that have an id label: resource.type = starts_with("gce_") AND
-         * resource.label:id
+         * An optional filter (https://cloud.google.com/monitoring/api/v3/filters) describing the
+         * descriptors to be returned. The filter can reference the descriptor's type and labels.
+         * For example, the following filter returns only Google Compute Engine descriptors that
+         * have an id label: resource.type = starts_with("gce_") AND resource.label:id
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -4726,13 +4743,15 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
 
         /**
          * If provided, this field specifies the criteria that must be met by notification channels
-         * to be included in the response.For more details, see sorting and filtering.
+         * to be included in the response.For more details, see sorting and filtering
+         * (https://cloud.google.com/monitoring/api/v3/sorting-and-filtering).
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
         /** If provided, this field specifies the criteria that must be met by notification channels to be
-       included in the response.For more details, see sorting and filtering.
+       included in the response.For more details, see sorting and filtering
+       (https://cloud.google.com/monitoring/api/v3/sorting-and-filtering).
          */
         public java.lang.String getFilter() {
           return filter;
@@ -4740,7 +4759,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
 
         /**
          * If provided, this field specifies the criteria that must be met by notification channels
-         * to be included in the response.For more details, see sorting and filtering.
+         * to be included in the response.For more details, see sorting and filtering
+         * (https://cloud.google.com/monitoring/api/v3/sorting-and-filtering).
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -4750,14 +4770,16 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         /**
          * A comma-separated list of fields by which to sort the result. Supports the same set of
          * fields as in filter. Entries can be prefixed with a minus sign to sort in descending
-         * rather than ascending order.For more details, see sorting and filtering.
+         * rather than ascending order.For more details, see sorting and filtering
+         * (https://cloud.google.com/monitoring/api/v3/sorting-and-filtering).
          */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
         /** A comma-separated list of fields by which to sort the result. Supports the same set of fields as in
        filter. Entries can be prefixed with a minus sign to sort in descending rather than ascending
-       order.For more details, see sorting and filtering.
+       order.For more details, see sorting and filtering (https://cloud.google.com/monitoring/api/v3
+       /sorting-and-filtering).
          */
         public java.lang.String getOrderBy() {
           return orderBy;
@@ -4766,7 +4788,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         /**
          * A comma-separated list of fields by which to sort the result. Supports the same set of
          * fields as in filter. Entries can be prefixed with a minus sign to sort in descending
-         * rather than ascending order.For more details, see sorting and filtering.
+         * rather than ascending order.For more details, see sorting and filtering
+         * (https://cloud.google.com/monitoring/api/v3/sorting-and-filtering).
          */
         public List setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;
@@ -5735,30 +5758,31 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Required. A monitoring filter that specifies which time series should be returned. The
-         * filter must specify a single metric type, and can additionally specify metric labels and
-         * other information. For example: metric.type =
-         * "compute.googleapis.com/instance/cpu/usage_time" AND metric.labels.instance_name = "my-
-         * instance-name"
+         * Required. A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) that
+         * specifies which time series should be returned. The filter must specify a single metric
+         * type, and can additionally specify metric labels and other information. For example:
+         * metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
+         * metric.labels.instance_name = "my-instance-name"
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Required. A monitoring filter that specifies which time series should be returned. The filter must
-       specify a single metric type, and can additionally specify metric labels and other information. For
-       example: metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
-       metric.labels.instance_name = "my-instance-name"
+        /** Required. A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) that specifies
+       which time series should be returned. The filter must specify a single metric type, and can
+       additionally specify metric labels and other information. For example: metric.type =
+       "compute.googleapis.com/instance/cpu/usage_time" AND metric.labels.instance_name = "my-instance-
+       name"
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
         /**
-         * Required. A monitoring filter that specifies which time series should be returned. The
-         * filter must specify a single metric type, and can additionally specify metric labels and
-         * other information. For example: metric.type =
-         * "compute.googleapis.com/instance/cpu/usage_time" AND metric.labels.instance_name = "my-
-         * instance-name"
+         * Required. A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) that
+         * specifies which time series should be returned. The filter must specify a single metric
+         * type, and can additionally specify metric labels and other information. For example:
+         * metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
+         * metric.labels.instance_name = "my-instance-name"
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;

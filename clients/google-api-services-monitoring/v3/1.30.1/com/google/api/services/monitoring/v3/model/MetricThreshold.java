@@ -77,11 +77,12 @@ public final class MetricThreshold extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A filter that identifies a time series that should be used as the denominator of a ratio that
-   * will be compared with the threshold. If a denominator_filter is specified, the time series
-   * specified by the filter field will be used as the numerator.The filter must specify the metric
-   * type and optionally may contain restrictions on resource type, resource labels, and metric
-   * labels. This field may not exceed 2048 Unicode characters in length.
+   * A filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies a time series
+   * that should be used as the denominator of a ratio that will be compared with the threshold. If
+   * a denominator_filter is specified, the time series specified by the filter field will be used
+   * as the numerator.The filter must specify the metric type and optionally may contain
+   * restrictions on resource type, resource labels, and metric labels. This field may not exceed
+   * 2048 Unicode characters in length.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,11 +102,12 @@ public final class MetricThreshold extends com.google.api.client.json.GenericJso
   private String duration;
 
   /**
-   * A filter that identifies which time series should be compared with the threshold.The filter is
-   * similar to the one that is specified in the ListTimeSeries request (that call is useful to
-   * verify the time series that will be retrieved / processed) and must specify the metric type and
-   * optionally may contain restrictions on resource type, resource labels, and metric labels. This
-   * field may not exceed 2048 Unicode characters in length.
+   * A filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies which time series
+   * should be compared with the threshold.The filter is similar to the one that is specified in the
+   * ListTimeSeries request (that call is useful to verify the time series that will be retrieved /
+   * processed) and must specify the metric type and optionally may contain restrictions on resource
+   * type, resource labels, and metric labels. This field may not exceed 2048 Unicode characters in
+   * length.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -206,11 +208,12 @@ public final class MetricThreshold extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A filter that identifies a time series that should be used as the denominator of a ratio that
-   * will be compared with the threshold. If a denominator_filter is specified, the time series
-   * specified by the filter field will be used as the numerator.The filter must specify the metric
-   * type and optionally may contain restrictions on resource type, resource labels, and metric
-   * labels. This field may not exceed 2048 Unicode characters in length.
+   * A filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies a time series
+   * that should be used as the denominator of a ratio that will be compared with the threshold. If
+   * a denominator_filter is specified, the time series specified by the filter field will be used
+   * as the numerator.The filter must specify the metric type and optionally may contain
+   * restrictions on resource type, resource labels, and metric labels. This field may not exceed
+   * 2048 Unicode characters in length.
    * @return value or {@code null} for none
    */
   public java.lang.String getDenominatorFilter() {
@@ -218,11 +221,12 @@ public final class MetricThreshold extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A filter that identifies a time series that should be used as the denominator of a ratio that
-   * will be compared with the threshold. If a denominator_filter is specified, the time series
-   * specified by the filter field will be used as the numerator.The filter must specify the metric
-   * type and optionally may contain restrictions on resource type, resource labels, and metric
-   * labels. This field may not exceed 2048 Unicode characters in length.
+   * A filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies a time series
+   * that should be used as the denominator of a ratio that will be compared with the threshold. If
+   * a denominator_filter is specified, the time series specified by the filter field will be used
+   * as the numerator.The filter must specify the metric type and optionally may contain
+   * restrictions on resource type, resource labels, and metric labels. This field may not exceed
+   * 2048 Unicode characters in length.
    * @param denominatorFilter denominatorFilter or {@code null} for none
    */
   public MetricThreshold setDenominatorFilter(java.lang.String denominatorFilter) {
@@ -260,11 +264,12 @@ public final class MetricThreshold extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A filter that identifies which time series should be compared with the threshold.The filter is
-   * similar to the one that is specified in the ListTimeSeries request (that call is useful to
-   * verify the time series that will be retrieved / processed) and must specify the metric type and
-   * optionally may contain restrictions on resource type, resource labels, and metric labels. This
-   * field may not exceed 2048 Unicode characters in length.
+   * A filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies which time series
+   * should be compared with the threshold.The filter is similar to the one that is specified in the
+   * ListTimeSeries request (that call is useful to verify the time series that will be retrieved /
+   * processed) and must specify the metric type and optionally may contain restrictions on resource
+   * type, resource labels, and metric labels. This field may not exceed 2048 Unicode characters in
+   * length.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -272,11 +277,12 @@ public final class MetricThreshold extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A filter that identifies which time series should be compared with the threshold.The filter is
-   * similar to the one that is specified in the ListTimeSeries request (that call is useful to
-   * verify the time series that will be retrieved / processed) and must specify the metric type and
-   * optionally may contain restrictions on resource type, resource labels, and metric labels. This
-   * field may not exceed 2048 Unicode characters in length.
+   * A filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies which time series
+   * should be compared with the threshold.The filter is similar to the one that is specified in the
+   * ListTimeSeries request (that call is useful to verify the time series that will be retrieved /
+   * processed) and must specify the metric type and optionally may contain restrictions on resource
+   * type, resource labels, and metric labels. This field may not exceed 2048 Unicode characters in
+   * length.
    * @param filter filter or {@code null} for none
    */
   public MetricThreshold setFilter(java.lang.String filter) {

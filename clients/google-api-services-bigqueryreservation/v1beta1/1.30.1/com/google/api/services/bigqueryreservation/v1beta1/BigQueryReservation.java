@@ -1348,6 +1348,600 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
             return (List) super.set(parameterName, value);
           }
         }
+        /**
+         * Merges capacity commitments of the same plan into one. Resulting capacity commitment has the
+         * longer commitment_end_time out of the two. Attempting to merge capacity commitments of different
+         * plan will fail with the error code `google.rpc.Code.FAILED_PRECONDITION`.
+         *
+         * Create a request for the method "capacityCommitments.merge".
+         *
+         * This request holds the parameters needed by the bigqueryreservation server.  After setting any
+         * optional parameters, call the {@link Merge#execute()} method to invoke the remote operation.
+         *
+         * @param parent Parent resource that identifies admin project and location e.g.,
+        projects/myproject/locations/us
+         * @param content the {@link com.google.api.services.bigqueryreservation.v1beta1.model.MergeCapacityCommitmentsRequest}
+         * @return the request
+         */
+        public Merge merge(java.lang.String parent, com.google.api.services.bigqueryreservation.v1beta1.model.MergeCapacityCommitmentsRequest content) throws java.io.IOException {
+          Merge result = new Merge(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Merge extends BigQueryReservationRequest<com.google.api.services.bigqueryreservation.v1beta1.model.CapacityCommitment> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/capacityCommitments:merge";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Merges capacity commitments of the same plan into one. Resulting capacity commitment has the
+           * longer commitment_end_time out of the two. Attempting to merge capacity commitments of
+           * different plan will fail with the error code `google.rpc.Code.FAILED_PRECONDITION`.
+           *
+           * Create a request for the method "capacityCommitments.merge".
+           *
+           * This request holds the parameters needed by the the bigqueryreservation server.  After setting
+           * any optional parameters, call the {@link Merge#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Merge#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Parent resource that identifies admin project and location e.g.,
+        projects/myproject/locations/us
+           * @param content the {@link com.google.api.services.bigqueryreservation.v1beta1.model.MergeCapacityCommitmentsRequest}
+           * @since 1.13
+           */
+          protected Merge(java.lang.String parent, com.google.api.services.bigqueryreservation.v1beta1.model.MergeCapacityCommitmentsRequest content) {
+            super(BigQueryReservation.this, "POST", REST_PATH, content, com.google.api.services.bigqueryreservation.v1beta1.model.CapacityCommitment.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Merge set$Xgafv(java.lang.String $Xgafv) {
+            return (Merge) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Merge setAccessToken(java.lang.String accessToken) {
+            return (Merge) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Merge setAlt(java.lang.String alt) {
+            return (Merge) super.setAlt(alt);
+          }
+
+          @Override
+          public Merge setCallback(java.lang.String callback) {
+            return (Merge) super.setCallback(callback);
+          }
+
+          @Override
+          public Merge setFields(java.lang.String fields) {
+            return (Merge) super.setFields(fields);
+          }
+
+          @Override
+          public Merge setKey(java.lang.String key) {
+            return (Merge) super.setKey(key);
+          }
+
+          @Override
+          public Merge setOauthToken(java.lang.String oauthToken) {
+            return (Merge) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Merge setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Merge) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Merge setQuotaUser(java.lang.String quotaUser) {
+            return (Merge) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Merge setUploadType(java.lang.String uploadType) {
+            return (Merge) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Merge setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Merge) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Parent resource that identifies admin project and location e.g.,
+           * projects/myproject/locations/us
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Parent resource that identifies admin project and location e.g., projects/myproject/locations/us
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Parent resource that identifies admin project and location e.g.,
+           * projects/myproject/locations/us
+           */
+          public Merge setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Merge set(String parameterName, Object value) {
+            return (Merge) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates an existing capacity commitment.
+         *
+         * Only renewal_plan field can be updated.
+         *
+         * Create a request for the method "capacityCommitments.patch".
+         *
+         * This request holds the parameters needed by the bigqueryreservation server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Output only. The resource name of the capacity commitment, e.g.,
+         *        projects/myproject/locations/US/capacityCommitments/123
+         * @param content the {@link com.google.api.services.bigqueryreservation.v1beta1.model.CapacityCommitment}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.bigqueryreservation.v1beta1.model.CapacityCommitment content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends BigQueryReservationRequest<com.google.api.services.bigqueryreservation.v1beta1.model.CapacityCommitment> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/capacityCommitments/[^/]+$");
+
+          /**
+           * Updates an existing capacity commitment.
+           *
+           * Only renewal_plan field can be updated.
+           *
+           * Create a request for the method "capacityCommitments.patch".
+           *
+           * This request holds the parameters needed by the the bigqueryreservation server.  After setting
+           * any optional parameters, call the {@link Patch#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Output only. The resource name of the capacity commitment, e.g.,
+         *        projects/myproject/locations/US/capacityCommitments/123
+           * @param content the {@link com.google.api.services.bigqueryreservation.v1beta1.model.CapacityCommitment}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.bigqueryreservation.v1beta1.model.CapacityCommitment content) {
+            super(BigQueryReservation.this, "PATCH", REST_PATH, content, com.google.api.services.bigqueryreservation.v1beta1.model.CapacityCommitment.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/capacityCommitments/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Output only. The resource name of the capacity commitment, e.g.,
+           * projects/myproject/locations/US/capacityCommitments/123
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Output only. The resource name of the capacity commitment, e.g.,
+         projects/myproject/locations/US/capacityCommitments/123
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Output only. The resource name of the capacity commitment, e.g.,
+           * projects/myproject/locations/US/capacityCommitments/123
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/capacityCommitments/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Standard field mask for the set of fields to be updated. */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Standard field mask for the set of fields to be updated.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** Standard field mask for the set of fields to be updated. */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Splits capacity commitment to two commitments of the same plan and commitment_end_time. A common
+         * use case to do that is to perform a downgrade e.g., in order to downgrade from 10000 slots to
+         * 8000, one might split 10000 capacity commitment to 2000 and 8000, change the plan of the first
+         * one to flex and then delete it.
+         *
+         * Create a request for the method "capacityCommitments.split".
+         *
+         * This request holds the parameters needed by the bigqueryreservation server.  After setting any
+         * optional parameters, call the {@link Split#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name e.g.,:
+          projects/myproject/locations/US/capacityCommitments/123
+         * @param content the {@link com.google.api.services.bigqueryreservation.v1beta1.model.SplitCapacityCommitmentRequest}
+         * @return the request
+         */
+        public Split split(java.lang.String name, com.google.api.services.bigqueryreservation.v1beta1.model.SplitCapacityCommitmentRequest content) throws java.io.IOException {
+          Split result = new Split(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Split extends BigQueryReservationRequest<com.google.api.services.bigqueryreservation.v1beta1.model.SplitCapacityCommitmentResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+name}:split";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/capacityCommitments/[^/]+$");
+
+          /**
+           * Splits capacity commitment to two commitments of the same plan and commitment_end_time. A
+           * common use case to do that is to perform a downgrade e.g., in order to downgrade from 10000
+           * slots to 8000, one might split 10000 capacity commitment to 2000 and 8000, change the plan of
+           * the first one to flex and then delete it.
+           *
+           * Create a request for the method "capacityCommitments.split".
+           *
+           * This request holds the parameters needed by the the bigqueryreservation server.  After setting
+           * any optional parameters, call the {@link Split#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Split#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name e.g.,:
+          projects/myproject/locations/US/capacityCommitments/123
+           * @param content the {@link com.google.api.services.bigqueryreservation.v1beta1.model.SplitCapacityCommitmentRequest}
+           * @since 1.13
+           */
+          protected Split(java.lang.String name, com.google.api.services.bigqueryreservation.v1beta1.model.SplitCapacityCommitmentRequest content) {
+            super(BigQueryReservation.this, "POST", REST_PATH, content, com.google.api.services.bigqueryreservation.v1beta1.model.SplitCapacityCommitmentResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/capacityCommitments/[^/]+$");
+            }
+          }
+
+          @Override
+          public Split set$Xgafv(java.lang.String $Xgafv) {
+            return (Split) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Split setAccessToken(java.lang.String accessToken) {
+            return (Split) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Split setAlt(java.lang.String alt) {
+            return (Split) super.setAlt(alt);
+          }
+
+          @Override
+          public Split setCallback(java.lang.String callback) {
+            return (Split) super.setCallback(callback);
+          }
+
+          @Override
+          public Split setFields(java.lang.String fields) {
+            return (Split) super.setFields(fields);
+          }
+
+          @Override
+          public Split setKey(java.lang.String key) {
+            return (Split) super.setKey(key);
+          }
+
+          @Override
+          public Split setOauthToken(java.lang.String oauthToken) {
+            return (Split) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Split setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Split) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Split setQuotaUser(java.lang.String quotaUser) {
+            return (Split) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Split setUploadType(java.lang.String uploadType) {
+            return (Split) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Split setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Split) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name e.g.,:
+           * projects/myproject/locations/US/capacityCommitments/123
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name e.g.,: projects/myproject/locations/US/capacityCommitments/123
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name e.g.,:
+           * projects/myproject/locations/US/capacityCommitments/123
+           */
+          public Split setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/capacityCommitments/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Split set(String parameterName, Object value) {
+            return (Split) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Replaces an existing commitment with a new commitment of a different plan. Plan can only be
+         * changed to a plan of a longer commitment period. New commitment start is set to a current time.
+         * Attempting to change to a plan with shorter commitment period will fail with the error code
+         * `google.rpc.Code.FAILED_PRECONDITION`.
+         *
+         * Create a request for the method "capacityCommitments.upgradeCapacityCommitmentPlan".
+         *
+         * This request holds the parameters needed by the bigqueryreservation server.  After setting any
+         * optional parameters, call the {@link UpgradeCapacityCommitmentPlan#execute()} method to invoke
+         * the remote operation.
+         *
+         * @param capacityCommitment Required. The resource name e.g.,:
+          projects/myproject/locations/US/capacityCommitments/123
+         * @param content the {@link com.google.api.services.bigqueryreservation.v1beta1.model.UpgradeCapacityCommitmentPlanRequest}
+         * @return the request
+         */
+        public UpgradeCapacityCommitmentPlan upgradeCapacityCommitmentPlan(java.lang.String capacityCommitment, com.google.api.services.bigqueryreservation.v1beta1.model.UpgradeCapacityCommitmentPlanRequest content) throws java.io.IOException {
+          UpgradeCapacityCommitmentPlan result = new UpgradeCapacityCommitmentPlan(capacityCommitment, content);
+          initialize(result);
+          return result;
+        }
+
+        public class UpgradeCapacityCommitmentPlan extends BigQueryReservationRequest<com.google.api.services.bigqueryreservation.v1beta1.model.CapacityCommitment> {
+
+          private static final String REST_PATH = "v1beta1/{+capacityCommitment}:upgradeCapacityCommitmentPlan";
+
+          private final java.util.regex.Pattern CAPACITY_COMMITMENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/capacityCommitments/[^/]+$");
+
+          /**
+           * Replaces an existing commitment with a new commitment of a different plan. Plan can only be
+           * changed to a plan of a longer commitment period. New commitment start is set to a current time.
+           * Attempting to change to a plan with shorter commitment period will fail with the error code
+           * `google.rpc.Code.FAILED_PRECONDITION`.
+           *
+           * Create a request for the method "capacityCommitments.upgradeCapacityCommitmentPlan".
+           *
+           * This request holds the parameters needed by the the bigqueryreservation server.  After setting
+           * any optional parameters, call the {@link UpgradeCapacityCommitmentPlan#execute()} method to
+           * invoke the remote operation. <p> {@link UpgradeCapacityCommitmentPlan#initialize(com.google.api
+           * .client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
+           * instance immediately after invoking the constructor. </p>
+           *
+           * @param capacityCommitment Required. The resource name e.g.,:
+          projects/myproject/locations/US/capacityCommitments/123
+           * @param content the {@link com.google.api.services.bigqueryreservation.v1beta1.model.UpgradeCapacityCommitmentPlanRequest}
+           * @since 1.13
+           */
+          protected UpgradeCapacityCommitmentPlan(java.lang.String capacityCommitment, com.google.api.services.bigqueryreservation.v1beta1.model.UpgradeCapacityCommitmentPlanRequest content) {
+            super(BigQueryReservation.this, "POST", REST_PATH, content, com.google.api.services.bigqueryreservation.v1beta1.model.CapacityCommitment.class);
+            this.capacityCommitment = com.google.api.client.util.Preconditions.checkNotNull(capacityCommitment, "Required parameter capacityCommitment must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CAPACITY_COMMITMENT_PATTERN.matcher(capacityCommitment).matches(),
+                  "Parameter capacityCommitment must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/capacityCommitments/[^/]+$");
+            }
+          }
+
+          @Override
+          public UpgradeCapacityCommitmentPlan set$Xgafv(java.lang.String $Xgafv) {
+            return (UpgradeCapacityCommitmentPlan) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public UpgradeCapacityCommitmentPlan setAccessToken(java.lang.String accessToken) {
+            return (UpgradeCapacityCommitmentPlan) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public UpgradeCapacityCommitmentPlan setAlt(java.lang.String alt) {
+            return (UpgradeCapacityCommitmentPlan) super.setAlt(alt);
+          }
+
+          @Override
+          public UpgradeCapacityCommitmentPlan setCallback(java.lang.String callback) {
+            return (UpgradeCapacityCommitmentPlan) super.setCallback(callback);
+          }
+
+          @Override
+          public UpgradeCapacityCommitmentPlan setFields(java.lang.String fields) {
+            return (UpgradeCapacityCommitmentPlan) super.setFields(fields);
+          }
+
+          @Override
+          public UpgradeCapacityCommitmentPlan setKey(java.lang.String key) {
+            return (UpgradeCapacityCommitmentPlan) super.setKey(key);
+          }
+
+          @Override
+          public UpgradeCapacityCommitmentPlan setOauthToken(java.lang.String oauthToken) {
+            return (UpgradeCapacityCommitmentPlan) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public UpgradeCapacityCommitmentPlan setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (UpgradeCapacityCommitmentPlan) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public UpgradeCapacityCommitmentPlan setQuotaUser(java.lang.String quotaUser) {
+            return (UpgradeCapacityCommitmentPlan) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public UpgradeCapacityCommitmentPlan setUploadType(java.lang.String uploadType) {
+            return (UpgradeCapacityCommitmentPlan) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public UpgradeCapacityCommitmentPlan setUploadProtocol(java.lang.String uploadProtocol) {
+            return (UpgradeCapacityCommitmentPlan) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name e.g.,:
+           * projects/myproject/locations/US/capacityCommitments/123
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String capacityCommitment;
+
+          /** Required. The resource name e.g.,: projects/myproject/locations/US/capacityCommitments/123
+           */
+          public java.lang.String getCapacityCommitment() {
+            return capacityCommitment;
+          }
+
+          /**
+           * Required. The resource name e.g.,:
+           * projects/myproject/locations/US/capacityCommitments/123
+           */
+          public UpgradeCapacityCommitmentPlan setCapacityCommitment(java.lang.String capacityCommitment) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CAPACITY_COMMITMENT_PATTERN.matcher(capacityCommitment).matches(),
+                  "Parameter capacityCommitment must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/capacityCommitments/[^/]+$");
+            }
+            this.capacityCommitment = capacityCommitment;
+            return this;
+          }
+
+          @Override
+          public UpgradeCapacityCommitmentPlan set(String parameterName, Object value) {
+            return (UpgradeCapacityCommitmentPlan) super.set(parameterName, value);
+          }
+        }
 
       }
       /**

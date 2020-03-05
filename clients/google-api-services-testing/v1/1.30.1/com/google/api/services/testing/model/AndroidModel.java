@@ -134,6 +134,13 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> tags;
 
   /**
+   * URL of a thumbnail image of the device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String thumbnailUrl;
+
+  /**
    * The company that this device is branded with. Example: "Google", "Samsung".
    * @return value or {@code null} for none
    */
@@ -380,6 +387,23 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
    */
   public AndroidModel setTags(java.util.List<java.lang.String> tags) {
     this.tags = tags;
+    return this;
+  }
+
+  /**
+   * URL of a thumbnail image of the device.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getThumbnailUrl() {
+    return thumbnailUrl;
+  }
+
+  /**
+   * URL of a thumbnail image of the device.
+   * @param thumbnailUrl thumbnailUrl or {@code null} for none
+   */
+  public AndroidModel setThumbnailUrl(java.lang.String thumbnailUrl) {
+    this.thumbnailUrl = thumbnailUrl;
     return this;
   }
 

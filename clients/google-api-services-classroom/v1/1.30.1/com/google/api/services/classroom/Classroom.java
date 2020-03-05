@@ -46,7 +46,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.8 of the Google Classroom API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.9 of the Google Classroom API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -5576,6 +5576,1040 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
 
       }
+    }
+    /**
+     * An accessor for creating requests from the CourseWorkMaterials collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Classroom classroom = new Classroom(...);}
+     *   {@code Classroom.CourseWorkMaterials.List request = classroom.courseWorkMaterials().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public CourseWorkMaterials courseWorkMaterials() {
+      return new CourseWorkMaterials();
+    }
+
+    /**
+     * The "courseWorkMaterials" collection of methods.
+     */
+    public class CourseWorkMaterials {
+
+      /**
+       * Creates a course work material.
+       *
+       * This method returns the following error codes:
+       *
+       * * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course,
+       * create course work material in the requested course, share a Drive attachment, or for access
+       * errors. * `INVALID_ARGUMENT` if the request is malformed or if more than 20 * materials are
+       * provided. * `NOT_FOUND` if the requested course does not exist. * `FAILED_PRECONDITION` for the
+       * following request error:     * AttachmentNotVisible
+       *
+       * Create a request for the method "courseWorkMaterials.create".
+       *
+       * This request holds the parameters needed by the classroom server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param courseId Identifier of the course.
+      This identifier can be either the Classroom-assigned identifier or an
+       *        alias.
+       * @param content the {@link com.google.api.services.classroom.model.CourseWorkMaterial}
+       * @return the request
+       */
+      public Create create(java.lang.String courseId, com.google.api.services.classroom.model.CourseWorkMaterial content) throws java.io.IOException {
+        Create result = new Create(courseId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends ClassroomRequest<com.google.api.services.classroom.model.CourseWorkMaterial> {
+
+        private static final String REST_PATH = "v1/courses/{courseId}/courseWorkMaterials";
+
+        /**
+         * Creates a course work material.
+         *
+         * This method returns the following error codes:
+         *
+         * * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course,
+         * create course work material in the requested course, share a Drive attachment, or for access
+         * errors. * `INVALID_ARGUMENT` if the request is malformed or if more than 20 * materials are
+         * provided. * `NOT_FOUND` if the requested course does not exist. * `FAILED_PRECONDITION` for the
+         * following request error:     * AttachmentNotVisible
+         *
+         * Create a request for the method "courseWorkMaterials.create".
+         *
+         * This request holds the parameters needed by the the classroom server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param courseId Identifier of the course.
+      This identifier can be either the Classroom-assigned identifier or an
+       *        alias.
+         * @param content the {@link com.google.api.services.classroom.model.CourseWorkMaterial}
+         * @since 1.13
+         */
+        protected Create(java.lang.String courseId, com.google.api.services.classroom.model.CourseWorkMaterial content) {
+          super(Classroom.this, "POST", REST_PATH, content, com.google.api.services.classroom.model.CourseWorkMaterial.class);
+          this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Identifier of the course. This identifier can be either the Classroom-assigned identifier
+         * or an alias.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String courseId;
+
+        /** Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
+       alias.
+         */
+        public java.lang.String getCourseId() {
+          return courseId;
+        }
+
+        /**
+         * Identifier of the course. This identifier can be either the Classroom-assigned identifier
+         * or an alias.
+         */
+        public Create setCourseId(java.lang.String courseId) {
+          this.courseId = courseId;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes a course work material.
+       *
+       * This request must be made by the Developer Console project of the [OAuth client
+       * ID](https://support.google.com/cloud/answer/6158849) used to create the corresponding course work
+       * material item.
+       *
+       * This method returns the following error codes:
+       *
+       * * `PERMISSION_DENIED` if the requesting developer project did not create the corresponding course
+       * work material, if the requesting user is not permitted to delete the requested course or for
+       * access errors. * `FAILED_PRECONDITION` if the requested course work material has already been
+       * deleted. * `NOT_FOUND` if no course exists with the requested ID.
+       *
+       * Create a request for the method "courseWorkMaterials.delete".
+       *
+       * This request holds the parameters needed by the classroom server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param courseId Identifier of the course.
+      This identifier can be either the Classroom-assigned identifier or an
+       *        alias.
+       * @param id Identifier of the course work material to delete.
+      This identifier is a Classroom-assigned
+       *        identifier.
+       * @return the request
+       */
+      public Delete delete(java.lang.String courseId, java.lang.String id) throws java.io.IOException {
+        Delete result = new Delete(courseId, id);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends ClassroomRequest<com.google.api.services.classroom.model.Empty> {
+
+        private static final String REST_PATH = "v1/courses/{courseId}/courseWorkMaterials/{id}";
+
+        /**
+         * Deletes a course work material.
+         *
+         * This request must be made by the Developer Console project of the [OAuth client
+         * ID](https://support.google.com/cloud/answer/6158849) used to create the corresponding course
+         * work material item.
+         *
+         * This method returns the following error codes:
+         *
+         * * `PERMISSION_DENIED` if the requesting developer project did not create the corresponding
+         * course work material, if the requesting user is not permitted to delete the requested course or
+         * for access errors. * `FAILED_PRECONDITION` if the requested course work material has already
+         * been deleted. * `NOT_FOUND` if no course exists with the requested ID.
+         *
+         * Create a request for the method "courseWorkMaterials.delete".
+         *
+         * This request holds the parameters needed by the the classroom server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param courseId Identifier of the course.
+      This identifier can be either the Classroom-assigned identifier or an
+       *        alias.
+         * @param id Identifier of the course work material to delete.
+      This identifier is a Classroom-assigned
+       *        identifier.
+         * @since 1.13
+         */
+        protected Delete(java.lang.String courseId, java.lang.String id) {
+          super(Classroom.this, "DELETE", REST_PATH, null, com.google.api.services.classroom.model.Empty.class);
+          this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+          this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Identifier of the course. This identifier can be either the Classroom-assigned identifier
+         * or an alias.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String courseId;
+
+        /** Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
+       alias.
+         */
+        public java.lang.String getCourseId() {
+          return courseId;
+        }
+
+        /**
+         * Identifier of the course. This identifier can be either the Classroom-assigned identifier
+         * or an alias.
+         */
+        public Delete setCourseId(java.lang.String courseId) {
+          this.courseId = courseId;
+          return this;
+        }
+
+        /**
+         * Identifier of the course work material to delete. This identifier is a Classroom-assigned
+         * identifier.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String id;
+
+        /** Identifier of the course work material to delete. This identifier is a Classroom-assigned
+       identifier.
+         */
+        public java.lang.String getId() {
+          return id;
+        }
+
+        /**
+         * Identifier of the course work material to delete. This identifier is a Classroom-assigned
+         * identifier.
+         */
+        public Delete setId(java.lang.String id) {
+          this.id = id;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Returns a course work material.
+       *
+       * This method returns the following error codes:
+       *
+       * * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or
+       * course work material, or for access errors. * `INVALID_ARGUMENT` if the request is malformed. *
+       * `NOT_FOUND` if the requested course or course work material does not exist.
+       *
+       * Create a request for the method "courseWorkMaterials.get".
+       *
+       * This request holds the parameters needed by the classroom server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param courseId Identifier of the course.
+      This identifier can be either the Classroom-assigned identifier or an
+       *        alias.
+       * @param id Identifier of the course work material.
+       * @return the request
+       */
+      public Get get(java.lang.String courseId, java.lang.String id) throws java.io.IOException {
+        Get result = new Get(courseId, id);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends ClassroomRequest<com.google.api.services.classroom.model.CourseWorkMaterial> {
+
+        private static final String REST_PATH = "v1/courses/{courseId}/courseWorkMaterials/{id}";
+
+        /**
+         * Returns a course work material.
+         *
+         * This method returns the following error codes:
+         *
+         * * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or
+         * course work material, or for access errors. * `INVALID_ARGUMENT` if the request is malformed. *
+         * `NOT_FOUND` if the requested course or course work material does not exist.
+         *
+         * Create a request for the method "courseWorkMaterials.get".
+         *
+         * This request holds the parameters needed by the the classroom server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param courseId Identifier of the course.
+      This identifier can be either the Classroom-assigned identifier or an
+       *        alias.
+         * @param id Identifier of the course work material.
+         * @since 1.13
+         */
+        protected Get(java.lang.String courseId, java.lang.String id) {
+          super(Classroom.this, "GET", REST_PATH, null, com.google.api.services.classroom.model.CourseWorkMaterial.class);
+          this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+          this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Identifier of the course. This identifier can be either the Classroom-assigned identifier
+         * or an alias.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String courseId;
+
+        /** Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
+       alias.
+         */
+        public java.lang.String getCourseId() {
+          return courseId;
+        }
+
+        /**
+         * Identifier of the course. This identifier can be either the Classroom-assigned identifier
+         * or an alias.
+         */
+        public Get setCourseId(java.lang.String courseId) {
+          this.courseId = courseId;
+          return this;
+        }
+
+        /** Identifier of the course work material. */
+        @com.google.api.client.util.Key
+        private java.lang.String id;
+
+        /** Identifier of the course work material.
+         */
+        public java.lang.String getId() {
+          return id;
+        }
+
+        /** Identifier of the course work material. */
+        public Get setId(java.lang.String id) {
+          this.id = id;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Returns a list of course work material that the requester is permitted to view.
+       *
+       * Course students may only view `PUBLISHED` course work material. Course teachers and domain
+       * administrators may view all course work material.
+       *
+       * This method returns the following error codes:
+       *
+       * * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or
+       * for access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if the
+       * requested course does not exist.
+       *
+       * Create a request for the method "courseWorkMaterials.list".
+       *
+       * This request holds the parameters needed by the classroom server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param courseId Identifier of the course.
+      This identifier can be either the Classroom-assigned identifier or an
+       *        alias.
+       * @return the request
+       */
+      public List list(java.lang.String courseId) throws java.io.IOException {
+        List result = new List(courseId);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends ClassroomRequest<com.google.api.services.classroom.model.ListCourseWorkMaterialResponse> {
+
+        private static final String REST_PATH = "v1/courses/{courseId}/courseWorkMaterials";
+
+        /**
+         * Returns a list of course work material that the requester is permitted to view.
+         *
+         * Course students may only view `PUBLISHED` course work material. Course teachers and domain
+         * administrators may view all course work material.
+         *
+         * This method returns the following error codes:
+         *
+         * * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or
+         * for access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if the
+         * requested course does not exist.
+         *
+         * Create a request for the method "courseWorkMaterials.list".
+         *
+         * This request holds the parameters needed by the the classroom server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param courseId Identifier of the course.
+      This identifier can be either the Classroom-assigned identifier or an
+       *        alias.
+         * @since 1.13
+         */
+        protected List(java.lang.String courseId) {
+          super(Classroom.this, "GET", REST_PATH, null, com.google.api.services.classroom.model.ListCourseWorkMaterialResponse.class);
+          this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Identifier of the course. This identifier can be either the Classroom-assigned identifier
+         * or an alias.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String courseId;
+
+        /** Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
+       alias.
+         */
+        public java.lang.String getCourseId() {
+          return courseId;
+        }
+
+        /**
+         * Identifier of the course. This identifier can be either the Classroom-assigned identifier
+         * or an alias.
+         */
+        public List setCourseId(java.lang.String courseId) {
+          this.courseId = courseId;
+          return this;
+        }
+
+        /**
+         * Restriction on the work status to return. Only course work material that matches is
+         * returned. If unspecified, items with a work status of `PUBLISHED` is returned.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> courseWorkMaterialStates;
+
+        /** Restriction on the work status to return. Only course work material that matches is returned. If
+       unspecified, items with a work status of `PUBLISHED` is returned.
+         */
+        public java.util.List<java.lang.String> getCourseWorkMaterialStates() {
+          return courseWorkMaterialStates;
+        }
+
+        /**
+         * Restriction on the work status to return. Only course work material that matches is
+         * returned. If unspecified, items with a work status of `PUBLISHED` is returned.
+         */
+        public List setCourseWorkMaterialStates(java.util.List<java.lang.String> courseWorkMaterialStates) {
+          this.courseWorkMaterialStates = courseWorkMaterialStates;
+          return this;
+        }
+
+        /**
+         * Optional filtering for course work material with at least one Drive material whose ID
+         * matches the provided string. If `material_link` is also specified, course work material
+         * must have materials matching both filters.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String materialDriveId;
+
+        /** Optional filtering for course work material with at least one Drive material whose ID matches the
+       provided string. If `material_link` is also specified, course work material must have materials
+       matching both filters.
+         */
+        public java.lang.String getMaterialDriveId() {
+          return materialDriveId;
+        }
+
+        /**
+         * Optional filtering for course work material with at least one Drive material whose ID
+         * matches the provided string. If `material_link` is also specified, course work material
+         * must have materials matching both filters.
+         */
+        public List setMaterialDriveId(java.lang.String materialDriveId) {
+          this.materialDriveId = materialDriveId;
+          return this;
+        }
+
+        /**
+         * Optional filtering for course work material with at least one link material whose URL
+         * partially matches the provided string.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String materialLink;
+
+        /** Optional filtering for course work material with at least one link material whose URL partially
+       matches the provided string.
+         */
+        public java.lang.String getMaterialLink() {
+          return materialLink;
+        }
+
+        /**
+         * Optional filtering for course work material with at least one link material whose URL
+         * partially matches the provided string.
+         */
+        public List setMaterialLink(java.lang.String materialLink) {
+          this.materialLink = materialLink;
+          return this;
+        }
+
+        /**
+         * Optional sort ordering for results. A comma-separated list of fields with an optional
+         * sort direction keyword. Supported field is `updateTime`. Supported direction keywords are
+         * `asc` and `desc`. If not specified, `updateTime desc` is the default behavior. Examples:
+         * `updateTime asc`, `updateTime`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orderBy;
+
+        /** Optional sort ordering for results. A comma-separated list of fields with an optional sort
+       direction keyword. Supported field is `updateTime`. Supported direction keywords are `asc` and
+       `desc`. If not specified, `updateTime desc` is the default behavior. Examples: `updateTime asc`,
+       `updateTime`
+         */
+        public java.lang.String getOrderBy() {
+          return orderBy;
+        }
+
+        /**
+         * Optional sort ordering for results. A comma-separated list of fields with an optional
+         * sort direction keyword. Supported field is `updateTime`. Supported direction keywords are
+         * `asc` and `desc`. If not specified, `updateTime desc` is the default behavior. Examples:
+         * `updateTime asc`, `updateTime`
+         */
+        public List setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
+          return this;
+        }
+
+        /**
+         * Maximum number of items to return. Zero or unspecified indicates that the server may
+         * assign a maximum.
+         *
+         * The server may return fewer than the specified number of results.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Maximum number of items to return. Zero or unspecified indicates that the server may assign a
+       maximum.
+
+       The server may return fewer than the specified number of results.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Maximum number of items to return. Zero or unspecified indicates that the server may
+         * assign a maximum.
+         *
+         * The server may return fewer than the specified number of results.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * nextPageToken value returned from a previous list call, indicating that the subsequent
+         * page of results should be returned.
+         *
+         * The list request must be otherwise identical to the one that resulted in this token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** nextPageToken value returned from a previous list call, indicating that the subsequent page of
+       results should be returned.
+
+       The list request must be otherwise identical to the one that resulted in this token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * nextPageToken value returned from a previous list call, indicating that the subsequent
+         * page of results should be returned.
+         *
+         * The list request must be otherwise identical to the one that resulted in this token.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates one or more fields of a course work material.
+       *
+       * This method returns the following error codes:
+       *
+       * * `PERMISSION_DENIED` if the requesting developer project for access errors. * `INVALID_ARGUMENT`
+       * if the request is malformed. * `FAILED_PRECONDITION` if the requested course work material has
+       * already been deleted. * `NOT_FOUND` if the requested course or course work material does not
+       * exist
+       *
+       * Create a request for the method "courseWorkMaterials.patch".
+       *
+       * This request holds the parameters needed by the classroom server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param courseId Identifier of the course.
+      This identifier can be either the Classroom-assigned identifier or an
+       *        alias.
+       * @param id Identifier of the course work material.
+       * @param content the {@link com.google.api.services.classroom.model.CourseWorkMaterial}
+       * @return the request
+       */
+      public Patch patch(java.lang.String courseId, java.lang.String id, com.google.api.services.classroom.model.CourseWorkMaterial content) throws java.io.IOException {
+        Patch result = new Patch(courseId, id, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends ClassroomRequest<com.google.api.services.classroom.model.CourseWorkMaterial> {
+
+        private static final String REST_PATH = "v1/courses/{courseId}/courseWorkMaterials/{id}";
+
+        /**
+         * Updates one or more fields of a course work material.
+         *
+         * This method returns the following error codes:
+         *
+         * * `PERMISSION_DENIED` if the requesting developer project for access errors. *
+         * `INVALID_ARGUMENT` if the request is malformed. * `FAILED_PRECONDITION` if the requested course
+         * work material has already been deleted. * `NOT_FOUND` if the requested course or course work
+         * material does not exist
+         *
+         * Create a request for the method "courseWorkMaterials.patch".
+         *
+         * This request holds the parameters needed by the the classroom server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param courseId Identifier of the course.
+      This identifier can be either the Classroom-assigned identifier or an
+       *        alias.
+         * @param id Identifier of the course work material.
+         * @param content the {@link com.google.api.services.classroom.model.CourseWorkMaterial}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String courseId, java.lang.String id, com.google.api.services.classroom.model.CourseWorkMaterial content) {
+          super(Classroom.this, "PATCH", REST_PATH, content, com.google.api.services.classroom.model.CourseWorkMaterial.class);
+          this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+          this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Identifier of the course. This identifier can be either the Classroom-assigned identifier
+         * or an alias.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String courseId;
+
+        /** Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
+       alias.
+         */
+        public java.lang.String getCourseId() {
+          return courseId;
+        }
+
+        /**
+         * Identifier of the course. This identifier can be either the Classroom-assigned identifier
+         * or an alias.
+         */
+        public Patch setCourseId(java.lang.String courseId) {
+          this.courseId = courseId;
+          return this;
+        }
+
+        /** Identifier of the course work material. */
+        @com.google.api.client.util.Key
+        private java.lang.String id;
+
+        /** Identifier of the course work material.
+         */
+        public java.lang.String getId() {
+          return id;
+        }
+
+        /** Identifier of the course work material. */
+        public Patch setId(java.lang.String id) {
+          this.id = id;
+          return this;
+        }
+
+        /**
+         * Mask that identifies which fields on the course work material to update. This field is
+         * required to do an update. The update fails if invalid fields are specified. If a field
+         * supports empty values, it can be cleared by specifying it in the update mask and not in
+         * the course work material object. If a field that does not support empty values is
+         * included in the update mask and not set in the course work material object, an
+         * `INVALID_ARGUMENT` error will be returned.
+         *
+         * The following fields may be specified by teachers:
+         *
+         * * `title` * `description` * `state` * `scheduled_time` * `topic_id`
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Mask that identifies which fields on the course work material to update. This field is required to
+       do an update. The update fails if invalid fields are specified. If a field supports empty values,
+       it can be cleared by specifying it in the update mask and not in the course work material object.
+       If a field that does not support empty values is included in the update mask and not set in the
+       course work material object, an `INVALID_ARGUMENT` error will be returned.
+
+       The following fields may be specified by teachers:
+
+       * `title` * `description` * `state` * `scheduled_time` * `topic_id`
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * Mask that identifies which fields on the course work material to update. This field is
+         * required to do an update. The update fails if invalid fields are specified. If a field
+         * supports empty values, it can be cleared by specifying it in the update mask and not in
+         * the course work material object. If a field that does not support empty values is
+         * included in the update mask and not set in the course work material object, an
+         * `INVALID_ARGUMENT` error will be returned.
+         *
+         * The following fields may be specified by teachers:
+         *
+         * * `title` * `description` * `state` * `scheduled_time` * `topic_id`
+         */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+
     }
     /**
      * An accessor for creating requests from the Students collection.

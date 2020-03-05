@@ -20,7 +20,7 @@ package com.google.api.services.ml.v1.model;
  * Represents input parameters for a training job. When using the gcloud command to submit your
  * training job, you can specify the input parameters as command-line arguments and/or in a YAML
  * configuration file referenced from the --config command-line argument. For details, see the guide
- * to submitting a training job.
+ * to [submitting a training job](/ai-platform/training/docs/training-jobs).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AI Platform Training & Prediction API. For a detailed
@@ -39,6 +39,14 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> args;
+
+  /**
+   * Custom encryption key options for a training job. If this is set, then all resources created by
+   * the training job will be encrypted with the provided encryption key.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudMlV1EncryptionConfig encryptionConfig;
 
   /**
    * Optional. The set of Hyperparameters to tune.
@@ -166,17 +174,14 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   private java.lang.String pythonModule;
 
   /**
-   * Optional. The version of Python used in training. If not set, the default version is '2.7'.
-   * Starting [January 13, 2020](/ml-engine/docs/release-notes#december_10_2019), this field is
-   * required.
+   * Optional. The version of Python used in training. You must either specify this field or specify
+   * `masterConfig.imageUri`.
    *
    * The following Python versions are available:
    *
    * * Python '3.7' is available when `runtime_version` is set to '1.15' or   later. * Python '3.5'
    * is available when `runtime_version` is set to a version   from '1.4' to '1.14'. * Python '2.7'
-   * is available when `runtime_version` is set to '1.15' or   earlier. (Runtime versions released
-   * [after January 1,   2020](/ml-engine/docs/release-notes#december_10_2019) do not support
-   * Python 2.7.)
+   * is available when `runtime_version` is set to '1.15' or   earlier.
    *
    * Read more about the Python versions available for [each runtime version](/ml-engine/docs
    * /runtime-version-list).
@@ -186,19 +191,20 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   private java.lang.String pythonVersion;
 
   /**
-   * Required. The Google Compute Engine region to run the training job in. See the available
-   * regions for AI Platform services.
+   * Required. The region to run the training job in. See the [available regions](/ai-
+   * platform/training/docs/regions) for AI Platform Training.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String region;
 
   /**
-   * Optional. The AI Platform runtime version to use for training. If not set, AI Platform uses the
-   * default stable version, 1.0. Starting [January 13, 2020](/ml-engine/docs/release-
-   * notes#december_10_2019), this field is required.
+   * Optional. The AI Platform runtime version to use for training. You must either specify this
+   * field or specify `masterConfig.imageUri`.
    *
-   * For more information, see the runtime version list and how to manage runtime versions.
+   * For more information, see the [runtime version list](/ai-platform/training/docs/runtime-
+   * version-list) and learn [how to manage runtime versions](/ai-
+   * platform/training/docs/versioning).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -290,6 +296,25 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    */
   public GoogleCloudMlV1TrainingInput setArgs(java.util.List<java.lang.String> args) {
     this.args = args;
+    return this;
+  }
+
+  /**
+   * Custom encryption key options for a training job. If this is set, then all resources created by
+   * the training job will be encrypted with the provided encryption key.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudMlV1EncryptionConfig getEncryptionConfig() {
+    return encryptionConfig;
+  }
+
+  /**
+   * Custom encryption key options for a training job. If this is set, then all resources created by
+   * the training job will be encrypted with the provided encryption key.
+   * @param encryptionConfig encryptionConfig or {@code null} for none
+   */
+  public GoogleCloudMlV1TrainingInput setEncryptionConfig(GoogleCloudMlV1EncryptionConfig encryptionConfig) {
+    this.encryptionConfig = encryptionConfig;
     return this;
   }
 
@@ -571,17 +596,14 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   }
 
   /**
-   * Optional. The version of Python used in training. If not set, the default version is '2.7'.
-   * Starting [January 13, 2020](/ml-engine/docs/release-notes#december_10_2019), this field is
-   * required.
+   * Optional. The version of Python used in training. You must either specify this field or specify
+   * `masterConfig.imageUri`.
    *
    * The following Python versions are available:
    *
    * * Python '3.7' is available when `runtime_version` is set to '1.15' or   later. * Python '3.5'
    * is available when `runtime_version` is set to a version   from '1.4' to '1.14'. * Python '2.7'
-   * is available when `runtime_version` is set to '1.15' or   earlier. (Runtime versions released
-   * [after January 1,   2020](/ml-engine/docs/release-notes#december_10_2019) do not support
-   * Python 2.7.)
+   * is available when `runtime_version` is set to '1.15' or   earlier.
    *
    * Read more about the Python versions available for [each runtime version](/ml-engine/docs
    * /runtime-version-list).
@@ -592,17 +614,14 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   }
 
   /**
-   * Optional. The version of Python used in training. If not set, the default version is '2.7'.
-   * Starting [January 13, 2020](/ml-engine/docs/release-notes#december_10_2019), this field is
-   * required.
+   * Optional. The version of Python used in training. You must either specify this field or specify
+   * `masterConfig.imageUri`.
    *
    * The following Python versions are available:
    *
    * * Python '3.7' is available when `runtime_version` is set to '1.15' or   later. * Python '3.5'
    * is available when `runtime_version` is set to a version   from '1.4' to '1.14'. * Python '2.7'
-   * is available when `runtime_version` is set to '1.15' or   earlier. (Runtime versions released
-   * [after January 1,   2020](/ml-engine/docs/release-notes#december_10_2019) do not support
-   * Python 2.7.)
+   * is available when `runtime_version` is set to '1.15' or   earlier.
    *
    * Read more about the Python versions available for [each runtime version](/ml-engine/docs
    * /runtime-version-list).
@@ -614,8 +633,8 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   }
 
   /**
-   * Required. The Google Compute Engine region to run the training job in. See the available
-   * regions for AI Platform services.
+   * Required. The region to run the training job in. See the [available regions](/ai-
+   * platform/training/docs/regions) for AI Platform Training.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -623,8 +642,8 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   }
 
   /**
-   * Required. The Google Compute Engine region to run the training job in. See the available
-   * regions for AI Platform services.
+   * Required. The region to run the training job in. See the [available regions](/ai-
+   * platform/training/docs/regions) for AI Platform Training.
    * @param region region or {@code null} for none
    */
   public GoogleCloudMlV1TrainingInput setRegion(java.lang.String region) {
@@ -633,11 +652,12 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   }
 
   /**
-   * Optional. The AI Platform runtime version to use for training. If not set, AI Platform uses the
-   * default stable version, 1.0. Starting [January 13, 2020](/ml-engine/docs/release-
-   * notes#december_10_2019), this field is required.
+   * Optional. The AI Platform runtime version to use for training. You must either specify this
+   * field or specify `masterConfig.imageUri`.
    *
-   * For more information, see the runtime version list and how to manage runtime versions.
+   * For more information, see the [runtime version list](/ai-platform/training/docs/runtime-
+   * version-list) and learn [how to manage runtime versions](/ai-
+   * platform/training/docs/versioning).
    * @return value or {@code null} for none
    */
   public java.lang.String getRuntimeVersion() {
@@ -645,11 +665,12 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   }
 
   /**
-   * Optional. The AI Platform runtime version to use for training. If not set, AI Platform uses the
-   * default stable version, 1.0. Starting [January 13, 2020](/ml-engine/docs/release-
-   * notes#december_10_2019), this field is required.
+   * Optional. The AI Platform runtime version to use for training. You must either specify this
+   * field or specify `masterConfig.imageUri`.
    *
-   * For more information, see the runtime version list and how to manage runtime versions.
+   * For more information, see the [runtime version list](/ai-platform/training/docs/runtime-
+   * version-list) and learn [how to manage runtime versions](/ai-
+   * platform/training/docs/versioning).
    * @param runtimeVersion runtimeVersion or {@code null} for none
    */
   public GoogleCloudMlV1TrainingInput setRuntimeVersion(java.lang.String runtimeVersion) {

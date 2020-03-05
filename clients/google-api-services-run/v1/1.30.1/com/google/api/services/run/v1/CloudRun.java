@@ -123,6 +123,531 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
   }
 
   /**
+   * An accessor for creating requests from the Api collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code CloudRun run = new CloudRun(...);}
+   *   {@code CloudRun.Api.List request = run.api().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Api api() {
+    return new Api();
+  }
+
+  /**
+   * The "api" collection of methods.
+   */
+  public class Api {
+
+    /**
+     * An accessor for creating requests from the V1 collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code CloudRun run = new CloudRun(...);}
+     *   {@code CloudRun.V1.List request = run.v1().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public V1 v1() {
+      return new V1();
+    }
+
+    /**
+     * The "v1" collection of methods.
+     */
+    public class V1 {
+
+      /**
+       * An accessor for creating requests from the Namespaces collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudRun run = new CloudRun(...);}
+       *   {@code CloudRun.Namespaces.List request = run.namespaces().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Namespaces namespaces() {
+        return new Namespaces();
+      }
+
+      /**
+       * The "namespaces" collection of methods.
+       */
+      public class Namespaces {
+
+        /**
+         * An accessor for creating requests from the Secrets collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code CloudRun run = new CloudRun(...);}
+         *   {@code CloudRun.Secrets.List request = run.secrets().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Secrets secrets() {
+          return new Secrets();
+        }
+
+        /**
+         * The "secrets" collection of methods.
+         */
+        public class Secrets {
+
+          /**
+           * Creates a new secret.
+           *
+           * Create a request for the method "secrets.create".
+           *
+           * This request holds the parameters needed by the run server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The project ID or project number in which this secret should
+          be created.
+           * @param content the {@link com.google.api.services.run.v1.model.Secret}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.run.v1.model.Secret content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends CloudRunRequest<com.google.api.services.run.v1.model.Secret> {
+
+            private static final String REST_PATH = "api/v1/{+parent}/secrets";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^namespaces/[^/]+$");
+
+            /**
+             * Creates a new secret.
+             *
+             * Create a request for the method "secrets.create".
+             *
+             * This request holds the parameters needed by the the run server.  After setting any optional
+             * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The project ID or project number in which this secret should
+          be created.
+             * @param content the {@link com.google.api.services.run.v1.model.Secret}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.run.v1.model.Secret content) {
+              super(CloudRun.this, "POST", REST_PATH, content, com.google.api.services.run.v1.model.Secret.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^namespaces/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The project ID or project number in which this secret should be created.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The project ID or project number in which this secret should be created.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The project ID or project number in which this secret should be created.
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^namespaces/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Rpc to get information about a secret.
+           *
+           * Create a request for the method "secrets.get".
+           *
+           * This request holds the parameters needed by the run server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the secret being retrieved. If needed, replace
+          {namespace_id} with the project
+           *        ID.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends CloudRunRequest<com.google.api.services.run.v1.model.Secret> {
+
+            private static final String REST_PATH = "api/v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^namespaces/[^/]+/secrets/[^/]+$");
+
+            /**
+             * Rpc to get information about a secret.
+             *
+             * Create a request for the method "secrets.get".
+             *
+             * This request holds the parameters needed by the the run server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+             * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the secret being retrieved. If needed, replace
+          {namespace_id} with the project
+           *        ID.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v1.model.Secret.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^namespaces/[^/]+/secrets/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the secret being retrieved. If needed, replace {namespace_id}
+             * with the project ID.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the secret being retrieved. If needed, replace {namespace_id} with the
+           project ID.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the secret being retrieved. If needed, replace {namespace_id}
+             * with the project ID.
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^namespaces/[^/]+/secrets/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Rpc to replace a secret.
+           *
+           * Only the spec and metadata labels and annotations are modifiable. After the Update request, Cloud
+           * Run will work to make the 'status' match the requested 'spec'.
+           *
+           * May provide metadata.resourceVersion to enforce update from last read for optimistic concurrency
+           * control.
+           *
+           * Create a request for the method "secrets.replaceSecret".
+           *
+           * This request holds the parameters needed by the run server.  After setting any optional
+           * parameters, call the {@link ReplaceSecret#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the secret being retrieved. If needed, replace
+          {namespace_id} with the project
+           *        ID.
+           * @param content the {@link com.google.api.services.run.v1.model.Secret}
+           * @return the request
+           */
+          public ReplaceSecret replaceSecret(java.lang.String name, com.google.api.services.run.v1.model.Secret content) throws java.io.IOException {
+            ReplaceSecret result = new ReplaceSecret(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class ReplaceSecret extends CloudRunRequest<com.google.api.services.run.v1.model.Secret> {
+
+            private static final String REST_PATH = "api/v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^namespaces/[^/]+/secrets/[^/]+$");
+
+            /**
+             * Rpc to replace a secret.
+             *
+             * Only the spec and metadata labels and annotations are modifiable. After the Update request,
+             * Cloud Run will work to make the 'status' match the requested 'spec'.
+             *
+             * May provide metadata.resourceVersion to enforce update from last read for optimistic
+             * concurrency control.
+             *
+             * Create a request for the method "secrets.replaceSecret".
+             *
+             * This request holds the parameters needed by the the run server.  After setting any optional
+             * parameters, call the {@link ReplaceSecret#execute()} method to invoke the remote operation. <p>
+             * {@link ReplaceSecret#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientR
+             * equest)} must be called to initialize this instance immediately after invoking the constructor.
+             * </p>
+             *
+             * @param name Required. The name of the secret being retrieved. If needed, replace
+          {namespace_id} with the project
+           *        ID.
+             * @param content the {@link com.google.api.services.run.v1.model.Secret}
+             * @since 1.13
+             */
+            protected ReplaceSecret(java.lang.String name, com.google.api.services.run.v1.model.Secret content) {
+              super(CloudRun.this, "PUT", REST_PATH, content, com.google.api.services.run.v1.model.Secret.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^namespaces/[^/]+/secrets/[^/]+$");
+              }
+            }
+
+            @Override
+            public ReplaceSecret set$Xgafv(java.lang.String $Xgafv) {
+              return (ReplaceSecret) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ReplaceSecret setAccessToken(java.lang.String accessToken) {
+              return (ReplaceSecret) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ReplaceSecret setAlt(java.lang.String alt) {
+              return (ReplaceSecret) super.setAlt(alt);
+            }
+
+            @Override
+            public ReplaceSecret setCallback(java.lang.String callback) {
+              return (ReplaceSecret) super.setCallback(callback);
+            }
+
+            @Override
+            public ReplaceSecret setFields(java.lang.String fields) {
+              return (ReplaceSecret) super.setFields(fields);
+            }
+
+            @Override
+            public ReplaceSecret setKey(java.lang.String key) {
+              return (ReplaceSecret) super.setKey(key);
+            }
+
+            @Override
+            public ReplaceSecret setOauthToken(java.lang.String oauthToken) {
+              return (ReplaceSecret) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ReplaceSecret setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ReplaceSecret) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ReplaceSecret setQuotaUser(java.lang.String quotaUser) {
+              return (ReplaceSecret) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ReplaceSecret setUploadType(java.lang.String uploadType) {
+              return (ReplaceSecret) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ReplaceSecret setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ReplaceSecret) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the secret being retrieved. If needed, replace {namespace_id}
+             * with the project ID.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the secret being retrieved. If needed, replace {namespace_id} with the
+           project ID.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the secret being retrieved. If needed, replace {namespace_id}
+             * with the project ID.
+             */
+            public ReplaceSecret setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^namespaces/[^/]+/secrets/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public ReplaceSecret set(String parameterName, Object value) {
+              return (ReplaceSecret) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+  /**
    * An accessor for creating requests from the Namespaces collection.
    *
    * <p>The typical use is:</p>
@@ -6504,6 +7029,467 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the Secrets collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudRun run = new CloudRun(...);}
+       *   {@code CloudRun.Secrets.List request = run.secrets().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Secrets secrets() {
+        return new Secrets();
+      }
+
+      /**
+       * The "secrets" collection of methods.
+       */
+      public class Secrets {
+
+        /**
+         * Creates a new secret.
+         *
+         * Create a request for the method "secrets.create".
+         *
+         * This request holds the parameters needed by the run server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The project ID or project number in which this secret should
+        be created.
+         * @param content the {@link com.google.api.services.run.v1.model.Secret}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.run.v1.model.Secret content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends CloudRunRequest<com.google.api.services.run.v1.model.Secret> {
+
+          private static final String REST_PATH = "v1/{+parent}/secrets";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new secret.
+           *
+           * Create a request for the method "secrets.create".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The project ID or project number in which this secret should
+        be created.
+           * @param content the {@link com.google.api.services.run.v1.model.Secret}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.run.v1.model.Secret content) {
+            super(CloudRun.this, "POST", REST_PATH, content, com.google.api.services.run.v1.model.Secret.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The project ID or project number in which this secret should be created.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The project ID or project number in which this secret should be created.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The project ID or project number in which this secret should be created.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Rpc to get information about a secret.
+         *
+         * Create a request for the method "secrets.get".
+         *
+         * This request holds the parameters needed by the run server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the secret being retrieved. If needed, replace
+        {namespace_id} with the project
+         *        ID.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends CloudRunRequest<com.google.api.services.run.v1.model.Secret> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/secrets/[^/]+$");
+
+          /**
+           * Rpc to get information about a secret.
+           *
+           * Create a request for the method "secrets.get".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the secret being retrieved. If needed, replace
+        {namespace_id} with the project
+         *        ID.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v1.model.Secret.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/secrets/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the secret being retrieved. If needed, replace {namespace_id}
+           * with the project ID.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the secret being retrieved. If needed, replace {namespace_id} with the
+         project ID.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the secret being retrieved. If needed, replace {namespace_id}
+           * with the project ID.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/secrets/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Rpc to replace a secret.
+         *
+         * Only the spec and metadata labels and annotations are modifiable. After the Update request, Cloud
+         * Run will work to make the 'status' match the requested 'spec'.
+         *
+         * May provide metadata.resourceVersion to enforce update from last read for optimistic concurrency
+         * control.
+         *
+         * Create a request for the method "secrets.replaceSecret".
+         *
+         * This request holds the parameters needed by the run server.  After setting any optional
+         * parameters, call the {@link ReplaceSecret#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the secret being retrieved. If needed, replace
+        {namespace_id} with the project
+         *        ID.
+         * @param content the {@link com.google.api.services.run.v1.model.Secret}
+         * @return the request
+         */
+        public ReplaceSecret replaceSecret(java.lang.String name, com.google.api.services.run.v1.model.Secret content) throws java.io.IOException {
+          ReplaceSecret result = new ReplaceSecret(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ReplaceSecret extends CloudRunRequest<com.google.api.services.run.v1.model.Secret> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/secrets/[^/]+$");
+
+          /**
+           * Rpc to replace a secret.
+           *
+           * Only the spec and metadata labels and annotations are modifiable. After the Update request,
+           * Cloud Run will work to make the 'status' match the requested 'spec'.
+           *
+           * May provide metadata.resourceVersion to enforce update from last read for optimistic
+           * concurrency control.
+           *
+           * Create a request for the method "secrets.replaceSecret".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link ReplaceSecret#execute()} method to invoke the remote operation. <p>
+           * {@link ReplaceSecret#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientR
+           * equest)} must be called to initialize this instance immediately after invoking the constructor.
+           * </p>
+           *
+           * @param name Required. The name of the secret being retrieved. If needed, replace
+        {namespace_id} with the project
+         *        ID.
+           * @param content the {@link com.google.api.services.run.v1.model.Secret}
+           * @since 1.13
+           */
+          protected ReplaceSecret(java.lang.String name, com.google.api.services.run.v1.model.Secret content) {
+            super(CloudRun.this, "PUT", REST_PATH, content, com.google.api.services.run.v1.model.Secret.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/secrets/[^/]+$");
+            }
+          }
+
+          @Override
+          public ReplaceSecret set$Xgafv(java.lang.String $Xgafv) {
+            return (ReplaceSecret) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ReplaceSecret setAccessToken(java.lang.String accessToken) {
+            return (ReplaceSecret) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ReplaceSecret setAlt(java.lang.String alt) {
+            return (ReplaceSecret) super.setAlt(alt);
+          }
+
+          @Override
+          public ReplaceSecret setCallback(java.lang.String callback) {
+            return (ReplaceSecret) super.setCallback(callback);
+          }
+
+          @Override
+          public ReplaceSecret setFields(java.lang.String fields) {
+            return (ReplaceSecret) super.setFields(fields);
+          }
+
+          @Override
+          public ReplaceSecret setKey(java.lang.String key) {
+            return (ReplaceSecret) super.setKey(key);
+          }
+
+          @Override
+          public ReplaceSecret setOauthToken(java.lang.String oauthToken) {
+            return (ReplaceSecret) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ReplaceSecret setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ReplaceSecret) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ReplaceSecret setQuotaUser(java.lang.String quotaUser) {
+            return (ReplaceSecret) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ReplaceSecret setUploadType(java.lang.String uploadType) {
+            return (ReplaceSecret) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ReplaceSecret setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ReplaceSecret) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the secret being retrieved. If needed, replace {namespace_id}
+           * with the project ID.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the secret being retrieved. If needed, replace {namespace_id} with the
+         project ID.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the secret being retrieved. If needed, replace {namespace_id}
+           * with the project ID.
+           */
+          public ReplaceSecret setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/secrets/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public ReplaceSecret set(String parameterName, Object value) {
+            return (ReplaceSecret) super.set(parameterName, value);
           }
         }
 

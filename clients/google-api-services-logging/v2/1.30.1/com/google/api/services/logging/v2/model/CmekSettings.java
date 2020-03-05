@@ -51,14 +51,14 @@ public final class CmekSettings extends com.google.api.client.json.GenericJson {
   private java.lang.String kmsKeyName;
 
   /**
-   * Output Only. The resource name of the CMEK settings.
+   * Output only. The resource name of the CMEK settings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output Only. The service account that will be used by the Logs Router to access your Cloud KMS
+   * Output only. The service account that will be used by the Logs Router to access your Cloud KMS
    * key.Before enabling CMEK for Logs Router, you must first assign the role
    * roles/cloudkms.cryptoKeyEncrypterDecrypter to the service account that the Logs Router will use
    * to access your Cloud KMS key. Use GetCmekSettings to obtain the service account ID.See Enabling
@@ -106,7 +106,7 @@ public final class CmekSettings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output Only. The resource name of the CMEK settings.
+   * Output only. The resource name of the CMEK settings.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -114,7 +114,7 @@ public final class CmekSettings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output Only. The resource name of the CMEK settings.
+   * Output only. The resource name of the CMEK settings.
    * @param name name or {@code null} for none
    */
   public CmekSettings setName(java.lang.String name) {
@@ -123,7 +123,7 @@ public final class CmekSettings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output Only. The service account that will be used by the Logs Router to access your Cloud KMS
+   * Output only. The service account that will be used by the Logs Router to access your Cloud KMS
    * key.Before enabling CMEK for Logs Router, you must first assign the role
    * roles/cloudkms.cryptoKeyEncrypterDecrypter to the service account that the Logs Router will use
    * to access your Cloud KMS key. Use GetCmekSettings to obtain the service account ID.See Enabling
@@ -135,7 +135,7 @@ public final class CmekSettings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output Only. The service account that will be used by the Logs Router to access your Cloud KMS
+   * Output only. The service account that will be used by the Logs Router to access your Cloud KMS
    * key.Before enabling CMEK for Logs Router, you must first assign the role
    * roles/cloudkms.cryptoKeyEncrypterDecrypter to the service account that the Logs Router will use
    * to access your Cloud KMS key. Use GetCmekSettings to obtain the service account ID.See Enabling

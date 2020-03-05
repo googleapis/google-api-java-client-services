@@ -73,13 +73,6 @@ public final class LogSink extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean disabled;
 
   /**
-   * Do not use. This field is ignored.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private String endTime;
-
-  /**
    * Optional. An advanced logs filter. The only exported log entries are those that are in the
    * resource owning the sink and that match the filter. For example:
    * logName="projects/[PROJECT_ID]/logs/[LOG_ID]" AND severity>=ERROR
@@ -120,13 +113,6 @@ public final class LogSink extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String outputVersionFormat;
-
-  /**
-   * Do not use. This field is ignored.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private String startTime;
 
   /**
    * Output only. The last update timestamp of the sink.This field may not be present for older
@@ -242,23 +228,6 @@ public final class LogSink extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Do not use. This field is ignored.
-   * @return value or {@code null} for none
-   */
-  public String getEndTime() {
-    return endTime;
-  }
-
-  /**
-   * Do not use. This field is ignored.
-   * @param endTime endTime or {@code null} for none
-   */
-  public LogSink setEndTime(String endTime) {
-    this.endTime = endTime;
-    return this;
-  }
-
-  /**
    * Optional. An advanced logs filter. The only exported log entries are those that are in the
    * resource owning the sink and that match the filter. For example:
    * logName="projects/[PROJECT_ID]/logs/[LOG_ID]" AND severity>=ERROR
@@ -351,23 +320,6 @@ public final class LogSink extends com.google.api.client.json.GenericJson {
    */
   public LogSink setOutputVersionFormat(java.lang.String outputVersionFormat) {
     this.outputVersionFormat = outputVersionFormat;
-    return this;
-  }
-
-  /**
-   * Do not use. This field is ignored.
-   * @return value or {@code null} for none
-   */
-  public String getStartTime() {
-    return startTime;
-  }
-
-  /**
-   * Do not use. This field is ignored.
-   * @param startTime startTime or {@code null} for none
-   */
-  public LogSink setStartTime(String startTime) {
-    this.startTime = startTime;
     return this;
   }
 

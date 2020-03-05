@@ -1288,7 +1288,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
          *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]"
         Note: The locations portion of the resource
-         *        is required, but supplying the character - in place of LOCATION_ID will return all
+         *        must be specified, but supplying the character - in place of LOCATION_ID will return all
          *        buckets.
          * @return the request
          */
@@ -1321,7 +1321,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
          *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]"
         Note: The locations portion of the resource
-         *        is required, but supplying the character - in place of LOCATION_ID will return all
+         *        must be specified, but supplying the character - in place of LOCATION_ID will return all
          *        buckets.
            * @since 1.13
            */
@@ -1406,8 +1406,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
            * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" Note: The locations portion of the
-           * resource is required, but supplying the character - in place of LOCATION_ID will return
-           * all buckets.
+           * resource must be specified, but supplying the character - in place of LOCATION_ID will
+           * return all buckets.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
@@ -1416,8 +1416,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
          "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
          "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
-         "folders/[FOLDER_ID]/locations/[LOCATION_ID]" Note: The locations portion of the resource is
-         required, but supplying the character - in place of LOCATION_ID will return all buckets.
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]" Note: The locations portion of the resource must be
+         specified, but supplying the character - in place of LOCATION_ID will return all buckets.
            */
           public java.lang.String getParent() {
             return parent;
@@ -1429,8 +1429,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
            * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" Note: The locations portion of the
-           * resource is required, but supplying the character - in place of LOCATION_ID will return
-           * all buckets.
+           * resource must be specified, but supplying the character - in place of LOCATION_ID will
+           * return all buckets.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -5603,7 +5603,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
          *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]"
         Note: The locations portion of the resource
-         *        is required, but supplying the character - in place of LOCATION_ID will return all
+         *        must be specified, but supplying the character - in place of LOCATION_ID will return all
          *        buckets.
          * @return the request
          */
@@ -5636,7 +5636,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
          *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]"
         Note: The locations portion of the resource
-         *        is required, but supplying the character - in place of LOCATION_ID will return all
+         *        must be specified, but supplying the character - in place of LOCATION_ID will return all
          *        buckets.
            * @since 1.13
            */
@@ -5721,8 +5721,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
            * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" Note: The locations portion of the
-           * resource is required, but supplying the character - in place of LOCATION_ID will return
-           * all buckets.
+           * resource must be specified, but supplying the character - in place of LOCATION_ID will
+           * return all buckets.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
@@ -5731,8 +5731,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
          "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
          "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
-         "folders/[FOLDER_ID]/locations/[LOCATION_ID]" Note: The locations portion of the resource is
-         required, but supplying the character - in place of LOCATION_ID will return all buckets.
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]" Note: The locations portion of the resource must be
+         specified, but supplying the character - in place of LOCATION_ID will return all buckets.
            */
           public java.lang.String getParent() {
             return parent;
@@ -5744,8 +5744,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
            * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" Note: The locations portion of the
-           * resource is required, but supplying the character - in place of LOCATION_ID will return
-           * all buckets.
+           * resource must be specified, but supplying the character - in place of LOCATION_ID will
+           * return all buckets.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -7867,7 +7867,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
        *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]"
       Note: The locations portion of the resource
-       *        is required, but supplying the character - in place of LOCATION_ID will return all
+       *        must be specified, but supplying the character - in place of LOCATION_ID will return all
        *        buckets.
        * @return the request
        */
@@ -7900,7 +7900,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
        *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]"
       Note: The locations portion of the resource
-       *        is required, but supplying the character - in place of LOCATION_ID will return all
+       *        must be specified, but supplying the character - in place of LOCATION_ID will return all
        *        buckets.
          * @since 1.13
          */
@@ -7985,7 +7985,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
          * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
          * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" Note: The locations portion of the resource
-         * is required, but supplying the character - in place of LOCATION_ID will return all
+         * must be specified, but supplying the character - in place of LOCATION_ID will return all
          * buckets.
          */
         @com.google.api.client.util.Key
@@ -7995,8 +7995,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
-       "folders/[FOLDER_ID]/locations/[LOCATION_ID]" Note: The locations portion of the resource is
-       required, but supplying the character - in place of LOCATION_ID will return all buckets.
+       "folders/[FOLDER_ID]/locations/[LOCATION_ID]" Note: The locations portion of the resource must be
+       specified, but supplying the character - in place of LOCATION_ID will return all buckets.
          */
         public java.lang.String getParent() {
           return parent;
@@ -8008,7 +8008,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
          * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
          * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" Note: The locations portion of the resource
-         * is required, but supplying the character - in place of LOCATION_ID will return all
+         * must be specified, but supplying the character - in place of LOCATION_ID will return all
          * buckets.
          */
         public List setParent(java.lang.String parent) {
@@ -10386,7 +10386,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
          *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]"
         Note: The locations portion of the resource
-         *        is required, but supplying the character - in place of LOCATION_ID will return all
+         *        must be specified, but supplying the character - in place of LOCATION_ID will return all
          *        buckets.
          * @return the request
          */
@@ -10419,7 +10419,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
          *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]"
         Note: The locations portion of the resource
-         *        is required, but supplying the character - in place of LOCATION_ID will return all
+         *        must be specified, but supplying the character - in place of LOCATION_ID will return all
          *        buckets.
            * @since 1.13
            */
@@ -10504,8 +10504,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
            * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" Note: The locations portion of the
-           * resource is required, but supplying the character - in place of LOCATION_ID will return
-           * all buckets.
+           * resource must be specified, but supplying the character - in place of LOCATION_ID will
+           * return all buckets.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
@@ -10514,8 +10514,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
          "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
          "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
-         "folders/[FOLDER_ID]/locations/[LOCATION_ID]" Note: The locations portion of the resource is
-         required, but supplying the character - in place of LOCATION_ID will return all buckets.
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]" Note: The locations portion of the resource must be
+         specified, but supplying the character - in place of LOCATION_ID will return all buckets.
            */
           public java.lang.String getParent() {
             return parent;
@@ -10527,8 +10527,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
            * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" Note: The locations portion of the
-           * resource is required, but supplying the character - in place of LOCATION_ID will return
-           * all buckets.
+           * resource must be specified, but supplying the character - in place of LOCATION_ID will
+           * return all buckets.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -13571,7 +13571,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
          *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]"
         Note: The locations portion of the resource
-         *        is required, but supplying the character - in place of LOCATION_ID will return all
+         *        must be specified, but supplying the character - in place of LOCATION_ID will return all
          *        buckets.
          * @return the request
          */
@@ -13604,7 +13604,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
          *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]"
         Note: The locations portion of the resource
-         *        is required, but supplying the character - in place of LOCATION_ID will return all
+         *        must be specified, but supplying the character - in place of LOCATION_ID will return all
          *        buckets.
            * @since 1.13
            */
@@ -13689,8 +13689,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
            * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" Note: The locations portion of the
-           * resource is required, but supplying the character - in place of LOCATION_ID will return
-           * all buckets.
+           * resource must be specified, but supplying the character - in place of LOCATION_ID will
+           * return all buckets.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
@@ -13699,8 +13699,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
          "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
          "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
-         "folders/[FOLDER_ID]/locations/[LOCATION_ID]" Note: The locations portion of the resource is
-         required, but supplying the character - in place of LOCATION_ID will return all buckets.
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]" Note: The locations portion of the resource must be
+         specified, but supplying the character - in place of LOCATION_ID will return all buckets.
            */
           public java.lang.String getParent() {
             return parent;
@@ -13712,8 +13712,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
            * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" Note: The locations portion of the
-           * resource is required, but supplying the character - in place of LOCATION_ID will return
-           * all buckets.
+           * resource must be specified, but supplying the character - in place of LOCATION_ID will
+           * return all buckets.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -14418,10 +14418,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * This request holds the parameters needed by the logging server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent The resource name of the project in which to create the metric:
+       * @param parent Required. The resource name of the project in which to create the metric:
       "projects/[PROJECT_ID]"
-      The new
-       *        metric must be provided in the request.
+       *        The new metric must be provided in the request.
        * @param content the {@link com.google.api.services.logging.v2.model.LogMetric}
        * @return the request
        */
@@ -14448,10 +14447,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The resource name of the project in which to create the metric:
+         * @param parent Required. The resource name of the project in which to create the metric:
       "projects/[PROJECT_ID]"
-      The new
-       *        metric must be provided in the request.
+       *        The new metric must be provided in the request.
          * @param content the {@link com.google.api.services.logging.v2.model.LogMetric}
          * @since 1.13
          */
@@ -14521,22 +14519,22 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * The resource name of the project in which to create the metric: "projects/[PROJECT_ID]"
-         * The new metric must be provided in the request.
+         * Required. The resource name of the project in which to create the metric:
+         * "projects/[PROJECT_ID]" The new metric must be provided in the request.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The resource name of the project in which to create the metric: "projects/[PROJECT_ID]" The new
-       metric must be provided in the request.
+        /** Required. The resource name of the project in which to create the metric: "projects/[PROJECT_ID]"
+       The new metric must be provided in the request.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The resource name of the project in which to create the metric: "projects/[PROJECT_ID]"
-         * The new metric must be provided in the request.
+         * Required. The resource name of the project in which to create the metric:
+         * "projects/[PROJECT_ID]" The new metric must be provided in the request.
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -14561,7 +14559,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * This request holds the parameters needed by the logging server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param metricName The resource name of the metric to delete:
+       * @param metricName Required. The resource name of the metric to delete:
       "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
        * @return the request
        */
@@ -14588,7 +14586,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param metricName The resource name of the metric to delete:
+         * @param metricName Required. The resource name of the metric to delete:
       "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
          * @since 1.13
          */
@@ -14658,19 +14656,21 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * The resource name of the metric to delete: "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
+         * Required. The resource name of the metric to delete:
+         * "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
          */
         @com.google.api.client.util.Key
         private java.lang.String metricName;
 
-        /** The resource name of the metric to delete: "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
+        /** Required. The resource name of the metric to delete: "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
          */
         public java.lang.String getMetricName() {
           return metricName;
         }
 
         /**
-         * The resource name of the metric to delete: "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
+         * Required. The resource name of the metric to delete:
+         * "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
          */
         public Delete setMetricName(java.lang.String metricName) {
           if (!getSuppressPatternChecks()) {
@@ -14695,7 +14695,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * This request holds the parameters needed by the logging server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param metricName The resource name of the desired metric:
+       * @param metricName Required. The resource name of the desired metric:
       "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
        * @return the request
        */
@@ -14722,7 +14722,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param metricName The resource name of the desired metric:
+         * @param metricName Required. The resource name of the desired metric:
       "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
          * @since 1.13
          */
@@ -14802,19 +14802,21 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * The resource name of the desired metric: "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
+         * Required. The resource name of the desired metric:
+         * "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
          */
         @com.google.api.client.util.Key
         private java.lang.String metricName;
 
-        /** The resource name of the desired metric: "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
+        /** Required. The resource name of the desired metric: "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
          */
         public java.lang.String getMetricName() {
           return metricName;
         }
 
         /**
-         * The resource name of the desired metric: "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
+         * Required. The resource name of the desired metric:
+         * "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
          */
         public Get setMetricName(java.lang.String metricName) {
           if (!getSuppressPatternChecks()) {
@@ -15035,11 +15037,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * This request holds the parameters needed by the logging server.  After setting any optional
        * parameters, call the {@link Update#execute()} method to invoke the remote operation.
        *
-       * @param metricName The resource name of the metric to update:
+       * @param metricName Required. The resource name of the metric to update:
       "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
-      The updated
-       *        metric must be provided in the request and it's name field must be the same as [METRIC_ID]
-       *        If the metric does not exist in [PROJECT_ID], then a new metric is created.
+      The
+       *        updated metric must be provided in the request and it's name field must be the same as
+       *        [METRIC_ID] If the metric does not exist in [PROJECT_ID], then a new metric is created.
        * @param content the {@link com.google.api.services.logging.v2.model.LogMetric}
        * @return the request
        */
@@ -15066,11 +15068,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param metricName The resource name of the metric to update:
+         * @param metricName Required. The resource name of the metric to update:
       "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
-      The updated
-       *        metric must be provided in the request and it's name field must be the same as [METRIC_ID]
-       *        If the metric does not exist in [PROJECT_ID], then a new metric is created.
+      The
+       *        updated metric must be provided in the request and it's name field must be the same as
+       *        [METRIC_ID] If the metric does not exist in [PROJECT_ID], then a new metric is created.
          * @param content the {@link com.google.api.services.logging.v2.model.LogMetric}
          * @since 1.13
          */
@@ -15140,27 +15142,27 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * The resource name of the metric to update: "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
-         * The updated metric must be provided in the request and it's name field must be the same
-         * as [METRIC_ID] If the metric does not exist in [PROJECT_ID], then a new metric is
-         * created.
+         * Required. The resource name of the metric to update:
+         * "projects/[PROJECT_ID]/metrics/[METRIC_ID]" The updated metric must be provided in the
+         * request and it's name field must be the same as [METRIC_ID] If the metric does not exist
+         * in [PROJECT_ID], then a new metric is created.
          */
         @com.google.api.client.util.Key
         private java.lang.String metricName;
 
-        /** The resource name of the metric to update: "projects/[PROJECT_ID]/metrics/[METRIC_ID]" The updated
-       metric must be provided in the request and it's name field must be the same as [METRIC_ID] If the
-       metric does not exist in [PROJECT_ID], then a new metric is created.
+        /** Required. The resource name of the metric to update: "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
+       The updated metric must be provided in the request and it's name field must be the same as
+       [METRIC_ID] If the metric does not exist in [PROJECT_ID], then a new metric is created.
          */
         public java.lang.String getMetricName() {
           return metricName;
         }
 
         /**
-         * The resource name of the metric to update: "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
-         * The updated metric must be provided in the request and it's name field must be the same
-         * as [METRIC_ID] If the metric does not exist in [PROJECT_ID], then a new metric is
-         * created.
+         * Required. The resource name of the metric to update:
+         * "projects/[PROJECT_ID]/metrics/[METRIC_ID]" The updated metric must be provided in the
+         * request and it's name field must be the same as [METRIC_ID] If the metric does not exist
+         * in [PROJECT_ID], then a new metric is created.
          */
         public Update setMetricName(java.lang.String metricName) {
           if (!getSuppressPatternChecks()) {

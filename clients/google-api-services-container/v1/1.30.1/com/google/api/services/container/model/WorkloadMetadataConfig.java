@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.container.v1beta1.model;
+package com.google.api.services.container.model;
 
 /**
  * WorkloadMetadataConfig defines the metadata configuration to expose to workloads on the node
@@ -39,14 +39,6 @@ public final class WorkloadMetadataConfig extends com.google.api.client.json.Gen
   private java.lang.String mode;
 
   /**
-   * NodeMetadata is the configuration for how to expose metadata to the workloads running on the
-   * node.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String nodeMetadata;
-
-  /**
    * Mode is the configuration for how to expose metadata to workloads running on the node pool.
    * @return value or {@code null} for none
    */
@@ -60,25 +52,6 @@ public final class WorkloadMetadataConfig extends com.google.api.client.json.Gen
    */
   public WorkloadMetadataConfig setMode(java.lang.String mode) {
     this.mode = mode;
-    return this;
-  }
-
-  /**
-   * NodeMetadata is the configuration for how to expose metadata to the workloads running on the
-   * node.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getNodeMetadata() {
-    return nodeMetadata;
-  }
-
-  /**
-   * NodeMetadata is the configuration for how to expose metadata to the workloads running on the
-   * node.
-   * @param nodeMetadata nodeMetadata or {@code null} for none
-   */
-  public WorkloadMetadataConfig setNodeMetadata(java.lang.String nodeMetadata) {
-    this.nodeMetadata = nodeMetadata;
     return this;
   }
 

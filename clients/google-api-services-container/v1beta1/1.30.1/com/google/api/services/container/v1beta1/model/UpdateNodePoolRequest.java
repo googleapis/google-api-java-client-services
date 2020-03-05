@@ -103,7 +103,7 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   private UpgradeSettings upgradeSettings;
 
   /**
-   * The desired image type for the node pool.
+   * The desired workload metadata config for the node pool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -287,7 +287,7 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * The desired image type for the node pool.
+   * The desired workload metadata config for the node pool.
    * @return value or {@code null} for none
    */
   public WorkloadMetadataConfig getWorkloadMetadataConfig() {
@@ -295,7 +295,7 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * The desired image type for the node pool.
+   * The desired workload metadata config for the node pool.
    * @param workloadMetadataConfig workloadMetadataConfig or {@code null} for none
    */
   public UpdateNodePoolRequest setWorkloadMetadataConfig(WorkloadMetadataConfig workloadMetadataConfig) {

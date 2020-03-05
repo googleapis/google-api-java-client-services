@@ -103,6 +103,13 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   private UpgradeSettings upgradeSettings;
 
   /**
+   * The desired workload metadata config for the node pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WorkloadMetadataConfig workloadMetadataConfig;
+
+  /**
    * Required. Deprecated. The name of the Google Compute Engine
    * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
    * deprecated and replaced by the name field.
@@ -276,6 +283,23 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
    */
   public UpdateNodePoolRequest setUpgradeSettings(UpgradeSettings upgradeSettings) {
     this.upgradeSettings = upgradeSettings;
+    return this;
+  }
+
+  /**
+   * The desired workload metadata config for the node pool.
+   * @return value or {@code null} for none
+   */
+  public WorkloadMetadataConfig getWorkloadMetadataConfig() {
+    return workloadMetadataConfig;
+  }
+
+  /**
+   * The desired workload metadata config for the node pool.
+   * @param workloadMetadataConfig workloadMetadataConfig or {@code null} for none
+   */
+  public UpdateNodePoolRequest setWorkloadMetadataConfig(WorkloadMetadataConfig workloadMetadataConfig) {
+    this.workloadMetadataConfig = workloadMetadataConfig;
     return this;
   }
 

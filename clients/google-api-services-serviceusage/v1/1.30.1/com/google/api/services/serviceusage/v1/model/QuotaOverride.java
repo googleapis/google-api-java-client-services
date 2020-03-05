@@ -37,14 +37,16 @@ public final class QuotaOverride extends com.google.api.client.json.GenericJson 
    * with the key "region" and the value "us-east-1"; the override is only applied to quota consumed
    * in that region.
    *
-   * This map has the following restrictions: - Keys that are not defined in the limit's unit are
-   * not valid keys.   Any string appearing in {brackets} in the unit (besides {project} or
-   * {user}) is a defined key. - "project" is not a valid key; the project is already specified in
-   * the parent resource name. - "user" is not a valid key; the API does not support quota overrides
-   * that apply only to a specific user. - If "region" appears as a key, its value must be a valid
-   * Cloud region. - If "zone" appears as a key, its value must be a valid Cloud zone. - If any
-   * valid key other than "region" or "zone" appears in the map, then   all valid keys other than
-   * "region" or "zone" must also appear in the map.
+   * This map has the following restrictions:
+   *
+   * *   Keys that are not defined in the limit's unit are not valid keys.     Any string appearing
+   * in {brackets} in the unit (besides {project} or     {user}) is a defined key. *   "project" is
+   * not a valid key; the project is already specified in     the parent resource name. *   "user"
+   * is not a valid key; the API does not support quota overrides     that apply only to a specific
+   * user. *   If "region" appears as a key, its value must be a valid Cloud region. *   If "zone"
+   * appears as a key, its value must be a valid Cloud zone. *   If any valid key other than
+   * "region" or "zone" appears in the map, then     all valid keys other than "region" or "zone"
+   * must also appear in the     map.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,14 +83,16 @@ public final class QuotaOverride extends com.google.api.client.json.GenericJson 
    * with the key "region" and the value "us-east-1"; the override is only applied to quota consumed
    * in that region.
    *
-   * This map has the following restrictions: - Keys that are not defined in the limit's unit are
-   * not valid keys.   Any string appearing in {brackets} in the unit (besides {project} or
-   * {user}) is a defined key. - "project" is not a valid key; the project is already specified in
-   * the parent resource name. - "user" is not a valid key; the API does not support quota overrides
-   * that apply only to a specific user. - If "region" appears as a key, its value must be a valid
-   * Cloud region. - If "zone" appears as a key, its value must be a valid Cloud zone. - If any
-   * valid key other than "region" or "zone" appears in the map, then   all valid keys other than
-   * "region" or "zone" must also appear in the map.
+   * This map has the following restrictions:
+   *
+   * *   Keys that are not defined in the limit's unit are not valid keys.     Any string appearing
+   * in {brackets} in the unit (besides {project} or     {user}) is a defined key. *   "project" is
+   * not a valid key; the project is already specified in     the parent resource name. *   "user"
+   * is not a valid key; the API does not support quota overrides     that apply only to a specific
+   * user. *   If "region" appears as a key, its value must be a valid Cloud region. *   If "zone"
+   * appears as a key, its value must be a valid Cloud zone. *   If any valid key other than
+   * "region" or "zone" appears in the map, then     all valid keys other than "region" or "zone"
+   * must also appear in the     map.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getDimensions() {
@@ -103,14 +107,16 @@ public final class QuotaOverride extends com.google.api.client.json.GenericJson 
    * with the key "region" and the value "us-east-1"; the override is only applied to quota consumed
    * in that region.
    *
-   * This map has the following restrictions: - Keys that are not defined in the limit's unit are
-   * not valid keys.   Any string appearing in {brackets} in the unit (besides {project} or
-   * {user}) is a defined key. - "project" is not a valid key; the project is already specified in
-   * the parent resource name. - "user" is not a valid key; the API does not support quota overrides
-   * that apply only to a specific user. - If "region" appears as a key, its value must be a valid
-   * Cloud region. - If "zone" appears as a key, its value must be a valid Cloud zone. - If any
-   * valid key other than "region" or "zone" appears in the map, then   all valid keys other than
-   * "region" or "zone" must also appear in the map.
+   * This map has the following restrictions:
+   *
+   * *   Keys that are not defined in the limit's unit are not valid keys.     Any string appearing
+   * in {brackets} in the unit (besides {project} or     {user}) is a defined key. *   "project" is
+   * not a valid key; the project is already specified in     the parent resource name. *   "user"
+   * is not a valid key; the API does not support quota overrides     that apply only to a specific
+   * user. *   If "region" appears as a key, its value must be a valid Cloud region. *   If "zone"
+   * appears as a key, its value must be a valid Cloud zone. *   If any valid key other than
+   * "region" or "zone" appears in the map, then     all valid keys other than "region" or "zone"
+   * must also appear in the     map.
    * @param dimensions dimensions or {@code null} for none
    */
   public QuotaOverride setDimensions(java.util.Map<String, java.lang.String> dimensions) {

@@ -18,10 +18,9 @@ package com.google.api.services.bigqueryreservation.v1beta1.model;
 
 /**
  * Capacity commitment is a way to purchase compute capacity for BigQuery jobs (in the form of
- * slots) with some minimum committed period of usage. Capacity commitment is immutable and cannot
- * be deleted until the end of the commitment period. After the end of the commitment period, slots
- * are still available but can be freely removed any time. Annual commitments will automatically be
- * downgraded to monthly after the commitment ends.
+ * slots) with some committed period of usage. Monthly and annual commitments renew by default. Only
+ * flex commitments can be removed. In order to remove monthly or annual commitments, their plan
+ * needs to be changed to flex first.
  *
  * A capacity commitment resource exists as a child resource of the admin project.
  *
@@ -37,9 +36,8 @@ package com.google.api.services.bigqueryreservation.v1beta1.model;
 public final class CapacityCommitment extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The end of the commitment period. Capacity commitment cannot be removed before
-   * commitment_end_time. It is applicable only for ACTIVE capacity commitments and is computed as a
-   * combination of the plan and the time when the capacity commitment became ACTIVE.
+   * Output only. The end of the current commitment period. It is applicable only for ACTIVE
+   * capacity commitments.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,6 +66,15 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
   private java.lang.String plan;
 
   /**
+   * The plan this capacity commitment is converted to after commitment_end_time passes. Once the
+   * plan is changed, committed period is extended according to commitment plan. Only applicable for
+   * MONTHLY and ANNUAL commitments.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String renewalPlan;
+
+  /**
    * Number of slots in this commitment.
    * The value may be {@code null}.
    */
@@ -82,9 +89,8 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
   private java.lang.String state;
 
   /**
-   * Output only. The end of the commitment period. Capacity commitment cannot be removed before
-   * commitment_end_time. It is applicable only for ACTIVE capacity commitments and is computed as a
-   * combination of the plan and the time when the capacity commitment became ACTIVE.
+   * Output only. The end of the current commitment period. It is applicable only for ACTIVE
+   * capacity commitments.
    * @return value or {@code null} for none
    */
   public String getCommitmentEndTime() {
@@ -92,9 +98,8 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. The end of the commitment period. Capacity commitment cannot be removed before
-   * commitment_end_time. It is applicable only for ACTIVE capacity commitments and is computed as a
-   * combination of the plan and the time when the capacity commitment became ACTIVE.
+   * Output only. The end of the current commitment period. It is applicable only for ACTIVE
+   * capacity commitments.
    * @param commitmentEndTime commitmentEndTime or {@code null} for none
    */
   public CapacityCommitment setCommitmentEndTime(String commitmentEndTime) {
@@ -152,6 +157,27 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
    */
   public CapacityCommitment setPlan(java.lang.String plan) {
     this.plan = plan;
+    return this;
+  }
+
+  /**
+   * The plan this capacity commitment is converted to after commitment_end_time passes. Once the
+   * plan is changed, committed period is extended according to commitment plan. Only applicable for
+   * MONTHLY and ANNUAL commitments.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRenewalPlan() {
+    return renewalPlan;
+  }
+
+  /**
+   * The plan this capacity commitment is converted to after commitment_end_time passes. Once the
+   * plan is changed, committed period is extended according to commitment plan. Only applicable for
+   * MONTHLY and ANNUAL commitments.
+   * @param renewalPlan renewalPlan or {@code null} for none
+   */
+  public CapacityCommitment setRenewalPlan(java.lang.String renewalPlan) {
+    this.renewalPlan = renewalPlan;
     return this;
   }
 

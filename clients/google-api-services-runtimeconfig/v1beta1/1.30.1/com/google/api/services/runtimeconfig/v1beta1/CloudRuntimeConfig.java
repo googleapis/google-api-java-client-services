@@ -1504,7 +1504,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
           private static final String REST_PATH = "v1beta1/{+name}";
 
           private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/configs/[^/]+/operations/.+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/configs/[^/]+/operations/.*$");
 
           /**
            * Gets the latest state of a long-running operation.  Clients can use this method to poll the
@@ -1526,7 +1526,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                   "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/configs/[^/]+/operations/.+$");
+                  "^projects/[^/]+/configs/[^/]+/operations/.*$");
             }
           }
 
@@ -1610,7 +1610,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                   "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/configs/[^/]+/operations/.+$");
+                  "^projects/[^/]+/configs/[^/]+/operations/.*$");
             }
             this.name = name;
             return this;
@@ -1650,7 +1650,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
           private static final String REST_PATH = "v1beta1/{+resource}:testIamPermissions";
 
           private final java.util.regex.Pattern RESOURCE_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/configs/[^/]+/operations/.+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/configs/[^/]+/operations/.*$");
 
           /**
            * Returns permissions that a caller has on the specified resource. If the resource does not
@@ -1679,7 +1679,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
                   "Parameter resource must conform to the pattern " +
-                  "^projects/[^/]+/configs/[^/]+/operations/.+$");
+                  "^projects/[^/]+/configs/[^/]+/operations/.*$");
             }
           }
 
@@ -1760,7 +1760,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
                   "Parameter resource must conform to the pattern " +
-                  "^projects/[^/]+/configs/[^/]+/operations/.+$");
+                  "^projects/[^/]+/configs/[^/]+/operations/.*$");
             }
             this.resource = resource;
             return this;
@@ -2020,7 +2020,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
           private static final String REST_PATH = "v1beta1/{+name}";
 
           private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/configs/[^/]+/variables/.+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/configs/[^/]+/variables/.*$");
 
           /**
            * Deletes a variable or multiple variables.
@@ -2047,7 +2047,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                   "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/configs/[^/]+/variables/.+$");
+                  "^projects/[^/]+/configs/[^/]+/variables/.*$");
             }
           }
 
@@ -2131,7 +2131,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                   "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/configs/[^/]+/variables/.+$");
+                  "^projects/[^/]+/configs/[^/]+/variables/.*$");
             }
             this.name = name;
             return this;
@@ -2185,7 +2185,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
           private static final String REST_PATH = "v1beta1/{+name}";
 
           private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/configs/[^/]+/variables/.+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/configs/[^/]+/variables/.*$");
 
           /**
            * Gets information about a single variable.
@@ -2207,7 +2207,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                   "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/configs/[^/]+/variables/.+$");
+                  "^projects/[^/]+/configs/[^/]+/variables/.*$");
             }
           }
 
@@ -2301,7 +2301,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                   "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/configs/[^/]+/variables/.+$");
+                  "^projects/[^/]+/configs/[^/]+/variables/.*$");
             }
             this.name = name;
             return this;
@@ -2601,7 +2601,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
           private static final String REST_PATH = "v1beta1/{+resource}:testIamPermissions";
 
           private final java.util.regex.Pattern RESOURCE_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/configs/[^/]+/variables/.+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/configs/[^/]+/variables/.*$");
 
           /**
            * Returns permissions that a caller has on the specified resource. If the resource does not
@@ -2630,7 +2630,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
                   "Parameter resource must conform to the pattern " +
-                  "^projects/[^/]+/configs/[^/]+/variables/.+$");
+                  "^projects/[^/]+/configs/[^/]+/variables/.*$");
             }
           }
 
@@ -2711,7 +2711,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
                   "Parameter resource must conform to the pattern " +
-                  "^projects/[^/]+/configs/[^/]+/variables/.+$");
+                  "^projects/[^/]+/configs/[^/]+/variables/.*$");
             }
             this.resource = resource;
             return this;
@@ -2746,7 +2746,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
           private static final String REST_PATH = "v1beta1/{+name}";
 
           private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/configs/[^/]+/variables/.+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/configs/[^/]+/variables/.*$");
 
           /**
            * Updates an existing variable with a new value.
@@ -2770,7 +2770,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                   "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/configs/[^/]+/variables/.+$");
+                  "^projects/[^/]+/configs/[^/]+/variables/.*$");
             }
           }
 
@@ -2854,7 +2854,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                   "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/configs/[^/]+/variables/.+$");
+                  "^projects/[^/]+/configs/[^/]+/variables/.*$");
             }
             this.name = name;
             return this;
@@ -2899,7 +2899,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
           private static final String REST_PATH = "v1beta1/{+name}:watch";
 
           private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/configs/[^/]+/variables/.+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/configs/[^/]+/variables/.*$");
 
           /**
            * Watches a specific variable and waits for a change in the variable's value. When there is a
@@ -2934,7 +2934,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                   "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/configs/[^/]+/variables/.+$");
+                  "^projects/[^/]+/configs/[^/]+/variables/.*$");
             }
           }
 
@@ -3018,7 +3018,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                   "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/configs/[^/]+/variables/.+$");
+                  "^projects/[^/]+/configs/[^/]+/variables/.*$");
             }
             this.name = name;
             return this;

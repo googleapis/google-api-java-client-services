@@ -48,11 +48,34 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   private java.lang.String configCompleteRedirectUrl;
 
   /**
+   * The type of dialog event we have received.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dialogEventType;
+
+  /**
    * The timestamp indicating when the event was dispatched.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String eventTime;
+
+  /**
+   * The list of form inputs we will supply to the bot. These are just the inputs from the dialog
+   * that are populated by the user. This will only be populated for CARD_CLICKED events.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<FormInput> formInputs;
+
+  /**
+   * Whether or not this event is related to dialogs request, submit or cancel. This will be set to
+   * true when we want a request/submit/cancel event.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isDialogEvent;
 
   /**
    * The message that triggered the event, if applicable.
@@ -143,6 +166,23 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * The type of dialog event we have received.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDialogEventType() {
+    return dialogEventType;
+  }
+
+  /**
+   * The type of dialog event we have received.
+   * @param dialogEventType dialogEventType or {@code null} for none
+   */
+  public DeprecatedEvent setDialogEventType(java.lang.String dialogEventType) {
+    this.dialogEventType = dialogEventType;
+    return this;
+  }
+
+  /**
    * The timestamp indicating when the event was dispatched.
    * @return value or {@code null} for none
    */
@@ -156,6 +196,44 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
    */
   public DeprecatedEvent setEventTime(String eventTime) {
     this.eventTime = eventTime;
+    return this;
+  }
+
+  /**
+   * The list of form inputs we will supply to the bot. These are just the inputs from the dialog
+   * that are populated by the user. This will only be populated for CARD_CLICKED events.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<FormInput> getFormInputs() {
+    return formInputs;
+  }
+
+  /**
+   * The list of form inputs we will supply to the bot. These are just the inputs from the dialog
+   * that are populated by the user. This will only be populated for CARD_CLICKED events.
+   * @param formInputs formInputs or {@code null} for none
+   */
+  public DeprecatedEvent setFormInputs(java.util.List<FormInput> formInputs) {
+    this.formInputs = formInputs;
+    return this;
+  }
+
+  /**
+   * Whether or not this event is related to dialogs request, submit or cancel. This will be set to
+   * true when we want a request/submit/cancel event.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsDialogEvent() {
+    return isDialogEvent;
+  }
+
+  /**
+   * Whether or not this event is related to dialogs request, submit or cancel. This will be set to
+   * true when we want a request/submit/cancel event.
+   * @param isDialogEvent isDialogEvent or {@code null} for none
+   */
+  public DeprecatedEvent setIsDialogEvent(java.lang.Boolean isDialogEvent) {
+    this.isDialogEvent = isDialogEvent;
     return this;
   }
 

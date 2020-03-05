@@ -39,8 +39,8 @@ public final class GooglePrivacyDlpV2FindingLimits extends com.google.api.client
 
   /**
    * Max number of findings that will be returned for each item scanned. When set within
-   * `InspectDataSourceRequest`, the maximum returned is 2000 regardless if this is set higher. When
-   * set within `InspectContentRequest`, this field is ignored.
+   * `InspectJobConfig`, the maximum returned is 2000 regardless if this is set higher. When set
+   * within `InspectContentRequest`, this field is ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,8 +73,8 @@ public final class GooglePrivacyDlpV2FindingLimits extends com.google.api.client
 
   /**
    * Max number of findings that will be returned for each item scanned. When set within
-   * `InspectDataSourceRequest`, the maximum returned is 2000 regardless if this is set higher. When
-   * set within `InspectContentRequest`, this field is ignored.
+   * `InspectJobConfig`, the maximum returned is 2000 regardless if this is set higher. When set
+   * within `InspectContentRequest`, this field is ignored.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxFindingsPerItem() {
@@ -83,8 +83,8 @@ public final class GooglePrivacyDlpV2FindingLimits extends com.google.api.client
 
   /**
    * Max number of findings that will be returned for each item scanned. When set within
-   * `InspectDataSourceRequest`, the maximum returned is 2000 regardless if this is set higher. When
-   * set within `InspectContentRequest`, this field is ignored.
+   * `InspectJobConfig`, the maximum returned is 2000 regardless if this is set higher. When set
+   * within `InspectContentRequest`, this field is ignored.
    * @param maxFindingsPerItem maxFindingsPerItem or {@code null} for none
    */
   public GooglePrivacyDlpV2FindingLimits setMaxFindingsPerItem(java.lang.Integer maxFindingsPerItem) {

@@ -52,6 +52,15 @@ public final class GooglePrivacyDlpV2StorageConfig extends com.google.api.client
   private GooglePrivacyDlpV2DatastoreOptions datastoreOptions;
 
   /**
+   * Hybrid inspection options. Early access feature is in a pre-release state and might change or
+   * have limited support. For more information, see https://cloud.google.com/products#product-
+   * launch-stages.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2HybridOptions hybridOptions;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,6 +114,27 @@ public final class GooglePrivacyDlpV2StorageConfig extends com.google.api.client
    */
   public GooglePrivacyDlpV2StorageConfig setDatastoreOptions(GooglePrivacyDlpV2DatastoreOptions datastoreOptions) {
     this.datastoreOptions = datastoreOptions;
+    return this;
+  }
+
+  /**
+   * Hybrid inspection options. Early access feature is in a pre-release state and might change or
+   * have limited support. For more information, see https://cloud.google.com/products#product-
+   * launch-stages.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2HybridOptions getHybridOptions() {
+    return hybridOptions;
+  }
+
+  /**
+   * Hybrid inspection options. Early access feature is in a pre-release state and might change or
+   * have limited support. For more information, see https://cloud.google.com/products#product-
+   * launch-stages.
+   * @param hybridOptions hybridOptions or {@code null} for none
+   */
+  public GooglePrivacyDlpV2StorageConfig setHybridOptions(GooglePrivacyDlpV2HybridOptions hybridOptions) {
+    this.hybridOptions = hybridOptions;
     return this;
   }
 

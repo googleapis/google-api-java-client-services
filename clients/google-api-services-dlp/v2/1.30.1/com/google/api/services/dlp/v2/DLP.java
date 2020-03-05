@@ -46,7 +46,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.8 of the Cloud Data Loss Prevention (DLP) API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.9 of the Cloud Data Loss Prevention (DLP) API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -12246,6 +12246,142 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
+         * Finish a running hybrid DlpJob. Triggers the finalization steps and running of any enabled
+         * actions that have not yet run. Early access feature is in a pre-release state and might change or
+         * have limited support. For more information, see https://cloud.google.com/products#product-launch-
+         * stages.
+         *
+         * Create a request for the method "dlpJobs.finish".
+         *
+         * This request holds the parameters needed by the dlp server.  After setting any optional
+         * parameters, call the {@link Finish#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the DlpJob resource to be cancelled.
+         * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2FinishDlpJobRequest}
+         * @return the request
+         */
+        public Finish finish(java.lang.String name, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2FinishDlpJobRequest content) throws java.io.IOException {
+          Finish result = new Finish(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Finish extends DLPRequest<com.google.api.services.dlp.v2.model.GoogleProtobufEmpty> {
+
+          private static final String REST_PATH = "v2/{+name}:finish";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dlpJobs/[^/]+$");
+
+          /**
+           * Finish a running hybrid DlpJob. Triggers the finalization steps and running of any enabled
+           * actions that have not yet run. Early access feature is in a pre-release state and might change
+           * or have limited support. For more information, see https://cloud.google.com/products#product-
+           * launch-stages.
+           *
+           * Create a request for the method "dlpJobs.finish".
+           *
+           * This request holds the parameters needed by the the dlp server.  After setting any optional
+           * parameters, call the {@link Finish#execute()} method to invoke the remote operation. <p> {@link
+           * Finish#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the DlpJob resource to be cancelled.
+           * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2FinishDlpJobRequest}
+           * @since 1.13
+           */
+          protected Finish(java.lang.String name, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2FinishDlpJobRequest content) {
+            super(DLP.this, "POST", REST_PATH, content, com.google.api.services.dlp.v2.model.GoogleProtobufEmpty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dlpJobs/[^/]+$");
+            }
+          }
+
+          @Override
+          public Finish set$Xgafv(java.lang.String $Xgafv) {
+            return (Finish) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Finish setAccessToken(java.lang.String accessToken) {
+            return (Finish) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Finish setAlt(java.lang.String alt) {
+            return (Finish) super.setAlt(alt);
+          }
+
+          @Override
+          public Finish setCallback(java.lang.String callback) {
+            return (Finish) super.setCallback(callback);
+          }
+
+          @Override
+          public Finish setFields(java.lang.String fields) {
+            return (Finish) super.setFields(fields);
+          }
+
+          @Override
+          public Finish setKey(java.lang.String key) {
+            return (Finish) super.setKey(key);
+          }
+
+          @Override
+          public Finish setOauthToken(java.lang.String oauthToken) {
+            return (Finish) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Finish setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Finish) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Finish setQuotaUser(java.lang.String quotaUser) {
+            return (Finish) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Finish setUploadType(java.lang.String uploadType) {
+            return (Finish) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Finish setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Finish) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the DlpJob resource to be cancelled. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the DlpJob resource to be cancelled.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the DlpJob resource to be cancelled. */
+          public Finish setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dlpJobs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Finish set(String parameterName, Object value) {
+            return (Finish) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets the latest state of a long-running DlpJob. See https://cloud.google.com/dlp/docs/inspecting-
          * storage and https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
          *
@@ -12383,6 +12519,154 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           @Override
           public Get set(String parameterName, Object value) {
             return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Inspect hybrid content and store findings to a job. To review the findings inspect the job.
+         * Inspection will occur asynchronously. Early access feature is in a pre-release state and might
+         * change or have limited support. For more information, see https://cloud.google.com/products
+         * #product-launch-stages.
+         *
+         * Create a request for the method "dlpJobs.hybridInspect".
+         *
+         * This request holds the parameters needed by the dlp server.  After setting any optional
+         * parameters, call the {@link HybridInspect#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Resource name of the job to execute a hybrid inspect on, for example
+        `projects/dlp-test-
+         *        project/dlpJob/53234423`.
+         * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2HybridInspectDlpJobRequest}
+         * @return the request
+         */
+        public HybridInspect hybridInspect(java.lang.String name, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2HybridInspectDlpJobRequest content) throws java.io.IOException {
+          HybridInspect result = new HybridInspect(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class HybridInspect extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2HybridInspectResponse> {
+
+          private static final String REST_PATH = "v2/{+name}:hybridInspect";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dlpJobs/[^/]+$");
+
+          /**
+           * Inspect hybrid content and store findings to a job. To review the findings inspect the job.
+           * Inspection will occur asynchronously. Early access feature is in a pre-release state and might
+           * change or have limited support. For more information, see https://cloud.google.com/products
+           * #product-launch-stages.
+           *
+           * Create a request for the method "dlpJobs.hybridInspect".
+           *
+           * This request holds the parameters needed by the the dlp server.  After setting any optional
+           * parameters, call the {@link HybridInspect#execute()} method to invoke the remote operation. <p>
+           * {@link HybridInspect#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientR
+           * equest)} must be called to initialize this instance immediately after invoking the constructor.
+           * </p>
+           *
+           * @param name Required. Resource name of the job to execute a hybrid inspect on, for example
+        `projects/dlp-test-
+         *        project/dlpJob/53234423`.
+           * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2HybridInspectDlpJobRequest}
+           * @since 1.13
+           */
+          protected HybridInspect(java.lang.String name, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2HybridInspectDlpJobRequest content) {
+            super(DLP.this, "POST", REST_PATH, content, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2HybridInspectResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dlpJobs/[^/]+$");
+            }
+          }
+
+          @Override
+          public HybridInspect set$Xgafv(java.lang.String $Xgafv) {
+            return (HybridInspect) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public HybridInspect setAccessToken(java.lang.String accessToken) {
+            return (HybridInspect) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public HybridInspect setAlt(java.lang.String alt) {
+            return (HybridInspect) super.setAlt(alt);
+          }
+
+          @Override
+          public HybridInspect setCallback(java.lang.String callback) {
+            return (HybridInspect) super.setCallback(callback);
+          }
+
+          @Override
+          public HybridInspect setFields(java.lang.String fields) {
+            return (HybridInspect) super.setFields(fields);
+          }
+
+          @Override
+          public HybridInspect setKey(java.lang.String key) {
+            return (HybridInspect) super.setKey(key);
+          }
+
+          @Override
+          public HybridInspect setOauthToken(java.lang.String oauthToken) {
+            return (HybridInspect) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public HybridInspect setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (HybridInspect) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public HybridInspect setQuotaUser(java.lang.String quotaUser) {
+            return (HybridInspect) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public HybridInspect setUploadType(java.lang.String uploadType) {
+            return (HybridInspect) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public HybridInspect setUploadProtocol(java.lang.String uploadProtocol) {
+            return (HybridInspect) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the job to execute a hybrid inspect on, for example
+           * `projects/dlp-test-project/dlpJob/53234423`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Resource name of the job to execute a hybrid inspect on, for example `projects/dlp-test-
+         project/dlpJob/53234423`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Resource name of the job to execute a hybrid inspect on, for example
+           * `projects/dlp-test-project/dlpJob/53234423`.
+           */
+          public HybridInspect setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dlpJobs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public HybridInspect set(String parameterName, Object value) {
+            return (HybridInspect) super.set(parameterName, value);
           }
         }
         /**
@@ -14445,6 +14729,154 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           @Override
           public Get set(String parameterName, Object value) {
             return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Inspect hybrid content and store findings to a trigger. The inspection will be processed
+         * asynchronously. To review the findings monitor the jobs within the trigger. Early access feature
+         * is in a pre-release state and might change or have limited support. For more information, see
+         * https://cloud.google.com/products#product-launch-stages.
+         *
+         * Create a request for the method "jobTriggers.hybridInspect".
+         *
+         * This request holds the parameters needed by the dlp server.  After setting any optional
+         * parameters, call the {@link HybridInspect#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Resource name of the trigger to execute a hybrid inspect on, for example
+        `projects/dlp-
+         *        test-project/jobTriggers/53234423`.
+         * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2HybridInspectJobTriggerRequest}
+         * @return the request
+         */
+        public HybridInspect hybridInspect(java.lang.String name, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2HybridInspectJobTriggerRequest content) throws java.io.IOException {
+          HybridInspect result = new HybridInspect(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class HybridInspect extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2HybridInspectResponse> {
+
+          private static final String REST_PATH = "v2/{+name}:hybridInspect";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/jobTriggers/[^/]+$");
+
+          /**
+           * Inspect hybrid content and store findings to a trigger. The inspection will be processed
+           * asynchronously. To review the findings monitor the jobs within the trigger. Early access
+           * feature is in a pre-release state and might change or have limited support. For more
+           * information, see https://cloud.google.com/products#product-launch-stages.
+           *
+           * Create a request for the method "jobTriggers.hybridInspect".
+           *
+           * This request holds the parameters needed by the the dlp server.  After setting any optional
+           * parameters, call the {@link HybridInspect#execute()} method to invoke the remote operation. <p>
+           * {@link HybridInspect#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientR
+           * equest)} must be called to initialize this instance immediately after invoking the constructor.
+           * </p>
+           *
+           * @param name Required. Resource name of the trigger to execute a hybrid inspect on, for example
+        `projects/dlp-
+         *        test-project/jobTriggers/53234423`.
+           * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2HybridInspectJobTriggerRequest}
+           * @since 1.13
+           */
+          protected HybridInspect(java.lang.String name, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2HybridInspectJobTriggerRequest content) {
+            super(DLP.this, "POST", REST_PATH, content, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2HybridInspectResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/jobTriggers/[^/]+$");
+            }
+          }
+
+          @Override
+          public HybridInspect set$Xgafv(java.lang.String $Xgafv) {
+            return (HybridInspect) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public HybridInspect setAccessToken(java.lang.String accessToken) {
+            return (HybridInspect) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public HybridInspect setAlt(java.lang.String alt) {
+            return (HybridInspect) super.setAlt(alt);
+          }
+
+          @Override
+          public HybridInspect setCallback(java.lang.String callback) {
+            return (HybridInspect) super.setCallback(callback);
+          }
+
+          @Override
+          public HybridInspect setFields(java.lang.String fields) {
+            return (HybridInspect) super.setFields(fields);
+          }
+
+          @Override
+          public HybridInspect setKey(java.lang.String key) {
+            return (HybridInspect) super.setKey(key);
+          }
+
+          @Override
+          public HybridInspect setOauthToken(java.lang.String oauthToken) {
+            return (HybridInspect) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public HybridInspect setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (HybridInspect) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public HybridInspect setQuotaUser(java.lang.String quotaUser) {
+            return (HybridInspect) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public HybridInspect setUploadType(java.lang.String uploadType) {
+            return (HybridInspect) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public HybridInspect setUploadProtocol(java.lang.String uploadProtocol) {
+            return (HybridInspect) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the trigger to execute a hybrid inspect on, for example
+           * `projects/dlp-test-project/jobTriggers/53234423`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Resource name of the trigger to execute a hybrid inspect on, for example `projects/dlp-
+         test-project/jobTriggers/53234423`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Resource name of the trigger to execute a hybrid inspect on, for example
+           * `projects/dlp-test-project/jobTriggers/53234423`.
+           */
+          public HybridInspect setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/jobTriggers/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public HybridInspect set(String parameterName, Object value) {
+            return (HybridInspect) super.set(parameterName, value);
           }
         }
         /**

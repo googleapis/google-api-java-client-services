@@ -59,6 +59,23 @@ public final class GooglePrivacyDlpV2Finding extends com.google.api.client.json.
   private java.lang.String jobName;
 
   /**
+   * The labels associated with this `InspectFinding`.
+   *
+   * Label keys must be between 1 and 63 characters long and must conform to the following regular
+   * expression: \[a-z\](\[-a-z0-9\]*\[a-z0-9\])?.
+   *
+   * Label values must be between 0 and 63 characters long and must conform to the regular
+   * expression (\[a-z\](\[-a-z0-9\]*\[a-z0-9\])?)?.
+   *
+   * No more than 10 labels can be associated with a given finding.
+   *
+   * Example: "environment" : "production" Example: "pipeline" : "etl"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
    * Confidence of how likely it is that the `info_type` is correct.
    * The value may be {@code null}.
    */
@@ -177,6 +194,43 @@ public final class GooglePrivacyDlpV2Finding extends com.google.api.client.json.
    */
   public GooglePrivacyDlpV2Finding setJobName(java.lang.String jobName) {
     this.jobName = jobName;
+    return this;
+  }
+
+  /**
+   * The labels associated with this `InspectFinding`.
+   *
+   * Label keys must be between 1 and 63 characters long and must conform to the following regular
+   * expression: \[a-z\](\[-a-z0-9\]*\[a-z0-9\])?.
+   *
+   * Label values must be between 0 and 63 characters long and must conform to the regular
+   * expression (\[a-z\](\[-a-z0-9\]*\[a-z0-9\])?)?.
+   *
+   * No more than 10 labels can be associated with a given finding.
+   *
+   * Example: "environment" : "production" Example: "pipeline" : "etl"
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * The labels associated with this `InspectFinding`.
+   *
+   * Label keys must be between 1 and 63 characters long and must conform to the following regular
+   * expression: \[a-z\](\[-a-z0-9\]*\[a-z0-9\])?.
+   *
+   * Label values must be between 0 and 63 characters long and must conform to the regular
+   * expression (\[a-z\](\[-a-z0-9\]*\[a-z0-9\])?)?.
+   *
+   * No more than 10 labels can be associated with a given finding.
+   *
+   * Example: "environment" : "production" Example: "pipeline" : "etl"
+   * @param labels labels or {@code null} for none
+   */
+  public GooglePrivacyDlpV2Finding setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 

@@ -39,6 +39,13 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfig extends com.google.api
   private java.lang.String description;
 
   /**
+   * Store dictionary-based CustomInfoType.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2Dictionary dictionary;
+
+  /**
    * Display name of the StoredInfoType (max 256 characters).
    * The value may be {@code null}.
    */
@@ -51,6 +58,13 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfig extends com.google.api
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2LargeCustomDictionaryConfig largeCustomDictionary;
+
+  /**
+   * Store regular expression-based StoredInfoType.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2Regex regex;
 
   /**
    * Description of the StoredInfoType (max 256 characters).
@@ -66,6 +80,23 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfig extends com.google.api
    */
   public GooglePrivacyDlpV2StoredInfoTypeConfig setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Store dictionary-based CustomInfoType.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2Dictionary getDictionary() {
+    return dictionary;
+  }
+
+  /**
+   * Store dictionary-based CustomInfoType.
+   * @param dictionary dictionary or {@code null} for none
+   */
+  public GooglePrivacyDlpV2StoredInfoTypeConfig setDictionary(GooglePrivacyDlpV2Dictionary dictionary) {
+    this.dictionary = dictionary;
     return this;
   }
 
@@ -100,6 +131,23 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfig extends com.google.api
    */
   public GooglePrivacyDlpV2StoredInfoTypeConfig setLargeCustomDictionary(GooglePrivacyDlpV2LargeCustomDictionaryConfig largeCustomDictionary) {
     this.largeCustomDictionary = largeCustomDictionary;
+    return this;
+  }
+
+  /**
+   * Store regular expression-based StoredInfoType.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2Regex getRegex() {
+    return regex;
+  }
+
+  /**
+   * Store regular expression-based StoredInfoType.
+   * @param regex regex or {@code null} for none
+   */
+  public GooglePrivacyDlpV2StoredInfoTypeConfig setRegex(GooglePrivacyDlpV2Regex regex) {
+    this.regex = regex;
     return this;
   }
 

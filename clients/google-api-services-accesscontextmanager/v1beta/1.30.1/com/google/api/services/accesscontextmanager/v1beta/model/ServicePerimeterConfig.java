@@ -17,7 +17,7 @@
 package com.google.api.services.accesscontextmanager.v1beta.model;
 
 /**
- * `ServicePerimeterConfig` specifies a set of GCP resources that describe specific Service
+ * `ServicePerimeterConfig` specifies a set of Google Cloud resources that describe specific Service
  * Perimeter configuration.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -35,8 +35,8 @@ public final class ServicePerimeterConfig extends com.google.api.client.json.Gen
    * A list of `AccessLevel` resource names that allow resources within the `ServicePerimeter` to be
    * accessed from the internet. `AccessLevels` listed must be in the same policy as this
    * `ServicePerimeter`. Referencing a nonexistent `AccessLevel` is a syntax error. If no
-   * `AccessLevel` names are listed, resources within the perimeter can only be accessed via GCP
-   * calls with request origins within the perimeter. Example:
+   * `AccessLevel` names are listed, resources within the perimeter can only be accessed via Google
+   * Cloud calls with request origins within the perimeter. Example:
    * `"accessPolicies/MY_POLICY/accessLevels/MY_LEVEL"`. For Service Perimeter Bridge, must be
    * empty.
    * The value may be {@code null}.
@@ -45,25 +45,25 @@ public final class ServicePerimeterConfig extends com.google.api.client.json.Gen
   private java.util.List<java.lang.String> accessLevels;
 
   /**
-   * A list of GCP resources that are inside of the service perimeter. Currently only projects are
-   * allowed. Format: `projects/{project_number}`
+   * A list of Google Cloud resources that are inside of the service perimeter. Currently only
+   * projects are allowed. Format: `projects/{project_number}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> resources;
 
   /**
-   * GCP services that are subject to the Service Perimeter restrictions. Must contain a list of
-   * services. For example, if `storage.googleapis.com` is specified, access to the storage buckets
-   * inside the perimeter must meet the perimeter's access restrictions.
+   * Google Cloud services that are subject to the Service Perimeter restrictions. Must contain a
+   * list of services. For example, if `storage.googleapis.com` is specified, access to the storage
+   * buckets inside the perimeter must meet the perimeter's access restrictions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> restrictedServices;
 
   /**
-   * GCP services that are not subject to the Service Perimeter restrictions. Deprecated. Must be
-   * set to a single wildcard "*".
+   * Google Cloud services that are not subject to the Service Perimeter restrictions. Deprecated.
+   * Must be set to a single wildcard "*".
    *
    * The wildcard means that unless explicitly specified by "restricted_services" list, any service
    * is treated as unrestricted.
@@ -73,26 +73,18 @@ public final class ServicePerimeterConfig extends com.google.api.client.json.Gen
   private java.util.List<java.lang.String> unrestrictedServices;
 
   /**
-   * Beta. Configuration for within Perimeter allowed APIs.
+   * Beta. Configuration for APIs allowed within Perimeter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private VpcAccessibleServices vpcAccessibleServices;
 
   /**
-   * Alpha. Configuration for within Perimeter allowed APIs. Deprecated. The field had been renamed
-   * to vpc_accessible_services
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private VpcServiceRestriction vpcServiceRestriction;
-
-  /**
    * A list of `AccessLevel` resource names that allow resources within the `ServicePerimeter` to be
    * accessed from the internet. `AccessLevels` listed must be in the same policy as this
    * `ServicePerimeter`. Referencing a nonexistent `AccessLevel` is a syntax error. If no
-   * `AccessLevel` names are listed, resources within the perimeter can only be accessed via GCP
-   * calls with request origins within the perimeter. Example:
+   * `AccessLevel` names are listed, resources within the perimeter can only be accessed via Google
+   * Cloud calls with request origins within the perimeter. Example:
    * `"accessPolicies/MY_POLICY/accessLevels/MY_LEVEL"`. For Service Perimeter Bridge, must be
    * empty.
    * @return value or {@code null} for none
@@ -105,8 +97,8 @@ public final class ServicePerimeterConfig extends com.google.api.client.json.Gen
    * A list of `AccessLevel` resource names that allow resources within the `ServicePerimeter` to be
    * accessed from the internet. `AccessLevels` listed must be in the same policy as this
    * `ServicePerimeter`. Referencing a nonexistent `AccessLevel` is a syntax error. If no
-   * `AccessLevel` names are listed, resources within the perimeter can only be accessed via GCP
-   * calls with request origins within the perimeter. Example:
+   * `AccessLevel` names are listed, resources within the perimeter can only be accessed via Google
+   * Cloud calls with request origins within the perimeter. Example:
    * `"accessPolicies/MY_POLICY/accessLevels/MY_LEVEL"`. For Service Perimeter Bridge, must be
    * empty.
    * @param accessLevels accessLevels or {@code null} for none
@@ -117,8 +109,8 @@ public final class ServicePerimeterConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * A list of GCP resources that are inside of the service perimeter. Currently only projects are
-   * allowed. Format: `projects/{project_number}`
+   * A list of Google Cloud resources that are inside of the service perimeter. Currently only
+   * projects are allowed. Format: `projects/{project_number}`
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResources() {
@@ -126,8 +118,8 @@ public final class ServicePerimeterConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * A list of GCP resources that are inside of the service perimeter. Currently only projects are
-   * allowed. Format: `projects/{project_number}`
+   * A list of Google Cloud resources that are inside of the service perimeter. Currently only
+   * projects are allowed. Format: `projects/{project_number}`
    * @param resources resources or {@code null} for none
    */
   public ServicePerimeterConfig setResources(java.util.List<java.lang.String> resources) {
@@ -136,9 +128,9 @@ public final class ServicePerimeterConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * GCP services that are subject to the Service Perimeter restrictions. Must contain a list of
-   * services. For example, if `storage.googleapis.com` is specified, access to the storage buckets
-   * inside the perimeter must meet the perimeter's access restrictions.
+   * Google Cloud services that are subject to the Service Perimeter restrictions. Must contain a
+   * list of services. For example, if `storage.googleapis.com` is specified, access to the storage
+   * buckets inside the perimeter must meet the perimeter's access restrictions.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRestrictedServices() {
@@ -146,9 +138,9 @@ public final class ServicePerimeterConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * GCP services that are subject to the Service Perimeter restrictions. Must contain a list of
-   * services. For example, if `storage.googleapis.com` is specified, access to the storage buckets
-   * inside the perimeter must meet the perimeter's access restrictions.
+   * Google Cloud services that are subject to the Service Perimeter restrictions. Must contain a
+   * list of services. For example, if `storage.googleapis.com` is specified, access to the storage
+   * buckets inside the perimeter must meet the perimeter's access restrictions.
    * @param restrictedServices restrictedServices or {@code null} for none
    */
   public ServicePerimeterConfig setRestrictedServices(java.util.List<java.lang.String> restrictedServices) {
@@ -157,8 +149,8 @@ public final class ServicePerimeterConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * GCP services that are not subject to the Service Perimeter restrictions. Deprecated. Must be
-   * set to a single wildcard "*".
+   * Google Cloud services that are not subject to the Service Perimeter restrictions. Deprecated.
+   * Must be set to a single wildcard "*".
    *
    * The wildcard means that unless explicitly specified by "restricted_services" list, any service
    * is treated as unrestricted.
@@ -169,8 +161,8 @@ public final class ServicePerimeterConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * GCP services that are not subject to the Service Perimeter restrictions. Deprecated. Must be
-   * set to a single wildcard "*".
+   * Google Cloud services that are not subject to the Service Perimeter restrictions. Deprecated.
+   * Must be set to a single wildcard "*".
    *
    * The wildcard means that unless explicitly specified by "restricted_services" list, any service
    * is treated as unrestricted.
@@ -182,7 +174,7 @@ public final class ServicePerimeterConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * Beta. Configuration for within Perimeter allowed APIs.
+   * Beta. Configuration for APIs allowed within Perimeter.
    * @return value or {@code null} for none
    */
   public VpcAccessibleServices getVpcAccessibleServices() {
@@ -190,30 +182,11 @@ public final class ServicePerimeterConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * Beta. Configuration for within Perimeter allowed APIs.
+   * Beta. Configuration for APIs allowed within Perimeter.
    * @param vpcAccessibleServices vpcAccessibleServices or {@code null} for none
    */
   public ServicePerimeterConfig setVpcAccessibleServices(VpcAccessibleServices vpcAccessibleServices) {
     this.vpcAccessibleServices = vpcAccessibleServices;
-    return this;
-  }
-
-  /**
-   * Alpha. Configuration for within Perimeter allowed APIs. Deprecated. The field had been renamed
-   * to vpc_accessible_services
-   * @return value or {@code null} for none
-   */
-  public VpcServiceRestriction getVpcServiceRestriction() {
-    return vpcServiceRestriction;
-  }
-
-  /**
-   * Alpha. Configuration for within Perimeter allowed APIs. Deprecated. The field had been renamed
-   * to vpc_accessible_services
-   * @param vpcServiceRestriction vpcServiceRestriction or {@code null} for none
-   */
-  public ServicePerimeterConfig setVpcServiceRestriction(VpcServiceRestriction vpcServiceRestriction) {
-    this.vpcServiceRestriction = vpcServiceRestriction;
     return this;
   }
 

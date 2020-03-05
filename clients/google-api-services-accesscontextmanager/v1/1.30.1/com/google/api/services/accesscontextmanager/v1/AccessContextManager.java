@@ -1759,6 +1759,165 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
           return (Patch) super.set(parameterName, value);
         }
       }
+      /**
+       * Replace all existing Access Levels in an Access Policy with the Access Levels provided. This is
+       * done atomically. The longrunning operation from this RPC will have a successful status once all
+       * replacements have propagated to long-lasting storage. Replacements containing errors will result
+       * in an error response for the first error encountered.  Replacement will be cancelled on error,
+       * existing Access Levels will not be affected. Operation.response field will contain
+       * ReplaceAccessLevelsResponse. Removing Access Levels contained in existing Service Perimeters will
+       * result in error.
+       *
+       * Create a request for the method "accessLevels.replaceAll".
+       *
+       * This request holds the parameters needed by the accesscontextmanager server.  After setting any
+       * optional parameters, call the {@link ReplaceAll#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Resource name for the access policy which owns these
+      Access Levels.
+      Format:
+       *        `accessPolicies/{policy_id}`
+       * @param content the {@link com.google.api.services.accesscontextmanager.v1.model.ReplaceAccessLevelsRequest}
+       * @return the request
+       */
+      public ReplaceAll replaceAll(java.lang.String parent, com.google.api.services.accesscontextmanager.v1.model.ReplaceAccessLevelsRequest content) throws java.io.IOException {
+        ReplaceAll result = new ReplaceAll(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class ReplaceAll extends AccessContextManagerRequest<com.google.api.services.accesscontextmanager.v1.model.Operation> {
+
+        private static final String REST_PATH = "v1/{+parent}/accessLevels:replaceAll";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^accessPolicies/[^/]+$");
+
+        /**
+         * Replace all existing Access Levels in an Access Policy with the Access Levels provided. This is
+         * done atomically. The longrunning operation from this RPC will have a successful status once all
+         * replacements have propagated to long-lasting storage. Replacements containing errors will
+         * result in an error response for the first error encountered.  Replacement will be cancelled on
+         * error, existing Access Levels will not be affected. Operation.response field will contain
+         * ReplaceAccessLevelsResponse. Removing Access Levels contained in existing Service Perimeters
+         * will result in error.
+         *
+         * Create a request for the method "accessLevels.replaceAll".
+         *
+         * This request holds the parameters needed by the the accesscontextmanager server.  After setting
+         * any optional parameters, call the {@link ReplaceAll#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * ReplaceAll#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Resource name for the access policy which owns these
+      Access Levels.
+      Format:
+       *        `accessPolicies/{policy_id}`
+         * @param content the {@link com.google.api.services.accesscontextmanager.v1.model.ReplaceAccessLevelsRequest}
+         * @since 1.13
+         */
+        protected ReplaceAll(java.lang.String parent, com.google.api.services.accesscontextmanager.v1.model.ReplaceAccessLevelsRequest content) {
+          super(AccessContextManager.this, "POST", REST_PATH, content, com.google.api.services.accesscontextmanager.v1.model.Operation.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accessPolicies/[^/]+$");
+          }
+        }
+
+        @Override
+        public ReplaceAll set$Xgafv(java.lang.String $Xgafv) {
+          return (ReplaceAll) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ReplaceAll setAccessToken(java.lang.String accessToken) {
+          return (ReplaceAll) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ReplaceAll setAlt(java.lang.String alt) {
+          return (ReplaceAll) super.setAlt(alt);
+        }
+
+        @Override
+        public ReplaceAll setCallback(java.lang.String callback) {
+          return (ReplaceAll) super.setCallback(callback);
+        }
+
+        @Override
+        public ReplaceAll setFields(java.lang.String fields) {
+          return (ReplaceAll) super.setFields(fields);
+        }
+
+        @Override
+        public ReplaceAll setKey(java.lang.String key) {
+          return (ReplaceAll) super.setKey(key);
+        }
+
+        @Override
+        public ReplaceAll setOauthToken(java.lang.String oauthToken) {
+          return (ReplaceAll) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ReplaceAll setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ReplaceAll) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ReplaceAll setQuotaUser(java.lang.String quotaUser) {
+          return (ReplaceAll) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ReplaceAll setUploadType(java.lang.String uploadType) {
+          return (ReplaceAll) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ReplaceAll setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ReplaceAll) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Resource name for the access policy which owns these Access Levels.
+         *
+         * Format: `accessPolicies/{policy_id}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Resource name for the access policy which owns these Access Levels.
+
+       Format: `accessPolicies/{policy_id}`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. Resource name for the access policy which owns these Access Levels.
+         *
+         * Format: `accessPolicies/{policy_id}`
+         */
+        public ReplaceAll setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accessPolicies/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public ReplaceAll set(String parameterName, Object value) {
+          return (ReplaceAll) super.set(parameterName, value);
+        }
+      }
 
     }
     /**
@@ -1781,6 +1940,172 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
      */
     public class ServicePerimeters {
 
+      /**
+       * Commit the dry-run spec for all the Service Perimeters in an Access Policy. A commit operation on
+       * a Service Perimeter involves copying its `spec` field to that Service Perimeter's `status` field.
+       * Only Service Perimeters with `use_explicit_dry_run_spec` field set to true are affected by a
+       * commit operation. The longrunning operation from this RPC will have a successful status once the
+       * dry-run specs for all the Service Perimeters have been committed. If a commit fails, it will
+       * cause the longrunning operation to return an error response and the entire commit operation will
+       * be cancelled. When successful, Operation.response field will contain
+       * CommitServicePerimetersResponse. The `dry_run` and the `spec` fields will be cleared after a
+       * successful commit operation.
+       *
+       * Create a request for the method "servicePerimeters.commit".
+       *
+       * This request holds the parameters needed by the accesscontextmanager server.  After setting any
+       * optional parameters, call the {@link Commit#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Resource name for the parent Access Policy which owns all
+      Service Perimeters in scope for
+       *        the commit operation.
+      Format: `accessPolicies/{policy_id}`
+       * @param content the {@link com.google.api.services.accesscontextmanager.v1.model.CommitServicePerimetersRequest}
+       * @return the request
+       */
+      public Commit commit(java.lang.String parent, com.google.api.services.accesscontextmanager.v1.model.CommitServicePerimetersRequest content) throws java.io.IOException {
+        Commit result = new Commit(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Commit extends AccessContextManagerRequest<com.google.api.services.accesscontextmanager.v1.model.Operation> {
+
+        private static final String REST_PATH = "v1/{+parent}/servicePerimeters:commit";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^accessPolicies/[^/]+$");
+
+        /**
+         * Commit the dry-run spec for all the Service Perimeters in an Access Policy. A commit operation
+         * on a Service Perimeter involves copying its `spec` field to that Service Perimeter's `status`
+         * field. Only Service Perimeters with `use_explicit_dry_run_spec` field set to true are affected
+         * by a commit operation. The longrunning operation from this RPC will have a successful status
+         * once the dry-run specs for all the Service Perimeters have been committed. If a commit fails,
+         * it will cause the longrunning operation to return an error response and the entire commit
+         * operation will be cancelled. When successful, Operation.response field will contain
+         * CommitServicePerimetersResponse. The `dry_run` and the `spec` fields will be cleared after a
+         * successful commit operation.
+         *
+         * Create a request for the method "servicePerimeters.commit".
+         *
+         * This request holds the parameters needed by the the accesscontextmanager server.  After setting
+         * any optional parameters, call the {@link Commit#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Commit#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Resource name for the parent Access Policy which owns all
+      Service Perimeters in scope for
+       *        the commit operation.
+      Format: `accessPolicies/{policy_id}`
+         * @param content the {@link com.google.api.services.accesscontextmanager.v1.model.CommitServicePerimetersRequest}
+         * @since 1.13
+         */
+        protected Commit(java.lang.String parent, com.google.api.services.accesscontextmanager.v1.model.CommitServicePerimetersRequest content) {
+          super(AccessContextManager.this, "POST", REST_PATH, content, com.google.api.services.accesscontextmanager.v1.model.Operation.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accessPolicies/[^/]+$");
+          }
+        }
+
+        @Override
+        public Commit set$Xgafv(java.lang.String $Xgafv) {
+          return (Commit) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Commit setAccessToken(java.lang.String accessToken) {
+          return (Commit) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Commit setAlt(java.lang.String alt) {
+          return (Commit) super.setAlt(alt);
+        }
+
+        @Override
+        public Commit setCallback(java.lang.String callback) {
+          return (Commit) super.setCallback(callback);
+        }
+
+        @Override
+        public Commit setFields(java.lang.String fields) {
+          return (Commit) super.setFields(fields);
+        }
+
+        @Override
+        public Commit setKey(java.lang.String key) {
+          return (Commit) super.setKey(key);
+        }
+
+        @Override
+        public Commit setOauthToken(java.lang.String oauthToken) {
+          return (Commit) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Commit setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Commit) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Commit setQuotaUser(java.lang.String quotaUser) {
+          return (Commit) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Commit setUploadType(java.lang.String uploadType) {
+          return (Commit) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Commit setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Commit) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Resource name for the parent Access Policy which owns all Service Perimeters in
+         * scope for the commit operation.
+         *
+         * Format: `accessPolicies/{policy_id}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Resource name for the parent Access Policy which owns all Service Perimeters in scope for
+       the commit operation.
+
+       Format: `accessPolicies/{policy_id}`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. Resource name for the parent Access Policy which owns all Service Perimeters in
+         * scope for the commit operation.
+         *
+         * Format: `accessPolicies/{policy_id}`
+         */
+        public Commit setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accessPolicies/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Commit set(String parameterName, Object value) {
+          return (Commit) super.set(parameterName, value);
+        }
+      }
       /**
        * Create an Service Perimeter. The longrunning operation from this RPC will have a successful
        * status once the Service Perimeter has propagated to long-lasting storage. Service Perimeters
@@ -2596,6 +2921,163 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
           return (Patch) super.set(parameterName, value);
         }
       }
+      /**
+       * Replace all existing Service Perimeters in an Access Policy with the Service Perimeters provided.
+       * This is done atomically. The longrunning operation from this RPC will have a successful status
+       * once all replacements have propagated to long-lasting storage. Replacements containing errors
+       * will result in an error response for the first error encountered. Replacement will be cancelled
+       * on error, existing Service Perimeters will not be affected. Operation.response field will contain
+       * ReplaceServicePerimetersResponse.
+       *
+       * Create a request for the method "servicePerimeters.replaceAll".
+       *
+       * This request holds the parameters needed by the accesscontextmanager server.  After setting any
+       * optional parameters, call the {@link ReplaceAll#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Resource name for the access policy which owns these
+      Service Perimeters.
+      Format:
+       *        `accessPolicies/{policy_id}`
+       * @param content the {@link com.google.api.services.accesscontextmanager.v1.model.ReplaceServicePerimetersRequest}
+       * @return the request
+       */
+      public ReplaceAll replaceAll(java.lang.String parent, com.google.api.services.accesscontextmanager.v1.model.ReplaceServicePerimetersRequest content) throws java.io.IOException {
+        ReplaceAll result = new ReplaceAll(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class ReplaceAll extends AccessContextManagerRequest<com.google.api.services.accesscontextmanager.v1.model.Operation> {
+
+        private static final String REST_PATH = "v1/{+parent}/servicePerimeters:replaceAll";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^accessPolicies/[^/]+$");
+
+        /**
+         * Replace all existing Service Perimeters in an Access Policy with the Service Perimeters
+         * provided. This is done atomically. The longrunning operation from this RPC will have a
+         * successful status once all replacements have propagated to long-lasting storage. Replacements
+         * containing errors will result in an error response for the first error encountered. Replacement
+         * will be cancelled on error, existing Service Perimeters will not be affected.
+         * Operation.response field will contain ReplaceServicePerimetersResponse.
+         *
+         * Create a request for the method "servicePerimeters.replaceAll".
+         *
+         * This request holds the parameters needed by the the accesscontextmanager server.  After setting
+         * any optional parameters, call the {@link ReplaceAll#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * ReplaceAll#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Resource name for the access policy which owns these
+      Service Perimeters.
+      Format:
+       *        `accessPolicies/{policy_id}`
+         * @param content the {@link com.google.api.services.accesscontextmanager.v1.model.ReplaceServicePerimetersRequest}
+         * @since 1.13
+         */
+        protected ReplaceAll(java.lang.String parent, com.google.api.services.accesscontextmanager.v1.model.ReplaceServicePerimetersRequest content) {
+          super(AccessContextManager.this, "POST", REST_PATH, content, com.google.api.services.accesscontextmanager.v1.model.Operation.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accessPolicies/[^/]+$");
+          }
+        }
+
+        @Override
+        public ReplaceAll set$Xgafv(java.lang.String $Xgafv) {
+          return (ReplaceAll) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ReplaceAll setAccessToken(java.lang.String accessToken) {
+          return (ReplaceAll) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ReplaceAll setAlt(java.lang.String alt) {
+          return (ReplaceAll) super.setAlt(alt);
+        }
+
+        @Override
+        public ReplaceAll setCallback(java.lang.String callback) {
+          return (ReplaceAll) super.setCallback(callback);
+        }
+
+        @Override
+        public ReplaceAll setFields(java.lang.String fields) {
+          return (ReplaceAll) super.setFields(fields);
+        }
+
+        @Override
+        public ReplaceAll setKey(java.lang.String key) {
+          return (ReplaceAll) super.setKey(key);
+        }
+
+        @Override
+        public ReplaceAll setOauthToken(java.lang.String oauthToken) {
+          return (ReplaceAll) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ReplaceAll setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ReplaceAll) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ReplaceAll setQuotaUser(java.lang.String quotaUser) {
+          return (ReplaceAll) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ReplaceAll setUploadType(java.lang.String uploadType) {
+          return (ReplaceAll) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ReplaceAll setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ReplaceAll) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Resource name for the access policy which owns these Service Perimeters.
+         *
+         * Format: `accessPolicies/{policy_id}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Resource name for the access policy which owns these Service Perimeters.
+
+       Format: `accessPolicies/{policy_id}`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. Resource name for the access policy which owns these Service Perimeters.
+         *
+         * Format: `accessPolicies/{policy_id}`
+         */
+        public ReplaceAll setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accessPolicies/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public ReplaceAll set(String parameterName, Object value) {
+          return (ReplaceAll) super.set(parameterName, value);
+        }
+      }
 
     }
   }
@@ -2649,7 +3131,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
       private static final String REST_PATH = "v1/{+name}:cancel";
 
       private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^operations/.+$");
+          java.util.regex.Pattern.compile("^operations/.*$");
 
       /**
        * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort
@@ -2678,7 +3160,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^operations/.+$");
+              "^operations/.*$");
         }
       }
 
@@ -2752,7 +3234,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^operations/.+$");
+              "^operations/.*$");
         }
         this.name = name;
         return this;
@@ -2787,7 +3269,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
       private static final String REST_PATH = "v1/{+name}";
 
       private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^operations/.+$");
+          java.util.regex.Pattern.compile("^operations/.*$");
 
       /**
        * Deletes a long-running operation. This method indicates that the client is no longer interested
@@ -2811,7 +3293,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^operations/.+$");
+              "^operations/.*$");
         }
       }
 
@@ -2885,7 +3367,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^operations/.+$");
+              "^operations/.*$");
         }
         this.name = name;
         return this;
@@ -2919,7 +3401,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
       private static final String REST_PATH = "v1/{+name}";
 
       private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^operations/.+$");
+          java.util.regex.Pattern.compile("^operations/.*$");
 
       /**
        * Gets the latest state of a long-running operation.  Clients can use this method to poll the
@@ -2942,7 +3424,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^operations/.+$");
+              "^operations/.*$");
         }
       }
 
@@ -3026,7 +3508,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^operations/.+$");
+              "^operations/.*$");
         }
         this.name = name;
         return this;

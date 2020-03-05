@@ -17,13 +17,14 @@
 package com.google.api.services.accesscontextmanager.v1.model;
 
 /**
- * `ServicePerimeter` describes a set of GCP resources which can freely import and export data
- * amongst themselves, but not export outside of the `ServicePerimeter`. If a request with a source
- * within this `ServicePerimeter` has a target outside of the `ServicePerimeter`, the request will
- * be blocked. Otherwise the request is allowed. There are two types of Service Perimeter - Regular
- * and Bridge. Regular Service Perimeters cannot overlap, a single GCP project can only belong to a
- * single regular Service Perimeter. Service Perimeter Bridges can contain only GCP projects as
- * members, a single GCP project may belong to multiple Service Perimeter Bridges.
+ * `ServicePerimeter` describes a set of Google Cloud resources which can freely import and export
+ * data amongst themselves, but not export outside of the `ServicePerimeter`. If a request with a
+ * source within this `ServicePerimeter` has a target outside of the `ServicePerimeter`, the request
+ * will be blocked. Otherwise the request is allowed. There are two types of Service Perimeter -
+ * Regular and Bridge. Regular Service Perimeters cannot overlap, a single Google Cloud project can
+ * only belong to a single regular Service Perimeter. Service Perimeter Bridges can contain only
+ * Google Cloud projects as members, a single Google Cloud project may belong to multiple Service
+ * Perimeter Bridges.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Access Context Manager API. For a detailed
@@ -70,6 +71,15 @@ public final class ServicePerimeter extends com.google.api.client.json.GenericJs
   private java.lang.String perimeterType;
 
   /**
+   * Proposed (or dry run) ServicePerimeter configuration. This configuration allows to specify and
+   * test ServicePerimeter configuration without enforcing actual access restrictions. Only allowed
+   * to be set when the "use_explicit_dry_run_spec" flag is set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ServicePerimeterConfig spec;
+
+  /**
    * Current ServicePerimeter configuration. Specifies sets of resources, restricted services and
    * access levels that determine perimeter content and boundaries.
    * The value may be {@code null}.
@@ -90,6 +100,20 @@ public final class ServicePerimeter extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists  for all Service
+   * Perimeters, and that spec is identical to the status for those Service Perimeters. When this
+   * flag is set, it inhibits the generation of the implicit spec, thereby allowing the user to
+   * explicitly provide a configuration ("spec") to use in a dry-run version of the Service
+   * Perimeter. This allows the user to test changes to the enforced config ("status") without
+   * actually enforcing them. This testing is done through analyzing the differences between
+   * currently enforced and suggested restrictions. use_explicit_dry_run_spec must bet set to True
+   * if any of the fields in the spec are set to non-default values.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean useExplicitDryRunSpec;
 
   /**
    * Output only. Time the `ServicePerimeter` was created in UTC.
@@ -170,6 +194,27 @@ public final class ServicePerimeter extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * Proposed (or dry run) ServicePerimeter configuration. This configuration allows to specify and
+   * test ServicePerimeter configuration without enforcing actual access restrictions. Only allowed
+   * to be set when the "use_explicit_dry_run_spec" flag is set.
+   * @return value or {@code null} for none
+   */
+  public ServicePerimeterConfig getSpec() {
+    return spec;
+  }
+
+  /**
+   * Proposed (or dry run) ServicePerimeter configuration. This configuration allows to specify and
+   * test ServicePerimeter configuration without enforcing actual access restrictions. Only allowed
+   * to be set when the "use_explicit_dry_run_spec" flag is set.
+   * @param spec spec or {@code null} for none
+   */
+  public ServicePerimeter setSpec(ServicePerimeterConfig spec) {
+    this.spec = spec;
+    return this;
+  }
+
+  /**
    * Current ServicePerimeter configuration. Specifies sets of resources, restricted services and
    * access levels that determine perimeter content and boundaries.
    * @return value or {@code null} for none
@@ -219,6 +264,37 @@ public final class ServicePerimeter extends com.google.api.client.json.GenericJs
    */
   public ServicePerimeter setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists  for all Service
+   * Perimeters, and that spec is identical to the status for those Service Perimeters. When this
+   * flag is set, it inhibits the generation of the implicit spec, thereby allowing the user to
+   * explicitly provide a configuration ("spec") to use in a dry-run version of the Service
+   * Perimeter. This allows the user to test changes to the enforced config ("status") without
+   * actually enforcing them. This testing is done through analyzing the differences between
+   * currently enforced and suggested restrictions. use_explicit_dry_run_spec must bet set to True
+   * if any of the fields in the spec are set to non-default values.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUseExplicitDryRunSpec() {
+    return useExplicitDryRunSpec;
+  }
+
+  /**
+   * Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists  for all Service
+   * Perimeters, and that spec is identical to the status for those Service Perimeters. When this
+   * flag is set, it inhibits the generation of the implicit spec, thereby allowing the user to
+   * explicitly provide a configuration ("spec") to use in a dry-run version of the Service
+   * Perimeter. This allows the user to test changes to the enforced config ("status") without
+   * actually enforcing them. This testing is done through analyzing the differences between
+   * currently enforced and suggested restrictions. use_explicit_dry_run_spec must bet set to True
+   * if any of the fields in the spec are set to non-default values.
+   * @param useExplicitDryRunSpec useExplicitDryRunSpec or {@code null} for none
+   */
+  public ServicePerimeter setUseExplicitDryRunSpec(java.lang.Boolean useExplicitDryRunSpec) {
+    this.useExplicitDryRunSpec = useExplicitDryRunSpec;
     return this;
   }
 

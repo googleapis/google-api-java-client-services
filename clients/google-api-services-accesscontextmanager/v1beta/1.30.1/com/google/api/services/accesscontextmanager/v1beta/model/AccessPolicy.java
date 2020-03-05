@@ -18,9 +18,9 @@ package com.google.api.services.accesscontextmanager.v1beta.model;
 
 /**
  * `AccessPolicy` is a container for `AccessLevels` (which define the necessary attributes to use
- * GCP services) and `ServicePerimeters` (which define regions of services able to freely pass data
- * within a perimeter). An access policy is globally visible within an organization, and the
- * restrictions it specifies apply to all projects within an organization.
+ * Google Cloud services) and `ServicePerimeters` (which define regions of services able to freely
+ * pass data within a perimeter). An access policy is globally visible within an organization, and
+ * the restrictions it specifies apply to all projects within an organization.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Access Context Manager API. For a detailed

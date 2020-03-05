@@ -30,21 +30,22 @@ package com.google.api.services.pubsub.model;
 public final class UpdateSubscriptionRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The updated subscription object.
+   * Required. The updated subscription object.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Subscription subscription;
 
   /**
-   * Indicates which fields in the provided subscription to update. Must be specified and non-empty.
+   * Required. Indicates which fields in the provided subscription to update. Must be specified and
+   * non-empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateMask;
 
   /**
-   * The updated subscription object.
+   * Required. The updated subscription object.
    * @return value or {@code null} for none
    */
   public Subscription getSubscription() {
@@ -52,7 +53,7 @@ public final class UpdateSubscriptionRequest extends com.google.api.client.json.
   }
 
   /**
-   * The updated subscription object.
+   * Required. The updated subscription object.
    * @param subscription subscription or {@code null} for none
    */
   public UpdateSubscriptionRequest setSubscription(Subscription subscription) {
@@ -61,7 +62,8 @@ public final class UpdateSubscriptionRequest extends com.google.api.client.json.
   }
 
   /**
-   * Indicates which fields in the provided subscription to update. Must be specified and non-empty.
+   * Required. Indicates which fields in the provided subscription to update. Must be specified and
+   * non-empty.
    * @return value or {@code null} for none
    */
   public String getUpdateMask() {
@@ -69,7 +71,8 @@ public final class UpdateSubscriptionRequest extends com.google.api.client.json.
   }
 
   /**
-   * Indicates which fields in the provided subscription to update. Must be specified and non-empty.
+   * Required. Indicates which fields in the provided subscription to update. Must be specified and
+   * non-empty.
    * @param updateMask updateMask or {@code null} for none
    */
   public UpdateSubscriptionRequest setUpdateMask(String updateMask) {

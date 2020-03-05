@@ -30,21 +30,22 @@ package com.google.api.services.pubsub.model;
 public final class UpdateSnapshotRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The updated snapshot object.
+   * Required. The updated snapshot object.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Snapshot snapshot;
 
   /**
-   * Indicates which fields in the provided snapshot to update. Must be specified and non-empty.
+   * Required. Indicates which fields in the provided snapshot to update. Must be specified and non-
+   * empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateMask;
 
   /**
-   * The updated snapshot object.
+   * Required. The updated snapshot object.
    * @return value or {@code null} for none
    */
   public Snapshot getSnapshot() {
@@ -52,7 +53,7 @@ public final class UpdateSnapshotRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * The updated snapshot object.
+   * Required. The updated snapshot object.
    * @param snapshot snapshot or {@code null} for none
    */
   public UpdateSnapshotRequest setSnapshot(Snapshot snapshot) {
@@ -61,7 +62,8 @@ public final class UpdateSnapshotRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Indicates which fields in the provided snapshot to update. Must be specified and non-empty.
+   * Required. Indicates which fields in the provided snapshot to update. Must be specified and non-
+   * empty.
    * @return value or {@code null} for none
    */
   public String getUpdateMask() {
@@ -69,7 +71,8 @@ public final class UpdateSnapshotRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Indicates which fields in the provided snapshot to update. Must be specified and non-empty.
+   * Required. Indicates which fields in the provided snapshot to update. Must be specified and non-
+   * empty.
    * @param updateMask updateMask or {@code null} for none
    */
   public UpdateSnapshotRequest setUpdateMask(String updateMask) {

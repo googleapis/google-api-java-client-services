@@ -30,14 +30,14 @@ package com.google.api.services.pubsub.model;
 public final class PublishRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The messages to publish.
+   * Required. The messages to publish.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<PubsubMessage> messages;
 
   /**
-   * The messages to publish.
+   * Required. The messages to publish.
    * @return value or {@code null} for none
    */
   public java.util.List<PubsubMessage> getMessages() {
@@ -45,7 +45,7 @@ public final class PublishRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The messages to publish.
+   * Required. The messages to publish.
    * @param messages messages or {@code null} for none
    */
   public PublishRequest setMessages(java.util.List<PubsubMessage> messages) {

@@ -30,7 +30,7 @@ package com.google.api.services.pubsub.model;
 public final class ModifyPushConfigRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The push configuration for future deliveries.
+   * Required. The push configuration for future deliveries.
    *
    * An empty `pushConfig` indicates that the Pub/Sub system should stop pushing messages from the
    * given subscription and allow messages to be pulled and acknowledged - effectively pausing the
@@ -41,7 +41,7 @@ public final class ModifyPushConfigRequest extends com.google.api.client.json.Ge
   private PushConfig pushConfig;
 
   /**
-   * The push configuration for future deliveries.
+   * Required. The push configuration for future deliveries.
    *
    * An empty `pushConfig` indicates that the Pub/Sub system should stop pushing messages from the
    * given subscription and allow messages to be pulled and acknowledged - effectively pausing the
@@ -53,7 +53,7 @@ public final class ModifyPushConfigRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * The push configuration for future deliveries.
+   * Required. The push configuration for future deliveries.
    *
    * An empty `pushConfig` indicates that the Pub/Sub system should stop pushing messages from the
    * given subscription and allow messages to be pulled and acknowledged - effectively pausing the

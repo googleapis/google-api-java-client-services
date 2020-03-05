@@ -1,15 +1,15 @@
-# Stackdriver Trace API Client Library for Java
+# Cloud Trace API Client Library for Java
 
-Sends application trace data to Stackdriver Trace for viewing. Trace data is collected for all App Engine applications by default. Trace data from other applications can be provided using this API. This library is used to interact with the Trace API directly. If you are looking to instrument your application for Stackdriver Trace, we recommend using OpenCensus.
+Sends application trace data to Cloud Trace for viewing. Trace data is collected for all App Engine applications by default. Trace data from other applications can be provided using this API. This library is used to interact with the Trace API directly. If you are looking to instrument your application for Cloud Trace, we recommend using OpenCensus.
 
 
-This page contains information about getting started with the Stackdriver Trace API
+This page contains information about getting started with the Cloud Trace API
 using the Google API Client Library for Java. In addition, you may be interested
 in the following documentation:
 
-* Browse the [Javadoc reference for the Stackdriver Trace API][javadoc]
+* Browse the [Javadoc reference for the Cloud Trace API][javadoc]
 * Read the [Developer's Guide for the Google API Client Library for Java][google-api-client].
-* Interact with this API in your browser using the [APIs Explorer for the Stackdriver Trace API][api-explorer]
+* Interact with this API in your browser using the [APIs Explorer for the Cloud Trace API][api-explorer]
 
 ## Installation
 
@@ -23,7 +23,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-cloudtrace</artifactId>
-      <version>v2beta1-rev20200218-1.30.8</version>
+      <version>v2beta1-rev20200225-1.30.8</version>
     </dependency>
   </dependencies>
 </project>
@@ -36,7 +36,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-cloudtrace:v2beta1-rev20200218-1.30.8'
+  compile 'com.google.apis:google-api-services-cloudtrace:v2beta1-rev20200225-1.30.8'
 }
 ```
 

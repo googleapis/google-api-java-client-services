@@ -20,7 +20,7 @@ package com.google.api.services.cloudtrace.v1;
  * Service definition for CloudTrace (v1).
  *
  * <p>
- * Sends application trace data to Stackdriver Trace for viewing. Trace data is collected for all App Engine applications by default. Trace data from other applications can be provided using this API. This library is used to interact with the Trace API directly. If you are looking to instrument your application for Stackdriver Trace, we recommend using OpenCensus.
+ * Sends application trace data to Cloud Trace for viewing. Trace data is collected for all App Engine applications by default. Trace data from other applications can be provided using this API. This library is used to interact with the Trace API directly. If you are looking to instrument your application for Cloud Trace, we recommend using OpenCensus.
 
  * </p>
  *
@@ -47,7 +47,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.8 of the Stackdriver Trace API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.8 of the Cloud Trace API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**

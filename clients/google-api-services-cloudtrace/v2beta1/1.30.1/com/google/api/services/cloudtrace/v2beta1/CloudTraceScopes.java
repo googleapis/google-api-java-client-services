@@ -17,7 +17,7 @@
 package com.google.api.services.cloudtrace.v2beta1;
 
 /**
- * Available OAuth 2.0 scopes for use with the Stackdriver Trace API.
+ * Available OAuth 2.0 scopes for use with the Cloud Trace API.
  *
  * @since 1.4
  */

@@ -183,7 +183,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
       private static final String REST_PATH = "v2/{+instanceName}/actionResults/{hash}/{sizeBytes}";
 
       private final java.util.regex.Pattern INSTANCE_NAME_PATTERN =
-          java.util.regex.Pattern.compile("^.+$");
+          java.util.regex.Pattern.compile("^.*$");
 
       /**
        * Retrieve a cached execution result.
@@ -224,7 +224,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(INSTANCE_NAME_PATTERN.matcher(instanceName).matches(),
               "Parameter instanceName must conform to the pattern " +
-              "^.+$");
+              "^.*$");
         }
         this.hash = com.google.api.client.util.Preconditions.checkNotNull(hash, "Required parameter hash must be specified.");
         this.sizeBytes = com.google.api.client.util.Preconditions.checkNotNull(sizeBytes, "Required parameter sizeBytes must be specified.");
@@ -323,7 +323,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(INSTANCE_NAME_PATTERN.matcher(instanceName).matches(),
               "Parameter instanceName must conform to the pattern " +
-              "^.+$");
+              "^.*$");
         }
         this.instanceName = instanceName;
         return this;
@@ -480,7 +480,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
       private static final String REST_PATH = "v2/{+instanceName}/actionResults/{hash}/{sizeBytes}";
 
       private final java.util.regex.Pattern INSTANCE_NAME_PATTERN =
-          java.util.regex.Pattern.compile("^.+$");
+          java.util.regex.Pattern.compile("^.*$");
 
       /**
        * Upload a new execution result.
@@ -524,7 +524,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(INSTANCE_NAME_PATTERN.matcher(instanceName).matches(),
               "Parameter instanceName must conform to the pattern " +
-              "^.+$");
+              "^.*$");
         }
         this.hash = com.google.api.client.util.Preconditions.checkNotNull(hash, "Required parameter hash must be specified.");
         this.sizeBytes = com.google.api.client.util.Preconditions.checkNotNull(sizeBytes, "Required parameter sizeBytes must be specified.");
@@ -613,7 +613,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(INSTANCE_NAME_PATTERN.matcher(instanceName).matches(),
               "Parameter instanceName must conform to the pattern " +
-              "^.+$");
+              "^.*$");
         }
         this.instanceName = instanceName;
         return this;
@@ -797,7 +797,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
       private static final String REST_PATH = "v2/{+instanceName}/actions:execute";
 
       private final java.util.regex.Pattern INSTANCE_NAME_PATTERN =
-          java.util.regex.Pattern.compile("^.+$");
+          java.util.regex.Pattern.compile("^.*$");
 
       /**
        * Execute an action remotely.
@@ -870,7 +870,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(INSTANCE_NAME_PATTERN.matcher(instanceName).matches(),
               "Parameter instanceName must conform to the pattern " +
-              "^.+$");
+              "^.*$");
         }
       }
 
@@ -957,7 +957,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(INSTANCE_NAME_PATTERN.matcher(instanceName).matches(),
               "Parameter instanceName must conform to the pattern " +
-              "^.+$");
+              "^.*$");
         }
         this.instanceName = instanceName;
         return this;
@@ -1034,7 +1034,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
       private static final String REST_PATH = "v2/{+instanceName}/blobs:batchRead";
 
       private final java.util.regex.Pattern INSTANCE_NAME_PATTERN =
-          java.util.regex.Pattern.compile("^.+$");
+          java.util.regex.Pattern.compile("^.*$");
 
       /**
        * Download many blobs at once.
@@ -1077,7 +1077,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(INSTANCE_NAME_PATTERN.matcher(instanceName).matches(),
               "Parameter instanceName must conform to the pattern " +
-              "^.+$");
+              "^.*$");
         }
       }
 
@@ -1164,7 +1164,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(INSTANCE_NAME_PATTERN.matcher(instanceName).matches(),
               "Parameter instanceName must conform to the pattern " +
-              "^.+$");
+              "^.*$");
         }
         this.instanceName = instanceName;
         return this;
@@ -1222,7 +1222,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
       private static final String REST_PATH = "v2/{+instanceName}/blobs:batchUpdate";
 
       private final java.util.regex.Pattern INSTANCE_NAME_PATTERN =
-          java.util.regex.Pattern.compile("^.+$");
+          java.util.regex.Pattern.compile("^.*$");
 
       /**
        * Upload many blobs at once.
@@ -1268,7 +1268,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(INSTANCE_NAME_PATTERN.matcher(instanceName).matches(),
               "Parameter instanceName must conform to the pattern " +
-              "^.+$");
+              "^.*$");
         }
       }
 
@@ -1355,7 +1355,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(INSTANCE_NAME_PATTERN.matcher(instanceName).matches(),
               "Parameter instanceName must conform to the pattern " +
-              "^.+$");
+              "^.*$");
         }
         this.instanceName = instanceName;
         return this;
@@ -1402,7 +1402,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
       private static final String REST_PATH = "v2/{+instanceName}/blobs:findMissing";
 
       private final java.util.regex.Pattern INSTANCE_NAME_PATTERN =
-          java.util.regex.Pattern.compile("^.+$");
+          java.util.regex.Pattern.compile("^.*$");
 
       /**
        * Determine if blobs are present in the CAS.
@@ -1437,7 +1437,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(INSTANCE_NAME_PATTERN.matcher(instanceName).matches(),
               "Parameter instanceName must conform to the pattern " +
-              "^.+$");
+              "^.*$");
         }
       }
 
@@ -1524,7 +1524,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(INSTANCE_NAME_PATTERN.matcher(instanceName).matches(),
               "Parameter instanceName must conform to the pattern " +
-              "^.+$");
+              "^.*$");
         }
         this.instanceName = instanceName;
         return this;
@@ -1584,7 +1584,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
       private static final String REST_PATH = "v2/{+instanceName}/blobs/{hash}/{sizeBytes}:getTree";
 
       private final java.util.regex.Pattern INSTANCE_NAME_PATTERN =
-          java.util.regex.Pattern.compile("^.+$");
+          java.util.regex.Pattern.compile("^.*$");
 
       /**
        * Fetch the entire directory tree rooted at a node.
@@ -1633,7 +1633,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(INSTANCE_NAME_PATTERN.matcher(instanceName).matches(),
               "Parameter instanceName must conform to the pattern " +
-              "^.+$");
+              "^.*$");
         }
         this.hash = com.google.api.client.util.Preconditions.checkNotNull(hash, "Required parameter hash must be specified.");
         this.sizeBytes = com.google.api.client.util.Preconditions.checkNotNull(sizeBytes, "Required parameter sizeBytes must be specified.");
@@ -1732,7 +1732,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(INSTANCE_NAME_PATTERN.matcher(instanceName).matches(),
               "Parameter instanceName must conform to the pattern " +
-              "^.+$");
+              "^.*$");
         }
         this.instanceName = instanceName;
         return this;
@@ -1885,7 +1885,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
       private static final String REST_PATH = "v2/{+name}:waitExecution";
 
       private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^operations/.+$");
+          java.util.regex.Pattern.compile("^operations/.*$");
 
       /**
        * Wait for an execution operation to complete. When the client initially makes the request, the
@@ -1913,7 +1913,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^operations/.+$");
+              "^operations/.*$");
         }
       }
 
@@ -1991,7 +1991,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^operations/.+$");
+              "^operations/.*$");
         }
         this.name = name;
         return this;
@@ -2059,7 +2059,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
       private static final String REST_PATH = "v2/{+instanceName}/capabilities";
 
       private final java.util.regex.Pattern INSTANCE_NAME_PATTERN =
-          java.util.regex.Pattern.compile("^.+$");
+          java.util.regex.Pattern.compile("^.*$");
 
       /**
        * GetCapabilities returns the server capabilities configuration of the remote endpoint. Only the
@@ -2092,7 +2092,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(INSTANCE_NAME_PATTERN.matcher(instanceName).matches(),
               "Parameter instanceName must conform to the pattern " +
-              "^.+$");
+              "^.*$");
         }
       }
 
@@ -2189,7 +2189,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(INSTANCE_NAME_PATTERN.matcher(instanceName).matches(),
               "Parameter instanceName must conform to the pattern " +
-              "^.+$");
+              "^.*$");
         }
         this.instanceName = instanceName;
         return this;

@@ -165,7 +165,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
       private static final String REST_PATH = "v1/media/{+resourceName}";
 
       private final java.util.regex.Pattern RESOURCE_NAME_PATTERN =
-          java.util.regex.Pattern.compile("^.+$");
+          java.util.regex.Pattern.compile("^.*$");
 
       /**
        * Downloads media. Download is supported on the URI `/v1/media/{+name}?alt=media`.
@@ -188,7 +188,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(RESOURCE_NAME_PATTERN.matcher(resourceName).matches(),
               "Parameter resourceName must conform to the pattern " +
-              "^.+$");
+              "^.*$");
         }
         initializeMediaDownload();
       }
@@ -292,7 +292,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(RESOURCE_NAME_PATTERN.matcher(resourceName).matches(),
               "Parameter resourceName must conform to the pattern " +
-              "^.+$");
+              "^.*$");
         }
         this.resourceName = resourceName;
         return this;
@@ -352,7 +352,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
       private static final String REST_PATH = "v1/media/{+resourceName}";
 
       private final java.util.regex.Pattern RESOURCE_NAME_PATTERN =
-          java.util.regex.Pattern.compile("^.+$");
+          java.util.regex.Pattern.compile("^.*$");
 
       /**
        * Uploads media. Upload is supported on the URI `/upload/v1/media/{+name}`.
@@ -376,7 +376,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(RESOURCE_NAME_PATTERN.matcher(resourceName).matches(),
               "Parameter resourceName must conform to the pattern " +
-              "^.+$");
+              "^.*$");
         }
       }
 
@@ -481,7 +481,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(RESOURCE_NAME_PATTERN.matcher(resourceName).matches(),
               "Parameter resourceName must conform to the pattern " +
-              "^.+$");
+              "^.*$");
         }
         this.resourceName = resourceName;
         return this;
@@ -544,7 +544,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
       private static final String REST_PATH = "v1/{+name}:cancel";
 
       private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^operations/.+$");
+          java.util.regex.Pattern.compile("^operations/.*$");
 
       /**
        * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort
@@ -573,7 +573,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^operations/.+$");
+              "^operations/.*$");
         }
       }
 
@@ -647,7 +647,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^operations/.+$");
+              "^operations/.*$");
         }
         this.name = name;
         return this;
@@ -682,7 +682,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
       private static final String REST_PATH = "v1/{+name}";
 
       private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^operations/.+$");
+          java.util.regex.Pattern.compile("^operations/.*$");
 
       /**
        * Deletes a long-running operation. This method indicates that the client is no longer interested
@@ -706,7 +706,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^operations/.+$");
+              "^operations/.*$");
         }
       }
 
@@ -780,7 +780,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^operations/.+$");
+              "^operations/.*$");
         }
         this.name = name;
         return this;

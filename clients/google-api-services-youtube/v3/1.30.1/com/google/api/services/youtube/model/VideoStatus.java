@@ -90,9 +90,6 @@ public final class VideoStatus extends com.google.api.client.json.GenericJson {
   private java.lang.String rejectionReason;
 
   /**
-   * Allows clients to set the Crosswalk self_declared state for a Video. This maps to
-   * VAPI.Video.creator_flags.is_crosswalk_self_declared() and
-   * VAPI.Video.creator_flags.is_not_crosswalk_self_declared().
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -250,9 +247,6 @@ public final class VideoStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Allows clients to set the Crosswalk self_declared state for a Video. This maps to
-   * VAPI.Video.creator_flags.is_crosswalk_self_declared() and
-   * VAPI.Video.creator_flags.is_not_crosswalk_self_declared().
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSelfDeclaredMadeForKids() {
@@ -260,9 +254,6 @@ public final class VideoStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Allows clients to set the Crosswalk self_declared state for a Video. This maps to
-   * VAPI.Video.creator_flags.is_crosswalk_self_declared() and
-   * VAPI.Video.creator_flags.is_not_crosswalk_self_declared().
    * @param selfDeclaredMadeForKids selfDeclaredMadeForKids or {@code null} for none
    */
   public VideoStatus setSelfDeclaredMadeForKids(java.lang.Boolean selfDeclaredMadeForKids) {

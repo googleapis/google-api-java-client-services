@@ -111,6 +111,10 @@ public final class LiveBroadcastContentDetails extends com.google.api.client.jso
   private java.lang.String latencyPreference;
 
   /**
+   * The mesh for projecting the video if projection is mesh. The mesh value must be a UTF-8 string
+   * containing the base-64 encoding of 3D mesh data that follows the  Spherical Video V2 RFC
+   * specification for an mshp box, excluding the box size and type but including the following four
+   * reserved zero bytes for the version and flags.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -353,6 +357,10 @@ public final class LiveBroadcastContentDetails extends com.google.api.client.jso
   }
 
   /**
+   * The mesh for projecting the video if projection is mesh. The mesh value must be a UTF-8 string
+   * containing the base-64 encoding of 3D mesh data that follows the  Spherical Video V2 RFC
+   * specification for an mshp box, excluding the box size and type but including the following four
+   * reserved zero bytes for the version and flags.
    * @see #decodeMesh()
    * @return value or {@code null} for none
    */
@@ -361,7 +369,10 @@ public final class LiveBroadcastContentDetails extends com.google.api.client.jso
   }
 
   /**
-
+   * The mesh for projecting the video if projection is mesh. The mesh value must be a UTF-8 string
+   * containing the base-64 encoding of 3D mesh data that follows the  Spherical Video V2 RFC
+   * specification for an mshp box, excluding the box size and type but including the following four
+   * reserved zero bytes for the version and flags.
    * @see #getMesh()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -372,6 +383,10 @@ public final class LiveBroadcastContentDetails extends com.google.api.client.jso
   }
 
   /**
+   * The mesh for projecting the video if projection is mesh. The mesh value must be a UTF-8 string
+   * containing the base-64 encoding of 3D mesh data that follows the  Spherical Video V2 RFC
+   * specification for an mshp box, excluding the box size and type but including the following four
+   * reserved zero bytes for the version and flags.
    * @see #encodeMesh()
    * @param mesh mesh or {@code null} for none
    */
@@ -381,7 +396,10 @@ public final class LiveBroadcastContentDetails extends com.google.api.client.jso
   }
 
   /**
-
+   * The mesh for projecting the video if projection is mesh. The mesh value must be a UTF-8 string
+   * containing the base-64 encoding of 3D mesh data that follows the  Spherical Video V2 RFC
+   * specification for an mshp box, excluding the box size and type but including the following four
+   * reserved zero bytes for the version and flags.
    * @see #setMesh()
    *
    * <p>

@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"LYADMvHWYH2ul9D6m9UT9gT77YM/FvGCP4PWblWUASImsiM0Esh60RM\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/BmF7sum2uJw0jCtnIjSA3ClUG4I\"",
  "discoveryVersion": "v1",
  "id": "youtube:v3",
  "name": "youtube",
  "canonicalName": "YouTube",
  "version": "v3",
- "revision": "20200109",
+ "revision": "20200213",
  "title": "YouTube Data API",
  "description": "Supports core YouTube features, such as uploading videos, creating and managing playlists, searching for content, and much more.",
  "ownerDomain": "google.com",
@@ -3978,6 +3978,7 @@
     },
     "mesh": {
      "type": "string",
+     "description": "The mesh for projecting the video if projection is mesh. The mesh value must be a UTF-8 string containing the base-64 encoding of 3D mesh data that follows the  Spherical Video V2 RFC specification for an mshp box, excluding the box size and type but including the following four reserved zero bytes for the version and flags.",
      "format": "byte"
     },
     "monitorStream": {
@@ -5246,40 +5247,63 @@
    "properties": {
     "accessibleLevels": {
      "type": "array",
-     "description": "All levels that the user has access to. This includes the currently active level and all other levels that are included because of a higher purchase.",
+     "description": "Ids of all levels that the user has access to. This includes the currently active level and all other levels that are included because of a higher purchase.",
      "items": {
       "type": "string"
      }
     },
     "highestAccessibleLevel": {
      "type": "string",
-     "description": "The highest level that the user has access to at the moment."
+     "description": "Id of the highest level that the user has access to at the moment."
     },
     "highestAccessibleLevelDisplayName": {
      "type": "string",
-     "description": "Display name for the highest level that the user has access to at the moment."
+     "description": "Display name of the highest level that the user has access to at the moment."
     },
+    "membershipsDuration": {
+     "$ref": "MembershipsDuration",
+     "description": "Data about memberships duration without taking into consideration pricing levels."
+    },
+    "membershipsDurationAtLevels": {
+     "type": "array",
+     "description": "Data about memberships duration on particular pricing levels.",
+     "items": {
+      "$ref": "MembershipsDurationAtLevel"
+     }
+    }
+   }
+  },
+  "MembershipsDuration": {
+   "id": "MembershipsDuration",
+   "type": "object",
+   "properties": {
     "memberSince": {
      "type": "string",
      "description": "The date and time when the user became a continuous member across all levels."
     },
-    "memberSinceCurrentLevel": {
-     "type": "string",
-     "description": "The date and time when the user started to continuously have access to the currently highest level."
-    },
-    "memberTotalDuration": {
+    "memberTotalDurationMonths": {
      "type": "integer",
      "description": "The cumulative time the user has been a member across all levels in complete months (the time is rounded down to the nearest integer).",
      "format": "int32"
-    },
-    "memberTotalDurationCurrentLevel": {
-     "type": "integer",
-     "description": "The cumulative time the user has had access to the currently highest level in complete months (the time is rounded down to the nearest integer).",
-     "format": "int32"
-    },
-    "purchasedLevel": {
+    }
+   }
+  },
+  "MembershipsDurationAtLevel": {
+   "id": "MembershipsDurationAtLevel",
+   "type": "object",
+   "properties": {
+    "level": {
      "type": "string",
-     "description": "The highest level that the user has access to at the moment. DEPRECATED - highest_accessible_level should be used instead. This will be removed after we make sure there are no 3rd parties relying on it."
+     "description": "Pricing level id."
+    },
+    "memberSince": {
+     "type": "string",
+     "description": "The date and time when the user became a continuous member for the given level."
+    },
+    "memberTotalDurationMonths": {
+     "type": "integer",
+     "description": "The cumulative time the user has been a member for the given level in complete months (the time is rounded down to the nearest integer).",
+     "format": "int32"
     }
    }
   },
@@ -7544,8 +7568,7 @@
      ]
     },
     "selfDeclaredMadeForKids": {
-     "type": "boolean",
-     "description": "Allows clients to set the Crosswalk self_declared state for a Video. This maps to VAPI.Video.creator_flags.is_crosswalk_self_declared() and VAPI.Video.creator_flags.is_not_crosswalk_self_declared()."
+     "type": "boolean"
     },
     "uploadStatus": {
      "type": "string",
@@ -9730,7 +9753,7 @@
        "default": "5",
        "format": "uint32",
        "minimum": "0",
-       "maximum": "50",
+       "maximum": "50000",
        "location": "query"
       },
       "mode": {

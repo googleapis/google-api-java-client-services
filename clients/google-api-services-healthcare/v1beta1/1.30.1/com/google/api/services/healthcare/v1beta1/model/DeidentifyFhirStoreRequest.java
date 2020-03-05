@@ -42,8 +42,8 @@ public final class DeidentifyFhirStoreRequest extends com.google.api.client.json
    *
    *  * The destination dataset must exist.  * The source dataset and destination dataset must both
    * reside in the same    project. De-identifying data across multiple projects is not supported.
-   * * The destination FHIR store must not exist.  * The caller must have the necessary permissions
-   * to create the destination    FHIR store.
+   * * The destination FHIR store must exist.  * The caller must have the
+   * healthcare.fhirResources.update permission to    write to the destination FHIR store.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,8 +80,8 @@ public final class DeidentifyFhirStoreRequest extends com.google.api.client.json
    *
    *  * The destination dataset must exist.  * The source dataset and destination dataset must both
    * reside in the same    project. De-identifying data across multiple projects is not supported.
-   * * The destination FHIR store must not exist.  * The caller must have the necessary permissions
-   * to create the destination    FHIR store.
+   * * The destination FHIR store must exist.  * The caller must have the
+   * healthcare.fhirResources.update permission to    write to the destination FHIR store.
    * @return value or {@code null} for none
    */
   public java.lang.String getDestinationStore() {
@@ -94,8 +94,8 @@ public final class DeidentifyFhirStoreRequest extends com.google.api.client.json
    *
    *  * The destination dataset must exist.  * The source dataset and destination dataset must both
    * reside in the same    project. De-identifying data across multiple projects is not supported.
-   * * The destination FHIR store must not exist.  * The caller must have the necessary permissions
-   * to create the destination    FHIR store.
+   * * The destination FHIR store must exist.  * The caller must have the
+   * healthcare.fhirResources.update permission to    write to the destination FHIR store.
    * @param destinationStore destinationStore or {@code null} for none
    */
   public DeidentifyFhirStoreRequest setDestinationStore(java.lang.String destinationStore) {

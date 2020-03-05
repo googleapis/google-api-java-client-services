@@ -75,7 +75,9 @@ public final class GoogleCloudDatacatalogV1beta1SearchCatalogRequest extends com
   private java.lang.String query;
 
   /**
-   * Required. The scope of this search request.
+   * Required. The scope of this search request. A `scope` that has empty `include_org_ids`,
+   * `include_project_ids` AND false `include_gcp_public_datasets` is considered invalid. Data
+   * Catalog will return an error in such a case.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -182,7 +184,9 @@ public final class GoogleCloudDatacatalogV1beta1SearchCatalogRequest extends com
   }
 
   /**
-   * Required. The scope of this search request.
+   * Required. The scope of this search request. A `scope` that has empty `include_org_ids`,
+   * `include_project_ids` AND false `include_gcp_public_datasets` is considered invalid. Data
+   * Catalog will return an error in such a case.
    * @return value or {@code null} for none
    */
   public GoogleCloudDatacatalogV1beta1SearchCatalogRequestScope getScope() {
@@ -190,7 +194,9 @@ public final class GoogleCloudDatacatalogV1beta1SearchCatalogRequest extends com
   }
 
   /**
-   * Required. The scope of this search request.
+   * Required. The scope of this search request. A `scope` that has empty `include_org_ids`,
+   * `include_project_ids` AND false `include_gcp_public_datasets` is considered invalid. Data
+   * Catalog will return an error in such a case.
    * @param scope scope or {@code null} for none
    */
   public GoogleCloudDatacatalogV1beta1SearchCatalogRequest setScope(GoogleCloudDatacatalogV1beta1SearchCatalogRequestScope scope) {

@@ -60,6 +60,16 @@ public final class GoogleCloudDatacatalogV1beta1TagField extends com.google.api.
   private GoogleCloudDatacatalogV1beta1TagFieldEnumValue enumValue;
 
   /**
+   * Output only. The order of this field with respect to other fields in this tag. It can be set in
+   * Tag. For example, a higher value can indicate a more important field. The value can be
+   * negative. Multiple fields can have the same order, and field orders within a tag do not have to
+   * be sequential.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer order;
+
+  /**
    * Holds the value for a tag field with string type.
    * The value may be {@code null}.
    */
@@ -140,6 +150,29 @@ public final class GoogleCloudDatacatalogV1beta1TagField extends com.google.api.
    */
   public GoogleCloudDatacatalogV1beta1TagField setEnumValue(GoogleCloudDatacatalogV1beta1TagFieldEnumValue enumValue) {
     this.enumValue = enumValue;
+    return this;
+  }
+
+  /**
+   * Output only. The order of this field with respect to other fields in this tag. It can be set in
+   * Tag. For example, a higher value can indicate a more important field. The value can be
+   * negative. Multiple fields can have the same order, and field orders within a tag do not have to
+   * be sequential.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getOrder() {
+    return order;
+  }
+
+  /**
+   * Output only. The order of this field with respect to other fields in this tag. It can be set in
+   * Tag. For example, a higher value can indicate a more important field. The value can be
+   * negative. Multiple fields can have the same order, and field orders within a tag do not have to
+   * be sequential.
+   * @param order order or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1beta1TagField setOrder(java.lang.Integer order) {
+    this.order = order;
     return this;
   }
 

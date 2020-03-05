@@ -586,7 +586,7 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
      * https://support.google.com/maps/answer/7012050?hl=en_topic=6275604, the photo must meet the
      * following requirements:
      *
-     * * Photo Sphere XMP metadata must be included in the photo medadata. See
+     * * Photo Sphere XMP metadata must be included in the photo metadata. See
      * https://developers.google.com/streetview/spherical-metadata for the required fields. * The pixel
      * size of the photo must meet the size requirements listed in
      * https://support.google.com/maps/answer/7012050?hl=en_topic=6275604, and the photo must be a full
@@ -622,7 +622,7 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
        * https://support.google.com/maps/answer/7012050?hl=en_topic=6275604, the photo must meet the
        * following requirements:
        *
-       * * Photo Sphere XMP metadata must be included in the photo medadata. See
+       * * Photo Sphere XMP metadata must be included in the photo metadata. See
        * https://developers.google.com/streetview/spherical-metadata for the required fields. * The
        * pixel size of the photo must meet the size requirements listed in
        * https://support.google.com/maps/answer/7012050?hl=en_topic=6275604, and the photo must be a

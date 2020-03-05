@@ -213,6 +213,13 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private java.util.List<NodeTaint> taints;
 
   /**
+   * The workload metadata configuration for this node.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WorkloadMetadataConfig workloadMetadataConfig;
+
+  /**
    * A list of hardware accelerators to be attached to each node. See
    * https://cloud.google.com/compute/docs/gpus for more information about support for GPUs.
    * @return value or {@code null} for none
@@ -612,6 +619,23 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setTaints(java.util.List<NodeTaint> taints) {
     this.taints = taints;
+    return this;
+  }
+
+  /**
+   * The workload metadata configuration for this node.
+   * @return value or {@code null} for none
+   */
+  public WorkloadMetadataConfig getWorkloadMetadataConfig() {
+    return workloadMetadataConfig;
+  }
+
+  /**
+   * The workload metadata configuration for this node.
+   * @param workloadMetadataConfig workloadMetadataConfig or {@code null} for none
+   */
+  public NodeConfig setWorkloadMetadataConfig(WorkloadMetadataConfig workloadMetadataConfig) {
+    this.workloadMetadataConfig = workloadMetadataConfig;
     return this;
   }
 

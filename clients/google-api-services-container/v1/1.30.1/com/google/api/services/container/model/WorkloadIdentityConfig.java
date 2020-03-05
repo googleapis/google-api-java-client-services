@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.container.v1beta1.model;
+package com.google.api.services.container.model;
 
 /**
  * Configuration for the use of Kubernetes Service Accounts in GCP IAM policies.
@@ -31,35 +31,11 @@ package com.google.api.services.container.v1beta1.model;
 public final class WorkloadIdentityConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * IAM Identity Namespace to attach all Kubernetes Service Accounts to.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String identityNamespace;
-
-  /**
    * The workload pool to attach all Kubernetes service accounts to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String workloadPool;
-
-  /**
-   * IAM Identity Namespace to attach all Kubernetes Service Accounts to.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getIdentityNamespace() {
-    return identityNamespace;
-  }
-
-  /**
-   * IAM Identity Namespace to attach all Kubernetes Service Accounts to.
-   * @param identityNamespace identityNamespace or {@code null} for none
-   */
-  public WorkloadIdentityConfig setIdentityNamespace(java.lang.String identityNamespace) {
-    this.identityNamespace = identityNamespace;
-    return this;
-  }
 
   /**
    * The workload pool to attach all Kubernetes service accounts to.

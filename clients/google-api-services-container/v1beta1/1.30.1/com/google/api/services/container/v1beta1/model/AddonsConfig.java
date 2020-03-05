@@ -47,8 +47,7 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
   private DnsCacheConfig dnsCacheConfig;
 
   /**
-   * Configuration for the GCE PD CSI driver. This option can only be enabled at cluster creation
-   * time.
+   * Configuration for the GCP Compute Persistent Disk CSI driver.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -140,8 +139,7 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Configuration for the GCE PD CSI driver. This option can only be enabled at cluster creation
-   * time.
+   * Configuration for the GCP Compute Persistent Disk CSI driver.
    * @return value or {@code null} for none
    */
   public GcePersistentDiskCsiDriverConfig getGcePersistentDiskCsiDriverConfig() {
@@ -149,8 +147,7 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Configuration for the GCE PD CSI driver. This option can only be enabled at cluster creation
-   * time.
+   * Configuration for the GCP Compute Persistent Disk CSI driver.
    * @param gcePersistentDiskCsiDriverConfig gcePersistentDiskCsiDriverConfig or {@code null} for none
    */
   public AddonsConfig setGcePersistentDiskCsiDriverConfig(GcePersistentDiskCsiDriverConfig gcePersistentDiskCsiDriverConfig) {

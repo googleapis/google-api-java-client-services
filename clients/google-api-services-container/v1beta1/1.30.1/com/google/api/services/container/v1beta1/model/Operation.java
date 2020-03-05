@@ -84,7 +84,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.lang.String operationType;
 
   /**
-   * [Output only] Progress information for an operation.
+   * Output only. [Output only] Progress information for an operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,7 +113,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.lang.String status;
 
   /**
-   * If an error has occurred, a textual description of the error.
+   * Output only. If an error has occurred, a textual description of the error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -260,7 +260,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] Progress information for an operation.
+   * Output only. [Output only] Progress information for an operation.
    * @return value or {@code null} for none
    */
   public OperationProgress getProgress() {
@@ -268,7 +268,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] Progress information for an operation.
+   * Output only. [Output only] Progress information for an operation.
    * @param progress progress or {@code null} for none
    */
   public Operation setProgress(OperationProgress progress) {
@@ -330,7 +330,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If an error has occurred, a textual description of the error.
+   * Output only. If an error has occurred, a textual description of the error.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatusMessage() {
@@ -338,7 +338,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If an error has occurred, a textual description of the error.
+   * Output only. If an error has occurred, a textual description of the error.
    * @param statusMessage statusMessage or {@code null} for none
    */
   public Operation setStatusMessage(java.lang.String statusMessage) {

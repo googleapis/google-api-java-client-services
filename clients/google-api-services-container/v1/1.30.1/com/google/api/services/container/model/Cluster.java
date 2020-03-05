@@ -436,6 +436,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private VerticalPodAutoscaling verticalPodAutoscaling;
 
   /**
+   * Configuration for the use of Kubernetes Service Accounts in GCP IAM policies.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WorkloadIdentityConfig workloadIdentityConfig;
+
+  /**
    * [Output only] The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
    * which the cluster resides. This field is deprecated, use location instead.
    * The value may be {@code null}.
@@ -1394,6 +1401,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setVerticalPodAutoscaling(VerticalPodAutoscaling verticalPodAutoscaling) {
     this.verticalPodAutoscaling = verticalPodAutoscaling;
+    return this;
+  }
+
+  /**
+   * Configuration for the use of Kubernetes Service Accounts in GCP IAM policies.
+   * @return value or {@code null} for none
+   */
+  public WorkloadIdentityConfig getWorkloadIdentityConfig() {
+    return workloadIdentityConfig;
+  }
+
+  /**
+   * Configuration for the use of Kubernetes Service Accounts in GCP IAM policies.
+   * @param workloadIdentityConfig workloadIdentityConfig or {@code null} for none
+   */
+  public Cluster setWorkloadIdentityConfig(WorkloadIdentityConfig workloadIdentityConfig) {
+    this.workloadIdentityConfig = workloadIdentityConfig;
     return this;
   }
 

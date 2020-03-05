@@ -39,7 +39,9 @@ public final class ReservationAffinity extends com.google.api.client.json.Generi
   private java.lang.String consumeReservationType;
 
   /**
-   * Corresponds to the label key of reservation resource.
+   * Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by
+   * name, specify "googleapis.com/reservation-name" as the key and specify the name of your
+   * reservation as its value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +72,9 @@ public final class ReservationAffinity extends com.google.api.client.json.Generi
   }
 
   /**
-   * Corresponds to the label key of reservation resource.
+   * Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by
+   * name, specify "googleapis.com/reservation-name" as the key and specify the name of your
+   * reservation as its value.
    * @return value or {@code null} for none
    */
   public java.lang.String getKey() {
@@ -78,7 +82,9 @@ public final class ReservationAffinity extends com.google.api.client.json.Generi
   }
 
   /**
-   * Corresponds to the label key of reservation resource.
+   * Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by
+   * name, specify "googleapis.com/reservation-name" as the key and specify the name of your
+   * reservation as its value.
    * @param key key or {@code null} for none
    */
   public ReservationAffinity setKey(java.lang.String key) {

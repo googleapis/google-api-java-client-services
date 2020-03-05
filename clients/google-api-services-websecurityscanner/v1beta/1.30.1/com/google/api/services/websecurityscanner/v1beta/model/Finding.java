@@ -114,6 +114,13 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private java.lang.String reproductionUrl;
 
   /**
+   * The severity level of the reported vulnerability.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String severity;
+
+  /**
    * The tracking ID uniquely identifies a vulnerability instance across multiple ScanRuns.
    * The value may be {@code null}.
    */
@@ -345,6 +352,23 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setReproductionUrl(java.lang.String reproductionUrl) {
     this.reproductionUrl = reproductionUrl;
+    return this;
+  }
+
+  /**
+   * The severity level of the reported vulnerability.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSeverity() {
+    return severity;
+  }
+
+  /**
+   * The severity level of the reported vulnerability.
+   * @param severity severity or {@code null} for none
+   */
+  public Finding setSeverity(java.lang.String severity) {
+    this.severity = severity;
     return this;
   }
 

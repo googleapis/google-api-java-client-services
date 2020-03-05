@@ -17,9 +17,9 @@
 package com.google.api.services.storagetransfer.v1.model;
 
 /**
- * In a GcsData resource, an object's name is the Cloud Storage object's name and its
- * `lastModificationTime` refers to the object's updated time, which changes when the content or the
- * metadata of the object is updated.
+ * In a GcsData resource, an object's name is the Cloud Storage object's name and its "last
+ * modification time" refers to the object's `updated` property of Cloud Storage objects, which
+ * changes when the content or the metadata of the object is updated.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Storage Transfer API. For a detailed explanation see:

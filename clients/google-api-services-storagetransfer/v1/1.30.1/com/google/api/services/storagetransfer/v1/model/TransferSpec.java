@@ -59,7 +59,7 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Only objects that satisfy these object conditions are included in the set of data source and
-   * data sink objects.  Object conditions based on objects' `lastModificationTime` do not exclude
+   * data sink objects.  Object conditions based on objects' "last modification time" do not exclude
    * objects in a data sink.
    * The value may be {@code null}.
    */
@@ -67,8 +67,9 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
   private ObjectConditions objectConditions;
 
   /**
-   * If the option `deleteObjectsUniqueInSink` is `true`, object conditions based on objects'
-   * `lastModificationTime` are ignored and do not exclude objects in a data source or a data sink.
+   * If the option delete_objects_unique_in_sink is `true`, object conditions based on objects'
+   * "last modification time" are ignored and do not exclude objects in a data source or a data
+   * sink.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -144,7 +145,7 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Only objects that satisfy these object conditions are included in the set of data source and
-   * data sink objects.  Object conditions based on objects' `lastModificationTime` do not exclude
+   * data sink objects.  Object conditions based on objects' "last modification time" do not exclude
    * objects in a data sink.
    * @return value or {@code null} for none
    */
@@ -154,7 +155,7 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Only objects that satisfy these object conditions are included in the set of data source and
-   * data sink objects.  Object conditions based on objects' `lastModificationTime` do not exclude
+   * data sink objects.  Object conditions based on objects' "last modification time" do not exclude
    * objects in a data sink.
    * @param objectConditions objectConditions or {@code null} for none
    */
@@ -164,8 +165,9 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If the option `deleteObjectsUniqueInSink` is `true`, object conditions based on objects'
-   * `lastModificationTime` are ignored and do not exclude objects in a data source or a data sink.
+   * If the option delete_objects_unique_in_sink is `true`, object conditions based on objects'
+   * "last modification time" are ignored and do not exclude objects in a data source or a data
+   * sink.
    * @return value or {@code null} for none
    */
   public TransferOptions getTransferOptions() {
@@ -173,8 +175,9 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If the option `deleteObjectsUniqueInSink` is `true`, object conditions based on objects'
-   * `lastModificationTime` are ignored and do not exclude objects in a data source or a data sink.
+   * If the option delete_objects_unique_in_sink is `true`, object conditions based on objects'
+   * "last modification time" are ignored and do not exclude objects in a data source or a data
+   * sink.
    * @param transferOptions transferOptions or {@code null} for none
    */
   public TransferSpec setTransferOptions(TransferOptions transferOptions) {

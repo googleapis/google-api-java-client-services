@@ -40,7 +40,7 @@ public final class AwsS3Data extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. S3 Bucket name (see [Creating a
-   * bucket](http://docs.aws.amazon.com/AmazonS3/latest/dev/create-bucket-get-location-
+   * bucket](https://docs.aws.amazon.com/AmazonS3/latest/dev/create-bucket-get-location-
    * example.html)).
    * The value may be {@code null}.
    */
@@ -68,7 +68,7 @@ public final class AwsS3Data extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. S3 Bucket name (see [Creating a
-   * bucket](http://docs.aws.amazon.com/AmazonS3/latest/dev/create-bucket-get-location-
+   * bucket](https://docs.aws.amazon.com/AmazonS3/latest/dev/create-bucket-get-location-
    * example.html)).
    * @return value or {@code null} for none
    */
@@ -78,7 +78,7 @@ public final class AwsS3Data extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. S3 Bucket name (see [Creating a
-   * bucket](http://docs.aws.amazon.com/AmazonS3/latest/dev/create-bucket-get-location-
+   * bucket](https://docs.aws.amazon.com/AmazonS3/latest/dev/create-bucket-get-location-
    * example.html)).
    * @param bucketName bucketName or {@code null} for none
    */

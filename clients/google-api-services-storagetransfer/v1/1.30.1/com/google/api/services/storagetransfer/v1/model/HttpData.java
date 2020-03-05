@@ -19,18 +19,18 @@ package com.google.api.services.storagetransfer.v1.model;
 /**
  * An HttpData resource specifies a list of objects on the web to be transferred over HTTP.  The
  * information of the objects to be transferred is contained in a file referenced by a URL. The
- * first line in the file must be "TsvHttpData-1.0", which specifies the format of the file.
+ * first line in the file must be `"TsvHttpData-1.0"`, which specifies the format of the file.
  * Subsequent lines specify the information of the list of objects, one object per list entry. Each
  * entry has the following tab-delimited fields:
  *
- * * HTTP URL - The location of the object.
+ * * **HTTP URL** — The location of the object.
  *
- * * Length - The size of the object in bytes.
+ * * **Length** — The size of the object in bytes.
  *
- * * MD5 - The base64-encoded MD5 hash of the object.
+ * * **MD5** — The base64-encoded MD5 hash of the object.
  *
- * For an example of a valid TSV file, see [Transferring data from
- * URLs](https://cloud.google.com/storage/transfer/create-url-list).
+ * For an example of a valid TSV file, see [Transferring data from URLs](https://cloud.google.com
+ * /storage-transfer/docs/create-url-list).
  *
  * When transferring data based on a URL list, keep the following in mind:
  *
@@ -41,8 +41,8 @@ package com.google.api.services.storagetransfer.v1.model;
  * object will not be transferred.
  *
  * * If the specified MD5 does not match the MD5 computed from the transferred bytes, the object
- * transfer will fail. For more information, see [Generating MD5
- * hashes](https://cloud.google.com/storage/transfer/#md5)
+ * transfer will fail. For more information, see [Generating MD5 hashes](https://cloud.google.com
+ * /storage-transfer/docs/create-url-list#md5)
  *
  * * Ensure that each URL you specify is publicly accessible. For example, in Cloud Storage you can
  * [share an object publicly] (https://cloud.google.com/storage/docs/cloud-console#_sharingdata) and
@@ -51,7 +51,7 @@ package com.google.api.services.storagetransfer.v1.model;
  * * Storage Transfer Service obeys `robots.txt` rules and requires the source HTTP server to
  * support `Range` requests and to return a `Content-Length` header in each response.
  *
- * * [ObjectConditions](#ObjectConditions) have no effect when filtering objects to transfer.
+ * * ObjectConditions have no effect when filtering objects to transfer.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Storage Transfer API. For a detailed explanation see:

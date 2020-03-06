@@ -56,6 +56,7 @@ packages on [Maven Central][maven-search].
 | Cloud Data Loss Prevention (DLP) API | [v2](clients/google-api-services-dlp/v2) |
 | Cloud Dataproc API | [v1](clients/google-api-services-dataproc/v1), [v1beta2](clients/google-api-services-dataproc/v1beta2) |
 | Cloud Datastore API | [v1](clients/google-api-services-datastore/v1), [v1beta1](clients/google-api-services-datastore/v1beta1), [v1beta3](clients/google-api-services-datastore/v1beta3) |
+| Cloud Debugger API | [v2](clients/google-api-services-clouddebugger/v2) |
 | Cloud Filestore API | [v1](clients/google-api-services-file/v1), [v1beta1](clients/google-api-services-file/v1beta1) |
 | Cloud Firestore API | [v1](clients/google-api-services-firestore/v1), [v1beta1](clients/google-api-services-firestore/v1beta1), [v1beta2](clients/google-api-services-firestore/v1beta2) |
 | Cloud Functions API | [v1](clients/google-api-services-cloudfunctions/v1), [v1beta2](clients/google-api-services-cloudfunctions/v1beta2) |
@@ -65,6 +66,7 @@ packages on [Maven Central][maven-search].
 | Cloud IoT API | [v1](clients/google-api-services-cloudiot/v1) |
 | Cloud Key Management Service (KMS) API | [v1](clients/google-api-services-cloudkms/v1) |
 | Cloud Life Sciences API | [v2beta](clients/google-api-services-lifesciences/v2beta) |
+| Cloud Logging API | [v2](clients/google-api-services-logging/v2) |
 | Cloud Natural Language API | [v1](clients/google-api-services-language/v1), [v1beta1](clients/google-api-services-language/v1beta1), [v1beta2](clients/google-api-services-language/v1beta2) |
 | Cloud OS Config API | [v1beta](clients/google-api-services-osconfig/v1beta) |
 | Cloud OS Login API | [v1](clients/google-api-services-oslogin/v1), [v1alpha](clients/google-api-services-oslogin/v1alpha), [v1beta](clients/google-api-services-oslogin/v1beta) |
@@ -88,7 +90,7 @@ packages on [Maven Central][maven-search].
 | Cloud Tasks API | [v2](clients/google-api-services-cloudtasks/v2), [v2beta2](clients/google-api-services-cloudtasks/v2beta2), [v2beta3](clients/google-api-services-cloudtasks/v2beta3) |
 | Cloud Testing API | [v1](clients/google-api-services-testing/v1) |
 | Cloud Text-to-Speech API | [v1](clients/google-api-services-texttospeech/v1), [v1beta1](clients/google-api-services-texttospeech/v1beta1) |
-| Cloud Tool Results API | [v1](clients/google-api-services-toolresults/v1), [v1beta3](clients/google-api-services-toolresults/v1beta3) |
+| Cloud Tool Results API | [v1beta3](clients/google-api-services-toolresults/v1beta3) |
 | Cloud Trace API | [v1](clients/google-api-services-cloudtrace/v1), [v2](clients/google-api-services-cloudtrace/v2), [v2beta1](clients/google-api-services-cloudtrace/v2beta1) |
 | Cloud Translation API | [v3](clients/google-api-services-translate/v3), [v3beta1](clients/google-api-services-translate/v3beta1) |
 | Cloud Video Intelligence API | [v1](clients/google-api-services-videointelligence/v1), [v1beta2](clients/google-api-services-videointelligence/v1beta2), [v1p1beta1](clients/google-api-services-videointelligence/v1p1beta1), [v1p2beta1](clients/google-api-services-videointelligence/v1p2beta1), [v1p3beta1](clients/google-api-services-videointelligence/v1p3beta1) |
@@ -158,6 +160,7 @@ packages on [Maven Central][maven-search].
 | Licensing API | [v1](clients/google-api-services-licensing/v1) |
 | Managed Service for Microsoft Active Directory API | [v1](clients/google-api-services-managedidentities/v1), [v1alpha1](clients/google-api-services-managedidentities/v1alpha1), [v1beta1](clients/google-api-services-managedidentities/v1beta1) |
 | Manufacturer Center API | [v1](clients/google-api-services-manufacturers/v1) |
+| Network Management API | [v1beta1](clients/google-api-services-networkmanagement/v1beta1) |
 | PageSpeed Insights API | [v1](clients/google-api-services-pagespeedonline/v1), [v2](clients/google-api-services-pagespeedonline/v2), [v4](clients/google-api-services-pagespeedonline/v4), [v5](clients/google-api-services-pagespeedonline/v5) |
 | People API | [v1](clients/google-api-services-people/v1) |
 | Perspective Comment Analyzer API | [v1alpha1](clients/google-api-services-commentanalyzer/v1alpha1) |
@@ -177,8 +180,6 @@ packages on [Maven Central][maven-search].
 | Service Management API | [v1](clients/google-api-services-servicemanagement/v1) |
 | Service Networking API | [v1](clients/google-api-services-servicenetworking/v1), [v1beta](clients/google-api-services-servicenetworking/v1beta) |
 | Service Usage API | [v1](clients/google-api-services-serviceusage/v1), [v1beta1](clients/google-api-services-serviceusage/v1beta1) |
-| Stackdriver Debugger API | [v2](clients/google-api-services-clouddebugger/v2) |
-| Stackdriver Logging API | [v2](clients/google-api-services-logging/v2) |
 | Stackdriver Monitoring API | [v1](clients/google-api-services-monitoring/v1), [v3](clients/google-api-services-monitoring/v3) |
 | Stackdriver Profiler API | [v2](clients/google-api-services-cloudprofiler/v2) |
 | Storage Transfer API | [v1](clients/google-api-services-storagetransfer/v1) |

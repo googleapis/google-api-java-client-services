@@ -115,6 +115,15 @@ public final class Queue extends com.google.api.client.json.GenericJson {
   private RetryConfig retryConfig;
 
   /**
+   * Configuration options for writing logs to [Stackdriver
+   * Logging](https://cloud.google.com/logging/docs/). If this field is unset, then no logs are
+   * written.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StackdriverLoggingConfig stackdriverLoggingConfig;
+
+  /**
    * Output only. The state of the queue.
    *
    * `state` can only be changed by called PauseQueue, ResumeQueue, or uploading
@@ -305,6 +314,27 @@ public final class Queue extends com.google.api.client.json.GenericJson {
    */
   public Queue setRetryConfig(RetryConfig retryConfig) {
     this.retryConfig = retryConfig;
+    return this;
+  }
+
+  /**
+   * Configuration options for writing logs to [Stackdriver
+   * Logging](https://cloud.google.com/logging/docs/). If this field is unset, then no logs are
+   * written.
+   * @return value or {@code null} for none
+   */
+  public StackdriverLoggingConfig getStackdriverLoggingConfig() {
+    return stackdriverLoggingConfig;
+  }
+
+  /**
+   * Configuration options for writing logs to [Stackdriver
+   * Logging](https://cloud.google.com/logging/docs/). If this field is unset, then no logs are
+   * written.
+   * @param stackdriverLoggingConfig stackdriverLoggingConfig or {@code null} for none
+   */
+  public Queue setStackdriverLoggingConfig(StackdriverLoggingConfig stackdriverLoggingConfig) {
+    this.stackdriverLoggingConfig = stackdriverLoggingConfig;
     return this;
   }
 

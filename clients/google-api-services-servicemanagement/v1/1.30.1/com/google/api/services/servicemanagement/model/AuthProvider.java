@@ -90,6 +90,22 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
   private java.lang.String jwksUri;
 
   /**
+   * Defines the locations to extract the JWT.
+   *
+   * JWT locations can be either from HTTP headers or URL query parameters. The rule is that the
+   * first match wins. The checking order is: checking all headers first, then URL query parameters.
+   *
+   * If not specified,  default to use following 3 locations:    1) Authorization: Bearer    2) x
+   * -goog-iap-jwt-assertion    3) access_token query parameter
+   *
+   * Default locations can be specified as followings:    jwt_locations:    - header: Authorization
+   * value_prefix: "Bearer "    - header: x-goog-iap-jwt-assertion    - query: access_token
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<JwtLocation> jwtLocations;
+
+  /**
    * The list of JWT [audiences](https://tools.ietf.org/html/draft-ietf-oauth-json-web-
    * token-32#section-4.1.3). that are allowed to access. A JWT containing any of these audiences
    * will be accepted. When this setting is absent, only JWTs with audience
@@ -217,6 +233,41 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
    */
   public AuthProvider setJwksUri(java.lang.String jwksUri) {
     this.jwksUri = jwksUri;
+    return this;
+  }
+
+  /**
+   * Defines the locations to extract the JWT.
+   *
+   * JWT locations can be either from HTTP headers or URL query parameters. The rule is that the
+   * first match wins. The checking order is: checking all headers first, then URL query parameters.
+   *
+   * If not specified,  default to use following 3 locations:    1) Authorization: Bearer    2) x
+   * -goog-iap-jwt-assertion    3) access_token query parameter
+   *
+   * Default locations can be specified as followings:    jwt_locations:    - header: Authorization
+   * value_prefix: "Bearer "    - header: x-goog-iap-jwt-assertion    - query: access_token
+   * @return value or {@code null} for none
+   */
+  public java.util.List<JwtLocation> getJwtLocations() {
+    return jwtLocations;
+  }
+
+  /**
+   * Defines the locations to extract the JWT.
+   *
+   * JWT locations can be either from HTTP headers or URL query parameters. The rule is that the
+   * first match wins. The checking order is: checking all headers first, then URL query parameters.
+   *
+   * If not specified,  default to use following 3 locations:    1) Authorization: Bearer    2) x
+   * -goog-iap-jwt-assertion    3) access_token query parameter
+   *
+   * Default locations can be specified as followings:    jwt_locations:    - header: Authorization
+   * value_prefix: "Bearer "    - header: x-goog-iap-jwt-assertion    - query: access_token
+   * @param jwtLocations jwtLocations or {@code null} for none
+   */
+  public AuthProvider setJwtLocations(java.util.List<JwtLocation> jwtLocations) {
+    this.jwtLocations = jwtLocations;
     return this;
   }
 

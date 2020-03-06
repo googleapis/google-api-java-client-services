@@ -19,7 +19,8 @@ package com.google.api.services.cloudidentity.v1beta1.model;
 /**
  * A group within the Cloud Identity Groups API.
  *
- * A `Group` is a collection of entities, where each entity is either a user or another group.
+ * A `Group` is a collection of entities, where each entity is either a user or another group or a
+ * service account.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Identity API. For a detailed explanation see:
@@ -32,7 +33,7 @@ package com.google.api.services.cloudidentity.v1beta1.model;
 public final class Group extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Additional entity key aliases for a Group.
+   * Additional entity key aliases for a Group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,7 +115,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
-   * Optional. Additional entity key aliases for a Group.
+   * Additional entity key aliases for a Group.
    * @return value or {@code null} for none
    */
   public java.util.List<EntityKey> getAdditionalGroupKeys() {
@@ -122,7 +123,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Additional entity key aliases for a Group.
+   * Additional entity key aliases for a Group.
    * @param additionalGroupKeys additionalGroupKeys or {@code null} for none
    */
   public Group setAdditionalGroupKeys(java.util.List<EntityKey> additionalGroupKeys) {

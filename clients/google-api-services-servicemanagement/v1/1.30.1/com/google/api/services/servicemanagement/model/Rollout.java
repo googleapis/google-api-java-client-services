@@ -40,7 +40,7 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * The user who created the Rollout. Readonly.
+   * This field is deprecated and will be deleted. Please remove usage of this field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,7 +106,7 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user who created the Rollout. Readonly.
+   * This field is deprecated and will be deleted. Please remove usage of this field.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreatedBy() {
@@ -114,7 +114,7 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user who created the Rollout. Readonly.
+   * This field is deprecated and will be deleted. Please remove usage of this field.
    * @param createdBy createdBy or {@code null} for none
    */
   public Rollout setCreatedBy(java.lang.String createdBy) {

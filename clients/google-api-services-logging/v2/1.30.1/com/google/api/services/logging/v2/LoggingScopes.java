@@ -17,7 +17,7 @@
 package com.google.api.services.logging.v2;
 
 /**
- * Available OAuth 2.0 scopes for use with the Stackdriver Logging API.
+ * Available OAuth 2.0 scopes for use with the Cloud Logging API.
  *
  * @since 1.4
  */

@@ -20,7 +20,7 @@ package com.google.api.services.logging.v2;
  * Service definition for Logging (v2).
  *
  * <p>
- * Writes log entries and manages your Stackdriver Logging configuration. The table entries below are presented in alphabetical order, not in order of common use. For explanations of the concepts found in the table entries, read the Stackdriver Logging documentation.
+ * Writes log entries and manages your Cloud Logging configuration. The table entries below are presented in alphabetical order, not in order of common use. For explanations of the concepts found in the table entries, read the Cloud Logging documentation.
  * </p>
  *
  * <p>
@@ -46,7 +46,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Stackdriver Logging API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.9 of the Cloud Logging API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**

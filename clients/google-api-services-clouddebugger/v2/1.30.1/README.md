@@ -1,15 +1,15 @@
-# Stackdriver Debugger API Client Library for Java
+# Cloud Debugger API Client Library for Java
 
 Examines the call stack and variables of a running application without stopping or slowing it down.
 
 
-This page contains information about getting started with the Stackdriver Debugger API
+This page contains information about getting started with the Cloud Debugger API
 using the Google API Client Library for Java. In addition, you may be interested
 in the following documentation:
 
-* Browse the [Javadoc reference for the Stackdriver Debugger API][javadoc]
+* Browse the [Javadoc reference for the Cloud Debugger API][javadoc]
 * Read the [Developer's Guide for the Google API Client Library for Java][google-api-client].
-* Interact with this API in your browser using the [APIs Explorer for the Stackdriver Debugger API][api-explorer]
+* Interact with this API in your browser using the [APIs Explorer for the Cloud Debugger API][api-explorer]
 
 ## Installation
 
@@ -23,7 +23,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-clouddebugger</artifactId>
-      <version>v2-rev20200221-1.30.9</version>
+      <version>v2-rev20200228-1.30.9</version>
     </dependency>
   </dependencies>
 </project>
@@ -36,7 +36,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-clouddebugger:v2-rev20200221-1.30.9'
+  compile 'com.google.apis:google-api-services-clouddebugger:v2-rev20200228-1.30.9'
 }
 ```
 

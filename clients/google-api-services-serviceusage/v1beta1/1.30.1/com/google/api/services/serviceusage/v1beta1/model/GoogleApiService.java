@@ -80,7 +80,9 @@ public final class GoogleApiService extends com.google.api.client.json.GenericJs
   /**
    * The semantic version of the service configuration. The config version affects the
    * interpretation of the service configuration. For example, certain features are enabled by
-   * default for certain config versions. The latest config version is `3`.
+   * default for certain config versions.
+   *
+   * The latest config version is `3`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -347,7 +349,9 @@ public final class GoogleApiService extends com.google.api.client.json.GenericJs
   /**
    * The semantic version of the service configuration. The config version affects the
    * interpretation of the service configuration. For example, certain features are enabled by
-   * default for certain config versions. The latest config version is `3`.
+   * default for certain config versions.
+   *
+   * The latest config version is `3`.
    * @return value or {@code null} for none
    */
   public java.lang.Long getConfigVersion() {
@@ -357,7 +361,9 @@ public final class GoogleApiService extends com.google.api.client.json.GenericJs
   /**
    * The semantic version of the service configuration. The config version affects the
    * interpretation of the service configuration. For example, certain features are enabled by
-   * default for certain config versions. The latest config version is `3`.
+   * default for certain config versions.
+   *
+   * The latest config version is `3`.
    * @param configVersion configVersion or {@code null} for none
    */
   public GoogleApiService setConfigVersion(java.lang.Long configVersion) {

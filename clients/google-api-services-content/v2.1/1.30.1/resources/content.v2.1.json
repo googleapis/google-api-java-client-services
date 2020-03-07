@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/jsas8bLNaSH3hHj4JQAHY8a_-DI\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/soPJe3_6whHFxBf3W9riAeYvQHU\"",
  "discoveryVersion": "v1",
  "id": "content:v2.1",
  "name": "content",
  "canonicalName": "Shopping Content",
  "version": "v2.1",
- "revision": "20200219",
+ "revision": "20200226",
  "title": "Content API for Shopping",
  "description": "Manages product items, inventory, and Merchant Center accounts for Google Shopping.",
  "ownerDomain": "google.com",
@@ -2411,7 +2411,7 @@
     },
     "promotions": {
      "type": "array",
-     "description": "Promotions associated with the order.",
+     "description": "Promotions associated with the order.\n\nTo determine which promotions apply to which products, check the Promotions[].appliedItems[].lineItemId field against the LineItems[].id field for each promotion. If a promotion is applied to more than 1 offerId, divide the discount value by the number of affected offers to determine how much discount to apply to each offerId.\n\nExamples:  \n- To calculate price paid by the customer for a single line item including the discount: For each promotion, subtract the LineItems[].adjustments[].priceAdjustment.value amount from the LineItems[].Price.value. \n- To calculate price paid by the customer for a single line item including the discount in case of multiple quantity: For each promotion, divide the LineItems[].adjustments[].priceAdjustment.value by the quantity of products then subtract the resulting value from the LineItems[].Product.Price.value for each quantity item.  \n\nOnly 1 promotion can be applied to an offerId in a given order. To refund an item which had a promotion applied to it, make sure to refund the amount after first subtracting the promotion discount from the item price.\n\nMore details about the program are here.",
      "items": {
       "$ref": "OrderPromotion"
      }
@@ -5651,6 +5651,29 @@
      "type": "array",
      "items": {
       "$ref": "ProductStatus"
+     }
+    }
+   }
+  },
+  "PubsubNotificationSettings": {
+   "id": "PubsubNotificationSettings",
+   "type": "object",
+   "description": "Settings for Pub/Sub notifications, all methods require that the caller is a direct user of the merchant center account.",
+   "properties": {
+    "cloudTopicName": {
+     "type": "string",
+     "description": "Cloud pub/sub topic to which notifications are sent (read-only)."
+    },
+    "kind": {
+     "type": "string",
+     "description": "Identifies what kind of resource this is. Value: the fixed string \"content#pubsubNotificationSettings\".",
+     "default": "content#pubsubNotificationSettings"
+    },
+    "registeredEvents": {
+     "type": "array",
+     "description": "List of event types. Supported event types: orderPendingShipment.",
+     "items": {
+      "type": "string"
      }
     }
    }
@@ -9512,7 +9535,7 @@
      "id": "content.products.list",
      "path": "{merchantId}/products",
      "httpMethod": "GET",
-     "description": "Lists the products in your Merchant Center account.",
+     "description": "Lists the products in your Merchant Center account. The response might contain fewer items than specified by maxResults. Rely on nextPageToken to determine if there are more items to be requested.",
      "parameters": {
       "maxResults": {
        "type": "integer",
@@ -9635,6 +9658,61 @@
      ],
      "response": {
       "$ref": "ProductstatusesListResponse"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/content"
+     ]
+    }
+   }
+  },
+  "pubsubnotificationsettings": {
+   "methods": {
+    "get": {
+     "id": "content.pubsubnotificationsettings.get",
+     "path": "{merchantId}/pubsubnotificationsettings",
+     "httpMethod": "GET",
+     "description": "Retrieves a Merchant Center account's pubsub notification settings.",
+     "parameters": {
+      "merchantId": {
+       "type": "string",
+       "description": "The ID of the account for which to get pubsub notification settings.",
+       "required": true,
+       "format": "uint64",
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "merchantId"
+     ],
+     "response": {
+      "$ref": "PubsubNotificationSettings"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/content"
+     ]
+    },
+    "update": {
+     "id": "content.pubsubnotificationsettings.update",
+     "path": "{merchantId}/pubsubnotificationsettings",
+     "httpMethod": "PUT",
+     "description": "Register a Merchant Center account for pubsub notifications. Note that cloud topic name should not be provided as part of the request.",
+     "parameters": {
+      "merchantId": {
+       "type": "string",
+       "description": "The ID of the account.",
+       "required": true,
+       "format": "uint64",
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "merchantId"
+     ],
+     "request": {
+      "$ref": "PubsubNotificationSettings"
+     },
+     "response": {
+      "$ref": "PubsubNotificationSettings"
      },
      "scopes": [
       "https://www.googleapis.com/auth/content"

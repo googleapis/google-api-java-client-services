@@ -131,6 +131,24 @@ public final class Order extends com.google.api.client.json.GenericJson {
 
   /**
    * Promotions associated with the order.
+   *
+   * To determine which promotions apply to which products, check the
+   * Promotions[].appliedItems[].lineItemId field against the LineItems[].id field for each
+   * promotion. If a promotion is applied to more than 1 offerId, divide the discount value by the
+   * number of affected offers to determine how much discount to apply to each offerId.
+   *
+   * Examples:   - To calculate price paid by the customer for a single line item including the
+   * discount: For each promotion, subtract the LineItems[].adjustments[].priceAdjustment.value
+   * amount from the LineItems[].Price.value.  - To calculate price paid by the customer for a
+   * single line item including the discount in case of multiple quantity: For each promotion,
+   * divide the LineItems[].adjustments[].priceAdjustment.value by the quantity of products then
+   * subtract the resulting value from the LineItems[].Product.Price.value for each quantity item.
+   *
+   * Only 1 promotion can be applied to an offerId in a given order. To refund an item which had a
+   * promotion applied to it, make sure to refund the amount after first subtracting the promotion
+   * discount from the item price.
+   *
+   * More details about the program are here.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -420,6 +438,24 @@ public final class Order extends com.google.api.client.json.GenericJson {
 
   /**
    * Promotions associated with the order.
+   *
+   * To determine which promotions apply to which products, check the
+   * Promotions[].appliedItems[].lineItemId field against the LineItems[].id field for each
+   * promotion. If a promotion is applied to more than 1 offerId, divide the discount value by the
+   * number of affected offers to determine how much discount to apply to each offerId.
+   *
+   * Examples:   - To calculate price paid by the customer for a single line item including the
+   * discount: For each promotion, subtract the LineItems[].adjustments[].priceAdjustment.value
+   * amount from the LineItems[].Price.value.  - To calculate price paid by the customer for a
+   * single line item including the discount in case of multiple quantity: For each promotion,
+   * divide the LineItems[].adjustments[].priceAdjustment.value by the quantity of products then
+   * subtract the resulting value from the LineItems[].Product.Price.value for each quantity item.
+   *
+   * Only 1 promotion can be applied to an offerId in a given order. To refund an item which had a
+   * promotion applied to it, make sure to refund the amount after first subtracting the promotion
+   * discount from the item price.
+   *
+   * More details about the program are here.
    * @return value or {@code null} for none
    */
   public java.util.List<OrderPromotion> getPromotions() {
@@ -428,6 +464,24 @@ public final class Order extends com.google.api.client.json.GenericJson {
 
   /**
    * Promotions associated with the order.
+   *
+   * To determine which promotions apply to which products, check the
+   * Promotions[].appliedItems[].lineItemId field against the LineItems[].id field for each
+   * promotion. If a promotion is applied to more than 1 offerId, divide the discount value by the
+   * number of affected offers to determine how much discount to apply to each offerId.
+   *
+   * Examples:   - To calculate price paid by the customer for a single line item including the
+   * discount: For each promotion, subtract the LineItems[].adjustments[].priceAdjustment.value
+   * amount from the LineItems[].Price.value.  - To calculate price paid by the customer for a
+   * single line item including the discount in case of multiple quantity: For each promotion,
+   * divide the LineItems[].adjustments[].priceAdjustment.value by the quantity of products then
+   * subtract the resulting value from the LineItems[].Product.Price.value for each quantity item.
+   *
+   * Only 1 promotion can be applied to an offerId in a given order. To refund an item which had a
+   * promotion applied to it, make sure to refund the amount after first subtracting the promotion
+   * discount from the item price.
+   *
+   * More details about the program are here.
    * @param promotions promotions or {@code null} for none
    */
   public Order setPromotions(java.util.List<OrderPromotion> promotions) {

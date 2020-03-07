@@ -41,6 +41,15 @@ public final class AccessPolicy extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Output only. An opaque identifier for the current version of the `AccessPolicy`. This will
+   * always be a strongly validated etag, meaning that two Access Polices will be identical if and
+   * only if their etags are identical. Clients should not expect this to be in any specific format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String etag;
+
+  /**
    * Output only. Resource name of the `AccessPolicy`. Format: `accessPolicies/{policy_id}`
    * The value may be {@code null}.
    */
@@ -83,6 +92,27 @@ public final class AccessPolicy extends com.google.api.client.json.GenericJson {
    */
   public AccessPolicy setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. An opaque identifier for the current version of the `AccessPolicy`. This will
+   * always be a strongly validated etag, meaning that two Access Polices will be identical if and
+   * only if their etags are identical. Clients should not expect this to be in any specific format.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEtag() {
+    return etag;
+  }
+
+  /**
+   * Output only. An opaque identifier for the current version of the `AccessPolicy`. This will
+   * always be a strongly validated etag, meaning that two Access Polices will be identical if and
+   * only if their etags are identical. Clients should not expect this to be in any specific format.
+   * @param etag etag or {@code null} for none
+   */
+  public AccessPolicy setEtag(java.lang.String etag) {
+    this.etag = etag;
     return this;
   }
 

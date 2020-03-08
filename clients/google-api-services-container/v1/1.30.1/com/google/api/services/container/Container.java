@@ -572,14 +572,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Required. Deprecated. The Google Developers Console [project ID or project
+         * Deprecated. The Google Developers Console [project ID or project
          * number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
          * and replaced by the name field.
          */
         @com.google.api.client.util.Key
         private java.lang.String projectId;
 
-        /** Required. Deprecated. The Google Developers Console [project ID or project
+        /** Deprecated. The Google Developers Console [project ID or project
        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
        replaced by the name field.
          */
@@ -588,7 +588,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Required. Deprecated. The Google Developers Console [project ID or project
+         * Deprecated. The Google Developers Console [project ID or project
          * number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
          * and replaced by the name field.
          */
@@ -598,24 +598,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Required. Deprecated. The name of the Google Compute Engine
-         * [zone](/compute/docs/zones#available) to return operations for. This field has been
-         * deprecated and replaced by the name field.
+         * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+         * to return operations for. This field has been deprecated and replaced by the name field.
          */
         @com.google.api.client.util.Key
         private java.lang.String zone;
 
-        /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-       to return operations for. This field has been deprecated and replaced by the name field.
+        /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) to return
+       operations for. This field has been deprecated and replaced by the name field.
          */
         public java.lang.String getZone() {
           return zone;
         }
 
         /**
-         * Required. Deprecated. The name of the Google Compute Engine
-         * [zone](/compute/docs/zones#available) to return operations for. This field has been
-         * deprecated and replaced by the name field.
+         * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+         * to return operations for. This field has been deprecated and replaced by the name field.
          */
         public GetServerConfig setZone(java.lang.String zone) {
           this.zone = zone;
@@ -1101,22 +1099,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The name of the cluster to delete. This field has been deprecated
-           * and replaced by the name field.
+           * Deprecated. The name of the cluster to delete. This field has been deprecated and
+           * replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String clusterId;
 
-          /** Required. Deprecated. The name of the cluster to delete. This field has been deprecated and
-         replaced by the name field.
+          /** Deprecated. The name of the cluster to delete. This field has been deprecated and replaced by the
+         name field.
            */
           public java.lang.String getClusterId() {
             return clusterId;
           }
 
           /**
-           * Required. Deprecated. The name of the cluster to delete. This field has been deprecated
-           * and replaced by the name field.
+           * Deprecated. The name of the cluster to delete. This field has been deprecated and
+           * replaced by the name field.
            */
           public Delete setClusterId(java.lang.String clusterId) {
             this.clusterId = clusterId;
@@ -1124,14 +1122,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://support.google.com/cloud/answer/6158840). This field has been
            * deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String projectId;
 
-          /** Required. Deprecated. The Google Developers Console [project ID or project
+          /** Deprecated. The Google Developers Console [project ID or project
          number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
          replaced by the name field.
            */
@@ -1140,7 +1138,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://support.google.com/cloud/answer/6158840). This field has been
            * deprecated and replaced by the name field.
            */
@@ -1150,24 +1148,24 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides. This field has been deprecated and replaced by the name
+           * field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+         the cluster resides. This field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides. This field has been deprecated and replaced by the name
+           * field.
            */
           public Delete setZone(java.lang.String zone) {
             this.zone = zone;
@@ -1324,22 +1322,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The name of the cluster to retrieve. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the cluster to retrieve. This field has been deprecated and
+           * replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String clusterId;
 
-          /** Required. Deprecated. The name of the cluster to retrieve. This field has been deprecated and
-         replaced by the name field.
+          /** Deprecated. The name of the cluster to retrieve. This field has been deprecated and replaced by the
+         name field.
            */
           public java.lang.String getClusterId() {
             return clusterId;
           }
 
           /**
-           * Required. Deprecated. The name of the cluster to retrieve. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the cluster to retrieve. This field has been deprecated and
+           * replaced by the name field.
            */
           public Get setClusterId(java.lang.String clusterId) {
             this.clusterId = clusterId;
@@ -1347,14 +1345,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://support.google.com/cloud/answer/6158840). This field has been
            * deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String projectId;
 
-          /** Required. Deprecated. The Google Developers Console [project ID or project
+          /** Deprecated. The Google Developers Console [project ID or project
          number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
          replaced by the name field.
            */
@@ -1363,7 +1361,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://support.google.com/cloud/answer/6158840). This field has been
            * deprecated and replaced by the name field.
            */
@@ -1373,24 +1371,24 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides. This field has been deprecated and replaced by the name
+           * field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+         the cluster resides. This field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides. This field has been deprecated and replaced by the name
+           * field.
            */
           public Get setZone(java.lang.String zone) {
             this.zone = zone;
@@ -1701,14 +1699,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://support.google.com/cloud/answer/6158840). This field has been
            * deprecated and replaced by the parent field.
            */
           @com.google.api.client.util.Key
           private java.lang.String projectId;
 
-          /** Required. Deprecated. The Google Developers Console [project ID or project
+          /** Deprecated. The Google Developers Console [project ID or project
          number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
          replaced by the parent field.
            */
@@ -1717,7 +1715,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://support.google.com/cloud/answer/6158840). This field has been
            * deprecated and replaced by the parent field.
            */
@@ -1727,25 +1725,25 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides, or "-" for all
-           * zones. This field has been deprecated and replaced by the parent field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides, or "-" for all zones. This field has been deprecated and
+           * replaced by the parent field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the cluster resides, or "-" for all zones. This field has been deprecated and replaced by
-         the parent field.
+          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+         the cluster resides, or "-" for all zones. This field has been deprecated and replaced by the
+         parent field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides, or "-" for all
-           * zones. This field has been deprecated and replaced by the parent field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides, or "-" for all zones. This field has been deprecated and
+           * replaced by the parent field.
            */
           public List setZone(java.lang.String zone) {
             this.zone = zone;
@@ -3771,22 +3769,21 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The name of the cluster. This field has been deprecated and
-             * replaced by the name field.
+             * Deprecated. The name of the cluster. This field has been deprecated and replaced by
+             * the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String clusterId;
 
-            /** Required. Deprecated. The name of the cluster. This field has been deprecated and replaced by the
-           name field.
+            /** Deprecated. The name of the cluster. This field has been deprecated and replaced by the name field.
              */
             public java.lang.String getClusterId() {
               return clusterId;
             }
 
             /**
-             * Required. Deprecated. The name of the cluster. This field has been deprecated and
-             * replaced by the name field.
+             * Deprecated. The name of the cluster. This field has been deprecated and replaced by
+             * the name field.
              */
             public Delete setClusterId(java.lang.String clusterId) {
               this.clusterId = clusterId;
@@ -3794,22 +3791,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The name of the node pool to delete. This field has been
-             * deprecated and replaced by the name field.
+             * Deprecated. The name of the node pool to delete. This field has been deprecated and
+             * replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String nodePoolId;
 
-            /** Required. Deprecated. The name of the node pool to delete. This field has been deprecated and
-           replaced by the name field.
+            /** Deprecated. The name of the node pool to delete. This field has been deprecated and replaced by the
+           name field.
              */
             public java.lang.String getNodePoolId() {
               return nodePoolId;
             }
 
             /**
-             * Required. Deprecated. The name of the node pool to delete. This field has been
-             * deprecated and replaced by the name field.
+             * Deprecated. The name of the node pool to delete. This field has been deprecated and
+             * replaced by the name field.
              */
             public Delete setNodePoolId(java.lang.String nodePoolId) {
               this.nodePoolId = nodePoolId;
@@ -3817,14 +3814,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The Google Developers Console [project ID or project
+             * Deprecated. The Google Developers Console [project ID or project
              * number](https://developers.google.com/console/help/new/#projectnumber). This field
              * has been deprecated and replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String projectId;
 
-            /** Required. Deprecated. The Google Developers Console [project ID or project
+            /** Deprecated. The Google Developers Console [project ID or project
            number](https://developers.google.com/console/help/new/#projectnumber). This field has been
            deprecated and replaced by the name field.
              */
@@ -3833,7 +3830,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The Google Developers Console [project ID or project
+             * Deprecated. The Google Developers Console [project ID or project
              * number](https://developers.google.com/console/help/new/#projectnumber). This field
              * has been deprecated and replaced by the name field.
              */
@@ -3843,22 +3840,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The name of the Google Compute Engine
+             * Deprecated. The name of the Google Compute Engine
              * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
              * been deprecated and replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String zone;
 
-            /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           in which the cluster resides. This field has been deprecated and replaced by the name field.
+            /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+           the cluster resides. This field has been deprecated and replaced by the name field.
              */
             public java.lang.String getZone() {
               return zone;
             }
 
             /**
-             * Required. Deprecated. The name of the Google Compute Engine
+             * Deprecated. The name of the Google Compute Engine
              * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
              * been deprecated and replaced by the name field.
              */
@@ -4017,22 +4014,21 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The name of the cluster. This field has been deprecated and
-             * replaced by the name field.
+             * Deprecated. The name of the cluster. This field has been deprecated and replaced by
+             * the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String clusterId;
 
-            /** Required. Deprecated. The name of the cluster. This field has been deprecated and replaced by the
-           name field.
+            /** Deprecated. The name of the cluster. This field has been deprecated and replaced by the name field.
              */
             public java.lang.String getClusterId() {
               return clusterId;
             }
 
             /**
-             * Required. Deprecated. The name of the cluster. This field has been deprecated and
-             * replaced by the name field.
+             * Deprecated. The name of the cluster. This field has been deprecated and replaced by
+             * the name field.
              */
             public Get setClusterId(java.lang.String clusterId) {
               this.clusterId = clusterId;
@@ -4040,22 +4036,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The name of the node pool. This field has been deprecated and
-             * replaced by the name field.
+             * Deprecated. The name of the node pool. This field has been deprecated and replaced by
+             * the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String nodePoolId;
 
-            /** Required. Deprecated. The name of the node pool. This field has been deprecated and replaced by the
-           name field.
+            /** Deprecated. The name of the node pool. This field has been deprecated and replaced by the name
+           field.
              */
             public java.lang.String getNodePoolId() {
               return nodePoolId;
             }
 
             /**
-             * Required. Deprecated. The name of the node pool. This field has been deprecated and
-             * replaced by the name field.
+             * Deprecated. The name of the node pool. This field has been deprecated and replaced by
+             * the name field.
              */
             public Get setNodePoolId(java.lang.String nodePoolId) {
               this.nodePoolId = nodePoolId;
@@ -4063,14 +4059,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The Google Developers Console [project ID or project
+             * Deprecated. The Google Developers Console [project ID or project
              * number](https://developers.google.com/console/help/new/#projectnumber). This field
              * has been deprecated and replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String projectId;
 
-            /** Required. Deprecated. The Google Developers Console [project ID or project
+            /** Deprecated. The Google Developers Console [project ID or project
            number](https://developers.google.com/console/help/new/#projectnumber). This field has been
            deprecated and replaced by the name field.
              */
@@ -4079,7 +4075,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The Google Developers Console [project ID or project
+             * Deprecated. The Google Developers Console [project ID or project
              * number](https://developers.google.com/console/help/new/#projectnumber). This field
              * has been deprecated and replaced by the name field.
              */
@@ -4089,22 +4085,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The name of the Google Compute Engine
+             * Deprecated. The name of the Google Compute Engine
              * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
              * been deprecated and replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String zone;
 
-            /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           in which the cluster resides. This field has been deprecated and replaced by the name field.
+            /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+           the cluster resides. This field has been deprecated and replaced by the name field.
              */
             public java.lang.String getZone() {
               return zone;
             }
 
             /**
-             * Required. Deprecated. The name of the Google Compute Engine
+             * Deprecated. The name of the Google Compute Engine
              * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
              * been deprecated and replaced by the name field.
              */
@@ -4263,22 +4259,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The name of the cluster. This field has been deprecated and
-             * replaced by the parent field.
+             * Deprecated. The name of the cluster. This field has been deprecated and replaced by
+             * the parent field.
              */
             @com.google.api.client.util.Key
             private java.lang.String clusterId;
 
-            /** Required. Deprecated. The name of the cluster. This field has been deprecated and replaced by the
-           parent field.
+            /** Deprecated. The name of the cluster. This field has been deprecated and replaced by the parent
+           field.
              */
             public java.lang.String getClusterId() {
               return clusterId;
             }
 
             /**
-             * Required. Deprecated. The name of the cluster. This field has been deprecated and
-             * replaced by the parent field.
+             * Deprecated. The name of the cluster. This field has been deprecated and replaced by
+             * the parent field.
              */
             public List setClusterId(java.lang.String clusterId) {
               this.clusterId = clusterId;
@@ -4286,14 +4282,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The Google Developers Console [project ID or project
+             * Deprecated. The Google Developers Console [project ID or project
              * number](https://developers.google.com/console/help/new/#projectnumber). This field
              * has been deprecated and replaced by the parent field.
              */
             @com.google.api.client.util.Key
             private java.lang.String projectId;
 
-            /** Required. Deprecated. The Google Developers Console [project ID or project
+            /** Deprecated. The Google Developers Console [project ID or project
            number](https://developers.google.com/console/help/new/#projectnumber). This field has been
            deprecated and replaced by the parent field.
              */
@@ -4302,7 +4298,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The Google Developers Console [project ID or project
+             * Deprecated. The Google Developers Console [project ID or project
              * number](https://developers.google.com/console/help/new/#projectnumber). This field
              * has been deprecated and replaced by the parent field.
              */
@@ -4312,22 +4308,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The name of the Google Compute Engine
+             * Deprecated. The name of the Google Compute Engine
              * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
              * been deprecated and replaced by the parent field.
              */
             @com.google.api.client.util.Key
             private java.lang.String zone;
 
-            /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           in which the cluster resides. This field has been deprecated and replaced by the parent field.
+            /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+           the cluster resides. This field has been deprecated and replaced by the parent field.
              */
             public java.lang.String getZone() {
               return zone;
             }
 
             /**
-             * Required. Deprecated. The name of the Google Compute Engine
+             * Deprecated. The name of the Google Compute Engine
              * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
              * been deprecated and replaced by the parent field.
              */
@@ -5550,22 +5546,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The server-assigned `name` of the operation. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The server-assigned `name` of the operation. This field has been deprecated
+           * and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String operationId;
 
-          /** Required. Deprecated. The server-assigned `name` of the operation. This field has been deprecated
-         and replaced by the name field.
+          /** Deprecated. The server-assigned `name` of the operation. This field has been deprecated and
+         replaced by the name field.
            */
           public java.lang.String getOperationId() {
             return operationId;
           }
 
           /**
-           * Required. Deprecated. The server-assigned `name` of the operation. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The server-assigned `name` of the operation. This field has been deprecated
+           * and replaced by the name field.
            */
           public Get setOperationId(java.lang.String operationId) {
             this.operationId = operationId;
@@ -5573,14 +5569,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://support.google.com/cloud/answer/6158840). This field has been
            * deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String projectId;
 
-          /** Required. Deprecated. The Google Developers Console [project ID or project
+          /** Deprecated. The Google Developers Console [project ID or project
          number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
          replaced by the name field.
            */
@@ -5589,7 +5585,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://support.google.com/cloud/answer/6158840). This field has been
            * deprecated and replaced by the name field.
            */
@@ -5599,24 +5595,24 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides. This field has been deprecated and replaced by the name
+           * field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+         the cluster resides. This field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides. This field has been deprecated and replaced by the name
+           * field.
            */
           public Get setZone(java.lang.String zone) {
             this.zone = zone;
@@ -5775,14 +5771,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://support.google.com/cloud/answer/6158840). This field has been
            * deprecated and replaced by the parent field.
            */
           @com.google.api.client.util.Key
           private java.lang.String projectId;
 
-          /** Required. Deprecated. The Google Developers Console [project ID or project
+          /** Deprecated. The Google Developers Console [project ID or project
          number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
          replaced by the parent field.
            */
@@ -5791,7 +5787,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://support.google.com/cloud/answer/6158840). This field has been
            * deprecated and replaced by the parent field.
            */
@@ -5801,25 +5797,25 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) to return operations for, or `-` for all zones.
-           * This field has been deprecated and replaced by the parent field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * to return operations for, or `-` for all zones. This field has been deprecated and
+           * replaced by the parent field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         to return operations for, or `-` for all zones. This field has been deprecated and replaced by the
-         parent field.
+          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) to return
+         operations for, or `-` for all zones. This field has been deprecated and replaced by the parent
+         field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) to return operations for, or `-` for all zones.
-           * This field has been deprecated and replaced by the parent field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * to return operations for, or `-` for all zones. This field has been deprecated and
+           * replaced by the parent field.
            */
           public List setZone(java.lang.String zone) {
             this.zone = zone;
@@ -5862,13 +5858,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the container server.  After setting any optional
        * parameters, call the {@link GetServerconfig#execute()} method to invoke the remote operation.
        *
-       * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+       * @param projectId Deprecated. The Google Developers Console [project ID or project
        *        number](https://support.google.com/cloud/answer/6158840).
       This field has been deprecated
        *        and replaced by the name field.
-       * @param zone Required. Deprecated. The name of the Google Compute Engine
-      [zone](/compute/docs/zones#available) to
-       *        return operations for.
+       * @param zone Deprecated. The name of the Google Compute Engine
+      [zone](/compute/docs/zones#available) to return
+       *        operations for.
       This field has been deprecated and replaced by the name field.
        * @return the request
        */
@@ -5893,13 +5889,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
          * the constructor. </p>
          *
-         * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+         * @param projectId Deprecated. The Google Developers Console [project ID or project
        *        number](https://support.google.com/cloud/answer/6158840).
       This field has been deprecated
        *        and replaced by the name field.
-         * @param zone Required. Deprecated. The name of the Google Compute Engine
-      [zone](/compute/docs/zones#available) to
-       *        return operations for.
+         * @param zone Deprecated. The name of the Google Compute Engine
+      [zone](/compute/docs/zones#available) to return
+       *        operations for.
       This field has been deprecated and replaced by the name field.
          * @since 1.13
          */
@@ -5975,14 +5971,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Required. Deprecated. The Google Developers Console [project ID or project
+         * Deprecated. The Google Developers Console [project ID or project
          * number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
          * and replaced by the name field.
          */
         @com.google.api.client.util.Key
         private java.lang.String projectId;
 
-        /** Required. Deprecated. The Google Developers Console [project ID or project
+        /** Deprecated. The Google Developers Console [project ID or project
        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
        replaced by the name field.
          */
@@ -5991,7 +5987,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Required. Deprecated. The Google Developers Console [project ID or project
+         * Deprecated. The Google Developers Console [project ID or project
          * number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
          * and replaced by the name field.
          */
@@ -6001,24 +5997,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Required. Deprecated. The name of the Google Compute Engine
-         * [zone](/compute/docs/zones#available) to return operations for. This field has been
-         * deprecated and replaced by the name field.
+         * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+         * to return operations for. This field has been deprecated and replaced by the name field.
          */
         @com.google.api.client.util.Key
         private java.lang.String zone;
 
-        /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-       to return operations for. This field has been deprecated and replaced by the name field.
+        /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) to return
+       operations for. This field has been deprecated and replaced by the name field.
          */
         public java.lang.String getZone() {
           return zone;
         }
 
         /**
-         * Required. Deprecated. The name of the Google Compute Engine
-         * [zone](/compute/docs/zones#available) to return operations for. This field has been
-         * deprecated and replaced by the name field.
+         * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+         * to return operations for. This field has been deprecated and replaced by the name field.
          */
         public GetServerconfig setZone(java.lang.String zone) {
           this.zone = zone;
@@ -6082,18 +6076,18 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link Addons#execute()} method to invoke the remote operation.
          *
-         * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+         * @param projectId Deprecated. The Google Developers Console [project ID or project
          *        number](https://support.google.com/cloud/answer/6158840).
         This field has been deprecated
          *        and replaced by the name field.
-         * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
+         * @param zone Deprecated. The name of the Google Compute Engine
+        [zone](/compute/docs/zones#available) in which the
+         *        cluster
         resides.
         This field has been deprecated and replaced by the name field.
-         * @param clusterId Required. Deprecated. The name of the cluster to upgrade.
-        This field has been deprecated and
-         *        replaced by the name field.
+         * @param clusterId Deprecated. The name of the cluster to upgrade.
+        This field has been deprecated and replaced by the
+         *        name field.
          * @param content the {@link com.google.api.services.container.model.SetAddonsConfigRequest}
          * @return the request
          */
@@ -6118,18 +6112,18 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * Addons#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+           * @param projectId Deprecated. The Google Developers Console [project ID or project
          *        number](https://support.google.com/cloud/answer/6158840).
         This field has been deprecated
          *        and replaced by the name field.
-           * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
+           * @param zone Deprecated. The name of the Google Compute Engine
+        [zone](/compute/docs/zones#available) in which the
+         *        cluster
         resides.
         This field has been deprecated and replaced by the name field.
-           * @param clusterId Required. Deprecated. The name of the cluster to upgrade.
-        This field has been deprecated and
-         *        replaced by the name field.
+           * @param clusterId Deprecated. The name of the cluster to upgrade.
+        This field has been deprecated and replaced by the
+         *        name field.
            * @param content the {@link com.google.api.services.container.model.SetAddonsConfigRequest}
            * @since 1.13
            */
@@ -6196,14 +6190,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://support.google.com/cloud/answer/6158840). This field has been
            * deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String projectId;
 
-          /** Required. Deprecated. The Google Developers Console [project ID or project
+          /** Deprecated. The Google Developers Console [project ID or project
          number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
          replaced by the name field.
            */
@@ -6212,7 +6206,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://support.google.com/cloud/answer/6158840). This field has been
            * deprecated and replaced by the name field.
            */
@@ -6222,24 +6216,24 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides. This field has been deprecated and replaced by the name
+           * field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+         the cluster resides. This field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides. This field has been deprecated and replaced by the name
+           * field.
            */
           public Addons setZone(java.lang.String zone) {
             this.zone = zone;
@@ -6247,22 +6241,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The name of the cluster to upgrade. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the cluster to upgrade. This field has been deprecated and
+           * replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String clusterId;
 
-          /** Required. Deprecated. The name of the cluster to upgrade. This field has been deprecated and
-         replaced by the name field.
+          /** Deprecated. The name of the cluster to upgrade. This field has been deprecated and replaced by the
+         name field.
            */
           public java.lang.String getClusterId() {
             return clusterId;
           }
 
           /**
-           * Required. Deprecated. The name of the cluster to upgrade. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the cluster to upgrade. This field has been deprecated and
+           * replaced by the name field.
            */
           public Addons setClusterId(java.lang.String clusterId) {
             this.clusterId = clusterId;
@@ -6282,18 +6276,17 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link CompleteIpRotation#execute()} method to invoke the remote operation.
          *
-         * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+         * @param projectId Deprecated. The Google Developers Console [project ID or project
          *        number](https://developers.google.com/console/help/new/#projectnumber).
         This field has
          *        been deprecated and replaced by the name field.
-         * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
+         * @param zone Deprecated. The name of the Google Compute Engine
+        [zone](/compute/docs/zones#available) in which the
+         *        cluster
         resides.
         This field has been deprecated and replaced by the name field.
-         * @param clusterId Required. Deprecated. The name of the cluster.
-        This field has been deprecated and replaced by the
-         *        name field.
+         * @param clusterId Deprecated. The name of the cluster.
+        This field has been deprecated and replaced by the name field.
          * @param content the {@link com.google.api.services.container.model.CompleteIPRotationRequest}
          * @return the request
          */
@@ -6318,18 +6311,17 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+           * @param projectId Deprecated. The Google Developers Console [project ID or project
          *        number](https://developers.google.com/console/help/new/#projectnumber).
         This field has
          *        been deprecated and replaced by the name field.
-           * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
+           * @param zone Deprecated. The name of the Google Compute Engine
+        [zone](/compute/docs/zones#available) in which the
+         *        cluster
         resides.
         This field has been deprecated and replaced by the name field.
-           * @param clusterId Required. Deprecated. The name of the cluster.
-        This field has been deprecated and replaced by the
-         *        name field.
+           * @param clusterId Deprecated. The name of the cluster.
+        This field has been deprecated and replaced by the name field.
            * @param content the {@link com.google.api.services.container.model.CompleteIPRotationRequest}
            * @since 1.13
            */
@@ -6396,14 +6388,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://developers.google.com/console/help/new/#projectnumber). This field has
            * been deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String projectId;
 
-          /** Required. Deprecated. The Google Developers Console [project ID or project
+          /** Deprecated. The Google Developers Console [project ID or project
          number](https://developers.google.com/console/help/new/#projectnumber). This field has been
          deprecated and replaced by the name field.
            */
@@ -6412,7 +6404,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://developers.google.com/console/help/new/#projectnumber). This field has
            * been deprecated and replaced by the name field.
            */
@@ -6422,24 +6414,24 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides. This field has been deprecated and replaced by the name
+           * field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+         the cluster resides. This field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides. This field has been deprecated and replaced by the name
+           * field.
            */
           public CompleteIpRotation setZone(java.lang.String zone) {
             this.zone = zone;
@@ -6447,22 +6439,21 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The name of the cluster. This field has been deprecated and
-           * replaced by the name field.
+           * Deprecated. The name of the cluster. This field has been deprecated and replaced by the
+           * name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String clusterId;
 
-          /** Required. Deprecated. The name of the cluster. This field has been deprecated and replaced by the
-         name field.
+          /** Deprecated. The name of the cluster. This field has been deprecated and replaced by the name field.
            */
           public java.lang.String getClusterId() {
             return clusterId;
           }
 
           /**
-           * Required. Deprecated. The name of the cluster. This field has been deprecated and
-           * replaced by the name field.
+           * Deprecated. The name of the cluster. This field has been deprecated and replaced by the
+           * name field.
            */
           public CompleteIpRotation setClusterId(java.lang.String clusterId) {
             this.clusterId = clusterId;
@@ -6493,16 +6484,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+         * @param projectId Deprecated. The Google Developers Console [project ID or project
          *        number](https://support.google.com/cloud/answer/6158840).
         This field has been deprecated
          *        and replaced by the parent field.
-         * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
+         * @param zone Deprecated. The name of the Google Compute Engine
+        [zone](/compute/docs/zones#available) in which the
+         *        cluster
         resides.
-        This field has been deprecated and replaced by the parent
-         *        field.
+        This field has been deprecated and replaced by the parent field.
          * @param content the {@link com.google.api.services.container.model.CreateClusterRequest}
          * @return the request
          */
@@ -6538,16 +6528,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+           * @param projectId Deprecated. The Google Developers Console [project ID or project
          *        number](https://support.google.com/cloud/answer/6158840).
         This field has been deprecated
          *        and replaced by the parent field.
-           * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
+           * @param zone Deprecated. The name of the Google Compute Engine
+        [zone](/compute/docs/zones#available) in which the
+         *        cluster
         resides.
-        This field has been deprecated and replaced by the parent
-         *        field.
+        This field has been deprecated and replaced by the parent field.
            * @param content the {@link com.google.api.services.container.model.CreateClusterRequest}
            * @since 1.13
            */
@@ -6613,14 +6602,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://support.google.com/cloud/answer/6158840). This field has been
            * deprecated and replaced by the parent field.
            */
           @com.google.api.client.util.Key
           private java.lang.String projectId;
 
-          /** Required. Deprecated. The Google Developers Console [project ID or project
+          /** Deprecated. The Google Developers Console [project ID or project
          number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
          replaced by the parent field.
            */
@@ -6629,7 +6618,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://support.google.com/cloud/answer/6158840). This field has been
            * deprecated and replaced by the parent field.
            */
@@ -6639,24 +6628,24 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the parent field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides. This field has been deprecated and replaced by the parent
+           * field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the cluster resides. This field has been deprecated and replaced by the parent field.
+          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+         the cluster resides. This field has been deprecated and replaced by the parent field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the parent field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides. This field has been deprecated and replaced by the parent
+           * field.
            */
           public Create setZone(java.lang.String zone) {
             this.zone = zone;
@@ -6681,18 +6670,18 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+         * @param projectId Deprecated. The Google Developers Console [project ID or project
          *        number](https://support.google.com/cloud/answer/6158840).
         This field has been deprecated
          *        and replaced by the name field.
-         * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
+         * @param zone Deprecated. The name of the Google Compute Engine
+        [zone](/compute/docs/zones#available) in which the
+         *        cluster
         resides.
         This field has been deprecated and replaced by the name field.
-         * @param clusterId Required. Deprecated. The name of the cluster to delete.
-        This field has been deprecated and replaced
-         *        by the name field.
+         * @param clusterId Deprecated. The name of the cluster to delete.
+        This field has been deprecated and replaced by the
+         *        name field.
          * @return the request
          */
         public Delete delete(java.lang.String projectId, java.lang.String zone, java.lang.String clusterId) throws java.io.IOException {
@@ -6722,18 +6711,18 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+           * @param projectId Deprecated. The Google Developers Console [project ID or project
          *        number](https://support.google.com/cloud/answer/6158840).
         This field has been deprecated
          *        and replaced by the name field.
-           * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
+           * @param zone Deprecated. The name of the Google Compute Engine
+        [zone](/compute/docs/zones#available) in which the
+         *        cluster
         resides.
         This field has been deprecated and replaced by the name field.
-           * @param clusterId Required. Deprecated. The name of the cluster to delete.
-        This field has been deprecated and replaced
-         *        by the name field.
+           * @param clusterId Deprecated. The name of the cluster to delete.
+        This field has been deprecated and replaced by the
+         *        name field.
            * @since 1.13
            */
           protected Delete(java.lang.String projectId, java.lang.String zone, java.lang.String clusterId) {
@@ -6799,14 +6788,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://support.google.com/cloud/answer/6158840). This field has been
            * deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String projectId;
 
-          /** Required. Deprecated. The Google Developers Console [project ID or project
+          /** Deprecated. The Google Developers Console [project ID or project
          number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
          replaced by the name field.
            */
@@ -6815,7 +6804,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://support.google.com/cloud/answer/6158840). This field has been
            * deprecated and replaced by the name field.
            */
@@ -6825,24 +6814,24 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides. This field has been deprecated and replaced by the name
+           * field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+         the cluster resides. This field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides. This field has been deprecated and replaced by the name
+           * field.
            */
           public Delete setZone(java.lang.String zone) {
             this.zone = zone;
@@ -6850,22 +6839,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The name of the cluster to delete. This field has been deprecated
-           * and replaced by the name field.
+           * Deprecated. The name of the cluster to delete. This field has been deprecated and
+           * replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String clusterId;
 
-          /** Required. Deprecated. The name of the cluster to delete. This field has been deprecated and
-         replaced by the name field.
+          /** Deprecated. The name of the cluster to delete. This field has been deprecated and replaced by the
+         name field.
            */
           public java.lang.String getClusterId() {
             return clusterId;
           }
 
           /**
-           * Required. Deprecated. The name of the cluster to delete. This field has been deprecated
-           * and replaced by the name field.
+           * Deprecated. The name of the cluster to delete. This field has been deprecated and
+           * replaced by the name field.
            */
           public Delete setClusterId(java.lang.String clusterId) {
             this.clusterId = clusterId;
@@ -6908,18 +6897,18 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+         * @param projectId Deprecated. The Google Developers Console [project ID or project
          *        number](https://support.google.com/cloud/answer/6158840).
         This field has been deprecated
          *        and replaced by the name field.
-         * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
+         * @param zone Deprecated. The name of the Google Compute Engine
+        [zone](/compute/docs/zones#available) in which the
+         *        cluster
         resides.
         This field has been deprecated and replaced by the name field.
-         * @param clusterId Required. Deprecated. The name of the cluster to retrieve.
-        This field has been deprecated and
-         *        replaced by the name field.
+         * @param clusterId Deprecated. The name of the cluster to retrieve.
+        This field has been deprecated and replaced by the
+         *        name field.
          * @return the request
          */
         public Get get(java.lang.String projectId, java.lang.String zone, java.lang.String clusterId) throws java.io.IOException {
@@ -6942,18 +6931,18 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+           * @param projectId Deprecated. The Google Developers Console [project ID or project
          *        number](https://support.google.com/cloud/answer/6158840).
         This field has been deprecated
          *        and replaced by the name field.
-           * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
+           * @param zone Deprecated. The name of the Google Compute Engine
+        [zone](/compute/docs/zones#available) in which the
+         *        cluster
         resides.
         This field has been deprecated and replaced by the name field.
-           * @param clusterId Required. Deprecated. The name of the cluster to retrieve.
-        This field has been deprecated and
-         *        replaced by the name field.
+           * @param clusterId Deprecated. The name of the cluster to retrieve.
+        This field has been deprecated and replaced by the
+         *        name field.
            * @since 1.13
            */
           protected Get(java.lang.String projectId, java.lang.String zone, java.lang.String clusterId) {
@@ -7029,14 +7018,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://support.google.com/cloud/answer/6158840). This field has been
            * deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String projectId;
 
-          /** Required. Deprecated. The Google Developers Console [project ID or project
+          /** Deprecated. The Google Developers Console [project ID or project
          number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
          replaced by the name field.
            */
@@ -7045,7 +7034,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://support.google.com/cloud/answer/6158840). This field has been
            * deprecated and replaced by the name field.
            */
@@ -7055,24 +7044,24 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides. This field has been deprecated and replaced by the name
+           * field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+         the cluster resides. This field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides. This field has been deprecated and replaced by the name
+           * field.
            */
           public Get setZone(java.lang.String zone) {
             this.zone = zone;
@@ -7080,22 +7069,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The name of the cluster to retrieve. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the cluster to retrieve. This field has been deprecated and
+           * replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String clusterId;
 
-          /** Required. Deprecated. The name of the cluster to retrieve. This field has been deprecated and
-         replaced by the name field.
+          /** Deprecated. The name of the cluster to retrieve. This field has been deprecated and replaced by the
+         name field.
            */
           public java.lang.String getClusterId() {
             return clusterId;
           }
 
           /**
-           * Required. Deprecated. The name of the cluster to retrieve. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the cluster to retrieve. This field has been deprecated and
+           * replaced by the name field.
            */
           public Get setClusterId(java.lang.String clusterId) {
             this.clusterId = clusterId;
@@ -7138,18 +7127,18 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link LegacyAbac#execute()} method to invoke the remote operation.
          *
-         * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+         * @param projectId Deprecated. The Google Developers Console [project ID or project
          *        number](https://support.google.com/cloud/answer/6158840).
         This field has been deprecated
          *        and replaced by the name field.
-         * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
+         * @param zone Deprecated. The name of the Google Compute Engine
+        [zone](/compute/docs/zones#available) in which the
+         *        cluster
         resides.
         This field has been deprecated and replaced by the name field.
-         * @param clusterId Required. Deprecated. The name of the cluster to update.
-        This field has been deprecated and replaced
-         *        by the name field.
+         * @param clusterId Deprecated. The name of the cluster to update.
+        This field has been deprecated and replaced by the
+         *        name field.
          * @param content the {@link com.google.api.services.container.model.SetLegacyAbacRequest}
          * @return the request
          */
@@ -7174,18 +7163,18 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * LegacyAbac#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+           * @param projectId Deprecated. The Google Developers Console [project ID or project
          *        number](https://support.google.com/cloud/answer/6158840).
         This field has been deprecated
          *        and replaced by the name field.
-           * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
+           * @param zone Deprecated. The name of the Google Compute Engine
+        [zone](/compute/docs/zones#available) in which the
+         *        cluster
         resides.
         This field has been deprecated and replaced by the name field.
-           * @param clusterId Required. Deprecated. The name of the cluster to update.
-        This field has been deprecated and replaced
-         *        by the name field.
+           * @param clusterId Deprecated. The name of the cluster to update.
+        This field has been deprecated and replaced by the
+         *        name field.
            * @param content the {@link com.google.api.services.container.model.SetLegacyAbacRequest}
            * @since 1.13
            */
@@ -7252,14 +7241,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://support.google.com/cloud/answer/6158840). This field has been
            * deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String projectId;
 
-          /** Required. Deprecated. The Google Developers Console [project ID or project
+          /** Deprecated. The Google Developers Console [project ID or project
          number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
          replaced by the name field.
            */
@@ -7268,7 +7257,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://support.google.com/cloud/answer/6158840). This field has been
            * deprecated and replaced by the name field.
            */
@@ -7278,24 +7267,24 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides. This field has been deprecated and replaced by the name
+           * field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+         the cluster resides. This field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides. This field has been deprecated and replaced by the name
+           * field.
            */
           public LegacyAbac setZone(java.lang.String zone) {
             this.zone = zone;
@@ -7303,22 +7292,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The name of the cluster to update. This field has been deprecated
-           * and replaced by the name field.
+           * Deprecated. The name of the cluster to update. This field has been deprecated and
+           * replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String clusterId;
 
-          /** Required. Deprecated. The name of the cluster to update. This field has been deprecated and
-         replaced by the name field.
+          /** Deprecated. The name of the cluster to update. This field has been deprecated and replaced by the
+         name field.
            */
           public java.lang.String getClusterId() {
             return clusterId;
           }
 
           /**
-           * Required. Deprecated. The name of the cluster to update. This field has been deprecated
-           * and replaced by the name field.
+           * Deprecated. The name of the cluster to update. This field has been deprecated and
+           * replaced by the name field.
            */
           public LegacyAbac setClusterId(java.lang.String clusterId) {
             this.clusterId = clusterId;
@@ -7338,16 +7327,16 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+         * @param projectId Deprecated. The Google Developers Console [project ID or project
          *        number](https://support.google.com/cloud/answer/6158840).
         This field has been deprecated
          *        and replaced by the parent field.
-         * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
+         * @param zone Deprecated. The name of the Google Compute Engine
+        [zone](/compute/docs/zones#available) in which the
+         *        cluster
         resides, or "-" for all zones.
-        This field has been deprecated and
-         *        replaced by the parent field.
+        This field has been deprecated and replaced by the
+         *        parent field.
          * @return the request
          */
         public List list(java.lang.String projectId, java.lang.String zone) throws java.io.IOException {
@@ -7370,16 +7359,16 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+           * @param projectId Deprecated. The Google Developers Console [project ID or project
          *        number](https://support.google.com/cloud/answer/6158840).
         This field has been deprecated
          *        and replaced by the parent field.
-           * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
+           * @param zone Deprecated. The name of the Google Compute Engine
+        [zone](/compute/docs/zones#available) in which the
+         *        cluster
         resides, or "-" for all zones.
-        This field has been deprecated and
-         *        replaced by the parent field.
+        This field has been deprecated and replaced by the
+         *        parent field.
            * @since 1.13
            */
           protected List(java.lang.String projectId, java.lang.String zone) {
@@ -7454,14 +7443,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://support.google.com/cloud/answer/6158840). This field has been
            * deprecated and replaced by the parent field.
            */
           @com.google.api.client.util.Key
           private java.lang.String projectId;
 
-          /** Required. Deprecated. The Google Developers Console [project ID or project
+          /** Deprecated. The Google Developers Console [project ID or project
          number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
          replaced by the parent field.
            */
@@ -7470,7 +7459,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://support.google.com/cloud/answer/6158840). This field has been
            * deprecated and replaced by the parent field.
            */
@@ -7480,25 +7469,25 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides, or "-" for all
-           * zones. This field has been deprecated and replaced by the parent field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides, or "-" for all zones. This field has been deprecated and
+           * replaced by the parent field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the cluster resides, or "-" for all zones. This field has been deprecated and replaced by
-         the parent field.
+          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+         the cluster resides, or "-" for all zones. This field has been deprecated and replaced by the
+         parent field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides, or "-" for all
-           * zones. This field has been deprecated and replaced by the parent field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides, or "-" for all zones. This field has been deprecated and
+           * replaced by the parent field.
            */
           public List setZone(java.lang.String zone) {
             this.zone = zone;
@@ -7542,18 +7531,18 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link Locations#execute()} method to invoke the remote operation.
          *
-         * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+         * @param projectId Deprecated. The Google Developers Console [project ID or project
          *        number](https://support.google.com/cloud/answer/6158840).
         This field has been deprecated
          *        and replaced by the name field.
-         * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
+         * @param zone Deprecated. The name of the Google Compute Engine
+        [zone](/compute/docs/zones#available) in which the
+         *        cluster
         resides.
         This field has been deprecated and replaced by the name field.
-         * @param clusterId Required. Deprecated. The name of the cluster to upgrade.
-        This field has been deprecated and
-         *        replaced by the name field.
+         * @param clusterId Deprecated. The name of the cluster to upgrade.
+        This field has been deprecated and replaced by the
+         *        name field.
          * @param content the {@link com.google.api.services.container.model.SetLocationsRequest}
          * @return the request
          */
@@ -7579,18 +7568,18 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * Locations#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+           * @param projectId Deprecated. The Google Developers Console [project ID or project
          *        number](https://support.google.com/cloud/answer/6158840).
         This field has been deprecated
          *        and replaced by the name field.
-           * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
+           * @param zone Deprecated. The name of the Google Compute Engine
+        [zone](/compute/docs/zones#available) in which the
+         *        cluster
         resides.
         This field has been deprecated and replaced by the name field.
-           * @param clusterId Required. Deprecated. The name of the cluster to upgrade.
-        This field has been deprecated and
-         *        replaced by the name field.
+           * @param clusterId Deprecated. The name of the cluster to upgrade.
+        This field has been deprecated and replaced by the
+         *        name field.
            * @param content the {@link com.google.api.services.container.model.SetLocationsRequest}
            * @since 1.13
            */
@@ -7657,14 +7646,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://support.google.com/cloud/answer/6158840). This field has been
            * deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String projectId;
 
-          /** Required. Deprecated. The Google Developers Console [project ID or project
+          /** Deprecated. The Google Developers Console [project ID or project
          number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
          replaced by the name field.
            */
@@ -7673,7 +7662,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://support.google.com/cloud/answer/6158840). This field has been
            * deprecated and replaced by the name field.
            */
@@ -7683,24 +7672,24 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides. This field has been deprecated and replaced by the name
+           * field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+         the cluster resides. This field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides. This field has been deprecated and replaced by the name
+           * field.
            */
           public Locations setZone(java.lang.String zone) {
             this.zone = zone;
@@ -7708,22 +7697,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The name of the cluster to upgrade. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the cluster to upgrade. This field has been deprecated and
+           * replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String clusterId;
 
-          /** Required. Deprecated. The name of the cluster to upgrade. This field has been deprecated and
-         replaced by the name field.
+          /** Deprecated. The name of the cluster to upgrade. This field has been deprecated and replaced by the
+         name field.
            */
           public java.lang.String getClusterId() {
             return clusterId;
           }
 
           /**
-           * Required. Deprecated. The name of the cluster to upgrade. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the cluster to upgrade. This field has been deprecated and
+           * replaced by the name field.
            */
           public Locations setClusterId(java.lang.String clusterId) {
             this.clusterId = clusterId;
@@ -7743,18 +7732,18 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link Logging#execute()} method to invoke the remote operation.
          *
-         * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+         * @param projectId Deprecated. The Google Developers Console [project ID or project
          *        number](https://support.google.com/cloud/answer/6158840).
         This field has been deprecated
          *        and replaced by the name field.
-         * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
+         * @param zone Deprecated. The name of the Google Compute Engine
+        [zone](/compute/docs/zones#available) in which the
+         *        cluster
         resides.
         This field has been deprecated and replaced by the name field.
-         * @param clusterId Required. Deprecated. The name of the cluster to upgrade.
-        This field has been deprecated and
-         *        replaced by the name field.
+         * @param clusterId Deprecated. The name of the cluster to upgrade.
+        This field has been deprecated and replaced by the
+         *        name field.
          * @param content the {@link com.google.api.services.container.model.SetLoggingServiceRequest}
          * @return the request
          */
@@ -7779,18 +7768,18 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * Logging#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+           * @param projectId Deprecated. The Google Developers Console [project ID or project
          *        number](https://support.google.com/cloud/answer/6158840).
         This field has been deprecated
          *        and replaced by the name field.
-           * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
+           * @param zone Deprecated. The name of the Google Compute Engine
+        [zone](/compute/docs/zones#available) in which the
+         *        cluster
         resides.
         This field has been deprecated and replaced by the name field.
-           * @param clusterId Required. Deprecated. The name of the cluster to upgrade.
-        This field has been deprecated and
-         *        replaced by the name field.
+           * @param clusterId Deprecated. The name of the cluster to upgrade.
+        This field has been deprecated and replaced by the
+         *        name field.
            * @param content the {@link com.google.api.services.container.model.SetLoggingServiceRequest}
            * @since 1.13
            */
@@ -7857,14 +7846,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://support.google.com/cloud/answer/6158840). This field has been
            * deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String projectId;
 
-          /** Required. Deprecated. The Google Developers Console [project ID or project
+          /** Deprecated. The Google Developers Console [project ID or project
          number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
          replaced by the name field.
            */
@@ -7873,7 +7862,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://support.google.com/cloud/answer/6158840). This field has been
            * deprecated and replaced by the name field.
            */
@@ -7883,24 +7872,24 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides. This field has been deprecated and replaced by the name
+           * field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+         the cluster resides. This field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides. This field has been deprecated and replaced by the name
+           * field.
            */
           public Logging setZone(java.lang.String zone) {
             this.zone = zone;
@@ -7908,22 +7897,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The name of the cluster to upgrade. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the cluster to upgrade. This field has been deprecated and
+           * replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String clusterId;
 
-          /** Required. Deprecated. The name of the cluster to upgrade. This field has been deprecated and
-         replaced by the name field.
+          /** Deprecated. The name of the cluster to upgrade. This field has been deprecated and replaced by the
+         name field.
            */
           public java.lang.String getClusterId() {
             return clusterId;
           }
 
           /**
-           * Required. Deprecated. The name of the cluster to upgrade. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the cluster to upgrade. This field has been deprecated and
+           * replaced by the name field.
            */
           public Logging setClusterId(java.lang.String clusterId) {
             this.clusterId = clusterId;
@@ -7943,18 +7932,18 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link Master#execute()} method to invoke the remote operation.
          *
-         * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+         * @param projectId Deprecated. The Google Developers Console [project ID or project
          *        number](https://support.google.com/cloud/answer/6158840).
         This field has been deprecated
          *        and replaced by the name field.
-         * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
+         * @param zone Deprecated. The name of the Google Compute Engine
+        [zone](/compute/docs/zones#available) in which the
+         *        cluster
         resides.
         This field has been deprecated and replaced by the name field.
-         * @param clusterId Required. Deprecated. The name of the cluster to upgrade.
-        This field has been deprecated and
-         *        replaced by the name field.
+         * @param clusterId Deprecated. The name of the cluster to upgrade.
+        This field has been deprecated and replaced by the
+         *        name field.
          * @param content the {@link com.google.api.services.container.model.UpdateMasterRequest}
          * @return the request
          */
@@ -7979,18 +7968,18 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * Master#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+           * @param projectId Deprecated. The Google Developers Console [project ID or project
          *        number](https://support.google.com/cloud/answer/6158840).
         This field has been deprecated
          *        and replaced by the name field.
-           * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
+           * @param zone Deprecated. The name of the Google Compute Engine
+        [zone](/compute/docs/zones#available) in which the
+         *        cluster
         resides.
         This field has been deprecated and replaced by the name field.
-           * @param clusterId Required. Deprecated. The name of the cluster to upgrade.
-        This field has been deprecated and
-         *        replaced by the name field.
+           * @param clusterId Deprecated. The name of the cluster to upgrade.
+        This field has been deprecated and replaced by the
+         *        name field.
            * @param content the {@link com.google.api.services.container.model.UpdateMasterRequest}
            * @since 1.13
            */
@@ -8057,14 +8046,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://support.google.com/cloud/answer/6158840). This field has been
            * deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String projectId;
 
-          /** Required. Deprecated. The Google Developers Console [project ID or project
+          /** Deprecated. The Google Developers Console [project ID or project
          number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
          replaced by the name field.
            */
@@ -8073,7 +8062,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://support.google.com/cloud/answer/6158840). This field has been
            * deprecated and replaced by the name field.
            */
@@ -8083,24 +8072,24 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides. This field has been deprecated and replaced by the name
+           * field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+         the cluster resides. This field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides. This field has been deprecated and replaced by the name
+           * field.
            */
           public Master setZone(java.lang.String zone) {
             this.zone = zone;
@@ -8108,22 +8097,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The name of the cluster to upgrade. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the cluster to upgrade. This field has been deprecated and
+           * replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String clusterId;
 
-          /** Required. Deprecated. The name of the cluster to upgrade. This field has been deprecated and
-         replaced by the name field.
+          /** Deprecated. The name of the cluster to upgrade. This field has been deprecated and replaced by the
+         name field.
            */
           public java.lang.String getClusterId() {
             return clusterId;
           }
 
           /**
-           * Required. Deprecated. The name of the cluster to upgrade. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the cluster to upgrade. This field has been deprecated and
+           * replaced by the name field.
            */
           public Master setClusterId(java.lang.String clusterId) {
             this.clusterId = clusterId;
@@ -8143,18 +8132,18 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link Monitoring#execute()} method to invoke the remote operation.
          *
-         * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+         * @param projectId Deprecated. The Google Developers Console [project ID or project
          *        number](https://support.google.com/cloud/answer/6158840).
         This field has been deprecated
          *        and replaced by the name field.
-         * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
+         * @param zone Deprecated. The name of the Google Compute Engine
+        [zone](/compute/docs/zones#available) in which the
+         *        cluster
         resides.
         This field has been deprecated and replaced by the name field.
-         * @param clusterId Required. Deprecated. The name of the cluster to upgrade.
-        This field has been deprecated and
-         *        replaced by the name field.
+         * @param clusterId Deprecated. The name of the cluster to upgrade.
+        This field has been deprecated and replaced by the
+         *        name field.
          * @param content the {@link com.google.api.services.container.model.SetMonitoringServiceRequest}
          * @return the request
          */
@@ -8179,18 +8168,18 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * Monitoring#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+           * @param projectId Deprecated. The Google Developers Console [project ID or project
          *        number](https://support.google.com/cloud/answer/6158840).
         This field has been deprecated
          *        and replaced by the name field.
-           * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
+           * @param zone Deprecated. The name of the Google Compute Engine
+        [zone](/compute/docs/zones#available) in which the
+         *        cluster
         resides.
         This field has been deprecated and replaced by the name field.
-           * @param clusterId Required. Deprecated. The name of the cluster to upgrade.
-        This field has been deprecated and
-         *        replaced by the name field.
+           * @param clusterId Deprecated. The name of the cluster to upgrade.
+        This field has been deprecated and replaced by the
+         *        name field.
            * @param content the {@link com.google.api.services.container.model.SetMonitoringServiceRequest}
            * @since 1.13
            */
@@ -8257,14 +8246,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://support.google.com/cloud/answer/6158840). This field has been
            * deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String projectId;
 
-          /** Required. Deprecated. The Google Developers Console [project ID or project
+          /** Deprecated. The Google Developers Console [project ID or project
          number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
          replaced by the name field.
            */
@@ -8273,7 +8262,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://support.google.com/cloud/answer/6158840). This field has been
            * deprecated and replaced by the name field.
            */
@@ -8283,24 +8272,24 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides. This field has been deprecated and replaced by the name
+           * field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+         the cluster resides. This field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides. This field has been deprecated and replaced by the name
+           * field.
            */
           public Monitoring setZone(java.lang.String zone) {
             this.zone = zone;
@@ -8308,22 +8297,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The name of the cluster to upgrade. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the cluster to upgrade. This field has been deprecated and
+           * replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String clusterId;
 
-          /** Required. Deprecated. The name of the cluster to upgrade. This field has been deprecated and
-         replaced by the name field.
+          /** Deprecated. The name of the cluster to upgrade. This field has been deprecated and replaced by the
+         name field.
            */
           public java.lang.String getClusterId() {
             return clusterId;
           }
 
           /**
-           * Required. Deprecated. The name of the cluster to upgrade. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the cluster to upgrade. This field has been deprecated and
+           * replaced by the name field.
            */
           public Monitoring setClusterId(java.lang.String clusterId) {
             this.clusterId = clusterId;
@@ -8343,18 +8332,17 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link ResourceLabels#execute()} method to invoke the remote operation.
          *
-         * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+         * @param projectId Deprecated. The Google Developers Console [project ID or project
          *        number](https://developers.google.com/console/help/new/#projectnumber).
         This field has
          *        been deprecated and replaced by the name field.
-         * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
+         * @param zone Deprecated. The name of the Google Compute Engine
+        [zone](/compute/docs/zones#available) in which the
+         *        cluster
         resides.
         This field has been deprecated and replaced by the name field.
-         * @param clusterId Required. Deprecated. The name of the cluster.
-        This field has been deprecated and replaced by the
-         *        name field.
+         * @param clusterId Deprecated. The name of the cluster.
+        This field has been deprecated and replaced by the name field.
          * @param content the {@link com.google.api.services.container.model.SetLabelsRequest}
          * @return the request
          */
@@ -8379,18 +8367,17 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
            * the constructor. </p>
            *
-           * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+           * @param projectId Deprecated. The Google Developers Console [project ID or project
          *        number](https://developers.google.com/console/help/new/#projectnumber).
         This field has
          *        been deprecated and replaced by the name field.
-           * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
+           * @param zone Deprecated. The name of the Google Compute Engine
+        [zone](/compute/docs/zones#available) in which the
+         *        cluster
         resides.
         This field has been deprecated and replaced by the name field.
-           * @param clusterId Required. Deprecated. The name of the cluster.
-        This field has been deprecated and replaced by the
-         *        name field.
+           * @param clusterId Deprecated. The name of the cluster.
+        This field has been deprecated and replaced by the name field.
            * @param content the {@link com.google.api.services.container.model.SetLabelsRequest}
            * @since 1.13
            */
@@ -8457,14 +8444,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://developers.google.com/console/help/new/#projectnumber). This field has
            * been deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String projectId;
 
-          /** Required. Deprecated. The Google Developers Console [project ID or project
+          /** Deprecated. The Google Developers Console [project ID or project
          number](https://developers.google.com/console/help/new/#projectnumber). This field has been
          deprecated and replaced by the name field.
            */
@@ -8473,7 +8460,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://developers.google.com/console/help/new/#projectnumber). This field has
            * been deprecated and replaced by the name field.
            */
@@ -8483,24 +8470,24 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides. This field has been deprecated and replaced by the name
+           * field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+         the cluster resides. This field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides. This field has been deprecated and replaced by the name
+           * field.
            */
           public ResourceLabels setZone(java.lang.String zone) {
             this.zone = zone;
@@ -8508,22 +8495,21 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The name of the cluster. This field has been deprecated and
-           * replaced by the name field.
+           * Deprecated. The name of the cluster. This field has been deprecated and replaced by the
+           * name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String clusterId;
 
-          /** Required. Deprecated. The name of the cluster. This field has been deprecated and replaced by the
-         name field.
+          /** Deprecated. The name of the cluster. This field has been deprecated and replaced by the name field.
            */
           public java.lang.String getClusterId() {
             return clusterId;
           }
 
           /**
-           * Required. Deprecated. The name of the cluster. This field has been deprecated and
-           * replaced by the name field.
+           * Deprecated. The name of the cluster. This field has been deprecated and replaced by the
+           * name field.
            */
           public ResourceLabels setClusterId(java.lang.String clusterId) {
             this.clusterId = clusterId;
@@ -8723,18 +8709,18 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link SetMasterAuth#execute()} method to invoke the remote operation.
          *
-         * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+         * @param projectId Deprecated. The Google Developers Console [project ID or project
          *        number](https://support.google.com/cloud/answer/6158840).
         This field has been deprecated
          *        and replaced by the name field.
-         * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
+         * @param zone Deprecated. The name of the Google Compute Engine
+        [zone](/compute/docs/zones#available) in which the
+         *        cluster
         resides.
         This field has been deprecated and replaced by the name field.
-         * @param clusterId Required. Deprecated. The name of the cluster to upgrade.
-        This field has been deprecated and
-         *        replaced by the name field.
+         * @param clusterId Deprecated. The name of the cluster to upgrade.
+        This field has been deprecated and replaced by the
+         *        name field.
          * @param content the {@link com.google.api.services.container.model.SetMasterAuthRequest}
          * @return the request
          */
@@ -8760,18 +8746,18 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
            * the constructor. </p>
            *
-           * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+           * @param projectId Deprecated. The Google Developers Console [project ID or project
          *        number](https://support.google.com/cloud/answer/6158840).
         This field has been deprecated
          *        and replaced by the name field.
-           * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
+           * @param zone Deprecated. The name of the Google Compute Engine
+        [zone](/compute/docs/zones#available) in which the
+         *        cluster
         resides.
         This field has been deprecated and replaced by the name field.
-           * @param clusterId Required. Deprecated. The name of the cluster to upgrade.
-        This field has been deprecated and
-         *        replaced by the name field.
+           * @param clusterId Deprecated. The name of the cluster to upgrade.
+        This field has been deprecated and replaced by the
+         *        name field.
            * @param content the {@link com.google.api.services.container.model.SetMasterAuthRequest}
            * @since 1.13
            */
@@ -8838,14 +8824,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://support.google.com/cloud/answer/6158840). This field has been
            * deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String projectId;
 
-          /** Required. Deprecated. The Google Developers Console [project ID or project
+          /** Deprecated. The Google Developers Console [project ID or project
          number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
          replaced by the name field.
            */
@@ -8854,7 +8840,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://support.google.com/cloud/answer/6158840). This field has been
            * deprecated and replaced by the name field.
            */
@@ -8864,24 +8850,24 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides. This field has been deprecated and replaced by the name
+           * field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+         the cluster resides. This field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides. This field has been deprecated and replaced by the name
+           * field.
            */
           public SetMasterAuth setZone(java.lang.String zone) {
             this.zone = zone;
@@ -8889,22 +8875,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The name of the cluster to upgrade. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the cluster to upgrade. This field has been deprecated and
+           * replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String clusterId;
 
-          /** Required. Deprecated. The name of the cluster to upgrade. This field has been deprecated and
-         replaced by the name field.
+          /** Deprecated. The name of the cluster to upgrade. This field has been deprecated and replaced by the
+         name field.
            */
           public java.lang.String getClusterId() {
             return clusterId;
           }
 
           /**
-           * Required. Deprecated. The name of the cluster to upgrade. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the cluster to upgrade. This field has been deprecated and
+           * replaced by the name field.
            */
           public SetMasterAuth setClusterId(java.lang.String clusterId) {
             this.clusterId = clusterId;
@@ -8924,18 +8910,17 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link SetNetworkPolicy#execute()} method to invoke the remote operation.
          *
-         * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+         * @param projectId Deprecated. The Google Developers Console [project ID or project
          *        number](https://developers.google.com/console/help/new/#projectnumber).
         This field has
          *        been deprecated and replaced by the name field.
-         * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
+         * @param zone Deprecated. The name of the Google Compute Engine
+        [zone](/compute/docs/zones#available) in which the
+         *        cluster
         resides.
         This field has been deprecated and replaced by the name field.
-         * @param clusterId Required. Deprecated. The name of the cluster.
-        This field has been deprecated and replaced by the
-         *        name field.
+         * @param clusterId Deprecated. The name of the cluster.
+        This field has been deprecated and replaced by the name field.
          * @param content the {@link com.google.api.services.container.model.SetNetworkPolicyRequest}
          * @return the request
          */
@@ -8960,18 +8945,17 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * tractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+           * @param projectId Deprecated. The Google Developers Console [project ID or project
          *        number](https://developers.google.com/console/help/new/#projectnumber).
         This field has
          *        been deprecated and replaced by the name field.
-           * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
+           * @param zone Deprecated. The name of the Google Compute Engine
+        [zone](/compute/docs/zones#available) in which the
+         *        cluster
         resides.
         This field has been deprecated and replaced by the name field.
-           * @param clusterId Required. Deprecated. The name of the cluster.
-        This field has been deprecated and replaced by the
-         *        name field.
+           * @param clusterId Deprecated. The name of the cluster.
+        This field has been deprecated and replaced by the name field.
            * @param content the {@link com.google.api.services.container.model.SetNetworkPolicyRequest}
            * @since 1.13
            */
@@ -9038,14 +9022,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://developers.google.com/console/help/new/#projectnumber). This field has
            * been deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String projectId;
 
-          /** Required. Deprecated. The Google Developers Console [project ID or project
+          /** Deprecated. The Google Developers Console [project ID or project
          number](https://developers.google.com/console/help/new/#projectnumber). This field has been
          deprecated and replaced by the name field.
            */
@@ -9054,7 +9038,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://developers.google.com/console/help/new/#projectnumber). This field has
            * been deprecated and replaced by the name field.
            */
@@ -9064,24 +9048,24 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides. This field has been deprecated and replaced by the name
+           * field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+         the cluster resides. This field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides. This field has been deprecated and replaced by the name
+           * field.
            */
           public SetNetworkPolicy setZone(java.lang.String zone) {
             this.zone = zone;
@@ -9089,22 +9073,21 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The name of the cluster. This field has been deprecated and
-           * replaced by the name field.
+           * Deprecated. The name of the cluster. This field has been deprecated and replaced by the
+           * name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String clusterId;
 
-          /** Required. Deprecated. The name of the cluster. This field has been deprecated and replaced by the
-         name field.
+          /** Deprecated. The name of the cluster. This field has been deprecated and replaced by the name field.
            */
           public java.lang.String getClusterId() {
             return clusterId;
           }
 
           /**
-           * Required. Deprecated. The name of the cluster. This field has been deprecated and
-           * replaced by the name field.
+           * Deprecated. The name of the cluster. This field has been deprecated and replaced by the
+           * name field.
            */
           public SetNetworkPolicy setClusterId(java.lang.String clusterId) {
             this.clusterId = clusterId;
@@ -9124,18 +9107,17 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link StartIpRotation#execute()} method to invoke the remote operation.
          *
-         * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+         * @param projectId Deprecated. The Google Developers Console [project ID or project
          *        number](https://developers.google.com/console/help/new/#projectnumber).
         This field has
          *        been deprecated and replaced by the name field.
-         * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
+         * @param zone Deprecated. The name of the Google Compute Engine
+        [zone](/compute/docs/zones#available) in which the
+         *        cluster
         resides.
         This field has been deprecated and replaced by the name field.
-         * @param clusterId Required. Deprecated. The name of the cluster.
-        This field has been deprecated and replaced by the
-         *        name field.
+         * @param clusterId Deprecated. The name of the cluster.
+        This field has been deprecated and replaced by the name field.
          * @param content the {@link com.google.api.services.container.model.StartIPRotationRequest}
          * @return the request
          */
@@ -9160,18 +9142,17 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
            * the constructor. </p>
            *
-           * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+           * @param projectId Deprecated. The Google Developers Console [project ID or project
          *        number](https://developers.google.com/console/help/new/#projectnumber).
         This field has
          *        been deprecated and replaced by the name field.
-           * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
+           * @param zone Deprecated. The name of the Google Compute Engine
+        [zone](/compute/docs/zones#available) in which the
+         *        cluster
         resides.
         This field has been deprecated and replaced by the name field.
-           * @param clusterId Required. Deprecated. The name of the cluster.
-        This field has been deprecated and replaced by the
-         *        name field.
+           * @param clusterId Deprecated. The name of the cluster.
+        This field has been deprecated and replaced by the name field.
            * @param content the {@link com.google.api.services.container.model.StartIPRotationRequest}
            * @since 1.13
            */
@@ -9238,14 +9219,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://developers.google.com/console/help/new/#projectnumber). This field has
            * been deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String projectId;
 
-          /** Required. Deprecated. The Google Developers Console [project ID or project
+          /** Deprecated. The Google Developers Console [project ID or project
          number](https://developers.google.com/console/help/new/#projectnumber). This field has been
          deprecated and replaced by the name field.
            */
@@ -9254,7 +9235,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://developers.google.com/console/help/new/#projectnumber). This field has
            * been deprecated and replaced by the name field.
            */
@@ -9264,24 +9245,24 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides. This field has been deprecated and replaced by the name
+           * field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+         the cluster resides. This field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides. This field has been deprecated and replaced by the name
+           * field.
            */
           public StartIpRotation setZone(java.lang.String zone) {
             this.zone = zone;
@@ -9289,22 +9270,21 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The name of the cluster. This field has been deprecated and
-           * replaced by the name field.
+           * Deprecated. The name of the cluster. This field has been deprecated and replaced by the
+           * name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String clusterId;
 
-          /** Required. Deprecated. The name of the cluster. This field has been deprecated and replaced by the
-         name field.
+          /** Deprecated. The name of the cluster. This field has been deprecated and replaced by the name field.
            */
           public java.lang.String getClusterId() {
             return clusterId;
           }
 
           /**
-           * Required. Deprecated. The name of the cluster. This field has been deprecated and
-           * replaced by the name field.
+           * Deprecated. The name of the cluster. This field has been deprecated and replaced by the
+           * name field.
            */
           public StartIpRotation setClusterId(java.lang.String clusterId) {
             this.clusterId = clusterId;
@@ -9324,18 +9304,18 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link Update#execute()} method to invoke the remote operation.
          *
-         * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+         * @param projectId Deprecated. The Google Developers Console [project ID or project
          *        number](https://support.google.com/cloud/answer/6158840).
         This field has been deprecated
          *        and replaced by the name field.
-         * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
+         * @param zone Deprecated. The name of the Google Compute Engine
+        [zone](/compute/docs/zones#available) in which the
+         *        cluster
         resides.
         This field has been deprecated and replaced by the name field.
-         * @param clusterId Required. Deprecated. The name of the cluster to upgrade.
-        This field has been deprecated and
-         *        replaced by the name field.
+         * @param clusterId Deprecated. The name of the cluster to upgrade.
+        This field has been deprecated and replaced by the
+         *        name field.
          * @param content the {@link com.google.api.services.container.model.UpdateClusterRequest}
          * @return the request
          */
@@ -9360,18 +9340,18 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+           * @param projectId Deprecated. The Google Developers Console [project ID or project
          *        number](https://support.google.com/cloud/answer/6158840).
         This field has been deprecated
          *        and replaced by the name field.
-           * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
+           * @param zone Deprecated. The name of the Google Compute Engine
+        [zone](/compute/docs/zones#available) in which the
+         *        cluster
         resides.
         This field has been deprecated and replaced by the name field.
-           * @param clusterId Required. Deprecated. The name of the cluster to upgrade.
-        This field has been deprecated and
-         *        replaced by the name field.
+           * @param clusterId Deprecated. The name of the cluster to upgrade.
+        This field has been deprecated and replaced by the
+         *        name field.
            * @param content the {@link com.google.api.services.container.model.UpdateClusterRequest}
            * @since 1.13
            */
@@ -9438,14 +9418,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://support.google.com/cloud/answer/6158840). This field has been
            * deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String projectId;
 
-          /** Required. Deprecated. The Google Developers Console [project ID or project
+          /** Deprecated. The Google Developers Console [project ID or project
          number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
          replaced by the name field.
            */
@@ -9454,7 +9434,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://support.google.com/cloud/answer/6158840). This field has been
            * deprecated and replaced by the name field.
            */
@@ -9464,24 +9444,24 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides. This field has been deprecated and replaced by the name
+           * field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+         the cluster resides. This field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides. This field has been deprecated and replaced by the name
+           * field.
            */
           public Update setZone(java.lang.String zone) {
             this.zone = zone;
@@ -9489,22 +9469,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The name of the cluster to upgrade. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the cluster to upgrade. This field has been deprecated and
+           * replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String clusterId;
 
-          /** Required. Deprecated. The name of the cluster to upgrade. This field has been deprecated and
-         replaced by the name field.
+          /** Deprecated. The name of the cluster to upgrade. This field has been deprecated and replaced by the
+         name field.
            */
           public java.lang.String getClusterId() {
             return clusterId;
           }
 
           /**
-           * Required. Deprecated. The name of the cluster to upgrade. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the cluster to upgrade. This field has been deprecated and
+           * replaced by the name field.
            */
           public Update setClusterId(java.lang.String clusterId) {
             this.clusterId = clusterId;
@@ -9545,21 +9525,21 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the container server.  After setting any optional
            * parameters, call the {@link Autoscaling#execute()} method to invoke the remote operation.
            *
-           * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+           * @param projectId Deprecated. The Google Developers Console [project ID or project
            *        number](https://support.google.com/cloud/answer/6158840).
           This field has been deprecated
            *        and replaced by the name field.
-           * @param zone Required. Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in
-           *        which the cluster
+           * @param zone Deprecated. The name of the Google Compute Engine
+          [zone](/compute/docs/zones#available) in which the
+           *        cluster
           resides.
           This field has been deprecated and replaced by the name field.
-           * @param clusterId Required. Deprecated. The name of the cluster to upgrade.
-          This field has been deprecated and
-           *        replaced by the name field.
-           * @param nodePoolId Required. Deprecated. The name of the node pool to upgrade.
-          This field has been deprecated and
-           *        replaced by the name field.
+           * @param clusterId Deprecated. The name of the cluster to upgrade.
+          This field has been deprecated and replaced by the
+           *        name field.
+           * @param nodePoolId Deprecated. The name of the node pool to upgrade.
+          This field has been deprecated and replaced by the
+           *        name field.
            * @param content the {@link com.google.api.services.container.model.SetNodePoolAutoscalingRequest}
            * @return the request
            */
@@ -9584,21 +9564,21 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
              * Autoscaling#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+             * @param projectId Deprecated. The Google Developers Console [project ID or project
            *        number](https://support.google.com/cloud/answer/6158840).
           This field has been deprecated
            *        and replaced by the name field.
-             * @param zone Required. Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in
-           *        which the cluster
+             * @param zone Deprecated. The name of the Google Compute Engine
+          [zone](/compute/docs/zones#available) in which the
+           *        cluster
           resides.
           This field has been deprecated and replaced by the name field.
-             * @param clusterId Required. Deprecated. The name of the cluster to upgrade.
-          This field has been deprecated and
-           *        replaced by the name field.
-             * @param nodePoolId Required. Deprecated. The name of the node pool to upgrade.
-          This field has been deprecated and
-           *        replaced by the name field.
+             * @param clusterId Deprecated. The name of the cluster to upgrade.
+          This field has been deprecated and replaced by the
+           *        name field.
+             * @param nodePoolId Deprecated. The name of the node pool to upgrade.
+          This field has been deprecated and replaced by the
+           *        name field.
              * @param content the {@link com.google.api.services.container.model.SetNodePoolAutoscalingRequest}
              * @since 1.13
              */
@@ -9666,14 +9646,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The Google Developers Console [project ID or project
+             * Deprecated. The Google Developers Console [project ID or project
              * number](https://support.google.com/cloud/answer/6158840). This field has been
              * deprecated and replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String projectId;
 
-            /** Required. Deprecated. The Google Developers Console [project ID or project
+            /** Deprecated. The Google Developers Console [project ID or project
            number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
            replaced by the name field.
              */
@@ -9682,7 +9662,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The Google Developers Console [project ID or project
+             * Deprecated. The Google Developers Console [project ID or project
              * number](https://support.google.com/cloud/answer/6158840). This field has been
              * deprecated and replaced by the name field.
              */
@@ -9692,22 +9672,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The name of the Google Compute Engine
+             * Deprecated. The name of the Google Compute Engine
              * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
              * been deprecated and replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String zone;
 
-            /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           in which the cluster resides. This field has been deprecated and replaced by the name field.
+            /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+           the cluster resides. This field has been deprecated and replaced by the name field.
              */
             public java.lang.String getZone() {
               return zone;
             }
 
             /**
-             * Required. Deprecated. The name of the Google Compute Engine
+             * Deprecated. The name of the Google Compute Engine
              * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
              * been deprecated and replaced by the name field.
              */
@@ -9717,22 +9697,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The name of the cluster to upgrade. This field has been
-             * deprecated and replaced by the name field.
+             * Deprecated. The name of the cluster to upgrade. This field has been deprecated and
+             * replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String clusterId;
 
-            /** Required. Deprecated. The name of the cluster to upgrade. This field has been deprecated and
-           replaced by the name field.
+            /** Deprecated. The name of the cluster to upgrade. This field has been deprecated and replaced by the
+           name field.
              */
             public java.lang.String getClusterId() {
               return clusterId;
             }
 
             /**
-             * Required. Deprecated. The name of the cluster to upgrade. This field has been
-             * deprecated and replaced by the name field.
+             * Deprecated. The name of the cluster to upgrade. This field has been deprecated and
+             * replaced by the name field.
              */
             public Autoscaling setClusterId(java.lang.String clusterId) {
               this.clusterId = clusterId;
@@ -9740,22 +9720,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The name of the node pool to upgrade. This field has been
-             * deprecated and replaced by the name field.
+             * Deprecated. The name of the node pool to upgrade. This field has been deprecated and
+             * replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String nodePoolId;
 
-            /** Required. Deprecated. The name of the node pool to upgrade. This field has been deprecated and
-           replaced by the name field.
+            /** Deprecated. The name of the node pool to upgrade. This field has been deprecated and replaced by
+           the name field.
              */
             public java.lang.String getNodePoolId() {
               return nodePoolId;
             }
 
             /**
-             * Required. Deprecated. The name of the node pool to upgrade. This field has been
-             * deprecated and replaced by the name field.
+             * Deprecated. The name of the node pool to upgrade. This field has been deprecated and
+             * replaced by the name field.
              */
             public Autoscaling setNodePoolId(java.lang.String nodePoolId) {
               this.nodePoolId = nodePoolId;
@@ -9775,19 +9755,18 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the container server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+           * @param projectId Deprecated. The Google Developers Console [project ID or project
            *        number](https://developers.google.com/console/help/new/#projectnumber).
           This field has
            *        been deprecated and replaced by the parent field.
-           * @param zone Required. Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in
-           *        which the cluster
+           * @param zone Deprecated. The name of the Google Compute Engine
+          [zone](/compute/docs/zones#available) in which the
+           *        cluster
           resides.
+          This field has been deprecated and replaced by the parent field.
+           * @param clusterId Deprecated. The name of the cluster.
           This field has been deprecated and replaced by the parent
            *        field.
-           * @param clusterId Required. Deprecated. The name of the cluster.
-          This field has been deprecated and replaced by the
-           *        parent field.
            * @param content the {@link com.google.api.services.container.model.CreateNodePoolRequest}
            * @return the request
            */
@@ -9812,19 +9791,18 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+             * @param projectId Deprecated. The Google Developers Console [project ID or project
            *        number](https://developers.google.com/console/help/new/#projectnumber).
           This field has
            *        been deprecated and replaced by the parent field.
-             * @param zone Required. Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in
-           *        which the cluster
+             * @param zone Deprecated. The name of the Google Compute Engine
+          [zone](/compute/docs/zones#available) in which the
+           *        cluster
           resides.
+          This field has been deprecated and replaced by the parent field.
+             * @param clusterId Deprecated. The name of the cluster.
           This field has been deprecated and replaced by the parent
            *        field.
-             * @param clusterId Required. Deprecated. The name of the cluster.
-          This field has been deprecated and replaced by the
-           *        parent field.
              * @param content the {@link com.google.api.services.container.model.CreateNodePoolRequest}
              * @since 1.13
              */
@@ -9891,14 +9869,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The Google Developers Console [project ID or project
+             * Deprecated. The Google Developers Console [project ID or project
              * number](https://developers.google.com/console/help/new/#projectnumber). This field
              * has been deprecated and replaced by the parent field.
              */
             @com.google.api.client.util.Key
             private java.lang.String projectId;
 
-            /** Required. Deprecated. The Google Developers Console [project ID or project
+            /** Deprecated. The Google Developers Console [project ID or project
            number](https://developers.google.com/console/help/new/#projectnumber). This field has been
            deprecated and replaced by the parent field.
              */
@@ -9907,7 +9885,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The Google Developers Console [project ID or project
+             * Deprecated. The Google Developers Console [project ID or project
              * number](https://developers.google.com/console/help/new/#projectnumber). This field
              * has been deprecated and replaced by the parent field.
              */
@@ -9917,22 +9895,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The name of the Google Compute Engine
+             * Deprecated. The name of the Google Compute Engine
              * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
              * been deprecated and replaced by the parent field.
              */
             @com.google.api.client.util.Key
             private java.lang.String zone;
 
-            /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           in which the cluster resides. This field has been deprecated and replaced by the parent field.
+            /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+           the cluster resides. This field has been deprecated and replaced by the parent field.
              */
             public java.lang.String getZone() {
               return zone;
             }
 
             /**
-             * Required. Deprecated. The name of the Google Compute Engine
+             * Deprecated. The name of the Google Compute Engine
              * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
              * been deprecated and replaced by the parent field.
              */
@@ -9942,22 +9920,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The name of the cluster. This field has been deprecated and
-             * replaced by the parent field.
+             * Deprecated. The name of the cluster. This field has been deprecated and replaced by
+             * the parent field.
              */
             @com.google.api.client.util.Key
             private java.lang.String clusterId;
 
-            /** Required. Deprecated. The name of the cluster. This field has been deprecated and replaced by the
-           parent field.
+            /** Deprecated. The name of the cluster. This field has been deprecated and replaced by the parent
+           field.
              */
             public java.lang.String getClusterId() {
               return clusterId;
             }
 
             /**
-             * Required. Deprecated. The name of the cluster. This field has been deprecated and
-             * replaced by the parent field.
+             * Deprecated. The name of the cluster. This field has been deprecated and replaced by
+             * the parent field.
              */
             public Create setClusterId(java.lang.String clusterId) {
               this.clusterId = clusterId;
@@ -9977,21 +9955,20 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the container server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+           * @param projectId Deprecated. The Google Developers Console [project ID or project
            *        number](https://developers.google.com/console/help/new/#projectnumber).
           This field has
            *        been deprecated and replaced by the name field.
-           * @param zone Required. Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in
-           *        which the cluster
+           * @param zone Deprecated. The name of the Google Compute Engine
+          [zone](/compute/docs/zones#available) in which the
+           *        cluster
           resides.
           This field has been deprecated and replaced by the name field.
-           * @param clusterId Required. Deprecated. The name of the cluster.
+           * @param clusterId Deprecated. The name of the cluster.
+          This field has been deprecated and replaced by the name field.
+           * @param nodePoolId Deprecated. The name of the node pool to delete.
           This field has been deprecated and replaced by the
            *        name field.
-           * @param nodePoolId Required. Deprecated. The name of the node pool to delete.
-          This field has been deprecated and
-           *        replaced by the name field.
            * @return the request
            */
           public Delete delete(java.lang.String projectId, java.lang.String zone, java.lang.String clusterId, java.lang.String nodePoolId) throws java.io.IOException {
@@ -10015,21 +9992,20 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+             * @param projectId Deprecated. The Google Developers Console [project ID or project
            *        number](https://developers.google.com/console/help/new/#projectnumber).
           This field has
            *        been deprecated and replaced by the name field.
-             * @param zone Required. Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in
-           *        which the cluster
+             * @param zone Deprecated. The name of the Google Compute Engine
+          [zone](/compute/docs/zones#available) in which the
+           *        cluster
           resides.
           This field has been deprecated and replaced by the name field.
-             * @param clusterId Required. Deprecated. The name of the cluster.
+             * @param clusterId Deprecated. The name of the cluster.
+          This field has been deprecated and replaced by the name field.
+             * @param nodePoolId Deprecated. The name of the node pool to delete.
           This field has been deprecated and replaced by the
            *        name field.
-             * @param nodePoolId Required. Deprecated. The name of the node pool to delete.
-          This field has been deprecated and
-           *        replaced by the name field.
              * @since 1.13
              */
             protected Delete(java.lang.String projectId, java.lang.String zone, java.lang.String clusterId, java.lang.String nodePoolId) {
@@ -10096,14 +10072,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The Google Developers Console [project ID or project
+             * Deprecated. The Google Developers Console [project ID or project
              * number](https://developers.google.com/console/help/new/#projectnumber). This field
              * has been deprecated and replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String projectId;
 
-            /** Required. Deprecated. The Google Developers Console [project ID or project
+            /** Deprecated. The Google Developers Console [project ID or project
            number](https://developers.google.com/console/help/new/#projectnumber). This field has been
            deprecated and replaced by the name field.
              */
@@ -10112,7 +10088,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The Google Developers Console [project ID or project
+             * Deprecated. The Google Developers Console [project ID or project
              * number](https://developers.google.com/console/help/new/#projectnumber). This field
              * has been deprecated and replaced by the name field.
              */
@@ -10122,22 +10098,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The name of the Google Compute Engine
+             * Deprecated. The name of the Google Compute Engine
              * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
              * been deprecated and replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String zone;
 
-            /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           in which the cluster resides. This field has been deprecated and replaced by the name field.
+            /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+           the cluster resides. This field has been deprecated and replaced by the name field.
              */
             public java.lang.String getZone() {
               return zone;
             }
 
             /**
-             * Required. Deprecated. The name of the Google Compute Engine
+             * Deprecated. The name of the Google Compute Engine
              * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
              * been deprecated and replaced by the name field.
              */
@@ -10147,22 +10123,21 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The name of the cluster. This field has been deprecated and
-             * replaced by the name field.
+             * Deprecated. The name of the cluster. This field has been deprecated and replaced by
+             * the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String clusterId;
 
-            /** Required. Deprecated. The name of the cluster. This field has been deprecated and replaced by the
-           name field.
+            /** Deprecated. The name of the cluster. This field has been deprecated and replaced by the name field.
              */
             public java.lang.String getClusterId() {
               return clusterId;
             }
 
             /**
-             * Required. Deprecated. The name of the cluster. This field has been deprecated and
-             * replaced by the name field.
+             * Deprecated. The name of the cluster. This field has been deprecated and replaced by
+             * the name field.
              */
             public Delete setClusterId(java.lang.String clusterId) {
               this.clusterId = clusterId;
@@ -10170,22 +10145,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The name of the node pool to delete. This field has been
-             * deprecated and replaced by the name field.
+             * Deprecated. The name of the node pool to delete. This field has been deprecated and
+             * replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String nodePoolId;
 
-            /** Required. Deprecated. The name of the node pool to delete. This field has been deprecated and
-           replaced by the name field.
+            /** Deprecated. The name of the node pool to delete. This field has been deprecated and replaced by the
+           name field.
              */
             public java.lang.String getNodePoolId() {
               return nodePoolId;
             }
 
             /**
-             * Required. Deprecated. The name of the node pool to delete. This field has been
-             * deprecated and replaced by the name field.
+             * Deprecated. The name of the node pool to delete. This field has been deprecated and
+             * replaced by the name field.
              */
             public Delete setNodePoolId(java.lang.String nodePoolId) {
               this.nodePoolId = nodePoolId;
@@ -10228,21 +10203,20 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the container server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+           * @param projectId Deprecated. The Google Developers Console [project ID or project
            *        number](https://developers.google.com/console/help/new/#projectnumber).
           This field has
            *        been deprecated and replaced by the name field.
-           * @param zone Required. Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in
-           *        which the cluster
+           * @param zone Deprecated. The name of the Google Compute Engine
+          [zone](/compute/docs/zones#available) in which the
+           *        cluster
           resides.
           This field has been deprecated and replaced by the name field.
-           * @param clusterId Required. Deprecated. The name of the cluster.
-          This field has been deprecated and replaced by the
-           *        name field.
-           * @param nodePoolId Required. Deprecated. The name of the node pool.
-          This field has been deprecated and replaced by the
-           *        name field.
+           * @param clusterId Deprecated. The name of the cluster.
+          This field has been deprecated and replaced by the name field.
+           * @param nodePoolId Deprecated. The name of the node pool.
+          This field has been deprecated and replaced by the name
+           *        field.
            * @return the request
            */
           public Get get(java.lang.String projectId, java.lang.String zone, java.lang.String clusterId, java.lang.String nodePoolId) throws java.io.IOException {
@@ -10265,21 +10239,20 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+             * @param projectId Deprecated. The Google Developers Console [project ID or project
            *        number](https://developers.google.com/console/help/new/#projectnumber).
           This field has
            *        been deprecated and replaced by the name field.
-             * @param zone Required. Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in
-           *        which the cluster
+             * @param zone Deprecated. The name of the Google Compute Engine
+          [zone](/compute/docs/zones#available) in which the
+           *        cluster
           resides.
           This field has been deprecated and replaced by the name field.
-             * @param clusterId Required. Deprecated. The name of the cluster.
-          This field has been deprecated and replaced by the
-           *        name field.
-             * @param nodePoolId Required. Deprecated. The name of the node pool.
-          This field has been deprecated and replaced by the
-           *        name field.
+             * @param clusterId Deprecated. The name of the cluster.
+          This field has been deprecated and replaced by the name field.
+             * @param nodePoolId Deprecated. The name of the node pool.
+          This field has been deprecated and replaced by the name
+           *        field.
              * @since 1.13
              */
             protected Get(java.lang.String projectId, java.lang.String zone, java.lang.String clusterId, java.lang.String nodePoolId) {
@@ -10356,14 +10329,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The Google Developers Console [project ID or project
+             * Deprecated. The Google Developers Console [project ID or project
              * number](https://developers.google.com/console/help/new/#projectnumber). This field
              * has been deprecated and replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String projectId;
 
-            /** Required. Deprecated. The Google Developers Console [project ID or project
+            /** Deprecated. The Google Developers Console [project ID or project
            number](https://developers.google.com/console/help/new/#projectnumber). This field has been
            deprecated and replaced by the name field.
              */
@@ -10372,7 +10345,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The Google Developers Console [project ID or project
+             * Deprecated. The Google Developers Console [project ID or project
              * number](https://developers.google.com/console/help/new/#projectnumber). This field
              * has been deprecated and replaced by the name field.
              */
@@ -10382,22 +10355,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The name of the Google Compute Engine
+             * Deprecated. The name of the Google Compute Engine
              * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
              * been deprecated and replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String zone;
 
-            /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           in which the cluster resides. This field has been deprecated and replaced by the name field.
+            /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+           the cluster resides. This field has been deprecated and replaced by the name field.
              */
             public java.lang.String getZone() {
               return zone;
             }
 
             /**
-             * Required. Deprecated. The name of the Google Compute Engine
+             * Deprecated. The name of the Google Compute Engine
              * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
              * been deprecated and replaced by the name field.
              */
@@ -10407,22 +10380,21 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The name of the cluster. This field has been deprecated and
-             * replaced by the name field.
+             * Deprecated. The name of the cluster. This field has been deprecated and replaced by
+             * the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String clusterId;
 
-            /** Required. Deprecated. The name of the cluster. This field has been deprecated and replaced by the
-           name field.
+            /** Deprecated. The name of the cluster. This field has been deprecated and replaced by the name field.
              */
             public java.lang.String getClusterId() {
               return clusterId;
             }
 
             /**
-             * Required. Deprecated. The name of the cluster. This field has been deprecated and
-             * replaced by the name field.
+             * Deprecated. The name of the cluster. This field has been deprecated and replaced by
+             * the name field.
              */
             public Get setClusterId(java.lang.String clusterId) {
               this.clusterId = clusterId;
@@ -10430,22 +10402,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The name of the node pool. This field has been deprecated and
-             * replaced by the name field.
+             * Deprecated. The name of the node pool. This field has been deprecated and replaced by
+             * the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String nodePoolId;
 
-            /** Required. Deprecated. The name of the node pool. This field has been deprecated and replaced by the
-           name field.
+            /** Deprecated. The name of the node pool. This field has been deprecated and replaced by the name
+           field.
              */
             public java.lang.String getNodePoolId() {
               return nodePoolId;
             }
 
             /**
-             * Required. Deprecated. The name of the node pool. This field has been deprecated and
-             * replaced by the name field.
+             * Deprecated. The name of the node pool. This field has been deprecated and replaced by
+             * the name field.
              */
             public Get setNodePoolId(java.lang.String nodePoolId) {
               this.nodePoolId = nodePoolId;
@@ -10488,19 +10460,18 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the container server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+           * @param projectId Deprecated. The Google Developers Console [project ID or project
            *        number](https://developers.google.com/console/help/new/#projectnumber).
           This field has
            *        been deprecated and replaced by the parent field.
-           * @param zone Required. Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in
-           *        which the cluster
+           * @param zone Deprecated. The name of the Google Compute Engine
+          [zone](/compute/docs/zones#available) in which the
+           *        cluster
           resides.
+          This field has been deprecated and replaced by the parent field.
+           * @param clusterId Deprecated. The name of the cluster.
           This field has been deprecated and replaced by the parent
            *        field.
-           * @param clusterId Required. Deprecated. The name of the cluster.
-          This field has been deprecated and replaced by the
-           *        parent field.
            * @return the request
            */
           public List list(java.lang.String projectId, java.lang.String zone, java.lang.String clusterId) throws java.io.IOException {
@@ -10523,19 +10494,18 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+             * @param projectId Deprecated. The Google Developers Console [project ID or project
            *        number](https://developers.google.com/console/help/new/#projectnumber).
           This field has
            *        been deprecated and replaced by the parent field.
-             * @param zone Required. Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in
-           *        which the cluster
+             * @param zone Deprecated. The name of the Google Compute Engine
+          [zone](/compute/docs/zones#available) in which the
+           *        cluster
           resides.
+          This field has been deprecated and replaced by the parent field.
+             * @param clusterId Deprecated. The name of the cluster.
           This field has been deprecated and replaced by the parent
            *        field.
-             * @param clusterId Required. Deprecated. The name of the cluster.
-          This field has been deprecated and replaced by the
-           *        parent field.
              * @since 1.13
              */
             protected List(java.lang.String projectId, java.lang.String zone, java.lang.String clusterId) {
@@ -10611,14 +10581,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The Google Developers Console [project ID or project
+             * Deprecated. The Google Developers Console [project ID or project
              * number](https://developers.google.com/console/help/new/#projectnumber). This field
              * has been deprecated and replaced by the parent field.
              */
             @com.google.api.client.util.Key
             private java.lang.String projectId;
 
-            /** Required. Deprecated. The Google Developers Console [project ID or project
+            /** Deprecated. The Google Developers Console [project ID or project
            number](https://developers.google.com/console/help/new/#projectnumber). This field has been
            deprecated and replaced by the parent field.
              */
@@ -10627,7 +10597,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The Google Developers Console [project ID or project
+             * Deprecated. The Google Developers Console [project ID or project
              * number](https://developers.google.com/console/help/new/#projectnumber). This field
              * has been deprecated and replaced by the parent field.
              */
@@ -10637,22 +10607,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The name of the Google Compute Engine
+             * Deprecated. The name of the Google Compute Engine
              * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
              * been deprecated and replaced by the parent field.
              */
             @com.google.api.client.util.Key
             private java.lang.String zone;
 
-            /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           in which the cluster resides. This field has been deprecated and replaced by the parent field.
+            /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+           the cluster resides. This field has been deprecated and replaced by the parent field.
              */
             public java.lang.String getZone() {
               return zone;
             }
 
             /**
-             * Required. Deprecated. The name of the Google Compute Engine
+             * Deprecated. The name of the Google Compute Engine
              * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
              * been deprecated and replaced by the parent field.
              */
@@ -10662,22 +10632,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The name of the cluster. This field has been deprecated and
-             * replaced by the parent field.
+             * Deprecated. The name of the cluster. This field has been deprecated and replaced by
+             * the parent field.
              */
             @com.google.api.client.util.Key
             private java.lang.String clusterId;
 
-            /** Required. Deprecated. The name of the cluster. This field has been deprecated and replaced by the
-           parent field.
+            /** Deprecated. The name of the cluster. This field has been deprecated and replaced by the parent
+           field.
              */
             public java.lang.String getClusterId() {
               return clusterId;
             }
 
             /**
-             * Required. Deprecated. The name of the cluster. This field has been deprecated and
-             * replaced by the parent field.
+             * Deprecated. The name of the cluster. This field has been deprecated and replaced by
+             * the parent field.
              */
             public List setClusterId(java.lang.String clusterId) {
               this.clusterId = clusterId;
@@ -10721,21 +10691,21 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the container server.  After setting any optional
            * parameters, call the {@link Rollback#execute()} method to invoke the remote operation.
            *
-           * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+           * @param projectId Deprecated. The Google Developers Console [project ID or project
            *        number](https://support.google.com/cloud/answer/6158840).
           This field has been deprecated
            *        and replaced by the name field.
-           * @param zone Required. Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in
-           *        which the cluster
+           * @param zone Deprecated. The name of the Google Compute Engine
+          [zone](/compute/docs/zones#available) in which the
+           *        cluster
           resides.
           This field has been deprecated and replaced by the name field.
-           * @param clusterId Required. Deprecated. The name of the cluster to rollback.
-          This field has been deprecated and
-           *        replaced by the name field.
-           * @param nodePoolId Required. Deprecated. The name of the node pool to rollback.
-          This field has been deprecated and
-           *        replaced by the name field.
+           * @param clusterId Deprecated. The name of the cluster to rollback.
+          This field has been deprecated and replaced by the
+           *        name field.
+           * @param nodePoolId Deprecated. The name of the node pool to rollback.
+          This field has been deprecated and replaced by
+           *        the name field.
            * @param content the {@link com.google.api.services.container.model.RollbackNodePoolUpgradeRequest}
            * @return the request
            */
@@ -10761,21 +10731,21 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
              * Rollback#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+             * @param projectId Deprecated. The Google Developers Console [project ID or project
            *        number](https://support.google.com/cloud/answer/6158840).
           This field has been deprecated
            *        and replaced by the name field.
-             * @param zone Required. Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in
-           *        which the cluster
+             * @param zone Deprecated. The name of the Google Compute Engine
+          [zone](/compute/docs/zones#available) in which the
+           *        cluster
           resides.
           This field has been deprecated and replaced by the name field.
-             * @param clusterId Required. Deprecated. The name of the cluster to rollback.
-          This field has been deprecated and
-           *        replaced by the name field.
-             * @param nodePoolId Required. Deprecated. The name of the node pool to rollback.
-          This field has been deprecated and
-           *        replaced by the name field.
+             * @param clusterId Deprecated. The name of the cluster to rollback.
+          This field has been deprecated and replaced by the
+           *        name field.
+             * @param nodePoolId Deprecated. The name of the node pool to rollback.
+          This field has been deprecated and replaced by
+           *        the name field.
              * @param content the {@link com.google.api.services.container.model.RollbackNodePoolUpgradeRequest}
              * @since 1.13
              */
@@ -10843,14 +10813,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The Google Developers Console [project ID or project
+             * Deprecated. The Google Developers Console [project ID or project
              * number](https://support.google.com/cloud/answer/6158840). This field has been
              * deprecated and replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String projectId;
 
-            /** Required. Deprecated. The Google Developers Console [project ID or project
+            /** Deprecated. The Google Developers Console [project ID or project
            number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
            replaced by the name field.
              */
@@ -10859,7 +10829,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The Google Developers Console [project ID or project
+             * Deprecated. The Google Developers Console [project ID or project
              * number](https://support.google.com/cloud/answer/6158840). This field has been
              * deprecated and replaced by the name field.
              */
@@ -10869,22 +10839,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The name of the Google Compute Engine
+             * Deprecated. The name of the Google Compute Engine
              * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
              * been deprecated and replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String zone;
 
-            /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           in which the cluster resides. This field has been deprecated and replaced by the name field.
+            /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+           the cluster resides. This field has been deprecated and replaced by the name field.
              */
             public java.lang.String getZone() {
               return zone;
             }
 
             /**
-             * Required. Deprecated. The name of the Google Compute Engine
+             * Deprecated. The name of the Google Compute Engine
              * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
              * been deprecated and replaced by the name field.
              */
@@ -10894,22 +10864,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The name of the cluster to rollback. This field has been
-             * deprecated and replaced by the name field.
+             * Deprecated. The name of the cluster to rollback. This field has been deprecated and
+             * replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String clusterId;
 
-            /** Required. Deprecated. The name of the cluster to rollback. This field has been deprecated and
-           replaced by the name field.
+            /** Deprecated. The name of the cluster to rollback. This field has been deprecated and replaced by the
+           name field.
              */
             public java.lang.String getClusterId() {
               return clusterId;
             }
 
             /**
-             * Required. Deprecated. The name of the cluster to rollback. This field has been
-             * deprecated and replaced by the name field.
+             * Deprecated. The name of the cluster to rollback. This field has been deprecated and
+             * replaced by the name field.
              */
             public Rollback setClusterId(java.lang.String clusterId) {
               this.clusterId = clusterId;
@@ -10917,22 +10887,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The name of the node pool to rollback. This field has been
-             * deprecated and replaced by the name field.
+             * Deprecated. The name of the node pool to rollback. This field has been deprecated and
+             * replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String nodePoolId;
 
-            /** Required. Deprecated. The name of the node pool to rollback. This field has been deprecated and
-           replaced by the name field.
+            /** Deprecated. The name of the node pool to rollback. This field has been deprecated and replaced by
+           the name field.
              */
             public java.lang.String getNodePoolId() {
               return nodePoolId;
             }
 
             /**
-             * Required. Deprecated. The name of the node pool to rollback. This field has been
-             * deprecated and replaced by the name field.
+             * Deprecated. The name of the node pool to rollback. This field has been deprecated and
+             * replaced by the name field.
              */
             public Rollback setNodePoolId(java.lang.String nodePoolId) {
               this.nodePoolId = nodePoolId;
@@ -10952,21 +10922,21 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the container server.  After setting any optional
            * parameters, call the {@link SetManagement#execute()} method to invoke the remote operation.
            *
-           * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+           * @param projectId Deprecated. The Google Developers Console [project ID or project
            *        number](https://support.google.com/cloud/answer/6158840).
           This field has been deprecated
            *        and replaced by the name field.
-           * @param zone Required. Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in
-           *        which the cluster
+           * @param zone Deprecated. The name of the Google Compute Engine
+          [zone](/compute/docs/zones#available) in which the
+           *        cluster
           resides.
           This field has been deprecated and replaced by the name field.
-           * @param clusterId Required. Deprecated. The name of the cluster to update.
-          This field has been deprecated and replaced
-           *        by the name field.
-           * @param nodePoolId Required. Deprecated. The name of the node pool to update.
-          This field has been deprecated and
-           *        replaced by the name field.
+           * @param clusterId Deprecated. The name of the cluster to update.
+          This field has been deprecated and replaced by the
+           *        name field.
+           * @param nodePoolId Deprecated. The name of the node pool to update.
+          This field has been deprecated and replaced by the
+           *        name field.
            * @param content the {@link com.google.api.services.container.model.SetNodePoolManagementRequest}
            * @return the request
            */
@@ -10991,21 +10961,21 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
              * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
              * the constructor. </p>
              *
-             * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+             * @param projectId Deprecated. The Google Developers Console [project ID or project
            *        number](https://support.google.com/cloud/answer/6158840).
           This field has been deprecated
            *        and replaced by the name field.
-             * @param zone Required. Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in
-           *        which the cluster
+             * @param zone Deprecated. The name of the Google Compute Engine
+          [zone](/compute/docs/zones#available) in which the
+           *        cluster
           resides.
           This field has been deprecated and replaced by the name field.
-             * @param clusterId Required. Deprecated. The name of the cluster to update.
-          This field has been deprecated and replaced
-           *        by the name field.
-             * @param nodePoolId Required. Deprecated. The name of the node pool to update.
-          This field has been deprecated and
-           *        replaced by the name field.
+             * @param clusterId Deprecated. The name of the cluster to update.
+          This field has been deprecated and replaced by the
+           *        name field.
+             * @param nodePoolId Deprecated. The name of the node pool to update.
+          This field has been deprecated and replaced by the
+           *        name field.
              * @param content the {@link com.google.api.services.container.model.SetNodePoolManagementRequest}
              * @since 1.13
              */
@@ -11073,14 +11043,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The Google Developers Console [project ID or project
+             * Deprecated. The Google Developers Console [project ID or project
              * number](https://support.google.com/cloud/answer/6158840). This field has been
              * deprecated and replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String projectId;
 
-            /** Required. Deprecated. The Google Developers Console [project ID or project
+            /** Deprecated. The Google Developers Console [project ID or project
            number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
            replaced by the name field.
              */
@@ -11089,7 +11059,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The Google Developers Console [project ID or project
+             * Deprecated. The Google Developers Console [project ID or project
              * number](https://support.google.com/cloud/answer/6158840). This field has been
              * deprecated and replaced by the name field.
              */
@@ -11099,22 +11069,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The name of the Google Compute Engine
+             * Deprecated. The name of the Google Compute Engine
              * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
              * been deprecated and replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String zone;
 
-            /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           in which the cluster resides. This field has been deprecated and replaced by the name field.
+            /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+           the cluster resides. This field has been deprecated and replaced by the name field.
              */
             public java.lang.String getZone() {
               return zone;
             }
 
             /**
-             * Required. Deprecated. The name of the Google Compute Engine
+             * Deprecated. The name of the Google Compute Engine
              * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
              * been deprecated and replaced by the name field.
              */
@@ -11124,22 +11094,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The name of the cluster to update. This field has been
-             * deprecated and replaced by the name field.
+             * Deprecated. The name of the cluster to update. This field has been deprecated and
+             * replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String clusterId;
 
-            /** Required. Deprecated. The name of the cluster to update. This field has been deprecated and
-           replaced by the name field.
+            /** Deprecated. The name of the cluster to update. This field has been deprecated and replaced by the
+           name field.
              */
             public java.lang.String getClusterId() {
               return clusterId;
             }
 
             /**
-             * Required. Deprecated. The name of the cluster to update. This field has been
-             * deprecated and replaced by the name field.
+             * Deprecated. The name of the cluster to update. This field has been deprecated and
+             * replaced by the name field.
              */
             public SetManagement setClusterId(java.lang.String clusterId) {
               this.clusterId = clusterId;
@@ -11147,22 +11117,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The name of the node pool to update. This field has been
-             * deprecated and replaced by the name field.
+             * Deprecated. The name of the node pool to update. This field has been deprecated and
+             * replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String nodePoolId;
 
-            /** Required. Deprecated. The name of the node pool to update. This field has been deprecated and
-           replaced by the name field.
+            /** Deprecated. The name of the node pool to update. This field has been deprecated and replaced by the
+           name field.
              */
             public java.lang.String getNodePoolId() {
               return nodePoolId;
             }
 
             /**
-             * Required. Deprecated. The name of the node pool to update. This field has been
-             * deprecated and replaced by the name field.
+             * Deprecated. The name of the node pool to update. This field has been deprecated and
+             * replaced by the name field.
              */
             public SetManagement setNodePoolId(java.lang.String nodePoolId) {
               this.nodePoolId = nodePoolId;
@@ -11182,21 +11152,21 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the container server.  After setting any optional
            * parameters, call the {@link SetSize#execute()} method to invoke the remote operation.
            *
-           * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+           * @param projectId Deprecated. The Google Developers Console [project ID or project
            *        number](https://support.google.com/cloud/answer/6158840).
           This field has been deprecated
            *        and replaced by the name field.
-           * @param zone Required. Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in
-           *        which the cluster
+           * @param zone Deprecated. The name of the Google Compute Engine
+          [zone](/compute/docs/zones#available) in which the
+           *        cluster
           resides.
           This field has been deprecated and replaced by the name field.
-           * @param clusterId Required. Deprecated. The name of the cluster to update.
-          This field has been deprecated and replaced
-           *        by the name field.
-           * @param nodePoolId Required. Deprecated. The name of the node pool to update.
-          This field has been deprecated and
-           *        replaced by the name field.
+           * @param clusterId Deprecated. The name of the cluster to update.
+          This field has been deprecated and replaced by the
+           *        name field.
+           * @param nodePoolId Deprecated. The name of the node pool to update.
+          This field has been deprecated and replaced by the
+           *        name field.
            * @param content the {@link com.google.api.services.container.model.SetNodePoolSizeRequest}
            * @return the request
            */
@@ -11221,21 +11191,21 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
              * SetSize#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+             * @param projectId Deprecated. The Google Developers Console [project ID or project
            *        number](https://support.google.com/cloud/answer/6158840).
           This field has been deprecated
            *        and replaced by the name field.
-             * @param zone Required. Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in
-           *        which the cluster
+             * @param zone Deprecated. The name of the Google Compute Engine
+          [zone](/compute/docs/zones#available) in which the
+           *        cluster
           resides.
           This field has been deprecated and replaced by the name field.
-             * @param clusterId Required. Deprecated. The name of the cluster to update.
-          This field has been deprecated and replaced
-           *        by the name field.
-             * @param nodePoolId Required. Deprecated. The name of the node pool to update.
-          This field has been deprecated and
-           *        replaced by the name field.
+             * @param clusterId Deprecated. The name of the cluster to update.
+          This field has been deprecated and replaced by the
+           *        name field.
+             * @param nodePoolId Deprecated. The name of the node pool to update.
+          This field has been deprecated and replaced by the
+           *        name field.
              * @param content the {@link com.google.api.services.container.model.SetNodePoolSizeRequest}
              * @since 1.13
              */
@@ -11303,14 +11273,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The Google Developers Console [project ID or project
+             * Deprecated. The Google Developers Console [project ID or project
              * number](https://support.google.com/cloud/answer/6158840). This field has been
              * deprecated and replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String projectId;
 
-            /** Required. Deprecated. The Google Developers Console [project ID or project
+            /** Deprecated. The Google Developers Console [project ID or project
            number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
            replaced by the name field.
              */
@@ -11319,7 +11289,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The Google Developers Console [project ID or project
+             * Deprecated. The Google Developers Console [project ID or project
              * number](https://support.google.com/cloud/answer/6158840). This field has been
              * deprecated and replaced by the name field.
              */
@@ -11329,22 +11299,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The name of the Google Compute Engine
+             * Deprecated. The name of the Google Compute Engine
              * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
              * been deprecated and replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String zone;
 
-            /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           in which the cluster resides. This field has been deprecated and replaced by the name field.
+            /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+           the cluster resides. This field has been deprecated and replaced by the name field.
              */
             public java.lang.String getZone() {
               return zone;
             }
 
             /**
-             * Required. Deprecated. The name of the Google Compute Engine
+             * Deprecated. The name of the Google Compute Engine
              * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
              * been deprecated and replaced by the name field.
              */
@@ -11354,22 +11324,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The name of the cluster to update. This field has been
-             * deprecated and replaced by the name field.
+             * Deprecated. The name of the cluster to update. This field has been deprecated and
+             * replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String clusterId;
 
-            /** Required. Deprecated. The name of the cluster to update. This field has been deprecated and
-           replaced by the name field.
+            /** Deprecated. The name of the cluster to update. This field has been deprecated and replaced by the
+           name field.
              */
             public java.lang.String getClusterId() {
               return clusterId;
             }
 
             /**
-             * Required. Deprecated. The name of the cluster to update. This field has been
-             * deprecated and replaced by the name field.
+             * Deprecated. The name of the cluster to update. This field has been deprecated and
+             * replaced by the name field.
              */
             public SetSize setClusterId(java.lang.String clusterId) {
               this.clusterId = clusterId;
@@ -11377,22 +11347,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The name of the node pool to update. This field has been
-             * deprecated and replaced by the name field.
+             * Deprecated. The name of the node pool to update. This field has been deprecated and
+             * replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String nodePoolId;
 
-            /** Required. Deprecated. The name of the node pool to update. This field has been deprecated and
-           replaced by the name field.
+            /** Deprecated. The name of the node pool to update. This field has been deprecated and replaced by the
+           name field.
              */
             public java.lang.String getNodePoolId() {
               return nodePoolId;
             }
 
             /**
-             * Required. Deprecated. The name of the node pool to update. This field has been
-             * deprecated and replaced by the name field.
+             * Deprecated. The name of the node pool to update. This field has been deprecated and
+             * replaced by the name field.
              */
             public SetSize setNodePoolId(java.lang.String nodePoolId) {
               this.nodePoolId = nodePoolId;
@@ -11412,21 +11382,21 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the container server.  After setting any optional
            * parameters, call the {@link Update#execute()} method to invoke the remote operation.
            *
-           * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+           * @param projectId Deprecated. The Google Developers Console [project ID or project
            *        number](https://support.google.com/cloud/answer/6158840).
           This field has been deprecated
            *        and replaced by the name field.
-           * @param zone Required. Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in
-           *        which the cluster
+           * @param zone Deprecated. The name of the Google Compute Engine
+          [zone](/compute/docs/zones#available) in which the
+           *        cluster
           resides.
           This field has been deprecated and replaced by the name field.
-           * @param clusterId Required. Deprecated. The name of the cluster to upgrade.
-          This field has been deprecated and
-           *        replaced by the name field.
-           * @param nodePoolId Required. Deprecated. The name of the node pool to upgrade.
-          This field has been deprecated and
-           *        replaced by the name field.
+           * @param clusterId Deprecated. The name of the cluster to upgrade.
+          This field has been deprecated and replaced by the
+           *        name field.
+           * @param nodePoolId Deprecated. The name of the node pool to upgrade.
+          This field has been deprecated and replaced by the
+           *        name field.
            * @param content the {@link com.google.api.services.container.model.UpdateNodePoolRequest}
            * @return the request
            */
@@ -11451,21 +11421,21 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
              * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+             * @param projectId Deprecated. The Google Developers Console [project ID or project
            *        number](https://support.google.com/cloud/answer/6158840).
           This field has been deprecated
            *        and replaced by the name field.
-             * @param zone Required. Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in
-           *        which the cluster
+             * @param zone Deprecated. The name of the Google Compute Engine
+          [zone](/compute/docs/zones#available) in which the
+           *        cluster
           resides.
           This field has been deprecated and replaced by the name field.
-             * @param clusterId Required. Deprecated. The name of the cluster to upgrade.
-          This field has been deprecated and
-           *        replaced by the name field.
-             * @param nodePoolId Required. Deprecated. The name of the node pool to upgrade.
-          This field has been deprecated and
-           *        replaced by the name field.
+             * @param clusterId Deprecated. The name of the cluster to upgrade.
+          This field has been deprecated and replaced by the
+           *        name field.
+             * @param nodePoolId Deprecated. The name of the node pool to upgrade.
+          This field has been deprecated and replaced by the
+           *        name field.
              * @param content the {@link com.google.api.services.container.model.UpdateNodePoolRequest}
              * @since 1.13
              */
@@ -11533,14 +11503,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The Google Developers Console [project ID or project
+             * Deprecated. The Google Developers Console [project ID or project
              * number](https://support.google.com/cloud/answer/6158840). This field has been
              * deprecated and replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String projectId;
 
-            /** Required. Deprecated. The Google Developers Console [project ID or project
+            /** Deprecated. The Google Developers Console [project ID or project
            number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
            replaced by the name field.
              */
@@ -11549,7 +11519,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The Google Developers Console [project ID or project
+             * Deprecated. The Google Developers Console [project ID or project
              * number](https://support.google.com/cloud/answer/6158840). This field has been
              * deprecated and replaced by the name field.
              */
@@ -11559,22 +11529,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The name of the Google Compute Engine
+             * Deprecated. The name of the Google Compute Engine
              * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
              * been deprecated and replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String zone;
 
-            /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           in which the cluster resides. This field has been deprecated and replaced by the name field.
+            /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+           the cluster resides. This field has been deprecated and replaced by the name field.
              */
             public java.lang.String getZone() {
               return zone;
             }
 
             /**
-             * Required. Deprecated. The name of the Google Compute Engine
+             * Deprecated. The name of the Google Compute Engine
              * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
              * been deprecated and replaced by the name field.
              */
@@ -11584,22 +11554,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The name of the cluster to upgrade. This field has been
-             * deprecated and replaced by the name field.
+             * Deprecated. The name of the cluster to upgrade. This field has been deprecated and
+             * replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String clusterId;
 
-            /** Required. Deprecated. The name of the cluster to upgrade. This field has been deprecated and
-           replaced by the name field.
+            /** Deprecated. The name of the cluster to upgrade. This field has been deprecated and replaced by the
+           name field.
              */
             public java.lang.String getClusterId() {
               return clusterId;
             }
 
             /**
-             * Required. Deprecated. The name of the cluster to upgrade. This field has been
-             * deprecated and replaced by the name field.
+             * Deprecated. The name of the cluster to upgrade. This field has been deprecated and
+             * replaced by the name field.
              */
             public Update setClusterId(java.lang.String clusterId) {
               this.clusterId = clusterId;
@@ -11607,22 +11577,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. Deprecated. The name of the node pool to upgrade. This field has been
-             * deprecated and replaced by the name field.
+             * Deprecated. The name of the node pool to upgrade. This field has been deprecated and
+             * replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String nodePoolId;
 
-            /** Required. Deprecated. The name of the node pool to upgrade. This field has been deprecated and
-           replaced by the name field.
+            /** Deprecated. The name of the node pool to upgrade. This field has been deprecated and replaced by
+           the name field.
              */
             public java.lang.String getNodePoolId() {
               return nodePoolId;
             }
 
             /**
-             * Required. Deprecated. The name of the node pool to upgrade. This field has been
-             * deprecated and replaced by the name field.
+             * Deprecated. The name of the node pool to upgrade. This field has been deprecated and
+             * replaced by the name field.
              */
             public Update setNodePoolId(java.lang.String nodePoolId) {
               this.nodePoolId = nodePoolId;
@@ -11665,18 +11635,17 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
          *
-         * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+         * @param projectId Deprecated. The Google Developers Console [project ID or project
          *        number](https://support.google.com/cloud/answer/6158840).
         This field has been deprecated
          *        and replaced by the name field.
-         * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the operation resides.
-        This field has been deprecated and replaced by the name
-         *        field.
-         * @param operationId Required. Deprecated. The server-assigned `name` of the operation.
-        This field has been deprecated
-         *        and replaced by the name field.
+         * @param zone Deprecated. The name of the Google Compute Engine
+        [zone](/compute/docs/zones#available) in which the
+         *        operation resides.
+        This field has been deprecated and replaced by the name field.
+         * @param operationId Deprecated. The server-assigned `name` of the operation.
+        This field has been deprecated and replaced
+         *        by the name field.
          * @param content the {@link com.google.api.services.container.model.CancelOperationRequest}
          * @return the request
          */
@@ -11701,18 +11670,17 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+           * @param projectId Deprecated. The Google Developers Console [project ID or project
          *        number](https://support.google.com/cloud/answer/6158840).
         This field has been deprecated
          *        and replaced by the name field.
-           * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the operation resides.
-        This field has been deprecated and replaced by the name
-         *        field.
-           * @param operationId Required. Deprecated. The server-assigned `name` of the operation.
-        This field has been deprecated
-         *        and replaced by the name field.
+           * @param zone Deprecated. The name of the Google Compute Engine
+        [zone](/compute/docs/zones#available) in which the
+         *        operation resides.
+        This field has been deprecated and replaced by the name field.
+           * @param operationId Deprecated. The server-assigned `name` of the operation.
+        This field has been deprecated and replaced
+         *        by the name field.
            * @param content the {@link com.google.api.services.container.model.CancelOperationRequest}
            * @since 1.13
            */
@@ -11779,14 +11747,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://support.google.com/cloud/answer/6158840). This field has been
            * deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String projectId;
 
-          /** Required. Deprecated. The Google Developers Console [project ID or project
+          /** Deprecated. The Google Developers Console [project ID or project
          number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
          replaced by the name field.
            */
@@ -11795,7 +11763,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://support.google.com/cloud/answer/6158840). This field has been
            * deprecated and replaced by the name field.
            */
@@ -11805,24 +11773,24 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the operation resides. This field has
-           * been deprecated and replaced by the name field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the operation resides. This field has been deprecated and replaced by the name
+           * field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the operation resides. This field has been deprecated and replaced by the name field.
+          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+         the operation resides. This field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the operation resides. This field has
-           * been deprecated and replaced by the name field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the operation resides. This field has been deprecated and replaced by the name
+           * field.
            */
           public Cancel setZone(java.lang.String zone) {
             this.zone = zone;
@@ -11830,22 +11798,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The server-assigned `name` of the operation. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The server-assigned `name` of the operation. This field has been deprecated
+           * and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String operationId;
 
-          /** Required. Deprecated. The server-assigned `name` of the operation. This field has been deprecated
-         and replaced by the name field.
+          /** Deprecated. The server-assigned `name` of the operation. This field has been deprecated and
+         replaced by the name field.
            */
           public java.lang.String getOperationId() {
             return operationId;
           }
 
           /**
-           * Required. Deprecated. The server-assigned `name` of the operation. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The server-assigned `name` of the operation. This field has been deprecated
+           * and replaced by the name field.
            */
           public Cancel setOperationId(java.lang.String operationId) {
             this.operationId = operationId;
@@ -11865,18 +11833,18 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+         * @param projectId Deprecated. The Google Developers Console [project ID or project
          *        number](https://support.google.com/cloud/answer/6158840).
         This field has been deprecated
          *        and replaced by the name field.
-         * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
+         * @param zone Deprecated. The name of the Google Compute Engine
+        [zone](/compute/docs/zones#available) in which the
+         *        cluster
         resides.
         This field has been deprecated and replaced by the name field.
-         * @param operationId Required. Deprecated. The server-assigned `name` of the operation.
-        This field has been deprecated
-         *        and replaced by the name field.
+         * @param operationId Deprecated. The server-assigned `name` of the operation.
+        This field has been deprecated and replaced
+         *        by the name field.
          * @return the request
          */
         public Get get(java.lang.String projectId, java.lang.String zone, java.lang.String operationId) throws java.io.IOException {
@@ -11899,18 +11867,18 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+           * @param projectId Deprecated. The Google Developers Console [project ID or project
          *        number](https://support.google.com/cloud/answer/6158840).
         This field has been deprecated
          *        and replaced by the name field.
-           * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in
-         *        which the cluster
+           * @param zone Deprecated. The name of the Google Compute Engine
+        [zone](/compute/docs/zones#available) in which the
+         *        cluster
         resides.
         This field has been deprecated and replaced by the name field.
-           * @param operationId Required. Deprecated. The server-assigned `name` of the operation.
-        This field has been deprecated
-         *        and replaced by the name field.
+           * @param operationId Deprecated. The server-assigned `name` of the operation.
+        This field has been deprecated and replaced
+         *        by the name field.
            * @since 1.13
            */
           protected Get(java.lang.String projectId, java.lang.String zone, java.lang.String operationId) {
@@ -11986,14 +11954,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://support.google.com/cloud/answer/6158840). This field has been
            * deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String projectId;
 
-          /** Required. Deprecated. The Google Developers Console [project ID or project
+          /** Deprecated. The Google Developers Console [project ID or project
          number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
          replaced by the name field.
            */
@@ -12002,7 +11970,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://support.google.com/cloud/answer/6158840). This field has been
            * deprecated and replaced by the name field.
            */
@@ -12012,24 +11980,24 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides. This field has been deprecated and replaced by the name
+           * field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         in which the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+         the cluster resides. This field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides. This field has been deprecated and replaced by the name
+           * field.
            */
           public Get setZone(java.lang.String zone) {
             this.zone = zone;
@@ -12037,22 +12005,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The server-assigned `name` of the operation. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The server-assigned `name` of the operation. This field has been deprecated
+           * and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String operationId;
 
-          /** Required. Deprecated. The server-assigned `name` of the operation. This field has been deprecated
-         and replaced by the name field.
+          /** Deprecated. The server-assigned `name` of the operation. This field has been deprecated and
+         replaced by the name field.
            */
           public java.lang.String getOperationId() {
             return operationId;
           }
 
           /**
-           * Required. Deprecated. The server-assigned `name` of the operation. This field has been
-           * deprecated and replaced by the name field.
+           * Deprecated. The server-assigned `name` of the operation. This field has been deprecated
+           * and replaced by the name field.
            */
           public Get setOperationId(java.lang.String operationId) {
             this.operationId = operationId;
@@ -12095,15 +12063,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+         * @param projectId Deprecated. The Google Developers Console [project ID or project
          *        number](https://support.google.com/cloud/answer/6158840).
         This field has been deprecated
          *        and replaced by the parent field.
-         * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) to
-         *        return operations for, or `-` for
-        all zones. This field has been deprecated and replaced
-         *        by the parent field.
+         * @param zone Deprecated. The name of the Google Compute Engine
+        [zone](/compute/docs/zones#available) to return
+         *        operations for, or `-` for
+        all zones. This field has been deprecated and replaced by the
+         *        parent field.
          * @return the request
          */
         public List list(java.lang.String projectId, java.lang.String zone) throws java.io.IOException {
@@ -12126,15 +12094,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param projectId Required. Deprecated. The Google Developers Console [project ID or project
+           * @param projectId Deprecated. The Google Developers Console [project ID or project
          *        number](https://support.google.com/cloud/answer/6158840).
         This field has been deprecated
          *        and replaced by the parent field.
-           * @param zone Required. Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) to
-         *        return operations for, or `-` for
-        all zones. This field has been deprecated and replaced
-         *        by the parent field.
+           * @param zone Deprecated. The name of the Google Compute Engine
+        [zone](/compute/docs/zones#available) to return
+         *        operations for, or `-` for
+        all zones. This field has been deprecated and replaced by the
+         *        parent field.
            * @since 1.13
            */
           protected List(java.lang.String projectId, java.lang.String zone) {
@@ -12209,14 +12177,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://support.google.com/cloud/answer/6158840). This field has been
            * deprecated and replaced by the parent field.
            */
           @com.google.api.client.util.Key
           private java.lang.String projectId;
 
-          /** Required. Deprecated. The Google Developers Console [project ID or project
+          /** Deprecated. The Google Developers Console [project ID or project
          number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
          replaced by the parent field.
            */
@@ -12225,7 +12193,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The Google Developers Console [project ID or project
+           * Deprecated. The Google Developers Console [project ID or project
            * number](https://support.google.com/cloud/answer/6158840). This field has been
            * deprecated and replaced by the parent field.
            */
@@ -12235,25 +12203,25 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) to return operations for, or `-` for all zones.
-           * This field has been deprecated and replaced by the parent field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * to return operations for, or `-` for all zones. This field has been deprecated and
+           * replaced by the parent field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         to return operations for, or `-` for all zones. This field has been deprecated and replaced by the
-         parent field.
+          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) to return
+         operations for, or `-` for all zones. This field has been deprecated and replaced by the parent
+         field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Required. Deprecated. The name of the Google Compute Engine
-           * [zone](/compute/docs/zones#available) to return operations for, or `-` for all zones.
-           * This field has been deprecated and replaced by the parent field.
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * to return operations for, or `-` for all zones. This field has been deprecated and
+           * replaced by the parent field.
            */
           public List setZone(java.lang.String zone) {
             this.zone = zone;

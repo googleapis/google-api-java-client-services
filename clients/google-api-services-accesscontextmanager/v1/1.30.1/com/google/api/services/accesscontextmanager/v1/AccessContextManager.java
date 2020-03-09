@@ -1605,7 +1605,9 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
        * @param name Required. Resource name for the Access Level. The `short_name` component
       must begin with a letter
        *        and only include alphanumeric and '_'. Format:
-       *        `accessPolicies/{policy_id}/accessLevels/{short_name}`
+       *        `accessPolicies/{policy_id}/accessLevels/{short_name}`. The maximum length
+      of the
+       *        `short_name` component is 50 characters.
        * @param content the {@link com.google.api.services.accesscontextmanager.v1.model.AccessLevel}
        * @return the request
        */
@@ -1638,7 +1640,9 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
          * @param name Required. Resource name for the Access Level. The `short_name` component
       must begin with a letter
        *        and only include alphanumeric and '_'. Format:
-       *        `accessPolicies/{policy_id}/accessLevels/{short_name}`
+       *        `accessPolicies/{policy_id}/accessLevels/{short_name}`. The maximum length
+      of the
+       *        `short_name` component is 50 characters.
          * @param content the {@link com.google.api.services.accesscontextmanager.v1.model.AccessLevel}
          * @since 1.13
          */
@@ -1710,14 +1714,16 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         /**
          * Required. Resource name for the Access Level. The `short_name` component must begin with
          * a letter and only include alphanumeric and '_'. Format:
-         * `accessPolicies/{policy_id}/accessLevels/{short_name}`
+         * `accessPolicies/{policy_id}/accessLevels/{short_name}`. The maximum length of the
+         * `short_name` component is 50 characters.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. Resource name for the Access Level. The `short_name` component must begin with a letter
        and only include alphanumeric and '_'. Format:
-       `accessPolicies/{policy_id}/accessLevels/{short_name}`
+       `accessPolicies/{policy_id}/accessLevels/{short_name}`. The maximum length of the `short_name`
+       component is 50 characters.
          */
         public java.lang.String getName() {
           return name;
@@ -1726,7 +1732,8 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         /**
          * Required. Resource name for the Access Level. The `short_name` component must begin with
          * a letter and only include alphanumeric and '_'. Format:
-         * `accessPolicies/{policy_id}/accessLevels/{short_name}`
+         * `accessPolicies/{policy_id}/accessLevels/{short_name}`. The maximum length of the
+         * `short_name` component is 50 characters.
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -2107,9 +2114,9 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
       }
       /**
-       * Create an Service Perimeter. The longrunning operation from this RPC will have a successful
-       * status once the Service Perimeter has propagated to long-lasting storage. Service Perimeters
-       * containing errors will result in an error response for the first error encountered.
+       * Create a Service Perimeter. The longrunning operation from this RPC will have a successful status
+       * once the Service Perimeter has propagated to long-lasting storage. Service Perimeters containing
+       * errors will result in an error response for the first error encountered.
        *
        * Create a request for the method "servicePerimeters.create".
        *
@@ -2137,7 +2144,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^accessPolicies/[^/]+$");
 
         /**
-         * Create an Service Perimeter. The longrunning operation from this RPC will have a successful
+         * Create a Service Perimeter. The longrunning operation from this RPC will have a successful
          * status once the Service Perimeter has propagated to long-lasting storage. Service Perimeters
          * containing errors will result in an error response for the first error encountered.
          *
@@ -2258,7 +2265,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
       }
       /**
-       * Delete an Service Perimeter by resource name. The longrunning operation from this RPC will have a
+       * Delete a Service Perimeter by resource name. The longrunning operation from this RPC will have a
        * successful status once the Service Perimeter has been removed from long-lasting storage.
        *
        * Create a request for the method "servicePerimeters.delete".
@@ -2285,7 +2292,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^accessPolicies/[^/]+/servicePerimeters/[^/]+$");
 
         /**
-         * Delete an Service Perimeter by resource name. The longrunning operation from this RPC will have
+         * Delete a Service Perimeter by resource name. The longrunning operation from this RPC will have
          * a successful status once the Service Perimeter has been removed from long-lasting storage.
          *
          * Create a request for the method "servicePerimeters.delete".
@@ -2403,7 +2410,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
       }
       /**
-       * Get an Service Perimeter by resource name.
+       * Get a Service Perimeter by resource name.
        *
        * Create a request for the method "servicePerimeters.get".
        *
@@ -2429,7 +2436,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^accessPolicies/[^/]+/servicePerimeters/[^/]+$");
 
         /**
-         * Get an Service Perimeter by resource name.
+         * Get a Service Perimeter by resource name.
          *
          * Create a request for the method "servicePerimeters.get".
          *
@@ -2752,8 +2759,8 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
       }
       /**
-       * Update an Service Perimeter. The longrunning operation from this RPC will have a successful
-       * status once the changes to the Service Perimeter have propagated to long-lasting storage. Service
+       * Update a Service Perimeter. The longrunning operation from this RPC will have a successful status
+       * once the changes to the Service Perimeter have propagated to long-lasting storage. Service
        * Perimeter containing errors will result in an error response for the first error encountered.
        *
        * Create a request for the method "servicePerimeters.patch".
@@ -2783,7 +2790,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^accessPolicies/[^/]+/servicePerimeters/[^/]+$");
 
         /**
-         * Update an Service Perimeter. The longrunning operation from this RPC will have a successful
+         * Update a Service Perimeter. The longrunning operation from this RPC will have a successful
          * status once the changes to the Service Perimeter have propagated to long-lasting storage.
          * Service Perimeter containing errors will result in an error response for the first error
          * encountered.

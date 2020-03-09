@@ -32,8 +32,8 @@ package com.google.api.services.container.model;
 public final class StartIPRotationRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Deprecated. The name of the cluster. This field has been deprecated and replaced by
-   * the name field.
+   * Deprecated. The name of the cluster. This field has been deprecated and replaced by the name
+   * field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +48,7 @@ public final class StartIPRotationRequest extends com.google.api.client.json.Gen
   private java.lang.String name;
 
   /**
-   * Required. Deprecated. The Google Developers Console [project ID or project
+   * Deprecated. The Google Developers Console [project ID or project
    * number](https://developers.google.com/console/help/new/#projectnumber). This field has been
    * deprecated and replaced by the name field.
    * The value may be {@code null}.
@@ -64,17 +64,16 @@ public final class StartIPRotationRequest extends com.google.api.client.json.Gen
   private java.lang.Boolean rotateCredentials;
 
   /**
-   * Required. Deprecated. The name of the Google Compute Engine
-   * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-   * deprecated and replaced by the name field.
+   * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
+   * which the cluster resides. This field has been deprecated and replaced by the name field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
 
   /**
-   * Required. Deprecated. The name of the cluster. This field has been deprecated and replaced by
-   * the name field.
+   * Deprecated. The name of the cluster. This field has been deprecated and replaced by the name
+   * field.
    * @return value or {@code null} for none
    */
   public java.lang.String getClusterId() {
@@ -82,8 +81,8 @@ public final class StartIPRotationRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. Deprecated. The name of the cluster. This field has been deprecated and replaced by
-   * the name field.
+   * Deprecated. The name of the cluster. This field has been deprecated and replaced by the name
+   * field.
    * @param clusterId clusterId or {@code null} for none
    */
   public StartIPRotationRequest setClusterId(java.lang.String clusterId) {
@@ -111,7 +110,7 @@ public final class StartIPRotationRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. Deprecated. The Google Developers Console [project ID or project
+   * Deprecated. The Google Developers Console [project ID or project
    * number](https://developers.google.com/console/help/new/#projectnumber). This field has been
    * deprecated and replaced by the name field.
    * @return value or {@code null} for none
@@ -121,7 +120,7 @@ public final class StartIPRotationRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. Deprecated. The Google Developers Console [project ID or project
+   * Deprecated. The Google Developers Console [project ID or project
    * number](https://developers.google.com/console/help/new/#projectnumber). This field has been
    * deprecated and replaced by the name field.
    * @param projectId projectId or {@code null} for none
@@ -149,9 +148,8 @@ public final class StartIPRotationRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. Deprecated. The name of the Google Compute Engine
-   * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-   * deprecated and replaced by the name field.
+   * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
+   * which the cluster resides. This field has been deprecated and replaced by the name field.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -159,9 +157,8 @@ public final class StartIPRotationRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. Deprecated. The name of the Google Compute Engine
-   * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-   * deprecated and replaced by the name field.
+   * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
+   * which the cluster resides. This field has been deprecated and replaced by the name field.
    * @param zone zone or {@code null} for none
    */
   public StartIPRotationRequest setZone(java.lang.String zone) {

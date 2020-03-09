@@ -46,7 +46,7 @@ public final class CreateClusterRequest extends com.google.api.client.json.Gener
   private java.lang.String parent;
 
   /**
-   * Required. Deprecated. The Google Developers Console [project ID or project
+   * Deprecated. The Google Developers Console [project ID or project
    * number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
    * replaced by the parent field.
    * The value may be {@code null}.
@@ -55,9 +55,8 @@ public final class CreateClusterRequest extends com.google.api.client.json.Gener
   private java.lang.String projectId;
 
   /**
-   * Required. Deprecated. The name of the Google Compute Engine
-   * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-   * deprecated and replaced by the parent field.
+   * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
+   * which the cluster resides. This field has been deprecated and replaced by the parent field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +99,7 @@ public final class CreateClusterRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. Deprecated. The Google Developers Console [project ID or project
+   * Deprecated. The Google Developers Console [project ID or project
    * number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
    * replaced by the parent field.
    * @return value or {@code null} for none
@@ -110,7 +109,7 @@ public final class CreateClusterRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. Deprecated. The Google Developers Console [project ID or project
+   * Deprecated. The Google Developers Console [project ID or project
    * number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
    * replaced by the parent field.
    * @param projectId projectId or {@code null} for none
@@ -121,9 +120,8 @@ public final class CreateClusterRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. Deprecated. The name of the Google Compute Engine
-   * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-   * deprecated and replaced by the parent field.
+   * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
+   * which the cluster resides. This field has been deprecated and replaced by the parent field.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -131,9 +129,8 @@ public final class CreateClusterRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. Deprecated. The name of the Google Compute Engine
-   * [zone](/compute/docs/zones#available) in which the cluster resides. This field has been
-   * deprecated and replaced by the parent field.
+   * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
+   * which the cluster resides. This field has been deprecated and replaced by the parent field.
    * @param zone zone or {@code null} for none
    */
   public CreateClusterRequest setZone(java.lang.String zone) {

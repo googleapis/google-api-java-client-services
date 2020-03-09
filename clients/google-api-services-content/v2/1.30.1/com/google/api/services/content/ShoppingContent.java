@@ -10767,7 +10767,9 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
-     * Lists the products in your Merchant Center account.
+     * Lists the products in your Merchant Center account. The response might contain fewer items than
+     * specified by maxResults. Rely on nextPageToken to determine if there are more items to be
+     * requested.
      *
      * Create a request for the method "products.list".
      *
@@ -10788,7 +10790,9 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "{merchantId}/products";
 
       /**
-       * Lists the products in your Merchant Center account.
+       * Lists the products in your Merchant Center account. The response might contain fewer items than
+       * specified by maxResults. Rely on nextPageToken to determine if there are more items to be
+       * requested.
        *
        * Create a request for the method "products.list".
        *

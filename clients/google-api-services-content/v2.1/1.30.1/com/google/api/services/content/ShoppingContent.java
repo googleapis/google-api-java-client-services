@@ -9874,7 +9874,9 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
-     * Lists the products in your Merchant Center account.
+     * Lists the products in your Merchant Center account. The response might contain fewer items than
+     * specified by maxResults. Rely on nextPageToken to determine if there are more items to be
+     * requested.
      *
      * Create a request for the method "products.list".
      *
@@ -9895,7 +9897,9 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "{merchantId}/products";
 
       /**
-       * Lists the products in your Merchant Center account.
+       * Lists the products in your Merchant Center account. The response might contain fewer items than
+       * specified by maxResults. Rely on nextPageToken to determine if there are more items to be
+       * requested.
        *
        * Create a request for the method "products.list".
        *
@@ -10435,6 +10439,233 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       @Override
       public List set(String parameterName, Object value) {
         return (List) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
+   * An accessor for creating requests from the Pubsubnotificationsettings collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code ShoppingContent content = new ShoppingContent(...);}
+   *   {@code ShoppingContent.Pubsubnotificationsettings.List request = content.pubsubnotificationsettings().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Pubsubnotificationsettings pubsubnotificationsettings() {
+    return new Pubsubnotificationsettings();
+  }
+
+  /**
+   * The "pubsubnotificationsettings" collection of methods.
+   */
+  public class Pubsubnotificationsettings {
+
+    /**
+     * Retrieves a Merchant Center account's pubsub notification settings.
+     *
+     * Create a request for the method "pubsubnotificationsettings.get".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId The ID of the account for which to get pubsub notification settings.
+     * @return the request
+     */
+    public Get get(java.math.BigInteger merchantId) throws java.io.IOException {
+      Get result = new Get(merchantId);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends ShoppingContentRequest<com.google.api.services.content.model.PubsubNotificationSettings> {
+
+      private static final String REST_PATH = "{merchantId}/pubsubnotificationsettings";
+
+      /**
+       * Retrieves a Merchant Center account's pubsub notification settings.
+       *
+       * Create a request for the method "pubsubnotificationsettings.get".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId The ID of the account for which to get pubsub notification settings.
+       * @since 1.13
+       */
+      protected Get(java.math.BigInteger merchantId) {
+        super(ShoppingContent.this, "GET", REST_PATH, null, com.google.api.services.content.model.PubsubNotificationSettings.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUserIp(java.lang.String userIp) {
+        return (Get) super.setUserIp(userIp);
+      }
+
+      /** The ID of the account for which to get pubsub notification settings. */
+      @com.google.api.client.util.Key
+      private java.math.BigInteger merchantId;
+
+      /** The ID of the account for which to get pubsub notification settings.
+       */
+      public java.math.BigInteger getMerchantId() {
+        return merchantId;
+      }
+
+      /** The ID of the account for which to get pubsub notification settings. */
+      public Get setMerchantId(java.math.BigInteger merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Register a Merchant Center account for pubsub notifications. Note that cloud topic name should
+     * not be provided as part of the request.
+     *
+     * Create a request for the method "pubsubnotificationsettings.update".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Update#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId The ID of the account.
+     * @param content the {@link com.google.api.services.content.model.PubsubNotificationSettings}
+     * @return the request
+     */
+    public Update update(java.math.BigInteger merchantId, com.google.api.services.content.model.PubsubNotificationSettings content) throws java.io.IOException {
+      Update result = new Update(merchantId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Update extends ShoppingContentRequest<com.google.api.services.content.model.PubsubNotificationSettings> {
+
+      private static final String REST_PATH = "{merchantId}/pubsubnotificationsettings";
+
+      /**
+       * Register a Merchant Center account for pubsub notifications. Note that cloud topic name should
+       * not be provided as part of the request.
+       *
+       * Create a request for the method "pubsubnotificationsettings.update".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Update#execute()} method to invoke the remote operation. <p> {@link
+       * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId The ID of the account.
+       * @param content the {@link com.google.api.services.content.model.PubsubNotificationSettings}
+       * @since 1.13
+       */
+      protected Update(java.math.BigInteger merchantId, com.google.api.services.content.model.PubsubNotificationSettings content) {
+        super(ShoppingContent.this, "PUT", REST_PATH, content, com.google.api.services.content.model.PubsubNotificationSettings.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+      }
+
+      @Override
+      public Update setAlt(java.lang.String alt) {
+        return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setFields(java.lang.String fields) {
+        return (Update) super.setFields(fields);
+      }
+
+      @Override
+      public Update setKey(java.lang.String key) {
+        return (Update) super.setKey(key);
+      }
+
+      @Override
+      public Update setOauthToken(java.lang.String oauthToken) {
+        return (Update) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Update) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Update setQuotaUser(java.lang.String quotaUser) {
+        return (Update) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Update setUserIp(java.lang.String userIp) {
+        return (Update) super.setUserIp(userIp);
+      }
+
+      /** The ID of the account. */
+      @com.google.api.client.util.Key
+      private java.math.BigInteger merchantId;
+
+      /** The ID of the account.
+       */
+      public java.math.BigInteger getMerchantId() {
+        return merchantId;
+      }
+
+      /** The ID of the account. */
+      public Update setMerchantId(java.math.BigInteger merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      @Override
+      public Update set(String parameterName, Object value) {
+        return (Update) super.set(parameterName, value);
       }
     }
 

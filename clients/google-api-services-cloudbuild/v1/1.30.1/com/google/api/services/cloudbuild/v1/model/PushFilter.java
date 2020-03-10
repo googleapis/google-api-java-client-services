@@ -40,6 +40,13 @@ public final class PushFilter extends com.google.api.client.json.GenericJson {
   private java.lang.String branch;
 
   /**
+   * When true, only trigger a build if the revision regex does NOT match the git_ref regex.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean invertRegex;
+
+  /**
    * Regexes matching tags to build.
    *
    * The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at
@@ -69,6 +76,23 @@ public final class PushFilter extends com.google.api.client.json.GenericJson {
    */
   public PushFilter setBranch(java.lang.String branch) {
     this.branch = branch;
+    return this;
+  }
+
+  /**
+   * When true, only trigger a build if the revision regex does NOT match the git_ref regex.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getInvertRegex() {
+    return invertRegex;
+  }
+
+  /**
+   * When true, only trigger a build if the revision regex does NOT match the git_ref regex.
+   * @param invertRegex invertRegex or {@code null} for none
+   */
+  public PushFilter setInvertRegex(java.lang.Boolean invertRegex) {
+    this.invertRegex = invertRegex;
     return this;
   }
 

@@ -165,8 +165,6 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
       /**
        * Creates a `WorkerPool` to run the builds, and returns the new worker pool.
        *
-       * This API is experimental.
-       *
        * Create a request for the method "workerPools.create".
        *
        * This request holds the parameters needed by the cloudbuild server.  After setting any optional
@@ -191,8 +189,6 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Creates a `WorkerPool` to run the builds, and returns the new worker pool.
-         *
-         * This API is experimental.
          *
          * Create a request for the method "workerPools.create".
          *
@@ -300,8 +296,6 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
       /**
        * Deletes a `WorkerPool` by its project ID and WorkerPool name.
        *
-       * This API is experimental.
-       *
        * Create a request for the method "workerPools.delete".
        *
        * This request holds the parameters needed by the cloudbuild server.  After setting any optional
@@ -327,8 +321,6 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Deletes a `WorkerPool` by its project ID and WorkerPool name.
-         *
-         * This API is experimental.
          *
          * Create a request for the method "workerPools.delete".
          *
@@ -444,8 +436,6 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
       /**
        * Returns information about a `WorkerPool`.
        *
-       * This API is experimental.
-       *
        * Create a request for the method "workerPools.get".
        *
        * This request holds the parameters needed by the cloudbuild server.  After setting any optional
@@ -471,8 +461,6 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Returns information about a `WorkerPool`.
-         *
-         * This API is experimental.
          *
          * Create a request for the method "workerPools.get".
          *
@@ -597,8 +585,6 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
       /**
        * List project's `WorkerPool`s.
        *
-       * This API is experimental.
-       *
        * Create a request for the method "workerPools.list".
        *
        * This request holds the parameters needed by the cloudbuild server.  After setting any optional
@@ -622,8 +608,6 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
 
         /**
          * List project's `WorkerPool`s.
-         *
-         * This API is experimental.
          *
          * Create a request for the method "workerPools.list".
          *
@@ -739,8 +723,6 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
       /**
        * Update a `WorkerPool`.
        *
-       * This API is experimental.
-       *
        * Create a request for the method "workerPools.patch".
        *
        * This request holds the parameters needed by the cloudbuild server.  After setting any optional
@@ -767,8 +749,6 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Update a `WorkerPool`.
-         *
-         * This API is experimental.
          *
          * Create a request for the method "workerPools.patch".
          *

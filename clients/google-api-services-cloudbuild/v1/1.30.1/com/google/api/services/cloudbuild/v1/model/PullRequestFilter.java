@@ -47,6 +47,13 @@ public final class PullRequestFilter extends com.google.api.client.json.GenericJ
   private java.lang.String commentControl;
 
   /**
+   * If true, branches that do NOT match the git_ref will trigger a build.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean invertRegex;
+
+  /**
    * Regex of branches to match.
    *
    * The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at
@@ -83,6 +90,23 @@ public final class PullRequestFilter extends com.google.api.client.json.GenericJ
    */
   public PullRequestFilter setCommentControl(java.lang.String commentControl) {
     this.commentControl = commentControl;
+    return this;
+  }
+
+  /**
+   * If true, branches that do NOT match the git_ref will trigger a build.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getInvertRegex() {
+    return invertRegex;
+  }
+
+  /**
+   * If true, branches that do NOT match the git_ref will trigger a build.
+   * @param invertRegex invertRegex or {@code null} for none
+   */
+  public PullRequestFilter setInvertRegex(java.lang.Boolean invertRegex) {
+    this.invertRegex = invertRegex;
     return this;
   }
 

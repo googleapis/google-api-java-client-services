@@ -238,6 +238,14 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private java.lang.String releaseDate;
 
   /**
+   * Rich product content. For more information, see
+   * https://support.google.com/manufacturers/answer/9389865
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> richContent;
+
+  /**
    * The scent of the product. For more information, see
    * https://support.google.com/manufacturers/answer/6124116#scent.
    * The value may be {@code null}.
@@ -795,6 +803,25 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
    */
   public Attributes setReleaseDate(java.lang.String releaseDate) {
     this.releaseDate = releaseDate;
+    return this;
+  }
+
+  /**
+   * Rich product content. For more information, see
+   * https://support.google.com/manufacturers/answer/9389865
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getRichContent() {
+    return richContent;
+  }
+
+  /**
+   * Rich product content. For more information, see
+   * https://support.google.com/manufacturers/answer/9389865
+   * @param richContent richContent or {@code null} for none
+   */
+  public Attributes setRichContent(java.util.List<java.lang.String> richContent) {
+    this.richContent = richContent;
     return this;
   }
 

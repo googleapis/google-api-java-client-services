@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.securitycenter.v1beta1.model;
+package com.google.api.services.securitycenter.v1p1alpha1.model;
 
 /**
  * Cloud Security Command Center (Cloud SCC) finding.

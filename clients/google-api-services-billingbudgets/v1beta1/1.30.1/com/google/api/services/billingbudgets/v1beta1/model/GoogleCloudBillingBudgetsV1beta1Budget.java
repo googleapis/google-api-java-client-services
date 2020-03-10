@@ -80,7 +80,7 @@ public final class GoogleCloudBillingBudgetsV1beta1Budget extends com.google.api
   private java.lang.String name;
 
   /**
-   * Required. Rules that trigger alerts (notifications of thresholds being crossed) when spend
+   * Optional. Rules that trigger alerts (notifications of thresholds being crossed) when spend
    * exceeds the specified percentages of the budget.
    * The value may be {@code null}.
    */
@@ -198,7 +198,7 @@ public final class GoogleCloudBillingBudgetsV1beta1Budget extends com.google.api
   }
 
   /**
-   * Required. Rules that trigger alerts (notifications of thresholds being crossed) when spend
+   * Optional. Rules that trigger alerts (notifications of thresholds being crossed) when spend
    * exceeds the specified percentages of the budget.
    * @return value or {@code null} for none
    */
@@ -207,7 +207,7 @@ public final class GoogleCloudBillingBudgetsV1beta1Budget extends com.google.api
   }
 
   /**
-   * Required. Rules that trigger alerts (notifications of thresholds being crossed) when spend
+   * Optional. Rules that trigger alerts (notifications of thresholds being crossed) when spend
    * exceeds the specified percentages of the budget.
    * @param thresholdRules thresholdRules or {@code null} for none
    */

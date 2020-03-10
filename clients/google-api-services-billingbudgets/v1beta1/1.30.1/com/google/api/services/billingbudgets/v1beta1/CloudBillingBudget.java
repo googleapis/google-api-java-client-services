@@ -449,7 +449,7 @@ public class CloudBillingBudget extends com.google.api.client.googleapis.service
        *
        * WARNING: There are some fields exposed on the Google Cloud Console that aren’t available on this
        * API. When reading from the API, you will not see these fields in the return value, though they
-       * may have been set in the cloud console.
+       * may have been set in the Cloud Console.
        *
        * Create a request for the method "budgets.get".
        *
@@ -478,7 +478,7 @@ public class CloudBillingBudget extends com.google.api.client.googleapis.service
          *
          * WARNING: There are some fields exposed on the Google Cloud Console that aren’t available on
          * this API. When reading from the API, you will not see these fields in the return value, though
-         * they may have been set in the cloud console.
+         * they may have been set in the Cloud Console.
          *
          * Create a request for the method "budgets.get".
          *
@@ -604,7 +604,7 @@ public class CloudBillingBudget extends com.google.api.client.googleapis.service
        *
        * WARNING: There are some fields exposed on the Google Cloud Console that aren’t available on this
        * API. When reading from the API, you will not see these fields in the return value, though they
-       * may have been set in the cloud console.
+       * may have been set in the Cloud Console.
        *
        * Create a request for the method "budgets.list".
        *
@@ -634,7 +634,7 @@ public class CloudBillingBudget extends com.google.api.client.googleapis.service
          *
          * WARNING: There are some fields exposed on the Google Cloud Console that aren’t available on
          * this API. When reading from the API, you will not see these fields in the return value, though
-         * they may have been set in the cloud console.
+         * they may have been set in the Cloud Console.
          *
          * Create a request for the method "budgets.list".
          *

@@ -1405,6 +1405,2439 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
       }
     }
 
+    /**
+     * An accessor for creating requests from the ConsumerQuotaMetrics collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code ServiceUsage serviceusage = new ServiceUsage(...);}
+     *   {@code ServiceUsage.ConsumerQuotaMetrics.List request = serviceusage.consumerQuotaMetrics().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public ConsumerQuotaMetrics consumerQuotaMetrics() {
+      return new ConsumerQuotaMetrics();
+    }
+
+    /**
+     * The "consumerQuotaMetrics" collection of methods.
+     */
+    public class ConsumerQuotaMetrics {
+
+      /**
+       * Retrieves a summary of quota information for a specific quota metric
+       *
+       * Create a request for the method "consumerQuotaMetrics.get".
+       *
+       * This request holds the parameters needed by the serviceusage server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name The resource name of the quota limit.
+      An example name would be:
+      projects/123/services/serviceusage.g
+       *        oogleapis.com/quotas/metrics/serviceusage.googleapis.com%2Fmutate_requests
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends ServiceUsageRequest<com.google.api.services.serviceusage.v1beta1.model.ConsumerQuotaMetric> {
+
+        private static final String REST_PATH = "v1beta1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+/[^/]+/services/[^/]+/consumerQuotaMetrics/[^/]+$");
+
+        /**
+         * Retrieves a summary of quota information for a specific quota metric
+         *
+         * Create a request for the method "consumerQuotaMetrics.get".
+         *
+         * This request holds the parameters needed by the the serviceusage server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The resource name of the quota limit.
+      An example name would be:
+      projects/123/services/serviceusage.g
+       *        oogleapis.com/quotas/metrics/serviceusage.googleapis.com%2Fmutate_requests
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(ServiceUsage.this, "GET", REST_PATH, null, com.google.api.services.serviceusage.v1beta1.model.ConsumerQuotaMetric.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^[^/]+/[^/]+/services/[^/]+/consumerQuotaMetrics/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The resource name of the quota limit.
+         *
+         * An example name would be: projects/123/services/serviceusage.googleapis.com/quotas/metric
+         * s/serviceusage.googleapis.com%2Fmutate_requests
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The resource name of the quota limit.
+
+       An example name would be: projects/123/services/serviceusage.googleapis.com/quotas/metrics/serviceu
+       sage.googleapis.com%2Fmutate_requests
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * The resource name of the quota limit.
+         *
+         * An example name would be: projects/123/services/serviceusage.googleapis.com/quotas/metric
+         * s/serviceusage.googleapis.com%2Fmutate_requests
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^[^/]+/[^/]+/services/[^/]+/consumerQuotaMetrics/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** Specifies the level of detail for quota information in the response. */
+        @com.google.api.client.util.Key
+        private java.lang.String view;
+
+        /** Specifies the level of detail for quota information in the response.
+         */
+        public java.lang.String getView() {
+          return view;
+        }
+
+        /** Specifies the level of detail for quota information in the response. */
+        public Get setView(java.lang.String view) {
+          this.view = view;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Retrieves a summary of all quota information visible to the service consumer, organized by
+       * service metric. Each metric includes information about all of its defined limits. Each limit
+       * includes the limit configuration (quota unit, preciseness, default value), the current effective
+       * limit value, and all of the overrides applied to the limit.
+       *
+       * Create a request for the method "consumerQuotaMetrics.list".
+       *
+       * This request holds the parameters needed by the serviceusage server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Parent of the quotas resource.
+      Some example names would be:
+       *        projects/123/services/serviceconsumermanagement.googleapis.com
+       *        folders/345/services/serviceconsumermanagement.googleapis.com
+       *        organizations/456/services/serviceconsumermanagement.googleapis.com
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends ServiceUsageRequest<com.google.api.services.serviceusage.v1beta1.model.ListConsumerQuotaMetricsResponse> {
+
+        private static final String REST_PATH = "v1beta1/{+parent}/consumerQuotaMetrics";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+/[^/]+/services/[^/]+$");
+
+        /**
+         * Retrieves a summary of all quota information visible to the service consumer, organized by
+         * service metric. Each metric includes information about all of its defined limits. Each limit
+         * includes the limit configuration (quota unit, preciseness, default value), the current
+         * effective limit value, and all of the overrides applied to the limit.
+         *
+         * Create a request for the method "consumerQuotaMetrics.list".
+         *
+         * This request holds the parameters needed by the the serviceusage server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Parent of the quotas resource.
+      Some example names would be:
+       *        projects/123/services/serviceconsumermanagement.googleapis.com
+       *        folders/345/services/serviceconsumermanagement.googleapis.com
+       *        organizations/456/services/serviceconsumermanagement.googleapis.com
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(ServiceUsage.this, "GET", REST_PATH, null, com.google.api.services.serviceusage.v1beta1.model.ListConsumerQuotaMetricsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^[^/]+/[^/]+/services/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Parent of the quotas resource.
+         *
+         * Some example names would be:
+         * projects/123/services/serviceconsumermanagement.googleapis.com
+         * folders/345/services/serviceconsumermanagement.googleapis.com
+         * organizations/456/services/serviceconsumermanagement.googleapis.com
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Parent of the quotas resource.
+
+       Some example names would be: projects/123/services/serviceconsumermanagement.googleapis.com
+       folders/345/services/serviceconsumermanagement.googleapis.com
+       organizations/456/services/serviceconsumermanagement.googleapis.com
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Parent of the quotas resource.
+         *
+         * Some example names would be:
+         * projects/123/services/serviceconsumermanagement.googleapis.com
+         * folders/345/services/serviceconsumermanagement.googleapis.com
+         * organizations/456/services/serviceconsumermanagement.googleapis.com
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^[^/]+/[^/]+/services/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /** Requested size of the next page of data. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Requested size of the next page of data.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** Requested size of the next page of data. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Token identifying which result to start with; returned by a previous list call.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Token identifying which result to start with; returned by a previous list call.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Token identifying which result to start with; returned by a previous list call.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        /** Specifies the level of detail for quota information in the response. */
+        @com.google.api.client.util.Key
+        private java.lang.String view;
+
+        /** Specifies the level of detail for quota information in the response.
+         */
+        public java.lang.String getView() {
+          return view;
+        }
+
+        /** Specifies the level of detail for quota information in the response. */
+        public List setView(java.lang.String view) {
+          this.view = view;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+      /**
+       * An accessor for creating requests from the Limits collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code ServiceUsage serviceusage = new ServiceUsage(...);}
+       *   {@code ServiceUsage.Limits.List request = serviceusage.limits().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Limits limits() {
+        return new Limits();
+      }
+
+      /**
+       * The "limits" collection of methods.
+       */
+      public class Limits {
+
+        /**
+         * Retrieves a summary of quota information for a specific quota limit.
+         *
+         * Create a request for the method "limits.get".
+         *
+         * This request holds the parameters needed by the serviceusage server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name The resource name of the quota limit.
+        Use the quota limit resource name returned by previous
+         *        ListConsumerQuotaMetrics and GetConsumerQuotaMetric API calls.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends ServiceUsageRequest<com.google.api.services.serviceusage.v1beta1.model.ConsumerQuotaLimit> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+/[^/]+/services/[^/]+/consumerQuotaMetrics/[^/]+/limits/[^/]+$");
+
+          /**
+           * Retrieves a summary of quota information for a specific quota limit.
+           *
+           * Create a request for the method "limits.get".
+           *
+           * This request holds the parameters needed by the the serviceusage server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The resource name of the quota limit.
+        Use the quota limit resource name returned by previous
+         *        ListConsumerQuotaMetrics and GetConsumerQuotaMetric API calls.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(ServiceUsage.this, "GET", REST_PATH, null, com.google.api.services.serviceusage.v1beta1.model.ConsumerQuotaLimit.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^[^/]+/[^/]+/services/[^/]+/consumerQuotaMetrics/[^/]+/limits/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The resource name of the quota limit.
+           *
+           * Use the quota limit resource name returned by previous ListConsumerQuotaMetrics and
+           * GetConsumerQuotaMetric API calls.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The resource name of the quota limit.
+
+         Use the quota limit resource name returned by previous ListConsumerQuotaMetrics and
+         GetConsumerQuotaMetric API calls.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The resource name of the quota limit.
+           *
+           * Use the quota limit resource name returned by previous ListConsumerQuotaMetrics and
+           * GetConsumerQuotaMetric API calls.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^[^/]+/[^/]+/services/[^/]+/consumerQuotaMetrics/[^/]+/limits/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Specifies the level of detail for quota information in the response. */
+          @com.google.api.client.util.Key
+          private java.lang.String view;
+
+          /** Specifies the level of detail for quota information in the response.
+           */
+          public java.lang.String getView() {
+            return view;
+          }
+
+          /** Specifies the level of detail for quota information in the response. */
+          public Get setView(java.lang.String view) {
+            this.view = view;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the AdminOverrides collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code ServiceUsage serviceusage = new ServiceUsage(...);}
+         *   {@code ServiceUsage.AdminOverrides.List request = serviceusage.adminOverrides().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public AdminOverrides adminOverrides() {
+          return new AdminOverrides();
+        }
+
+        /**
+         * The "adminOverrides" collection of methods.
+         */
+        public class AdminOverrides {
+
+          /**
+           * Creates an admin override. An admin override is applied by an administrator of a parent folder or
+           * parent organization of the consumer receiving the override. An admin override is intended to
+           * limit the amount of quota the consumer can use out of the total quota pool allocated to all
+           * children of the folder or organization.
+           *
+           * Create a request for the method "adminOverrides.create".
+           *
+           * This request holds the parameters needed by the serviceusage server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent The resource name of the parent quota limit, returned by a
+          ListConsumerQuotaMetrics or
+           *        GetConsumerQuotaMetric call.
+          An example name would be:
+          `projects/123/services/compute.goog
+           *        leapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+           * @param content the {@link com.google.api.services.serviceusage.v1beta1.model.QuotaOverride}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.serviceusage.v1beta1.model.QuotaOverride content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends ServiceUsageRequest<com.google.api.services.serviceusage.v1beta1.model.Operation> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/adminOverrides";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+/[^/]+/services/[^/]+/consumerQuotaMetrics/[^/]+/limits/[^/]+$");
+
+            /**
+             * Creates an admin override. An admin override is applied by an administrator of a parent folder
+             * or parent organization of the consumer receiving the override. An admin override is intended to
+             * limit the amount of quota the consumer can use out of the total quota pool allocated to all
+             * children of the folder or organization.
+             *
+             * Create a request for the method "adminOverrides.create".
+             *
+             * This request holds the parameters needed by the the serviceusage server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent The resource name of the parent quota limit, returned by a
+          ListConsumerQuotaMetrics or
+           *        GetConsumerQuotaMetric call.
+          An example name would be:
+          `projects/123/services/compute.goog
+           *        leapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+             * @param content the {@link com.google.api.services.serviceusage.v1beta1.model.QuotaOverride}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.serviceusage.v1beta1.model.QuotaOverride content) {
+              super(ServiceUsage.this, "POST", REST_PATH, content, com.google.api.services.serviceusage.v1beta1.model.Operation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^[^/]+/[^/]+/services/[^/]+/consumerQuotaMetrics/[^/]+/limits/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics
+             * or GetConsumerQuotaMetric call.
+             *
+             * An example name would be: `projects/123/services/compute.googleapis.com/consumerQuota
+             * Metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics or
+           GetConsumerQuotaMetric call.
+
+           An example name would be: `projects/123/services/compute.googleapis.com/consumerQuotaMetrics/comput
+           e.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics
+             * or GetConsumerQuotaMetric call.
+             *
+             * An example name would be: `projects/123/services/compute.googleapis.com/consumerQuota
+             * Metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^[^/]+/[^/]+/services/[^/]+/consumerQuotaMetrics/[^/]+/limits/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Whether to force the creation of the quota override. If creating an override would
+             * cause the effective quota for the consumer to decrease by more than 10 percent, the
+             * call is rejected, as a safety measure to avoid accidentally decreasing quota too
+             * quickly. Setting the force parameter to true ignores this restriction.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean force;
+
+            /** Whether to force the creation of the quota override. If creating an override would cause the
+           effective quota for the consumer to decrease by more than 10 percent, the call is rejected, as a
+           safety measure to avoid accidentally decreasing quota too quickly. Setting the force parameter to
+           true ignores this restriction.
+             */
+            public java.lang.Boolean getForce() {
+              return force;
+            }
+
+            /**
+             * Whether to force the creation of the quota override. If creating an override would
+             * cause the effective quota for the consumer to decrease by more than 10 percent, the
+             * call is rejected, as a safety measure to avoid accidentally decreasing quota too
+             * quickly. Setting the force parameter to true ignores this restriction.
+             */
+            public Create setForce(java.lang.Boolean force) {
+              this.force = force;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes an admin override.
+           *
+           * Create a request for the method "adminOverrides.delete".
+           *
+           * This request holds the parameters needed by the serviceusage server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name The resource name of the override to delete.
+          An example name would be:
+          `projects/123/services/comput
+           *        e.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fre
+           *        gion/adminOverrides/4a3f2c1d`
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends ServiceUsageRequest<com.google.api.services.serviceusage.v1beta1.model.Operation> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+/[^/]+/services/[^/]+/consumerQuotaMetrics/[^/]+/limits/[^/]+/adminOverrides/[^/]+$");
+
+            /**
+             * Deletes an admin override.
+             *
+             * Create a request for the method "adminOverrides.delete".
+             *
+             * This request holds the parameters needed by the the serviceusage server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name The resource name of the override to delete.
+          An example name would be:
+          `projects/123/services/comput
+           *        e.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fre
+           *        gion/adminOverrides/4a3f2c1d`
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(ServiceUsage.this, "DELETE", REST_PATH, null, com.google.api.services.serviceusage.v1beta1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^[^/]+/[^/]+/services/[^/]+/consumerQuotaMetrics/[^/]+/limits/[^/]+/adminOverrides/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The resource name of the override to delete.
+             *
+             * An example name would be: `projects/123/services/compute.googleapis.com/consumerQuota
+             * Metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/adminOverrides/4a3f2
+             * c1d`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The resource name of the override to delete.
+
+           An example name would be: `projects/123/services/compute.googleapis.com/consumerQuotaMetrics/comput
+           e.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/adminOverrides/4a3f2c1d`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * The resource name of the override to delete.
+             *
+             * An example name would be: `projects/123/services/compute.googleapis.com/consumerQuota
+             * Metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/adminOverrides/4a3f2
+             * c1d`
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^[^/]+/[^/]+/services/[^/]+/consumerQuotaMetrics/[^/]+/limits/[^/]+/adminOverrides/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Whether to force the deletion of the quota override. If deleting an override would
+             * cause the effective quota for the consumer to decrease by more than 10 percent, the
+             * call is rejected, as a safety measure to avoid accidentally decreasing quota too
+             * quickly. Setting the force parameter to true ignores this restriction.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean force;
+
+            /** Whether to force the deletion of the quota override. If deleting an override would cause the
+           effective quota for the consumer to decrease by more than 10 percent, the call is rejected, as a
+           safety measure to avoid accidentally decreasing quota too quickly. Setting the force parameter to
+           true ignores this restriction.
+             */
+            public java.lang.Boolean getForce() {
+              return force;
+            }
+
+            /**
+             * Whether to force the deletion of the quota override. If deleting an override would
+             * cause the effective quota for the consumer to decrease by more than 10 percent, the
+             * call is rejected, as a safety measure to avoid accidentally decreasing quota too
+             * quickly. Setting the force parameter to true ignores this restriction.
+             */
+            public Delete setForce(java.lang.Boolean force) {
+              this.force = force;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists all admin overrides on this limit.
+           *
+           * Create a request for the method "adminOverrides.list".
+           *
+           * This request holds the parameters needed by the serviceusage server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent The resource name of the parent quota limit, returned by a
+          ListConsumerQuotaMetrics or
+           *        GetConsumerQuotaMetric call.
+          An example name would be:
+          `projects/123/services/compute.goog
+           *        leapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends ServiceUsageRequest<com.google.api.services.serviceusage.v1beta1.model.ListAdminOverridesResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/adminOverrides";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+/[^/]+/services/[^/]+/consumerQuotaMetrics/[^/]+/limits/[^/]+$");
+
+            /**
+             * Lists all admin overrides on this limit.
+             *
+             * Create a request for the method "adminOverrides.list".
+             *
+             * This request holds the parameters needed by the the serviceusage server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent The resource name of the parent quota limit, returned by a
+          ListConsumerQuotaMetrics or
+           *        GetConsumerQuotaMetric call.
+          An example name would be:
+          `projects/123/services/compute.goog
+           *        leapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(ServiceUsage.this, "GET", REST_PATH, null, com.google.api.services.serviceusage.v1beta1.model.ListAdminOverridesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^[^/]+/[^/]+/services/[^/]+/consumerQuotaMetrics/[^/]+/limits/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics
+             * or GetConsumerQuotaMetric call.
+             *
+             * An example name would be: `projects/123/services/compute.googleapis.com/consumerQuota
+             * Metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics or
+           GetConsumerQuotaMetric call.
+
+           An example name would be: `projects/123/services/compute.googleapis.com/consumerQuotaMetrics/comput
+           e.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics
+             * or GetConsumerQuotaMetric call.
+             *
+             * An example name would be: `projects/123/services/compute.googleapis.com/consumerQuota
+             * Metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^[^/]+/[^/]+/services/[^/]+/consumerQuotaMetrics/[^/]+/limits/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Requested size of the next page of data. */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Requested size of the next page of data.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /** Requested size of the next page of data. */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Token identifying which result to start with; returned by a previous list call.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Token identifying which result to start with; returned by a previous list call.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Token identifying which result to start with; returned by a previous list call.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates an admin override.
+           *
+           * Create a request for the method "adminOverrides.patch".
+           *
+           * This request holds the parameters needed by the serviceusage server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name The resource name of the override to update.
+          An example name would be:
+          `projects/123/services/comput
+           *        e.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fre
+           *        gion/adminOverrides/4a3f2c1d`
+           * @param content the {@link com.google.api.services.serviceusage.v1beta1.model.QuotaOverride}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.serviceusage.v1beta1.model.QuotaOverride content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends ServiceUsageRequest<com.google.api.services.serviceusage.v1beta1.model.Operation> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+/[^/]+/services/[^/]+/consumerQuotaMetrics/[^/]+/limits/[^/]+/adminOverrides/[^/]+$");
+
+            /**
+             * Updates an admin override.
+             *
+             * Create a request for the method "adminOverrides.patch".
+             *
+             * This request holds the parameters needed by the the serviceusage server.  After setting any
+             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name The resource name of the override to update.
+          An example name would be:
+          `projects/123/services/comput
+           *        e.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fre
+           *        gion/adminOverrides/4a3f2c1d`
+             * @param content the {@link com.google.api.services.serviceusage.v1beta1.model.QuotaOverride}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.serviceusage.v1beta1.model.QuotaOverride content) {
+              super(ServiceUsage.this, "PATCH", REST_PATH, content, com.google.api.services.serviceusage.v1beta1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^[^/]+/[^/]+/services/[^/]+/consumerQuotaMetrics/[^/]+/limits/[^/]+/adminOverrides/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The resource name of the override to update.
+             *
+             * An example name would be: `projects/123/services/compute.googleapis.com/consumerQuota
+             * Metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/adminOverrides/4a3f2
+             * c1d`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The resource name of the override to update.
+
+           An example name would be: `projects/123/services/compute.googleapis.com/consumerQuotaMetrics/comput
+           e.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/adminOverrides/4a3f2c1d`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * The resource name of the override to update.
+             *
+             * An example name would be: `projects/123/services/compute.googleapis.com/consumerQuota
+             * Metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/adminOverrides/4a3f2
+             * c1d`
+             */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^[^/]+/[^/]+/services/[^/]+/consumerQuotaMetrics/[^/]+/limits/[^/]+/adminOverrides/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Whether to force the update of the quota override. If updating an override would
+             * cause the effective quota for the consumer to decrease by more than 10 percent, the
+             * call is rejected, as a safety measure to avoid accidentally decreasing quota too
+             * quickly. Setting the force parameter to true ignores this restriction.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean force;
+
+            /** Whether to force the update of the quota override. If updating an override would cause the
+           effective quota for the consumer to decrease by more than 10 percent, the call is rejected, as a
+           safety measure to avoid accidentally decreasing quota too quickly. Setting the force parameter to
+           true ignores this restriction.
+             */
+            public java.lang.Boolean getForce() {
+              return force;
+            }
+
+            /**
+             * Whether to force the update of the quota override. If updating an override would
+             * cause the effective quota for the consumer to decrease by more than 10 percent, the
+             * call is rejected, as a safety measure to avoid accidentally decreasing quota too
+             * quickly. Setting the force parameter to true ignores this restriction.
+             */
+            public Patch setForce(java.lang.Boolean force) {
+              this.force = force;
+              return this;
+            }
+
+            /**
+             * Update only the specified fields of the override. If unset, all fields will be
+             * updated.
+             */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Update only the specified fields of the override. If unset, all fields will be updated.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /**
+             * Update only the specified fields of the override. If unset, all fields will be
+             * updated.
+             */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the ConsumerOverrides collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code ServiceUsage serviceusage = new ServiceUsage(...);}
+         *   {@code ServiceUsage.ConsumerOverrides.List request = serviceusage.consumerOverrides().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public ConsumerOverrides consumerOverrides() {
+          return new ConsumerOverrides();
+        }
+
+        /**
+         * The "consumerOverrides" collection of methods.
+         */
+        public class ConsumerOverrides {
+
+          /**
+           * Creates a consumer override. A consumer override is applied to the consumer on its own authority
+           * to limit its own quota usage. Consumer overrides cannot be used to grant more quota than would be
+           * allowed by admin overrides, producer overrides, or the default limit of the service.
+           *
+           * Create a request for the method "consumerOverrides.create".
+           *
+           * This request holds the parameters needed by the serviceusage server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent The resource name of the parent quota limit, returned by a
+          ListConsumerQuotaMetrics or
+           *        GetConsumerQuotaMetric call.
+          An example name would be:
+          `projects/123/services/compute.goog
+           *        leapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+           * @param content the {@link com.google.api.services.serviceusage.v1beta1.model.QuotaOverride}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.serviceusage.v1beta1.model.QuotaOverride content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends ServiceUsageRequest<com.google.api.services.serviceusage.v1beta1.model.Operation> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/consumerOverrides";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+/[^/]+/services/[^/]+/consumerQuotaMetrics/[^/]+/limits/[^/]+$");
+
+            /**
+             * Creates a consumer override. A consumer override is applied to the consumer on its own
+             * authority to limit its own quota usage. Consumer overrides cannot be used to grant more quota
+             * than would be allowed by admin overrides, producer overrides, or the default limit of the
+             * service.
+             *
+             * Create a request for the method "consumerOverrides.create".
+             *
+             * This request holds the parameters needed by the the serviceusage server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent The resource name of the parent quota limit, returned by a
+          ListConsumerQuotaMetrics or
+           *        GetConsumerQuotaMetric call.
+          An example name would be:
+          `projects/123/services/compute.goog
+           *        leapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+             * @param content the {@link com.google.api.services.serviceusage.v1beta1.model.QuotaOverride}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.serviceusage.v1beta1.model.QuotaOverride content) {
+              super(ServiceUsage.this, "POST", REST_PATH, content, com.google.api.services.serviceusage.v1beta1.model.Operation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^[^/]+/[^/]+/services/[^/]+/consumerQuotaMetrics/[^/]+/limits/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics
+             * or GetConsumerQuotaMetric call.
+             *
+             * An example name would be: `projects/123/services/compute.googleapis.com/consumerQuota
+             * Metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics or
+           GetConsumerQuotaMetric call.
+
+           An example name would be: `projects/123/services/compute.googleapis.com/consumerQuotaMetrics/comput
+           e.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics
+             * or GetConsumerQuotaMetric call.
+             *
+             * An example name would be: `projects/123/services/compute.googleapis.com/consumerQuota
+             * Metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^[^/]+/[^/]+/services/[^/]+/consumerQuotaMetrics/[^/]+/limits/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Whether to force the creation of the quota override. If creating an override would
+             * cause the effective quota for the consumer to decrease by more than 10 percent, the
+             * call is rejected, as a safety measure to avoid accidentally decreasing quota too
+             * quickly. Setting the force parameter to true ignores this restriction.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean force;
+
+            /** Whether to force the creation of the quota override. If creating an override would cause the
+           effective quota for the consumer to decrease by more than 10 percent, the call is rejected, as a
+           safety measure to avoid accidentally decreasing quota too quickly. Setting the force parameter to
+           true ignores this restriction.
+             */
+            public java.lang.Boolean getForce() {
+              return force;
+            }
+
+            /**
+             * Whether to force the creation of the quota override. If creating an override would
+             * cause the effective quota for the consumer to decrease by more than 10 percent, the
+             * call is rejected, as a safety measure to avoid accidentally decreasing quota too
+             * quickly. Setting the force parameter to true ignores this restriction.
+             */
+            public Create setForce(java.lang.Boolean force) {
+              this.force = force;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a consumer override.
+           *
+           * Create a request for the method "consumerOverrides.delete".
+           *
+           * This request holds the parameters needed by the serviceusage server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name The resource name of the override to delete.
+          An example name would be:
+          `projects/123/services/comput
+           *        e.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fre
+           *        gion/consumerOverrides/4a3f2c1d`
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends ServiceUsageRequest<com.google.api.services.serviceusage.v1beta1.model.Operation> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+/[^/]+/services/[^/]+/consumerQuotaMetrics/[^/]+/limits/[^/]+/consumerOverrides/[^/]+$");
+
+            /**
+             * Deletes a consumer override.
+             *
+             * Create a request for the method "consumerOverrides.delete".
+             *
+             * This request holds the parameters needed by the the serviceusage server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name The resource name of the override to delete.
+          An example name would be:
+          `projects/123/services/comput
+           *        e.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fre
+           *        gion/consumerOverrides/4a3f2c1d`
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(ServiceUsage.this, "DELETE", REST_PATH, null, com.google.api.services.serviceusage.v1beta1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^[^/]+/[^/]+/services/[^/]+/consumerQuotaMetrics/[^/]+/limits/[^/]+/consumerOverrides/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The resource name of the override to delete.
+             *
+             * An example name would be: `projects/123/services/compute.googleapis.com/consumerQuota
+             * Metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/consumerOverrides/4a
+             * 3f2c1d`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The resource name of the override to delete.
+
+           An example name would be: `projects/123/services/compute.googleapis.com/consumerQuotaMetrics/comput
+           e.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/consumerOverrides/4a3f2c1d`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * The resource name of the override to delete.
+             *
+             * An example name would be: `projects/123/services/compute.googleapis.com/consumerQuota
+             * Metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/consumerOverrides/4a
+             * 3f2c1d`
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^[^/]+/[^/]+/services/[^/]+/consumerQuotaMetrics/[^/]+/limits/[^/]+/consumerOverrides/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Whether to force the deletion of the quota override. If deleting an override would
+             * cause the effective quota for the consumer to decrease by more than 10 percent, the
+             * call is rejected, as a safety measure to avoid accidentally decreasing quota too
+             * quickly. Setting the force parameter to true ignores this restriction.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean force;
+
+            /** Whether to force the deletion of the quota override. If deleting an override would cause the
+           effective quota for the consumer to decrease by more than 10 percent, the call is rejected, as a
+           safety measure to avoid accidentally decreasing quota too quickly. Setting the force parameter to
+           true ignores this restriction.
+             */
+            public java.lang.Boolean getForce() {
+              return force;
+            }
+
+            /**
+             * Whether to force the deletion of the quota override. If deleting an override would
+             * cause the effective quota for the consumer to decrease by more than 10 percent, the
+             * call is rejected, as a safety measure to avoid accidentally decreasing quota too
+             * quickly. Setting the force parameter to true ignores this restriction.
+             */
+            public Delete setForce(java.lang.Boolean force) {
+              this.force = force;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists all consumer overrides on this limit.
+           *
+           * Create a request for the method "consumerOverrides.list".
+           *
+           * This request holds the parameters needed by the serviceusage server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent The resource name of the parent quota limit, returned by a
+          ListConsumerQuotaMetrics or
+           *        GetConsumerQuotaMetric call.
+          An example name would be:
+          `projects/123/services/compute.goog
+           *        leapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends ServiceUsageRequest<com.google.api.services.serviceusage.v1beta1.model.ListConsumerOverridesResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/consumerOverrides";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+/[^/]+/services/[^/]+/consumerQuotaMetrics/[^/]+/limits/[^/]+$");
+
+            /**
+             * Lists all consumer overrides on this limit.
+             *
+             * Create a request for the method "consumerOverrides.list".
+             *
+             * This request holds the parameters needed by the the serviceusage server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent The resource name of the parent quota limit, returned by a
+          ListConsumerQuotaMetrics or
+           *        GetConsumerQuotaMetric call.
+          An example name would be:
+          `projects/123/services/compute.goog
+           *        leapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(ServiceUsage.this, "GET", REST_PATH, null, com.google.api.services.serviceusage.v1beta1.model.ListConsumerOverridesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^[^/]+/[^/]+/services/[^/]+/consumerQuotaMetrics/[^/]+/limits/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics
+             * or GetConsumerQuotaMetric call.
+             *
+             * An example name would be: `projects/123/services/compute.googleapis.com/consumerQuota
+             * Metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics or
+           GetConsumerQuotaMetric call.
+
+           An example name would be: `projects/123/services/compute.googleapis.com/consumerQuotaMetrics/comput
+           e.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics
+             * or GetConsumerQuotaMetric call.
+             *
+             * An example name would be: `projects/123/services/compute.googleapis.com/consumerQuota
+             * Metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^[^/]+/[^/]+/services/[^/]+/consumerQuotaMetrics/[^/]+/limits/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Requested size of the next page of data. */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Requested size of the next page of data.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /** Requested size of the next page of data. */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Token identifying which result to start with; returned by a previous list call.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Token identifying which result to start with; returned by a previous list call.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Token identifying which result to start with; returned by a previous list call.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates a consumer override.
+           *
+           * Create a request for the method "consumerOverrides.patch".
+           *
+           * This request holds the parameters needed by the serviceusage server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name The resource name of the override to update.
+          An example name would be:
+          `projects/123/services/comput
+           *        e.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fre
+           *        gion/consumerOverrides/4a3f2c1d`
+           * @param content the {@link com.google.api.services.serviceusage.v1beta1.model.QuotaOverride}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.serviceusage.v1beta1.model.QuotaOverride content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends ServiceUsageRequest<com.google.api.services.serviceusage.v1beta1.model.Operation> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+/[^/]+/services/[^/]+/consumerQuotaMetrics/[^/]+/limits/[^/]+/consumerOverrides/[^/]+$");
+
+            /**
+             * Updates a consumer override.
+             *
+             * Create a request for the method "consumerOverrides.patch".
+             *
+             * This request holds the parameters needed by the the serviceusage server.  After setting any
+             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name The resource name of the override to update.
+          An example name would be:
+          `projects/123/services/comput
+           *        e.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fre
+           *        gion/consumerOverrides/4a3f2c1d`
+             * @param content the {@link com.google.api.services.serviceusage.v1beta1.model.QuotaOverride}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.serviceusage.v1beta1.model.QuotaOverride content) {
+              super(ServiceUsage.this, "PATCH", REST_PATH, content, com.google.api.services.serviceusage.v1beta1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^[^/]+/[^/]+/services/[^/]+/consumerQuotaMetrics/[^/]+/limits/[^/]+/consumerOverrides/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The resource name of the override to update.
+             *
+             * An example name would be: `projects/123/services/compute.googleapis.com/consumerQuota
+             * Metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/consumerOverrides/4a
+             * 3f2c1d`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The resource name of the override to update.
+
+           An example name would be: `projects/123/services/compute.googleapis.com/consumerQuotaMetrics/comput
+           e.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/consumerOverrides/4a3f2c1d`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * The resource name of the override to update.
+             *
+             * An example name would be: `projects/123/services/compute.googleapis.com/consumerQuota
+             * Metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/consumerOverrides/4a
+             * 3f2c1d`
+             */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^[^/]+/[^/]+/services/[^/]+/consumerQuotaMetrics/[^/]+/limits/[^/]+/consumerOverrides/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Whether to force the update of the quota override. If updating an override would
+             * cause the effective quota for the consumer to decrease by more than 10 percent, the
+             * call is rejected, as a safety measure to avoid accidentally decreasing quota too
+             * quickly. Setting the force parameter to true ignores this restriction.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean force;
+
+            /** Whether to force the update of the quota override. If updating an override would cause the
+           effective quota for the consumer to decrease by more than 10 percent, the call is rejected, as a
+           safety measure to avoid accidentally decreasing quota too quickly. Setting the force parameter to
+           true ignores this restriction.
+             */
+            public java.lang.Boolean getForce() {
+              return force;
+            }
+
+            /**
+             * Whether to force the update of the quota override. If updating an override would
+             * cause the effective quota for the consumer to decrease by more than 10 percent, the
+             * call is rejected, as a safety measure to avoid accidentally decreasing quota too
+             * quickly. Setting the force parameter to true ignores this restriction.
+             */
+            public Patch setForce(java.lang.Boolean force) {
+              this.force = force;
+              return this;
+            }
+
+            /**
+             * Update only the specified fields of the override. If unset, all fields will be
+             * updated.
+             */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Update only the specified fields of the override. If unset, all fields will be updated.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /**
+             * Update only the specified fields of the override. If unset, all fields will be
+             * updated.
+             */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the ProducerOverrides collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code ServiceUsage serviceusage = new ServiceUsage(...);}
+         *   {@code ServiceUsage.ProducerOverrides.List request = serviceusage.producerOverrides().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public ProducerOverrides producerOverrides() {
+          return new ProducerOverrides();
+        }
+
+        /**
+         * The "producerOverrides" collection of methods.
+         */
+        public class ProducerOverrides {
+
+          /**
+           * Lists all producer overrides on this limit. Unlike other types of overrides, producer overrides
+           * are under the control of the service producer and cannot be modified using this API.
+           *
+           * Create a request for the method "producerOverrides.list".
+           *
+           * This request holds the parameters needed by the serviceusage server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent The resource name of the parent quota limit, returned by a
+          ListConsumerQuotaMetrics or
+           *        GetConsumerQuotaMetric call.
+          An example name would be:
+          `projects/123/services/compute.goog
+           *        leapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends ServiceUsageRequest<com.google.api.services.serviceusage.v1beta1.model.ListProducerOverridesResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/producerOverrides";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+/[^/]+/services/[^/]+/consumerQuotaMetrics/[^/]+/limits/[^/]+$");
+
+            /**
+             * Lists all producer overrides on this limit. Unlike other types of overrides, producer overrides
+             * are under the control of the service producer and cannot be modified using this API.
+             *
+             * Create a request for the method "producerOverrides.list".
+             *
+             * This request holds the parameters needed by the the serviceusage server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent The resource name of the parent quota limit, returned by a
+          ListConsumerQuotaMetrics or
+           *        GetConsumerQuotaMetric call.
+          An example name would be:
+          `projects/123/services/compute.goog
+           *        leapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(ServiceUsage.this, "GET", REST_PATH, null, com.google.api.services.serviceusage.v1beta1.model.ListProducerOverridesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^[^/]+/[^/]+/services/[^/]+/consumerQuotaMetrics/[^/]+/limits/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics
+             * or GetConsumerQuotaMetric call.
+             *
+             * An example name would be: `projects/123/services/compute.googleapis.com/consumerQuota
+             * Metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics or
+           GetConsumerQuotaMetric call.
+
+           An example name would be: `projects/123/services/compute.googleapis.com/consumerQuotaMetrics/comput
+           e.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics
+             * or GetConsumerQuotaMetric call.
+             *
+             * An example name would be: `projects/123/services/compute.googleapis.com/consumerQuota
+             * Metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^[^/]+/[^/]+/services/[^/]+/consumerQuotaMetrics/[^/]+/limits/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Requested size of the next page of data. */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Requested size of the next page of data.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /** Requested size of the next page of data. */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Token identifying which result to start with; returned by a previous list call.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Token identifying which result to start with; returned by a previous list call.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Token identifying which result to start with; returned by a previous list call.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+    }
   }
 
   /**

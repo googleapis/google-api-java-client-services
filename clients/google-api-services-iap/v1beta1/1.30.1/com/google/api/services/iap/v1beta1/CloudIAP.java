@@ -169,7 +169,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
       private static final String REST_PATH = "v1beta1/{+resource}:getIamPolicy";
 
       private final java.util.regex.Pattern RESOURCE_PATTERN =
-          java.util.regex.Pattern.compile("^.+$");
+          java.util.regex.Pattern.compile("^.*$");
 
       /**
        * Gets the access control policy for an Identity-Aware Proxy protected resource. More information
@@ -196,7 +196,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
               "Parameter resource must conform to the pattern " +
-              "^.+$");
+              "^.*$");
         }
       }
 
@@ -277,7 +277,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
               "Parameter resource must conform to the pattern " +
-              "^.+$");
+              "^.*$");
         }
         this.resource = resource;
         return this;
@@ -315,7 +315,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
       private static final String REST_PATH = "v1beta1/{+resource}:setIamPolicy";
 
       private final java.util.regex.Pattern RESOURCE_PATTERN =
-          java.util.regex.Pattern.compile("^.+$");
+          java.util.regex.Pattern.compile("^.*$");
 
       /**
        * Sets the access control policy for an Identity-Aware Proxy protected resource. Replaces any
@@ -342,7 +342,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
               "Parameter resource must conform to the pattern " +
-              "^.+$");
+              "^.*$");
         }
       }
 
@@ -423,7 +423,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
               "Parameter resource must conform to the pattern " +
-              "^.+$");
+              "^.*$");
         }
         this.resource = resource;
         return this;
@@ -463,7 +463,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
       private static final String REST_PATH = "v1beta1/{+resource}:testIamPermissions";
 
       private final java.util.regex.Pattern RESOURCE_PATTERN =
-          java.util.regex.Pattern.compile("^.+$");
+          java.util.regex.Pattern.compile("^.*$");
 
       /**
        * Returns permissions that a caller has on the Identity-Aware Proxy protected resource. If the
@@ -492,7 +492,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
               "Parameter resource must conform to the pattern " +
-              "^.+$");
+              "^.*$");
         }
       }
 
@@ -573,7 +573,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
               "Parameter resource must conform to the pattern " +
-              "^.+$");
+              "^.*$");
         }
         this.resource = resource;
         return this;

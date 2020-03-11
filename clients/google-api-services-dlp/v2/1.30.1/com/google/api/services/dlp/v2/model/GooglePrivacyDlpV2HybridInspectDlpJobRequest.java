@@ -17,9 +17,7 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * Request to search for potentially sensitive info in a custom location. Early access feature is in
- * a pre-release state and might change or have limited support. For more information, see
- * https://cloud.google.com/products#product-launch-stages.
+ * Request to search for potentially sensitive info in a custom location.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Data Loss Prevention (DLP) API. For a detailed

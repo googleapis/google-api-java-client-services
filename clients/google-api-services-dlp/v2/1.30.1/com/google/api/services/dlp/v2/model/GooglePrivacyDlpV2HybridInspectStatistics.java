@@ -17,9 +17,7 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * Statistics related to processing hybrid inspect requests Early access feature is in a pre-release
- * state and might change or have limited support. For more information, see
- * https://cloud.google.com/products#product-launch-stages.
+ * Statistics related to processing hybrid inspect requests.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Data Loss Prevention (DLP) API. For a detailed
@@ -38,7 +36,7 @@ public final class GooglePrivacyDlpV2HybridInspectStatistics extends com.google.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long hybridRequestsAborted;
+  private java.lang.Long abortedCount;
 
   /**
    * The number of hybrid requests currently being processed. Only populated when called via method
@@ -48,31 +46,31 @@ public final class GooglePrivacyDlpV2HybridInspectStatistics extends com.google.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long hybridRequestsPending;
+  private java.lang.Long pendingCount;
 
   /**
    * The number of hybrid inspection requests processed within this job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long hybridRequestsProcessed;
+  private java.lang.Long processedCount;
 
   /**
    * The number of hybrid inspection requests aborted because the job ran out of quota or was ended
    * before they could be processed.
    * @return value or {@code null} for none
    */
-  public java.lang.Long getHybridRequestsAborted() {
-    return hybridRequestsAborted;
+  public java.lang.Long getAbortedCount() {
+    return abortedCount;
   }
 
   /**
    * The number of hybrid inspection requests aborted because the job ran out of quota or was ended
    * before they could be processed.
-   * @param hybridRequestsAborted hybridRequestsAborted or {@code null} for none
+   * @param abortedCount abortedCount or {@code null} for none
    */
-  public GooglePrivacyDlpV2HybridInspectStatistics setHybridRequestsAborted(java.lang.Long hybridRequestsAborted) {
-    this.hybridRequestsAborted = hybridRequestsAborted;
+  public GooglePrivacyDlpV2HybridInspectStatistics setAbortedCount(java.lang.Long abortedCount) {
+    this.abortedCount = abortedCount;
     return this;
   }
 
@@ -83,8 +81,8 @@ public final class GooglePrivacyDlpV2HybridInspectStatistics extends com.google.
    * is enqueued for.
    * @return value or {@code null} for none
    */
-  public java.lang.Long getHybridRequestsPending() {
-    return hybridRequestsPending;
+  public java.lang.Long getPendingCount() {
+    return pendingCount;
   }
 
   /**
@@ -92,10 +90,10 @@ public final class GooglePrivacyDlpV2HybridInspectStatistics extends com.google.
    * `getDlpJob`. A burst of traffic may cause hybrid inspect requests to be enqueued. Processing
    * will take place as quickly as possible, but resource limitations may impact how long a request
    * is enqueued for.
-   * @param hybridRequestsPending hybridRequestsPending or {@code null} for none
+   * @param pendingCount pendingCount or {@code null} for none
    */
-  public GooglePrivacyDlpV2HybridInspectStatistics setHybridRequestsPending(java.lang.Long hybridRequestsPending) {
-    this.hybridRequestsPending = hybridRequestsPending;
+  public GooglePrivacyDlpV2HybridInspectStatistics setPendingCount(java.lang.Long pendingCount) {
+    this.pendingCount = pendingCount;
     return this;
   }
 
@@ -103,16 +101,16 @@ public final class GooglePrivacyDlpV2HybridInspectStatistics extends com.google.
    * The number of hybrid inspection requests processed within this job.
    * @return value or {@code null} for none
    */
-  public java.lang.Long getHybridRequestsProcessed() {
-    return hybridRequestsProcessed;
+  public java.lang.Long getProcessedCount() {
+    return processedCount;
   }
 
   /**
    * The number of hybrid inspection requests processed within this job.
-   * @param hybridRequestsProcessed hybridRequestsProcessed or {@code null} for none
+   * @param processedCount processedCount or {@code null} for none
    */
-  public GooglePrivacyDlpV2HybridInspectStatistics setHybridRequestsProcessed(java.lang.Long hybridRequestsProcessed) {
-    this.hybridRequestsProcessed = hybridRequestsProcessed;
+  public GooglePrivacyDlpV2HybridInspectStatistics setProcessedCount(java.lang.Long processedCount) {
+    this.processedCount = processedCount;
     return this;
   }
 

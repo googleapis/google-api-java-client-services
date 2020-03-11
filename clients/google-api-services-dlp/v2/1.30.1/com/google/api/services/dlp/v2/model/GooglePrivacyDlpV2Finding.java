@@ -59,7 +59,7 @@ public final class GooglePrivacyDlpV2Finding extends com.google.api.client.json.
   private java.lang.String jobName;
 
   /**
-   * The labels associated with this `InspectFinding`.
+   * The labels associated with this `Finding`.
    *
    * Label keys must be between 1 and 63 characters long and must conform to the following regular
    * expression: \[a-z\](\[-a-z0-9\]*\[a-z0-9\])?.
@@ -90,8 +90,8 @@ public final class GooglePrivacyDlpV2Finding extends com.google.api.client.json.
   private GooglePrivacyDlpV2Location location;
 
   /**
-   * Resource name in format projects/{id}/locations/{id}/inspectFindings/{id} Populated only when
-   * viewing persisted findings.
+   * Resource name in format projects/{project}/locations/{location}/findings/{finding} Populated
+   * only when viewing persisted findings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -198,7 +198,7 @@ public final class GooglePrivacyDlpV2Finding extends com.google.api.client.json.
   }
 
   /**
-   * The labels associated with this `InspectFinding`.
+   * The labels associated with this `Finding`.
    *
    * Label keys must be between 1 and 63 characters long and must conform to the following regular
    * expression: \[a-z\](\[-a-z0-9\]*\[a-z0-9\])?.
@@ -216,7 +216,7 @@ public final class GooglePrivacyDlpV2Finding extends com.google.api.client.json.
   }
 
   /**
-   * The labels associated with this `InspectFinding`.
+   * The labels associated with this `Finding`.
    *
    * Label keys must be between 1 and 63 characters long and must conform to the following regular
    * expression: \[a-z\](\[-a-z0-9\]*\[a-z0-9\])?.
@@ -269,8 +269,8 @@ public final class GooglePrivacyDlpV2Finding extends com.google.api.client.json.
   }
 
   /**
-   * Resource name in format projects/{id}/locations/{id}/inspectFindings/{id} Populated only when
-   * viewing persisted findings.
+   * Resource name in format projects/{project}/locations/{location}/findings/{finding} Populated
+   * only when viewing persisted findings.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -278,8 +278,8 @@ public final class GooglePrivacyDlpV2Finding extends com.google.api.client.json.
   }
 
   /**
-   * Resource name in format projects/{id}/locations/{id}/inspectFindings/{id} Populated only when
-   * viewing persisted findings.
+   * Resource name in format projects/{project}/locations/{location}/findings/{finding} Populated
+   * only when viewing persisted findings.
    * @param name name or {@code null} for none
    */
   public GooglePrivacyDlpV2Finding setName(java.lang.String name) {

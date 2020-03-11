@@ -17,9 +17,7 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * Quota exceeded errors will be thrown once quota has been met. Early access feature is in a pre-
- * release state and might change or have limited support. For more information, see
- * https://cloud.google.com/products#product-launch-stages.
+ * Quota exceeded errors will be thrown once quota has been met.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Data Loss Prevention (DLP) API. For a detailed

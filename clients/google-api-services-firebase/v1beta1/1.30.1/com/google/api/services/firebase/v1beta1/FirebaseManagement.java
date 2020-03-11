@@ -2132,7 +2132,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * This request holds the parameters needed by the firebase server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent The parent Project for which to list Apps, in the format:
+       * @param parent The parent Project in which to create an App, in the format:
       projects/projectId
        * @param content the {@link com.google.api.services.firebase.v1beta1.model.AndroidApp}
        * @return the request
@@ -2165,7 +2165,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The parent Project for which to list Apps, in the format:
+         * @param parent The parent Project in which to create an App, in the format:
       projects/projectId
          * @param content the {@link com.google.api.services.firebase.v1beta1.model.AndroidApp}
          * @since 1.13
@@ -2236,19 +2236,19 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
 
         /**
-         * The parent Project for which to list Apps, in the format: projects/projectId
+         * The parent Project in which to create an App, in the format: projects/projectId
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The parent Project for which to list Apps, in the format: projects/projectId
+        /** The parent Project in which to create an App, in the format: projects/projectId
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The parent Project for which to list Apps, in the format: projects/projectId
+         * The parent Project in which to create an App, in the format: projects/projectId
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -3965,7 +3965,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * This request holds the parameters needed by the firebase server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent The parent Project for which to list Apps, in the format:
+       * @param parent The parent Project in which to create an App, in the format:
       projects/projectId
        * @param content the {@link com.google.api.services.firebase.v1beta1.model.IosApp}
        * @return the request
@@ -3998,7 +3998,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The parent Project for which to list Apps, in the format:
+         * @param parent The parent Project in which to create an App, in the format:
       projects/projectId
          * @param content the {@link com.google.api.services.firebase.v1beta1.model.IosApp}
          * @since 1.13
@@ -4069,19 +4069,19 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
 
         /**
-         * The parent Project for which to list Apps, in the format: projects/projectId
+         * The parent Project in which to create an App, in the format: projects/projectId
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The parent Project for which to list Apps, in the format: projects/projectId
+        /** The parent Project in which to create an App, in the format: projects/projectId
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The parent Project for which to list Apps, in the format: projects/projectId
+         * The parent Project in which to create an App, in the format: projects/projectId
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -4819,7 +4819,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * This request holds the parameters needed by the firebase server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent The parent Project for which to list Apps, in the format:
+       * @param parent The parent Project in which to create an App, in the format:
       projects/projectId
        * @param content the {@link com.google.api.services.firebase.v1beta1.model.WebApp}
        * @return the request
@@ -4852,7 +4852,7 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The parent Project for which to list Apps, in the format:
+         * @param parent The parent Project in which to create an App, in the format:
       projects/projectId
          * @param content the {@link com.google.api.services.firebase.v1beta1.model.WebApp}
          * @since 1.13
@@ -4923,19 +4923,19 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
 
         /**
-         * The parent Project for which to list Apps, in the format: projects/projectId
+         * The parent Project in which to create an App, in the format: projects/projectId
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The parent Project for which to list Apps, in the format: projects/projectId
+        /** The parent Project in which to create an App, in the format: projects/projectId
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The parent Project for which to list Apps, in the format: projects/projectId
+         * The parent Project in which to create an App, in the format: projects/projectId
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {

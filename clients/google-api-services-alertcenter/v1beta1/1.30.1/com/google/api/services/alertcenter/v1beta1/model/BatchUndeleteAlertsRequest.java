@@ -31,7 +31,7 @@ package com.google.api.services.alertcenter.v1beta1.model;
 public final class BatchUndeleteAlertsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. list of alert ids.
+   * Required. list of alert IDs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class BatchUndeleteAlertsRequest extends com.google.api.client.json
   private java.lang.String customerId;
 
   /**
-   * Required. list of alert ids.
+   * Required. list of alert IDs.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAlertId() {
@@ -54,7 +54,7 @@ public final class BatchUndeleteAlertsRequest extends com.google.api.client.json
   }
 
   /**
-   * Required. list of alert ids.
+   * Required. list of alert IDs.
    * @param alertId alertId or {@code null} for none
    */
   public BatchUndeleteAlertsRequest setAlertId(java.util.List<java.lang.String> alertId) {

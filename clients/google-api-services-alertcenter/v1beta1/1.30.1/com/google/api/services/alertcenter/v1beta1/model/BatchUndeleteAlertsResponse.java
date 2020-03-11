@@ -38,7 +38,7 @@ public final class BatchUndeleteAlertsResponse extends com.google.api.client.jso
   private java.util.Map<String, Status> failedAlertStatus;
 
   /**
-   * The successful list of alert ids.
+   * The successful list of alert IDs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class BatchUndeleteAlertsResponse extends com.google.api.client.jso
   }
 
   /**
-   * The successful list of alert ids.
+   * The successful list of alert IDs.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSuccessAlertIds() {
@@ -70,7 +70,7 @@ public final class BatchUndeleteAlertsResponse extends com.google.api.client.jso
   }
 
   /**
-   * The successful list of alert ids.
+   * The successful list of alert IDs.
    * @param successAlertIds successAlertIds or {@code null} for none
    */
   public BatchUndeleteAlertsResponse setSuccessAlertIds(java.util.List<java.lang.String> successAlertIds) {

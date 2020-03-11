@@ -19,7 +19,7 @@ package com.google.api.services.ml.v1.model;
 /**
  * Message holding configuration options for explaining model predictions. There are two feature
  * attribution methods supported for TensorFlow models: integrated gradients and sampled Shapley.
- * Learn more about feature attributions.
+ * [Learn more about feature attributions.](/ml-engine/docs/ai-explanations/overview)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AI Platform Training & Prediction API. For a detailed
@@ -33,18 +33,36 @@ package com.google.api.services.ml.v1.model;
 public final class GoogleCloudMlV1ExplanationConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Attributes credit by computing the Aumann-Shapley value taking advantage of the model's fully
+   * differentiable structure. Refer to this paper for more details:
+   * http://proceedings.mlr.press/v70/sundararajan17a.html
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudMlV1IntegratedGradientsAttribution integratedGradientsAttribution;
 
   /**
+   * An attribution method that approximates Shapley values for features that contribute to the
+   * label being predicted. A sampling strategy is used to approximate the value rather than
+   * considering all subsets of features.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudMlV1SampledShapleyAttribution sampledShapleyAttribution;
 
   /**
+   * Attributes credit by computing the XRAI taking advantage of the model's fully differentiable
+   * structure. Refer to this paper for more details: https://arxiv.org/abs/1906.02825 Currently
+   * only implemented for models with natural image inputs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudMlV1XraiAttribution xraiAttribution;
+
+  /**
+   * Attributes credit by computing the Aumann-Shapley value taking advantage of the model's fully
+   * differentiable structure. Refer to this paper for more details:
+   * http://proceedings.mlr.press/v70/sundararajan17a.html
    * @return value or {@code null} for none
    */
   public GoogleCloudMlV1IntegratedGradientsAttribution getIntegratedGradientsAttribution() {
@@ -52,6 +70,9 @@ public final class GoogleCloudMlV1ExplanationConfig extends com.google.api.clien
   }
 
   /**
+   * Attributes credit by computing the Aumann-Shapley value taking advantage of the model's fully
+   * differentiable structure. Refer to this paper for more details:
+   * http://proceedings.mlr.press/v70/sundararajan17a.html
    * @param integratedGradientsAttribution integratedGradientsAttribution or {@code null} for none
    */
   public GoogleCloudMlV1ExplanationConfig setIntegratedGradientsAttribution(GoogleCloudMlV1IntegratedGradientsAttribution integratedGradientsAttribution) {
@@ -60,6 +81,9 @@ public final class GoogleCloudMlV1ExplanationConfig extends com.google.api.clien
   }
 
   /**
+   * An attribution method that approximates Shapley values for features that contribute to the
+   * label being predicted. A sampling strategy is used to approximate the value rather than
+   * considering all subsets of features.
    * @return value or {@code null} for none
    */
   public GoogleCloudMlV1SampledShapleyAttribution getSampledShapleyAttribution() {
@@ -67,10 +91,34 @@ public final class GoogleCloudMlV1ExplanationConfig extends com.google.api.clien
   }
 
   /**
+   * An attribution method that approximates Shapley values for features that contribute to the
+   * label being predicted. A sampling strategy is used to approximate the value rather than
+   * considering all subsets of features.
    * @param sampledShapleyAttribution sampledShapleyAttribution or {@code null} for none
    */
   public GoogleCloudMlV1ExplanationConfig setSampledShapleyAttribution(GoogleCloudMlV1SampledShapleyAttribution sampledShapleyAttribution) {
     this.sampledShapleyAttribution = sampledShapleyAttribution;
+    return this;
+  }
+
+  /**
+   * Attributes credit by computing the XRAI taking advantage of the model's fully differentiable
+   * structure. Refer to this paper for more details: https://arxiv.org/abs/1906.02825 Currently
+   * only implemented for models with natural image inputs.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudMlV1XraiAttribution getXraiAttribution() {
+    return xraiAttribution;
+  }
+
+  /**
+   * Attributes credit by computing the XRAI taking advantage of the model's fully differentiable
+   * structure. Refer to this paper for more details: https://arxiv.org/abs/1906.02825 Currently
+   * only implemented for models with natural image inputs.
+   * @param xraiAttribution xraiAttribution or {@code null} for none
+   */
+  public GoogleCloudMlV1ExplanationConfig setXraiAttribution(GoogleCloudMlV1XraiAttribution xraiAttribution) {
+    this.xraiAttribution = xraiAttribution;
     return this;
   }
 

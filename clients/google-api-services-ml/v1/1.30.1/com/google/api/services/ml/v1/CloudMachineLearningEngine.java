@@ -2579,6 +2579,1820 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
         }
 
       }
+      /**
+       * An accessor for creating requests from the Studies collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudMachineLearningEngine ml = new CloudMachineLearningEngine(...);}
+       *   {@code CloudMachineLearningEngine.Studies.List request = ml.studies().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Studies studies() {
+        return new Studies();
+      }
+
+      /**
+       * The "studies" collection of methods.
+       */
+      public class Studies {
+
+        /**
+         * Creates a study.
+         *
+         * Create a request for the method "studies.create".
+         *
+         * This request holds the parameters needed by the ml server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The project and location that the study belongs to.
+        Format:
+         *        projects/{project}/locations/{location}
+         * @param content the {@link com.google.api.services.ml.v1.model.GoogleCloudMlV1Study}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.ml.v1.model.GoogleCloudMlV1Study content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends CloudMachineLearningEngineRequest<com.google.api.services.ml.v1.model.GoogleCloudMlV1Study> {
+
+          private static final String REST_PATH = "v1/{+parent}/studies";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a study.
+           *
+           * Create a request for the method "studies.create".
+           *
+           * This request holds the parameters needed by the the ml server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The project and location that the study belongs to.
+        Format:
+         *        projects/{project}/locations/{location}
+           * @param content the {@link com.google.api.services.ml.v1.model.GoogleCloudMlV1Study}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.ml.v1.model.GoogleCloudMlV1Study content) {
+            super(CloudMachineLearningEngine.this, "POST", REST_PATH, content, com.google.api.services.ml.v1.model.GoogleCloudMlV1Study.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The project and location that the study belongs to. Format:
+           * projects/{project}/locations/{location}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The project and location that the study belongs to. Format:
+         projects/{project}/locations/{location}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The project and location that the study belongs to. Format:
+           * projects/{project}/locations/{location}
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. The ID to use for the study, which will become the final component of the
+           * study's resource name.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String studyId;
+
+          /** Required. The ID to use for the study, which will become the final component of the study's
+         resource name.
+           */
+          public java.lang.String getStudyId() {
+            return studyId;
+          }
+
+          /**
+           * Required. The ID to use for the study, which will become the final component of the
+           * study's resource name.
+           */
+          public Create setStudyId(java.lang.String studyId) {
+            this.studyId = studyId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a study.
+         *
+         * Create a request for the method "studies.delete".
+         *
+         * This request holds the parameters needed by the ml server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The study name.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends CloudMachineLearningEngineRequest<com.google.api.services.ml.v1.model.GoogleProtobufEmpty> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/studies/[^/]+$");
+
+          /**
+           * Deletes a study.
+           *
+           * Create a request for the method "studies.delete".
+           *
+           * This request holds the parameters needed by the the ml server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The study name.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(CloudMachineLearningEngine.this, "DELETE", REST_PATH, null, com.google.api.services.ml.v1.model.GoogleProtobufEmpty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/studies/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The study name. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The study name.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The study name. */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/studies/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets a study.
+         *
+         * Create a request for the method "studies.get".
+         *
+         * This request holds the parameters needed by the ml server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The study name.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends CloudMachineLearningEngineRequest<com.google.api.services.ml.v1.model.GoogleCloudMlV1Study> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/studies/[^/]+$");
+
+          /**
+           * Gets a study.
+           *
+           * Create a request for the method "studies.get".
+           *
+           * This request holds the parameters needed by the the ml server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The study name.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(CloudMachineLearningEngine.this, "GET", REST_PATH, null, com.google.api.services.ml.v1.model.GoogleCloudMlV1Study.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/studies/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The study name. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The study name.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The study name. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/studies/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists all the studies in a region for an associated project.
+         *
+         * Create a request for the method "studies.list".
+         *
+         * This request holds the parameters needed by the ml server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The project and location that the study belongs to.
+        Format:
+         *        projects/{project}/locations/{location}
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends CloudMachineLearningEngineRequest<com.google.api.services.ml.v1.model.GoogleCloudMlV1ListStudiesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/studies";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists all the studies in a region for an associated project.
+           *
+           * Create a request for the method "studies.list".
+           *
+           * This request holds the parameters needed by the the ml server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The project and location that the study belongs to.
+        Format:
+         *        projects/{project}/locations/{location}
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(CloudMachineLearningEngine.this, "GET", REST_PATH, null, com.google.api.services.ml.v1.model.GoogleCloudMlV1ListStudiesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The project and location that the study belongs to. Format:
+           * projects/{project}/locations/{location}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The project and location that the study belongs to. Format:
+         projects/{project}/locations/{location}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The project and location that the study belongs to. Format:
+           * projects/{project}/locations/{location}
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the Trials collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code CloudMachineLearningEngine ml = new CloudMachineLearningEngine(...);}
+         *   {@code CloudMachineLearningEngine.Trials.List request = ml.trials().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Trials trials() {
+          return new Trials();
+        }
+
+        /**
+         * The "trials" collection of methods.
+         */
+        public class Trials {
+
+          /**
+           * Adds a measurement of the objective metrics to a Trial. This measurement is assumed to have been
+           * taken before the Trial is complete.
+           *
+           * Create a request for the method "trials.addMeasurement".
+           *
+           * This request holds the parameters needed by the ml server.  After setting any optional
+           * parameters, call the {@link AddMeasurement#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The trial name.
+           * @param content the {@link com.google.api.services.ml.v1.model.GoogleCloudMlV1AddTrialMeasurementRequest}
+           * @return the request
+           */
+          public AddMeasurement addMeasurement(java.lang.String name, com.google.api.services.ml.v1.model.GoogleCloudMlV1AddTrialMeasurementRequest content) throws java.io.IOException {
+            AddMeasurement result = new AddMeasurement(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class AddMeasurement extends CloudMachineLearningEngineRequest<com.google.api.services.ml.v1.model.GoogleCloudMlV1Trial> {
+
+            private static final String REST_PATH = "v1/{+name}:addMeasurement";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/studies/[^/]+/trials/[^/]+$");
+
+            /**
+             * Adds a measurement of the objective metrics to a Trial. This measurement is assumed to have
+             * been taken before the Trial is complete.
+             *
+             * Create a request for the method "trials.addMeasurement".
+             *
+             * This request holds the parameters needed by the the ml server.  After setting any optional
+             * parameters, call the {@link AddMeasurement#execute()} method to invoke the remote operation.
+             * <p> {@link AddMeasurement#initialize(com.google.api.client.googleapis.services.AbstractGoogleCl
+             * ientRequest)} must be called to initialize this instance immediately after invoking the
+             * constructor. </p>
+             *
+             * @param name Required. The trial name.
+             * @param content the {@link com.google.api.services.ml.v1.model.GoogleCloudMlV1AddTrialMeasurementRequest}
+             * @since 1.13
+             */
+            protected AddMeasurement(java.lang.String name, com.google.api.services.ml.v1.model.GoogleCloudMlV1AddTrialMeasurementRequest content) {
+              super(CloudMachineLearningEngine.this, "POST", REST_PATH, content, com.google.api.services.ml.v1.model.GoogleCloudMlV1Trial.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/studies/[^/]+/trials/[^/]+$");
+              }
+            }
+
+            @Override
+            public AddMeasurement set$Xgafv(java.lang.String $Xgafv) {
+              return (AddMeasurement) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public AddMeasurement setAccessToken(java.lang.String accessToken) {
+              return (AddMeasurement) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public AddMeasurement setAlt(java.lang.String alt) {
+              return (AddMeasurement) super.setAlt(alt);
+            }
+
+            @Override
+            public AddMeasurement setCallback(java.lang.String callback) {
+              return (AddMeasurement) super.setCallback(callback);
+            }
+
+            @Override
+            public AddMeasurement setFields(java.lang.String fields) {
+              return (AddMeasurement) super.setFields(fields);
+            }
+
+            @Override
+            public AddMeasurement setKey(java.lang.String key) {
+              return (AddMeasurement) super.setKey(key);
+            }
+
+            @Override
+            public AddMeasurement setOauthToken(java.lang.String oauthToken) {
+              return (AddMeasurement) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public AddMeasurement setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (AddMeasurement) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public AddMeasurement setQuotaUser(java.lang.String quotaUser) {
+              return (AddMeasurement) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public AddMeasurement setUploadType(java.lang.String uploadType) {
+              return (AddMeasurement) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public AddMeasurement setUploadProtocol(java.lang.String uploadProtocol) {
+              return (AddMeasurement) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The trial name. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The trial name.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The trial name. */
+            public AddMeasurement setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/studies/[^/]+/trials/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public AddMeasurement set(String parameterName, Object value) {
+              return (AddMeasurement) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Checks whether a trial should stop or not.
+           *
+           * Create a request for the method "trials.checkEarlyStoppingState".
+           *
+           * This request holds the parameters needed by the ml server.  After setting any optional
+           * parameters, call the {@link CheckEarlyStoppingState#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The trial name.
+           * @param content the {@link com.google.api.services.ml.v1.model.GoogleCloudMlV1CheckTrialEarlyStoppingStateRequest}
+           * @return the request
+           */
+          public CheckEarlyStoppingState checkEarlyStoppingState(java.lang.String name, com.google.api.services.ml.v1.model.GoogleCloudMlV1CheckTrialEarlyStoppingStateRequest content) throws java.io.IOException {
+            CheckEarlyStoppingState result = new CheckEarlyStoppingState(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class CheckEarlyStoppingState extends CloudMachineLearningEngineRequest<com.google.api.services.ml.v1.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1/{+name}:checkEarlyStoppingState";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/studies/[^/]+/trials/[^/]+$");
+
+            /**
+             * Checks whether a trial should stop or not.
+             *
+             * Create a request for the method "trials.checkEarlyStoppingState".
+             *
+             * This request holds the parameters needed by the the ml server.  After setting any optional
+             * parameters, call the {@link CheckEarlyStoppingState#execute()} method to invoke the remote
+             * operation. <p> {@link CheckEarlyStoppingState#initialize(com.google.api.client.googleapis.servi
+             * ces.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Required. The trial name.
+             * @param content the {@link com.google.api.services.ml.v1.model.GoogleCloudMlV1CheckTrialEarlyStoppingStateRequest}
+             * @since 1.13
+             */
+            protected CheckEarlyStoppingState(java.lang.String name, com.google.api.services.ml.v1.model.GoogleCloudMlV1CheckTrialEarlyStoppingStateRequest content) {
+              super(CloudMachineLearningEngine.this, "POST", REST_PATH, content, com.google.api.services.ml.v1.model.GoogleLongrunningOperation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/studies/[^/]+/trials/[^/]+$");
+              }
+            }
+
+            @Override
+            public CheckEarlyStoppingState set$Xgafv(java.lang.String $Xgafv) {
+              return (CheckEarlyStoppingState) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public CheckEarlyStoppingState setAccessToken(java.lang.String accessToken) {
+              return (CheckEarlyStoppingState) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public CheckEarlyStoppingState setAlt(java.lang.String alt) {
+              return (CheckEarlyStoppingState) super.setAlt(alt);
+            }
+
+            @Override
+            public CheckEarlyStoppingState setCallback(java.lang.String callback) {
+              return (CheckEarlyStoppingState) super.setCallback(callback);
+            }
+
+            @Override
+            public CheckEarlyStoppingState setFields(java.lang.String fields) {
+              return (CheckEarlyStoppingState) super.setFields(fields);
+            }
+
+            @Override
+            public CheckEarlyStoppingState setKey(java.lang.String key) {
+              return (CheckEarlyStoppingState) super.setKey(key);
+            }
+
+            @Override
+            public CheckEarlyStoppingState setOauthToken(java.lang.String oauthToken) {
+              return (CheckEarlyStoppingState) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public CheckEarlyStoppingState setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (CheckEarlyStoppingState) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public CheckEarlyStoppingState setQuotaUser(java.lang.String quotaUser) {
+              return (CheckEarlyStoppingState) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public CheckEarlyStoppingState setUploadType(java.lang.String uploadType) {
+              return (CheckEarlyStoppingState) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public CheckEarlyStoppingState setUploadProtocol(java.lang.String uploadProtocol) {
+              return (CheckEarlyStoppingState) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The trial name. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The trial name.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The trial name. */
+            public CheckEarlyStoppingState setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/studies/[^/]+/trials/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public CheckEarlyStoppingState set(String parameterName, Object value) {
+              return (CheckEarlyStoppingState) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Marks a Trial as complete.
+           *
+           * Create a request for the method "trials.complete".
+           *
+           * This request holds the parameters needed by the ml server.  After setting any optional
+           * parameters, call the {@link Complete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The trial name.
+           * @param content the {@link com.google.api.services.ml.v1.model.GoogleCloudMlV1CompleteTrialRequest}
+           * @return the request
+           */
+          public Complete complete(java.lang.String name, com.google.api.services.ml.v1.model.GoogleCloudMlV1CompleteTrialRequest content) throws java.io.IOException {
+            Complete result = new Complete(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Complete extends CloudMachineLearningEngineRequest<com.google.api.services.ml.v1.model.GoogleCloudMlV1Trial> {
+
+            private static final String REST_PATH = "v1/{+name}:complete";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/studies/[^/]+/trials/[^/]+$");
+
+            /**
+             * Marks a Trial as complete.
+             *
+             * Create a request for the method "trials.complete".
+             *
+             * This request holds the parameters needed by the the ml server.  After setting any optional
+             * parameters, call the {@link Complete#execute()} method to invoke the remote operation. <p>
+             * {@link
+             * Complete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The trial name.
+             * @param content the {@link com.google.api.services.ml.v1.model.GoogleCloudMlV1CompleteTrialRequest}
+             * @since 1.13
+             */
+            protected Complete(java.lang.String name, com.google.api.services.ml.v1.model.GoogleCloudMlV1CompleteTrialRequest content) {
+              super(CloudMachineLearningEngine.this, "POST", REST_PATH, content, com.google.api.services.ml.v1.model.GoogleCloudMlV1Trial.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/studies/[^/]+/trials/[^/]+$");
+              }
+            }
+
+            @Override
+            public Complete set$Xgafv(java.lang.String $Xgafv) {
+              return (Complete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Complete setAccessToken(java.lang.String accessToken) {
+              return (Complete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Complete setAlt(java.lang.String alt) {
+              return (Complete) super.setAlt(alt);
+            }
+
+            @Override
+            public Complete setCallback(java.lang.String callback) {
+              return (Complete) super.setCallback(callback);
+            }
+
+            @Override
+            public Complete setFields(java.lang.String fields) {
+              return (Complete) super.setFields(fields);
+            }
+
+            @Override
+            public Complete setKey(java.lang.String key) {
+              return (Complete) super.setKey(key);
+            }
+
+            @Override
+            public Complete setOauthToken(java.lang.String oauthToken) {
+              return (Complete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Complete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Complete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Complete setQuotaUser(java.lang.String quotaUser) {
+              return (Complete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Complete setUploadType(java.lang.String uploadType) {
+              return (Complete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Complete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Complete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The trial name. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The trial name.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The trial name. */
+            public Complete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/studies/[^/]+/trials/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Complete set(String parameterName, Object value) {
+              return (Complete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Adds a user provided trial to a Study.
+           *
+           * Create a request for the method "trials.create".
+           *
+           * This request holds the parameters needed by the ml server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The name of the study that the trial belongs to.
+           * @param content the {@link com.google.api.services.ml.v1.model.GoogleCloudMlV1Trial}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.ml.v1.model.GoogleCloudMlV1Trial content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends CloudMachineLearningEngineRequest<com.google.api.services.ml.v1.model.GoogleCloudMlV1Trial> {
+
+            private static final String REST_PATH = "v1/{+parent}/trials";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/studies/[^/]+$");
+
+            /**
+             * Adds a user provided trial to a Study.
+             *
+             * Create a request for the method "trials.create".
+             *
+             * This request holds the parameters needed by the the ml server.  After setting any optional
+             * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The name of the study that the trial belongs to.
+             * @param content the {@link com.google.api.services.ml.v1.model.GoogleCloudMlV1Trial}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.ml.v1.model.GoogleCloudMlV1Trial content) {
+              super(CloudMachineLearningEngine.this, "POST", REST_PATH, content, com.google.api.services.ml.v1.model.GoogleCloudMlV1Trial.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/studies/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the study that the trial belongs to. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The name of the study that the trial belongs to.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. The name of the study that the trial belongs to. */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/studies/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a Trial.
+           *
+           * Create a request for the method "trials.delete".
+           *
+           * This request holds the parameters needed by the ml server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The trial name.
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends CloudMachineLearningEngineRequest<com.google.api.services.ml.v1.model.GoogleProtobufEmpty> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/studies/[^/]+/trials/[^/]+$");
+
+            /**
+             * Deletes a Trial.
+             *
+             * Create a request for the method "trials.delete".
+             *
+             * This request holds the parameters needed by the the ml server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The trial name.
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(CloudMachineLearningEngine.this, "DELETE", REST_PATH, null, com.google.api.services.ml.v1.model.GoogleProtobufEmpty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/studies/[^/]+/trials/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The trial name. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The trial name.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The trial name. */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/studies/[^/]+/trials/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets a Trial.
+           *
+           * Create a request for the method "trials.get".
+           *
+           * This request holds the parameters needed by the ml server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The trial name.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends CloudMachineLearningEngineRequest<com.google.api.services.ml.v1.model.GoogleCloudMlV1Trial> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/studies/[^/]+/trials/[^/]+$");
+
+            /**
+             * Gets a Trial.
+             *
+             * Create a request for the method "trials.get".
+             *
+             * This request holds the parameters needed by the the ml server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+             * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The trial name.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(CloudMachineLearningEngine.this, "GET", REST_PATH, null, com.google.api.services.ml.v1.model.GoogleCloudMlV1Trial.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/studies/[^/]+/trials/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The trial name. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The trial name.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The trial name. */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/studies/[^/]+/trials/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists the trials associated with a Study.
+           *
+           * Create a request for the method "trials.list".
+           *
+           * This request holds the parameters needed by the ml server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The name of the study that the trial belongs to.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends CloudMachineLearningEngineRequest<com.google.api.services.ml.v1.model.GoogleCloudMlV1ListTrialsResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/trials";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/studies/[^/]+$");
+
+            /**
+             * Lists the trials associated with a Study.
+             *
+             * Create a request for the method "trials.list".
+             *
+             * This request holds the parameters needed by the the ml server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+             * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The name of the study that the trial belongs to.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(CloudMachineLearningEngine.this, "GET", REST_PATH, null, com.google.api.services.ml.v1.model.GoogleCloudMlV1ListTrialsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/studies/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the study that the trial belongs to. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The name of the study that the trial belongs to.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. The name of the study that the trial belongs to. */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/studies/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Stops a trial.
+           *
+           * Create a request for the method "trials.stop".
+           *
+           * This request holds the parameters needed by the ml server.  After setting any optional
+           * parameters, call the {@link Stop#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The trial name.
+           * @param content the {@link com.google.api.services.ml.v1.model.GoogleCloudMlV1StopTrialRequest}
+           * @return the request
+           */
+          public Stop stop(java.lang.String name, com.google.api.services.ml.v1.model.GoogleCloudMlV1StopTrialRequest content) throws java.io.IOException {
+            Stop result = new Stop(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Stop extends CloudMachineLearningEngineRequest<com.google.api.services.ml.v1.model.GoogleCloudMlV1Trial> {
+
+            private static final String REST_PATH = "v1/{+name}:stop";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/studies/[^/]+/trials/[^/]+$");
+
+            /**
+             * Stops a trial.
+             *
+             * Create a request for the method "trials.stop".
+             *
+             * This request holds the parameters needed by the the ml server.  After setting any optional
+             * parameters, call the {@link Stop#execute()} method to invoke the remote operation. <p> {@link
+             * Stop#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The trial name.
+             * @param content the {@link com.google.api.services.ml.v1.model.GoogleCloudMlV1StopTrialRequest}
+             * @since 1.13
+             */
+            protected Stop(java.lang.String name, com.google.api.services.ml.v1.model.GoogleCloudMlV1StopTrialRequest content) {
+              super(CloudMachineLearningEngine.this, "POST", REST_PATH, content, com.google.api.services.ml.v1.model.GoogleCloudMlV1Trial.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/studies/[^/]+/trials/[^/]+$");
+              }
+            }
+
+            @Override
+            public Stop set$Xgafv(java.lang.String $Xgafv) {
+              return (Stop) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Stop setAccessToken(java.lang.String accessToken) {
+              return (Stop) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Stop setAlt(java.lang.String alt) {
+              return (Stop) super.setAlt(alt);
+            }
+
+            @Override
+            public Stop setCallback(java.lang.String callback) {
+              return (Stop) super.setCallback(callback);
+            }
+
+            @Override
+            public Stop setFields(java.lang.String fields) {
+              return (Stop) super.setFields(fields);
+            }
+
+            @Override
+            public Stop setKey(java.lang.String key) {
+              return (Stop) super.setKey(key);
+            }
+
+            @Override
+            public Stop setOauthToken(java.lang.String oauthToken) {
+              return (Stop) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Stop setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Stop) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Stop setQuotaUser(java.lang.String quotaUser) {
+              return (Stop) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Stop setUploadType(java.lang.String uploadType) {
+              return (Stop) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Stop setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Stop) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The trial name. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The trial name.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The trial name. */
+            public Stop setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/studies/[^/]+/trials/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Stop set(String parameterName, Object value) {
+              return (Stop) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Returns a long-running operation associated with the generation of trial suggestions.
+           *
+           * Create a request for the method "trials.suggest".
+           *
+           * This request holds the parameters needed by the ml server.  After setting any optional
+           * parameters, call the {@link Suggest#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The name of the study that the trial belongs to.
+           * @param content the {@link com.google.api.services.ml.v1.model.GoogleCloudMlV1SuggestTrialsRequest}
+           * @return the request
+           */
+          public Suggest suggest(java.lang.String parent, com.google.api.services.ml.v1.model.GoogleCloudMlV1SuggestTrialsRequest content) throws java.io.IOException {
+            Suggest result = new Suggest(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Suggest extends CloudMachineLearningEngineRequest<com.google.api.services.ml.v1.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1/{+parent}/trials:suggest";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/studies/[^/]+$");
+
+            /**
+             * Returns a long-running operation associated with the generation of trial suggestions.
+             *
+             * Create a request for the method "trials.suggest".
+             *
+             * This request holds the parameters needed by the the ml server.  After setting any optional
+             * parameters, call the {@link Suggest#execute()} method to invoke the remote operation. <p>
+             * {@link
+             * Suggest#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The name of the study that the trial belongs to.
+             * @param content the {@link com.google.api.services.ml.v1.model.GoogleCloudMlV1SuggestTrialsRequest}
+             * @since 1.13
+             */
+            protected Suggest(java.lang.String parent, com.google.api.services.ml.v1.model.GoogleCloudMlV1SuggestTrialsRequest content) {
+              super(CloudMachineLearningEngine.this, "POST", REST_PATH, content, com.google.api.services.ml.v1.model.GoogleLongrunningOperation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/studies/[^/]+$");
+              }
+            }
+
+            @Override
+            public Suggest set$Xgafv(java.lang.String $Xgafv) {
+              return (Suggest) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Suggest setAccessToken(java.lang.String accessToken) {
+              return (Suggest) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Suggest setAlt(java.lang.String alt) {
+              return (Suggest) super.setAlt(alt);
+            }
+
+            @Override
+            public Suggest setCallback(java.lang.String callback) {
+              return (Suggest) super.setCallback(callback);
+            }
+
+            @Override
+            public Suggest setFields(java.lang.String fields) {
+              return (Suggest) super.setFields(fields);
+            }
+
+            @Override
+            public Suggest setKey(java.lang.String key) {
+              return (Suggest) super.setKey(key);
+            }
+
+            @Override
+            public Suggest setOauthToken(java.lang.String oauthToken) {
+              return (Suggest) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Suggest setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Suggest) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Suggest setQuotaUser(java.lang.String quotaUser) {
+              return (Suggest) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Suggest setUploadType(java.lang.String uploadType) {
+              return (Suggest) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Suggest setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Suggest) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the study that the trial belongs to. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The name of the study that the trial belongs to.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. The name of the study that the trial belongs to. */
+            public Suggest setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/studies/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public Suggest set(String parameterName, Object value) {
+              return (Suggest) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
     }
     /**
      * An accessor for creating requests from the Models collection.

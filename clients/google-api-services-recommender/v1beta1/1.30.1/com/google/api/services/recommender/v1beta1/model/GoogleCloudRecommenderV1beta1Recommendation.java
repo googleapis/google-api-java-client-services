@@ -45,6 +45,13 @@ public final class GoogleCloudRecommenderV1beta1Recommendation extends com.googl
   }
 
   /**
+   * Insights that led to this recommendation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudRecommenderV1beta1RecommendationInsightReference> associatedInsights;
+
+  /**
    * Content of the recommendation describing recommended changes to resources.
    * The value may be {@code null}.
    */
@@ -122,6 +129,23 @@ public final class GoogleCloudRecommenderV1beta1Recommendation extends com.googl
    */
   public GoogleCloudRecommenderV1beta1Recommendation setAdditionalImpact(java.util.List<GoogleCloudRecommenderV1beta1Impact> additionalImpact) {
     this.additionalImpact = additionalImpact;
+    return this;
+  }
+
+  /**
+   * Insights that led to this recommendation.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudRecommenderV1beta1RecommendationInsightReference> getAssociatedInsights() {
+    return associatedInsights;
+  }
+
+  /**
+   * Insights that led to this recommendation.
+   * @param associatedInsights associatedInsights or {@code null} for none
+   */
+  public GoogleCloudRecommenderV1beta1Recommendation setAssociatedInsights(java.util.List<GoogleCloudRecommenderV1beta1RecommendationInsightReference> associatedInsights) {
+    this.associatedInsights = associatedInsights;
     return this;
   }
 

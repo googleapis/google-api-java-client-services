@@ -188,7 +188,7 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
       private static final String REST_PATH = "v1/{+name}:test";
 
       private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^projects/.+$");
+          java.util.regex.Pattern.compile("^projects/.*$");
 
       /**
        * Test `Source` for syntactic and semantic correctness. Issues present, if any, will be returned
@@ -233,7 +233,7 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^projects/.+$");
+              "^projects/.*$");
         }
       }
 
@@ -329,7 +329,7 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^projects/.+$");
+              "^projects/.*$");
         }
         this.name = name;
         return this;
@@ -559,7 +559,7 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
         private static final String REST_PATH = "v1/{+name}";
 
         private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^projects/[^/]+/releases/.+$");
+            java.util.regex.Pattern.compile("^projects/[^/]+/releases/.*$");
 
         /**
          * Delete a `Release` by resource name.
@@ -582,7 +582,7 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/releases/.+$");
+                "^projects/[^/]+/releases/.*$");
           }
         }
 
@@ -666,7 +666,7 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/releases/.+$");
+                "^projects/[^/]+/releases/.*$");
           }
           this.name = name;
           return this;
@@ -700,7 +700,7 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
         private static final String REST_PATH = "v1/{+name}";
 
         private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^projects/[^/]+/releases/.+$");
+            java.util.regex.Pattern.compile("^projects/[^/]+/releases/.*$");
 
         /**
          * Get a `Release` by name.
@@ -722,7 +722,7 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/releases/.+$");
+                "^projects/[^/]+/releases/.*$");
           }
         }
 
@@ -816,7 +816,7 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/releases/.+$");
+                "^projects/[^/]+/releases/.*$");
           }
           this.name = name;
           return this;
@@ -850,7 +850,7 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
         private static final String REST_PATH = "v1/{+name}:getExecutable";
 
         private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^projects/[^/]+/releases/.+$");
+            java.util.regex.Pattern.compile("^projects/[^/]+/releases/.*$");
 
         /**
          * Get the `Release` executable to use when enforcing rules.
@@ -873,7 +873,7 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/releases/.+$");
+                "^projects/[^/]+/releases/.*$");
           }
         }
 
@@ -967,7 +967,7 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/releases/.+$");
+                "^projects/[^/]+/releases/.*$");
           }
           this.name = name;
           return this;
@@ -1303,7 +1303,7 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
         private static final String REST_PATH = "v1/{+name}";
 
         private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^projects/[^/]+/releases/.+$");
+            java.util.regex.Pattern.compile("^projects/[^/]+/releases/.*$");
 
         /**
          * Update a `Release` via PATCH.
@@ -1330,7 +1330,7 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/releases/.+$");
+                "^projects/[^/]+/releases/.*$");
           }
         }
 
@@ -1414,7 +1414,7 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/releases/.+$");
+                "^projects/[^/]+/releases/.*$");
           }
           this.name = name;
           return this;

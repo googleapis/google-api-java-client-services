@@ -38,7 +38,7 @@ public final class ResourceInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String documentId;
 
   /**
-   * Title of the resource, e.g. email subject, or document title.
+   * Title of the resource, for example email subject, or document title.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class ResourceInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Title of the resource, e.g. email subject, or document title.
+   * Title of the resource, for example email subject, or document title.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceTitle() {
@@ -70,7 +70,7 @@ public final class ResourceInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Title of the resource, e.g. email subject, or document title.
+   * Title of the resource, for example email subject, or document title.
    * @param resourceTitle resourceTitle or {@code null} for none
    */
   public ResourceInfo setResourceTitle(java.lang.String resourceTitle) {

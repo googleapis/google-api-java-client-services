@@ -39,7 +39,7 @@ public final class LoginDetails extends com.google.api.client.json.GenericJson {
   private java.lang.String ipAddress;
 
   /**
-   * Optional. The successful login time that is associated with the warning event. This will not be
+   * Optional. The successful login time that is associated with the warning event. This isn't
    * present for blocked login attempts.
    * The value may be {@code null}.
    */
@@ -66,7 +66,7 @@ public final class LoginDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The successful login time that is associated with the warning event. This will not be
+   * Optional. The successful login time that is associated with the warning event. This isn't
    * present for blocked login attempts.
    * @return value or {@code null} for none
    */
@@ -75,7 +75,7 @@ public final class LoginDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The successful login time that is associated with the warning event. This will not be
+   * Optional. The successful login time that is associated with the warning event. This isn't
    * present for blocked login attempts.
    * @param loginTime loginTime or {@code null} for none
    */

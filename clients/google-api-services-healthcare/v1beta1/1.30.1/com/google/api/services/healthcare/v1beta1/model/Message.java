@@ -61,7 +61,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * The message type and trigger event for this message. MSH-9.
+   * The message type for this message. MSH-9.1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -201,7 +201,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The message type and trigger event for this message. MSH-9.
+   * The message type for this message. MSH-9.1.
    * @return value or {@code null} for none
    */
   public java.lang.String getMessageType() {
@@ -209,7 +209,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The message type and trigger event for this message. MSH-9.
+   * The message type for this message. MSH-9.1.
    * @param messageType messageType or {@code null} for none
    */
   public Message setMessageType(java.lang.String messageType) {

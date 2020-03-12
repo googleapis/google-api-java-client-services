@@ -15177,7 +15177,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                *
                * Fields/functions available for filtering are:
                *
-               * *  `message_type`, from the MSH-9 segment. For example, `NOT message_type = "ADT"`.
+               * *  `message_type`, from the MSH-9.1 field. For example, `NOT message_type = "ADT"`.
                * *  `send_date` or `sendDate`, the YYYY-MM-DD date the message was sent in the
                * dataset's time_zone, from the MSH-7 segment. For example, `send_date <
                * "2017-01-02"`. *  `send_time`, the timestamp when the message was sent, using the
@@ -15211,7 +15211,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
              Fields/functions available for filtering are:
 
-             *  `message_type`, from the MSH-9 segment. For example, `NOT message_type = "ADT"`. *  `send_date`
+             *  `message_type`, from the MSH-9.1 field. For example, `NOT message_type = "ADT"`. *  `send_date`
              or `sendDate`, the YYYY-MM-DD date the message was sent in the dataset's time_zone, from the MSH-7
              segment. For example, `send_date < "2017-01-02"`. *  `send_time`, the timestamp when the message
              was sent, using the RFC3339 time format for comparisons, from the MSH-7 segment. For example,
@@ -15244,7 +15244,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                *
                * Fields/functions available for filtering are:
                *
-               * *  `message_type`, from the MSH-9 segment. For example, `NOT message_type = "ADT"`.
+               * *  `message_type`, from the MSH-9.1 field. For example, `NOT message_type = "ADT"`.
                * *  `send_date` or `sendDate`, the YYYY-MM-DD date the message was sent in the
                * dataset's time_zone, from the MSH-7 segment. For example, `send_date <
                * "2017-01-02"`. *  `send_time`, the timestamp when the message was sent, using the

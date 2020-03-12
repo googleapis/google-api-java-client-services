@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"F5McR9eEaw0XRpaO3M9gbIugkbs/PorHXWkzCl6hdMxMR0HVf8TWRb0\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/BV5VgafKGN7nHBma8L1whtyvndo\"",
  "discoveryVersion": "v1",
  "id": "drive:v3",
  "name": "drive",
  "version": "v3",
- "revision": "20191108",
+ "revision": "20200303",
  "title": "Drive API",
  "description": "Manages files in Drive including uploading, downloading, searching, detecting changes, and updating sharing permissions.",
  "ownerDomain": "google.com",
@@ -675,6 +675,10 @@
        "type": "boolean",
        "description": "Whether the current user can add children to this folder. This is always false when the item is not a folder."
       },
+      "canAddMyDriveParent": {
+       "type": "boolean",
+       "description": "Whether the current user can add a parent for the item without removing an existing parent in the same request. Not populated for shared drive files."
+      },
       "canChangeCopyRequiresWriterPermission": {
        "type": "boolean",
        "description": "Whether the current user can change the copyRequiresWriterPermission restriction of this file."
@@ -770,6 +774,10 @@
       "canRemoveChildren": {
        "type": "boolean",
        "description": "Whether the current user can remove children from this folder. This is always false when the item is not a folder. For a folder in a shared drive, use canDeleteChildren or canTrashChildren instead."
+      },
+      "canRemoveMyDriveParent": {
+       "type": "boolean",
+       "description": "Whether the current user can remove a parent from the item without adding another parent in the same request. Not populated for shared drive files."
       },
       "canRename": {
        "type": "boolean",
@@ -2454,6 +2462,12 @@
      "httpMethod": "POST",
      "description": "Creates a copy of a file and applies any requested updates with patch semantics.",
      "parameters": {
+      "enforceSingleParent": {
+       "type": "boolean",
+       "description": "Set to true to opt in to API behavior that aims for all items to have exactly one parent. This parameter will only take effect if the item is not in a shared drive. Requests that specify more than one parent will fail.",
+       "default": "false",
+       "location": "query"
+      },
       "fileId": {
        "type": "string",
        "description": "The ID of the file.",
@@ -2512,6 +2526,12 @@
      "httpMethod": "POST",
      "description": "Creates a new file.",
      "parameters": {
+      "enforceSingleParent": {
+       "type": "boolean",
+       "description": "Set to true to opt in to API behavior that aims for all items to have exactly one parent. This parameter will only take effect if the item is not in a shared drive. Requests that specify more than one parent will fail.",
+       "default": "false",
+       "location": "query"
+      },
       "ignoreDefaultVisibility": {
        "type": "boolean",
        "description": "Whether to ignore the domain's default visibility settings for the created file. Domain administrators can choose to make all uploaded files visible to the domain by default; this parameter bypasses that behavior for the request. Permissions are still inherited from parent folders.",
@@ -2845,6 +2865,12 @@
        "description": "A comma-separated list of parent IDs to add.",
        "location": "query"
       },
+      "enforceSingleParent": {
+       "type": "boolean",
+       "description": "Set to true to opt in to API behavior that aims for all items to have exactly one parent. This parameter will only take effect if the item is not in a shared drive. If the item's owner makes a request to add a single parent, the item will be removed from all current folders and placed in the requested folder. Other requests that increase the number of parents will fail, except when the canAddMyDriveParent file capability is true and a single parent is being added.",
+       "default": "false",
+       "location": "query"
+      },
       "fileId": {
        "type": "string",
        "description": "The ID of the file.",
@@ -2989,11 +3015,23 @@
        "description": "A plain text custom message to include in the notification email.",
        "location": "query"
       },
+      "enforceSingleParent": {
+       "type": "boolean",
+       "description": "Set to true to opt in to API behavior that aims for all items to have exactly one parent. This parameter will only take effect if the item is not in a shared drive. See moveToNewOwnersRoot for details.",
+       "default": "false",
+       "location": "query"
+      },
       "fileId": {
        "type": "string",
        "description": "The ID of the file or shared drive.",
        "required": true,
        "location": "path"
+      },
+      "moveToNewOwnersRoot": {
+       "type": "boolean",
+       "description": "This parameter will only take effect if the item is not in a shared drive and the request is attempting to transfer the ownership of the item. When set to true, the item will be moved to the new owner's My Drive root folder and all prior parents removed. If set to false, when enforceSingleParent=true, parents are not changed. If set to false, when enforceSingleParent=false, existing parents are not changed; however, the file will be added to the new owner's My Drive root folder, unless it is already in the new owner's My Drive.",
+       "default": "false",
+       "location": "query"
       },
       "sendNotificationEmail": {
        "type": "boolean",

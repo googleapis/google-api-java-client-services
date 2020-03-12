@@ -68,10 +68,8 @@ packages on [Maven Central][maven-search].
 | Cloud Life Sciences API | [v2beta](clients/google-api-services-lifesciences/v2beta) |
 | Cloud Logging API | [v2](clients/google-api-services-logging/v2) |
 | Cloud Natural Language API | [v1](clients/google-api-services-language/v1), [v1beta1](clients/google-api-services-language/v1beta1), [v1beta2](clients/google-api-services-language/v1beta2) |
-| Cloud OS Config API | [v1beta](clients/google-api-services-osconfig/v1beta) |
+| Cloud OS Config API | [v1](clients/google-api-services-osconfig/v1), [v1beta](clients/google-api-services-osconfig/v1beta) |
 | Cloud OS Login API | [v1](clients/google-api-services-oslogin/v1), [v1alpha](clients/google-api-services-oslogin/v1alpha), [v1beta](clients/google-api-services-oslogin/v1beta) |
-| Cloud Private Catalog API | [v1beta1](clients/google-api-services-cloudprivatecatalog/v1beta1) |
-| Cloud Private Catalog Producer API | [v1beta1](clients/google-api-services-cloudprivatecatalogproducer/v1beta1) |
 | Cloud Pub/Sub API | [v1](clients/google-api-services-pubsub/v1), [v1beta1a](clients/google-api-services-pubsub/v1beta1a), [v1beta2](clients/google-api-services-pubsub/v1beta2) |
 | Cloud Resource Manager API | [v1](clients/google-api-services-cloudresourcemanager/v1), [v1beta1](clients/google-api-services-cloudresourcemanager/v1beta1), [v2](clients/google-api-services-cloudresourcemanager/v2), [v2beta1](clients/google-api-services-cloudresourcemanager/v2beta1) |
 | Cloud Run API | [v1](clients/google-api-services-run/v1), [v1alpha1](clients/google-api-services-run/v1alpha1), [v1beta1](clients/google-api-services-run/v1beta1) |

@@ -17,7 +17,7 @@
 package com.google.api.services.datafusion.v1beta1.model;
 
 /**
- * Represents a Data Fusion instance.
+ * Represents a Data Fusion instance. Next available ID: 23
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Data Fusion API. For a detailed explanation
@@ -29,6 +29,19 @@ package com.google.api.services.datafusion.v1beta1.model;
  */
 @SuppressWarnings("javadoc")
 public final class Instance extends com.google.api.client.json.GenericJson {
+
+  /**
+   * List of accelerators enabled for this CDF instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Accelerator> accelerators;
+
+  static {
+    // hack to force ProGuard to consider Accelerator used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Accelerator.class);
+  }
 
   /**
    * Output only. Endpoint on which the REST APIs is accessible.
@@ -52,7 +65,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * An optional description of this instance.
+   * Optional. An optional description of this instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -183,6 +196,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String zone;
 
   /**
+   * List of accelerators enabled for this CDF instance.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Accelerator> getAccelerators() {
+    return accelerators;
+  }
+
+  /**
+   * List of accelerators enabled for this CDF instance.
+   * @param accelerators accelerators or {@code null} for none
+   */
+  public Instance setAccelerators(java.util.List<Accelerator> accelerators) {
+    this.accelerators = accelerators;
+    return this;
+  }
+
+  /**
    * Output only. Endpoint on which the REST APIs is accessible.
    * @return value or {@code null} for none
    */
@@ -234,7 +264,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An optional description of this instance.
+   * Optional. An optional description of this instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -242,7 +272,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An optional description of this instance.
+   * Optional. An optional description of this instance.
    * @param description description or {@code null} for none
    */
   public Instance setDescription(java.lang.String description) {

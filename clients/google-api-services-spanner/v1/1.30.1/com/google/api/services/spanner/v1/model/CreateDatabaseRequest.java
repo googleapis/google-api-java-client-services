@@ -40,7 +40,7 @@ public final class CreateDatabaseRequest extends com.google.api.client.json.Gene
   private java.lang.String createStatement;
 
   /**
-   * An optional list of DDL statements to run inside the newly created database. Statements can
+   * Optional. A list of DDL statements to run inside the newly created database. Statements can
    * create tables, indexes, etc. These statements execute atomically with the creation of the
    * database: if there is an error in any statement, the database is not created.
    * The value may be {@code null}.
@@ -72,7 +72,7 @@ public final class CreateDatabaseRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * An optional list of DDL statements to run inside the newly created database. Statements can
+   * Optional. A list of DDL statements to run inside the newly created database. Statements can
    * create tables, indexes, etc. These statements execute atomically with the creation of the
    * database: if there is an error in any statement, the database is not created.
    * @return value or {@code null} for none
@@ -82,7 +82,7 @@ public final class CreateDatabaseRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * An optional list of DDL statements to run inside the newly created database. Statements can
+   * Optional. A list of DDL statements to run inside the newly created database. Statements can
    * create tables, indexes, etc. These statements execute atomically with the creation of the
    * database: if there is an error in any statement, the database is not created.
    * @param extraStatements extraStatements or {@code null} for none

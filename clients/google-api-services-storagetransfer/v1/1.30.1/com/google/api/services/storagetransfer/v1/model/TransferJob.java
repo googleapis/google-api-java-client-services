@@ -59,17 +59,17 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
   private String lastModificationTime;
 
   /**
-   * A unique name (within the transfer project) assigned when the job is created. If this field is
-   * left empty in a CreateTransferJobRequest, Storage Transfer Service will assign a unique name.
-   * Otherwise, the supplied name is used as the unique name for this job.
+   * A unique name (within the transfer project) assigned when the job is created.  If this field is
+   * empty in a CreateTransferJobRequest, Storage Transfer Service will assign a unique name.
+   * Otherwise, the specified name is used as the unique name for this job.
+   *
+   * If the specified name is in use by a job, the creation request fails with an ALREADY_EXISTS
+   * error.
    *
    * This name must start with `"transferJobs/"` prefix and end with a letter or a number, and
-   * should be no more than 128 characters. Example of a valid format :
-   * `"transferJobs/[A-Za-z0-9-._~]*[A-Za-z0-9]$"`
+   * should be no more than 128 characters. Example: `"transferJobs/[A-Za-z0-9-._~]*[A-Za-z0-9]$"`
    *
-   * **Note:** If the supplied name is already in use, the creation request results in an
-   * ALREADY_EXISTS error and the transfer job will not be created.  Invalid job names will return
-   * an INVALID_ARGUMENT error and the job will not be created.
+   * Invalid job names will fail with an INVALID_ARGUMENT error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -178,17 +178,17 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A unique name (within the transfer project) assigned when the job is created. If this field is
-   * left empty in a CreateTransferJobRequest, Storage Transfer Service will assign a unique name.
-   * Otherwise, the supplied name is used as the unique name for this job.
+   * A unique name (within the transfer project) assigned when the job is created.  If this field is
+   * empty in a CreateTransferJobRequest, Storage Transfer Service will assign a unique name.
+   * Otherwise, the specified name is used as the unique name for this job.
+   *
+   * If the specified name is in use by a job, the creation request fails with an ALREADY_EXISTS
+   * error.
    *
    * This name must start with `"transferJobs/"` prefix and end with a letter or a number, and
-   * should be no more than 128 characters. Example of a valid format :
-   * `"transferJobs/[A-Za-z0-9-._~]*[A-Za-z0-9]$"`
+   * should be no more than 128 characters. Example: `"transferJobs/[A-Za-z0-9-._~]*[A-Za-z0-9]$"`
    *
-   * **Note:** If the supplied name is already in use, the creation request results in an
-   * ALREADY_EXISTS error and the transfer job will not be created.  Invalid job names will return
-   * an INVALID_ARGUMENT error and the job will not be created.
+   * Invalid job names will fail with an INVALID_ARGUMENT error.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -196,17 +196,17 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A unique name (within the transfer project) assigned when the job is created. If this field is
-   * left empty in a CreateTransferJobRequest, Storage Transfer Service will assign a unique name.
-   * Otherwise, the supplied name is used as the unique name for this job.
+   * A unique name (within the transfer project) assigned when the job is created.  If this field is
+   * empty in a CreateTransferJobRequest, Storage Transfer Service will assign a unique name.
+   * Otherwise, the specified name is used as the unique name for this job.
+   *
+   * If the specified name is in use by a job, the creation request fails with an ALREADY_EXISTS
+   * error.
    *
    * This name must start with `"transferJobs/"` prefix and end with a letter or a number, and
-   * should be no more than 128 characters. Example of a valid format :
-   * `"transferJobs/[A-Za-z0-9-._~]*[A-Za-z0-9]$"`
+   * should be no more than 128 characters. Example: `"transferJobs/[A-Za-z0-9-._~]*[A-Za-z0-9]$"`
    *
-   * **Note:** If the supplied name is already in use, the creation request results in an
-   * ALREADY_EXISTS error and the transfer job will not be created.  Invalid job names will return
-   * an INVALID_ARGUMENT error and the job will not be created.
+   * Invalid job names will fail with an INVALID_ARGUMENT error.
    * @param name name or {@code null} for none
    */
   public TransferJob setName(java.lang.String name) {

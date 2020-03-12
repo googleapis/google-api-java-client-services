@@ -1372,6 +1372,8 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
      * Clients can use this API before uploading blobs to determine which ones are already present in
      * the CAS and do not need to be uploaded again.
      *
+     * Servers SHOULD increase the TTLs of the referenced blobs if necessary and applicable.
+     *
      * There are no method-specific errors.
      *
      * Create a request for the method "blobs.findMissing".
@@ -1409,6 +1411,8 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
        *
        * Clients can use this API before uploading blobs to determine which ones are already present in
        * the CAS and do not need to be uploaded again.
+       *
+       * Servers SHOULD increase the TTLs of the referenced blobs if necessary and applicable.
        *
        * There are no method-specific errors.
        *
@@ -1552,6 +1556,8 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
      * If part of the tree is missing from the CAS, the server will return the portion present and omit
      * the rest.
      *
+     * Errors:
+     *
      * * `NOT_FOUND`: The requested tree root is not present in the CAS.
      *
      * Create a request for the method "blobs.getTree".
@@ -1602,6 +1608,8 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
        *
        * If part of the tree is missing from the CAS, the server will return the portion present and
        * omit the rest.
+       *
+       * Errors:
        *
        * * `NOT_FOUND`: The requested tree root is not present in the CAS.
        *
@@ -1807,13 +1815,14 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
 
       /**
        * A page token, which must be a value received in a previous GetTreeResponse. If present, the
-       * server will use it to return the following page of results.
+       * server will use that token as an offset, returning only that page and the ones that succeed
+       * it.
        */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
       /** A page token, which must be a value received in a previous GetTreeResponse. If present, the server
-     will use it to return the following page of results.
+     will use that token as an offset, returning only that page and the ones that succeed it.
        */
       public java.lang.String getPageToken() {
         return pageToken;
@@ -1821,7 +1830,8 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
 
       /**
        * A page token, which must be a value received in a previous GetTreeResponse. If present, the
-       * server will use it to return the following page of results.
+       * server will use that token as an offset, returning only that page and the ones that succeed
+       * it.
        */
       public GetTree setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;

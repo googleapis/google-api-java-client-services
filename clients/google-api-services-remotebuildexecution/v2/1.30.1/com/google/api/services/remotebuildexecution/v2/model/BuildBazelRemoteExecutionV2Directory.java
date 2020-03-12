@@ -32,7 +32,8 @@ package com.google.api.services.remotebuildexecution.v2.model;
  * with a Directory that has both "Foo" and "foo" as   children, but the Action may be rejected by
  * the remote system upon   execution. * The files, directories and symlinks in the directory must
  * each be sorted   in lexicographical order by path. The path strings must be sorted by code
- * point, equivalently, by UTF-8 bytes.
+ * point, equivalently, by UTF-8 bytes. * The NodeProperties of files,   directories, and symlinks
+ * must be sorted in lexicographical order by   property name.
  *
  * A `Directory` that obeys the restrictions is said to be in canonical form.
  *
@@ -40,8 +41,10 @@ package com.google.api.services.remotebuildexecution.v2.model;
  * with an executable file named `baz` (hashes shortened for readability):
  *
  * ```json // (Directory proto) {   files: [     {       name: "bar",       digest: {         hash:
- * "4a73bc9d03...",         size: 65534       }     }   ],   directories: [     {       name: "foo",
- * digest: {         hash: "4cf2eda940...",         size: 43       }     }   ] }
+ * "4a73bc9d03...",         size: 65534       },       node_properties: [         {
+ * "name": "MTime",           "value": "2017-01-15T01:30:15.01Z"         }       ]     }   ],
+ * directories: [     {       name: "foo",       digest: {         hash: "4cf2eda940...",
+ * size: 43       }     }   ] }
  *
  * // (Directory proto with hash "4cf2eda940..." and size 43) {   files: [     {       name: "baz",
  * digest: {         hash: "b2c941073e...",         size: 1294,       },       is_executable: true
@@ -71,6 +74,13 @@ public final class BuildBazelRemoteExecutionV2Directory extends com.google.api.c
    */
   @com.google.api.client.util.Key
   private java.util.List<BuildBazelRemoteExecutionV2FileNode> files;
+
+  /**
+   * The node properties of the Directory.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<BuildBazelRemoteExecutionV2NodeProperty> nodeProperties;
 
   /**
    * The symlinks in the directory.
@@ -110,6 +120,23 @@ public final class BuildBazelRemoteExecutionV2Directory extends com.google.api.c
    */
   public BuildBazelRemoteExecutionV2Directory setFiles(java.util.List<BuildBazelRemoteExecutionV2FileNode> files) {
     this.files = files;
+    return this;
+  }
+
+  /**
+   * The node properties of the Directory.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<BuildBazelRemoteExecutionV2NodeProperty> getNodeProperties() {
+    return nodeProperties;
+  }
+
+  /**
+   * The node properties of the Directory.
+   * @param nodeProperties nodeProperties or {@code null} for none
+   */
+  public BuildBazelRemoteExecutionV2Directory setNodeProperties(java.util.List<BuildBazelRemoteExecutionV2NodeProperty> nodeProperties) {
+    this.nodeProperties = nodeProperties;
     return this;
   }
 

@@ -38,6 +38,19 @@ public final class BuildBazelRemoteExecutionV2SymlinkNode extends com.google.api
   private java.lang.String name;
 
   /**
+   * The node properties of the SymlinkNode.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<BuildBazelRemoteExecutionV2NodeProperty> nodeProperties;
+
+  static {
+    // hack to force ProGuard to consider BuildBazelRemoteExecutionV2NodeProperty used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(BuildBazelRemoteExecutionV2NodeProperty.class);
+  }
+
+  /**
    * The target path of the symlink. The path separator is a forward slash `/`. The target path can
    * be relative to the parent directory of the symlink or it can be an absolute path starting with
    * `/`. Support for absolute paths can be checked using the Capabilities API. The canonical form
@@ -62,6 +75,23 @@ public final class BuildBazelRemoteExecutionV2SymlinkNode extends com.google.api
    */
   public BuildBazelRemoteExecutionV2SymlinkNode setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * The node properties of the SymlinkNode.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<BuildBazelRemoteExecutionV2NodeProperty> getNodeProperties() {
+    return nodeProperties;
+  }
+
+  /**
+   * The node properties of the SymlinkNode.
+   * @param nodeProperties nodeProperties or {@code null} for none
+   */
+  public BuildBazelRemoteExecutionV2SymlinkNode setNodeProperties(java.util.List<BuildBazelRemoteExecutionV2NodeProperty> nodeProperties) {
+    this.nodeProperties = nodeProperties;
     return this;
   }
 

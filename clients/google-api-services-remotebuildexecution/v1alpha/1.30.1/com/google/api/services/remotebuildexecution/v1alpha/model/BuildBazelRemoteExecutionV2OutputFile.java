@@ -56,6 +56,19 @@ public final class BuildBazelRemoteExecutionV2OutputFile extends com.google.api.
   private java.lang.Boolean isExecutable;
 
   /**
+   * The supported node properties of the OutputFile, if requested by the Action.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<BuildBazelRemoteExecutionV2NodeProperty> nodeProperties;
+
+  static {
+    // hack to force ProGuard to consider BuildBazelRemoteExecutionV2NodeProperty used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(BuildBazelRemoteExecutionV2NodeProperty.class);
+  }
+
+  /**
    * The full path of the file relative to the working directory, including the filename. The path
    * separator is a forward slash `/`. Since this is a relative path, it MUST NOT begin with a
    * leading forward slash.
@@ -152,6 +165,23 @@ public final class BuildBazelRemoteExecutionV2OutputFile extends com.google.api.
    */
   public BuildBazelRemoteExecutionV2OutputFile setIsExecutable(java.lang.Boolean isExecutable) {
     this.isExecutable = isExecutable;
+    return this;
+  }
+
+  /**
+   * The supported node properties of the OutputFile, if requested by the Action.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<BuildBazelRemoteExecutionV2NodeProperty> getNodeProperties() {
+    return nodeProperties;
+  }
+
+  /**
+   * The supported node properties of the OutputFile, if requested by the Action.
+   * @param nodeProperties nodeProperties or {@code null} for none
+   */
+  public BuildBazelRemoteExecutionV2OutputFile setNodeProperties(java.util.List<BuildBazelRemoteExecutionV2NodeProperty> nodeProperties) {
+    this.nodeProperties = nodeProperties;
     return this;
   }
 

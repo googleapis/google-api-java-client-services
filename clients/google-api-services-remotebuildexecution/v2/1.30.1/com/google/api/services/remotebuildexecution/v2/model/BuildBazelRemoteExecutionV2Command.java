@@ -79,6 +79,8 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
    * Directories leading up to the output directories (but not the output directories themselves)
    * are created by the worker prior to execution, even if they are not explicitly part of the input
    * root.
+   *
+   * DEPRECATED since 2.1: Use `output_paths` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,10 +104,38 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
    *
    * Directories leading up to the output files are created by the worker prior to execution, even
    * if they are not explicitly part of the input root.
+   *
+   * DEPRECATED since v2.1: Use `output_paths` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> outputFiles;
+
+  /**
+   * A list of the output paths that the client expects to retrieve from the action. Only the listed
+   * paths will be returned to the client as output. The type of the output (file or directory) is
+   * not specified, and will be determined by the server after action execution. If the resulting
+   * path is a file, it will be returned in an OutputFile) typed field. If the path is a directory,
+   * the entire directory structure will be returned as a Tree message digest, see OutputDirectory)
+   * Other files or directories that may be created during command execution are discarded.
+   *
+   * The paths are relative to the working directory of the action execution. The paths are
+   * specified using a single forward slash (`/`) as a path separator, even if the execution
+   * platform natively uses a different separator. The path MUST NOT include a trailing slash, nor a
+   * leading slash, being a relative path.
+   *
+   * In order to ensure consistent hashing of the same Action, the output paths MUST be deduplicated
+   * and sorted lexicographically by code point (or, equivalently, by UTF-8 bytes).
+   *
+   * Directories leading up to the output paths are created by the worker prior to execution, even
+   * if they are not explicitly part of the input root.
+   *
+   * New in v2.1: this field supersedes the DEPRECATED `output_files` and `output_directories`
+   * fields. If `output_paths` is used, `output_files` and `output_directories` will be ignored!
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> outputPaths;
 
   /**
    * The platform requirements for the execution environment. The server MAY choose to execute the
@@ -198,6 +228,8 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
    * Directories leading up to the output directories (but not the output directories themselves)
    * are created by the worker prior to execution, even if they are not explicitly part of the input
    * root.
+   *
+   * DEPRECATED since 2.1: Use `output_paths` instead.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getOutputDirectories() {
@@ -226,6 +258,8 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
    * Directories leading up to the output directories (but not the output directories themselves)
    * are created by the worker prior to execution, even if they are not explicitly part of the input
    * root.
+   *
+   * DEPRECATED since 2.1: Use `output_paths` instead.
    * @param outputDirectories outputDirectories or {@code null} for none
    */
   public BuildBazelRemoteExecutionV2Command setOutputDirectories(java.util.List<java.lang.String> outputDirectories) {
@@ -251,6 +285,8 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
    *
    * Directories leading up to the output files are created by the worker prior to execution, even
    * if they are not explicitly part of the input root.
+   *
+   * DEPRECATED since v2.1: Use `output_paths` instead.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getOutputFiles() {
@@ -275,10 +311,67 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
    *
    * Directories leading up to the output files are created by the worker prior to execution, even
    * if they are not explicitly part of the input root.
+   *
+   * DEPRECATED since v2.1: Use `output_paths` instead.
    * @param outputFiles outputFiles or {@code null} for none
    */
   public BuildBazelRemoteExecutionV2Command setOutputFiles(java.util.List<java.lang.String> outputFiles) {
     this.outputFiles = outputFiles;
+    return this;
+  }
+
+  /**
+   * A list of the output paths that the client expects to retrieve from the action. Only the listed
+   * paths will be returned to the client as output. The type of the output (file or directory) is
+   * not specified, and will be determined by the server after action execution. If the resulting
+   * path is a file, it will be returned in an OutputFile) typed field. If the path is a directory,
+   * the entire directory structure will be returned as a Tree message digest, see OutputDirectory)
+   * Other files or directories that may be created during command execution are discarded.
+   *
+   * The paths are relative to the working directory of the action execution. The paths are
+   * specified using a single forward slash (`/`) as a path separator, even if the execution
+   * platform natively uses a different separator. The path MUST NOT include a trailing slash, nor a
+   * leading slash, being a relative path.
+   *
+   * In order to ensure consistent hashing of the same Action, the output paths MUST be deduplicated
+   * and sorted lexicographically by code point (or, equivalently, by UTF-8 bytes).
+   *
+   * Directories leading up to the output paths are created by the worker prior to execution, even
+   * if they are not explicitly part of the input root.
+   *
+   * New in v2.1: this field supersedes the DEPRECATED `output_files` and `output_directories`
+   * fields. If `output_paths` is used, `output_files` and `output_directories` will be ignored!
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getOutputPaths() {
+    return outputPaths;
+  }
+
+  /**
+   * A list of the output paths that the client expects to retrieve from the action. Only the listed
+   * paths will be returned to the client as output. The type of the output (file or directory) is
+   * not specified, and will be determined by the server after action execution. If the resulting
+   * path is a file, it will be returned in an OutputFile) typed field. If the path is a directory,
+   * the entire directory structure will be returned as a Tree message digest, see OutputDirectory)
+   * Other files or directories that may be created during command execution are discarded.
+   *
+   * The paths are relative to the working directory of the action execution. The paths are
+   * specified using a single forward slash (`/`) as a path separator, even if the execution
+   * platform natively uses a different separator. The path MUST NOT include a trailing slash, nor a
+   * leading slash, being a relative path.
+   *
+   * In order to ensure consistent hashing of the same Action, the output paths MUST be deduplicated
+   * and sorted lexicographically by code point (or, equivalently, by UTF-8 bytes).
+   *
+   * Directories leading up to the output paths are created by the worker prior to execution, even
+   * if they are not explicitly part of the input root.
+   *
+   * New in v2.1: this field supersedes the DEPRECATED `output_files` and `output_directories`
+   * fields. If `output_paths` is used, `output_files` and `output_directories` will be ignored!
+   * @param outputPaths outputPaths or {@code null} for none
+   */
+  public BuildBazelRemoteExecutionV2Command setOutputPaths(java.util.List<java.lang.String> outputPaths) {
+    this.outputPaths = outputPaths;
     return this;
   }
 

@@ -30,6 +30,13 @@ package com.google.api.services.spanner.v1.model;
 public final class Database extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. If exists, the time at which the database creation started.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createTime;
+
+  /**
    * Required. The name of the database. Values are of the form `projects//instances//databases/`,
    * where `` is as specified in the `CREATE DATABASE` statement. This name can be passed to other
    * API methods to identify the database.
@@ -39,11 +46,36 @@ public final class Database extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. Applicable only for restored databases. Contains information about the restore
+   * source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RestoreInfo restoreInfo;
+
+  /**
    * Output only. The current database state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * Output only. If exists, the time at which the database creation started.
+   * @return value or {@code null} for none
+   */
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * Output only. If exists, the time at which the database creation started.
+   * @param createTime createTime or {@code null} for none
+   */
+  public Database setCreateTime(String createTime) {
+    this.createTime = createTime;
+    return this;
+  }
 
   /**
    * Required. The name of the database. Values are of the form `projects//instances//databases/`,
@@ -63,6 +95,25 @@ public final class Database extends com.google.api.client.json.GenericJson {
    */
   public Database setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. Applicable only for restored databases. Contains information about the restore
+   * source.
+   * @return value or {@code null} for none
+   */
+  public RestoreInfo getRestoreInfo() {
+    return restoreInfo;
+  }
+
+  /**
+   * Output only. Applicable only for restored databases. Contains information about the restore
+   * source.
+   * @param restoreInfo restoreInfo or {@code null} for none
+   */
+  public Database setRestoreInfo(RestoreInfo restoreInfo) {
+    this.restoreInfo = restoreInfo;
     return this;
   }
 

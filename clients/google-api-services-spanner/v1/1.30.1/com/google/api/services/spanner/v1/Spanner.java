@@ -1947,6 +1947,335 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
+       * An accessor for creating requests from the BackupOperations collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Spanner spanner = new Spanner(...);}
+       *   {@code Spanner.BackupOperations.List request = spanner.backupOperations().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public BackupOperations backupOperations() {
+        return new BackupOperations();
+      }
+
+      /**
+       * The "backupOperations" collection of methods.
+       */
+      public class BackupOperations {
+
+        /**
+         * Lists the backup long-running operations in the given instance. A backup operation has a name of
+         * the form `projects//instances//backups//operations/`. The long-running operation metadata field
+         * type `metadata.type_url` describes the type of the metadata. Operations returned include those
+         * that have completed/failed/canceled within the last 7 days, and pending operations. Operations
+         * returned are ordered by `operation.metadata.value.progress.start_time` in descending order
+         * starting from the most recently started operation.
+         *
+         * Create a request for the method "backupOperations.list".
+         *
+         * This request holds the parameters needed by the spanner server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The instance of the backup operations. Values are of
+        the form `projects//instances/`.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends SpannerRequest<com.google.api.services.spanner.v1.model.ListBackupOperationsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/backupOperations";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+$");
+
+          /**
+           * Lists the backup long-running operations in the given instance. A backup operation has a name
+           * of the form `projects//instances//backups//operations/`. The long-running operation metadata
+           * field type `metadata.type_url` describes the type of the metadata. Operations returned include
+           * those that have completed/failed/canceled within the last 7 days, and pending operations.
+           * Operations returned are ordered by `operation.metadata.value.progress.start_time` in descending
+           * order starting from the most recently started operation.
+           *
+           * Create a request for the method "backupOperations.list".
+           *
+           * This request holds the parameters needed by the the spanner server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The instance of the backup operations. Values are of
+        the form `projects//instances/`.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Spanner.this, "GET", REST_PATH, null, com.google.api.services.spanner.v1.model.ListBackupOperationsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The instance of the backup operations. Values are of the form
+           * `projects//instances/`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The instance of the backup operations. Values are of the form `projects//instances/`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The instance of the backup operations. Values are of the form
+           * `projects//instances/`.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * A filter expression that filters what operations are returned in the response.
+           *
+           * The filter expression must specify the field name of an operation, a comparison
+           * operator, and the value that you want to use for filtering. The value must be a string,
+           * a number, or a boolean. The comparison operator must be <, >, <=, >=, !=, =, or :.
+           * Colon ‘:’ represents a HAS operator which is roughly synonymous with equality. Filter
+           * rules are case insensitive.
+           *
+           * The long-running operation fields eligible for filtering are: * `name` --> The name of
+           * the long-running operation * `done` --> False if the operation is in progress, else
+           * true. * `metadata.type_url` (using filter string `metadata.@type`) and fields in
+           * `metadata.value` (using filter string `metadata.`, where  is a field in metadata.value)
+           * are eligible for filtering. * `error` --> Error associated with the long-running
+           * operation. * `response.type_url` (using filter string `response.@type`) and fields in
+           * `response.value` (using filter string `response.`, where  is a field in response.value)
+           * are eligible for filtering.
+           *
+           * To filter on multiple expressions, provide each separate expression within parentheses.
+           * By default, each expression is an AND expression. However, you can include AND, OR, and
+           * NOT expressions explicitly.
+           *
+           * Some examples of using filters are:
+           *
+           * * `done:true` --> The operation is complete. * `metadata.database:prod` --> The
+           * database the backup was taken from has a name containing the string "prod". * `(metadat
+           * a.@type:type.googleapis.com/google.spanner.admin.database.v1.CreateBackupMetadata) AND
+           * (metadata.name:howl) AND (metadata.progress.start_time < \"2018-03-28T14:50:00Z\") AND
+           * (error:*)` --> Return CreateBackup operations where the created backup name contains
+           * the string "howl", the progress.start_time of the backup operation is before
+           * 2018-03-28T14:50:00Z, and the operation returned an error.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** A filter expression that filters what operations are returned in the response.
+
+         The filter expression must specify the field name of an operation, a comparison operator, and the
+         value that you want to use for filtering. The value must be a string, a number, or a boolean. The
+         comparison operator must be <, >, <=, >=, !=, =, or :. Colon ‘:’ represents a HAS operator which is
+         roughly synonymous with equality. Filter rules are case insensitive.
+
+         The long-running operation fields eligible for filtering are: * `name` --> The name of the long-
+         running operation * `done` --> False if the operation is in progress, else true. *
+         `metadata.type_url` (using filter string `metadata.@type`) and fields in `metadata.value` (using
+         filter string `metadata.`, where  is a field in metadata.value) are eligible for filtering. *
+         `error` --> Error associated with the long-running operation. * `response.type_url` (using filter
+         string `response.@type`) and fields in `response.value` (using filter string `response.`, where  is
+         a field in response.value) are eligible for filtering.
+
+         To filter on multiple expressions, provide each separate expression within parentheses. By default,
+         each expression is an AND expression. However, you can include AND, OR, and NOT expressions
+         explicitly.
+
+         Some examples of using filters are:
+
+         * `done:true` --> The operation is complete. * `metadata.database:prod` --> The database the backup
+         was taken from has a name containing the string "prod". *
+         `(metadata.@type:type.googleapis.com/google.spanner.admin.database.v1.CreateBackupMetadata) AND
+         (metadata.name:howl) AND (metadata.progress.start_time < \"2018-03-28T14:50:00Z\") AND (error:*)`
+         --> Return CreateBackup operations where the created backup name contains the string "howl", the
+         progress.start_time of the backup operation is before 2018-03-28T14:50:00Z, and the operation
+         returned an error.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * A filter expression that filters what operations are returned in the response.
+           *
+           * The filter expression must specify the field name of an operation, a comparison
+           * operator, and the value that you want to use for filtering. The value must be a string,
+           * a number, or a boolean. The comparison operator must be <, >, <=, >=, !=, =, or :.
+           * Colon ‘:’ represents a HAS operator which is roughly synonymous with equality. Filter
+           * rules are case insensitive.
+           *
+           * The long-running operation fields eligible for filtering are: * `name` --> The name of
+           * the long-running operation * `done` --> False if the operation is in progress, else
+           * true. * `metadata.type_url` (using filter string `metadata.@type`) and fields in
+           * `metadata.value` (using filter string `metadata.`, where  is a field in metadata.value)
+           * are eligible for filtering. * `error` --> Error associated with the long-running
+           * operation. * `response.type_url` (using filter string `response.@type`) and fields in
+           * `response.value` (using filter string `response.`, where  is a field in response.value)
+           * are eligible for filtering.
+           *
+           * To filter on multiple expressions, provide each separate expression within parentheses.
+           * By default, each expression is an AND expression. However, you can include AND, OR, and
+           * NOT expressions explicitly.
+           *
+           * Some examples of using filters are:
+           *
+           * * `done:true` --> The operation is complete. * `metadata.database:prod` --> The
+           * database the backup was taken from has a name containing the string "prod". * `(metadat
+           * a.@type:type.googleapis.com/google.spanner.admin.database.v1.CreateBackupMetadata) AND
+           * (metadata.name:howl) AND (metadata.progress.start_time < \"2018-03-28T14:50:00Z\") AND
+           * (error:*)` --> Return CreateBackup operations where the created backup name contains
+           * the string "howl", the progress.start_time of the backup operation is before
+           * 2018-03-28T14:50:00Z, and the operation returned an error.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Number of operations to be returned in the response. If 0 or less, defaults to the
+           * server's maximum allowed page size.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Number of operations to be returned in the response. If 0 or less, defaults to the server's maximum
+         allowed page size.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Number of operations to be returned in the response. If 0 or less, defaults to the
+           * server's maximum allowed page size.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * If non-empty, `page_token` should contain a next_page_token from a previous
+           * ListBackupOperationsResponse to the same `parent` and with the same `filter`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** If non-empty, `page_token` should contain a next_page_token from a previous
+         ListBackupOperationsResponse to the same `parent` and with the same `filter`.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * If non-empty, `page_token` should contain a next_page_token from a previous
+           * ListBackupOperationsResponse to the same `parent` and with the same `filter`.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the Backups collection.
        *
        * <p>The typical use is:</p>
@@ -1967,10 +2296,487 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
       public class Backups {
 
         /**
-         * Gets the access control policy for a database resource. Returns an empty policy if a database
-         * exists but does not have a policy set.
+         * Starts creating a new Cloud Spanner Backup. The returned backup long-running operation will have
+         * a name of the format `projects//instances//backups//operations/` and can be used to track
+         * creation of the backup. The metadata field type is CreateBackupMetadata. The response field type
+         * is Backup, if successful. Cancelling the returned operation will stop the creation and delete the
+         * backup. There can be only one pending backup creation per database. Backup creation of different
+         * databases can run concurrently.
          *
-         * Authorization requires `spanner.databases.getIamPolicy` permission on resource.
+         * Create a request for the method "backups.create".
+         *
+         * This request holds the parameters needed by the spanner server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The name of the instance in which the backup will be
+        created. This must be the same
+         *        instance that contains the database the
+        backup will be created from. The backup will be
+         *        stored in the
+        location(s) specified in the instance configuration of this
+        instance. Values
+         *        are of the form
+        `projects//instances/`.
+         * @param content the {@link com.google.api.services.spanner.v1.model.Backup}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.spanner.v1.model.Backup content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends SpannerRequest<com.google.api.services.spanner.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+parent}/backups";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+$");
+
+          /**
+           * Starts creating a new Cloud Spanner Backup. The returned backup long-running operation will
+           * have a name of the format `projects//instances//backups//operations/` and can be used to track
+           * creation of the backup. The metadata field type is CreateBackupMetadata. The response field
+           * type is Backup, if successful. Cancelling the returned operation will stop the creation and
+           * delete the backup. There can be only one pending backup creation per database. Backup creation
+           * of different databases can run concurrently.
+           *
+           * Create a request for the method "backups.create".
+           *
+           * This request holds the parameters needed by the the spanner server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The name of the instance in which the backup will be
+        created. This must be the same
+         *        instance that contains the database the
+        backup will be created from. The backup will be
+         *        stored in the
+        location(s) specified in the instance configuration of this
+        instance. Values
+         *        are of the form
+        `projects//instances/`.
+           * @param content the {@link com.google.api.services.spanner.v1.model.Backup}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.spanner.v1.model.Backup content) {
+            super(Spanner.this, "POST", REST_PATH, content, com.google.api.services.spanner.v1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the instance in which the backup will be created. This must be
+           * the same instance that contains the database the backup will be created from. The
+           * backup will be stored in the location(s) specified in the instance configuration of
+           * this instance. Values are of the form `projects//instances/`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The name of the instance in which the backup will be created. This must be the same
+         instance that contains the database the backup will be created from. The backup will be stored in
+         the location(s) specified in the instance configuration of this instance. Values are of the form
+         `projects//instances/`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The name of the instance in which the backup will be created. This must be
+           * the same instance that contains the database the backup will be created from. The
+           * backup will be stored in the location(s) specified in the instance configuration of
+           * this instance. Values are of the form `projects//instances/`.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. The id of the backup to be created. The `backup_id` appended to `parent`
+           * forms the full backup name of the form `projects//instances//backups/`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String backupId;
+
+          /** Required. The id of the backup to be created. The `backup_id` appended to `parent` forms the full
+         backup name of the form `projects//instances//backups/`.
+           */
+          public java.lang.String getBackupId() {
+            return backupId;
+          }
+
+          /**
+           * Required. The id of the backup to be created. The `backup_id` appended to `parent`
+           * forms the full backup name of the form `projects//instances//backups/`.
+           */
+          public Create setBackupId(java.lang.String backupId) {
+            this.backupId = backupId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a pending or completed Backup.
+         *
+         * Create a request for the method "backups.delete".
+         *
+         * This request holds the parameters needed by the spanner server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the backup to delete.
+        Values are of the form
+        `projects//instances//backups/`.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends SpannerRequest<com.google.api.services.spanner.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/backups/[^/]+$");
+
+          /**
+           * Deletes a pending or completed Backup.
+           *
+           * Create a request for the method "backups.delete".
+           *
+           * This request holds the parameters needed by the the spanner server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the backup to delete.
+        Values are of the form
+        `projects//instances//backups/`.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Spanner.this, "DELETE", REST_PATH, null, com.google.api.services.spanner.v1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+/backups/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the backup to delete. Values are of the form
+           * `projects//instances//backups/`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the backup to delete. Values are of the form `projects//instances//backups/`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the backup to delete. Values are of the form
+           * `projects//instances//backups/`.
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+/backups/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets metadata on a pending or completed Backup.
+         *
+         * Create a request for the method "backups.get".
+         *
+         * This request holds the parameters needed by the spanner server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the backup.
+        Values are of the form
+        `projects//instances//backups/`.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends SpannerRequest<com.google.api.services.spanner.v1.model.Backup> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/backups/[^/]+$");
+
+          /**
+           * Gets metadata on a pending or completed Backup.
+           *
+           * Create a request for the method "backups.get".
+           *
+           * This request holds the parameters needed by the the spanner server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the backup.
+        Values are of the form
+        `projects//instances//backups/`.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Spanner.this, "GET", REST_PATH, null, com.google.api.services.spanner.v1.model.Backup.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+/backups/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the backup. Values are of the form `projects//instances//backups/`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the backup. Values are of the form `projects//instances//backups/`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the backup. Values are of the form `projects//instances//backups/`.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+/backups/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets the access control policy for a database or backup resource. Returns an empty policy if a
+         * database or backup exists but does not have a policy set.
+         *
+         * Authorization requires `spanner.databases.getIamPolicy` permission on resource. For backups,
+         * authorization requires `spanner.backups.getIamPolicy` permission on resource.
          *
          * Create a request for the method "backups.getIamPolicy".
          *
@@ -1997,10 +2803,11 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
               java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/backups/[^/]+$");
 
           /**
-           * Gets the access control policy for a database resource. Returns an empty policy if a database
-           * exists but does not have a policy set.
+           * Gets the access control policy for a database or backup resource. Returns an empty policy if a
+           * database or backup exists but does not have a policy set.
            *
-           * Authorization requires `spanner.databases.getIamPolicy` permission on resource.
+           * Authorization requires `spanner.databases.getIamPolicy` permission on resource. For backups,
+           * authorization requires `spanner.backups.getIamPolicy` permission on resource.
            *
            * Create a request for the method "backups.getIamPolicy".
            *
@@ -2118,9 +2925,510 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           }
         }
         /**
-         * Sets the access control policy on a database resource. Replaces any existing policy.
+         * Lists completed and pending backups. Backups returned are ordered by `create_time` in descending
+         * order, starting from the most recent `create_time`.
          *
-         * Authorization requires `spanner.databases.setIamPolicy` permission on resource.
+         * Create a request for the method "backups.list".
+         *
+         * This request holds the parameters needed by the spanner server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The instance to list backups from.  Values are of the
+        form `projects//instances/`.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends SpannerRequest<com.google.api.services.spanner.v1.model.ListBackupsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/backups";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+$");
+
+          /**
+           * Lists completed and pending backups. Backups returned are ordered by `create_time` in
+           * descending order, starting from the most recent `create_time`.
+           *
+           * Create a request for the method "backups.list".
+           *
+           * This request holds the parameters needed by the the spanner server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The instance to list backups from.  Values are of the
+        form `projects//instances/`.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Spanner.this, "GET", REST_PATH, null, com.google.api.services.spanner.v1.model.ListBackupsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The instance to list backups from.  Values are of the form
+           * `projects//instances/`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The instance to list backups from.  Values are of the form `projects//instances/`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The instance to list backups from.  Values are of the form
+           * `projects//instances/`.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * A filter expression that filters backups listed in the response. The expression must
+           * specify the field name, a comparison operator, and the value that you want to use for
+           * filtering. The value must be a string, a number, or a boolean. The comparison operator
+           * must be <, >, <=, >=, !=, =, or :. Colon ‘:’ represents a HAS operator which is roughly
+           * synonymous with equality. Filter rules are case insensitive.
+           *
+           * The fields eligible for filtering are: * `name` * `database` * `state` * `create_time`
+           * (and values are of the format YYYY-MM-DDTHH:MM:SSZ) * `expire_time` (and values are of
+           * the format YYYY-MM-DDTHH:MM:SSZ) * `size_bytes`
+           *
+           * To filter on multiple expressions, provide each separate expression within parentheses.
+           * By default, each expression is an AND expression. However, you can include AND, OR, and
+           * NOT expressions explicitly.
+           *
+           * Some examples of using filters are:
+           *
+           * * `name:Howl` --> The backup's name contains the string "howl". * `database:prod` -->
+           * The database's name contains the string "prod". * `state:CREATING` --> The backup is
+           * pending creation. * `state:READY` --> The backup is fully created and ready for use. *
+           * `(name:howl) AND (create_time < \"2018-03-28T14:50:00Z\")` --> The backup name contains
+           * the string "howl" and `create_time` of the backup is before 2018-03-28T14:50:00Z. *
+           * `expire_time < \"2018-03-28T14:50:00Z\"` --> The backup `expire_time` is before
+           * 2018-03-28T14:50:00Z. * `size_bytes > 10000000000` --> The backup's size is greater
+           * than 10GB
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** A filter expression that filters backups listed in the response. The expression must specify the
+         field name, a comparison operator, and the value that you want to use for filtering. The value must
+         be a string, a number, or a boolean. The comparison operator must be <, >, <=, >=, !=, =, or :.
+         Colon ‘:’ represents a HAS operator which is roughly synonymous with equality. Filter rules are
+         case insensitive.
+
+         The fields eligible for filtering are: * `name` * `database` * `state` * `create_time` (and values
+         are of the format YYYY-MM-DDTHH:MM:SSZ) * `expire_time` (and values are of the format YYYY-MM-
+         DDTHH:MM:SSZ) * `size_bytes`
+
+         To filter on multiple expressions, provide each separate expression within parentheses. By default,
+         each expression is an AND expression. However, you can include AND, OR, and NOT expressions
+         explicitly.
+
+         Some examples of using filters are:
+
+         * `name:Howl` --> The backup's name contains the string "howl". * `database:prod` --> The
+         database's name contains the string "prod". * `state:CREATING` --> The backup is pending creation.
+         * `state:READY` --> The backup is fully created and ready for use. * `(name:howl) AND (create_time
+         < \"2018-03-28T14:50:00Z\")` --> The backup name contains the string "howl" and `create_time` of
+         the backup is before 2018-03-28T14:50:00Z. * `expire_time < \"2018-03-28T14:50:00Z\"` --> The
+         backup `expire_time` is before 2018-03-28T14:50:00Z. * `size_bytes > 10000000000` --> The backup's
+         size is greater than 10GB
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * A filter expression that filters backups listed in the response. The expression must
+           * specify the field name, a comparison operator, and the value that you want to use for
+           * filtering. The value must be a string, a number, or a boolean. The comparison operator
+           * must be <, >, <=, >=, !=, =, or :. Colon ‘:’ represents a HAS operator which is roughly
+           * synonymous with equality. Filter rules are case insensitive.
+           *
+           * The fields eligible for filtering are: * `name` * `database` * `state` * `create_time`
+           * (and values are of the format YYYY-MM-DDTHH:MM:SSZ) * `expire_time` (and values are of
+           * the format YYYY-MM-DDTHH:MM:SSZ) * `size_bytes`
+           *
+           * To filter on multiple expressions, provide each separate expression within parentheses.
+           * By default, each expression is an AND expression. However, you can include AND, OR, and
+           * NOT expressions explicitly.
+           *
+           * Some examples of using filters are:
+           *
+           * * `name:Howl` --> The backup's name contains the string "howl". * `database:prod` -->
+           * The database's name contains the string "prod". * `state:CREATING` --> The backup is
+           * pending creation. * `state:READY` --> The backup is fully created and ready for use. *
+           * `(name:howl) AND (create_time < \"2018-03-28T14:50:00Z\")` --> The backup name contains
+           * the string "howl" and `create_time` of the backup is before 2018-03-28T14:50:00Z. *
+           * `expire_time < \"2018-03-28T14:50:00Z\"` --> The backup `expire_time` is before
+           * 2018-03-28T14:50:00Z. * `size_bytes > 10000000000` --> The backup's size is greater
+           * than 10GB
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Number of backups to be returned in the response. If 0 or less, defaults to the
+           * server's maximum allowed page size.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Number of backups to be returned in the response. If 0 or less, defaults to the server's maximum
+         allowed page size.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Number of backups to be returned in the response. If 0 or less, defaults to the
+           * server's maximum allowed page size.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * If non-empty, `page_token` should contain a next_page_token from a previous
+           * ListBackupsResponse to the same `parent` and with the same `filter`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** If non-empty, `page_token` should contain a next_page_token from a previous ListBackupsResponse to
+         the same `parent` and with the same `filter`.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * If non-empty, `page_token` should contain a next_page_token from a previous
+           * ListBackupsResponse to the same `parent` and with the same `filter`.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a pending or completed Backup.
+         *
+         * Create a request for the method "backups.patch".
+         *
+         * This request holds the parameters needed by the spanner server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Output only for the CreateBackup][DatabaseAdmin.CreateBackup] operation.
+        Required for the
+         *        UpdateBackup operation.
+        A globally unique identifier for the backup which cannot be
+         *        changed. Values are of the form
+        `projects//instances//backups/a-z*[a-z0-9]`
+        The final
+         *        segment of the name must be between 2 and 60 characters
+        in length.
+        The backup is stored in
+         *        the location(s) specified in the instance
+        configuration of the instance containing the
+         *        backup, identified
+        by the prefix of the backup name of the form
+        `projects//instances/`.
+         * @param content the {@link com.google.api.services.spanner.v1.model.Backup}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.spanner.v1.model.Backup content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends SpannerRequest<com.google.api.services.spanner.v1.model.Backup> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/backups/[^/]+$");
+
+          /**
+           * Updates a pending or completed Backup.
+           *
+           * Create a request for the method "backups.patch".
+           *
+           * This request holds the parameters needed by the the spanner server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Output only for the CreateBackup][DatabaseAdmin.CreateBackup] operation.
+        Required for the
+         *        UpdateBackup operation.
+        A globally unique identifier for the backup which cannot be
+         *        changed. Values are of the form
+        `projects//instances//backups/a-z*[a-z0-9]`
+        The final
+         *        segment of the name must be between 2 and 60 characters
+        in length.
+        The backup is stored in
+         *        the location(s) specified in the instance
+        configuration of the instance containing the
+         *        backup, identified
+        by the prefix of the backup name of the form
+        `projects//instances/`.
+           * @param content the {@link com.google.api.services.spanner.v1.model.Backup}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.spanner.v1.model.Backup content) {
+            super(Spanner.this, "PATCH", REST_PATH, content, com.google.api.services.spanner.v1.model.Backup.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+/backups/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Output only for the CreateBackup][DatabaseAdmin.CreateBackup] operation. Required for
+           * the UpdateBackup operation.
+           *
+           * A globally unique identifier for the backup which cannot be changed. Values are of the
+           * form `projects//instances//backups/a-z*[a-z0-9]` The final segment of the name must be
+           * between 2 and 60 characters in length.
+           *
+           * The backup is stored in the location(s) specified in the instance configuration of the
+           * instance containing the backup, identified by the prefix of the backup name of the form
+           * `projects//instances/`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Output only for the CreateBackup][DatabaseAdmin.CreateBackup] operation. Required for the
+         UpdateBackup operation.
+
+         A globally unique identifier for the backup which cannot be changed. Values are of the form
+         `projects//instances//backups/a-z*[a-z0-9]` The final segment of the name must be between 2 and 60
+         characters in length.
+
+         The backup is stored in the location(s) specified in the instance configuration of the instance
+         containing the backup, identified by the prefix of the backup name of the form
+         `projects//instances/`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Output only for the CreateBackup][DatabaseAdmin.CreateBackup] operation. Required for
+           * the UpdateBackup operation.
+           *
+           * A globally unique identifier for the backup which cannot be changed. Values are of the
+           * form `projects//instances//backups/a-z*[a-z0-9]` The final segment of the name must be
+           * between 2 and 60 characters in length.
+           *
+           * The backup is stored in the location(s) specified in the instance configuration of the
+           * instance containing the backup, identified by the prefix of the backup name of the form
+           * `projects//instances/`.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+/backups/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Required. A mask specifying which fields (e.g. `expire_time`) in the Backup resource
+           * should be updated. This mask is relative to the Backup resource, not to the request
+           * message. The field mask must always be specified; this prevents any future fields from
+           * being erased accidentally by clients that do not know about them.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. A mask specifying which fields (e.g. `expire_time`) in the Backup resource should be
+         updated. This mask is relative to the Backup resource, not to the request message. The field mask
+         must always be specified; this prevents any future fields from being erased accidentally by clients
+         that do not know about them.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Required. A mask specifying which fields (e.g. `expire_time`) in the Backup resource
+           * should be updated. This mask is relative to the Backup resource, not to the request
+           * message. The field mask must always be specified; this prevents any future fields from
+           * being erased accidentally by clients that do not know about them.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Sets the access control policy on a database or backup resource. Replaces any existing policy.
+         *
+         * Authorization requires `spanner.databases.setIamPolicy` permission on resource. For backups,
+         * authorization requires `spanner.backups.setIamPolicy` permission on resource.
          *
          * Create a request for the method "backups.setIamPolicy".
          *
@@ -2147,9 +3455,10 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
               java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/backups/[^/]+$");
 
           /**
-           * Sets the access control policy on a database resource. Replaces any existing policy.
+           * Sets the access control policy on a database or backup resource. Replaces any existing policy.
            *
-           * Authorization requires `spanner.databases.setIamPolicy` permission on resource.
+           * Authorization requires `spanner.databases.setIamPolicy` permission on resource. For backups,
+           * authorization requires `spanner.backups.setIamPolicy` permission on resource.
            *
            * Create a request for the method "backups.setIamPolicy".
            *
@@ -2267,11 +3576,13 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           }
         }
         /**
-         * Returns permissions that the caller has on the specified database resource.
+         * Returns permissions that the caller has on the specified database or backup resource.
          *
          * Attempting this RPC on a non-existent Cloud Spanner database will result in a NOT_FOUND error if
          * the user has `spanner.databases.list` permission on the containing Cloud Spanner instance.
-         * Otherwise returns an empty set of permissions.
+         * Otherwise returns an empty set of permissions. Calling this method on a backup that does not
+         * exist will result in a NOT_FOUND error if the user has `spanner.backups.list` permission on the
+         * containing instance.
          *
          * Create a request for the method "backups.testIamPermissions".
          *
@@ -2298,11 +3609,13 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
               java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/backups/[^/]+$");
 
           /**
-           * Returns permissions that the caller has on the specified database resource.
+           * Returns permissions that the caller has on the specified database or backup resource.
            *
            * Attempting this RPC on a non-existent Cloud Spanner database will result in a NOT_FOUND error
            * if the user has `spanner.databases.list` permission on the containing Cloud Spanner instance.
-           * Otherwise returns an empty set of permissions.
+           * Otherwise returns an empty set of permissions. Calling this method on a backup that does not
+           * exist will result in a NOT_FOUND error if the user has `spanner.backups.list` permission on the
+           * containing instance.
            *
            * Create a request for the method "backups.testIamPermissions".
            *
@@ -3056,6 +4369,331 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
+       * An accessor for creating requests from the DatabaseOperations collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Spanner spanner = new Spanner(...);}
+       *   {@code Spanner.DatabaseOperations.List request = spanner.databaseOperations().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public DatabaseOperations databaseOperations() {
+        return new DatabaseOperations();
+      }
+
+      /**
+       * The "databaseOperations" collection of methods.
+       */
+      public class DatabaseOperations {
+
+        /**
+         * Lists database longrunning-operations. A database operation has a name of the form
+         * `projects//instances//databases//operations/`. The long-running operation metadata field type
+         * `metadata.type_url` describes the type of the metadata. Operations returned include those that
+         * have completed/failed/canceled within the last 7 days, and pending operations.
+         *
+         * Create a request for the method "databaseOperations.list".
+         *
+         * This request holds the parameters needed by the spanner server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The instance of the database operations.
+        Values are of the form `projects//instances/`.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends SpannerRequest<com.google.api.services.spanner.v1.model.ListDatabaseOperationsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/databaseOperations";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+$");
+
+          /**
+           * Lists database longrunning-operations. A database operation has a name of the form
+           * `projects//instances//databases//operations/`. The long-running operation metadata field type
+           * `metadata.type_url` describes the type of the metadata. Operations returned include those that
+           * have completed/failed/canceled within the last 7 days, and pending operations.
+           *
+           * Create a request for the method "databaseOperations.list".
+           *
+           * This request holds the parameters needed by the the spanner server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The instance of the database operations.
+        Values are of the form `projects//instances/`.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Spanner.this, "GET", REST_PATH, null, com.google.api.services.spanner.v1.model.ListDatabaseOperationsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The instance of the database operations. Values are of the form
+           * `projects//instances/`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The instance of the database operations. Values are of the form `projects//instances/`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The instance of the database operations. Values are of the form
+           * `projects//instances/`.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * A filter expression that filters what operations are returned in the response.
+           *
+           * The filter expression must specify the field name, a comparison operator, and the value
+           * that you want to use for filtering. The value must be a string, a number, or a boolean.
+           * The comparison operator must be <, >, <=, >=, !=, =, or :. Colon ‘:’ represents a HAS
+           * operator which is roughly synonymous with equality. Filter rules are case insensitive.
+           *
+           * The long-running operation fields eligible for filtering are: * `name` --> The name of
+           * the long-running operation * `done` --> False if the operation is in progress, else
+           * true. * `metadata.type_url` (using filter string `metadata.@type`) and fields in
+           * `metadata.value` (using filter string `metadata.`, where  is a field in metadata.value)
+           * are eligible for filtering. * `error` --> Error associated with the long-running
+           * operation. * `response.type_url` (using filter string `response.@type`) and fields in
+           * `response.value` (using filter string `response.`, where  is a field in response.value)
+           * are eligible for filtering.
+           *
+           * To filter on multiple expressions, provide each separate expression within parentheses.
+           * By default, each expression is an AND expression. However, you can include AND, OR, and
+           * NOT expressions explicitly.
+           *
+           * Some examples of using filters are:
+           *
+           * * `done:true` --> The operation is complete. * `(metadata.@type:type.googleapis.com/goo
+           * gle.spanner.admin.database.v1.RestoreDatabaseMetadata) AND
+           * (metadata.source_type:BACKUP) AND (metadata.backup_info.backup:backup_howl) AND
+           * (metadata.name:restored_howl) AND (metadata.progress.start_time <
+           * \"2018-03-28T14:50:00Z\") AND (error:*)` --> Return RestoreDatabase operations from
+           * backups whose name contains "backup_howl", where the created database name contains the
+           * string "restored_howl", the start_time of the restore operation is before
+           * 2018-03-28T14:50:00Z, and the operation returned an error.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** A filter expression that filters what operations are returned in the response.
+
+         The filter expression must specify the field name, a comparison operator, and the value that you
+         want to use for filtering. The value must be a string, a number, or a boolean. The comparison
+         operator must be <, >, <=, >=, !=, =, or :. Colon ‘:’ represents a HAS operator which is roughly
+         synonymous with equality. Filter rules are case insensitive.
+
+         The long-running operation fields eligible for filtering are: * `name` --> The name of the long-
+         running operation * `done` --> False if the operation is in progress, else true. *
+         `metadata.type_url` (using filter string `metadata.@type`) and fields in `metadata.value` (using
+         filter string `metadata.`, where  is a field in metadata.value) are eligible for filtering. *
+         `error` --> Error associated with the long-running operation. * `response.type_url` (using filter
+         string `response.@type`) and fields in `response.value` (using filter string `response.`, where  is
+         a field in response.value) are eligible for filtering.
+
+         To filter on multiple expressions, provide each separate expression within parentheses. By default,
+         each expression is an AND expression. However, you can include AND, OR, and NOT expressions
+         explicitly.
+
+         Some examples of using filters are:
+
+         * `done:true` --> The operation is complete. *
+         `(metadata.@type:type.googleapis.com/google.spanner.admin.database.v1.RestoreDatabaseMetadata) AND
+         (metadata.source_type:BACKUP) AND (metadata.backup_info.backup:backup_howl) AND
+         (metadata.name:restored_howl) AND (metadata.progress.start_time < \"2018-03-28T14:50:00Z\") AND
+         (error:*)` --> Return RestoreDatabase operations from backups whose name contains "backup_howl",
+         where the created database name contains the string "restored_howl", the start_time of the restore
+         operation is before 2018-03-28T14:50:00Z, and the operation returned an error.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * A filter expression that filters what operations are returned in the response.
+           *
+           * The filter expression must specify the field name, a comparison operator, and the value
+           * that you want to use for filtering. The value must be a string, a number, or a boolean.
+           * The comparison operator must be <, >, <=, >=, !=, =, or :. Colon ‘:’ represents a HAS
+           * operator which is roughly synonymous with equality. Filter rules are case insensitive.
+           *
+           * The long-running operation fields eligible for filtering are: * `name` --> The name of
+           * the long-running operation * `done` --> False if the operation is in progress, else
+           * true. * `metadata.type_url` (using filter string `metadata.@type`) and fields in
+           * `metadata.value` (using filter string `metadata.`, where  is a field in metadata.value)
+           * are eligible for filtering. * `error` --> Error associated with the long-running
+           * operation. * `response.type_url` (using filter string `response.@type`) and fields in
+           * `response.value` (using filter string `response.`, where  is a field in response.value)
+           * are eligible for filtering.
+           *
+           * To filter on multiple expressions, provide each separate expression within parentheses.
+           * By default, each expression is an AND expression. However, you can include AND, OR, and
+           * NOT expressions explicitly.
+           *
+           * Some examples of using filters are:
+           *
+           * * `done:true` --> The operation is complete. * `(metadata.@type:type.googleapis.com/goo
+           * gle.spanner.admin.database.v1.RestoreDatabaseMetadata) AND
+           * (metadata.source_type:BACKUP) AND (metadata.backup_info.backup:backup_howl) AND
+           * (metadata.name:restored_howl) AND (metadata.progress.start_time <
+           * \"2018-03-28T14:50:00Z\") AND (error:*)` --> Return RestoreDatabase operations from
+           * backups whose name contains "backup_howl", where the created database name contains the
+           * string "restored_howl", the start_time of the restore operation is before
+           * 2018-03-28T14:50:00Z, and the operation returned an error.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Number of operations to be returned in the response. If 0 or less, defaults to the
+           * server's maximum allowed page size.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Number of operations to be returned in the response. If 0 or less, defaults to the server's maximum
+         allowed page size.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Number of operations to be returned in the response. If 0 or less, defaults to the
+           * server's maximum allowed page size.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * If non-empty, `page_token` should contain a next_page_token from a previous
+           * ListDatabaseOperationsResponse to the same `parent` and with the same `filter`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** If non-empty, `page_token` should contain a next_page_token from a previous
+         ListDatabaseOperationsResponse to the same `parent` and with the same `filter`.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * If non-empty, `page_token` should contain a next_page_token from a previous
+           * ListDatabaseOperationsResponse to the same `parent` and with the same `filter`.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the Databases collection.
        *
        * <p>The typical use is:</p>
@@ -3223,7 +4861,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           }
         }
         /**
-         * Drops (aka deletes) a Cloud Spanner database.
+         * Drops (aka deletes) a Cloud Spanner database. Completed backups for the database will be retained
+         * according to their `expire_time`.
          *
          * Create a request for the method "databases.dropDatabase".
          *
@@ -3247,7 +4886,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
               java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/databases/[^/]+$");
 
           /**
-           * Drops (aka deletes) a Cloud Spanner database.
+           * Drops (aka deletes) a Cloud Spanner database. Completed backups for the database will be
+           * retained according to their `expire_time`.
            *
            * Create a request for the method "databases.dropDatabase".
            *
@@ -3639,10 +5279,11 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           }
         }
         /**
-         * Gets the access control policy for a database resource. Returns an empty policy if a database
-         * exists but does not have a policy set.
+         * Gets the access control policy for a database or backup resource. Returns an empty policy if a
+         * database or backup exists but does not have a policy set.
          *
-         * Authorization requires `spanner.databases.getIamPolicy` permission on resource.
+         * Authorization requires `spanner.databases.getIamPolicy` permission on resource. For backups,
+         * authorization requires `spanner.backups.getIamPolicy` permission on resource.
          *
          * Create a request for the method "databases.getIamPolicy".
          *
@@ -3669,10 +5310,11 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
               java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/databases/[^/]+$");
 
           /**
-           * Gets the access control policy for a database resource. Returns an empty policy if a database
-           * exists but does not have a policy set.
+           * Gets the access control policy for a database or backup resource. Returns an empty policy if a
+           * database or backup exists but does not have a policy set.
            *
-           * Authorization requires `spanner.databases.getIamPolicy` permission on resource.
+           * Authorization requires `spanner.databases.getIamPolicy` permission on resource. For backups,
+           * authorization requires `spanner.backups.getIamPolicy` permission on resource.
            *
            * Create a request for the method "databases.getIamPolicy".
            *
@@ -3984,9 +5626,177 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           }
         }
         /**
-         * Sets the access control policy on a database resource. Replaces any existing policy.
+         * Create a new database by restoring from a completed backup. The new database must be in the same
+         * project and in an instance with the same instance configuration as the instance containing the
+         * backup. The returned database long-running operation has a name of the format
+         * `projects//instances//databases//operations/`, and can be used to track the progress of the
+         * operation, and to cancel it. The metadata field type is RestoreDatabaseMetadata. The response
+         * type is Database, if successful. Cancelling the returned operation will stop the restore and
+         * delete the database. There can be only one database being restored into an instance at a time.
+         * Once the restore operation completes, a new restore operation can be initiated, without waiting
+         * for the optimize operation associated with the first restore to complete.
          *
-         * Authorization requires `spanner.databases.setIamPolicy` permission on resource.
+         * Create a request for the method "databases.restore".
+         *
+         * This request holds the parameters needed by the spanner server.  After setting any optional
+         * parameters, call the {@link Restore#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The name of the instance in which to create the
+        restored database. This instance must be
+         *        in the same project and
+        have the same instance configuration as the instance containing
+         *        the source backup. Values are of the form
+        `projects//instances/.
+         * @param content the {@link com.google.api.services.spanner.v1.model.RestoreDatabaseRequest}
+         * @return the request
+         */
+        public Restore restore(java.lang.String parent, com.google.api.services.spanner.v1.model.RestoreDatabaseRequest content) throws java.io.IOException {
+          Restore result = new Restore(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Restore extends SpannerRequest<com.google.api.services.spanner.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+parent}/databases:restore";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+$");
+
+          /**
+           * Create a new database by restoring from a completed backup. The new database must be in the
+           * same project and in an instance with the same instance configuration as the instance containing
+           * the backup. The returned database long-running operation has a name of the format
+           * `projects//instances//databases//operations/`, and can be used to track the progress of the
+           * operation, and to cancel it. The metadata field type is RestoreDatabaseMetadata. The response
+           * type is Database, if successful. Cancelling the returned operation will stop the restore and
+           * delete the database. There can be only one database being restored into an instance at a time.
+           * Once the restore operation completes, a new restore operation can be initiated, without waiting
+           * for the optimize operation associated with the first restore to complete.
+           *
+           * Create a request for the method "databases.restore".
+           *
+           * This request holds the parameters needed by the the spanner server.  After setting any optional
+           * parameters, call the {@link Restore#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * Restore#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The name of the instance in which to create the
+        restored database. This instance must be
+         *        in the same project and
+        have the same instance configuration as the instance containing
+         *        the source backup. Values are of the form
+        `projects//instances/.
+           * @param content the {@link com.google.api.services.spanner.v1.model.RestoreDatabaseRequest}
+           * @since 1.13
+           */
+          protected Restore(java.lang.String parent, com.google.api.services.spanner.v1.model.RestoreDatabaseRequest content) {
+            super(Spanner.this, "POST", REST_PATH, content, com.google.api.services.spanner.v1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public Restore set$Xgafv(java.lang.String $Xgafv) {
+            return (Restore) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Restore setAccessToken(java.lang.String accessToken) {
+            return (Restore) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Restore setAlt(java.lang.String alt) {
+            return (Restore) super.setAlt(alt);
+          }
+
+          @Override
+          public Restore setCallback(java.lang.String callback) {
+            return (Restore) super.setCallback(callback);
+          }
+
+          @Override
+          public Restore setFields(java.lang.String fields) {
+            return (Restore) super.setFields(fields);
+          }
+
+          @Override
+          public Restore setKey(java.lang.String key) {
+            return (Restore) super.setKey(key);
+          }
+
+          @Override
+          public Restore setOauthToken(java.lang.String oauthToken) {
+            return (Restore) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Restore setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Restore) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Restore setQuotaUser(java.lang.String quotaUser) {
+            return (Restore) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Restore setUploadType(java.lang.String uploadType) {
+            return (Restore) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Restore setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Restore) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the instance in which to create the restored database. This
+           * instance must be in the same project and have the same instance configuration as the
+           * instance containing the source backup. Values are of the form `projects//instances/.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The name of the instance in which to create the restored database. This instance must be
+         in the same project and have the same instance configuration as the instance containing the source
+         backup. Values are of the form `projects//instances/.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The name of the instance in which to create the restored database. This
+           * instance must be in the same project and have the same instance configuration as the
+           * instance containing the source backup. Values are of the form `projects//instances/.
+           */
+          public Restore setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Restore set(String parameterName, Object value) {
+            return (Restore) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Sets the access control policy on a database or backup resource. Replaces any existing policy.
+         *
+         * Authorization requires `spanner.databases.setIamPolicy` permission on resource. For backups,
+         * authorization requires `spanner.backups.setIamPolicy` permission on resource.
          *
          * Create a request for the method "databases.setIamPolicy".
          *
@@ -4013,9 +5823,10 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
               java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/databases/[^/]+$");
 
           /**
-           * Sets the access control policy on a database resource. Replaces any existing policy.
+           * Sets the access control policy on a database or backup resource. Replaces any existing policy.
            *
-           * Authorization requires `spanner.databases.setIamPolicy` permission on resource.
+           * Authorization requires `spanner.databases.setIamPolicy` permission on resource. For backups,
+           * authorization requires `spanner.backups.setIamPolicy` permission on resource.
            *
            * Create a request for the method "databases.setIamPolicy".
            *
@@ -4133,11 +5944,13 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           }
         }
         /**
-         * Returns permissions that the caller has on the specified database resource.
+         * Returns permissions that the caller has on the specified database or backup resource.
          *
          * Attempting this RPC on a non-existent Cloud Spanner database will result in a NOT_FOUND error if
          * the user has `spanner.databases.list` permission on the containing Cloud Spanner instance.
-         * Otherwise returns an empty set of permissions.
+         * Otherwise returns an empty set of permissions. Calling this method on a backup that does not
+         * exist will result in a NOT_FOUND error if the user has `spanner.backups.list` permission on the
+         * containing instance.
          *
          * Create a request for the method "databases.testIamPermissions".
          *
@@ -4164,11 +5977,13 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
               java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/databases/[^/]+$");
 
           /**
-           * Returns permissions that the caller has on the specified database resource.
+           * Returns permissions that the caller has on the specified database or backup resource.
            *
            * Attempting this RPC on a non-existent Cloud Spanner database will result in a NOT_FOUND error
            * if the user has `spanner.databases.list` permission on the containing Cloud Spanner instance.
-           * Otherwise returns an empty set of permissions.
+           * Otherwise returns an empty set of permissions. Calling this method on a backup that does not
+           * exist will result in a NOT_FOUND error if the user has `spanner.backups.list` permission on the
+           * containing instance.
            *
            * Create a request for the method "databases.testIamPermissions".
            *

@@ -77,6 +77,30 @@ public final class ObjectConditions extends com.google.api.client.json.GenericJs
   private java.util.List<java.lang.String> includePrefixes;
 
   /**
+   * If specified, only objects with a "last modification time" before this timestamp and objects
+   * that don't have a "last modification time" will be transferred.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String lastModifiedBefore;
+
+  /**
+   * If specified, only objects with a "last modification time" on or after this timestamp and
+   * objects that don't have a "last modification time" are transferred.
+   *
+   * The `last_modified_since` and `last_modified_before` fields can be used together for chunked
+   * data processing. For example, consider a script that processes each day's worth of data at a
+   * time. For that you'd set each of the fields as follows:
+   *
+   * *  `last_modified_since` to the start of the day
+   *
+   * *  `last_modified_before` to the end of the day
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String lastModifiedSince;
+
+  /**
    * If specified, only objects with a "last modification time" on or after `NOW` -
    * `max_time_elapsed_since_last_modification` and objects that don't have a "last modification
    * time" are transferred.
@@ -187,6 +211,60 @@ public final class ObjectConditions extends com.google.api.client.json.GenericJs
    */
   public ObjectConditions setIncludePrefixes(java.util.List<java.lang.String> includePrefixes) {
     this.includePrefixes = includePrefixes;
+    return this;
+  }
+
+  /**
+   * If specified, only objects with a "last modification time" before this timestamp and objects
+   * that don't have a "last modification time" will be transferred.
+   * @return value or {@code null} for none
+   */
+  public String getLastModifiedBefore() {
+    return lastModifiedBefore;
+  }
+
+  /**
+   * If specified, only objects with a "last modification time" before this timestamp and objects
+   * that don't have a "last modification time" will be transferred.
+   * @param lastModifiedBefore lastModifiedBefore or {@code null} for none
+   */
+  public ObjectConditions setLastModifiedBefore(String lastModifiedBefore) {
+    this.lastModifiedBefore = lastModifiedBefore;
+    return this;
+  }
+
+  /**
+   * If specified, only objects with a "last modification time" on or after this timestamp and
+   * objects that don't have a "last modification time" are transferred.
+   *
+   * The `last_modified_since` and `last_modified_before` fields can be used together for chunked
+   * data processing. For example, consider a script that processes each day's worth of data at a
+   * time. For that you'd set each of the fields as follows:
+   *
+   * *  `last_modified_since` to the start of the day
+   *
+   * *  `last_modified_before` to the end of the day
+   * @return value or {@code null} for none
+   */
+  public String getLastModifiedSince() {
+    return lastModifiedSince;
+  }
+
+  /**
+   * If specified, only objects with a "last modification time" on or after this timestamp and
+   * objects that don't have a "last modification time" are transferred.
+   *
+   * The `last_modified_since` and `last_modified_before` fields can be used together for chunked
+   * data processing. For example, consider a script that processes each day's worth of data at a
+   * time. For that you'd set each of the fields as follows:
+   *
+   * *  `last_modified_since` to the start of the day
+   *
+   * *  `last_modified_before` to the end of the day
+   * @param lastModifiedSince lastModifiedSince or {@code null} for none
+   */
+  public ObjectConditions setLastModifiedSince(String lastModifiedSince) {
+    this.lastModifiedSince = lastModifiedSince;
     return this;
   }
 

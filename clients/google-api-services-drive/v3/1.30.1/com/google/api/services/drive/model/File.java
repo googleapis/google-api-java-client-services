@@ -1491,6 +1491,14 @@ public final class File extends com.google.api.client.json.GenericJson {
     private java.lang.Boolean canAddChildren;
 
     /**
+     * Whether the current user can add a parent for the item without removing an existing parent in
+     * the same request. Not populated for shared drive files.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean canAddMyDriveParent;
+
+    /**
      * Whether the current user can change the copyRequiresWriterPermission restriction of this file.
      * The value may be {@code null}.
      */
@@ -1674,6 +1682,14 @@ public final class File extends com.google.api.client.json.GenericJson {
     private java.lang.Boolean canRemoveChildren;
 
     /**
+     * Whether the current user can remove a parent from the item without adding another parent in the
+     * same request. Not populated for shared drive files.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean canRemoveMyDriveParent;
+
+    /**
      * Whether the current user can rename this file.
      * The value may be {@code null}.
      */
@@ -1725,6 +1741,25 @@ public final class File extends com.google.api.client.json.GenericJson {
      */
     public Capabilities setCanAddChildren(java.lang.Boolean canAddChildren) {
       this.canAddChildren = canAddChildren;
+      return this;
+    }
+
+    /**
+     * Whether the current user can add a parent for the item without removing an existing parent in
+     * the same request. Not populated for shared drive files.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getCanAddMyDriveParent() {
+      return canAddMyDriveParent;
+    }
+
+    /**
+     * Whether the current user can add a parent for the item without removing an existing parent in
+     * the same request. Not populated for shared drive files.
+     * @param canAddMyDriveParent canAddMyDriveParent or {@code null} for none
+     */
+    public Capabilities setCanAddMyDriveParent(java.lang.Boolean canAddMyDriveParent) {
+      this.canAddMyDriveParent = canAddMyDriveParent;
       return this;
     }
 
@@ -2163,6 +2198,25 @@ public final class File extends com.google.api.client.json.GenericJson {
      */
     public Capabilities setCanRemoveChildren(java.lang.Boolean canRemoveChildren) {
       this.canRemoveChildren = canRemoveChildren;
+      return this;
+    }
+
+    /**
+     * Whether the current user can remove a parent from the item without adding another parent in the
+     * same request. Not populated for shared drive files.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getCanRemoveMyDriveParent() {
+      return canRemoveMyDriveParent;
+    }
+
+    /**
+     * Whether the current user can remove a parent from the item without adding another parent in the
+     * same request. Not populated for shared drive files.
+     * @param canRemoveMyDriveParent canRemoveMyDriveParent or {@code null} for none
+     */
+    public Capabilities setCanRemoveMyDriveParent(java.lang.Boolean canRemoveMyDriveParent) {
+      this.canRemoveMyDriveParent = canRemoveMyDriveParent;
       return this;
     }
 

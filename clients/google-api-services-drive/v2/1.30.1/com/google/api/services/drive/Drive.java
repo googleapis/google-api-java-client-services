@@ -2439,6 +2439,61 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
+      /**
+       * Set to true to opt in to API behavior that aims for all items to have exactly one parent.
+       * This parameter will only take effect if the item is not in a shared drive. If the item's
+       * last parent is removed, the item will be placed under its owner's root.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean enforceSingleParent;
+
+      /** Set to true to opt in to API behavior that aims for all items to have exactly one parent. This
+     parameter will only take effect if the item is not in a shared drive. If the item's last parent is
+     removed, the item will be placed under its owner's root. [default: false]
+       */
+      public java.lang.Boolean getEnforceSingleParent() {
+        return enforceSingleParent;
+      }
+
+      /**
+       * Set to true to opt in to API behavior that aims for all items to have exactly one parent.
+       * This parameter will only take effect if the item is not in a shared drive. If the item's
+       * last parent is removed, the item will be placed under its owner's root.
+       */
+      public Delete setEnforceSingleParent(java.lang.Boolean enforceSingleParent) {
+        this.enforceSingleParent = enforceSingleParent;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * Set to true to opt in to API behavior that aims for all items to have exactly one parent. This
+     parameter will only take effect if the item is not in a shared drive. If the item's last parent is
+     removed, the item will be placed under its owner's root.
+       * </p>
+       */
+      public boolean isEnforceSingleParent() {
+        if (enforceSingleParent == null || enforceSingleParent == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return false;
+        }
+        return enforceSingleParent;
+      }
+
       @Override
       public Delete set(String parameterName, Object value) {
         return (Delete) super.set(parameterName, value);
@@ -2660,6 +2715,71 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       public Insert setFolderId(java.lang.String folderId) {
         this.folderId = folderId;
         return this;
+      }
+
+      /**
+       * Set to true to opt in to API behavior that aims for all items to have exactly one parent.
+       * This parameter will only take effect if the item is not in a shared drive. If the child's
+       * owner makes the request, the child will be removed from all current folders and placed in
+       * the requested folder. Any other requests that increase the number of the child's parents
+       * will fail, except when the canAddMyDriveParent file capability is true and a single parent
+       * is being added.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean enforceSingleParent;
+
+      /** Set to true to opt in to API behavior that aims for all items to have exactly one parent. This
+     parameter will only take effect if the item is not in a shared drive. If the child's owner makes
+     the request, the child will be removed from all current folders and placed in the requested folder.
+     Any other requests that increase the number of the child's parents will fail, except when the
+     canAddMyDriveParent file capability is true and a single parent is being added. [default: false]
+       */
+      public java.lang.Boolean getEnforceSingleParent() {
+        return enforceSingleParent;
+      }
+
+      /**
+       * Set to true to opt in to API behavior that aims for all items to have exactly one parent.
+       * This parameter will only take effect if the item is not in a shared drive. If the child's
+       * owner makes the request, the child will be removed from all current folders and placed in
+       * the requested folder. Any other requests that increase the number of the child's parents
+       * will fail, except when the canAddMyDriveParent file capability is true and a single parent
+       * is being added.
+       */
+      public Insert setEnforceSingleParent(java.lang.Boolean enforceSingleParent) {
+        this.enforceSingleParent = enforceSingleParent;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * Set to true to opt in to API behavior that aims for all items to have exactly one parent. This
+     parameter will only take effect if the item is not in a shared drive. If the child's owner makes
+     the request, the child will be removed from all current folders and placed in the requested folder.
+     Any other requests that increase the number of the child's parents will fail, except when the
+     canAddMyDriveParent file capability is true and a single parent is being added.
+       * </p>
+       */
+      public boolean isEnforceSingleParent() {
+        if (enforceSingleParent == null || enforceSingleParent == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return false;
+        }
+        return enforceSingleParent;
       }
 
       /**
@@ -4898,6 +5018,61 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return convert;
       }
 
+      /**
+       * Set to true to opt in to API behavior that aims for all items to have exactly one parent.
+       * This parameter will only take effect if the item is not in a shared drive. Requests that
+       * specify more than one parent will fail.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean enforceSingleParent;
+
+      /** Set to true to opt in to API behavior that aims for all items to have exactly one parent. This
+     parameter will only take effect if the item is not in a shared drive. Requests that specify more
+     than one parent will fail. [default: false]
+       */
+      public java.lang.Boolean getEnforceSingleParent() {
+        return enforceSingleParent;
+      }
+
+      /**
+       * Set to true to opt in to API behavior that aims for all items to have exactly one parent.
+       * This parameter will only take effect if the item is not in a shared drive. Requests that
+       * specify more than one parent will fail.
+       */
+      public Copy setEnforceSingleParent(java.lang.Boolean enforceSingleParent) {
+        this.enforceSingleParent = enforceSingleParent;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * Set to true to opt in to API behavior that aims for all items to have exactly one parent. This
+     parameter will only take effect if the item is not in a shared drive. Requests that specify more
+     than one parent will fail.
+       * </p>
+       */
+      public boolean isEnforceSingleParent() {
+        if (enforceSingleParent == null || enforceSingleParent == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return false;
+        }
+        return enforceSingleParent;
+      }
+
       /** Whether to attempt OCR on .jpg, .png, .gif, or .pdf uploads. */
       @com.google.api.client.util.Key
       private java.lang.Boolean ocr;
@@ -6234,6 +6409,61 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return convert;
       }
 
+      /**
+       * Set to true to opt in to API behavior that aims for all items to have exactly one parent.
+       * This parameter will only take effect if the item is not in a shared drive. Requests that
+       * specify more than one parent will fail.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean enforceSingleParent;
+
+      /** Set to true to opt in to API behavior that aims for all items to have exactly one parent. This
+     parameter will only take effect if the item is not in a shared drive. Requests that specify more
+     than one parent will fail. [default: false]
+       */
+      public java.lang.Boolean getEnforceSingleParent() {
+        return enforceSingleParent;
+      }
+
+      /**
+       * Set to true to opt in to API behavior that aims for all items to have exactly one parent.
+       * This parameter will only take effect if the item is not in a shared drive. Requests that
+       * specify more than one parent will fail.
+       */
+      public Insert setEnforceSingleParent(java.lang.Boolean enforceSingleParent) {
+        this.enforceSingleParent = enforceSingleParent;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * Set to true to opt in to API behavior that aims for all items to have exactly one parent. This
+     parameter will only take effect if the item is not in a shared drive. Requests that specify more
+     than one parent will fail.
+       * </p>
+       */
+      public boolean isEnforceSingleParent() {
+        if (enforceSingleParent == null || enforceSingleParent == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return false;
+        }
+        return enforceSingleParent;
+      }
+
       /** Whether to attempt OCR on .jpg, .png, .gif, or .pdf uploads. */
       @com.google.api.client.util.Key
       private java.lang.Boolean ocr;
@@ -7178,6 +7408,71 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
           return false;
         }
         return convert;
+      }
+
+      /**
+       * Set to true to opt in to API behavior that aims for all items to have exactly one parent.
+       * This parameter will only take effect if the item is not in a shared drive. If the item's
+       * owner makes a request to add a single parent, the item will be removed from all current
+       * folders and placed in the requested folder. Other requests that increase the number of
+       * parents will fail, except when the canAddMyDriveParent file capability is true and a single
+       * parent is being added.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean enforceSingleParent;
+
+      /** Set to true to opt in to API behavior that aims for all items to have exactly one parent. This
+     parameter will only take effect if the item is not in a shared drive. If the item's owner makes a
+     request to add a single parent, the item will be removed from all current folders and placed in the
+     requested folder. Other requests that increase the number of parents will fail, except when the
+     canAddMyDriveParent file capability is true and a single parent is being added. [default: false]
+       */
+      public java.lang.Boolean getEnforceSingleParent() {
+        return enforceSingleParent;
+      }
+
+      /**
+       * Set to true to opt in to API behavior that aims for all items to have exactly one parent.
+       * This parameter will only take effect if the item is not in a shared drive. If the item's
+       * owner makes a request to add a single parent, the item will be removed from all current
+       * folders and placed in the requested folder. Other requests that increase the number of
+       * parents will fail, except when the canAddMyDriveParent file capability is true and a single
+       * parent is being added.
+       */
+      public Patch setEnforceSingleParent(java.lang.Boolean enforceSingleParent) {
+        this.enforceSingleParent = enforceSingleParent;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * Set to true to opt in to API behavior that aims for all items to have exactly one parent. This
+     parameter will only take effect if the item is not in a shared drive. If the item's owner makes a
+     request to add a single parent, the item will be removed from all current folders and placed in the
+     requested folder. Other requests that increase the number of parents will fail, except when the
+     canAddMyDriveParent file capability is true and a single parent is being added.
+       * </p>
+       */
+      public boolean isEnforceSingleParent() {
+        if (enforceSingleParent == null || enforceSingleParent == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return false;
+        }
+        return enforceSingleParent;
       }
 
       /**
@@ -8445,6 +8740,71 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
+       * Set to true to opt in to API behavior that aims for all items to have exactly one parent.
+       * This parameter will only take effect if the item is not in a shared drive. If the item's
+       * owner makes a request to add a single parent, the item will be removed from all current
+       * folders and placed in the requested folder. Other requests that increase the number of
+       * parents will fail, except when the canAddMyDriveParent file capability is true and a single
+       * parent is being added.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean enforceSingleParent;
+
+      /** Set to true to opt in to API behavior that aims for all items to have exactly one parent. This
+     parameter will only take effect if the item is not in a shared drive. If the item's owner makes a
+     request to add a single parent, the item will be removed from all current folders and placed in the
+     requested folder. Other requests that increase the number of parents will fail, except when the
+     canAddMyDriveParent file capability is true and a single parent is being added. [default: false]
+       */
+      public java.lang.Boolean getEnforceSingleParent() {
+        return enforceSingleParent;
+      }
+
+      /**
+       * Set to true to opt in to API behavior that aims for all items to have exactly one parent.
+       * This parameter will only take effect if the item is not in a shared drive. If the item's
+       * owner makes a request to add a single parent, the item will be removed from all current
+       * folders and placed in the requested folder. Other requests that increase the number of
+       * parents will fail, except when the canAddMyDriveParent file capability is true and a single
+       * parent is being added.
+       */
+      public Update setEnforceSingleParent(java.lang.Boolean enforceSingleParent) {
+        this.enforceSingleParent = enforceSingleParent;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * Set to true to opt in to API behavior that aims for all items to have exactly one parent. This
+     parameter will only take effect if the item is not in a shared drive. If the item's owner makes a
+     request to add a single parent, the item will be removed from all current folders and placed in the
+     requested folder. Other requests that increase the number of parents will fail, except when the
+     canAddMyDriveParent file capability is true and a single parent is being added.
+       * </p>
+       */
+      public boolean isEnforceSingleParent() {
+        if (enforceSingleParent == null || enforceSingleParent == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return false;
+        }
+        return enforceSingleParent;
+      }
+
+      /**
        * Determines the behavior in which modifiedDate is updated. This overrides setModifiedDate.
        */
       @com.google.api.client.util.Key
@@ -9414,6 +9774,61 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
+      /**
+       * Set to true to opt in to API behavior that aims for all items to have exactly one parent.
+       * This parameter will only take effect if the item is not in a shared drive. If the item's
+       * last parent is removed, the item will be placed under its owner's root.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean enforceSingleParent;
+
+      /** Set to true to opt in to API behavior that aims for all items to have exactly one parent. This
+     parameter will only take effect if the item is not in a shared drive. If the item's last parent is
+     removed, the item will be placed under its owner's root. [default: false]
+       */
+      public java.lang.Boolean getEnforceSingleParent() {
+        return enforceSingleParent;
+      }
+
+      /**
+       * Set to true to opt in to API behavior that aims for all items to have exactly one parent.
+       * This parameter will only take effect if the item is not in a shared drive. If the item's
+       * last parent is removed, the item will be placed under its owner's root.
+       */
+      public Delete setEnforceSingleParent(java.lang.Boolean enforceSingleParent) {
+        this.enforceSingleParent = enforceSingleParent;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * Set to true to opt in to API behavior that aims for all items to have exactly one parent. This
+     parameter will only take effect if the item is not in a shared drive. If the item's last parent is
+     removed, the item will be placed under its owner's root.
+       * </p>
+       */
+      public boolean isEnforceSingleParent() {
+        if (enforceSingleParent == null || enforceSingleParent == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return false;
+        }
+        return enforceSingleParent;
+      }
+
       @Override
       public Delete set(String parameterName, Object value) {
         return (Delete) super.set(parameterName, value);
@@ -9635,6 +10050,71 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       public Insert setFileId(java.lang.String fileId) {
         this.fileId = fileId;
         return this;
+      }
+
+      /**
+       * Set to true to opt in to API behavior that aims for all items to have exactly one parent.
+       * This parameter will only take effect if the item is not in a shared drive. If the child's
+       * owner makes the request, the child will be removed from all current folders and placed in
+       * the requested folder. Any other requests that increase the number of the child's parents
+       * will fail, except when the canAddMyDriveParent file capability is true and a single parent
+       * is being added.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean enforceSingleParent;
+
+      /** Set to true to opt in to API behavior that aims for all items to have exactly one parent. This
+     parameter will only take effect if the item is not in a shared drive. If the child's owner makes
+     the request, the child will be removed from all current folders and placed in the requested folder.
+     Any other requests that increase the number of the child's parents will fail, except when the
+     canAddMyDriveParent file capability is true and a single parent is being added. [default: false]
+       */
+      public java.lang.Boolean getEnforceSingleParent() {
+        return enforceSingleParent;
+      }
+
+      /**
+       * Set to true to opt in to API behavior that aims for all items to have exactly one parent.
+       * This parameter will only take effect if the item is not in a shared drive. If the child's
+       * owner makes the request, the child will be removed from all current folders and placed in
+       * the requested folder. Any other requests that increase the number of the child's parents
+       * will fail, except when the canAddMyDriveParent file capability is true and a single parent
+       * is being added.
+       */
+      public Insert setEnforceSingleParent(java.lang.Boolean enforceSingleParent) {
+        this.enforceSingleParent = enforceSingleParent;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * Set to true to opt in to API behavior that aims for all items to have exactly one parent. This
+     parameter will only take effect if the item is not in a shared drive. If the child's owner makes
+     the request, the child will be removed from all current folders and placed in the requested folder.
+     Any other requests that increase the number of the child's parents will fail, except when the
+     canAddMyDriveParent file capability is true and a single parent is being added.
+       * </p>
+       */
+      public boolean isEnforceSingleParent() {
+        if (enforceSingleParent == null || enforceSingleParent == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return false;
+        }
+        return enforceSingleParent;
       }
 
       /**
@@ -10628,6 +11108,130 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       public Insert setEmailMessage(java.lang.String emailMessage) {
         this.emailMessage = emailMessage;
         return this;
+      }
+
+      /**
+       * Set to true to opt in to API behavior that aims for all items to have exactly one parent.
+       * This parameter will only take effect if the item is not in a shared drive. See
+       * moveToNewOwnersRoot for details.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean enforceSingleParent;
+
+      /** Set to true to opt in to API behavior that aims for all items to have exactly one parent. This
+     parameter will only take effect if the item is not in a shared drive. See moveToNewOwnersRoot for
+     details. [default: false]
+       */
+      public java.lang.Boolean getEnforceSingleParent() {
+        return enforceSingleParent;
+      }
+
+      /**
+       * Set to true to opt in to API behavior that aims for all items to have exactly one parent.
+       * This parameter will only take effect if the item is not in a shared drive. See
+       * moveToNewOwnersRoot for details.
+       */
+      public Insert setEnforceSingleParent(java.lang.Boolean enforceSingleParent) {
+        this.enforceSingleParent = enforceSingleParent;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * Set to true to opt in to API behavior that aims for all items to have exactly one parent. This
+     parameter will only take effect if the item is not in a shared drive. See moveToNewOwnersRoot for
+     details.
+       * </p>
+       */
+      public boolean isEnforceSingleParent() {
+        if (enforceSingleParent == null || enforceSingleParent == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return false;
+        }
+        return enforceSingleParent;
+      }
+
+      /**
+       * This parameter will only take effect if the item is not in a shared drive and the request
+       * is attempting to transfer the ownership of the item. When set to true, the item will be
+       * moved to the new owner's My Drive root folder and all prior parents removed. If set to
+       * false, when enforceSingleParent=true, parents are not changed. If set to false, when
+       * enforceSingleParent=false, existing parents are not changed; however, the file will be
+       * added to the new owner's My Drive root folder, unless it is already in the new owner's My
+       * Drive.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean moveToNewOwnersRoot;
+
+      /** This parameter will only take effect if the item is not in a shared drive and the request is
+     attempting to transfer the ownership of the item. When set to true, the item will be moved to the
+     new owner's My Drive root folder and all prior parents removed. If set to false, when
+     enforceSingleParent=true, parents are not changed. If set to false, when enforceSingleParent=false,
+     existing parents are not changed; however, the file will be added to the new owner's My Drive root
+     folder, unless it is already in the new owner's My Drive. [default: false]
+       */
+      public java.lang.Boolean getMoveToNewOwnersRoot() {
+        return moveToNewOwnersRoot;
+      }
+
+      /**
+       * This parameter will only take effect if the item is not in a shared drive and the request
+       * is attempting to transfer the ownership of the item. When set to true, the item will be
+       * moved to the new owner's My Drive root folder and all prior parents removed. If set to
+       * false, when enforceSingleParent=true, parents are not changed. If set to false, when
+       * enforceSingleParent=false, existing parents are not changed; however, the file will be
+       * added to the new owner's My Drive root folder, unless it is already in the new owner's My
+       * Drive.
+       */
+      public Insert setMoveToNewOwnersRoot(java.lang.Boolean moveToNewOwnersRoot) {
+        this.moveToNewOwnersRoot = moveToNewOwnersRoot;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * This parameter will only take effect if the item is not in a shared drive and the request is
+     attempting to transfer the ownership of the item. When set to true, the item will be moved to the
+     new owner's My Drive root folder and all prior parents removed. If set to false, when
+     enforceSingleParent=true, parents are not changed. If set to false, when enforceSingleParent=false,
+     existing parents are not changed; however, the file will be added to the new owner's My Drive root
+     folder, unless it is already in the new owner's My Drive.
+       * </p>
+       */
+      public boolean isMoveToNewOwnersRoot() {
+        if (moveToNewOwnersRoot == null || moveToNewOwnersRoot == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return false;
+        }
+        return moveToNewOwnersRoot;
       }
 
       /**

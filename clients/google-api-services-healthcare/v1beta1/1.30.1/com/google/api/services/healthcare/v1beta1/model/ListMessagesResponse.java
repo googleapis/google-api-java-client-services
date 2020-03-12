@@ -38,14 +38,6 @@ public final class ListMessagesResponse extends com.google.api.client.json.Gener
   private java.util.List<Message> hl7V2Messages;
 
   /**
-   * Deprecated. Use `hl7_v2_messages` instead. The returned message names. Won't be more values
-   * than the value of page_size in the request.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> messages;
-
-  /**
    * Token to retrieve the next page of results or empty if there are no more results in the list.
    * The value may be {@code null}.
    */
@@ -68,25 +60,6 @@ public final class ListMessagesResponse extends com.google.api.client.json.Gener
    */
   public ListMessagesResponse setHl7V2Messages(java.util.List<Message> hl7V2Messages) {
     this.hl7V2Messages = hl7V2Messages;
-    return this;
-  }
-
-  /**
-   * Deprecated. Use `hl7_v2_messages` instead. The returned message names. Won't be more values
-   * than the value of page_size in the request.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getMessages() {
-    return messages;
-  }
-
-  /**
-   * Deprecated. Use `hl7_v2_messages` instead. The returned message names. Won't be more values
-   * than the value of page_size in the request.
-   * @param messages messages or {@code null} for none
-   */
-  public ListMessagesResponse setMessages(java.util.List<java.lang.String> messages) {
-    this.messages = messages;
     return this;
   }
 

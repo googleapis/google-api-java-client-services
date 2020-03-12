@@ -18,7 +18,7 @@ package com.google.api.services.remotebuildexecution.v1.model;
 
 /**
  * A content digest. A digest for a given blob consists of the size of the blob and its hash. The
- * hash algorithm to use is defined by the server, but servers SHOULD use SHA-256.
+ * hash algorithm to use is defined by the server.
  *
  * The size is considered to be an integral part of the digest and cannot be separated. That is,
  * even if the `hash` field is correctly specified but `size_bytes` is not, the server MUST reject

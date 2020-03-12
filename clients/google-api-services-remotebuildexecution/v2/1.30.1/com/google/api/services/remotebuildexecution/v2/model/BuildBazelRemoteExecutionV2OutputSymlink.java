@@ -33,6 +33,19 @@ package com.google.api.services.remotebuildexecution.v2.model;
 public final class BuildBazelRemoteExecutionV2OutputSymlink extends com.google.api.client.json.GenericJson {
 
   /**
+   * The supported node properties of the OutputSymlink, if requested by the Action.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<BuildBazelRemoteExecutionV2NodeProperty> nodeProperties;
+
+  static {
+    // hack to force ProGuard to consider BuildBazelRemoteExecutionV2NodeProperty used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(BuildBazelRemoteExecutionV2NodeProperty.class);
+  }
+
+  /**
    * The full path of the symlink relative to the working directory, including the filename. The
    * path separator is a forward slash `/`. Since this is a relative path, it MUST NOT begin with a
    * leading forward slash.
@@ -51,6 +64,23 @@ public final class BuildBazelRemoteExecutionV2OutputSymlink extends com.google.a
    */
   @com.google.api.client.util.Key
   private java.lang.String target;
+
+  /**
+   * The supported node properties of the OutputSymlink, if requested by the Action.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<BuildBazelRemoteExecutionV2NodeProperty> getNodeProperties() {
+    return nodeProperties;
+  }
+
+  /**
+   * The supported node properties of the OutputSymlink, if requested by the Action.
+   * @param nodeProperties nodeProperties or {@code null} for none
+   */
+  public BuildBazelRemoteExecutionV2OutputSymlink setNodeProperties(java.util.List<BuildBazelRemoteExecutionV2NodeProperty> nodeProperties) {
+    this.nodeProperties = nodeProperties;
+    return this;
+  }
 
   /**
    * The full path of the symlink relative to the working directory, including the filename. The

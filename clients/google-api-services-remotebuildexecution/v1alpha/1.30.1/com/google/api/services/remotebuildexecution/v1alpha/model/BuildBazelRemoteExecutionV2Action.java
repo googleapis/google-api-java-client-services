@@ -68,6 +68,18 @@ public final class BuildBazelRemoteExecutionV2Action extends com.google.api.clie
   private BuildBazelRemoteExecutionV2Digest inputRootDigest;
 
   /**
+   * List of required supported NodeProperty keys. In order to ensure that equivalent `Action`s
+   * always hash to the same value, the supported node properties MUST be lexicographically sorted
+   * by name. Sorting of strings is done by code point, equivalently, by the UTF-8 bytes.
+   *
+   * The interpretation of these properties is server-dependent. If a property is not recognized by
+   * the server, the server will return an `INVALID_ARGUMENT` error.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> outputNodeProperties;
+
+  /**
    * A timeout after which the execution should be killed. If the timeout is absent, then the client
    * is specifying that the execution should continue as long as the server will let it. The server
    * SHOULD impose a timeout if the client does not specify one, however, if the client does specify
@@ -140,6 +152,33 @@ public final class BuildBazelRemoteExecutionV2Action extends com.google.api.clie
    */
   public BuildBazelRemoteExecutionV2Action setInputRootDigest(BuildBazelRemoteExecutionV2Digest inputRootDigest) {
     this.inputRootDigest = inputRootDigest;
+    return this;
+  }
+
+  /**
+   * List of required supported NodeProperty keys. In order to ensure that equivalent `Action`s
+   * always hash to the same value, the supported node properties MUST be lexicographically sorted
+   * by name. Sorting of strings is done by code point, equivalently, by the UTF-8 bytes.
+   *
+   * The interpretation of these properties is server-dependent. If a property is not recognized by
+   * the server, the server will return an `INVALID_ARGUMENT` error.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getOutputNodeProperties() {
+    return outputNodeProperties;
+  }
+
+  /**
+   * List of required supported NodeProperty keys. In order to ensure that equivalent `Action`s
+   * always hash to the same value, the supported node properties MUST be lexicographically sorted
+   * by name. Sorting of strings is done by code point, equivalently, by the UTF-8 bytes.
+   *
+   * The interpretation of these properties is server-dependent. If a property is not recognized by
+   * the server, the server will return an `INVALID_ARGUMENT` error.
+   * @param outputNodeProperties outputNodeProperties or {@code null} for none
+   */
+  public BuildBazelRemoteExecutionV2Action setOutputNodeProperties(java.util.List<java.lang.String> outputNodeProperties) {
+    this.outputNodeProperties = outputNodeProperties;
     return this;
   }
 

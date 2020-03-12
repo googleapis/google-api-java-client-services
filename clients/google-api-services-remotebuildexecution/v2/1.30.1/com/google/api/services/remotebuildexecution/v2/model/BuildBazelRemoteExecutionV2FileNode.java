@@ -52,6 +52,13 @@ public final class BuildBazelRemoteExecutionV2FileNode extends com.google.api.cl
   private java.lang.String name;
 
   /**
+   * The node properties of the FileNode.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<BuildBazelRemoteExecutionV2NodeProperty> nodeProperties;
+
+  /**
    * The digest of the file's content.
    * @return value or {@code null} for none
    */
@@ -99,6 +106,23 @@ public final class BuildBazelRemoteExecutionV2FileNode extends com.google.api.cl
    */
   public BuildBazelRemoteExecutionV2FileNode setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * The node properties of the FileNode.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<BuildBazelRemoteExecutionV2NodeProperty> getNodeProperties() {
+    return nodeProperties;
+  }
+
+  /**
+   * The node properties of the FileNode.
+   * @param nodeProperties nodeProperties or {@code null} for none
+   */
+  public BuildBazelRemoteExecutionV2FileNode setNodeProperties(java.util.List<BuildBazelRemoteExecutionV2NodeProperty> nodeProperties) {
+    this.nodeProperties = nodeProperties;
     return this;
   }
 

@@ -52,6 +52,13 @@ public final class BuildBazelRemoteExecutionV2ExecutionCapabilities extends com.
   private BuildBazelRemoteExecutionV2PriorityCapabilities executionPriorityCapabilities;
 
   /**
+   * Supported node properties.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> supportedNodeProperties;
+
+  /**
    * Remote execution may only support a single digest function.
    * @return value or {@code null} for none
    */
@@ -99,6 +106,23 @@ public final class BuildBazelRemoteExecutionV2ExecutionCapabilities extends com.
    */
   public BuildBazelRemoteExecutionV2ExecutionCapabilities setExecutionPriorityCapabilities(BuildBazelRemoteExecutionV2PriorityCapabilities executionPriorityCapabilities) {
     this.executionPriorityCapabilities = executionPriorityCapabilities;
+    return this;
+  }
+
+  /**
+   * Supported node properties.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSupportedNodeProperties() {
+    return supportedNodeProperties;
+  }
+
+  /**
+   * Supported node properties.
+   * @param supportedNodeProperties supportedNodeProperties or {@code null} for none
+   */
+  public BuildBazelRemoteExecutionV2ExecutionCapabilities setSupportedNodeProperties(java.util.List<java.lang.String> supportedNodeProperties) {
+    this.supportedNodeProperties = supportedNodeProperties;
     return this;
   }
 

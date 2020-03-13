@@ -1513,11 +1513,17 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       /**
        * Required. The name of the resource to list all attached Liens. For example,
        * `projects/1234`.
+       *
+       * (google.api.field_policy).resource_type annotation is not set since the parent depends on
+       * the meta api implementation. This field could be a project or other sub project resources.
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
       /** Required. The name of the resource to list all attached Liens. For example, `projects/1234`.
+
+     (google.api.field_policy).resource_type annotation is not set since the parent depends on the meta
+     api implementation. This field could be a project or other sub project resources.
        */
       public java.lang.String getParent() {
         return parent;
@@ -1526,6 +1532,9 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       /**
        * Required. The name of the resource to list all attached Liens. For example,
        * `projects/1234`.
+       *
+       * (google.api.field_policy).resource_type annotation is not set since the parent depends on
+       * the meta api implementation. This field could be a project or other sub project resources.
        */
       public List setParent(java.lang.String parent) {
         this.parent = parent;

@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.osconfig.v1beta.model;
+package com.google.api.services.osconfig.v1.model;
 
 /**
  * A high level representation of a patch job that is either in progress or has completed.

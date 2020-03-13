@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.osconfig.v1beta.model;
+package com.google.api.services.osconfig.v1.model;
 
 /**
  * Patch details for a VM instance. For more information about reviewing VM instance details, see

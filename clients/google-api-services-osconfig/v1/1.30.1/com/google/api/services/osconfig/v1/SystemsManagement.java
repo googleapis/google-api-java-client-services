@@ -123,6 +123,1518 @@ public class SystemsManagement extends com.google.api.client.googleapis.services
   }
 
   /**
+   * An accessor for creating requests from the Projects collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code SystemsManagement osconfig = new SystemsManagement(...);}
+   *   {@code SystemsManagement.Projects.List request = osconfig.projects().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Projects projects() {
+    return new Projects();
+  }
+
+  /**
+   * The "projects" collection of methods.
+   */
+  public class Projects {
+
+    /**
+     * An accessor for creating requests from the PatchDeployments collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code SystemsManagement osconfig = new SystemsManagement(...);}
+     *   {@code SystemsManagement.PatchDeployments.List request = osconfig.patchDeployments().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public PatchDeployments patchDeployments() {
+      return new PatchDeployments();
+    }
+
+    /**
+     * The "patchDeployments" collection of methods.
+     */
+    public class PatchDeployments {
+
+      /**
+       * Create an OS Config patch deployment.
+       *
+       * Create a request for the method "patchDeployments.create".
+       *
+       * This request holds the parameters needed by the osconfig server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The project to apply this patch deployment to in the form `projects`.
+       * @param content the {@link com.google.api.services.osconfig.v1.model.PatchDeployment}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.osconfig.v1.model.PatchDeployment content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends SystemsManagementRequest<com.google.api.services.osconfig.v1.model.PatchDeployment> {
+
+        private static final String REST_PATH = "v1/{+parent}/patchDeployments";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Create an OS Config patch deployment.
+         *
+         * Create a request for the method "patchDeployments.create".
+         *
+         * This request holds the parameters needed by the the osconfig server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The project to apply this patch deployment to in the form `projects`.
+         * @param content the {@link com.google.api.services.osconfig.v1.model.PatchDeployment}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.osconfig.v1.model.PatchDeployment content) {
+          super(SystemsManagement.this, "POST", REST_PATH, content, com.google.api.services.osconfig.v1.model.PatchDeployment.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The project to apply this patch deployment to in the form `projects`. */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The project to apply this patch deployment to in the form `projects`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. The project to apply this patch deployment to in the form `projects`. */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Required. A name for the patch deployment in the project. When creating a name the
+         * following rules apply: * Must contain only lowercase letters, numbers, and hyphens. *
+         * Must start with a letter. * Must be between 1-63 characters. * Must end with a number or
+         * a letter. * Must be unique within the project.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String patchDeploymentId;
+
+        /** Required. A name for the patch deployment in the project. When creating a name the following rules
+       apply: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. *
+       Must be between 1-63 characters. * Must end with a number or a letter. * Must be unique within the
+       project.
+         */
+        public java.lang.String getPatchDeploymentId() {
+          return patchDeploymentId;
+        }
+
+        /**
+         * Required. A name for the patch deployment in the project. When creating a name the
+         * following rules apply: * Must contain only lowercase letters, numbers, and hyphens. *
+         * Must start with a letter. * Must be between 1-63 characters. * Must end with a number or
+         * a letter. * Must be unique within the project.
+         */
+        public Create setPatchDeploymentId(java.lang.String patchDeploymentId) {
+          this.patchDeploymentId = patchDeploymentId;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Delete an OS Config patch deployment.
+       *
+       * Create a request for the method "patchDeployments.delete".
+       *
+       * This request holds the parameters needed by the osconfig server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name of the patch deployment in the form
+      `projects/patchDeployments`.
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends SystemsManagementRequest<com.google.api.services.osconfig.v1.model.Empty> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/patchDeployments/[^/]+$");
+
+        /**
+         * Delete an OS Config patch deployment.
+         *
+         * Create a request for the method "patchDeployments.delete".
+         *
+         * This request holds the parameters needed by the the osconfig server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name of the patch deployment in the form
+      `projects/patchDeployments`.
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(SystemsManagement.this, "DELETE", REST_PATH, null, com.google.api.services.osconfig.v1.model.Empty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/patchDeployments/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the patch deployment in the form
+         * `projects/patchDeployments`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the patch deployment in the form `projects/patchDeployments`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The resource name of the patch deployment in the form
+         * `projects/patchDeployments`.
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/patchDeployments/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Get an OS Config patch deployment.
+       *
+       * Create a request for the method "patchDeployments.get".
+       *
+       * This request holds the parameters needed by the osconfig server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name of the patch deployment in the form
+      `projects/patchDeployments`.
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends SystemsManagementRequest<com.google.api.services.osconfig.v1.model.PatchDeployment> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/patchDeployments/[^/]+$");
+
+        /**
+         * Get an OS Config patch deployment.
+         *
+         * Create a request for the method "patchDeployments.get".
+         *
+         * This request holds the parameters needed by the the osconfig server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name of the patch deployment in the form
+      `projects/patchDeployments`.
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(SystemsManagement.this, "GET", REST_PATH, null, com.google.api.services.osconfig.v1.model.PatchDeployment.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/patchDeployments/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the patch deployment in the form
+         * `projects/patchDeployments`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the patch deployment in the form `projects/patchDeployments`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The resource name of the patch deployment in the form
+         * `projects/patchDeployments`.
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/patchDeployments/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Get a page of OS Config patch deployments.
+       *
+       * Create a request for the method "patchDeployments.list".
+       *
+       * This request holds the parameters needed by the osconfig server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The resource name of the parent in the form `projects`.
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends SystemsManagementRequest<com.google.api.services.osconfig.v1.model.ListPatchDeploymentsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/patchDeployments";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Get a page of OS Config patch deployments.
+         *
+         * Create a request for the method "patchDeployments.list".
+         *
+         * This request holds the parameters needed by the the osconfig server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The resource name of the parent in the form `projects`.
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(SystemsManagement.this, "GET", REST_PATH, null, com.google.api.services.osconfig.v1.model.ListPatchDeploymentsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The resource name of the parent in the form `projects`. */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The resource name of the parent in the form `projects`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. The resource name of the parent in the form `projects`. */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /** Optional. The maximum number of patch deployments to return. Default is 100. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of patch deployments to return. Default is 100.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** Optional. The maximum number of patch deployments to return. Default is 100. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. A pagination token returned from a previous call to ListPatchDeployments that
+         * indicates where this listing should continue from.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. A pagination token returned from a previous call to ListPatchDeployments that indicates
+       where this listing should continue from.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. A pagination token returned from a previous call to ListPatchDeployments that
+         * indicates where this listing should continue from.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the PatchJobs collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code SystemsManagement osconfig = new SystemsManagement(...);}
+     *   {@code SystemsManagement.PatchJobs.List request = osconfig.patchJobs().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public PatchJobs patchJobs() {
+      return new PatchJobs();
+    }
+
+    /**
+     * The "patchJobs" collection of methods.
+     */
+    public class PatchJobs {
+
+      /**
+       * Cancel a patch job. The patch job must be active. Canceled patch jobs cannot be restarted.
+       *
+       * Create a request for the method "patchJobs.cancel".
+       *
+       * This request holds the parameters needed by the osconfig server.  After setting any optional
+       * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Name of the patch in the form `projects/patchJobs`
+       * @param content the {@link com.google.api.services.osconfig.v1.model.CancelPatchJobRequest}
+       * @return the request
+       */
+      public Cancel cancel(java.lang.String name, com.google.api.services.osconfig.v1.model.CancelPatchJobRequest content) throws java.io.IOException {
+        Cancel result = new Cancel(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Cancel extends SystemsManagementRequest<com.google.api.services.osconfig.v1.model.PatchJob> {
+
+        private static final String REST_PATH = "v1/{+name}:cancel";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/patchJobs/[^/]+$");
+
+        /**
+         * Cancel a patch job. The patch job must be active. Canceled patch jobs cannot be restarted.
+         *
+         * Create a request for the method "patchJobs.cancel".
+         *
+         * This request holds the parameters needed by the the osconfig server.  After setting any
+         * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Name of the patch in the form `projects/patchJobs`
+         * @param content the {@link com.google.api.services.osconfig.v1.model.CancelPatchJobRequest}
+         * @since 1.13
+         */
+        protected Cancel(java.lang.String name, com.google.api.services.osconfig.v1.model.CancelPatchJobRequest content) {
+          super(SystemsManagement.this, "POST", REST_PATH, content, com.google.api.services.osconfig.v1.model.PatchJob.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/patchJobs/[^/]+$");
+          }
+        }
+
+        @Override
+        public Cancel set$Xgafv(java.lang.String $Xgafv) {
+          return (Cancel) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Cancel setAccessToken(java.lang.String accessToken) {
+          return (Cancel) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Cancel setAlt(java.lang.String alt) {
+          return (Cancel) super.setAlt(alt);
+        }
+
+        @Override
+        public Cancel setCallback(java.lang.String callback) {
+          return (Cancel) super.setCallback(callback);
+        }
+
+        @Override
+        public Cancel setFields(java.lang.String fields) {
+          return (Cancel) super.setFields(fields);
+        }
+
+        @Override
+        public Cancel setKey(java.lang.String key) {
+          return (Cancel) super.setKey(key);
+        }
+
+        @Override
+        public Cancel setOauthToken(java.lang.String oauthToken) {
+          return (Cancel) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Cancel) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Cancel setQuotaUser(java.lang.String quotaUser) {
+          return (Cancel) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Cancel setUploadType(java.lang.String uploadType) {
+          return (Cancel) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Cancel) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. Name of the patch in the form `projects/patchJobs` */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Name of the patch in the form `projects/patchJobs`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. Name of the patch in the form `projects/patchJobs` */
+        public Cancel setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/patchJobs/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Cancel set(String parameterName, Object value) {
+          return (Cancel) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Patch VM instances by creating and running a patch job.
+       *
+       * Create a request for the method "patchJobs.execute".
+       *
+       * This request holds the parameters needed by the osconfig server.  After setting any optional
+       * parameters, call the {@link Execute#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The project in which to run this patch in the form `projects`
+       * @param content the {@link com.google.api.services.osconfig.v1.model.ExecutePatchJobRequest}
+       * @return the request
+       */
+      public Execute execute(java.lang.String parent, com.google.api.services.osconfig.v1.model.ExecutePatchJobRequest content) throws java.io.IOException {
+        Execute result = new Execute(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Execute extends SystemsManagementRequest<com.google.api.services.osconfig.v1.model.PatchJob> {
+
+        private static final String REST_PATH = "v1/{+parent}/patchJobs:execute";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Patch VM instances by creating and running a patch job.
+         *
+         * Create a request for the method "patchJobs.execute".
+         *
+         * This request holds the parameters needed by the the osconfig server.  After setting any
+         * optional parameters, call the {@link Execute#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Execute#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The project in which to run this patch in the form `projects`
+         * @param content the {@link com.google.api.services.osconfig.v1.model.ExecutePatchJobRequest}
+         * @since 1.13
+         */
+        protected Execute(java.lang.String parent, com.google.api.services.osconfig.v1.model.ExecutePatchJobRequest content) {
+          super(SystemsManagement.this, "POST", REST_PATH, content, com.google.api.services.osconfig.v1.model.PatchJob.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public Execute set$Xgafv(java.lang.String $Xgafv) {
+          return (Execute) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Execute setAccessToken(java.lang.String accessToken) {
+          return (Execute) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Execute setAlt(java.lang.String alt) {
+          return (Execute) super.setAlt(alt);
+        }
+
+        @Override
+        public Execute setCallback(java.lang.String callback) {
+          return (Execute) super.setCallback(callback);
+        }
+
+        @Override
+        public Execute setFields(java.lang.String fields) {
+          return (Execute) super.setFields(fields);
+        }
+
+        @Override
+        public Execute setKey(java.lang.String key) {
+          return (Execute) super.setKey(key);
+        }
+
+        @Override
+        public Execute setOauthToken(java.lang.String oauthToken) {
+          return (Execute) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Execute setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Execute) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Execute setQuotaUser(java.lang.String quotaUser) {
+          return (Execute) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Execute setUploadType(java.lang.String uploadType) {
+          return (Execute) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Execute setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Execute) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The project in which to run this patch in the form `projects` */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The project in which to run this patch in the form `projects`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. The project in which to run this patch in the form `projects` */
+        public Execute setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Execute set(String parameterName, Object value) {
+          return (Execute) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Get the patch job. This can be used to track the progress of an ongoing patch job or review the
+       * details of completed jobs.
+       *
+       * Create a request for the method "patchJobs.get".
+       *
+       * This request holds the parameters needed by the osconfig server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Name of the patch in the form `projects/patchJobs`
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends SystemsManagementRequest<com.google.api.services.osconfig.v1.model.PatchJob> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/patchJobs/[^/]+$");
+
+        /**
+         * Get the patch job. This can be used to track the progress of an ongoing patch job or review the
+         * details of completed jobs.
+         *
+         * Create a request for the method "patchJobs.get".
+         *
+         * This request holds the parameters needed by the the osconfig server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Name of the patch in the form `projects/patchJobs`
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(SystemsManagement.this, "GET", REST_PATH, null, com.google.api.services.osconfig.v1.model.PatchJob.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/patchJobs/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. Name of the patch in the form `projects/patchJobs` */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Name of the patch in the form `projects/patchJobs`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. Name of the patch in the form `projects/patchJobs` */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/patchJobs/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Get a list of patch jobs.
+       *
+       * Create a request for the method "patchJobs.list".
+       *
+       * This request holds the parameters needed by the osconfig server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. In the form of `projects`
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends SystemsManagementRequest<com.google.api.services.osconfig.v1.model.ListPatchJobsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/patchJobs";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Get a list of patch jobs.
+         *
+         * Create a request for the method "patchJobs.list".
+         *
+         * This request holds the parameters needed by the the osconfig server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. In the form of `projects`
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(SystemsManagement.this, "GET", REST_PATH, null, com.google.api.services.osconfig.v1.model.ListPatchJobsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. In the form of `projects` */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. In the form of `projects`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. In the form of `projects` */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * If provided, this field specifies the criteria that must be met by patch jobs to be
+         * included in the response. Currently, filtering is only available on the patch_deployment
+         * field.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** If provided, this field specifies the criteria that must be met by patch jobs to be included in the
+       response. Currently, filtering is only available on the patch_deployment field.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * If provided, this field specifies the criteria that must be met by patch jobs to be
+         * included in the response. Currently, filtering is only available on the patch_deployment
+         * field.
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /** The maximum number of instance status to return. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of instance status to return.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** The maximum number of instance status to return. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A pagination token returned from a previous call that indicates where this listing should
+         * continue from.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A pagination token returned from a previous call that indicates where this listing should continue
+       from.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A pagination token returned from a previous call that indicates where this listing should
+         * continue from.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+      /**
+       * An accessor for creating requests from the InstanceDetails collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code SystemsManagement osconfig = new SystemsManagement(...);}
+       *   {@code SystemsManagement.InstanceDetails.List request = osconfig.instanceDetails().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public InstanceDetails instanceDetails() {
+        return new InstanceDetails();
+      }
+
+      /**
+       * The "instanceDetails" collection of methods.
+       */
+      public class InstanceDetails {
+
+        /**
+         * Get a list of instance details for a given patch job.
+         *
+         * Create a request for the method "instanceDetails.list".
+         *
+         * This request holds the parameters needed by the osconfig server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent for the instances are in the form of `projects/patchJobs`.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends SystemsManagementRequest<com.google.api.services.osconfig.v1.model.ListPatchJobInstanceDetailsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/instanceDetails";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/patchJobs/[^/]+$");
+
+          /**
+           * Get a list of instance details for a given patch job.
+           *
+           * Create a request for the method "instanceDetails.list".
+           *
+           * This request holds the parameters needed by the the osconfig server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent for the instances are in the form of `projects/patchJobs`.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(SystemsManagement.this, "GET", REST_PATH, null, com.google.api.services.osconfig.v1.model.ListPatchJobInstanceDetailsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/patchJobs/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent for the instances are in the form of `projects/patchJobs`. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent for the instances are in the form of `projects/patchJobs`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent for the instances are in the form of `projects/patchJobs`. */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/patchJobs/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * A filter expression that filters results listed in the response. This field supports
+           * filtering results by instance zone, name, state, or `failure_reason`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** A filter expression that filters results listed in the response. This field supports filtering
+         results by instance zone, name, state, or `failure_reason`.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * A filter expression that filters results listed in the response. This field supports
+           * filtering results by instance zone, name, state, or `failure_reason`.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** The maximum number of instance details records to return.  Default is 100. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of instance details records to return.  Default is 100.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** The maximum number of instance details records to return.  Default is 100. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A pagination token returned from a previous call that indicates where this listing
+           * should continue from.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A pagination token returned from a previous call that indicates where this listing should continue
+         from.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A pagination token returned from a previous call that indicates where this listing
+           * should continue from.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+  }
+
+  /**
    * Builder for {@link SystemsManagement}.
    *
    * <p>

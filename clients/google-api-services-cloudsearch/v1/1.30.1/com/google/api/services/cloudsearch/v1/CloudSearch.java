@@ -3499,7 +3499,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       private static final String REST_PATH = "v1/media/{+resourceName}";
 
       private final java.util.regex.Pattern RESOURCE_NAME_PATTERN =
-          java.util.regex.Pattern.compile("^.+$");
+          java.util.regex.Pattern.compile("^.*$");
 
       /**
        * Uploads media for indexing.
@@ -3539,7 +3539,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(RESOURCE_NAME_PATTERN.matcher(resourceName).matches(),
               "Parameter resourceName must conform to the pattern " +
-              "^.+$");
+              "^.*$");
         }
       }
 
@@ -3660,7 +3660,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(RESOURCE_NAME_PATTERN.matcher(resourceName).matches(),
               "Parameter resourceName must conform to the pattern " +
-              "^.+$");
+              "^.*$");
         }
         this.resourceName = resourceName;
         return this;
@@ -3717,7 +3717,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       private static final String REST_PATH = "v1/{+name}";
 
       private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^operations/.+$");
+          java.util.regex.Pattern.compile("^operations/.*$");
 
       /**
        * Gets the latest state of a long-running operation.  Clients can use this method to poll the
@@ -3739,7 +3739,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^operations/.+$");
+              "^operations/.*$");
         }
       }
 
@@ -3823,7 +3823,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^operations/.+$");
+              "^operations/.*$");
         }
         this.name = name;
         return this;

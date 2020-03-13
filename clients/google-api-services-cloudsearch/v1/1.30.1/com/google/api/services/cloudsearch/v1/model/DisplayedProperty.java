@@ -18,9 +18,9 @@ package com.google.api.services.cloudsearch.v1.model;
 
 /**
  * A reference to a top-level property within the object that should be displayed in search results.
- * The values of the chosen properties will be displayed in the search results along with the
- * dislpay label for that property if one is specified. If a display label is not specified, only
- * the values will be shown.
+ * The values of the chosen properties is displayed in the search results along with the display
+ * label for that property if one is specified. If a display label is not specified, only the values
+ * is shown.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:
@@ -34,8 +34,8 @@ public final class DisplayedProperty extends com.google.api.client.json.GenericJ
 
   /**
    * The name of the top-level property as defined in a property definition for the object. If the
-   * name is not a defined property in the schema, an error will be given when attempting to update
-   * the schema.
+   * name is not a defined property in the schema, an error is given when attempting to update the
+   * schema.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,8 +43,8 @@ public final class DisplayedProperty extends com.google.api.client.json.GenericJ
 
   /**
    * The name of the top-level property as defined in a property definition for the object. If the
-   * name is not a defined property in the schema, an error will be given when attempting to update
-   * the schema.
+   * name is not a defined property in the schema, an error is given when attempting to update the
+   * schema.
    * @return value or {@code null} for none
    */
   public java.lang.String getPropertyName() {
@@ -53,8 +53,8 @@ public final class DisplayedProperty extends com.google.api.client.json.GenericJ
 
   /**
    * The name of the top-level property as defined in a property definition for the object. If the
-   * name is not a defined property in the schema, an error will be given when attempting to update
-   * the schema.
+   * name is not a defined property in the schema, an error is given when attempting to update the
+   * schema.
    * @param propertyName propertyName or {@code null} for none
    */
   public DisplayedProperty setPropertyName(java.lang.String propertyName) {

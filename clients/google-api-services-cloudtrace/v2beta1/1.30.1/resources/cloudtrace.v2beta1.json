@@ -1,11 +1,28 @@
 {
-  "basePath": "",
   "id": "cloudtrace:v2beta1",
   "documentationLink": "https://cloud.google.com/trace",
-  "revision": "20200225",
+  "revision": "20200309",
   "discoveryVersion": "v1",
   "version_module": true,
   "schemas": {
+    "ListTraceSinksResponse": {
+      "id": "ListTraceSinksResponse",
+      "description": "Result returned from `ListTraceSinks`.",
+      "type": "object",
+      "properties": {
+        "nextPageToken": {
+          "description": "If there might be more results than appear in this response, then\n`nextPageToken` is included.  To get the next set of results, call the same\nmethod again using the value of `nextPageToken` as `pageToken`.",
+          "type": "string"
+        },
+        "sinks": {
+          "description": "A list of sinks.",
+          "type": "array",
+          "items": {
+            "$ref": "TraceSink"
+          }
+        }
+      }
+    },
     "Empty": {
       "description": "A generic empty message that you can re-use to avoid defining duplicated\nempty messages in your APIs. A typical example is to use it as the request\nor the response type of an API method. For instance:\n\n    service Foo {\n      rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty);\n    }\n\nThe JSON representation for `Empty` is empty JSON object `{}`.",
       "type": "object",
@@ -13,7 +30,6 @@
       "id": "Empty"
     },
     "TraceSink": {
-      "id": "TraceSink",
       "description": "Describes a sink used to export traces to a BigQuery dataset. The sink must\nbe created within a project.",
       "type": "object",
       "properties": {
@@ -29,7 +45,8 @@
           "description": "Output only. A service account name for exporting the data. This field is\nset by sinks.create and sinks.update. The service account will need to be\ngranted write access to the destination specified in the output\nconfiguration, see [Granting access for a\nresource](/iam/docs/granting-roles-to-service-accounts#granting_access_to_a_service_account_for_a_resource).\nTo create tables and write data this account will need the dataEditor role.\nRead more about roles in the [BigQuery\ndocumentation](https://cloud.google.com/bigquery/docs/access-control#permissions_and_roles).\nE.g.:\n\n   \"service-00000001@00000002.iam.gserviceaccount.com\"",
           "type": "string"
         }
-      }
+      },
+      "id": "TraceSink"
     },
     "OutputConfig": {
       "description": "OutputConfig contains a destination for writing trace data.",
@@ -41,31 +58,13 @@
         }
       },
       "id": "OutputConfig"
-    },
-    "ListTraceSinksResponse": {
-      "description": "Result returned from `ListTraceSinks`.",
-      "type": "object",
-      "properties": {
-        "sinks": {
-          "description": "A list of sinks.",
-          "type": "array",
-          "items": {
-            "$ref": "TraceSink"
-          }
-        },
-        "nextPageToken": {
-          "description": "If there might be more results than appear in this response, then\n`nextPageToken` is included.  To get the next set of results, call the same\nmethod again using the value of `nextPageToken` as `pageToken`.",
-          "type": "string"
-        }
-      },
-      "id": "ListTraceSinksResponse"
     }
   },
-  "protocol": "rest",
   "icons": {
-    "x16": "http://www.google.com/images/icons/product/search-16.gif",
-    "x32": "http://www.google.com/images/icons/product/search-32.gif"
+    "x32": "http://www.google.com/images/icons/product/search-32.gif",
+    "x16": "http://www.google.com/images/icons/product/search-16.gif"
   },
+  "protocol": "rest",
   "canonicalName": "Cloud Trace",
   "auth": {
     "oauth2": {
@@ -85,8 +84,8 @@
   "rootUrl": "https://cloudtrace.googleapis.com/",
   "ownerDomain": "google.com",
   "name": "cloudtrace",
-  "mtlsRootUrl": "https://cloudtrace.mtls.googleapis.com/",
   "batchPath": "batch",
+  "mtlsRootUrl": "https://cloudtrace.mtls.googleapis.com/",
   "fullyEncodeReservedExpansion": true,
   "title": "Cloud Trace API",
   "ownerName": "Google",
@@ -95,62 +94,36 @@
       "resources": {
         "traceSinks": {
           "methods": {
-            "create": {
-              "response": {
-                "$ref": "TraceSink"
-              },
-              "parameterOrder": [
-                "parent"
-              ],
-              "httpMethod": "POST",
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform",
-                "https://www.googleapis.com/auth/trace.append"
-              ],
-              "parameters": {
-                "parent": {
-                  "required": true,
-                  "type": "string",
-                  "pattern": "^projects/[^/]+$",
-                  "location": "path",
-                  "description": "Required. The resource in which to create the sink (currently only project\nsinks are supported):\n\n    \"projects/[PROJECT_ID]\"\n\nExamples: `\"projects/my-trace-project\"`, `\"projects/123456789\"`."
-                }
-              },
-              "flatPath": "v2beta1/projects/{projectsId}/traceSinks",
-              "path": "v2beta1/{+parent}/traceSinks",
-              "id": "cloudtrace.projects.traceSinks.create",
-              "request": {
-                "$ref": "TraceSink"
-              },
-              "description": "Creates a sink that exports trace spans to a destination.  The\nexport of newly-ingested traces begins immediately, unless the sink's\n`writer_identity` is not permitted to write to the destination.  A sink can\nexport traces only from the resource owning the sink (the 'parent')."
-            },
             "delete": {
-              "httpMethod": "DELETE",
+              "flatPath": "v2beta1/projects/{projectsId}/traceSinks/{traceSinksId}",
+              "path": "v2beta1/{+name}",
+              "id": "cloudtrace.projects.traceSinks.delete",
+              "description": "Deletes a sink.",
               "response": {
                 "$ref": "Empty"
               },
               "parameterOrder": [
                 "name"
               ],
-              "parameters": {
-                "name": {
-                  "required": true,
-                  "type": "string",
-                  "pattern": "^projects/[^/]+/traceSinks/[^/]+$",
-                  "location": "path",
-                  "description": "Required. The full resource name of the sink to delete, including the\nparent resource and the sink identifier:\n\n    \"projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]\"\n\nExample: `\"projects/12345/traceSinks/my-sink-id\"`."
-                }
-              },
+              "httpMethod": "DELETE",
               "scopes": [
                 "https://www.googleapis.com/auth/cloud-platform",
                 "https://www.googleapis.com/auth/trace.append"
               ],
-              "flatPath": "v2beta1/projects/{projectsId}/traceSinks/{traceSinksId}",
-              "id": "cloudtrace.projects.traceSinks.delete",
-              "path": "v2beta1/{+name}",
-              "description": "Deletes a sink."
+              "parameters": {
+                "name": {
+                  "description": "Required. The full resource name of the sink to delete, including the\nparent resource and the sink identifier:\n\n    \"projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]\"\n\nExample: `\"projects/12345/traceSinks/my-sink-id\"`.",
+                  "required": true,
+                  "type": "string",
+                  "pattern": "^projects/[^/]+/traceSinks/[^/]+$",
+                  "location": "path"
+                }
+              }
             },
             "list": {
+              "flatPath": "v2beta1/projects/{projectsId}/traceSinks",
+              "path": "v2beta1/{+parent}/traceSinks",
+              "id": "cloudtrace.projects.traceSinks.list",
               "description": "List all sinks for the parent resource (GCP project).",
               "response": {
                 "$ref": "ListTraceSinksResponse"
@@ -164,60 +137,57 @@
                 "https://www.googleapis.com/auth/trace.readonly"
               ],
               "parameters": {
-                "parent": {
-                  "location": "path",
-                  "description": "Required. The parent resource whose sinks are to be listed (currently only\nproject parent resources are supported):\n\n    \"projects/[PROJECT_ID]\"",
-                  "required": true,
-                  "type": "string",
-                  "pattern": "^projects/[^/]+$"
-                },
                 "pageToken": {
                   "location": "query",
                   "description": "Optional. If present, then retrieve the next batch of results from the\npreceding call to this method.  `pageToken` must be the value of\n`nextPageToken` from the previous response.  The values of other method\nparameters should be identical to those in the previous call.",
                   "type": "string"
                 },
                 "pageSize": {
-                  "location": "query",
                   "description": "Optional. The maximum number of results to return from this request.\nNon-positive values are ignored.  The presence of `nextPageToken` in the\nresponse indicates that more results might be available.",
                   "format": "int32",
-                  "type": "integer"
+                  "type": "integer",
+                  "location": "query"
+                },
+                "parent": {
+                  "description": "Required. The parent resource whose sinks are to be listed (currently only\nproject parent resources are supported):\n\n    \"projects/[PROJECT_ID]\"",
+                  "required": true,
+                  "type": "string",
+                  "pattern": "^projects/[^/]+$",
+                  "location": "path"
                 }
-              },
-              "flatPath": "v2beta1/projects/{projectsId}/traceSinks",
-              "path": "v2beta1/{+parent}/traceSinks",
-              "id": "cloudtrace.projects.traceSinks.list"
+              }
             },
             "get": {
-              "flatPath": "v2beta1/projects/{projectsId}/traceSinks/{traceSinksId}",
-              "path": "v2beta1/{+name}",
-              "id": "cloudtrace.projects.traceSinks.get",
               "description": "Get a trace sink by name under the parent resource (GCP project).",
-              "response": {
-                "$ref": "TraceSink"
-              },
+              "httpMethod": "GET",
               "parameterOrder": [
                 "name"
               ],
-              "httpMethod": "GET",
+              "response": {
+                "$ref": "TraceSink"
+              },
               "parameters": {
                 "name": {
-                  "location": "path",
-                  "description": "Required. The resource name of the sink:\n\n    \"projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]\"\n\nExample: `\"projects/12345/traceSinks/my-sink-id\"`.",
                   "required": true,
                   "type": "string",
-                  "pattern": "^projects/[^/]+/traceSinks/[^/]+$"
+                  "pattern": "^projects/[^/]+/traceSinks/[^/]+$",
+                  "location": "path",
+                  "description": "Required. The resource name of the sink:\n\n    \"projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]\"\n\nExample: `\"projects/12345/traceSinks/my-sink-id\"`."
                 }
               },
               "scopes": [
                 "https://www.googleapis.com/auth/cloud-platform",
                 "https://www.googleapis.com/auth/trace.readonly"
-              ]
+              ],
+              "flatPath": "v2beta1/projects/{projectsId}/traceSinks/{traceSinksId}",
+              "id": "cloudtrace.projects.traceSinks.get",
+              "path": "v2beta1/{+name}"
             },
             "patch": {
-              "description": "Updates a sink.  This method updates fields in the existing sink according\nto the provided update mask. The sink's name cannot be changed nor any\noutput-only fields (e.g. the writer_identity).",
               "request": {
                 "$ref": "TraceSink"
               },
+              "description": "Updates a sink.  This method updates fields in the existing sink according\nto the provided update mask. The sink's name cannot be changed nor any\noutput-only fields (e.g. the writer_identity).",
               "response": {
                 "$ref": "TraceSink"
               },
@@ -225,6 +195,10 @@
                 "name"
               ],
               "httpMethod": "PATCH",
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform",
+                "https://www.googleapis.com/auth/trace.append"
+              ],
               "parameters": {
                 "name": {
                   "pattern": "^projects/[^/]+/traceSinks/[^/]+$",
@@ -234,19 +208,44 @@
                   "type": "string"
                 },
                 "updateMask": {
-                  "location": "query",
                   "description": "Required. Field mask that specifies the fields in `trace_sink` that are to\nbe updated. A sink field is overwritten if, and only if, it is\nin the update mask.  `name` and `writer_identity` fields cannot be updated.\n\nAn empty updateMask is considered an error.\n\nFor a detailed `FieldMask` definition, see\nhttps://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask\n\nExample: `updateMask=output_config`.",
                   "format": "google-fieldmask",
-                  "type": "string"
+                  "type": "string",
+                  "location": "query"
+                }
+              },
+              "flatPath": "v2beta1/projects/{projectsId}/traceSinks/{traceSinksId}",
+              "path": "v2beta1/{+name}",
+              "id": "cloudtrace.projects.traceSinks.patch"
+            },
+            "create": {
+              "response": {
+                "$ref": "TraceSink"
+              },
+              "parameterOrder": [
+                "parent"
+              ],
+              "httpMethod": "POST",
+              "parameters": {
+                "parent": {
+                  "description": "Required. The resource in which to create the sink (currently only project\nsinks are supported):\n\n    \"projects/[PROJECT_ID]\"\n\nExamples: `\"projects/my-trace-project\"`, `\"projects/123456789\"`.",
+                  "required": true,
+                  "type": "string",
+                  "pattern": "^projects/[^/]+$",
+                  "location": "path"
                 }
               },
               "scopes": [
                 "https://www.googleapis.com/auth/cloud-platform",
                 "https://www.googleapis.com/auth/trace.append"
               ],
-              "flatPath": "v2beta1/projects/{projectsId}/traceSinks/{traceSinksId}",
-              "path": "v2beta1/{+name}",
-              "id": "cloudtrace.projects.traceSinks.patch"
+              "flatPath": "v2beta1/projects/{projectsId}/traceSinks",
+              "path": "v2beta1/{+parent}/traceSinks",
+              "id": "cloudtrace.projects.traceSinks.create",
+              "description": "Creates a sink that exports trace spans to a destination.  The\nexport of newly-ingested traces begins immediately, unless the sink's\n`writer_identity` is not permitted to write to the destination.  A sink can\nexport traces only from the resource owning the sink (the 'parent').",
+              "request": {
+                "$ref": "TraceSink"
+              }
             }
           }
         }
@@ -254,26 +253,41 @@
     }
   },
   "parameters": {
-    "prettyPrint": {
-      "type": "boolean",
-      "default": "true",
+    "key": {
       "location": "query",
-      "description": "Returns response with indentations and line breaks."
+      "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
+      "type": "string"
+    },
+    "access_token": {
+      "description": "OAuth access token.",
+      "type": "string",
+      "location": "query"
+    },
+    "upload_protocol": {
+      "description": "Upload protocol for media (e.g. \"raw\", \"multipart\").",
+      "type": "string",
+      "location": "query"
+    },
+    "prettyPrint": {
+      "location": "query",
+      "description": "Returns response with indentations and line breaks.",
+      "type": "boolean",
+      "default": "true"
     },
     "quotaUser": {
       "location": "query",
       "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.",
       "type": "string"
     },
-    "fields": {
-      "description": "Selector specifying which fields to include in a partial response.",
-      "type": "string",
-      "location": "query"
-    },
     "uploadType": {
       "description": "Legacy upload protocol for media (e.g. \"media\", \"multipart\").",
       "type": "string",
       "location": "query"
+    },
+    "fields": {
+      "location": "query",
+      "description": "Selector specifying which fields to include in a partial response.",
+      "type": "string"
     },
     "$.xgafv": {
       "enumDescriptions": [
@@ -289,22 +303,16 @@
       "type": "string"
     },
     "oauth_token": {
-      "type": "string",
       "location": "query",
-      "description": "OAuth 2.0 token for the current user."
-    },
-    "callback": {
-      "location": "query",
-      "description": "JSONP",
+      "description": "OAuth 2.0 token for the current user.",
       "type": "string"
     },
+    "callback": {
+      "description": "JSONP",
+      "type": "string",
+      "location": "query"
+    },
     "alt": {
-      "default": "json",
-      "enum": [
-        "json",
-        "media",
-        "proto"
-      ],
       "type": "string",
       "enumDescriptions": [
         "Responses with Content-Type of application/json",
@@ -312,27 +320,19 @@
         "Responses with Content-Type of application/x-protobuf"
       ],
       "location": "query",
-      "description": "Data format for response."
-    },
-    "key": {
-      "location": "query",
-      "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
-      "type": "string"
-    },
-    "access_token": {
-      "description": "OAuth access token.",
-      "type": "string",
-      "location": "query"
-    },
-    "upload_protocol": {
-      "type": "string",
-      "location": "query",
-      "description": "Upload protocol for media (e.g. \"raw\", \"multipart\")."
+      "description": "Data format for response.",
+      "default": "json",
+      "enum": [
+        "json",
+        "media",
+        "proto"
+      ]
     }
   },
   "version": "v2beta1",
   "baseUrl": "https://cloudtrace.googleapis.com/",
   "servicePath": "",
-  "description": "Sends application trace data to Cloud Trace for viewing. Trace data is collected for all App Engine applications by default. Trace data from other applications can be provided using this API. This library is used to interact with the Trace API directly. If you are looking to instrument your application for Cloud Trace, we recommend using OpenCensus.\n",
-  "kind": "discovery#restDescription"
+  "description": "Sends application trace data to Cloud Trace for viewing. Trace data is collected for all App Engine applications by default. Trace data from other applications can be provided using this API. This library is used to interact with the Cloud Trace API directly. If you are looking to instrument your application for Cloud Trace, we recommend using OpenCensus.\n",
+  "kind": "discovery#restDescription",
+  "basePath": ""
 }

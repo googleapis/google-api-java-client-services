@@ -33,9 +33,9 @@ public final class IntegerOperatorOptions extends com.google.api.client.json.Gen
   /**
    * Indicates the operator name required in the query in order to isolate the integer property
    * using the greater-than operator. For example, if greaterThanOperatorName is *priorityabove* and
-   * the property's name is *priorityVal*, then queries like *priorityabove:value* will show results
-   * only where the value of the property named *priorityVal* is greater than *value*. The operator
-   * name can only contain lowercase letters (a-z). The maximum length is 32 characters.
+   * the property's name is *priorityVal*, then queries like *priorityabove:value* show results only
+   * where the value of the property named *priorityVal* is greater than *value*. The operator name
+   * can only contain lowercase letters (a-z). The maximum length is 32 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,9 +44,9 @@ public final class IntegerOperatorOptions extends com.google.api.client.json.Gen
   /**
    * Indicates the operator name required in the query in order to isolate the integer property
    * using the less-than operator. For example, if lessThanOperatorName is *prioritybelow* and the
-   * property's name is *priorityVal*, then queries like *prioritybelow:value* will show results
-   * only where the value of the property named *priorityVal* is less than *value*. The operator
-   * name can only contain lowercase letters (a-z). The maximum length is 32 characters.
+   * property's name is *priorityVal*, then queries like *prioritybelow:value* show results only
+   * where the value of the property named *priorityVal* is less than *value*. The operator name can
+   * only contain lowercase letters (a-z). The maximum length is 32 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,11 +55,11 @@ public final class IntegerOperatorOptions extends com.google.api.client.json.Gen
   /**
    * Indicates the operator name required in the query in order to isolate the integer property. For
    * example, if operatorName is *priority* and the property's name is *priorityVal*, then queries
-   * like *priority:value* will show results only where the value of the property named
-   * *priorityVal* matches *value*. By contrast, a search that uses the same *value* without an
-   * operator will return all items where *value* matches the value of any String properties or text
-   * within the content field for the item. The operator name can only contain lowercase letters
-   * (a-z). The maximum length is 32 characters.
+   * like *priority:value* show results only where the value of the property named *priorityVal*
+   * matches *value*. By contrast, a search that uses the same *value* without an operator returns
+   * all items where *value* matches the value of any String properties or text within the content
+   * field for the item. The operator name can only contain lowercase letters (a-z). The maximum
+   * length is 32 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,9 +68,9 @@ public final class IntegerOperatorOptions extends com.google.api.client.json.Gen
   /**
    * Indicates the operator name required in the query in order to isolate the integer property
    * using the greater-than operator. For example, if greaterThanOperatorName is *priorityabove* and
-   * the property's name is *priorityVal*, then queries like *priorityabove:value* will show results
-   * only where the value of the property named *priorityVal* is greater than *value*. The operator
-   * name can only contain lowercase letters (a-z). The maximum length is 32 characters.
+   * the property's name is *priorityVal*, then queries like *priorityabove:value* show results only
+   * where the value of the property named *priorityVal* is greater than *value*. The operator name
+   * can only contain lowercase letters (a-z). The maximum length is 32 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getGreaterThanOperatorName() {
@@ -80,9 +80,9 @@ public final class IntegerOperatorOptions extends com.google.api.client.json.Gen
   /**
    * Indicates the operator name required in the query in order to isolate the integer property
    * using the greater-than operator. For example, if greaterThanOperatorName is *priorityabove* and
-   * the property's name is *priorityVal*, then queries like *priorityabove:value* will show results
-   * only where the value of the property named *priorityVal* is greater than *value*. The operator
-   * name can only contain lowercase letters (a-z). The maximum length is 32 characters.
+   * the property's name is *priorityVal*, then queries like *priorityabove:value* show results only
+   * where the value of the property named *priorityVal* is greater than *value*. The operator name
+   * can only contain lowercase letters (a-z). The maximum length is 32 characters.
    * @param greaterThanOperatorName greaterThanOperatorName or {@code null} for none
    */
   public IntegerOperatorOptions setGreaterThanOperatorName(java.lang.String greaterThanOperatorName) {
@@ -93,9 +93,9 @@ public final class IntegerOperatorOptions extends com.google.api.client.json.Gen
   /**
    * Indicates the operator name required in the query in order to isolate the integer property
    * using the less-than operator. For example, if lessThanOperatorName is *prioritybelow* and the
-   * property's name is *priorityVal*, then queries like *prioritybelow:value* will show results
-   * only where the value of the property named *priorityVal* is less than *value*. The operator
-   * name can only contain lowercase letters (a-z). The maximum length is 32 characters.
+   * property's name is *priorityVal*, then queries like *prioritybelow:value* show results only
+   * where the value of the property named *priorityVal* is less than *value*. The operator name can
+   * only contain lowercase letters (a-z). The maximum length is 32 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getLessThanOperatorName() {
@@ -105,9 +105,9 @@ public final class IntegerOperatorOptions extends com.google.api.client.json.Gen
   /**
    * Indicates the operator name required in the query in order to isolate the integer property
    * using the less-than operator. For example, if lessThanOperatorName is *prioritybelow* and the
-   * property's name is *priorityVal*, then queries like *prioritybelow:value* will show results
-   * only where the value of the property named *priorityVal* is less than *value*. The operator
-   * name can only contain lowercase letters (a-z). The maximum length is 32 characters.
+   * property's name is *priorityVal*, then queries like *prioritybelow:value* show results only
+   * where the value of the property named *priorityVal* is less than *value*. The operator name can
+   * only contain lowercase letters (a-z). The maximum length is 32 characters.
    * @param lessThanOperatorName lessThanOperatorName or {@code null} for none
    */
   public IntegerOperatorOptions setLessThanOperatorName(java.lang.String lessThanOperatorName) {
@@ -118,11 +118,11 @@ public final class IntegerOperatorOptions extends com.google.api.client.json.Gen
   /**
    * Indicates the operator name required in the query in order to isolate the integer property. For
    * example, if operatorName is *priority* and the property's name is *priorityVal*, then queries
-   * like *priority:value* will show results only where the value of the property named
-   * *priorityVal* matches *value*. By contrast, a search that uses the same *value* without an
-   * operator will return all items where *value* matches the value of any String properties or text
-   * within the content field for the item. The operator name can only contain lowercase letters
-   * (a-z). The maximum length is 32 characters.
+   * like *priority:value* show results only where the value of the property named *priorityVal*
+   * matches *value*. By contrast, a search that uses the same *value* without an operator returns
+   * all items where *value* matches the value of any String properties or text within the content
+   * field for the item. The operator name can only contain lowercase letters (a-z). The maximum
+   * length is 32 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getOperatorName() {
@@ -132,11 +132,11 @@ public final class IntegerOperatorOptions extends com.google.api.client.json.Gen
   /**
    * Indicates the operator name required in the query in order to isolate the integer property. For
    * example, if operatorName is *priority* and the property's name is *priorityVal*, then queries
-   * like *priority:value* will show results only where the value of the property named
-   * *priorityVal* matches *value*. By contrast, a search that uses the same *value* without an
-   * operator will return all items where *value* matches the value of any String properties or text
-   * within the content field for the item. The operator name can only contain lowercase letters
-   * (a-z). The maximum length is 32 characters.
+   * like *priority:value* show results only where the value of the property named *priorityVal*
+   * matches *value*. By contrast, a search that uses the same *value* without an operator returns
+   * all items where *value* matches the value of any String properties or text within the content
+   * field for the item. The operator name can only contain lowercase letters (a-z). The maximum
+   * length is 32 characters.
    * @param operatorName operatorName or {@code null} for none
    */
   public IntegerOperatorOptions setOperatorName(java.lang.String operatorName) {

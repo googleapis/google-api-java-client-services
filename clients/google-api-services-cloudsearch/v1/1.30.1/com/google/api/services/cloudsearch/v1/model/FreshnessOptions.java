@@ -48,7 +48,7 @@ public final class FreshnessOptions extends com.google.api.client.json.GenericJs
    * date type. Otherwise, the Indexing API uses updateTime as the freshness indicator. The maximum
    * length is 256 characters.
    *
-   * When a property is used to calculate fresheness, the value defaults to 2 years from the current
+   * When a property is used to calculate freshness, the value defaults to 2 years from the current
    * time.
    * The value may be {@code null}.
    */
@@ -80,7 +80,7 @@ public final class FreshnessOptions extends com.google.api.client.json.GenericJs
    * date type. Otherwise, the Indexing API uses updateTime as the freshness indicator. The maximum
    * length is 256 characters.
    *
-   * When a property is used to calculate fresheness, the value defaults to 2 years from the current
+   * When a property is used to calculate freshness, the value defaults to 2 years from the current
    * time.
    * @return value or {@code null} for none
    */
@@ -94,7 +94,7 @@ public final class FreshnessOptions extends com.google.api.client.json.GenericJs
    * date type. Otherwise, the Indexing API uses updateTime as the freshness indicator. The maximum
    * length is 256 characters.
    *
-   * When a property is used to calculate fresheness, the value defaults to 2 years from the current
+   * When a property is used to calculate freshness, the value defaults to 2 years from the current
    * time.
    * @param freshnessProperty freshnessProperty or {@code null} for none
    */

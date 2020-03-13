@@ -54,7 +54,7 @@ public final class EntityKey extends com.google.api.client.json.GenericJson {
    * Google Group.
    *
    * If specified, the `EntityKey` represents an external-identity-mapped group. The namespace must
-   * correspond to an identity source created in Admin Console. Must be of the form
+   * correspond to an identity source created in Admin Console and must be in the form of
    * `identitysources/{identity_source_id}.
    * The value may be {@code null}.
    */
@@ -99,7 +99,7 @@ public final class EntityKey extends com.google.api.client.json.GenericJson {
    * Google Group.
    *
    * If specified, the `EntityKey` represents an external-identity-mapped group. The namespace must
-   * correspond to an identity source created in Admin Console. Must be of the form
+   * correspond to an identity source created in Admin Console and must be in the form of
    * `identitysources/{identity_source_id}.
    * @return value or {@code null} for none
    */
@@ -114,7 +114,7 @@ public final class EntityKey extends com.google.api.client.json.GenericJson {
    * Google Group.
    *
    * If specified, the `EntityKey` represents an external-identity-mapped group. The namespace must
-   * correspond to an identity source created in Admin Console. Must be of the form
+   * correspond to an identity source created in Admin Console and must be in the form of
    * `identitysources/{identity_source_id}.
    * @param namespace namespace or {@code null} for none
    */

@@ -2296,8 +2296,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * execution of workflow by polling operations.get. The Operation will complete when entire workflow
          * is finished.The running workflow can be aborted via operations.cancel. This will cause any
          * inflight jobs to be cancelled and workflow-owned clusters to be deleted.The Operation.metadata
-         * will be WorkflowMetadata. Also see Using WorkflowMetadata.On successful completion,
-         * Operation.response will be Empty.
+         * will be WorkflowMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.datap
+         * roc.v1beta2#workflowmetadata). Also see Using WorkflowMetadata
+         * (https://cloud.google.com/dataproc/docs/concepts/workflows/debugging#using_workflowmetadata).On
+         * successful completion, Operation.response will be Empty.
          *
          * Create a request for the method "workflowTemplates.instantiate".
          *
@@ -2333,8 +2335,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * execution of workflow by polling operations.get. The Operation will complete when entire
            * workflow is finished.The running workflow can be aborted via operations.cancel. This will cause
            * any inflight jobs to be cancelled and workflow-owned clusters to be deleted.The
-           * Operation.metadata will be WorkflowMetadata. Also see Using WorkflowMetadata.On successful
-           * completion, Operation.response will be Empty.
+           * Operation.metadata will be WorkflowMetadata (https://cloud.google.com/dataproc/docs/reference/r
+           * pc/google.cloud.dataproc.v1beta2#workflowmetadata). Also see Using WorkflowMetadata
+           * (https://cloud.google.com/dataproc/docs/concepts/workflows/debugging#using_workflowmetadata).On
+           * successful completion, Operation.response will be Empty.
            *
            * Create a request for the method "workflowTemplates.instantiate".
            *
@@ -2475,7 +2479,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * Operation can be used to track execution of workflow by polling operations.get. The Operation
          * will complete when entire workflow is finished.The running workflow can be aborted via
          * operations.cancel. This will cause any inflight jobs to be cancelled and workflow-owned clusters
-         * to be deleted.The Operation.metadata will be WorkflowMetadata. Also see Using WorkflowMetadata.On
+         * to be deleted.The Operation.metadata will be WorkflowMetadata
+         * (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#workflowmetadata).
+         * Also see Using WorkflowMetadata
+         * (https://cloud.google.com/dataproc/docs/concepts/workflows/debugging#using_workflowmetadata).On
          * successful completion, Operation.response will be Empty.
          *
          * Create a request for the method "workflowTemplates.instantiateInline".
@@ -2513,8 +2520,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * returned Operation can be used to track execution of workflow by polling operations.get. The
            * Operation will complete when entire workflow is finished.The running workflow can be aborted
            * via operations.cancel. This will cause any inflight jobs to be cancelled and workflow-owned
-           * clusters to be deleted.The Operation.metadata will be WorkflowMetadata. Also see Using
-           * WorkflowMetadata.On successful completion, Operation.response will be Empty.
+           * clusters to be deleted.The Operation.metadata will be WorkflowMetadata (https://cloud.google.co
+           * m/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#workflowmetadata). Also see Using
+           * WorkflowMetadata
+           * (https://cloud.google.com/dataproc/docs/concepts/workflows/debugging#using_workflowmetadata).On
+           * successful completion, Operation.response will be Empty.
            *
            * Create a request for the method "workflowTemplates.instantiateInline".
            *
@@ -4783,7 +4793,9 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
       public class Clusters {
 
         /**
-         * Creates a cluster in a project. The returned Operation.metadata will be ClusterOperationMetadata.
+         * Creates a cluster in a project. The returned Operation.metadata will be ClusterOperationMetadata
+         * (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1beta2#clusteroperat
+         * ionmetadata).
          *
          * Create a request for the method "clusters.create".
          *
@@ -4807,7 +4819,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Creates a cluster in a project. The returned Operation.metadata will be
-           * ClusterOperationMetadata.
+           * ClusterOperationMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dat
+           * aproc.v1beta2#clusteroperationmetadata).
            *
            * Create a request for the method "clusters.create".
            *
@@ -4958,7 +4971,9 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Deletes a cluster in a project. The returned Operation.metadata will be ClusterOperationMetadata.
+         * Deletes a cluster in a project. The returned Operation.metadata will be ClusterOperationMetadata
+         * (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1beta2#clusteroperat
+         * ionmetadata).
          *
          * Create a request for the method "clusters.delete".
          *
@@ -4982,7 +4997,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Deletes a cluster in a project. The returned Operation.metadata will be
-           * ClusterOperationMetadata.
+           * ClusterOperationMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dat
+           * aproc.v1beta2#clusteroperationmetadata).
            *
            * Create a request for the method "clusters.delete".
            *
@@ -5174,7 +5190,9 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
         }
         /**
          * Gets cluster diagnostic information. The returned Operation.metadata will be
-         * ClusterOperationMetadata. After the operation completes, Operation.response contains Empty.
+         * ClusterOperationMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.datap
+         * roc.v1beta2#clusteroperationmetadata). After the operation completes, Operation.response contains
+         * Empty.
          *
          * Create a request for the method "clusters.diagnose".
          *
@@ -5199,7 +5217,9 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Gets cluster diagnostic information. The returned Operation.metadata will be
-           * ClusterOperationMetadata. After the operation completes, Operation.response contains Empty.
+           * ClusterOperationMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dat
+           * aproc.v1beta2#clusteroperationmetadata). After the operation completes, Operation.response
+           * contains Empty.
            *
            * Create a request for the method "clusters.diagnose".
            *
@@ -5673,7 +5693,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Lists all regions/{region}/clusters in a project.
+         * Lists all regions/{region}/clusters in a project alphabetically.
          *
          * Create a request for the method "clusters.list".
          *
@@ -5695,7 +5715,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           private static final String REST_PATH = "v1beta2/projects/{projectId}/regions/{region}/clusters";
 
           /**
-           * Lists all regions/{region}/clusters in a project.
+           * Lists all regions/{region}/clusters in a project alphabetically.
            *
            * Create a request for the method "clusters.list".
            *
@@ -5895,7 +5915,9 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Updates a cluster in a project. The returned Operation.metadata will be ClusterOperationMetadata.
+         * Updates a cluster in a project. The returned Operation.metadata will be ClusterOperationMetadata
+         * (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1beta2#clusteroperat
+         * ionmetadata).
          *
          * Create a request for the method "clusters.patch".
          *
@@ -5920,7 +5942,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Updates a cluster in a project. The returned Operation.metadata will be
-           * ClusterOperationMetadata.
+           * ClusterOperationMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dat
+           * aproc.v1beta2#clusteroperationmetadata).
            *
            * Create a request for the method "clusters.patch".
            *
@@ -6357,6 +6380,317 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
+         * Starts a cluster in a project.
+         *
+         * Create a request for the method "clusters.start".
+         *
+         * This request holds the parameters needed by the dataproc server.  After setting any optional
+         * parameters, call the {@link Start#execute()} method to invoke the remote operation.
+         *
+         * @param projectId Required. The ID of the Google Cloud Platform project the cluster belongs to.
+         * @param region Required. The Dataproc region in which to handle the request.
+         * @param clusterName Required. The cluster name.
+         * @param content the {@link com.google.api.services.dataproc.v1beta2.model.StartClusterRequest}
+         * @return the request
+         */
+        public Start start(java.lang.String projectId, java.lang.String region, java.lang.String clusterName, com.google.api.services.dataproc.v1beta2.model.StartClusterRequest content) throws java.io.IOException {
+          Start result = new Start(projectId, region, clusterName, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Start extends DataprocRequest<com.google.api.services.dataproc.v1beta2.model.Operation> {
+
+          private static final String REST_PATH = "v1beta2/projects/{projectId}/regions/{region}/clusters/{clusterName}:start";
+
+          /**
+           * Starts a cluster in a project.
+           *
+           * Create a request for the method "clusters.start".
+           *
+           * This request holds the parameters needed by the the dataproc server.  After setting any
+           * optional parameters, call the {@link Start#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Start#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param projectId Required. The ID of the Google Cloud Platform project the cluster belongs to.
+           * @param region Required. The Dataproc region in which to handle the request.
+           * @param clusterName Required. The cluster name.
+           * @param content the {@link com.google.api.services.dataproc.v1beta2.model.StartClusterRequest}
+           * @since 1.13
+           */
+          protected Start(java.lang.String projectId, java.lang.String region, java.lang.String clusterName, com.google.api.services.dataproc.v1beta2.model.StartClusterRequest content) {
+            super(Dataproc.this, "POST", REST_PATH, content, com.google.api.services.dataproc.v1beta2.model.Operation.class);
+            this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+            this.region = com.google.api.client.util.Preconditions.checkNotNull(region, "Required parameter region must be specified.");
+            this.clusterName = com.google.api.client.util.Preconditions.checkNotNull(clusterName, "Required parameter clusterName must be specified.");
+          }
+
+          @Override
+          public Start set$Xgafv(java.lang.String $Xgafv) {
+            return (Start) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Start setAccessToken(java.lang.String accessToken) {
+            return (Start) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Start setAlt(java.lang.String alt) {
+            return (Start) super.setAlt(alt);
+          }
+
+          @Override
+          public Start setCallback(java.lang.String callback) {
+            return (Start) super.setCallback(callback);
+          }
+
+          @Override
+          public Start setFields(java.lang.String fields) {
+            return (Start) super.setFields(fields);
+          }
+
+          @Override
+          public Start setKey(java.lang.String key) {
+            return (Start) super.setKey(key);
+          }
+
+          @Override
+          public Start setOauthToken(java.lang.String oauthToken) {
+            return (Start) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Start setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Start) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Start setQuotaUser(java.lang.String quotaUser) {
+            return (Start) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Start setUploadType(java.lang.String uploadType) {
+            return (Start) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Start setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Start) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The ID of the Google Cloud Platform project the cluster belongs to. */
+          @com.google.api.client.util.Key
+          private java.lang.String projectId;
+
+          /** Required. The ID of the Google Cloud Platform project the cluster belongs to.
+           */
+          public java.lang.String getProjectId() {
+            return projectId;
+          }
+
+          /** Required. The ID of the Google Cloud Platform project the cluster belongs to. */
+          public Start setProjectId(java.lang.String projectId) {
+            this.projectId = projectId;
+            return this;
+          }
+
+          /** Required. The Dataproc region in which to handle the request. */
+          @com.google.api.client.util.Key
+          private java.lang.String region;
+
+          /** Required. The Dataproc region in which to handle the request.
+           */
+          public java.lang.String getRegion() {
+            return region;
+          }
+
+          /** Required. The Dataproc region in which to handle the request. */
+          public Start setRegion(java.lang.String region) {
+            this.region = region;
+            return this;
+          }
+
+          /** Required. The cluster name. */
+          @com.google.api.client.util.Key
+          private java.lang.String clusterName;
+
+          /** Required. The cluster name.
+           */
+          public java.lang.String getClusterName() {
+            return clusterName;
+          }
+
+          /** Required. The cluster name. */
+          public Start setClusterName(java.lang.String clusterName) {
+            this.clusterName = clusterName;
+            return this;
+          }
+
+          @Override
+          public Start set(String parameterName, Object value) {
+            return (Start) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Stops a cluster in a project.
+         *
+         * Create a request for the method "clusters.stop".
+         *
+         * This request holds the parameters needed by the dataproc server.  After setting any optional
+         * parameters, call the {@link Stop#execute()} method to invoke the remote operation.
+         *
+         * @param projectId Required. The ID of the Google Cloud Platform project the cluster belongs to.
+         * @param region Required. The Dataproc region in which to handle the request.
+         * @param clusterName Required. The cluster name.
+         * @param content the {@link com.google.api.services.dataproc.v1beta2.model.StopClusterRequest}
+         * @return the request
+         */
+        public Stop stop(java.lang.String projectId, java.lang.String region, java.lang.String clusterName, com.google.api.services.dataproc.v1beta2.model.StopClusterRequest content) throws java.io.IOException {
+          Stop result = new Stop(projectId, region, clusterName, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Stop extends DataprocRequest<com.google.api.services.dataproc.v1beta2.model.Operation> {
+
+          private static final String REST_PATH = "v1beta2/projects/{projectId}/regions/{region}/clusters/{clusterName}:stop";
+
+          /**
+           * Stops a cluster in a project.
+           *
+           * Create a request for the method "clusters.stop".
+           *
+           * This request holds the parameters needed by the the dataproc server.  After setting any
+           * optional parameters, call the {@link Stop#execute()} method to invoke the remote operation. <p>
+           * {@link Stop#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param projectId Required. The ID of the Google Cloud Platform project the cluster belongs to.
+           * @param region Required. The Dataproc region in which to handle the request.
+           * @param clusterName Required. The cluster name.
+           * @param content the {@link com.google.api.services.dataproc.v1beta2.model.StopClusterRequest}
+           * @since 1.13
+           */
+          protected Stop(java.lang.String projectId, java.lang.String region, java.lang.String clusterName, com.google.api.services.dataproc.v1beta2.model.StopClusterRequest content) {
+            super(Dataproc.this, "POST", REST_PATH, content, com.google.api.services.dataproc.v1beta2.model.Operation.class);
+            this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+            this.region = com.google.api.client.util.Preconditions.checkNotNull(region, "Required parameter region must be specified.");
+            this.clusterName = com.google.api.client.util.Preconditions.checkNotNull(clusterName, "Required parameter clusterName must be specified.");
+          }
+
+          @Override
+          public Stop set$Xgafv(java.lang.String $Xgafv) {
+            return (Stop) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Stop setAccessToken(java.lang.String accessToken) {
+            return (Stop) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Stop setAlt(java.lang.String alt) {
+            return (Stop) super.setAlt(alt);
+          }
+
+          @Override
+          public Stop setCallback(java.lang.String callback) {
+            return (Stop) super.setCallback(callback);
+          }
+
+          @Override
+          public Stop setFields(java.lang.String fields) {
+            return (Stop) super.setFields(fields);
+          }
+
+          @Override
+          public Stop setKey(java.lang.String key) {
+            return (Stop) super.setKey(key);
+          }
+
+          @Override
+          public Stop setOauthToken(java.lang.String oauthToken) {
+            return (Stop) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Stop setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Stop) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Stop setQuotaUser(java.lang.String quotaUser) {
+            return (Stop) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Stop setUploadType(java.lang.String uploadType) {
+            return (Stop) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Stop setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Stop) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The ID of the Google Cloud Platform project the cluster belongs to. */
+          @com.google.api.client.util.Key
+          private java.lang.String projectId;
+
+          /** Required. The ID of the Google Cloud Platform project the cluster belongs to.
+           */
+          public java.lang.String getProjectId() {
+            return projectId;
+          }
+
+          /** Required. The ID of the Google Cloud Platform project the cluster belongs to. */
+          public Stop setProjectId(java.lang.String projectId) {
+            this.projectId = projectId;
+            return this;
+          }
+
+          /** Required. The Dataproc region in which to handle the request. */
+          @com.google.api.client.util.Key
+          private java.lang.String region;
+
+          /** Required. The Dataproc region in which to handle the request.
+           */
+          public java.lang.String getRegion() {
+            return region;
+          }
+
+          /** Required. The Dataproc region in which to handle the request. */
+          public Stop setRegion(java.lang.String region) {
+            this.region = region;
+            return this;
+          }
+
+          /** Required. The cluster name. */
+          @com.google.api.client.util.Key
+          private java.lang.String clusterName;
+
+          /** Required. The cluster name.
+           */
+          public java.lang.String getClusterName() {
+            return clusterName;
+          }
+
+          /** Required. The cluster name. */
+          public Stop setClusterName(java.lang.String clusterName) {
+            this.clusterName = clusterName;
+            return this;
+          }
+
+          @Override
+          public Stop set(String parameterName, Object value) {
+            return (Stop) super.set(parameterName, value);
+          }
+        }
+        /**
          * Returns permissions that a caller has on the specified resource. If the resource does not exist,
          * this will return an empty set of permissions, not a NOT_FOUND error.Note: This operation is
          * designed to be used for building permission-aware UIs and command-line tools, not for
@@ -6526,7 +6860,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Starts a job cancellation request. To access the job resource after cancellation, call
-         * regions/{region}/jobs.list or regions/{region}/jobs.get.
+         * regions/{region}/jobs.list
+         * (https://cloud.google.com/dataproc/docs/reference/rest/v1beta2/projects.regions.jobs/list) or
+         * regions/{region}/jobs.get
+         * (https://cloud.google.com/dataproc/docs/reference/rest/v1beta2/projects.regions.jobs/get).
          *
          * Create a request for the method "jobs.cancel".
          *
@@ -6551,7 +6888,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Starts a job cancellation request. To access the job resource after cancellation, call
-           * regions/{region}/jobs.list or regions/{region}/jobs.get.
+           * regions/{region}/jobs.list
+           * (https://cloud.google.com/dataproc/docs/reference/rest/v1beta2/projects.regions.jobs/list) or
+           * regions/{region}/jobs.get
+           * (https://cloud.google.com/dataproc/docs/reference/rest/v1beta2/projects.regions.jobs/get).
            *
            * Create a request for the method "jobs.cancel".
            *
@@ -7903,6 +8243,143 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public Submit set(String parameterName, Object value) {
             return (Submit) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Submits job to a cluster.
+         *
+         * Create a request for the method "jobs.submitAsOperation".
+         *
+         * This request holds the parameters needed by the dataproc server.  After setting any optional
+         * parameters, call the {@link SubmitAsOperation#execute()} method to invoke the remote operation.
+         *
+         * @param projectId Required. The ID of the Google Cloud Platform project that the job belongs to.
+         * @param region Required. The Dataproc region in which to handle the request.
+         * @param content the {@link com.google.api.services.dataproc.v1beta2.model.SubmitJobRequest}
+         * @return the request
+         */
+        public SubmitAsOperation submitAsOperation(java.lang.String projectId, java.lang.String region, com.google.api.services.dataproc.v1beta2.model.SubmitJobRequest content) throws java.io.IOException {
+          SubmitAsOperation result = new SubmitAsOperation(projectId, region, content);
+          initialize(result);
+          return result;
+        }
+
+        public class SubmitAsOperation extends DataprocRequest<com.google.api.services.dataproc.v1beta2.model.Operation> {
+
+          private static final String REST_PATH = "v1beta2/projects/{projectId}/regions/{region}/jobs:submitAsOperation";
+
+          /**
+           * Submits job to a cluster.
+           *
+           * Create a request for the method "jobs.submitAsOperation".
+           *
+           * This request holds the parameters needed by the the dataproc server.  After setting any
+           * optional parameters, call the {@link SubmitAsOperation#execute()} method to invoke the remote
+           * operation. <p> {@link SubmitAsOperation#initialize(com.google.api.client.googleapis.services.Ab
+           * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param projectId Required. The ID of the Google Cloud Platform project that the job belongs to.
+           * @param region Required. The Dataproc region in which to handle the request.
+           * @param content the {@link com.google.api.services.dataproc.v1beta2.model.SubmitJobRequest}
+           * @since 1.13
+           */
+          protected SubmitAsOperation(java.lang.String projectId, java.lang.String region, com.google.api.services.dataproc.v1beta2.model.SubmitJobRequest content) {
+            super(Dataproc.this, "POST", REST_PATH, content, com.google.api.services.dataproc.v1beta2.model.Operation.class);
+            this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+            this.region = com.google.api.client.util.Preconditions.checkNotNull(region, "Required parameter region must be specified.");
+          }
+
+          @Override
+          public SubmitAsOperation set$Xgafv(java.lang.String $Xgafv) {
+            return (SubmitAsOperation) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public SubmitAsOperation setAccessToken(java.lang.String accessToken) {
+            return (SubmitAsOperation) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public SubmitAsOperation setAlt(java.lang.String alt) {
+            return (SubmitAsOperation) super.setAlt(alt);
+          }
+
+          @Override
+          public SubmitAsOperation setCallback(java.lang.String callback) {
+            return (SubmitAsOperation) super.setCallback(callback);
+          }
+
+          @Override
+          public SubmitAsOperation setFields(java.lang.String fields) {
+            return (SubmitAsOperation) super.setFields(fields);
+          }
+
+          @Override
+          public SubmitAsOperation setKey(java.lang.String key) {
+            return (SubmitAsOperation) super.setKey(key);
+          }
+
+          @Override
+          public SubmitAsOperation setOauthToken(java.lang.String oauthToken) {
+            return (SubmitAsOperation) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public SubmitAsOperation setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (SubmitAsOperation) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public SubmitAsOperation setQuotaUser(java.lang.String quotaUser) {
+            return (SubmitAsOperation) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public SubmitAsOperation setUploadType(java.lang.String uploadType) {
+            return (SubmitAsOperation) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public SubmitAsOperation setUploadProtocol(java.lang.String uploadProtocol) {
+            return (SubmitAsOperation) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The ID of the Google Cloud Platform project that the job belongs to. */
+          @com.google.api.client.util.Key
+          private java.lang.String projectId;
+
+          /** Required. The ID of the Google Cloud Platform project that the job belongs to.
+           */
+          public java.lang.String getProjectId() {
+            return projectId;
+          }
+
+          /** Required. The ID of the Google Cloud Platform project that the job belongs to. */
+          public SubmitAsOperation setProjectId(java.lang.String projectId) {
+            this.projectId = projectId;
+            return this;
+          }
+
+          /** Required. The Dataproc region in which to handle the request. */
+          @com.google.api.client.util.Key
+          private java.lang.String region;
+
+          /** Required. The Dataproc region in which to handle the request.
+           */
+          public java.lang.String getRegion() {
+            return region;
+          }
+
+          /** Required. The Dataproc region in which to handle the request. */
+          public SubmitAsOperation setRegion(java.lang.String region) {
+            this.region = region;
+            return this;
+          }
+
+          @Override
+          public SubmitAsOperation set(String parameterName, Object value) {
+            return (SubmitAsOperation) super.set(parameterName, value);
           }
         }
         /**
@@ -9910,8 +10387,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * execution of workflow by polling operations.get. The Operation will complete when entire workflow
          * is finished.The running workflow can be aborted via operations.cancel. This will cause any
          * inflight jobs to be cancelled and workflow-owned clusters to be deleted.The Operation.metadata
-         * will be WorkflowMetadata. Also see Using WorkflowMetadata.On successful completion,
-         * Operation.response will be Empty.
+         * will be WorkflowMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.datap
+         * roc.v1beta2#workflowmetadata). Also see Using WorkflowMetadata
+         * (https://cloud.google.com/dataproc/docs/concepts/workflows/debugging#using_workflowmetadata).On
+         * successful completion, Operation.response will be Empty.
          *
          * Create a request for the method "workflowTemplates.instantiate".
          *
@@ -9947,8 +10426,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * execution of workflow by polling operations.get. The Operation will complete when entire
            * workflow is finished.The running workflow can be aborted via operations.cancel. This will cause
            * any inflight jobs to be cancelled and workflow-owned clusters to be deleted.The
-           * Operation.metadata will be WorkflowMetadata. Also see Using WorkflowMetadata.On successful
-           * completion, Operation.response will be Empty.
+           * Operation.metadata will be WorkflowMetadata (https://cloud.google.com/dataproc/docs/reference/r
+           * pc/google.cloud.dataproc.v1beta2#workflowmetadata). Also see Using WorkflowMetadata
+           * (https://cloud.google.com/dataproc/docs/concepts/workflows/debugging#using_workflowmetadata).On
+           * successful completion, Operation.response will be Empty.
            *
            * Create a request for the method "workflowTemplates.instantiate".
            *
@@ -10089,7 +10570,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * Operation can be used to track execution of workflow by polling operations.get. The Operation
          * will complete when entire workflow is finished.The running workflow can be aborted via
          * operations.cancel. This will cause any inflight jobs to be cancelled and workflow-owned clusters
-         * to be deleted.The Operation.metadata will be WorkflowMetadata. Also see Using WorkflowMetadata.On
+         * to be deleted.The Operation.metadata will be WorkflowMetadata
+         * (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#workflowmetadata).
+         * Also see Using WorkflowMetadata
+         * (https://cloud.google.com/dataproc/docs/concepts/workflows/debugging#using_workflowmetadata).On
          * successful completion, Operation.response will be Empty.
          *
          * Create a request for the method "workflowTemplates.instantiateInline".
@@ -10127,8 +10611,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * returned Operation can be used to track execution of workflow by polling operations.get. The
            * Operation will complete when entire workflow is finished.The running workflow can be aborted
            * via operations.cancel. This will cause any inflight jobs to be cancelled and workflow-owned
-           * clusters to be deleted.The Operation.metadata will be WorkflowMetadata. Also see Using
-           * WorkflowMetadata.On successful completion, Operation.response will be Empty.
+           * clusters to be deleted.The Operation.metadata will be WorkflowMetadata (https://cloud.google.co
+           * m/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#workflowmetadata). Also see Using
+           * WorkflowMetadata
+           * (https://cloud.google.com/dataproc/docs/concepts/workflows/debugging#using_workflowmetadata).On
+           * successful completion, Operation.response will be Empty.
            *
            * Create a request for the method "workflowTemplates.instantiateInline".
            *

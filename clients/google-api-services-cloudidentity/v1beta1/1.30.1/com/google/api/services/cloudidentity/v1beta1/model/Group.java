@@ -19,7 +19,7 @@ package com.google.api.services.cloudidentity.v1beta1.model;
 /**
  * A group within the Cloud Identity Groups API.
  *
- * A `Group` is a collection of entities, where each entity is either a user or another group or a
+ * A `Group` is a collection of entities, where each entity is either a user, another group or a
  * service account.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

@@ -38,10 +38,12 @@ public final class PullRequest extends com.google.api.client.json.GenericJson {
   private java.lang.Integer maxMessages;
 
   /**
-   * If this is specified as true the system will respond immediately even if it is not able to
-   * return a message in the `Pull` response. Otherwise the system is allowed to wait until at least
-   * one message is available rather than returning no messages. The client may cancel the request
-   * if it does not wish to wait any longer for the response.
+   * Optional. If this is specified as true the system will respond immediately even if it is not
+   * able to return a message in the `Pull` response. Otherwise the system is allowed to wait until
+   * at least one message is available rather than returning no messages. The client may cancel the
+   * request if it does not wish to wait any longer for the response. Warning: setting this field to
+   * `true` is discouraged because it adversely impacts the performance of `Pull` operations. We
+   * recommend that users do not set this field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,10 +69,12 @@ public final class PullRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If this is specified as true the system will respond immediately even if it is not able to
-   * return a message in the `Pull` response. Otherwise the system is allowed to wait until at least
-   * one message is available rather than returning no messages. The client may cancel the request
-   * if it does not wish to wait any longer for the response.
+   * Optional. If this is specified as true the system will respond immediately even if it is not
+   * able to return a message in the `Pull` response. Otherwise the system is allowed to wait until
+   * at least one message is available rather than returning no messages. The client may cancel the
+   * request if it does not wish to wait any longer for the response. Warning: setting this field to
+   * `true` is discouraged because it adversely impacts the performance of `Pull` operations. We
+   * recommend that users do not set this field.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getReturnImmediately() {
@@ -78,10 +82,12 @@ public final class PullRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If this is specified as true the system will respond immediately even if it is not able to
-   * return a message in the `Pull` response. Otherwise the system is allowed to wait until at least
-   * one message is available rather than returning no messages. The client may cancel the request
-   * if it does not wish to wait any longer for the response.
+   * Optional. If this is specified as true the system will respond immediately even if it is not
+   * able to return a message in the `Pull` response. Otherwise the system is allowed to wait until
+   * at least one message is available rather than returning no messages. The client may cancel the
+   * request if it does not wish to wait any longer for the response. Warning: setting this field to
+   * `true` is discouraged because it adversely impacts the performance of `Pull` operations. We
+   * recommend that users do not set this field.
    * @param returnImmediately returnImmediately or {@code null} for none
    */
   public PullRequest setReturnImmediately(java.lang.Boolean returnImmediately) {

@@ -2429,6 +2429,29 @@ public class AdSenseHost extends com.google.api.client.googleapis.services.json.
         return this;
       }
 
+      /**
+       * The URL to redirect the user to once association is completed. It receives a token
+       * parameter that can then be used to retrieve the associated account.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String callbackUrl;
+
+      /** The URL to redirect the user to once association is completed. It receives a token parameter that
+     can then be used to retrieve the associated account.
+       */
+      public java.lang.String getCallbackUrl() {
+        return callbackUrl;
+      }
+
+      /**
+       * The URL to redirect the user to once association is completed. It receives a token
+       * parameter that can then be used to retrieve the associated account.
+       */
+      public Start setCallbackUrl(java.lang.String callbackUrl) {
+        this.callbackUrl = callbackUrl;
+        return this;
+      }
+
       /** The preferred locale of the user. */
       @com.google.api.client.util.Key
       private java.lang.String userLocale;

@@ -2225,8 +2225,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * execution of workflow by polling operations.get. The Operation will complete when entire workflow
          * is finished.The running workflow can be aborted via operations.cancel. This will cause any
          * inflight jobs to be cancelled and workflow-owned clusters to be deleted.The Operation.metadata
-         * will be WorkflowMetadata. Also see Using WorkflowMetadata.On successful completion,
-         * Operation.response will be Empty.
+         * will be WorkflowMetadata
+         * (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#workflowmetadata).
+         * Also see Using WorkflowMetadata
+         * (https://cloud.google.com/dataproc/docs/concepts/workflows/debugging#using_workflowmetadata).On
+         * successful completion, Operation.response will be Empty.
          *
          * Create a request for the method "workflowTemplates.instantiate".
          *
@@ -2262,8 +2265,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * execution of workflow by polling operations.get. The Operation will complete when entire
            * workflow is finished.The running workflow can be aborted via operations.cancel. This will cause
            * any inflight jobs to be cancelled and workflow-owned clusters to be deleted.The
-           * Operation.metadata will be WorkflowMetadata. Also see Using WorkflowMetadata.On successful
-           * completion, Operation.response will be Empty.
+           * Operation.metadata will be WorkflowMetadata (https://cloud.google.com/dataproc/docs/reference/r
+           * pc/google.cloud.dataproc.v1#workflowmetadata). Also see Using WorkflowMetadata
+           * (https://cloud.google.com/dataproc/docs/concepts/workflows/debugging#using_workflowmetadata).On
+           * successful completion, Operation.response will be Empty.
            *
            * Create a request for the method "workflowTemplates.instantiate".
            *
@@ -2404,7 +2409,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * Operation can be used to track execution of workflow by polling operations.get. The Operation
          * will complete when entire workflow is finished.The running workflow can be aborted via
          * operations.cancel. This will cause any inflight jobs to be cancelled and workflow-owned clusters
-         * to be deleted.The Operation.metadata will be WorkflowMetadata. Also see Using WorkflowMetadata.On
+         * to be deleted.The Operation.metadata will be WorkflowMetadata
+         * (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#workflowmetadata).
+         * Also see Using WorkflowMetadata
+         * (https://cloud.google.com/dataproc/docs/concepts/workflows/debugging#using_workflowmetadata).On
          * successful completion, Operation.response will be Empty.
          *
          * Create a request for the method "workflowTemplates.instantiateInline".
@@ -2442,8 +2450,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * returned Operation can be used to track execution of workflow by polling operations.get. The
            * Operation will complete when entire workflow is finished.The running workflow can be aborted
            * via operations.cancel. This will cause any inflight jobs to be cancelled and workflow-owned
-           * clusters to be deleted.The Operation.metadata will be WorkflowMetadata. Also see Using
-           * WorkflowMetadata.On successful completion, Operation.response will be Empty.
+           * clusters to be deleted.The Operation.metadata will be WorkflowMetadata (https://cloud.google.co
+           * m/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#workflowmetadata). Also see Using
+           * WorkflowMetadata
+           * (https://cloud.google.com/dataproc/docs/concepts/workflows/debugging#using_workflowmetadata).On
+           * successful completion, Operation.response will be Empty.
            *
            * Create a request for the method "workflowTemplates.instantiateInline".
            *
@@ -4662,7 +4673,9 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
       public class Clusters {
 
         /**
-         * Creates a cluster in a project. The returned Operation.metadata will be ClusterOperationMetadata.
+         * Creates a cluster in a project. The returned Operation.metadata will be ClusterOperationMetadata
+         * (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationme
+         * tadata).
          *
          * Create a request for the method "clusters.create".
          *
@@ -4686,7 +4699,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Creates a cluster in a project. The returned Operation.metadata will be
-           * ClusterOperationMetadata.
+           * ClusterOperationMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dat
+           * aproc.v1#clusteroperationmetadata).
            *
            * Create a request for the method "clusters.create".
            *
@@ -4837,7 +4851,9 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Deletes a cluster in a project. The returned Operation.metadata will be ClusterOperationMetadata.
+         * Deletes a cluster in a project. The returned Operation.metadata will be ClusterOperationMetadata
+         * (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationme
+         * tadata).
          *
          * Create a request for the method "clusters.delete".
          *
@@ -4861,7 +4877,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Deletes a cluster in a project. The returned Operation.metadata will be
-           * ClusterOperationMetadata.
+           * ClusterOperationMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dat
+           * aproc.v1#clusteroperationmetadata).
            *
            * Create a request for the method "clusters.delete".
            *
@@ -5053,8 +5070,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
         }
         /**
          * Gets cluster diagnostic information. The returned Operation.metadata will be
-         * ClusterOperationMetadata. After the operation completes, Operation.response contains
-         * DiagnoseClusterResults.
+         * ClusterOperationMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.datap
+         * roc.v1#clusteroperationmetadata). After the operation completes, Operation.response contains
+         * DiagnoseClusterResults (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.datapro
+         * c.v1#diagnoseclusterresults).
          *
          * Create a request for the method "clusters.diagnose".
          *
@@ -5079,8 +5098,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Gets cluster diagnostic information. The returned Operation.metadata will be
-           * ClusterOperationMetadata. After the operation completes, Operation.response contains
-           * DiagnoseClusterResults.
+           * ClusterOperationMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dat
+           * aproc.v1#clusteroperationmetadata). After the operation completes, Operation.response contains
+           * DiagnoseClusterResults (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.datap
+           * roc.v1#diagnoseclusterresults).
            *
            * Create a request for the method "clusters.diagnose".
            *
@@ -5517,7 +5538,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Lists all regions/{region}/clusters in a project.
+         * Lists all regions/{region}/clusters in a project alphabetically.
          *
          * Create a request for the method "clusters.list".
          *
@@ -5539,7 +5560,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           private static final String REST_PATH = "v1/projects/{projectId}/regions/{region}/clusters";
 
           /**
-           * Lists all regions/{region}/clusters in a project.
+           * Lists all regions/{region}/clusters in a project alphabetically.
            *
            * Create a request for the method "clusters.list".
            *
@@ -5739,7 +5760,9 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Updates a cluster in a project. The returned Operation.metadata will be ClusterOperationMetadata.
+         * Updates a cluster in a project. The returned Operation.metadata will be ClusterOperationMetadata
+         * (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationme
+         * tadata).
          *
          * Create a request for the method "clusters.patch".
          *
@@ -5764,7 +5787,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Updates a cluster in a project. The returned Operation.metadata will be
-           * ClusterOperationMetadata.
+           * ClusterOperationMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dat
+           * aproc.v1#clusteroperationmetadata).
            *
            * Create a request for the method "clusters.patch".
            *
@@ -6333,7 +6357,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Starts a job cancellation request. To access the job resource after cancellation, call
-         * regions/{region}/jobs.list or regions/{region}/jobs.get.
+         * regions/{region}/jobs.list
+         * (https://cloud.google.com/dataproc/docs/reference/rest/v1/projects.regions.jobs/list) or
+         * regions/{region}/jobs.get
+         * (https://cloud.google.com/dataproc/docs/reference/rest/v1/projects.regions.jobs/get).
          *
          * Create a request for the method "jobs.cancel".
          *
@@ -6358,7 +6385,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Starts a job cancellation request. To access the job resource after cancellation, call
-           * regions/{region}/jobs.list or regions/{region}/jobs.get.
+           * regions/{region}/jobs.list
+           * (https://cloud.google.com/dataproc/docs/reference/rest/v1/projects.regions.jobs/list) or
+           * regions/{region}/jobs.get
+           * (https://cloud.google.com/dataproc/docs/reference/rest/v1/projects.regions.jobs/get).
            *
            * Create a request for the method "jobs.cancel".
            *
@@ -9606,8 +9636,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * execution of workflow by polling operations.get. The Operation will complete when entire workflow
          * is finished.The running workflow can be aborted via operations.cancel. This will cause any
          * inflight jobs to be cancelled and workflow-owned clusters to be deleted.The Operation.metadata
-         * will be WorkflowMetadata. Also see Using WorkflowMetadata.On successful completion,
-         * Operation.response will be Empty.
+         * will be WorkflowMetadata
+         * (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#workflowmetadata).
+         * Also see Using WorkflowMetadata
+         * (https://cloud.google.com/dataproc/docs/concepts/workflows/debugging#using_workflowmetadata).On
+         * successful completion, Operation.response will be Empty.
          *
          * Create a request for the method "workflowTemplates.instantiate".
          *
@@ -9643,8 +9676,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * execution of workflow by polling operations.get. The Operation will complete when entire
            * workflow is finished.The running workflow can be aborted via operations.cancel. This will cause
            * any inflight jobs to be cancelled and workflow-owned clusters to be deleted.The
-           * Operation.metadata will be WorkflowMetadata. Also see Using WorkflowMetadata.On successful
-           * completion, Operation.response will be Empty.
+           * Operation.metadata will be WorkflowMetadata (https://cloud.google.com/dataproc/docs/reference/r
+           * pc/google.cloud.dataproc.v1#workflowmetadata). Also see Using WorkflowMetadata
+           * (https://cloud.google.com/dataproc/docs/concepts/workflows/debugging#using_workflowmetadata).On
+           * successful completion, Operation.response will be Empty.
            *
            * Create a request for the method "workflowTemplates.instantiate".
            *
@@ -9785,7 +9820,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * Operation can be used to track execution of workflow by polling operations.get. The Operation
          * will complete when entire workflow is finished.The running workflow can be aborted via
          * operations.cancel. This will cause any inflight jobs to be cancelled and workflow-owned clusters
-         * to be deleted.The Operation.metadata will be WorkflowMetadata. Also see Using WorkflowMetadata.On
+         * to be deleted.The Operation.metadata will be WorkflowMetadata
+         * (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#workflowmetadata).
+         * Also see Using WorkflowMetadata
+         * (https://cloud.google.com/dataproc/docs/concepts/workflows/debugging#using_workflowmetadata).On
          * successful completion, Operation.response will be Empty.
          *
          * Create a request for the method "workflowTemplates.instantiateInline".
@@ -9823,8 +9861,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * returned Operation can be used to track execution of workflow by polling operations.get. The
            * Operation will complete when entire workflow is finished.The running workflow can be aborted
            * via operations.cancel. This will cause any inflight jobs to be cancelled and workflow-owned
-           * clusters to be deleted.The Operation.metadata will be WorkflowMetadata. Also see Using
-           * WorkflowMetadata.On successful completion, Operation.response will be Empty.
+           * clusters to be deleted.The Operation.metadata will be WorkflowMetadata (https://cloud.google.co
+           * m/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#workflowmetadata). Also see Using
+           * WorkflowMetadata
+           * (https://cloud.google.com/dataproc/docs/concepts/workflows/debugging#using_workflowmetadata).On
+           * successful completion, Operation.response will be Empty.
            *
            * Create a request for the method "workflowTemplates.instantiateInline".
            *

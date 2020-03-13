@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-cloudtrace</artifactId>
-  <version>v1-rev20200225-1.30.9</version>
-  <name>Cloud Trace API v1-rev20200225-1.30.9</name>
+  <version>v1-rev20200309-1.30.9</version>
+  <name>Cloud Trace API v1-rev20200309-1.30.9</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

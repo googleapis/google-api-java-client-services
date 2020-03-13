@@ -38,9 +38,11 @@ public final class PullRequest extends com.google.api.client.json.GenericJson {
   private java.lang.Integer maxMessages;
 
   /**
-   * If this field set to true, the system will respond immediately even if it there are no messages
-   * available to return in the `Pull` response. Otherwise, the system may wait (for a bounded
-   * amount of time) until at least one message is available, rather than returning no messages.
+   * Optional. If this field set to true, the system will respond immediately even if it there are
+   * no messages available to return in the `Pull` response. Otherwise, the system may wait (for a
+   * bounded amount of time) until at least one message is available, rather than returning no
+   * messages. Warning: setting this field to `true` is discouraged because it adversely impacts the
+   * performance of `Pull` operations. We recommend that users do not set this field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,9 +68,11 @@ public final class PullRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If this field set to true, the system will respond immediately even if it there are no messages
-   * available to return in the `Pull` response. Otherwise, the system may wait (for a bounded
-   * amount of time) until at least one message is available, rather than returning no messages.
+   * Optional. If this field set to true, the system will respond immediately even if it there are
+   * no messages available to return in the `Pull` response. Otherwise, the system may wait (for a
+   * bounded amount of time) until at least one message is available, rather than returning no
+   * messages. Warning: setting this field to `true` is discouraged because it adversely impacts the
+   * performance of `Pull` operations. We recommend that users do not set this field.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getReturnImmediately() {
@@ -76,9 +80,11 @@ public final class PullRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If this field set to true, the system will respond immediately even if it there are no messages
-   * available to return in the `Pull` response. Otherwise, the system may wait (for a bounded
-   * amount of time) until at least one message is available, rather than returning no messages.
+   * Optional. If this field set to true, the system will respond immediately even if it there are
+   * no messages available to return in the `Pull` response. Otherwise, the system may wait (for a
+   * bounded amount of time) until at least one message is available, rather than returning no
+   * messages. Warning: setting this field to `true` is discouraged because it adversely impacts the
+   * performance of `Pull` operations. We recommend that users do not set this field.
    * @param returnImmediately returnImmediately or {@code null} for none
    */
   public PullRequest setReturnImmediately(java.lang.Boolean returnImmediately) {

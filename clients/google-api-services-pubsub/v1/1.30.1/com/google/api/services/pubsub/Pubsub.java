@@ -4970,8 +4970,9 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * This request holds the parameters needed by the pubsub server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param topic The name of the topic that snapshots are attached to.
-        Format is `projects/{project}/topics/{topic}`.
+         * @param topic Required. The name of the topic that snapshots are attached to.
+        Format is
+         *        `projects/{project}/topics/{topic}`.
          * @return the request
          */
         public List list(java.lang.String topic) throws java.io.IOException {
@@ -4999,8 +5000,9 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param topic The name of the topic that snapshots are attached to.
-        Format is `projects/{project}/topics/{topic}`.
+           * @param topic Required. The name of the topic that snapshots are attached to.
+        Format is
+         *        `projects/{project}/topics/{topic}`.
            * @since 1.13
            */
           protected List(java.lang.String topic) {
@@ -5079,13 +5081,13 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * The name of the topic that snapshots are attached to. Format is
+           * Required. The name of the topic that snapshots are attached to. Format is
            * `projects/{project}/topics/{topic}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String topic;
 
-          /** The name of the topic that snapshots are attached to. Format is
+          /** Required. The name of the topic that snapshots are attached to. Format is
          `projects/{project}/topics/{topic}`.
            */
           public java.lang.String getTopic() {
@@ -5093,7 +5095,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * The name of the topic that snapshots are attached to. Format is
+           * Required. The name of the topic that snapshots are attached to. Format is
            * `projects/{project}/topics/{topic}`.
            */
           public List setTopic(java.lang.String topic) {

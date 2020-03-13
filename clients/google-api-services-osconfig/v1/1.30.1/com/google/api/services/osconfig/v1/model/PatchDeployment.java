@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.osconfig.v1beta.model;
+package com.google.api.services.osconfig.v1.model;
 
 /**
  * Patch deployments are configurations that individual patch jobs use to complete a patch. These

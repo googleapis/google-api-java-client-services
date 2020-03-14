@@ -55,10 +55,10 @@ public final class ExportAssetsRequest extends com.google.api.client.json.Generi
   private OutputConfig outputConfig;
 
   /**
-   * Timestamp to take an asset snapshot. This can only be set to a timestamp between 2018-10-02 UTC
-   * (inclusive) and the current time. If not specified, the current time will be used. Due to
-   * delays in resource data collection and indexing, there is a volatile window during which
-   * running the same query may get different results.
+   * Timestamp to take an asset snapshot. This can only be set to a timestamp between the current
+   * time and the current time minus 35 days (inclusive). If not specified, the current time will be
+   * used. Due to delays in resource data collection and indexing, there is a volatile window during
+   * which running the same query may get different results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,10 +124,10 @@ public final class ExportAssetsRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Timestamp to take an asset snapshot. This can only be set to a timestamp between 2018-10-02 UTC
-   * (inclusive) and the current time. If not specified, the current time will be used. Due to
-   * delays in resource data collection and indexing, there is a volatile window during which
-   * running the same query may get different results.
+   * Timestamp to take an asset snapshot. This can only be set to a timestamp between the current
+   * time and the current time minus 35 days (inclusive). If not specified, the current time will be
+   * used. Due to delays in resource data collection and indexing, there is a volatile window during
+   * which running the same query may get different results.
    * @return value or {@code null} for none
    */
   public String getReadTime() {
@@ -135,10 +135,10 @@ public final class ExportAssetsRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Timestamp to take an asset snapshot. This can only be set to a timestamp between 2018-10-02 UTC
-   * (inclusive) and the current time. If not specified, the current time will be used. Due to
-   * delays in resource data collection and indexing, there is a volatile window during which
-   * running the same query may get different results.
+   * Timestamp to take an asset snapshot. This can only be set to a timestamp between the current
+   * time and the current time minus 35 days (inclusive). If not specified, the current time will be
+   * used. Due to delays in resource data collection and indexing, there is a volatile window during
+   * which running the same query may get different results.
    * @param readTime readTime or {@code null} for none
    */
   public ExportAssetsRequest setReadTime(String readTime) {

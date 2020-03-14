@@ -17,7 +17,7 @@
 package com.google.api.services.cloudasset.v1.model;
 
 /**
- * A time window of (start_time, end_time].
+ * A time window specified by its "start_time" and "end_time".
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Asset API. For a detailed explanation see:
@@ -30,7 +30,8 @@ package com.google.api.services.cloudasset.v1.model;
 public final class TimeWindow extends com.google.api.client.json.GenericJson {
 
   /**
-   * End time of the time window (inclusive). Current timestamp if not specified.
+   * End time of the time window (inclusive). If not specified, the current timestamp is used
+   * instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +45,8 @@ public final class TimeWindow extends com.google.api.client.json.GenericJson {
   private String startTime;
 
   /**
-   * End time of the time window (inclusive). Current timestamp if not specified.
+   * End time of the time window (inclusive). If not specified, the current timestamp is used
+   * instead.
    * @return value or {@code null} for none
    */
   public String getEndTime() {
@@ -52,7 +54,8 @@ public final class TimeWindow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * End time of the time window (inclusive). Current timestamp if not specified.
+   * End time of the time window (inclusive). If not specified, the current timestamp is used
+   * instead.
    * @param endTime endTime or {@code null} for none
    */
   public TimeWindow setEndTime(String endTime) {

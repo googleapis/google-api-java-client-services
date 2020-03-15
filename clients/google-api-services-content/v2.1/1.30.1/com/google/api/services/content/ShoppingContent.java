@@ -5064,6 +5064,230 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
   }
 
   /**
+   * An accessor for creating requests from the Localinventory collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code ShoppingContent content = new ShoppingContent(...);}
+   *   {@code ShoppingContent.Localinventory.List request = content.localinventory().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Localinventory localinventory() {
+    return new Localinventory();
+  }
+
+  /**
+   * The "localinventory" collection of methods.
+   */
+  public class Localinventory {
+
+    /**
+     * Updates local inventory for multiple products or stores in a single request.
+     *
+     * Create a request for the method "localinventory.custombatch".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Custombatch#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.content.model.LocalinventoryCustomBatchRequest}
+     * @return the request
+     */
+    public Custombatch custombatch(com.google.api.services.content.model.LocalinventoryCustomBatchRequest content) throws java.io.IOException {
+      Custombatch result = new Custombatch(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Custombatch extends ShoppingContentRequest<com.google.api.services.content.model.LocalinventoryCustomBatchResponse> {
+
+      private static final String REST_PATH = "localinventory/batch";
+
+      /**
+       * Updates local inventory for multiple products or stores in a single request.
+       *
+       * Create a request for the method "localinventory.custombatch".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Custombatch#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * Custombatch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.content.model.LocalinventoryCustomBatchRequest}
+       * @since 1.13
+       */
+      protected Custombatch(com.google.api.services.content.model.LocalinventoryCustomBatchRequest content) {
+        super(ShoppingContent.this, "POST", REST_PATH, content, com.google.api.services.content.model.LocalinventoryCustomBatchResponse.class);
+      }
+
+      @Override
+      public Custombatch setAlt(java.lang.String alt) {
+        return (Custombatch) super.setAlt(alt);
+      }
+
+      @Override
+      public Custombatch setFields(java.lang.String fields) {
+        return (Custombatch) super.setFields(fields);
+      }
+
+      @Override
+      public Custombatch setKey(java.lang.String key) {
+        return (Custombatch) super.setKey(key);
+      }
+
+      @Override
+      public Custombatch setOauthToken(java.lang.String oauthToken) {
+        return (Custombatch) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Custombatch setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Custombatch) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Custombatch setQuotaUser(java.lang.String quotaUser) {
+        return (Custombatch) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Custombatch setUserIp(java.lang.String userIp) {
+        return (Custombatch) super.setUserIp(userIp);
+      }
+
+      @Override
+      public Custombatch set(String parameterName, Object value) {
+        return (Custombatch) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Update the local inventory of a product in your Merchant Center account.
+     *
+     * Create a request for the method "localinventory.insert".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId The ID of the account that contains the product. This account cannot be a multi-client account.
+     * @param productId The REST ID of the product for which to update local inventory.
+     * @param content the {@link com.google.api.services.content.model.LocalInventory}
+     * @return the request
+     */
+    public Insert insert(java.math.BigInteger merchantId, java.lang.String productId, com.google.api.services.content.model.LocalInventory content) throws java.io.IOException {
+      Insert result = new Insert(merchantId, productId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Insert extends ShoppingContentRequest<com.google.api.services.content.model.LocalInventory> {
+
+      private static final String REST_PATH = "{merchantId}/products/{productId}/localinventory";
+
+      /**
+       * Update the local inventory of a product in your Merchant Center account.
+       *
+       * Create a request for the method "localinventory.insert".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Insert#execute()} method to invoke the remote operation. <p> {@link
+       * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId The ID of the account that contains the product. This account cannot be a multi-client account.
+       * @param productId The REST ID of the product for which to update local inventory.
+       * @param content the {@link com.google.api.services.content.model.LocalInventory}
+       * @since 1.13
+       */
+      protected Insert(java.math.BigInteger merchantId, java.lang.String productId, com.google.api.services.content.model.LocalInventory content) {
+        super(ShoppingContent.this, "POST", REST_PATH, content, com.google.api.services.content.model.LocalInventory.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+        this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
+      }
+
+      @Override
+      public Insert setAlt(java.lang.String alt) {
+        return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setFields(java.lang.String fields) {
+        return (Insert) super.setFields(fields);
+      }
+
+      @Override
+      public Insert setKey(java.lang.String key) {
+        return (Insert) super.setKey(key);
+      }
+
+      @Override
+      public Insert setOauthToken(java.lang.String oauthToken) {
+        return (Insert) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Insert setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Insert) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Insert setQuotaUser(java.lang.String quotaUser) {
+        return (Insert) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Insert setUserIp(java.lang.String userIp) {
+        return (Insert) super.setUserIp(userIp);
+      }
+
+      /**
+       * The ID of the account that contains the product. This account cannot be a multi-client
+       * account.
+       */
+      @com.google.api.client.util.Key
+      private java.math.BigInteger merchantId;
+
+      /** The ID of the account that contains the product. This account cannot be a multi-client account.
+       */
+      public java.math.BigInteger getMerchantId() {
+        return merchantId;
+      }
+
+      /**
+       * The ID of the account that contains the product. This account cannot be a multi-client
+       * account.
+       */
+      public Insert setMerchantId(java.math.BigInteger merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /** The REST ID of the product for which to update local inventory. */
+      @com.google.api.client.util.Key
+      private java.lang.String productId;
+
+      /** The REST ID of the product for which to update local inventory.
+       */
+      public java.lang.String getProductId() {
+        return productId;
+      }
+
+      /** The REST ID of the product for which to update local inventory. */
+      public Insert setProductId(java.lang.String productId) {
+        this.productId = productId;
+        return this;
+      }
+
+      @Override
+      public Insert set(String parameterName, Object value) {
+        return (Insert) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Orderinvoices collection.
    *
    * <p>The typical use is:</p>

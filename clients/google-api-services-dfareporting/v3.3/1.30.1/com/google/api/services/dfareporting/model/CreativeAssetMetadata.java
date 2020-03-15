@@ -39,7 +39,8 @@ public final class CreativeAssetMetadata extends com.google.api.client.json.Gene
   private CreativeAssetId assetIdentifier;
 
   /**
-   * List of detected click tags for assets. This is a read-only auto-generated field.
+   * List of detected click tags for assets. This is a read-only, auto-generated field. This field
+   * is empty for a rich media asset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,7 +117,8 @@ public final class CreativeAssetMetadata extends com.google.api.client.json.Gene
   }
 
   /**
-   * List of detected click tags for assets. This is a read-only auto-generated field.
+   * List of detected click tags for assets. This is a read-only, auto-generated field. This field
+   * is empty for a rich media asset.
    * @return value or {@code null} for none
    */
   public java.util.List<ClickTag> getClickTags() {
@@ -124,7 +126,8 @@ public final class CreativeAssetMetadata extends com.google.api.client.json.Gene
   }
 
   /**
-   * List of detected click tags for assets. This is a read-only auto-generated field.
+   * List of detected click tags for assets. This is a read-only, auto-generated field. This field
+   * is empty for a rich media asset.
    * @param clickTags clickTags or {@code null} for none
    */
   public CreativeAssetMetadata setClickTags(java.util.List<ClickTag> clickTags) {

@@ -31,7 +31,7 @@ package com.google.api.services.dfareporting.model;
 public final class UserProfileList extends com.google.api.client.json.GenericJson {
 
   /**
-   * The eTag of this response for caching purposes.
+   * Etag of this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,14 +51,15 @@ public final class UserProfileList extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The kind of list this is, in this case dfareporting#userProfileList.
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#userProfileList".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * The eTag of this response for caching purposes.
+   * Etag of this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -66,7 +67,7 @@ public final class UserProfileList extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The eTag of this response for caching purposes.
+   * Etag of this resource.
    * @param etag etag or {@code null} for none
    */
   public UserProfileList setEtag(java.lang.String etag) {
@@ -92,7 +93,8 @@ public final class UserProfileList extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The kind of list this is, in this case dfareporting#userProfileList.
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#userProfileList".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -100,7 +102,8 @@ public final class UserProfileList extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The kind of list this is, in this case dfareporting#userProfileList.
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#userProfileList".
    * @param kind kind or {@code null} for none
    */
   public UserProfileList setKind(java.lang.String kind) {

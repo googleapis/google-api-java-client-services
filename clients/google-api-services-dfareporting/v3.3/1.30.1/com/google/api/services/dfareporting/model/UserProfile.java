@@ -17,7 +17,8 @@
 package com.google.api.services.dfareporting.model;
 
 /**
- * Represents a UserProfile resource.
+ * A UserProfile resource lets you list all DFA user profiles that are associated with a Google user
+ * account. The profile_id needs to be specified in other API requests.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the DCM/DFA Reporting And Trafficking API. For a detailed
@@ -45,14 +46,14 @@ public final class UserProfile extends com.google.api.client.json.GenericJson {
   private java.lang.String accountName;
 
   /**
-   * The eTag of this response for caching purposes.
+   * Etag of this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String etag;
 
   /**
-   * The kind of resource this is, in this case dfareporting#userProfile.
+   * Identifies what kind of resource this is. Value: the fixed string "dfareporting#userProfile".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -121,7 +122,7 @@ public final class UserProfile extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The eTag of this response for caching purposes.
+   * Etag of this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -129,7 +130,7 @@ public final class UserProfile extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The eTag of this response for caching purposes.
+   * Etag of this resource.
    * @param etag etag or {@code null} for none
    */
   public UserProfile setEtag(java.lang.String etag) {
@@ -138,7 +139,7 @@ public final class UserProfile extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The kind of resource this is, in this case dfareporting#userProfile.
+   * Identifies what kind of resource this is. Value: the fixed string "dfareporting#userProfile".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -146,7 +147,7 @@ public final class UserProfile extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The kind of resource this is, in this case dfareporting#userProfile.
+   * Identifies what kind of resource this is. Value: the fixed string "dfareporting#userProfile".
    * @param kind kind or {@code null} for none
    */
   public UserProfile setKind(java.lang.String kind) {

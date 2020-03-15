@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"F5McR9eEaw0XRpaO3M9gbIugkbs/S1XdsaA4QL0oNYNbtJtRXPuoeKA\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/P8vp1s6AhOr6TOOrpFmRBo2inek\"",
  "discoveryVersion": "v1",
  "id": "games:v1",
  "name": "games",
  "canonicalName": "Games",
  "version": "v1",
- "revision": "20191017",
+ "revision": "20200306",
  "title": "Google Play Game Services API",
  "description": "The API for Google Play Game Services.",
  "ownerDomain": "google.com",
@@ -1364,6 +1364,10 @@
     "experienceInfo": {
      "$ref": "PlayerExperienceInfo",
      "description": "An object to represent Play Game experience information for the player."
+    },
+    "friendStatus": {
+     "type": "string",
+     "description": "The friend status of the given player, relative to the requester. This is unset if the player is not sharing their friends list with the game."
     },
     "kind": {
      "type": "string",
@@ -3432,15 +3436,17 @@
        "required": true,
        "enum": [
         "connected",
+        "friends_all",
         "playedWith",
         "played_with",
         "visible"
        ],
        "enumDescriptions": [
-        "Retrieve a list of players that are also playing this game in reverse chronological order.",
-        "(DEPRECATED: please use played_with!) Retrieve a list of players you have played a multiplayer game (realtime or turn-based) with recently.",
-        "Retrieve a list of players you have played a multiplayer game (realtime or turn-based) with recently.",
-        "Retrieve a list of players in the user's social graph that are visible to this game."
+        "(DEPRECATED) Retrieve a list of players that are also playing this game in reverse chronological order.",
+        "Retrieve a list of players who are friends of the user in alphabetical order.",
+        "(DEPRECATED) Retrieve a list of players you have played a multiplayer game (realtime or turn-based) with recently.",
+        "(DEPRECATED) Retrieve a list of players you have played a multiplayer game (realtime or turn-based) with recently.",
+        "(DEPRECATED: please use FRIENDS_ALL) Retrieve a list of players in the user's social graph that are visible to this game."
        ],
        "location": "path"
       },
@@ -3853,13 +3859,11 @@
        "required": true,
        "enum": [
         "PUBLIC",
-        "SOCIAL",
-        "SOCIAL_1P"
+        "SOCIAL"
        ],
        "enumDescriptions": [
         "List all scores in the public leaderboard.",
-        "List only social scores.",
-        "List only social scores, not respecting the fACL."
+        "List only social scores."
        ],
        "location": "path"
       },
@@ -3928,13 +3932,11 @@
        "required": true,
        "enum": [
         "PUBLIC",
-        "SOCIAL",
-        "SOCIAL_1P"
+        "SOCIAL"
        ],
        "enumDescriptions": [
         "List all scores in the public leaderboard.",
-        "List only social scores.",
-        "List only social scores, not respecting the fACL."
+        "List only social scores."
        ],
        "location": "path"
       },

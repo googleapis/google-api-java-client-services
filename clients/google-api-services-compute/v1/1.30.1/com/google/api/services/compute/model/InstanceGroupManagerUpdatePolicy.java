@@ -81,6 +81,13 @@ public final class InstanceGroupManagerUpdatePolicy extends com.google.api.clien
   private java.lang.String minimalAction;
 
   /**
+   * What action should be used to replace instances. See minimal_action.REPLACE
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String replacementMethod;
+
+  /**
    * The type of update process. You can specify either PROACTIVE so that the instance group manager
    * proactively executes actions in order to bring instances to their target versions or
    * OPPORTUNISTIC so that no action is proactively executed but the update will be performed as
@@ -201,6 +208,23 @@ public final class InstanceGroupManagerUpdatePolicy extends com.google.api.clien
    */
   public InstanceGroupManagerUpdatePolicy setMinimalAction(java.lang.String minimalAction) {
     this.minimalAction = minimalAction;
+    return this;
+  }
+
+  /**
+   * What action should be used to replace instances. See minimal_action.REPLACE
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReplacementMethod() {
+    return replacementMethod;
+  }
+
+  /**
+   * What action should be used to replace instances. See minimal_action.REPLACE
+   * @param replacementMethod replacementMethod or {@code null} for none
+   */
+  public InstanceGroupManagerUpdatePolicy setReplacementMethod(java.lang.String replacementMethod) {
+    this.replacementMethod = replacementMethod;
     return this;
   }
 

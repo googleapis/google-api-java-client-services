@@ -152,7 +152,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   private ReservationAffinity reservationAffinity;
 
   /**
-   * Resource policies (names, not ULRs) applied to instances created from this templae.
+   * Resource policies (names, not ULRs) applied to instances created from this template.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -459,7 +459,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Resource policies (names, not ULRs) applied to instances created from this templae.
+   * Resource policies (names, not ULRs) applied to instances created from this template.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResourcePolicies() {
@@ -467,7 +467,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Resource policies (names, not ULRs) applied to instances created from this templae.
+   * Resource policies (names, not ULRs) applied to instances created from this template.
    * @param resourcePolicies resourcePolicies or {@code null} for none
    */
   public InstanceProperties setResourcePolicies(java.util.List<java.lang.String> resourcePolicies) {

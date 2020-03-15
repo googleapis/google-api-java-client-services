@@ -51,6 +51,13 @@ public final class HealthStatusForNetworkEndpoint extends com.google.api.client.
   private HealthCheckReference healthCheck;
 
   /**
+   * URL of the health check service associated with the health state of the network endpoint.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HealthCheckServiceReference healthCheckService;
+
+  /**
    * Health state of the network endpoint determined based on the health checks configured.
    * The value may be {@code null}.
    */
@@ -105,6 +112,23 @@ public final class HealthStatusForNetworkEndpoint extends com.google.api.client.
    */
   public HealthStatusForNetworkEndpoint setHealthCheck(HealthCheckReference healthCheck) {
     this.healthCheck = healthCheck;
+    return this;
+  }
+
+  /**
+   * URL of the health check service associated with the health state of the network endpoint.
+   * @return value or {@code null} for none
+   */
+  public HealthCheckServiceReference getHealthCheckService() {
+    return healthCheckService;
+  }
+
+  /**
+   * URL of the health check service associated with the health state of the network endpoint.
+   * @param healthCheckService healthCheckService or {@code null} for none
+   */
+  public HealthStatusForNetworkEndpoint setHealthCheckService(HealthCheckServiceReference healthCheckService) {
+    this.healthCheckService = healthCheckService;
     return this;
   }
 

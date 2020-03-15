@@ -21,8 +21,8 @@ package com.google.api.services.compute.model;
  *
  * Forwarding rule resources in GCP can be either regional or global in scope:
  *
- * * [Global](/compute/docs/reference/rest/latest/globalForwardingRules) *
- * [Regional](/compute/docs/reference/rest/latest/forwardingRules)
+ * * [Global](/compute/docs/reference/rest/{$api_version}/globalForwardingRules) *
+ * [Regional](/compute/docs/reference/rest/{$api_version}/forwardingRules)
  *
  * A forwarding rule and its corresponding IP address represent the frontend configuration of a
  * Google Cloud Platform load balancer. Forwarding rules can also reference target instances and
@@ -199,7 +199,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * external IP address  - The following load balancers: HTTP(S), SSL Proxy, TCP Proxy, and Network
    * TCP/UDP     - INTERNAL is used for:   - Protocol forwarding to VMs from an internal IP address
    * - Internal TCP/UDP load balancers    - INTERNAL_MANAGED is used for:   - Internal HTTP(S) load
-   * balancers    - >INTERNAL_SELF_MANAGED is used for:   - Traffic Director
+   * balancers    - INTERNAL_SELF_MANAGED is used for:   - Traffic Director
    *
    * For more information about forwarding rules, refer to Forwarding rule concepts.
    * The value may be {@code null}.
@@ -248,7 +248,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
 
   /**
    * This signifies the networking tier used for configuring this load balancer and can only take
-   * the following values: PREMIUM , STANDARD.
+   * the following values: PREMIUM, STANDARD.
    *
    * For regional ForwardingRule, the valid values are PREMIUM and STANDARD. For
    * GlobalForwardingRule, the valid value is PREMIUM.
@@ -791,7 +791,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * external IP address  - The following load balancers: HTTP(S), SSL Proxy, TCP Proxy, and Network
    * TCP/UDP     - INTERNAL is used for:   - Protocol forwarding to VMs from an internal IP address
    * - Internal TCP/UDP load balancers    - INTERNAL_MANAGED is used for:   - Internal HTTP(S) load
-   * balancers    - >INTERNAL_SELF_MANAGED is used for:   - Traffic Director
+   * balancers    - INTERNAL_SELF_MANAGED is used for:   - Traffic Director
    *
    * For more information about forwarding rules, refer to Forwarding rule concepts.
    * @return value or {@code null} for none
@@ -807,7 +807,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * external IP address  - The following load balancers: HTTP(S), SSL Proxy, TCP Proxy, and Network
    * TCP/UDP     - INTERNAL is used for:   - Protocol forwarding to VMs from an internal IP address
    * - Internal TCP/UDP load balancers    - INTERNAL_MANAGED is used for:   - Internal HTTP(S) load
-   * balancers    - >INTERNAL_SELF_MANAGED is used for:   - Traffic Director
+   * balancers    - INTERNAL_SELF_MANAGED is used for:   - Traffic Director
    *
    * For more information about forwarding rules, refer to Forwarding rule concepts.
    * @param loadBalancingScheme loadBalancingScheme or {@code null} for none
@@ -906,7 +906,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
 
   /**
    * This signifies the networking tier used for configuring this load balancer and can only take
-   * the following values: PREMIUM , STANDARD.
+   * the following values: PREMIUM, STANDARD.
    *
    * For regional ForwardingRule, the valid values are PREMIUM and STANDARD. For
    * GlobalForwardingRule, the valid value is PREMIUM.
@@ -921,7 +921,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
 
   /**
    * This signifies the networking tier used for configuring this load balancer and can only take
-   * the following values: PREMIUM , STANDARD.
+   * the following values: PREMIUM, STANDARD.
    *
    * For regional ForwardingRule, the valid values are PREMIUM and STANDARD. For
    * GlobalForwardingRule, the valid value is PREMIUM.

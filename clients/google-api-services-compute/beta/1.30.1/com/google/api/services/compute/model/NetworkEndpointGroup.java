@@ -19,7 +19,7 @@ package com.google.api.services.compute.model;
 /**
  * Represents a collection of network endpoints.
  *
- * For more information read Setting up network endpoint groups in load balancing. (== resource_for
+ * For more information read Network endpoint groups overview. (== resource_for
  * {$api_version}.networkEndpointGroups ==) Next ID: 21
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -103,8 +103,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   private java.lang.String network;
 
   /**
-   * Type of network endpoints in this network endpoint group. Currently the only supported value is
-   * GCE_VM_IP_PORT.
+   * Type of network endpoints in this network endpoint group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -306,8 +305,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Type of network endpoints in this network endpoint group. Currently the only supported value is
-   * GCE_VM_IP_PORT.
+   * Type of network endpoints in this network endpoint group.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkEndpointType() {
@@ -315,8 +313,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Type of network endpoints in this network endpoint group. Currently the only supported value is
-   * GCE_VM_IP_PORT.
+   * Type of network endpoints in this network endpoint group.
    * @param networkEndpointType networkEndpointType or {@code null} for none
    */
   public NetworkEndpointGroup setNetworkEndpointType(java.lang.String networkEndpointType) {

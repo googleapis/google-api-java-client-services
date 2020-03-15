@@ -17,7 +17,10 @@
 package com.google.api.services.compute.model;
 
 /**
- * Model definition for ResourcePolicy.
+ * Represents a Resource Policy resource. You can use resource policies to schedule actions for some
+ * Compute Engine resources. For example, you can use them to schedule persistent disk snapshots.
+ *
+ * (== resource_for {$api_version}.resourcePolicies ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -41,6 +44,13 @@ public final class ResourcePolicy extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
+
+  /**
+   * Resource policy for instacnes for placement configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ResourcePolicyGroupPlacementPolicy groupPlacementPolicy;
 
   /**
    * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
@@ -123,6 +133,23 @@ public final class ResourcePolicy extends com.google.api.client.json.GenericJson
    */
   public ResourcePolicy setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Resource policy for instacnes for placement configuration.
+   * @return value or {@code null} for none
+   */
+  public ResourcePolicyGroupPlacementPolicy getGroupPlacementPolicy() {
+    return groupPlacementPolicy;
+  }
+
+  /**
+   * Resource policy for instacnes for placement configuration.
+   * @param groupPlacementPolicy groupPlacementPolicy or {@code null} for none
+   */
+  public ResourcePolicy setGroupPlacementPolicy(ResourcePolicyGroupPlacementPolicy groupPlacementPolicy) {
+    this.groupPlacementPolicy = groupPlacementPolicy;
     return this;
   }
 

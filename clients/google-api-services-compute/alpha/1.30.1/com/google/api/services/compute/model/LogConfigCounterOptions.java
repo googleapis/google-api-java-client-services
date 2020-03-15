@@ -34,9 +34,6 @@ package com.google.api.services.compute.model;
  * Examples: counter { metric: "/debug_access_count" field: "iam_principal" } ==> increment counter
  * /iam/policy/debug_access_count {iam_principal=[value of IAMContext.principal]}
  *
- * TODO(b/141846426): Consider supporting "authority" and "iam_principal" fields in the same
- * counter.
- *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>

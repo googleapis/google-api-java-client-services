@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Sets the scheduling options for an Instance. NextID: 9
+ * Sets the scheduling options for an Instance. NextID: 10
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -59,6 +59,20 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   private java.lang.String locationHint;
 
   /**
+   * Compute Engine Long Term Release. When specified, VMs that have this policy become long term
+   * release (internal: stable fleet) VMs.
+   *
+   * For all VM shapes, this should result in fewer disruptions due to software updates and greater
+   * predictability via 1 week extended notifications.
+   *
+   * For GPU VMs, this should also result in an 2 week uptime guarantee. See go/stable-fleet-gpus-
+   * design for more details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean longTermRelease;
+
+  /**
    * The minimum number of virtual CPUs this instance will consume when running on a sole-tenant
    * node.
    * The value may be {@code null}.
@@ -68,7 +82,7 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
 
   /**
    * A set of node affinity and anti-affinity configurations. Refer to Configuring node affinity for
-   * more information.
+   * more information. Overrides reservationAffinity.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -159,6 +173,37 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Compute Engine Long Term Release. When specified, VMs that have this policy become long term
+   * release (internal: stable fleet) VMs.
+   *
+   * For all VM shapes, this should result in fewer disruptions due to software updates and greater
+   * predictability via 1 week extended notifications.
+   *
+   * For GPU VMs, this should also result in an 2 week uptime guarantee. See go/stable-fleet-gpus-
+   * design for more details.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getLongTermRelease() {
+    return longTermRelease;
+  }
+
+  /**
+   * Compute Engine Long Term Release. When specified, VMs that have this policy become long term
+   * release (internal: stable fleet) VMs.
+   *
+   * For all VM shapes, this should result in fewer disruptions due to software updates and greater
+   * predictability via 1 week extended notifications.
+   *
+   * For GPU VMs, this should also result in an 2 week uptime guarantee. See go/stable-fleet-gpus-
+   * design for more details.
+   * @param longTermRelease longTermRelease or {@code null} for none
+   */
+  public Scheduling setLongTermRelease(java.lang.Boolean longTermRelease) {
+    this.longTermRelease = longTermRelease;
+    return this;
+  }
+
+  /**
    * The minimum number of virtual CPUs this instance will consume when running on a sole-tenant
    * node.
    * @return value or {@code null} for none
@@ -179,7 +224,7 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
 
   /**
    * A set of node affinity and anti-affinity configurations. Refer to Configuring node affinity for
-   * more information.
+   * more information. Overrides reservationAffinity.
    * @return value or {@code null} for none
    */
   public java.util.List<SchedulingNodeAffinity> getNodeAffinities() {
@@ -188,7 +233,7 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
 
   /**
    * A set of node affinity and anti-affinity configurations. Refer to Configuring node affinity for
-   * more information.
+   * more information. Overrides reservationAffinity.
    * @param nodeAffinities nodeAffinities or {@code null} for none
    */
   public Scheduling setNodeAffinities(java.util.List<SchedulingNodeAffinity> nodeAffinities) {

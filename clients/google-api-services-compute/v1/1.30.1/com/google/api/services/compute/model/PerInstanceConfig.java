@@ -30,8 +30,8 @@ package com.google.api.services.compute.model;
 public final class PerInstanceConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Fingerprint of this per-instance config. This field may be used in optimistic locking. It will
-   * be ignored when inserting a per-instance config. An up-to-date fingerprint must be provided in
+   * Fingerprint of this per-instance config. This field can be used in optimistic locking. It is
+   * ignored when inserting a per-instance config. An up-to-date fingerprint must be provided in
    * order to update an existing per-instance config or the field needs to be unset.
    * The value may be {@code null}.
    */
@@ -39,19 +39,19 @@ public final class PerInstanceConfig extends com.google.api.client.json.GenericJ
   private java.lang.String fingerprint;
 
   /**
-   * The name of the per-instance config and the corresponding instance. Serves as a merge key
-   * during UpdatePerInstanceConfigs operation, i.e. if per-instance config with the same name
+   * The name of a per-instance config and its corresponding instance. Serves as a merge key during
+   * UpdatePerInstanceConfigs operations, that is, if a per-instance config with the same name
    * exists then it will be updated, otherwise a new one will be created for the VM instance with
    * the same name. An attempt to create a per-instance config for a VM instance that either doesn't
-   * exist or is not part of the group will result in a failure.
+   * exist or is not part of the group will result in an error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Fingerprint of this per-instance config. This field may be used in optimistic locking. It will
-   * be ignored when inserting a per-instance config. An up-to-date fingerprint must be provided in
+   * Fingerprint of this per-instance config. This field can be used in optimistic locking. It is
+   * ignored when inserting a per-instance config. An up-to-date fingerprint must be provided in
    * order to update an existing per-instance config or the field needs to be unset.
    * @see #decodeFingerprint()
    * @return value or {@code null} for none
@@ -61,8 +61,8 @@ public final class PerInstanceConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Fingerprint of this per-instance config. This field may be used in optimistic locking. It will
-   * be ignored when inserting a per-instance config. An up-to-date fingerprint must be provided in
+   * Fingerprint of this per-instance config. This field can be used in optimistic locking. It is
+   * ignored when inserting a per-instance config. An up-to-date fingerprint must be provided in
    * order to update an existing per-instance config or the field needs to be unset.
    * @see #getFingerprint()
    * @return Base64 decoded value or {@code null} for none
@@ -74,8 +74,8 @@ public final class PerInstanceConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Fingerprint of this per-instance config. This field may be used in optimistic locking. It will
-   * be ignored when inserting a per-instance config. An up-to-date fingerprint must be provided in
+   * Fingerprint of this per-instance config. This field can be used in optimistic locking. It is
+   * ignored when inserting a per-instance config. An up-to-date fingerprint must be provided in
    * order to update an existing per-instance config or the field needs to be unset.
    * @see #encodeFingerprint()
    * @param fingerprint fingerprint or {@code null} for none
@@ -86,8 +86,8 @@ public final class PerInstanceConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Fingerprint of this per-instance config. This field may be used in optimistic locking. It will
-   * be ignored when inserting a per-instance config. An up-to-date fingerprint must be provided in
+   * Fingerprint of this per-instance config. This field can be used in optimistic locking. It is
+   * ignored when inserting a per-instance config. An up-to-date fingerprint must be provided in
    * order to update an existing per-instance config or the field needs to be unset.
    * @see #setFingerprint()
    *
@@ -103,11 +103,11 @@ public final class PerInstanceConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The name of the per-instance config and the corresponding instance. Serves as a merge key
-   * during UpdatePerInstanceConfigs operation, i.e. if per-instance config with the same name
+   * The name of a per-instance config and its corresponding instance. Serves as a merge key during
+   * UpdatePerInstanceConfigs operations, that is, if a per-instance config with the same name
    * exists then it will be updated, otherwise a new one will be created for the VM instance with
    * the same name. An attempt to create a per-instance config for a VM instance that either doesn't
-   * exist or is not part of the group will result in a failure.
+   * exist or is not part of the group will result in an error.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -115,11 +115,11 @@ public final class PerInstanceConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The name of the per-instance config and the corresponding instance. Serves as a merge key
-   * during UpdatePerInstanceConfigs operation, i.e. if per-instance config with the same name
+   * The name of a per-instance config and its corresponding instance. Serves as a merge key during
+   * UpdatePerInstanceConfigs operations, that is, if a per-instance config with the same name
    * exists then it will be updated, otherwise a new one will be created for the VM instance with
    * the same name. An attempt to create a per-instance config for a VM instance that either doesn't
-   * exist or is not part of the group will result in a failure.
+   * exist or is not part of the group will result in an error.
    * @param name name or {@code null} for none
    */
   public PerInstanceConfig setName(java.lang.String name) {

@@ -149,6 +149,13 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   private java.lang.String mode;
 
   /**
+   * [Output Only] shielded vm initial state stored on disk
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InitialStateConfig shieldedInstanceInitialState;
+
+  /**
    * Specifies a valid partial or full URL to an existing Persistent Disk resource. When creating a
    * new instance, one of initializeParams.sourceImage or initializeParams.sourceSnapshot or
    * disks.source is required except for local SSD.
@@ -441,6 +448,23 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
    */
   public AttachedDisk setMode(java.lang.String mode) {
     this.mode = mode;
+    return this;
+  }
+
+  /**
+   * [Output Only] shielded vm initial state stored on disk
+   * @return value or {@code null} for none
+   */
+  public InitialStateConfig getShieldedInstanceInitialState() {
+    return shieldedInstanceInitialState;
+  }
+
+  /**
+   * [Output Only] shielded vm initial state stored on disk
+   * @param shieldedInstanceInitialState shieldedInstanceInitialState or {@code null} for none
+   */
+  public AttachedDisk setShieldedInstanceInitialState(InitialStateConfig shieldedInstanceInitialState) {
+    this.shieldedInstanceInitialState = shieldedInstanceInitialState;
     return this;
   }
 

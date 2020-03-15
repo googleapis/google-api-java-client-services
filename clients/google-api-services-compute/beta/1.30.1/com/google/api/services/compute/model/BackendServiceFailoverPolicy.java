@@ -17,7 +17,12 @@
 package com.google.api.services.compute.model;
 
 /**
- * Model definition for BackendServiceFailoverPolicy.
+ * Applicable only to Failover for Internal TCP/UDP Load Balancing. On failover or failback, this
+ * field indicates whether connection draining will be honored. GCP has a fixed connection draining
+ * timeout of 10 minutes. A setting of true terminates existing TCP connections to the active pool
+ * during failover and failback, immediately draining traffic. A setting of false allows existing
+ * TCP connections to persist, even on VMs no longer in the active pool, for up to the duration of
+ * the connection draining timeout (10 minutes).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

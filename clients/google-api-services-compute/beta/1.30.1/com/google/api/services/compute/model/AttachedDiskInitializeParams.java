@@ -94,6 +94,14 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Specifies which action to take on instance update with this disk. Default is to use the
+   * existing disk.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String onUpdateAction;
+
+  /**
    * Resource policies applied to this disk for automatic snapshot creations. Specified using the
    * full or partial URL. For instance template, specify only the resource policy name.
    * The value may be {@code null}.
@@ -292,6 +300,25 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
    */
   public AttachedDiskInitializeParams setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Specifies which action to take on instance update with this disk. Default is to use the
+   * existing disk.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOnUpdateAction() {
+    return onUpdateAction;
+  }
+
+  /**
+   * Specifies which action to take on instance update with this disk. Default is to use the
+   * existing disk.
+   * @param onUpdateAction onUpdateAction or {@code null} for none
+   */
+  public AttachedDiskInitializeParams setOnUpdateAction(java.lang.String onUpdateAction) {
+    this.onUpdateAction = onUpdateAction;
     return this;
   }
 

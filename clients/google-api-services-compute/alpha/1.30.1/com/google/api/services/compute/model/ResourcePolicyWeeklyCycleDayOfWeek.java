@@ -30,7 +30,9 @@ package com.google.api.services.compute.model;
 public final class ResourcePolicyWeeklyCycleDayOfWeek extends com.google.api.client.json.GenericJson {
 
   /**
-   * Allows to define schedule that runs specified day of the week.
+   * Defines a schedule that runs on specific days of the week. Specify one or more days. The
+   * following options are available: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY,
+   * SUNDAY.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +55,9 @@ public final class ResourcePolicyWeeklyCycleDayOfWeek extends com.google.api.cli
   private java.lang.String startTime;
 
   /**
-   * Allows to define schedule that runs specified day of the week.
+   * Defines a schedule that runs on specific days of the week. Specify one or more days. The
+   * following options are available: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY,
+   * SUNDAY.
    * @return value or {@code null} for none
    */
   public java.lang.String getDay() {
@@ -61,7 +65,9 @@ public final class ResourcePolicyWeeklyCycleDayOfWeek extends com.google.api.cli
   }
 
   /**
-   * Allows to define schedule that runs specified day of the week.
+   * Defines a schedule that runs on specific days of the week. Specify one or more days. The
+   * following options are available: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY,
+   * SUNDAY.
    * @param day day or {@code null} for none
    */
   public ResourcePolicyWeeklyCycleDayOfWeek setDay(java.lang.String day) {

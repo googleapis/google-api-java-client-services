@@ -233,14 +233,6 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   private java.lang.String purpose;
 
   /**
-   * The type of IP CIDR range to associate with this subnetwork. The default is RFC_1918. When
-   * creating a subnetwork in non-RFC 1918 range, this field must be set to NON_RFC_1918.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String rangeType;
-
-  /**
    * URL of the region where the Subnetwork resides. This field can be set only at resource creation
    * time.
    * The value may be {@code null}.
@@ -249,7 +241,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   private java.lang.String region;
 
   /**
-   * The role of subnetwork. Currenly, this field is only used when purpose =
+   * The role of subnetwork. Currently, this field is only used when purpose =
    * INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE or BACKUP. An ACTIVE subnetwork is
    * one that is currently being used for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is
    * one that is ready to be promoted to ACTIVE or is currently draining. This field can be updated
@@ -794,25 +786,6 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of IP CIDR range to associate with this subnetwork. The default is RFC_1918. When
-   * creating a subnetwork in non-RFC 1918 range, this field must be set to NON_RFC_1918.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getRangeType() {
-    return rangeType;
-  }
-
-  /**
-   * The type of IP CIDR range to associate with this subnetwork. The default is RFC_1918. When
-   * creating a subnetwork in non-RFC 1918 range, this field must be set to NON_RFC_1918.
-   * @param rangeType rangeType or {@code null} for none
-   */
-  public Subnetwork setRangeType(java.lang.String rangeType) {
-    this.rangeType = rangeType;
-    return this;
-  }
-
-  /**
    * URL of the region where the Subnetwork resides. This field can be set only at resource creation
    * time.
    * @return value or {@code null} for none
@@ -832,7 +805,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The role of subnetwork. Currenly, this field is only used when purpose =
+   * The role of subnetwork. Currently, this field is only used when purpose =
    * INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE or BACKUP. An ACTIVE subnetwork is
    * one that is currently being used for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is
    * one that is ready to be promoted to ACTIVE or is currently draining. This field can be updated
@@ -844,7 +817,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The role of subnetwork. Currenly, this field is only used when purpose =
+   * The role of subnetwork. Currently, this field is only used when purpose =
    * INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE or BACKUP. An ACTIVE subnetwork is
    * one that is currently being used for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is
    * one that is ready to be promoted to ACTIVE or is currently draining. This field can be updated

@@ -35,6 +35,13 @@ package com.google.api.services.compute.model;
 public final class NodeGroup extends com.google.api.client.json.GenericJson {
 
   /**
+   * Specifies how autoscaling should behave.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NodeGroupAutoscalingPolicy autoscalingPolicy;
+
+  /**
    * [Output Only] Creation timestamp in RFC3339 text format.
    * The value may be {@code null}.
    */
@@ -49,6 +56,12 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String fingerprint;
+
+  /**
    * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * The value may be {@code null}.
    */
@@ -61,6 +74,13 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
+
+  /**
+   * Specifies how to handle instances when a node in the group undergoes maintenance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String maintenancePolicy;
 
   /**
    * The name of the resource, provided by the client when initially creating the resource. The
@@ -108,6 +128,23 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
   private java.lang.String zone;
 
   /**
+   * Specifies how autoscaling should behave.
+   * @return value or {@code null} for none
+   */
+  public NodeGroupAutoscalingPolicy getAutoscalingPolicy() {
+    return autoscalingPolicy;
+  }
+
+  /**
+   * Specifies how autoscaling should behave.
+   * @param autoscalingPolicy autoscalingPolicy or {@code null} for none
+   */
+  public NodeGroup setAutoscalingPolicy(NodeGroupAutoscalingPolicy autoscalingPolicy) {
+    this.autoscalingPolicy = autoscalingPolicy;
+    return this;
+  }
+
+  /**
    * [Output Only] Creation timestamp in RFC3339 text format.
    * @return value or {@code null} for none
    */
@@ -142,6 +179,49 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * @see #decodeFingerprint()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFingerprint() {
+    return fingerprint;
+  }
+
+  /**
+
+   * @see #getFingerprint()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeFingerprint() {
+    return com.google.api.client.util.Base64.decodeBase64(fingerprint);
+  }
+
+  /**
+   * @see #encodeFingerprint()
+   * @param fingerprint fingerprint or {@code null} for none
+   */
+  public NodeGroup setFingerprint(java.lang.String fingerprint) {
+    this.fingerprint = fingerprint;
+    return this;
+  }
+
+  /**
+
+   * @see #setFingerprint()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public NodeGroup encodeFingerprint(byte[] fingerprint) {
+    this.fingerprint = com.google.api.client.util.Base64.encodeBase64URLSafeString(fingerprint);
+    return this;
+  }
+
+  /**
    * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * @return value or {@code null} for none
    */
@@ -172,6 +252,23 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
    */
   public NodeGroup setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * Specifies how to handle instances when a node in the group undergoes maintenance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMaintenancePolicy() {
+    return maintenancePolicy;
+  }
+
+  /**
+   * Specifies how to handle instances when a node in the group undergoes maintenance.
+   * @param maintenancePolicy maintenancePolicy or {@code null} for none
+   */
+  public NodeGroup setMaintenancePolicy(java.lang.String maintenancePolicy) {
+    this.maintenancePolicy = maintenancePolicy;
     return this;
   }
 

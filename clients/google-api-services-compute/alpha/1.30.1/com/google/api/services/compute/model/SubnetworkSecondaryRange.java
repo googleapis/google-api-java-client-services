@@ -48,15 +48,6 @@ public final class SubnetworkSecondaryRange extends com.google.api.client.json.G
   private java.lang.String rangeName;
 
   /**
-   * The type of IP CIDR range to associate with this subnetwork secondary range. The default is
-   * RFC_1918. When creating a subnetwork in non-RFC 1918 range, this field must be set to
-   * NON_RFC_1918.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String rangeType;
-
-  /**
    * The range of IP addresses belonging to this subnetwork secondary range. Provide this property
    * when you create the subnetwork. Ranges must be unique and non-overlapping with all primary and
    * secondary IP ranges within a network. Only IPv4 is supported.
@@ -95,27 +86,6 @@ public final class SubnetworkSecondaryRange extends com.google.api.client.json.G
    */
   public SubnetworkSecondaryRange setRangeName(java.lang.String rangeName) {
     this.rangeName = rangeName;
-    return this;
-  }
-
-  /**
-   * The type of IP CIDR range to associate with this subnetwork secondary range. The default is
-   * RFC_1918. When creating a subnetwork in non-RFC 1918 range, this field must be set to
-   * NON_RFC_1918.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getRangeType() {
-    return rangeType;
-  }
-
-  /**
-   * The type of IP CIDR range to associate with this subnetwork secondary range. The default is
-   * RFC_1918. When creating a subnetwork in non-RFC 1918 range, this field must be set to
-   * NON_RFC_1918.
-   * @param rangeType rangeType or {@code null} for none
-   */
-  public SubnetworkSecondaryRange setRangeType(java.lang.String rangeType) {
-    this.rangeType = rangeType;
     return this;
   }
 

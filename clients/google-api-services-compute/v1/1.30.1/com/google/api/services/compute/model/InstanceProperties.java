@@ -122,6 +122,13 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   private ReservationAffinity reservationAffinity;
 
   /**
+   * Resource policies (names, not ULRs) applied to instances created from this template.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> resourcePolicies;
+
+  /**
    * Specifies the scheduling options for the instances that are created from this template.
    * The value may be {@code null}.
    */
@@ -339,6 +346,23 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
    */
   public InstanceProperties setReservationAffinity(ReservationAffinity reservationAffinity) {
     this.reservationAffinity = reservationAffinity;
+    return this;
+  }
+
+  /**
+   * Resource policies (names, not ULRs) applied to instances created from this template.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getResourcePolicies() {
+    return resourcePolicies;
+  }
+
+  /**
+   * Resource policies (names, not ULRs) applied to instances created from this template.
+   * @param resourcePolicies resourcePolicies or {@code null} for none
+   */
+  public InstanceProperties setResourcePolicies(java.util.List<java.lang.String> resourcePolicies) {
+    this.resourcePolicies = resourcePolicies;
     return this;
   }
 

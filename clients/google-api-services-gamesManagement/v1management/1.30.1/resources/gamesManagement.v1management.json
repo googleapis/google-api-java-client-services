@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"LYADMvHWYH2ul9D6m9UT9gT77YM/sFFviHLGRCfVlmoquWCKc5oVeNY\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/JlEZIu7ktOle6jt-VJ9L795QuEw\"",
  "discoveryVersion": "v1",
  "id": "gamesManagement:v1management",
  "name": "gamesManagement",
  "canonicalName": "Games Management",
  "version": "v1management",
- "revision": "20191205",
+ "revision": "20200306",
  "title": "Google Play Game Services Management API",
  "description": "The Management API for Google Play Game Services.",
  "ownerDomain": "google.com",
@@ -289,6 +289,10 @@
     "experienceInfo": {
      "$ref": "GamesPlayerExperienceInfoResource",
      "description": "An object to represent Play Game experience information for the player."
+    },
+    "friendStatus": {
+     "type": "string",
+     "description": "The friend status of the given player, relative to the requester. This is unset if the player is not sharing their friends list with the game."
     },
     "kind": {
      "type": "string",

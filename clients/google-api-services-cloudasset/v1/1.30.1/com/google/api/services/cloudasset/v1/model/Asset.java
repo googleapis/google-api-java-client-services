@@ -17,8 +17,10 @@
 package com.google.api.services.cloudasset.v1.model;
 
 /**
- * Cloud asset. This includes all Google Cloud Platform resources, Cloud IAM policies, and other
- * non-GCP assets.
+ * An asset in Google Cloud. An asset can be any resource in the Google Cloud [resource
+ * hierarchy](https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy), a
+ * resource outside the Google Cloud resource hierarchy (such as Google Kubernetes Engine clusters
+ * and objects), or a Cloud IAM policy.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Asset API. For a detailed explanation see:
@@ -43,26 +45,35 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   private GoogleIdentityAccesscontextmanagerV1AccessPolicy accessPolicy;
 
   /**
-   * Asset's ancestry path in Cloud Resource Manager (CRM) hierarchy, represented as a list of
-   * relative resource names. Ancestry path starts with the closest CRM ancestor and ends at root.
-   * If the asset is a CRM project/folder/organization, this starts from the asset itself.
+   * The ancestry path of an asset in Google Cloud [resource hierarchy](https://cloud.google.com
+   * /resource-manager/docs/cloud-platform-resource-hierarchy), represented as a list of relative
+   * resource names. An ancestry path starts with the closest ancestor in the hierarchy and ends at
+   * root. If the asset is a project, folder, or organization, the ancestry path starts from the
+   * asset itself.
    *
-   * Example: ["projects/123456789", "folders/5432", "organizations/1234"]
+   * For example: `["projects/123456789", "folders/5432", "organizations/1234"]`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> ancestors;
 
   /**
-   * Type of the asset. Example: "compute.googleapis.com/Disk".
+   * The type of the asset. For example: "compute.googleapis.com/Disk"
+   *
+   * See [Supported asset types](https://cloud.google.com/asset-inventory/docs/supported-asset-
+   * types) for more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String assetType;
 
   /**
-   * Representation of the actual Cloud IAM policy set on a cloud resource. For each resource, there
-   * must be at most one Cloud IAM policy set on it.
+   * A representation of the Cloud IAM policy set on a Google Cloud resource. There can be a maximum
+   * of one Cloud IAM policy set on any given resource. In addition, Cloud IAM policies inherit
+   * their granted access scope from any policies set on parent resources in the resource hierarchy.
+   * Therefore, the effectively policy is the union of both the policy set on this resource and each
+   * policy set on all of the resource's ancestry resource levels in the hierarchy. See [this
+   * topic](https://cloud.google.com/iam/docs/policies#inheritance) for more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,24 +81,26 @@ public final class Asset extends com.google.api.client.json.GenericJson {
 
   /**
    * The full name of the asset. For example:
-   * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See
-   * [Resource Names](https://cloud.google.com/apis/design/resource_names#full_resource_name) for
-   * more information.
+   * "//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1"
+   *
+   * See [Resource names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
+   * for more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Representation of the Cloud Organization Policy set on an asset. For each asset, there could be
-   * multiple Organization policies with different constraints.
+   * A representation of an [organization policy](https://cloud.google.com/resource-manager/docs
+   * /organization-policy/overview#organization_policy). There can be more than one organization
+   * policy with different constraints set on a given resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudOrgpolicyV1Policy> orgPolicy;
 
   /**
-   * Representation of the resource.
+   * A representation of the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,11 +143,13 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Asset's ancestry path in Cloud Resource Manager (CRM) hierarchy, represented as a list of
-   * relative resource names. Ancestry path starts with the closest CRM ancestor and ends at root.
-   * If the asset is a CRM project/folder/organization, this starts from the asset itself.
+   * The ancestry path of an asset in Google Cloud [resource hierarchy](https://cloud.google.com
+   * /resource-manager/docs/cloud-platform-resource-hierarchy), represented as a list of relative
+   * resource names. An ancestry path starts with the closest ancestor in the hierarchy and ends at
+   * root. If the asset is a project, folder, or organization, the ancestry path starts from the
+   * asset itself.
    *
-   * Example: ["projects/123456789", "folders/5432", "organizations/1234"]
+   * For example: `["projects/123456789", "folders/5432", "organizations/1234"]`
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAncestors() {
@@ -142,11 +157,13 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Asset's ancestry path in Cloud Resource Manager (CRM) hierarchy, represented as a list of
-   * relative resource names. Ancestry path starts with the closest CRM ancestor and ends at root.
-   * If the asset is a CRM project/folder/organization, this starts from the asset itself.
+   * The ancestry path of an asset in Google Cloud [resource hierarchy](https://cloud.google.com
+   * /resource-manager/docs/cloud-platform-resource-hierarchy), represented as a list of relative
+   * resource names. An ancestry path starts with the closest ancestor in the hierarchy and ends at
+   * root. If the asset is a project, folder, or organization, the ancestry path starts from the
+   * asset itself.
    *
-   * Example: ["projects/123456789", "folders/5432", "organizations/1234"]
+   * For example: `["projects/123456789", "folders/5432", "organizations/1234"]`
    * @param ancestors ancestors or {@code null} for none
    */
   public Asset setAncestors(java.util.List<java.lang.String> ancestors) {
@@ -155,7 +172,10 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of the asset. Example: "compute.googleapis.com/Disk".
+   * The type of the asset. For example: "compute.googleapis.com/Disk"
+   *
+   * See [Supported asset types](https://cloud.google.com/asset-inventory/docs/supported-asset-
+   * types) for more information.
    * @return value or {@code null} for none
    */
   public java.lang.String getAssetType() {
@@ -163,7 +183,10 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of the asset. Example: "compute.googleapis.com/Disk".
+   * The type of the asset. For example: "compute.googleapis.com/Disk"
+   *
+   * See [Supported asset types](https://cloud.google.com/asset-inventory/docs/supported-asset-
+   * types) for more information.
    * @param assetType assetType or {@code null} for none
    */
   public Asset setAssetType(java.lang.String assetType) {
@@ -172,8 +195,12 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Representation of the actual Cloud IAM policy set on a cloud resource. For each resource, there
-   * must be at most one Cloud IAM policy set on it.
+   * A representation of the Cloud IAM policy set on a Google Cloud resource. There can be a maximum
+   * of one Cloud IAM policy set on any given resource. In addition, Cloud IAM policies inherit
+   * their granted access scope from any policies set on parent resources in the resource hierarchy.
+   * Therefore, the effectively policy is the union of both the policy set on this resource and each
+   * policy set on all of the resource's ancestry resource levels in the hierarchy. See [this
+   * topic](https://cloud.google.com/iam/docs/policies#inheritance) for more information.
    * @return value or {@code null} for none
    */
   public Policy getIamPolicy() {
@@ -181,8 +208,12 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Representation of the actual Cloud IAM policy set on a cloud resource. For each resource, there
-   * must be at most one Cloud IAM policy set on it.
+   * A representation of the Cloud IAM policy set on a Google Cloud resource. There can be a maximum
+   * of one Cloud IAM policy set on any given resource. In addition, Cloud IAM policies inherit
+   * their granted access scope from any policies set on parent resources in the resource hierarchy.
+   * Therefore, the effectively policy is the union of both the policy set on this resource and each
+   * policy set on all of the resource's ancestry resource levels in the hierarchy. See [this
+   * topic](https://cloud.google.com/iam/docs/policies#inheritance) for more information.
    * @param iamPolicy iamPolicy or {@code null} for none
    */
   public Asset setIamPolicy(Policy iamPolicy) {
@@ -192,9 +223,10 @@ public final class Asset extends com.google.api.client.json.GenericJson {
 
   /**
    * The full name of the asset. For example:
-   * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See
-   * [Resource Names](https://cloud.google.com/apis/design/resource_names#full_resource_name) for
-   * more information.
+   * "//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1"
+   *
+   * See [Resource names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
+   * for more information.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -203,9 +235,10 @@ public final class Asset extends com.google.api.client.json.GenericJson {
 
   /**
    * The full name of the asset. For example:
-   * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See
-   * [Resource Names](https://cloud.google.com/apis/design/resource_names#full_resource_name) for
-   * more information.
+   * "//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1"
+   *
+   * See [Resource names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
+   * for more information.
    * @param name name or {@code null} for none
    */
   public Asset setName(java.lang.String name) {
@@ -214,8 +247,9 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Representation of the Cloud Organization Policy set on an asset. For each asset, there could be
-   * multiple Organization policies with different constraints.
+   * A representation of an [organization policy](https://cloud.google.com/resource-manager/docs
+   * /organization-policy/overview#organization_policy). There can be more than one organization
+   * policy with different constraints set on a given resource.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudOrgpolicyV1Policy> getOrgPolicy() {
@@ -223,8 +257,9 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Representation of the Cloud Organization Policy set on an asset. For each asset, there could be
-   * multiple Organization policies with different constraints.
+   * A representation of an [organization policy](https://cloud.google.com/resource-manager/docs
+   * /organization-policy/overview#organization_policy). There can be more than one organization
+   * policy with different constraints set on a given resource.
    * @param orgPolicy orgPolicy or {@code null} for none
    */
   public Asset setOrgPolicy(java.util.List<GoogleCloudOrgpolicyV1Policy> orgPolicy) {
@@ -233,7 +268,7 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Representation of the resource.
+   * A representation of the resource.
    * @return value or {@code null} for none
    */
   public Resource getResource() {
@@ -241,7 +276,7 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Representation of the resource.
+   * A representation of the resource.
    * @param resource resource or {@code null} for none
    */
   public Asset setResource(Resource resource) {

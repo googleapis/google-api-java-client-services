@@ -61,7 +61,7 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig ex
   private java.util.List<java.lang.String> restrictedServices;
 
   /**
-   * Configuration for within Perimeter allowed APIs.
+   * Configuration for APIs allowed within Perimeter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,7 +137,7 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig ex
   }
 
   /**
-   * Configuration for within Perimeter allowed APIs.
+   * Configuration for APIs allowed within Perimeter.
    * @return value or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1VpcAccessibleServices getVpcAccessibleServices() {
@@ -145,7 +145,7 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig ex
   }
 
   /**
-   * Configuration for within Perimeter allowed APIs.
+   * Configuration for APIs allowed within Perimeter.
    * @param vpcAccessibleServices vpcAccessibleServices or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig setVpcAccessibleServices(GoogleIdentityAccesscontextmanagerV1VpcAccessibleServices vpcAccessibleServices) {

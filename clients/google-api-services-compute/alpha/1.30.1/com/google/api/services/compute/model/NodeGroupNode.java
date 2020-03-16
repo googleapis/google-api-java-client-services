@@ -43,6 +43,13 @@ public final class NodeGroupNode extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * CPU overcommit.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cpuOvercommitType;
+
+  /**
    * Local disk configurations.
    * The value may be {@code null}.
    */
@@ -110,6 +117,23 @@ public final class NodeGroupNode extends com.google.api.client.json.GenericJson 
    */
   public NodeGroupNode setAccelerators(java.util.List<AcceleratorConfig> accelerators) {
     this.accelerators = accelerators;
+    return this;
+  }
+
+  /**
+   * CPU overcommit.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCpuOvercommitType() {
+    return cpuOvercommitType;
+  }
+
+  /**
+   * CPU overcommit.
+   * @param cpuOvercommitType cpuOvercommitType or {@code null} for none
+   */
+  public NodeGroupNode setCpuOvercommitType(java.lang.String cpuOvercommitType) {
+    this.cpuOvercommitType = cpuOvercommitType;
     return this;
   }
 

@@ -49,6 +49,37 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
   private HttpHeaderAction headerAction;
 
   /**
+   * Outbound route specific configuration for networkservices.HttpFilter resources enabled by
+   * Traffic Director. httpFilterConfigs only applies for Loadbalancers with loadBalancingScheme set
+   * to INTERNAL_SELF_MANAGED. See ForwardingRule for more details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<HttpFilterConfig> httpFilterConfigs;
+
+  static {
+    // hack to force ProGuard to consider HttpFilterConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(HttpFilterConfig.class);
+  }
+
+  /**
+   * Outbound route specific metadata supplied to networkservices.HttpFilter resources enabled by
+   * Traffic Director. httpFilterMetadata only applies for Loadbalancers with loadBalancingScheme
+   * set to INTERNAL_SELF_MANAGED. See ForwardingRule for more details. The only configTypeUrl
+   * supported is type.googleapis.com/google.protobuf.Struct
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<HttpFilterConfig> httpFilterMetadata;
+
+  static {
+    // hack to force ProGuard to consider HttpFilterConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(HttpFilterConfig.class);
+  }
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -139,6 +170,50 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
    */
   public HttpRouteRule setHeaderAction(HttpHeaderAction headerAction) {
     this.headerAction = headerAction;
+    return this;
+  }
+
+  /**
+   * Outbound route specific configuration for networkservices.HttpFilter resources enabled by
+   * Traffic Director. httpFilterConfigs only applies for Loadbalancers with loadBalancingScheme set
+   * to INTERNAL_SELF_MANAGED. See ForwardingRule for more details.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<HttpFilterConfig> getHttpFilterConfigs() {
+    return httpFilterConfigs;
+  }
+
+  /**
+   * Outbound route specific configuration for networkservices.HttpFilter resources enabled by
+   * Traffic Director. httpFilterConfigs only applies for Loadbalancers with loadBalancingScheme set
+   * to INTERNAL_SELF_MANAGED. See ForwardingRule for more details.
+   * @param httpFilterConfigs httpFilterConfigs or {@code null} for none
+   */
+  public HttpRouteRule setHttpFilterConfigs(java.util.List<HttpFilterConfig> httpFilterConfigs) {
+    this.httpFilterConfigs = httpFilterConfigs;
+    return this;
+  }
+
+  /**
+   * Outbound route specific metadata supplied to networkservices.HttpFilter resources enabled by
+   * Traffic Director. httpFilterMetadata only applies for Loadbalancers with loadBalancingScheme
+   * set to INTERNAL_SELF_MANAGED. See ForwardingRule for more details. The only configTypeUrl
+   * supported is type.googleapis.com/google.protobuf.Struct
+   * @return value or {@code null} for none
+   */
+  public java.util.List<HttpFilterConfig> getHttpFilterMetadata() {
+    return httpFilterMetadata;
+  }
+
+  /**
+   * Outbound route specific metadata supplied to networkservices.HttpFilter resources enabled by
+   * Traffic Director. httpFilterMetadata only applies for Loadbalancers with loadBalancingScheme
+   * set to INTERNAL_SELF_MANAGED. See ForwardingRule for more details. The only configTypeUrl
+   * supported is type.googleapis.com/google.protobuf.Struct
+   * @param httpFilterMetadata httpFilterMetadata or {@code null} for none
+   */
+  public HttpRouteRule setHttpFilterMetadata(java.util.List<HttpFilterConfig> httpFilterMetadata) {
+    this.httpFilterMetadata = httpFilterMetadata;
     return this;
   }
 

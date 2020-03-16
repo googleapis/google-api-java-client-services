@@ -21,8 +21,8 @@ package com.google.api.services.compute.model;
  *
  * Google Compute Engine has two Target HTTPS Proxy resources:
  *
- * * [Global](/compute/docs/reference/rest/latest/targetHttpsProxies) *
- * [Regional](/compute/docs/reference/rest/latest/regionTargetHttpsProxies)
+ * * [Global](/compute/docs/reference/rest/{$api_version}/targetHttpsProxies) *
+ * [Regional](/compute/docs/reference/rest/{$api_version}/regionTargetHttpsProxies)
  *
  * A target HTTPS proxy is a component of GCP HTTPS load balancers.
  *
@@ -43,6 +43,15 @@ package com.google.api.services.compute.model;
  */
 @SuppressWarnings("javadoc")
 public final class TargetHttpsProxy extends com.google.api.client.json.GenericJson {
+
+  /**
+   * URL of a certificate map that identifies a certificate map associated with the given target
+   * proxy. This field can only be set for global target proxies. If set, sslCertificates will be
+   * ignored.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String certificateMap;
 
   /**
    * [Output Only] Creation timestamp in RFC3339 text format.
@@ -151,6 +160,27 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.String urlMap;
+
+  /**
+   * URL of a certificate map that identifies a certificate map associated with the given target
+   * proxy. This field can only be set for global target proxies. If set, sslCertificates will be
+   * ignored.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCertificateMap() {
+    return certificateMap;
+  }
+
+  /**
+   * URL of a certificate map that identifies a certificate map associated with the given target
+   * proxy. This field can only be set for global target proxies. If set, sslCertificates will be
+   * ignored.
+   * @param certificateMap certificateMap or {@code null} for none
+   */
+  public TargetHttpsProxy setCertificateMap(java.lang.String certificateMap) {
+    this.certificateMap = certificateMap;
+    return this;
+  }
 
   /**
    * [Output Only] Creation timestamp in RFC3339 text format.

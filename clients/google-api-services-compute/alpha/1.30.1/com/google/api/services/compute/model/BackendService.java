@@ -24,8 +24,8 @@ package com.google.api.services.compute.model;
  *
  * Backend services in Google Compute Engine can be either regionally or globally scoped.
  *
- * * [Global](/compute/docs/reference/rest/latest/backendServices) *
- * [Regional](/compute/docs/reference/rest/latest/regionBackendServices)
+ * * [Global](/compute/docs/reference/rest/{$api_version}/backendServices) *
+ * [Regional](/compute/docs/reference/rest/{$api_version}/regionBackendServices)
  *
  * For more information, read Backend Services.
  *
@@ -153,13 +153,11 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.lang.String fingerprint;
 
   /**
-   * The list of URLs to the HttpHealthCheck or HttpsHealthCheck resource for health checking this
-   * BackendService. Currently at most one health check can be specified. Health check is optional
-   * for Compute Engine backend services if there is no backend. A health check must not be
-   * specified when adding Internet Network Endpoint Group or Serverless Network Endpoint Group as
-   * backends. In all other cases, a health check is required for Compute Engine backend services.
-   *
-   * For internal load balancing, a URL to a HealthCheck resource must be specified instead.
+   * The list of URLs to the healthChecks, httpHealthChecks (legacy), or httpsHealthChecks (legacy)
+   * resource for health checking this backend service. Not all backend services support legacy
+   * health checks. See  Load balancer guide. Currently at most one health check can be specified.
+   * Backend services with instance group or zonal NEG backends must have a health check. Backend
+   * services with internet NEG backends must not have a health check. A health check must
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -273,9 +271,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * A named port on a backend instance group representing the port for communication to the backend
-   * VMs in that group. Required when the loadBalancingScheme is EXTERNAL and the backends are
-   * instance groups. The named port must be defined on each backend instance group. This parameter
-   * has no meaning if the backends are NEGs.
+   * VMs in that group. Required when the loadBalancingScheme is EXTERNAL, INTERNAL_MANAGED, or
+   * INTERNAL_SELF_MANAGED and the backends are instance groups. The named port must be defined on
+   * each backend instance group. This parameter has no meaning if the backends are NEGs.
    *
    * Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Blaancing).
    * The value may be {@code null}.
@@ -286,7 +284,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * The protocol this BackendService uses to communicate with backends.
    *
-   * Possible values are HTTP, HTTPS, HTTP2, TCP, SSL, or UDP, depending on the chosen load balancer
+   * Possible values are HTTP, HTTPS, HTTP2, TCP, SSL, or UDP. depending on the chosen load balancer
    * or Traffic Director configuration. Refer to the documentation for the load balancer or for
    * Traffic Director for more information.
    * The value may be {@code null}.
@@ -644,13 +642,11 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The list of URLs to the HttpHealthCheck or HttpsHealthCheck resource for health checking this
-   * BackendService. Currently at most one health check can be specified. Health check is optional
-   * for Compute Engine backend services if there is no backend. A health check must not be
-   * specified when adding Internet Network Endpoint Group or Serverless Network Endpoint Group as
-   * backends. In all other cases, a health check is required for Compute Engine backend services.
-   *
-   * For internal load balancing, a URL to a HealthCheck resource must be specified instead.
+   * The list of URLs to the healthChecks, httpHealthChecks (legacy), or httpsHealthChecks (legacy)
+   * resource for health checking this backend service. Not all backend services support legacy
+   * health checks. See  Load balancer guide. Currently at most one health check can be specified.
+   * Backend services with instance group or zonal NEG backends must have a health check. Backend
+   * services with internet NEG backends must not have a health check. A health check must
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getHealthChecks() {
@@ -658,13 +654,11 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The list of URLs to the HttpHealthCheck or HttpsHealthCheck resource for health checking this
-   * BackendService. Currently at most one health check can be specified. Health check is optional
-   * for Compute Engine backend services if there is no backend. A health check must not be
-   * specified when adding Internet Network Endpoint Group or Serverless Network Endpoint Group as
-   * backends. In all other cases, a health check is required for Compute Engine backend services.
-   *
-   * For internal load balancing, a URL to a HealthCheck resource must be specified instead.
+   * The list of URLs to the healthChecks, httpHealthChecks (legacy), or httpsHealthChecks (legacy)
+   * resource for health checking this backend service. Not all backend services support legacy
+   * health checks. See  Load balancer guide. Currently at most one health check can be specified.
+   * Backend services with instance group or zonal NEG backends must have a health check. Backend
+   * services with internet NEG backends must not have a health check. A health check must
    * @param healthChecks healthChecks or {@code null} for none
    */
   public BackendService setHealthChecks(java.util.List<java.lang.String> healthChecks) {
@@ -916,9 +910,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * A named port on a backend instance group representing the port for communication to the backend
-   * VMs in that group. Required when the loadBalancingScheme is EXTERNAL and the backends are
-   * instance groups. The named port must be defined on each backend instance group. This parameter
-   * has no meaning if the backends are NEGs.
+   * VMs in that group. Required when the loadBalancingScheme is EXTERNAL, INTERNAL_MANAGED, or
+   * INTERNAL_SELF_MANAGED and the backends are instance groups. The named port must be defined on
+   * each backend instance group. This parameter has no meaning if the backends are NEGs.
    *
    * Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Blaancing).
    * @return value or {@code null} for none
@@ -929,9 +923,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * A named port on a backend instance group representing the port for communication to the backend
-   * VMs in that group. Required when the loadBalancingScheme is EXTERNAL and the backends are
-   * instance groups. The named port must be defined on each backend instance group. This parameter
-   * has no meaning if the backends are NEGs.
+   * VMs in that group. Required when the loadBalancingScheme is EXTERNAL, INTERNAL_MANAGED, or
+   * INTERNAL_SELF_MANAGED and the backends are instance groups. The named port must be defined on
+   * each backend instance group. This parameter has no meaning if the backends are NEGs.
    *
    * Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Blaancing).
    * @param portName portName or {@code null} for none
@@ -944,7 +938,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * The protocol this BackendService uses to communicate with backends.
    *
-   * Possible values are HTTP, HTTPS, HTTP2, TCP, SSL, or UDP, depending on the chosen load balancer
+   * Possible values are HTTP, HTTPS, HTTP2, TCP, SSL, or UDP. depending on the chosen load balancer
    * or Traffic Director configuration. Refer to the documentation for the load balancer or for
    * Traffic Director for more information.
    * @return value or {@code null} for none
@@ -956,7 +950,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * The protocol this BackendService uses to communicate with backends.
    *
-   * Possible values are HTTP, HTTPS, HTTP2, TCP, SSL, or UDP, depending on the chosen load balancer
+   * Possible values are HTTP, HTTPS, HTTP2, TCP, SSL, or UDP. depending on the chosen load balancer
    * or Traffic Director configuration. Refer to the documentation for the load balancer or for
    * Traffic Director for more information.
    * @param protocol protocol or {@code null} for none

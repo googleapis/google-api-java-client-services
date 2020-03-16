@@ -17,7 +17,10 @@
 package com.google.api.services.compute.model;
 
 /**
- * Model definition for ResourcePolicy.
+ * Represents a Resource Policy resource. You can use resource policies to schedule actions for some
+ * Compute Engine resources. For example, you can use them to schedule persistent disk snapshots.
+ *
+ * (== resource_for {$api_version}.resourcePolicies ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

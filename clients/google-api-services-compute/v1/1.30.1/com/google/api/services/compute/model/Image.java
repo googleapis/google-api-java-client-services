@@ -180,6 +180,13 @@ public final class Image extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
+   * Set the secure boot keys of shielded instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InitialStateConfig shieldedInstanceInitialState;
+
+  /**
    * URL of the source disk used to create this image. This can be a full or valid partial URL. You
    * must provide either this property or the rawDisk.source property but not both to create an
    * image. For example, the following are valid values: -
@@ -652,6 +659,23 @@ public final class Image extends com.google.api.client.json.GenericJson {
    */
   public Image setSelfLink(java.lang.String selfLink) {
     this.selfLink = selfLink;
+    return this;
+  }
+
+  /**
+   * Set the secure boot keys of shielded instance.
+   * @return value or {@code null} for none
+   */
+  public InitialStateConfig getShieldedInstanceInitialState() {
+    return shieldedInstanceInitialState;
+  }
+
+  /**
+   * Set the secure boot keys of shielded instance.
+   * @param shieldedInstanceInitialState shieldedInstanceInitialState or {@code null} for none
+   */
+  public Image setShieldedInstanceInitialState(InitialStateConfig shieldedInstanceInitialState) {
+    this.shieldedInstanceInitialState = shieldedInstanceInitialState;
     return this;
   }
 

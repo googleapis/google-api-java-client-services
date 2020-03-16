@@ -46,6 +46,25 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   private java.lang.String description;
 
   /**
+   * The direction in which this rule applies. This field may only be specified when versioned_expr
+   * is set to FIREWALL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String direction;
+
+  /**
+   * Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be
+   * exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery
+   * or Pub/Sub. Note: you cannot enable logging on "goto_next" rules.
+   *
+   * This field may only be specified when the versioned_expr is set to FIREWALL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableLogging;
+
+  /**
    * [Output only] Type of the resource. Always compute#securityPolicyRule for security policy rules
    * The value may be {@code null}.
    */
@@ -75,6 +94,31 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private java.lang.Integer priority;
+
+  /**
+   * [Output Only] Calculation of the complexity of a single firewall security policy rule.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer ruleTupleCount;
+
+  /**
+   * A list of network resource URLs to which this rule applies. This field allows you to control
+   * which network's VMs get this rule. If this field is left blank, all VMs within the organization
+   * will receive the rule.
+   *
+   * This field may only be specified when versioned_expr is set to FIREWALL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> targetResources;
+
+  /**
+   * A list of service accounts indicating the sets of instances that are applied with this rule.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> targetServiceAccounts;
 
   /**
    * The Action to preform when the client connection triggers the rule. Can currently be either
@@ -109,6 +153,50 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
    */
   public SecurityPolicyRule setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * The direction in which this rule applies. This field may only be specified when versioned_expr
+   * is set to FIREWALL.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDirection() {
+    return direction;
+  }
+
+  /**
+   * The direction in which this rule applies. This field may only be specified when versioned_expr
+   * is set to FIREWALL.
+   * @param direction direction or {@code null} for none
+   */
+  public SecurityPolicyRule setDirection(java.lang.String direction) {
+    this.direction = direction;
+    return this;
+  }
+
+  /**
+   * Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be
+   * exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery
+   * or Pub/Sub. Note: you cannot enable logging on "goto_next" rules.
+   *
+   * This field may only be specified when the versioned_expr is set to FIREWALL.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableLogging() {
+    return enableLogging;
+  }
+
+  /**
+   * Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be
+   * exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery
+   * or Pub/Sub. Note: you cannot enable logging on "goto_next" rules.
+   *
+   * This field may only be specified when the versioned_expr is set to FIREWALL.
+   * @param enableLogging enableLogging or {@code null} for none
+   */
+  public SecurityPolicyRule setEnableLogging(java.lang.Boolean enableLogging) {
+    this.enableLogging = enableLogging;
     return this;
   }
 
@@ -183,6 +271,65 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
    */
   public SecurityPolicyRule setPriority(java.lang.Integer priority) {
     this.priority = priority;
+    return this;
+  }
+
+  /**
+   * [Output Only] Calculation of the complexity of a single firewall security policy rule.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getRuleTupleCount() {
+    return ruleTupleCount;
+  }
+
+  /**
+   * [Output Only] Calculation of the complexity of a single firewall security policy rule.
+   * @param ruleTupleCount ruleTupleCount or {@code null} for none
+   */
+  public SecurityPolicyRule setRuleTupleCount(java.lang.Integer ruleTupleCount) {
+    this.ruleTupleCount = ruleTupleCount;
+    return this;
+  }
+
+  /**
+   * A list of network resource URLs to which this rule applies. This field allows you to control
+   * which network's VMs get this rule. If this field is left blank, all VMs within the organization
+   * will receive the rule.
+   *
+   * This field may only be specified when versioned_expr is set to FIREWALL.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getTargetResources() {
+    return targetResources;
+  }
+
+  /**
+   * A list of network resource URLs to which this rule applies. This field allows you to control
+   * which network's VMs get this rule. If this field is left blank, all VMs within the organization
+   * will receive the rule.
+   *
+   * This field may only be specified when versioned_expr is set to FIREWALL.
+   * @param targetResources targetResources or {@code null} for none
+   */
+  public SecurityPolicyRule setTargetResources(java.util.List<java.lang.String> targetResources) {
+    this.targetResources = targetResources;
+    return this;
+  }
+
+  /**
+   * A list of service accounts indicating the sets of instances that are applied with this rule.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getTargetServiceAccounts() {
+    return targetServiceAccounts;
+  }
+
+  /**
+   * A list of service accounts indicating the sets of instances that are applied with this rule.
+   * @param targetServiceAccounts targetServiceAccounts or {@code null} for none
+   */
+  public SecurityPolicyRule setTargetServiceAccounts(java.util.List<java.lang.String> targetServiceAccounts) {
+    this.targetServiceAccounts = targetServiceAccounts;
     return this;
   }
 

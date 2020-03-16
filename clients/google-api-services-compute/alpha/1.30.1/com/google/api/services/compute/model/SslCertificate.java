@@ -21,17 +21,18 @@ package com.google.api.services.compute.model;
  *
  * Google Compute Engine has two SSL Certificate resources:
  *
- * * [Global](/compute/docs/reference/rest/latest/sslCertificates) *
- * [Regional](/compute/docs/reference/rest/latest/regionSslCertificates)
+ * * [Global](/compute/docs/reference/rest/{$api_version}/sslCertificates) *
+ * [Regional](/compute/docs/reference/rest/{$api_version}/regionSslCertificates)
  *
- * - sslCertificates are used by: - external HTTPS load balancers - SSL proxy load balancers
+ * The sslCertificates are used by:   - external HTTPS load balancers  - SSL proxy load balancers
  *
- * - regionSslCertificates are used by: - internal HTTPS load balancers
+ * The regionSslCertificates are used by internal HTTPS load balancers.
  *
- * This SSL certificate resource also contains a private key. You can use SSL keys and certificates
- * to secure connections to a load balancer. For more information, read  Creating and Using SSL
- * Certificates. (== resource_for {$api_version}.sslCertificates ==) (== resource_for
- * {$api_version}.regionSslCertificates ==) Next ID: 17
+ * Optionally, certificate file contents that you upload can contain a set of up to five PEM-encoded
+ * certificates. The API call creates an object (sslCertificate) that holds this data. You can use
+ * SSL keys and certificates to secure connections to a load balancer. For more information, read
+ * Creating and using SSL certificates and SSL certificates quotas and limits. (== resource_for
+ * {$api_version}.sslCertificates ==) (== resource_for {$api_version}.regionSslCertificates ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

@@ -30,20 +30,58 @@ package com.google.api.services.compute.model;
 public final class InstanceGroupManagerStatusStateful extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] A bit indicating whether the managed instance group is stateful, i.e. has any
-   * disks in Stateful Policy or at least one per-instance config. This is determined based on the
-   * user intent, the group may be reported as not stateful even when there is still some preserved
-   * state on managed instances.
+   * [Output Only] A bit indicating whether the managed instance group has stateful configuration,
+   * that is, if you have configured any items in a stateful policy or in per-instance configs. The
+   * group might report that it has no stateful config even when there is still some preserved state
+   * on a managed instance, for example, if you have deleted all PICs but not yet applied those
+   * deletions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean hasStatefulConfig;
+
+  /**
+   * [Output Only] A bit indicating whether the managed instance group has stateful configuration,
+   * that is, if you have configured any items in a stateful policy or in per-instance configs. The
+   * group might report that it has no stateful config even when there is still some preserved state
+   * on a managed instance, for example, if you have deleted all PICs but not yet applied those
+   * deletions. This field is deprecated in favor of has_stateful_config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isStateful;
 
   /**
-   * [Output Only] A bit indicating whether the managed instance group is stateful, i.e. has any
-   * disks in Stateful Policy or at least one per-instance config. This is determined based on the
-   * user intent, the group may be reported as not stateful even when there is still some preserved
-   * state on managed instances.
+   * [Output Only] A bit indicating whether the managed instance group has stateful configuration,
+   * that is, if you have configured any items in a stateful policy or in per-instance configs. The
+   * group might report that it has no stateful config even when there is still some preserved state
+   * on a managed instance, for example, if you have deleted all PICs but not yet applied those
+   * deletions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getHasStatefulConfig() {
+    return hasStatefulConfig;
+  }
+
+  /**
+   * [Output Only] A bit indicating whether the managed instance group has stateful configuration,
+   * that is, if you have configured any items in a stateful policy or in per-instance configs. The
+   * group might report that it has no stateful config even when there is still some preserved state
+   * on a managed instance, for example, if you have deleted all PICs but not yet applied those
+   * deletions.
+   * @param hasStatefulConfig hasStatefulConfig or {@code null} for none
+   */
+  public InstanceGroupManagerStatusStateful setHasStatefulConfig(java.lang.Boolean hasStatefulConfig) {
+    this.hasStatefulConfig = hasStatefulConfig;
+    return this;
+  }
+
+  /**
+   * [Output Only] A bit indicating whether the managed instance group has stateful configuration,
+   * that is, if you have configured any items in a stateful policy or in per-instance configs. The
+   * group might report that it has no stateful config even when there is still some preserved state
+   * on a managed instance, for example, if you have deleted all PICs but not yet applied those
+   * deletions. This field is deprecated in favor of has_stateful_config.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsStateful() {
@@ -51,10 +89,11 @@ public final class InstanceGroupManagerStatusStateful extends com.google.api.cli
   }
 
   /**
-   * [Output Only] A bit indicating whether the managed instance group is stateful, i.e. has any
-   * disks in Stateful Policy or at least one per-instance config. This is determined based on the
-   * user intent, the group may be reported as not stateful even when there is still some preserved
-   * state on managed instances.
+   * [Output Only] A bit indicating whether the managed instance group has stateful configuration,
+   * that is, if you have configured any items in a stateful policy or in per-instance configs. The
+   * group might report that it has no stateful config even when there is still some preserved state
+   * on a managed instance, for example, if you have deleted all PICs but not yet applied those
+   * deletions. This field is deprecated in favor of has_stateful_config.
    * @param isStateful isStateful or {@code null} for none
    */
   public InstanceGroupManagerStatusStateful setIsStateful(java.lang.Boolean isStateful) {

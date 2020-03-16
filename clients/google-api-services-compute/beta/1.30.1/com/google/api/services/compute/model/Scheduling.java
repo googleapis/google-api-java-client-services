@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Sets the scheduling options for an Instance. NextID: 9
+ * Sets the scheduling options for an Instance. NextID: 10
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -51,7 +51,7 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
 
   /**
    * A set of node affinity and anti-affinity configurations. Refer to Configuring node affinity for
-   * more information.
+   * more information. Overrides reservationAffinity.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,7 +122,7 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
 
   /**
    * A set of node affinity and anti-affinity configurations. Refer to Configuring node affinity for
-   * more information.
+   * more information. Overrides reservationAffinity.
    * @return value or {@code null} for none
    */
   public java.util.List<SchedulingNodeAffinity> getNodeAffinities() {
@@ -131,7 +131,7 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
 
   /**
    * A set of node affinity and anti-affinity configurations. Refer to Configuring node affinity for
-   * more information.
+   * more information. Overrides reservationAffinity.
    * @param nodeAffinities nodeAffinities or {@code null} for none
    */
   public Scheduling setNodeAffinities(java.util.List<SchedulingNodeAffinity> nodeAffinities) {

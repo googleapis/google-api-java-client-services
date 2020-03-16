@@ -17,7 +17,11 @@
 package com.google.api.services.compute.model;
 
 /**
- * Model definition for LicenseCode.
+ * Represents a License Code resource.
+ *
+ * A License Code is a unique identifier used to represent a license resource.  Caution This
+ * resource is intended for use only by third-party partners who are creating Cloud Marketplace
+ * images. (== resource_for {$api_version}.licenseCodes ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

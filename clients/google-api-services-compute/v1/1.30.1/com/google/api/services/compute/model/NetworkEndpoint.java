@@ -30,6 +30,14 @@ package com.google.api.services.compute.model;
 public final class NetworkEndpoint extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional fully qualified domain name of network endpoint. This can only be specified when
+   * NetworkEndpointGroup.network_endpoint_type is NON_GCP_FQDN_PORT.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String fqdn;
+
+  /**
    * The name for a specific VM instance that the IP address belongs to. This is required for
    * network endpoints of type GCE_VM_IP_PORT. The instance must be in the same zone of network
    * endpoint group.
@@ -58,6 +66,25 @@ public final class NetworkEndpoint extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.Integer port;
+
+  /**
+   * Optional fully qualified domain name of network endpoint. This can only be specified when
+   * NetworkEndpointGroup.network_endpoint_type is NON_GCP_FQDN_PORT.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFqdn() {
+    return fqdn;
+  }
+
+  /**
+   * Optional fully qualified domain name of network endpoint. This can only be specified when
+   * NetworkEndpointGroup.network_endpoint_type is NON_GCP_FQDN_PORT.
+   * @param fqdn fqdn or {@code null} for none
+   */
+  public NetworkEndpoint setFqdn(java.lang.String fqdn) {
+    this.fqdn = fqdn;
+    return this;
+  }
 
   /**
    * The name for a specific VM instance that the IP address belongs to. This is required for

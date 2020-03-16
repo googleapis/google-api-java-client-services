@@ -96,14 +96,6 @@ public final class Network extends com.google.api.client.json.GenericJson {
   private java.lang.Integer mtu;
 
   /**
-   * The multicast mode for this network. If set to ZONAL, multicast is allowed within a zone. If
-   * set to DISABLED, multicast is disabled for this network. The default is DISABLED.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String multicastMode;
-
-  /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
    * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be
@@ -297,25 +289,6 @@ public final class Network extends com.google.api.client.json.GenericJson {
    */
   public Network setMtu(java.lang.Integer mtu) {
     this.mtu = mtu;
-    return this;
-  }
-
-  /**
-   * The multicast mode for this network. If set to ZONAL, multicast is allowed within a zone. If
-   * set to DISABLED, multicast is disabled for this network. The default is DISABLED.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getMulticastMode() {
-    return multicastMode;
-  }
-
-  /**
-   * The multicast mode for this network. If set to ZONAL, multicast is allowed within a zone. If
-   * set to DISABLED, multicast is disabled for this network. The default is DISABLED.
-   * @param multicastMode multicastMode or {@code null} for none
-   */
-  public Network setMulticastMode(java.lang.String multicastMode) {
-    this.multicastMode = multicastMode;
     return this;
   }
 

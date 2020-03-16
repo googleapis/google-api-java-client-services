@@ -21,8 +21,8 @@ package com.google.api.services.compute.model;
  *
  * Google Compute Engine has two Health Check resources:
  *
- * * [Global](/compute/docs/reference/rest/latest/healthChecks) *
- * [Regional](/compute/docs/reference/rest/latest/regionHealthChecks)
+ * * [Global](/compute/docs/reference/rest/{$api_version}/healthChecks) *
+ * [Regional](/compute/docs/reference/rest/{$api_version}/regionHealthChecks)
  *
  * Internal HTTP(S) load balancers use regional health checks. All other types of GCP load balancers
  * and managed instance group auto-healing use global health checks. For more information, read
@@ -61,6 +61,12 @@ public final class HealthCheck extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GRPCHealthCheck grpcHealthCheck;
 
   /**
    * A so-far unhealthy instance will be marked healthy after this many consecutive successes. The
@@ -232,6 +238,21 @@ public final class HealthCheck extends com.google.api.client.json.GenericJson {
    */
   public HealthCheck setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public GRPCHealthCheck getGrpcHealthCheck() {
+    return grpcHealthCheck;
+  }
+
+  /**
+   * @param grpcHealthCheck grpcHealthCheck or {@code null} for none
+   */
+  public HealthCheck setGrpcHealthCheck(GRPCHealthCheck grpcHealthCheck) {
+    this.grpcHealthCheck = grpcHealthCheck;
     return this;
   }
 

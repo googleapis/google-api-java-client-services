@@ -34,6 +34,13 @@ package com.google.api.services.compute.model;
 public final class SecurityPolicy extends com.google.api.client.json.GenericJson {
 
   /**
+   * A list of associations that belong to this policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SecurityPolicyAssociation> associations;
+
+  /**
    * [Output Only] Creation timestamp in RFC3339 text format.
    * The value may be {@code null}.
    */
@@ -46,6 +53,19 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
+
+  /**
+   * User-provided name of the Organization security plicy. The name should be unique in the
+   * organization in which the security policy is created. This should only be used when
+   * SecurityPolicyType is FIREWALL. The name must be 1-63 characters long, and comply with RFC1035.
+   * Specifically, the name must be 1-63 characters long and match the regular expression
+   * `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and
+   * all following characters must be a dash, lowercase letter, or digit, except the last character,
+   * which cannot be a dash.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayName;
 
   /**
    * Specifies a fingerprint for this resource, which is essentially a hash of the metadata's
@@ -106,6 +126,21 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
   private java.lang.String name;
 
   /**
+   * [Output Only] The parent of the security policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String parent;
+
+  /**
+   * [Output Only] Total count of all security policy rule tuples. A security policy can not exceed
+   * a set number of tuples.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer ruleTupleCount;
+
+  /**
    * A list of rules that belong to this policy. There must always be a default rule (rule with
    * priority 2147483647 and match "*"). If no rules are provided when creating a security policy, a
    * default rule with action "allow" will be added.
@@ -120,6 +155,38 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
+
+  /**
+   * [Output Only] Server-defined URL for this resource with the resource id.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String selfLinkWithId;
+
+  /**
+   * The type indicates the intended use of the security policy. CLOUD_ARMOR policies apply to
+   * backend services. FIREWALL policies apply to organizations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String type;
+
+  /**
+   * A list of associations that belong to this policy.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SecurityPolicyAssociation> getAssociations() {
+    return associations;
+  }
+
+  /**
+   * A list of associations that belong to this policy.
+   * @param associations associations or {@code null} for none
+   */
+  public SecurityPolicy setAssociations(java.util.List<SecurityPolicyAssociation> associations) {
+    this.associations = associations;
+    return this;
+  }
 
   /**
    * [Output Only] Creation timestamp in RFC3339 text format.
@@ -152,6 +219,35 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
    */
   public SecurityPolicy setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * User-provided name of the Organization security plicy. The name should be unique in the
+   * organization in which the security policy is created. This should only be used when
+   * SecurityPolicyType is FIREWALL. The name must be 1-63 characters long, and comply with RFC1035.
+   * Specifically, the name must be 1-63 characters long and match the regular expression
+   * `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and
+   * all following characters must be a dash, lowercase letter, or digit, except the last character,
+   * which cannot be a dash.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayName() {
+    return displayName;
+  }
+
+  /**
+   * User-provided name of the Organization security plicy. The name should be unique in the
+   * organization in which the security policy is created. This should only be used when
+   * SecurityPolicyType is FIREWALL. The name must be 1-63 characters long, and comply with RFC1035.
+   * Specifically, the name must be 1-63 characters long and match the regular expression
+   * `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and
+   * all following characters must be a dash, lowercase letter, or digit, except the last character,
+   * which cannot be a dash.
+   * @param displayName displayName or {@code null} for none
+   */
+  public SecurityPolicy setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
     return this;
   }
 
@@ -368,6 +464,42 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * [Output Only] The parent of the security policy.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getParent() {
+    return parent;
+  }
+
+  /**
+   * [Output Only] The parent of the security policy.
+   * @param parent parent or {@code null} for none
+   */
+  public SecurityPolicy setParent(java.lang.String parent) {
+    this.parent = parent;
+    return this;
+  }
+
+  /**
+   * [Output Only] Total count of all security policy rule tuples. A security policy can not exceed
+   * a set number of tuples.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getRuleTupleCount() {
+    return ruleTupleCount;
+  }
+
+  /**
+   * [Output Only] Total count of all security policy rule tuples. A security policy can not exceed
+   * a set number of tuples.
+   * @param ruleTupleCount ruleTupleCount or {@code null} for none
+   */
+  public SecurityPolicy setRuleTupleCount(java.lang.Integer ruleTupleCount) {
+    this.ruleTupleCount = ruleTupleCount;
+    return this;
+  }
+
+  /**
    * A list of rules that belong to this policy. There must always be a default rule (rule with
    * priority 2147483647 and match "*"). If no rules are provided when creating a security policy, a
    * default rule with action "allow" will be added.
@@ -402,6 +534,42 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
    */
   public SecurityPolicy setSelfLink(java.lang.String selfLink) {
     this.selfLink = selfLink;
+    return this;
+  }
+
+  /**
+   * [Output Only] Server-defined URL for this resource with the resource id.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSelfLinkWithId() {
+    return selfLinkWithId;
+  }
+
+  /**
+   * [Output Only] Server-defined URL for this resource with the resource id.
+   * @param selfLinkWithId selfLinkWithId or {@code null} for none
+   */
+  public SecurityPolicy setSelfLinkWithId(java.lang.String selfLinkWithId) {
+    this.selfLinkWithId = selfLinkWithId;
+    return this;
+  }
+
+  /**
+   * The type indicates the intended use of the security policy. CLOUD_ARMOR policies apply to
+   * backend services. FIREWALL policies apply to organizations.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getType() {
+    return type;
+  }
+
+  /**
+   * The type indicates the intended use of the security policy. CLOUD_ARMOR policies apply to
+   * backend services. FIREWALL policies apply to organizations.
+   * @param type type or {@code null} for none
+   */
+  public SecurityPolicy setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 

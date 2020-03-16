@@ -31,10 +31,70 @@ public final class SecurityPolicyRuleMatcherConfig extends com.google.api.client
 
   /**
    * CIDR IP address range.
+   *
+   * This field may only be specified when versioned_expr is set to FIREWALL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> destIpRanges;
+
+  /**
+   * Pairs of IP protocols and ports that the rule should match.
+   *
+   * This field may only be specified when versioned_expr is set to FIREWALL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SecurityPolicyRuleMatcherConfigLayer4Config> layer4Configs;
+
+  /**
+   * CIDR IP address range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> srcIpRanges;
+
+  /**
+   * CIDR IP address range.
+   *
+   * This field may only be specified when versioned_expr is set to FIREWALL.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDestIpRanges() {
+    return destIpRanges;
+  }
+
+  /**
+   * CIDR IP address range.
+   *
+   * This field may only be specified when versioned_expr is set to FIREWALL.
+   * @param destIpRanges destIpRanges or {@code null} for none
+   */
+  public SecurityPolicyRuleMatcherConfig setDestIpRanges(java.util.List<java.lang.String> destIpRanges) {
+    this.destIpRanges = destIpRanges;
+    return this;
+  }
+
+  /**
+   * Pairs of IP protocols and ports that the rule should match.
+   *
+   * This field may only be specified when versioned_expr is set to FIREWALL.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SecurityPolicyRuleMatcherConfigLayer4Config> getLayer4Configs() {
+    return layer4Configs;
+  }
+
+  /**
+   * Pairs of IP protocols and ports that the rule should match.
+   *
+   * This field may only be specified when versioned_expr is set to FIREWALL.
+   * @param layer4Configs layer4Configs or {@code null} for none
+   */
+  public SecurityPolicyRuleMatcherConfig setLayer4Configs(java.util.List<SecurityPolicyRuleMatcherConfigLayer4Config> layer4Configs) {
+    this.layer4Configs = layer4Configs;
+    return this;
+  }
 
   /**
    * CIDR IP address range.

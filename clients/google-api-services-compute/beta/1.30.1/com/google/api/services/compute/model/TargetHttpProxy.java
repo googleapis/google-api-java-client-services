@@ -21,8 +21,8 @@ package com.google.api.services.compute.model;
  *
  * Google Compute Engine has two Target HTTP Proxy resources:
  *
- * * [Global](/compute/docs/reference/rest/latest/targetHttpProxies) *
- * [Regional](/compute/docs/reference/rest/latest/regionTargetHttpProxies)
+ * * [Global](/compute/docs/reference/rest/{$api_version}/targetHttpProxies) *
+ * [Regional](/compute/docs/reference/rest/{$api_version}/regionTargetHttpProxies)
  *
  * A target HTTP proxy is a component of GCP HTTP load balancers.
  *

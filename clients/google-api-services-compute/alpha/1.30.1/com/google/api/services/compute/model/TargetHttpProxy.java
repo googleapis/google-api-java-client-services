@@ -21,8 +21,8 @@ package com.google.api.services.compute.model;
  *
  * Google Compute Engine has two Target HTTP Proxy resources:
  *
- * * [Global](/compute/docs/reference/rest/latest/targetHttpProxies) *
- * [Regional](/compute/docs/reference/rest/latest/regionTargetHttpProxies)
+ * * [Global](/compute/docs/reference/rest/{$api_version}/targetHttpProxies) *
+ * [Regional](/compute/docs/reference/rest/{$api_version}/regionTargetHttpProxies)
  *
  * A target HTTP proxy is a component of GCP HTTP load balancers.
  *
@@ -56,6 +56,21 @@ public final class TargetHttpProxy extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
+
+  /**
+   * Urls to networkservices.HttpFilter resources enabled for xDS clients using this configuration.
+   * For example, https://networkservices.googleapis.com/v1alpha1/projects/project/locations/locatio
+   * nhttpFilters/httpFilter Only filters that handle outbound connection and stream events may be
+   * specified. These filters work in conjunction with a default set of HTTP filters that may
+   * already be configured by Traffic Director. Traffic Director will determine the final location
+   * of these filters within xDS configuration based on the name of the HTTP filter. If Traffic
+   * Director positions multiple filters at the same location, those filters will be in the same
+   * order as specified in this list. httpFilters only applies for loadbalancers with
+   * loadBalancingScheme set to INTERNAL_SELF_MANAGED. See ForwardingRule for more details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> httpFilters;
 
   /**
    * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
@@ -150,6 +165,39 @@ public final class TargetHttpProxy extends com.google.api.client.json.GenericJso
    */
   public TargetHttpProxy setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Urls to networkservices.HttpFilter resources enabled for xDS clients using this configuration.
+   * For example, https://networkservices.googleapis.com/v1alpha1/projects/project/locations/locatio
+   * nhttpFilters/httpFilter Only filters that handle outbound connection and stream events may be
+   * specified. These filters work in conjunction with a default set of HTTP filters that may
+   * already be configured by Traffic Director. Traffic Director will determine the final location
+   * of these filters within xDS configuration based on the name of the HTTP filter. If Traffic
+   * Director positions multiple filters at the same location, those filters will be in the same
+   * order as specified in this list. httpFilters only applies for loadbalancers with
+   * loadBalancingScheme set to INTERNAL_SELF_MANAGED. See ForwardingRule for more details.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getHttpFilters() {
+    return httpFilters;
+  }
+
+  /**
+   * Urls to networkservices.HttpFilter resources enabled for xDS clients using this configuration.
+   * For example, https://networkservices.googleapis.com/v1alpha1/projects/project/locations/locatio
+   * nhttpFilters/httpFilter Only filters that handle outbound connection and stream events may be
+   * specified. These filters work in conjunction with a default set of HTTP filters that may
+   * already be configured by Traffic Director. Traffic Director will determine the final location
+   * of these filters within xDS configuration based on the name of the HTTP filter. If Traffic
+   * Director positions multiple filters at the same location, those filters will be in the same
+   * order as specified in this list. httpFilters only applies for loadbalancers with
+   * loadBalancingScheme set to INTERNAL_SELF_MANAGED. See ForwardingRule for more details.
+   * @param httpFilters httpFilters or {@code null} for none
+   */
+  public TargetHttpProxy setHttpFilters(java.util.List<java.lang.String> httpFilters) {
+    this.httpFilters = httpFilters;
     return this;
   }
 

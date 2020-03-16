@@ -38,7 +38,8 @@ public final class ResourcePolicyHourlyCycle extends com.google.api.client.json.
   private java.lang.String duration;
 
   /**
-   * Allows to define schedule that runs every nth hour.
+   * Defines a schedule with units measured in hours. The value determines how many hours pass
+   * between the start of each cycle.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +73,8 @@ public final class ResourcePolicyHourlyCycle extends com.google.api.client.json.
   }
 
   /**
-   * Allows to define schedule that runs every nth hour.
+   * Defines a schedule with units measured in hours. The value determines how many hours pass
+   * between the start of each cycle.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getHoursInCycle() {
@@ -80,7 +82,8 @@ public final class ResourcePolicyHourlyCycle extends com.google.api.client.json.
   }
 
   /**
-   * Allows to define schedule that runs every nth hour.
+   * Defines a schedule with units measured in hours. The value determines how many hours pass
+   * between the start of each cycle.
    * @param hoursInCycle hoursInCycle or {@code null} for none
    */
   public ResourcePolicyHourlyCycle setHoursInCycle(java.lang.Integer hoursInCycle) {

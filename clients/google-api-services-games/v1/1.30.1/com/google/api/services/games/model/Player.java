@@ -66,6 +66,14 @@ public final class Player extends com.google.api.client.json.GenericJson {
   private PlayerExperienceInfo experienceInfo;
 
   /**
+   * The friend status of the given player, relative to the requester. This is unset if the player
+   * is not sharing their friends list with the game.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String friendStatus;
+
+  /**
    * Uniquely identifies the type of this resource. Value is always the fixed string games#player.
    * The value may be {@code null}.
    */
@@ -207,6 +215,25 @@ public final class Player extends com.google.api.client.json.GenericJson {
    */
   public Player setExperienceInfo(PlayerExperienceInfo experienceInfo) {
     this.experienceInfo = experienceInfo;
+    return this;
+  }
+
+  /**
+   * The friend status of the given player, relative to the requester. This is unset if the player
+   * is not sharing their friends list with the game.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFriendStatus() {
+    return friendStatus;
+  }
+
+  /**
+   * The friend status of the given player, relative to the requester. This is unset if the player
+   * is not sharing their friends list with the game.
+   * @param friendStatus friendStatus or {@code null} for none
+   */
+  public Player setFriendStatus(java.lang.String friendStatus) {
+    this.friendStatus = friendStatus;
     return this;
   }
 

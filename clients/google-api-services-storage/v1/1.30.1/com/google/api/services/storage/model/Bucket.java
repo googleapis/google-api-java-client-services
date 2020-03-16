@@ -241,6 +241,16 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
   private Website website;
 
   /**
+   * The zone or zones from which the bucket is intended to use zonal quota. Requests for data from
+   * outside the specified affinities are still allowed but won’t be able to use zonal quota. The
+   * zone or zones need to be within the bucket location otherwise the requests will fail with a 400
+   * Bad Request response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("zone_affinity")
+  private java.util.List<java.lang.String> zoneAffinity;
+
+  /**
    * Access controls on the bucket.
    * @return value or {@code null} for none
    */
@@ -723,6 +733,29 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
    */
   public Bucket setWebsite(Website website) {
     this.website = website;
+    return this;
+  }
+
+  /**
+   * The zone or zones from which the bucket is intended to use zonal quota. Requests for data from
+   * outside the specified affinities are still allowed but won’t be able to use zonal quota. The
+   * zone or zones need to be within the bucket location otherwise the requests will fail with a 400
+   * Bad Request response.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getZoneAffinity() {
+    return zoneAffinity;
+  }
+
+  /**
+   * The zone or zones from which the bucket is intended to use zonal quota. Requests for data from
+   * outside the specified affinities are still allowed but won’t be able to use zonal quota. The
+   * zone or zones need to be within the bucket location otherwise the requests will fail with a 400
+   * Bad Request response.
+   * @param zoneAffinity zoneAffinity or {@code null} for none
+   */
+  public Bucket setZoneAffinity(java.util.List<java.lang.String> zoneAffinity) {
+    this.zoneAffinity = zoneAffinity;
     return this;
   }
 
@@ -1881,4 +1914,5 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
     }
 
   }
+
 }

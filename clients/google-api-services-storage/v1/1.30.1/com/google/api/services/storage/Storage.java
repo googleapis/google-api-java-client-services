@@ -8007,6 +8007,32 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
+       * Filter results to objects whose names are lexicographically before endOffset. If
+       * startOffset is also set, the objects listed will have names between startOffset (inclusive)
+       * and endOffset (exclusive).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String endOffset;
+
+      /** Filter results to objects whose names are lexicographically before endOffset. If startOffset is
+     also set, the objects listed will have names between startOffset (inclusive) and endOffset
+     (exclusive).
+       */
+      public java.lang.String getEndOffset() {
+        return endOffset;
+      }
+
+      /**
+       * Filter results to objects whose names are lexicographically before endOffset. If
+       * startOffset is also set, the objects listed will have names between startOffset (inclusive)
+       * and endOffset (exclusive).
+       */
+      public List setEndOffset(java.lang.String endOffset) {
+        this.endOffset = endOffset;
+        return this;
+      }
+
+      /**
        * If true, objects that end in exactly one instance of delimiter will have their metadata
        * included in items in addition to prefixes.
        */
@@ -8124,6 +8150,32 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
        */
       public List setProvisionalUserProject(java.lang.String provisionalUserProject) {
         this.provisionalUserProject = provisionalUserProject;
+        return this;
+      }
+
+      /**
+       * Filter results to objects whose names are lexicographically equal to or after startOffset.
+       * If endOffset is also set, the objects listed will have names between startOffset
+       * (inclusive) and endOffset (exclusive).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String startOffset;
+
+      /** Filter results to objects whose names are lexicographically equal to or after startOffset. If
+     endOffset is also set, the objects listed will have names between startOffset (inclusive) and
+     endOffset (exclusive).
+       */
+      public java.lang.String getStartOffset() {
+        return startOffset;
+      }
+
+      /**
+       * Filter results to objects whose names are lexicographically equal to or after startOffset.
+       * If endOffset is also set, the objects listed will have names between startOffset
+       * (inclusive) and endOffset (exclusive).
+       */
+      public List setStartOffset(java.lang.String startOffset) {
+        this.startOffset = startOffset;
         return this;
       }
 
@@ -9880,6 +9932,32 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
+       * Filter results to objects whose names are lexicographically before endOffset. If
+       * startOffset is also set, the objects listed will have names between startOffset (inclusive)
+       * and endOffset (exclusive).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String endOffset;
+
+      /** Filter results to objects whose names are lexicographically before endOffset. If startOffset is
+     also set, the objects listed will have names between startOffset (inclusive) and endOffset
+     (exclusive).
+       */
+      public java.lang.String getEndOffset() {
+        return endOffset;
+      }
+
+      /**
+       * Filter results to objects whose names are lexicographically before endOffset. If
+       * startOffset is also set, the objects listed will have names between startOffset (inclusive)
+       * and endOffset (exclusive).
+       */
+      public WatchAll setEndOffset(java.lang.String endOffset) {
+        this.endOffset = endOffset;
+        return this;
+      }
+
+      /**
        * If true, objects that end in exactly one instance of delimiter will have their metadata
        * included in items in addition to prefixes.
        */
@@ -9997,6 +10075,32 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
        */
       public WatchAll setProvisionalUserProject(java.lang.String provisionalUserProject) {
         this.provisionalUserProject = provisionalUserProject;
+        return this;
+      }
+
+      /**
+       * Filter results to objects whose names are lexicographically equal to or after startOffset.
+       * If endOffset is also set, the objects listed will have names between startOffset
+       * (inclusive) and endOffset (exclusive).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String startOffset;
+
+      /** Filter results to objects whose names are lexicographically equal to or after startOffset. If
+     endOffset is also set, the objects listed will have names between startOffset (inclusive) and
+     endOffset (exclusive).
+       */
+      public java.lang.String getStartOffset() {
+        return startOffset;
+      }
+
+      /**
+       * Filter results to objects whose names are lexicographically equal to or after startOffset.
+       * If endOffset is also set, the objects listed will have names between startOffset
+       * (inclusive) and endOffset (exclusive).
+       */
+      public WatchAll setStartOffset(java.lang.String startOffset) {
+        this.startOffset = startOffset;
         return this;
       }
 

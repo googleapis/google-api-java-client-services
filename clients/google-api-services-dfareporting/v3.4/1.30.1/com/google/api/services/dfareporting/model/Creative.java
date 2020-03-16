@@ -390,6 +390,14 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Online behavioral advertising icon to be added to the creative. Applicable to the following
+   * creative types: all INSTREAM_VIDEO.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ObaIcon obaIcon;
+
+  /**
    * Override CSS value for rich media creatives. Applicable to the following creative types: all
    * RICH_MEDIA.
    * The value may be {@code null}.
@@ -1419,6 +1427,25 @@ public final class Creative extends com.google.api.client.json.GenericJson {
    */
   public Creative setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Online behavioral advertising icon to be added to the creative. Applicable to the following
+   * creative types: all INSTREAM_VIDEO.
+   * @return value or {@code null} for none
+   */
+  public ObaIcon getObaIcon() {
+    return obaIcon;
+  }
+
+  /**
+   * Online behavioral advertising icon to be added to the creative. Applicable to the following
+   * creative types: all INSTREAM_VIDEO.
+   * @param obaIcon obaIcon or {@code null} for none
+   */
+  public Creative setObaIcon(ObaIcon obaIcon) {
+    this.obaIcon = obaIcon;
     return this;
   }
 

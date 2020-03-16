@@ -33,11 +33,20 @@ package com.google.api.services.dfareporting.model;
 public final class CustomEvent extends com.google.api.client.json.GenericJson {
 
   /**
-   * Annotate a click event.
+   * Annotate an impression. This field is mutually exclusive with insertEvent and
+   * annotateImpressionEvent. This or insertEvent and annotateImpressionEvent is a required field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CustomEventClickAnnotation annotateClickEvent;
+
+  /**
+   * Annotate an impression. This field is mutually exclusive with insertEvent and
+   * annotateClickEvent. This or insertEvent and annotateClickEvent is a required field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CustomEventImpressionAnnotation annotateImpressionEvent;
 
   /**
    * Custom variables associated with the event.
@@ -47,9 +56,8 @@ public final class CustomEvent extends com.google.api.client.json.GenericJson {
   private java.util.List<CustomVariable> customVariables;
 
   /**
-   * The type of event. If INSERT, the fields in insertEvent need to be populated. If
-   * ANNOTATE_CLICK, the fields in annotateClickEvent need to be populated. A custom event cannot
-   * have both insertEvent and annotateClickEvent populated.
+   * The type of event. If INSERT, the fields in insertEvent need to be populated. If ANNOTATE, the
+   * fields in either annotateClickEvent or annotateImpressionEvent need to be populated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,7 +71,9 @@ public final class CustomEvent extends com.google.api.client.json.GenericJson {
   private java.lang.Long floodlightConfigurationId;
 
   /**
-   * Insert custom event.
+   * Annotate an impression. This field is mutually exclusive with annotateClickEvent and
+   * annotateImpressionEvent. This or annotateClickEvent and annotateImpressionEvent is a required
+   * field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +101,8 @@ public final class CustomEvent extends com.google.api.client.json.GenericJson {
   private java.lang.Long timestampMicros;
 
   /**
-   * Annotate a click event.
+   * Annotate an impression. This field is mutually exclusive with insertEvent and
+   * annotateImpressionEvent. This or insertEvent and annotateImpressionEvent is a required field.
    * @return value or {@code null} for none
    */
   public CustomEventClickAnnotation getAnnotateClickEvent() {
@@ -99,11 +110,31 @@ public final class CustomEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Annotate a click event.
+   * Annotate an impression. This field is mutually exclusive with insertEvent and
+   * annotateImpressionEvent. This or insertEvent and annotateImpressionEvent is a required field.
    * @param annotateClickEvent annotateClickEvent or {@code null} for none
    */
   public CustomEvent setAnnotateClickEvent(CustomEventClickAnnotation annotateClickEvent) {
     this.annotateClickEvent = annotateClickEvent;
+    return this;
+  }
+
+  /**
+   * Annotate an impression. This field is mutually exclusive with insertEvent and
+   * annotateClickEvent. This or insertEvent and annotateClickEvent is a required field.
+   * @return value or {@code null} for none
+   */
+  public CustomEventImpressionAnnotation getAnnotateImpressionEvent() {
+    return annotateImpressionEvent;
+  }
+
+  /**
+   * Annotate an impression. This field is mutually exclusive with insertEvent and
+   * annotateClickEvent. This or insertEvent and annotateClickEvent is a required field.
+   * @param annotateImpressionEvent annotateImpressionEvent or {@code null} for none
+   */
+  public CustomEvent setAnnotateImpressionEvent(CustomEventImpressionAnnotation annotateImpressionEvent) {
+    this.annotateImpressionEvent = annotateImpressionEvent;
     return this;
   }
 
@@ -125,9 +156,8 @@ public final class CustomEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of event. If INSERT, the fields in insertEvent need to be populated. If
-   * ANNOTATE_CLICK, the fields in annotateClickEvent need to be populated. A custom event cannot
-   * have both insertEvent and annotateClickEvent populated.
+   * The type of event. If INSERT, the fields in insertEvent need to be populated. If ANNOTATE, the
+   * fields in either annotateClickEvent or annotateImpressionEvent need to be populated.
    * @return value or {@code null} for none
    */
   public java.lang.String getEventType() {
@@ -135,9 +165,8 @@ public final class CustomEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of event. If INSERT, the fields in insertEvent need to be populated. If
-   * ANNOTATE_CLICK, the fields in annotateClickEvent need to be populated. A custom event cannot
-   * have both insertEvent and annotateClickEvent populated.
+   * The type of event. If INSERT, the fields in insertEvent need to be populated. If ANNOTATE, the
+   * fields in either annotateClickEvent or annotateImpressionEvent need to be populated.
    * @param eventType eventType or {@code null} for none
    */
   public CustomEvent setEventType(java.lang.String eventType) {
@@ -163,7 +192,9 @@ public final class CustomEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Insert custom event.
+   * Annotate an impression. This field is mutually exclusive with annotateClickEvent and
+   * annotateImpressionEvent. This or annotateClickEvent and annotateImpressionEvent is a required
+   * field.
    * @return value or {@code null} for none
    */
   public CustomEventInsert getInsertEvent() {
@@ -171,7 +202,9 @@ public final class CustomEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Insert custom event.
+   * Annotate an impression. This field is mutually exclusive with annotateClickEvent and
+   * annotateImpressionEvent. This or annotateClickEvent and annotateImpressionEvent is a required
+   * field.
    * @param insertEvent insertEvent or {@code null} for none
    */
   public CustomEvent setInsertEvent(CustomEventInsert insertEvent) {

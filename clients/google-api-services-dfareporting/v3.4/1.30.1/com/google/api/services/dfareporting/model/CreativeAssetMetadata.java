@@ -39,7 +39,8 @@ public final class CreativeAssetMetadata extends com.google.api.client.json.Gene
   private CreativeAssetId assetIdentifier;
 
   /**
-   * List of detected click tags for assets. This is a read-only auto-generated field.
+   * List of detected click tags for assets. This is a read-only, auto-generated field. This field
+   * is empty for a rich media asset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,6 +53,14 @@ public final class CreativeAssetMetadata extends com.google.api.client.json.Gene
   }
 
   /**
+   * List of counter events configured for the asset. This is a read-only, auto-generated field and
+   * only applicable to a rich media asset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<CreativeCustomEvent> counterCustomEvents;
+
+  /**
    * List of feature dependencies for the creative asset that are detected by Campaign Manager.
    * Feature dependencies are features that a browser must be able to support in order to render
    * your HTML5 creative correctly. This is a read-only, auto-generated field.
@@ -59,6 +68,14 @@ public final class CreativeAssetMetadata extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> detectedFeatures;
+
+  /**
+   * List of exit events configured for the asset. This is a read-only, auto-generated field and
+   * only applicable to a rich media asset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<CreativeCustomEvent> exitCustomEvents;
 
   /**
    * Numeric ID of the asset. This is a read-only, auto-generated field.
@@ -81,6 +98,21 @@ public final class CreativeAssetMetadata extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
+
+  /**
+   * True if the uploaded asset is a rich media asset. This is a read-only, auto-generated field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean richMedia;
+
+  /**
+   * List of timer events configured for the asset. This is a read-only, auto-generated field and
+   * only applicable to a rich media asset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<CreativeCustomEvent> timerCustomEvents;
 
   /**
    * Rules validated during code generation that generated a warning. This is a read-only, auto-
@@ -116,7 +148,8 @@ public final class CreativeAssetMetadata extends com.google.api.client.json.Gene
   }
 
   /**
-   * List of detected click tags for assets. This is a read-only auto-generated field.
+   * List of detected click tags for assets. This is a read-only, auto-generated field. This field
+   * is empty for a rich media asset.
    * @return value or {@code null} for none
    */
   public java.util.List<ClickTag> getClickTags() {
@@ -124,11 +157,31 @@ public final class CreativeAssetMetadata extends com.google.api.client.json.Gene
   }
 
   /**
-   * List of detected click tags for assets. This is a read-only auto-generated field.
+   * List of detected click tags for assets. This is a read-only, auto-generated field. This field
+   * is empty for a rich media asset.
    * @param clickTags clickTags or {@code null} for none
    */
   public CreativeAssetMetadata setClickTags(java.util.List<ClickTag> clickTags) {
     this.clickTags = clickTags;
+    return this;
+  }
+
+  /**
+   * List of counter events configured for the asset. This is a read-only, auto-generated field and
+   * only applicable to a rich media asset.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<CreativeCustomEvent> getCounterCustomEvents() {
+    return counterCustomEvents;
+  }
+
+  /**
+   * List of counter events configured for the asset. This is a read-only, auto-generated field and
+   * only applicable to a rich media asset.
+   * @param counterCustomEvents counterCustomEvents or {@code null} for none
+   */
+  public CreativeAssetMetadata setCounterCustomEvents(java.util.List<CreativeCustomEvent> counterCustomEvents) {
+    this.counterCustomEvents = counterCustomEvents;
     return this;
   }
 
@@ -150,6 +203,25 @@ public final class CreativeAssetMetadata extends com.google.api.client.json.Gene
    */
   public CreativeAssetMetadata setDetectedFeatures(java.util.List<java.lang.String> detectedFeatures) {
     this.detectedFeatures = detectedFeatures;
+    return this;
+  }
+
+  /**
+   * List of exit events configured for the asset. This is a read-only, auto-generated field and
+   * only applicable to a rich media asset.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<CreativeCustomEvent> getExitCustomEvents() {
+    return exitCustomEvents;
+  }
+
+  /**
+   * List of exit events configured for the asset. This is a read-only, auto-generated field and
+   * only applicable to a rich media asset.
+   * @param exitCustomEvents exitCustomEvents or {@code null} for none
+   */
+  public CreativeAssetMetadata setExitCustomEvents(java.util.List<CreativeCustomEvent> exitCustomEvents) {
+    this.exitCustomEvents = exitCustomEvents;
     return this;
   }
 
@@ -203,6 +275,42 @@ public final class CreativeAssetMetadata extends com.google.api.client.json.Gene
    */
   public CreativeAssetMetadata setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * True if the uploaded asset is a rich media asset. This is a read-only, auto-generated field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRichMedia() {
+    return richMedia;
+  }
+
+  /**
+   * True if the uploaded asset is a rich media asset. This is a read-only, auto-generated field.
+   * @param richMedia richMedia or {@code null} for none
+   */
+  public CreativeAssetMetadata setRichMedia(java.lang.Boolean richMedia) {
+    this.richMedia = richMedia;
+    return this;
+  }
+
+  /**
+   * List of timer events configured for the asset. This is a read-only, auto-generated field and
+   * only applicable to a rich media asset.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<CreativeCustomEvent> getTimerCustomEvents() {
+    return timerCustomEvents;
+  }
+
+  /**
+   * List of timer events configured for the asset. This is a read-only, auto-generated field and
+   * only applicable to a rich media asset.
+   * @param timerCustomEvents timerCustomEvents or {@code null} for none
+   */
+  public CreativeAssetMetadata setTimerCustomEvents(java.util.List<CreativeCustomEvent> timerCustomEvents) {
+    this.timerCustomEvents = timerCustomEvents;
     return this;
   }
 

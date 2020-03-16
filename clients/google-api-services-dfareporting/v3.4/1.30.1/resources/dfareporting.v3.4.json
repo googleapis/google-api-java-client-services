@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/gQnTYlSgJfc3uOvLoj3SdrLwqnM\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/SMMQbsIvQKLBV5sLWUgd_5p3lV0\"",
  "discoveryVersion": "v1",
  "id": "dfareporting:v3.4",
  "name": "dfareporting",
  "version": "v3.4",
- "revision": "20200121",
+ "revision": "20200306",
  "title": "DCM/DFA Reporting And Trafficking API",
  "description": "Manages your DoubleClick Campaign Manager ad campaigns and reports.",
  "ownerDomain": "google.com",
@@ -2435,6 +2435,10 @@
      "type": "string",
      "description": "Name of the creative. This is a required field and must be less than 256 characters long. Applicable to all creative types."
     },
+    "obaIcon": {
+     "$ref": "ObaIcon",
+     "description": "Online behavioral advertising icon to be added to the creative. Applicable to the following creative types: all INSTREAM_VIDEO."
+    },
     "overrideCss": {
      "type": "string",
      "description": "Override CSS value for rich media creatives. Applicable to the following creative types: all RICH_MEDIA."
@@ -3150,9 +3154,16 @@
     },
     "clickTags": {
      "type": "array",
-     "description": "List of detected click tags for assets. This is a read-only auto-generated field.",
+     "description": "List of detected click tags for assets. This is a read-only, auto-generated field. This field is empty for a rich media asset.",
      "items": {
       "$ref": "ClickTag"
+     }
+    },
+    "counterCustomEvents": {
+     "type": "array",
+     "description": "List of counter events configured for the asset. This is a read-only, auto-generated field and only applicable to a rich media asset.",
+     "items": {
+      "$ref": "CreativeCustomEvent"
      }
     },
     "detectedFeatures": {
@@ -3298,6 +3309,13 @@
       ]
      }
     },
+    "exitCustomEvents": {
+     "type": "array",
+     "description": "List of exit events configured for the asset. This is a read-only, auto-generated field and only applicable to a rich media asset.",
+     "items": {
+      "$ref": "CreativeCustomEvent"
+     }
+    },
     "id": {
      "type": "string",
      "description": "Numeric ID of the asset. This is a read-only, auto-generated field.",
@@ -3311,6 +3329,17 @@
      "type": "string",
      "description": "Identifies what kind of resource this is. Value: the fixed string \"dfareporting#creativeAssetMetadata\".",
      "default": "dfareporting#creativeAssetMetadata"
+    },
+    "richMedia": {
+     "type": "boolean",
+     "description": "True if the uploaded asset is a rich media asset. This is a read-only, auto-generated field."
+    },
+    "timerCustomEvents": {
+     "type": "array",
+     "description": "List of timer events configured for the asset. This is a read-only, auto-generated field and only applicable to a rich media asset.",
+     "items": {
+      "$ref": "CreativeCustomEvent"
+     }
     },
     "warnedValidationRules": {
      "type": "array",
@@ -3944,7 +3973,11 @@
    "properties": {
     "annotateClickEvent": {
      "$ref": "CustomEventClickAnnotation",
-     "description": "Annotate a click event."
+     "description": "Annotate an impression. This field is mutually exclusive with insertEvent and annotateImpressionEvent. This or insertEvent and annotateImpressionEvent is a required field."
+    },
+    "annotateImpressionEvent": {
+     "$ref": "CustomEventImpressionAnnotation",
+     "description": "Annotate an impression. This field is mutually exclusive with insertEvent and annotateClickEvent. This or insertEvent and annotateClickEvent is a required field."
     },
     "customVariables": {
      "type": "array",
@@ -3955,7 +3988,7 @@
     },
     "eventType": {
      "type": "string",
-     "description": "The type of event. If INSERT, the fields in insertEvent need to be populated. If ANNOTATE_CLICK, the fields in annotateClickEvent need to be populated. A custom event cannot have both insertEvent and annotateClickEvent populated.",
+     "description": "The type of event. If INSERT, the fields in insertEvent need to be populated. If ANNOTATE, the fields in either annotateClickEvent or annotateImpressionEvent need to be populated.",
      "enum": [
       "ANNOTATE",
       "INSERT",
@@ -3974,7 +4007,7 @@
     },
     "insertEvent": {
      "$ref": "CustomEventInsert",
-     "description": "Insert custom event."
+     "description": "Annotate an impression. This field is mutually exclusive with annotateClickEvent and annotateImpressionEvent. This or annotateClickEvent and annotateImpressionEvent is a required field."
     },
     "kind": {
      "type": "string",
@@ -4039,6 +4072,22 @@
     "message": {
      "type": "string",
      "description": "A description of the error."
+    }
+   }
+  },
+  "CustomEventImpressionAnnotation": {
+   "id": "CustomEventImpressionAnnotation",
+   "type": "object",
+   "description": "Annotate an impression.",
+   "properties": {
+    "kind": {
+     "type": "string",
+     "description": "Identifies what kind of resource this is. Value: the fixed string \"dfareporting#customEventImpressionAnnotation\".",
+     "default": "dfareporting#customEventImpressionAnnotation"
+    },
+    "pathImpressionId": {
+     "type": "string",
+     "description": "The path impression ID. Use this field to annotate the impression associated with the pathImpressionId."
     }
    }
   },
@@ -6830,6 +6879,37 @@
      "items": {
       "$ref": "MobileCarrier"
      }
+    }
+   }
+  },
+  "ObaIcon": {
+   "id": "ObaIcon",
+   "type": "object",
+   "description": "Online Behavioral Advertiser icon.",
+   "properties": {
+    "iconClickThroughUrl": {
+     "type": "string",
+     "description": "URL to redirect to when an OBA icon is clicked."
+    },
+    "program": {
+     "type": "string",
+     "description": "Identifies the industry initiative that the icon supports. For example, AdChoices."
+    },
+    "resourceUrl": {
+     "type": "string",
+     "description": "OBA icon resource script URL. Campaign Manager only supports image, JavaScript, and Flash icons. Learn more"
+    },
+    "size": {
+     "$ref": "Size",
+     "description": "OBA icon size."
+    },
+    "xPosition": {
+     "type": "string",
+     "description": "OBA icon x coordinate position."
+    },
+    "yPosition": {
+     "type": "string",
+     "description": "OBA icon y coordinate position."
     }
    }
   },
@@ -10553,7 +10633,7 @@
   "UserProfile": {
    "id": "UserProfile",
    "type": "object",
-   "description": "Represents a UserProfile resource.",
+   "description": "A UserProfile resource lets you list all DFA user profiles that are associated with a Google user account. The profile_id needs to be specified in other API requests. ",
    "properties": {
     "accountId": {
      "type": "string",
@@ -10566,11 +10646,11 @@
     },
     "etag": {
      "type": "string",
-     "description": "The eTag of this response for caching purposes."
+     "description": "Etag of this resource."
     },
     "kind": {
      "type": "string",
-     "description": "The kind of resource this is, in this case dfareporting#userProfile.",
+     "description": "Identifies what kind of resource this is. Value: the fixed string \"dfareporting#userProfile\".",
      "default": "dfareporting#userProfile"
     },
     "profileId": {
@@ -10600,7 +10680,7 @@
    "properties": {
     "etag": {
      "type": "string",
-     "description": "The eTag of this response for caching purposes."
+     "description": "Etag of this resource."
     },
     "items": {
      "type": "array",
@@ -10611,7 +10691,7 @@
     },
     "kind": {
      "type": "string",
-     "description": "The kind of list this is, in this case dfareporting#userProfileList.",
+     "description": "Identifies what kind of resource this is. Value: the fixed string \"dfareporting#userProfileList\".",
      "default": "dfareporting#userProfileList"
     }
    }
@@ -11977,7 +12057,6 @@
      "parameters": {
       "id": {
        "type": "string",
-       "description": "Advertiser group ID.",
        "required": true,
        "format": "int64",
        "location": "query"
@@ -12205,7 +12284,6 @@
      "parameters": {
       "id": {
        "type": "string",
-       "description": "Landing page ID.",
        "required": true,
        "format": "int64",
        "location": "query"
@@ -12451,7 +12529,6 @@
      "parameters": {
       "id": {
        "type": "string",
-       "description": "Advertiser ID.",
        "required": true,
        "format": "int64",
        "location": "query"
@@ -12824,7 +12901,6 @@
      "parameters": {
       "id": {
        "type": "string",
-       "description": "Campaign ID.",
        "required": true,
        "format": "int64",
        "location": "query"
@@ -13412,7 +13488,6 @@
      "parameters": {
       "id": {
        "type": "string",
-       "description": "Content category ID.",
        "required": true,
        "format": "int64",
        "location": "query"
@@ -13846,7 +13921,7 @@
      "id": "dfareporting.creativeFieldValues.patch",
      "path": "userprofiles/{profileId}/creativeFields/{creativeFieldId}/creativeFieldValues",
      "httpMethod": "PATCH",
-     "description": "Updates an existing creative field value. This method supports patch semantics.",
+     "description": "Updates an existing creative field. This method supports patch semantics.",
      "parameters": {
       "creativeFieldId": {
        "type": "string",
@@ -13857,7 +13932,6 @@
       },
       "id": {
        "type": "string",
-       "description": "Creative Field Value ID",
        "required": true,
        "format": "int64",
        "location": "query"
@@ -14105,7 +14179,6 @@
      "parameters": {
       "id": {
        "type": "string",
-       "description": "Creative Field ID",
        "required": true,
        "format": "int64",
        "location": "query"
@@ -14323,7 +14396,6 @@
      "parameters": {
       "id": {
        "type": "string",
-       "description": "Creative group ID.",
        "required": true,
        "format": "int64",
        "location": "query"
@@ -14642,7 +14714,6 @@
      "parameters": {
       "id": {
        "type": "string",
-       "description": "Creative ID.",
        "required": true,
        "format": "int64",
        "location": "query"
@@ -15291,7 +15362,6 @@
      "parameters": {
       "id": {
        "type": "string",
-       "description": "Event tag ID.",
        "required": true,
        "format": "int64",
        "location": "query"
@@ -15719,7 +15789,6 @@
      "parameters": {
       "id": {
        "type": "string",
-       "description": "Floodlight activity ID.",
        "required": true,
        "format": "int64",
        "location": "query"
@@ -15947,7 +16016,6 @@
      "parameters": {
       "id": {
        "type": "string",
-       "description": "Floodlight activity Group ID.",
        "required": true,
        "format": "int64",
        "location": "query"
@@ -16076,7 +16144,6 @@
      "parameters": {
       "id": {
        "type": "string",
-       "description": "Floodlight configuration ID.",
        "required": true,
        "format": "int64",
        "location": "query"
@@ -17160,7 +17227,6 @@
      "parameters": {
       "id": {
        "type": "string",
-       "description": "Placement group ID.",
        "required": true,
        "format": "int64",
        "location": "query"
@@ -17392,7 +17458,6 @@
      "parameters": {
       "id": {
        "type": "string",
-       "description": "Placement strategy ID.",
        "required": true,
        "format": "int64",
        "location": "query"
@@ -17818,7 +17883,6 @@
      "parameters": {
       "id": {
        "type": "string",
-       "description": "Placement ID.",
        "required": true,
        "format": "int64",
        "location": "query"
@@ -18191,7 +18255,6 @@
       },
       "remarketingListId": {
        "type": "string",
-       "description": "Remarketing list ID.",
        "required": true,
        "format": "int64",
        "location": "query"
@@ -18399,7 +18462,6 @@
      "parameters": {
       "id": {
        "type": "string",
-       "description": "Remarketing list ID.",
        "required": true,
        "format": "int64",
        "location": "query"
@@ -19051,7 +19113,6 @@
      "parameters": {
       "id": {
        "type": "string",
-       "description": "Site ID.",
        "required": true,
        "format": "int64",
        "location": "query"
@@ -19369,7 +19430,6 @@
      "parameters": {
       "id": {
        "type": "string",
-       "description": "Subaccount ID.",
        "required": true,
        "format": "int64",
        "location": "query"
@@ -19698,7 +19758,6 @@
      "parameters": {
       "id": {
        "type": "string",
-       "description": "Targeting template ID.",
        "required": true,
        "format": "int64",
        "location": "query"
@@ -20110,7 +20169,6 @@
      "parameters": {
       "id": {
        "type": "string",
-       "description": "User role ID.",
        "required": true,
        "format": "int64",
        "location": "query"

@@ -20,7 +20,7 @@ package com.google.api.services.logging.v2;
  * Service definition for Logging (v2).
  *
  * <p>
- * Writes log entries and manages your Cloud Logging configuration. The table entries below are presented in alphabetical order, not in order of common use. For explanations of the concepts found in the table entries, read the Cloud Logging documentation.
+ * Writes log entries and manages your Cloud Logging configuration. The table entries below are presented in alphabetical order, not in order of common use. For explanations of the concepts found in the table entries, read the documentation at https://cloud.google.com/logging/docs.
  * </p>
  *
  * <p>

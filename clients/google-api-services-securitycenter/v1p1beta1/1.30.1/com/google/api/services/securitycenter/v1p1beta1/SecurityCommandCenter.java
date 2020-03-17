@@ -907,6 +907,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * security_center_properties.resource_owners: `=`, `:`
          *
          * For example, `resource_properties.size = 100` is a valid filter string.
+         *
+         * Use a partial match on the empty string to filter based on a property existing:
+         * "resource_properties.my_property : \"\""
+         *
+         * Use a negated partial match on the empty string to filter based on a property not
+         * existing: "-resource_properties.my_property : \"\""
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
@@ -953,6 +959,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        security_center_properties.resource_owners: `=`, `:`
 
        For example, `resource_properties.size = 100` is a valid filter string.
+
+       Use a partial match on the empty string to filter based on a property existing:
+       "resource_properties.my_property : \"\""
+
+       Use a negated partial match on the empty string to filter based on a property not existing:
+       "-resource_properties.my_property : \"\""
          */
         public java.lang.String getFilter() {
           return filter;
@@ -1002,6 +1014,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * security_center_properties.resource_owners: `=`, `:`
          *
          * For example, `resource_properties.size = 100` is a valid filter string.
+         *
+         * Use a partial match on the empty string to filter based on a property existing:
+         * "resource_properties.my_property : \"\""
+         *
+         * Use a negated partial match on the empty string to filter based on a property not
+         * existing: "-resource_properties.my_property : \"\""
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -4726,6 +4744,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * security_marks.marks: `=`, `:` source_properties: `=`, `:`, `>`, `<`, `>=`, `<=`
            *
            * For example, `source_properties.size = 100` is a valid filter string.
+           *
+           * Use a partial match on the empty string to filter based on a property existing:
+           * "source_properties.my_property : \"\""
+           *
+           * Use a negated partial match on the empty string to filter based on a property not
+           * existing: "-source_properties.my_property : \"\""
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -4760,6 +4784,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          security_marks.marks: `=`, `:` source_properties: `=`, `:`, `>`, `<`, `>=`, `<=`
 
          For example, `source_properties.size = 100` is a valid filter string.
+
+         Use a partial match on the empty string to filter based on a property existing:
+         "source_properties.my_property : \"\""
+
+         Use a negated partial match on the empty string to filter based on a property not existing:
+         "-source_properties.my_property : \"\""
            */
           public java.lang.String getFilter() {
             return filter;
@@ -4796,6 +4826,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * security_marks.marks: `=`, `:` source_properties: `=`, `:`, `>`, `<`, `>=`, `<=`
            *
            * For example, `source_properties.size = 100` is a valid filter string.
+           *
+           * Use a partial match on the empty string to filter based on a property existing:
+           * "source_properties.my_property : \"\""
+           *
+           * Use a negated partial match on the empty string to filter based on a property not
+           * existing: "-source_properties.my_property : \"\""
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;

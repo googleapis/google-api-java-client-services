@@ -92,6 +92,12 @@ public final class GroupFindingsRequest extends com.google.api.client.json.Gener
    * * security_marks.marks: `=`, `:` * source_properties: `=`, `:`, `>`, `<`, `>=`, `<=`
    *
    * For example, `source_properties.size = 100` is a valid filter string.
+   *
+   * Use a partial match on the empty string to filter based on a property existing:
+   * "source_properties.my_property : \"\""
+   *
+   * Use a negated partial match on the empty string to filter based on a property not existing:
+   * "-source_properties.my_property : \"\""
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -235,6 +241,12 @@ public final class GroupFindingsRequest extends com.google.api.client.json.Gener
    * * security_marks.marks: `=`, `:` * source_properties: `=`, `:`, `>`, `<`, `>=`, `<=`
    *
    * For example, `source_properties.size = 100` is a valid filter string.
+   *
+   * Use a partial match on the empty string to filter based on a property existing:
+   * "source_properties.my_property : \"\""
+   *
+   * Use a negated partial match on the empty string to filter based on a property not existing:
+   * "-source_properties.my_property : \"\""
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -272,6 +284,12 @@ public final class GroupFindingsRequest extends com.google.api.client.json.Gener
    * * security_marks.marks: `=`, `:` * source_properties: `=`, `:`, `>`, `<`, `>=`, `<=`
    *
    * For example, `source_properties.size = 100` is a valid filter string.
+   *
+   * Use a partial match on the empty string to filter based on a property existing:
+   * "source_properties.my_property : \"\""
+   *
+   * Use a negated partial match on the empty string to filter based on a property not existing:
+   * "-source_properties.my_property : \"\""
    * @param filter filter or {@code null} for none
    */
   public GroupFindingsRequest setFilter(java.lang.String filter) {

@@ -45,7 +45,7 @@ public final class BatchUpdateSpreadsheetRequest extends com.google.api.client.j
   private java.util.List<Request> requests;
 
   /**
-   * True if grid data should be returned. Meaningful only if if include_spreadsheet_in_response is
+   * True if grid data should be returned. Meaningful only if include_spreadsheet_in_response is
    * 'true'. This parameter is ignored if a field mask was set in the request.
    * The value may be {@code null}.
    */
@@ -54,7 +54,7 @@ public final class BatchUpdateSpreadsheetRequest extends com.google.api.client.j
 
   /**
    * Limits the ranges included in the response spreadsheet. Meaningful only if
-   * include_spreadsheet_response is 'true'.
+   * include_spreadsheet_in_response is 'true'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,7 +97,7 @@ public final class BatchUpdateSpreadsheetRequest extends com.google.api.client.j
   }
 
   /**
-   * True if grid data should be returned. Meaningful only if if include_spreadsheet_in_response is
+   * True if grid data should be returned. Meaningful only if include_spreadsheet_in_response is
    * 'true'. This parameter is ignored if a field mask was set in the request.
    * @return value or {@code null} for none
    */
@@ -106,7 +106,7 @@ public final class BatchUpdateSpreadsheetRequest extends com.google.api.client.j
   }
 
   /**
-   * True if grid data should be returned. Meaningful only if if include_spreadsheet_in_response is
+   * True if grid data should be returned. Meaningful only if include_spreadsheet_in_response is
    * 'true'. This parameter is ignored if a field mask was set in the request.
    * @param responseIncludeGridData responseIncludeGridData or {@code null} for none
    */
@@ -117,7 +117,7 @@ public final class BatchUpdateSpreadsheetRequest extends com.google.api.client.j
 
   /**
    * Limits the ranges included in the response spreadsheet. Meaningful only if
-   * include_spreadsheet_response is 'true'.
+   * include_spreadsheet_in_response is 'true'.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResponseRanges() {
@@ -126,7 +126,7 @@ public final class BatchUpdateSpreadsheetRequest extends com.google.api.client.j
 
   /**
    * Limits the ranges included in the response spreadsheet. Meaningful only if
-   * include_spreadsheet_response is 'true'.
+   * include_spreadsheet_in_response is 'true'.
    * @param responseRanges responseRanges or {@code null} for none
    */
   public BatchUpdateSpreadsheetRequest setResponseRanges(java.util.List<java.lang.String> responseRanges) {

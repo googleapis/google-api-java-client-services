@@ -101,6 +101,12 @@ public final class GroupAssetsRequest extends com.google.api.client.json.Generic
    * security_center_properties.resource_owners: `=`, `:`
    *
    * For example, `resource_properties.size = 100` is a valid filter string.
+   *
+   * Use a partial match on the empty string to filter based on a property existing:
+   * "resource_properties.my_property : \"\""
+   *
+   * Use a negated partial match on the empty string to filter based on a property not existing:
+   * "-resource_properties.my_property : \"\""
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -254,6 +260,12 @@ public final class GroupAssetsRequest extends com.google.api.client.json.Generic
    * security_center_properties.resource_owners: `=`, `:`
    *
    * For example, `resource_properties.size = 100` is a valid filter string.
+   *
+   * Use a partial match on the empty string to filter based on a property existing:
+   * "resource_properties.my_property : \"\""
+   *
+   * Use a negated partial match on the empty string to filter based on a property not existing:
+   * "-resource_properties.my_property : \"\""
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -304,6 +316,12 @@ public final class GroupAssetsRequest extends com.google.api.client.json.Generic
    * security_center_properties.resource_owners: `=`, `:`
    *
    * For example, `resource_properties.size = 100` is a valid filter string.
+   *
+   * Use a partial match on the empty string to filter based on a property existing:
+   * "resource_properties.my_property : \"\""
+   *
+   * Use a negated partial match on the empty string to filter based on a property not existing:
+   * "-resource_properties.my_property : \"\""
    * @param filter filter or {@code null} for none
    */
   public GroupAssetsRequest setFilter(java.lang.String filter) {

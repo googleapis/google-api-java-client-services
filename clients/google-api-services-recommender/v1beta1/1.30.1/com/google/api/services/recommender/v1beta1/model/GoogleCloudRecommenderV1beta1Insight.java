@@ -81,9 +81,6 @@ public final class GoogleCloudRecommenderV1beta1Insight extends com.google.api.c
 
   /**
    * Name of the insight.
-   *
-   * * A project insight is represented as   projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightT
-   * ypes/[INSIGHT_TYPE_ID]/insights/[insight_id]
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -232,9 +229,6 @@ public final class GoogleCloudRecommenderV1beta1Insight extends com.google.api.c
 
   /**
    * Name of the insight.
-   *
-   * * A project insight is represented as   projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightT
-   * ypes/[INSIGHT_TYPE_ID]/insights/[insight_id]
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -243,9 +237,6 @@ public final class GoogleCloudRecommenderV1beta1Insight extends com.google.api.c
 
   /**
    * Name of the insight.
-   *
-   * * A project insight is represented as   projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightT
-   * ypes/[INSIGHT_TYPE_ID]/insights/[insight_id]
    * @param name name or {@code null} for none
    */
   public GoogleCloudRecommenderV1beta1Insight setName(java.lang.String name) {

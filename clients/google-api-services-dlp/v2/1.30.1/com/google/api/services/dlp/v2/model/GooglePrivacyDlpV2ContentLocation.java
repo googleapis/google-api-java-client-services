@@ -75,6 +75,13 @@ public final class GooglePrivacyDlpV2ContentLocation extends com.google.api.clie
   private GooglePrivacyDlpV2ImageLocation imageLocation;
 
   /**
+   * Location within the metadata for inspected content.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2MetadataLocation metadataLocation;
+
+  /**
    * Location within a row or record of a database table.
    * The value may be {@code null}.
    */
@@ -181,6 +188,23 @@ public final class GooglePrivacyDlpV2ContentLocation extends com.google.api.clie
    */
   public GooglePrivacyDlpV2ContentLocation setImageLocation(GooglePrivacyDlpV2ImageLocation imageLocation) {
     this.imageLocation = imageLocation;
+    return this;
+  }
+
+  /**
+   * Location within the metadata for inspected content.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2MetadataLocation getMetadataLocation() {
+    return metadataLocation;
+  }
+
+  /**
+   * Location within the metadata for inspected content.
+   * @param metadataLocation metadataLocation or {@code null} for none
+   */
+  public GooglePrivacyDlpV2ContentLocation setMetadataLocation(GooglePrivacyDlpV2MetadataLocation metadataLocation) {
+    this.metadataLocation = metadataLocation;
     return this;
   }
 

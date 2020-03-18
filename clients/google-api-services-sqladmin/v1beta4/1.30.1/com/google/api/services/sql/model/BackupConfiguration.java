@@ -30,8 +30,8 @@ package com.google.api.services.sql.model;
 public final class BackupConfiguration extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether binary log is enabled. If backup configuration is disabled, binary log must be disabled
-   * as well.
+   * (MySQL only) Whether binary log is enabled. If backup configuration is disabled, binarylog must
+   * be disabled as well.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,8 +80,8 @@ public final class BackupConfiguration extends com.google.api.client.json.Generi
   private java.lang.String startTime;
 
   /**
-   * Whether binary log is enabled. If backup configuration is disabled, binary log must be disabled
-   * as well.
+   * (MySQL only) Whether binary log is enabled. If backup configuration is disabled, binarylog must
+   * be disabled as well.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getBinaryLogEnabled() {
@@ -89,8 +89,8 @@ public final class BackupConfiguration extends com.google.api.client.json.Generi
   }
 
   /**
-   * Whether binary log is enabled. If backup configuration is disabled, binary log must be disabled
-   * as well.
+   * (MySQL only) Whether binary log is enabled. If backup configuration is disabled, binarylog must
+   * be disabled as well.
    * @param binaryLogEnabled binaryLogEnabled or {@code null} for none
    */
   public BackupConfiguration setBinaryLogEnabled(java.lang.Boolean binaryLogEnabled) {

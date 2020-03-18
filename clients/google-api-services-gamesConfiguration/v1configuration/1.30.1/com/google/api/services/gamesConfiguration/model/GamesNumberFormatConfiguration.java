@@ -17,7 +17,7 @@
 package com.google.api.services.gamesConfiguration.model;
 
 /**
- * This is a JSON template for a number format resource.
+ * A number format resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play Game Services Publishing API. For a
@@ -45,17 +45,14 @@ public final class GamesNumberFormatConfiguration extends com.google.api.client.
   private java.lang.Integer numDecimalPlaces;
 
   /**
-   * The formatting for the number. Possible values are:   - "NUMERIC" - Numbers are formatted to
-   * have no digits or a fixed number of digits after the decimal point according to locale. An
-   * optional custom unit can be added. - "TIME_DURATION" - Numbers are formatted to hours, minutes
-   * and seconds. - "CURRENCY" - Numbers are formatted to currency according to locale.
+   * The formatting for the number.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String numberFormatType;
 
   /**
-   * An optional suffix for the NUMERIC format type. These strings follow the same  plural rules as
+   * An optional suffix for the NUMERIC format type.  These strings follow the same  plural rules as
    * all Android string resources.
    * The value may be {@code null}.
    */
@@ -97,10 +94,7 @@ public final class GamesNumberFormatConfiguration extends com.google.api.client.
   }
 
   /**
-   * The formatting for the number. Possible values are:   - "NUMERIC" - Numbers are formatted to
-   * have no digits or a fixed number of digits after the decimal point according to locale. An
-   * optional custom unit can be added. - "TIME_DURATION" - Numbers are formatted to hours, minutes
-   * and seconds. - "CURRENCY" - Numbers are formatted to currency according to locale.
+   * The formatting for the number.
    * @return value or {@code null} for none
    */
   public java.lang.String getNumberFormatType() {
@@ -108,10 +102,7 @@ public final class GamesNumberFormatConfiguration extends com.google.api.client.
   }
 
   /**
-   * The formatting for the number. Possible values are:   - "NUMERIC" - Numbers are formatted to
-   * have no digits or a fixed number of digits after the decimal point according to locale. An
-   * optional custom unit can be added. - "TIME_DURATION" - Numbers are formatted to hours, minutes
-   * and seconds. - "CURRENCY" - Numbers are formatted to currency according to locale.
+   * The formatting for the number.
    * @param numberFormatType numberFormatType or {@code null} for none
    */
   public GamesNumberFormatConfiguration setNumberFormatType(java.lang.String numberFormatType) {
@@ -120,7 +111,7 @@ public final class GamesNumberFormatConfiguration extends com.google.api.client.
   }
 
   /**
-   * An optional suffix for the NUMERIC format type. These strings follow the same  plural rules as
+   * An optional suffix for the NUMERIC format type.  These strings follow the same  plural rules as
    * all Android string resources.
    * @return value or {@code null} for none
    */
@@ -129,7 +120,7 @@ public final class GamesNumberFormatConfiguration extends com.google.api.client.
   }
 
   /**
-   * An optional suffix for the NUMERIC format type. These strings follow the same  plural rules as
+   * An optional suffix for the NUMERIC format type.  These strings follow the same  plural rules as
    * all Android string resources.
    * @param suffix suffix or {@code null} for none
    */

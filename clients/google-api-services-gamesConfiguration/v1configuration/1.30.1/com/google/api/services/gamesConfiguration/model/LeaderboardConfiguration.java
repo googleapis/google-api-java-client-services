@@ -17,7 +17,7 @@
 package com.google.api.services.gamesConfiguration.model;
 
 /**
- * This is a JSON template for an leaderboard configuration resource.
+ * An leaderboard configuration resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play Game Services Publishing API. For a
@@ -74,8 +74,6 @@ public final class LeaderboardConfiguration extends com.google.api.client.json.G
   private java.lang.Long scoreMin;
 
   /**
-   * The type of the leaderboard. Possible values are:   - "LARGER_IS_BETTER" - Larger scores posted
-   * are ranked higher.  - "SMALLER_IS_BETTER" - Smaller scores posted are ranked higher.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -193,8 +191,6 @@ public final class LeaderboardConfiguration extends com.google.api.client.json.G
   }
 
   /**
-   * The type of the leaderboard. Possible values are:   - "LARGER_IS_BETTER" - Larger scores posted
-   * are ranked higher.  - "SMALLER_IS_BETTER" - Smaller scores posted are ranked higher.
    * @return value or {@code null} for none
    */
   public java.lang.String getScoreOrder() {
@@ -202,8 +198,6 @@ public final class LeaderboardConfiguration extends com.google.api.client.json.G
   }
 
   /**
-   * The type of the leaderboard. Possible values are:   - "LARGER_IS_BETTER" - Larger scores posted
-   * are ranked higher.  - "SMALLER_IS_BETTER" - Smaller scores posted are ranked higher.
    * @param scoreOrder scoreOrder or {@code null} for none
    */
   public LeaderboardConfiguration setScoreOrder(java.lang.String scoreOrder) {

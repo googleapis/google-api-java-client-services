@@ -1,6 +1,6 @@
 # Google Play Game Services Publishing API Client Library for Java
 
-The Publishing API for Google Play Game Services.
+The Google Play Game Services Publishing API allows developers to configure their games in Game Services.
 
 This page contains information about getting started with the Google Play Game Services Publishing API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-gamesConfiguration</artifactId>
-      <version>v1configuration-rev20180816-1.30.9</version>
+      <version>v1configuration-rev20200317-1.30.9</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-gamesConfiguration:v1configuration-rev20180816-1.30.9'
+  compile 'com.google.apis:google-api-services-gamesConfiguration:v1configuration-rev20200317-1.30.9'
 }
 ```
 

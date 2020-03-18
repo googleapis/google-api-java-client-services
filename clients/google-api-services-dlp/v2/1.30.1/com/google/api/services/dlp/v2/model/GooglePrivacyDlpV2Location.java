@@ -48,6 +48,13 @@ public final class GooglePrivacyDlpV2Location extends com.google.api.client.json
   private GooglePrivacyDlpV2Range codepointRange;
 
   /**
+   * Information about the container where this finding occurred, if available.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2Container container;
+
+  /**
    * List of nested objects pointing to the precise location of the finding within the file or
    * record.
    * The value may be {@code null}.
@@ -98,6 +105,23 @@ public final class GooglePrivacyDlpV2Location extends com.google.api.client.json
    */
   public GooglePrivacyDlpV2Location setCodepointRange(GooglePrivacyDlpV2Range codepointRange) {
     this.codepointRange = codepointRange;
+    return this;
+  }
+
+  /**
+   * Information about the container where this finding occurred, if available.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2Container getContainer() {
+    return container;
+  }
+
+  /**
+   * Information about the container where this finding occurred, if available.
+   * @param container container or {@code null} for none
+   */
+  public GooglePrivacyDlpV2Location setContainer(GooglePrivacyDlpV2Container container) {
+    this.container = container;
     return this;
   }
 

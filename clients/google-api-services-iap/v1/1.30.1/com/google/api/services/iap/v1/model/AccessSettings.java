@@ -52,6 +52,13 @@ public final class AccessSettings extends com.google.api.client.json.GenericJson
   private OAuthSettings oauthSettings;
 
   /**
+   * Settings to configure Policy delegation for apps hosted in tenant projects. INTERNAL_ONLY.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PolicyDelegationSettings policyDelegationSettings;
+
+  /**
    * Configuration to allow cross-origin requests via IAP.
    * @return value or {@code null} for none
    */
@@ -99,6 +106,23 @@ public final class AccessSettings extends com.google.api.client.json.GenericJson
    */
   public AccessSettings setOauthSettings(OAuthSettings oauthSettings) {
     this.oauthSettings = oauthSettings;
+    return this;
+  }
+
+  /**
+   * Settings to configure Policy delegation for apps hosted in tenant projects. INTERNAL_ONLY.
+   * @return value or {@code null} for none
+   */
+  public PolicyDelegationSettings getPolicyDelegationSettings() {
+    return policyDelegationSettings;
+  }
+
+  /**
+   * Settings to configure Policy delegation for apps hosted in tenant projects. INTERNAL_ONLY.
+   * @param policyDelegationSettings policyDelegationSettings or {@code null} for none
+   */
+  public AccessSettings setPolicyDelegationSettings(PolicyDelegationSettings policyDelegationSettings) {
+    this.policyDelegationSettings = policyDelegationSettings;
     return this;
   }
 

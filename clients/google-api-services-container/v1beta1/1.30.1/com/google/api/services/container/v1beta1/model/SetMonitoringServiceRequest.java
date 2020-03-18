@@ -42,8 +42,12 @@ public final class SetMonitoringServiceRequest extends com.google.api.client.jso
    * Required. The monitoring service the cluster should use to write metrics. Currently available
    * options:
    *
-   * * "monitoring.googleapis.com" - the Google Cloud Monitoring service * "none" - no metrics will
-   * be exported from the cluster
+   * * "monitoring.googleapis.com/kubernetes" - The Cloud Monitoring service with a Kubernetes-
+   * native resource model * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no
+   * longer available as of GKE 1.15). * `none` - No metrics will be exported from the cluster.
+   *
+   * If left as an empty string,`monitoring.googleapis.com/kubernetes` will be used for GKE 1.14+ or
+   * `monitoring.googleapis.com` for earlier versions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,8 +102,12 @@ public final class SetMonitoringServiceRequest extends com.google.api.client.jso
    * Required. The monitoring service the cluster should use to write metrics. Currently available
    * options:
    *
-   * * "monitoring.googleapis.com" - the Google Cloud Monitoring service * "none" - no metrics will
-   * be exported from the cluster
+   * * "monitoring.googleapis.com/kubernetes" - The Cloud Monitoring service with a Kubernetes-
+   * native resource model * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no
+   * longer available as of GKE 1.15). * `none` - No metrics will be exported from the cluster.
+   *
+   * If left as an empty string,`monitoring.googleapis.com/kubernetes` will be used for GKE 1.14+ or
+   * `monitoring.googleapis.com` for earlier versions.
    * @return value or {@code null} for none
    */
   public java.lang.String getMonitoringService() {
@@ -110,8 +118,12 @@ public final class SetMonitoringServiceRequest extends com.google.api.client.jso
    * Required. The monitoring service the cluster should use to write metrics. Currently available
    * options:
    *
-   * * "monitoring.googleapis.com" - the Google Cloud Monitoring service * "none" - no metrics will
-   * be exported from the cluster
+   * * "monitoring.googleapis.com/kubernetes" - The Cloud Monitoring service with a Kubernetes-
+   * native resource model * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no
+   * longer available as of GKE 1.15). * `none` - No metrics will be exported from the cluster.
+   *
+   * If left as an empty string,`monitoring.googleapis.com/kubernetes` will be used for GKE 1.14+ or
+   * `monitoring.googleapis.com` for earlier versions.
    * @param monitoringService monitoringService or {@code null} for none
    */
   public SetMonitoringServiceRequest setMonitoringService(java.lang.String monitoringService) {

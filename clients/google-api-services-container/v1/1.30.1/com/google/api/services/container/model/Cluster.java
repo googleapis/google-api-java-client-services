@@ -244,10 +244,12 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   /**
    * The logging service the cluster should use to write logs. Currently available options:
    *
-   * * "logging.googleapis.com/kubernetes" - the Google Cloud Logging service with Kubernetes-native
-   * resource model * `logging.googleapis.com` - the Google Cloud Logging service. * `none` - no
-   * logs will be exported from the cluster. * if left as an empty string,`logging.googleapis.com`
-   * will be used.
+   * * `logging.googleapis.com/kubernetes` - The Cloud Logging service with a Kubernetes-native
+   * resource model * `logging.googleapis.com` - The legacy Cloud Logging service (no longer
+   * available as of GKE 1.15). * `none` - no logs will be exported from the cluster.
+   *
+   * If left as an empty string,`logging.googleapis.com/kubernetes` will be used for GKE 1.14+ or
+   * `logging.googleapis.com` for earlier versions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -279,9 +281,12 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   /**
    * The monitoring service the cluster should use to write metrics. Currently available options:
    *
-   * * `monitoring.googleapis.com` - the Google Cloud Monitoring service. * `none` - no metrics will
-   * be exported from the cluster. * if left as an empty string, `monitoring.googleapis.com` will be
-   * used.
+   * * "monitoring.googleapis.com/kubernetes" - The Cloud Monitoring service with a Kubernetes-
+   * native resource model * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no
+   * longer available as of GKE 1.15). * `none` - No metrics will be exported from the cluster.
+   *
+   * If left as an empty string,`monitoring.googleapis.com/kubernetes` will be used for GKE 1.14+ or
+   * `monitoring.googleapis.com` for earlier versions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -950,10 +955,12 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   /**
    * The logging service the cluster should use to write logs. Currently available options:
    *
-   * * "logging.googleapis.com/kubernetes" - the Google Cloud Logging service with Kubernetes-native
-   * resource model * `logging.googleapis.com` - the Google Cloud Logging service. * `none` - no
-   * logs will be exported from the cluster. * if left as an empty string,`logging.googleapis.com`
-   * will be used.
+   * * `logging.googleapis.com/kubernetes` - The Cloud Logging service with a Kubernetes-native
+   * resource model * `logging.googleapis.com` - The legacy Cloud Logging service (no longer
+   * available as of GKE 1.15). * `none` - no logs will be exported from the cluster.
+   *
+   * If left as an empty string,`logging.googleapis.com/kubernetes` will be used for GKE 1.14+ or
+   * `logging.googleapis.com` for earlier versions.
    * @return value or {@code null} for none
    */
   public java.lang.String getLoggingService() {
@@ -963,10 +970,12 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   /**
    * The logging service the cluster should use to write logs. Currently available options:
    *
-   * * "logging.googleapis.com/kubernetes" - the Google Cloud Logging service with Kubernetes-native
-   * resource model * `logging.googleapis.com` - the Google Cloud Logging service. * `none` - no
-   * logs will be exported from the cluster. * if left as an empty string,`logging.googleapis.com`
-   * will be used.
+   * * `logging.googleapis.com/kubernetes` - The Cloud Logging service with a Kubernetes-native
+   * resource model * `logging.googleapis.com` - The legacy Cloud Logging service (no longer
+   * available as of GKE 1.15). * `none` - no logs will be exported from the cluster.
+   *
+   * If left as an empty string,`logging.googleapis.com/kubernetes` will be used for GKE 1.14+ or
+   * `logging.googleapis.com` for earlier versions.
    * @param loggingService loggingService or {@code null} for none
    */
   public Cluster setLoggingService(java.lang.String loggingService) {
@@ -1032,9 +1041,12 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   /**
    * The monitoring service the cluster should use to write metrics. Currently available options:
    *
-   * * `monitoring.googleapis.com` - the Google Cloud Monitoring service. * `none` - no metrics will
-   * be exported from the cluster. * if left as an empty string, `monitoring.googleapis.com` will be
-   * used.
+   * * "monitoring.googleapis.com/kubernetes" - The Cloud Monitoring service with a Kubernetes-
+   * native resource model * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no
+   * longer available as of GKE 1.15). * `none` - No metrics will be exported from the cluster.
+   *
+   * If left as an empty string,`monitoring.googleapis.com/kubernetes` will be used for GKE 1.14+ or
+   * `monitoring.googleapis.com` for earlier versions.
    * @return value or {@code null} for none
    */
   public java.lang.String getMonitoringService() {
@@ -1044,9 +1056,12 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   /**
    * The monitoring service the cluster should use to write metrics. Currently available options:
    *
-   * * `monitoring.googleapis.com` - the Google Cloud Monitoring service. * `none` - no metrics will
-   * be exported from the cluster. * if left as an empty string, `monitoring.googleapis.com` will be
-   * used.
+   * * "monitoring.googleapis.com/kubernetes" - The Cloud Monitoring service with a Kubernetes-
+   * native resource model * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no
+   * longer available as of GKE 1.15). * `none` - No metrics will be exported from the cluster.
+   *
+   * If left as an empty string,`monitoring.googleapis.com/kubernetes` will be used for GKE 1.14+ or
+   * `monitoring.googleapis.com` for earlier versions.
    * @param monitoringService monitoringService or {@code null} for none
    */
   public Cluster setMonitoringService(java.lang.String monitoringService) {

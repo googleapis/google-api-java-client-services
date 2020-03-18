@@ -93,11 +93,14 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private java.util.List<java.lang.String> desiredLocations;
 
   /**
-   * The logging service the cluster should use to write metrics. Currently available options:
+   * The logging service the cluster should use to write logs. Currently available options:
    *
-   * * "logging.googleapis.com/kubernetes" - the Google Cloud Logging service with Kubernetes-native
-   * resource model * "logging.googleapis.com" - the Google Cloud Logging service * "none" - no logs
-   * will be exported from the cluster
+   * * `logging.googleapis.com/kubernetes` - The Cloud Logging service with a Kubernetes-native
+   * resource model * `logging.googleapis.com` - The legacy Cloud Logging service (no longer
+   * available as of GKE 1.15). * `none` - no logs will be exported from the cluster.
+   *
+   * If left as an empty string,`logging.googleapis.com/kubernetes` will be used for GKE 1.14+ or
+   * `logging.googleapis.com` for earlier versions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,9 +132,12 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   /**
    * The monitoring service the cluster should use to write metrics. Currently available options:
    *
-   * * "monitoring.googleapis.com/kubernetes" - the Google Cloud Monitoring service with Kubernetes-
-   * native resource model * "monitoring.googleapis.com" - the Google Cloud Monitoring service *
-   * "none" - no metrics will be exported from the cluster
+   * * "monitoring.googleapis.com/kubernetes" - The Cloud Monitoring service with a Kubernetes-
+   * native resource model * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no
+   * longer available as of GKE 1.15). * `none` - No metrics will be exported from the cluster.
+   *
+   * If left as an empty string,`monitoring.googleapis.com/kubernetes` will be used for GKE 1.14+ or
+   * `monitoring.googleapis.com` for earlier versions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -204,6 +210,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private ShieldedNodes desiredShieldedNodes;
+
+  /**
+   * The desired Cloud TPU configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TpuConfig desiredTpuConfig;
 
   /**
    * Cluster-level Vertical Pod Autoscaling configuration.
@@ -366,11 +379,14 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The logging service the cluster should use to write metrics. Currently available options:
+   * The logging service the cluster should use to write logs. Currently available options:
    *
-   * * "logging.googleapis.com/kubernetes" - the Google Cloud Logging service with Kubernetes-native
-   * resource model * "logging.googleapis.com" - the Google Cloud Logging service * "none" - no logs
-   * will be exported from the cluster
+   * * `logging.googleapis.com/kubernetes` - The Cloud Logging service with a Kubernetes-native
+   * resource model * `logging.googleapis.com` - The legacy Cloud Logging service (no longer
+   * available as of GKE 1.15). * `none` - no logs will be exported from the cluster.
+   *
+   * If left as an empty string,`logging.googleapis.com/kubernetes` will be used for GKE 1.14+ or
+   * `logging.googleapis.com` for earlier versions.
    * @return value or {@code null} for none
    */
   public java.lang.String getDesiredLoggingService() {
@@ -378,11 +394,14 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The logging service the cluster should use to write metrics. Currently available options:
+   * The logging service the cluster should use to write logs. Currently available options:
    *
-   * * "logging.googleapis.com/kubernetes" - the Google Cloud Logging service with Kubernetes-native
-   * resource model * "logging.googleapis.com" - the Google Cloud Logging service * "none" - no logs
-   * will be exported from the cluster
+   * * `logging.googleapis.com/kubernetes` - The Cloud Logging service with a Kubernetes-native
+   * resource model * `logging.googleapis.com` - The legacy Cloud Logging service (no longer
+   * available as of GKE 1.15). * `none` - no logs will be exported from the cluster.
+   *
+   * If left as an empty string,`logging.googleapis.com/kubernetes` will be used for GKE 1.14+ or
+   * `logging.googleapis.com` for earlier versions.
    * @param desiredLoggingService desiredLoggingService or {@code null} for none
    */
   public ClusterUpdate setDesiredLoggingService(java.lang.String desiredLoggingService) {
@@ -445,9 +464,12 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   /**
    * The monitoring service the cluster should use to write metrics. Currently available options:
    *
-   * * "monitoring.googleapis.com/kubernetes" - the Google Cloud Monitoring service with Kubernetes-
-   * native resource model * "monitoring.googleapis.com" - the Google Cloud Monitoring service *
-   * "none" - no metrics will be exported from the cluster
+   * * "monitoring.googleapis.com/kubernetes" - The Cloud Monitoring service with a Kubernetes-
+   * native resource model * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no
+   * longer available as of GKE 1.15). * `none` - No metrics will be exported from the cluster.
+   *
+   * If left as an empty string,`monitoring.googleapis.com/kubernetes` will be used for GKE 1.14+ or
+   * `monitoring.googleapis.com` for earlier versions.
    * @return value or {@code null} for none
    */
   public java.lang.String getDesiredMonitoringService() {
@@ -457,9 +479,12 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   /**
    * The monitoring service the cluster should use to write metrics. Currently available options:
    *
-   * * "monitoring.googleapis.com/kubernetes" - the Google Cloud Monitoring service with Kubernetes-
-   * native resource model * "monitoring.googleapis.com" - the Google Cloud Monitoring service *
-   * "none" - no metrics will be exported from the cluster
+   * * "monitoring.googleapis.com/kubernetes" - The Cloud Monitoring service with a Kubernetes-
+   * native resource model * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no
+   * longer available as of GKE 1.15). * `none` - No metrics will be exported from the cluster.
+   *
+   * If left as an empty string,`monitoring.googleapis.com/kubernetes` will be used for GKE 1.14+ or
+   * `monitoring.googleapis.com` for earlier versions.
    * @param desiredMonitoringService desiredMonitoringService or {@code null} for none
    */
   public ClusterUpdate setDesiredMonitoringService(java.lang.String desiredMonitoringService) {
@@ -624,6 +649,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredShieldedNodes(ShieldedNodes desiredShieldedNodes) {
     this.desiredShieldedNodes = desiredShieldedNodes;
+    return this;
+  }
+
+  /**
+   * The desired Cloud TPU configuration.
+   * @return value or {@code null} for none
+   */
+  public TpuConfig getDesiredTpuConfig() {
+    return desiredTpuConfig;
+  }
+
+  /**
+   * The desired Cloud TPU configuration.
+   * @param desiredTpuConfig desiredTpuConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredTpuConfig(TpuConfig desiredTpuConfig) {
+    this.desiredTpuConfig = desiredTpuConfig;
     return this;
   }
 

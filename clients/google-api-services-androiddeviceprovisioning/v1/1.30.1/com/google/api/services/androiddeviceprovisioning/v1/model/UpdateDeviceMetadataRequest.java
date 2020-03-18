@@ -31,14 +31,14 @@ package com.google.api.services.androiddeviceprovisioning.v1.model;
 public final class UpdateDeviceMetadataRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The metdata to attach to the device.
+   * Required. The metadata to attach to the device.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DeviceMetadata deviceMetadata;
 
   /**
-   * Required. The metdata to attach to the device.
+   * Required. The metadata to attach to the device.
    * @return value or {@code null} for none
    */
   public DeviceMetadata getDeviceMetadata() {
@@ -46,7 +46,7 @@ public final class UpdateDeviceMetadataRequest extends com.google.api.client.jso
   }
 
   /**
-   * Required. The metdata to attach to the device.
+   * Required. The metadata to attach to the device.
    * @param deviceMetadata deviceMetadata or {@code null} for none
    */
   public UpdateDeviceMetadataRequest setDeviceMetadata(DeviceMetadata deviceMetadata) {

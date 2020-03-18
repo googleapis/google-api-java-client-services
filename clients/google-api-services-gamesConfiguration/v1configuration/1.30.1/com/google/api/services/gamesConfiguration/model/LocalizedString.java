@@ -17,7 +17,7 @@
 package com.google.api.services.gamesConfiguration.model;
 
 /**
- * This is a JSON template for a localized string resource.
+ * A localized string resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play Game Services Publishing API. For a

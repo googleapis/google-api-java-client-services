@@ -20,12 +20,12 @@ package com.google.api.services.gamesConfiguration;
  * Service definition for GamesConfiguration (v1configuration).
  *
  * <p>
- * The Publishing API for Google Play Game Services.
+ * The Google Play Game Services Publishing API allows developers to configure their games in Game Services.
  * </p>
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://developers.google.com/games/services" target="_blank">API Documentation</a>
+ * <a href="https://developers.google.com/games/" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>
@@ -63,7 +63,7 @@ public class GamesConfiguration extends com.google.api.client.googleapis.service
    *
    * @since 1.7
    */
-  public static final String DEFAULT_SERVICE_PATH = "games/v1configuration/";
+  public static final String DEFAULT_SERVICE_PATH = "";
 
   /**
    * The default encoded batch path of the service. This is determined when the library is
@@ -71,7 +71,7 @@ public class GamesConfiguration extends com.google.api.client.googleapis.service
    *
    * @since 1.23
    */
-  public static final String DEFAULT_BATCH_PATH = "batch/gamesConfiguration/v1configuration";
+  public static final String DEFAULT_BATCH_PATH = "batch";
 
   /**
    * The default encoded base URL of the service. This is determined when the library is generated
@@ -161,7 +161,7 @@ public class GamesConfiguration extends com.google.api.client.googleapis.service
 
     public class Delete extends GamesConfigurationRequest<Void> {
 
-      private static final String REST_PATH = "achievements/{achievementId}";
+      private static final String REST_PATH = "games/v1configuration/achievements/{achievementId}";
 
       /**
        * Delete the achievement configuration with the given ID.
@@ -183,8 +183,23 @@ public class GamesConfiguration extends com.google.api.client.googleapis.service
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -213,8 +228,13 @@ public class GamesConfiguration extends com.google.api.client.googleapis.service
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the achievement used by this method. */
@@ -257,7 +277,7 @@ public class GamesConfiguration extends com.google.api.client.googleapis.service
 
     public class Get extends GamesConfigurationRequest<com.google.api.services.gamesConfiguration.model.AchievementConfiguration> {
 
-      private static final String REST_PATH = "achievements/{achievementId}";
+      private static final String REST_PATH = "games/v1configuration/achievements/{achievementId}";
 
       /**
        * Retrieves the metadata of the achievement configuration with the given ID.
@@ -289,8 +309,23 @@ public class GamesConfiguration extends com.google.api.client.googleapis.service
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -319,8 +354,13 @@ public class GamesConfiguration extends com.google.api.client.googleapis.service
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the achievement used by this method. */
@@ -364,7 +404,7 @@ public class GamesConfiguration extends com.google.api.client.googleapis.service
 
     public class Insert extends GamesConfigurationRequest<com.google.api.services.gamesConfiguration.model.AchievementConfiguration> {
 
-      private static final String REST_PATH = "applications/{applicationId}/achievements";
+      private static final String REST_PATH = "games/v1configuration/applications/{applicationId}/achievements";
 
       /**
        * Insert a new achievement configuration in this application.
@@ -387,8 +427,23 @@ public class GamesConfiguration extends com.google.api.client.googleapis.service
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -417,8 +472,13 @@ public class GamesConfiguration extends com.google.api.client.googleapis.service
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The application ID from the Google Play developer console. */
@@ -461,7 +521,7 @@ public class GamesConfiguration extends com.google.api.client.googleapis.service
 
     public class List extends GamesConfigurationRequest<com.google.api.services.gamesConfiguration.model.AchievementConfigurationListResponse> {
 
-      private static final String REST_PATH = "applications/{applicationId}/achievements";
+      private static final String REST_PATH = "games/v1configuration/applications/{applicationId}/achievements";
 
       /**
        * Returns a list of the achievement configurations in this application.
@@ -493,8 +553,23 @@ public class GamesConfiguration extends com.google.api.client.googleapis.service
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -523,8 +598,13 @@ public class GamesConfiguration extends com.google.api.client.googleapis.service
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The application ID from the Google Play developer console. */
@@ -553,8 +633,6 @@ public class GamesConfiguration extends com.google.api.client.googleapis.service
 
       /** The maximum number of resource configurations to return in the response, used for paging. For any
      response, the actual number of resources returned may be less than the specified maxResults.
-
-     [minimum: 1] [maximum: 200]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -592,106 +670,6 @@ public class GamesConfiguration extends com.google.api.client.googleapis.service
       }
     }
     /**
-     * Update the metadata of the achievement configuration with the given ID. This method supports
-     * patch semantics.
-     *
-     * Create a request for the method "achievementConfigurations.patch".
-     *
-     * This request holds the parameters needed by the gamesConfiguration server.  After setting any
-     * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
-     *
-     * @param achievementId The ID of the achievement used by this method.
-     * @param content the {@link com.google.api.services.gamesConfiguration.model.AchievementConfiguration}
-     * @return the request
-     */
-    public Patch patch(java.lang.String achievementId, com.google.api.services.gamesConfiguration.model.AchievementConfiguration content) throws java.io.IOException {
-      Patch result = new Patch(achievementId, content);
-      initialize(result);
-      return result;
-    }
-
-    public class Patch extends GamesConfigurationRequest<com.google.api.services.gamesConfiguration.model.AchievementConfiguration> {
-
-      private static final String REST_PATH = "achievements/{achievementId}";
-
-      /**
-       * Update the metadata of the achievement configuration with the given ID. This method supports
-       * patch semantics.
-       *
-       * Create a request for the method "achievementConfigurations.patch".
-       *
-       * This request holds the parameters needed by the the gamesConfiguration server.  After setting
-       * any optional parameters, call the {@link Patch#execute()} method to invoke the remote
-       * operation. <p> {@link
-       * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-       * be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param achievementId The ID of the achievement used by this method.
-       * @param content the {@link com.google.api.services.gamesConfiguration.model.AchievementConfiguration}
-       * @since 1.13
-       */
-      protected Patch(java.lang.String achievementId, com.google.api.services.gamesConfiguration.model.AchievementConfiguration content) {
-        super(GamesConfiguration.this, "PATCH", REST_PATH, content, com.google.api.services.gamesConfiguration.model.AchievementConfiguration.class);
-        this.achievementId = com.google.api.client.util.Preconditions.checkNotNull(achievementId, "Required parameter achievementId must be specified.");
-      }
-
-      @Override
-      public Patch setAlt(java.lang.String alt) {
-        return (Patch) super.setAlt(alt);
-      }
-
-      @Override
-      public Patch setFields(java.lang.String fields) {
-        return (Patch) super.setFields(fields);
-      }
-
-      @Override
-      public Patch setKey(java.lang.String key) {
-        return (Patch) super.setKey(key);
-      }
-
-      @Override
-      public Patch setOauthToken(java.lang.String oauthToken) {
-        return (Patch) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Patch) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Patch setQuotaUser(java.lang.String quotaUser) {
-        return (Patch) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
-      }
-
-      /** The ID of the achievement used by this method. */
-      @com.google.api.client.util.Key
-      private java.lang.String achievementId;
-
-      /** The ID of the achievement used by this method.
-       */
-      public java.lang.String getAchievementId() {
-        return achievementId;
-      }
-
-      /** The ID of the achievement used by this method. */
-      public Patch setAchievementId(java.lang.String achievementId) {
-        this.achievementId = achievementId;
-        return this;
-      }
-
-      @Override
-      public Patch set(String parameterName, Object value) {
-        return (Patch) super.set(parameterName, value);
-      }
-    }
-    /**
      * Update the metadata of the achievement configuration with the given ID.
      *
      * Create a request for the method "achievementConfigurations.update".
@@ -711,7 +689,7 @@ public class GamesConfiguration extends com.google.api.client.googleapis.service
 
     public class Update extends GamesConfigurationRequest<com.google.api.services.gamesConfiguration.model.AchievementConfiguration> {
 
-      private static final String REST_PATH = "achievements/{achievementId}";
+      private static final String REST_PATH = "games/v1configuration/achievements/{achievementId}";
 
       /**
        * Update the metadata of the achievement configuration with the given ID.
@@ -734,8 +712,23 @@ public class GamesConfiguration extends com.google.api.client.googleapis.service
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -764,8 +757,13 @@ public class GamesConfiguration extends com.google.api.client.googleapis.service
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the achievement used by this method. */
@@ -855,7 +853,7 @@ public class GamesConfiguration extends com.google.api.client.googleapis.service
 
     public class Upload extends GamesConfigurationRequest<com.google.api.services.gamesConfiguration.model.ImageConfiguration> {
 
-      private static final String REST_PATH = "images/{resourceId}/imageType/{imageType}";
+      private static final String REST_PATH = "games/v1configuration/images/{resourceId}/imageType/{imageType}";
 
       /**
        * Uploads an image for a resource with the given ID and image type.
@@ -905,8 +903,23 @@ public class GamesConfiguration extends com.google.api.client.googleapis.service
       }
 
       @Override
+      public Upload set$Xgafv(java.lang.String $Xgafv) {
+        return (Upload) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Upload setAccessToken(java.lang.String accessToken) {
+        return (Upload) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Upload setAlt(java.lang.String alt) {
         return (Upload) super.setAlt(alt);
+      }
+
+      @Override
+      public Upload setCallback(java.lang.String callback) {
+        return (Upload) super.setCallback(callback);
       }
 
       @Override
@@ -935,8 +948,13 @@ public class GamesConfiguration extends com.google.api.client.googleapis.service
       }
 
       @Override
-      public Upload setUserIp(java.lang.String userIp) {
-        return (Upload) super.setUserIp(userIp);
+      public Upload setUploadType(java.lang.String uploadType) {
+        return (Upload) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Upload setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Upload) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the resource used by this method. */
@@ -1018,7 +1036,7 @@ public class GamesConfiguration extends com.google.api.client.googleapis.service
 
     public class Delete extends GamesConfigurationRequest<Void> {
 
-      private static final String REST_PATH = "leaderboards/{leaderboardId}";
+      private static final String REST_PATH = "games/v1configuration/leaderboards/{leaderboardId}";
 
       /**
        * Delete the leaderboard configuration with the given ID.
@@ -1040,8 +1058,23 @@ public class GamesConfiguration extends com.google.api.client.googleapis.service
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -1070,8 +1103,13 @@ public class GamesConfiguration extends com.google.api.client.googleapis.service
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the leaderboard. */
@@ -1114,7 +1152,7 @@ public class GamesConfiguration extends com.google.api.client.googleapis.service
 
     public class Get extends GamesConfigurationRequest<com.google.api.services.gamesConfiguration.model.LeaderboardConfiguration> {
 
-      private static final String REST_PATH = "leaderboards/{leaderboardId}";
+      private static final String REST_PATH = "games/v1configuration/leaderboards/{leaderboardId}";
 
       /**
        * Retrieves the metadata of the leaderboard configuration with the given ID.
@@ -1146,8 +1184,23 @@ public class GamesConfiguration extends com.google.api.client.googleapis.service
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -1176,8 +1229,13 @@ public class GamesConfiguration extends com.google.api.client.googleapis.service
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the leaderboard. */
@@ -1221,7 +1279,7 @@ public class GamesConfiguration extends com.google.api.client.googleapis.service
 
     public class Insert extends GamesConfigurationRequest<com.google.api.services.gamesConfiguration.model.LeaderboardConfiguration> {
 
-      private static final String REST_PATH = "applications/{applicationId}/leaderboards";
+      private static final String REST_PATH = "games/v1configuration/applications/{applicationId}/leaderboards";
 
       /**
        * Insert a new leaderboard configuration in this application.
@@ -1244,8 +1302,23 @@ public class GamesConfiguration extends com.google.api.client.googleapis.service
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -1274,8 +1347,13 @@ public class GamesConfiguration extends com.google.api.client.googleapis.service
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The application ID from the Google Play developer console. */
@@ -1318,7 +1396,7 @@ public class GamesConfiguration extends com.google.api.client.googleapis.service
 
     public class List extends GamesConfigurationRequest<com.google.api.services.gamesConfiguration.model.LeaderboardConfigurationListResponse> {
 
-      private static final String REST_PATH = "applications/{applicationId}/leaderboards";
+      private static final String REST_PATH = "games/v1configuration/applications/{applicationId}/leaderboards";
 
       /**
        * Returns a list of the leaderboard configurations in this application.
@@ -1350,8 +1428,23 @@ public class GamesConfiguration extends com.google.api.client.googleapis.service
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -1380,8 +1473,13 @@ public class GamesConfiguration extends com.google.api.client.googleapis.service
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The application ID from the Google Play developer console. */
@@ -1410,8 +1508,6 @@ public class GamesConfiguration extends com.google.api.client.googleapis.service
 
       /** The maximum number of resource configurations to return in the response, used for paging. For any
      response, the actual number of resources returned may be less than the specified maxResults.
-
-     [minimum: 1] [maximum: 200]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -1449,106 +1545,6 @@ public class GamesConfiguration extends com.google.api.client.googleapis.service
       }
     }
     /**
-     * Update the metadata of the leaderboard configuration with the given ID. This method supports
-     * patch semantics.
-     *
-     * Create a request for the method "leaderboardConfigurations.patch".
-     *
-     * This request holds the parameters needed by the gamesConfiguration server.  After setting any
-     * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
-     *
-     * @param leaderboardId The ID of the leaderboard.
-     * @param content the {@link com.google.api.services.gamesConfiguration.model.LeaderboardConfiguration}
-     * @return the request
-     */
-    public Patch patch(java.lang.String leaderboardId, com.google.api.services.gamesConfiguration.model.LeaderboardConfiguration content) throws java.io.IOException {
-      Patch result = new Patch(leaderboardId, content);
-      initialize(result);
-      return result;
-    }
-
-    public class Patch extends GamesConfigurationRequest<com.google.api.services.gamesConfiguration.model.LeaderboardConfiguration> {
-
-      private static final String REST_PATH = "leaderboards/{leaderboardId}";
-
-      /**
-       * Update the metadata of the leaderboard configuration with the given ID. This method supports
-       * patch semantics.
-       *
-       * Create a request for the method "leaderboardConfigurations.patch".
-       *
-       * This request holds the parameters needed by the the gamesConfiguration server.  After setting
-       * any optional parameters, call the {@link Patch#execute()} method to invoke the remote
-       * operation. <p> {@link
-       * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-       * be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param leaderboardId The ID of the leaderboard.
-       * @param content the {@link com.google.api.services.gamesConfiguration.model.LeaderboardConfiguration}
-       * @since 1.13
-       */
-      protected Patch(java.lang.String leaderboardId, com.google.api.services.gamesConfiguration.model.LeaderboardConfiguration content) {
-        super(GamesConfiguration.this, "PATCH", REST_PATH, content, com.google.api.services.gamesConfiguration.model.LeaderboardConfiguration.class);
-        this.leaderboardId = com.google.api.client.util.Preconditions.checkNotNull(leaderboardId, "Required parameter leaderboardId must be specified.");
-      }
-
-      @Override
-      public Patch setAlt(java.lang.String alt) {
-        return (Patch) super.setAlt(alt);
-      }
-
-      @Override
-      public Patch setFields(java.lang.String fields) {
-        return (Patch) super.setFields(fields);
-      }
-
-      @Override
-      public Patch setKey(java.lang.String key) {
-        return (Patch) super.setKey(key);
-      }
-
-      @Override
-      public Patch setOauthToken(java.lang.String oauthToken) {
-        return (Patch) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Patch) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Patch setQuotaUser(java.lang.String quotaUser) {
-        return (Patch) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
-      }
-
-      /** The ID of the leaderboard. */
-      @com.google.api.client.util.Key
-      private java.lang.String leaderboardId;
-
-      /** The ID of the leaderboard.
-       */
-      public java.lang.String getLeaderboardId() {
-        return leaderboardId;
-      }
-
-      /** The ID of the leaderboard. */
-      public Patch setLeaderboardId(java.lang.String leaderboardId) {
-        this.leaderboardId = leaderboardId;
-        return this;
-      }
-
-      @Override
-      public Patch set(String parameterName, Object value) {
-        return (Patch) super.set(parameterName, value);
-      }
-    }
-    /**
      * Update the metadata of the leaderboard configuration with the given ID.
      *
      * Create a request for the method "leaderboardConfigurations.update".
@@ -1568,7 +1564,7 @@ public class GamesConfiguration extends com.google.api.client.googleapis.service
 
     public class Update extends GamesConfigurationRequest<com.google.api.services.gamesConfiguration.model.LeaderboardConfiguration> {
 
-      private static final String REST_PATH = "leaderboards/{leaderboardId}";
+      private static final String REST_PATH = "games/v1configuration/leaderboards/{leaderboardId}";
 
       /**
        * Update the metadata of the leaderboard configuration with the given ID.
@@ -1591,8 +1587,23 @@ public class GamesConfiguration extends com.google.api.client.googleapis.service
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -1621,8 +1632,13 @@ public class GamesConfiguration extends com.google.api.client.googleapis.service
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the leaderboard. */

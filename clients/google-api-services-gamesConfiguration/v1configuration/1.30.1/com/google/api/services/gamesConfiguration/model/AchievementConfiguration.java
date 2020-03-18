@@ -17,7 +17,7 @@
 package com.google.api.services.gamesConfiguration.model;
 
 /**
- * This is a JSON template for an achievement configuration resource.
+ * An achievement configuration resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play Game Services Publishing API. For a
@@ -31,8 +31,7 @@ package com.google.api.services.gamesConfiguration.model;
 public final class AchievementConfiguration extends com.google.api.client.json.GenericJson {
 
   /**
-   * The type of the achievement. Possible values are:   - "STANDARD" - Achievement is either locked
-   * or unlocked.  - "INCREMENTAL" - Achievement is incremental.
+   * The type of the achievement.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,8 +52,7 @@ public final class AchievementConfiguration extends com.google.api.client.json.G
   private java.lang.String id;
 
   /**
-   * The initial state of the achievement. Possible values are:   - "HIDDEN" - Achievement is
-   * hidden.  - "REVEALED" - Achievement is revealed.  - "UNLOCKED" - Achievement is unlocked.
+   * The initial state of the achievement.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +74,7 @@ public final class AchievementConfiguration extends com.google.api.client.json.G
   private AchievementConfigurationDetail published;
 
   /**
-   * Steps to unlock. Only applicable to incremental achievements.
+   * Steps to unlock.  Only applicable to incremental achievements.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,8 +88,7 @@ public final class AchievementConfiguration extends com.google.api.client.json.G
   private java.lang.String token;
 
   /**
-   * The type of the achievement. Possible values are:   - "STANDARD" - Achievement is either locked
-   * or unlocked.  - "INCREMENTAL" - Achievement is incremental.
+   * The type of the achievement.
    * @return value or {@code null} for none
    */
   public java.lang.String getAchievementType() {
@@ -99,8 +96,7 @@ public final class AchievementConfiguration extends com.google.api.client.json.G
   }
 
   /**
-   * The type of the achievement. Possible values are:   - "STANDARD" - Achievement is either locked
-   * or unlocked.  - "INCREMENTAL" - Achievement is incremental.
+   * The type of the achievement.
    * @param achievementType achievementType or {@code null} for none
    */
   public AchievementConfiguration setAchievementType(java.lang.String achievementType) {
@@ -143,8 +139,7 @@ public final class AchievementConfiguration extends com.google.api.client.json.G
   }
 
   /**
-   * The initial state of the achievement. Possible values are:   - "HIDDEN" - Achievement is
-   * hidden.  - "REVEALED" - Achievement is revealed.  - "UNLOCKED" - Achievement is unlocked.
+   * The initial state of the achievement.
    * @return value or {@code null} for none
    */
   public java.lang.String getInitialState() {
@@ -152,8 +147,7 @@ public final class AchievementConfiguration extends com.google.api.client.json.G
   }
 
   /**
-   * The initial state of the achievement. Possible values are:   - "HIDDEN" - Achievement is
-   * hidden.  - "REVEALED" - Achievement is revealed.  - "UNLOCKED" - Achievement is unlocked.
+   * The initial state of the achievement.
    * @param initialState initialState or {@code null} for none
    */
   public AchievementConfiguration setInitialState(java.lang.String initialState) {
@@ -198,7 +192,7 @@ public final class AchievementConfiguration extends com.google.api.client.json.G
   }
 
   /**
-   * Steps to unlock. Only applicable to incremental achievements.
+   * Steps to unlock.  Only applicable to incremental achievements.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getStepsToUnlock() {
@@ -206,7 +200,7 @@ public final class AchievementConfiguration extends com.google.api.client.json.G
   }
 
   /**
-   * Steps to unlock. Only applicable to incremental achievements.
+   * Steps to unlock.  Only applicable to incremental achievements.
    * @param stepsToUnlock stepsToUnlock or {@code null} for none
    */
   public AchievementConfiguration setStepsToUnlock(java.lang.Integer stepsToUnlock) {

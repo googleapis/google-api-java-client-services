@@ -296,29 +296,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /**
-       * The name of the backupRun to delete. Format:
-       * projects/{project}/locations/{location}/instances/{instance}/backupRuns/{backupRun}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String resourceName;
-
-      /** The name of the backupRun to delete. Format:
-     projects/{project}/locations/{location}/instances/{instance}/backupRuns/{backupRun}
-       */
-      public java.lang.String getResourceName() {
-        return resourceName;
-      }
-
-      /**
-       * The name of the backupRun to delete. Format:
-       * projects/{project}/locations/{location}/instances/{instance}/backupRuns/{backupRun}
-       */
-      public Delete setResourceName(java.lang.String resourceName) {
-        this.resourceName = resourceName;
-        return this;
-      }
-
       @Override
       public Delete set(String parameterName, Object value) {
         return (Delete) super.set(parameterName, value);
@@ -482,29 +459,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /**
-       * Name of the resource backupRun. Format:
-       * projects/{project}/locations/{location}/instances/{instance}/backupRuns/{backupRun}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String resourceName;
-
-      /** Name of the resource backupRun. Format:
-     projects/{project}/locations/{location}/instances/{instance}/backupRuns/{backupRun}
-       */
-      public java.lang.String getResourceName() {
-        return resourceName;
-      }
-
-      /**
-       * Name of the resource backupRun. Format:
-       * projects/{project}/locations/{location}/instances/{instance}/backupRuns/{backupRun}
-       */
-      public Get setResourceName(java.lang.String resourceName) {
-        this.resourceName = resourceName;
-        return this;
-      }
-
       @Override
       public Get set(String parameterName, Object value) {
         return (Get) super.set(parameterName, value);
@@ -640,29 +594,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Cloud SQL instance ID. This does not include the project ID. */
       public Insert setInstance(java.lang.String instance) {
         this.instance = instance;
-        return this;
-      }
-
-      /**
-       * The parent resource where Cloud SQL should create this backupRun. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String parent;
-
-      /** The parent resource where Cloud SQL should create this backupRun. Format:
-     projects/{project}/locations/{location}/instances/{instance}
-       */
-      public java.lang.String getParent() {
-        return parent;
-      }
-
-      /**
-       * The parent resource where Cloud SQL should create this backupRun. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      public Insert setParent(java.lang.String parent) {
-        this.parent = parent;
         return this;
       }
 
@@ -848,29 +779,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /**
-       * The parent, which owns this collection of backupRuns. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String parent;
-
-      /** The parent, which owns this collection of backupRuns. Format:
-     projects/{project}/locations/{location}/instances/{instance}
-       */
-      public java.lang.String getParent() {
-        return parent;
-      }
-
-      /**
-       * The parent, which owns this collection of backupRuns. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      public List setParent(java.lang.String parent) {
-        this.parent = parent;
-        return this;
-      }
-
       @Override
       public List set(String parameterName, Object value) {
         return (List) super.set(parameterName, value);
@@ -1047,29 +955,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /**
-       * The name of the database to delete. Format:
-       * projects/{project}/locations/{location}/instances/{instance}/databases/{database}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String resourceName;
-
-      /** The name of the database to delete. Format:
-     projects/{project}/locations/{location}/instances/{instance}/databases/{database}
-       */
-      public java.lang.String getResourceName() {
-        return resourceName;
-      }
-
-      /**
-       * The name of the database to delete. Format:
-       * projects/{project}/locations/{location}/instances/{instance}/databases/{database}
-       */
-      public Delete setResourceName(java.lang.String resourceName) {
-        this.resourceName = resourceName;
-        return this;
-      }
-
       @Override
       public Delete set(String parameterName, Object value) {
         return (Delete) super.set(parameterName, value);
@@ -1233,29 +1118,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /**
-       * Name of the resource database. Format:
-       * projects/{project}/locations/{location}/instances/{instance}/databases/{database}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String resourceName;
-
-      /** Name of the resource database. Format:
-     projects/{project}/locations/{location}/instances/{instance}/databases/{database}
-       */
-      public java.lang.String getResourceName() {
-        return resourceName;
-      }
-
-      /**
-       * Name of the resource database. Format:
-       * projects/{project}/locations/{location}/instances/{instance}/databases/{database}
-       */
-      public Get setResourceName(java.lang.String resourceName) {
-        this.resourceName = resourceName;
-        return this;
-      }
-
       @Override
       public Get set(String parameterName, Object value) {
         return (Get) super.set(parameterName, value);
@@ -1389,29 +1251,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Database instance ID. This does not include the project ID. */
       public Insert setInstance(java.lang.String instance) {
         this.instance = instance;
-        return this;
-      }
-
-      /**
-       * The parent resource where Cloud SQL should add this database. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String parent;
-
-      /** The parent resource where Cloud SQL should add this database. Format:
-     projects/{project}/locations/{location}/instances/{instance}
-       */
-      public java.lang.String getParent() {
-        return parent;
-      }
-
-      /**
-       * The parent resource where Cloud SQL should add this database. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      public Insert setParent(java.lang.String parent) {
-        this.parent = parent;
         return this;
       }
 
@@ -1559,29 +1398,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /**
-       * The parent, which owns this collection of databases. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String parent;
-
-      /** The parent, which owns this collection of databases. Format:
-     projects/{project}/locations/{location}/instances/{instance}
-       */
-      public java.lang.String getParent() {
-        return parent;
-      }
-
-      /**
-       * The parent, which owns this collection of databases. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      public List setParent(java.lang.String parent) {
-        this.parent = parent;
-        return this;
-      }
-
       @Override
       public List set(String parameterName, Object value) {
         return (List) super.set(parameterName, value);
@@ -1589,8 +1405,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
     }
     /**
      * Partially updates a resource containing information about a database inside a Cloud SQL instance.
-     * This method supports patch semantics. Caution: This is not a partial update, so you must include
-     * values for all the settings that you want to retain. For partial updates, use update.
+     * This method supports patch semantics.
      *
      * Create a request for the method "databases.patch".
      *
@@ -1615,9 +1430,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Partially updates a resource containing information about a database inside a Cloud SQL
-       * instance. This method supports patch semantics. Caution: This is not a partial update, so you
-       * must include values for all the settings that you want to retain. For partial updates, use
-       * update.
+       * instance. This method supports patch semantics.
        *
        * Create a request for the method "databases.patch".
        *
@@ -1739,29 +1552,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Name of the database to be updated in the instance. */
       public Patch setDatabase(java.lang.String database) {
         this.database = database;
-        return this;
-      }
-
-      /**
-       * The name of the database for Cloud SQL to update. Format:
-       * projects/{project}/locations/{location}/instances/{instance}/databases/{database}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String resourceName;
-
-      /** The name of the database for Cloud SQL to update. Format:
-     projects/{project}/locations/{location}/instances/{instance}/databases/{database}
-       */
-      public java.lang.String getResourceName() {
-        return resourceName;
-      }
-
-      /**
-       * The name of the database for Cloud SQL to update. Format:
-       * projects/{project}/locations/{location}/instances/{instance}/databases/{database}
-       */
-      public Patch setResourceName(java.lang.String resourceName) {
-        this.resourceName = resourceName;
         return this;
       }
 
@@ -1917,29 +1707,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Name of the database to be updated in the instance. */
       public Update setDatabase(java.lang.String database) {
         this.database = database;
-        return this;
-      }
-
-      /**
-       * The name of the database for Cloud SQL to update. Format:
-       * projects/{project}/locations/{location}/instances/{instance}/databases/{database}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String resourceName;
-
-      /** The name of the database for Cloud SQL to update. Format:
-     projects/{project}/locations/{location}/instances/{instance}/databases/{database}
-       */
-      public java.lang.String getResourceName() {
-        return resourceName;
-      }
-
-      /**
-       * The name of the database for Cloud SQL to update. Format:
-       * projects/{project}/locations/{location}/instances/{instance}/databases/{database}
-       */
-      public Update setResourceName(java.lang.String resourceName) {
-        this.resourceName = resourceName;
         return this;
       }
 
@@ -2259,36 +2026,14 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /**
-       * The parent resource where Cloud SQL should add this server CA. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String parent;
-
-      /** The parent resource where Cloud SQL should add this server CA. Format:
-     projects/{project}/locations/{location}/instances/{instance}
-       */
-      public java.lang.String getParent() {
-        return parent;
-      }
-
-      /**
-       * The parent resource where Cloud SQL should add this server CA. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      public AddServerCa setParent(java.lang.String parent) {
-        this.parent = parent;
-        return this;
-      }
-
       @Override
       public AddServerCa set(String parameterName, Object value) {
         return (AddServerCa) super.set(parameterName, value);
       }
     }
     /**
-     * Creates a Cloud SQL instance as a clone of the source instance.
+     * Creates a Cloud SQL instance as a clone of the source instance. Using this operation might cause
+     * your instance to restart.
      *
      * Create a request for the method "instances.clone".
      *
@@ -2312,7 +2057,8 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/clone";
 
       /**
-       * Creates a Cloud SQL instance as a clone of the source instance.
+       * Creates a Cloud SQL instance as a clone of the source instance. Using this operation might
+       * cause your instance to restart.
        *
        * Create a request for the method "instances.clone".
        *
@@ -2423,29 +2169,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
        */
       public Clone setInstance(java.lang.String instance) {
         this.instance = instance;
-        return this;
-      }
-
-      /**
-       * The parent resource where Cloud SQL should clone this instance. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String parent;
-
-      /** The parent resource where Cloud SQL should clone this instance. Format:
-     projects/{project}/locations/{location}/instances/{instance}
-       */
-      public java.lang.String getParent() {
-        return parent;
-      }
-
-      /**
-       * The parent resource where Cloud SQL should clone this instance. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      public Clone setParent(java.lang.String parent) {
-        this.parent = parent;
         return this;
       }
 
@@ -2580,29 +2303,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Cloud SQL instance ID. This does not include the project ID. */
       public Delete setInstance(java.lang.String instance) {
         this.instance = instance;
-        return this;
-      }
-
-      /**
-       * The name of database instance to delete. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String resourceName;
-
-      /** The name of database instance to delete. Format:
-     projects/{project}/locations/{location}/instances/{instance}
-       */
-      public java.lang.String getResourceName() {
-        return resourceName;
-      }
-
-      /**
-       * The name of database instance to delete. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      public Delete setResourceName(java.lang.String resourceName) {
-        this.resourceName = resourceName;
         return this;
       }
 
@@ -2744,29 +2444,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /**
-       * The parent resource where Cloud SQL demotes this master database instance. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String parent;
-
-      /** The parent resource where Cloud SQL demotes this master database instance. Format:
-     projects/{project}/locations/{location}/instances/{instance}
-       */
-      public java.lang.String getParent() {
-        return parent;
-      }
-
-      /**
-       * The parent resource where Cloud SQL demotes this master database instance. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      public DemoteMaster setParent(java.lang.String parent) {
-        this.parent = parent;
-        return this;
-      }
-
       @Override
       public DemoteMaster set(String parameterName, Object value) {
         return (DemoteMaster) super.set(parameterName, value);
@@ -2903,36 +2580,14 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /**
-       * The parent resource where Cloud SQL exports this database instance. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String parent;
-
-      /** The parent resource where Cloud SQL exports this database instance. Format:
-     projects/{project}/locations/{location}/instances/{instance}
-       */
-      public java.lang.String getParent() {
-        return parent;
-      }
-
-      /**
-       * The parent resource where Cloud SQL exports this database instance. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      public Export setParent(java.lang.String parent) {
-        this.parent = parent;
-        return this;
-      }
-
       @Override
       public Export set(String parameterName, Object value) {
         return (Export) super.set(parameterName, value);
       }
     }
     /**
-     * Failover the instance to its failover replica instance.
+     * Failover the instance to its failover replica instance. Using this operation might cause your
+     * instance to restart.
      *
      * Create a request for the method "instances.failover".
      *
@@ -2955,7 +2610,8 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/failover";
 
       /**
-       * Failover the instance to its failover replica instance.
+       * Failover the instance to its failover replica instance. Using this operation might cause your
+       * instance to restart.
        *
        * Create a request for the method "instances.failover".
        *
@@ -3060,29 +2716,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Cloud SQL instance ID. This does not include the project ID. */
       public Failover setInstance(java.lang.String instance) {
         this.instance = instance;
-        return this;
-      }
-
-      /**
-       * The parent resource where Cloud SQL sends this database instance during a failover. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String parent;
-
-      /** The parent resource where Cloud SQL sends this database instance during a failover. Format:
-     projects/{project}/locations/{location}/instances/{instance}
-       */
-      public java.lang.String getParent() {
-        return parent;
-      }
-
-      /**
-       * The parent resource where Cloud SQL sends this database instance during a failover. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      public Failover setParent(java.lang.String parent) {
-        this.parent = parent;
         return this;
       }
 
@@ -3230,29 +2863,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /**
-       * Name of the resource database instance. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String resourceName;
-
-      /** Name of the resource database instance. Format:
-     projects/{project}/locations/{location}/instances/{instance}
-       */
-      public java.lang.String getResourceName() {
-        return resourceName;
-      }
-
-      /**
-       * Name of the resource database instance. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      public Get setResourceName(java.lang.String resourceName) {
-        this.resourceName = resourceName;
-        return this;
-      }
-
       @Override
       public Get set(String parameterName, Object value) {
         return (Get) super.set(parameterName, value);
@@ -3390,29 +3000,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /**
-       * The parent resource where Cloud SQL imports this database instance. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String parent;
-
-      /** The parent resource where Cloud SQL imports this database instance. Format:
-     projects/{project}/locations/{location}/instances/{instance}
-       */
-      public java.lang.String getParent() {
-        return parent;
-      }
-
-      /**
-       * The parent resource where Cloud SQL imports this database instance. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      public SQLAdminImport setParent(java.lang.String parent) {
-        this.parent = parent;
-        return this;
-      }
-
       @Override
       public SQLAdminImport set(String parameterName, Object value) {
         return (SQLAdminImport) super.set(parameterName, value);
@@ -3533,29 +3120,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
        */
       public Insert setProject(java.lang.String project) {
         this.project = project;
-        return this;
-      }
-
-      /**
-       * The parent resource where Cloud SQL creates this database instance. Format:
-       * projects/{project}/locations/{location}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String parent;
-
-      /** The parent resource where Cloud SQL creates this database instance. Format:
-     projects/{project}/locations/{location}
-       */
-      public java.lang.String getParent() {
-        return parent;
-      }
-
-      /**
-       * The parent resource where Cloud SQL creates this database instance. Format:
-       * projects/{project}/locations/{location}
-       */
-      public Insert setParent(java.lang.String parent) {
-        this.parent = parent;
         return this;
       }
 
@@ -3758,29 +3322,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /**
-       * The parent, which owns this collection of database instances. Format:
-       * projects/{project}/locations/{location}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String parent;
-
-      /** The parent, which owns this collection of database instances. Format:
-     projects/{project}/locations/{location}
-       */
-      public java.lang.String getParent() {
-        return parent;
-      }
-
-      /**
-       * The parent, which owns this collection of database instances. Format:
-       * projects/{project}/locations/{location}
-       */
-      public List setParent(java.lang.String parent) {
-        this.parent = parent;
-        return this;
-      }
-
       @Override
       public List set(String parameterName, Object value) {
         return (List) super.set(parameterName, value);
@@ -3932,29 +3473,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /**
-       * The parent, which owns this collection of server CAs. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String parent;
-
-      /** The parent, which owns this collection of server CAs. Format:
-     projects/{project}/locations/{location}/instances/{instance}
-       */
-      public java.lang.String getParent() {
-        return parent;
-      }
-
-      /**
-       * The parent, which owns this collection of server CAs. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      public ListServerCas setParent(java.lang.String parent) {
-        this.parent = parent;
-        return this;
-      }
-
       @Override
       public ListServerCas set(String parameterName, Object value) {
         return (ListServerCas) super.set(parameterName, value);
@@ -4091,36 +3609,14 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /**
-       * The name of the database instance for Cloud SQL to update. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String resourceName;
-
-      /** The name of the database instance for Cloud SQL to update. Format:
-     projects/{project}/locations/{location}/instances/{instance}
-       */
-      public java.lang.String getResourceName() {
-        return resourceName;
-      }
-
-      /**
-       * The name of the database instance for Cloud SQL to update. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      public Patch setResourceName(java.lang.String resourceName) {
-        this.resourceName = resourceName;
-        return this;
-      }
-
       @Override
       public Patch set(String parameterName, Object value) {
         return (Patch) super.set(parameterName, value);
       }
     }
     /**
-     * Promotes the read replica instance to be a stand-alone Cloud SQL instance.
+     * Promotes the read replica instance to be a stand-alone Cloud SQL instance. Using this operation
+     * might cause your instance to restart.
      *
      * Create a request for the method "instances.promoteReplica".
      *
@@ -4142,7 +3638,8 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/promoteReplica";
 
       /**
-       * Promotes the read replica instance to be a stand-alone Cloud SQL instance.
+       * Promotes the read replica instance to be a stand-alone Cloud SQL instance. Using this operation
+       * might cause your instance to restart.
        *
        * Create a request for the method "instances.promoteReplica".
        *
@@ -4246,29 +3743,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Cloud SQL read replica instance name. */
       public PromoteReplica setInstance(java.lang.String instance) {
         this.instance = instance;
-        return this;
-      }
-
-      /**
-       * The parent resource where Cloud SQL promotes this replica database instance. Format:
-       * projects/{project}/locations/{location}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String parent;
-
-      /** The parent resource where Cloud SQL promotes this replica database instance. Format:
-     projects/{project}/locations/{location}
-       */
-      public java.lang.String getParent() {
-        return parent;
-      }
-
-      /**
-       * The parent resource where Cloud SQL promotes this replica database instance. Format:
-       * projects/{project}/locations/{location}
-       */
-      public PromoteReplica setParent(java.lang.String parent) {
-        this.parent = parent;
         return this;
       }
 
@@ -4407,29 +3881,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /**
-       * The parent resource where Cloud SQL resets this SSL config. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String parent;
-
-      /** The parent resource where Cloud SQL resets this SSL config. Format:
-     projects/{project}/locations/{location}/instances/{instance}
-       */
-      public java.lang.String getParent() {
-        return parent;
-      }
-
-      /**
-       * The parent resource where Cloud SQL resets this SSL config. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      public ResetSslConfig setParent(java.lang.String parent) {
-        this.parent = parent;
-        return this;
-      }
-
       @Override
       public ResetSslConfig set(String parameterName, Object value) {
         return (ResetSslConfig) super.set(parameterName, value);
@@ -4565,36 +4016,14 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /**
-       * The parent resource where Cloud SQL restarts this database instance. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String parent;
-
-      /** The parent resource where Cloud SQL restarts this database instance. Format:
-     projects/{project}/locations/{location}/instances/{instance}
-       */
-      public java.lang.String getParent() {
-        return parent;
-      }
-
-      /**
-       * The parent resource where Cloud SQL restarts this database instance. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      public Restart setParent(java.lang.String parent) {
-        this.parent = parent;
-        return this;
-      }
-
       @Override
       public Restart set(String parameterName, Object value) {
         return (Restart) super.set(parameterName, value);
       }
     }
     /**
-     * Restores a backup of a Cloud SQL instance.
+     * Restores a backup of a Cloud SQL instance. Using this operation might cause your instance to
+     * restart.
      *
      * Create a request for the method "instances.restoreBackup".
      *
@@ -4617,7 +4046,8 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/restoreBackup";
 
       /**
-       * Restores a backup of a Cloud SQL instance.
+       * Restores a backup of a Cloud SQL instance. Using this operation might cause your instance to
+       * restart.
        *
        * Create a request for the method "instances.restoreBackup".
        *
@@ -4722,29 +4152,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Cloud SQL instance ID. This does not include the project ID. */
       public RestoreBackup setInstance(java.lang.String instance) {
         this.instance = instance;
-        return this;
-      }
-
-      /**
-       * The parent resource where Cloud SQL restores this database instance from backup. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String parent;
-
-      /** The parent resource where Cloud SQL restores this database instance from backup. Format:
-     projects/{project}/locations/{location}/instances/{instance}
-       */
-      public java.lang.String getParent() {
-        return parent;
-      }
-
-      /**
-       * The parent resource where Cloud SQL restores this database instance from backup. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      public RestoreBackup setParent(java.lang.String parent) {
-        this.parent = parent;
         return this;
       }
 
@@ -4887,29 +4294,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /**
-       * The parent resource where Cloud SQL rotates these server CAs. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String parent;
-
-      /** The parent resource where Cloud SQL rotates these server CAs. Format:
-     projects/{project}/locations/{location}/instances/{instance}
-       */
-      public java.lang.String getParent() {
-        return parent;
-      }
-
-      /**
-       * The parent resource where Cloud SQL rotates these server CAs. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      public RotateServerCa setParent(java.lang.String parent) {
-        this.parent = parent;
-        return this;
-      }
-
       @Override
       public RotateServerCa set(String parameterName, Object value) {
         return (RotateServerCa) super.set(parameterName, value);
@@ -5045,29 +4429,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /**
-       * The parent resource where Cloud SQL starts this database instance replication. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String parent;
-
-      /** The parent resource where Cloud SQL starts this database instance replication. Format:
-     projects/{project}/locations/{location}/instances/{instance}
-       */
-      public java.lang.String getParent() {
-        return parent;
-      }
-
-      /**
-       * The parent resource where Cloud SQL starts this database instance replication. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      public StartReplica setParent(java.lang.String parent) {
-        this.parent = parent;
-        return this;
-      }
-
       @Override
       public StartReplica set(String parameterName, Object value) {
         return (StartReplica) super.set(parameterName, value);
@@ -5200,29 +4561,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Cloud SQL read replica instance name. */
       public StopReplica setInstance(java.lang.String instance) {
         this.instance = instance;
-        return this;
-      }
-
-      /**
-       * The parent resource where Cloud SQL stops this database instance replication. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String parent;
-
-      /** The parent resource where Cloud SQL stops this database instance replication. Format:
-     projects/{project}/locations/{location}/instances/{instance}
-       */
-      public java.lang.String getParent() {
-        return parent;
-      }
-
-      /**
-       * The parent resource where Cloud SQL stops this database instance replication. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      public StopReplica setParent(java.lang.String parent) {
-        this.parent = parent;
         return this;
       }
 
@@ -5363,36 +4701,14 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /**
-       * The parent resource where Cloud SQL truncates this log. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String parent;
-
-      /** The parent resource where Cloud SQL truncates this log. Format:
-     projects/{project}/locations/{location}/instances/{instance}
-       */
-      public java.lang.String getParent() {
-        return parent;
-      }
-
-      /**
-       * The parent resource where Cloud SQL truncates this log. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      public TruncateLog setParent(java.lang.String parent) {
-        this.parent = parent;
-        return this;
-      }
-
       @Override
       public TruncateLog set(String parameterName, Object value) {
         return (TruncateLog) super.set(parameterName, value);
       }
     }
     /**
-     * Updates settings of a Cloud SQL instance.
+     * Updates settings of a Cloud SQL instance. Using this operation might cause your instance to
+     * restart.
      *
      * Create a request for the method "instances.update".
      *
@@ -5415,7 +4731,8 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}";
 
       /**
-       * Updates settings of a Cloud SQL instance.
+       * Updates settings of a Cloud SQL instance. Using this operation might cause your instance to
+       * restart.
        *
        * Create a request for the method "instances.update".
        *
@@ -5519,29 +4836,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Cloud SQL instance ID. This does not include the project ID. */
       public Update setInstance(java.lang.String instance) {
         this.instance = instance;
-        return this;
-      }
-
-      /**
-       * The name of the database instance for Cloud SQL to update. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String resourceName;
-
-      /** The name of the database instance for Cloud SQL to update. Format:
-     projects/{project}/locations/{location}/instances/{instance}
-       */
-      public java.lang.String getResourceName() {
-        return resourceName;
-      }
-
-      /**
-       * The name of the database instance for Cloud SQL to update. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      public Update setResourceName(java.lang.String resourceName) {
-        this.resourceName = resourceName;
         return this;
       }
 
@@ -5709,29 +5003,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Instance operation ID. */
       public Get setOperation(java.lang.String operation) {
         this.operation = operation;
-        return this;
-      }
-
-      /**
-       * The name of the operation for Cloud SQL to get. Format:
-       * projects/{project}/locations/{location}/operations/{operation}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String resourceName;
-
-      /** The name of the operation for Cloud SQL to get. Format:
-     projects/{project}/locations/{location}/operations/{operation}
-       */
-      public java.lang.String getResourceName() {
-        return resourceName;
-      }
-
-      /**
-       * The name of the operation for Cloud SQL to get. Format:
-       * projects/{project}/locations/{location}/operations/{operation}
-       */
-      public Get setResourceName(java.lang.String resourceName) {
-        this.resourceName = resourceName;
         return this;
       }
 
@@ -5911,29 +5182,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
-        return this;
-      }
-
-      /**
-       * Indirect parent. The direct parent should combine with the instance name, which owns this
-       * collection of operations. Format: projects/{project}/locations/{location}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String parent;
-
-      /** Indirect parent. The direct parent should combine with the instance name, which owns this
-     collection of operations. Format: projects/{project}/locations/{location}
-       */
-      public java.lang.String getParent() {
-        return parent;
-      }
-
-      /**
-       * Indirect parent. The direct parent should combine with the instance name, which owns this
-       * collection of operations. Format: projects/{project}/locations/{location}
-       */
-      public List setParent(java.lang.String parent) {
-        this.parent = parent;
         return this;
       }
 
@@ -6118,29 +5366,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /**
-         * The parent resource where Cloud SQL reshedule this database instance's maintenance.
-         * Format: projects/{project}/locations/{location}/instances/{instance}
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String parent;
-
-        /** The parent resource where Cloud SQL reshedule this database instance's maintenance. Format:
-       projects/{project}/locations/{location}/instances/{instance}
-         */
-        public java.lang.String getParent() {
-          return parent;
-        }
-
-        /**
-         * The parent resource where Cloud SQL reshedule this database instance's maintenance.
-         * Format: projects/{project}/locations/{location}/instances/{instance}
-         */
-        public RescheduleMaintenance setParent(java.lang.String parent) {
-          this.parent = parent;
-          return this;
-        }
-
         @Override
         public RescheduleMaintenance set(String parameterName, Object value) {
           return (RescheduleMaintenance) super.set(parameterName, value);
@@ -6273,29 +5498,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         /** Cloud SQL instance ID. This does not include the project ID. */
         public StartExternalSync setInstance(java.lang.String instance) {
           this.instance = instance;
-          return this;
-        }
-
-        /**
-         * The parent resource where Cloud SQL starts this database instance external sync. Format:
-         * projects/{project}/locations/{location}/instances/{instance}
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String parent;
-
-        /** The parent resource where Cloud SQL starts this database instance external sync. Format:
-       projects/{project}/locations/{location}/instances/{instance}
-         */
-        public java.lang.String getParent() {
-          return parent;
-        }
-
-        /**
-         * The parent resource where Cloud SQL starts this database instance external sync. Format:
-         * projects/{project}/locations/{location}/instances/{instance}
-         */
-        public StartExternalSync setParent(java.lang.String parent) {
-          this.parent = parent;
           return this;
         }
 
@@ -6451,29 +5653,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /**
-         * The parent resource where Cloud SQL verifies this database instance external sync
-         * settings. Format: projects/{project}/locations/{location}/instances/{instance}
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String parent;
-
-        /** The parent resource where Cloud SQL verifies this database instance external sync settings. Format:
-       projects/{project}/locations/{location}/instances/{instance}
-         */
-        public java.lang.String getParent() {
-          return parent;
-        }
-
-        /**
-         * The parent resource where Cloud SQL verifies this database instance external sync
-         * settings. Format: projects/{project}/locations/{location}/instances/{instance}
-         */
-        public VerifyExternalSyncSettings setParent(java.lang.String parent) {
-          this.parent = parent;
-          return this;
-        }
-
         /** External sync mode */
         @com.google.api.client.util.Key
         private java.lang.String syncMode;
@@ -6512,617 +5691,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         }
       }
 
-    }
-    /**
-     * An accessor for creating requests from the Locations collection.
-     *
-     * <p>The typical use is:</p>
-     * <pre>
-     *   {@code SQLAdmin sql = new SQLAdmin(...);}
-     *   {@code SQLAdmin.Locations.List request = sql.locations().list(parameters ...)}
-     * </pre>
-     *
-     * @return the resource collection
-     */
-    public Locations locations() {
-      return new Locations();
-    }
-
-    /**
-     * The "locations" collection of methods.
-     */
-    public class Locations {
-
-      /**
-       * An accessor for creating requests from the Instances collection.
-       *
-       * <p>The typical use is:</p>
-       * <pre>
-       *   {@code SQLAdmin sql = new SQLAdmin(...);}
-       *   {@code SQLAdmin.Instances.List request = sql.instances().list(parameters ...)}
-       * </pre>
-       *
-       * @return the resource collection
-       */
-      public Instances instances() {
-        return new Instances();
-      }
-
-      /**
-       * The "instances" collection of methods.
-       */
-      public class Instances {
-
-        /**
-         * Reschedules the maintenance on the given instance.
-         *
-         * Create a request for the method "instances.rescheduleMaintenance".
-         *
-         * This request holds the parameters needed by the sql server.  After setting any optional
-         * parameters, call the {@link RescheduleMaintenance#execute()} method to invoke the remote
-         * operation.
-         *
-         * @param parent The parent resource where Cloud SQL reshedule this database instance's
-        maintenance. Format:
-         *        projects/{project}/locations/{location}/instances/{instance}
-         * @param content the {@link com.google.api.services.sql.model.SqlInstancesRescheduleMaintenanceRequestBody}
-         * @return the request
-         */
-        public RescheduleMaintenance rescheduleMaintenance(java.lang.String parent, com.google.api.services.sql.model.SqlInstancesRescheduleMaintenanceRequestBody content) throws java.io.IOException {
-          RescheduleMaintenance result = new RescheduleMaintenance(parent, content);
-          initialize(result);
-          return result;
-        }
-
-        public class RescheduleMaintenance extends SQLAdminRequest<com.google.api.services.sql.model.Operation> {
-
-          private static final String REST_PATH = "sql/v1beta4/{+parent}/rescheduleMaintenance";
-
-          private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
-
-          /**
-           * Reschedules the maintenance on the given instance.
-           *
-           * Create a request for the method "instances.rescheduleMaintenance".
-           *
-           * This request holds the parameters needed by the the sql server.  After setting any optional
-           * parameters, call the {@link RescheduleMaintenance#execute()} method to invoke the remote
-           * operation. <p> {@link RescheduleMaintenance#initialize(com.google.api.client.googleapis.service
-           * s.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
-           * invoking the constructor. </p>
-           *
-           * @param parent The parent resource where Cloud SQL reshedule this database instance's
-        maintenance. Format:
-         *        projects/{project}/locations/{location}/instances/{instance}
-           * @param content the {@link com.google.api.services.sql.model.SqlInstancesRescheduleMaintenanceRequestBody}
-           * @since 1.13
-           */
-          protected RescheduleMaintenance(java.lang.String parent, com.google.api.services.sql.model.SqlInstancesRescheduleMaintenanceRequestBody content) {
-            super(SQLAdmin.this, "POST", REST_PATH, content, com.google.api.services.sql.model.Operation.class);
-            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
-            }
-          }
-
-          @Override
-          public RescheduleMaintenance set$Xgafv(java.lang.String $Xgafv) {
-            return (RescheduleMaintenance) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public RescheduleMaintenance setAccessToken(java.lang.String accessToken) {
-            return (RescheduleMaintenance) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public RescheduleMaintenance setAlt(java.lang.String alt) {
-            return (RescheduleMaintenance) super.setAlt(alt);
-          }
-
-          @Override
-          public RescheduleMaintenance setCallback(java.lang.String callback) {
-            return (RescheduleMaintenance) super.setCallback(callback);
-          }
-
-          @Override
-          public RescheduleMaintenance setFields(java.lang.String fields) {
-            return (RescheduleMaintenance) super.setFields(fields);
-          }
-
-          @Override
-          public RescheduleMaintenance setKey(java.lang.String key) {
-            return (RescheduleMaintenance) super.setKey(key);
-          }
-
-          @Override
-          public RescheduleMaintenance setOauthToken(java.lang.String oauthToken) {
-            return (RescheduleMaintenance) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public RescheduleMaintenance setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (RescheduleMaintenance) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public RescheduleMaintenance setQuotaUser(java.lang.String quotaUser) {
-            return (RescheduleMaintenance) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public RescheduleMaintenance setUploadType(java.lang.String uploadType) {
-            return (RescheduleMaintenance) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public RescheduleMaintenance setUploadProtocol(java.lang.String uploadProtocol) {
-            return (RescheduleMaintenance) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * The parent resource where Cloud SQL reshedule this database instance's maintenance.
-           * Format: projects/{project}/locations/{location}/instances/{instance}
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String parent;
-
-          /** The parent resource where Cloud SQL reshedule this database instance's maintenance. Format:
-         projects/{project}/locations/{location}/instances/{instance}
-           */
-          public java.lang.String getParent() {
-            return parent;
-          }
-
-          /**
-           * The parent resource where Cloud SQL reshedule this database instance's maintenance.
-           * Format: projects/{project}/locations/{location}/instances/{instance}
-           */
-          public RescheduleMaintenance setParent(java.lang.String parent) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
-            }
-            this.parent = parent;
-            return this;
-          }
-
-          /** Cloud SQL instance ID. This does not include the project ID. */
-          @com.google.api.client.util.Key
-          private java.lang.String instance;
-
-          /** Cloud SQL instance ID. This does not include the project ID.
-           */
-          public java.lang.String getInstance() {
-            return instance;
-          }
-
-          /** Cloud SQL instance ID. This does not include the project ID. */
-          public RescheduleMaintenance setInstance(java.lang.String instance) {
-            this.instance = instance;
-            return this;
-          }
-
-          /** ID of the project that contains the instance. */
-          @com.google.api.client.util.Key
-          private java.lang.String project;
-
-          /** ID of the project that contains the instance.
-           */
-          public java.lang.String getProject() {
-            return project;
-          }
-
-          /** ID of the project that contains the instance. */
-          public RescheduleMaintenance setProject(java.lang.String project) {
-            this.project = project;
-            return this;
-          }
-
-          @Override
-          public RescheduleMaintenance set(String parameterName, Object value) {
-            return (RescheduleMaintenance) super.set(parameterName, value);
-          }
-        }
-        /**
-         * Start External master migration.
-         *
-         * Create a request for the method "instances.startExternalSync".
-         *
-         * This request holds the parameters needed by the sql server.  After setting any optional
-         * parameters, call the {@link StartExternalSync#execute()} method to invoke the remote operation.
-         *
-         * @param parent The parent resource where Cloud SQL starts this database instance
-        external sync. Format:
-         *        projects/{project}/locations/{location}/instances/{instance}
-         * @return the request
-         */
-        public StartExternalSync startExternalSync(java.lang.String parent) throws java.io.IOException {
-          StartExternalSync result = new StartExternalSync(parent);
-          initialize(result);
-          return result;
-        }
-
-        public class StartExternalSync extends SQLAdminRequest<com.google.api.services.sql.model.Operation> {
-
-          private static final String REST_PATH = "sql/v1beta4/{+parent}/startExternalSync";
-
-          private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
-
-          /**
-           * Start External master migration.
-           *
-           * Create a request for the method "instances.startExternalSync".
-           *
-           * This request holds the parameters needed by the the sql server.  After setting any optional
-           * parameters, call the {@link StartExternalSync#execute()} method to invoke the remote operation.
-           * <p> {@link StartExternalSync#initialize(com.google.api.client.googleapis.services.AbstractGoogl
-           * eClientRequest)} must be called to initialize this instance immediately after invoking the
-           * constructor. </p>
-           *
-           * @param parent The parent resource where Cloud SQL starts this database instance
-        external sync. Format:
-         *        projects/{project}/locations/{location}/instances/{instance}
-           * @since 1.13
-           */
-          protected StartExternalSync(java.lang.String parent) {
-            super(SQLAdmin.this, "POST", REST_PATH, null, com.google.api.services.sql.model.Operation.class);
-            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
-            }
-          }
-
-          @Override
-          public StartExternalSync set$Xgafv(java.lang.String $Xgafv) {
-            return (StartExternalSync) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public StartExternalSync setAccessToken(java.lang.String accessToken) {
-            return (StartExternalSync) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public StartExternalSync setAlt(java.lang.String alt) {
-            return (StartExternalSync) super.setAlt(alt);
-          }
-
-          @Override
-          public StartExternalSync setCallback(java.lang.String callback) {
-            return (StartExternalSync) super.setCallback(callback);
-          }
-
-          @Override
-          public StartExternalSync setFields(java.lang.String fields) {
-            return (StartExternalSync) super.setFields(fields);
-          }
-
-          @Override
-          public StartExternalSync setKey(java.lang.String key) {
-            return (StartExternalSync) super.setKey(key);
-          }
-
-          @Override
-          public StartExternalSync setOauthToken(java.lang.String oauthToken) {
-            return (StartExternalSync) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public StartExternalSync setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (StartExternalSync) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public StartExternalSync setQuotaUser(java.lang.String quotaUser) {
-            return (StartExternalSync) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public StartExternalSync setUploadType(java.lang.String uploadType) {
-            return (StartExternalSync) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public StartExternalSync setUploadProtocol(java.lang.String uploadProtocol) {
-            return (StartExternalSync) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * The parent resource where Cloud SQL starts this database instance external sync.
-           * Format: projects/{project}/locations/{location}/instances/{instance}
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String parent;
-
-          /** The parent resource where Cloud SQL starts this database instance external sync. Format:
-         projects/{project}/locations/{location}/instances/{instance}
-           */
-          public java.lang.String getParent() {
-            return parent;
-          }
-
-          /**
-           * The parent resource where Cloud SQL starts this database instance external sync.
-           * Format: projects/{project}/locations/{location}/instances/{instance}
-           */
-          public StartExternalSync setParent(java.lang.String parent) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
-            }
-            this.parent = parent;
-            return this;
-          }
-
-          /** Cloud SQL instance ID. This does not include the project ID. */
-          @com.google.api.client.util.Key
-          private java.lang.String instance;
-
-          /** Cloud SQL instance ID. This does not include the project ID.
-           */
-          public java.lang.String getInstance() {
-            return instance;
-          }
-
-          /** Cloud SQL instance ID. This does not include the project ID. */
-          public StartExternalSync setInstance(java.lang.String instance) {
-            this.instance = instance;
-            return this;
-          }
-
-          /** ID of the project that contains the first generation instance. */
-          @com.google.api.client.util.Key
-          private java.lang.String project;
-
-          /** ID of the project that contains the first generation instance.
-           */
-          public java.lang.String getProject() {
-            return project;
-          }
-
-          /** ID of the project that contains the first generation instance. */
-          public StartExternalSync setProject(java.lang.String project) {
-            this.project = project;
-            return this;
-          }
-
-          /** External sync mode */
-          @com.google.api.client.util.Key
-          private java.lang.String syncMode;
-
-          /** External sync mode
-           */
-          public java.lang.String getSyncMode() {
-            return syncMode;
-          }
-
-          /** External sync mode */
-          public StartExternalSync setSyncMode(java.lang.String syncMode) {
-            this.syncMode = syncMode;
-            return this;
-          }
-
-          @Override
-          public StartExternalSync set(String parameterName, Object value) {
-            return (StartExternalSync) super.set(parameterName, value);
-          }
-        }
-        /**
-         * Verify External master external sync settings.
-         *
-         * Create a request for the method "instances.verifyExternalSyncSettings".
-         *
-         * This request holds the parameters needed by the sql server.  After setting any optional
-         * parameters, call the {@link VerifyExternalSyncSettings#execute()} method to invoke the remote
-         * operation.
-         *
-         * @param parent The parent resource where Cloud SQL verifies this database instance
-        external sync settings. Format:
-         *        projects/{project}/locations/{location}/instances/{instance}
-         * @return the request
-         */
-        public VerifyExternalSyncSettings verifyExternalSyncSettings(java.lang.String parent) throws java.io.IOException {
-          VerifyExternalSyncSettings result = new VerifyExternalSyncSettings(parent);
-          initialize(result);
-          return result;
-        }
-
-        public class VerifyExternalSyncSettings extends SQLAdminRequest<com.google.api.services.sql.model.SqlInstancesVerifyExternalSyncSettingsResponse> {
-
-          private static final String REST_PATH = "sql/v1beta4/{+parent}/verifyExternalSyncSettings";
-
-          private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
-
-          /**
-           * Verify External master external sync settings.
-           *
-           * Create a request for the method "instances.verifyExternalSyncSettings".
-           *
-           * This request holds the parameters needed by the the sql server.  After setting any optional
-           * parameters, call the {@link VerifyExternalSyncSettings#execute()} method to invoke the remote
-           * operation. <p> {@link VerifyExternalSyncSettings#initialize(com.google.api.client.googleapis.se
-           * rvices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
-           * after invoking the constructor. </p>
-           *
-           * @param parent The parent resource where Cloud SQL verifies this database instance
-        external sync settings. Format:
-         *        projects/{project}/locations/{location}/instances/{instance}
-           * @since 1.13
-           */
-          protected VerifyExternalSyncSettings(java.lang.String parent) {
-            super(SQLAdmin.this, "POST", REST_PATH, null, com.google.api.services.sql.model.SqlInstancesVerifyExternalSyncSettingsResponse.class);
-            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
-            }
-          }
-
-          @Override
-          public VerifyExternalSyncSettings set$Xgafv(java.lang.String $Xgafv) {
-            return (VerifyExternalSyncSettings) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public VerifyExternalSyncSettings setAccessToken(java.lang.String accessToken) {
-            return (VerifyExternalSyncSettings) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public VerifyExternalSyncSettings setAlt(java.lang.String alt) {
-            return (VerifyExternalSyncSettings) super.setAlt(alt);
-          }
-
-          @Override
-          public VerifyExternalSyncSettings setCallback(java.lang.String callback) {
-            return (VerifyExternalSyncSettings) super.setCallback(callback);
-          }
-
-          @Override
-          public VerifyExternalSyncSettings setFields(java.lang.String fields) {
-            return (VerifyExternalSyncSettings) super.setFields(fields);
-          }
-
-          @Override
-          public VerifyExternalSyncSettings setKey(java.lang.String key) {
-            return (VerifyExternalSyncSettings) super.setKey(key);
-          }
-
-          @Override
-          public VerifyExternalSyncSettings setOauthToken(java.lang.String oauthToken) {
-            return (VerifyExternalSyncSettings) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public VerifyExternalSyncSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (VerifyExternalSyncSettings) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public VerifyExternalSyncSettings setQuotaUser(java.lang.String quotaUser) {
-            return (VerifyExternalSyncSettings) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public VerifyExternalSyncSettings setUploadType(java.lang.String uploadType) {
-            return (VerifyExternalSyncSettings) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public VerifyExternalSyncSettings setUploadProtocol(java.lang.String uploadProtocol) {
-            return (VerifyExternalSyncSettings) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * The parent resource where Cloud SQL verifies this database instance external sync
-           * settings. Format: projects/{project}/locations/{location}/instances/{instance}
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String parent;
-
-          /** The parent resource where Cloud SQL verifies this database instance external sync settings. Format:
-         projects/{project}/locations/{location}/instances/{instance}
-           */
-          public java.lang.String getParent() {
-            return parent;
-          }
-
-          /**
-           * The parent resource where Cloud SQL verifies this database instance external sync
-           * settings. Format: projects/{project}/locations/{location}/instances/{instance}
-           */
-          public VerifyExternalSyncSettings setParent(java.lang.String parent) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
-            }
-            this.parent = parent;
-            return this;
-          }
-
-          /** Cloud SQL instance ID. This does not include the project ID. */
-          @com.google.api.client.util.Key
-          private java.lang.String instance;
-
-          /** Cloud SQL instance ID. This does not include the project ID.
-           */
-          public java.lang.String getInstance() {
-            return instance;
-          }
-
-          /** Cloud SQL instance ID. This does not include the project ID. */
-          public VerifyExternalSyncSettings setInstance(java.lang.String instance) {
-            this.instance = instance;
-            return this;
-          }
-
-          /** Project ID of the project that contains the instance. */
-          @com.google.api.client.util.Key
-          private java.lang.String project;
-
-          /** Project ID of the project that contains the instance.
-           */
-          public java.lang.String getProject() {
-            return project;
-          }
-
-          /** Project ID of the project that contains the instance. */
-          public VerifyExternalSyncSettings setProject(java.lang.String project) {
-            this.project = project;
-            return this;
-          }
-
-          /** External sync mode */
-          @com.google.api.client.util.Key
-          private java.lang.String syncMode;
-
-          /** External sync mode
-           */
-          public java.lang.String getSyncMode() {
-            return syncMode;
-          }
-
-          /** External sync mode */
-          public VerifyExternalSyncSettings setSyncMode(java.lang.String syncMode) {
-            this.syncMode = syncMode;
-            return this;
-          }
-
-          /** Flag to enable verifying connection only */
-          @com.google.api.client.util.Key
-          private java.lang.Boolean verifyConnectionOnly;
-
-          /** Flag to enable verifying connection only
-           */
-          public java.lang.Boolean getVerifyConnectionOnly() {
-            return verifyConnectionOnly;
-          }
-
-          /** Flag to enable verifying connection only */
-          public VerifyExternalSyncSettings setVerifyConnectionOnly(java.lang.Boolean verifyConnectionOnly) {
-            this.verifyConnectionOnly = verifyConnectionOnly;
-            return this;
-          }
-
-          @Override
-          public VerifyExternalSyncSettings set(String parameterName, Object value) {
-            return (VerifyExternalSyncSettings) super.set(parameterName, value);
-          }
-        }
-
-      }
     }
   }
 
@@ -7282,29 +5850,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /**
-       * The parent resource where Cloud SQL creates this ephemeral certificate. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String parent;
-
-      /** The parent resource where Cloud SQL creates this ephemeral certificate. Format:
-     projects/{project}/locations/{location}/instances/{instance}
-       */
-      public java.lang.String getParent() {
-        return parent;
-      }
-
-      /**
-       * The parent resource where Cloud SQL creates this ephemeral certificate. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      public CreateEphemeral setParent(java.lang.String parent) {
-        this.parent = parent;
-        return this;
-      }
-
       @Override
       public CreateEphemeral set(String parameterName, Object value) {
         return (CreateEphemeral) super.set(parameterName, value);
@@ -7457,29 +6002,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Sha1 FingerPrint. */
       public Delete setSha1Fingerprint(java.lang.String sha1Fingerprint) {
         this.sha1Fingerprint = sha1Fingerprint;
-        return this;
-      }
-
-      /**
-       * The name of SSL certificate to delete. Format:
-       * projects/{project}/locations/{location}/instances/{instance}/sslCerts/{sslCert}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String resourceName;
-
-      /** The name of SSL certificate to delete. Format:
-     projects/{project}/locations/{location}/instances/{instance}/sslCerts/{sslCert}
-       */
-      public java.lang.String getResourceName() {
-        return resourceName;
-      }
-
-      /**
-       * The name of SSL certificate to delete. Format:
-       * projects/{project}/locations/{location}/instances/{instance}/sslCerts/{sslCert}
-       */
-      public Delete setResourceName(java.lang.String resourceName) {
-        this.resourceName = resourceName;
         return this;
       }
 
@@ -7648,29 +6170,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /**
-       * Name of the resource ssl certificate. Format:
-       * projects/{project}/locations/{location}/instances/{instance}/sslCerts/{sslCert}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String resourceName;
-
-      /** Name of the resource ssl certificate. Format:
-     projects/{project}/locations/{location}/instances/{instance}/sslCerts/{sslCert}
-       */
-      public java.lang.String getResourceName() {
-        return resourceName;
-      }
-
-      /**
-       * Name of the resource ssl certificate. Format:
-       * projects/{project}/locations/{location}/instances/{instance}/sslCerts/{sslCert}
-       */
-      public Get setResourceName(java.lang.String resourceName) {
-        this.resourceName = resourceName;
-        return this;
-      }
-
       @Override
       public Get set(String parameterName, Object value) {
         return (Get) super.set(parameterName, value);
@@ -7806,29 +6305,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Cloud SQL instance ID. This does not include the project ID. */
       public Insert setInstance(java.lang.String instance) {
         this.instance = instance;
-        return this;
-      }
-
-      /**
-       * The parent resource where Cloud SQL creates this SSL certificate. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String parent;
-
-      /** The parent resource where Cloud SQL creates this SSL certificate. Format:
-     projects/{project}/locations/{location}/instances/{instance}
-       */
-      public java.lang.String getParent() {
-        return parent;
-      }
-
-      /**
-       * The parent resource where Cloud SQL creates this SSL certificate. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      public Insert setParent(java.lang.String parent) {
-        this.parent = parent;
         return this;
       }
 
@@ -7973,29 +6449,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Cloud SQL instance ID. This does not include the project ID. */
       public List setInstance(java.lang.String instance) {
         this.instance = instance;
-        return this;
-      }
-
-      /**
-       * The parent, which owns this collection of SSL certificates. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String parent;
-
-      /** The parent, which owns this collection of SSL certificates. Format:
-     projects/{project}/locations/{location}/instances/{instance}
-       */
-      public java.lang.String getParent() {
-        return parent;
-      }
-
-      /**
-       * The parent, which owns this collection of SSL certificates. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      public List setParent(java.lang.String parent) {
-        this.parent = parent;
         return this;
       }
 
@@ -8338,29 +6791,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /**
-       * The name of the user to delete. Format:
-       * projects/{project}/locations/{location}/instances/{instance}/users
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String resourceName;
-
-      /** The name of the user to delete. Format:
-     projects/{project}/locations/{location}/instances/{instance}/users
-       */
-      public java.lang.String getResourceName() {
-        return resourceName;
-      }
-
-      /**
-       * The name of the user to delete. Format:
-       * projects/{project}/locations/{location}/instances/{instance}/users
-       */
-      public Delete setResourceName(java.lang.String resourceName) {
-        this.resourceName = resourceName;
-        return this;
-      }
-
       @Override
       public Delete set(String parameterName, Object value) {
         return (Delete) super.set(parameterName, value);
@@ -8494,29 +6924,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Database instance ID. This does not include the project ID. */
       public Insert setInstance(java.lang.String instance) {
         this.instance = instance;
-        return this;
-      }
-
-      /**
-       * The parent resource where Cloud SQL creates this user. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String parent;
-
-      /** The parent resource where Cloud SQL creates this user. Format:
-     projects/{project}/locations/{location}/instances/{instance}
-       */
-      public java.lang.String getParent() {
-        return parent;
-      }
-
-      /**
-       * The parent resource where Cloud SQL creates this user. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      public Insert setParent(java.lang.String parent) {
-        this.parent = parent;
         return this;
       }
 
@@ -8661,29 +7068,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Database instance ID. This does not include the project ID. */
       public List setInstance(java.lang.String instance) {
         this.instance = instance;
-        return this;
-      }
-
-      /**
-       * The parent, which owns this collection of users. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String parent;
-
-      /** The parent, which owns this collection of users. Format:
-     projects/{project}/locations/{location}/instances/{instance}
-       */
-      public java.lang.String getParent() {
-        return parent;
-      }
-
-      /**
-       * The parent, which owns this collection of users. Format:
-       * projects/{project}/locations/{location}/instances/{instance}
-       */
-      public List setParent(java.lang.String parent) {
-        this.parent = parent;
         return this;
       }
 
@@ -8852,29 +7236,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Name of the user in the instance. */
       public Update setName(java.lang.String name) {
         this.name = name;
-        return this;
-      }
-
-      /**
-       * The name of the user for Cloud SQL to update. Format:
-       * projects/{project}/locations/{location}/instances/{instance}/users
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String resourceName;
-
-      /** The name of the user for Cloud SQL to update. Format:
-     projects/{project}/locations/{location}/instances/{instance}/users
-       */
-      public java.lang.String getResourceName() {
-        return resourceName;
-      }
-
-      /**
-       * The name of the user for Cloud SQL to update. Format:
-       * projects/{project}/locations/{location}/instances/{instance}/users
-       */
-      public Update setResourceName(java.lang.String resourceName) {
-        this.resourceName = resourceName;
         return this;
       }
 

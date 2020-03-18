@@ -50,9 +50,9 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> authorizedGaeApplications;
 
   /**
-   * Availability type (PostgreSQL instances only). Potential values: ZONAL: The instance serves
-   * data from only one zone. Outages in that zone affect data accessibility. REGIONAL: The instance
-   * can serve data from more than one zone in a region (it is highly available). For more
+   * Availability type (PostgreSQL and MySQL instances only). Potential values: ZONAL: The instance
+   * serves data from only one zone. Outages in that zone affect data accessibility. REGIONAL: The
+   * instance can serve data from more than one zone in a region (it is highly available). For more
    * information, see Overview of the High Availability Configuration.
    * The value may be {@code null}.
    */
@@ -247,9 +247,9 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Availability type (PostgreSQL instances only). Potential values: ZONAL: The instance serves
-   * data from only one zone. Outages in that zone affect data accessibility. REGIONAL: The instance
-   * can serve data from more than one zone in a region (it is highly available). For more
+   * Availability type (PostgreSQL and MySQL instances only). Potential values: ZONAL: The instance
+   * serves data from only one zone. Outages in that zone affect data accessibility. REGIONAL: The
+   * instance can serve data from more than one zone in a region (it is highly available). For more
    * information, see Overview of the High Availability Configuration.
    * @return value or {@code null} for none
    */
@@ -258,9 +258,9 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Availability type (PostgreSQL instances only). Potential values: ZONAL: The instance serves
-   * data from only one zone. Outages in that zone affect data accessibility. REGIONAL: The instance
-   * can serve data from more than one zone in a region (it is highly available). For more
+   * Availability type (PostgreSQL and MySQL instances only). Potential values: ZONAL: The instance
+   * serves data from only one zone. Outages in that zone affect data accessibility. REGIONAL: The
+   * instance can serve data from more than one zone in a region (it is highly available). For more
    * information, see Overview of the High Availability Configuration.
    * @param availabilityType availabilityType or {@code null} for none
    */

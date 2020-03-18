@@ -17,7 +17,7 @@
 package com.google.api.services.gamesConfiguration.model;
 
 /**
- * This is a JSON template for a ListConfigurations response.
+ * A ListConfigurations response.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play Game Services Publishing API. For a
@@ -45,7 +45,7 @@ public final class LeaderboardConfigurationListResponse extends com.google.api.c
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#leaderboardConfigurationListResponse.
+   * gamesConfiguration#leaderboardConfigurationListResponse.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +77,7 @@ public final class LeaderboardConfigurationListResponse extends com.google.api.c
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#leaderboardConfigurationListResponse.
+   * gamesConfiguration#leaderboardConfigurationListResponse.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -86,7 +86,7 @@ public final class LeaderboardConfigurationListResponse extends com.google.api.c
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
-   * games#leaderboardConfigurationListResponse.
+   * gamesConfiguration#leaderboardConfigurationListResponse.
    * @param kind kind or {@code null} for none
    */
   public LeaderboardConfigurationListResponse setKind(java.lang.String kind) {

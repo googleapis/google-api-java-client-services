@@ -30,12 +30,8 @@ package com.google.api.services.calendar.model;
 public final class CalendarNotification extends com.google.api.client.json.GenericJson {
 
   /**
-   * The method used to deliver the notification. Possible values are: - "email" - Notifications are
-   * sent via email.  - "sms" - Deprecated. Once this feature is shutdown, the API will no longer
-   * return notifications using this method. Any newly added SMS notifications will be ignored. See
-   * Google Calendar SMS notifications to be removed for more information. Notifications are sent
-   * via SMS. This value is read-only and is ignored on inserts and updates. SMS notifications are
-   * only available for G Suite customers.   Required when adding a notification.
+   * The method used to deliver the notification. The possible value is: - "email" - Notifications
+   * are sent via email.   Required when adding a notification.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,12 +49,8 @@ public final class CalendarNotification extends com.google.api.client.json.Gener
   private java.lang.String type;
 
   /**
-   * The method used to deliver the notification. Possible values are: - "email" - Notifications are
-   * sent via email.  - "sms" - Deprecated. Once this feature is shutdown, the API will no longer
-   * return notifications using this method. Any newly added SMS notifications will be ignored. See
-   * Google Calendar SMS notifications to be removed for more information. Notifications are sent
-   * via SMS. This value is read-only and is ignored on inserts and updates. SMS notifications are
-   * only available for G Suite customers.   Required when adding a notification.
+   * The method used to deliver the notification. The possible value is: - "email" - Notifications
+   * are sent via email.   Required when adding a notification.
    * @return value or {@code null} for none
    */
   public java.lang.String getMethod() {
@@ -66,12 +58,8 @@ public final class CalendarNotification extends com.google.api.client.json.Gener
   }
 
   /**
-   * The method used to deliver the notification. Possible values are: - "email" - Notifications are
-   * sent via email.  - "sms" - Deprecated. Once this feature is shutdown, the API will no longer
-   * return notifications using this method. Any newly added SMS notifications will be ignored. See
-   * Google Calendar SMS notifications to be removed for more information. Notifications are sent
-   * via SMS. This value is read-only and is ignored on inserts and updates. SMS notifications are
-   * only available for G Suite customers.   Required when adding a notification.
+   * The method used to deliver the notification. The possible value is: - "email" - Notifications
+   * are sent via email.   Required when adding a notification.
    * @param method method or {@code null} for none
    */
   public CalendarNotification setMethod(java.lang.String method) {

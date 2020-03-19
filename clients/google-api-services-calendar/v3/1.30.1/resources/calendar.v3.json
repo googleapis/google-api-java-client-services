@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"F5McR9eEaw0XRpaO3M9gbIugkbs/GRm3c2ODiqPegIjaMSf2yLVHc90\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/LOAKB2Nh9hEBRsvPxpYLUp0jQMg\"",
  "discoveryVersion": "v1",
  "id": "calendar:v3",
  "name": "calendar",
  "version": "v3",
- "revision": "20191117",
+ "revision": "20200315",
  "title": "Calendar API",
  "description": "Manipulates events and other calendar data.",
  "ownerDomain": "google.com",
@@ -153,7 +153,8 @@
        "description": "The type of the scope. Possible values are:  \n- \"default\" - The public scope. This is the default value. \n- \"user\" - Limits the scope to a single user. \n- \"group\" - Limits the scope to a group. \n- \"domain\" - Limits the scope to a domain.  Note: The permissions granted to the \"default\", or public, scope apply to any user, authenticated or not.",
        "annotations": {
         "required": [
-         "calendar.acl.insert"
+         "calendar.acl.insert",
+         "calendar.acl.update"
         ]
        }
       },
@@ -164,7 +165,8 @@
      },
      "annotations": {
       "required": [
-       "calendar.acl.insert"
+       "calendar.acl.insert",
+       "calendar.acl.update"
       ]
      }
     }
@@ -354,7 +356,7 @@
    "properties": {
     "method": {
      "type": "string",
-     "description": "The method used to deliver the notification. Possible values are:  \n- \"email\" - Notifications are sent via email. \n- \"sms\" - Deprecated. Once this feature is shutdown, the API will no longer return notifications using this method. Any newly added SMS notifications will be ignored. See  Google Calendar SMS notifications to be removed for more information.\nNotifications are sent via SMS. This value is read-only and is ignored on inserts and updates. SMS notifications are only available for G Suite customers.  \nRequired when adding a notification."
+     "description": "The method used to deliver the notification. The possible value is:  \n- \"email\" - Notifications are sent via email.  \nRequired when adding a notification."
     },
     "type": {
      "type": "string",
@@ -1073,7 +1075,7 @@
    "properties": {
     "method": {
      "type": "string",
-     "description": "The method used by this reminder. Possible values are:  \n- \"email\" - Reminders are sent via email. \n- \"sms\" - Deprecated. Once this feature is shutdown, the API will no longer return reminders using this method. Any newly added SMS reminders will be ignored. See  Google Calendar SMS notifications to be removed for more information.\nReminders are sent via SMS. These are only available for G Suite customers. Requests to set SMS reminders for other account types are ignored. \n- \"popup\" - Reminders are sent via a UI popup.  \nRequired when adding a reminder."
+     "description": "The method used by this reminder. Possible values are:  \n- \"email\" - Reminders are sent via email. \n- \"popup\" - Reminders are sent via a UI popup.  \nRequired when adding a reminder."
     },
     "minutes": {
      "type": "integer",

@@ -39,7 +39,7 @@ public final class GoogleDevtoolsRemotebuildbotCommandDurations extends com.goog
   private String dockerPrep;
 
   /**
-   * The timestamp when docker prepartion begins.
+   * The timestamp when docker preparation begins.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,7 +128,7 @@ public final class GoogleDevtoolsRemotebuildbotCommandDurations extends com.goog
   }
 
   /**
-   * The timestamp when docker prepartion begins.
+   * The timestamp when docker preparation begins.
    * @return value or {@code null} for none
    */
   public String getDockerPrepStartTime() {
@@ -136,7 +136,7 @@ public final class GoogleDevtoolsRemotebuildbotCommandDurations extends com.goog
   }
 
   /**
-   * The timestamp when docker prepartion begins.
+   * The timestamp when docker preparation begins.
    * @param dockerPrepStartTime dockerPrepStartTime or {@code null} for none
    */
   public GoogleDevtoolsRemotebuildbotCommandDurations setDockerPrepStartTime(String dockerPrepStartTime) {

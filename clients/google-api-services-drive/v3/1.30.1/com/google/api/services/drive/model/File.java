@@ -326,6 +326,14 @@ public final class File extends com.google.api.client.json.GenericJson {
   private User sharingUser;
 
   /**
+   * Shortcut file details. Only populated for shortcut files, which have the mimeType field set to
+   * application/vnd.google-apps.shortcut.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ShortcutDetails shortcutDetails;
+
+  /**
    * The size of the file's content in bytes. This is only applicable to files with binary content
    * in Google Drive.
    * The value may be {@code null}.
@@ -1156,6 +1164,25 @@ public final class File extends com.google.api.client.json.GenericJson {
    */
   public File setSharingUser(User sharingUser) {
     this.sharingUser = sharingUser;
+    return this;
+  }
+
+  /**
+   * Shortcut file details. Only populated for shortcut files, which have the mimeType field set to
+   * application/vnd.google-apps.shortcut.
+   * @return value or {@code null} for none
+   */
+  public ShortcutDetails getShortcutDetails() {
+    return shortcutDetails;
+  }
+
+  /**
+   * Shortcut file details. Only populated for shortcut files, which have the mimeType field set to
+   * application/vnd.google-apps.shortcut.
+   * @param shortcutDetails shortcutDetails or {@code null} for none
+   */
+  public File setShortcutDetails(ShortcutDetails shortcutDetails) {
+    this.shortcutDetails = shortcutDetails;
     return this;
   }
 
@@ -3091,6 +3118,75 @@ public final class File extends com.google.api.client.json.GenericJson {
       }
 
     }
+  }
+
+  /**
+   * Shortcut file details. Only populated for shortcut files, which have the mimeType field set to
+   * application/vnd.google-apps.shortcut.
+   */
+  public static final class ShortcutDetails extends com.google.api.client.json.GenericJson {
+
+    /**
+     * The ID of the file that this shortcut points to.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String targetId;
+
+    /**
+     * The MIME type of the file that this shortcut points to. The value of this field is a snapshot
+     * of the target's MIME type, captured when the shortcut is created.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String targetMimeType;
+
+    /**
+     * The ID of the file that this shortcut points to.
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getTargetId() {
+      return targetId;
+    }
+
+    /**
+     * The ID of the file that this shortcut points to.
+     * @param targetId targetId or {@code null} for none
+     */
+    public ShortcutDetails setTargetId(java.lang.String targetId) {
+      this.targetId = targetId;
+      return this;
+    }
+
+    /**
+     * The MIME type of the file that this shortcut points to. The value of this field is a snapshot
+     * of the target's MIME type, captured when the shortcut is created.
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getTargetMimeType() {
+      return targetMimeType;
+    }
+
+    /**
+     * The MIME type of the file that this shortcut points to. The value of this field is a snapshot
+     * of the target's MIME type, captured when the shortcut is created.
+     * @param targetMimeType targetMimeType or {@code null} for none
+     */
+    public ShortcutDetails setTargetMimeType(java.lang.String targetMimeType) {
+      this.targetMimeType = targetMimeType;
+      return this;
+    }
+
+    @Override
+    public ShortcutDetails set(String fieldName, Object value) {
+      return (ShortcutDetails) super.set(fieldName, value);
+    }
+
+    @Override
+    public ShortcutDetails clone() {
+      return (ShortcutDetails) super.clone();
+    }
+
   }
 
   /**

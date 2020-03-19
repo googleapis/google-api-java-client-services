@@ -550,8 +550,7 @@ public final class Permission extends com.google.api.client.json.GenericJson {
     private java.lang.Boolean inherited;
 
     /**
-     * The ID of the item from which this permission is inherited. This is an output-only field and is
-     * only populated for members of the shared drive.
+     * The ID of the item from which this permission is inherited. This is an output-only field.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -612,8 +611,7 @@ public final class Permission extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The ID of the item from which this permission is inherited. This is an output-only field and is
-     * only populated for members of the shared drive.
+     * The ID of the item from which this permission is inherited. This is an output-only field.
      * @return value or {@code null} for none
      */
     public java.lang.String getInheritedFrom() {
@@ -621,8 +619,7 @@ public final class Permission extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The ID of the item from which this permission is inherited. This is an output-only field and is
-     * only populated for members of the shared drive.
+     * The ID of the item from which this permission is inherited. This is an output-only field.
      * @param inheritedFrom inheritedFrom or {@code null} for none
      */
     public PermissionDetails setInheritedFrom(java.lang.String inheritedFrom) {

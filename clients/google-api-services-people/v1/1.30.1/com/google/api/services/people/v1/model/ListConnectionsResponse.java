@@ -37,14 +37,16 @@ public final class ListConnectionsResponse extends com.google.api.client.json.Ge
   private java.util.List<Person> connections;
 
   /**
-   * The token that can be used to retrieve the next page of results.
+   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
+   * there are no subsequent pages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * The token that can be used to retrieve changes since the last request.
+   * A token, which can be sent as `sync_token` to retrieve changes since the last request. Request
+   * must set `request_sync_token` to return the sync token.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +85,8 @@ public final class ListConnectionsResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * The token that can be used to retrieve the next page of results.
+   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
+   * there are no subsequent pages.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -91,7 +94,8 @@ public final class ListConnectionsResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * The token that can be used to retrieve the next page of results.
+   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
+   * there are no subsequent pages.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListConnectionsResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -100,7 +104,8 @@ public final class ListConnectionsResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * The token that can be used to retrieve changes since the last request.
+   * A token, which can be sent as `sync_token` to retrieve changes since the last request. Request
+   * must set `request_sync_token` to return the sync token.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextSyncToken() {
@@ -108,7 +113,8 @@ public final class ListConnectionsResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * The token that can be used to retrieve changes since the last request.
+   * A token, which can be sent as `sync_token` to retrieve changes since the last request. Request
+   * must set `request_sync_token` to return the sync token.
    * @param nextSyncToken nextSyncToken or {@code null} for none
    */
   public ListConnectionsResponse setNextSyncToken(java.lang.String nextSyncToken) {

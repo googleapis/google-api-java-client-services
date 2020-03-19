@@ -23,14 +23,14 @@ package com.google.api.services.oauth2;
  */
 public class Oauth2Scopes {
 
-  /** Associate you with your personal info on Google. */
-  public static final String PLUS_ME = "https://www.googleapis.com/auth/plus.me";
-
   /** View your email address. */
   public static final String USERINFO_EMAIL = "https://www.googleapis.com/auth/userinfo.email";
 
   /** See your personal info, including any personal info you've made publicly available. */
   public static final String USERINFO_PROFILE = "https://www.googleapis.com/auth/userinfo.profile";
+
+  /** Associate you with your personal info on Google. */
+  public static final String OPENID = "openid";
 
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
@@ -39,9 +39,9 @@ public class Oauth2Scopes {
    */
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
-    set.add(PLUS_ME);
     set.add(USERINFO_EMAIL);
     set.add(USERINFO_PROFILE);
+    set.add(OPENID);
     return java.util.Collections.unmodifiableSet(set);
   }
 

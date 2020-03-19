@@ -957,6 +957,10 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
         super(Calendar.this, "PUT", REST_PATH, content, com.google.api.services.calendar.model.AclRule.class);
         this.calendarId = com.google.api.client.util.Preconditions.checkNotNull(calendarId, "Required parameter calendarId must be specified.");
         this.ruleId = com.google.api.client.util.Preconditions.checkNotNull(ruleId, "Required parameter ruleId must be specified.");
+        checkRequiredParameter(content, "content");
+        checkRequiredParameter(content.getScope(), "AclRule.getScope()");
+        checkRequiredParameter(content, "content");
+        checkRequiredParameter(content.getScope().getType(), "AclRule.getScope().getType()");
       }
 
       @Override

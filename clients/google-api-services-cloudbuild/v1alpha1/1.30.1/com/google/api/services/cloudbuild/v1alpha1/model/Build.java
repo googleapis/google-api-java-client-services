@@ -123,6 +123,16 @@ public final class Build extends com.google.api.client.json.GenericJson {
   private java.lang.String projectId;
 
   /**
+   * TTL in queue for this build. If provided and the build is enqueued longer than this value, the
+   * build will expire and the build status will be `EXPIRED`.
+   *
+   * The TTL starts ticking from create_time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String queueTtl;
+
+  /**
    * Output only. Results of the build.
    * The value may be {@code null}.
    */
@@ -405,6 +415,29 @@ public final class Build extends com.google.api.client.json.GenericJson {
    */
   public Build setProjectId(java.lang.String projectId) {
     this.projectId = projectId;
+    return this;
+  }
+
+  /**
+   * TTL in queue for this build. If provided and the build is enqueued longer than this value, the
+   * build will expire and the build status will be `EXPIRED`.
+   *
+   * The TTL starts ticking from create_time.
+   * @return value or {@code null} for none
+   */
+  public String getQueueTtl() {
+    return queueTtl;
+  }
+
+  /**
+   * TTL in queue for this build. If provided and the build is enqueued longer than this value, the
+   * build will expire and the build status will be `EXPIRED`.
+   *
+   * The TTL starts ticking from create_time.
+   * @param queueTtl queueTtl or {@code null} for none
+   */
+  public Build setQueueTtl(String queueTtl) {
+    this.queueTtl = queueTtl;
     return this;
   }
 

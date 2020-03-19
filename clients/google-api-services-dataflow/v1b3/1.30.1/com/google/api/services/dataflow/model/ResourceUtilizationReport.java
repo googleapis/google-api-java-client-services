@@ -31,6 +31,13 @@ package com.google.api.services.dataflow.model;
 public final class ResourceUtilizationReport extends com.google.api.client.json.GenericJson {
 
   /**
+   * Per container information. Key: container name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, ResourceUtilizationReport> containers;
+
+  /**
    * CPU utilization samples.
    * The value may be {@code null}.
    */
@@ -41,6 +48,36 @@ public final class ResourceUtilizationReport extends com.google.api.client.json.
     // hack to force ProGuard to consider CPUTime used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(CPUTime.class);
+  }
+
+  /**
+   * Memory utilization samples.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<MemInfo> memoryInfo;
+
+  static {
+    // hack to force ProGuard to consider MemInfo used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(MemInfo.class);
+  }
+
+  /**
+   * Per container information. Key: container name.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, ResourceUtilizationReport> getContainers() {
+    return containers;
+  }
+
+  /**
+   * Per container information. Key: container name.
+   * @param containers containers or {@code null} for none
+   */
+  public ResourceUtilizationReport setContainers(java.util.Map<String, ResourceUtilizationReport> containers) {
+    this.containers = containers;
+    return this;
   }
 
   /**
@@ -57,6 +94,23 @@ public final class ResourceUtilizationReport extends com.google.api.client.json.
    */
   public ResourceUtilizationReport setCpuTime(java.util.List<CPUTime> cpuTime) {
     this.cpuTime = cpuTime;
+    return this;
+  }
+
+  /**
+   * Memory utilization samples.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<MemInfo> getMemoryInfo() {
+    return memoryInfo;
+  }
+
+  /**
+   * Memory utilization samples.
+   * @param memoryInfo memoryInfo or {@code null} for none
+   */
+  public ResourceUtilizationReport setMemoryInfo(java.util.List<MemInfo> memoryInfo) {
+    this.memoryInfo = memoryInfo;
     return this;
   }
 

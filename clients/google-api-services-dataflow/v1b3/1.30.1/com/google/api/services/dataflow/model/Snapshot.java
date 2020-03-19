@@ -37,6 +37,20 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   private String creationTime;
 
   /**
+   * User specified description of the snapshot. Maybe empty.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String description;
+
+  /**
+   * The disk byte size of the snapshot. Only available for snapshots in READY state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long diskSizeBytes;
+
+  /**
    * The unique ID of this snapshot.
    * The value may be {@code null}.
    */
@@ -49,6 +63,19 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String projectId;
+
+  /**
+   * PubSub snapshot metadata.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<PubsubSnapshotMetadata> pubsubMetadata;
+
+  static {
+    // hack to force ProGuard to consider PubsubSnapshotMetadata used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(PubsubSnapshotMetadata.class);
+  }
 
   /**
    * The job this snapshot was created from.
@@ -89,6 +116,40 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * User specified description of the snapshot. Maybe empty.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  /**
+   * User specified description of the snapshot. Maybe empty.
+   * @param description description or {@code null} for none
+   */
+  public Snapshot setDescription(java.lang.String description) {
+    this.description = description;
+    return this;
+  }
+
+  /**
+   * The disk byte size of the snapshot. Only available for snapshots in READY state.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getDiskSizeBytes() {
+    return diskSizeBytes;
+  }
+
+  /**
+   * The disk byte size of the snapshot. Only available for snapshots in READY state.
+   * @param diskSizeBytes diskSizeBytes or {@code null} for none
+   */
+  public Snapshot setDiskSizeBytes(java.lang.Long diskSizeBytes) {
+    this.diskSizeBytes = diskSizeBytes;
+    return this;
+  }
+
+  /**
    * The unique ID of this snapshot.
    * @return value or {@code null} for none
    */
@@ -119,6 +180,23 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
    */
   public Snapshot setProjectId(java.lang.String projectId) {
     this.projectId = projectId;
+    return this;
+  }
+
+  /**
+   * PubSub snapshot metadata.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<PubsubSnapshotMetadata> getPubsubMetadata() {
+    return pubsubMetadata;
+  }
+
+  /**
+   * PubSub snapshot metadata.
+   * @param pubsubMetadata pubsubMetadata or {@code null} for none
+   */
+  public Snapshot setPubsubMetadata(java.util.List<PubsubSnapshotMetadata> pubsubMetadata) {
+    this.pubsubMetadata = pubsubMetadata;
     return this;
   }
 

@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.bigqueryreservation.v1beta1.model;
+package com.google.api.services.bigqueryreservation.v1.model;
 
 /**
  * A reservation is a mechanism used to guarantee slots to users.
@@ -29,13 +29,6 @@ package com.google.api.services.bigqueryreservation.v1beta1.model;
  */
 @SuppressWarnings("javadoc")
 public final class Reservation extends com.google.api.client.json.GenericJson {
-
-  /**
-   * The configuration parameters for the auto scaling feature. Note this is an alpha feature.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private Autoscale autoscale;
 
   /**
    * If false, any query using this reservation will use idle slots from other reservations within
@@ -64,23 +57,6 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long slotCapacity;
-
-  /**
-   * The configuration parameters for the auto scaling feature. Note this is an alpha feature.
-   * @return value or {@code null} for none
-   */
-  public Autoscale getAutoscale() {
-    return autoscale;
-  }
-
-  /**
-   * The configuration parameters for the auto scaling feature. Note this is an alpha feature.
-   * @param autoscale autoscale or {@code null} for none
-   */
-  public Reservation setAutoscale(Autoscale autoscale) {
-    this.autoscale = autoscale;
-    return this;
-  }
 
   /**
    * If false, any query using this reservation will use idle slots from other reservations within

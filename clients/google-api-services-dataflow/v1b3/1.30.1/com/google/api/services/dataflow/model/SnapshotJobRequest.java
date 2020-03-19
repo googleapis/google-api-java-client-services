@@ -30,6 +30,13 @@ package com.google.api.services.dataflow.model;
 public final class SnapshotJobRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * User specified description of the snapshot. Maybe empty.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String description;
+
+  /**
    * The location that contains this job.
    * The value may be {@code null}.
    */
@@ -37,11 +44,35 @@ public final class SnapshotJobRequest extends com.google.api.client.json.Generic
   private java.lang.String location;
 
   /**
+   * If true, perform snapshots for sources which support this.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean snapshotSources;
+
+  /**
    * TTL for the snapshot.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String ttl;
+
+  /**
+   * User specified description of the snapshot. Maybe empty.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  /**
+   * User specified description of the snapshot. Maybe empty.
+   * @param description description or {@code null} for none
+   */
+  public SnapshotJobRequest setDescription(java.lang.String description) {
+    this.description = description;
+    return this;
+  }
 
   /**
    * The location that contains this job.
@@ -57,6 +88,23 @@ public final class SnapshotJobRequest extends com.google.api.client.json.Generic
    */
   public SnapshotJobRequest setLocation(java.lang.String location) {
     this.location = location;
+    return this;
+  }
+
+  /**
+   * If true, perform snapshots for sources which support this.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSnapshotSources() {
+    return snapshotSources;
+  }
+
+  /**
+   * If true, perform snapshots for sources which support this.
+   * @param snapshotSources snapshotSources or {@code null} for none
+   */
+  public SnapshotJobRequest setSnapshotSources(java.lang.Boolean snapshotSources) {
+    this.snapshotSources = snapshotSources;
     return this;
   }
 

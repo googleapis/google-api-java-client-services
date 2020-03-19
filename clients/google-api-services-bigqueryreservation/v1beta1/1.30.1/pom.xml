@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-bigqueryreservation</artifactId>
-  <version>v1beta1-rev20200229-1.30.9</version>
-  <name>BigQuery Reservation API v1beta1-rev20200229-1.30.9</name>
+  <version>v1beta1-rev20200315-1.30.9</version>
+  <name>BigQuery Reservation API v1beta1-rev20200315-1.30.9</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

@@ -2574,17 +2574,33 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
           return this;
         }
 
-        /** Optional. The token of the page to be returned. */
+        /**
+         * Optional. A page token, received from a previous `ListConnections` call. Provide this to
+         * retrieve the subsequent page.
+         *
+         * When paginating, all other parameters provided to `ListConnections` must match the call
+         * that provided the page token.
+         */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** Optional. The token of the page to be returned.
+        /** Optional. A page token, received from a previous `ListConnections` call. Provide this to retrieve
+       the subsequent page.
+
+       When paginating, all other parameters provided to `ListConnections` must match the call that
+       provided the page token.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /** Optional. The token of the page to be returned. */
+        /**
+         * Optional. A page token, received from a previous `ListConnections` call. Provide this to
+         * retrieve the subsequent page.
+         *
+         * When paginating, all other parameters provided to `ListConnections` must match the call
+         * that provided the page token.
+         */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
@@ -2654,27 +2670,27 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * Optional. Whether the response should include a sync token, which can be used to get all
-         * changes since the last request. For subsequent sync requests use the `sync_token` param
-         * instead. Initial sync requests that specify `request_sync_token` have an additional rate
-         * limit.
+         * Optional. Whether the response should include `next_sync_token`, which can be used to get
+         * all changes since the last request. For subsequent sync requests use the `sync_token`
+         * param instead. Initial sync requests that specify `request_sync_token` have an additional
+         * rate limit.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean requestSyncToken;
 
-        /** Optional. Whether the response should include a sync token, which can be used to get all changes
-       since the last request. For subsequent sync requests use the `sync_token` param instead. Initial
-       sync requests that specify `request_sync_token` have an additional rate limit.
+        /** Optional. Whether the response should include `next_sync_token`, which can be used to get all
+       changes since the last request. For subsequent sync requests use the `sync_token` param instead.
+       Initial sync requests that specify `request_sync_token` have an additional rate limit.
          */
         public java.lang.Boolean getRequestSyncToken() {
           return requestSyncToken;
         }
 
         /**
-         * Optional. Whether the response should include a sync token, which can be used to get all
-         * changes since the last request. For subsequent sync requests use the `sync_token` param
-         * instead. Initial sync requests that specify `request_sync_token` have an additional rate
-         * limit.
+         * Optional. Whether the response should include `next_sync_token`, which can be used to get
+         * all changes since the last request. For subsequent sync requests use the `sync_token`
+         * param instead. Initial sync requests that specify `request_sync_token` have an additional
+         * rate limit.
          */
         public List setRequestSyncToken(java.lang.Boolean requestSyncToken) {
           this.requestSyncToken = requestSyncToken;
@@ -2705,25 +2721,34 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * Optional. A sync token returned by a previous call to `people.connections.list`. Only
-         * resources changed since the sync token was created will be returned. Sync requests that
-         * specify `sync_token` have an additional rate limit.
+         * Optional. A sync token, received from a previous `ListConnections` call. Provide this to
+         * retrieve only the resources changed since the last request. Sync requests that specify
+         * `sync_token` have an additional rate limit.
+         *
+         * When syncing, all other parameters provided to `ListConnections` must match the call that
+         * provided the sync token.
          */
         @com.google.api.client.util.Key
         private java.lang.String syncToken;
 
-        /** Optional. A sync token returned by a previous call to `people.connections.list`. Only resources
-       changed since the sync token was created will be returned. Sync requests that specify `sync_token`
-       have an additional rate limit.
+        /** Optional. A sync token, received from a previous `ListConnections` call. Provide this to retrieve
+       only the resources changed since the last request. Sync requests that specify `sync_token` have an
+       additional rate limit.
+
+       When syncing, all other parameters provided to `ListConnections` must match the call that provided
+       the sync token.
          */
         public java.lang.String getSyncToken() {
           return syncToken;
         }
 
         /**
-         * Optional. A sync token returned by a previous call to `people.connections.list`. Only
-         * resources changed since the sync token was created will be returned. Sync requests that
-         * specify `sync_token` have an additional rate limit.
+         * Optional. A sync token, received from a previous `ListConnections` call. Provide this to
+         * retrieve only the resources changed since the last request. Sync requests that specify
+         * `sync_token` have an additional rate limit.
+         *
+         * When syncing, all other parameters provided to `ListConnections` must match the call that
+         * provided the sync token.
          */
         public List setSyncToken(java.lang.String syncToken) {
           this.syncToken = syncToken;

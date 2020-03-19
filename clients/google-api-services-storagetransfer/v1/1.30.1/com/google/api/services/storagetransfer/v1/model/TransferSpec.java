@@ -37,6 +37,13 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
   private AwsS3Data awsS3DataSource;
 
   /**
+   * An Azure Blob Storage data source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AzureBlobStorageData azureBlobStorageDataSource;
+
+  /**
    * A Cloud Storage data sink.
    * The value may be {@code null}.
    */
@@ -89,6 +96,23 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
    */
   public TransferSpec setAwsS3DataSource(AwsS3Data awsS3DataSource) {
     this.awsS3DataSource = awsS3DataSource;
+    return this;
+  }
+
+  /**
+   * An Azure Blob Storage data source.
+   * @return value or {@code null} for none
+   */
+  public AzureBlobStorageData getAzureBlobStorageDataSource() {
+    return azureBlobStorageDataSource;
+  }
+
+  /**
+   * An Azure Blob Storage data source.
+   * @param azureBlobStorageDataSource azureBlobStorageDataSource or {@code null} for none
+   */
+  public TransferSpec setAzureBlobStorageDataSource(AzureBlobStorageData azureBlobStorageDataSource) {
+    this.azureBlobStorageDataSource = azureBlobStorageDataSource;
     return this;
   }
 

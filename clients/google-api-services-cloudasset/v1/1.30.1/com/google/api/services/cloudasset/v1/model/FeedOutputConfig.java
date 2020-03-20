@@ -30,14 +30,14 @@ package com.google.api.services.cloudasset.v1.model;
 public final class FeedOutputConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Destination on Cloud Pubsub.
+   * Destination on Pub/Sub.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PubsubDestination pubsubDestination;
 
   /**
-   * Destination on Cloud Pubsub.
+   * Destination on Pub/Sub.
    * @return value or {@code null} for none
    */
   public PubsubDestination getPubsubDestination() {
@@ -45,7 +45,7 @@ public final class FeedOutputConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Destination on Cloud Pubsub.
+   * Destination on Pub/Sub.
    * @param pubsubDestination pubsubDestination or {@code null} for none
    */
   public FeedOutputConfig setPubsubDestination(PubsubDestination pubsubDestination) {

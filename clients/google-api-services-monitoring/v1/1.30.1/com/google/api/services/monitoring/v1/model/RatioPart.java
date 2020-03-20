@@ -20,8 +20,7 @@ package com.google.api.services.monitoring.v1.model;
  * Describes a query to build the numerator or denominator of a TimeSeriesFilterRatio.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Stackdriver Monitoring API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Cloud Monitoring API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -39,8 +38,8 @@ public final class RatioPart extends com.google.api.client.json.GenericJson {
   private Aggregation aggregation;
 
   /**
-   * Required. The monitoring filter that identifies the metric types, resources, and projects to
-   * query.
+   * Required. The monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) that
+   * identifies the metric types, resources, and projects to query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,8 +65,8 @@ public final class RatioPart extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The monitoring filter that identifies the metric types, resources, and projects to
-   * query.
+   * Required. The monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) that
+   * identifies the metric types, resources, and projects to query.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -75,8 +74,8 @@ public final class RatioPart extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The monitoring filter that identifies the metric types, resources, and projects to
-   * query.
+   * Required. The monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) that
+   * identifies the metric types, resources, and projects to query.
    * @param filter filter or {@code null} for none
    */
   public RatioPart setFilter(java.lang.String filter) {

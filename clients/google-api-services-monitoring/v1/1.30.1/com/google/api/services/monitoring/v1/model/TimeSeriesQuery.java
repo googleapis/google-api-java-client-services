@@ -21,8 +21,7 @@ package com.google.api.services.monitoring.v1.model;
  * Stackdriver metrics API.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Stackdriver Monitoring API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Cloud Monitoring API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -47,7 +46,8 @@ public final class TimeSeriesQuery extends com.google.api.client.json.GenericJso
 
   /**
    * The unit of data contained in fetched time series. If non-empty, this unit will override any
-   * unit that accompanies fetched data. The format is the same as the unit field in
+   * unit that accompanies fetched data. The format is the same as the unit
+   * (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.metricDescriptors) field in
    * MetricDescriptor.
    * The value may be {@code null}.
    */
@@ -90,7 +90,8 @@ public final class TimeSeriesQuery extends com.google.api.client.json.GenericJso
 
   /**
    * The unit of data contained in fetched time series. If non-empty, this unit will override any
-   * unit that accompanies fetched data. The format is the same as the unit field in
+   * unit that accompanies fetched data. The format is the same as the unit
+   * (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.metricDescriptors) field in
    * MetricDescriptor.
    * @return value or {@code null} for none
    */
@@ -100,7 +101,8 @@ public final class TimeSeriesQuery extends com.google.api.client.json.GenericJso
 
   /**
    * The unit of data contained in fetched time series. If non-empty, this unit will override any
-   * unit that accompanies fetched data. The format is the same as the unit field in
+   * unit that accompanies fetched data. The format is the same as the unit
+   * (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.metricDescriptors) field in
    * MetricDescriptor.
    * @param unitOverride unitOverride or {@code null} for none
    */

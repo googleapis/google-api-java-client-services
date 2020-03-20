@@ -22,8 +22,7 @@ package com.google.api.services.monitoring.v1.model;
  * trends of the scorecard's timeseries.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Stackdriver Monitoring API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Cloud Monitoring API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -43,7 +42,7 @@ public final class SparkChartView extends com.google.api.client.json.GenericJson
   private String minAlignmentPeriod;
 
   /**
-   * The type of sparkchart to show in this chartView.
+   * Required. The type of sparkchart to show in this chartView.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +72,7 @@ public final class SparkChartView extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The type of sparkchart to show in this chartView.
+   * Required. The type of sparkchart to show in this chartView.
    * @return value or {@code null} for none
    */
   public java.lang.String getSparkChartType() {
@@ -81,7 +80,7 @@ public final class SparkChartView extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The type of sparkchart to show in this chartView.
+   * Required. The type of sparkchart to show in this chartView.
    * @param sparkChartType sparkChartType or {@code null} for none
    */
   public SparkChartView setSparkChartType(java.lang.String sparkChartType) {

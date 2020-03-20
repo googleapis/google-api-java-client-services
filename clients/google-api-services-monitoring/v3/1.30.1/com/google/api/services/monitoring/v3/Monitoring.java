@@ -20,7 +20,7 @@ package com.google.api.services.monitoring.v3;
  * Service definition for Monitoring (v3).
  *
  * <p>
- * Manages your Stackdriver Monitoring data and configurations. Most projects must be associated with a Stackdriver account, with a few exceptions as noted on the individual method pages. The table entries below are presented in alphabetical order, not in order of common use. For explanations of the concepts found in the table entries, read the Stackdriver Monitoring documentation.
+ * Manages your Cloud Monitoring data and configurations. Most projects must be associated with a Workspace, with a few exceptions as noted on the individual method pages. The table entries below are presented in alphabetical order, not in order of common use. For explanations of the concepts found in the table entries, read the Cloud Monitoring documentation.
  * </p>
  *
  * <p>
@@ -46,7 +46,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Stackdriver Monitoring API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.9 of the Cloud Monitoring API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -2765,7 +2765,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Gets a single metric descriptor. This method does not require a Stackdriver account.
+       * Gets a single metric descriptor. This method does not require a Workspace.
        *
        * Create a request for the method "metricDescriptors.get".
        *
@@ -2792,7 +2792,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+/metricDescriptors/.*$");
 
         /**
-         * Gets a single metric descriptor. This method does not require a Stackdriver account.
+         * Gets a single metric descriptor. This method does not require a Workspace.
          *
          * Create a request for the method "metricDescriptors.get".
          *
@@ -2919,7 +2919,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
+       * Lists metric descriptors that match a filter. This method does not require a Workspace.
        *
        * Create a request for the method "metricDescriptors.list".
        *
@@ -2944,8 +2944,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists metric descriptors that match a filter. This method does not require a Stackdriver
-         * account.
+         * Lists metric descriptors that match a filter. This method does not require a Workspace.
          *
          * Create a request for the method "metricDescriptors.list".
          *
@@ -3163,7 +3162,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
     public class MonitoredResourceDescriptors {
 
       /**
-       * Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
+       * Gets a single monitored resource descriptor. This method does not require a Workspace.
        *
        * Create a request for the method "monitoredResourceDescriptors.get".
        *
@@ -3190,8 +3189,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+/monitoredResourceDescriptors/.*$");
 
         /**
-         * Gets a single monitored resource descriptor. This method does not require a Stackdriver
-         * account.
+         * Gets a single monitored resource descriptor. This method does not require a Workspace.
          *
          * Create a request for the method "monitoredResourceDescriptors.get".
          *
@@ -3319,7 +3317,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
       }
       /**
        * Lists monitored resource descriptors that match a filter. This method does not require a
-       * Stackdriver account.
+       * Workspace.
        *
        * Create a request for the method "monitoredResourceDescriptors.list".
        *
@@ -3345,7 +3343,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Lists monitored resource descriptors that match a filter. This method does not require a
-         * Stackdriver account.
+         * Workspace.
          *
          * Create a request for the method "monitoredResourceDescriptors.list".
          *
@@ -5444,7 +5442,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Lists time series that match a filter. This method does not require a Stackdriver account.
+       * Lists time series that match a filter. This method does not require a Workspace.
        *
        * Create a request for the method "timeSeries.list".
        *
@@ -5469,7 +5467,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists time series that match a filter. This method does not require a Stackdriver account.
+         * Lists time series that match a filter. This method does not require a Workspace.
          *
          * Create a request for the method "timeSeries.list".
          *
@@ -5925,6 +5923,148 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Queries time series using the time series query language. This method does not require a
+       * Workspace.
+       *
+       * Create a request for the method "timeSeries.query".
+       *
+       * This request holds the parameters needed by the monitoring server.  After setting any optional
+       * parameters, call the {@link Query#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The project on which to execute the request. The format is:
+       *        projects/[PROJECT_ID_OR_NUMBER]
+       * @param content the {@link com.google.api.services.monitoring.v3.model.QueryTimeSeriesRequest}
+       * @return the request
+       */
+      public Query query(java.lang.String name, com.google.api.services.monitoring.v3.model.QueryTimeSeriesRequest content) throws java.io.IOException {
+        Query result = new Query(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Query extends MonitoringRequest<com.google.api.services.monitoring.v3.model.QueryTimeSeriesResponse> {
+
+        private static final String REST_PATH = "v3/{+name}/timeSeries:query";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Queries time series using the time series query language. This method does not require a
+         * Workspace.
+         *
+         * Create a request for the method "timeSeries.query".
+         *
+         * This request holds the parameters needed by the the monitoring server.  After setting any
+         * optional parameters, call the {@link Query#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Query#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The project on which to execute the request. The format is:
+       *        projects/[PROJECT_ID_OR_NUMBER]
+         * @param content the {@link com.google.api.services.monitoring.v3.model.QueryTimeSeriesRequest}
+         * @since 1.13
+         */
+        protected Query(java.lang.String name, com.google.api.services.monitoring.v3.model.QueryTimeSeriesRequest content) {
+          super(Monitoring.this, "POST", REST_PATH, content, com.google.api.services.monitoring.v3.model.QueryTimeSeriesResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public Query set$Xgafv(java.lang.String $Xgafv) {
+          return (Query) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Query setAccessToken(java.lang.String accessToken) {
+          return (Query) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Query setAlt(java.lang.String alt) {
+          return (Query) super.setAlt(alt);
+        }
+
+        @Override
+        public Query setCallback(java.lang.String callback) {
+          return (Query) super.setCallback(callback);
+        }
+
+        @Override
+        public Query setFields(java.lang.String fields) {
+          return (Query) super.setFields(fields);
+        }
+
+        @Override
+        public Query setKey(java.lang.String key) {
+          return (Query) super.setKey(key);
+        }
+
+        @Override
+        public Query setOauthToken(java.lang.String oauthToken) {
+          return (Query) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Query setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Query) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Query setQuotaUser(java.lang.String quotaUser) {
+          return (Query) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Query setUploadType(java.lang.String uploadType) {
+          return (Query) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Query setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Query) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The project on which to execute the request. The format is:
+         * projects/[PROJECT_ID_OR_NUMBER]
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The project on which to execute the request. The format is:
+       projects/[PROJECT_ID_OR_NUMBER]
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The project on which to execute the request. The format is:
+         * projects/[PROJECT_ID_OR_NUMBER]
+         */
+        public Query setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Query set(String parameterName, Object value) {
+          return (Query) super.set(parameterName, value);
         }
       }
 
@@ -7240,8 +7380,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
      * This request holds the parameters needed by the monitoring server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. Resource name of the parent containing the listed services, either a project or
-     *        Stackdriver Account (workspace). The formats are:
+     * @param parent Required. Resource name of the parent containing the listed services, either a project or a
+     *        Monitoring Workspace. The formats are:
     projects/[PROJECT_ID_OR_NUMBER]
      *        workspaces/[HOST_PROJECT_ID]
      * @return the request
@@ -7269,8 +7409,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Required. Resource name of the parent containing the listed services, either a project or
-     *        Stackdriver Account (workspace). The formats are:
+       * @param parent Required. Resource name of the parent containing the listed services, either a project or a
+     *        Monitoring Workspace. The formats are:
     projects/[PROJECT_ID_OR_NUMBER]
      *        workspaces/[HOST_PROJECT_ID]
        * @since 1.13
@@ -7351,24 +7491,23 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
       }
 
       /**
-       * Required. Resource name of the parent containing the listed services, either a project or
-       * Stackdriver Account (workspace). The formats are: projects/[PROJECT_ID_OR_NUMBER]
+       * Required. Resource name of the parent containing the listed services, either a project or a
+       * Monitoring Workspace. The formats are: projects/[PROJECT_ID_OR_NUMBER]
        * workspaces/[HOST_PROJECT_ID]
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Required. Resource name of the parent containing the listed services, either a project or
-     Stackdriver Account (workspace). The formats are: projects/[PROJECT_ID_OR_NUMBER]
-     workspaces/[HOST_PROJECT_ID]
+      /** Required. Resource name of the parent containing the listed services, either a project or a
+     Monitoring Workspace. The formats are: projects/[PROJECT_ID_OR_NUMBER] workspaces/[HOST_PROJECT_ID]
        */
       public java.lang.String getParent() {
         return parent;
       }
 
       /**
-       * Required. Resource name of the parent containing the listed services, either a project or
-       * Stackdriver Account (workspace). The formats are: projects/[PROJECT_ID_OR_NUMBER]
+       * Required. Resource name of the parent containing the listed services, either a project or a
+       * Monitoring Workspace. The formats are: projects/[PROJECT_ID_OR_NUMBER]
        * workspaces/[HOST_PROJECT_ID]
        */
       public List setParent(java.lang.String parent) {
@@ -7481,7 +7620,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param name Resource name for this Service. The format is:
-    projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID}
+    projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
      * @param content the {@link com.google.api.services.monitoring.v3.model.Service}
      * @return the request
      */
@@ -7510,7 +7649,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param name Resource name for this Service. The format is:
-    projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID}
+    projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
        * @param content the {@link com.google.api.services.monitoring.v3.model.Service}
        * @since 1.13
        */
@@ -7581,13 +7720,13 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
 
       /**
        * Resource name for this Service. The format is:
-       * projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID}
+       * projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
       /** Resource name for this Service. The format is:
-     projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID}
+     projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
        */
       public java.lang.String getName() {
         return name;
@@ -7595,7 +7734,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
 
       /**
        * Resource name for this Service. The format is:
-       * projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID}
+       * projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
        */
       public Patch setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -8133,8 +8272,10 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Resource name of the parent Service. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
+       * @param parent Required. Resource name of the parent containing the listed SLOs, either a project or a Monitoring
+       *        Workspace. The formats are:
+      projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
+       *        workspaces/[HOST_PROJECT_ID]/services/[SERVICE_ID]
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -8160,8 +8301,10 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Resource name of the parent Service. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
+         * @param parent Required. Resource name of the parent containing the listed SLOs, either a project or a Monitoring
+       *        Workspace. The formats are:
+      projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
+       *        workspaces/[HOST_PROJECT_ID]/services/[SERVICE_ID]
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -8240,22 +8383,27 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Required. Resource name of the parent Service. The format is:
+         * Required. Resource name of the parent containing the listed SLOs, either a project or a
+         * Monitoring Workspace. The formats are:
          * projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
+         * workspaces/[HOST_PROJECT_ID]/services/[SERVICE_ID]
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Resource name of the parent Service. The format is:
-       projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
+        /** Required. Resource name of the parent containing the listed SLOs, either a project or a Monitoring
+       Workspace. The formats are: projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
+       workspaces/[HOST_PROJECT_ID]/services/[SERVICE_ID]
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. Resource name of the parent Service. The format is:
+         * Required. Resource name of the parent containing the listed SLOs, either a project or a
+         * Monitoring Workspace. The formats are:
          * projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
+         * workspaces/[HOST_PROJECT_ID]/services/[SERVICE_ID]
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {

@@ -28,8 +28,7 @@ package com.google.api.services.monitoring.v3.model;
  * meaningless.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Stackdriver Monitoring API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Cloud Monitoring API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -39,7 +38,7 @@ package com.google.api.services.monitoring.v3.model;
 public final class Distribution extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required in the Stackdriver Monitoring API v3. The values for each bucket specified in
+   * Required in the Cloud Monitoring API v3. The values for each bucket specified in
    * bucket_options. The sum of the values in bucketCounts must equal the value in the count field
    * of the Distribution object. The order of the bucket counts follows the numbering schemes
    * described for the three bucket types. The underflow bucket has number 0; the finite buckets, if
@@ -52,7 +51,7 @@ public final class Distribution extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.Long> bucketCounts;
 
   /**
-   * Required in the Stackdriver Monitoring API v3. Defines the histogram bucket boundaries.
+   * Required in the Cloud Monitoring API v3. Defines the histogram bucket boundaries.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +82,7 @@ public final class Distribution extends com.google.api.client.json.GenericJson {
 
   /**
    * If specified, contains the range of the population values. The field must not be present if the
-   * count is zero. This field is presently ignored by the Stackdriver Monitoring API v3.
+   * count is zero. This field is presently ignored by the Cloud Monitoring API v3.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +99,7 @@ public final class Distribution extends com.google.api.client.json.GenericJson {
   private java.lang.Double sumOfSquaredDeviation;
 
   /**
-   * Required in the Stackdriver Monitoring API v3. The values for each bucket specified in
+   * Required in the Cloud Monitoring API v3. The values for each bucket specified in
    * bucket_options. The sum of the values in bucketCounts must equal the value in the count field
    * of the Distribution object. The order of the bucket counts follows the numbering schemes
    * described for the three bucket types. The underflow bucket has number 0; the finite buckets, if
@@ -114,7 +113,7 @@ public final class Distribution extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required in the Stackdriver Monitoring API v3. The values for each bucket specified in
+   * Required in the Cloud Monitoring API v3. The values for each bucket specified in
    * bucket_options. The sum of the values in bucketCounts must equal the value in the count field
    * of the Distribution object. The order of the bucket counts follows the numbering schemes
    * described for the three bucket types. The underflow bucket has number 0; the finite buckets, if
@@ -129,7 +128,7 @@ public final class Distribution extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required in the Stackdriver Monitoring API v3. Defines the histogram bucket boundaries.
+   * Required in the Cloud Monitoring API v3. Defines the histogram bucket boundaries.
    * @return value or {@code null} for none
    */
   public BucketOptions getBucketOptions() {
@@ -137,7 +136,7 @@ public final class Distribution extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required in the Stackdriver Monitoring API v3. Defines the histogram bucket boundaries.
+   * Required in the Cloud Monitoring API v3. Defines the histogram bucket boundaries.
    * @param bucketOptions bucketOptions or {@code null} for none
    */
   public Distribution setBucketOptions(BucketOptions bucketOptions) {
@@ -202,7 +201,7 @@ public final class Distribution extends com.google.api.client.json.GenericJson {
 
   /**
    * If specified, contains the range of the population values. The field must not be present if the
-   * count is zero. This field is presently ignored by the Stackdriver Monitoring API v3.
+   * count is zero. This field is presently ignored by the Cloud Monitoring API v3.
    * @return value or {@code null} for none
    */
   public Range getRange() {
@@ -211,7 +210,7 @@ public final class Distribution extends com.google.api.client.json.GenericJson {
 
   /**
    * If specified, contains the range of the population values. The field must not be present if the
-   * count is zero. This field is presently ignored by the Stackdriver Monitoring API v3.
+   * count is zero. This field is presently ignored by the Cloud Monitoring API v3.
    * @param range range or {@code null} for none
    */
   public Distribution setRange(Range range) {

@@ -21,8 +21,7 @@ package com.google.api.services.monitoring.v1.model;
  * thresholds.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Stackdriver Monitoring API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Cloud Monitoring API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -64,7 +63,7 @@ public final class Scorecard extends com.google.api.client.json.GenericJson {
   private java.util.List<Threshold> thresholds;
 
   /**
-   * Fields for querying time series data from the Stackdriver metrics API.
+   * Required. Fields for querying time series data from the Stackdriver metrics API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -144,7 +143,7 @@ public final class Scorecard extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Fields for querying time series data from the Stackdriver metrics API.
+   * Required. Fields for querying time series data from the Stackdriver metrics API.
    * @return value or {@code null} for none
    */
   public TimeSeriesQuery getTimeSeriesQuery() {
@@ -152,7 +151,7 @@ public final class Scorecard extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Fields for querying time series data from the Stackdriver metrics API.
+   * Required. Fields for querying time series data from the Stackdriver metrics API.
    * @param timeSeriesQuery timeSeriesQuery or {@code null} for none
    */
   public Scorecard setTimeSeriesQuery(TimeSeriesQuery timeSeriesQuery) {

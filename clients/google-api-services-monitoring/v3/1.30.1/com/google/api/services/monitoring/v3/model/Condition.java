@@ -21,8 +21,7 @@ package com.google.api.services.monitoring.v3.model;
  * If a condition evaluates to true, it signifies that something is wrong.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Stackdriver Monitoring API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Cloud Monitoring API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -44,6 +43,14 @@ public final class Condition extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private MetricThreshold conditionThreshold;
+
+  /**
+   * A condition that uses the time series query language format to define alerts. If set, no other
+   * conditions can be present.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TimeSeriesQueryLanguageCondition conditionTimeSeriesQueryLanguage;
 
   /**
    * A short name or phrase used to identify the condition in dashboards, notifications, and
@@ -103,6 +110,25 @@ public final class Condition extends com.google.api.client.json.GenericJson {
    */
   public Condition setConditionThreshold(MetricThreshold conditionThreshold) {
     this.conditionThreshold = conditionThreshold;
+    return this;
+  }
+
+  /**
+   * A condition that uses the time series query language format to define alerts. If set, no other
+   * conditions can be present.
+   * @return value or {@code null} for none
+   */
+  public TimeSeriesQueryLanguageCondition getConditionTimeSeriesQueryLanguage() {
+    return conditionTimeSeriesQueryLanguage;
+  }
+
+  /**
+   * A condition that uses the time series query language format to define alerts. If set, no other
+   * conditions can be present.
+   * @param conditionTimeSeriesQueryLanguage conditionTimeSeriesQueryLanguage or {@code null} for none
+   */
+  public Condition setConditionTimeSeriesQueryLanguage(TimeSeriesQueryLanguageCondition conditionTimeSeriesQueryLanguage) {
+    this.conditionTimeSeriesQueryLanguage = conditionTimeSeriesQueryLanguage;
     return this;
   }
 

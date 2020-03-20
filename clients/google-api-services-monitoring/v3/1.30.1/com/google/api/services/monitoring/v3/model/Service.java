@@ -18,13 +18,11 @@ package com.google.api.services.monitoring.v3.model;
 
 /**
  * A Service is a discrete, autonomous, and network-accessible unit, designed to solve an individual
- * concern (Wikipedia (https://en.wikipedia.org/wiki/Service-orientation)). In Stackdriver
- * Monitoring, a Service acts as the root resource under which operational aspects of the service
- * are accessible.
+ * concern (Wikipedia (https://en.wikipedia.org/wiki/Service-orientation)). In Cloud Monitoring, a
+ * Service acts as the root resource under which operational aspects of the service are accessible.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Stackdriver Monitoring API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Cloud Monitoring API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -77,7 +75,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * Resource name for this Service. The format is:
-   * projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID}
+   * projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -194,7 +192,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * Resource name for this Service. The format is:
-   * projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID}
+   * projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -203,7 +201,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * Resource name for this Service. The format is:
-   * projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID}
+   * projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
    * @param name name or {@code null} for none
    */
   public Service setName(java.lang.String name) {

@@ -9081,6 +9081,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * contains invalid references or if some resources fail to be imported, the FHIR store might be
            * left in a state that violates referential integrity.
            *
+           * The import process does not trigger PubSub notification or BigQuery streaming update, regardless
+           * of how those are configured on the FHIR store.
+           *
            * If a resource with the specified ID already exists, the most recent version of the resource is
            * overwritten without creating a new historical version, regardless of the
            * disable_resource_versioning setting on the FHIR store. If transient failures occur during the
@@ -9156,6 +9159,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * with arbitrary interdependencies without considering grouping or ordering, but if the input
              * data contains invalid references or if some resources fail to be imported, the FHIR store might
              * be left in a state that violates referential integrity.
+             *
+             * The import process does not trigger PubSub notification or BigQuery streaming update,
+             * regardless of how those are configured on the FHIR store.
              *
              * If a resource with the specified ID already exists, the most recent version of the resource is
              * overwritten without creating a new historical version, regardless of the
@@ -12271,7 +12277,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              *
              * Implements the FHIR standard patch interaction
              * ([STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#patch),
-             * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#patch)]).
+             * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#patch)).
              *
              * DSTU2 doesn't define a patch method, but the server supports it in the same way it supports STU3.
              *
@@ -12311,7 +12317,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                *
                * Implements the FHIR standard patch interaction
                * ([STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#patch),
-               * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#patch)]).
+               * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#patch)).
                *
                * DSTU2 doesn't define a patch method, but the server supports it in the same way it supports
                * STU3.
@@ -15190,18 +15196,6 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * label with key `x` as set using the Message.labels map. For example,
                * `labels."priority"="high"`. The operator `:*` can be used to assert the existence
                * of a label. For example, `labels."priority":*`.
-               *
-               * Limitations on conjunctions:
-               *
-               * *  Negation on the patient ID function or the labels field is not supported. For
-               * example, these queries are invalid: `NOT PatientId("123456", "MRN")`, `NOT
-               * labels."tag1":*`, `NOT labels."tag2"="val2"`. *  Conjunction of multiple patient ID
-               * functions is not supported, for example this query is invalid: `PatientId("123456",
-               * "MRN") AND PatientId("456789", "MRN")`. *  Conjunction of multiple labels fields is
-               * also not supported, for example this query is invalid: `labels."tag1":* AND
-               * labels."tag2"="val2"`. *  Conjunction of one patient ID function, one labels field
-               * and conditions on other fields is supported. For example, this query is valid:
-               * `PatientId("123456", "MRN") AND labels."tag1":* AND message_type = "ADT"`.
                */
               @com.google.api.client.util.Key
               private java.lang.String filter;
@@ -15222,17 +15216,6 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              string value of the label with key `x` as set using the Message.labels map. For example,
              `labels."priority"="high"`. The operator `:*` can be used to assert the existence of a label. For
              example, `labels."priority":*`.
-
-             Limitations on conjunctions:
-
-             *  Negation on the patient ID function or the labels field is not supported. For example, these
-             queries are invalid: `NOT PatientId("123456", "MRN")`, `NOT labels."tag1":*`, `NOT
-             labels."tag2"="val2"`. *  Conjunction of multiple patient ID functions is not supported, for
-             example this query is invalid: `PatientId("123456", "MRN") AND PatientId("456789", "MRN")`. *
-             Conjunction of multiple labels fields is also not supported, for example this query is invalid:
-             `labels."tag1":* AND labels."tag2"="val2"`. *  Conjunction of one patient ID function, one labels
-             field and conditions on other fields is supported. For example, this query is valid:
-             `PatientId("123456", "MRN") AND labels."tag1":* AND message_type = "ADT"`.
                */
               public java.lang.String getFilter() {
                 return filter;
@@ -15257,18 +15240,6 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * label with key `x` as set using the Message.labels map. For example,
                * `labels."priority"="high"`. The operator `:*` can be used to assert the existence
                * of a label. For example, `labels."priority":*`.
-               *
-               * Limitations on conjunctions:
-               *
-               * *  Negation on the patient ID function or the labels field is not supported. For
-               * example, these queries are invalid: `NOT PatientId("123456", "MRN")`, `NOT
-               * labels."tag1":*`, `NOT labels."tag2"="val2"`. *  Conjunction of multiple patient ID
-               * functions is not supported, for example this query is invalid: `PatientId("123456",
-               * "MRN") AND PatientId("456789", "MRN")`. *  Conjunction of multiple labels fields is
-               * also not supported, for example this query is invalid: `labels."tag1":* AND
-               * labels."tag2"="val2"`. *  Conjunction of one patient ID function, one labels field
-               * and conditions on other fields is supported. For example, this query is valid:
-               * `PatientId("123456", "MRN") AND labels."tag1":* AND message_type = "ADT"`.
                */
               public List setFilter(java.lang.String filter) {
                 this.filter = filter;
@@ -15580,6 +15551,149 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
          */
         public class Operations {
 
+          /**
+           * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort to
+           * cancel the operation, but success is not guaranteed.  If the server doesn't support this method,
+           * it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or other
+           * methods to check whether the cancellation succeeded or whether the operation completed despite
+           * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+           * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+           * `Code.CANCELLED`.
+           *
+           * Create a request for the method "operations.cancel".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+           *
+           * @param name The name of the operation resource to be cancelled.
+           * @param content the {@link com.google.api.services.healthcare.v1beta1.model.CancelOperationRequest}
+           * @return the request
+           */
+          public Cancel cancel(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.CancelOperationRequest content) throws java.io.IOException {
+            Cancel result = new Cancel(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Cancel extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Empty> {
+
+            private static final String REST_PATH = "v1beta1/{+name}:cancel";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/operations/[^/]+$");
+
+            /**
+             * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort
+             * to cancel the operation, but success is not guaranteed.  If the server doesn't support this
+             * method, it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or
+             * other methods to check whether the cancellation succeeded or whether the operation completed
+             * despite cancellation. On successful cancellation, the operation is not deleted; instead, it
+             * becomes an operation with an Operation.error value with a google.rpc.Status.code of 1,
+             * corresponding to `Code.CANCELLED`.
+             *
+             * Create a request for the method "operations.cancel".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name The name of the operation resource to be cancelled.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.CancelOperationRequest}
+             * @since 1.13
+             */
+            protected Cancel(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.CancelOperationRequest content) {
+              super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.Empty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/operations/[^/]+$");
+              }
+            }
+
+            @Override
+            public Cancel set$Xgafv(java.lang.String $Xgafv) {
+              return (Cancel) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Cancel setAccessToken(java.lang.String accessToken) {
+              return (Cancel) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Cancel setAlt(java.lang.String alt) {
+              return (Cancel) super.setAlt(alt);
+            }
+
+            @Override
+            public Cancel setCallback(java.lang.String callback) {
+              return (Cancel) super.setCallback(callback);
+            }
+
+            @Override
+            public Cancel setFields(java.lang.String fields) {
+              return (Cancel) super.setFields(fields);
+            }
+
+            @Override
+            public Cancel setKey(java.lang.String key) {
+              return (Cancel) super.setKey(key);
+            }
+
+            @Override
+            public Cancel setOauthToken(java.lang.String oauthToken) {
+              return (Cancel) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Cancel) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Cancel setQuotaUser(java.lang.String quotaUser) {
+              return (Cancel) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Cancel setUploadType(java.lang.String uploadType) {
+              return (Cancel) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Cancel) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** The name of the operation resource to be cancelled. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The name of the operation resource to be cancelled.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** The name of the operation resource to be cancelled. */
+            public Cancel setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/operations/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Cancel set(String parameterName, Object value) {
+              return (Cancel) super.set(parameterName, value);
+            }
+          }
           /**
            * Gets the latest state of a long-running operation.  Clients can use this method to poll the
            * operation result at intervals as recommended by the API service.

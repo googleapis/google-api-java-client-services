@@ -30,6 +30,13 @@ package com.google.api.services.oauth2.model;
 public final class Tokeninfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * The access type granted with this token. It can be offline or online.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("access_type")
+  private java.lang.String accessType;
+
+  /**
    * Who is the intended audience for this token. In general the same as issued_to.
    * The value may be {@code null}.
    */
@@ -107,6 +114,23 @@ public final class Tokeninfo extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key("verified_email")
   private java.lang.Boolean verifiedEmail;
+
+  /**
+   * The access type granted with this token. It can be offline or online.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAccessType() {
+    return accessType;
+  }
+
+  /**
+   * The access type granted with this token. It can be offline or online.
+   * @param accessType accessType or {@code null} for none
+   */
+  public Tokeninfo setAccessType(java.lang.String accessType) {
+    this.accessType = accessType;
+    return this;
+  }
 
   /**
    * Who is the intended audience for this token. In general the same as issued_to.

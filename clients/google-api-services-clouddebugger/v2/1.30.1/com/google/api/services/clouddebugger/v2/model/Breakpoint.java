@@ -17,6 +17,9 @@
 package com.google.api.services.clouddebugger.v2.model;
 
 /**
+ * ------------------------------------------------------------------------------ ## Breakpoint (the
+ * resource)
+ *
  * Represents the breakpoint specification, status and results.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

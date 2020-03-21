@@ -9920,7 +9920,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       private java.lang.Long maxResults;
 
       /** The maxResults parameter specifies the maximum number of items that should be returned in the
-     result set. [default: 5] [minimum: 0] [maximum: 50000]
+     result set. [default: 5] [minimum: 0] [maximum: 1000]
        */
       public java.lang.Long getMaxResults() {
         return maxResults;

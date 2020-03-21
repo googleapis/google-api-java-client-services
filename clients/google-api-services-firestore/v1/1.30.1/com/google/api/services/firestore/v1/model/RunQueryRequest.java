@@ -38,7 +38,7 @@ public final class RunQueryRequest extends com.google.api.client.json.GenericJso
   private TransactionOptions newTransaction;
 
   /**
-   * Reads documents as they were at the given time. This may not be older than 60 seconds.
+   * Reads documents as they were at the given time. This may not be older than 270 seconds.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,7 +78,7 @@ public final class RunQueryRequest extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Reads documents as they were at the given time. This may not be older than 60 seconds.
+   * Reads documents as they were at the given time. This may not be older than 270 seconds.
    * @return value or {@code null} for none
    */
   public String getReadTime() {
@@ -86,7 +86,7 @@ public final class RunQueryRequest extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Reads documents as they were at the given time. This may not be older than 60 seconds.
+   * Reads documents as they were at the given time. This may not be older than 270 seconds.
    * @param readTime readTime or {@code null} for none
    */
   public RunQueryRequest setReadTime(String readTime) {

@@ -74,6 +74,22 @@ public final class Write extends com.google.api.client.json.GenericJson {
   private DocumentMask updateMask;
 
   /**
+   * The transforms to perform after update.
+   *
+   * This field can be set only when the operation is `update`. If present, this write is equivalent
+   * to performing `update` and `transform` to the same document atomically and in order.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<FieldTransform> updateTransforms;
+
+  static {
+    // hack to force ProGuard to consider FieldTransform used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(FieldTransform.class);
+  }
+
+  /**
    * An optional precondition on the document.
    *
    * The write will fail if this is set and not met by the target document.
@@ -173,6 +189,29 @@ public final class Write extends com.google.api.client.json.GenericJson {
    */
   public Write setUpdateMask(DocumentMask updateMask) {
     this.updateMask = updateMask;
+    return this;
+  }
+
+  /**
+   * The transforms to perform after update.
+   *
+   * This field can be set only when the operation is `update`. If present, this write is equivalent
+   * to performing `update` and `transform` to the same document atomically and in order.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<FieldTransform> getUpdateTransforms() {
+    return updateTransforms;
+  }
+
+  /**
+   * The transforms to perform after update.
+   *
+   * This field can be set only when the operation is `update`. If present, this write is equivalent
+   * to performing `update` and `transform` to the same document atomically and in order.
+   * @param updateTransforms updateTransforms or {@code null} for none
+   */
+  public Write setUpdateTransforms(java.util.List<FieldTransform> updateTransforms) {
+    this.updateTransforms = updateTransforms;
     return this;
   }
 

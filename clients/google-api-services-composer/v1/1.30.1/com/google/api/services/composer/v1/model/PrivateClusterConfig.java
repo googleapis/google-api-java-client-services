@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.composer.v1beta1.model;
+package com.google.api.services.composer.v1.model;
 
 /**
  * Configuration options for the private GKE cluster in a Cloud Composer environment.
@@ -46,7 +46,7 @@ public final class PrivateClusterConfig extends com.google.api.client.json.Gener
 
   /**
    * Output only. The IP range in CIDR notation to use for the hosted master network. This range is
-   * used for assigning internal IP addresses to the cluster master or set of masters and to the
+   * used for assigning internal IP addresses to the GKE cluster master or set of masters and to the
    * internal load balancer virtual IP. This range must not overlap with any other ranges in use
    * within the cluster's network.
    * The value may be {@code null}.
@@ -92,7 +92,7 @@ public final class PrivateClusterConfig extends com.google.api.client.json.Gener
 
   /**
    * Output only. The IP range in CIDR notation to use for the hosted master network. This range is
-   * used for assigning internal IP addresses to the cluster master or set of masters and to the
+   * used for assigning internal IP addresses to the GKE cluster master or set of masters and to the
    * internal load balancer virtual IP. This range must not overlap with any other ranges in use
    * within the cluster's network.
    * @return value or {@code null} for none
@@ -103,7 +103,7 @@ public final class PrivateClusterConfig extends com.google.api.client.json.Gener
 
   /**
    * Output only. The IP range in CIDR notation to use for the hosted master network. This range is
-   * used for assigning internal IP addresses to the cluster master or set of masters and to the
+   * used for assigning internal IP addresses to the GKE cluster master or set of masters and to the
    * internal load balancer virtual IP. This range must not overlap with any other ranges in use
    * within the cluster's network.
    * @param masterIpv4ReservedRange masterIpv4ReservedRange or {@code null} for none

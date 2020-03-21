@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.composer.v1beta1.model;
+package com.google.api.services.composer.v1.model;
 
 /**
  * The configuration information for configuring a Private IP Cloud Composer environment.
@@ -31,15 +31,15 @@ public final class PrivateEnvironmentConfig extends com.google.api.client.json.G
 
   /**
    * Optional. The CIDR block from which IP range in tenant project will be reserved for Cloud SQL.
-   * Needs to be disjoint from web_server_ipv4_cidr_block
+   * Needs to be disjoint from `web_server_ipv4_cidr_block`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cloudSqlIpv4CidrBlock;
 
   /**
-   * Optional. If `true`, a Private IP Cloud Composer environment is created. If this field is true,
-   * `use_ip_aliases` must be true.
+   * Optional. If `true`, a Private IP Cloud Composer environment is created. If this field is set
+   * to true, `IPAllocationPolicy.use_ip_aliases` must be set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,7 +55,7 @@ public final class PrivateEnvironmentConfig extends com.google.api.client.json.G
 
   /**
    * Optional. The CIDR block from which IP range for web server will be reserved. Needs to be
-   * disjoint from private_cluster_config.master_ipv4_cidr_block and cloud_sql_ipv4_cidr_block.
+   * disjoint from `private_cluster_config.master_ipv4_cidr_block` and `cloud_sql_ipv4_cidr_block`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +70,7 @@ public final class PrivateEnvironmentConfig extends com.google.api.client.json.G
 
   /**
    * Optional. The CIDR block from which IP range in tenant project will be reserved for Cloud SQL.
-   * Needs to be disjoint from web_server_ipv4_cidr_block
+   * Needs to be disjoint from `web_server_ipv4_cidr_block`.
    * @return value or {@code null} for none
    */
   public java.lang.String getCloudSqlIpv4CidrBlock() {
@@ -79,7 +79,7 @@ public final class PrivateEnvironmentConfig extends com.google.api.client.json.G
 
   /**
    * Optional. The CIDR block from which IP range in tenant project will be reserved for Cloud SQL.
-   * Needs to be disjoint from web_server_ipv4_cidr_block
+   * Needs to be disjoint from `web_server_ipv4_cidr_block`.
    * @param cloudSqlIpv4CidrBlock cloudSqlIpv4CidrBlock or {@code null} for none
    */
   public PrivateEnvironmentConfig setCloudSqlIpv4CidrBlock(java.lang.String cloudSqlIpv4CidrBlock) {
@@ -88,8 +88,8 @@ public final class PrivateEnvironmentConfig extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. If `true`, a Private IP Cloud Composer environment is created. If this field is true,
-   * `use_ip_aliases` must be true.
+   * Optional. If `true`, a Private IP Cloud Composer environment is created. If this field is set
+   * to true, `IPAllocationPolicy.use_ip_aliases` must be set to true.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnablePrivateEnvironment() {
@@ -97,8 +97,8 @@ public final class PrivateEnvironmentConfig extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. If `true`, a Private IP Cloud Composer environment is created. If this field is true,
-   * `use_ip_aliases` must be true.
+   * Optional. If `true`, a Private IP Cloud Composer environment is created. If this field is set
+   * to true, `IPAllocationPolicy.use_ip_aliases` must be set to true.
    * @param enablePrivateEnvironment enablePrivateEnvironment or {@code null} for none
    */
   public PrivateEnvironmentConfig setEnablePrivateEnvironment(java.lang.Boolean enablePrivateEnvironment) {
@@ -127,7 +127,7 @@ public final class PrivateEnvironmentConfig extends com.google.api.client.json.G
 
   /**
    * Optional. The CIDR block from which IP range for web server will be reserved. Needs to be
-   * disjoint from private_cluster_config.master_ipv4_cidr_block and cloud_sql_ipv4_cidr_block.
+   * disjoint from `private_cluster_config.master_ipv4_cidr_block` and `cloud_sql_ipv4_cidr_block`.
    * @return value or {@code null} for none
    */
   public java.lang.String getWebServerIpv4CidrBlock() {
@@ -136,7 +136,7 @@ public final class PrivateEnvironmentConfig extends com.google.api.client.json.G
 
   /**
    * Optional. The CIDR block from which IP range for web server will be reserved. Needs to be
-   * disjoint from private_cluster_config.master_ipv4_cidr_block and cloud_sql_ipv4_cidr_block.
+   * disjoint from `private_cluster_config.master_ipv4_cidr_block` and `cloud_sql_ipv4_cidr_block`.
    * @param webServerIpv4CidrBlock webServerIpv4CidrBlock or {@code null} for none
    */
   public PrivateEnvironmentConfig setWebServerIpv4CidrBlock(java.lang.String webServerIpv4CidrBlock) {

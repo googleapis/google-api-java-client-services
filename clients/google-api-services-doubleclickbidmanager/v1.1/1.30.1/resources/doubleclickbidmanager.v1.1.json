@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/KgHbpPlGO3sdIv5ckISvodWARP8\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/6b9y3bDbjgvkpj1FGVAGd_f0qZM\"",
  "discoveryVersion": "v1",
  "id": "doubleclickbidmanager:v1.1",
  "name": "doubleclickbidmanager",
  "canonicalName": "DoubleClick Bid Manager",
  "version": "v1.1",
- "revision": "20200220",
+ "revision": "20200316",
  "title": "DoubleClick Bid Manager API",
  "description": "API for viewing and managing your reports in DoubleClick Bid Manager.",
  "ownerDomain": "google.com",
@@ -2364,6 +2364,7 @@
       "LAST_14_DAYS",
       "LAST_30_DAYS",
       "LAST_365_DAYS",
+      "LAST_60_DAYS",
       "LAST_7_DAYS",
       "LAST_90_DAYS",
       "MONTH_TO_DATE",
@@ -2379,6 +2380,7 @@
       "YEAR_TO_DATE"
      ],
      "enumDescriptions": [
+      "",
       "",
       "",
       "",
@@ -2710,6 +2712,7 @@
       "LAST_14_DAYS",
       "LAST_30_DAYS",
       "LAST_365_DAYS",
+      "LAST_60_DAYS",
       "LAST_7_DAYS",
       "LAST_90_DAYS",
       "MONTH_TO_DATE",
@@ -2725,6 +2728,7 @@
       "YEAR_TO_DATE"
      ],
      "enumDescriptions": [
+      "",
       "",
       "",
       "",
@@ -2862,6 +2866,14 @@
      "path": "query",
      "httpMethod": "POST",
      "description": "Creates a query.",
+     "parameters": {
+      "asynchronous": {
+       "type": "boolean",
+       "description": "If true, tries to run the query asynchronously. Only applicable when the frequency is ONE_TIME.",
+       "default": "false",
+       "location": "query"
+      }
+     },
      "request": {
       "$ref": "Query"
      },
@@ -2948,6 +2960,12 @@
      "httpMethod": "POST",
      "description": "Runs a stored query to generate a report.",
      "parameters": {
+      "asynchronous": {
+       "type": "boolean",
+       "description": "If true, tries to run the query asynchronously.",
+       "default": "false",
+       "location": "query"
+      },
       "queryId": {
        "type": "string",
        "description": "Query ID to run.",

@@ -400,6 +400,56 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
         return (Createquery) super.setUserIp(userIp);
       }
 
+      /**
+       * If true, tries to run the query asynchronously. Only applicable when the frequency is
+       * ONE_TIME.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean asynchronous;
+
+      /** If true, tries to run the query asynchronously. Only applicable when the frequency is ONE_TIME.
+     [default: false]
+       */
+      public java.lang.Boolean getAsynchronous() {
+        return asynchronous;
+      }
+
+      /**
+       * If true, tries to run the query asynchronously. Only applicable when the frequency is
+       * ONE_TIME.
+       */
+      public Createquery setAsynchronous(java.lang.Boolean asynchronous) {
+        this.asynchronous = asynchronous;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * If true, tries to run the query asynchronously. Only applicable when the frequency is ONE_TIME.
+       * </p>
+       */
+      public boolean isAsynchronous() {
+        if (asynchronous == null || asynchronous == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return false;
+        }
+        return asynchronous;
+      }
+
       @Override
       public Createquery set(String parameterName, Object value) {
         return (Createquery) super.set(parameterName, value);
@@ -825,6 +875,49 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
       public Runquery setQueryId(java.lang.Long queryId) {
         this.queryId = queryId;
         return this;
+      }
+
+      /** If true, tries to run the query asynchronously. */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean asynchronous;
+
+      /** If true, tries to run the query asynchronously. [default: false]
+       */
+      public java.lang.Boolean getAsynchronous() {
+        return asynchronous;
+      }
+
+      /** If true, tries to run the query asynchronously. */
+      public Runquery setAsynchronous(java.lang.Boolean asynchronous) {
+        this.asynchronous = asynchronous;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * If true, tries to run the query asynchronously.
+       * </p>
+       */
+      public boolean isAsynchronous() {
+        if (asynchronous == null || asynchronous == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return false;
+        }
+        return asynchronous;
       }
 
       @Override

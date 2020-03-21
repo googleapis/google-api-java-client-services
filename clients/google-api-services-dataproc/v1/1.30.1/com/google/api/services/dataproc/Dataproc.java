@@ -7706,6 +7706,143 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
+         * Submits job to a cluster.
+         *
+         * Create a request for the method "jobs.submitAsOperation".
+         *
+         * This request holds the parameters needed by the dataproc server.  After setting any optional
+         * parameters, call the {@link SubmitAsOperation#execute()} method to invoke the remote operation.
+         *
+         * @param projectId Required. The ID of the Google Cloud Platform project that the job belongs to.
+         * @param region Required. The Dataproc region in which to handle the request.
+         * @param content the {@link com.google.api.services.dataproc.model.SubmitJobRequest}
+         * @return the request
+         */
+        public SubmitAsOperation submitAsOperation(java.lang.String projectId, java.lang.String region, com.google.api.services.dataproc.model.SubmitJobRequest content) throws java.io.IOException {
+          SubmitAsOperation result = new SubmitAsOperation(projectId, region, content);
+          initialize(result);
+          return result;
+        }
+
+        public class SubmitAsOperation extends DataprocRequest<com.google.api.services.dataproc.model.Operation> {
+
+          private static final String REST_PATH = "v1/projects/{projectId}/regions/{region}/jobs:submitAsOperation";
+
+          /**
+           * Submits job to a cluster.
+           *
+           * Create a request for the method "jobs.submitAsOperation".
+           *
+           * This request holds the parameters needed by the the dataproc server.  After setting any
+           * optional parameters, call the {@link SubmitAsOperation#execute()} method to invoke the remote
+           * operation. <p> {@link SubmitAsOperation#initialize(com.google.api.client.googleapis.services.Ab
+           * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param projectId Required. The ID of the Google Cloud Platform project that the job belongs to.
+           * @param region Required. The Dataproc region in which to handle the request.
+           * @param content the {@link com.google.api.services.dataproc.model.SubmitJobRequest}
+           * @since 1.13
+           */
+          protected SubmitAsOperation(java.lang.String projectId, java.lang.String region, com.google.api.services.dataproc.model.SubmitJobRequest content) {
+            super(Dataproc.this, "POST", REST_PATH, content, com.google.api.services.dataproc.model.Operation.class);
+            this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+            this.region = com.google.api.client.util.Preconditions.checkNotNull(region, "Required parameter region must be specified.");
+          }
+
+          @Override
+          public SubmitAsOperation set$Xgafv(java.lang.String $Xgafv) {
+            return (SubmitAsOperation) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public SubmitAsOperation setAccessToken(java.lang.String accessToken) {
+            return (SubmitAsOperation) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public SubmitAsOperation setAlt(java.lang.String alt) {
+            return (SubmitAsOperation) super.setAlt(alt);
+          }
+
+          @Override
+          public SubmitAsOperation setCallback(java.lang.String callback) {
+            return (SubmitAsOperation) super.setCallback(callback);
+          }
+
+          @Override
+          public SubmitAsOperation setFields(java.lang.String fields) {
+            return (SubmitAsOperation) super.setFields(fields);
+          }
+
+          @Override
+          public SubmitAsOperation setKey(java.lang.String key) {
+            return (SubmitAsOperation) super.setKey(key);
+          }
+
+          @Override
+          public SubmitAsOperation setOauthToken(java.lang.String oauthToken) {
+            return (SubmitAsOperation) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public SubmitAsOperation setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (SubmitAsOperation) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public SubmitAsOperation setQuotaUser(java.lang.String quotaUser) {
+            return (SubmitAsOperation) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public SubmitAsOperation setUploadType(java.lang.String uploadType) {
+            return (SubmitAsOperation) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public SubmitAsOperation setUploadProtocol(java.lang.String uploadProtocol) {
+            return (SubmitAsOperation) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The ID of the Google Cloud Platform project that the job belongs to. */
+          @com.google.api.client.util.Key
+          private java.lang.String projectId;
+
+          /** Required. The ID of the Google Cloud Platform project that the job belongs to.
+           */
+          public java.lang.String getProjectId() {
+            return projectId;
+          }
+
+          /** Required. The ID of the Google Cloud Platform project that the job belongs to. */
+          public SubmitAsOperation setProjectId(java.lang.String projectId) {
+            this.projectId = projectId;
+            return this;
+          }
+
+          /** Required. The Dataproc region in which to handle the request. */
+          @com.google.api.client.util.Key
+          private java.lang.String region;
+
+          /** Required. The Dataproc region in which to handle the request.
+           */
+          public java.lang.String getRegion() {
+            return region;
+          }
+
+          /** Required. The Dataproc region in which to handle the request. */
+          public SubmitAsOperation setRegion(java.lang.String region) {
+            this.region = region;
+            return this;
+          }
+
+          @Override
+          public SubmitAsOperation set(String parameterName, Object value) {
+            return (SubmitAsOperation) super.set(parameterName, value);
+          }
+        }
+        /**
          * Returns permissions that a caller has on the specified resource. If the resource does not exist,
          * this will return an empty set of permissions, not a NOT_FOUND error.Note: This operation is
          * designed to be used for building permission-aware UIs and command-line tools, not for

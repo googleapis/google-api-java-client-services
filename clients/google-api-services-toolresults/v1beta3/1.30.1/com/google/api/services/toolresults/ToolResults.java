@@ -63,7 +63,7 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
    *
    * @since 1.7
    */
-  public static final String DEFAULT_SERVICE_PATH = "toolresults/v1beta3/projects/";
+  public static final String DEFAULT_SERVICE_PATH = "toolresults/v1beta3/";
 
   /**
    * The default encoded batch path of the service. This is determined when the library is
@@ -166,7 +166,7 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
 
     public class GetSettings extends ToolResultsRequest<com.google.api.services.toolresults.model.ProjectSettings> {
 
-      private static final String REST_PATH = "{projectId}/settings";
+      private static final String REST_PATH = "projects/{projectId}/settings";
 
       /**
        * Gets the Tool Results settings for a project.
@@ -309,7 +309,7 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
 
     public class InitializeSettings extends ToolResultsRequest<com.google.api.services.toolresults.model.ProjectSettings> {
 
-      private static final String REST_PATH = "{projectId}:initializeSettings";
+      private static final String REST_PATH = "projects/{projectId}:initializeSettings";
 
       /**
        * Creates resources for settings which have not yet been set.
@@ -467,7 +467,7 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
 
       public class Create extends ToolResultsRequest<com.google.api.services.toolresults.model.History> {
 
-        private static final String REST_PATH = "{projectId}/histories";
+        private static final String REST_PATH = "projects/{projectId}/histories";
 
         /**
          * Creates a History.
@@ -616,7 +616,7 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
 
       public class Get extends ToolResultsRequest<com.google.api.services.toolresults.model.History> {
 
-        private static final String REST_PATH = "{projectId}/histories/{historyId}";
+        private static final String REST_PATH = "projects/{projectId}/histories/{historyId}";
 
         /**
          * Gets a History.
@@ -775,7 +775,7 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
 
       public class List extends ToolResultsRequest<com.google.api.services.toolresults.model.ListHistoriesResponse> {
 
-        private static final String REST_PATH = "{projectId}/histories";
+        private static final String REST_PATH = "projects/{projectId}/histories";
 
         /**
          * Lists Histories for a given Project.
@@ -1018,7 +1018,7 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
 
         public class Create extends ToolResultsRequest<com.google.api.services.toolresults.model.Execution> {
 
-          private static final String REST_PATH = "{projectId}/histories/{historyId}/executions";
+          private static final String REST_PATH = "projects/{projectId}/histories/{historyId}/executions";
 
           /**
            * Creates an Execution.
@@ -1198,7 +1198,7 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
 
         public class Get extends ToolResultsRequest<com.google.api.services.toolresults.model.Execution> {
 
-          private static final String REST_PATH = "{projectId}/histories/{historyId}/executions/{executionId}";
+          private static final String REST_PATH = "projects/{projectId}/histories/{historyId}/executions/{executionId}";
 
           /**
            * Gets an Execution.
@@ -1388,7 +1388,7 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
 
         public class List extends ToolResultsRequest<com.google.api.services.toolresults.model.ListExecutionsResponse> {
 
-          private static final String REST_PATH = "{projectId}/histories/{historyId}/executions";
+          private static final String REST_PATH = "projects/{projectId}/histories/{historyId}/executions";
 
           /**
            * Lists Executions for a given History.
@@ -1610,7 +1610,7 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
 
         public class Patch extends ToolResultsRequest<com.google.api.services.toolresults.model.Execution> {
 
-          private static final String REST_PATH = "{projectId}/histories/{historyId}/executions/{executionId}";
+          private static final String REST_PATH = "projects/{projectId}/histories/{historyId}/executions/{executionId}";
 
           /**
            * Updates an existing Execution with the supplied partial entity.
@@ -1803,7 +1803,7 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
 
           public class Get extends ToolResultsRequest<com.google.api.services.toolresults.model.ScreenshotCluster> {
 
-            private static final String REST_PATH = "{projectId}/histories/{historyId}/executions/{executionId}/clusters/{clusterId}";
+            private static final String REST_PATH = "projects/{projectId}/histories/{historyId}/executions/{executionId}/clusters/{clusterId}";
 
             /**
              * Retrieves a single screenshot cluster by its ID
@@ -2017,7 +2017,7 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
 
           public class List extends ToolResultsRequest<com.google.api.services.toolresults.model.ListScreenshotClustersResponse> {
 
-            private static final String REST_PATH = "{projectId}/histories/{historyId}/executions/{executionId}/clusters";
+            private static final String REST_PATH = "projects/{projectId}/histories/{historyId}/executions/{executionId}/clusters";
 
             /**
              * Lists Screenshot Clusters
@@ -2227,7 +2227,7 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
 
           public class Get extends ToolResultsRequest<com.google.api.services.toolresults.model.Environment> {
 
-            private static final String REST_PATH = "{projectId}/histories/{historyId}/executions/{executionId}/environments/{environmentId}";
+            private static final String REST_PATH = "projects/{projectId}/histories/{historyId}/executions/{executionId}/environments/{environmentId}";
 
             /**
              * Gets an Environment.
@@ -2400,7 +2400,7 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
 
           public class List extends ToolResultsRequest<com.google.api.services.toolresults.model.ListEnvironmentsResponse> {
 
-            private static final String REST_PATH = "{projectId}/histories/{historyId}/executions/{executionId}/environments";
+            private static final String REST_PATH = "projects/{projectId}/histories/{historyId}/executions/{executionId}/environments";
 
             /**
              * Lists Environments for a given Execution.
@@ -2596,6 +2596,179 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
         public class Steps {
 
           /**
+           * Lists accessibility clusters for a given Step
+           *
+           * May return any of the following canonical error codes:
+           *
+           * - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the
+           * request is malformed - FAILED_PRECONDITION - if an argument in the request happens to be invalid;
+           * e.g. if the locale format is incorrect - NOT_FOUND - if the containing Step does not exist
+           *
+           * Create a request for the method "steps.accessibilityClusters".
+           *
+           * This request holds the parameters needed by the toolresults server.  After setting any optional
+           * parameters, call the {@link AccessibilityClusters#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name A full resource name of the step. For example, projects/my-
+           *        project/histories/bh.1234567890abcdef/executions/
+           *        1234567890123456789/steps/bs.1234567890abcdef
+          Required.
+           * @return the request
+           */
+          public AccessibilityClusters accessibilityClusters(java.lang.String name) throws java.io.IOException {
+            AccessibilityClusters result = new AccessibilityClusters(name);
+            initialize(result);
+            return result;
+          }
+
+          public class AccessibilityClusters extends ToolResultsRequest<com.google.api.services.toolresults.model.ListStepAccessibilityClustersResponse> {
+
+            private static final String REST_PATH = "{+name}:accessibilityClusters";
+
+            /**
+             * Lists accessibility clusters for a given Step
+             *
+             * May return any of the following canonical error codes:
+             *
+             * - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the
+             * request is malformed - FAILED_PRECONDITION - if an argument in the request happens to be
+             * invalid; e.g. if the locale format is incorrect - NOT_FOUND - if the containing Step does not
+             * exist
+             *
+             * Create a request for the method "steps.accessibilityClusters".
+             *
+             * This request holds the parameters needed by the the toolresults server.  After setting any
+             * optional parameters, call the {@link AccessibilityClusters#execute()} method to invoke the
+             * remote operation. <p> {@link AccessibilityClusters#initialize(com.google.api.client.googleapis.
+             * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param name A full resource name of the step. For example, projects/my-
+           *        project/histories/bh.1234567890abcdef/executions/
+           *        1234567890123456789/steps/bs.1234567890abcdef
+          Required.
+             * @since 1.13
+             */
+            protected AccessibilityClusters(java.lang.String name) {
+              super(ToolResults.this, "GET", REST_PATH, null, com.google.api.services.toolresults.model.ListStepAccessibilityClustersResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public AccessibilityClusters setAlt(java.lang.String alt) {
+              return (AccessibilityClusters) super.setAlt(alt);
+            }
+
+            @Override
+            public AccessibilityClusters setFields(java.lang.String fields) {
+              return (AccessibilityClusters) super.setFields(fields);
+            }
+
+            @Override
+            public AccessibilityClusters setKey(java.lang.String key) {
+              return (AccessibilityClusters) super.setKey(key);
+            }
+
+            @Override
+            public AccessibilityClusters setOauthToken(java.lang.String oauthToken) {
+              return (AccessibilityClusters) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public AccessibilityClusters setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (AccessibilityClusters) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public AccessibilityClusters setQuotaUser(java.lang.String quotaUser) {
+              return (AccessibilityClusters) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public AccessibilityClusters setUserIp(java.lang.String userIp) {
+              return (AccessibilityClusters) super.setUserIp(userIp);
+            }
+
+            /**
+             * A full resource name of the step. For example, projects/my-
+             * project/histories/bh.1234567890abcdef/executions/
+             * 1234567890123456789/steps/bs.1234567890abcdef
+             *
+             * Required.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** A full resource name of the step. For example, projects/my-
+           project/histories/bh.1234567890abcdef/executions/ 1234567890123456789/steps/bs.1234567890abcdef
+
+           Required.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * A full resource name of the step. For example, projects/my-
+             * project/histories/bh.1234567890abcdef/executions/
+             * 1234567890123456789/steps/bs.1234567890abcdef
+             *
+             * Required.
+             */
+            public AccessibilityClusters setName(java.lang.String name) {
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * The accepted format is the canonical Unicode format with hyphen as a delimiter.
+             * Language must be lowercase, Language Script - Capitalized, Region - UPPERCASE. See
+             * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier for details.
+             *
+             * Required.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String locale;
+
+            /** The accepted format is the canonical Unicode format with hyphen as a delimiter. Language must be
+           lowercase, Language Script - Capitalized, Region - UPPERCASE. See
+           http://www.unicode.org/reports/tr35/#Unicode_locale_identifier for details.
+
+           Required.
+             */
+            public java.lang.String getLocale() {
+              return locale;
+            }
+
+            /**
+             * The accepted format is the canonical Unicode format with hyphen as a delimiter.
+             * Language must be lowercase, Language Script - Capitalized, Region - UPPERCASE. See
+             * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier for details.
+             *
+             * Required.
+             */
+            public AccessibilityClusters setLocale(java.lang.String locale) {
+              this.locale = locale;
+              return this;
+            }
+
+            @Override
+            public AccessibilityClusters set(String parameterName, Object value) {
+              return (AccessibilityClusters) super.set(parameterName, value);
+            }
+          }
+          /**
            * Creates a Step.
            *
            * The returned Step will have the id set.
@@ -2625,7 +2798,7 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
 
           public class Create extends ToolResultsRequest<com.google.api.services.toolresults.model.Step> {
 
-            private static final String REST_PATH = "{projectId}/histories/{historyId}/executions/{executionId}/steps";
+            private static final String REST_PATH = "projects/{projectId}/histories/{historyId}/executions/{executionId}/steps";
 
             /**
              * Creates a Step.
@@ -2804,7 +2977,7 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
 
           public class Get extends ToolResultsRequest<com.google.api.services.toolresults.model.Step> {
 
-            private static final String REST_PATH = "{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}";
+            private static final String REST_PATH = "projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}";
 
             /**
              * Gets a Step.
@@ -3019,7 +3192,7 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
 
           public class GetPerfMetricsSummary extends ToolResultsRequest<com.google.api.services.toolresults.model.PerfMetricsSummary> {
 
-            private static final String REST_PATH = "{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfMetricsSummary";
+            private static final String REST_PATH = "projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfMetricsSummary";
 
             /**
              * Retrieves a PerfMetricsSummary.
@@ -3197,7 +3370,7 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
 
           public class List extends ToolResultsRequest<com.google.api.services.toolresults.model.ListStepsResponse> {
 
-            private static final String REST_PATH = "{projectId}/histories/{historyId}/executions/{executionId}/steps";
+            private static final String REST_PATH = "projects/{projectId}/histories/{historyId}/executions/{executionId}/steps";
 
             /**
              * Lists Steps for a given Execution.
@@ -3456,7 +3629,7 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
 
           public class Patch extends ToolResultsRequest<com.google.api.services.toolresults.model.Step> {
 
-            private static final String REST_PATH = "{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}";
+            private static final String REST_PATH = "projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}";
 
             /**
              * Updates an existing Step with the supplied partial entity.
@@ -3700,7 +3873,7 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
 
           public class PublishXunitXmlFiles extends ToolResultsRequest<com.google.api.services.toolresults.model.Step> {
 
-            private static final String REST_PATH = "{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}:publishXunitXmlFiles";
+            private static final String REST_PATH = "projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}:publishXunitXmlFiles";
 
             /**
              * Publish xml files to an existing Step.
@@ -3929,7 +4102,7 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
 
             public class Create extends ToolResultsRequest<com.google.api.services.toolresults.model.PerfMetricsSummary> {
 
-              private static final String REST_PATH = "{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfMetricsSummary";
+              private static final String REST_PATH = "projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfMetricsSummary";
 
               /**
                * Creates a PerfMetricsSummary resource. Returns the existing one if it has already been created.
@@ -4111,7 +4284,7 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
 
             public class Create extends ToolResultsRequest<com.google.api.services.toolresults.model.PerfSampleSeries> {
 
-              private static final String REST_PATH = "{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries";
+              private static final String REST_PATH = "projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries";
 
               /**
                * Creates a PerfSampleSeries.
@@ -4272,7 +4445,7 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
 
             public class Get extends ToolResultsRequest<com.google.api.services.toolresults.model.PerfSampleSeries> {
 
-              private static final String REST_PATH = "{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries/{sampleSeriesId}";
+              private static final String REST_PATH = "projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries/{sampleSeriesId}";
 
               /**
                * Gets a PerfSampleSeries.
@@ -4461,7 +4634,7 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
 
             public class List extends ToolResultsRequest<com.google.api.services.toolresults.model.ListPerfSampleSeriesResponse> {
 
-              private static final String REST_PATH = "{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries";
+              private static final String REST_PATH = "projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries";
 
               /**
                * Lists PerfSampleSeries for a given Step.
@@ -4675,7 +4848,7 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
 
               public class BatchCreate extends ToolResultsRequest<com.google.api.services.toolresults.model.BatchCreatePerfSamplesResponse> {
 
-                private static final String REST_PATH = "{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries/{sampleSeriesId}/samples:batchCreate";
+                private static final String REST_PATH = "projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries/{sampleSeriesId}/samples:batchCreate";
 
                 /**
                  * Creates a batch of PerfSamples - a client can submit multiple batches of Perf Samples through
@@ -4862,7 +5035,7 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
 
               public class List extends ToolResultsRequest<com.google.api.services.toolresults.model.ListPerfSamplesResponse> {
 
-                private static final String REST_PATH = "{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries/{sampleSeriesId}/samples";
+                private static final String REST_PATH = "projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries/{sampleSeriesId}/samples";
 
                 /**
                  * Lists the Performance Samples of a given Sample Series - The list results are sorted by
@@ -5122,7 +5295,7 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
 
             public class Get extends ToolResultsRequest<com.google.api.services.toolresults.model.TestCase> {
 
-              private static final String REST_PATH = "{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/testCases/{testCaseId}";
+              private static final String REST_PATH = "projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/testCases/{testCaseId}";
 
               /**
                * Gets details of a Test Case for a Step. Experimental test cases API. Still in active
@@ -5372,7 +5545,7 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
 
             public class List extends ToolResultsRequest<com.google.api.services.toolresults.model.ListTestCasesResponse> {
 
-              private static final String REST_PATH = "{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/testCases";
+              private static final String REST_PATH = "projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/testCases";
 
               /**
                * Lists Test Cases attached to a Step. Experimental test cases API. Still in active development.
@@ -5674,7 +5847,7 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
 
             public class List extends ToolResultsRequest<com.google.api.services.toolresults.model.ListStepThumbnailsResponse> {
 
-              private static final String REST_PATH = "{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/thumbnails";
+              private static final String REST_PATH = "projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/thumbnails";
 
               /**
                * Lists thumbnails of images attached to a step.

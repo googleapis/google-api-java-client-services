@@ -31,8 +31,9 @@ package com.google.api.services.content.model;
 public final class ReturnPolicyPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Last day for returning the items. In ISO 8601 format. When specifying the return window like
-   * this, set the policy type to "lastReturnDate". Use this for seasonal overrides only.
+   * Required. Last day for returning the items. In ISO 8601 format. When specifying the return
+   * window like this, set the policy type to "lastReturnDate". Use this for seasonal overrides
+   * only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,14 +56,18 @@ public final class ReturnPolicyPolicy extends com.google.api.client.json.Generic
    * minimum of 30 days is required for returns. Exceptions may be made for electronics or non-
    * returnable items such as food, perishables, and living things. A policy of less than 30 days
    * can only be applied to those items.
+   *
+   * Acceptable values are:   - "lastReturnDate"  - "lifetimeReturns"  - "noReturns"  -
+   * "numberOfDaysAfterDelivery"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Last day for returning the items. In ISO 8601 format. When specifying the return window like
-   * this, set the policy type to "lastReturnDate". Use this for seasonal overrides only.
+   * Required. Last day for returning the items. In ISO 8601 format. When specifying the return
+   * window like this, set the policy type to "lastReturnDate". Use this for seasonal overrides
+   * only.
    * @return value or {@code null} for none
    */
   public java.lang.String getLastReturnDate() {
@@ -70,8 +75,9 @@ public final class ReturnPolicyPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * Last day for returning the items. In ISO 8601 format. When specifying the return window like
-   * this, set the policy type to "lastReturnDate". Use this for seasonal overrides only.
+   * Required. Last day for returning the items. In ISO 8601 format. When specifying the return
+   * window like this, set the policy type to "lastReturnDate". Use this for seasonal overrides
+   * only.
    * @param lastReturnDate lastReturnDate or {@code null} for none
    */
   public ReturnPolicyPolicy setLastReturnDate(java.lang.String lastReturnDate) {
@@ -111,6 +117,9 @@ public final class ReturnPolicyPolicy extends com.google.api.client.json.Generic
    * minimum of 30 days is required for returns. Exceptions may be made for electronics or non-
    * returnable items such as food, perishables, and living things. A policy of less than 30 days
    * can only be applied to those items.
+   *
+   * Acceptable values are:   - "lastReturnDate"  - "lifetimeReturns"  - "noReturns"  -
+   * "numberOfDaysAfterDelivery"
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -122,6 +131,9 @@ public final class ReturnPolicyPolicy extends com.google.api.client.json.Generic
    * minimum of 30 days is required for returns. Exceptions may be made for electronics or non-
    * returnable items such as food, perishables, and living things. A policy of less than 30 days
    * can only be applied to those items.
+   *
+   * Acceptable values are:   - "lastReturnDate"  - "lifetimeReturns"  - "noReturns"  -
+   * "numberOfDaysAfterDelivery"
    * @param type type or {@code null} for none
    */
   public ReturnPolicyPolicy setType(java.lang.String type) {

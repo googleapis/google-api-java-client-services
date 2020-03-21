@@ -31,14 +31,14 @@ package com.google.api.services.content.model;
 public final class ReturnAddress extends com.google.api.client.json.GenericJson {
 
   /**
-   * The address.
+   * Required. The address.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ReturnAddressAddress address;
 
   /**
-   * The country of sale where the return address is applicable.
+   * Required. The country of sale where the return address is applicable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,14 +52,15 @@ public final class ReturnAddress extends com.google.api.client.json.GenericJson 
   private java.lang.String kind;
 
   /**
-   * The user-defined label of the return address. For the default address, use the label "default".
+   * Required. The user-defined label of the return address. For the default address, use the label
+   * "default".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String label;
 
   /**
-   * The merchant's contact phone number regarding the return.
+   * Required. The merchant's contact phone number regarding the return.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +74,7 @@ public final class ReturnAddress extends com.google.api.client.json.GenericJson 
   private java.lang.String returnAddressId;
 
   /**
-   * The address.
+   * Required. The address.
    * @return value or {@code null} for none
    */
   public ReturnAddressAddress getAddress() {
@@ -81,7 +82,7 @@ public final class ReturnAddress extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The address.
+   * Required. The address.
    * @param address address or {@code null} for none
    */
   public ReturnAddress setAddress(ReturnAddressAddress address) {
@@ -90,7 +91,7 @@ public final class ReturnAddress extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The country of sale where the return address is applicable.
+   * Required. The country of sale where the return address is applicable.
    * @return value or {@code null} for none
    */
   public java.lang.String getCountry() {
@@ -98,7 +99,7 @@ public final class ReturnAddress extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The country of sale where the return address is applicable.
+   * Required. The country of sale where the return address is applicable.
    * @param country country or {@code null} for none
    */
   public ReturnAddress setCountry(java.lang.String country) {
@@ -124,7 +125,8 @@ public final class ReturnAddress extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The user-defined label of the return address. For the default address, use the label "default".
+   * Required. The user-defined label of the return address. For the default address, use the label
+   * "default".
    * @return value or {@code null} for none
    */
   public java.lang.String getLabel() {
@@ -132,7 +134,8 @@ public final class ReturnAddress extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The user-defined label of the return address. For the default address, use the label "default".
+   * Required. The user-defined label of the return address. For the default address, use the label
+   * "default".
    * @param label label or {@code null} for none
    */
   public ReturnAddress setLabel(java.lang.String label) {
@@ -141,7 +144,7 @@ public final class ReturnAddress extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The merchant's contact phone number regarding the return.
+   * Required. The merchant's contact phone number regarding the return.
    * @return value or {@code null} for none
    */
   public java.lang.String getPhoneNumber() {
@@ -149,7 +152,7 @@ public final class ReturnAddress extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The merchant's contact phone number regarding the return.
+   * Required. The merchant's contact phone number regarding the return.
    * @param phoneNumber phoneNumber or {@code null} for none
    */
   public ReturnAddress setPhoneNumber(java.lang.String phoneNumber) {

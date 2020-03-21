@@ -32,6 +32,9 @@ public final class LinkService extends com.google.api.client.json.GenericJson {
 
   /**
    * Service provided to or by the linked account.
+   *
+   * Acceptable values are:   - "shoppingActionsOrderManagement"  -
+   * "shoppingActionsProductManagement"  - "shoppingAdsProductManagement"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,6 +42,8 @@ public final class LinkService extends com.google.api.client.json.GenericJson {
 
   /**
    * Status of the link
+   *
+   * Acceptable values are:   - "active"  - "inactive"  - "pending"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,6 +51,9 @@ public final class LinkService extends com.google.api.client.json.GenericJson {
 
   /**
    * Service provided to or by the linked account.
+   *
+   * Acceptable values are:   - "shoppingActionsOrderManagement"  -
+   * "shoppingActionsProductManagement"  - "shoppingAdsProductManagement"
    * @return value or {@code null} for none
    */
   public java.lang.String getService() {
@@ -54,6 +62,9 @@ public final class LinkService extends com.google.api.client.json.GenericJson {
 
   /**
    * Service provided to or by the linked account.
+   *
+   * Acceptable values are:   - "shoppingActionsOrderManagement"  -
+   * "shoppingActionsProductManagement"  - "shoppingAdsProductManagement"
    * @param service service or {@code null} for none
    */
   public LinkService setService(java.lang.String service) {
@@ -63,6 +74,8 @@ public final class LinkService extends com.google.api.client.json.GenericJson {
 
   /**
    * Status of the link
+   *
+   * Acceptable values are:   - "active"  - "inactive"  - "pending"
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -71,6 +84,8 @@ public final class LinkService extends com.google.api.client.json.GenericJson {
 
   /**
    * Status of the link
+   *
+   * Acceptable values are:   - "active"  - "inactive"  - "pending"
    * @param status status or {@code null} for none
    */
   public LinkService setStatus(java.lang.String status) {

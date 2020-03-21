@@ -34,6 +34,8 @@ public final class InventoryPickup extends com.google.api.client.json.GenericJso
    * Whether store pickup is available for this offer and whether the pickup option should be shown
    * as buy, reserve, or not supported. Only supported for local inventory. Unless the value is "not
    * supported", must be submitted together with pickupSla.
+   *
+   * Acceptable values are:   - "buy"  - "not supported"  - "reserve"  - "ship to store"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,6 +44,9 @@ public final class InventoryPickup extends com.google.api.client.json.GenericJso
   /**
    * The expected date that an order will be ready for pickup, relative to when the order is placed.
    * Only supported for local inventory. Must be submitted together with pickupMethod.
+   *
+   * Acceptable values are:   - "five day"  - "four day"  - "multi day"  - "multi week"  - "next
+   * day"  - "same day"  - "seven day"  - "six day"  - "three day"  - "two day"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,6 +56,8 @@ public final class InventoryPickup extends com.google.api.client.json.GenericJso
    * Whether store pickup is available for this offer and whether the pickup option should be shown
    * as buy, reserve, or not supported. Only supported for local inventory. Unless the value is "not
    * supported", must be submitted together with pickupSla.
+   *
+   * Acceptable values are:   - "buy"  - "not supported"  - "reserve"  - "ship to store"
    * @return value or {@code null} for none
    */
   public java.lang.String getPickupMethod() {
@@ -61,6 +68,8 @@ public final class InventoryPickup extends com.google.api.client.json.GenericJso
    * Whether store pickup is available for this offer and whether the pickup option should be shown
    * as buy, reserve, or not supported. Only supported for local inventory. Unless the value is "not
    * supported", must be submitted together with pickupSla.
+   *
+   * Acceptable values are:   - "buy"  - "not supported"  - "reserve"  - "ship to store"
    * @param pickupMethod pickupMethod or {@code null} for none
    */
   public InventoryPickup setPickupMethod(java.lang.String pickupMethod) {
@@ -71,6 +80,9 @@ public final class InventoryPickup extends com.google.api.client.json.GenericJso
   /**
    * The expected date that an order will be ready for pickup, relative to when the order is placed.
    * Only supported for local inventory. Must be submitted together with pickupMethod.
+   *
+   * Acceptable values are:   - "five day"  - "four day"  - "multi day"  - "multi week"  - "next
+   * day"  - "same day"  - "seven day"  - "six day"  - "three day"  - "two day"
    * @return value or {@code null} for none
    */
   public java.lang.String getPickupSla() {
@@ -80,6 +92,9 @@ public final class InventoryPickup extends com.google.api.client.json.GenericJso
   /**
    * The expected date that an order will be ready for pickup, relative to when the order is placed.
    * Only supported for local inventory. Must be submitted together with pickupMethod.
+   *
+   * Acceptable values are:   - "five day"  - "four day"  - "multi day"  - "multi week"  - "next
+   * day"  - "same day"  - "seven day"  - "six day"  - "three day"  - "two day"
    * @param pickupSla pickupSla or {@code null} for none
    */
   public InventoryPickup setPickupSla(java.lang.String pickupSla) {

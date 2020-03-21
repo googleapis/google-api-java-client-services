@@ -31,7 +31,7 @@ package com.google.api.services.content.model;
 public final class ReturnPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * The country of sale where the return policy is applicable.
+   * Required. The country of sale where the return policy is applicable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,14 +45,15 @@ public final class ReturnPolicy extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * The user-defined label of the return policy. For the default policy, use the label "default".
+   * Required. The user-defined label of the return policy. For the default policy, use the label
+   * "default".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String label;
 
   /**
-   * The name of the policy as shown in Merchant Center.
+   * Required. The name of the policy as shown in Merchant Center.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +67,7 @@ public final class ReturnPolicy extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> nonFreeReturnReasons;
 
   /**
-   * The policy.
+   * Required. The policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,7 +88,7 @@ public final class ReturnPolicy extends com.google.api.client.json.GenericJson {
   private java.util.List<ReturnPolicySeasonalOverride> seasonalOverrides;
 
   /**
-   * The country of sale where the return policy is applicable.
+   * Required. The country of sale where the return policy is applicable.
    * @return value or {@code null} for none
    */
   public java.lang.String getCountry() {
@@ -95,7 +96,7 @@ public final class ReturnPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The country of sale where the return policy is applicable.
+   * Required. The country of sale where the return policy is applicable.
    * @param country country or {@code null} for none
    */
   public ReturnPolicy setCountry(java.lang.String country) {
@@ -121,7 +122,8 @@ public final class ReturnPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user-defined label of the return policy. For the default policy, use the label "default".
+   * Required. The user-defined label of the return policy. For the default policy, use the label
+   * "default".
    * @return value or {@code null} for none
    */
   public java.lang.String getLabel() {
@@ -129,7 +131,8 @@ public final class ReturnPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user-defined label of the return policy. For the default policy, use the label "default".
+   * Required. The user-defined label of the return policy. For the default policy, use the label
+   * "default".
    * @param label label or {@code null} for none
    */
   public ReturnPolicy setLabel(java.lang.String label) {
@@ -138,7 +141,7 @@ public final class ReturnPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the policy as shown in Merchant Center.
+   * Required. The name of the policy as shown in Merchant Center.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -146,7 +149,7 @@ public final class ReturnPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the policy as shown in Merchant Center.
+   * Required. The name of the policy as shown in Merchant Center.
    * @param name name or {@code null} for none
    */
   public ReturnPolicy setName(java.lang.String name) {
@@ -172,7 +175,7 @@ public final class ReturnPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The policy.
+   * Required. The policy.
    * @return value or {@code null} for none
    */
   public ReturnPolicyPolicy getPolicy() {
@@ -180,7 +183,7 @@ public final class ReturnPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The policy.
+   * Required. The policy.
    * @param policy policy or {@code null} for none
    */
   public ReturnPolicy setPolicy(ReturnPolicyPolicy policy) {

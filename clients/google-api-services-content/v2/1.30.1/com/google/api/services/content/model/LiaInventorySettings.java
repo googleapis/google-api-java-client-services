@@ -46,6 +46,8 @@ public final class LiaInventorySettings extends com.google.api.client.json.Gener
 
   /**
    * The status of the verification contact.
+   *
+   * Acceptable values are:   - "active"  - "inactive"  - "pending"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,6 +55,8 @@ public final class LiaInventorySettings extends com.google.api.client.json.Gener
 
   /**
    * The status of the inventory verification process.
+   *
+   * Acceptable values are:   - "active"  - "inactive"  - "pending"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,6 +98,8 @@ public final class LiaInventorySettings extends com.google.api.client.json.Gener
 
   /**
    * The status of the verification contact.
+   *
+   * Acceptable values are:   - "active"  - "inactive"  - "pending"
    * @return value or {@code null} for none
    */
   public java.lang.String getInventoryVerificationContactStatus() {
@@ -102,6 +108,8 @@ public final class LiaInventorySettings extends com.google.api.client.json.Gener
 
   /**
    * The status of the verification contact.
+   *
+   * Acceptable values are:   - "active"  - "inactive"  - "pending"
    * @param inventoryVerificationContactStatus inventoryVerificationContactStatus or {@code null} for none
    */
   public LiaInventorySettings setInventoryVerificationContactStatus(java.lang.String inventoryVerificationContactStatus) {
@@ -111,6 +119,8 @@ public final class LiaInventorySettings extends com.google.api.client.json.Gener
 
   /**
    * The status of the inventory verification process.
+   *
+   * Acceptable values are:   - "active"  - "inactive"  - "pending"
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -119,6 +129,8 @@ public final class LiaInventorySettings extends com.google.api.client.json.Gener
 
   /**
    * The status of the inventory verification process.
+   *
+   * Acceptable values are:   - "active"  - "inactive"  - "pending"
    * @param status status or {@code null} for none
    */
   public LiaInventorySettings setStatus(java.lang.String status) {

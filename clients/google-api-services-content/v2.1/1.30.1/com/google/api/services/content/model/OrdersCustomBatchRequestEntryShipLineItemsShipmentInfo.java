@@ -39,7 +39,8 @@ public final class OrdersCustomBatchRequestEntryShipLineItemsShipmentInfo extend
   private java.lang.String carrier;
 
   /**
-   * The ID of the shipment. This is assigned by the merchant and is unique to each shipment.
+   * Required. The ID of the shipment. This is assigned by the merchant and is unique to each
+   * shipment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +73,8 @@ public final class OrdersCustomBatchRequestEntryShipLineItemsShipmentInfo extend
   }
 
   /**
-   * The ID of the shipment. This is assigned by the merchant and is unique to each shipment.
+   * Required. The ID of the shipment. This is assigned by the merchant and is unique to each
+   * shipment.
    * @return value or {@code null} for none
    */
   public java.lang.String getShipmentId() {
@@ -80,7 +82,8 @@ public final class OrdersCustomBatchRequestEntryShipLineItemsShipmentInfo extend
   }
 
   /**
-   * The ID of the shipment. This is assigned by the merchant and is unique to each shipment.
+   * Required. The ID of the shipment. This is assigned by the merchant and is unique to each
+   * shipment.
    * @param shipmentId shipmentId or {@code null} for none
    */
   public OrdersCustomBatchRequestEntryShipLineItemsShipmentInfo setShipmentId(java.lang.String shipmentId) {

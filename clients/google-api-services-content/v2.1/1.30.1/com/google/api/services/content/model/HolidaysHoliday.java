@@ -72,6 +72,9 @@ public final class HolidaysHoliday extends com.google.api.client.json.GenericJso
 
   /**
    * The holiday type. Always present.
+   *
+   * Acceptable values are:   - "Christmas"  - "Easter"  - "Father's Day"  - "Halloween"  -
+   * "Independence Day (USA)"  - "Mother's Day"  - "Thanksgiving"  - "Valentine's Day"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -174,6 +177,9 @@ public final class HolidaysHoliday extends com.google.api.client.json.GenericJso
 
   /**
    * The holiday type. Always present.
+   *
+   * Acceptable values are:   - "Christmas"  - "Easter"  - "Father's Day"  - "Halloween"  -
+   * "Independence Day (USA)"  - "Mother's Day"  - "Thanksgiving"  - "Valentine's Day"
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -182,6 +188,9 @@ public final class HolidaysHoliday extends com.google.api.client.json.GenericJso
 
   /**
    * The holiday type. Always present.
+   *
+   * Acceptable values are:   - "Christmas"  - "Easter"  - "Father's Day"  - "Halloween"  -
+   * "Independence Day (USA)"  - "Mother's Day"  - "Thanksgiving"  - "Valentine's Day"
    * @param type type or {@code null} for none
    */
   public HolidaysHoliday setType(java.lang.String type) {

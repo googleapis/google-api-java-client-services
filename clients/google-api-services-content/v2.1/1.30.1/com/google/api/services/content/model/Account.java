@@ -64,7 +64,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
   private AccountGoogleMyBusinessLink googleMyBusinessLink;
 
   /**
-   * Merchant Center account ID.
+   * Required for update. Merchant Center account ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -78,7 +78,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * Display name for the account.
+   * Required. Display name for the account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -193,7 +193,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Merchant Center account ID.
+   * Required for update. Merchant Center account ID.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -201,7 +201,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Merchant Center account ID.
+   * Required for update. Merchant Center account ID.
    * @param id id or {@code null} for none
    */
   public Account setId(java.math.BigInteger id) {
@@ -227,7 +227,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Display name for the account.
+   * Required. Display name for the account.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -235,7 +235,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Display name for the account.
+   * Required. Display name for the account.
    * @param name name or {@code null} for none
    */
   public Account setName(java.lang.String name) {

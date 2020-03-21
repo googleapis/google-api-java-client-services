@@ -46,6 +46,8 @@ public final class UnitInvoiceTaxLine extends com.google.api.client.json.Generic
 
   /**
    * [required] Type of the tax.
+   *
+   * Acceptable values are:   - "otherFee"  - "otherFeeTax"  - "sales"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,6 +89,8 @@ public final class UnitInvoiceTaxLine extends com.google.api.client.json.Generic
 
   /**
    * [required] Type of the tax.
+   *
+   * Acceptable values are:   - "otherFee"  - "otherFeeTax"  - "sales"
    * @return value or {@code null} for none
    */
   public java.lang.String getTaxType() {
@@ -95,6 +99,8 @@ public final class UnitInvoiceTaxLine extends com.google.api.client.json.Generic
 
   /**
    * [required] Type of the tax.
+   *
+   * Acceptable values are:   - "otherFee"  - "otherFeeTax"  - "sales"
    * @param taxType taxType or {@code null} for none
    */
   public UnitInvoiceTaxLine setTaxType(java.lang.String taxType) {

@@ -61,6 +61,10 @@ public final class OrdersCancelLineItemRequest extends com.google.api.client.jso
 
   /**
    * The reason for the cancellation.
+   *
+   * Acceptable values are:   - "customerInitiatedCancel"  - "invalidCoupon"  -
+   * "malformedShippingAddress"  - "noInventory"  - "other"  - "priceError"  - "shippingPriceError"
+   * - "taxError"  - "undeliverableShippingAddress"  - "unsupportedPoBoxAddress"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,6 +149,10 @@ public final class OrdersCancelLineItemRequest extends com.google.api.client.jso
 
   /**
    * The reason for the cancellation.
+   *
+   * Acceptable values are:   - "customerInitiatedCancel"  - "invalidCoupon"  -
+   * "malformedShippingAddress"  - "noInventory"  - "other"  - "priceError"  - "shippingPriceError"
+   * - "taxError"  - "undeliverableShippingAddress"  - "unsupportedPoBoxAddress"
    * @return value or {@code null} for none
    */
   public java.lang.String getReason() {
@@ -153,6 +161,10 @@ public final class OrdersCancelLineItemRequest extends com.google.api.client.jso
 
   /**
    * The reason for the cancellation.
+   *
+   * Acceptable values are:   - "customerInitiatedCancel"  - "invalidCoupon"  -
+   * "malformedShippingAddress"  - "noInventory"  - "other"  - "priceError"  - "shippingPriceError"
+   * - "taxError"  - "undeliverableShippingAddress"  - "unsupportedPoBoxAddress"
    * @param reason reason or {@code null} for none
    */
   public OrdersCancelLineItemRequest setReason(java.lang.String reason) {

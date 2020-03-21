@@ -33,6 +33,8 @@ public final class DatafeedFormat extends com.google.api.client.json.GenericJson
   /**
    * Delimiter for the separation of values in a delimiter-separated values feed. If not specified,
    * the delimiter will be auto-detected. Ignored for non-DSV data feeds.
+   *
+   * Acceptable values are:   - "pipe"  - "tab"  - "tilde"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,6 +43,8 @@ public final class DatafeedFormat extends com.google.api.client.json.GenericJson
   /**
    * Character encoding scheme of the data feed. If not specified, the encoding will be auto-
    * detected.
+   *
+   * Acceptable values are:   - "latin-1"  - "utf-16be"  - "utf-16le"  - "utf-8"  - "windows-1252"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,6 +53,8 @@ public final class DatafeedFormat extends com.google.api.client.json.GenericJson
   /**
    * Specifies how double quotes are interpreted. If not specified, the mode will be auto-detected.
    * Ignored for non-DSV data feeds.
+   *
+   * Acceptable values are:   - "normal character"  - "value quoting"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,6 +63,8 @@ public final class DatafeedFormat extends com.google.api.client.json.GenericJson
   /**
    * Delimiter for the separation of values in a delimiter-separated values feed. If not specified,
    * the delimiter will be auto-detected. Ignored for non-DSV data feeds.
+   *
+   * Acceptable values are:   - "pipe"  - "tab"  - "tilde"
    * @return value or {@code null} for none
    */
   public java.lang.String getColumnDelimiter() {
@@ -66,6 +74,8 @@ public final class DatafeedFormat extends com.google.api.client.json.GenericJson
   /**
    * Delimiter for the separation of values in a delimiter-separated values feed. If not specified,
    * the delimiter will be auto-detected. Ignored for non-DSV data feeds.
+   *
+   * Acceptable values are:   - "pipe"  - "tab"  - "tilde"
    * @param columnDelimiter columnDelimiter or {@code null} for none
    */
   public DatafeedFormat setColumnDelimiter(java.lang.String columnDelimiter) {
@@ -76,6 +86,8 @@ public final class DatafeedFormat extends com.google.api.client.json.GenericJson
   /**
    * Character encoding scheme of the data feed. If not specified, the encoding will be auto-
    * detected.
+   *
+   * Acceptable values are:   - "latin-1"  - "utf-16be"  - "utf-16le"  - "utf-8"  - "windows-1252"
    * @return value or {@code null} for none
    */
   public java.lang.String getFileEncoding() {
@@ -85,6 +97,8 @@ public final class DatafeedFormat extends com.google.api.client.json.GenericJson
   /**
    * Character encoding scheme of the data feed. If not specified, the encoding will be auto-
    * detected.
+   *
+   * Acceptable values are:   - "latin-1"  - "utf-16be"  - "utf-16le"  - "utf-8"  - "windows-1252"
    * @param fileEncoding fileEncoding or {@code null} for none
    */
   public DatafeedFormat setFileEncoding(java.lang.String fileEncoding) {
@@ -95,6 +109,8 @@ public final class DatafeedFormat extends com.google.api.client.json.GenericJson
   /**
    * Specifies how double quotes are interpreted. If not specified, the mode will be auto-detected.
    * Ignored for non-DSV data feeds.
+   *
+   * Acceptable values are:   - "normal character"  - "value quoting"
    * @return value or {@code null} for none
    */
   public java.lang.String getQuotingMode() {
@@ -104,6 +120,8 @@ public final class DatafeedFormat extends com.google.api.client.json.GenericJson
   /**
    * Specifies how double quotes are interpreted. If not specified, the mode will be auto-detected.
    * Ignored for non-DSV data feeds.
+   *
+   * Acceptable values are:   - "normal character"  - "value quoting"
    * @param quotingMode quotingMode or {@code null} for none
    */
   public DatafeedFormat setQuotingMode(java.lang.String quotingMode) {

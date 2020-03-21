@@ -39,6 +39,8 @@ public final class Order extends com.google.api.client.json.GenericJson {
 
   /**
    * Deprecated.
+   *
+   * Acceptable values are:   - "googleExpress"  - "purchasesOnGoogle"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,6 +111,9 @@ public final class Order extends com.google.api.client.json.GenericJson {
 
   /**
    * The status of the payment.
+   *
+   * Acceptable values are:   - "paymentCaptured"  - "paymentRejected"  - "paymentSecured"  -
+   * "pendingAuthorization"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -183,6 +188,9 @@ public final class Order extends com.google.api.client.json.GenericJson {
 
   /**
    * Deprecated. Shipping details are provided with line items instead.
+   *
+   * Acceptable values are:   - "economy"  - "expedited"  - "oneDay"  - "sameDay"  - "standard"  -
+   * "twoDay"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -190,6 +198,9 @@ public final class Order extends com.google.api.client.json.GenericJson {
 
   /**
    * The status of the order.
+   *
+   * Acceptable values are:   - "canceled"  - "delivered"  - "inProgress"  - "partiallyDelivered"  -
+   * "partiallyReturned"  - "partiallyShipped"  - "pendingShipment"  - "returned"  - "shipped"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -197,6 +208,8 @@ public final class Order extends com.google.api.client.json.GenericJson {
 
   /**
    * The party responsible for collecting and remitting taxes.
+   *
+   * Acceptable values are:   - "marketplaceFacilitator"  - "merchant"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -221,6 +234,8 @@ public final class Order extends com.google.api.client.json.GenericJson {
 
   /**
    * Deprecated.
+   *
+   * Acceptable values are:   - "googleExpress"  - "purchasesOnGoogle"
    * @return value or {@code null} for none
    */
   public java.lang.String getChannelType() {
@@ -229,6 +244,8 @@ public final class Order extends com.google.api.client.json.GenericJson {
 
   /**
    * Deprecated.
+   *
+   * Acceptable values are:   - "googleExpress"  - "purchasesOnGoogle"
    * @param channelType channelType or {@code null} for none
    */
   public Order setChannelType(java.lang.String channelType) {
@@ -391,6 +408,9 @@ public final class Order extends com.google.api.client.json.GenericJson {
 
   /**
    * The status of the payment.
+   *
+   * Acceptable values are:   - "paymentCaptured"  - "paymentRejected"  - "paymentSecured"  -
+   * "pendingAuthorization"
    * @return value or {@code null} for none
    */
   public java.lang.String getPaymentStatus() {
@@ -399,6 +419,9 @@ public final class Order extends com.google.api.client.json.GenericJson {
 
   /**
    * The status of the payment.
+   *
+   * Acceptable values are:   - "paymentCaptured"  - "paymentRejected"  - "paymentSecured"  -
+   * "pendingAuthorization"
    * @param paymentStatus paymentStatus or {@code null} for none
    */
   public Order setPaymentStatus(java.lang.String paymentStatus) {
@@ -563,6 +586,9 @@ public final class Order extends com.google.api.client.json.GenericJson {
 
   /**
    * Deprecated. Shipping details are provided with line items instead.
+   *
+   * Acceptable values are:   - "economy"  - "expedited"  - "oneDay"  - "sameDay"  - "standard"  -
+   * "twoDay"
    * @return value or {@code null} for none
    */
   public java.lang.String getShippingOption() {
@@ -571,6 +597,9 @@ public final class Order extends com.google.api.client.json.GenericJson {
 
   /**
    * Deprecated. Shipping details are provided with line items instead.
+   *
+   * Acceptable values are:   - "economy"  - "expedited"  - "oneDay"  - "sameDay"  - "standard"  -
+   * "twoDay"
    * @param shippingOption shippingOption or {@code null} for none
    */
   public Order setShippingOption(java.lang.String shippingOption) {
@@ -580,6 +609,9 @@ public final class Order extends com.google.api.client.json.GenericJson {
 
   /**
    * The status of the order.
+   *
+   * Acceptable values are:   - "canceled"  - "delivered"  - "inProgress"  - "partiallyDelivered"  -
+   * "partiallyReturned"  - "partiallyShipped"  - "pendingShipment"  - "returned"  - "shipped"
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -588,6 +620,9 @@ public final class Order extends com.google.api.client.json.GenericJson {
 
   /**
    * The status of the order.
+   *
+   * Acceptable values are:   - "canceled"  - "delivered"  - "inProgress"  - "partiallyDelivered"  -
+   * "partiallyReturned"  - "partiallyShipped"  - "pendingShipment"  - "returned"  - "shipped"
    * @param status status or {@code null} for none
    */
   public Order setStatus(java.lang.String status) {
@@ -597,6 +632,8 @@ public final class Order extends com.google.api.client.json.GenericJson {
 
   /**
    * The party responsible for collecting and remitting taxes.
+   *
+   * Acceptable values are:   - "marketplaceFacilitator"  - "merchant"
    * @return value or {@code null} for none
    */
   public java.lang.String getTaxCollector() {
@@ -605,6 +642,8 @@ public final class Order extends com.google.api.client.json.GenericJson {
 
   /**
    * The party responsible for collecting and remitting taxes.
+   *
+   * Acceptable values are:   - "marketplaceFacilitator"  - "merchant"
    * @param taxCollector taxCollector or {@code null} for none
    */
   public Order setTaxCollector(java.lang.String taxCollector) {

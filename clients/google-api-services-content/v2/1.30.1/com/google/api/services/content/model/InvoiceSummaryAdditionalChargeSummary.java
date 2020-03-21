@@ -39,6 +39,8 @@ public final class InvoiceSummaryAdditionalChargeSummary extends com.google.api.
 
   /**
    * [required] Type of the additional charge.
+   *
+   * Acceptable values are:   - "shipping"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,6 +65,8 @@ public final class InvoiceSummaryAdditionalChargeSummary extends com.google.api.
 
   /**
    * [required] Type of the additional charge.
+   *
+   * Acceptable values are:   - "shipping"
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -71,6 +75,8 @@ public final class InvoiceSummaryAdditionalChargeSummary extends com.google.api.
 
   /**
    * [required] Type of the additional charge.
+   *
+   * Acceptable values are:   - "shipping"
    * @param type type or {@code null} for none
    */
   public InvoiceSummaryAdditionalChargeSummary setType(java.lang.String type) {

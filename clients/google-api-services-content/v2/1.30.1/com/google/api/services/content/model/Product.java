@@ -76,6 +76,9 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * Target age group of the item.
+   *
+   * Acceptable values are:   - "adult"  - "infant"  - "kids"  - "newborn"  - "toddler"  -
+   * "youngAdult"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,6 +93,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * Availability status of the item.
+   *
+   * Acceptable values are:   - "in stock"  - "out of stock"  - "preorder"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,7 +115,9 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String brand;
 
   /**
-   * The item's channel (online or local).
+   * Required. The item's channel (online or local).
+   *
+   * Acceptable values are:   - "local"  - "online"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,13 +132,15 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * Condition or state of the item.
+   *
+   * Acceptable values are:   - "local"  - "online"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String condition;
 
   /**
-   * The two-letter ISO 639-1 language code for the item.
+   * Required. The two-letter ISO 639-1 language code for the item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -259,6 +268,9 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * The energy efficiency class as defined in EU directive 2010/30/EU.
+   *
+   * Acceptable values are:   - "A"  - "A+"  - "A++"  - "A+++"  - "B"  - "C"  - "D"  - "E"  - "F"  -
+   * "G"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -275,6 +287,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * Target gender of the item.
+   *
+   * Acceptable values are:   - "female"  - "male"  - "unisex"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -371,6 +385,9 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * The energy efficiency class as defined in EU directive 2010/30/EU.
+   *
+   * Acceptable values are:   - "A"  - "A+"  - "A++"  - "A+++"  - "B"  - "C"  - "D"  - "E"  - "F"  -
+   * "G"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -385,6 +402,9 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * The energy efficiency class as defined in EU directive 2010/30/EU.
+   *
+   * Acceptable values are:   - "A"  - "A+"  - "A++"  - "A+++"  - "B"  - "C"  - "D"  - "E"  - "F"  -
+   * "G"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -419,10 +439,10 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.Long multipack;
 
   /**
-   * A unique identifier for the item. Leading and trailing whitespaces are stripped and multiple
-   * whitespaces are replaced by a single whitespace upon submission. Only valid unicode characters
-   * are accepted. See the products feed specification for details. Note: Content API methods that
-   * operate on products take the REST ID of the product, not this identifier.
+   * Required. A unique identifier for the item. Leading and trailing whitespaces are stripped and
+   * multiple whitespaces are replaced by a single whitespace upon submission. Only valid unicode
+   * characters are accepted. See the products feed specification for details. Note: Content API
+   * methods that operate on products take the REST ID of the product, not this identifier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -529,6 +549,9 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * System in which the size is specified. Recommended for apparel items.
+   *
+   * Acceptable values are:   - "AU"  - "BR"  - "CN"  - "DE"  - "EU"  - "FR"  - "IT"  - "JP"  -
+   * "MEX"  - "UK"  - "US"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -536,6 +559,9 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * The cut of the item. Recommended for apparel items.
+   *
+   * Acceptable values are:   - "big and tall"  - "maternity"  - "oversize"  - "petite"  - "plus"  -
+   * "regular"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -551,13 +577,15 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * The source of the offer, i.e., how the offer was created.
+   *
+   * Acceptable values are:   - "api"  - "crawl"  - "feed"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String source;
 
   /**
-   * The CLDR territory code for the item.
+   * Required. The CLDR territory code for the item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -717,6 +745,9 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * Target age group of the item.
+   *
+   * Acceptable values are:   - "adult"  - "infant"  - "kids"  - "newborn"  - "toddler"  -
+   * "youngAdult"
    * @return value or {@code null} for none
    */
   public java.lang.String getAgeGroup() {
@@ -725,6 +756,9 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * Target age group of the item.
+   *
+   * Acceptable values are:   - "adult"  - "infant"  - "kids"  - "newborn"  - "toddler"  -
+   * "youngAdult"
    * @param ageGroup ageGroup or {@code null} for none
    */
   public Product setAgeGroup(java.lang.String ageGroup) {
@@ -751,6 +785,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * Availability status of the item.
+   *
+   * Acceptable values are:   - "in stock"  - "out of stock"  - "preorder"
    * @return value or {@code null} for none
    */
   public java.lang.String getAvailability() {
@@ -759,6 +795,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * Availability status of the item.
+   *
+   * Acceptable values are:   - "in stock"  - "out of stock"  - "preorder"
    * @param availability availability or {@code null} for none
    */
   public Product setAvailability(java.lang.String availability) {
@@ -801,7 +839,9 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The item's channel (online or local).
+   * Required. The item's channel (online or local).
+   *
+   * Acceptable values are:   - "local"  - "online"
    * @return value or {@code null} for none
    */
   public java.lang.String getChannel() {
@@ -809,7 +849,9 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The item's channel (online or local).
+   * Required. The item's channel (online or local).
+   *
+   * Acceptable values are:   - "local"  - "online"
    * @param channel channel or {@code null} for none
    */
   public Product setChannel(java.lang.String channel) {
@@ -836,6 +878,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * Condition or state of the item.
+   *
+   * Acceptable values are:   - "local"  - "online"
    * @return value or {@code null} for none
    */
   public java.lang.String getCondition() {
@@ -844,6 +888,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * Condition or state of the item.
+   *
+   * Acceptable values are:   - "local"  - "online"
    * @param condition condition or {@code null} for none
    */
   public Product setCondition(java.lang.String condition) {
@@ -852,7 +898,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The two-letter ISO 639-1 language code for the item.
+   * Required. The two-letter ISO 639-1 language code for the item.
    * @return value or {@code null} for none
    */
   public java.lang.String getContentLanguage() {
@@ -860,7 +906,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The two-letter ISO 639-1 language code for the item.
+   * Required. The two-letter ISO 639-1 language code for the item.
    * @param contentLanguage contentLanguage or {@code null} for none
    */
   public Product setContentLanguage(java.lang.String contentLanguage) {
@@ -1131,6 +1177,9 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * The energy efficiency class as defined in EU directive 2010/30/EU.
+   *
+   * Acceptable values are:   - "A"  - "A+"  - "A++"  - "A+++"  - "B"  - "C"  - "D"  - "E"  - "F"  -
+   * "G"
    * @return value or {@code null} for none
    */
   public java.lang.String getEnergyEfficiencyClass() {
@@ -1139,6 +1188,9 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * The energy efficiency class as defined in EU directive 2010/30/EU.
+   *
+   * Acceptable values are:   - "A"  - "A+"  - "A++"  - "A+++"  - "B"  - "C"  - "D"  - "E"  - "F"  -
+   * "G"
    * @param energyEfficiencyClass energyEfficiencyClass or {@code null} for none
    */
   public Product setEnergyEfficiencyClass(java.lang.String energyEfficiencyClass) {
@@ -1169,6 +1221,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * Target gender of the item.
+   *
+   * Acceptable values are:   - "female"  - "male"  - "unisex"
    * @return value or {@code null} for none
    */
   public java.lang.String getGender() {
@@ -1177,6 +1231,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * Target gender of the item.
+   *
+   * Acceptable values are:   - "female"  - "male"  - "unisex"
    * @param gender gender or {@code null} for none
    */
   public Product setGender(java.lang.String gender) {
@@ -1400,6 +1456,9 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * The energy efficiency class as defined in EU directive 2010/30/EU.
+   *
+   * Acceptable values are:   - "A"  - "A+"  - "A++"  - "A+++"  - "B"  - "C"  - "D"  - "E"  - "F"  -
+   * "G"
    * @return value or {@code null} for none
    */
   public java.lang.String getMaxEnergyEfficiencyClass() {
@@ -1408,6 +1467,9 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * The energy efficiency class as defined in EU directive 2010/30/EU.
+   *
+   * Acceptable values are:   - "A"  - "A+"  - "A++"  - "A+++"  - "B"  - "C"  - "D"  - "E"  - "F"  -
+   * "G"
    * @param maxEnergyEfficiencyClass maxEnergyEfficiencyClass or {@code null} for none
    */
   public Product setMaxEnergyEfficiencyClass(java.lang.String maxEnergyEfficiencyClass) {
@@ -1434,6 +1496,9 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * The energy efficiency class as defined in EU directive 2010/30/EU.
+   *
+   * Acceptable values are:   - "A"  - "A+"  - "A++"  - "A+++"  - "B"  - "C"  - "D"  - "E"  - "F"  -
+   * "G"
    * @return value or {@code null} for none
    */
   public java.lang.String getMinEnergyEfficiencyClass() {
@@ -1442,6 +1507,9 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * The energy efficiency class as defined in EU directive 2010/30/EU.
+   *
+   * Acceptable values are:   - "A"  - "A+"  - "A++"  - "A+++"  - "B"  - "C"  - "D"  - "E"  - "F"  -
+   * "G"
    * @param minEnergyEfficiencyClass minEnergyEfficiencyClass or {@code null} for none
    */
   public Product setMinEnergyEfficiencyClass(java.lang.String minEnergyEfficiencyClass) {
@@ -1518,10 +1586,10 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A unique identifier for the item. Leading and trailing whitespaces are stripped and multiple
-   * whitespaces are replaced by a single whitespace upon submission. Only valid unicode characters
-   * are accepted. See the products feed specification for details. Note: Content API methods that
-   * operate on products take the REST ID of the product, not this identifier.
+   * Required. A unique identifier for the item. Leading and trailing whitespaces are stripped and
+   * multiple whitespaces are replaced by a single whitespace upon submission. Only valid unicode
+   * characters are accepted. See the products feed specification for details. Note: Content API
+   * methods that operate on products take the REST ID of the product, not this identifier.
    * @return value or {@code null} for none
    */
   public java.lang.String getOfferId() {
@@ -1529,10 +1597,10 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A unique identifier for the item. Leading and trailing whitespaces are stripped and multiple
-   * whitespaces are replaced by a single whitespace upon submission. Only valid unicode characters
-   * are accepted. See the products feed specification for details. Note: Content API methods that
-   * operate on products take the REST ID of the product, not this identifier.
+   * Required. A unique identifier for the item. Leading and trailing whitespaces are stripped and
+   * multiple whitespaces are replaced by a single whitespace upon submission. Only valid unicode
+   * characters are accepted. See the products feed specification for details. Note: Content API
+   * methods that operate on products take the REST ID of the product, not this identifier.
    * @param offerId offerId or {@code null} for none
    */
   public Product setOfferId(java.lang.String offerId) {
@@ -1782,6 +1850,9 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * System in which the size is specified. Recommended for apparel items.
+   *
+   * Acceptable values are:   - "AU"  - "BR"  - "CN"  - "DE"  - "EU"  - "FR"  - "IT"  - "JP"  -
+   * "MEX"  - "UK"  - "US"
    * @return value or {@code null} for none
    */
   public java.lang.String getSizeSystem() {
@@ -1790,6 +1861,9 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * System in which the size is specified. Recommended for apparel items.
+   *
+   * Acceptable values are:   - "AU"  - "BR"  - "CN"  - "DE"  - "EU"  - "FR"  - "IT"  - "JP"  -
+   * "MEX"  - "UK"  - "US"
    * @param sizeSystem sizeSystem or {@code null} for none
    */
   public Product setSizeSystem(java.lang.String sizeSystem) {
@@ -1799,6 +1873,9 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * The cut of the item. Recommended for apparel items.
+   *
+   * Acceptable values are:   - "big and tall"  - "maternity"  - "oversize"  - "petite"  - "plus"  -
+   * "regular"
    * @return value or {@code null} for none
    */
   public java.lang.String getSizeType() {
@@ -1807,6 +1884,9 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * The cut of the item. Recommended for apparel items.
+   *
+   * Acceptable values are:   - "big and tall"  - "maternity"  - "oversize"  - "petite"  - "plus"  -
+   * "regular"
    * @param sizeType sizeType or {@code null} for none
    */
   public Product setSizeType(java.lang.String sizeType) {
@@ -1835,6 +1915,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * The source of the offer, i.e., how the offer was created.
+   *
+   * Acceptable values are:   - "api"  - "crawl"  - "feed"
    * @return value or {@code null} for none
    */
   public java.lang.String getSource() {
@@ -1843,6 +1925,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * The source of the offer, i.e., how the offer was created.
+   *
+   * Acceptable values are:   - "api"  - "crawl"  - "feed"
    * @param source source or {@code null} for none
    */
   public Product setSource(java.lang.String source) {
@@ -1851,7 +1935,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The CLDR territory code for the item.
+   * Required. The CLDR territory code for the item.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetCountry() {
@@ -1859,7 +1943,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The CLDR territory code for the item.
+   * Required. The CLDR territory code for the item.
    * @param targetCountry targetCountry or {@code null} for none
    */
   public Product setTargetCountry(java.lang.String targetCountry) {

@@ -61,6 +61,12 @@ public final class OrdersRefundRequest extends com.google.api.client.json.Generi
 
   /**
    * The reason for the refund.
+   *
+   * Acceptable values are:   - "adjustment"  - "courtesyAdjustment"  - "customerCanceled"  -
+   * "customerDiscretionaryReturn"  - "deliveredLateByCarrier"  - "feeAdjustment"  -
+   * "lateShipmentCredit"  - "noInventory"  - "other"  - "priceError"  - "productArrivedDamaged"  -
+   * "productNotAsDescribed"  - "shippingCostAdjustment"  - "taxAdjustment"  -
+   * "undeliverableShippingAddress"  - "wrongProductShipped"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,6 +151,12 @@ public final class OrdersRefundRequest extends com.google.api.client.json.Generi
 
   /**
    * The reason for the refund.
+   *
+   * Acceptable values are:   - "adjustment"  - "courtesyAdjustment"  - "customerCanceled"  -
+   * "customerDiscretionaryReturn"  - "deliveredLateByCarrier"  - "feeAdjustment"  -
+   * "lateShipmentCredit"  - "noInventory"  - "other"  - "priceError"  - "productArrivedDamaged"  -
+   * "productNotAsDescribed"  - "shippingCostAdjustment"  - "taxAdjustment"  -
+   * "undeliverableShippingAddress"  - "wrongProductShipped"
    * @return value or {@code null} for none
    */
   public java.lang.String getReason() {
@@ -153,6 +165,12 @@ public final class OrdersRefundRequest extends com.google.api.client.json.Generi
 
   /**
    * The reason for the refund.
+   *
+   * Acceptable values are:   - "adjustment"  - "courtesyAdjustment"  - "customerCanceled"  -
+   * "customerDiscretionaryReturn"  - "deliveredLateByCarrier"  - "feeAdjustment"  -
+   * "lateShipmentCredit"  - "noInventory"  - "other"  - "priceError"  - "productArrivedDamaged"  -
+   * "productNotAsDescribed"  - "shippingCostAdjustment"  - "taxAdjustment"  -
+   * "undeliverableShippingAddress"  - "wrongProductShipped"
    * @param reason reason or {@code null} for none
    */
   public OrdersRefundRequest setReason(java.lang.String reason) {

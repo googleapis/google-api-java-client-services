@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/jKW_lZ9iDZgQCWmVQG-RLYTf3MU\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/FCbogHEaDYtIb38u_EKa1gG2PAw\"",
  "discoveryVersion": "v1",
  "id": "content:v2",
  "name": "content",
  "canonicalName": "Shopping Content",
  "version": "v2",
- "revision": "20200226",
+ "revision": "20200310",
  "title": "Content API for Shopping",
  "description": "Manages product items, inventory, and Merchant Center accounts for Google Shopping.",
  "ownerDomain": "google.com",
@@ -103,7 +103,7 @@
     },
     "id": {
      "type": "string",
-     "description": "Merchant Center account ID.",
+     "description": "Required for update. Merchant Center account ID.",
      "format": "uint64",
      "annotations": {
       "required": [
@@ -118,7 +118,7 @@
     },
     "name": {
      "type": "string",
-     "description": "Display name for the account.",
+     "description": "Required. Display name for the account.",
      "annotations": {
       "required": [
        "content.accounts.insert",
@@ -191,7 +191,7 @@
     },
     "status": {
      "type": "string",
-     "description": "Status of the link between this Merchant Center account and the AdWords account. Upon retrieval, it represents the actual status of the link and can be either active if it was approved in Google AdWords or pending if it's pending approval. Upon insertion, it represents the intended status of the link. Re-uploading a link with status active when it's still pending or with status pending when it's already active will have no effect: the status will remain unchanged. Re-uploading a link with deprecated status inactive is equivalent to not submitting the link at all and will delete the link if it was active or cancel the link request if it was pending."
+     "description": "Status of the link between this Merchant Center account and the AdWords account. Upon retrieval, it represents the actual status of the link and can be either active if it was approved in Google AdWords or pending if it's pending approval. Upon insertion, it represents the intended status of the link. Re-uploading a link with status active when it's still pending or with status pending when it's already active will have no effect: the status will remain unchanged. Re-uploading a link with deprecated status inactive is equivalent to not submitting the link at all and will delete the link if it was active or cancel the link request if it was pending.\n\nAcceptable values are:  \n- \"active\" \n- \"pending\""
     }
    }
   },
@@ -241,7 +241,7 @@
     },
     "status": {
      "type": "string",
-     "description": "Status of the link between this Merchant Center account and the GMB account."
+     "description": "Status of the link between this Merchant Center account and the GMB account.\n\nAcceptable values are:  \n- \"active\" \n- \"pending\""
     }
    }
   },
@@ -328,7 +328,7 @@
     },
     "severity": {
      "type": "string",
-     "description": "Severity of the issue."
+     "description": "Severity of the issue.\n\nAcceptable values are:  \n- \"critical\" \n- \"error\" \n- \"suggestion\""
     },
     "title": {
      "type": "string",
@@ -372,7 +372,8 @@
      "format": "uint32"
     },
     "severity": {
-     "type": "string"
+     "type": "string",
+     "description": "Acceptable values are:  \n- \"critical\" \n- \"error\" \n- \"suggestion\""
     },
     "submittedValue": {
      "type": "string"
@@ -445,7 +446,7 @@
    "properties": {
     "channel": {
      "type": "string",
-     "description": "The channel the data applies to."
+     "description": "The channel the data applies to.\n\nAcceptable values are:  \n- \"local\" \n- \"online\""
     },
     "country": {
      "type": "string",
@@ -501,7 +502,7 @@
    "properties": {
     "accountId": {
      "type": "string",
-     "description": "The ID of the account to which these account tax settings belong.",
+     "description": "Required. The ID of the account to which these account tax settings belong.",
      "format": "uint64",
      "annotations": {
       "required": [
@@ -534,7 +535,7 @@
     },
     "locationId": {
      "type": "string",
-     "description": "State (or province) is which the tax is applicable, described by its location ID (also called criteria ID).",
+     "description": "Required. State (or province) is which the tax is applicable, described by its location ID (also called criteria ID).",
      "format": "uint64",
      "annotations": {
       "required": [
@@ -672,7 +673,7 @@
     },
     "method": {
      "type": "string",
-     "description": "The method of the batch entry."
+     "description": "The method of the batch entry.\n\nAcceptable values are:  \n- \"claimWebsite\" \n- \"delete\" \n- \"get\" \n- \"insert\" \n- \"link\" \n- \"update\""
     },
     "overwrite": {
      "type": "boolean",
@@ -686,11 +687,11 @@
    "properties": {
     "action": {
      "type": "string",
-     "description": "Action to perform for this link. The \"request\" action is only available to select merchants."
+     "description": "Action to perform for this link. The \"request\" action is only available to select merchants.\n\nAcceptable values are:  \n- \"approve\" \n- \"remove\" \n- \"request\""
     },
     "linkType": {
      "type": "string",
-     "description": "Type of the link between the two accounts."
+     "description": "Type of the link between the two accounts.\n\nAcceptable values are:  \n- \"channelPartner\" \n- \"eCommercePlatform\""
     },
     "linkedAccountId": {
      "type": "string",
@@ -741,7 +742,7 @@
     },
     "linkStatus": {
      "type": "string",
-     "description": "Deprecated. This field is never set."
+     "description": "Deprecated. This field is never set.\n\nAcceptable values are:  \n- \"active\" \n- \"inactive\" \n- \"pending\""
     }
    }
   },
@@ -751,11 +752,11 @@
    "properties": {
     "action": {
      "type": "string",
-     "description": "Action to perform for this link. The \"request\" action is only available to select merchants."
+     "description": "Action to perform for this link. The \"request\" action is only available to select merchants.\n\nAcceptable values are:  \n- \"approve\" \n- \"remove\" \n- \"request\""
     },
     "linkType": {
      "type": "string",
-     "description": "Type of the link between the two accounts."
+     "description": "Type of the link between the two accounts.\n\nAcceptable values are:  \n- \"channelPartner\" \n- \"eCommercePlatform\""
     },
     "linkedAccountId": {
      "type": "string",
@@ -837,7 +838,7 @@
     },
     "method": {
      "type": "string",
-     "description": "The method (get)."
+     "description": "The method of the batch entry.\n\nAcceptable values are:  \n- \"get\""
     }
    }
   },
@@ -938,7 +939,8 @@
      "format": "uint64"
     },
     "method": {
-     "type": "string"
+     "type": "string",
+     "description": "The method of the batch entry.\n\nAcceptable values are:  \n- \"get\" \n- \"update\""
     }
    }
   },
@@ -1094,7 +1096,7 @@
     },
     "type": {
      "type": "string",
-     "description": "The type of the attribute."
+     "description": "The type of the attribute.\n\nAcceptable values are:  \n- \"boolean\" \n- \"datetimerange\" \n- \"float\" \n- \"group\" \n- \"int\" \n- \"price\" \n- \"text\" \n- \"time\" \n- \"url\""
     },
     "unit": {
      "type": "string",
@@ -1133,7 +1135,7 @@
     },
     "reasonCode": {
      "type": "string",
-     "description": "Code of the return reason."
+     "description": "Code of the return reason.\n\nAcceptable values are:  \n- \"betterPriceFound\" \n- \"changedMind\" \n- \"damagedOrDefectiveItem\" \n- \"didNotMatchDescription\" \n- \"doesNotFit\" \n- \"expiredItem\" \n- \"incorrectItemReceived\" \n- \"noLongerNeeded\" \n- \"notSpecified\" \n- \"orderedWrongItem\" \n- \"other\" \n- \"qualityNotExpected\" \n- \"receivedTooLate\" \n- \"undeliverable\""
     }
    }
   },
@@ -1172,7 +1174,7 @@
     },
     "contentType": {
      "type": "string",
-     "description": "The type of data feed. For product inventory feeds, only feeds for local stores, not online stores, are supported.",
+     "description": "Required. The type of data feed. For product inventory feeds, only feeds for local stores, not online stores, are supported.\n\nAcceptable values are:  \n- \"local products\" \n- \"product inventory\" \n- \"products\"",
      "annotations": {
       "required": [
        "content.datafeeds.insert",
@@ -1186,7 +1188,7 @@
     },
     "fileName": {
      "type": "string",
-     "description": "The filename of the feed. All feeds must have a unique file name.",
+     "description": "Required. The filename of the feed. All feeds must have a unique file name.",
      "annotations": {
       "required": [
        "content.datafeeds.insert",
@@ -1200,7 +1202,7 @@
     },
     "id": {
      "type": "string",
-     "description": "The ID of the data feed.",
+     "description": "Required for update. The ID of the data feed.",
      "format": "int64",
      "annotations": {
       "required": [
@@ -1222,7 +1224,7 @@
     },
     "name": {
      "type": "string",
-     "description": "A descriptive name of the data feed.",
+     "description": "Required for insert. A descriptive name of the data feed.",
      "annotations": {
       "required": [
        "content.datafeeds.insert"
@@ -1284,7 +1286,7 @@
     },
     "weekday": {
      "type": "string",
-     "description": "The day of the week the feed file should be fetched."
+     "description": "The day of the week the feed file should be fetched.\n\nAcceptable values are:  \n- \"monday\" \n- \"tuesday\" \n- \"wednesday\" \n- \"thursday\" \n- \"friday\" \n- \"saturday\" \n- \"sunday\""
     }
    }
   },
@@ -1294,15 +1296,15 @@
    "properties": {
     "columnDelimiter": {
      "type": "string",
-     "description": "Delimiter for the separation of values in a delimiter-separated values feed. If not specified, the delimiter will be auto-detected. Ignored for non-DSV data feeds."
+     "description": "Delimiter for the separation of values in a delimiter-separated values feed. If not specified, the delimiter will be auto-detected. Ignored for non-DSV data feeds.\n\nAcceptable values are:  \n- \"pipe\" \n- \"tab\" \n- \"tilde\""
     },
     "fileEncoding": {
      "type": "string",
-     "description": "Character encoding scheme of the data feed. If not specified, the encoding will be auto-detected."
+     "description": "Character encoding scheme of the data feed. If not specified, the encoding will be auto-detected.\n\nAcceptable values are:  \n- \"latin-1\" \n- \"utf-16be\" \n- \"utf-16le\" \n- \"utf-8\" \n- \"windows-1252\""
     },
     "quotingMode": {
      "type": "string",
-     "description": "Specifies how double quotes are interpreted. If not specified, the mode will be auto-detected. Ignored for non-DSV data feeds."
+     "description": "Specifies how double quotes are interpreted. If not specified, the mode will be auto-detected. Ignored for non-DSV data feeds.\n\nAcceptable values are:  \n- \"normal character\" \n- \"value quoting\""
     }
    }
   },
@@ -1352,7 +1354,7 @@
     },
     "processingStatus": {
      "type": "string",
-     "description": "The processing status of the feed."
+     "description": "The processing status of the feed.\n\nAcceptable values are:  \n- \"\"failure\": The feed could not be processed or all items had errors.\" \n- \"in progress\": The feed is being processed. \n- \"none\": The feed has not yet been processed. For example, a feed that has never been uploaded will have this processing status. \n- \"success\": The feed was processed successfully, though some items might have had errors."
     },
     "warnings": {
      "type": "array",
@@ -1476,7 +1478,8 @@
      "format": "uint64"
     },
     "method": {
-     "type": "string"
+     "type": "string",
+     "description": "The method of the batch entry.\n\nAcceptable values are:  \n- \"delete\" \n- \"fetchNow\" \n- \"get\" \n- \"insert\" \n- \"update\""
     }
    }
   },
@@ -1592,7 +1595,8 @@
      "format": "uint64"
     },
     "method": {
-     "type": "string"
+     "type": "string",
+     "description": "The method of the batch entry.\n\nAcceptable values are:  \n- \"get\""
     }
    }
   },
@@ -1883,7 +1887,7 @@
     },
     "type": {
      "type": "string",
-     "description": "The holiday type. Always present."
+     "description": "The holiday type. Always present.\n\nAcceptable values are:  \n- \"Christmas\" \n- \"Easter\" \n- \"Father's Day\" \n- \"Halloween\" \n- \"Independence Day (USA)\" \n- \"Mother's Day\" \n- \"Thanksgiving\" \n- \"Valentine's Day\""
     }
    }
   },
@@ -1908,7 +1912,7 @@
    "properties": {
     "availability": {
      "type": "string",
-     "description": "The availability of the product."
+     "description": "The availability of the product.\n\nAcceptable values are:  \n- \"in stock\" \n- \"out of stock\" \n- \"preorder\""
     },
     "customLabel0": {
      "type": "string",
@@ -2062,11 +2066,11 @@
    "properties": {
     "pickupMethod": {
      "type": "string",
-     "description": "Whether store pickup is available for this offer and whether the pickup option should be shown as buy, reserve, or not supported. Only supported for local inventory. Unless the value is \"not supported\", must be submitted together with pickupSla."
+     "description": "Whether store pickup is available for this offer and whether the pickup option should be shown as buy, reserve, or not supported. Only supported for local inventory. Unless the value is \"not supported\", must be submitted together with pickupSla.\n\nAcceptable values are:  \n- \"buy\" \n- \"not supported\" \n- \"reserve\" \n- \"ship to store\""
     },
     "pickupSla": {
      "type": "string",
-     "description": "The expected date that an order will be ready for pickup, relative to when the order is placed. Only supported for local inventory. Must be submitted together with pickupMethod."
+     "description": "The expected date that an order will be ready for pickup, relative to when the order is placed. Only supported for local inventory. Must be submitted together with pickupMethod.\n\nAcceptable values are:  \n- \"five day\" \n- \"four day\" \n- \"multi day\" \n- \"multi week\" \n- \"next day\" \n- \"same day\" \n- \"seven day\" \n- \"six day\" \n- \"three day\" \n- \"two day\""
     }
    }
   },
@@ -2076,7 +2080,7 @@
    "properties": {
     "availability": {
      "type": "string",
-     "description": "The availability of the product."
+     "description": "The availability of the product.\n\nAcceptable values are:  \n- \"in stock\" \n- \"out of stock\" \n- \"preorder\""
     },
     "customLabel0": {
      "type": "string",
@@ -2195,7 +2199,7 @@
     },
     "type": {
      "type": "string",
-     "description": "[required] Type of the additional charge."
+     "description": "[required] Type of the additional charge.\n\nAcceptable values are:  \n- \"shipping\""
     }
    }
   },
@@ -2205,7 +2209,7 @@
    "properties": {
     "status": {
      "type": "string",
-     "description": "The status of the verification process for the About page."
+     "description": "The status of the verification process for the About page.\n\nAcceptable values are:  \n- \"active\" \n- \"inactive\" \n- \"pending\""
     },
     "url": {
      "type": "string",
@@ -2223,7 +2227,7 @@
     },
     "country": {
      "type": "string",
-     "description": "CLDR country code (e.g. \"US\").",
+     "description": "Required. CLDR country code (e.g. \"US\").",
      "annotations": {
       "required": [
        "content.liasettings.update"
@@ -2266,11 +2270,11 @@
     },
     "inventoryVerificationContactStatus": {
      "type": "string",
-     "description": "The status of the verification contact."
+     "description": "The status of the verification contact.\n\nAcceptable values are:  \n- \"active\" \n- \"inactive\" \n- \"pending\""
     },
     "status": {
      "type": "string",
-     "description": "The status of the inventory verification process."
+     "description": "The status of the inventory verification process.\n\nAcceptable values are:  \n- \"active\" \n- \"inactive\" \n- \"pending\""
     }
    }
   },
@@ -2284,7 +2288,7 @@
     },
     "status": {
      "type": "string",
-     "description": "The status of the ?On display to order? feature."
+     "description": "The status of the ?On display to order? feature.\n\nAcceptable values are:  \n- \"active\" \n- \"inactive\" \n- \"pending\""
     }
    }
   },
@@ -2380,7 +2384,8 @@
      "format": "uint64"
     },
     "method": {
-     "type": "string"
+     "type": "string",
+     "description": "The method of the batch entry.\n\nAcceptable values are:  \n- \"get\" \n- \"getAccessibleGmbAccounts\" \n- \"requestGmbAccess\" \n- \"requestInventoryVerification\" \n- \"setInventoryVerificationContact\" \n- \"update\""
     },
     "posDataProviderId": {
      "type": "string",
@@ -2651,7 +2656,7 @@
     },
     "state": {
      "type": "string",
-     "description": "State of the item."
+     "description": "State of the item.\n\nAcceptable values are:  \n- \"canceled\" \n- \"new\" \n- \"received\" \n- \"refunded\" \n- \"rejected\""
     }
    }
   },
@@ -2666,7 +2671,7 @@
     },
     "channelType": {
      "type": "string",
-     "description": "Deprecated."
+     "description": "Deprecated.\n\nAcceptable values are:  \n- \"googleExpress\" \n- \"purchasesOnGoogle\""
     },
     "customer": {
      "$ref": "OrderCustomer",
@@ -2710,7 +2715,7 @@
     },
     "paymentStatus": {
      "type": "string",
-     "description": "The status of the payment."
+     "description": "The status of the payment.\n\nAcceptable values are:  \n- \"paymentCaptured\" \n- \"paymentRejected\" \n- \"paymentSecured\" \n- \"pendingAuthorization\""
     },
     "pickupDetails": {
      "$ref": "OrderPickupDetails",
@@ -2751,15 +2756,15 @@
     },
     "shippingOption": {
      "type": "string",
-     "description": "Deprecated. Shipping details are provided with line items instead."
+     "description": "Deprecated. Shipping details are provided with line items instead.\n\nAcceptable values are:  \n- \"economy\" \n- \"expedited\" \n- \"oneDay\" \n- \"sameDay\" \n- \"standard\" \n- \"twoDay\""
     },
     "status": {
      "type": "string",
-     "description": "The status of the order."
+     "description": "The status of the order.\n\nAcceptable values are:  \n- \"canceled\" \n- \"delivered\" \n- \"inProgress\" \n- \"partiallyDelivered\" \n- \"partiallyReturned\" \n- \"partiallyShipped\" \n- \"pendingShipment\" \n- \"returned\" \n- \"shipped\""
     },
     "taxCollector": {
      "type": "string",
-     "description": "The party responsible for collecting and remitting taxes."
+     "description": "The party responsible for collecting and remitting taxes.\n\nAcceptable values are:  \n- \"marketplaceFacilitator\" \n- \"merchant\""
     }
    }
   },
@@ -2813,7 +2818,7 @@
    "properties": {
     "actor": {
      "type": "string",
-     "description": "The actor that created the cancellation."
+     "description": "The actor that created the cancellation.\n\nAcceptable values are:  \n- \"customer\" \n- \"googleBot\" \n- \"googleCustomerService\" \n- \"googlePayments\" \n- \"googleSabre\" \n- \"merchant\""
     },
     "creationDate": {
      "type": "string",
@@ -2826,7 +2831,7 @@
     },
     "reason": {
      "type": "string",
-     "description": "The reason for the cancellation. Orders that are canceled with a noInventory reason will lead to the removal of the product from Shopping Actions until you make an update to that product. This will not affect your Shopping ads."
+     "description": "The reason for the cancellation. Orders that are canceled with a noInventory reason will lead to the removal of the product from Shopping Actions until you make an update to that product. This will not affect your Shopping ads.\n\nAcceptable values are:  \n- \"autoPostInternal\" \n- \"autoPostInvalidBillingAddress\" \n- \"autoPostNoInventory\" \n- \"autoPostPriceError\" \n- \"autoPostUndeliverableShippingAddress\" \n- \"couponAbuse\" \n- \"customerCanceled\" \n- \"customerInitiatedCancel\" \n- \"customerSupportRequested\" \n- \"failToPushOrderGoogleError\" \n- \"failToPushOrderMerchantError\" \n- \"failToPushOrderMerchantFulfillmentError\" \n- \"failToPushOrderToMerchant\" \n- \"failToPushOrderToMerchantOutOfStock\" \n- \"invalidCoupon\" \n- \"malformedShippingAddress\" \n- \"merchantDidNotShipOnTime\" \n- \"noInventory\" \n- \"orderTimeout\" \n- \"other\" \n- \"paymentAbuse\" \n- \"paymentDeclined\" \n- \"priceError\" \n- \"returnRefundAbuse\" \n- \"shippingPriceError\" \n- \"taxError\" \n- \"undeliverableShippingAddress\" \n- \"unsupportedPoBoxAddress\""
     },
     "reasonText": {
      "type": "string",
@@ -2866,7 +2871,7 @@
    "properties": {
     "explicitMarketingPreference": {
      "type": "string",
-     "description": "Last known customer selection regarding marketing preferences. In certain cases this selection might not be known, so this field would be empty. If a customer selected granted in their most recent order, they can be subscribed to marketing emails. Customers who have chosen denied must not be subscribed, or must be unsubscribed if already opted-in."
+     "description": "Last known customer selection regarding marketing preferences. In certain cases this selection might not be known, so this field would be empty. If a customer selected granted in their most recent order, they can be subscribed to marketing emails. Customers who have chosen denied must not be subscribed, or must be unsubscribed if already opted-in.\n\nAcceptable values are:  \n- \"denied\" \n- \"granted\""
     },
     "lastUpdatedTimestamp": {
      "type": "string",
@@ -2920,11 +2925,11 @@
     },
     "productApplicability": {
      "type": "string",
-     "description": "Whether the promotion is applicable to all products or only specific products."
+     "description": "Whether the promotion is applicable to all products or only specific products.\n\nAcceptable values are:  \n- \"allProducts\" \n- \"specificProducts\""
     },
     "redemptionChannel": {
      "type": "string",
-     "description": "Indicates that the promotion is valid online."
+     "description": "Indicates that the promotion is valid online.\n\nAcceptable values are:  \n- \"online\""
     }
    }
   },
@@ -2945,7 +2950,7 @@
     },
     "subType": {
      "type": "string",
-     "description": "Further describes the benefit of the promotion. Note that we will expand on this enumeration as we support new promotion sub-types."
+     "description": "Further describes the benefit of the promotion. Note that we will expand on this enumeration as we support new promotion sub-types.\n\nAcceptable values are:  \n- \"buyMGetMoneyOff\" \n- \"buyMGetNMoneyOff\" \n- \"buyMGetNPercentOff\" \n- \"buyMGetPercentOff\" \n- \"freeGift\" \n- \"freeGiftWithItemId\" \n- \"freeGiftWithValue\" \n- \"freeOvernightShipping\" \n- \"freeShipping\" \n- \"freeTwoDayShipping\" \n- \"moneyOff\" \n- \"percentageOff\" \n- \"rewardPoints\" \n- \"salePrice\""
     },
     "taxImpact": {
      "$ref": "Price",
@@ -2953,7 +2958,7 @@
     },
     "type": {
      "type": "string",
-     "description": "Describes whether the promotion applies to products (e.g. 20% off) or to shipping (e.g. Free Shipping)."
+     "description": "Describes whether the promotion applies to products (e.g. 20% off) or to shipping (e.g. Free Shipping).\n\nAcceptable values are:  \n- \"product\" \n- \"shipping\""
     }
    }
   },
@@ -3053,11 +3058,11 @@
     },
     "channel": {
      "type": "string",
-     "description": "The item's channel (online or local)."
+     "description": "The item's channel (online or local).\n\nAcceptable values are:  \n- \"local\" \n- \"online\""
     },
     "condition": {
      "type": "string",
-     "description": "Condition or state of the item."
+     "description": "Condition or state of the item.\n\nAcceptable values are:  \n- \"new\" \n- \"refurbished\" \n- \"used\""
     },
     "contentLanguage": {
      "type": "string",
@@ -3153,7 +3158,7 @@
    "properties": {
     "daysToReturn": {
      "type": "integer",
-     "description": "How many days later the item can be returned.",
+     "description": "Required. How many days later the item can be returned.",
      "format": "int32",
      "annotations": {
       "required": [
@@ -3163,7 +3168,7 @@
     },
     "isReturnable": {
      "type": "boolean",
-     "description": "Whether the item is returnable.",
+     "description": "Required. Whether the item is returnable.",
      "annotations": {
       "required": [
        "content.orders.createtestorder"
@@ -3172,7 +3177,7 @@
     },
     "policyUrl": {
      "type": "string",
-     "description": "URL of the item return policy.",
+     "description": "Required. URL of the item return policy.",
      "annotations": {
       "required": [
        "content.orders.createtestorder"
@@ -3187,7 +3192,7 @@
    "properties": {
     "deliverByDate": {
      "type": "string",
-     "description": "The delivery by date, in ISO 8601 format.",
+     "description": "Required. The delivery by date, in ISO 8601 format.",
      "annotations": {
       "required": [
        "content.orders.createtestorder"
@@ -3196,7 +3201,7 @@
     },
     "method": {
      "$ref": "OrderLineItemShippingDetailsMethod",
-     "description": "Details of the shipping method.",
+     "description": "Required. Details of the shipping method.",
      "annotations": {
       "required": [
        "content.orders.createtestorder"
@@ -3205,7 +3210,7 @@
     },
     "shipByDate": {
      "type": "string",
-     "description": "The ship by date, in ISO 8601 format.",
+     "description": "Required. The ship by date, in ISO 8601 format.",
      "annotations": {
       "required": [
        "content.orders.createtestorder"
@@ -3214,7 +3219,7 @@
     },
     "type": {
      "type": "string",
-     "description": "Type of shipment. Indicates whether deliveryDetails or pickupDetails is applicable for this shipment."
+     "description": "Type of shipment. Indicates whether deliveryDetails or pickupDetails is applicable for this shipment.\n\nAcceptable values are:  \n- \"delivery\" \n- \"pickup\""
     }
    }
   },
@@ -3228,7 +3233,7 @@
     },
     "maxDaysInTransit": {
      "type": "integer",
-     "description": "Maximum transit time.",
+     "description": "Required. Maximum transit time.",
      "format": "uint32",
      "annotations": {
       "required": [
@@ -3238,7 +3243,7 @@
     },
     "methodName": {
      "type": "string",
-     "description": "The name of the shipping method.",
+     "description": "Required. The name of the shipping method.",
      "annotations": {
       "required": [
        "content.orders.createtestorder"
@@ -3247,7 +3252,7 @@
     },
     "minDaysInTransit": {
      "type": "integer",
-     "description": "Minimum transit time.",
+     "description": "Required. Minimum transit time.",
      "format": "uint32",
      "annotations": {
       "required": [
@@ -3344,7 +3349,7 @@
    "properties": {
     "actor": {
      "type": "string",
-     "description": "The actor that created the refund."
+     "description": "The actor that created the refund.\n\nAcceptable values are:  \n- \"customer\" \n- \"googleBot\" \n- \"googleCustomerService\" \n- \"googlePayments\" \n- \"googleSabre\" \n- \"merchant\""
     },
     "amount": {
      "$ref": "Price",
@@ -3356,7 +3361,7 @@
     },
     "reason": {
      "type": "string",
-     "description": "The reason for the refund."
+     "description": "The reason for the refund.\n\nAcceptable values are:  \n- \"adjustment\" \n- \"autoPostInternal\" \n- \"autoPostInvalidBillingAddress\" \n- \"autoPostNoInventory\" \n- \"autoPostPriceError\" \n- \"autoPostUndeliverableShippingAddress\" \n- \"couponAbuse\" \n- \"courtesyAdjustment\" \n- \"customerCanceled\" \n- \"customerDiscretionaryReturn\" \n- \"customerInitiatedMerchantCancel\" \n- \"customerSupportRequested\" \n- \"deliveredLateByCarrier\" \n- \"deliveredTooLate\" \n- \"expiredItem\" \n- \"failToPushOrderGoogleError\" \n- \"failToPushOrderMerchantError\" \n- \"failToPushOrderMerchantFulfillmentError\" \n- \"failToPushOrderToMerchant\" \n- \"failToPushOrderToMerchantOutOfStock\" \n- \"feeAdjustment\" \n- \"invalidCoupon\" \n- \"lateShipmentCredit\" \n- \"malformedShippingAddress\" \n- \"merchantDidNotShipOnTime\" \n- \"noInventory\" \n- \"orderTimeout\" \n- \"other\" \n- \"paymentAbuse\" \n- \"paymentDeclined\" \n- \"priceAdjustment\" \n- \"priceError\" \n- \"productArrivedDamaged\" \n- \"productNotAsDescribed\" \n- \"promoReallocation\" \n- \"qualityNotAsExpected\" \n- \"returnRefundAbuse\" \n- \"shippingCostAdjustment\" \n- \"shippingPriceError\" \n- \"taxAdjustment\" \n- \"taxError\" \n- \"undeliverableShippingAddress\" \n- \"unsupportedPoBoxAddress\" \n- \"wrongProductShipped\""
     },
     "reasonText": {
      "type": "string",
@@ -3445,7 +3450,7 @@
    "properties": {
     "actor": {
      "type": "string",
-     "description": "The actor that created the refund."
+     "description": "The actor that created the refund.\n\nAcceptable values are:  \n- \"customer\" \n- \"googleBot\" \n- \"googleCustomerService\" \n- \"googlePayments\" \n- \"googleSabre\" \n- \"merchant\""
     },
     "creationDate": {
      "type": "string",
@@ -3458,7 +3463,7 @@
     },
     "reason": {
      "type": "string",
-     "description": "The reason for the return."
+     "description": "The reason for the return.\n\nAcceptable values are:  \n- \"customerDiscretionaryReturn\" \n- \"customerInitiatedMerchantCancel\" \n- \"deliveredTooLate\" \n- \"expiredItem\" \n- \"invalidCoupon\" \n- \"malformedShippingAddress\" \n- \"other\" \n- \"productArrivedDamaged\" \n- \"productNotAsDescribed\" \n- \"qualityNotAsExpected\" \n- \"undeliverableShippingAddress\" \n- \"unsupportedPoBoxAddress\" \n- \"wrongProductShipped\""
     },
     "reasonText": {
      "type": "string",
@@ -3495,7 +3500,7 @@
     },
     "status": {
      "type": "string",
-     "description": "The status of the shipment."
+     "description": "The status of the shipment.\n\nAcceptable values are:  \n- \"delivered\" \n- \"readyForPickup\" \n- \"shipped\" \n- \"undeliverable\""
     },
     "trackingId": {
      "type": "string",
@@ -3557,7 +3562,7 @@
    "properties": {
     "executionStatus": {
      "type": "string",
-     "description": "The status of the execution."
+     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"duplicate\" \n- \"executed\""
     },
     "kind": {
      "type": "string",
@@ -3601,7 +3606,7 @@
    "properties": {
     "executionStatus": {
      "type": "string",
-     "description": "The status of the execution."
+     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"duplicate\" \n- \"executed\""
     },
     "kind": {
      "type": "string",
@@ -3620,7 +3625,7 @@
     },
     "reason": {
      "type": "string",
-     "description": "[required] Reason for the refund."
+     "description": "[required] Reason for the refund.\n\nAcceptable values are:  \n- \"adjustment\" \n- \"autoPostInternal\" \n- \"autoPostInvalidBillingAddress\" \n- \"autoPostNoInventory\" \n- \"autoPostPriceError\" \n- \"autoPostUndeliverableShippingAddress\" \n- \"couponAbuse\" \n- \"courtesyAdjustment\" \n- \"customerCanceled\" \n- \"customerDiscretionaryReturn\" \n- \"customerInitiatedMerchantCancel\" \n- \"customerSupportRequested\" \n- \"deliveredLateByCarrier\" \n- \"deliveredTooLate\" \n- \"expiredItem\" \n- \"failToPushOrderGoogleError\" \n- \"failToPushOrderMerchantError\" \n- \"failToPushOrderMerchantFulfillmentError\" \n- \"failToPushOrderToMerchant\" \n- \"failToPushOrderToMerchantOutOfStock\" \n- \"feeAdjustment\" \n- \"invalidCoupon\" \n- \"lateShipmentCredit\" \n- \"malformedShippingAddress\" \n- \"merchantDidNotShipOnTime\" \n- \"noInventory\" \n- \"orderTimeout\" \n- \"other\" \n- \"paymentAbuse\" \n- \"paymentDeclined\" \n- \"priceAdjustment\" \n- \"priceError\" \n- \"productArrivedDamaged\" \n- \"productNotAsDescribed\" \n- \"promoReallocation\" \n- \"qualityNotAsExpected\" \n- \"returnRefundAbuse\" \n- \"shippingCostAdjustment\" \n- \"shippingPriceError\" \n- \"taxAdjustment\" \n- \"taxError\" \n- \"undeliverableShippingAddress\" \n- \"unsupportedPoBoxAddress\" \n- \"wrongProductShipped\""
     }
    }
   },
@@ -3634,7 +3639,7 @@
     },
     "reason": {
      "type": "string",
-     "description": "[required] Reason for the return."
+     "description": "[required] Reason for the return.\n\nAcceptable values are:  \n- \"customerDiscretionaryReturn\" \n- \"customerInitiatedMerchantCancel\" \n- \"deliveredTooLate\" \n- \"expiredItem\" \n- \"invalidCoupon\" \n- \"malformedShippingAddress\" \n- \"other\" \n- \"productArrivedDamaged\" \n- \"productNotAsDescribed\" \n- \"qualityNotAsExpected\" \n- \"undeliverableShippingAddress\" \n- \"unsupportedPoBoxAddress\" \n- \"wrongProductShipped\""
     }
    }
   },
@@ -3719,7 +3724,7 @@
    "properties": {
     "executionStatus": {
      "type": "string",
-     "description": "The status of the execution."
+     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"duplicate\" \n- \"executed\""
     },
     "kind": {
      "type": "string",
@@ -3774,7 +3779,7 @@
     },
     "reason": {
      "type": "string",
-     "description": "The reason for the cancellation."
+     "description": "The reason for the cancellation.\n\nAcceptable values are:  \n- \"customerInitiatedCancel\" \n- \"invalidCoupon\" \n- \"malformedShippingAddress\" \n- \"noInventory\" \n- \"other\" \n- \"priceError\" \n- \"shippingPriceError\" \n- \"taxError\" \n- \"undeliverableShippingAddress\" \n- \"unsupportedPoBoxAddress\""
     },
     "reasonText": {
      "type": "string",
@@ -3788,7 +3793,7 @@
    "properties": {
     "executionStatus": {
      "type": "string",
-     "description": "The status of the execution."
+     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"duplicate\" \n- \"executed\""
     },
     "kind": {
      "type": "string",
@@ -3807,7 +3812,7 @@
     },
     "reason": {
      "type": "string",
-     "description": "The reason for the cancellation."
+     "description": "The reason for the cancellation.\n\nAcceptable values are:  \n- \"customerInitiatedCancel\" \n- \"invalidCoupon\" \n- \"malformedShippingAddress\" \n- \"noInventory\" \n- \"other\" \n- \"priceError\" \n- \"shippingPriceError\" \n- \"taxError\" \n- \"undeliverableShippingAddress\" \n- \"unsupportedPoBoxAddress\""
     },
     "reasonText": {
      "type": "string",
@@ -3821,7 +3826,7 @@
    "properties": {
     "executionStatus": {
      "type": "string",
-     "description": "The status of the execution."
+     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"duplicate\" \n- \"executed\""
     },
     "kind": {
      "type": "string",
@@ -3836,7 +3841,7 @@
    "properties": {
     "reason": {
      "type": "string",
-     "description": "The reason for the cancellation."
+     "description": "The reason for the cancellation.\n\nAcceptable values are:  \n- \"changedMind\" \n- \"orderedWrongItem\" \n- \"other\""
     }
    }
   },
@@ -3861,7 +3866,7 @@
     },
     "templateName": {
      "type": "string",
-     "description": "The test order template to use. Specify as an alternative to testOrder as a shortcut for retrieving a template and then creating an order using that template."
+     "description": "The test order template to use. Specify as an alternative to testOrder as a shortcut for retrieving a template and then creating an order using that template.\n\nAcceptable values are:  \n- \"template1\" \n- \"template1a\" \n- \"template1b\" \n- \"template2\" \n- \"template3\""
     },
     "testOrder": {
      "$ref": "TestOrder",
@@ -3957,7 +3962,7 @@
     },
     "method": {
      "type": "string",
-     "description": "The method to apply."
+     "description": "The method of the batch entry.\n\nAcceptable values are:  \n- \"acknowledge\" \n- \"cancel\" \n- \"cancelLineItem\" \n- \"get\" \n- \"getByMerchantOrderId\" \n- \"inStoreRefundLineItem\" \n- \"refund\" \n- \"rejectReturnLineItem\" \n- \"returnLineItem\" \n- \"returnRefundLineItem\" \n- \"setLineItemMetadata\" \n- \"shipLineItems\" \n- \"updateLineItemShippingDetails\" \n- \"updateMerchantOrderId\" \n- \"updateShipment\""
     },
     "operationId": {
      "type": "string",
@@ -4007,7 +4012,7 @@
    "properties": {
     "reason": {
      "type": "string",
-     "description": "The reason for the cancellation."
+     "description": "The reason for the cancellation.\n\nAcceptable values are:  \n- \"customerInitiatedCancel\" \n- \"invalidCoupon\" \n- \"malformedShippingAddress\" \n- \"noInventory\" \n- \"other\" \n- \"priceError\" \n- \"shippingPriceError\" \n- \"taxError\" \n- \"undeliverableShippingAddress\" \n- \"unsupportedPoBoxAddress\""
     },
     "reasonText": {
      "type": "string",
@@ -4046,7 +4051,7 @@
     },
     "reason": {
      "type": "string",
-     "description": "The reason for the cancellation."
+     "description": "The reason for the cancellation.\n\nAcceptable values are:  \n- \"customerInitiatedCancel\" \n- \"invalidCoupon\" \n- \"malformedShippingAddress\" \n- \"noInventory\" \n- \"other\" \n- \"priceError\" \n- \"shippingPriceError\" \n- \"taxError\" \n- \"undeliverableShippingAddress\" \n- \"unsupportedPoBoxAddress\""
     },
     "reasonText": {
      "type": "string",
@@ -4096,7 +4101,7 @@
     },
     "reason": {
      "type": "string",
-     "description": "The reason for the return."
+     "description": "The reason for the return.\n\nAcceptable values are:  \n- \"customerDiscretionaryReturn\" \n- \"customerInitiatedMerchantCancel\" \n- \"deliveredTooLate\" \n- \"expiredItem\" \n- \"invalidCoupon\" \n- \"malformedShippingAddress\" \n- \"other\" \n- \"productArrivedDamaged\" \n- \"productNotAsDescribed\" \n- \"qualityNotAsExpected\" \n- \"undeliverableShippingAddress\" \n- \"unsupportedPoBoxAddress\" \n- \"wrongProductShipped\""
     },
     "reasonText": {
      "type": "string",
@@ -4122,7 +4127,7 @@
     },
     "reason": {
      "type": "string",
-     "description": "The reason for the refund."
+     "description": "The reason for the refund.\n\nAcceptable values are:  \n- \"adjustment\" \n- \"courtesyAdjustment\" \n- \"customerCanceled\" \n- \"customerDiscretionaryReturn\" \n- \"deliveredLateByCarrier\" \n- \"feeAdjustment\" \n- \"lateShipmentCredit\" \n- \"noInventory\" \n- \"other\" \n- \"priceError\" \n- \"productArrivedDamaged\" \n- \"productNotAsDescribed\" \n- \"shippingCostAdjustment\" \n- \"taxAdjustment\" \n- \"undeliverableShippingAddress\" \n- \"wrongProductShipped\""
     },
     "reasonText": {
      "type": "string",
@@ -4149,7 +4154,7 @@
     },
     "reason": {
      "type": "string",
-     "description": "The reason for the return."
+     "description": "The reason for the return.\n\nAcceptable values are:  \n- \"damagedOrUsed\" \n- \"missingComponent\" \n- \"notEligible\" \n- \"other\" \n- \"outOfReturnWindow\""
     },
     "reasonText": {
      "type": "string",
@@ -4176,7 +4181,7 @@
     },
     "reason": {
      "type": "string",
-     "description": "The reason for the return."
+     "description": "The reason for the return.\n\nAcceptable values are:  \n- \"customerDiscretionaryReturn\" \n- \"customerInitiatedMerchantCancel\" \n- \"deliveredTooLate\" \n- \"expiredItem\" \n- \"invalidCoupon\" \n- \"malformedShippingAddress\" \n- \"other\" \n- \"productArrivedDamaged\" \n- \"productNotAsDescribed\" \n- \"qualityNotAsExpected\" \n- \"undeliverableShippingAddress\" \n- \"unsupportedPoBoxAddress\" \n- \"wrongProductShipped\""
     },
     "reasonText": {
      "type": "string",
@@ -4211,7 +4216,7 @@
     },
     "reason": {
      "type": "string",
-     "description": "The reason for the return."
+     "description": "The reason for the return.\n\nAcceptable values are:  \n- \"customerDiscretionaryReturn\" \n- \"customerInitiatedMerchantCancel\" \n- \"deliveredTooLate\" \n- \"expiredItem\" \n- \"invalidCoupon\" \n- \"malformedShippingAddress\" \n- \"other\" \n- \"productArrivedDamaged\" \n- \"productNotAsDescribed\" \n- \"qualityNotAsExpected\" \n- \"undeliverableShippingAddress\" \n- \"unsupportedPoBoxAddress\" \n- \"wrongProductShipped\""
     },
     "reasonText": {
      "type": "string",
@@ -4285,7 +4290,7 @@
     },
     "shipmentId": {
      "type": "string",
-     "description": "The ID of the shipment. This is assigned by the merchant and is unique to each shipment.",
+     "description": "Required. The ID of the shipment. This is assigned by the merchant and is unique to each shipment.",
      "annotations": {
       "required": [
        "content.orders.shiplineitems"
@@ -4338,7 +4343,7 @@
     },
     "status": {
      "type": "string",
-     "description": "New status for the shipment. Not updated if missing."
+     "description": "New status for the shipment. Not updated if missing.\n\nAcceptable values are:  \n- \"delivered\" \n- \"undeliverable\""
     },
     "trackingId": {
      "type": "string",
@@ -4379,7 +4384,7 @@
     },
     "executionStatus": {
      "type": "string",
-     "description": "The status of the execution. Only defined if  \n- the request was successful; and \n- the method is not get, getByMerchantOrderId, or one of the test methods."
+     "description": "The status of the execution. Only defined if  \n- the request was successful; and \n- the method is not get, getByMerchantOrderId, or one of the test methods.  \n\nAcceptable values are:  \n- \"duplicate\" \n- \"executed\""
     },
     "kind": {
      "type": "string",
@@ -4453,7 +4458,7 @@
     },
     "reason": {
      "type": "string",
-     "description": "The reason for the return."
+     "description": "The reason for the return.\n\nAcceptable values are:  \n- \"customerDiscretionaryReturn\" \n- \"customerInitiatedMerchantCancel\" \n- \"deliveredTooLate\" \n- \"expiredItem\" \n- \"invalidCoupon\" \n- \"malformedShippingAddress\" \n- \"other\" \n- \"productArrivedDamaged\" \n- \"productNotAsDescribed\" \n- \"qualityNotAsExpected\" \n- \"undeliverableShippingAddress\" \n- \"unsupportedPoBoxAddress\" \n- \"wrongProductShipped\""
     },
     "reasonText": {
      "type": "string",
@@ -4467,7 +4472,7 @@
    "properties": {
     "executionStatus": {
      "type": "string",
-     "description": "The status of the execution."
+     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"duplicate\" \n- \"executed\""
     },
     "kind": {
      "type": "string",
@@ -4519,7 +4524,7 @@
     },
     "reason": {
      "type": "string",
-     "description": "The reason for the refund."
+     "description": "The reason for the refund.\n\nAcceptable values are:  \n- \"adjustment\" \n- \"courtesyAdjustment\" \n- \"customerCanceled\" \n- \"customerDiscretionaryReturn\" \n- \"deliveredLateByCarrier\" \n- \"feeAdjustment\" \n- \"lateShipmentCredit\" \n- \"noInventory\" \n- \"other\" \n- \"priceError\" \n- \"productArrivedDamaged\" \n- \"productNotAsDescribed\" \n- \"shippingCostAdjustment\" \n- \"taxAdjustment\" \n- \"undeliverableShippingAddress\" \n- \"wrongProductShipped\""
     },
     "reasonText": {
      "type": "string",
@@ -4533,7 +4538,7 @@
    "properties": {
     "executionStatus": {
      "type": "string",
-     "description": "The status of the execution."
+     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"duplicate\" \n- \"executed\""
     },
     "kind": {
      "type": "string",
@@ -4565,7 +4570,7 @@
     },
     "reason": {
      "type": "string",
-     "description": "The reason for the return."
+     "description": "The reason for the return.\n\nAcceptable values are:  \n- \"damagedOrUsed\" \n- \"missingComponent\" \n- \"notEligible\" \n- \"other\" \n- \"outOfReturnWindow\""
     },
     "reasonText": {
      "type": "string",
@@ -4579,7 +4584,7 @@
    "properties": {
     "executionStatus": {
      "type": "string",
-     "description": "The status of the execution."
+     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"duplicate\" \n- \"executed\""
     },
     "kind": {
      "type": "string",
@@ -4611,7 +4616,7 @@
     },
     "reason": {
      "type": "string",
-     "description": "The reason for the return."
+     "description": "The reason for the return.\n\nAcceptable values are:  \n- \"customerDiscretionaryReturn\" \n- \"customerInitiatedMerchantCancel\" \n- \"deliveredTooLate\" \n- \"expiredItem\" \n- \"invalidCoupon\" \n- \"malformedShippingAddress\" \n- \"other\" \n- \"productArrivedDamaged\" \n- \"productNotAsDescribed\" \n- \"qualityNotAsExpected\" \n- \"undeliverableShippingAddress\" \n- \"unsupportedPoBoxAddress\" \n- \"wrongProductShipped\""
     },
     "reasonText": {
      "type": "string",
@@ -4625,7 +4630,7 @@
    "properties": {
     "executionStatus": {
      "type": "string",
-     "description": "The status of the execution."
+     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"duplicate\" \n- \"executed\""
     },
     "kind": {
      "type": "string",
@@ -4665,7 +4670,7 @@
     },
     "reason": {
      "type": "string",
-     "description": "The reason for the return."
+     "description": "The reason for the return.\n\nAcceptable values are:  \n- \"customerDiscretionaryReturn\" \n- \"customerInitiatedMerchantCancel\" \n- \"deliveredTooLate\" \n- \"expiredItem\" \n- \"invalidCoupon\" \n- \"malformedShippingAddress\" \n- \"other\" \n- \"productArrivedDamaged\" \n- \"productNotAsDescribed\" \n- \"qualityNotAsExpected\" \n- \"undeliverableShippingAddress\" \n- \"unsupportedPoBoxAddress\" \n- \"wrongProductShipped\""
     },
     "reasonText": {
      "type": "string",
@@ -4679,7 +4684,7 @@
    "properties": {
     "executionStatus": {
      "type": "string",
-     "description": "The status of the execution."
+     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"duplicate\" \n- \"executed\""
     },
     "kind": {
      "type": "string",
@@ -4718,7 +4723,7 @@
    "properties": {
     "executionStatus": {
      "type": "string",
-     "description": "The status of the execution."
+     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"duplicate\" \n- \"executed\""
     },
     "kind": {
      "type": "string",
@@ -4773,7 +4778,7 @@
    "properties": {
     "executionStatus": {
      "type": "string",
-     "description": "The status of the execution."
+     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"duplicate\" \n- \"executed\""
     },
     "kind": {
      "type": "string",
@@ -4814,7 +4819,7 @@
    "properties": {
     "executionStatus": {
      "type": "string",
-     "description": "The status of the execution."
+     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"duplicate\" \n- \"executed\""
     },
     "kind": {
      "type": "string",
@@ -4843,7 +4848,7 @@
    "properties": {
     "executionStatus": {
      "type": "string",
-     "description": "The status of the execution."
+     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"duplicate\" \n- \"executed\""
     },
     "kind": {
      "type": "string",
@@ -4874,7 +4879,7 @@
     },
     "status": {
      "type": "string",
-     "description": "New status for the shipment. Not updated if missing."
+     "description": "New status for the shipment. Not updated if missing.\n\nAcceptable values are:  \n- \"delivered\" \n- \"undeliverable\""
     },
     "trackingId": {
      "type": "string",
@@ -4888,7 +4893,7 @@
    "properties": {
     "executionStatus": {
      "type": "string",
-     "description": "The status of the execution."
+     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"duplicate\" \n- \"executed\""
     },
     "kind": {
      "type": "string",
@@ -4961,7 +4966,8 @@
      "format": "uint64"
     },
     "method": {
-     "type": "string"
+     "type": "string",
+     "description": "The method of the batch entry.\n\nAcceptable values are:  \n- \"delete\" \n- \"get\" \n- \"insert\" \n- \"inventory\" \n- \"sale\""
     },
     "sale": {
      "$ref": "PosSale",
@@ -5075,7 +5081,7 @@
    "properties": {
     "contentLanguage": {
      "type": "string",
-     "description": "The two-letter ISO 639-1 language code for the item.",
+     "description": "Required. The two-letter ISO 639-1 language code for the item.",
      "annotations": {
       "required": [
        "content.pos.inventory"
@@ -5088,7 +5094,7 @@
     },
     "itemId": {
      "type": "string",
-     "description": "A unique identifier for the item.",
+     "description": "Required. A unique identifier for the item.",
      "annotations": {
       "required": [
        "content.pos.inventory"
@@ -5102,7 +5108,7 @@
     },
     "price": {
      "$ref": "Price",
-     "description": "The current price of the item.",
+     "description": "Required. The current price of the item.",
      "annotations": {
       "required": [
        "content.pos.inventory"
@@ -5111,7 +5117,7 @@
     },
     "quantity": {
      "type": "string",
-     "description": "The available quantity of the item.",
+     "description": "Required. The available quantity of the item.",
      "format": "int64",
      "annotations": {
       "required": [
@@ -5121,7 +5127,7 @@
     },
     "storeCode": {
      "type": "string",
-     "description": "The identifier of the merchant's store. Either a storeCode inserted via the API or the code of the store in Google My Business.",
+     "description": "Required. The identifier of the merchant's store. Either a storeCode inserted via the API or the code of the store in Google My Business.",
      "annotations": {
       "required": [
        "content.pos.inventory"
@@ -5130,7 +5136,7 @@
     },
     "targetCountry": {
      "type": "string",
-     "description": "The CLDR territory code for the item.",
+     "description": "Required. The CLDR territory code for the item.",
      "annotations": {
       "required": [
        "content.pos.inventory"
@@ -5139,7 +5145,7 @@
     },
     "timestamp": {
      "type": "string",
-     "description": "The inventory timestamp, in ISO 8601 format.",
+     "description": "Required. The inventory timestamp, in ISO 8601 format.",
      "annotations": {
       "required": [
        "content.pos.inventory"
@@ -5154,7 +5160,7 @@
    "properties": {
     "contentLanguage": {
      "type": "string",
-     "description": "The two-letter ISO 639-1 language code for the item.",
+     "description": "Required. The two-letter ISO 639-1 language code for the item.",
      "annotations": {
       "required": [
        "content.pos.inventory"
@@ -5167,7 +5173,7 @@
     },
     "itemId": {
      "type": "string",
-     "description": "A unique identifier for the item.",
+     "description": "Required. A unique identifier for the item.",
      "annotations": {
       "required": [
        "content.pos.inventory"
@@ -5176,7 +5182,7 @@
     },
     "price": {
      "$ref": "Price",
-     "description": "The current price of the item.",
+     "description": "Required. The current price of the item.",
      "annotations": {
       "required": [
        "content.pos.inventory"
@@ -5185,7 +5191,7 @@
     },
     "quantity": {
      "type": "string",
-     "description": "The available quantity of the item.",
+     "description": "Required. The available quantity of the item.",
      "format": "int64",
      "annotations": {
       "required": [
@@ -5195,7 +5201,7 @@
     },
     "storeCode": {
      "type": "string",
-     "description": "The identifier of the merchant's store. Either a storeCode inserted via the API or the code of the store in Google My Business.",
+     "description": "Required. The identifier of the merchant's store. Either a storeCode inserted via the API or the code of the store in Google My Business.",
      "annotations": {
       "required": [
        "content.pos.inventory"
@@ -5204,7 +5210,7 @@
     },
     "targetCountry": {
      "type": "string",
-     "description": "The CLDR territory code for the item.",
+     "description": "Required. The CLDR territory code for the item.",
      "annotations": {
       "required": [
        "content.pos.inventory"
@@ -5213,7 +5219,7 @@
     },
     "timestamp": {
      "type": "string",
-     "description": "The inventory timestamp, in ISO 8601 format.",
+     "description": "Required. The inventory timestamp, in ISO 8601 format.",
      "annotations": {
       "required": [
        "content.pos.inventory"
@@ -5228,7 +5234,7 @@
    "properties": {
     "contentLanguage": {
      "type": "string",
-     "description": "The two-letter ISO 639-1 language code for the item.",
+     "description": "Required. The two-letter ISO 639-1 language code for the item.",
      "annotations": {
       "required": [
        "content.pos.inventory"
@@ -5241,7 +5247,7 @@
     },
     "itemId": {
      "type": "string",
-     "description": "A unique identifier for the item.",
+     "description": "Required. A unique identifier for the item.",
      "annotations": {
       "required": [
        "content.pos.inventory"
@@ -5255,7 +5261,7 @@
     },
     "price": {
      "$ref": "Price",
-     "description": "The current price of the item.",
+     "description": "Required. The current price of the item.",
      "annotations": {
       "required": [
        "content.pos.inventory"
@@ -5264,7 +5270,7 @@
     },
     "quantity": {
      "type": "string",
-     "description": "The available quantity of the item.",
+     "description": "Required. The available quantity of the item.",
      "format": "int64",
      "annotations": {
       "required": [
@@ -5274,7 +5280,7 @@
     },
     "storeCode": {
      "type": "string",
-     "description": "The identifier of the merchant's store. Either a storeCode inserted via the API or the code of the store in Google My Business.",
+     "description": "Required. The identifier of the merchant's store. Either a storeCode inserted via the API or the code of the store in Google My Business.",
      "annotations": {
       "required": [
        "content.pos.inventory"
@@ -5283,7 +5289,7 @@
     },
     "targetCountry": {
      "type": "string",
-     "description": "The CLDR territory code for the item.",
+     "description": "Required. The CLDR territory code for the item.",
      "annotations": {
       "required": [
        "content.pos.inventory"
@@ -5292,7 +5298,7 @@
     },
     "timestamp": {
      "type": "string",
-     "description": "The inventory timestamp, in ISO 8601 format.",
+     "description": "Required. The inventory timestamp, in ISO 8601 format.",
      "annotations": {
       "required": [
        "content.pos.inventory"
@@ -5325,7 +5331,7 @@
    "properties": {
     "contentLanguage": {
      "type": "string",
-     "description": "The two-letter ISO 639-1 language code for the item.",
+     "description": "Required. The two-letter ISO 639-1 language code for the item.",
      "annotations": {
       "required": [
        "content.pos.sale"
@@ -5338,7 +5344,7 @@
     },
     "itemId": {
      "type": "string",
-     "description": "A unique identifier for the item.",
+     "description": "Required. A unique identifier for the item.",
      "annotations": {
       "required": [
        "content.pos.sale"
@@ -5352,7 +5358,7 @@
     },
     "price": {
      "$ref": "Price",
-     "description": "The price of the item.",
+     "description": "Required. The price of the item.",
      "annotations": {
       "required": [
        "content.pos.sale"
@@ -5361,7 +5367,7 @@
     },
     "quantity": {
      "type": "string",
-     "description": "The relative change of the available quantity. Negative for items returned.",
+     "description": "Required. The relative change of the available quantity. Negative for items returned.",
      "format": "int64",
      "annotations": {
       "required": [
@@ -5375,7 +5381,7 @@
     },
     "storeCode": {
      "type": "string",
-     "description": "The identifier of the merchant's store. Either a storeCode inserted via the API or the code of the store in Google My Business.",
+     "description": "Required. The identifier of the merchant's store. Either a storeCode inserted via the API or the code of the store in Google My Business.",
      "annotations": {
       "required": [
        "content.pos.sale"
@@ -5384,7 +5390,7 @@
     },
     "targetCountry": {
      "type": "string",
-     "description": "The CLDR territory code for the item.",
+     "description": "Required. The CLDR territory code for the item.",
      "annotations": {
       "required": [
        "content.pos.sale"
@@ -5393,7 +5399,7 @@
     },
     "timestamp": {
      "type": "string",
-     "description": "The inventory timestamp, in ISO 8601 format.",
+     "description": "Required. The inventory timestamp, in ISO 8601 format.",
      "annotations": {
       "required": [
        "content.pos.sale"
@@ -5408,7 +5414,7 @@
    "properties": {
     "contentLanguage": {
      "type": "string",
-     "description": "The two-letter ISO 639-1 language code for the item.",
+     "description": "Required. The two-letter ISO 639-1 language code for the item.",
      "annotations": {
       "required": [
        "content.pos.sale"
@@ -5421,7 +5427,7 @@
     },
     "itemId": {
      "type": "string",
-     "description": "A unique identifier for the item.",
+     "description": "Required. A unique identifier for the item.",
      "annotations": {
       "required": [
        "content.pos.sale"
@@ -5430,7 +5436,7 @@
     },
     "price": {
      "$ref": "Price",
-     "description": "The price of the item.",
+     "description": "Required. The price of the item.",
      "annotations": {
       "required": [
        "content.pos.sale"
@@ -5439,7 +5445,7 @@
     },
     "quantity": {
      "type": "string",
-     "description": "The relative change of the available quantity. Negative for items returned.",
+     "description": "Required. The relative change of the available quantity. Negative for items returned.",
      "format": "int64",
      "annotations": {
       "required": [
@@ -5453,7 +5459,7 @@
     },
     "storeCode": {
      "type": "string",
-     "description": "The identifier of the merchant's store. Either a storeCode inserted via the API or the code of the store in Google My Business.",
+     "description": "Required. The identifier of the merchant's store. Either a storeCode inserted via the API or the code of the store in Google My Business.",
      "annotations": {
       "required": [
        "content.pos.sale"
@@ -5462,7 +5468,7 @@
     },
     "targetCountry": {
      "type": "string",
-     "description": "The CLDR territory code for the item.",
+     "description": "Required. The CLDR territory code for the item.",
      "annotations": {
       "required": [
        "content.pos.sale"
@@ -5471,7 +5477,7 @@
     },
     "timestamp": {
      "type": "string",
-     "description": "The inventory timestamp, in ISO 8601 format.",
+     "description": "Required. The inventory timestamp, in ISO 8601 format.",
      "annotations": {
       "required": [
        "content.pos.sale"
@@ -5486,7 +5492,7 @@
    "properties": {
     "contentLanguage": {
      "type": "string",
-     "description": "The two-letter ISO 639-1 language code for the item.",
+     "description": "Required. The two-letter ISO 639-1 language code for the item.",
      "annotations": {
       "required": [
        "content.pos.sale"
@@ -5499,7 +5505,7 @@
     },
     "itemId": {
      "type": "string",
-     "description": "A unique identifier for the item.",
+     "description": "Required. A unique identifier for the item.",
      "annotations": {
       "required": [
        "content.pos.sale"
@@ -5513,7 +5519,7 @@
     },
     "price": {
      "$ref": "Price",
-     "description": "The price of the item.",
+     "description": "Required. The price of the item.",
      "annotations": {
       "required": [
        "content.pos.sale"
@@ -5522,7 +5528,7 @@
     },
     "quantity": {
      "type": "string",
-     "description": "The relative change of the available quantity. Negative for items returned.",
+     "description": "Required. The relative change of the available quantity. Negative for items returned.",
      "format": "int64",
      "annotations": {
       "required": [
@@ -5536,7 +5542,7 @@
     },
     "storeCode": {
      "type": "string",
-     "description": "The identifier of the merchant's store. Either a storeCode inserted via the API or the code of the store in Google My Business.",
+     "description": "Required. The identifier of the merchant's store. Either a storeCode inserted via the API or the code of the store in Google My Business.",
      "annotations": {
       "required": [
        "content.pos.sale"
@@ -5545,7 +5551,7 @@
     },
     "targetCountry": {
      "type": "string",
-     "description": "The CLDR territory code for the item.",
+     "description": "Required. The CLDR territory code for the item.",
      "annotations": {
       "required": [
        "content.pos.sale"
@@ -5554,7 +5560,7 @@
     },
     "timestamp": {
      "type": "string",
-     "description": "The inventory timestamp, in ISO 8601 format.",
+     "description": "Required. The inventory timestamp, in ISO 8601 format.",
      "annotations": {
       "required": [
        "content.pos.sale"
@@ -5575,7 +5581,7 @@
     },
     "storeAddress": {
      "type": "string",
-     "description": "The street address of the store.",
+     "description": "Required. The street address of the store.",
      "annotations": {
       "required": [
        "content.pos.insert"
@@ -5584,7 +5590,7 @@
     },
     "storeCode": {
      "type": "string",
-     "description": "A store identifier that is unique for the given merchant.",
+     "description": "Required. A store identifier that is unique for the given merchant.",
      "annotations": {
       "required": [
        "content.pos.insert"
@@ -5682,7 +5688,7 @@
     },
     "ageGroup": {
      "type": "string",
-     "description": "Target age group of the item."
+     "description": "Target age group of the item.\n\nAcceptable values are:  \n- \"adult\" \n- \"infant\" \n- \"kids\" \n- \"newborn\" \n- \"toddler\" \n- \"youngAdult\""
     },
     "aspects": {
      "type": "array",
@@ -5693,7 +5699,7 @@
     },
     "availability": {
      "type": "string",
-     "description": "Availability status of the item."
+     "description": "Availability status of the item.\n\nAcceptable values are:  \n- \"in stock\" \n- \"out of stock\" \n- \"preorder\""
     },
     "availabilityDate": {
      "type": "string",
@@ -5705,7 +5711,7 @@
     },
     "channel": {
      "type": "string",
-     "description": "The item's channel (online or local).",
+     "description": "Required. The item's channel (online or local).\n\nAcceptable values are:  \n- \"local\" \n- \"online\"",
      "annotations": {
       "required": [
        "content.products.insert"
@@ -5718,11 +5724,11 @@
     },
     "condition": {
      "type": "string",
-     "description": "Condition or state of the item."
+     "description": "Condition or state of the item.\n\nAcceptable values are:  \n- \"local\" \n- \"online\""
     },
     "contentLanguage": {
      "type": "string",
-     "description": "The two-letter ISO 639-1 language code for the item.",
+     "description": "Required. The two-letter ISO 639-1 language code for the item.",
      "annotations": {
       "required": [
        "content.products.insert"
@@ -5804,7 +5810,7 @@
     },
     "energyEfficiencyClass": {
      "type": "string",
-     "description": "The energy efficiency class as defined in EU directive 2010/30/EU."
+     "description": "The energy efficiency class as defined in EU directive 2010/30/EU.\n\nAcceptable values are:  \n- \"A\" \n- \"A+\" \n- \"A++\" \n- \"A+++\" \n- \"B\" \n- \"C\" \n- \"D\" \n- \"E\" \n- \"F\" \n- \"G\""
     },
     "expirationDate": {
      "type": "string",
@@ -5812,7 +5818,7 @@
     },
     "gender": {
      "type": "string",
-     "description": "Target gender of the item."
+     "description": "Target gender of the item.\n\nAcceptable values are:  \n- \"female\" \n- \"male\" \n- \"unisex\""
     },
     "googleProductCategory": {
      "type": "string",
@@ -5865,7 +5871,7 @@
     },
     "maxEnergyEfficiencyClass": {
      "type": "string",
-     "description": "The energy efficiency class as defined in EU directive 2010/30/EU."
+     "description": "The energy efficiency class as defined in EU directive 2010/30/EU.\n\nAcceptable values are:  \n- \"A\" \n- \"A+\" \n- \"A++\" \n- \"A+++\" \n- \"B\" \n- \"C\" \n- \"D\" \n- \"E\" \n- \"F\" \n- \"G\""
     },
     "maxHandlingTime": {
      "type": "string",
@@ -5874,7 +5880,7 @@
     },
     "minEnergyEfficiencyClass": {
      "type": "string",
-     "description": "The energy efficiency class as defined in EU directive 2010/30/EU."
+     "description": "The energy efficiency class as defined in EU directive 2010/30/EU.\n\nAcceptable values are:  \n- \"A\" \n- \"A+\" \n- \"A++\" \n- \"A+++\" \n- \"B\" \n- \"C\" \n- \"D\" \n- \"E\" \n- \"F\" \n- \"G\""
     },
     "minHandlingTime": {
      "type": "string",
@@ -5896,7 +5902,7 @@
     },
     "offerId": {
      "type": "string",
-     "description": "A unique identifier for the item. Leading and trailing whitespaces are stripped and multiple whitespaces are replaced by a single whitespace upon submission. Only valid unicode characters are accepted. See the products feed specification for details.\nNote: Content API methods that operate on products take the REST ID of the product, not this identifier.",
+     "description": "Required. A unique identifier for the item. Leading and trailing whitespaces are stripped and multiple whitespaces are replaced by a single whitespace upon submission. Only valid unicode characters are accepted. See the products feed specification for details.\nNote: Content API methods that operate on products take the REST ID of the product, not this identifier.",
      "annotations": {
       "required": [
        "content.products.insert"
@@ -5968,11 +5974,11 @@
     },
     "sizeSystem": {
      "type": "string",
-     "description": "System in which the size is specified. Recommended for apparel items."
+     "description": "System in which the size is specified. Recommended for apparel items.\n\nAcceptable values are:  \n- \"AU\" \n- \"BR\" \n- \"CN\" \n- \"DE\" \n- \"EU\" \n- \"FR\" \n- \"IT\" \n- \"JP\" \n- \"MEX\" \n- \"UK\" \n- \"US\""
     },
     "sizeType": {
      "type": "string",
-     "description": "The cut of the item. Recommended for apparel items."
+     "description": "The cut of the item. Recommended for apparel items.\n\nAcceptable values are:  \n- \"big and tall\" \n- \"maternity\" \n- \"oversize\" \n- \"petite\" \n- \"plus\" \n- \"regular\""
     },
     "sizes": {
      "type": "array",
@@ -5983,11 +5989,11 @@
     },
     "source": {
      "type": "string",
-     "description": "The source of the offer, i.e., how the offer was created."
+     "description": "The source of the offer, i.e., how the offer was created.\n\nAcceptable values are:  \n- \"api\" \n- \"crawl\" \n- \"feed\""
     },
     "targetCountry": {
      "type": "string",
-     "description": "The CLDR territory code for the item.",
+     "description": "Required. The CLDR territory code for the item.",
      "annotations": {
       "required": [
        "content.products.insert"
@@ -6075,7 +6081,7 @@
     },
     "intention": {
      "type": "string",
-     "description": "Whether the destination is required, excluded or should be validated."
+     "description": "Whether the destination is required, excluded or should be validated.\n\nAcceptable values are:  \n- \"default\" \n- \"excluded\" \n- \"optional\" \n- \"required\""
     }
    }
   },
@@ -6248,7 +6254,7 @@
     },
     "approvalStatus": {
      "type": "string",
-     "description": "The destination's approval status."
+     "description": "The destination's approval status.\n\nAcceptable values are:  \n- \"approved\" \n- \"disapproved\""
     },
     "destination": {
      "type": "string",
@@ -6256,7 +6262,7 @@
     },
     "intention": {
      "type": "string",
-     "description": "Provided for backward compatibility only. Always set to \"required\"."
+     "description": "Provided for backward compatibility only. Always set to \"required\".\n\nAcceptable values are:  \n- \"default\" \n- \"excluded\" \n- \"optional\" \n- \"required\""
     }
    }
   },
@@ -6389,7 +6395,8 @@
      "format": "uint64"
     },
     "method": {
-     "type": "string"
+     "type": "string",
+     "description": "The method of the batch entry.\n\nAcceptable values are:  \n- \"delete\" \n- \"get\" \n- \"insert\""
     },
     "product": {
      "$ref": "Product",
@@ -6504,7 +6511,8 @@
      "format": "uint64"
     },
     "method": {
-     "type": "string"
+     "type": "string",
+     "description": "The method of the batch entry.\n\nAcceptable values are:  \n- \"get\""
     },
     "productId": {
      "type": "string",
@@ -6639,7 +6647,7 @@
     },
     "reasonCode": {
      "type": "string",
-     "description": "Code of the refund reason."
+     "description": "Code of the refund reason.\n\nAcceptable values are:  \n- \"adjustment\" \n- \"autoPostInternal\" \n- \"autoPostInvalidBillingAddress\" \n- \"autoPostNoInventory\" \n- \"autoPostPriceError\" \n- \"autoPostUndeliverableShippingAddress\" \n- \"couponAbuse\" \n- \"courtesyAdjustment\" \n- \"customerCanceled\" \n- \"customerDiscretionaryReturn\" \n- \"customerInitiatedMerchantCancel\" \n- \"customerSupportRequested\" \n- \"deliveredLateByCarrier\" \n- \"deliveredTooLate\" \n- \"expiredItem\" \n- \"failToPushOrderGoogleError\" \n- \"failToPushOrderMerchantError\" \n- \"failToPushOrderMerchantFulfillmentError\" \n- \"failToPushOrderToMerchant\" \n- \"failToPushOrderToMerchantOutOfStock\" \n- \"feeAdjustment\" \n- \"invalidCoupon\" \n- \"lateShipmentCredit\" \n- \"malformedShippingAddress\" \n- \"merchantDidNotShipOnTime\" \n- \"noInventory\" \n- \"orderTimeout\" \n- \"other\" \n- \"paymentAbuse\" \n- \"paymentDeclined\" \n- \"priceAdjustment\" \n- \"priceError\" \n- \"productArrivedDamaged\" \n- \"productNotAsDescribed\" \n- \"promoReallocation\" \n- \"qualityNotAsExpected\" \n- \"returnRefundAbuse\" \n- \"shippingCostAdjustment\" \n- \"shippingPriceError\" \n- \"taxAdjustment\" \n- \"taxError\" \n- \"undeliverableShippingAddress\" \n- \"unsupportedPoBoxAddress\" \n- \"wrongProductShipped\""
     }
    }
   },
@@ -6657,7 +6665,7 @@
     },
     "returnMethodType": {
      "type": "string",
-     "description": "Type of the return method."
+     "description": "Type of the return method.\n\nAcceptable values are:  \n- \"byMail\" \n- \"contactCustomerSupport\" \n- \"returnless\""
     },
     "shipmentId": {
      "type": "string",
@@ -6676,7 +6684,7 @@
     },
     "state": {
      "type": "string",
-     "description": "State of the shipment."
+     "description": "State of the shipment.\n\nAcceptable values are:  \n- \"completed\" \n- \"new\" \n- \"shipped\" \n- \"undeliverable\""
     }
    }
   },
@@ -6715,7 +6723,7 @@
     },
     "eligibility": {
      "type": "string",
-     "description": "Eligibility for this service."
+     "description": "Eligibility for this service.\n\nAcceptable values are:  \n- \"All scenarios\" \n- \"All scenarios except Shopping Actions\" \n- \"Shopping Actions\""
     },
     "minimumOrderValue": {
      "$ref": "Price",
@@ -6738,7 +6746,7 @@
     },
     "shipmentType": {
      "type": "string",
-     "description": "Type of locations this service ships orders to."
+     "description": "Type of locations this service ships orders to.\n\nAcceptable values are:  \n- \"delivery\" \n- \"pickup\""
     }
    }
   },
@@ -6794,7 +6802,7 @@
    "properties": {
     "carrier": {
      "type": "string",
-     "description": "The shipping carrier that handles the package."
+     "description": "The shipping carrier that handles the package.\n\nAcceptable values are:  \n- \"boxtal\" \n- \"bpost\" \n- \"chronopost\" \n- \"colisPrive\" \n- \"colissimo\" \n- \"cxt\" \n- \"deliv\" \n- \"dhl\" \n- \"dpd\" \n- \"dynamex\" \n- \"eCourier\" \n- \"easypost\" \n- \"efw\" \n- \"fedex\" \n- \"fedexSmartpost\" \n- \"geodis\" \n- \"gls\" \n- \"googleCourier\" \n- \"gsx\" \n- \"jdLogistics\" \n- \"laPoste\" \n- \"lasership\" \n- \"manual\" \n- \"mpx\" \n- \"onTrac\" \n- \"other\" \n- \"tnt\" \n- \"uds\" \n- \"ups\" \n- \"usps\""
     },
     "trackingNumber": {
      "type": "string",
@@ -6862,7 +6870,8 @@
      "format": "uint64"
     },
     "method": {
-     "type": "string"
+     "type": "string",
+     "description": "The method of the batch entry.\n\nAcceptable values are:  \n- \"get\" \n- \"update\""
     },
     "shippingSettings": {
      "$ref": "ShippingSettings",
@@ -7019,7 +7028,7 @@
    "properties": {
     "customer": {
      "$ref": "TestOrderCustomer",
-     "description": "The details of the customer who placed the order.",
+     "description": "Required. The details of the customer who placed the order.",
      "annotations": {
       "required": [
        "content.orders.createtestorder"
@@ -7037,7 +7046,7 @@
     },
     "lineItems": {
      "type": "array",
-     "description": "Line items that are ordered. At least one line item must be provided.",
+     "description": "Required. Line items that are ordered. At least one line item must be provided.",
      "items": {
       "$ref": "TestOrderLineItem"
      },
@@ -7049,7 +7058,7 @@
     },
     "notificationMode": {
      "type": "string",
-     "description": "Determines if test order must be pulled by merchant or pushed to merchant via push integration."
+     "description": "Determines if test order must be pulled by merchant or pushed to merchant via push integration.\n\nAcceptable values are:  \n- \"checkoutIntegration\" \n- \"merchantPull\""
     },
     "paymentMethod": {
      "$ref": "TestOrderPaymentMethod",
@@ -7057,7 +7066,7 @@
     },
     "predefinedDeliveryAddress": {
      "type": "string",
-     "description": "Identifier of one of the predefined delivery addresses for the delivery.",
+     "description": "Required. Identifier of one of the predefined delivery addresses for the delivery.\n\nAcceptable values are:  \n- \"dwight\" \n- \"jim\" \n- \"pam\"",
      "annotations": {
       "required": [
        "content.orders.createtestorder"
@@ -7066,7 +7075,7 @@
     },
     "predefinedPickupDetails": {
      "type": "string",
-     "description": "Identifier of one of the predefined pickup details. Required for orders containing line items with shipping type pickup."
+     "description": "Identifier of one of the predefined pickup details. Required for orders containing line items with shipping type pickup.\n\nAcceptable values are:  \n- \"dwight\" \n- \"jim\" \n- \"pam\""
     },
     "promotions": {
      "type": "array",
@@ -7077,7 +7086,7 @@
     },
     "shippingCost": {
      "$ref": "Price",
-     "description": "The price of shipping for all items. Shipping tax is automatically calculated for orders where marketplace facilitator tax laws are applicable. Otherwise, tax settings from Merchant Center are applied. Note that shipping is not taxed in certain states.",
+     "description": "Required. The price of shipping for all items. Shipping tax is automatically calculated for orders where marketplace facilitator tax laws are applicable. Otherwise, tax settings from Merchant Center are applied. Note that shipping is not taxed in certain states.",
      "annotations": {
       "required": [
        "content.orders.createtestorder"
@@ -7090,7 +7099,7 @@
     },
     "shippingOption": {
      "type": "string",
-     "description": "The requested shipping option.",
+     "description": "Required. The requested shipping option.\n\nAcceptable values are:  \n- \"economy\" \n- \"expedited\" \n- \"oneDay\" \n- \"sameDay\" \n- \"standard\" \n- \"twoDay\"",
      "annotations": {
       "required": [
        "content.orders.createtestorder"
@@ -7105,7 +7114,7 @@
    "properties": {
     "email": {
      "type": "string",
-     "description": "Email address of the customer.",
+     "description": "Required. Email address of the customer.\n\nAcceptable values are:  \n- \"pog.dwight.schrute@gmail.com\" \n- \"pog.jim.halpert@gmail.com\" \n- \"penpog.pam.beesly@gmail.comding\"",
      "annotations": {
       "required": [
        "content.orders.createtestorder"
@@ -7132,7 +7141,7 @@
    "properties": {
     "explicitMarketingPreference": {
      "type": "string",
-     "description": "Last know user use selection regards marketing preferences. In certain cases selection might not be known, so this field would be empty."
+     "description": "Last know user use selection regards marketing preferences. In certain cases selection might not be known, so this field would be empty.\n\nAcceptable values are:  \n- \"denied\" \n- \"granted\""
     },
     "lastUpdatedTimestamp": {
      "type": "string",
@@ -7146,11 +7155,11 @@
    "properties": {
     "product": {
      "$ref": "TestOrderLineItemProduct",
-     "description": "Product data from the time of the order placement."
+     "description": "Required. Product data from the time of the order placement."
     },
     "quantityOrdered": {
      "type": "integer",
-     "description": "Number of items ordered.",
+     "description": "Required. Number of items ordered.",
      "format": "uint32",
      "annotations": {
       "required": [
@@ -7160,7 +7169,7 @@
     },
     "returnInfo": {
      "$ref": "OrderLineItemReturnInfo",
-     "description": "Details of the return policy for the line item.",
+     "description": "Required. Details of the return policy for the line item.",
      "annotations": {
       "required": [
        "content.orders.createtestorder"
@@ -7169,7 +7178,7 @@
     },
     "shippingDetails": {
      "$ref": "OrderLineItemShippingDetails",
-     "description": "Details of the requested shipping for the line item.",
+     "description": "Required. Details of the requested shipping for the line item.",
      "annotations": {
       "required": [
        "content.orders.createtestorder"
@@ -7188,7 +7197,7 @@
    "properties": {
     "brand": {
      "type": "string",
-     "description": "Brand of the item.",
+     "description": "Required. Brand of the item.",
      "annotations": {
       "required": [
        "content.orders.createtestorder"
@@ -7197,11 +7206,11 @@
     },
     "channel": {
      "type": "string",
-     "description": "Deprecated."
+     "description": "Deprecated.\n\nAcceptable values are:  \n- \"online\""
     },
     "condition": {
      "type": "string",
-     "description": "Condition or state of the item.",
+     "description": "Required. Condition or state of the item.\n\nAcceptable values are:  \n- \"new\"",
      "annotations": {
       "required": [
        "content.orders.createtestorder"
@@ -7210,7 +7219,7 @@
     },
     "contentLanguage": {
      "type": "string",
-     "description": "The two-letter ISO 639-1 language code for the item.",
+     "description": "Required. The two-letter ISO 639-1 language code for the item.\n\nAcceptable values are:  \n- \"en\" \n- \"fr\"",
      "annotations": {
       "required": [
        "content.orders.createtestorder"
@@ -7230,7 +7239,7 @@
     },
     "imageLink": {
      "type": "string",
-     "description": "URL of an image of the item.",
+     "description": "Required. URL of an image of the item.",
      "annotations": {
       "required": [
        "content.orders.createtestorder"
@@ -7247,7 +7256,7 @@
     },
     "offerId": {
      "type": "string",
-     "description": "An identifier of the item.",
+     "description": "Required. An identifier of the item.",
      "annotations": {
       "required": [
        "content.orders.createtestorder"
@@ -7256,7 +7265,7 @@
     },
     "price": {
      "$ref": "Price",
-     "description": "The price for the product. Tax is automatically calculated for orders where marketplace facilitator tax laws are applicable. Otherwise, tax settings from Merchant Center are applied.",
+     "description": "Required. The price for the product. Tax is automatically calculated for orders where marketplace facilitator tax laws are applicable. Otherwise, tax settings from Merchant Center are applied.",
      "annotations": {
       "required": [
        "content.orders.createtestorder"
@@ -7265,7 +7274,7 @@
     },
     "targetCountry": {
      "type": "string",
-     "description": "The CLDR territory code of the target country of the product.",
+     "description": "Required. The CLDR territory code of the target country of the product.",
      "annotations": {
       "required": [
        "content.orders.createtestorder"
@@ -7274,7 +7283,7 @@
     },
     "title": {
      "type": "string",
-     "description": "The title of the product.",
+     "description": "Required. The title of the product.",
      "annotations": {
       "required": [
        "content.orders.createtestorder"
@@ -7310,11 +7319,11 @@
     },
     "predefinedBillingAddress": {
      "type": "string",
-     "description": "The billing address."
+     "description": "The billing address.\n\nAcceptable values are:  \n- \"dwight\" \n- \"jim\" \n- \"pam\""
     },
     "type": {
      "type": "string",
-     "description": "The type of instrument. Note that real orders might have different values than the four values accepted by createTestOrder."
+     "description": "The type of instrument. Note that real orders might have different values than the four values accepted by createTestOrder.\n\nAcceptable values are:  \n- \"AMEX\" \n- \"DISCOVER\" \n- \"MASTERCARD\" \n- \"VISA\""
     }
    }
   },
@@ -7420,7 +7429,7 @@
     },
     "type": {
      "type": "string",
-     "description": "[required] Type of the additional charge."
+     "description": "[required] Type of the additional charge.\n\nAcceptable values are:  \n- \"shipping\""
     }
    }
   },
@@ -7438,7 +7447,7 @@
     },
     "taxType": {
      "type": "string",
-     "description": "[required] Type of the tax."
+     "description": "[required] Type of the tax.\n\nAcceptable values are:  \n- \"otherFee\" \n- \"otherFeeTax\" \n- \"sales\""
     }
    }
   },
@@ -7475,11 +7484,11 @@
    "properties": {
     "unit": {
      "type": "string",
-     "description": "The weight unit."
+     "description": "Required. The weight unit.\n\nAcceptable values are:  \n- \"kg\" \n- \"lb\""
     },
     "value": {
      "type": "string",
-     "description": "The weight represented as a number."
+     "description": "Required. The weight represented as a number."
     }
    }
   }

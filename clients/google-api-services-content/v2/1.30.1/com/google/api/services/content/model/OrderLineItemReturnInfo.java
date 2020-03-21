@@ -31,28 +31,28 @@ package com.google.api.services.content.model;
 public final class OrderLineItemReturnInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * How many days later the item can be returned.
+   * Required. How many days later the item can be returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer daysToReturn;
 
   /**
-   * Whether the item is returnable.
+   * Required. Whether the item is returnable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isReturnable;
 
   /**
-   * URL of the item return policy.
+   * Required. URL of the item return policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String policyUrl;
 
   /**
-   * How many days later the item can be returned.
+   * Required. How many days later the item can be returned.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDaysToReturn() {
@@ -60,7 +60,7 @@ public final class OrderLineItemReturnInfo extends com.google.api.client.json.Ge
   }
 
   /**
-   * How many days later the item can be returned.
+   * Required. How many days later the item can be returned.
    * @param daysToReturn daysToReturn or {@code null} for none
    */
   public OrderLineItemReturnInfo setDaysToReturn(java.lang.Integer daysToReturn) {
@@ -69,7 +69,7 @@ public final class OrderLineItemReturnInfo extends com.google.api.client.json.Ge
   }
 
   /**
-   * Whether the item is returnable.
+   * Required. Whether the item is returnable.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsReturnable() {
@@ -77,7 +77,7 @@ public final class OrderLineItemReturnInfo extends com.google.api.client.json.Ge
   }
 
   /**
-   * Whether the item is returnable.
+   * Required. Whether the item is returnable.
    * @param isReturnable isReturnable or {@code null} for none
    */
   public OrderLineItemReturnInfo setIsReturnable(java.lang.Boolean isReturnable) {
@@ -86,7 +86,7 @@ public final class OrderLineItemReturnInfo extends com.google.api.client.json.Ge
   }
 
   /**
-   * URL of the item return policy.
+   * Required. URL of the item return policy.
    * @return value or {@code null} for none
    */
   public java.lang.String getPolicyUrl() {
@@ -94,7 +94,7 @@ public final class OrderLineItemReturnInfo extends com.google.api.client.json.Ge
   }
 
   /**
-   * URL of the item return policy.
+   * Required. URL of the item return policy.
    * @param policyUrl policyUrl or {@code null} for none
    */
   public OrderLineItemReturnInfo setPolicyUrl(java.lang.String policyUrl) {

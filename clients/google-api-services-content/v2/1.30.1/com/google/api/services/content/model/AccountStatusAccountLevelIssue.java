@@ -67,6 +67,8 @@ public final class AccountStatusAccountLevelIssue extends com.google.api.client.
 
   /**
    * Severity of the issue.
+   *
+   * Acceptable values are:   - "critical"  - "error"  - "suggestion"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -166,6 +168,8 @@ public final class AccountStatusAccountLevelIssue extends com.google.api.client.
 
   /**
    * Severity of the issue.
+   *
+   * Acceptable values are:   - "critical"  - "error"  - "suggestion"
    * @return value or {@code null} for none
    */
   public java.lang.String getSeverity() {
@@ -174,6 +178,8 @@ public final class AccountStatusAccountLevelIssue extends com.google.api.client.
 
   /**
    * Severity of the issue.
+   *
+   * Acceptable values are:   - "critical"  - "error"  - "suggestion"
    * @param severity severity or {@code null} for none
    */
   public AccountStatusAccountLevelIssue setSeverity(java.lang.String severity) {

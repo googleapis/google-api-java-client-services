@@ -46,8 +46,10 @@ public final class Datafeed extends com.google.api.client.json.GenericJson {
   private java.lang.String contentLanguage;
 
   /**
-   * The type of data feed. For product inventory feeds, only feeds for local stores, not online
-   * stores, are supported.
+   * Required. The type of data feed. For product inventory feeds, only feeds for local stores, not
+   * online stores, are supported.
+   *
+   * Acceptable values are:   - "local products"  - "product inventory"  - "products"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +63,7 @@ public final class Datafeed extends com.google.api.client.json.GenericJson {
   private DatafeedFetchSchedule fetchSchedule;
 
   /**
-   * The filename of the feed. All feeds must have a unique file name.
+   * Required. The filename of the feed. All feeds must have a unique file name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +77,7 @@ public final class Datafeed extends com.google.api.client.json.GenericJson {
   private DatafeedFormat format;
 
   /**
-   * The ID of the data feed.
+   * Required for update. The ID of the data feed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -97,7 +99,7 @@ public final class Datafeed extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * A descriptive name of the data feed.
+   * Required for insert. A descriptive name of the data feed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -155,8 +157,10 @@ public final class Datafeed extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of data feed. For product inventory feeds, only feeds for local stores, not online
-   * stores, are supported.
+   * Required. The type of data feed. For product inventory feeds, only feeds for local stores, not
+   * online stores, are supported.
+   *
+   * Acceptable values are:   - "local products"  - "product inventory"  - "products"
    * @return value or {@code null} for none
    */
   public java.lang.String getContentType() {
@@ -164,8 +168,10 @@ public final class Datafeed extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of data feed. For product inventory feeds, only feeds for local stores, not online
-   * stores, are supported.
+   * Required. The type of data feed. For product inventory feeds, only feeds for local stores, not
+   * online stores, are supported.
+   *
+   * Acceptable values are:   - "local products"  - "product inventory"  - "products"
    * @param contentType contentType or {@code null} for none
    */
   public Datafeed setContentType(java.lang.String contentType) {
@@ -191,7 +197,7 @@ public final class Datafeed extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The filename of the feed. All feeds must have a unique file name.
+   * Required. The filename of the feed. All feeds must have a unique file name.
    * @return value or {@code null} for none
    */
   public java.lang.String getFileName() {
@@ -199,7 +205,7 @@ public final class Datafeed extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The filename of the feed. All feeds must have a unique file name.
+   * Required. The filename of the feed. All feeds must have a unique file name.
    * @param fileName fileName or {@code null} for none
    */
   public Datafeed setFileName(java.lang.String fileName) {
@@ -225,7 +231,7 @@ public final class Datafeed extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the data feed.
+   * Required for update. The ID of the data feed.
    * @return value or {@code null} for none
    */
   public java.lang.Long getId() {
@@ -233,7 +239,7 @@ public final class Datafeed extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the data feed.
+   * Required for update. The ID of the data feed.
    * @param id id or {@code null} for none
    */
   public Datafeed setId(java.lang.Long id) {
@@ -278,7 +284,7 @@ public final class Datafeed extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A descriptive name of the data feed.
+   * Required for insert. A descriptive name of the data feed.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -286,7 +292,7 @@ public final class Datafeed extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A descriptive name of the data feed.
+   * Required for insert. A descriptive name of the data feed.
    * @param name name or {@code null} for none
    */
   public Datafeed setName(java.lang.String name) {

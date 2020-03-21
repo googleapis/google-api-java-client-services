@@ -98,7 +98,7 @@ public final class LocalInventory extends com.google.api.client.json.GenericJson
   private java.lang.String salePriceEffectiveDate;
 
   /**
-   * Store code of this local inventory resource.
+   * Required. Store code of this local inventory resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -264,7 +264,7 @@ public final class LocalInventory extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Store code of this local inventory resource.
+   * Required. Store code of this local inventory resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getStoreCode() {
@@ -272,7 +272,7 @@ public final class LocalInventory extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Store code of this local inventory resource.
+   * Required. Store code of this local inventory resource.
    * @param storeCode storeCode or {@code null} for none
    */
   public LocalInventory setStoreCode(java.lang.String storeCode) {

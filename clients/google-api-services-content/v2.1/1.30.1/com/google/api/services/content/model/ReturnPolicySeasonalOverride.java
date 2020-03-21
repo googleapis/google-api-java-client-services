@@ -31,35 +31,35 @@ package com.google.api.services.content.model;
 public final class ReturnPolicySeasonalOverride extends com.google.api.client.json.GenericJson {
 
   /**
-   * Last day on which the override applies. In ISO 8601 format.
+   * Required. Last day on which the override applies. In ISO 8601 format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String endDate;
 
   /**
-   * The name of the seasonal override as shown in Merchant Center.
+   * Required. The name of the seasonal override as shown in Merchant Center.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The policy which is in effect during that time.
+   * Required. The policy which is in effect during that time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ReturnPolicyPolicy policy;
 
   /**
-   * First day on which the override applies. In ISO 8601 format.
+   * Required. First day on which the override applies. In ISO 8601 format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String startDate;
 
   /**
-   * Last day on which the override applies. In ISO 8601 format.
+   * Required. Last day on which the override applies. In ISO 8601 format.
    * @return value or {@code null} for none
    */
   public java.lang.String getEndDate() {
@@ -67,7 +67,7 @@ public final class ReturnPolicySeasonalOverride extends com.google.api.client.js
   }
 
   /**
-   * Last day on which the override applies. In ISO 8601 format.
+   * Required. Last day on which the override applies. In ISO 8601 format.
    * @param endDate endDate or {@code null} for none
    */
   public ReturnPolicySeasonalOverride setEndDate(java.lang.String endDate) {
@@ -76,7 +76,7 @@ public final class ReturnPolicySeasonalOverride extends com.google.api.client.js
   }
 
   /**
-   * The name of the seasonal override as shown in Merchant Center.
+   * Required. The name of the seasonal override as shown in Merchant Center.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -84,7 +84,7 @@ public final class ReturnPolicySeasonalOverride extends com.google.api.client.js
   }
 
   /**
-   * The name of the seasonal override as shown in Merchant Center.
+   * Required. The name of the seasonal override as shown in Merchant Center.
    * @param name name or {@code null} for none
    */
   public ReturnPolicySeasonalOverride setName(java.lang.String name) {
@@ -93,7 +93,7 @@ public final class ReturnPolicySeasonalOverride extends com.google.api.client.js
   }
 
   /**
-   * The policy which is in effect during that time.
+   * Required. The policy which is in effect during that time.
    * @return value or {@code null} for none
    */
   public ReturnPolicyPolicy getPolicy() {
@@ -101,7 +101,7 @@ public final class ReturnPolicySeasonalOverride extends com.google.api.client.js
   }
 
   /**
-   * The policy which is in effect during that time.
+   * Required. The policy which is in effect during that time.
    * @param policy policy or {@code null} for none
    */
   public ReturnPolicySeasonalOverride setPolicy(ReturnPolicyPolicy policy) {
@@ -110,7 +110,7 @@ public final class ReturnPolicySeasonalOverride extends com.google.api.client.js
   }
 
   /**
-   * First day on which the override applies. In ISO 8601 format.
+   * Required. First day on which the override applies. In ISO 8601 format.
    * @return value or {@code null} for none
    */
   public java.lang.String getStartDate() {
@@ -118,7 +118,7 @@ public final class ReturnPolicySeasonalOverride extends com.google.api.client.js
   }
 
   /**
-   * First day on which the override applies. In ISO 8601 format.
+   * Required. First day on which the override applies. In ISO 8601 format.
    * @param startDate startDate or {@code null} for none
    */
   public ReturnPolicySeasonalOverride setStartDate(java.lang.String startDate) {

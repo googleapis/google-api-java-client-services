@@ -31,21 +31,21 @@ package com.google.api.services.content.model;
 public final class OrderLineItemShippingDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * The delivery by date, in ISO 8601 format.
+   * Required. The delivery by date, in ISO 8601 format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String deliverByDate;
 
   /**
-   * Details of the shipping method.
+   * Required. Details of the shipping method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private OrderLineItemShippingDetailsMethod method;
 
   /**
-   * The ship by date, in ISO 8601 format.
+   * Required. The ship by date, in ISO 8601 format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,13 +54,15 @@ public final class OrderLineItemShippingDetails extends com.google.api.client.js
   /**
    * Type of shipment. Indicates whether deliveryDetails or pickupDetails is applicable for this
    * shipment.
+   *
+   * Acceptable values are:   - "delivery"  - "pickup"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * The delivery by date, in ISO 8601 format.
+   * Required. The delivery by date, in ISO 8601 format.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeliverByDate() {
@@ -68,7 +70,7 @@ public final class OrderLineItemShippingDetails extends com.google.api.client.js
   }
 
   /**
-   * The delivery by date, in ISO 8601 format.
+   * Required. The delivery by date, in ISO 8601 format.
    * @param deliverByDate deliverByDate or {@code null} for none
    */
   public OrderLineItemShippingDetails setDeliverByDate(java.lang.String deliverByDate) {
@@ -77,7 +79,7 @@ public final class OrderLineItemShippingDetails extends com.google.api.client.js
   }
 
   /**
-   * Details of the shipping method.
+   * Required. Details of the shipping method.
    * @return value or {@code null} for none
    */
   public OrderLineItemShippingDetailsMethod getMethod() {
@@ -85,7 +87,7 @@ public final class OrderLineItemShippingDetails extends com.google.api.client.js
   }
 
   /**
-   * Details of the shipping method.
+   * Required. Details of the shipping method.
    * @param method method or {@code null} for none
    */
   public OrderLineItemShippingDetails setMethod(OrderLineItemShippingDetailsMethod method) {
@@ -94,7 +96,7 @@ public final class OrderLineItemShippingDetails extends com.google.api.client.js
   }
 
   /**
-   * The ship by date, in ISO 8601 format.
+   * Required. The ship by date, in ISO 8601 format.
    * @return value or {@code null} for none
    */
   public java.lang.String getShipByDate() {
@@ -102,7 +104,7 @@ public final class OrderLineItemShippingDetails extends com.google.api.client.js
   }
 
   /**
-   * The ship by date, in ISO 8601 format.
+   * Required. The ship by date, in ISO 8601 format.
    * @param shipByDate shipByDate or {@code null} for none
    */
   public OrderLineItemShippingDetails setShipByDate(java.lang.String shipByDate) {
@@ -113,6 +115,8 @@ public final class OrderLineItemShippingDetails extends com.google.api.client.js
   /**
    * Type of shipment. Indicates whether deliveryDetails or pickupDetails is applicable for this
    * shipment.
+   *
+   * Acceptable values are:   - "delivery"  - "pickup"
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -122,6 +126,8 @@ public final class OrderLineItemShippingDetails extends com.google.api.client.js
   /**
    * Type of shipment. Indicates whether deliveryDetails or pickupDetails is applicable for this
    * shipment.
+   *
+   * Acceptable values are:   - "delivery"  - "pickup"
    * @param type type or {@code null} for none
    */
   public OrderLineItemShippingDetails setType(java.lang.String type) {

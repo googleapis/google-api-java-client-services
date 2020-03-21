@@ -52,6 +52,9 @@ public final class ProductsCustomBatchRequestEntry extends com.google.api.client
   private java.math.BigInteger merchantId;
 
   /**
+   * The method of the batch entry.
+   *
+   * Acceptable values are:   - "delete"  - "get"  - "insert"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,6 +126,9 @@ public final class ProductsCustomBatchRequestEntry extends com.google.api.client
   }
 
   /**
+   * The method of the batch entry.
+   *
+   * Acceptable values are:   - "delete"  - "get"  - "insert"
    * @return value or {@code null} for none
    */
   public java.lang.String getMethod() {
@@ -130,6 +136,9 @@ public final class ProductsCustomBatchRequestEntry extends com.google.api.client
   }
 
   /**
+   * The method of the batch entry.
+   *
+   * Acceptable values are:   - "delete"  - "get"  - "insert"
    * @param method method or {@code null} for none
    */
   public ProductsCustomBatchRequestEntry setMethod(java.lang.String method) {

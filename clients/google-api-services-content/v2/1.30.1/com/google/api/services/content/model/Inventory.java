@@ -32,6 +32,8 @@ public final class Inventory extends com.google.api.client.json.GenericJson {
 
   /**
    * The availability of the product.
+   *
+   * Acceptable values are:   - "in stock"  - "out of stock"  - "preorder"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -154,6 +156,8 @@ public final class Inventory extends com.google.api.client.json.GenericJson {
 
   /**
    * The availability of the product.
+   *
+   * Acceptable values are:   - "in stock"  - "out of stock"  - "preorder"
    * @return value or {@code null} for none
    */
   public java.lang.String getAvailability() {
@@ -162,6 +166,8 @@ public final class Inventory extends com.google.api.client.json.GenericJson {
 
   /**
    * The availability of the product.
+   *
+   * Acceptable values are:   - "in stock"  - "out of stock"  - "preorder"
    * @param availability availability or {@code null} for none
    */
   public Inventory setAvailability(java.lang.String availability) {

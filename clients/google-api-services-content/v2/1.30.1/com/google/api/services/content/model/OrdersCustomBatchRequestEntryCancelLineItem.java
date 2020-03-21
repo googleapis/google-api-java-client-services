@@ -78,6 +78,10 @@ public final class OrdersCustomBatchRequestEntryCancelLineItem extends com.googl
 
   /**
    * The reason for the cancellation.
+   *
+   * Acceptable values are:   - "customerInitiatedCancel"  - "invalidCoupon"  -
+   * "malformedShippingAddress"  - "noInventory"  - "other"  - "priceError"  - "shippingPriceError"
+   * - "taxError"  - "undeliverableShippingAddress"  - "unsupportedPoBoxAddress"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -202,6 +206,10 @@ public final class OrdersCustomBatchRequestEntryCancelLineItem extends com.googl
 
   /**
    * The reason for the cancellation.
+   *
+   * Acceptable values are:   - "customerInitiatedCancel"  - "invalidCoupon"  -
+   * "malformedShippingAddress"  - "noInventory"  - "other"  - "priceError"  - "shippingPriceError"
+   * - "taxError"  - "undeliverableShippingAddress"  - "unsupportedPoBoxAddress"
    * @return value or {@code null} for none
    */
   public java.lang.String getReason() {
@@ -210,6 +218,10 @@ public final class OrdersCustomBatchRequestEntryCancelLineItem extends com.googl
 
   /**
    * The reason for the cancellation.
+   *
+   * Acceptable values are:   - "customerInitiatedCancel"  - "invalidCoupon"  -
+   * "malformedShippingAddress"  - "noInventory"  - "other"  - "priceError"  - "shippingPriceError"
+   * - "taxError"  - "undeliverableShippingAddress"  - "unsupportedPoBoxAddress"
    * @param reason reason or {@code null} for none
    */
   public OrdersCustomBatchRequestEntryCancelLineItem setReason(java.lang.String reason) {

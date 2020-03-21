@@ -45,6 +45,9 @@ public final class ReturnpolicyCustomBatchRequestEntry extends com.google.api.cl
   private java.math.BigInteger merchantId;
 
   /**
+   * Method of the batch request entry.
+   *
+   * Acceptable values are:   - "delete"  - "get"  - "insert"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,6 +102,9 @@ public final class ReturnpolicyCustomBatchRequestEntry extends com.google.api.cl
   }
 
   /**
+   * Method of the batch request entry.
+   *
+   * Acceptable values are:   - "delete"  - "get"  - "insert"
    * @return value or {@code null} for none
    */
   public java.lang.String getMethod() {
@@ -106,6 +112,9 @@ public final class ReturnpolicyCustomBatchRequestEntry extends com.google.api.cl
   }
 
   /**
+   * Method of the batch request entry.
+   *
+   * Acceptable values are:   - "delete"  - "get"  - "insert"
    * @param method method or {@code null} for none
    */
   public ReturnpolicyCustomBatchRequestEntry setMethod(java.lang.String method) {

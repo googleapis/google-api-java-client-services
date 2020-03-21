@@ -31,7 +31,10 @@ package com.google.api.services.content.model;
 public final class TestOrderCustomer extends com.google.api.client.json.GenericJson {
 
   /**
-   * Email address of the customer.
+   * Required. Email address of the customer.
+   *
+   * Acceptable values are:   - "pog.dwight.schrute@gmail.com"  - "pog.jim.halpert@gmail.com"  -
+   * "penpog.pam.beesly@gmail.comding"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +62,10 @@ public final class TestOrderCustomer extends com.google.api.client.json.GenericJ
   private TestOrderCustomerMarketingRightsInfo marketingRightsInfo;
 
   /**
-   * Email address of the customer.
+   * Required. Email address of the customer.
+   *
+   * Acceptable values are:   - "pog.dwight.schrute@gmail.com"  - "pog.jim.halpert@gmail.com"  -
+   * "penpog.pam.beesly@gmail.comding"
    * @return value or {@code null} for none
    */
   public java.lang.String getEmail() {
@@ -67,7 +73,10 @@ public final class TestOrderCustomer extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Email address of the customer.
+   * Required. Email address of the customer.
+   *
+   * Acceptable values are:   - "pog.dwight.schrute@gmail.com"  - "pog.jim.halpert@gmail.com"  -
+   * "penpog.pam.beesly@gmail.comding"
    * @param email email or {@code null} for none
    */
   public TestOrderCustomer setEmail(java.lang.String email) {

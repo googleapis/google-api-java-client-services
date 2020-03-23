@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"F5McR9eEaw0XRpaO3M9gbIugkbs/CBEJ9kxU4IEf68udooTm0hfyOkw\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/ZyE2O5Chmj-TJK9zNTPU4D2ctNI\"",
  "discoveryVersion": "v1",
  "id": "toolresults:v1beta3",
  "name": "toolresults",
  "canonicalName": "Tool Results",
  "version": "v1beta3",
- "revision": "20191203",
+ "revision": "20200317",
  "title": "Cloud Tool Results API",
  "description": "Reads and publishes results from Firebase Test Lab.",
  "ownerDomain": "google.com",
@@ -17,10 +17,10 @@
  },
  "documentationLink": "https://firebase.google.com/docs/test-lab/",
  "protocol": "rest",
- "baseUrl": "https://www.googleapis.com/toolresults/v1beta3/projects/",
- "basePath": "/toolresults/v1beta3/projects/",
+ "baseUrl": "https://www.googleapis.com/toolresults/v1beta3/",
+ "basePath": "/toolresults/v1beta3/",
  "rootUrl": "https://www.googleapis.com/",
- "servicePath": "toolresults/v1beta3/projects/",
+ "servicePath": "toolresults/v1beta3/",
  "batchPath": "batch/toolresults/v1beta3",
  "parameters": {
   "alt": {
@@ -792,6 +792,24 @@
     }
    }
   },
+  "ListStepAccessibilityClustersResponse": {
+   "id": "ListStepAccessibilityClustersResponse",
+   "type": "object",
+   "description": "Response message for AccessibilityService.ListStepAccessibilityClusters.",
+   "properties": {
+    "clusters": {
+     "type": "array",
+     "description": "A sequence of accessibility suggestions, grouped into clusters. Within the sequence, clusters that belong to the same SuggestionCategory should be adjacent. Within each category, clusters should be ordered by their SuggestionPriority (ERRORs first). The categories should be ordered by their highest priority cluster.",
+     "items": {
+      "$ref": "SuggestionClusterProto"
+     }
+    },
+    "name": {
+     "type": "string",
+     "description": "A full resource name of the step. For example, projects/my-project/histories/bh.1234567890abcdef/executions/ 1234567890123456789/steps/bs.1234567890abcdef\n\nAlways presents."
+    }
+   }
+  },
   "ListStepThumbnailsResponse": {
    "id": "ListStepThumbnailsResponse",
    "type": "object",
@@ -1138,6 +1156,33 @@
     }
    }
   },
+  "RegionProto": {
+   "id": "RegionProto",
+   "type": "object",
+   "description": "A rectangular region.",
+   "properties": {
+    "heightPx": {
+     "type": "integer",
+     "description": "The height, in pixels. Always set.",
+     "format": "int32"
+    },
+    "leftPx": {
+     "type": "integer",
+     "description": "The left side of the rectangle, in pixels. Always set.",
+     "format": "int32"
+    },
+    "topPx": {
+     "type": "integer",
+     "description": "The top of the rectangle, in pixels. Always set.",
+     "format": "int32"
+    },
+    "widthPx": {
+     "type": "integer",
+     "description": "The width, in pixels. Always set.",
+     "format": "int32"
+    }
+   }
+  },
   "ResultsStorage": {
    "id": "ResultsStorage",
    "type": "object",
@@ -1150,6 +1195,17 @@
     "xunitXmlFile": {
      "$ref": "FileReference",
      "description": "The path to the Xunit XML file."
+    }
+   }
+  },
+  "SafeHtmlProto": {
+   "id": "SafeHtmlProto",
+   "type": "object",
+   "description": "IMPORTANT: It is unsafe to accept this message from an untrusted source, since it's trivial for an attacker to forge serialized messages that don't fulfill the type's safety contract -- for example, it could contain attacker controlled script. A system which receives a SafeHtmlProto implicitly trusts the producer of the SafeHtmlProto. So, it's generally safe to return this message in RPC responses, but generally unsafe to accept it in RPC requests.",
+   "properties": {
+    "privateDoNotAccessOrElseSafeHtmlWrappedValue": {
+     "type": "string",
+     "description": "IMPORTANT: Never set or read this field, even from tests, it is private. See documentation at the top of .proto file for programming language packages with which to create or read this message."
     }
    }
   },
@@ -1392,6 +1448,97 @@
     "otherNativeCrash": {
      "type": "boolean",
      "description": "If a native process other than the app crashed."
+    }
+   }
+  },
+  "SuggestionClusterProto": {
+   "id": "SuggestionClusterProto",
+   "type": "object",
+   "description": "A set of similar suggestions that we suspect are closely related.\n\nThis proto and most of the nested protos are branched from foxandcrown.prelaunchreport.service.SuggestionClusterProto, replacing PLR's dependencies with FTL's.",
+   "properties": {
+    "category": {
+     "type": "string",
+     "description": "Category in which these types of suggestions should appear. Always set.",
+     "enum": [
+      "contentLabeling",
+      "implementation",
+      "lowContrast",
+      "touchTargetSize",
+      "unknownCategory"
+     ],
+     "enumDescriptions": [
+      "",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    "suggestions": {
+     "type": "array",
+     "description": "A sequence of suggestions. All of the suggestions within a cluster must have the same SuggestionPriority and belong to the same SuggestionCategory. Suggestions with the same screenshot URL should be adjacent.",
+     "items": {
+      "$ref": "SuggestionProto"
+     }
+    }
+   }
+  },
+  "SuggestionProto": {
+   "id": "SuggestionProto",
+   "type": "object",
+   "properties": {
+    "helpUrl": {
+     "type": "string",
+     "description": "Reference to a help center article concerning this type of suggestion. Always set."
+    },
+    "longMessage": {
+     "$ref": "SafeHtmlProto",
+     "description": "Message, in the user's language, explaining the suggestion, which may contain markup. Always set."
+    },
+    "priority": {
+     "type": "string",
+     "description": "Relative importance of a suggestion. Always set.",
+     "enum": [
+      "error",
+      "info",
+      "unknownPriority",
+      "warning"
+     ],
+     "enumDescriptions": [
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    "pseudoResourceId": {
+     "type": "string",
+     "description": "A somewhat human readable identifier of the source view, if it does not have a resource_name. This is a path within the accessibility hierarchy, an element with resource name; similar to an XPath."
+    },
+    "region": {
+     "$ref": "RegionProto",
+     "description": "Region within the screenshot that is relevant to this suggestion. Optional."
+    },
+    "resourceName": {
+     "type": "string",
+     "description": "Reference to a view element, identified by its resource name, if it has one."
+    },
+    "screenId": {
+     "type": "string",
+     "description": "ID of the screen for the suggestion. It is used for getting the corresponding screenshot path. For example, screen_id \"1\" corresponds to \"1.png\" file in GCS. Always set."
+    },
+    "secondaryPriority": {
+     "type": "number",
+     "description": "Relative importance of a suggestion as compared with other suggestions that have the same priority and category. This is a meaningless value that can be used to order suggestions that are in the same category and have the same priority. The larger values have higher priority (i.e., are more important). Optional.",
+     "format": "double"
+    },
+    "shortMessage": {
+     "$ref": "SafeHtmlProto",
+     "description": "Concise message, in the user's language, representing the suggestion, which may contain markup. Always set."
+    },
+    "title": {
+     "type": "string",
+     "description": "General title for the suggestion, in the user's language, without markup. Always set."
     }
    }
   },
@@ -1798,7 +1945,7 @@
    "methods": {
     "getSettings": {
      "id": "toolresults.projects.getSettings",
-     "path": "{projectId}/settings",
+     "path": "projects/{projectId}/settings",
      "httpMethod": "GET",
      "description": "Gets the Tool Results settings for a project.\n\nMay return any of the following canonical error codes:\n\n- PERMISSION_DENIED - if the user is not authorized to read from project",
      "parameters": {
@@ -1821,7 +1968,7 @@
     },
     "initializeSettings": {
      "id": "toolresults.projects.initializeSettings",
-     "path": "{projectId}:initializeSettings",
+     "path": "projects/{projectId}:initializeSettings",
      "httpMethod": "POST",
      "description": "Creates resources for settings which have not yet been set.\n\nCurrently, this creates a single resource: a Google Cloud Storage bucket, to be used as the default bucket for this project. The bucket is created in an FTL-own storage project. Except for in rare cases, calling this method in parallel from multiple clients will only create a single bucket. In order to avoid unnecessary storage charges, the bucket is configured to automatically delete objects older than 90 days.\n\nThe bucket is created with the following permissions: - Owner access for owners of central storage project (FTL-owned) - Writer access for owners/editors of customer project - Reader access for viewers of customer project The default ACL on objects created in the bucket is: - Owner access for owners of central storage project - Reader access for owners/editors/viewers of customer project See Google Cloud Storage documentation for more details.\n\nIf there is already a default bucket set and the project can access the bucket, this call does nothing. However, if the project doesn't have the permission to access the bucket or the bucket is deleted, a new bucket will be created.\n\nMay return any canonical error codes, including the following:\n\n- PERMISSION_DENIED - if the user is not authorized to write to project - Any error code raised by Google Cloud Storage",
      "parameters": {
@@ -1848,7 +1995,7 @@
      "methods": {
       "create": {
        "id": "toolresults.projects.histories.create",
-       "path": "{projectId}/histories",
+       "path": "projects/{projectId}/histories",
        "httpMethod": "POST",
        "description": "Creates a History.\n\nThe returned History will have the id set.\n\nMay return any of the following canonical error codes:\n\n- PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the containing project does not exist",
        "parameters": {
@@ -1879,7 +2026,7 @@
       },
       "get": {
        "id": "toolresults.projects.histories.get",
-       "path": "{projectId}/histories/{historyId}",
+       "path": "projects/{projectId}/histories/{historyId}",
        "httpMethod": "GET",
        "description": "Gets a History.\n\nMay return any of the following canonical error codes:\n\n- PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the History does not exist",
        "parameters": {
@@ -1909,7 +2056,7 @@
       },
       "list": {
        "id": "toolresults.projects.histories.list",
-       "path": "{projectId}/histories",
+       "path": "projects/{projectId}/histories",
        "httpMethod": "GET",
        "description": "Lists Histories for a given Project.\n\nThe histories are sorted by modification time in descending order. The history_id key will be used to order the history with the same modification time.\n\nMay return any of the following canonical error codes:\n\n- PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the History does not exist",
        "parameters": {
@@ -1952,7 +2099,7 @@
        "methods": {
         "create": {
          "id": "toolresults.projects.histories.executions.create",
-         "path": "{projectId}/histories/{historyId}/executions",
+         "path": "projects/{projectId}/histories/{historyId}/executions",
          "httpMethod": "POST",
          "description": "Creates an Execution.\n\nThe returned Execution will have the id set.\n\nMay return any of the following canonical error codes:\n\n- PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the containing History does not exist",
          "parameters": {
@@ -1990,7 +2137,7 @@
         },
         "get": {
          "id": "toolresults.projects.histories.executions.get",
-         "path": "{projectId}/histories/{historyId}/executions/{executionId}",
+         "path": "projects/{projectId}/histories/{historyId}/executions/{executionId}",
          "httpMethod": "GET",
          "description": "Gets an Execution.\n\nMay return any of the following canonical error codes:\n\n- PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the Execution does not exist",
          "parameters": {
@@ -2027,7 +2174,7 @@
         },
         "list": {
          "id": "toolresults.projects.histories.executions.list",
-         "path": "{projectId}/histories/{historyId}/executions",
+         "path": "projects/{projectId}/histories/{historyId}/executions",
          "httpMethod": "GET",
          "description": "Lists Executions for a given History.\n\nThe executions are sorted by creation_time in descending order. The execution_id key will be used to order the executions with the same creation_time.\n\nMay return any of the following canonical error codes:\n\n- PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the containing History does not exist",
          "parameters": {
@@ -2068,7 +2215,7 @@
         },
         "patch": {
          "id": "toolresults.projects.histories.executions.patch",
-         "path": "{projectId}/histories/{historyId}/executions/{executionId}",
+         "path": "projects/{projectId}/histories/{historyId}/executions/{executionId}",
          "httpMethod": "PATCH",
          "description": "Updates an existing Execution with the supplied partial entity.\n\nMay return any of the following canonical error codes:\n\n- PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed - FAILED_PRECONDITION - if the requested state transition is illegal - NOT_FOUND - if the containing History does not exist",
          "parameters": {
@@ -2117,7 +2264,7 @@
          "methods": {
           "get": {
            "id": "toolresults.projects.histories.executions.clusters.get",
-           "path": "{projectId}/histories/{historyId}/executions/{executionId}/clusters/{clusterId}",
+           "path": "projects/{projectId}/histories/{historyId}/executions/{executionId}/clusters/{clusterId}",
            "httpMethod": "GET",
            "description": "Retrieves a single screenshot cluster by its ID",
            "parameters": {
@@ -2158,7 +2305,7 @@
           },
           "list": {
            "id": "toolresults.projects.histories.executions.clusters.list",
-           "path": "{projectId}/histories/{historyId}/executions/{executionId}/clusters",
+           "path": "projects/{projectId}/histories/{historyId}/executions/{executionId}/clusters",
            "httpMethod": "GET",
            "description": "Lists Screenshot Clusters\n\nReturns the list of screenshot clusters corresponding to an execution. Screenshot clusters are created after the execution is finished. Clusters are created from a set of screenshots. Between any two screenshots, a matching score is calculated based off their metadata that determines how similar they are. Screenshots are placed in the cluster that has screens which have the highest matching scores.",
            "parameters": {
@@ -2196,7 +2343,7 @@
          "methods": {
           "get": {
            "id": "toolresults.projects.histories.executions.environments.get",
-           "path": "{projectId}/histories/{historyId}/executions/{executionId}/environments/{environmentId}",
+           "path": "projects/{projectId}/histories/{historyId}/executions/{executionId}/environments/{environmentId}",
            "httpMethod": "GET",
            "description": "Gets an Environment.\n\nMay return any of the following canonical error codes:\n\n- PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the Environment does not exist",
            "parameters": {
@@ -2240,7 +2387,7 @@
           },
           "list": {
            "id": "toolresults.projects.histories.executions.environments.list",
-           "path": "{projectId}/histories/{historyId}/executions/{executionId}/environments",
+           "path": "projects/{projectId}/histories/{historyId}/executions/{executionId}/environments",
            "httpMethod": "GET",
            "description": "Lists Environments for a given Execution.\n\nThe Environments are sorted by display name.\n\nMay return any of the following canonical error codes:\n\n- PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the containing Execution does not exist",
            "parameters": {
@@ -2290,9 +2437,37 @@
         },
         "steps": {
          "methods": {
+          "accessibilityClusters": {
+           "id": "toolresults.projects.histories.executions.steps.accessibilityClusters",
+           "path": "{+name}:accessibilityClusters",
+           "httpMethod": "GET",
+           "description": "Lists accessibility clusters for a given Step\n\nMay return any of the following canonical error codes:\n\n- PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - FAILED_PRECONDITION - if an argument in the request happens to be invalid; e.g. if the locale format is incorrect - NOT_FOUND - if the containing Step does not exist",
+           "parameters": {
+            "locale": {
+             "type": "string",
+             "description": "The accepted format is the canonical Unicode format with hyphen as a delimiter. Language must be lowercase, Language Script - Capitalized, Region - UPPERCASE. See http://www.unicode.org/reports/tr35/#Unicode_locale_identifier for details.\n\nRequired.",
+             "location": "query"
+            },
+            "name": {
+             "type": "string",
+             "description": "A full resource name of the step. For example, projects/my-project/histories/bh.1234567890abcdef/executions/ 1234567890123456789/steps/bs.1234567890abcdef\n\nRequired.",
+             "required": true,
+             "location": "path"
+            }
+           },
+           "parameterOrder": [
+            "name"
+           ],
+           "response": {
+            "$ref": "ListStepAccessibilityClustersResponse"
+           },
+           "scopes": [
+            "https://www.googleapis.com/auth/cloud-platform"
+           ]
+          },
           "create": {
            "id": "toolresults.projects.histories.executions.steps.create",
-           "path": "{projectId}/histories/{historyId}/executions/{executionId}/steps",
+           "path": "projects/{projectId}/histories/{historyId}/executions/{executionId}/steps",
            "httpMethod": "POST",
            "description": "Creates a Step.\n\nThe returned Step will have the id set.\n\nMay return any of the following canonical error codes:\n\n- PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed - FAILED_PRECONDITION - if the step is too large (more than 10Mib) - NOT_FOUND - if the containing Execution does not exist",
            "parameters": {
@@ -2337,7 +2512,7 @@
           },
           "get": {
            "id": "toolresults.projects.histories.executions.steps.get",
-           "path": "{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}",
+           "path": "projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}",
            "httpMethod": "GET",
            "description": "Gets a Step.\n\nMay return any of the following canonical error codes:\n\n- PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the Step does not exist",
            "parameters": {
@@ -2381,7 +2556,7 @@
           },
           "getPerfMetricsSummary": {
            "id": "toolresults.projects.histories.executions.steps.getPerfMetricsSummary",
-           "path": "{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfMetricsSummary",
+           "path": "projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfMetricsSummary",
            "httpMethod": "GET",
            "description": "Retrieves a PerfMetricsSummary.\n\nMay return any of the following error code(s): - NOT_FOUND - The specified PerfMetricsSummary does not exist",
            "parameters": {
@@ -2425,7 +2600,7 @@
           },
           "list": {
            "id": "toolresults.projects.histories.executions.steps.list",
-           "path": "{projectId}/histories/{historyId}/executions/{executionId}/steps",
+           "path": "projects/{projectId}/histories/{historyId}/executions/{executionId}/steps",
            "httpMethod": "GET",
            "description": "Lists Steps for a given Execution.\n\nThe steps are sorted by creation_time in descending order. The step_id key will be used to order the steps with the same creation_time.\n\nMay return any of the following canonical error codes:\n\n- PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - FAILED_PRECONDITION - if an argument in the request happens to be invalid; e.g. if an attempt is made to list the children of a nonexistent Step - NOT_FOUND - if the containing Execution does not exist",
            "parameters": {
@@ -2473,7 +2648,7 @@
           },
           "patch": {
            "id": "toolresults.projects.histories.executions.steps.patch",
-           "path": "{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}",
+           "path": "projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}",
            "httpMethod": "PATCH",
            "description": "Updates an existing Step with the supplied partial entity.\n\nMay return any of the following canonical error codes:\n\n- PERMISSION_DENIED - if the user is not authorized to write project - INVALID_ARGUMENT - if the request is malformed - FAILED_PRECONDITION - if the requested state transition is illegal (e.g try to upload a duplicate xml file), if the updated step is too large (more than 10Mib) - NOT_FOUND - if the containing Execution does not exist",
            "parameters": {
@@ -2525,7 +2700,7 @@
           },
           "publishXunitXmlFiles": {
            "id": "toolresults.projects.histories.executions.steps.publishXunitXmlFiles",
-           "path": "{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}:publishXunitXmlFiles",
+           "path": "projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}:publishXunitXmlFiles",
            "httpMethod": "POST",
            "description": "Publish xml files to an existing Step.\n\nMay return any of the following canonical error codes:\n\n- PERMISSION_DENIED - if the user is not authorized to write project - INVALID_ARGUMENT - if the request is malformed - FAILED_PRECONDITION - if the requested state transition is illegal, e.g try to upload a duplicate xml file or a file too large. - NOT_FOUND - if the containing Execution does not exist",
            "parameters": {
@@ -2576,7 +2751,7 @@
            "methods": {
             "create": {
              "id": "toolresults.projects.histories.executions.steps.perfMetricsSummary.create",
-             "path": "{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfMetricsSummary",
+             "path": "projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfMetricsSummary",
              "httpMethod": "POST",
              "description": "Creates a PerfMetricsSummary resource. Returns the existing one if it has already been created.\n\nMay return any of the following error code(s): - NOT_FOUND - The containing Step does not exist",
              "parameters": {
@@ -2627,7 +2802,7 @@
            "methods": {
             "create": {
              "id": "toolresults.projects.histories.executions.steps.perfSampleSeries.create",
-             "path": "{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries",
+             "path": "projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries",
              "httpMethod": "POST",
              "description": "Creates a PerfSampleSeries.\n\nMay return any of the following error code(s): - ALREADY_EXISTS - PerfMetricSummary already exists for the given Step - NOT_FOUND - The containing Step does not exist",
              "parameters": {
@@ -2674,7 +2849,7 @@
             },
             "get": {
              "id": "toolresults.projects.histories.executions.steps.perfSampleSeries.get",
-             "path": "{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries/{sampleSeriesId}",
+             "path": "projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries/{sampleSeriesId}",
              "httpMethod": "GET",
              "description": "Gets a PerfSampleSeries.\n\nMay return any of the following error code(s): - NOT_FOUND - The specified PerfSampleSeries does not exist",
              "parameters": {
@@ -2725,7 +2900,7 @@
             },
             "list": {
              "id": "toolresults.projects.histories.executions.steps.perfSampleSeries.list",
-             "path": "{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries",
+             "path": "projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries",
              "httpMethod": "GET",
              "description": "Lists PerfSampleSeries for a given Step.\n\nThe request provides an optional filter which specifies one or more PerfMetricsType to include in the result; if none returns all. The resulting PerfSampleSeries are sorted by ids.\n\nMay return any of the following canonical error codes: - NOT_FOUND - The containing Step does not exist",
              "parameters": {
@@ -2793,7 +2968,7 @@
              "methods": {
               "batchCreate": {
                "id": "toolresults.projects.histories.executions.steps.perfSampleSeries.samples.batchCreate",
-               "path": "{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries/{sampleSeriesId}/samples:batchCreate",
+               "path": "projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries/{sampleSeriesId}/samples:batchCreate",
                "httpMethod": "POST",
                "description": "Creates a batch of PerfSamples - a client can submit multiple batches of Perf Samples through repeated calls to this method in order to split up a large request payload - duplicates and existing timestamp entries will be ignored. - the batch operation may partially succeed - the set of elements successfully inserted is returned in the response (omits items which already existed in the database).\n\nMay return any of the following canonical error codes: - NOT_FOUND - The containing PerfSampleSeries does not exist",
                "parameters": {
@@ -2847,7 +3022,7 @@
               },
               "list": {
                "id": "toolresults.projects.histories.executions.steps.perfSampleSeries.samples.list",
-               "path": "{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries/{sampleSeriesId}/samples",
+               "path": "projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries/{sampleSeriesId}/samples",
                "httpMethod": "GET",
                "description": "Lists the Performance Samples of a given Sample Series - The list results are sorted by timestamps ascending - The default page size is 500 samples; and maximum size allowed 5000 - The response token indicates the last returned PerfSample timestamp - When the results size exceeds the page size, submit a subsequent request including the page token to return the rest of the samples up to the page limit\n\nMay return any of the following canonical error codes: - OUT_OF_RANGE - The specified request page_token is out of valid range - NOT_FOUND - The containing PerfSampleSeries does not exist",
                "parameters": {
@@ -2915,7 +3090,7 @@
            "methods": {
             "get": {
              "id": "toolresults.projects.histories.executions.steps.testCases.get",
-             "path": "{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/testCases/{testCaseId}",
+             "path": "projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/testCases/{testCaseId}",
              "httpMethod": "GET",
              "description": "Gets details of a Test Case for a Step. Experimental test cases API. Still in active development.\n\nMay return any of the following canonical error codes:\n\n- PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the containing Test Case does not exist",
              "parameters": {
@@ -2966,7 +3141,7 @@
             },
             "list": {
              "id": "toolresults.projects.histories.executions.steps.testCases.list",
-             "path": "{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/testCases",
+             "path": "projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/testCases",
              "httpMethod": "GET",
              "description": "Lists Test Cases attached to a Step. Experimental test cases API. Still in active development.\n\nMay return any of the following canonical error codes:\n\n- PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the containing Step does not exist",
              "parameters": {
@@ -3025,7 +3200,7 @@
            "methods": {
             "list": {
              "id": "toolresults.projects.histories.executions.steps.thumbnails.list",
-             "path": "{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/thumbnails",
+             "path": "projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/thumbnails",
              "httpMethod": "GET",
              "description": "Lists thumbnails of images attached to a step.\n\nMay return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to read from the project, or from any of the images - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the step does not exist, or if any of the images do not exist",
              "parameters": {

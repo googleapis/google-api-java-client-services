@@ -31,28 +31,28 @@ package com.google.api.services.content.model;
 public final class TestOrderLineItem extends com.google.api.client.json.GenericJson {
 
   /**
-   * Product data from the time of the order placement.
+   * Required. Product data from the time of the order placement.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TestOrderLineItemProduct product;
 
   /**
-   * Number of items ordered.
+   * Required. Number of items ordered.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Long quantityOrdered;
 
   /**
-   * Details of the return policy for the line item.
+   * Required. Details of the return policy for the line item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private OrderLineItemReturnInfo returnInfo;
 
   /**
-   * Details of the requested shipping for the line item.
+   * Required. Details of the requested shipping for the line item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +66,7 @@ public final class TestOrderLineItem extends com.google.api.client.json.GenericJ
   private Price unitTax;
 
   /**
-   * Product data from the time of the order placement.
+   * Required. Product data from the time of the order placement.
    * @return value or {@code null} for none
    */
   public TestOrderLineItemProduct getProduct() {
@@ -74,7 +74,7 @@ public final class TestOrderLineItem extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Product data from the time of the order placement.
+   * Required. Product data from the time of the order placement.
    * @param product product or {@code null} for none
    */
   public TestOrderLineItem setProduct(TestOrderLineItemProduct product) {
@@ -83,7 +83,7 @@ public final class TestOrderLineItem extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Number of items ordered.
+   * Required. Number of items ordered.
    * @return value or {@code null} for none
    */
   public java.lang.Long getQuantityOrdered() {
@@ -91,7 +91,7 @@ public final class TestOrderLineItem extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Number of items ordered.
+   * Required. Number of items ordered.
    * @param quantityOrdered quantityOrdered or {@code null} for none
    */
   public TestOrderLineItem setQuantityOrdered(java.lang.Long quantityOrdered) {
@@ -100,7 +100,7 @@ public final class TestOrderLineItem extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Details of the return policy for the line item.
+   * Required. Details of the return policy for the line item.
    * @return value or {@code null} for none
    */
   public OrderLineItemReturnInfo getReturnInfo() {
@@ -108,7 +108,7 @@ public final class TestOrderLineItem extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Details of the return policy for the line item.
+   * Required. Details of the return policy for the line item.
    * @param returnInfo returnInfo or {@code null} for none
    */
   public TestOrderLineItem setReturnInfo(OrderLineItemReturnInfo returnInfo) {
@@ -117,7 +117,7 @@ public final class TestOrderLineItem extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Details of the requested shipping for the line item.
+   * Required. Details of the requested shipping for the line item.
    * @return value or {@code null} for none
    */
   public OrderLineItemShippingDetails getShippingDetails() {
@@ -125,7 +125,7 @@ public final class TestOrderLineItem extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Details of the requested shipping for the line item.
+   * Required. Details of the requested shipping for the line item.
    * @param shippingDetails shippingDetails or {@code null} for none
    */
   public TestOrderLineItem setShippingDetails(OrderLineItemShippingDetails shippingDetails) {

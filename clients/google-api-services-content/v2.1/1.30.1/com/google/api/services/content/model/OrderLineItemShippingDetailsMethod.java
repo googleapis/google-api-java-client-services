@@ -39,21 +39,21 @@ public final class OrderLineItemShippingDetailsMethod extends com.google.api.cli
   private java.lang.String carrier;
 
   /**
-   * Maximum transit time.
+   * Required. Maximum transit time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Long maxDaysInTransit;
 
   /**
-   * The name of the shipping method.
+   * Required. The name of the shipping method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String methodName;
 
   /**
-   * Minimum transit time.
+   * Required. Minimum transit time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,7 +79,7 @@ public final class OrderLineItemShippingDetailsMethod extends com.google.api.cli
   }
 
   /**
-   * Maximum transit time.
+   * Required. Maximum transit time.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMaxDaysInTransit() {
@@ -87,7 +87,7 @@ public final class OrderLineItemShippingDetailsMethod extends com.google.api.cli
   }
 
   /**
-   * Maximum transit time.
+   * Required. Maximum transit time.
    * @param maxDaysInTransit maxDaysInTransit or {@code null} for none
    */
   public OrderLineItemShippingDetailsMethod setMaxDaysInTransit(java.lang.Long maxDaysInTransit) {
@@ -96,7 +96,7 @@ public final class OrderLineItemShippingDetailsMethod extends com.google.api.cli
   }
 
   /**
-   * The name of the shipping method.
+   * Required. The name of the shipping method.
    * @return value or {@code null} for none
    */
   public java.lang.String getMethodName() {
@@ -104,7 +104,7 @@ public final class OrderLineItemShippingDetailsMethod extends com.google.api.cli
   }
 
   /**
-   * The name of the shipping method.
+   * Required. The name of the shipping method.
    * @param methodName methodName or {@code null} for none
    */
   public OrderLineItemShippingDetailsMethod setMethodName(java.lang.String methodName) {
@@ -113,7 +113,7 @@ public final class OrderLineItemShippingDetailsMethod extends com.google.api.cli
   }
 
   /**
-   * Minimum transit time.
+   * Required. Minimum transit time.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMinDaysInTransit() {
@@ -121,7 +121,7 @@ public final class OrderLineItemShippingDetailsMethod extends com.google.api.cli
   }
 
   /**
-   * Minimum transit time.
+   * Required. Minimum transit time.
    * @param minDaysInTransit minDaysInTransit or {@code null} for none
    */
   public OrderLineItemShippingDetailsMethod setMinDaysInTransit(java.lang.Long minDaysInTransit) {

@@ -61,6 +61,9 @@ public final class OrdersRejectReturnLineItemRequest extends com.google.api.clie
 
   /**
    * The reason for the return.
+   *
+   * Acceptable values are:   - "damagedOrUsed"  - "missingComponent"  - "notEligible"  - "other"  -
+   * "outOfReturnWindow"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,6 +148,9 @@ public final class OrdersRejectReturnLineItemRequest extends com.google.api.clie
 
   /**
    * The reason for the return.
+   *
+   * Acceptable values are:   - "damagedOrUsed"  - "missingComponent"  - "notEligible"  - "other"  -
+   * "outOfReturnWindow"
    * @return value or {@code null} for none
    */
   public java.lang.String getReason() {
@@ -153,6 +159,9 @@ public final class OrdersRejectReturnLineItemRequest extends com.google.api.clie
 
   /**
    * The reason for the return.
+   *
+   * Acceptable values are:   - "damagedOrUsed"  - "missingComponent"  - "notEligible"  - "other"  -
+   * "outOfReturnWindow"
    * @param reason reason or {@code null} for none
    */
   public OrdersRejectReturnLineItemRequest setReason(java.lang.String reason) {

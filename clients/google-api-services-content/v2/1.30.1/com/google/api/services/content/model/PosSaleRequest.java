@@ -31,7 +31,7 @@ package com.google.api.services.content.model;
 public final class PosSaleRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The two-letter ISO 639-1 language code for the item.
+   * Required. The two-letter ISO 639-1 language code for the item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,21 +45,21 @@ public final class PosSaleRequest extends com.google.api.client.json.GenericJson
   private java.lang.String gtin;
 
   /**
-   * A unique identifier for the item.
+   * Required. A unique identifier for the item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String itemId;
 
   /**
-   * The price of the item.
+   * Required. The price of the item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Price price;
 
   /**
-   * The relative change of the available quantity. Negative for items returned.
+   * Required. The relative change of the available quantity. Negative for items returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -73,29 +73,29 @@ public final class PosSaleRequest extends com.google.api.client.json.GenericJson
   private java.lang.String saleId;
 
   /**
-   * The identifier of the merchant's store. Either a storeCode inserted via the API or the code of
-   * the store in Google My Business.
+   * Required. The identifier of the merchant's store. Either a storeCode inserted via the API or
+   * the code of the store in Google My Business.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String storeCode;
 
   /**
-   * The CLDR territory code for the item.
+   * Required. The CLDR territory code for the item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String targetCountry;
 
   /**
-   * The inventory timestamp, in ISO 8601 format.
+   * Required. The inventory timestamp, in ISO 8601 format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String timestamp;
 
   /**
-   * The two-letter ISO 639-1 language code for the item.
+   * Required. The two-letter ISO 639-1 language code for the item.
    * @return value or {@code null} for none
    */
   public java.lang.String getContentLanguage() {
@@ -103,7 +103,7 @@ public final class PosSaleRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The two-letter ISO 639-1 language code for the item.
+   * Required. The two-letter ISO 639-1 language code for the item.
    * @param contentLanguage contentLanguage or {@code null} for none
    */
   public PosSaleRequest setContentLanguage(java.lang.String contentLanguage) {
@@ -129,7 +129,7 @@ public final class PosSaleRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A unique identifier for the item.
+   * Required. A unique identifier for the item.
    * @return value or {@code null} for none
    */
   public java.lang.String getItemId() {
@@ -137,7 +137,7 @@ public final class PosSaleRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A unique identifier for the item.
+   * Required. A unique identifier for the item.
    * @param itemId itemId or {@code null} for none
    */
   public PosSaleRequest setItemId(java.lang.String itemId) {
@@ -146,7 +146,7 @@ public final class PosSaleRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The price of the item.
+   * Required. The price of the item.
    * @return value or {@code null} for none
    */
   public Price getPrice() {
@@ -154,7 +154,7 @@ public final class PosSaleRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The price of the item.
+   * Required. The price of the item.
    * @param price price or {@code null} for none
    */
   public PosSaleRequest setPrice(Price price) {
@@ -163,7 +163,7 @@ public final class PosSaleRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The relative change of the available quantity. Negative for items returned.
+   * Required. The relative change of the available quantity. Negative for items returned.
    * @return value or {@code null} for none
    */
   public java.lang.Long getQuantity() {
@@ -171,7 +171,7 @@ public final class PosSaleRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The relative change of the available quantity. Negative for items returned.
+   * Required. The relative change of the available quantity. Negative for items returned.
    * @param quantity quantity or {@code null} for none
    */
   public PosSaleRequest setQuantity(java.lang.Long quantity) {
@@ -197,8 +197,8 @@ public final class PosSaleRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The identifier of the merchant's store. Either a storeCode inserted via the API or the code of
-   * the store in Google My Business.
+   * Required. The identifier of the merchant's store. Either a storeCode inserted via the API or
+   * the code of the store in Google My Business.
    * @return value or {@code null} for none
    */
   public java.lang.String getStoreCode() {
@@ -206,8 +206,8 @@ public final class PosSaleRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The identifier of the merchant's store. Either a storeCode inserted via the API or the code of
-   * the store in Google My Business.
+   * Required. The identifier of the merchant's store. Either a storeCode inserted via the API or
+   * the code of the store in Google My Business.
    * @param storeCode storeCode or {@code null} for none
    */
   public PosSaleRequest setStoreCode(java.lang.String storeCode) {
@@ -216,7 +216,7 @@ public final class PosSaleRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The CLDR territory code for the item.
+   * Required. The CLDR territory code for the item.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetCountry() {
@@ -224,7 +224,7 @@ public final class PosSaleRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The CLDR territory code for the item.
+   * Required. The CLDR territory code for the item.
    * @param targetCountry targetCountry or {@code null} for none
    */
   public PosSaleRequest setTargetCountry(java.lang.String targetCountry) {
@@ -233,7 +233,7 @@ public final class PosSaleRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The inventory timestamp, in ISO 8601 format.
+   * Required. The inventory timestamp, in ISO 8601 format.
    * @return value or {@code null} for none
    */
   public java.lang.String getTimestamp() {
@@ -241,7 +241,7 @@ public final class PosSaleRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The inventory timestamp, in ISO 8601 format.
+   * Required. The inventory timestamp, in ISO 8601 format.
    * @param timestamp timestamp or {@code null} for none
    */
   public PosSaleRequest setTimestamp(java.lang.String timestamp) {

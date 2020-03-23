@@ -38,14 +38,14 @@ public final class PosStore extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * The street address of the store.
+   * Required. The street address of the store.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String storeAddress;
 
   /**
-   * A store identifier that is unique for the given merchant.
+   * Required. A store identifier that is unique for the given merchant.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +69,7 @@ public final class PosStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The street address of the store.
+   * Required. The street address of the store.
    * @return value or {@code null} for none
    */
   public java.lang.String getStoreAddress() {
@@ -77,7 +77,7 @@ public final class PosStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The street address of the store.
+   * Required. The street address of the store.
    * @param storeAddress storeAddress or {@code null} for none
    */
   public PosStore setStoreAddress(java.lang.String storeAddress) {
@@ -86,7 +86,7 @@ public final class PosStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A store identifier that is unique for the given merchant.
+   * Required. A store identifier that is unique for the given merchant.
    * @return value or {@code null} for none
    */
   public java.lang.String getStoreCode() {
@@ -94,7 +94,7 @@ public final class PosStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A store identifier that is unique for the given merchant.
+   * Required. A store identifier that is unique for the given merchant.
    * @param storeCode storeCode or {@code null} for none
    */
   public PosStore setStoreCode(java.lang.String storeCode) {

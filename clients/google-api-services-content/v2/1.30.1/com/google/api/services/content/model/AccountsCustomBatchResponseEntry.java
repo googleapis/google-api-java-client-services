@@ -62,6 +62,8 @@ public final class AccountsCustomBatchResponseEntry extends com.google.api.clien
 
   /**
    * Deprecated. This field is never set.
+   *
+   * Acceptable values are:   - "active"  - "inactive"  - "pending"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,6 +143,8 @@ public final class AccountsCustomBatchResponseEntry extends com.google.api.clien
 
   /**
    * Deprecated. This field is never set.
+   *
+   * Acceptable values are:   - "active"  - "inactive"  - "pending"
    * @return value or {@code null} for none
    */
   public java.lang.String getLinkStatus() {
@@ -149,6 +153,8 @@ public final class AccountsCustomBatchResponseEntry extends com.google.api.clien
 
   /**
    * Deprecated. This field is never set.
+   *
+   * Acceptable values are:   - "active"  - "inactive"  - "pending"
    * @param linkStatus linkStatus or {@code null} for none
    */
   public AccountsCustomBatchResponseEntry setLinkStatus(java.lang.String linkStatus) {

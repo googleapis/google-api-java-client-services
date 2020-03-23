@@ -85,6 +85,7 @@ public final class AccountStatusDataQualityIssue extends com.google.api.client.j
   private java.lang.Long numItems;
 
   /**
+   * Acceptable values are: - "critical"  - "error"  - "suggestion"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -232,6 +233,7 @@ public final class AccountStatusDataQualityIssue extends com.google.api.client.j
   }
 
   /**
+   * Acceptable values are: - "critical"  - "error"  - "suggestion"
    * @return value or {@code null} for none
    */
   public java.lang.String getSeverity() {
@@ -239,6 +241,7 @@ public final class AccountStatusDataQualityIssue extends com.google.api.client.j
   }
 
   /**
+   * Acceptable values are: - "critical"  - "error"  - "suggestion"
    * @param severity severity or {@code null} for none
    */
   public AccountStatusDataQualityIssue setSeverity(java.lang.String severity) {

@@ -38,7 +38,7 @@ public final class OrderPromotionItem extends com.google.api.client.json.Generic
   private java.lang.String lineItemId;
 
   /**
-   * Offer ID of a product. Only for orders.createtestorder.
+   * Required. Offer ID of a product. Only for orders.createtestorder.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +76,7 @@ public final class OrderPromotionItem extends com.google.api.client.json.Generic
   }
 
   /**
-   * Offer ID of a product. Only for orders.createtestorder.
+   * Required. Offer ID of a product. Only for orders.createtestorder.
    * @return value or {@code null} for none
    */
   public java.lang.String getOfferId() {
@@ -84,7 +84,7 @@ public final class OrderPromotionItem extends com.google.api.client.json.Generic
   }
 
   /**
-   * Offer ID of a product. Only for orders.createtestorder.
+   * Required. Offer ID of a product. Only for orders.createtestorder.
    * @param offerId offerId or {@code null} for none
    */
   public OrderPromotionItem setOfferId(java.lang.String offerId) {

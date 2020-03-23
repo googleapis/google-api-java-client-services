@@ -54,6 +54,11 @@ public final class OrdersCustomBatchRequestEntryReturnLineItem extends com.googl
 
   /**
    * The reason for the return.
+   *
+   * Acceptable values are:   - "customerDiscretionaryReturn"  - "customerInitiatedMerchantCancel"
+   * - "deliveredTooLate"  - "expiredItem"  - "invalidCoupon"  - "malformedShippingAddress"  -
+   * "other"  - "productArrivedDamaged"  - "productNotAsDescribed"  - "qualityNotAsExpected"  -
+   * "undeliverableShippingAddress"  - "unsupportedPoBoxAddress"  - "wrongProductShipped"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -121,6 +126,11 @@ public final class OrdersCustomBatchRequestEntryReturnLineItem extends com.googl
 
   /**
    * The reason for the return.
+   *
+   * Acceptable values are:   - "customerDiscretionaryReturn"  - "customerInitiatedMerchantCancel"
+   * - "deliveredTooLate"  - "expiredItem"  - "invalidCoupon"  - "malformedShippingAddress"  -
+   * "other"  - "productArrivedDamaged"  - "productNotAsDescribed"  - "qualityNotAsExpected"  -
+   * "undeliverableShippingAddress"  - "unsupportedPoBoxAddress"  - "wrongProductShipped"
    * @return value or {@code null} for none
    */
   public java.lang.String getReason() {
@@ -129,6 +139,11 @@ public final class OrdersCustomBatchRequestEntryReturnLineItem extends com.googl
 
   /**
    * The reason for the return.
+   *
+   * Acceptable values are:   - "customerDiscretionaryReturn"  - "customerInitiatedMerchantCancel"
+   * - "deliveredTooLate"  - "expiredItem"  - "invalidCoupon"  - "malformedShippingAddress"  -
+   * "other"  - "productArrivedDamaged"  - "productNotAsDescribed"  - "qualityNotAsExpected"  -
+   * "undeliverableShippingAddress"  - "unsupportedPoBoxAddress"  - "wrongProductShipped"
    * @param reason reason or {@code null} for none
    */
   public OrdersCustomBatchRequestEntryReturnLineItem setReason(java.lang.String reason) {

@@ -31,21 +31,25 @@ package com.google.api.services.content.model;
 public final class TestOrderLineItemProduct extends com.google.api.client.json.GenericJson {
 
   /**
-   * Brand of the item.
+   * Required. Brand of the item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String brand;
 
   /**
-   * Condition or state of the item.
+   * Required. Condition or state of the item.
+   *
+   * Acceptable values are:   - "new"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String condition;
 
   /**
-   * The two-letter ISO 639-1 language code for the item.
+   * Required. The two-letter ISO 639-1 language code for the item.
+   *
+   * Acceptable values are:   - "en"  - "fr"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +76,7 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   private java.lang.String gtin;
 
   /**
-   * URL of an image of the item.
+   * Required. URL of an image of the item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,29 +97,30 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   private java.lang.String mpn;
 
   /**
-   * An identifier of the item.
+   * Required. An identifier of the item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String offerId;
 
   /**
-   * The price for the product. Tax is automatically calculated for orders where marketplace
-   * facilitator tax laws are applicable. Otherwise, tax settings from Merchant Center are applied.
+   * Required. The price for the product. Tax is automatically calculated for orders where
+   * marketplace facilitator tax laws are applicable. Otherwise, tax settings from Merchant Center
+   * are applied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Price price;
 
   /**
-   * The CLDR territory code of the target country of the product.
+   * Required. The CLDR territory code of the target country of the product.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String targetCountry;
 
   /**
-   * The title of the product.
+   * Required. The title of the product.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,7 +140,7 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   }
 
   /**
-   * Brand of the item.
+   * Required. Brand of the item.
    * @return value or {@code null} for none
    */
   public java.lang.String getBrand() {
@@ -143,7 +148,7 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   }
 
   /**
-   * Brand of the item.
+   * Required. Brand of the item.
    * @param brand brand or {@code null} for none
    */
   public TestOrderLineItemProduct setBrand(java.lang.String brand) {
@@ -152,7 +157,9 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   }
 
   /**
-   * Condition or state of the item.
+   * Required. Condition or state of the item.
+   *
+   * Acceptable values are:   - "new"
    * @return value or {@code null} for none
    */
   public java.lang.String getCondition() {
@@ -160,7 +167,9 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   }
 
   /**
-   * Condition or state of the item.
+   * Required. Condition or state of the item.
+   *
+   * Acceptable values are:   - "new"
    * @param condition condition or {@code null} for none
    */
   public TestOrderLineItemProduct setCondition(java.lang.String condition) {
@@ -169,7 +178,9 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   }
 
   /**
-   * The two-letter ISO 639-1 language code for the item.
+   * Required. The two-letter ISO 639-1 language code for the item.
+   *
+   * Acceptable values are:   - "en"  - "fr"
    * @return value or {@code null} for none
    */
   public java.lang.String getContentLanguage() {
@@ -177,7 +188,9 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   }
 
   /**
-   * The two-letter ISO 639-1 language code for the item.
+   * Required. The two-letter ISO 639-1 language code for the item.
+   *
+   * Acceptable values are:   - "en"  - "fr"
    * @param contentLanguage contentLanguage or {@code null} for none
    */
   public TestOrderLineItemProduct setContentLanguage(java.lang.String contentLanguage) {
@@ -220,7 +233,7 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   }
 
   /**
-   * URL of an image of the item.
+   * Required. URL of an image of the item.
    * @return value or {@code null} for none
    */
   public java.lang.String getImageLink() {
@@ -228,7 +241,7 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   }
 
   /**
-   * URL of an image of the item.
+   * Required. URL of an image of the item.
    * @param imageLink imageLink or {@code null} for none
    */
   public TestOrderLineItemProduct setImageLink(java.lang.String imageLink) {
@@ -271,7 +284,7 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   }
 
   /**
-   * An identifier of the item.
+   * Required. An identifier of the item.
    * @return value or {@code null} for none
    */
   public java.lang.String getOfferId() {
@@ -279,7 +292,7 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   }
 
   /**
-   * An identifier of the item.
+   * Required. An identifier of the item.
    * @param offerId offerId or {@code null} for none
    */
   public TestOrderLineItemProduct setOfferId(java.lang.String offerId) {
@@ -288,8 +301,9 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   }
 
   /**
-   * The price for the product. Tax is automatically calculated for orders where marketplace
-   * facilitator tax laws are applicable. Otherwise, tax settings from Merchant Center are applied.
+   * Required. The price for the product. Tax is automatically calculated for orders where
+   * marketplace facilitator tax laws are applicable. Otherwise, tax settings from Merchant Center
+   * are applied.
    * @return value or {@code null} for none
    */
   public Price getPrice() {
@@ -297,8 +311,9 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   }
 
   /**
-   * The price for the product. Tax is automatically calculated for orders where marketplace
-   * facilitator tax laws are applicable. Otherwise, tax settings from Merchant Center are applied.
+   * Required. The price for the product. Tax is automatically calculated for orders where
+   * marketplace facilitator tax laws are applicable. Otherwise, tax settings from Merchant Center
+   * are applied.
    * @param price price or {@code null} for none
    */
   public TestOrderLineItemProduct setPrice(Price price) {
@@ -307,7 +322,7 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   }
 
   /**
-   * The CLDR territory code of the target country of the product.
+   * Required. The CLDR territory code of the target country of the product.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetCountry() {
@@ -315,7 +330,7 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   }
 
   /**
-   * The CLDR territory code of the target country of the product.
+   * Required. The CLDR territory code of the target country of the product.
    * @param targetCountry targetCountry or {@code null} for none
    */
   public TestOrderLineItemProduct setTargetCountry(java.lang.String targetCountry) {
@@ -324,7 +339,7 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   }
 
   /**
-   * The title of the product.
+   * Required. The title of the product.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -332,7 +347,7 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   }
 
   /**
-   * The title of the product.
+   * Required. The title of the product.
    * @param title title or {@code null} for none
    */
   public TestOrderLineItemProduct setTitle(java.lang.String title) {

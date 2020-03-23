@@ -53,6 +53,8 @@ public final class LocalinventoryCustomBatchRequestEntry extends com.google.api.
 
   /**
    * Method of the batch request entry.
+   *
+   * Acceptable values are:   - "insert"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,6 +120,8 @@ public final class LocalinventoryCustomBatchRequestEntry extends com.google.api.
 
   /**
    * Method of the batch request entry.
+   *
+   * Acceptable values are:   - "insert"
    * @return value or {@code null} for none
    */
   public java.lang.String getMethod() {
@@ -126,6 +130,8 @@ public final class LocalinventoryCustomBatchRequestEntry extends com.google.api.
 
   /**
    * Method of the batch request entry.
+   *
+   * Acceptable values are:   - "insert"
    * @param method method or {@code null} for none
    */
   public LocalinventoryCustomBatchRequestEntry setMethod(java.lang.String method) {

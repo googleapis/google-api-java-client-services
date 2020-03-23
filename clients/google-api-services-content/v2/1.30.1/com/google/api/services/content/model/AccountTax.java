@@ -31,7 +31,7 @@ package com.google.api.services.content.model;
 public final class AccountTax extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ID of the account to which these account tax settings belong.
+   * Required. The ID of the account to which these account tax settings belong.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -53,7 +53,7 @@ public final class AccountTax extends com.google.api.client.json.GenericJson {
   private java.util.List<AccountTaxTaxRule> rules;
 
   /**
-   * The ID of the account to which these account tax settings belong.
+   * Required. The ID of the account to which these account tax settings belong.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getAccountId() {
@@ -61,7 +61,7 @@ public final class AccountTax extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the account to which these account tax settings belong.
+   * Required. The ID of the account to which these account tax settings belong.
    * @param accountId accountId or {@code null} for none
    */
   public AccountTax setAccountId(java.math.BigInteger accountId) {

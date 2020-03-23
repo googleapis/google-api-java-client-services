@@ -39,6 +39,21 @@ public final class RefundReason extends com.google.api.client.json.GenericJson {
 
   /**
    * Code of the refund reason.
+   *
+   * Acceptable values are:   - "adjustment"  - "autoPostInternal"  -
+   * "autoPostInvalidBillingAddress"  - "autoPostNoInventory"  - "autoPostPriceError"  -
+   * "autoPostUndeliverableShippingAddress"  - "couponAbuse"  - "courtesyAdjustment"  -
+   * "customerCanceled"  - "customerDiscretionaryReturn"  - "customerInitiatedMerchantCancel"  -
+   * "customerSupportRequested"  - "deliveredLateByCarrier"  - "deliveredTooLate"  - "expiredItem"
+   * - "failToPushOrderGoogleError"  - "failToPushOrderMerchantError"  -
+   * "failToPushOrderMerchantFulfillmentError"  - "failToPushOrderToMerchant"  -
+   * "failToPushOrderToMerchantOutOfStock"  - "feeAdjustment"  - "invalidCoupon"  -
+   * "lateShipmentCredit"  - "malformedShippingAddress"  - "merchantDidNotShipOnTime"  -
+   * "noInventory"  - "orderTimeout"  - "other"  - "paymentAbuse"  - "paymentDeclined"  -
+   * "priceAdjustment"  - "priceError"  - "productArrivedDamaged"  - "productNotAsDescribed"  -
+   * "promoReallocation"  - "qualityNotAsExpected"  - "returnRefundAbuse"  -
+   * "shippingCostAdjustment"  - "shippingPriceError"  - "taxAdjustment"  - "taxError"  -
+   * "undeliverableShippingAddress"  - "unsupportedPoBoxAddress"  - "wrongProductShipped"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,6 +78,21 @@ public final class RefundReason extends com.google.api.client.json.GenericJson {
 
   /**
    * Code of the refund reason.
+   *
+   * Acceptable values are:   - "adjustment"  - "autoPostInternal"  -
+   * "autoPostInvalidBillingAddress"  - "autoPostNoInventory"  - "autoPostPriceError"  -
+   * "autoPostUndeliverableShippingAddress"  - "couponAbuse"  - "courtesyAdjustment"  -
+   * "customerCanceled"  - "customerDiscretionaryReturn"  - "customerInitiatedMerchantCancel"  -
+   * "customerSupportRequested"  - "deliveredLateByCarrier"  - "deliveredTooLate"  - "expiredItem"
+   * - "failToPushOrderGoogleError"  - "failToPushOrderMerchantError"  -
+   * "failToPushOrderMerchantFulfillmentError"  - "failToPushOrderToMerchant"  -
+   * "failToPushOrderToMerchantOutOfStock"  - "feeAdjustment"  - "invalidCoupon"  -
+   * "lateShipmentCredit"  - "malformedShippingAddress"  - "merchantDidNotShipOnTime"  -
+   * "noInventory"  - "orderTimeout"  - "other"  - "paymentAbuse"  - "paymentDeclined"  -
+   * "priceAdjustment"  - "priceError"  - "productArrivedDamaged"  - "productNotAsDescribed"  -
+   * "promoReallocation"  - "qualityNotAsExpected"  - "returnRefundAbuse"  -
+   * "shippingCostAdjustment"  - "shippingPriceError"  - "taxAdjustment"  - "taxError"  -
+   * "undeliverableShippingAddress"  - "unsupportedPoBoxAddress"  - "wrongProductShipped"
    * @return value or {@code null} for none
    */
   public java.lang.String getReasonCode() {
@@ -71,6 +101,21 @@ public final class RefundReason extends com.google.api.client.json.GenericJson {
 
   /**
    * Code of the refund reason.
+   *
+   * Acceptable values are:   - "adjustment"  - "autoPostInternal"  -
+   * "autoPostInvalidBillingAddress"  - "autoPostNoInventory"  - "autoPostPriceError"  -
+   * "autoPostUndeliverableShippingAddress"  - "couponAbuse"  - "courtesyAdjustment"  -
+   * "customerCanceled"  - "customerDiscretionaryReturn"  - "customerInitiatedMerchantCancel"  -
+   * "customerSupportRequested"  - "deliveredLateByCarrier"  - "deliveredTooLate"  - "expiredItem"
+   * - "failToPushOrderGoogleError"  - "failToPushOrderMerchantError"  -
+   * "failToPushOrderMerchantFulfillmentError"  - "failToPushOrderToMerchant"  -
+   * "failToPushOrderToMerchantOutOfStock"  - "feeAdjustment"  - "invalidCoupon"  -
+   * "lateShipmentCredit"  - "malformedShippingAddress"  - "merchantDidNotShipOnTime"  -
+   * "noInventory"  - "orderTimeout"  - "other"  - "paymentAbuse"  - "paymentDeclined"  -
+   * "priceAdjustment"  - "priceError"  - "productArrivedDamaged"  - "productNotAsDescribed"  -
+   * "promoReallocation"  - "qualityNotAsExpected"  - "returnRefundAbuse"  -
+   * "shippingCostAdjustment"  - "shippingPriceError"  - "taxAdjustment"  - "taxError"  -
+   * "undeliverableShippingAddress"  - "unsupportedPoBoxAddress"  - "wrongProductShipped"
    * @param reasonCode reasonCode or {@code null} for none
    */
   public RefundReason setReasonCode(java.lang.String reasonCode) {

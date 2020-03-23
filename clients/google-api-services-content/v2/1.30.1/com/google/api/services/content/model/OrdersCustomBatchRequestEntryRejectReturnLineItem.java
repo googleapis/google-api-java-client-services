@@ -54,6 +54,9 @@ public final class OrdersCustomBatchRequestEntryRejectReturnLineItem extends com
 
   /**
    * The reason for the return.
+   *
+   * Acceptable values are:   - "damagedOrUsed"  - "missingComponent"  - "notEligible"  - "other"  -
+   * "outOfReturnWindow"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -121,6 +124,9 @@ public final class OrdersCustomBatchRequestEntryRejectReturnLineItem extends com
 
   /**
    * The reason for the return.
+   *
+   * Acceptable values are:   - "damagedOrUsed"  - "missingComponent"  - "notEligible"  - "other"  -
+   * "outOfReturnWindow"
    * @return value or {@code null} for none
    */
   public java.lang.String getReason() {
@@ -129,6 +135,9 @@ public final class OrdersCustomBatchRequestEntryRejectReturnLineItem extends com
 
   /**
    * The reason for the return.
+   *
+   * Acceptable values are:   - "damagedOrUsed"  - "missingComponent"  - "notEligible"  - "other"  -
+   * "outOfReturnWindow"
    * @param reason reason or {@code null} for none
    */
   public OrdersCustomBatchRequestEntryRejectReturnLineItem setReason(java.lang.String reason) {

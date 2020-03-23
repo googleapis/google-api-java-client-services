@@ -45,7 +45,7 @@ public final class TestOrder extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * Line items that are ordered. At least one line item must be provided.
+   * Required. Line items that are ordered. At least one line item must be provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,27 +53,36 @@ public final class TestOrder extends com.google.api.client.json.GenericJson {
 
   /**
    * Determines if test order must be pulled by merchant or pushed to merchant via push integration.
+   *
+   * Acceptable values are:   - "checkoutIntegration"  - "merchantPull"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String notificationMode;
 
   /**
-   * The billing address.
+   * Required. The billing address.
+   *
+   * Acceptable values are:   - "dwight"  - "jim"  - "pam"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String predefinedBillingAddress;
 
   /**
-   * Identifier of one of the predefined delivery addresses for the delivery.
+   * Required. Identifier of one of the predefined delivery addresses for the delivery.
+   *
+   * Acceptable values are:   - "dwight"  - "jim"  - "pam"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String predefinedDeliveryAddress;
 
   /**
-   * Email address of the customer.
+   * Required. Email address of the customer.
+   *
+   * Acceptable values are:   - "pog.dwight.schrute@gmail.com"  - "pog.jim.halpert@gmail.com"  -
+   * "penpog.pam.beesly@gmail.comding"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,6 +91,8 @@ public final class TestOrder extends com.google.api.client.json.GenericJson {
   /**
    * Identifier of one of the predefined pickup details. Required for orders containing line items
    * with shipping type pickup.
+   *
+   * Acceptable values are:   - "dwight"  - "jim"  - "pam"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,16 +112,19 @@ public final class TestOrder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The price of shipping for all items. Shipping tax is automatically calculated for orders where
-   * marketplace facilitator tax laws are applicable. Otherwise, tax settings from Merchant Center
-   * are applied. Note that shipping is not taxed in certain states.
+   * Required. The price of shipping for all items. Shipping tax is automatically calculated for
+   * orders where marketplace facilitator tax laws are applicable. Otherwise, tax settings from
+   * Merchant Center are applied. Note that shipping is not taxed in certain states.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Price shippingCost;
 
   /**
-   * The requested shipping option.
+   * Required. The requested shipping option.
+   *
+   * Acceptable values are:   - "economy"  - "expedited"  - "oneDay"  - "sameDay"  - "standard"  -
+   * "twoDay"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -151,7 +165,7 @@ public final class TestOrder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Line items that are ordered. At least one line item must be provided.
+   * Required. Line items that are ordered. At least one line item must be provided.
    * @return value or {@code null} for none
    */
   public java.util.List<TestOrderLineItem> getLineItems() {
@@ -159,7 +173,7 @@ public final class TestOrder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Line items that are ordered. At least one line item must be provided.
+   * Required. Line items that are ordered. At least one line item must be provided.
    * @param lineItems lineItems or {@code null} for none
    */
   public TestOrder setLineItems(java.util.List<TestOrderLineItem> lineItems) {
@@ -169,6 +183,8 @@ public final class TestOrder extends com.google.api.client.json.GenericJson {
 
   /**
    * Determines if test order must be pulled by merchant or pushed to merchant via push integration.
+   *
+   * Acceptable values are:   - "checkoutIntegration"  - "merchantPull"
    * @return value or {@code null} for none
    */
   public java.lang.String getNotificationMode() {
@@ -177,6 +193,8 @@ public final class TestOrder extends com.google.api.client.json.GenericJson {
 
   /**
    * Determines if test order must be pulled by merchant or pushed to merchant via push integration.
+   *
+   * Acceptable values are:   - "checkoutIntegration"  - "merchantPull"
    * @param notificationMode notificationMode or {@code null} for none
    */
   public TestOrder setNotificationMode(java.lang.String notificationMode) {
@@ -185,7 +203,9 @@ public final class TestOrder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The billing address.
+   * Required. The billing address.
+   *
+   * Acceptable values are:   - "dwight"  - "jim"  - "pam"
    * @return value or {@code null} for none
    */
   public java.lang.String getPredefinedBillingAddress() {
@@ -193,7 +213,9 @@ public final class TestOrder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The billing address.
+   * Required. The billing address.
+   *
+   * Acceptable values are:   - "dwight"  - "jim"  - "pam"
    * @param predefinedBillingAddress predefinedBillingAddress or {@code null} for none
    */
   public TestOrder setPredefinedBillingAddress(java.lang.String predefinedBillingAddress) {
@@ -202,7 +224,9 @@ public final class TestOrder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier of one of the predefined delivery addresses for the delivery.
+   * Required. Identifier of one of the predefined delivery addresses for the delivery.
+   *
+   * Acceptable values are:   - "dwight"  - "jim"  - "pam"
    * @return value or {@code null} for none
    */
   public java.lang.String getPredefinedDeliveryAddress() {
@@ -210,7 +234,9 @@ public final class TestOrder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier of one of the predefined delivery addresses for the delivery.
+   * Required. Identifier of one of the predefined delivery addresses for the delivery.
+   *
+   * Acceptable values are:   - "dwight"  - "jim"  - "pam"
    * @param predefinedDeliveryAddress predefinedDeliveryAddress or {@code null} for none
    */
   public TestOrder setPredefinedDeliveryAddress(java.lang.String predefinedDeliveryAddress) {
@@ -219,7 +245,10 @@ public final class TestOrder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Email address of the customer.
+   * Required. Email address of the customer.
+   *
+   * Acceptable values are:   - "pog.dwight.schrute@gmail.com"  - "pog.jim.halpert@gmail.com"  -
+   * "penpog.pam.beesly@gmail.comding"
    * @return value or {@code null} for none
    */
   public java.lang.String getPredefinedEmail() {
@@ -227,7 +256,10 @@ public final class TestOrder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Email address of the customer.
+   * Required. Email address of the customer.
+   *
+   * Acceptable values are:   - "pog.dwight.schrute@gmail.com"  - "pog.jim.halpert@gmail.com"  -
+   * "penpog.pam.beesly@gmail.comding"
    * @param predefinedEmail predefinedEmail or {@code null} for none
    */
   public TestOrder setPredefinedEmail(java.lang.String predefinedEmail) {
@@ -238,6 +270,8 @@ public final class TestOrder extends com.google.api.client.json.GenericJson {
   /**
    * Identifier of one of the predefined pickup details. Required for orders containing line items
    * with shipping type pickup.
+   *
+   * Acceptable values are:   - "dwight"  - "jim"  - "pam"
    * @return value or {@code null} for none
    */
   public java.lang.String getPredefinedPickupDetails() {
@@ -247,6 +281,8 @@ public final class TestOrder extends com.google.api.client.json.GenericJson {
   /**
    * Identifier of one of the predefined pickup details. Required for orders containing line items
    * with shipping type pickup.
+   *
+   * Acceptable values are:   - "dwight"  - "jim"  - "pam"
    * @param predefinedPickupDetails predefinedPickupDetails or {@code null} for none
    */
   public TestOrder setPredefinedPickupDetails(java.lang.String predefinedPickupDetails) {
@@ -272,9 +308,9 @@ public final class TestOrder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The price of shipping for all items. Shipping tax is automatically calculated for orders where
-   * marketplace facilitator tax laws are applicable. Otherwise, tax settings from Merchant Center
-   * are applied. Note that shipping is not taxed in certain states.
+   * Required. The price of shipping for all items. Shipping tax is automatically calculated for
+   * orders where marketplace facilitator tax laws are applicable. Otherwise, tax settings from
+   * Merchant Center are applied. Note that shipping is not taxed in certain states.
    * @return value or {@code null} for none
    */
   public Price getShippingCost() {
@@ -282,9 +318,9 @@ public final class TestOrder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The price of shipping for all items. Shipping tax is automatically calculated for orders where
-   * marketplace facilitator tax laws are applicable. Otherwise, tax settings from Merchant Center
-   * are applied. Note that shipping is not taxed in certain states.
+   * Required. The price of shipping for all items. Shipping tax is automatically calculated for
+   * orders where marketplace facilitator tax laws are applicable. Otherwise, tax settings from
+   * Merchant Center are applied. Note that shipping is not taxed in certain states.
    * @param shippingCost shippingCost or {@code null} for none
    */
   public TestOrder setShippingCost(Price shippingCost) {
@@ -293,7 +329,10 @@ public final class TestOrder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The requested shipping option.
+   * Required. The requested shipping option.
+   *
+   * Acceptable values are:   - "economy"  - "expedited"  - "oneDay"  - "sameDay"  - "standard"  -
+   * "twoDay"
    * @return value or {@code null} for none
    */
   public java.lang.String getShippingOption() {
@@ -301,7 +340,10 @@ public final class TestOrder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The requested shipping option.
+   * Required. The requested shipping option.
+   *
+   * Acceptable values are:   - "economy"  - "expedited"  - "oneDay"  - "sameDay"  - "standard"  -
+   * "twoDay"
    * @param shippingOption shippingOption or {@code null} for none
    */
   public TestOrder setShippingOption(java.lang.String shippingOption) {

@@ -32,6 +32,8 @@ public final class OrdersAcknowledgeResponse extends com.google.api.client.json.
 
   /**
    * The status of the execution.
+   *
+   * Acceptable values are:   - "duplicate"  - "executed"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,6 +49,8 @@ public final class OrdersAcknowledgeResponse extends com.google.api.client.json.
 
   /**
    * The status of the execution.
+   *
+   * Acceptable values are:   - "duplicate"  - "executed"
    * @return value or {@code null} for none
    */
   public java.lang.String getExecutionStatus() {
@@ -55,6 +59,8 @@ public final class OrdersAcknowledgeResponse extends com.google.api.client.json.
 
   /**
    * The status of the execution.
+   *
+   * Acceptable values are:   - "duplicate"  - "executed"
    * @param executionStatus executionStatus or {@code null} for none
    */
   public OrdersAcknowledgeResponse setExecutionStatus(java.lang.String executionStatus) {

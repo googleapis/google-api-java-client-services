@@ -18,11 +18,11 @@ package com.google.api.services.monitoring.v1.model;
 
 /**
  * A filter that defines a subset of time series data that is displayed in a widget. Time series
- * data is fetched using the ListTimeSeries method.
+ * data is fetched using the ListTimeSeries
+ * (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.timeSeries/list) method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Stackdriver Monitoring API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Cloud Monitoring API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -40,8 +40,8 @@ public final class TimeSeriesFilter extends com.google.api.client.json.GenericJs
   private Aggregation aggregation;
 
   /**
-   * Required. The monitoring filter that identifies the metric types, resources, and projects to
-   * query.
+   * Required. The monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) that
+   * identifies the metric types, resources, and projects to query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,8 +74,8 @@ public final class TimeSeriesFilter extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. The monitoring filter that identifies the metric types, resources, and projects to
-   * query.
+   * Required. The monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) that
+   * identifies the metric types, resources, and projects to query.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -83,8 +83,8 @@ public final class TimeSeriesFilter extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. The monitoring filter that identifies the metric types, resources, and projects to
-   * query.
+   * Required. The monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) that
+   * identifies the metric types, resources, and projects to query.
    * @param filter filter or {@code null} for none
    */
   public TimeSeriesFilter setFilter(java.lang.String filter) {

@@ -17,7 +17,7 @@
 package com.google.api.services.monitoring.v3;
 
 /**
- * Available OAuth 2.0 scopes for use with the Stackdriver Monitoring API.
+ * Available OAuth 2.0 scopes for use with the Cloud Monitoring API.
  *
  * @since 1.4
  */

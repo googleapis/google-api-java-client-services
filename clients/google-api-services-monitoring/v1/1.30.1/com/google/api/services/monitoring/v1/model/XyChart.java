@@ -20,8 +20,7 @@ package com.google.api.services.monitoring.v1.model;
  * A chart that displays data on a 2D (X and Y axes) plane.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Stackdriver Monitoring API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Cloud Monitoring API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -38,7 +37,7 @@ public final class XyChart extends com.google.api.client.json.GenericJson {
   private ChartOptions chartOptions;
 
   /**
-   * The data displayed in this chart.
+   * Required. The data displayed in this chart.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,7 +103,7 @@ public final class XyChart extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The data displayed in this chart.
+   * Required. The data displayed in this chart.
    * @return value or {@code null} for none
    */
   public java.util.List<DataSet> getDataSets() {
@@ -112,7 +111,7 @@ public final class XyChart extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The data displayed in this chart.
+   * Required. The data displayed in this chart.
    * @param dataSets dataSets or {@code null} for none
    */
   public XyChart setDataSets(java.util.List<DataSet> dataSets) {

@@ -19,11 +19,10 @@ package com.google.api.services.monitoring.v3.model;
 /**
  * A description of the conditions under which some aspect of your system is considered to be
  * "unhealthy" and the ways to notify people or services about this state. For an overview of alert
- * policies, see Introduction to Alerting.
+ * policies, see Introduction to Alerting (https://cloud.google.com/monitoring/alerts/).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Stackdriver Monitoring API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Cloud Monitoring API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *

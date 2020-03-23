@@ -20,7 +20,7 @@ package com.google.api.services.monitoring.v1;
  * Service definition for Monitoring (v1).
  *
  * <p>
- * Manages your Stackdriver Monitoring data and configurations. Most projects must be associated with a Stackdriver account, with a few exceptions as noted on the individual method pages. The table entries below are presented in alphabetical order, not in order of common use. For explanations of the concepts found in the table entries, read the Stackdriver Monitoring documentation.
+ * Manages your Cloud Monitoring data and configurations. Most projects must be associated with a Workspace, with a few exceptions as noted on the individual method pages. The table entries below are presented in alphabetical order, not in order of common use. For explanations of the concepts found in the table entries, read the Cloud Monitoring documentation.
  * </p>
  *
  * <p>
@@ -46,7 +46,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Stackdriver Monitoring API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.9 of the Cloud Monitoring API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -821,7 +821,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name The resource name of the dashboard.
+       * @param name Immutable. The resource name of the dashboard.
        * @param content the {@link com.google.api.services.monitoring.v1.model.Dashboard}
        * @return the request
        */
@@ -851,7 +851,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The resource name of the dashboard.
+         * @param name Immutable. The resource name of the dashboard.
          * @param content the {@link com.google.api.services.monitoring.v1.model.Dashboard}
          * @since 1.13
          */
@@ -920,17 +920,17 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
           return (Patch) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** The resource name of the dashboard. */
+        /** Immutable. The resource name of the dashboard. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The resource name of the dashboard.
+        /** Immutable. The resource name of the dashboard.
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** The resource name of the dashboard. */
+        /** Immutable. The resource name of the dashboard. */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

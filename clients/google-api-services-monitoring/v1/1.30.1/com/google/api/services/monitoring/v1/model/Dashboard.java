@@ -21,8 +21,7 @@ package com.google.api.services.monitoring.v1.model;
  * Stackdriver web application.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Stackdriver Monitoring API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Cloud Monitoring API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -39,7 +38,7 @@ public final class Dashboard extends com.google.api.client.json.GenericJson {
   private ColumnLayout columnLayout;
 
   /**
-   * The mutable, human-readable name.
+   * Required. The mutable, human-readable name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +64,7 @@ public final class Dashboard extends com.google.api.client.json.GenericJson {
   private GridLayout gridLayout;
 
   /**
-   * The resource name of the dashboard.
+   * Immutable. The resource name of the dashboard.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,7 +95,7 @@ public final class Dashboard extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The mutable, human-readable name.
+   * Required. The mutable, human-readable name.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -104,7 +103,7 @@ public final class Dashboard extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The mutable, human-readable name.
+   * Required. The mutable, human-readable name.
    * @param displayName displayName or {@code null} for none
    */
   public Dashboard setDisplayName(java.lang.String displayName) {
@@ -157,7 +156,7 @@ public final class Dashboard extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the dashboard.
+   * Immutable. The resource name of the dashboard.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -165,7 +164,7 @@ public final class Dashboard extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the dashboard.
+   * Immutable. The resource name of the dashboard.
    * @param name name or {@code null} for none
    */
   public Dashboard setName(java.lang.String name) {

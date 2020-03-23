@@ -2835,20 +2835,20 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Reads the version of the document at the given time. This may not be older than 60
+           * Reads the version of the document at the given time. This may not be older than 270
            * seconds.
            */
           @com.google.api.client.util.Key
           private String readTime;
 
-          /** Reads the version of the document at the given time. This may not be older than 60 seconds.
+          /** Reads the version of the document at the given time. This may not be older than 270 seconds.
            */
           public String getReadTime() {
             return readTime;
           }
 
           /**
-           * Reads the version of the document at the given time. This may not be older than 60
+           * Reads the version of the document at the given time. This may not be older than 270
            * seconds.
            */
           public Get setReadTime(String readTime) {
@@ -3136,19 +3136,19 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Reads documents as they were at the given time. This may not be older than 60 seconds.
+           * Reads documents as they were at the given time. This may not be older than 270 seconds.
            */
           @com.google.api.client.util.Key
           private String readTime;
 
-          /** Reads documents as they were at the given time. This may not be older than 60 seconds.
+          /** Reads documents as they were at the given time. This may not be older than 270 seconds.
            */
           public String getReadTime() {
             return readTime;
           }
 
           /**
-           * Reads documents as they were at the given time. This may not be older than 60 seconds.
+           * Reads documents as they were at the given time. This may not be older than 270 seconds.
            */
           public List setReadTime(String readTime) {
             this.readTime = readTime;

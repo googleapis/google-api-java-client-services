@@ -38,6 +38,13 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
   private java.lang.String apiMethodName;
 
   /**
+   * Specifies if cancellation was requested for the operation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean cancelRequested;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,6 +78,23 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
    */
   public OperationMetadata setApiMethodName(java.lang.String apiMethodName) {
     this.apiMethodName = apiMethodName;
+    return this;
+  }
+
+  /**
+   * Specifies if cancellation was requested for the operation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCancelRequested() {
+    return cancelRequested;
+  }
+
+  /**
+   * Specifies if cancellation was requested for the operation.
+   * @param cancelRequested cancelRequested or {@code null} for none
+   */
+  public OperationMetadata setCancelRequested(java.lang.Boolean cancelRequested) {
+    this.cancelRequested = cancelRequested;
     return this;
   }
 

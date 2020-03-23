@@ -158,7 +158,7 @@ public class Oauth2 extends com.google.api.client.googleapis.services.json.Abstr
       return result;
     }
 
-    public class Get extends Oauth2Request<com.google.api.services.oauth2.model.Userinfo> {
+    public class Get extends Oauth2Request<com.google.api.services.oauth2.model.Userinfoplus> {
 
       private static final String REST_PATH = "oauth2/v1/userinfo";
 
@@ -175,7 +175,7 @@ public class Oauth2 extends com.google.api.client.googleapis.services.json.Abstr
        * @since 1.13
        */
       protected Get() {
-        super(Oauth2.this, "GET", REST_PATH, null, com.google.api.services.oauth2.model.Userinfo.class);
+        super(Oauth2.this, "GET", REST_PATH, null, com.google.api.services.oauth2.model.Userinfoplus.class);
       }
 
       @Override
@@ -285,7 +285,7 @@ public class Oauth2 extends com.google.api.client.googleapis.services.json.Abstr
           return result;
         }
 
-        public class Get extends Oauth2Request<com.google.api.services.oauth2.model.Userinfo> {
+        public class Get extends Oauth2Request<com.google.api.services.oauth2.model.Userinfoplus> {
 
           private static final String REST_PATH = "userinfo/v2/me";
 
@@ -302,7 +302,7 @@ public class Oauth2 extends com.google.api.client.googleapis.services.json.Abstr
            * @since 1.13
            */
           protected Get() {
-            super(Oauth2.this, "GET", REST_PATH, null, com.google.api.services.oauth2.model.Userinfo.class);
+            super(Oauth2.this, "GET", REST_PATH, null, com.google.api.services.oauth2.model.Userinfoplus.class);
           }
 
           @Override

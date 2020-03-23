@@ -38,9 +38,9 @@ public final class UpdateTopicRequest extends com.google.api.client.json.Generic
 
   /**
    * Required. Indicates which fields in the provided topic to update. Must be specified and non-
-   * empty. Note that if `update_mask` contains "message_storage_policy" then the new value will be
-   * determined based on the policy configured at the project or organization level. The
-   * `message_storage_policy` must not be set in the `topic` provided above.
+   * empty. Note that if `update_mask` contains "message_storage_policy" but the
+   * `message_storage_policy` is not set in the `topic` provided above, then the updated value is
+   * determined by the policy configured at the project or organization level.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,9 +65,9 @@ public final class UpdateTopicRequest extends com.google.api.client.json.Generic
 
   /**
    * Required. Indicates which fields in the provided topic to update. Must be specified and non-
-   * empty. Note that if `update_mask` contains "message_storage_policy" then the new value will be
-   * determined based on the policy configured at the project or organization level. The
-   * `message_storage_policy` must not be set in the `topic` provided above.
+   * empty. Note that if `update_mask` contains "message_storage_policy" but the
+   * `message_storage_policy` is not set in the `topic` provided above, then the updated value is
+   * determined by the policy configured at the project or organization level.
    * @return value or {@code null} for none
    */
   public String getUpdateMask() {
@@ -76,9 +76,9 @@ public final class UpdateTopicRequest extends com.google.api.client.json.Generic
 
   /**
    * Required. Indicates which fields in the provided topic to update. Must be specified and non-
-   * empty. Note that if `update_mask` contains "message_storage_policy" then the new value will be
-   * determined based on the policy configured at the project or organization level. The
-   * `message_storage_policy` must not be set in the `topic` provided above.
+   * empty. Note that if `update_mask` contains "message_storage_policy" but the
+   * `message_storage_policy` is not set in the `topic` provided above, then the updated value is
+   * determined by the policy configured at the project or organization level.
    * @param updateMask updateMask or {@code null} for none
    */
   public UpdateTopicRequest setUpdateMask(String updateMask) {

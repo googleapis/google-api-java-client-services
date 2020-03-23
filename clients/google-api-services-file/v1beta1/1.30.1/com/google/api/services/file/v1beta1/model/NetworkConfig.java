@@ -55,11 +55,11 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
   private java.lang.String network;
 
   /**
-   * A /29 CIDR block in one of the [internal IP address
-   * ranges](https://www.arin.net/knowledge/address_filters.html) that identifies the range of IP
-   * addresses reserved for this instance. For example, 10.0.0.0/29 or 192.168.0.0/29. The range you
-   * specify can't overlap with either existing subnets or assigned IP address ranges for other
-   * Cloud Filestore instances in the selected VPC network.
+   * A /29 CIDR block for Basic or a /23 CIDR block for High Scale in one of the [internal IP
+   * address ranges](https://www.arin.net/knowledge/address_filters.html) that identifies the range
+   * of IP addresses reserved for this instance. For example, 10.0.0.0/29 or 192.168.0.0/23. The
+   * range you specify can't overlap with either existing subnets or assigned IP address ranges for
+   * other Cloud Filestore instances in the selected VPC network.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,11 +125,11 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A /29 CIDR block in one of the [internal IP address
-   * ranges](https://www.arin.net/knowledge/address_filters.html) that identifies the range of IP
-   * addresses reserved for this instance. For example, 10.0.0.0/29 or 192.168.0.0/29. The range you
-   * specify can't overlap with either existing subnets or assigned IP address ranges for other
-   * Cloud Filestore instances in the selected VPC network.
+   * A /29 CIDR block for Basic or a /23 CIDR block for High Scale in one of the [internal IP
+   * address ranges](https://www.arin.net/knowledge/address_filters.html) that identifies the range
+   * of IP addresses reserved for this instance. For example, 10.0.0.0/29 or 192.168.0.0/23. The
+   * range you specify can't overlap with either existing subnets or assigned IP address ranges for
+   * other Cloud Filestore instances in the selected VPC network.
    * @return value or {@code null} for none
    */
   public java.lang.String getReservedIpRange() {
@@ -137,11 +137,11 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A /29 CIDR block in one of the [internal IP address
-   * ranges](https://www.arin.net/knowledge/address_filters.html) that identifies the range of IP
-   * addresses reserved for this instance. For example, 10.0.0.0/29 or 192.168.0.0/29. The range you
-   * specify can't overlap with either existing subnets or assigned IP address ranges for other
-   * Cloud Filestore instances in the selected VPC network.
+   * A /29 CIDR block for Basic or a /23 CIDR block for High Scale in one of the [internal IP
+   * address ranges](https://www.arin.net/knowledge/address_filters.html) that identifies the range
+   * of IP addresses reserved for this instance. For example, 10.0.0.0/29 or 192.168.0.0/23. The
+   * range you specify can't overlap with either existing subnets or assigned IP address ranges for
+   * other Cloud Filestore instances in the selected VPC network.
    * @param reservedIpRange reservedIpRange or {@code null} for none
    */
   public NetworkConfig setReservedIpRange(java.lang.String reservedIpRange) {

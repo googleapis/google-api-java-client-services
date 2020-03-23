@@ -17,7 +17,7 @@
 package com.google.api.services.cloudasset.v1.model;
 
 /**
- * A Cloud Pubsub destination.
+ * A Pub/Sub destination.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Asset API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.cloudasset.v1.model;
 public final class PubsubDestination extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the Cloud Pub/Sub topic to publish to. For example:
+   * The name of the Pub/Sub topic to publish to. For example:
    * `projects/PROJECT_ID/topics/TOPIC_ID`.
    * The value may be {@code null}.
    */
@@ -38,7 +38,7 @@ public final class PubsubDestination extends com.google.api.client.json.GenericJ
   private java.lang.String topic;
 
   /**
-   * The name of the Cloud Pub/Sub topic to publish to. For example:
+   * The name of the Pub/Sub topic to publish to. For example:
    * `projects/PROJECT_ID/topics/TOPIC_ID`.
    * @return value or {@code null} for none
    */
@@ -47,7 +47,7 @@ public final class PubsubDestination extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The name of the Cloud Pub/Sub topic to publish to. For example:
+   * The name of the Pub/Sub topic to publish to. For example:
    * `projects/PROJECT_ID/topics/TOPIC_ID`.
    * @param topic topic or {@code null} for none
    */

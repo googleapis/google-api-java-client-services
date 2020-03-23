@@ -19,7 +19,7 @@ package com.google.api.services.cloudasset.v1.model;
 /**
  * An asset feed used to export asset updates to a destinations. An asset feed filter controls what
  * updates are exported. The asset feed must be created within a project, organization, or folder.
- * Supported destinations are: Cloud Pub/Sub topics.
+ * Supported destinations are: Pub/Sub topics.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Asset API. For a detailed explanation see:

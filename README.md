@@ -36,6 +36,7 @@ packages on [Maven Central][maven-search].
 | Analytics Reporting API | [v4](clients/google-api-services-analyticsreporting/v4) |
 | Android Device Provisioning Partner API | [v1](clients/google-api-services-androiddeviceprovisioning/v1) |
 | Android Management API | [v1](clients/google-api-services-androidmanagement/v1) |
+| Apigee API | [v1](clients/google-api-services-apigee/v1) |
 | App Engine Admin API | [v1](clients/google-api-services-appengine/v1), [v1alpha](clients/google-api-services-appengine/v1alpha), [v1beta](clients/google-api-services-appengine/v1beta), [v1beta4](clients/google-api-services-appengine/v1beta4), [v1beta5](clients/google-api-services-appengine/v1beta5) |
 | Apps Script API | [v1](clients/google-api-services-script/v1) |
 | BigQuery API | [v2](clients/google-api-services-bigquery/v2) |
@@ -46,7 +47,7 @@ packages on [Maven Central][maven-search].
 | Blogger API | [v2](clients/google-api-services-blogger/v2), [v3](clients/google-api-services-blogger/v3) |
 | Books API | [v1](clients/google-api-services-books/v1) |
 | Calendar API | [v3](clients/google-api-services-calendar/v3) |
-| Cloud Asset API | [v1](clients/google-api-services-cloudasset/v1), [v1beta1](clients/google-api-services-cloudasset/v1beta1) |
+| Cloud Asset API | [v1](clients/google-api-services-cloudasset/v1), [v1beta1](clients/google-api-services-cloudasset/v1beta1), [v1p1beta1](clients/google-api-services-cloudasset/v1p1beta1) |
 | Cloud Bigtable Admin API | [v1](clients/google-api-services-bigtableadmin/v1), [v2](clients/google-api-services-bigtableadmin/v2) |
 | Cloud Billing API | [v1](clients/google-api-services-cloudbilling/v1) |
 | Cloud Billing Budget API | [v1beta1](clients/google-api-services-billingbudgets/v1beta1) |
@@ -67,6 +68,7 @@ packages on [Maven Central][maven-search].
 | Cloud Key Management Service (KMS) API | [v1](clients/google-api-services-cloudkms/v1) |
 | Cloud Life Sciences API | [v2beta](clients/google-api-services-lifesciences/v2beta) |
 | Cloud Logging API | [v2](clients/google-api-services-logging/v2) |
+| Cloud Memorystore for Memcached API | [v1beta2](clients/google-api-services-memcache/v1beta2) |
 | Cloud Natural Language API | [v1](clients/google-api-services-language/v1), [v1beta1](clients/google-api-services-language/v1beta1), [v1beta2](clients/google-api-services-language/v1beta2) |
 | Cloud OS Config API | [v1](clients/google-api-services-osconfig/v1), [v1beta](clients/google-api-services-osconfig/v1beta) |
 | Cloud OS Login API | [v1](clients/google-api-services-oslogin/v1), [v1alpha](clients/google-api-services-oslogin/v1alpha), [v1beta](clients/google-api-services-oslogin/v1beta) |
@@ -173,8 +175,9 @@ packages on [Maven Central][maven-search].
 | Search Ads 360 API | [v2](clients/google-api-services-doubleclicksearch/v2) |
 | Search Console API | [v3](clients/google-api-services-webmasters/v3) |
 | Secret Manager API | [v1](clients/google-api-services-secretmanager/v1), [v1beta1](clients/google-api-services-secretmanager/v1beta1) |
-| Service Consumer Management API | [v1](clients/google-api-services-serviceconsumermanagement/v1) |
+| Service Consumer Management API | [v1](clients/google-api-services-serviceconsumermanagement/v1), [v1beta1](clients/google-api-services-serviceconsumermanagement/v1beta1) |
 | Service Control API | [v1](clients/google-api-services-servicecontrol/v1) |
+| Service Directory API | [v1beta1](clients/google-api-services-servicedirectory/v1beta1) |
 | Service Management API | [v1](clients/google-api-services-servicemanagement/v1) |
 | Service Networking API | [v1](clients/google-api-services-servicenetworking/v1), [v1beta](clients/google-api-services-servicenetworking/v1beta) |
 | Service Usage API | [v1](clients/google-api-services-serviceusage/v1), [v1beta1](clients/google-api-services-serviceusage/v1beta1) |

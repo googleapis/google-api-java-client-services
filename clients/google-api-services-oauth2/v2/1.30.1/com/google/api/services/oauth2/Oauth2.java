@@ -156,7 +156,7 @@ public class Oauth2 extends com.google.api.client.googleapis.services.json.Abstr
       return result;
     }
 
-    public class Get extends Oauth2Request<com.google.api.services.oauth2.model.Userinfoplus> {
+    public class Get extends Oauth2Request<com.google.api.services.oauth2.model.Userinfo> {
 
       private static final String REST_PATH = "oauth2/v2/userinfo";
 
@@ -171,7 +171,7 @@ public class Oauth2 extends com.google.api.client.googleapis.services.json.Abstr
        * @since 1.13
        */
       protected Get() {
-        super(Oauth2.this, "GET", REST_PATH, null, com.google.api.services.oauth2.model.Userinfoplus.class);
+        super(Oauth2.this, "GET", REST_PATH, null, com.google.api.services.oauth2.model.Userinfo.class);
       }
 
       @Override
@@ -279,7 +279,7 @@ public class Oauth2 extends com.google.api.client.googleapis.services.json.Abstr
           return result;
         }
 
-        public class Get extends Oauth2Request<com.google.api.services.oauth2.model.Userinfoplus> {
+        public class Get extends Oauth2Request<com.google.api.services.oauth2.model.Userinfo> {
 
           private static final String REST_PATH = "userinfo/v2/me";
 
@@ -294,7 +294,7 @@ public class Oauth2 extends com.google.api.client.googleapis.services.json.Abstr
            * @since 1.13
            */
           protected Get() {
-            super(Oauth2.this, "GET", REST_PATH, null, com.google.api.services.oauth2.model.Userinfoplus.class);
+            super(Oauth2.this, "GET", REST_PATH, null, com.google.api.services.oauth2.model.Userinfo.class);
           }
 
           @Override
@@ -447,21 +447,6 @@ public class Oauth2 extends com.google.api.client.googleapis.services.json.Abstr
 
     public Tokeninfo setIdToken(java.lang.String idToken) {
       this.idToken = idToken;
-      return this;
-    }
-
-    @com.google.api.client.util.Key("token_handle")
-    private java.lang.String tokenHandle;
-
-    /**
-
-     */
-    public java.lang.String getTokenHandle() {
-      return tokenHandle;
-    }
-
-    public Tokeninfo setTokenHandle(java.lang.String tokenHandle) {
-      this.tokenHandle = tokenHandle;
       return this;
     }
 

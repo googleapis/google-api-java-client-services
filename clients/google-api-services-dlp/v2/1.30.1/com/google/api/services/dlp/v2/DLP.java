@@ -10557,6 +10557,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * @param parent The parent resource name, for example projects/my-project-id.
          * @param locationId The geographic location to process content inspection. Reserved for future
         extensions.
+        When
+         *        inspecting images location is restricted to 'global', 'us', 'asia',
+        and 'europe'.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectContentRequest}
          * @return the request
          */
@@ -10595,6 +10598,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * @param parent The parent resource name, for example projects/my-project-id.
            * @param locationId The geographic location to process content inspection. Reserved for future
         extensions.
+        When
+         *        inspecting images location is restricted to 'global', 'us', 'asia',
+        and 'europe'.
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectContentRequest}
            * @since 1.13
            */
@@ -10687,11 +10693,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * The geographic location to process content inspection. Reserved for future extensions.
+           * When inspecting images location is restricted to 'global', 'us', 'asia', and 'europe'.
            */
           @com.google.api.client.util.Key
           private java.lang.String locationId;
 
-          /** The geographic location to process content inspection. Reserved for future extensions.
+          /** The geographic location to process content inspection. Reserved for future extensions. When
+         inspecting images location is restricted to 'global', 'us', 'asia', and 'europe'.
            */
           public java.lang.String getLocationId() {
             return locationId;
@@ -10699,6 +10707,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * The geographic location to process content inspection. Reserved for future extensions.
+           * When inspecting images location is restricted to 'global', 'us', 'asia', and 'europe'.
            */
           public Inspect setLocationId(java.lang.String locationId) {
             this.locationId = locationId;
@@ -13058,6 +13067,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * @param parent The parent resource name, for example projects/my-project-id.
          * @param locationId The geographic location to process the request. Reserved for future
         extensions.
+        Location is
+         *        restricted to 'global', 'us', 'asia', and 'europe'.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2RedactImageRequest}
          * @return the request
          */
@@ -13093,6 +13104,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * @param parent The parent resource name, for example projects/my-project-id.
            * @param locationId The geographic location to process the request. Reserved for future
         extensions.
+        Location is
+         *        restricted to 'global', 'us', 'asia', and 'europe'.
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2RedactImageRequest}
            * @since 1.13
            */
@@ -13185,11 +13198,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * The geographic location to process the request. Reserved for future extensions.
+           * Location is restricted to 'global', 'us', 'asia', and 'europe'.
            */
           @com.google.api.client.util.Key
           private java.lang.String locationId;
 
-          /** The geographic location to process the request. Reserved for future extensions.
+          /** The geographic location to process the request. Reserved for future extensions. Location is
+         restricted to 'global', 'us', 'asia', and 'europe'.
            */
           public java.lang.String getLocationId() {
             return locationId;
@@ -13197,6 +13212,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * The geographic location to process the request. Reserved for future extensions.
+           * Location is restricted to 'global', 'us', 'asia', and 'europe'.
            */
           public Redact setLocationId(java.lang.String locationId) {
             this.locationId = locationId;

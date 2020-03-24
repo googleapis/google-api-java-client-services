@@ -30,13 +30,6 @@ package com.google.api.services.oauth2.model;
 public final class Tokeninfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * The access type granted with this token. It can be offline or online.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key("access_type")
-  private java.lang.String accessType;
-
-  /**
    * Who is the intended audience for this token. In general the same as issued_to.
    * The value may be {@code null}.
    */
@@ -72,13 +65,6 @@ public final class Tokeninfo extends com.google.api.client.json.GenericJson {
   private java.lang.String scope;
 
   /**
-   * The token handle associated with this token.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key("token_handle")
-  private java.lang.String tokenHandle;
-
-  /**
    * The obfuscated user id.
    * The value may be {@code null}.
    */
@@ -92,23 +78,6 @@ public final class Tokeninfo extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key("verified_email")
   private java.lang.Boolean verifiedEmail;
-
-  /**
-   * The access type granted with this token. It can be offline or online.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getAccessType() {
-    return accessType;
-  }
-
-  /**
-   * The access type granted with this token. It can be offline or online.
-   * @param accessType accessType or {@code null} for none
-   */
-  public Tokeninfo setAccessType(java.lang.String accessType) {
-    this.accessType = accessType;
-    return this;
-  }
 
   /**
    * Who is the intended audience for this token. In general the same as issued_to.
@@ -192,23 +161,6 @@ public final class Tokeninfo extends com.google.api.client.json.GenericJson {
    */
   public Tokeninfo setScope(java.lang.String scope) {
     this.scope = scope;
-    return this;
-  }
-
-  /**
-   * The token handle associated with this token.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getTokenHandle() {
-    return tokenHandle;
-  }
-
-  /**
-   * The token handle associated with this token.
-   * @param tokenHandle tokenHandle or {@code null} for none
-   */
-  public Tokeninfo setTokenHandle(java.lang.String tokenHandle) {
-    this.tokenHandle = tokenHandle;
     return this;
   }
 

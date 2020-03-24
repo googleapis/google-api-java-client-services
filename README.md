@@ -69,6 +69,7 @@ packages on [Maven Central][maven-search].
 | Cloud Life Sciences API | [v2beta](clients/google-api-services-lifesciences/v2beta) |
 | Cloud Logging API | [v2](clients/google-api-services-logging/v2) |
 | Cloud Memorystore for Memcached API | [v1beta2](clients/google-api-services-memcache/v1beta2) |
+| Cloud Monitoring API | [v1](clients/google-api-services-monitoring/v1), [v3](clients/google-api-services-monitoring/v3) |
 | Cloud Natural Language API | [v1](clients/google-api-services-language/v1), [v1beta1](clients/google-api-services-language/v1beta1), [v1beta2](clients/google-api-services-language/v1beta2) |
 | Cloud OS Config API | [v1](clients/google-api-services-osconfig/v1), [v1beta](clients/google-api-services-osconfig/v1beta) |
 | Cloud OS Login API | [v1](clients/google-api-services-oslogin/v1), [v1alpha](clients/google-api-services-oslogin/v1alpha), [v1beta](clients/google-api-services-oslogin/v1beta) |
@@ -181,7 +182,6 @@ packages on [Maven Central][maven-search].
 | Service Management API | [v1](clients/google-api-services-servicemanagement/v1) |
 | Service Networking API | [v1](clients/google-api-services-servicenetworking/v1), [v1beta](clients/google-api-services-servicenetworking/v1beta) |
 | Service Usage API | [v1](clients/google-api-services-serviceusage/v1), [v1beta1](clients/google-api-services-serviceusage/v1beta1) |
-| Stackdriver Monitoring API | [v1](clients/google-api-services-monitoring/v1), [v3](clients/google-api-services-monitoring/v3) |
 | Stackdriver Profiler API | [v2](clients/google-api-services-cloudprofiler/v2) |
 | Storage Transfer API | [v1](clients/google-api-services-storagetransfer/v1) |
 | Street View Publish API | [v1](clients/google-api-services-streetviewpublish/v1) |

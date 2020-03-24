@@ -2155,6 +2155,176 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
       }
 
     }
+    /**
+     * An accessor for creating requests from the Roles collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code ServiceNetworking servicenetworking = new ServiceNetworking(...);}
+     *   {@code ServiceNetworking.Roles.List request = servicenetworking.roles().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Roles roles() {
+      return new Roles();
+    }
+
+    /**
+     * The "roles" collection of methods.
+     */
+    public class Roles {
+
+      /**
+       * Service producers can use this method to add roles in the shared VPC host project. Each role is
+       * bound to the provided member. Each role must be selected from within a whitelisted set of roles.
+       * Each role is applied at only the granularity specified in the whitelist.
+       *
+       * Create a request for the method "roles.add".
+       *
+       * This request holds the parameters needed by the servicenetworking server.  After setting any
+       * optional parameters, call the {@link Add#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. This is in a form services/{service} where {service} is the name of the
+      private access
+       *        management service. For example
+      'service-peering.example.com'.
+       * @param content the {@link com.google.api.services.servicenetworking.v1.model.AddRolesRequest}
+       * @return the request
+       */
+      public Add add(java.lang.String parent, com.google.api.services.servicenetworking.v1.model.AddRolesRequest content) throws java.io.IOException {
+        Add result = new Add(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Add extends ServiceNetworkingRequest<com.google.api.services.servicenetworking.v1.model.Operation> {
+
+        private static final String REST_PATH = "v1/{+parent}/roles:add";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^services/[^/]+$");
+
+        /**
+         * Service producers can use this method to add roles in the shared VPC host project. Each role is
+         * bound to the provided member. Each role must be selected from within a whitelisted set of
+         * roles. Each role is applied at only the granularity specified in the whitelist.
+         *
+         * Create a request for the method "roles.add".
+         *
+         * This request holds the parameters needed by the the servicenetworking server.  After setting
+         * any optional parameters, call the {@link Add#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Add#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. This is in a form services/{service} where {service} is the name of the
+      private access
+       *        management service. For example
+      'service-peering.example.com'.
+         * @param content the {@link com.google.api.services.servicenetworking.v1.model.AddRolesRequest}
+         * @since 1.13
+         */
+        protected Add(java.lang.String parent, com.google.api.services.servicenetworking.v1.model.AddRolesRequest content) {
+          super(ServiceNetworking.this, "POST", REST_PATH, content, com.google.api.services.servicenetworking.v1.model.Operation.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^services/[^/]+$");
+          }
+        }
+
+        @Override
+        public Add set$Xgafv(java.lang.String $Xgafv) {
+          return (Add) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Add setAccessToken(java.lang.String accessToken) {
+          return (Add) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Add setAlt(java.lang.String alt) {
+          return (Add) super.setAlt(alt);
+        }
+
+        @Override
+        public Add setCallback(java.lang.String callback) {
+          return (Add) super.setCallback(callback);
+        }
+
+        @Override
+        public Add setFields(java.lang.String fields) {
+          return (Add) super.setFields(fields);
+        }
+
+        @Override
+        public Add setKey(java.lang.String key) {
+          return (Add) super.setKey(key);
+        }
+
+        @Override
+        public Add setOauthToken(java.lang.String oauthToken) {
+          return (Add) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Add setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Add) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Add setQuotaUser(java.lang.String quotaUser) {
+          return (Add) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Add setUploadType(java.lang.String uploadType) {
+          return (Add) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Add setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Add) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. This is in a form services/{service} where {service} is the name of the private
+         * access management service. For example 'service-peering.example.com'.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. This is in a form services/{service} where {service} is the name of the private access
+       management service. For example 'service-peering.example.com'.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. This is in a form services/{service} where {service} is the name of the private
+         * access management service. For example 'service-peering.example.com'.
+         */
+        public Add setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^services/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Add set(String parameterName, Object value) {
+          return (Add) super.set(parameterName, value);
+        }
+      }
+
+    }
   }
 
   /**

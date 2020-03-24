@@ -59,7 +59,9 @@ public final class GooglePrivacyDlpV2CloudStorageOptions extends com.google.api.
   /**
    * List of file type groups to include in the scan. If empty, all files are scanned and available
    * data format processors are applied. In addition, the binary content of the selected files is
-   * always scanned as well.
+   * always scanned as well. Images are scanned only as binary if the specified region does not
+   * support image inspection and no file_types were specified. Image inspection is restricted to
+   * 'global', 'us', 'asia', and 'europe'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -144,7 +146,9 @@ public final class GooglePrivacyDlpV2CloudStorageOptions extends com.google.api.
   /**
    * List of file type groups to include in the scan. If empty, all files are scanned and available
    * data format processors are applied. In addition, the binary content of the selected files is
-   * always scanned as well.
+   * always scanned as well. Images are scanned only as binary if the specified region does not
+   * support image inspection and no file_types were specified. Image inspection is restricted to
+   * 'global', 'us', 'asia', and 'europe'.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getFileTypes() {
@@ -154,7 +158,9 @@ public final class GooglePrivacyDlpV2CloudStorageOptions extends com.google.api.
   /**
    * List of file type groups to include in the scan. If empty, all files are scanned and available
    * data format processors are applied. In addition, the binary content of the selected files is
-   * always scanned as well.
+   * always scanned as well. Images are scanned only as binary if the specified region does not
+   * support image inspection and no file_types were specified. Image inspection is restricted to
+   * 'global', 'us', 'asia', and 'europe'.
    * @param fileTypes fileTypes or {@code null} for none
    */
   public GooglePrivacyDlpV2CloudStorageOptions setFileTypes(java.util.List<java.lang.String> fileTypes) {

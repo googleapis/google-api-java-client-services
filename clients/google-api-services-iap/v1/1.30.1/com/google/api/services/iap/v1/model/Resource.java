@@ -48,12 +48,14 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Name of the resource on which conditions will be evaluated. Relative Resource Name of the
-   * resource should be set, which is the URI path of the resource without leading "/". For
-   * instance, resource.name set for a bucket is "projects/project123/buckets/bucket456". This field
-   * is required for evaluating conditions with rules on resource names. SYSContext.resource_name is
-   * not used by condition evaluation. See https://cloud.google.com/apis/design/resource_names for
-   * details.
+   * Name of the resource on which conditions will be evaluated. Must use the Relative Resource Name
+   * of the resource, which is the URI path of the resource without the leading "/". Examples are
+   * "projects/_/buckets/[BUCKET-ID]" for storage buckets or "projects/[PROJECT-ID]/global/firewalls
+   * /[FIREWALL-ID]" for a firewall.
+   *
+   * This field is required for evaluating conditions with rules on resource names. For a `list`
+   * permission check, the resource.name value must be set to the parent resource. If the parent
+   * resource is a project, this field should be left unset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -120,12 +122,14 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the resource on which conditions will be evaluated. Relative Resource Name of the
-   * resource should be set, which is the URI path of the resource without leading "/". For
-   * instance, resource.name set for a bucket is "projects/project123/buckets/bucket456". This field
-   * is required for evaluating conditions with rules on resource names. SYSContext.resource_name is
-   * not used by condition evaluation. See https://cloud.google.com/apis/design/resource_names for
-   * details.
+   * Name of the resource on which conditions will be evaluated. Must use the Relative Resource Name
+   * of the resource, which is the URI path of the resource without the leading "/". Examples are
+   * "projects/_/buckets/[BUCKET-ID]" for storage buckets or "projects/[PROJECT-ID]/global/firewalls
+   * /[FIREWALL-ID]" for a firewall.
+   *
+   * This field is required for evaluating conditions with rules on resource names. For a `list`
+   * permission check, the resource.name value must be set to the parent resource. If the parent
+   * resource is a project, this field should be left unset.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -133,12 +137,14 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the resource on which conditions will be evaluated. Relative Resource Name of the
-   * resource should be set, which is the URI path of the resource without leading "/". For
-   * instance, resource.name set for a bucket is "projects/project123/buckets/bucket456". This field
-   * is required for evaluating conditions with rules on resource names. SYSContext.resource_name is
-   * not used by condition evaluation. See https://cloud.google.com/apis/design/resource_names for
-   * details.
+   * Name of the resource on which conditions will be evaluated. Must use the Relative Resource Name
+   * of the resource, which is the URI path of the resource without the leading "/". Examples are
+   * "projects/_/buckets/[BUCKET-ID]" for storage buckets or "projects/[PROJECT-ID]/global/firewalls
+   * /[FIREWALL-ID]" for a firewall.
+   *
+   * This field is required for evaluating conditions with rules on resource names. For a `list`
+   * permission check, the resource.name value must be set to the parent resource. If the parent
+   * resource is a project, this field should be left unset.
    * @param name name or {@code null} for none
    */
   public Resource setName(java.lang.String name) {

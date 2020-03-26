@@ -45,6 +45,30 @@ package com.google.api.services.compute.model;
 public final class TargetHttpsProxy extends com.google.api.client.json.GenericJson {
 
   /**
+   * A URL referring to a networksecurity.Authentication resource that describes how the proxy
+   * should authenticate inbound traffic. If left blank, communications between services are not
+   * encrypted (i.e., the TLS policy is set to OPEN). When terminating inbound traffic to this
+   * proxy, the TerminationTls setting of Authentication.TransportAuthentication is applied. Refer
+   * to the Authentication and Authentication.TransportAuthentication.TerminationTls resources for
+   * additional details. authentication only applies to a global TargetHttpsProxy attached to
+   * globalForwardingRules with the loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String authentication;
+
+  /**
+   * A URL referring to a networksecurity.Authorization resource that describes how the proxy should
+   * authorize inbound traffic. If left blank, access will not be restricted by an authorization
+   * policy. Refer to the Authorization resource for additional details. authorization only applies
+   * to a global TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set
+   * to INTERNAL_SELF_MANAGED.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String authorization;
+
+  /**
    * URL of a certificate map that identifies a certificate map associated with the given target
    * proxy. This field can only be set for global target proxies. If set, sslCertificates will be
    * ignored.
@@ -160,6 +184,60 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.String urlMap;
+
+  /**
+   * A URL referring to a networksecurity.Authentication resource that describes how the proxy
+   * should authenticate inbound traffic. If left blank, communications between services are not
+   * encrypted (i.e., the TLS policy is set to OPEN). When terminating inbound traffic to this
+   * proxy, the TerminationTls setting of Authentication.TransportAuthentication is applied. Refer
+   * to the Authentication and Authentication.TransportAuthentication.TerminationTls resources for
+   * additional details. authentication only applies to a global TargetHttpsProxy attached to
+   * globalForwardingRules with the loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAuthentication() {
+    return authentication;
+  }
+
+  /**
+   * A URL referring to a networksecurity.Authentication resource that describes how the proxy
+   * should authenticate inbound traffic. If left blank, communications between services are not
+   * encrypted (i.e., the TLS policy is set to OPEN). When terminating inbound traffic to this
+   * proxy, the TerminationTls setting of Authentication.TransportAuthentication is applied. Refer
+   * to the Authentication and Authentication.TransportAuthentication.TerminationTls resources for
+   * additional details. authentication only applies to a global TargetHttpsProxy attached to
+   * globalForwardingRules with the loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * @param authentication authentication or {@code null} for none
+   */
+  public TargetHttpsProxy setAuthentication(java.lang.String authentication) {
+    this.authentication = authentication;
+    return this;
+  }
+
+  /**
+   * A URL referring to a networksecurity.Authorization resource that describes how the proxy should
+   * authorize inbound traffic. If left blank, access will not be restricted by an authorization
+   * policy. Refer to the Authorization resource for additional details. authorization only applies
+   * to a global TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set
+   * to INTERNAL_SELF_MANAGED.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAuthorization() {
+    return authorization;
+  }
+
+  /**
+   * A URL referring to a networksecurity.Authorization resource that describes how the proxy should
+   * authorize inbound traffic. If left blank, access will not be restricted by an authorization
+   * policy. Refer to the Authorization resource for additional details. authorization only applies
+   * to a global TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set
+   * to INTERNAL_SELF_MANAGED.
+   * @param authorization authorization or {@code null} for none
+   */
+  public TargetHttpsProxy setAuthorization(java.lang.String authorization) {
+    this.authorization = authorization;
+    return this;
+  }
 
   /**
    * URL of a certificate map that identifies a certificate map associated with the given target

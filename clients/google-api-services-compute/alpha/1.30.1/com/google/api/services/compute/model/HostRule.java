@@ -38,9 +38,9 @@ public final class HostRule extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * The list of host patterns to match. They must be valid hostnames, except * will match any
-   * string of ([a-z0-9-.]*). In that case, * must be the first character and must be followed in
-   * the pattern by either - or ..
+   * The list of host patterns to match. They must be valid hostnames with optional port numbers in
+   * the format host:port. * matches any string of ([a-z0-9-.]*). In that case, * must be the first
+   * character and must be followed in the pattern by either - or ..
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,9 +72,9 @@ public final class HostRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of host patterns to match. They must be valid hostnames, except * will match any
-   * string of ([a-z0-9-.]*). In that case, * must be the first character and must be followed in
-   * the pattern by either - or ..
+   * The list of host patterns to match. They must be valid hostnames with optional port numbers in
+   * the format host:port. * matches any string of ([a-z0-9-.]*). In that case, * must be the first
+   * character and must be followed in the pattern by either - or ..
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getHosts() {
@@ -82,9 +82,9 @@ public final class HostRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of host patterns to match. They must be valid hostnames, except * will match any
-   * string of ([a-z0-9-.]*). In that case, * must be the first character and must be followed in
-   * the pattern by either - or ..
+   * The list of host patterns to match. They must be valid hostnames with optional port numbers in
+   * the format host:port. * matches any string of ([a-z0-9-.]*). In that case, * must be the first
+   * character and must be followed in the pattern by either - or ..
    * @param hosts hosts or {@code null} for none
    */
   public HostRule setHosts(java.util.List<java.lang.String> hosts) {

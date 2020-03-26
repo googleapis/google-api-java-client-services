@@ -104,6 +104,12 @@ public final class AutoscalingPolicy extends com.google.api.client.json.GenericJ
   private AutoscalingPolicyScaleDownControl scaleDownControl;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AutoscalingPolicyScaleInControl scaleInControl;
+
+  /**
    * The number of seconds that the autoscaler should wait before it starts collecting information
    * from a new instance. This prevents the autoscaler from collecting information when the instance
    * is initializing, during which the collected usage would not be reliable. The default time
@@ -275,6 +281,21 @@ public final class AutoscalingPolicy extends com.google.api.client.json.GenericJ
    */
   public AutoscalingPolicy setScaleDownControl(AutoscalingPolicyScaleDownControl scaleDownControl) {
     this.scaleDownControl = scaleDownControl;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public AutoscalingPolicyScaleInControl getScaleInControl() {
+    return scaleInControl;
+  }
+
+  /**
+   * @param scaleInControl scaleInControl or {@code null} for none
+   */
+  public AutoscalingPolicy setScaleInControl(AutoscalingPolicyScaleInControl scaleInControl) {
+    this.scaleInControl = scaleInControl;
     return this;
   }
 

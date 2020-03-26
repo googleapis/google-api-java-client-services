@@ -17,7 +17,8 @@
 package com.google.api.services.compute.model;
 
 /**
- * The client side authentication settings for connection originating from the backend service.
+ * [Deprecated] The client side authentication settings for connection originating from the backend
+ * service. the backend service.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

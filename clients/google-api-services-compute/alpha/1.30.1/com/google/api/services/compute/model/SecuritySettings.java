@@ -30,14 +30,29 @@ package com.google.api.services.compute.model;
 public final class SecuritySettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Authentication policy defines what authentication methods can be accepted on backends, and if
-   * authenticated, which method/certificate will set the request principal.
+   * A URL referring to a networksecurity.Authentication resource that describes how clients should
+   * authenticate with this service's backends. If left blank, communications between services are
+   * not encrypted (i.e., the TLS policy is set to OPEN). When sending traffic to this service's
+   * backends, the OriginationTls setting of Authentication.TransportAuthentication is applied.
+   * Refer to the Authentication and Authentication.TransportAuthentication.OriginationTls resources
+   * for additional details. authentication only applies to a global BackendService with the
+   * loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String authentication;
+
+  /**
+   * [Deprecated] Authentication policy defines what authentication methods can be accepted on
+   * backends, and if authenticated, which method/certificate will set the request principal.
+   * request principal.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AuthenticationPolicy authenticationPolicy;
 
   /**
+   * [Deprecated] Authorization config defines the Role Based Access Control (RBAC) config.
    * Authorization config defines the Role Based Access Control (RBAC) config.
    * The value may be {@code null}.
    */
@@ -45,15 +60,56 @@ public final class SecuritySettings extends com.google.api.client.json.GenericJs
   private AuthorizationConfig authorizationConfig;
 
   /**
-   * TLS Settings for the backend service.
+   * [Deprecated] TLS Settings for the backend service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ClientTlsSettings clientTlsSettings;
 
   /**
-   * Authentication policy defines what authentication methods can be accepted on backends, and if
-   * authenticated, which method/certificate will set the request principal.
+   * Optional. A list of subject alternate names to verify the subject identity (SAN) in the
+   * certificate presented by the server, to authorize the SAN list as identities to run the service
+   * represented by this BackendService. If specified, the client will verify that the server
+   * certificate's subject alt name matches one of the specified values. Only applies to a global
+   * BackendService with the loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> subjectAltNames;
+
+  /**
+   * A URL referring to a networksecurity.Authentication resource that describes how clients should
+   * authenticate with this service's backends. If left blank, communications between services are
+   * not encrypted (i.e., the TLS policy is set to OPEN). When sending traffic to this service's
+   * backends, the OriginationTls setting of Authentication.TransportAuthentication is applied.
+   * Refer to the Authentication and Authentication.TransportAuthentication.OriginationTls resources
+   * for additional details. authentication only applies to a global BackendService with the
+   * loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAuthentication() {
+    return authentication;
+  }
+
+  /**
+   * A URL referring to a networksecurity.Authentication resource that describes how clients should
+   * authenticate with this service's backends. If left blank, communications between services are
+   * not encrypted (i.e., the TLS policy is set to OPEN). When sending traffic to this service's
+   * backends, the OriginationTls setting of Authentication.TransportAuthentication is applied.
+   * Refer to the Authentication and Authentication.TransportAuthentication.OriginationTls resources
+   * for additional details. authentication only applies to a global BackendService with the
+   * loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * @param authentication authentication or {@code null} for none
+   */
+  public SecuritySettings setAuthentication(java.lang.String authentication) {
+    this.authentication = authentication;
+    return this;
+  }
+
+  /**
+   * [Deprecated] Authentication policy defines what authentication methods can be accepted on
+   * backends, and if authenticated, which method/certificate will set the request principal.
+   * request principal.
    * @return value or {@code null} for none
    */
   public AuthenticationPolicy getAuthenticationPolicy() {
@@ -61,8 +117,9 @@ public final class SecuritySettings extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Authentication policy defines what authentication methods can be accepted on backends, and if
-   * authenticated, which method/certificate will set the request principal.
+   * [Deprecated] Authentication policy defines what authentication methods can be accepted on
+   * backends, and if authenticated, which method/certificate will set the request principal.
+   * request principal.
    * @param authenticationPolicy authenticationPolicy or {@code null} for none
    */
   public SecuritySettings setAuthenticationPolicy(AuthenticationPolicy authenticationPolicy) {
@@ -71,6 +128,7 @@ public final class SecuritySettings extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * [Deprecated] Authorization config defines the Role Based Access Control (RBAC) config.
    * Authorization config defines the Role Based Access Control (RBAC) config.
    * @return value or {@code null} for none
    */
@@ -79,6 +137,7 @@ public final class SecuritySettings extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * [Deprecated] Authorization config defines the Role Based Access Control (RBAC) config.
    * Authorization config defines the Role Based Access Control (RBAC) config.
    * @param authorizationConfig authorizationConfig or {@code null} for none
    */
@@ -88,7 +147,7 @@ public final class SecuritySettings extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * TLS Settings for the backend service.
+   * [Deprecated] TLS Settings for the backend service.
    * @return value or {@code null} for none
    */
   public ClientTlsSettings getClientTlsSettings() {
@@ -96,11 +155,36 @@ public final class SecuritySettings extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * TLS Settings for the backend service.
+   * [Deprecated] TLS Settings for the backend service.
    * @param clientTlsSettings clientTlsSettings or {@code null} for none
    */
   public SecuritySettings setClientTlsSettings(ClientTlsSettings clientTlsSettings) {
     this.clientTlsSettings = clientTlsSettings;
+    return this;
+  }
+
+  /**
+   * Optional. A list of subject alternate names to verify the subject identity (SAN) in the
+   * certificate presented by the server, to authorize the SAN list as identities to run the service
+   * represented by this BackendService. If specified, the client will verify that the server
+   * certificate's subject alt name matches one of the specified values. Only applies to a global
+   * BackendService with the loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSubjectAltNames() {
+    return subjectAltNames;
+  }
+
+  /**
+   * Optional. A list of subject alternate names to verify the subject identity (SAN) in the
+   * certificate presented by the server, to authorize the SAN list as identities to run the service
+   * represented by this BackendService. If specified, the client will verify that the server
+   * certificate's subject alt name matches one of the specified values. Only applies to a global
+   * BackendService with the loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * @param subjectAltNames subjectAltNames or {@code null} for none
+   */
+  public SecuritySettings setSubjectAltNames(java.util.List<java.lang.String> subjectAltNames) {
+    this.subjectAltNames = subjectAltNames;
     return this;
   }
 

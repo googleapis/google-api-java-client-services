@@ -83,6 +83,14 @@ public final class TargetHttpProxy extends com.google.api.client.json.GenericJso
   private java.lang.String name;
 
   /**
+   * This field only applies when the loadBalancingScheme is INTERNAL_SELF_MANAGED. When set to true
+   * the Envoy binds on the IP address specified by the forwarding rule. Default is false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean proxyBind;
+
+  /**
    * [Output Only] URL of the region where the regional Target HTTP Proxy resides. This field is not
    * applicable to global Target HTTP Proxies.
    * The value may be {@code null}.
@@ -194,6 +202,25 @@ public final class TargetHttpProxy extends com.google.api.client.json.GenericJso
    */
   public TargetHttpProxy setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * This field only applies when the loadBalancingScheme is INTERNAL_SELF_MANAGED. When set to true
+   * the Envoy binds on the IP address specified by the forwarding rule. Default is false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getProxyBind() {
+    return proxyBind;
+  }
+
+  /**
+   * This field only applies when the loadBalancingScheme is INTERNAL_SELF_MANAGED. When set to true
+   * the Envoy binds on the IP address specified by the forwarding rule. Default is false.
+   * @param proxyBind proxyBind or {@code null} for none
+   */
+  public TargetHttpProxy setProxyBind(java.lang.Boolean proxyBind) {
+    this.proxyBind = proxyBind;
     return this;
   }
 

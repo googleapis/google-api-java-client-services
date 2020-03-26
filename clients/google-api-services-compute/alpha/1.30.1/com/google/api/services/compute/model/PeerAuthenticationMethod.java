@@ -17,7 +17,8 @@
 package com.google.api.services.compute.model;
 
 /**
- * Configuration for the peer authentication method.
+ * [Deprecated] Configuration for the peer authentication method. Configuration for the peer
+ * authentication method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

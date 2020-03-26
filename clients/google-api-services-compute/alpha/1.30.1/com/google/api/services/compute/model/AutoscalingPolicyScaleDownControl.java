@@ -45,14 +45,6 @@ public final class AutoscalingPolicyScaleDownControl extends com.google.api.clie
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleDuration timeWindow;
-
-  /**
-   * How long back autoscaling should look when computing recommendations to include directives
-   * regarding slower scale down, as described above.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
   private java.lang.Integer timeWindowSec;
 
   /**
@@ -73,25 +65,6 @@ public final class AutoscalingPolicyScaleDownControl extends com.google.api.clie
    */
   public AutoscalingPolicyScaleDownControl setMaxScaledDownReplicas(FixedOrPercent maxScaledDownReplicas) {
     this.maxScaledDownReplicas = maxScaledDownReplicas;
-    return this;
-  }
-
-  /**
-   * How long back autoscaling should look when computing recommendations to include directives
-   * regarding slower scale down, as described above.
-   * @return value or {@code null} for none
-   */
-  public GoogleDuration getTimeWindow() {
-    return timeWindow;
-  }
-
-  /**
-   * How long back autoscaling should look when computing recommendations to include directives
-   * regarding slower scale down, as described above.
-   * @param timeWindow timeWindow or {@code null} for none
-   */
-  public AutoscalingPolicyScaleDownControl setTimeWindow(GoogleDuration timeWindow) {
-    this.timeWindow = timeWindow;
     return this;
   }
 

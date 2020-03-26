@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/Ue91wV1IeCv4GFsZ3w-zJGtpBIg\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/FxLyjO3NNw-MCcpaZiOfen7ZKXY\"",
  "discoveryVersion": "v1",
  "id": "compute:v1",
  "name": "compute",
  "version": "v1",
- "revision": "20200225",
+ "revision": "20200302",
  "title": "Compute Engine API",
  "description": "Creates and runs virtual machines on Google Cloud Platform.",
  "ownerDomain": "google.com",
@@ -6543,7 +6543,7 @@
     },
     "hosts": {
      "type": "array",
-     "description": "The list of host patterns to match. They must be valid hostnames, except * will match any string of ([a-z0-9-.]*). In that case, * must be the first character and must be followed in the pattern by either - or ..",
+     "description": "The list of host patterns to match. They must be valid hostnames with optional port numbers in the format host:port. * matches any string of ([a-z0-9-.]*). In that case, * must be the first character and must be followed in the pattern by either - or ..",
      "items": {
       "type": "string"
      }
@@ -9857,6 +9857,32 @@
     }
    }
   },
+  "InstancesAddResourcePoliciesRequest": {
+   "id": "InstancesAddResourcePoliciesRequest",
+   "type": "object",
+   "properties": {
+    "resourcePolicies": {
+     "type": "array",
+     "description": "Resource policies to be added to this instance.",
+     "items": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "InstancesRemoveResourcePoliciesRequest": {
+   "id": "InstancesRemoveResourcePoliciesRequest",
+   "type": "object",
+   "properties": {
+    "resourcePolicies": {
+     "type": "array",
+     "description": "Resource policies to be removed from this instance.",
+     "items": {
+      "type": "string"
+     }
+    }
+   }
+  },
   "InstancesScopedList": {
    "id": "InstancesScopedList",
    "type": "object",
@@ -11671,7 +11697,7 @@
    "properties": {
     "logMode": {
      "type": "string",
-     "description": "Whether Gin logging should happen in a fail-closed manner at the caller. This is currently supported in the LocalIAM implementation, Stubby C++, Stubby Java, and Apps Framework. TODO(b/77591626): Add support for Stubby Go. TODO(b/129671387): Add support for Scaffolding.",
+     "description": "Whether Gin logging should happen in a fail-closed manner at the caller. This is currently supported in the LocalIAM implementation, Stubby C++, and Stubby Java. For Apps Framework, see go/af-audit-logging#failclosed. TODO(b/77591626): Add support for Stubby Go. TODO(b/129671387): Add support for Scaffolding.",
      "enum": [
       "LOG_FAIL_CLOSED",
       "LOG_MODE_UNSPECIFIED"
@@ -32977,6 +33003,55 @@
       "https://www.googleapis.com/auth/compute"
      ]
     },
+    "addResourcePolicies": {
+     "id": "compute.instances.addResourcePolicies",
+     "path": "{project}/zones/{zone}/instances/{instance}/addResourcePolicies",
+     "httpMethod": "POST",
+     "description": "Adds existing resource policies to an instance. You can only add one policy right now which will be applied to this instance for scheduling live migrations.",
+     "parameters": {
+      "instance": {
+       "type": "string",
+       "description": "The instance name for this request.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}",
+       "location": "path"
+      },
+      "project": {
+       "type": "string",
+       "description": "Project ID for this request.",
+       "required": true,
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "location": "path"
+      },
+      "requestId": {
+       "type": "string",
+       "description": "An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed.\n\nFor example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments.\n\nThe request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).",
+       "location": "query"
+      },
+      "zone": {
+       "type": "string",
+       "description": "The name of the zone for this request.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?",
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "project",
+      "zone",
+      "instance"
+     ],
+     "request": {
+      "$ref": "InstancesAddResourcePoliciesRequest"
+     },
+     "response": {
+      "$ref": "Operation"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute"
+     ]
+    },
     "aggregatedList": {
      "id": "compute.instances.aggregatedList",
      "path": "{project}/aggregated/instances",
@@ -33645,6 +33720,55 @@
       "https://www.googleapis.com/auth/cloud-platform",
       "https://www.googleapis.com/auth/compute",
       "https://www.googleapis.com/auth/compute.readonly"
+     ]
+    },
+    "removeResourcePolicies": {
+     "id": "compute.instances.removeResourcePolicies",
+     "path": "{project}/zones/{zone}/instances/{instance}/removeResourcePolicies",
+     "httpMethod": "POST",
+     "description": "Removes resource policies from an instance.",
+     "parameters": {
+      "instance": {
+       "type": "string",
+       "description": "The instance name for this request.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}",
+       "location": "path"
+      },
+      "project": {
+       "type": "string",
+       "description": "Project ID for this request.",
+       "required": true,
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "location": "path"
+      },
+      "requestId": {
+       "type": "string",
+       "description": "An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed.\n\nFor example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments.\n\nThe request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).",
+       "location": "query"
+      },
+      "zone": {
+       "type": "string",
+       "description": "The name of the zone for this request.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?",
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "project",
+      "zone",
+      "instance"
+     ],
+     "request": {
+      "$ref": "InstancesRemoveResourcePoliciesRequest"
+     },
+     "response": {
+      "$ref": "Operation"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute"
      ]
     },
     "reset": {
@@ -34522,7 +34646,7 @@
      "id": "compute.instances.update",
      "path": "{project}/zones/{zone}/instances/{instance}",
      "httpMethod": "PUT",
-     "description": "Updates an instance.",
+     "description": "Updates an instance only if the necessary resources are available. This method can update only a specific set of instance properties. See  Updating a running instance for a list of updatable instance properties.",
      "parameters": {
       "instance": {
        "type": "string",
@@ -34533,7 +34657,7 @@
       },
       "minimalAction": {
        "type": "string",
-       "description": "If specified, this action or higher level action is performed on the instance irrespective of what action is required for the update to take effect. If not specified, then Compute Engine acts based on the minimum action required.",
+       "description": "Specifies the action to take when updating an instance even if the updated properties do not require it. If not specified, then Compute Engine acts based on the minimum action that the updated properties require.",
        "enum": [
         "INVALID",
         "NO_EFFECT",
@@ -34550,7 +34674,7 @@
       },
       "mostDisruptiveAllowedAction": {
        "type": "string",
-       "description": "If specified, Compute Engine returns an error if the update requires a higher action to be applied to the instance. If not specified, the default will be REFRESH.",
+       "description": "Specifies the most disruptive action that can be taken on the instance as part of the update. Compute Engine returns an error if the instance properties require a more disruptive action as part of the instance update. Valid options from lowest to highest are NO_EFFECT, REFRESH, and RESTART.",
        "enum": [
         "INVALID",
         "NO_EFFECT",

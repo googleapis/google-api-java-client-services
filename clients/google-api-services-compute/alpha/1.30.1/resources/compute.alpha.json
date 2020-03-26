@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/QskFbv8OOpQvGEYUSqx19mR1wXE\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/dPe5kjvqlXmECtfslvRuOuguFN0\"",
  "discoveryVersion": "v1",
  "id": "compute:alpha",
  "name": "compute",
  "version": "alpha",
- "revision": "20200225",
+ "revision": "20200302",
  "title": "Compute Engine API",
  "description": "Creates and runs virtual machines on Google Cloud Platform.",
  "ownerDomain": "google.com",
@@ -1392,7 +1392,7 @@
   "AuthenticationPolicy": {
    "id": "AuthenticationPolicy",
    "type": "object",
-   "description": "The authentication settings for the backend service.",
+   "description": "[Deprecated] The authentication settings for the backend service. The authentication settings for the backend service.",
    "properties": {
     "origins": {
      "type": "array",
@@ -1431,7 +1431,7 @@
   "AuthorizationConfig": {
    "id": "AuthorizationConfig",
    "type": "object",
-   "description": "Authorization configuration provides service-level and method-level access control for a service.",
+   "description": "[Deprecated] Authorization configuration provides service-level and method-level access control for a service. control for a service.",
    "properties": {
     "policies": {
      "type": "array",
@@ -1992,6 +1992,9 @@
     },
     "scaleDownControl": {
      "$ref": "AutoscalingPolicyScaleDownControl"
+    },
+    "scaleInControl": {
+     "$ref": "AutoscalingPolicyScaleInControl"
     }
    }
   },
@@ -2117,13 +2120,25 @@
      "$ref": "FixedOrPercent",
      "description": "Maximum allowed number (or %) of VMs that can be deducted from the peak recommendation during the window autoscaler looks at when computing recommendations. Possibly all these VMs can be deleted at once so user service needs to be prepared to lose that many VMs in one step."
     },
-    "timeWindow": {
-     "$ref": "GoogleDuration",
-     "description": "How long back autoscaling should look when computing recommendations to include directives regarding slower scale down, as described above."
-    },
     "timeWindowSec": {
      "type": "integer",
      "description": "How long back autoscaling should look when computing recommendations to include directives regarding slower scale down, as described above.",
+     "format": "int32"
+    }
+   }
+  },
+  "AutoscalingPolicyScaleInControl": {
+   "id": "AutoscalingPolicyScaleInControl",
+   "type": "object",
+   "description": "Configuration that allows for slower scale in so that even if Autoscaler recommends an abrupt scale in of a MIG, it will be throttled as specified by the parameters below.",
+   "properties": {
+    "maxScaledInReplicas": {
+     "$ref": "FixedOrPercent",
+     "description": "Maximum allowed number (or %) of VMs that can be deducted from the peak recommendation during the window autoscaler looks at when computing recommendations. Possibly all these VMs can be deleted at once so user service needs to be prepared to lose that many VMs in one step."
+    },
+    "timeWindowSec": {
+     "type": "integer",
+     "description": "How long back autoscaling should look when computing recommendations to include directives regarding slower scale in, as described above.",
      "format": "int32"
     }
    }
@@ -3442,7 +3457,7 @@
   "CallCredentials": {
    "id": "CallCredentials",
    "type": "object",
-   "description": "gRPC call credentials to access the SDS server.",
+   "description": "[Deprecated] gRPC call credentials to access the SDS server. gRPC call credentials to access the SDS server.",
    "properties": {
     "callCredentialType": {
      "type": "string",
@@ -3467,7 +3482,7 @@
   "ChannelCredentials": {
    "id": "ChannelCredentials",
    "type": "object",
-   "description": "gRPC channel credentials to access the SDS server.",
+   "description": "[Deprecated] gRPC channel credentials to access the SDS server. gRPC channel credentials to access the SDS server.",
    "properties": {
     "certificates": {
      "$ref": "TlsCertificatePaths",
@@ -3528,7 +3543,7 @@
   "ClientTlsSettings": {
    "id": "ClientTlsSettings",
    "type": "object",
-   "description": "The client side authentication settings for connection originating from the backend service.",
+   "description": "[Deprecated] The client side authentication settings for connection originating from the backend service. the backend service.",
    "properties": {
     "clientTlsContext": {
      "$ref": "TlsContext",
@@ -6742,27 +6757,10 @@
     }
    }
   },
-  "GoogleDuration": {
-   "id": "GoogleDuration",
-   "type": "object",
-   "description": "A Duration represents a signed, fixed-length span of time represented as a count of seconds and fractions of seconds at nanosecond resolution. It is independent of any calendar and concepts like \"day\" or \"month\". It is related to Timestamp in that the difference between two Timestamp values is a Duration and it can be added or subtracted from a Timestamp. Range is approximately +-10,000 years.\n\n# Examples\n\nExample 1: Compute Duration from two Timestamps in pseudo code.\n\nTimestamp start = ...; Timestamp end = ...; Duration duration = ...;\n\nduration.seconds = end.seconds - start.seconds; duration.nanos = end.nanos - start.nanos;\n\nif (duration.seconds  0) { duration.seconds += 1; duration.nanos -= 1000000000; } else if (duration.seconds \u003e 0 && duration.nanos \u003c 0) { duration.seconds -= 1; duration.nanos += 1000000000; }\n\nExample 2: Compute Timestamp from Timestamp + Duration in pseudo code.\n\nTimestamp start = ...; Duration duration = ...; Timestamp end = ...;\n\nend.seconds = start.seconds + duration.seconds; end.nanos = start.nanos + duration.nanos;\n\nif (end.nanos = 1000000000) { end.seconds += 1; end.nanos -= 1000000000; }\n\nExample 3: Compute Duration from datetime.timedelta in Python.\n\ntd = datetime.timedelta(days=3, minutes=10) duration = Duration() duration.FromTimedelta(td)\n\n# JSON Mapping\n\nIn JSON format, the Duration type is encoded as a string rather than an object, where the string ends in the suffix \"s\" (indicating seconds) and is preceded by the number of seconds, with nanoseconds expressed as fractional seconds. For example, 3 seconds with 0 nanoseconds should be encoded in JSON format as \"3s\", while 3 seconds and 1 nanosecond should be expressed in JSON format as \"3.000000001s\", and 3 seconds and 1 microsecond should be expressed in JSON format as \"3.000001s\".",
-   "properties": {
-    "nanos": {
-     "type": "integer",
-     "description": "Signed fractions of a second at nanosecond resolution of the span of time. Durations less than one second are represented with a 0 `seconds` field and a positive or negative `nanos` field. For durations of one second or more, a non-zero value for the `nanos` field must be of the same sign as the `seconds` field. Must be from -999,999,999 to +999,999,999 inclusive.",
-     "format": "int32"
-    },
-    "seconds": {
-     "type": "string",
-     "description": "Signed seconds of the span of time. Must be from -315,576,000,000 to +315,576,000,000 inclusive. Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years",
-     "format": "int64"
-    }
-   }
-  },
   "GrpcServiceConfig": {
    "id": "GrpcServiceConfig",
    "type": "object",
-   "description": "gRPC config to access the SDS server.",
+   "description": "[Deprecated] gRPC config to access the SDS server. gRPC config to access the SDS server.",
    "properties": {
     "callCredentials": {
      "$ref": "CallCredentials",
@@ -7795,7 +7793,7 @@
     },
     "hosts": {
      "type": "array",
-     "description": "The list of host patterns to match. They must be valid hostnames, except * will match any string of ([a-z0-9-.]*). In that case, * must be the first character and must be followed in the pattern by either - or ..",
+     "description": "The list of host patterns to match. They must be valid hostnames with optional port numbers in the format host:port. * matches any string of ([a-z0-9-.]*). In that case, * must be the first character and must be followed in the pattern by either - or ..",
      "items": {
       "type": "string"
      }
@@ -13520,7 +13518,7 @@
   "Jwt": {
    "id": "Jwt",
    "type": "object",
-   "description": "JWT configuration for origin authentication.",
+   "description": "[Deprecated] JWT configuration for origin authentication. JWT configuration for origin authentication.",
    "properties": {
     "audiences": {
      "type": "array",
@@ -13556,7 +13554,7 @@
   "JwtHeader": {
    "id": "JwtHeader",
    "type": "object",
-   "description": "This message specifies a header location to extract JWT token.",
+   "description": "[Deprecated] This message specifies a header location to extract JWT token. This message specifies a header location to extract JWT token.",
    "properties": {
     "name": {
      "type": "string",
@@ -13961,7 +13959,7 @@
    "properties": {
     "logMode": {
      "type": "string",
-     "description": "Whether Gin logging should happen in a fail-closed manner at the caller. This is currently supported in the LocalIAM implementation, Stubby C++, Stubby Java, and Apps Framework. TODO(b/77591626): Add support for Stubby Go. TODO(b/129671387): Add support for Scaffolding.",
+     "description": "Whether Gin logging should happen in a fail-closed manner at the caller. This is currently supported in the LocalIAM implementation, Stubby C++, and Stubby Java. For Apps Framework, see go/af-audit-logging#failclosed. TODO(b/77591626): Add support for Stubby Go. TODO(b/129671387): Add support for Scaffolding.",
      "enum": [
       "LOG_FAIL_CLOSED",
       "LOG_MODE_UNSPECIFIED"
@@ -14822,7 +14820,7 @@
   "MetadataCredentialsFromPlugin": {
    "id": "MetadataCredentialsFromPlugin",
    "type": "object",
-   "description": "Custom authenticator credentials.",
+   "description": "[Deprecated] Custom authenticator credentials. Custom authenticator credentials.",
    "properties": {
     "name": {
      "type": "string",
@@ -14880,7 +14878,7 @@
   "MutualTls": {
    "id": "MutualTls",
    "type": "object",
-   "description": "Configuration for the mutual Tls mode for peer authentication.",
+   "description": "[Deprecated] Configuration for the mutual Tls mode for peer authentication. Configuration for the mutual Tls mode for peer authentication.",
    "properties": {
     "mode": {
      "type": "string",
@@ -18372,7 +18370,7 @@
   "OriginAuthenticationMethod": {
    "id": "OriginAuthenticationMethod",
    "type": "object",
-   "description": "Configuration for the origin authentication method.",
+   "description": "[Deprecated] Configuration for the origin authentication method. Configuration for the origin authentication method.",
    "properties": {
     "jwt": {
      "$ref": "Jwt"
@@ -19092,7 +19090,7 @@
   "PeerAuthenticationMethod": {
    "id": "PeerAuthenticationMethod",
    "type": "object",
-   "description": "Configuration for the peer authentication method.",
+   "description": "[Deprecated] Configuration for the peer authentication method. Configuration for the peer authentication method.",
    "properties": {
     "mtls": {
      "$ref": "MutualTls",
@@ -19122,7 +19120,7 @@
   "Permission": {
    "id": "Permission",
    "type": "object",
-   "description": "All fields defined in a permission are ANDed.",
+   "description": "[Deprecated] All fields defined in a permission are ANDed.",
    "properties": {
     "constraints": {
      "type": "array",
@@ -19320,7 +19318,7 @@
   "Principal": {
    "id": "Principal",
    "type": "object",
-   "description": "All fields defined in a principal are ANDed.",
+   "description": "[Deprecated] All fields defined in a principal are ANDed.",
    "properties": {
     "condition": {
      "type": "string",
@@ -24614,7 +24612,7 @@
   "SdsConfig": {
    "id": "SdsConfig",
    "type": "object",
-   "description": "The configuration to access the SDS server.",
+   "description": "[Deprecated] The configuration to access the SDS server. The configuration to access the SDS server.",
    "properties": {
     "grpcServiceConfig": {
      "$ref": "GrpcServiceConfig",
@@ -25097,17 +25095,28 @@
    "type": "object",
    "description": "The authentication and authorization settings for a BackendService.",
    "properties": {
+    "authentication": {
+     "type": "string",
+     "description": "A URL referring to a networksecurity.Authentication resource that describes how clients should authenticate with this service's backends. If left blank, communications between services are not encrypted (i.e., the TLS policy is set to OPEN). When sending traffic to this service's backends, the OriginationTls setting of Authentication.TransportAuthentication is applied. Refer to the Authentication and Authentication.TransportAuthentication.OriginationTls resources for additional details. authentication only applies to a global BackendService with the loadBalancingScheme set to INTERNAL_SELF_MANAGED."
+    },
     "authenticationPolicy": {
      "$ref": "AuthenticationPolicy",
-     "description": "Authentication policy defines what authentication methods can be accepted on backends, and if authenticated, which method/certificate will set the request principal."
+     "description": "[Deprecated] Authentication policy defines what authentication methods can be accepted on backends, and if authenticated, which method/certificate will set the request principal. request principal."
     },
     "authorizationConfig": {
      "$ref": "AuthorizationConfig",
-     "description": "Authorization config defines the Role Based Access Control (RBAC) config."
+     "description": "[Deprecated] Authorization config defines the Role Based Access Control (RBAC) config. Authorization config defines the Role Based Access Control (RBAC) config."
     },
     "clientTlsSettings": {
      "$ref": "ClientTlsSettings",
-     "description": "TLS Settings for the backend service."
+     "description": "[Deprecated] TLS Settings for the backend service."
+    },
+    "subjectAltNames": {
+     "type": "array",
+     "description": "Optional. A list of subject alternate names to verify the subject identity (SAN) in the certificate presented by the server, to authorize the SAN list as identities to run the service represented by this BackendService. If specified, the client will verify that the server certificate's subject alt name matches one of the specified values. Only applies to a global BackendService with the loadBalancingScheme set to INTERNAL_SELF_MANAGED.",
+     "items": {
+      "type": "string"
+     }
     }
    }
   },
@@ -27927,6 +27936,14 @@
    "type": "object",
    "description": "Represents a Target HTTPS Proxy resource.\n\nGoogle Compute Engine has two Target HTTPS Proxy resources:\n\n* [Global](/compute/docs/reference/rest/{$api_version}/targetHttpsProxies) * [Regional](/compute/docs/reference/rest/{$api_version}/regionTargetHttpsProxies)\n\nA target HTTPS proxy is a component of GCP HTTPS load balancers.\n\n* targetHttpsProxies are used by external HTTPS load balancers. * regionTargetHttpsProxies are used by internal HTTPS load balancers.\n\nForwarding rules reference a target HTTPS proxy, and the target proxy then references a URL map. For more information, read Using Target Proxies and  Forwarding rule concepts. (== resource_for {$api_version}.targetHttpsProxies ==) (== resource_for {$api_version}.regionTargetHttpsProxies ==)",
    "properties": {
+    "authentication": {
+     "type": "string",
+     "description": "A URL referring to a networksecurity.Authentication resource that describes how the proxy should authenticate inbound traffic. If left blank, communications between services are not encrypted (i.e., the TLS policy is set to OPEN). When terminating inbound traffic to this proxy, the TerminationTls setting of Authentication.TransportAuthentication is applied.\nRefer to the Authentication and Authentication.TransportAuthentication.TerminationTls resources for additional details.\nauthentication only applies to a global TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set to INTERNAL_SELF_MANAGED."
+    },
+    "authorization": {
+     "type": "string",
+     "description": "A URL referring to a networksecurity.Authorization resource that describes how the proxy should authorize inbound traffic. If left blank, access will not be restricted by an authorization policy.\nRefer to the Authorization resource for additional details.\nauthorization only applies to a global TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set to INTERNAL_SELF_MANAGED."
+    },
     "certificateMap": {
      "type": "string",
      "description": "URL of a certificate map that identifies a certificate map associated with the given target proxy. This field can only be set for global target proxies. If set, sslCertificates will be ignored."
@@ -30009,7 +30026,7 @@
   "TlsCertificateContext": {
    "id": "TlsCertificateContext",
    "type": "object",
-   "description": "Defines the mechanism to obtain the client or server certificate.",
+   "description": "[Deprecated] Defines the mechanism to obtain the client or server certificate. Defines the mechanism to obtain the client or server certificate.",
    "properties": {
     "certificatePaths": {
      "$ref": "TlsCertificatePaths",
@@ -30038,7 +30055,7 @@
   "TlsCertificatePaths": {
    "id": "TlsCertificatePaths",
    "type": "object",
-   "description": "The paths to the mounted TLS Certificates and private key.",
+   "description": "[Deprecated] The paths to the mounted TLS Certificates and private key. The paths to the mounted TLS Certificates and private key.",
    "properties": {
     "certificatePath": {
      "type": "string",
@@ -30053,7 +30070,7 @@
   "TlsContext": {
    "id": "TlsContext",
    "type": "object",
-   "description": "The TLS settings for the client or server.",
+   "description": "[Deprecated] The TLS settings for the client or server. The TLS settings for the client or server.",
    "properties": {
     "certificateContext": {
      "$ref": "TlsCertificateContext",
@@ -30068,7 +30085,7 @@
   "TlsValidationContext": {
    "id": "TlsValidationContext",
    "type": "object",
-   "description": "Defines the mechanism to obtain the Certificate Authority certificate to validate the client/server certificate.",
+   "description": "[Deprecated] Defines the mechanism to obtain the Certificate Authority certificate to validate the client/server certificate. validate the client/server certificate.",
    "properties": {
     "certificatePath": {
      "type": "string",
@@ -38607,6 +38624,47 @@
       "https://www.googleapis.com/auth/compute.readonly"
      ]
     },
+    "patch": {
+     "id": "compute.images.patch",
+     "path": "{project}/global/images/{image}",
+     "httpMethod": "PATCH",
+     "description": "Patches the specified image with the data included in the request. Only the following fields can be modified: family, description, deprecation status.",
+     "parameters": {
+      "image": {
+       "type": "string",
+       "description": "Name of the image resource to patch.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}",
+       "location": "path"
+      },
+      "project": {
+       "type": "string",
+       "description": "Project ID for this request.",
+       "required": true,
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "location": "path"
+      },
+      "requestId": {
+       "type": "string",
+       "description": "An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed.\n\nFor example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments.\n\nThe request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).",
+       "location": "query"
+      }
+     },
+     "parameterOrder": [
+      "project",
+      "image"
+     ],
+     "request": {
+      "$ref": "Image"
+     },
+     "response": {
+      "$ref": "Operation"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute"
+     ]
+    },
     "setIamPolicy": {
      "id": "compute.images.setIamPolicy",
      "path": "{project}/global/images/{resource}/setIamPolicy",
@@ -42795,7 +42853,7 @@
      "id": "compute.instances.update",
      "path": "{project}/zones/{zone}/instances/{instance}",
      "httpMethod": "PUT",
-     "description": "Updates an instance.",
+     "description": "Updates an instance only if the necessary resources are available. This method can update only a specific set of instance properties. See  Updating a running instance for a list of updatable instance properties.",
      "parameters": {
       "instance": {
        "type": "string",
@@ -42806,7 +42864,7 @@
       },
       "minimalAction": {
        "type": "string",
-       "description": "If specified, this action or higher level action is performed on the instance irrespective of what action is required for the update to take effect. If not specified, then Compute Engine acts based on the minimum action required.",
+       "description": "Specifies the action to take when updating an instance even if the updated properties do not require it. If not specified, then Compute Engine acts based on the minimum action that the updated properties require.",
        "enum": [
         "INVALID",
         "NO_EFFECT",
@@ -42823,7 +42881,7 @@
       },
       "mostDisruptiveAllowedAction": {
        "type": "string",
-       "description": "If specified, Compute Engine returns an error if the update requires a higher action to be applied to the instance. If not specified, the default will be REFRESH.",
+       "description": "Specifies the most disruptive action that can be taken on the instance as part of the update. Compute Engine returns an error if the instance properties require a more disruptive action as part of the instance update. Valid options from lowest to highest are NO_EFFECT, REFRESH, and RESTART.",
        "enum": [
         "INVALID",
         "NO_EFFECT",

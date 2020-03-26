@@ -17,7 +17,8 @@
 package com.google.api.services.compute.model;
 
 /**
- * This message specifies a header location to extract JWT token.
+ * [Deprecated] This message specifies a header location to extract JWT token. This message
+ * specifies a header location to extract JWT token.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

@@ -30,8 +30,18 @@ package com.google.api.services.people.v1.model;
 public final class Gender extends com.google.api.client.json.GenericJson {
 
   /**
+   * The type of pronouns that should be used to address the person. The value can be custom or one
+   * of these predefined values:
+   *
+   * * `male` * `female` * `other`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String addressMeAs;
+
+  /**
    * Output only. The value of the gender translated and formatted in the viewer's account locale or
-   * the `Accept-Language` HTTP header locale.
+   * the `Accept-Language` HTTP header locale. Unspecified or custom value are not localized.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,15 +57,38 @@ public final class Gender extends com.google.api.client.json.GenericJson {
   /**
    * The gender for the person. The gender can be custom or one of these predefined values:
    *
-   * * `male` * `female` * `other` * `unknown`
+   * * `male` * `female` * `unspecified`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String value;
 
   /**
+   * The type of pronouns that should be used to address the person. The value can be custom or one
+   * of these predefined values:
+   *
+   * * `male` * `female` * `other`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAddressMeAs() {
+    return addressMeAs;
+  }
+
+  /**
+   * The type of pronouns that should be used to address the person. The value can be custom or one
+   * of these predefined values:
+   *
+   * * `male` * `female` * `other`
+   * @param addressMeAs addressMeAs or {@code null} for none
+   */
+  public Gender setAddressMeAs(java.lang.String addressMeAs) {
+    this.addressMeAs = addressMeAs;
+    return this;
+  }
+
+  /**
    * Output only. The value of the gender translated and formatted in the viewer's account locale or
-   * the `Accept-Language` HTTP header locale.
+   * the `Accept-Language` HTTP header locale. Unspecified or custom value are not localized.
    * @return value or {@code null} for none
    */
   public java.lang.String getFormattedValue() {
@@ -64,7 +97,7 @@ public final class Gender extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The value of the gender translated and formatted in the viewer's account locale or
-   * the `Accept-Language` HTTP header locale.
+   * the `Accept-Language` HTTP header locale. Unspecified or custom value are not localized.
    * @param formattedValue formattedValue or {@code null} for none
    */
   public Gender setFormattedValue(java.lang.String formattedValue) {
@@ -92,7 +125,7 @@ public final class Gender extends com.google.api.client.json.GenericJson {
   /**
    * The gender for the person. The gender can be custom or one of these predefined values:
    *
-   * * `male` * `female` * `other` * `unknown`
+   * * `male` * `female` * `unspecified`
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -102,7 +135,7 @@ public final class Gender extends com.google.api.client.json.GenericJson {
   /**
    * The gender for the person. The gender can be custom or one of these predefined values:
    *
-   * * `male` * `female` * `other` * `unknown`
+   * * `male` * `female` * `unspecified`
    * @param value value or {@code null} for none
    */
   public Gender setValue(java.lang.String value) {

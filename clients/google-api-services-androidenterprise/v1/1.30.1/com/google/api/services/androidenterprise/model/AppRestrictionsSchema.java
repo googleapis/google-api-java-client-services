@@ -30,6 +30,7 @@ package com.google.api.services.androidenterprise.model;
 public final class AppRestrictionsSchema extends com.google.api.client.json.GenericJson {
 
   /**
+   * Deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,6 +44,7 @@ public final class AppRestrictionsSchema extends com.google.api.client.json.Gene
   private java.util.List<AppRestrictionsSchemaRestriction> restrictions;
 
   /**
+   * Deprecated.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -50,6 +52,7 @@ public final class AppRestrictionsSchema extends com.google.api.client.json.Gene
   }
 
   /**
+   * Deprecated.
    * @param kind kind or {@code null} for none
    */
   public AppRestrictionsSchema setKind(java.lang.String kind) {

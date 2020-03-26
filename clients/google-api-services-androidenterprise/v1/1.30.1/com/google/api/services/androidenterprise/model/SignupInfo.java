@@ -39,6 +39,7 @@ public final class SignupInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String completionToken;
 
   /**
+   * Deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,6 +73,7 @@ public final class SignupInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Deprecated.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -79,6 +81,7 @@ public final class SignupInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Deprecated.
    * @param kind kind or {@code null} for none
    */
   public SignupInfo setKind(java.lang.String kind) {

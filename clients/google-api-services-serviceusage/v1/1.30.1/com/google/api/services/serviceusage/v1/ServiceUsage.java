@@ -925,6 +925,198 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
       }
     }
     /**
+     * Returns the service configurations and enabled states for a given list of services.
+     *
+     * Create a request for the method "services.batchGet".
+     *
+     * This request holds the parameters needed by the serviceusage server.  After setting any optional
+     * parameters, call the {@link BatchGet#execute()} method to invoke the remote operation.
+     *
+     * @param parent Parent to retrieve services from.
+    If this is set, the parent of all of the services specified in
+     *        `names` must
+    match this field. An example name would be: `projects/123` where `123` is
+    the
+     *        project number. The `BatchGetServices` method currently only supports
+    projects.
+     * @return the request
+     */
+    public BatchGet batchGet(java.lang.String parent) throws java.io.IOException {
+      BatchGet result = new BatchGet(parent);
+      initialize(result);
+      return result;
+    }
+
+    public class BatchGet extends ServiceUsageRequest<com.google.api.services.serviceusage.v1.model.BatchGetServicesResponse> {
+
+      private static final String REST_PATH = "v1/{+parent}/services:batchGet";
+
+      private final java.util.regex.Pattern PARENT_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
+
+      /**
+       * Returns the service configurations and enabled states for a given list of services.
+       *
+       * Create a request for the method "services.batchGet".
+       *
+       * This request holds the parameters needed by the the serviceusage server.  After setting any
+       * optional parameters, call the {@link BatchGet#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * BatchGet#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param parent Parent to retrieve services from.
+    If this is set, the parent of all of the services specified in
+     *        `names` must
+    match this field. An example name would be: `projects/123` where `123` is
+    the
+     *        project number. The `BatchGetServices` method currently only supports
+    projects.
+       * @since 1.13
+       */
+      protected BatchGet(java.lang.String parent) {
+        super(ServiceUsage.this, "GET", REST_PATH, null, com.google.api.services.serviceusage.v1.model.BatchGetServicesResponse.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public BatchGet set$Xgafv(java.lang.String $Xgafv) {
+        return (BatchGet) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public BatchGet setAccessToken(java.lang.String accessToken) {
+        return (BatchGet) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public BatchGet setAlt(java.lang.String alt) {
+        return (BatchGet) super.setAlt(alt);
+      }
+
+      @Override
+      public BatchGet setCallback(java.lang.String callback) {
+        return (BatchGet) super.setCallback(callback);
+      }
+
+      @Override
+      public BatchGet setFields(java.lang.String fields) {
+        return (BatchGet) super.setFields(fields);
+      }
+
+      @Override
+      public BatchGet setKey(java.lang.String key) {
+        return (BatchGet) super.setKey(key);
+      }
+
+      @Override
+      public BatchGet setOauthToken(java.lang.String oauthToken) {
+        return (BatchGet) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public BatchGet setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (BatchGet) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public BatchGet setQuotaUser(java.lang.String quotaUser) {
+        return (BatchGet) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public BatchGet setUploadType(java.lang.String uploadType) {
+        return (BatchGet) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public BatchGet setUploadProtocol(java.lang.String uploadProtocol) {
+        return (BatchGet) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Parent to retrieve services from. If this is set, the parent of all of the services
+       * specified in `names` must match this field. An example name would be: `projects/123` where
+       * `123` is the project number. The `BatchGetServices` method currently only supports
+       * projects.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Parent to retrieve services from. If this is set, the parent of all of the services specified in
+     `names` must match this field. An example name would be: `projects/123` where `123` is the project
+     number. The `BatchGetServices` method currently only supports projects.
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /**
+       * Parent to retrieve services from. If this is set, the parent of all of the services
+       * specified in `names` must match this field. An example name would be: `projects/123` where
+       * `123` is the project number. The `BatchGetServices` method currently only supports
+       * projects.
+       */
+      public BatchGet setParent(java.lang.String parent) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+        this.parent = parent;
+        return this;
+      }
+
+      /**
+       * Names of the services to retrieve.
+       *
+       * An example name would be: `projects/123/services/serviceusage.googleapis.com` where `123`
+       * is the project number. A single request can get a maximum of 20 services at a time.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> names;
+
+      /** Names of the services to retrieve.
+
+     An example name would be: `projects/123/services/serviceusage.googleapis.com` where `123` is the
+     project number. A single request can get a maximum of 20 services at a time.
+       */
+      public java.util.List<java.lang.String> getNames() {
+        return names;
+      }
+
+      /**
+       * Names of the services to retrieve.
+       *
+       * An example name would be: `projects/123/services/serviceusage.googleapis.com` where `123`
+       * is the project number. A single request can get a maximum of 20 services at a time.
+       */
+      public BatchGet setNames(java.util.List<java.lang.String> names) {
+        this.names = names;
+        return this;
+      }
+
+      @Override
+      public BatchGet set(String parameterName, Object value) {
+        return (BatchGet) super.set(parameterName, value);
+      }
+    }
+    /**
      * Disable a service so that it can no longer be used with a project. This prevents unintended usage
      * that may cause unexpected billing charges or security leaks.
      *

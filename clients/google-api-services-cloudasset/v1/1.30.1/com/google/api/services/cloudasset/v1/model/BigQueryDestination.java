@@ -32,7 +32,7 @@ public final class BigQueryDestination extends com.google.api.client.json.Generi
   /**
    * Required. The BigQuery dataset in format "projects/projectId/datasets/datasetId", to which the
    * snapshot result should be exported. If this dataset does not exist, the export call returns an
-   * error.
+   * INVALID_ARGUMENT error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,8 +40,8 @@ public final class BigQueryDestination extends com.google.api.client.json.Generi
 
   /**
    * If the destination table already exists and this flag is `TRUE`, the table will be overwritten
-   * by the contents of assets snapshot. If the flag is not set and the destination table already
-   * exists, the export call returns an error.
+   * by the contents of assets snapshot. If the flag is `FALSE` or unset and the destination table
+   * already exists, the export call returns an INVALID_ARGUMEMT error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class BigQueryDestination extends com.google.api.client.json.Generi
   /**
    * Required. The BigQuery dataset in format "projects/projectId/datasets/datasetId", to which the
    * snapshot result should be exported. If this dataset does not exist, the export call returns an
-   * error.
+   * INVALID_ARGUMENT error.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataset() {
@@ -68,7 +68,7 @@ public final class BigQueryDestination extends com.google.api.client.json.Generi
   /**
    * Required. The BigQuery dataset in format "projects/projectId/datasets/datasetId", to which the
    * snapshot result should be exported. If this dataset does not exist, the export call returns an
-   * error.
+   * INVALID_ARGUMENT error.
    * @param dataset dataset or {@code null} for none
    */
   public BigQueryDestination setDataset(java.lang.String dataset) {
@@ -78,8 +78,8 @@ public final class BigQueryDestination extends com.google.api.client.json.Generi
 
   /**
    * If the destination table already exists and this flag is `TRUE`, the table will be overwritten
-   * by the contents of assets snapshot. If the flag is not set and the destination table already
-   * exists, the export call returns an error.
+   * by the contents of assets snapshot. If the flag is `FALSE` or unset and the destination table
+   * already exists, the export call returns an INVALID_ARGUMEMT error.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getForce() {
@@ -88,8 +88,8 @@ public final class BigQueryDestination extends com.google.api.client.json.Generi
 
   /**
    * If the destination table already exists and this flag is `TRUE`, the table will be overwritten
-   * by the contents of assets snapshot. If the flag is not set and the destination table already
-   * exists, the export call returns an error.
+   * by the contents of assets snapshot. If the flag is `FALSE` or unset and the destination table
+   * already exists, the export call returns an INVALID_ARGUMEMT error.
    * @param force force or {@code null} for none
    */
   public BigQueryDestination setForce(java.lang.Boolean force) {

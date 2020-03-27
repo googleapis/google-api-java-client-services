@@ -58,13 +58,6 @@ public final class ServerConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String defaultImageType;
 
   /**
-   * Premium configuration for service.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private PremiumConfig premiumConfig;
-
-  /**
    * List of valid image types.
    * The value may be {@code null}.
    */
@@ -133,23 +126,6 @@ public final class ServerConfig extends com.google.api.client.json.GenericJson {
    */
   public ServerConfig setDefaultImageType(java.lang.String defaultImageType) {
     this.defaultImageType = defaultImageType;
-    return this;
-  }
-
-  /**
-   * Premium configuration for service.
-   * @return value or {@code null} for none
-   */
-  public PremiumConfig getPremiumConfig() {
-    return premiumConfig;
-  }
-
-  /**
-   * Premium configuration for service.
-   * @param premiumConfig premiumConfig or {@code null} for none
-   */
-  public ServerConfig setPremiumConfig(PremiumConfig premiumConfig) {
-    this.premiumConfig = premiumConfig;
     return this;
   }
 

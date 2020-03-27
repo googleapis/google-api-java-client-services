@@ -466,13 +466,6 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String subnetwork;
 
   /**
-   * Cluster tier settings.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private TierSettings tierSettings;
-
-  /**
    * Configuration for Cloud TPU support;
    * The value may be {@code null}.
    */
@@ -1530,23 +1523,6 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setSubnetwork(java.lang.String subnetwork) {
     this.subnetwork = subnetwork;
-    return this;
-  }
-
-  /**
-   * Cluster tier settings.
-   * @return value or {@code null} for none
-   */
-  public TierSettings getTierSettings() {
-    return tierSettings;
-  }
-
-  /**
-   * Cluster tier settings.
-   * @param tierSettings tierSettings or {@code null} for none
-   */
-  public Cluster setTierSettings(TierSettings tierSettings) {
-    this.tierSettings = tierSettings;
     return this;
   }
 

@@ -7383,7 +7383,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
      * @param parent Required. Resource name of the parent containing the listed services, either a project or a
      *        Monitoring Workspace. The formats are:
     projects/[PROJECT_ID_OR_NUMBER]
-     *        workspaces/[HOST_PROJECT_ID]
+     *        workspaces/[HOST_PROJECT_ID_OR_NUMBER]
      * @return the request
      */
     public List list(java.lang.String parent) throws java.io.IOException {
@@ -7412,7 +7412,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * @param parent Required. Resource name of the parent containing the listed services, either a project or a
      *        Monitoring Workspace. The formats are:
     projects/[PROJECT_ID_OR_NUMBER]
-     *        workspaces/[HOST_PROJECT_ID]
+     *        workspaces/[HOST_PROJECT_ID_OR_NUMBER]
        * @since 1.13
        */
       protected List(java.lang.String parent) {
@@ -7493,13 +7493,14 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
       /**
        * Required. Resource name of the parent containing the listed services, either a project or a
        * Monitoring Workspace. The formats are: projects/[PROJECT_ID_OR_NUMBER]
-       * workspaces/[HOST_PROJECT_ID]
+       * workspaces/[HOST_PROJECT_ID_OR_NUMBER]
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
       /** Required. Resource name of the parent containing the listed services, either a project or a
-     Monitoring Workspace. The formats are: projects/[PROJECT_ID_OR_NUMBER] workspaces/[HOST_PROJECT_ID]
+     Monitoring Workspace. The formats are: projects/[PROJECT_ID_OR_NUMBER]
+     workspaces/[HOST_PROJECT_ID_OR_NUMBER]
        */
       public java.lang.String getParent() {
         return parent;
@@ -7508,7 +7509,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
       /**
        * Required. Resource name of the parent containing the listed services, either a project or a
        * Monitoring Workspace. The formats are: projects/[PROJECT_ID_OR_NUMBER]
-       * workspaces/[HOST_PROJECT_ID]
+       * workspaces/[HOST_PROJECT_ID_OR_NUMBER]
        */
       public List setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {
@@ -8275,7 +8276,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * @param parent Required. Resource name of the parent containing the listed SLOs, either a project or a Monitoring
        *        Workspace. The formats are:
       projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
-       *        workspaces/[HOST_PROJECT_ID]/services/[SERVICE_ID]
+       *        workspaces/[HOST_PROJECT_ID_OR_NUMBER]/services/-
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -8304,7 +8305,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * @param parent Required. Resource name of the parent containing the listed SLOs, either a project or a Monitoring
        *        Workspace. The formats are:
       projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
-       *        workspaces/[HOST_PROJECT_ID]/services/[SERVICE_ID]
+       *        workspaces/[HOST_PROJECT_ID_OR_NUMBER]/services/-
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -8386,14 +8387,14 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * Required. Resource name of the parent containing the listed SLOs, either a project or a
          * Monitoring Workspace. The formats are:
          * projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
-         * workspaces/[HOST_PROJECT_ID]/services/[SERVICE_ID]
+         * workspaces/[HOST_PROJECT_ID_OR_NUMBER]/services/-
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. Resource name of the parent containing the listed SLOs, either a project or a Monitoring
        Workspace. The formats are: projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
-       workspaces/[HOST_PROJECT_ID]/services/[SERVICE_ID]
+       workspaces/[HOST_PROJECT_ID_OR_NUMBER]/services/-
          */
         public java.lang.String getParent() {
           return parent;
@@ -8403,7 +8404,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * Required. Resource name of the parent containing the listed SLOs, either a project or a
          * Monitoring Workspace. The formats are:
          * projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
-         * workspaces/[HOST_PROJECT_ID]/services/[SERVICE_ID]
+         * workspaces/[HOST_PROJECT_ID_OR_NUMBER]/services/-
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {

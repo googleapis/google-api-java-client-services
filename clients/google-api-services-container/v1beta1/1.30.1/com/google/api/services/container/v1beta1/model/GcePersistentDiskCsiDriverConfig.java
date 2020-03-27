@@ -17,8 +17,8 @@
 package com.google.api.services.container.v1beta1.model;
 
 /**
- * Configuration for the GCE PD CSI driver. This option can only be enabled at cluster creation
- * time.
+ * Configuration for the Compute Engine PD CSI driver. This option can only be enabled at cluster
+ * creation time.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation
@@ -32,14 +32,14 @@ package com.google.api.services.container.v1beta1.model;
 public final class GcePersistentDiskCsiDriverConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether the GCE PD CSI driver is enabled for this cluster.
+   * Whether the Compute Engine PD CSI driver is enabled for this cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enabled;
 
   /**
-   * Whether the GCE PD CSI driver is enabled for this cluster.
+   * Whether the Compute Engine PD CSI driver is enabled for this cluster.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnabled() {
@@ -47,7 +47,7 @@ public final class GcePersistentDiskCsiDriverConfig extends com.google.api.clien
   }
 
   /**
-   * Whether the GCE PD CSI driver is enabled for this cluster.
+   * Whether the Compute Engine PD CSI driver is enabled for this cluster.
    * @param enabled enabled or {@code null} for none
    */
   public GcePersistentDiskCsiDriverConfig setEnabled(java.lang.Boolean enabled) {

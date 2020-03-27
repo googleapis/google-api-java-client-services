@@ -55,7 +55,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPool exte
   private GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig workerConfig;
 
   /**
-   * The desired number of workers in the worker pool. Must be a value between 0 and 1000.
+   * The desired number of workers in the worker pool. Must be a value between 0 and 15000.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -119,7 +119,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPool exte
   }
 
   /**
-   * The desired number of workers in the worker pool. Must be a value between 0 and 1000.
+   * The desired number of workers in the worker pool. Must be a value between 0 and 15000.
    * @return value or {@code null} for none
    */
   public java.lang.Long getWorkerCount() {
@@ -127,7 +127,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPool exte
   }
 
   /**
-   * The desired number of workers in the worker pool. Must be a value between 0 and 1000.
+   * The desired number of workers in the worker pool. Must be a value between 0 and 15000.
    * @param workerCount workerCount or {@code null} for none
    */
   public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPool setWorkerCount(java.lang.Long workerCount) {

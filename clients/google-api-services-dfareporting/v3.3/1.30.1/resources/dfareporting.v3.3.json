@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/2DXbE-BPrSqdiwxL8mZiY5h8A4U\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/JV5A1Afwli8SHTRCmKagDhZ6DOA\"",
  "discoveryVersion": "v1",
  "id": "dfareporting:v3.3",
  "name": "dfareporting",
  "version": "v3.3",
- "revision": "20200306",
+ "revision": "20200324",
  "title": "DCM/DFA Reporting And Trafficking API",
  "description": "Manages your DoubleClick Campaign Manager ad campaigns and reports.",
  "ownerDomain": "google.com",
@@ -11666,6 +11666,7 @@
      "parameters": {
       "id": {
        "type": "string",
+       "description": "Advertiser group ID.",
        "required": true,
        "format": "int64",
        "location": "query"
@@ -11893,6 +11894,7 @@
      "parameters": {
       "id": {
        "type": "string",
+       "description": "Landing page ID.",
        "required": true,
        "format": "int64",
        "location": "query"
@@ -12138,6 +12140,7 @@
      "parameters": {
       "id": {
        "type": "string",
+       "description": "Advertiser ID.",
        "required": true,
        "format": "int64",
        "location": "query"
@@ -12510,6 +12513,7 @@
      "parameters": {
       "id": {
        "type": "string",
+       "description": "Campaign ID.",
        "required": true,
        "format": "int64",
        "location": "query"
@@ -13097,6 +13101,7 @@
      "parameters": {
       "id": {
        "type": "string",
+       "description": "Content category ID.",
        "required": true,
        "format": "int64",
        "location": "query"
@@ -13530,7 +13535,7 @@
      "id": "dfareporting.creativeFieldValues.patch",
      "path": "userprofiles/{profileId}/creativeFields/{creativeFieldId}/creativeFieldValues",
      "httpMethod": "PATCH",
-     "description": "Updates an existing creative field. This method supports patch semantics.",
+     "description": "Updates an existing creative field value. This method supports patch semantics.",
      "parameters": {
       "creativeFieldId": {
        "type": "string",
@@ -13541,6 +13546,7 @@
       },
       "id": {
        "type": "string",
+       "description": "Creative Field Value ID",
        "required": true,
        "format": "int64",
        "location": "query"
@@ -13788,6 +13794,7 @@
      "parameters": {
       "id": {
        "type": "string",
+       "description": "Creative Field ID",
        "required": true,
        "format": "int64",
        "location": "query"
@@ -14005,6 +14012,7 @@
      "parameters": {
       "id": {
        "type": "string",
+       "description": "Creative group ID.",
        "required": true,
        "format": "int64",
        "location": "query"
@@ -14323,6 +14331,7 @@
      "parameters": {
       "id": {
        "type": "string",
+       "description": "Creative ID.",
        "required": true,
        "format": "int64",
        "location": "query"
@@ -14940,6 +14949,7 @@
      "parameters": {
       "id": {
        "type": "string",
+       "description": "Event tag ID.",
        "required": true,
        "format": "int64",
        "location": "query"
@@ -15367,6 +15377,7 @@
      "parameters": {
       "id": {
        "type": "string",
+       "description": "Floodlight activity ID.",
        "required": true,
        "format": "int64",
        "location": "query"
@@ -15594,6 +15605,7 @@
      "parameters": {
       "id": {
        "type": "string",
+       "description": "Floodlight activity Group ID.",
        "required": true,
        "format": "int64",
        "location": "query"
@@ -15722,6 +15734,7 @@
      "parameters": {
       "id": {
        "type": "string",
+       "description": "Floodlight configuration ID.",
        "required": true,
        "format": "int64",
        "location": "query"
@@ -16805,6 +16818,7 @@
      "parameters": {
       "id": {
        "type": "string",
+       "description": "Placement group ID.",
        "required": true,
        "format": "int64",
        "location": "query"
@@ -17036,6 +17050,7 @@
      "parameters": {
       "id": {
        "type": "string",
+       "description": "Placement strategy ID.",
        "required": true,
        "format": "int64",
        "location": "query"
@@ -17461,6 +17476,7 @@
      "parameters": {
       "id": {
        "type": "string",
+       "description": "Placement ID.",
        "required": true,
        "format": "int64",
        "location": "query"
@@ -17833,6 +17849,7 @@
       },
       "remarketingListId": {
        "type": "string",
+       "description": "Remarketing list ID.",
        "required": true,
        "format": "int64",
        "location": "query"
@@ -18040,6 +18057,7 @@
      "parameters": {
       "id": {
        "type": "string",
+       "description": "Remarketing list ID.",
        "required": true,
        "format": "int64",
        "location": "query"
@@ -18726,6 +18744,7 @@
      "parameters": {
       "id": {
        "type": "string",
+       "description": "Site ID.",
        "required": true,
        "format": "int64",
        "location": "query"
@@ -19043,6 +19062,7 @@
      "parameters": {
       "id": {
        "type": "string",
+       "description": "Subaccount ID.",
        "required": true,
        "format": "int64",
        "location": "query"
@@ -19371,6 +19391,7 @@
      "parameters": {
       "id": {
        "type": "string",
+       "description": "Targeting template ID.",
        "required": true,
        "format": "int64",
        "location": "query"
@@ -19782,6 +19803,7 @@
      "parameters": {
       "id": {
        "type": "string",
+       "description": "User role ID.",
        "required": true,
        "format": "int64",
        "location": "query"

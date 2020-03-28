@@ -3659,7 +3659,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id
+     * @param id Advertiser group ID.
      * @param content the {@link com.google.api.services.dfareporting.model.AdvertiserGroup}
      * @return the request
      */
@@ -3685,7 +3685,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id
+       * @param id Advertiser group ID.
        * @param content the {@link com.google.api.services.dfareporting.model.AdvertiserGroup}
        * @since 1.13
        */
@@ -3746,16 +3746,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
+      /** Advertiser group ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /**
-
+      /** Advertiser group ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
+      /** Advertiser group ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -4408,7 +4409,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id
+     * @param id Landing page ID.
      * @param content the {@link com.google.api.services.dfareporting.model.LandingPage}
      * @return the request
      */
@@ -4434,7 +4435,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id
+       * @param id Landing page ID.
        * @param content the {@link com.google.api.services.dfareporting.model.LandingPage}
        * @since 1.13
        */
@@ -4495,16 +4496,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
+      /** Landing page ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /**
-
+      /** Landing page ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
+      /** Landing page ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -5182,7 +5184,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id
+     * @param id Advertiser ID.
      * @param content the {@link com.google.api.services.dfareporting.model.Advertiser}
      * @return the request
      */
@@ -5208,7 +5210,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id
+       * @param id Advertiser ID.
        * @param content the {@link com.google.api.services.dfareporting.model.Advertiser}
        * @since 1.13
        */
@@ -5269,16 +5271,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
+      /** Advertiser ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /**
-
+      /** Advertiser ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
+      /** Advertiser ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -6421,7 +6424,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id
+     * @param id Campaign ID.
      * @param content the {@link com.google.api.services.dfareporting.model.Campaign}
      * @return the request
      */
@@ -6447,7 +6450,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id
+       * @param id Campaign ID.
        * @param content the {@link com.google.api.services.dfareporting.model.Campaign}
        * @since 1.13
        */
@@ -6508,16 +6511,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
+      /** Campaign ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /**
-
+      /** Campaign ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
+      /** Campaign ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -8109,7 +8113,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id
+     * @param id Content category ID.
      * @param content the {@link com.google.api.services.dfareporting.model.ContentCategory}
      * @return the request
      */
@@ -8135,7 +8139,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id
+       * @param id Content category ID.
        * @param content the {@link com.google.api.services.dfareporting.model.ContentCategory}
        * @since 1.13
        */
@@ -8196,16 +8200,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
+      /** Content category ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /**
-
+      /** Content category ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
+      /** Content category ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -9620,7 +9625,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Updates an existing creative field. This method supports patch semantics.
+     * Updates an existing creative field value. This method supports patch semantics.
      *
      * Create a request for the method "creativeFieldValues.patch".
      *
@@ -9629,7 +9634,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      *
      * @param profileId User profile ID associated with this request.
      * @param creativeFieldId Creative field ID for this creative field value.
-     * @param id
+     * @param id Creative Field Value ID
      * @param content the {@link com.google.api.services.dfareporting.model.CreativeFieldValue}
      * @return the request
      */
@@ -9644,7 +9649,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       private static final String REST_PATH = "userprofiles/{profileId}/creativeFields/{creativeFieldId}/creativeFieldValues";
 
       /**
-       * Updates an existing creative field. This method supports patch semantics.
+       * Updates an existing creative field value. This method supports patch semantics.
        *
        * Create a request for the method "creativeFieldValues.patch".
        *
@@ -9656,7 +9661,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        *
        * @param profileId User profile ID associated with this request.
        * @param creativeFieldId Creative field ID for this creative field value.
-       * @param id
+       * @param id Creative Field Value ID
        * @param content the {@link com.google.api.services.dfareporting.model.CreativeFieldValue}
        * @since 1.13
        */
@@ -9734,16 +9739,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
+      /** Creative Field Value ID */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /**
-
+      /** Creative Field Value ID
        */
       public java.lang.Long getId() {
         return id;
       }
 
+      /** Creative Field Value ID */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -10476,7 +10482,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id
+     * @param id Creative Field ID
      * @param content the {@link com.google.api.services.dfareporting.model.CreativeField}
      * @return the request
      */
@@ -10502,7 +10508,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id
+       * @param id Creative Field ID
        * @param content the {@link com.google.api.services.dfareporting.model.CreativeField}
        * @since 1.13
        */
@@ -10563,16 +10569,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
+      /** Creative Field ID */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /**
-
+      /** Creative Field ID
        */
       public java.lang.Long getId() {
         return id;
       }
 
+      /** Creative Field ID */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -11189,7 +11196,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id
+     * @param id Creative group ID.
      * @param content the {@link com.google.api.services.dfareporting.model.CreativeGroup}
      * @return the request
      */
@@ -11215,7 +11222,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id
+       * @param id Creative group ID.
        * @param content the {@link com.google.api.services.dfareporting.model.CreativeGroup}
        * @since 1.13
        */
@@ -11276,16 +11283,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
+      /** Creative group ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /**
-
+      /** Creative group ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
+      /** Creative group ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -12029,7 +12037,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id
+     * @param id Creative ID.
      * @param content the {@link com.google.api.services.dfareporting.model.Creative}
      * @return the request
      */
@@ -12055,7 +12063,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id
+       * @param id Creative ID.
        * @param content the {@link com.google.api.services.dfareporting.model.Creative}
        * @since 1.13
        */
@@ -12116,16 +12124,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
+      /** Creative ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /**
-
+      /** Creative ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
+      /** Creative ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -14223,7 +14232,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id
+     * @param id Event tag ID.
      * @param content the {@link com.google.api.services.dfareporting.model.EventTag}
      * @return the request
      */
@@ -14249,7 +14258,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id
+       * @param id Event tag ID.
        * @param content the {@link com.google.api.services.dfareporting.model.EventTag}
        * @since 1.13
        */
@@ -14310,16 +14319,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
+      /** Event tag ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /**
-
+      /** Event tag ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
+      /** Event tag ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -15614,7 +15624,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id
+     * @param id Floodlight activity ID.
      * @param content the {@link com.google.api.services.dfareporting.model.FloodlightActivity}
      * @return the request
      */
@@ -15640,7 +15650,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id
+       * @param id Floodlight activity ID.
        * @param content the {@link com.google.api.services.dfareporting.model.FloodlightActivity}
        * @since 1.13
        */
@@ -15701,16 +15711,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
+      /** Floodlight activity ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /**
-
+      /** Floodlight activity ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
+      /** Floodlight activity ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -16369,7 +16380,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id
+     * @param id Floodlight activity Group ID.
      * @param content the {@link com.google.api.services.dfareporting.model.FloodlightActivityGroup}
      * @return the request
      */
@@ -16395,7 +16406,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id
+       * @param id Floodlight activity Group ID.
        * @param content the {@link com.google.api.services.dfareporting.model.FloodlightActivityGroup}
        * @since 1.13
        */
@@ -16456,16 +16467,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
+      /** Floodlight activity Group ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /**
-
+      /** Floodlight activity Group ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
+      /** Floodlight activity Group ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -16858,7 +16870,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id
+     * @param id Floodlight configuration ID.
      * @param content the {@link com.google.api.services.dfareporting.model.FloodlightConfiguration}
      * @return the request
      */
@@ -16884,7 +16896,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id
+       * @param id Floodlight configuration ID.
        * @param content the {@link com.google.api.services.dfareporting.model.FloodlightConfiguration}
        * @since 1.13
        */
@@ -16945,16 +16957,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
+      /** Floodlight configuration ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /**
-
+      /** Floodlight configuration ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
+      /** Floodlight configuration ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -20460,7 +20473,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id
+     * @param id Placement group ID.
      * @param content the {@link com.google.api.services.dfareporting.model.PlacementGroup}
      * @return the request
      */
@@ -20486,7 +20499,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id
+       * @param id Placement group ID.
        * @param content the {@link com.google.api.services.dfareporting.model.PlacementGroup}
        * @since 1.13
        */
@@ -20547,16 +20560,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
+      /** Placement group ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /**
-
+      /** Placement group ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
+      /** Placement group ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -21254,7 +21268,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id
+     * @param id Placement strategy ID.
      * @param content the {@link com.google.api.services.dfareporting.model.PlacementStrategy}
      * @return the request
      */
@@ -21280,7 +21294,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id
+       * @param id Placement strategy ID.
        * @param content the {@link com.google.api.services.dfareporting.model.PlacementStrategy}
        * @since 1.13
        */
@@ -21341,16 +21355,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
+      /** Placement strategy ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /**
-
+      /** Placement strategy ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
+      /** Placement strategy ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -22390,7 +22405,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id
+     * @param id Placement ID.
      * @param content the {@link com.google.api.services.dfareporting.model.Placement}
      * @return the request
      */
@@ -22416,7 +22431,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id
+       * @param id Placement ID.
        * @param content the {@link com.google.api.services.dfareporting.model.Placement}
        * @since 1.13
        */
@@ -22477,16 +22492,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
+      /** Placement ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /**
-
+      /** Placement ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
+      /** Placement ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -23763,7 +23779,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param remarketingListId
+     * @param remarketingListId Remarketing list ID.
      * @param content the {@link com.google.api.services.dfareporting.model.RemarketingListShare}
      * @return the request
      */
@@ -23789,7 +23805,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param remarketingListId
+       * @param remarketingListId Remarketing list ID.
        * @param content the {@link com.google.api.services.dfareporting.model.RemarketingListShare}
        * @since 1.13
        */
@@ -23850,16 +23866,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
+      /** Remarketing list ID. */
       @com.google.api.client.util.Key
       private java.lang.Long remarketingListId;
 
-      /**
-
+      /** Remarketing list ID.
        */
       public java.lang.Long getRemarketingListId() {
         return remarketingListId;
       }
 
+      /** Remarketing list ID. */
       public Patch setRemarketingListId(java.lang.Long remarketingListId) {
         this.remarketingListId = remarketingListId;
         return this;
@@ -24477,7 +24494,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id
+     * @param id Remarketing list ID.
      * @param content the {@link com.google.api.services.dfareporting.model.RemarketingList}
      * @return the request
      */
@@ -24503,7 +24520,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id
+       * @param id Remarketing list ID.
        * @param content the {@link com.google.api.services.dfareporting.model.RemarketingList}
        * @since 1.13
        */
@@ -24564,16 +24581,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
+      /** Remarketing list ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /**
-
+      /** Remarketing list ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
+      /** Remarketing list ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -26631,7 +26649,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id
+     * @param id Site ID.
      * @param content the {@link com.google.api.services.dfareporting.model.Site}
      * @return the request
      */
@@ -26657,7 +26675,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id
+       * @param id Site ID.
        * @param content the {@link com.google.api.services.dfareporting.model.Site}
        * @since 1.13
        */
@@ -26718,16 +26736,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
+      /** Site ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /**
-
+      /** Site ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
+      /** Site ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -27731,7 +27750,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id
+     * @param id Subaccount ID.
      * @param content the {@link com.google.api.services.dfareporting.model.Subaccount}
      * @return the request
      */
@@ -27757,7 +27776,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id
+       * @param id Subaccount ID.
        * @param content the {@link com.google.api.services.dfareporting.model.Subaccount}
        * @since 1.13
        */
@@ -27818,16 +27837,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
+      /** Subaccount ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /**
-
+      /** Subaccount ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
+      /** Subaccount ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -28810,7 +28830,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id
+     * @param id Targeting template ID.
      * @param content the {@link com.google.api.services.dfareporting.model.TargetingTemplate}
      * @return the request
      */
@@ -28836,7 +28856,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id
+       * @param id Targeting template ID.
        * @param content the {@link com.google.api.services.dfareporting.model.TargetingTemplate}
        * @since 1.13
        */
@@ -28897,16 +28917,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
+      /** Targeting template ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /**
-
+      /** Targeting template ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
+      /** Targeting template ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -30367,7 +30388,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id
+     * @param id User role ID.
      * @param content the {@link com.google.api.services.dfareporting.model.UserRole}
      * @return the request
      */
@@ -30393,7 +30414,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id
+       * @param id User role ID.
        * @param content the {@link com.google.api.services.dfareporting.model.UserRole}
        * @since 1.13
        */
@@ -30454,16 +30475,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
+      /** User role ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /**
-
+      /** User role ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
+      /** User role ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;

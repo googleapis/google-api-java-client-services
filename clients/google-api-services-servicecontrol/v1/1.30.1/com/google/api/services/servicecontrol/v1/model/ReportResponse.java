@@ -79,7 +79,7 @@ public final class ReportResponse extends com.google.api.client.json.GenericJson
   private java.lang.String serviceConfigId;
 
   /**
-   * Unimplemented. The current service rollout id used to process the request.
+   * The current service rollout id used to process the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -169,7 +169,7 @@ public final class ReportResponse extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Unimplemented. The current service rollout id used to process the request.
+   * The current service rollout id used to process the request.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceRolloutId() {
@@ -177,7 +177,7 @@ public final class ReportResponse extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Unimplemented. The current service rollout id used to process the request.
+   * The current service rollout id used to process the request.
    * @param serviceRolloutId serviceRolloutId or {@code null} for none
    */
   public ReportResponse setServiceRolloutId(java.lang.String serviceRolloutId) {

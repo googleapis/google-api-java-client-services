@@ -48,6 +48,13 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   private Clustering clustering;
 
   /**
+   * Connection properties.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.Object> connectionProperties;
+
+  /**
    * [Optional] Specifies whether the job is allowed to create new tables. The following values are
    * supported: CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
    * CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in
@@ -301,6 +308,23 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
    */
   public JobConfigurationQuery setClustering(Clustering clustering) {
     this.clustering = clustering;
+    return this;
+  }
+
+  /**
+   * Connection properties.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Object> getConnectionProperties() {
+    return connectionProperties;
+  }
+
+  /**
+   * Connection properties.
+   * @param connectionProperties connectionProperties or {@code null} for none
+   */
+  public JobConfigurationQuery setConnectionProperties(java.util.List<java.lang.Object> connectionProperties) {
+    this.connectionProperties = connectionProperties;
     return this;
   }
 

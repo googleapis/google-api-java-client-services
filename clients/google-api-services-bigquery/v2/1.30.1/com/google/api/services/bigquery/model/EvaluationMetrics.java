@@ -53,6 +53,13 @@ public final class EvaluationMetrics extends com.google.api.client.json.GenericJ
   private MultiClassClassificationMetrics multiClassClassificationMetrics;
 
   /**
+   * [Alpha] Populated for implicit feedback type matrix factorization models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RankingMetrics rankingMetrics;
+
+  /**
    * Populated for regression models and explicit feedback type matrix factorization models.
    * The value may be {@code null}.
    */
@@ -107,6 +114,23 @@ public final class EvaluationMetrics extends com.google.api.client.json.GenericJ
    */
   public EvaluationMetrics setMultiClassClassificationMetrics(MultiClassClassificationMetrics multiClassClassificationMetrics) {
     this.multiClassClassificationMetrics = multiClassClassificationMetrics;
+    return this;
+  }
+
+  /**
+   * [Alpha] Populated for implicit feedback type matrix factorization models.
+   * @return value or {@code null} for none
+   */
+  public RankingMetrics getRankingMetrics() {
+    return rankingMetrics;
+  }
+
+  /**
+   * [Alpha] Populated for implicit feedback type matrix factorization models.
+   * @param rankingMetrics rankingMetrics or {@code null} for none
+   */
+  public EvaluationMetrics setRankingMetrics(RankingMetrics rankingMetrics) {
+    this.rankingMetrics = rankingMetrics;
     return this;
   }
 

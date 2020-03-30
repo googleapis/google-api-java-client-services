@@ -30,6 +30,13 @@ package com.google.api.services.bigquery.model;
 public final class TrainingOptions extends com.google.api.client.json.GenericJson {
 
   /**
+   * Batch size for dnn models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long batchSize;
+
+  /**
    * The column to split data with. This column won't be used as a feature. 1. When
    * data_split_method is CUSTOM, the corresponding column should be boolean. The rows with true
    * value tag are eval data, and the false are training data. 2. When data_split_method is SEQ, the
@@ -66,12 +73,33 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.String distanceType;
 
   /**
+   * Dropout probability for dnn models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double dropout;
+
+  /**
    * Whether to stop early when the loss doesn't improve significantly any more (compared to
    * min_relative_progress). Used only for iterative training algorithms.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean earlyStop;
+
+  /**
+   * Feedback type that specifies which algorithm to run for matrix factorization.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String feedbackType;
+
+  /**
+   * Hidden units for dnn models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.util.List<java.lang.Long> hiddenUnits;
 
   /**
    * Specifies the initial learning rate for the line search learn rate strategy.
@@ -86,6 +114,13 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> inputLabelColumns;
+
+  /**
+   * Item column specified for matrix factorization models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String itemColumn;
 
   /**
    * The column used to provide the initial centroids for kmeans algorithm when
@@ -153,12 +188,26 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.Long maxIterations;
 
   /**
+   * Maximum depth of a tree for boosted tree models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long maxTreeDepth;
+
+  /**
    * When early_stop is true, stops training when accuracy improvement is less than
    * 'min_relative_progress'. Used only for iterative training algorithms.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double minRelativeProgress;
+
+  /**
+   * Minimum split loss for boosted tree models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double minSplitLoss;
 
   /**
    * [Beta] Google Cloud Storage URI from which the model was imported. Only applicable for imported
@@ -176,6 +225,13 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.Long numClusters;
 
   /**
+   * Num factors specified for matrix factorization models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long numFactors;
+
+  /**
    * Optimization strategy for training linear regression models.
    * The value may be {@code null}.
    */
@@ -183,11 +239,50 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.String optimizationStrategy;
 
   /**
+   * Subsample fraction of the training data to grow tree to prevent overfitting for boosted tree
+   * models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double subsample;
+
+  /**
+   * User column specified for matrix factorization models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String userColumn;
+
+  /**
+   * Hyperparameter for matrix factoration when implicit feedback type is specified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double walsAlpha;
+
+  /**
    * Whether to train a model from the last checkpoint.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean warmStart;
+
+  /**
+   * Batch size for dnn models.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getBatchSize() {
+    return batchSize;
+  }
+
+  /**
+   * Batch size for dnn models.
+   * @param batchSize batchSize or {@code null} for none
+   */
+  public TrainingOptions setBatchSize(java.lang.Long batchSize) {
+    this.batchSize = batchSize;
+    return this;
+  }
 
   /**
    * The column to split data with. This column won't be used as a feature. 1. When
@@ -274,6 +369,23 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Dropout probability for dnn models.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getDropout() {
+    return dropout;
+  }
+
+  /**
+   * Dropout probability for dnn models.
+   * @param dropout dropout or {@code null} for none
+   */
+  public TrainingOptions setDropout(java.lang.Double dropout) {
+    this.dropout = dropout;
+    return this;
+  }
+
+  /**
    * Whether to stop early when the loss doesn't improve significantly any more (compared to
    * min_relative_progress). Used only for iterative training algorithms.
    * @return value or {@code null} for none
@@ -289,6 +401,40 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   public TrainingOptions setEarlyStop(java.lang.Boolean earlyStop) {
     this.earlyStop = earlyStop;
+    return this;
+  }
+
+  /**
+   * Feedback type that specifies which algorithm to run for matrix factorization.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFeedbackType() {
+    return feedbackType;
+  }
+
+  /**
+   * Feedback type that specifies which algorithm to run for matrix factorization.
+   * @param feedbackType feedbackType or {@code null} for none
+   */
+  public TrainingOptions setFeedbackType(java.lang.String feedbackType) {
+    this.feedbackType = feedbackType;
+    return this;
+  }
+
+  /**
+   * Hidden units for dnn models.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Long> getHiddenUnits() {
+    return hiddenUnits;
+  }
+
+  /**
+   * Hidden units for dnn models.
+   * @param hiddenUnits hiddenUnits or {@code null} for none
+   */
+  public TrainingOptions setHiddenUnits(java.util.List<java.lang.Long> hiddenUnits) {
+    this.hiddenUnits = hiddenUnits;
     return this;
   }
 
@@ -323,6 +469,23 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   public TrainingOptions setInputLabelColumns(java.util.List<java.lang.String> inputLabelColumns) {
     this.inputLabelColumns = inputLabelColumns;
+    return this;
+  }
+
+  /**
+   * Item column specified for matrix factorization models.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getItemColumn() {
+    return itemColumn;
+  }
+
+  /**
+   * Item column specified for matrix factorization models.
+   * @param itemColumn itemColumn or {@code null} for none
+   */
+  public TrainingOptions setItemColumn(java.lang.String itemColumn) {
+    this.itemColumn = itemColumn;
     return this;
   }
 
@@ -484,6 +647,23 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Maximum depth of a tree for boosted tree models.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMaxTreeDepth() {
+    return maxTreeDepth;
+  }
+
+  /**
+   * Maximum depth of a tree for boosted tree models.
+   * @param maxTreeDepth maxTreeDepth or {@code null} for none
+   */
+  public TrainingOptions setMaxTreeDepth(java.lang.Long maxTreeDepth) {
+    this.maxTreeDepth = maxTreeDepth;
+    return this;
+  }
+
+  /**
    * When early_stop is true, stops training when accuracy improvement is less than
    * 'min_relative_progress'. Used only for iterative training algorithms.
    * @return value or {@code null} for none
@@ -499,6 +679,23 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   public TrainingOptions setMinRelativeProgress(java.lang.Double minRelativeProgress) {
     this.minRelativeProgress = minRelativeProgress;
+    return this;
+  }
+
+  /**
+   * Minimum split loss for boosted tree models.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getMinSplitLoss() {
+    return minSplitLoss;
+  }
+
+  /**
+   * Minimum split loss for boosted tree models.
+   * @param minSplitLoss minSplitLoss or {@code null} for none
+   */
+  public TrainingOptions setMinSplitLoss(java.lang.Double minSplitLoss) {
+    this.minSplitLoss = minSplitLoss;
     return this;
   }
 
@@ -539,6 +736,23 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Num factors specified for matrix factorization models.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getNumFactors() {
+    return numFactors;
+  }
+
+  /**
+   * Num factors specified for matrix factorization models.
+   * @param numFactors numFactors or {@code null} for none
+   */
+  public TrainingOptions setNumFactors(java.lang.Long numFactors) {
+    this.numFactors = numFactors;
+    return this;
+  }
+
+  /**
    * Optimization strategy for training linear regression models.
    * @return value or {@code null} for none
    */
@@ -552,6 +766,59 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   public TrainingOptions setOptimizationStrategy(java.lang.String optimizationStrategy) {
     this.optimizationStrategy = optimizationStrategy;
+    return this;
+  }
+
+  /**
+   * Subsample fraction of the training data to grow tree to prevent overfitting for boosted tree
+   * models.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getSubsample() {
+    return subsample;
+  }
+
+  /**
+   * Subsample fraction of the training data to grow tree to prevent overfitting for boosted tree
+   * models.
+   * @param subsample subsample or {@code null} for none
+   */
+  public TrainingOptions setSubsample(java.lang.Double subsample) {
+    this.subsample = subsample;
+    return this;
+  }
+
+  /**
+   * User column specified for matrix factorization models.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUserColumn() {
+    return userColumn;
+  }
+
+  /**
+   * User column specified for matrix factorization models.
+   * @param userColumn userColumn or {@code null} for none
+   */
+  public TrainingOptions setUserColumn(java.lang.String userColumn) {
+    this.userColumn = userColumn;
+    return this;
+  }
+
+  /**
+   * Hyperparameter for matrix factoration when implicit feedback type is specified.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getWalsAlpha() {
+    return walsAlpha;
+  }
+
+  /**
+   * Hyperparameter for matrix factoration when implicit feedback type is specified.
+   * @param walsAlpha walsAlpha or {@code null} for none
+   */
+  public TrainingOptions setWalsAlpha(java.lang.Double walsAlpha) {
+    this.walsAlpha = walsAlpha;
     return this;
   }
 

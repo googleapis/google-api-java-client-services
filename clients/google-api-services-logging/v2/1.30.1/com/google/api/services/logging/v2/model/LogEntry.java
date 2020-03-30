@@ -162,10 +162,9 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
    * the log entry's age and to enforce the logs retention period. If this field is omitted in a new
    * log entry, then Logging assigns it the current time. Timestamps have nanosecond accuracy, but
    * trailing zeros in the fractional seconds might be omitted when the timestamp is
-   * displayed.Incoming log entries should have timestamps that are no more than the logs retention
-   * period in the past, and no more than 24 hours in the future. Log entries outside those time
-   * boundaries will not be available when calling entries.list, but those log entries can still be
-   * exported with LogSinks.
+   * displayed.Incoming log entries must have timestamps that don't exceed the logs retention period
+   * in the past, and that don't exceed 24 hours in the future. Log entries outside those time
+   * boundaries aren't ingested by Logging.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -494,10 +493,9 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
    * the log entry's age and to enforce the logs retention period. If this field is omitted in a new
    * log entry, then Logging assigns it the current time. Timestamps have nanosecond accuracy, but
    * trailing zeros in the fractional seconds might be omitted when the timestamp is
-   * displayed.Incoming log entries should have timestamps that are no more than the logs retention
-   * period in the past, and no more than 24 hours in the future. Log entries outside those time
-   * boundaries will not be available when calling entries.list, but those log entries can still be
-   * exported with LogSinks.
+   * displayed.Incoming log entries must have timestamps that don't exceed the logs retention period
+   * in the past, and that don't exceed 24 hours in the future. Log entries outside those time
+   * boundaries aren't ingested by Logging.
    * @return value or {@code null} for none
    */
   public String getTimestamp() {
@@ -509,10 +507,9 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
    * the log entry's age and to enforce the logs retention period. If this field is omitted in a new
    * log entry, then Logging assigns it the current time. Timestamps have nanosecond accuracy, but
    * trailing zeros in the fractional seconds might be omitted when the timestamp is
-   * displayed.Incoming log entries should have timestamps that are no more than the logs retention
-   * period in the past, and no more than 24 hours in the future. Log entries outside those time
-   * boundaries will not be available when calling entries.list, but those log entries can still be
-   * exported with LogSinks.
+   * displayed.Incoming log entries must have timestamps that don't exceed the logs retention period
+   * in the past, and that don't exceed 24 hours in the future. Log entries outside those time
+   * boundaries aren't ingested by Logging.
    * @param timestamp timestamp or {@code null} for none
    */
   public LogEntry setTimestamp(String timestamp) {

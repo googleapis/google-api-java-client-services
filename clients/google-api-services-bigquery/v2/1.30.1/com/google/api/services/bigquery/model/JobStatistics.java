@@ -117,6 +117,14 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   private java.lang.String reservationId;
 
   /**
+   * [Output-only] [Preview] Statistics for row-level security. Present only for query and extract
+   * jobs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RowLevelSecurityStatistics rowLevelSecurityStatistics;
+
+  /**
    * [Output-only] Statistics for a child job of a script.
    * The value may be {@code null}.
    */
@@ -337,6 +345,25 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
    */
   public JobStatistics setReservationId(java.lang.String reservationId) {
     this.reservationId = reservationId;
+    return this;
+  }
+
+  /**
+   * [Output-only] [Preview] Statistics for row-level security. Present only for query and extract
+   * jobs.
+   * @return value or {@code null} for none
+   */
+  public RowLevelSecurityStatistics getRowLevelSecurityStatistics() {
+    return rowLevelSecurityStatistics;
+  }
+
+  /**
+   * [Output-only] [Preview] Statistics for row-level security. Present only for query and extract
+   * jobs.
+   * @param rowLevelSecurityStatistics rowLevelSecurityStatistics or {@code null} for none
+   */
+  public JobStatistics setRowLevelSecurityStatistics(RowLevelSecurityStatistics rowLevelSecurityStatistics) {
+    this.rowLevelSecurityStatistics = rowLevelSecurityStatistics;
     return this;
   }
 

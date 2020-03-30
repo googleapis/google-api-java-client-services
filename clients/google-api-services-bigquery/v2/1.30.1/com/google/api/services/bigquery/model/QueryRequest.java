@@ -30,6 +30,13 @@ package com.google.api.services.bigquery.model;
 public final class QueryRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Connection properties.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.Object> connectionProperties;
+
+  /**
    * [Optional] Specifies the default datasetId and projectId to assume for any unqualified table
    * names in the query. If not set, all table names in the query string must be qualified in the
    * format 'datasetId.tableId'.
@@ -137,6 +144,23 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean useQueryCache;
+
+  /**
+   * Connection properties.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Object> getConnectionProperties() {
+    return connectionProperties;
+  }
+
+  /**
+   * Connection properties.
+   * @param connectionProperties connectionProperties or {@code null} for none
+   */
+  public QueryRequest setConnectionProperties(java.util.List<java.lang.Object> connectionProperties) {
+    this.connectionProperties = connectionProperties;
+    return this;
+  }
 
   /**
    * [Optional] Specifies the default datasetId and projectId to assume for any unqualified table

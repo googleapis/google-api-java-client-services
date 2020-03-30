@@ -44,6 +44,14 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   private java.lang.Boolean cacheHit;
 
   /**
+   * [Output-only] [Preview] The number of row access policies affected by a DDL statement. Present
+   * only for DROP ALL ROW ACCESS POLICIES queries.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long ddlAffectedRowAccessPolicyCount;
+
+  /**
    * The DDL operation performed, possibly dependent on the pre-existence of the DDL target.
    * Possible values (new values might be added in the future): "CREATE": The query created the DDL
    * target. "SKIP": No-op. Example cases: the query is CREATE TABLE IF NOT EXISTS while the table
@@ -63,7 +71,16 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   private RoutineReference ddlTargetRoutine;
 
   /**
-   * The DDL target table. Present only for CREATE/DROP TABLE/VIEW queries.
+   * [Output-only] [Preview] The DDL target row access policy. Present only for CREATE/DROP ROW
+   * ACCESS POLICY queries.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RowAccessPolicyReference ddlTargetRowAccessPolicy;
+
+  /**
+   * [Output-only] The DDL target table. Present only for CREATE/DROP TABLE/VIEW and DROP ALL ROW
+   * ACCESS POLICIES queries.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -263,6 +280,25 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * [Output-only] [Preview] The number of row access policies affected by a DDL statement. Present
+   * only for DROP ALL ROW ACCESS POLICIES queries.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getDdlAffectedRowAccessPolicyCount() {
+    return ddlAffectedRowAccessPolicyCount;
+  }
+
+  /**
+   * [Output-only] [Preview] The number of row access policies affected by a DDL statement. Present
+   * only for DROP ALL ROW ACCESS POLICIES queries.
+   * @param ddlAffectedRowAccessPolicyCount ddlAffectedRowAccessPolicyCount or {@code null} for none
+   */
+  public JobStatistics2 setDdlAffectedRowAccessPolicyCount(java.lang.Long ddlAffectedRowAccessPolicyCount) {
+    this.ddlAffectedRowAccessPolicyCount = ddlAffectedRowAccessPolicyCount;
+    return this;
+  }
+
+  /**
    * The DDL operation performed, possibly dependent on the pre-existence of the DDL target.
    * Possible values (new values might be added in the future): "CREATE": The query created the DDL
    * target. "SKIP": No-op. Example cases: the query is CREATE TABLE IF NOT EXISTS while the table
@@ -307,7 +343,27 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The DDL target table. Present only for CREATE/DROP TABLE/VIEW queries.
+   * [Output-only] [Preview] The DDL target row access policy. Present only for CREATE/DROP ROW
+   * ACCESS POLICY queries.
+   * @return value or {@code null} for none
+   */
+  public RowAccessPolicyReference getDdlTargetRowAccessPolicy() {
+    return ddlTargetRowAccessPolicy;
+  }
+
+  /**
+   * [Output-only] [Preview] The DDL target row access policy. Present only for CREATE/DROP ROW
+   * ACCESS POLICY queries.
+   * @param ddlTargetRowAccessPolicy ddlTargetRowAccessPolicy or {@code null} for none
+   */
+  public JobStatistics2 setDdlTargetRowAccessPolicy(RowAccessPolicyReference ddlTargetRowAccessPolicy) {
+    this.ddlTargetRowAccessPolicy = ddlTargetRowAccessPolicy;
+    return this;
+  }
+
+  /**
+   * [Output-only] The DDL target table. Present only for CREATE/DROP TABLE/VIEW and DROP ALL ROW
+   * ACCESS POLICIES queries.
    * @return value or {@code null} for none
    */
   public TableReference getDdlTargetTable() {
@@ -315,7 +371,8 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The DDL target table. Present only for CREATE/DROP TABLE/VIEW queries.
+   * [Output-only] The DDL target table. Present only for CREATE/DROP TABLE/VIEW and DROP ALL ROW
+   * ACCESS POLICIES queries.
    * @param ddlTargetTable ddlTargetTable or {@code null} for none
    */
   public JobStatistics2 setDdlTargetTable(TableReference ddlTargetTable) {

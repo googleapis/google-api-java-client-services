@@ -17,11 +17,11 @@
 package com.google.api.services.securitycenter.v1p1alpha1.model;
 
 /**
- * Cloud SCC managed properties. These properties are managed by Cloud SCC and cannot be modified by
- * the user.
+ * Security Command Center managed properties. These properties are managed by Security Command
+ * Center and cannot be modified by the user.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Cloud Security Command Center API. For a detailed
+ * transmitted over HTTP when working with the Security Command Center API. For a detailed
  * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
@@ -39,8 +39,9 @@ public final class GoogleCloudSecuritycenterV1p1beta1SecurityCenterProperties ex
   private java.lang.String resourceDisplayName;
 
   /**
-   * The full resource name of the GCP resource this asset represents. This field is immutable after
-   * create time. See: https://cloud.google.com/apis/design/resource_names#full_resource_name
+   * The full resource name of the Google Cloud resource this asset represents. This field is
+   * immutable after create time. See:
+   * https://cloud.google.com/apis/design/resource_names#full_resource_name
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,9 +85,9 @@ public final class GoogleCloudSecuritycenterV1p1beta1SecurityCenterProperties ex
   private java.lang.String resourceProjectDisplayName;
 
   /**
-   * The type of the GCP resource. Examples include: APPLICATION, PROJECT, and ORGANIZATION. This is
-   * a case insensitive field defined by Cloud SCC and/or the producer of the resource and is
-   * immutable after create time.
+   * The type of the Google Cloud resource. Examples include: APPLICATION, PROJECT, and
+   * ORGANIZATION. This is a case insensitive field defined by Security Command Center and/or the
+   * producer of the resource and is immutable after create time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,8 +111,9 @@ public final class GoogleCloudSecuritycenterV1p1beta1SecurityCenterProperties ex
   }
 
   /**
-   * The full resource name of the GCP resource this asset represents. This field is immutable after
-   * create time. See: https://cloud.google.com/apis/design/resource_names#full_resource_name
+   * The full resource name of the Google Cloud resource this asset represents. This field is
+   * immutable after create time. See:
+   * https://cloud.google.com/apis/design/resource_names#full_resource_name
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceName() {
@@ -119,8 +121,9 @@ public final class GoogleCloudSecuritycenterV1p1beta1SecurityCenterProperties ex
   }
 
   /**
-   * The full resource name of the GCP resource this asset represents. This field is immutable after
-   * create time. See: https://cloud.google.com/apis/design/resource_names#full_resource_name
+   * The full resource name of the Google Cloud resource this asset represents. This field is
+   * immutable after create time. See:
+   * https://cloud.google.com/apis/design/resource_names#full_resource_name
    * @param resourceName resourceName or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1p1beta1SecurityCenterProperties setResourceName(java.lang.String resourceName) {
@@ -218,9 +221,9 @@ public final class GoogleCloudSecuritycenterV1p1beta1SecurityCenterProperties ex
   }
 
   /**
-   * The type of the GCP resource. Examples include: APPLICATION, PROJECT, and ORGANIZATION. This is
-   * a case insensitive field defined by Cloud SCC and/or the producer of the resource and is
-   * immutable after create time.
+   * The type of the Google Cloud resource. Examples include: APPLICATION, PROJECT, and
+   * ORGANIZATION. This is a case insensitive field defined by Security Command Center and/or the
+   * producer of the resource and is immutable after create time.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceType() {
@@ -228,9 +231,9 @@ public final class GoogleCloudSecuritycenterV1p1beta1SecurityCenterProperties ex
   }
 
   /**
-   * The type of the GCP resource. Examples include: APPLICATION, PROJECT, and ORGANIZATION. This is
-   * a case insensitive field defined by Cloud SCC and/or the producer of the resource and is
-   * immutable after create time.
+   * The type of the Google Cloud resource. Examples include: APPLICATION, PROJECT, and
+   * ORGANIZATION. This is a case insensitive field defined by Security Command Center and/or the
+   * producer of the resource and is immutable after create time.
    * @param resourceType resourceType or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1p1beta1SecurityCenterProperties setResourceType(java.lang.String resourceType) {

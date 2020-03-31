@@ -17,12 +17,12 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * User specified security marks that are attached to the parent Cloud Security Command Center
- * (Cloud SCC) resource. Security marks are scoped within a Cloud SCC organization -- they can be
- * modified and viewed by all users who have proper permissions on the organization.
+ * User specified security marks that are attached to the parent Security Command Center resource.
+ * Security marks are scoped within a Security Command Center organization -- they can be modified
+ * and viewed by all users who have proper permissions on the organization.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Cloud Security Command Center API. For a detailed
+ * transmitted over HTTP when working with the Security Command Center API. For a detailed
  * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>

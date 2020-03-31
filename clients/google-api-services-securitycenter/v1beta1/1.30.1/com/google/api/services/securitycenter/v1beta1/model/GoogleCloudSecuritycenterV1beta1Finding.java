@@ -17,14 +17,14 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * Cloud Security Command Center (Cloud SCC) finding.
+ * Security Command Center finding.
  *
- * A finding is a record of assessment data (security, risk, health or privacy) ingested into Cloud
- * SCC for presentation, notification, analysis, policy testing, and enforcement. For example, an
- * XSS vulnerability in an App Engine application is a finding.
+ * A finding is a record of assessment data (security, risk, health or privacy) ingested into
+ * Security Command Center for presentation, notification, analysis, policy testing, and
+ * enforcement. For example, an XSS vulnerability in an App Engine application is a finding.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Cloud Security Command Center API. For a detailed
+ * transmitted over HTTP when working with the Security Command Center API. For a detailed
  * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
@@ -43,7 +43,7 @@ public final class GoogleCloudSecuritycenterV1beta1Finding extends com.google.ap
   private java.lang.String category;
 
   /**
-   * The time at which the finding was created in Cloud SCC.
+   * The time at which the finding was created in Security Command Center.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,9 +59,9 @@ public final class GoogleCloudSecuritycenterV1beta1Finding extends com.google.ap
   private String eventTime;
 
   /**
-   * The URI that, if available, points to a web page outside of Cloud SCC where additional
-   * information about the finding can be found. This field is guaranteed to be either empty or a
-   * well formed URL.
+   * The URI that, if available, points to a web page outside of Security Command Center where
+   * additional information about the finding can be found. This field is guaranteed to be either
+   * empty or a well formed URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,11 +87,11 @@ public final class GoogleCloudSecuritycenterV1beta1Finding extends com.google.ap
   private java.lang.String parent;
 
   /**
-   * For findings on Google Cloud Platform (GCP) resources, the full resource name of the GCP
-   * resource this finding is for. See:
+   * For findings on Google Cloud resources, the full resource name of the Google Cloud resource
+   * this finding is for. See:
    * https://cloud.google.com/apis/design/resource_names#full_resource_name When the finding is for
-   * a non-GCP resource, the resourceName can be a customer or partner defined string. This field is
-   * immutable after creation time.
+   * a non-Google Cloud resource, the resourceName can be a customer or partner defined string. This
+   * field is immutable after creation time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,7 +141,7 @@ public final class GoogleCloudSecuritycenterV1beta1Finding extends com.google.ap
   }
 
   /**
-   * The time at which the finding was created in Cloud SCC.
+   * The time at which the finding was created in Security Command Center.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -149,7 +149,7 @@ public final class GoogleCloudSecuritycenterV1beta1Finding extends com.google.ap
   }
 
   /**
-   * The time at which the finding was created in Cloud SCC.
+   * The time at which the finding was created in Security Command Center.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1beta1Finding setCreateTime(String createTime) {
@@ -179,9 +179,9 @@ public final class GoogleCloudSecuritycenterV1beta1Finding extends com.google.ap
   }
 
   /**
-   * The URI that, if available, points to a web page outside of Cloud SCC where additional
-   * information about the finding can be found. This field is guaranteed to be either empty or a
-   * well formed URL.
+   * The URI that, if available, points to a web page outside of Security Command Center where
+   * additional information about the finding can be found. This field is guaranteed to be either
+   * empty or a well formed URL.
    * @return value or {@code null} for none
    */
   public java.lang.String getExternalUri() {
@@ -189,9 +189,9 @@ public final class GoogleCloudSecuritycenterV1beta1Finding extends com.google.ap
   }
 
   /**
-   * The URI that, if available, points to a web page outside of Cloud SCC where additional
-   * information about the finding can be found. This field is guaranteed to be either empty or a
-   * well formed URL.
+   * The URI that, if available, points to a web page outside of Security Command Center where
+   * additional information about the finding can be found. This field is guaranteed to be either
+   * empty or a well formed URL.
    * @param externalUri externalUri or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1beta1Finding setExternalUri(java.lang.String externalUri) {
@@ -244,11 +244,11 @@ public final class GoogleCloudSecuritycenterV1beta1Finding extends com.google.ap
   }
 
   /**
-   * For findings on Google Cloud Platform (GCP) resources, the full resource name of the GCP
-   * resource this finding is for. See:
+   * For findings on Google Cloud resources, the full resource name of the Google Cloud resource
+   * this finding is for. See:
    * https://cloud.google.com/apis/design/resource_names#full_resource_name When the finding is for
-   * a non-GCP resource, the resourceName can be a customer or partner defined string. This field is
-   * immutable after creation time.
+   * a non-Google Cloud resource, the resourceName can be a customer or partner defined string. This
+   * field is immutable after creation time.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceName() {
@@ -256,11 +256,11 @@ public final class GoogleCloudSecuritycenterV1beta1Finding extends com.google.ap
   }
 
   /**
-   * For findings on Google Cloud Platform (GCP) resources, the full resource name of the GCP
-   * resource this finding is for. See:
+   * For findings on Google Cloud resources, the full resource name of the Google Cloud resource
+   * this finding is for. See:
    * https://cloud.google.com/apis/design/resource_names#full_resource_name When the finding is for
-   * a non-GCP resource, the resourceName can be a customer or partner defined string. This field is
-   * immutable after creation time.
+   * a non-Google Cloud resource, the resourceName can be a customer or partner defined string. This
+   * field is immutable after creation time.
    * @param resourceName resourceName or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1beta1Finding setResourceName(java.lang.String resourceName) {

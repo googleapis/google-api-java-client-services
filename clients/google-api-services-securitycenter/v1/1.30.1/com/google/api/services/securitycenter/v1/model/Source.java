@@ -17,12 +17,12 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Cloud Security Command Center's (Cloud SCC) finding source. A finding source is an entity or a
- * mechanism that can produce a finding. A source is like a container of findings that come from the
- * same scanner, logger, monitor, and other tools.
+ * Security Command Center finding source. A finding source is an entity or a mechanism that can
+ * produce a finding. A source is like a container of findings that come from the same scanner,
+ * logger, monitor, and other tools.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Cloud Security Command Center API. For a detailed
+ * transmitted over HTTP when working with the Security Command Center API. For a detailed
  * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>

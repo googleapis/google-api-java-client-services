@@ -17,7 +17,7 @@
 package com.google.api.services.healthcare.v1beta1.model;
 
 /**
- * The content of an HL7v2 message in a structured format.
+ * Returns additional information in regards to a completed DICOM store import.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:
@@ -27,37 +27,16 @@ package com.google.api.services.healthcare.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ParsedData extends com.google.api.client.json.GenericJson {
+public final class ImportDicomDataResponse extends com.google.api.client.json.GenericJson {
 
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<Segment> segments;
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.util.List<Segment> getSegments() {
-    return segments;
-  }
-
-  /**
-   * @param segments segments or {@code null} for none
-   */
-  public ParsedData setSegments(java.util.List<Segment> segments) {
-    this.segments = segments;
-    return this;
+  @Override
+  public ImportDicomDataResponse set(String fieldName, Object value) {
+    return (ImportDicomDataResponse) super.set(fieldName, value);
   }
 
   @Override
-  public ParsedData set(String fieldName, Object value) {
-    return (ParsedData) super.set(fieldName, value);
-  }
-
-  @Override
-  public ParsedData clone() {
-    return (ParsedData) super.clone();
+  public ImportDicomDataResponse clone() {
+    return (ImportDicomDataResponse) super.clone();
   }
 
 }

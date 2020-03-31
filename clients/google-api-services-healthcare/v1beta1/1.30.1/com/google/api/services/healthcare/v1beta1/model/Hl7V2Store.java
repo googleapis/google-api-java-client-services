@@ -63,6 +63,21 @@ public final class Hl7V2Store extends com.google.api.client.json.GenericJson {
   private NotificationConfig notificationConfig;
 
   /**
+   * A list of notification configs. Each configuration uses a filter to determine whether to
+   * publish a message (both Ingest & Create) on the corresponding notification destination. Only
+   * the message name is sent as part of the notification. Supplied by the client.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Hl7V2NotificationConfig> notificationConfigs;
+
+  static {
+    // hack to force ProGuard to consider Hl7V2NotificationConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Hl7V2NotificationConfig.class);
+  }
+
+  /**
    * The configuration for the parser. It determines how the server parses the messages.
    * The value may be {@code null}.
    */
@@ -154,6 +169,27 @@ public final class Hl7V2Store extends com.google.api.client.json.GenericJson {
    */
   public Hl7V2Store setNotificationConfig(NotificationConfig notificationConfig) {
     this.notificationConfig = notificationConfig;
+    return this;
+  }
+
+  /**
+   * A list of notification configs. Each configuration uses a filter to determine whether to
+   * publish a message (both Ingest & Create) on the corresponding notification destination. Only
+   * the message name is sent as part of the notification. Supplied by the client.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Hl7V2NotificationConfig> getNotificationConfigs() {
+    return notificationConfigs;
+  }
+
+  /**
+   * A list of notification configs. Each configuration uses a filter to determine whether to
+   * publish a message (both Ingest & Create) on the corresponding notification destination. Only
+   * the message name is sent as part of the notification. Supplied by the client.
+   * @param notificationConfigs notificationConfigs or {@code null} for none
+   */
+  public Hl7V2Store setNotificationConfigs(java.util.List<Hl7V2NotificationConfig> notificationConfigs) {
+    this.notificationConfigs = notificationConfigs;
     return this;
   }
 

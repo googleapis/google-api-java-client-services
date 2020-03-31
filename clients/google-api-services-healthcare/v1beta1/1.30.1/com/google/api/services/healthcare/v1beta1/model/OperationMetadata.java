@@ -65,6 +65,14 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
   private String endTime;
 
   /**
+   * A link to audit and error logs in the log viewer. Error logs are generated only by some
+   * operations, listed at https://cloud.google.com/healthcare/docs/how-tos/stackdriver-logging.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String logsUrl;
+
+  /**
    * The name of the API method that initiated the operation.
    * @return value or {@code null} for none
    */
@@ -144,6 +152,25 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
    */
   public OperationMetadata setEndTime(String endTime) {
     this.endTime = endTime;
+    return this;
+  }
+
+  /**
+   * A link to audit and error logs in the log viewer. Error logs are generated only by some
+   * operations, listed at https://cloud.google.com/healthcare/docs/how-tos/stackdriver-logging.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLogsUrl() {
+    return logsUrl;
+  }
+
+  /**
+   * A link to audit and error logs in the log viewer. Error logs are generated only by some
+   * operations, listed at https://cloud.google.com/healthcare/docs/how-tos/stackdriver-logging.
+   * @param logsUrl logsUrl or {@code null} for none
+   */
+  public OperationMetadata setLogsUrl(java.lang.String logsUrl) {
+    this.logsUrl = logsUrl;
     return this;
   }
 

@@ -17,15 +17,14 @@
 package com.google.api.services.securitycenter.v1p1beta1.model;
 
 /**
- * Cloud Security Command Center's (Cloud SCC) representation of a Google Cloud Platform (GCP)
- * resource.
+ * Security Command Center representation of a Google Cloud resource.
  *
- * The Asset is a Cloud SCC resource that captures information about a single GCP resource. All
- * modifications to an Asset are only within the context of Cloud SCC and don't affect the
- * referenced GCP resource.
+ * The Asset is a Security Command Center resource that captures information about a single Google
+ * Cloud resource. All modifications to an Asset are only within the context of Security Command
+ * Center and don't affect the referenced Google Cloud resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Cloud Security Command Center API. For a detailed
+ * transmitted over HTTP when working with the Security Command Center API. For a detailed
  * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
@@ -36,15 +35,16 @@ package com.google.api.services.securitycenter.v1p1beta1.model;
 public final class GoogleCloudSecuritycenterV1p1beta1Asset extends com.google.api.client.json.GenericJson {
 
   /**
-   * The time at which the asset was created in Cloud SCC.
+   * The time at which the asset was created in Security Command Center.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * IAM Policy information associated with the GCP resource described by the Cloud SCC asset. This
-   * information is managed and defined by the GCP resource and cannot be modified by the user.
+   * Cloud IAM Policy information associated with the Google Cloud resource described by the
+   * Security Command Center asset. This information is managed and defined by the Google Cloud
+   * resource and cannot be modified by the user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,16 +60,16 @@ public final class GoogleCloudSecuritycenterV1p1beta1Asset extends com.google.ap
   private java.lang.String name;
 
   /**
-   * Resource managed properties. These properties are managed and defined by the GCP resource and
-   * cannot be modified by the user.
+   * Resource managed properties. These properties are managed and defined by the Google Cloud
+   * resource and cannot be modified by the user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> resourceProperties;
 
   /**
-   * Cloud SCC managed properties. These properties are managed by Cloud SCC and cannot be modified
-   * by the user.
+   * Security Command Center managed properties. These properties are managed by Security Command
+   * Center and cannot be modified by the user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +91,7 @@ public final class GoogleCloudSecuritycenterV1p1beta1Asset extends com.google.ap
   private String updateTime;
 
   /**
-   * The time at which the asset was created in Cloud SCC.
+   * The time at which the asset was created in Security Command Center.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -99,7 +99,7 @@ public final class GoogleCloudSecuritycenterV1p1beta1Asset extends com.google.ap
   }
 
   /**
-   * The time at which the asset was created in Cloud SCC.
+   * The time at which the asset was created in Security Command Center.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1p1beta1Asset setCreateTime(String createTime) {
@@ -108,8 +108,9 @@ public final class GoogleCloudSecuritycenterV1p1beta1Asset extends com.google.ap
   }
 
   /**
-   * IAM Policy information associated with the GCP resource described by the Cloud SCC asset. This
-   * information is managed and defined by the GCP resource and cannot be modified by the user.
+   * Cloud IAM Policy information associated with the Google Cloud resource described by the
+   * Security Command Center asset. This information is managed and defined by the Google Cloud
+   * resource and cannot be modified by the user.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1p1beta1IamPolicy getIamPolicy() {
@@ -117,8 +118,9 @@ public final class GoogleCloudSecuritycenterV1p1beta1Asset extends com.google.ap
   }
 
   /**
-   * IAM Policy information associated with the GCP resource described by the Cloud SCC asset. This
-   * information is managed and defined by the GCP resource and cannot be modified by the user.
+   * Cloud IAM Policy information associated with the Google Cloud resource described by the
+   * Security Command Center asset. This information is managed and defined by the Google Cloud
+   * resource and cannot be modified by the user.
    * @param iamPolicy iamPolicy or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1p1beta1Asset setIamPolicy(GoogleCloudSecuritycenterV1p1beta1IamPolicy iamPolicy) {
@@ -148,8 +150,8 @@ public final class GoogleCloudSecuritycenterV1p1beta1Asset extends com.google.ap
   }
 
   /**
-   * Resource managed properties. These properties are managed and defined by the GCP resource and
-   * cannot be modified by the user.
+   * Resource managed properties. These properties are managed and defined by the Google Cloud
+   * resource and cannot be modified by the user.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getResourceProperties() {
@@ -157,8 +159,8 @@ public final class GoogleCloudSecuritycenterV1p1beta1Asset extends com.google.ap
   }
 
   /**
-   * Resource managed properties. These properties are managed and defined by the GCP resource and
-   * cannot be modified by the user.
+   * Resource managed properties. These properties are managed and defined by the Google Cloud
+   * resource and cannot be modified by the user.
    * @param resourceProperties resourceProperties or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1p1beta1Asset setResourceProperties(java.util.Map<String, java.lang.Object> resourceProperties) {
@@ -167,8 +169,8 @@ public final class GoogleCloudSecuritycenterV1p1beta1Asset extends com.google.ap
   }
 
   /**
-   * Cloud SCC managed properties. These properties are managed by Cloud SCC and cannot be modified
-   * by the user.
+   * Security Command Center managed properties. These properties are managed by Security Command
+   * Center and cannot be modified by the user.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1p1beta1SecurityCenterProperties getSecurityCenterProperties() {
@@ -176,8 +178,8 @@ public final class GoogleCloudSecuritycenterV1p1beta1Asset extends com.google.ap
   }
 
   /**
-   * Cloud SCC managed properties. These properties are managed by Cloud SCC and cannot be modified
-   * by the user.
+   * Security Command Center managed properties. These properties are managed by Security Command
+   * Center and cannot be modified by the user.
    * @param securityCenterProperties securityCenterProperties or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1p1beta1Asset setSecurityCenterProperties(GoogleCloudSecuritycenterV1p1beta1SecurityCenterProperties securityCenterProperties) {

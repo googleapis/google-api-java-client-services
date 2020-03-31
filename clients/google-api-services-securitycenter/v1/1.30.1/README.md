@@ -1,14 +1,14 @@
-# Cloud Security Command Center API Client Library for Java
+# Security Command Center API Client Library for Java
 
-Cloud Security Command Center API provides access to temporal views of assets and findings within an organization.
+Security Command Center API provides access to temporal views of assets and findings within an organization.
 
-This page contains information about getting started with the Cloud Security Command Center API
+This page contains information about getting started with the Security Command Center API
 using the Google API Client Library for Java. In addition, you may be interested
 in the following documentation:
 
-* Browse the [Javadoc reference for the Cloud Security Command Center API][javadoc]
+* Browse the [Javadoc reference for the Security Command Center API][javadoc]
 * Read the [Developer's Guide for the Google API Client Library for Java][google-api-client].
-* Interact with this API in your browser using the [APIs Explorer for the Cloud Security Command Center API][api-explorer]
+* Interact with this API in your browser using the [APIs Explorer for the Security Command Center API][api-explorer]
 
 ## Installation
 
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-securitycenter</artifactId>
-      <version>v1-rev20200313-1.30.9</version>
+      <version>v1-rev20200329-1.30.9</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-securitycenter:v1-rev20200313-1.30.9'
+  compile 'com.google.apis:google-api-services-securitycenter:v1-rev20200329-1.30.9'
 }
 ```
 

@@ -17,12 +17,12 @@
 package com.google.api.services.securitycenter.v1p1beta1.model;
 
 /**
- * Cloud Security Command Center's (Cloud SCC) finding source. A finding source is an entity or a
- * mechanism that can produce a finding. A source is like a container of findings that come from the
- * same scanner, logger, monitor, etc.
+ * Security Command Center finding source. A finding source is an entity or a mechanism that can
+ * produce a finding. A source is like a container of findings that come from the same scanner,
+ * logger, monitor, etc.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Cloud Security Command Center API. For a detailed
+ * transmitted over HTTP when working with the Security Command Center API. For a detailed
  * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
@@ -33,10 +33,10 @@ package com.google.api.services.securitycenter.v1p1beta1.model;
 public final class Source extends com.google.api.client.json.GenericJson {
 
   /**
-   * The description of the source (max of 1024 characters). Example: "Cloud Security Scanner is a
-   * web security scanner for common vulnerabilities in App Engine applications. It can
-   * automatically scan and detect four common vulnerabilities, including cross-site-scripting
-   * (XSS), Flash injection, mixed content (HTTP in HTTPS), and outdated/insecure libraries."
+   * The description of the source (max of 1024 characters). Example: "Web Security Scanner is a web
+   * security scanner for common vulnerabilities in App Engine applications. It can automatically
+   * scan and detect four common vulnerabilities, including cross-site-scripting (XSS), Flash
+   * injection, mixed content (HTTP in HTTPS), and outdated/insecure libraries."
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,10 +61,10 @@ public final class Source extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The description of the source (max of 1024 characters). Example: "Cloud Security Scanner is a
-   * web security scanner for common vulnerabilities in App Engine applications. It can
-   * automatically scan and detect four common vulnerabilities, including cross-site-scripting
-   * (XSS), Flash injection, mixed content (HTTP in HTTPS), and outdated/insecure libraries."
+   * The description of the source (max of 1024 characters). Example: "Web Security Scanner is a web
+   * security scanner for common vulnerabilities in App Engine applications. It can automatically
+   * scan and detect four common vulnerabilities, including cross-site-scripting (XSS), Flash
+   * injection, mixed content (HTTP in HTTPS), and outdated/insecure libraries."
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -72,10 +72,10 @@ public final class Source extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The description of the source (max of 1024 characters). Example: "Cloud Security Scanner is a
-   * web security scanner for common vulnerabilities in App Engine applications. It can
-   * automatically scan and detect four common vulnerabilities, including cross-site-scripting
-   * (XSS), Flash injection, mixed content (HTTP in HTTPS), and outdated/insecure libraries."
+   * The description of the source (max of 1024 characters). Example: "Web Security Scanner is a web
+   * security scanner for common vulnerabilities in App Engine applications. It can automatically
+   * scan and detect four common vulnerabilities, including cross-site-scripting (XSS), Flash
+   * injection, mixed content (HTTP in HTTPS), and outdated/insecure libraries."
    * @param description description or {@code null} for none
    */
   public Source setDescription(java.lang.String description) {

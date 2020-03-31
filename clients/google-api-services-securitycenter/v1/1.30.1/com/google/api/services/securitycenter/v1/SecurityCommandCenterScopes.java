@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1;
 
 /**
- * Available OAuth 2.0 scopes for use with the Cloud Security Command Center API.
+ * Available OAuth 2.0 scopes for use with the Security Command Center API.
  *
  * @since 1.4
  */

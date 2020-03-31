@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-securitycenter</artifactId>
-  <version>v1p1beta1-rev20200313-1.30.9</version>
-  <name>Cloud Security Command Center API v1p1beta1-rev20200313-1.30.9</name>
+  <version>v1p1beta1-rev20200329-1.30.9</version>
+  <name>Security Command Center API v1p1beta1-rev20200329-1.30.9</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
@@ -86,8 +86,8 @@
         </executions>
         <configuration>
           <doclint>none</doclint>
-          <doctitle>Cloud Security Command Center API ${project.version}</doctitle>
-          <windowtitle>Cloud Security Command Center API ${project.version}</windowtitle>
+          <doctitle>Security Command Center API ${project.version}</doctitle>
+          <windowtitle>Security Command Center API ${project.version}</windowtitle>
           <links>
             <link>http://docs.oracle.com/javase/7/docs/api</link>
             <link>https://googleapis.dev/java/google-http-client/1.34.2/</link>

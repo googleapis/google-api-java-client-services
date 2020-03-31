@@ -20,7 +20,7 @@ package com.google.api.services.securitycenter.v1;
  * Service definition for SecurityCommandCenter (v1).
  *
  * <p>
- * Cloud Security Command Center API provides access to temporal views of assets and findings within an organization.
+ * Security Command Center API provides access to temporal views of assets and findings within an organization.
  * </p>
  *
  * <p>
@@ -46,7 +46,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Cloud Security Command Center API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.9 of the Security Command Center API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**

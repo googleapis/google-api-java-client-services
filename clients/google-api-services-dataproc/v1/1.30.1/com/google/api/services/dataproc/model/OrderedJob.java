@@ -66,6 +66,13 @@ public final class OrderedJob extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> prerequisiteStepIds;
 
   /**
+   * Presto job
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PrestoJob prestoJob;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,6 +90,13 @@ public final class OrderedJob extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private SparkJob sparkJob;
+
+  /**
+   * Spark R job
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SparkRJob sparkRJob;
 
   /**
    * The value may be {@code null}.
@@ -189,6 +203,23 @@ public final class OrderedJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Presto job
+   * @return value or {@code null} for none
+   */
+  public PrestoJob getPrestoJob() {
+    return prestoJob;
+  }
+
+  /**
+   * Presto job
+   * @param prestoJob prestoJob or {@code null} for none
+   */
+  public OrderedJob setPrestoJob(PrestoJob prestoJob) {
+    this.prestoJob = prestoJob;
+    return this;
+  }
+
+  /**
    * @return value or {@code null} for none
    */
   public PySparkJob getPysparkJob() {
@@ -232,6 +263,23 @@ public final class OrderedJob extends com.google.api.client.json.GenericJson {
    */
   public OrderedJob setSparkJob(SparkJob sparkJob) {
     this.sparkJob = sparkJob;
+    return this;
+  }
+
+  /**
+   * Spark R job
+   * @return value or {@code null} for none
+   */
+  public SparkRJob getSparkRJob() {
+    return sparkRJob;
+  }
+
+  /**
+   * Spark R job
+   * @param sparkRJob sparkRJob or {@code null} for none
+   */
+  public OrderedJob setSparkRJob(SparkRJob sparkRJob) {
+    this.sparkRJob = sparkRJob;
     return this;
   }
 

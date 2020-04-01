@@ -860,6 +860,161 @@ public class Genomics extends com.google.api.client.googleapis.services.json.Abs
       }
 
     }
+    /**
+     * An accessor for creating requests from the Workers collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Genomics genomics = new Genomics(...);}
+     *   {@code Genomics.Workers.List request = genomics.workers().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Workers workers() {
+      return new Workers();
+    }
+
+    /**
+     * The "workers" collection of methods.
+     */
+    public class Workers {
+
+      /**
+       * The worker uses this method to retrieve the assigned operation and provide periodic status
+       * updates.
+       *
+       * Create a request for the method "workers.checkIn".
+       *
+       * This request holds the parameters needed by the genomics server.  After setting any optional
+       * parameters, call the {@link CheckIn#execute()} method to invoke the remote operation.
+       *
+       * @param id The worker id, assigned when it was created.
+       * @param content the {@link com.google.api.services.genomics.v2alpha1.model.CheckInRequest}
+       * @return the request
+       */
+      public CheckIn checkIn(java.lang.String id, com.google.api.services.genomics.v2alpha1.model.CheckInRequest content) throws java.io.IOException {
+        CheckIn result = new CheckIn(id, content);
+        initialize(result);
+        return result;
+      }
+
+      public class CheckIn extends GenomicsRequest<com.google.api.services.genomics.v2alpha1.model.CheckInResponse> {
+
+        private static final String REST_PATH = "v2alpha1/{+id}:checkIn";
+
+        private final java.util.regex.Pattern ID_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/workers/[^/]+$");
+
+        /**
+         * The worker uses this method to retrieve the assigned operation and provide periodic status
+         * updates.
+         *
+         * Create a request for the method "workers.checkIn".
+         *
+         * This request holds the parameters needed by the the genomics server.  After setting any
+         * optional parameters, call the {@link CheckIn#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * CheckIn#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param id The worker id, assigned when it was created.
+         * @param content the {@link com.google.api.services.genomics.v2alpha1.model.CheckInRequest}
+         * @since 1.13
+         */
+        protected CheckIn(java.lang.String id, com.google.api.services.genomics.v2alpha1.model.CheckInRequest content) {
+          super(Genomics.this, "POST", REST_PATH, content, com.google.api.services.genomics.v2alpha1.model.CheckInResponse.class);
+          this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(ID_PATTERN.matcher(id).matches(),
+                "Parameter id must conform to the pattern " +
+                "^projects/[^/]+/workers/[^/]+$");
+          }
+        }
+
+        @Override
+        public CheckIn set$Xgafv(java.lang.String $Xgafv) {
+          return (CheckIn) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public CheckIn setAccessToken(java.lang.String accessToken) {
+          return (CheckIn) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public CheckIn setAlt(java.lang.String alt) {
+          return (CheckIn) super.setAlt(alt);
+        }
+
+        @Override
+        public CheckIn setCallback(java.lang.String callback) {
+          return (CheckIn) super.setCallback(callback);
+        }
+
+        @Override
+        public CheckIn setFields(java.lang.String fields) {
+          return (CheckIn) super.setFields(fields);
+        }
+
+        @Override
+        public CheckIn setKey(java.lang.String key) {
+          return (CheckIn) super.setKey(key);
+        }
+
+        @Override
+        public CheckIn setOauthToken(java.lang.String oauthToken) {
+          return (CheckIn) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public CheckIn setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (CheckIn) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public CheckIn setQuotaUser(java.lang.String quotaUser) {
+          return (CheckIn) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public CheckIn setUploadType(java.lang.String uploadType) {
+          return (CheckIn) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public CheckIn setUploadProtocol(java.lang.String uploadProtocol) {
+          return (CheckIn) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** The worker id, assigned when it was created. */
+        @com.google.api.client.util.Key
+        private java.lang.String id;
+
+        /** The worker id, assigned when it was created.
+         */
+        public java.lang.String getId() {
+          return id;
+        }
+
+        /** The worker id, assigned when it was created. */
+        public CheckIn setId(java.lang.String id) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(ID_PATTERN.matcher(id).matches(),
+                "Parameter id must conform to the pattern " +
+                "^projects/[^/]+/workers/[^/]+$");
+          }
+          this.id = id;
+          return this;
+        }
+
+        @Override
+        public CheckIn set(String parameterName, Object value) {
+          return (CheckIn) super.set(parameterName, value);
+        }
+      }
+
+    }
   }
 
   /**

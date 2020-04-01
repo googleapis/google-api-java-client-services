@@ -67,7 +67,7 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
   private java.util.List<java.lang.String> instanceNames;
 
   /**
-   * Optional. Specifies that this instance group contains preemptible instances.
+   * Output only. Specifies that this instance group contains preemptible instances.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,7 +110,9 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
   private java.lang.Integer numInstances;
 
   /**
-   * Optional. Specifies the preemptibility of the instance group.
+   * Optional. Specifies the preemptibility of the instance group.The default value for master and
+   * worker groups is NON_PREEMPTIBLE. This default cannot be changed.The default value for
+   * secondary instances is PREEMPTIBLE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -189,7 +191,7 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. Specifies that this instance group contains preemptible instances.
+   * Output only. Specifies that this instance group contains preemptible instances.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsPreemptible() {
@@ -197,7 +199,7 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. Specifies that this instance group contains preemptible instances.
+   * Output only. Specifies that this instance group contains preemptible instances.
    * @param isPreemptible isPreemptible or {@code null} for none
    */
   public InstanceGroupConfig setIsPreemptible(java.lang.Boolean isPreemptible) {
@@ -290,7 +292,9 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. Specifies the preemptibility of the instance group.
+   * Optional. Specifies the preemptibility of the instance group.The default value for master and
+   * worker groups is NON_PREEMPTIBLE. This default cannot be changed.The default value for
+   * secondary instances is PREEMPTIBLE.
    * @return value or {@code null} for none
    */
   public java.lang.String getPreemptibility() {
@@ -298,7 +302,9 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. Specifies the preemptibility of the instance group.
+   * Optional. Specifies the preemptibility of the instance group.The default value for master and
+   * worker groups is NON_PREEMPTIBLE. This default cannot be changed.The default value for
+   * secondary instances is PREEMPTIBLE.
    * @param preemptibility preemptibility or {@code null} for none
    */
   public InstanceGroupConfig setPreemptibility(java.lang.String preemptibility) {

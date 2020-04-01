@@ -55,6 +55,13 @@ public final class LongRunningRecognizeMetadata extends com.google.api.client.js
   private String startTime;
 
   /**
+   * The URI of the audio file being transcribed. Empty if the audio was sent as byte content.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String uri;
+
+  /**
    * Time of the most recent processing update.
    * @return value or {@code null} for none
    */
@@ -104,6 +111,23 @@ public final class LongRunningRecognizeMetadata extends com.google.api.client.js
    */
   public LongRunningRecognizeMetadata setStartTime(String startTime) {
     this.startTime = startTime;
+    return this;
+  }
+
+  /**
+   * The URI of the audio file being transcribed. Empty if the audio was sent as byte content.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUri() {
+    return uri;
+  }
+
+  /**
+   * The URI of the audio file being transcribed. Empty if the audio was sent as byte content.
+   * @param uri uri or {@code null} for none
+   */
+  public LongRunningRecognizeMetadata setUri(java.lang.String uri) {
+    this.uri = uri;
     return this;
   }
 

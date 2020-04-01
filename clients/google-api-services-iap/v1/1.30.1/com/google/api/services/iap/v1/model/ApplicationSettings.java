@@ -31,11 +31,35 @@ package com.google.api.services.iap.v1.model;
 public final class ApplicationSettings extends com.google.api.client.json.GenericJson {
 
   /**
+   * Customization for Access Denied page.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AccessDeniedPageSettings accessDeniedPageSettings;
+
+  /**
    * Settings to configure IAP's behavior for a CSM mesh.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CsmSettings csmSettings;
+
+  /**
+   * Customization for Access Denied page.
+   * @return value or {@code null} for none
+   */
+  public AccessDeniedPageSettings getAccessDeniedPageSettings() {
+    return accessDeniedPageSettings;
+  }
+
+  /**
+   * Customization for Access Denied page.
+   * @param accessDeniedPageSettings accessDeniedPageSettings or {@code null} for none
+   */
+  public ApplicationSettings setAccessDeniedPageSettings(AccessDeniedPageSettings accessDeniedPageSettings) {
+    this.accessDeniedPageSettings = accessDeniedPageSettings;
+    return this;
+  }
 
   /**
    * Settings to configure IAP's behavior for a CSM mesh.

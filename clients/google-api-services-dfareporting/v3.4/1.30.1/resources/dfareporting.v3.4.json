@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/zj0LdJoqoGn6og_OA0V0rVeZPBU\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/hEFj7FeiMMK3lgT1AeWxVHm69KU\"",
  "discoveryVersion": "v1",
  "id": "dfareporting:v3.4",
  "name": "dfareporting",
  "version": "v3.4",
- "revision": "20200324",
+ "revision": "20200326",
  "title": "DCM/DFA Reporting And Trafficking API",
  "description": "Manages your DoubleClick Campaign Manager ad campaigns and reports.",
  "ownerDomain": "google.com",
@@ -5324,12 +5324,11 @@
    "description": "Represents a File resource. A file contains the metadata for a report run. It shows the status of the run and holds the URLs to the generated report data if the run is finished and the status is \"REPORT_AVAILABLE\".",
    "properties": {
     "dateRange": {
-     "$ref": "DateRange",
-     "description": "The date range for which the file has report data. The date range will always be the absolute date range for which the report is run."
+     "$ref": "DateRange"
     },
     "etag": {
      "type": "string",
-     "description": "The eTag of this response for caching purposes."
+     "description": "Etag of this resource."
     },
     "fileName": {
      "type": "string",
@@ -5337,15 +5336,7 @@
     },
     "format": {
      "type": "string",
-     "description": "The output format of the report. Only available once the file is available.",
-     "enum": [
-      "CSV",
-      "EXCEL"
-     ],
-     "enumDescriptions": [
-      "",
-      ""
-     ]
+     "description": "The output format of the report. Only available once the file is available."
     },
     "id": {
      "type": "string",
@@ -5354,7 +5345,7 @@
     },
     "kind": {
      "type": "string",
-     "description": "The kind of resource this is, in this case dfareporting#file.",
+     "description": "Identifies what kind of resource this is. Value: the fixed string \"dfareporting#file\".",
      "default": "dfareporting#file"
     },
     "lastModifiedTime": {
@@ -5369,19 +5360,7 @@
     },
     "status": {
      "type": "string",
-     "description": "The status of the report file.",
-     "enum": [
-      "CANCELLED",
-      "FAILED",
-      "PROCESSING",
-      "REPORT_AVAILABLE"
-     ],
-     "enumDescriptions": [
-      "",
-      "",
-      "",
-      ""
-     ]
+     "description": "The status of the report file."
     },
     "urls": {
      "type": "object",
@@ -5402,22 +5381,20 @@
   "FileList": {
    "id": "FileList",
    "type": "object",
-   "description": "Represents the list of File resources.",
    "properties": {
     "etag": {
      "type": "string",
-     "description": "The eTag of this response for caching purposes."
+     "description": "Etag of this resource."
     },
     "items": {
      "type": "array",
-     "description": "The files returned in this response.",
      "items": {
       "$ref": "File"
      }
     },
     "kind": {
      "type": "string",
-     "description": "The kind of list this is, in this case dfareporting#fileList.",
+     "description": "Identifies what kind of resource this is. Value: the fixed string \"dfareporting#fileList\".",
      "default": "dfareporting#fileList"
     },
     "nextPageToken": {
@@ -6891,13 +6868,21 @@
      "type": "string",
      "description": "URL to redirect to when an OBA icon is clicked."
     },
+    "iconClickTrackingUrl": {
+     "type": "string",
+     "description": "URL to track click when an OBA icon is clicked."
+    },
+    "iconViewTrackingUrl": {
+     "type": "string",
+     "description": "URL to track view when an OBA icon is clicked."
+    },
     "program": {
      "type": "string",
      "description": "Identifies the industry initiative that the icon supports. For example, AdChoices."
     },
     "resourceUrl": {
      "type": "string",
-     "description": "OBA icon resource script URL. Campaign Manager only supports image, JavaScript, and Flash icons. Learn more"
+     "description": "OBA icon resource URL. Campaign Manager only supports image and JavaScript icons. Learn more"
     },
     "size": {
      "$ref": "Size",
@@ -6905,11 +6890,11 @@
     },
     "xPosition": {
      "type": "string",
-     "description": "OBA icon x coordinate position."
+     "description": "OBA icon x coordinate position. Accepted values are left or right."
     },
     "yPosition": {
      "type": "string",
-     "description": "OBA icon y coordinate position."
+     "description": "OBA icon y coordinate position. Accepted values are top or bottom."
     }
    }
   },
@@ -18819,7 +18804,7 @@
        "id": "dfareporting.reports.files.get",
        "path": "userprofiles/{profileId}/reports/{reportId}/files/{fileId}",
        "httpMethod": "GET",
-       "description": "Retrieves a report file. This method supports media download.",
+       "description": "Retrieves a report file by its report ID and file ID. This method supports media download.",
        "parameters": {
         "fileId": {
          "type": "string",
@@ -18830,7 +18815,7 @@
         },
         "profileId": {
          "type": "string",
-         "description": "The DFA profile ID.",
+         "description": "The DFA user profile ID.",
          "required": true,
          "format": "int64",
          "location": "path"
@@ -18878,14 +18863,14 @@
         },
         "profileId": {
          "type": "string",
-         "description": "The DFA profile ID.",
+         "description": "The DFA user profile ID.",
          "required": true,
          "format": "int64",
          "location": "path"
         },
         "reportId": {
          "type": "string",
-         "description": "The ID of the parent report.",
+         "description": "The ID of the report.",
          "required": true,
          "format": "int64",
          "location": "path"
@@ -18899,8 +18884,8 @@
           "LAST_MODIFIED_TIME"
          ],
          "enumDescriptions": [
-          "Sort by file ID.",
-          "Sort by 'lastmodifiedAt' field."
+          "",
+          ""
          ],
          "location": "query"
         },
@@ -18913,8 +18898,8 @@
           "DESCENDING"
          ],
          "enumDescriptions": [
-          "Ascending order.",
-          "Descending order."
+          "",
+          ""
          ],
          "location": "query"
         }

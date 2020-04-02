@@ -38,6 +38,20 @@ public final class ObaIcon extends com.google.api.client.json.GenericJson {
   private java.lang.String iconClickThroughUrl;
 
   /**
+   * URL to track click when an OBA icon is clicked.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String iconClickTrackingUrl;
+
+  /**
+   * URL to track view when an OBA icon is clicked.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String iconViewTrackingUrl;
+
+  /**
    * Identifies the industry initiative that the icon supports. For example, AdChoices.
    * The value may be {@code null}.
    */
@@ -45,8 +59,7 @@ public final class ObaIcon extends com.google.api.client.json.GenericJson {
   private java.lang.String program;
 
   /**
-   * OBA icon resource script URL. Campaign Manager only supports image, JavaScript, and Flash
-   * icons. Learn more
+   * OBA icon resource URL. Campaign Manager only supports image and JavaScript icons. Learn more
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,14 +73,14 @@ public final class ObaIcon extends com.google.api.client.json.GenericJson {
   private Size size;
 
   /**
-   * OBA icon x coordinate position.
+   * OBA icon x coordinate position. Accepted values are left or right.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String xPosition;
 
   /**
-   * OBA icon y coordinate position.
+   * OBA icon y coordinate position. Accepted values are top or bottom.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,6 +104,40 @@ public final class ObaIcon extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * URL to track click when an OBA icon is clicked.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIconClickTrackingUrl() {
+    return iconClickTrackingUrl;
+  }
+
+  /**
+   * URL to track click when an OBA icon is clicked.
+   * @param iconClickTrackingUrl iconClickTrackingUrl or {@code null} for none
+   */
+  public ObaIcon setIconClickTrackingUrl(java.lang.String iconClickTrackingUrl) {
+    this.iconClickTrackingUrl = iconClickTrackingUrl;
+    return this;
+  }
+
+  /**
+   * URL to track view when an OBA icon is clicked.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIconViewTrackingUrl() {
+    return iconViewTrackingUrl;
+  }
+
+  /**
+   * URL to track view when an OBA icon is clicked.
+   * @param iconViewTrackingUrl iconViewTrackingUrl or {@code null} for none
+   */
+  public ObaIcon setIconViewTrackingUrl(java.lang.String iconViewTrackingUrl) {
+    this.iconViewTrackingUrl = iconViewTrackingUrl;
+    return this;
+  }
+
+  /**
    * Identifies the industry initiative that the icon supports. For example, AdChoices.
    * @return value or {@code null} for none
    */
@@ -108,8 +155,7 @@ public final class ObaIcon extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * OBA icon resource script URL. Campaign Manager only supports image, JavaScript, and Flash
-   * icons. Learn more
+   * OBA icon resource URL. Campaign Manager only supports image and JavaScript icons. Learn more
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceUrl() {
@@ -117,8 +163,7 @@ public final class ObaIcon extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * OBA icon resource script URL. Campaign Manager only supports image, JavaScript, and Flash
-   * icons. Learn more
+   * OBA icon resource URL. Campaign Manager only supports image and JavaScript icons. Learn more
    * @param resourceUrl resourceUrl or {@code null} for none
    */
   public ObaIcon setResourceUrl(java.lang.String resourceUrl) {
@@ -144,7 +189,7 @@ public final class ObaIcon extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * OBA icon x coordinate position.
+   * OBA icon x coordinate position. Accepted values are left or right.
    * @return value or {@code null} for none
    */
   public java.lang.String getXPosition() {
@@ -152,7 +197,7 @@ public final class ObaIcon extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * OBA icon x coordinate position.
+   * OBA icon x coordinate position. Accepted values are left or right.
    * @param xPosition xPosition or {@code null} for none
    */
   public ObaIcon setXPosition(java.lang.String xPosition) {
@@ -161,7 +206,7 @@ public final class ObaIcon extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * OBA icon y coordinate position.
+   * OBA icon y coordinate position. Accepted values are top or bottom.
    * @return value or {@code null} for none
    */
   public java.lang.String getYPosition() {
@@ -169,7 +214,7 @@ public final class ObaIcon extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * OBA icon y coordinate position.
+   * OBA icon y coordinate position. Accepted values are top or bottom.
    * @param yPosition yPosition or {@code null} for none
    */
   public ObaIcon setYPosition(java.lang.String yPosition) {

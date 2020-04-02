@@ -33,15 +33,13 @@ package com.google.api.services.dfareporting.model;
 public final class File extends com.google.api.client.json.GenericJson {
 
   /**
-   * The date range for which the file has report data. The date range will always be the absolute
-   * date range for which the report is run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DateRange dateRange;
 
   /**
-   * The eTag of this response for caching purposes.
+   * Etag of this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +67,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   private java.lang.Long id;
 
   /**
-   * The kind of resource this is, in this case dfareporting#file.
+   * Identifies what kind of resource this is. Value: the fixed string "dfareporting#file".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,8 +102,6 @@ public final class File extends com.google.api.client.json.GenericJson {
   private Urls urls;
 
   /**
-   * The date range for which the file has report data. The date range will always be the absolute
-   * date range for which the report is run.
    * @return value or {@code null} for none
    */
   public DateRange getDateRange() {
@@ -113,8 +109,6 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The date range for which the file has report data. The date range will always be the absolute
-   * date range for which the report is run.
    * @param dateRange dateRange or {@code null} for none
    */
   public File setDateRange(DateRange dateRange) {
@@ -123,7 +117,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The eTag of this response for caching purposes.
+   * Etag of this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -131,7 +125,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The eTag of this response for caching purposes.
+   * Etag of this resource.
    * @param etag etag or {@code null} for none
    */
   public File setEtag(java.lang.String etag) {
@@ -191,7 +185,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The kind of resource this is, in this case dfareporting#file.
+   * Identifies what kind of resource this is. Value: the fixed string "dfareporting#file".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -199,7 +193,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The kind of resource this is, in this case dfareporting#file.
+   * Identifies what kind of resource this is. Value: the fixed string "dfareporting#file".
    * @param kind kind or {@code null} for none
    */
   public File setKind(java.lang.String kind) {

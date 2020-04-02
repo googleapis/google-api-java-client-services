@@ -17,7 +17,7 @@
 package com.google.api.services.dfareporting.model;
 
 /**
- * Represents the list of File resources.
+ * Model definition for FileList.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the DCM/DFA Reporting And Trafficking API. For a detailed
@@ -31,14 +31,13 @@ package com.google.api.services.dfareporting.model;
 public final class FileList extends com.google.api.client.json.GenericJson {
 
   /**
-   * The eTag of this response for caching purposes.
+   * Etag of this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String etag;
 
   /**
-   * The files returned in this response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +50,7 @@ public final class FileList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The kind of list this is, in this case dfareporting#fileList.
+   * Identifies what kind of resource this is. Value: the fixed string "dfareporting#fileList".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +66,7 @@ public final class FileList extends com.google.api.client.json.GenericJson {
   private java.lang.String nextPageToken;
 
   /**
-   * The eTag of this response for caching purposes.
+   * Etag of this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -75,7 +74,7 @@ public final class FileList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The eTag of this response for caching purposes.
+   * Etag of this resource.
    * @param etag etag or {@code null} for none
    */
   public FileList setEtag(java.lang.String etag) {
@@ -84,7 +83,6 @@ public final class FileList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The files returned in this response.
    * @return value or {@code null} for none
    */
   public java.util.List<File> getItems() {
@@ -92,7 +90,6 @@ public final class FileList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The files returned in this response.
    * @param items items or {@code null} for none
    */
   public FileList setItems(java.util.List<File> items) {
@@ -101,7 +98,7 @@ public final class FileList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The kind of list this is, in this case dfareporting#fileList.
+   * Identifies what kind of resource this is. Value: the fixed string "dfareporting#fileList".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -109,7 +106,7 @@ public final class FileList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The kind of list this is, in this case dfareporting#fileList.
+   * Identifies what kind of resource this is. Value: the fixed string "dfareporting#fileList".
    * @param kind kind or {@code null} for none
    */
   public FileList setKind(java.lang.String kind) {

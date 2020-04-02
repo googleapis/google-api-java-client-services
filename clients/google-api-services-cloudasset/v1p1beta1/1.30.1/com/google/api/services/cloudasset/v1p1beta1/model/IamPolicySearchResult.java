@@ -30,8 +30,18 @@ package com.google.api.services.cloudasset.v1p1beta1.model;
 public final class IamPolicySearchResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * Representation of the actual Cloud IAM policy set on a cloud resource. For each resource, there
-   * must be at most one Cloud IAM policy set on it.
+   * Explanation about the IAM policy search result. It contains additional information to explain
+   * why the search result matches the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Explanation explanation;
+
+  /**
+   * The IAM policy directly set on the given resource. Note that the original IAM policy can
+   * contain multiple bindings. This only contains the bindings that match the given query. For
+   * queries that don't contain a constrain on policies (e.g. an empty query), this contains all the
+   * bindings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,8 +67,29 @@ public final class IamPolicySearchResult extends com.google.api.client.json.Gene
   private java.lang.String resource;
 
   /**
-   * Representation of the actual Cloud IAM policy set on a cloud resource. For each resource, there
-   * must be at most one Cloud IAM policy set on it.
+   * Explanation about the IAM policy search result. It contains additional information to explain
+   * why the search result matches the query.
+   * @return value or {@code null} for none
+   */
+  public Explanation getExplanation() {
+    return explanation;
+  }
+
+  /**
+   * Explanation about the IAM policy search result. It contains additional information to explain
+   * why the search result matches the query.
+   * @param explanation explanation or {@code null} for none
+   */
+  public IamPolicySearchResult setExplanation(Explanation explanation) {
+    this.explanation = explanation;
+    return this;
+  }
+
+  /**
+   * The IAM policy directly set on the given resource. Note that the original IAM policy can
+   * contain multiple bindings. This only contains the bindings that match the given query. For
+   * queries that don't contain a constrain on policies (e.g. an empty query), this contains all the
+   * bindings.
    * @return value or {@code null} for none
    */
   public Policy getPolicy() {
@@ -66,8 +97,10 @@ public final class IamPolicySearchResult extends com.google.api.client.json.Gene
   }
 
   /**
-   * Representation of the actual Cloud IAM policy set on a cloud resource. For each resource, there
-   * must be at most one Cloud IAM policy set on it.
+   * The IAM policy directly set on the given resource. Note that the original IAM policy can
+   * contain multiple bindings. This only contains the bindings that match the given query. For
+   * queries that don't contain a constrain on policies (e.g. an empty query), this contains all the
+   * bindings.
    * @param policy policy or {@code null} for none
    */
   public IamPolicySearchResult setPolicy(Policy policy) {

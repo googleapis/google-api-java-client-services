@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"9eZ1uxVRThTDhLJCZHhqs3eQWz4/V7jM5EsXc58zTkN0gQqOa8rHpsw\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/-O2VI_wilvpiO4jXhzVfOalgfGY\"",
  "discoveryVersion": "v1",
  "id": "doubleclicksearch:v2",
  "name": "doubleclicksearch",
  "version": "v2",
- "revision": "20190821",
+ "revision": "20200325",
  "title": "Search Ads 360 API",
  "description": "Reports and modifies your advertising data in DoubleClick Search (for example, campaigns, ad groups, keywords, and conversions).",
  "ownerDomain": "google.com",
@@ -856,87 +856,6 @@
      "path": "conversion",
      "httpMethod": "POST",
      "description": "Inserts a batch of new conversions into DoubleClick Search.",
-     "request": {
-      "$ref": "ConversionList"
-     },
-     "response": {
-      "$ref": "ConversionList"
-     },
-     "scopes": [
-      "https://www.googleapis.com/auth/doubleclicksearch"
-     ]
-    },
-    "patch": {
-     "id": "doubleclicksearch.conversion.patch",
-     "path": "conversion",
-     "httpMethod": "PATCH",
-     "description": "Updates a batch of conversions in DoubleClick Search. This method supports patch semantics.",
-     "parameters": {
-      "advertiserId": {
-       "type": "string",
-       "description": "Numeric ID of the advertiser.",
-       "required": true,
-       "format": "int64",
-       "location": "query"
-      },
-      "agencyId": {
-       "type": "string",
-       "description": "Numeric ID of the agency.",
-       "required": true,
-       "format": "int64",
-       "location": "query"
-      },
-      "endDate": {
-       "type": "integer",
-       "description": "Last date (inclusive) on which to retrieve conversions. Format is yyyymmdd.",
-       "required": true,
-       "format": "int32",
-       "minimum": "20091101",
-       "maximum": "99991231",
-       "location": "query"
-      },
-      "engineAccountId": {
-       "type": "string",
-       "description": "Numeric ID of the engine account.",
-       "required": true,
-       "format": "int64",
-       "location": "query"
-      },
-      "rowCount": {
-       "type": "integer",
-       "description": "The number of conversions to return per call.",
-       "required": true,
-       "format": "int32",
-       "minimum": "1",
-       "maximum": "1000",
-       "location": "query"
-      },
-      "startDate": {
-       "type": "integer",
-       "description": "First date (inclusive) on which to retrieve conversions. Format is yyyymmdd.",
-       "required": true,
-       "format": "int32",
-       "minimum": "20091101",
-       "maximum": "99991231",
-       "location": "query"
-      },
-      "startRow": {
-       "type": "integer",
-       "description": "The 0-based starting index for retrieving conversions results.",
-       "required": true,
-       "format": "uint32",
-       "location": "query"
-      }
-     },
-     "parameterOrder": [
-      "advertiserId",
-      "agencyId",
-      "endDate",
-      "engineAccountId",
-      "rowCount",
-      "startDate",
-      "startRow"
-     ],
      "request": {
       "$ref": "ConversionList"
      },

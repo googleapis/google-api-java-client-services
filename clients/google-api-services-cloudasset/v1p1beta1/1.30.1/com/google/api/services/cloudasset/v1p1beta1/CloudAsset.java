@@ -599,6 +599,32 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       }
 
       /**
+       * Optional. A comma separated list of fields specifying the sorting order of the results. The
+       * default order is ascending. Add " desc" after the field name to indicate descending order.
+       * Redundant space characters are ignored. For example, "  foo ,  bar  desc  ".
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String orderBy;
+
+      /** Optional. A comma separated list of fields specifying the sorting order of the results. The default
+     order is ascending. Add " desc" after the field name to indicate descending order. Redundant space
+     characters are ignored. For example, "  foo ,  bar  desc  ".
+       */
+      public java.lang.String getOrderBy() {
+        return orderBy;
+      }
+
+      /**
+       * Optional. A comma separated list of fields specifying the sorting order of the results. The
+       * default order is ascending. Add " desc" after the field name to indicate descending order.
+       * Redundant space characters are ignored. For example, "  foo ,  bar  desc  ".
+       */
+      public SearchAll setOrderBy(java.lang.String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+      }
+
+      /**
        * Optional. The page size for search result pagination. Page size is capped at 500 even if a
        * larger value is given. If set to zero, server will pick an appropriate default. Returned
        * results may be fewer than requested. When this happens, there could be more results as long

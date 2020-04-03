@@ -58,8 +58,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private String expireTime;
 
   /**
-   * Output only for the CreateBackup][DatabaseAdmin.CreateBackup] operation. Required for the
-   * UpdateBackup operation.
+   * Output only for the CreateBackup operation. Required for the UpdateBackup operation.
    *
    * A globally unique identifier for the backup which cannot be changed. Values are of the form
    * `projects//instances//backups/a-z*[a-z0-9]` The final segment of the name must be between 2 and
@@ -164,8 +163,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only for the CreateBackup][DatabaseAdmin.CreateBackup] operation. Required for the
-   * UpdateBackup operation.
+   * Output only for the CreateBackup operation. Required for the UpdateBackup operation.
    *
    * A globally unique identifier for the backup which cannot be changed. Values are of the form
    * `projects//instances//backups/a-z*[a-z0-9]` The final segment of the name must be between 2 and
@@ -181,8 +179,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only for the CreateBackup][DatabaseAdmin.CreateBackup] operation. Required for the
-   * UpdateBackup operation.
+   * Output only for the CreateBackup operation. Required for the UpdateBackup operation.
    *
    * A globally unique identifier for the backup which cannot be changed. Values are of the form
    * `projects//instances//backups/a-z*[a-z0-9]` The final segment of the name must be between 2 and

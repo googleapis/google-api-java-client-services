@@ -17,7 +17,7 @@
 package com.google.api.services.monitoring.v3.model;
 
 /**
- * A condition type that allows alert policies to be defined using the time series query language.
+ * A condition type that allows alert policies to be defined using Monitoring Query Language.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Monitoring API. For a detailed explanation see:
@@ -30,8 +30,8 @@ package com.google.api.services.monitoring.v3.model;
 public final class TimeSeriesQueryLanguageCondition extends com.google.api.client.json.GenericJson {
 
   /**
-   * A query in the time series query language format that generates time series indicating points
-   * in time that the condition should be considered active.
+   * Monitoring Query Language query that generates time series data and describes a condition for
+   * alerting on that data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,8 +46,8 @@ public final class TimeSeriesQueryLanguageCondition extends com.google.api.clien
   private java.lang.String summary;
 
   /**
-   * A query in the time series query language format that generates time series indicating points
-   * in time that the condition should be considered active.
+   * Monitoring Query Language query that generates time series data and describes a condition for
+   * alerting on that data.
    * @return value or {@code null} for none
    */
   public java.lang.String getQuery() {
@@ -55,8 +55,8 @@ public final class TimeSeriesQueryLanguageCondition extends com.google.api.clien
   }
 
   /**
-   * A query in the time series query language format that generates time series indicating points
-   * in time that the condition should be considered active.
+   * Monitoring Query Language query that generates time series data and describes a condition for
+   * alerting on that data.
    * @param query query or {@code null} for none
    */
   public TimeSeriesQueryLanguageCondition setQuery(java.lang.String query) {

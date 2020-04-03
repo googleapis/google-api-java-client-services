@@ -45,7 +45,7 @@ public final class Condition extends com.google.api.client.json.GenericJson {
   private MetricThreshold conditionThreshold;
 
   /**
-   * A condition that uses the time series query language format to define alerts. If set, no other
+   * A condition that uses the Monitoring Query Language to define alerts. If set, no other
    * conditions can be present.
    * The value may be {@code null}.
    */
@@ -114,7 +114,7 @@ public final class Condition extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A condition that uses the time series query language format to define alerts. If set, no other
+   * A condition that uses the Monitoring Query Language to define alerts. If set, no other
    * conditions can be present.
    * @return value or {@code null} for none
    */
@@ -123,7 +123,7 @@ public final class Condition extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A condition that uses the time series query language format to define alerts. If set, no other
+   * A condition that uses the Monitoring Query Language to define alerts. If set, no other
    * conditions can be present.
    * @param conditionTimeSeriesQueryLanguage conditionTimeSeriesQueryLanguage or {@code null} for none
    */

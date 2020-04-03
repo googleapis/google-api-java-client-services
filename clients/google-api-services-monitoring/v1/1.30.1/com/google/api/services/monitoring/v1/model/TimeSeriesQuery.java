@@ -45,6 +45,13 @@ public final class TimeSeriesQuery extends com.google.api.client.json.GenericJso
   private TimeSeriesFilterRatio timeSeriesFilterRatio;
 
   /**
+   * A query used to fetch time series.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String timeSeriesQueryLanguage;
+
+  /**
    * The unit of data contained in fetched time series. If non-empty, this unit will override any
    * unit that accompanies fetched data. The format is the same as the unit
    * (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.metricDescriptors) field in
@@ -85,6 +92,23 @@ public final class TimeSeriesQuery extends com.google.api.client.json.GenericJso
    */
   public TimeSeriesQuery setTimeSeriesFilterRatio(TimeSeriesFilterRatio timeSeriesFilterRatio) {
     this.timeSeriesFilterRatio = timeSeriesFilterRatio;
+    return this;
+  }
+
+  /**
+   * A query used to fetch time series.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTimeSeriesQueryLanguage() {
+    return timeSeriesQueryLanguage;
+  }
+
+  /**
+   * A query used to fetch time series.
+   * @param timeSeriesQueryLanguage timeSeriesQueryLanguage or {@code null} for none
+   */
+  public TimeSeriesQuery setTimeSeriesQueryLanguage(java.lang.String timeSeriesQueryLanguage) {
+    this.timeSeriesQueryLanguage = timeSeriesQueryLanguage;
     return this;
   }
 

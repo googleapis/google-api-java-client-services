@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-container</artifactId>
-  <version>v1-rev20200318-1.30.9</version>
-  <name>Kubernetes Engine API v1-rev20200318-1.30.9</name>
+  <version>v1-rev20200324-1.30.9</version>
+  <name>Kubernetes Engine API v1-rev20200324-1.30.9</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

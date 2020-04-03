@@ -2041,7 +2041,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         }
         /**
          * Sets the locations for a specific cluster. Deprecated. Use [projects.locations.clusters.update
-         * ](/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.update) instead.
+         * ](/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters/update) instead.
          *
          * Create a request for the method "clusters.setLocations".
          *
@@ -2069,7 +2069,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Sets the locations for a specific cluster. Deprecated. Use [projects.locations.clusters.update
-           * ](/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.update) instead.
+           * ](/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters/update) instead.
            *
            * Create a request for the method "clusters.setLocations".
            *
@@ -7524,7 +7524,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         }
         /**
          * Sets the locations for a specific cluster. Deprecated. Use [projects.locations.clusters.update
-         * ](/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.update) instead.
+         * ](/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters/update) instead.
          *
          * Create a request for the method "clusters.locations".
          *
@@ -7558,7 +7558,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Sets the locations for a specific cluster. Deprecated. Use [projects.locations.clusters.update
-           * ](/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.update) instead.
+           * ](/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters/update) instead.
            *
            * Create a request for the method "clusters.locations".
            *

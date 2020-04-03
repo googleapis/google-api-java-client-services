@@ -60,7 +60,7 @@ public final class RestoreDatabaseMetadata extends com.google.api.client.json.Ge
    * If exists, the name of the long-running operation that will be used to track the post-restore
    * optimization process to optimize the performance of the restored database, and remove the
    * dependency on the restore source. The name is of the form
-   * `projects//instances//databases//operations/ where the  is the name of database being created
+   * `projects//instances//databases//operations/` where the  is the name of database being created
    * and restored to. The metadata type of the  long-running operation is
    * OptimizeRestoredDatabaseMetadata. This long-running operation will be automatically created by
    * the system after the RestoreDatabase long-running operation completes successfully. This
@@ -151,7 +151,7 @@ public final class RestoreDatabaseMetadata extends com.google.api.client.json.Ge
    * If exists, the name of the long-running operation that will be used to track the post-restore
    * optimization process to optimize the performance of the restored database, and remove the
    * dependency on the restore source. The name is of the form
-   * `projects//instances//databases//operations/ where the  is the name of database being created
+   * `projects//instances//databases//operations/` where the  is the name of database being created
    * and restored to. The metadata type of the  long-running operation is
    * OptimizeRestoredDatabaseMetadata. This long-running operation will be automatically created by
    * the system after the RestoreDatabase long-running operation completes successfully. This
@@ -166,7 +166,7 @@ public final class RestoreDatabaseMetadata extends com.google.api.client.json.Ge
    * If exists, the name of the long-running operation that will be used to track the post-restore
    * optimization process to optimize the performance of the restored database, and remove the
    * dependency on the restore source. The name is of the form
-   * `projects//instances//databases//operations/ where the  is the name of database being created
+   * `projects//instances//databases//operations/` where the  is the name of database being created
    * and restored to. The metadata type of the  long-running operation is
    * OptimizeRestoredDatabaseMetadata. This long-running operation will be automatically created by
    * the system after the RestoreDatabase long-running operation completes successfully. This

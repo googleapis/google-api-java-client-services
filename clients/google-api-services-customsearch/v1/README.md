@@ -1,14 +1,14 @@
-# CustomSearch API Client Library for Java
+# Custom Search API Client Library for Java
 
 Searches over a website or collection of websites
 
-This page contains information about getting started with the CustomSearch API
+This page contains information about getting started with the Custom Search API
 using the Google API Client Library for Java. In addition, you may be interested
 in the following documentation:
 
-* Browse the [Javadoc reference for the CustomSearch API][javadoc]
+* Browse the [Javadoc reference for the Custom Search API][javadoc]
 * Read the [Developer's Guide for the Google API Client Library for Java][google-api-client].
-* Interact with this API in your browser using the [APIs Explorer for the CustomSearch API][api-explorer]
+* Interact with this API in your browser using the [APIs Explorer for the Custom Search API][api-explorer]
 
 ## Installation
 
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-customsearch</artifactId>
-      <version>v1-rev20181001-1.30.9</version>
+      <version>v1-rev20200401-1.30.9</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-customsearch:v1-rev20181001-1.30.9'
+  compile 'com.google.apis:google-api-services-customsearch:v1-rev20200401-1.30.9'
 }
 ```
 

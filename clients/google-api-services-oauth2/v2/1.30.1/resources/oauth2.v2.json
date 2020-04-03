@@ -14,7 +14,7 @@
   "x16": "https://www.gstatic.com/images/branding/product/1x/googleg_16dp.png",
   "x32": "https://www.gstatic.com/images/branding/product/1x/googleg_32dp.png"
  },
- "documentationLink": "https://developers.google.com/accounts/docs/OAuth2",
+ "documentationLink": "https://developers.google.com/identity/protocols/oauth2/",
  "protocol": "rest",
  "baseUrl": "https://www.googleapis.com/",
  "basePath": "/",

@@ -76,8 +76,16 @@ public final class FilterSet extends com.google.api.client.json.GenericJson {
   private java.lang.String environment;
 
   /**
-   * The list of formats on which to filter; may be empty. The filters represented by multiple
-   * formats are ORed together (i.e., if non-empty, results must match any one of the formats).
+   * Creative format bidded on or allowed to bid on, can be empty.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String format;
+
+  /**
+   * Creative formats bidded on or allowed to bid on, can be empty. Although this field is a list,
+   * it can only be populated with a single item. A HTTP 400 bad request error will be returned in
+   * the response if you specify multiple items.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -245,8 +253,26 @@ public final class FilterSet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of formats on which to filter; may be empty. The filters represented by multiple
-   * formats are ORed together (i.e., if non-empty, results must match any one of the formats).
+   * Creative format bidded on or allowed to bid on, can be empty.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFormat() {
+    return format;
+  }
+
+  /**
+   * Creative format bidded on or allowed to bid on, can be empty.
+   * @param format format or {@code null} for none
+   */
+  public FilterSet setFormat(java.lang.String format) {
+    this.format = format;
+    return this;
+  }
+
+  /**
+   * Creative formats bidded on or allowed to bid on, can be empty. Although this field is a list,
+   * it can only be populated with a single item. A HTTP 400 bad request error will be returned in
+   * the response if you specify multiple items.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getFormats() {
@@ -254,8 +280,9 @@ public final class FilterSet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of formats on which to filter; may be empty. The filters represented by multiple
-   * formats are ORed together (i.e., if non-empty, results must match any one of the formats).
+   * Creative formats bidded on or allowed to bid on, can be empty. Although this field is a list,
+   * it can only be populated with a single item. A HTTP 400 bad request error will be returned in
+   * the response if you specify multiple items.
    * @param formats formats or {@code null} for none
    */
   public FilterSet setFormats(java.util.List<java.lang.String> formats) {

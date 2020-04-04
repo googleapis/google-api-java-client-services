@@ -2780,7 +2780,7 @@ public final class File extends com.google.api.client.json.GenericJson {
     private java.lang.String meteringMode;
 
     /**
-     * The rotation in clockwise degrees from the image's original orientation.
+     * The number of clockwise 90 degree rotations applied from the image's original orientation.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -3087,7 +3087,7 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The rotation in clockwise degrees from the image's original orientation.
+     * The number of clockwise 90 degree rotations applied from the image's original orientation.
      * @return value or {@code null} for none
      */
     public java.lang.Integer getRotation() {
@@ -3095,7 +3095,7 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The rotation in clockwise degrees from the image's original orientation.
+     * The number of clockwise 90 degree rotations applied from the image's original orientation.
      * @param rotation rotation or {@code null} for none
      */
     public ImageMediaMetadata setRotation(java.lang.Integer rotation) {

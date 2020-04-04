@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/Zc80I13MdlmrO7IOEArAhrUwoBI\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/k6ve9mvJLQYNtOLJVCwlyhkSP30\"",
  "discoveryVersion": "v1",
  "id": "androidpublisher:v2",
  "name": "androidpublisher",
  "canonicalName": "Android Publisher",
  "version": "v2",
- "revision": "20200115",
+ "revision": "20200331",
  "title": "Google Play Developer API",
  "description": "Accesses Android application developers' Google Play accounts.",
  "ownerDomain": "google.com",
@@ -544,7 +544,7 @@
     },
     "gracePeriod": {
      "type": "string",
-     "description": "Grace period of the subscription, specified in ISO 8601 format. It will allow developers to give their subscribers a grace period when the payment for the new recurrence period is declined. Acceptable values = \"P3D\" (three days) and \"P7D\" (seven days)"
+     "description": "Grace period of the subscription, specified in ISO 8601 format. It will allow developers to give their subscribers a grace period when the payment for the new recurrence period is declined. Acceptable values = \"P3D\" (three days), \"P7D\" (seven days), \"P14D\" (fourteen days), and \"P30D\" (thirty days)"
     },
     "listings": {
      "type": "object",

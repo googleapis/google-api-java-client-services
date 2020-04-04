@@ -48,7 +48,8 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
   /**
    * Grace period of the subscription, specified in ISO 8601 format. It will allow developers to
    * give their subscribers a grace period when the payment for the new recurrence period is
-   * declined. Acceptable values = "P3D" (three days) and "P7D" (seven days)
+   * declined. Acceptable values = "P3D" (three days), "P7D" (seven days), "P14D" (fourteen days),
+   * and "P30D" (thirty days)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -151,7 +152,8 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
   /**
    * Grace period of the subscription, specified in ISO 8601 format. It will allow developers to
    * give their subscribers a grace period when the payment for the new recurrence period is
-   * declined. Acceptable values = "P3D" (three days) and "P7D" (seven days)
+   * declined. Acceptable values = "P3D" (three days), "P7D" (seven days), "P14D" (fourteen days),
+   * and "P30D" (thirty days)
    * @return value or {@code null} for none
    */
   public java.lang.String getGracePeriod() {
@@ -161,7 +163,8 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
   /**
    * Grace period of the subscription, specified in ISO 8601 format. It will allow developers to
    * give their subscribers a grace period when the payment for the new recurrence period is
-   * declined. Acceptable values = "P3D" (three days) and "P7D" (seven days)
+   * declined. Acceptable values = "P3D" (three days), "P7D" (seven days), "P14D" (fourteen days),
+   * and "P30D" (thirty days)
    * @param gracePeriod gracePeriod or {@code null} for none
    */
   public InAppProduct setGracePeriod(java.lang.String gracePeriod) {

@@ -28,9 +28,9 @@ package com.google.api.services.compute.model;
  * You can use an operation resource to manage asynchronous API requests. For more information, read
  * Handling API responses.
  *
- * Operations can be global, regional or zonal.   - For global operations, use the globalOperations
- * resource.  - For regional operations, use the regionOperations resource.  - For zonal operations,
- * use the zoneOperations resource.
+ * Operations can be global, regional or zonal.   - For global operations, use the
+ * `globalOperations` resource.  - For regional operations, use the `regionOperations` resource.  -
+ * For zonal operations, use the `zonalOperations` resource.
  *
  * For more information, read  Global, Regional, and Zonal Resources. (== resource_for
  * {$api_version}.globalOperations ==) (== resource_for {$api_version}.regionOperations ==) (==
@@ -86,7 +86,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] If the operation fails, this field contains the HTTP error message that was
-   * returned, such as NOT FOUND.
+   * returned, such as `NOT FOUND`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +94,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] If the operation fails, this field contains the HTTP error status code that was
-   * returned. For example, a 404 means the resource was not found.
+   * returned. For example, a `404` means the resource was not found.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,7 +116,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.lang.String insertTime;
 
   /**
-   * [Output Only] Type of the resource. Always compute#operation for Operation resources.
+   * [Output Only] Type of the resource. Always `compute#operation` for Operation resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,7 +130,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * [Output Only] The type of operation, such as insert, update, or delete, and so on.
+   * [Output Only] The type of operation, such as `insert`, `update`, or `delete`, and so on.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -177,8 +177,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.lang.String startTime;
 
   /**
-   * [Output Only] The status of the operation, which can be one of the following: PENDING, RUNNING,
-   * or DONE.
+   * [Output Only] The status of the operation, which can be one of the following: `PENDING`,
+   * `RUNNING`, or `DONE`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -208,7 +208,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.lang.String targetLink;
 
   /**
-   * [Output Only] User who requested the operation, for example: user@example.com.
+   * [Output Only] User who requested the operation, for example: `user@example.com`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -329,7 +329,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] If the operation fails, this field contains the HTTP error message that was
-   * returned, such as NOT FOUND.
+   * returned, such as `NOT FOUND`.
    * @return value or {@code null} for none
    */
   public java.lang.String getHttpErrorMessage() {
@@ -338,7 +338,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] If the operation fails, this field contains the HTTP error message that was
-   * returned, such as NOT FOUND.
+   * returned, such as `NOT FOUND`.
    * @param httpErrorMessage httpErrorMessage or {@code null} for none
    */
   public Operation setHttpErrorMessage(java.lang.String httpErrorMessage) {
@@ -348,7 +348,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] If the operation fails, this field contains the HTTP error status code that was
-   * returned. For example, a 404 means the resource was not found.
+   * returned. For example, a `404` means the resource was not found.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getHttpErrorStatusCode() {
@@ -357,7 +357,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] If the operation fails, this field contains the HTTP error status code that was
-   * returned. For example, a 404 means the resource was not found.
+   * returned. For example, a `404` means the resource was not found.
    * @param httpErrorStatusCode httpErrorStatusCode or {@code null} for none
    */
   public Operation setHttpErrorStatusCode(java.lang.Integer httpErrorStatusCode) {
@@ -402,7 +402,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#operation for Operation resources.
+   * [Output Only] Type of the resource. Always `compute#operation` for Operation resources.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -410,7 +410,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#operation for Operation resources.
+   * [Output Only] Type of the resource. Always `compute#operation` for Operation resources.
    * @param kind kind or {@code null} for none
    */
   public Operation setKind(java.lang.String kind) {
@@ -436,7 +436,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The type of operation, such as insert, update, or delete, and so on.
+   * [Output Only] The type of operation, such as `insert`, `update`, or `delete`, and so on.
    * @return value or {@code null} for none
    */
   public java.lang.String getOperationType() {
@@ -444,7 +444,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The type of operation, such as insert, update, or delete, and so on.
+   * [Output Only] The type of operation, such as `insert`, `update`, or `delete`, and so on.
    * @param operationType operationType or {@code null} for none
    */
   public Operation setOperationType(java.lang.String operationType) {
@@ -548,8 +548,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The status of the operation, which can be one of the following: PENDING, RUNNING,
-   * or DONE.
+   * [Output Only] The status of the operation, which can be one of the following: `PENDING`,
+   * `RUNNING`, or `DONE`.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -557,8 +557,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The status of the operation, which can be one of the following: PENDING, RUNNING,
-   * or DONE.
+   * [Output Only] The status of the operation, which can be one of the following: `PENDING`,
+   * `RUNNING`, or `DONE`.
    * @param status status or {@code null} for none
    */
   public Operation setStatus(java.lang.String status) {
@@ -622,7 +622,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] User who requested the operation, for example: user@example.com.
+   * [Output Only] User who requested the operation, for example: `user@example.com`.
    * @return value or {@code null} for none
    */
   public java.lang.String getUser() {
@@ -630,7 +630,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] User who requested the operation, for example: user@example.com.
+   * [Output Only] User who requested the operation, for example: `user@example.com`.
    * @param user user or {@code null} for none
    */
   public Operation setUser(java.lang.String user) {

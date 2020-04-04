@@ -21,7 +21,7 @@ package com.google.api.services.compute.model;
  *
  * Google Compute Engine has two Disk resources:
  *
- * * [Global](/compute/docs/reference/rest/{$api_version}/disks) *
+ * * [Zonal](/compute/docs/reference/rest/{$api_version}/disks) *
  * [Regional](/compute/docs/reference/rest/{$api_version}/regionDisks)
  *
  * Persistent disks are required for running your VM instances. Create both boot and non-boot (data)
@@ -299,6 +299,28 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String sourceImageId;
+
+  /**
+   * The source in-place snapshot used to create this disk. You can provide this as a partial or
+   * full URL to the resource. For example, the following are valid values: -
+   * https://www.googleapis.com/compute/v1/projects/project/global/inPlaceSnapshots/inPlaceSnapshots
+   * - projects/project/global/inPlaceSnapshots/inPlaceSnapshots  -
+   * global/inPlaceSnapshots/inPlaceSnapshots
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceInPlaceSnapshot;
+
+  /**
+   * [Output Only] The unique ID of the in-place snapshot used to create this disk. This value
+   * identifies the exact in-place snapshot that was used to create this persistent disk. For
+   * example, if you created the persistent disk from an in-place snapshot that was later deleted
+   * and recreated under the same name, the source in-place snapshot ID would identify the exact
+   * version of the in-place snapshot that was used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceInPlaceSnapshotId;
 
   /**
    * The source snapshot used to create this disk. You can provide this as a partial or full URL to
@@ -1009,6 +1031,56 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    */
   public Disk setSourceImageId(java.lang.String sourceImageId) {
     this.sourceImageId = sourceImageId;
+    return this;
+  }
+
+  /**
+   * The source in-place snapshot used to create this disk. You can provide this as a partial or
+   * full URL to the resource. For example, the following are valid values: -
+   * https://www.googleapis.com/compute/v1/projects/project/global/inPlaceSnapshots/inPlaceSnapshots
+   * - projects/project/global/inPlaceSnapshots/inPlaceSnapshots  -
+   * global/inPlaceSnapshots/inPlaceSnapshots
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceInPlaceSnapshot() {
+    return sourceInPlaceSnapshot;
+  }
+
+  /**
+   * The source in-place snapshot used to create this disk. You can provide this as a partial or
+   * full URL to the resource. For example, the following are valid values: -
+   * https://www.googleapis.com/compute/v1/projects/project/global/inPlaceSnapshots/inPlaceSnapshots
+   * - projects/project/global/inPlaceSnapshots/inPlaceSnapshots  -
+   * global/inPlaceSnapshots/inPlaceSnapshots
+   * @param sourceInPlaceSnapshot sourceInPlaceSnapshot or {@code null} for none
+   */
+  public Disk setSourceInPlaceSnapshot(java.lang.String sourceInPlaceSnapshot) {
+    this.sourceInPlaceSnapshot = sourceInPlaceSnapshot;
+    return this;
+  }
+
+  /**
+   * [Output Only] The unique ID of the in-place snapshot used to create this disk. This value
+   * identifies the exact in-place snapshot that was used to create this persistent disk. For
+   * example, if you created the persistent disk from an in-place snapshot that was later deleted
+   * and recreated under the same name, the source in-place snapshot ID would identify the exact
+   * version of the in-place snapshot that was used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceInPlaceSnapshotId() {
+    return sourceInPlaceSnapshotId;
+  }
+
+  /**
+   * [Output Only] The unique ID of the in-place snapshot used to create this disk. This value
+   * identifies the exact in-place snapshot that was used to create this persistent disk. For
+   * example, if you created the persistent disk from an in-place snapshot that was later deleted
+   * and recreated under the same name, the source in-place snapshot ID would identify the exact
+   * version of the in-place snapshot that was used.
+   * @param sourceInPlaceSnapshotId sourceInPlaceSnapshotId or {@code null} for none
+   */
+  public Disk setSourceInPlaceSnapshotId(java.lang.String sourceInPlaceSnapshotId) {
+    this.sourceInPlaceSnapshotId = sourceInPlaceSnapshotId;
     return this;
   }
 

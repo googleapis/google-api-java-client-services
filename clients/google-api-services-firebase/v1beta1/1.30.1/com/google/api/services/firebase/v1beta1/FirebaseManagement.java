@@ -3471,9 +3471,10 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * However, if the default GCP resource location has already been set for the Project, then this
        * setting cannot be changed.
        *
-       * This call checks for any location restrictions for the specified Project and, thus, might return
-       * a subset of all possible GCP resource locations. To list all GCP resource locations (regardless
-       * of any restrictions), call the endpoint without specifying a `projectId` (that is,
+       * This call checks for any possible [location restrictions](https://cloud.google.com/resource-
+       * manager/docs/organization-policy/defining-locations) for the specified Project and, thus, might
+       * return a subset of all possible GCP resource locations. To list all GCP resource locations
+       * (regardless of any restrictions), call the endpoint without specifying a `projectId` (that is,
        * `/v1beta1/{parent=projects/-}/listAvailableLocations`).
        *
        * To call `ListAvailableLocations` with a specified project, a member must be at minimum a Viewer
@@ -3517,7 +3518,8 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          * However, if the default GCP resource location has already been set for the Project, then this
          * setting cannot be changed.
          *
-         * This call checks for any location restrictions for the specified Project and, thus, might
+         * This call checks for any possible [location restrictions](https://cloud.google.com/resource-
+         * manager/docs/organization-policy/defining-locations) for the specified Project and, thus, might
          * return a subset of all possible GCP resource locations. To list all GCP resource locations
          * (regardless of any restrictions), call the endpoint without specifying a `projectId` (that is,
          * `/v1beta1/{parent=projects/-}/listAvailableLocations`).

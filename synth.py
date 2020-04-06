@@ -79,8 +79,19 @@ def maven_metadata(pom_file: str):
         "version": version
     }
 
-def generate_service(disco: str):
+def write_discovery_file(input_file: str, output_file: str):
+    """Write discovery doc contents to the resource directory, but sort the contents
+    to attempt making a readable diff.
+    """
+    discovery_json = ""
+    with open(input_file) as json_file:
+        discovery_json = json.load(json_file)
 
+    # Use binary mode to allow json.dump to control exact format.
+    with open(output_file, 'wb') as discovery_file:
+      json.dump(discovery_json, discovery_file, indent=2, sort_keys=True)
+
+def generate_service(disco: str):
     m = re.search(VERSION_REGEX, disco)
     if m is None:
         log.info(f"Skipping {disco}.")
@@ -111,7 +122,7 @@ def generate_service(disco: str):
 
         resource_dir = repository / "clients" / library_name / version / template / "resources"
         shell.run(f"mkdir -p {resource_dir}".split())
-        shutil.copy(input_file, resource_dir / path.basename(disco))
+        write_discovery_file(input_file, resource_dir / path.basename(disco))
 
     # write the metadata file
     latest_version = TEMPLATE_VERSIONS[-1]

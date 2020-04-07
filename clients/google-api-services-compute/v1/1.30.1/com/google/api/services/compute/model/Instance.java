@@ -221,6 +221,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private ReservationAffinity reservationAffinity;
 
   /**
+   * Resource policies applied to this instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> resourcePolicies;
+
+  /**
    * Sets the scheduling options for this instance.
    * The value may be {@code null}.
    */
@@ -783,6 +790,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setReservationAffinity(ReservationAffinity reservationAffinity) {
     this.reservationAffinity = reservationAffinity;
+    return this;
+  }
+
+  /**
+   * Resource policies applied to this instance.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getResourcePolicies() {
+    return resourcePolicies;
+  }
+
+  /**
+   * Resource policies applied to this instance.
+   * @param resourcePolicies resourcePolicies or {@code null} for none
+   */
+  public Instance setResourcePolicies(java.util.List<java.lang.String> resourcePolicies) {
+    this.resourcePolicies = resourcePolicies;
     return this;
   }
 

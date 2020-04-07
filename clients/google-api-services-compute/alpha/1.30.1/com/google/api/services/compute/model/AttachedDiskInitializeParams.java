@@ -42,9 +42,9 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   private java.lang.String description;
 
   /**
-   * Specifies the disk name. If not specified, the default is to use the name of the instance. If
-   * the disk with the instance name exists already in the given zone/region, a new name will be
-   * automatically generated.
+   * Specifies the disk name. If not specified, the default is to use the name of the instance. If a
+   * disk with the same name already exists in the given region, the existing disk is attached to
+   * the new instance and the new disk is not created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -193,9 +193,9 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   }
 
   /**
-   * Specifies the disk name. If not specified, the default is to use the name of the instance. If
-   * the disk with the instance name exists already in the given zone/region, a new name will be
-   * automatically generated.
+   * Specifies the disk name. If not specified, the default is to use the name of the instance. If a
+   * disk with the same name already exists in the given region, the existing disk is attached to
+   * the new instance and the new disk is not created.
    * @return value or {@code null} for none
    */
   public java.lang.String getDiskName() {
@@ -203,9 +203,9 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   }
 
   /**
-   * Specifies the disk name. If not specified, the default is to use the name of the instance. If
-   * the disk with the instance name exists already in the given zone/region, a new name will be
-   * automatically generated.
+   * Specifies the disk name. If not specified, the default is to use the name of the instance. If a
+   * disk with the same name already exists in the given region, the existing disk is attached to
+   * the new instance and the new disk is not created.
    * @param diskName diskName or {@code null} for none
    */
   public AttachedDiskInitializeParams setDiskName(java.lang.String diskName) {

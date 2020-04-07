@@ -1,7 +1,8 @@
 # Google Java API Client Services
 
 This repository contains the generated source for individual APIs that utilize
-[Google APIs Client Library for Java][google-api-java-client].
+[Google APIs Client Library for Java][google-api-java-client].  We recommend using the
+[Google Auth Library for Java](google-auth-library-java) for handling authentication.
 
 ## Requirements
 
@@ -194,6 +195,10 @@ packages on [Maven Central][maven-search].
 | YouTube Reporting API | [v1](clients/google-api-services-youtubereporting/v1) |
 
 [//]: # (API_TABLE_END)
+
+## Authentication
+
+google-api-java recommends using the [google-auth-library-java](google-auth-library-java) library to authenticate requests. google-auth-library-java supports a wide range of authentication types; see the [project's README](google-auth-library-java#google-auth-library) and [javadoc](https://googleapis.dev/java/google-auth-library/latest/) for more details.
 
 ## Generating the API clients
 

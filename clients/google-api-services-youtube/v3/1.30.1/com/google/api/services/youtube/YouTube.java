@@ -12574,7 +12574,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       private java.lang.String safeSearch;
 
       /** The safeSearch parameter indicates whether the search results should include restricted content as
-     well as standard content.
+     well as standard content. [default: SAFE_SEARCH_MODERATE_FILTERING]
        */
       public java.lang.String getSafeSearch() {
         return safeSearch;

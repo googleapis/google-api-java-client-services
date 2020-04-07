@@ -73,7 +73,7 @@ public final class ActivityRule extends com.google.api.client.json.GenericJson {
   private java.lang.String query;
 
   /**
-   * List of alert ids superseded by this alert. It is used to indicate that this alert is
+   * List of alert IDs superseded by this alert. It is used to indicate that this alert is
    * essentially extension of superseded alerts and we found the relationship after creating these
    * alerts.
    * The value may be {@code null}.
@@ -222,7 +222,7 @@ public final class ActivityRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of alert ids superseded by this alert. It is used to indicate that this alert is
+   * List of alert IDs superseded by this alert. It is used to indicate that this alert is
    * essentially extension of superseded alerts and we found the relationship after creating these
    * alerts.
    * @return value or {@code null} for none
@@ -232,7 +232,7 @@ public final class ActivityRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of alert ids superseded by this alert. It is used to indicate that this alert is
+   * List of alert IDs superseded by this alert. It is used to indicate that this alert is
    * essentially extension of superseded alerts and we found the relationship after creating these
    * alerts.
    * @param supersededAlerts supersededAlerts or {@code null} for none

@@ -81,7 +81,6 @@ packages on [Maven Central][maven-search].
 | Cloud SQL Admin API | [v1beta4](clients/google-api-services-sqladmin/v1beta4), [v1beta4](clients/google-api-services-sql/v1beta4) |
 | Cloud Scheduler API | [v1](clients/google-api-services-cloudscheduler/v1), [v1beta1](clients/google-api-services-cloudscheduler/v1beta1) |
 | Cloud Search API | [v1](clients/google-api-services-cloudsearch/v1) |
-| Cloud Security Command Center API | [v1](clients/google-api-services-securitycenter/v1), [v1beta1](clients/google-api-services-securitycenter/v1beta1), [v1p1alpha1](clients/google-api-services-securitycenter/v1p1alpha1), [v1p1beta1](clients/google-api-services-securitycenter/v1p1beta1) |
 | Cloud Shell API | [v1](clients/google-api-services-cloudshell/v1), [v1alpha1](clients/google-api-services-cloudshell/v1alpha1) |
 | Cloud Source Repositories API | [v1](clients/google-api-services-sourcerepo/v1) |
 | Cloud Spanner API | [v1](clients/google-api-services-spanner/v1) |
@@ -177,6 +176,7 @@ packages on [Maven Central][maven-search].
 | Search Ads 360 API | [v2](clients/google-api-services-doubleclicksearch/v2) |
 | Search Console API | [v3](clients/google-api-services-webmasters/v3) |
 | Secret Manager API | [v1](clients/google-api-services-secretmanager/v1), [v1beta1](clients/google-api-services-secretmanager/v1beta1) |
+| Security Command Center API | [v1](clients/google-api-services-securitycenter/v1), [v1beta1](clients/google-api-services-securitycenter/v1beta1), [v1p1alpha1](clients/google-api-services-securitycenter/v1p1alpha1), [v1p1beta1](clients/google-api-services-securitycenter/v1p1beta1) |
 | Service Consumer Management API | [v1](clients/google-api-services-serviceconsumermanagement/v1), [v1beta1](clients/google-api-services-serviceconsumermanagement/v1beta1) |
 | Service Control API | [v1](clients/google-api-services-servicecontrol/v1) |
 | Service Directory API | [v1beta1](clients/google-api-services-servicedirectory/v1beta1) |

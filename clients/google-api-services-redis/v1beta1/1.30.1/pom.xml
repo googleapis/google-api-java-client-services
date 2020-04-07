@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-redis</artifactId>
-  <version>v1beta1-rev20200320-1.30.9</version>
-  <name>Google Cloud Memorystore for Redis API v1beta1-rev20200320-1.30.9</name>
+  <version>v1beta1-rev20200402-1.30.9</version>
+  <name>Google Cloud Memorystore for Redis API v1beta1-rev20200402-1.30.9</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

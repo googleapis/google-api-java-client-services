@@ -49,8 +49,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String authorizedNetwork;
 
   /**
-   * Optional. The connect mode of Redis instance. If not provided, default one will be used.
-   * Current default: DIRECT_PEERING.
+   * Optional. The network connect mode of the Redis instance. If not provided, the connect mode
+   * defaults to DIRECT_PEERING.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -246,8 +246,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The connect mode of Redis instance. If not provided, default one will be used.
-   * Current default: DIRECT_PEERING.
+   * Optional. The network connect mode of the Redis instance. If not provided, the connect mode
+   * defaults to DIRECT_PEERING.
    * @return value or {@code null} for none
    */
   public java.lang.String getConnectMode() {
@@ -255,8 +255,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The connect mode of Redis instance. If not provided, default one will be used.
-   * Current default: DIRECT_PEERING.
+   * Optional. The network connect mode of the Redis instance. If not provided, the connect mode
+   * defaults to DIRECT_PEERING.
    * @param connectMode connectMode or {@code null} for none
    */
   public Instance setConnectMode(java.lang.String connectMode) {

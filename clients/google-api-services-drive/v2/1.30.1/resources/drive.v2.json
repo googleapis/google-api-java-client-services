@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/UpjyoESYd-zLywS8qG4vhXzZdxY\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/UEl2PHBvsMjh3TSXQxSnNlF4wSs\"",
  "discoveryVersion": "v1",
  "id": "drive:v2",
  "name": "drive",
  "version": "v2",
- "revision": "20200306",
+ "revision": "20200326",
  "title": "Drive API",
  "description": "Manages files in Drive including uploading, downloading, searching, detecting changes, and updating sharing permissions.",
  "ownerDomain": "google.com",
@@ -1494,7 +1494,7 @@
       },
       "rotation": {
        "type": "integer",
-       "description": "The rotation in clockwise degrees from the image's original orientation.",
+       "description": "The number of clockwise 90 degree rotations applied from the image's original orientation.",
        "format": "int32"
       },
       "sensor": {

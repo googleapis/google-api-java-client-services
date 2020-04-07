@@ -107,12 +107,12 @@ public final class GoogleCloudMlV1Model extends com.google.api.client.json.Gener
   private java.lang.Boolean onlinePredictionLogging;
 
   /**
-   * Optional. The list of regions where the model is going to be deployed. Currently only one
-   * region per model is supported. Defaults to 'us-central1' if nothing is set. See the available
-   * regions for AI Platform services. Note: *   No matter where a model is deployed, it can always
-   * be accessed by     users from anywhere, both for online and batch prediction. *   The region
-   * for a batch prediction job is set by the region field when     submitting the batch prediction
-   * job and does not take its value from     this field.
+   * Optional. The list of regions where the model is going to be deployed. Only one region per
+   * model is supported. Defaults to 'us-central1' if nothing is set. See the available regions for
+   * AI Platform services. Note: *   No matter where a model is deployed, it can always be accessed
+   * by     users from anywhere, both for online and batch prediction. *   The region for a batch
+   * prediction job is set by the region field when     submitting the batch prediction job and does
+   * not take its value from     this field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -324,12 +324,12 @@ public final class GoogleCloudMlV1Model extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. The list of regions where the model is going to be deployed. Currently only one
-   * region per model is supported. Defaults to 'us-central1' if nothing is set. See the available
-   * regions for AI Platform services. Note: *   No matter where a model is deployed, it can always
-   * be accessed by     users from anywhere, both for online and batch prediction. *   The region
-   * for a batch prediction job is set by the region field when     submitting the batch prediction
-   * job and does not take its value from     this field.
+   * Optional. The list of regions where the model is going to be deployed. Only one region per
+   * model is supported. Defaults to 'us-central1' if nothing is set. See the available regions for
+   * AI Platform services. Note: *   No matter where a model is deployed, it can always be accessed
+   * by     users from anywhere, both for online and batch prediction. *   The region for a batch
+   * prediction job is set by the region field when     submitting the batch prediction job and does
+   * not take its value from     this field.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRegions() {
@@ -337,12 +337,12 @@ public final class GoogleCloudMlV1Model extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. The list of regions where the model is going to be deployed. Currently only one
-   * region per model is supported. Defaults to 'us-central1' if nothing is set. See the available
-   * regions for AI Platform services. Note: *   No matter where a model is deployed, it can always
-   * be accessed by     users from anywhere, both for online and batch prediction. *   The region
-   * for a batch prediction job is set by the region field when     submitting the batch prediction
-   * job and does not take its value from     this field.
+   * Optional. The list of regions where the model is going to be deployed. Only one region per
+   * model is supported. Defaults to 'us-central1' if nothing is set. See the available regions for
+   * AI Platform services. Note: *   No matter where a model is deployed, it can always be accessed
+   * by     users from anywhere, both for online and batch prediction. *   The region for a batch
+   * prediction job is set by the region field when     submitting the batch prediction job and does
+   * not take its value from     this field.
    * @param regions regions or {@code null} for none
    */
   public GoogleCloudMlV1Model setRegions(java.util.List<java.lang.String> regions) {

@@ -32,7 +32,7 @@ public final class GoogleCloudMlV1ReplicaConfig extends com.google.api.client.js
 
   /**
    * Represents the type and number of accelerators used by the replica. [Learn about restrictions
-   * on accelerator configurations for training.](/ml-engine/docs/tensorflow/using-gpus#compute-
+   * on accelerator configurations for training.](/ai-platform/training/docs/using-gpus#compute-
    * engine-machine-types-with-gpu)
    * The value may be {@code null}.
    */
@@ -41,7 +41,8 @@ public final class GoogleCloudMlV1ReplicaConfig extends com.google.api.client.js
 
   /**
    * The Docker image to run on the replica. This image must be in Container Registry. Learn more
-   * about [configuring custom containers](/ml-engine/docs/distributed-training-containers).
+   * about [configuring custom containers](/ai-platform/training/docs/distributed-training-
+   * containers).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +66,7 @@ public final class GoogleCloudMlV1ReplicaConfig extends com.google.api.client.js
 
   /**
    * Represents the type and number of accelerators used by the replica. [Learn about restrictions
-   * on accelerator configurations for training.](/ml-engine/docs/tensorflow/using-gpus#compute-
+   * on accelerator configurations for training.](/ai-platform/training/docs/using-gpus#compute-
    * engine-machine-types-with-gpu)
    * @return value or {@code null} for none
    */
@@ -75,7 +76,7 @@ public final class GoogleCloudMlV1ReplicaConfig extends com.google.api.client.js
 
   /**
    * Represents the type and number of accelerators used by the replica. [Learn about restrictions
-   * on accelerator configurations for training.](/ml-engine/docs/tensorflow/using-gpus#compute-
+   * on accelerator configurations for training.](/ai-platform/training/docs/using-gpus#compute-
    * engine-machine-types-with-gpu)
    * @param acceleratorConfig acceleratorConfig or {@code null} for none
    */
@@ -86,7 +87,8 @@ public final class GoogleCloudMlV1ReplicaConfig extends com.google.api.client.js
 
   /**
    * The Docker image to run on the replica. This image must be in Container Registry. Learn more
-   * about [configuring custom containers](/ml-engine/docs/distributed-training-containers).
+   * about [configuring custom containers](/ai-platform/training/docs/distributed-training-
+   * containers).
    * @return value or {@code null} for none
    */
   public java.lang.String getImageUri() {
@@ -95,7 +97,8 @@ public final class GoogleCloudMlV1ReplicaConfig extends com.google.api.client.js
 
   /**
    * The Docker image to run on the replica. This image must be in Container Registry. Learn more
-   * about [configuring custom containers](/ml-engine/docs/distributed-training-containers).
+   * about [configuring custom containers](/ai-platform/training/docs/distributed-training-
+   * containers).
    * @param imageUri imageUri or {@code null} for none
    */
   public GoogleCloudMlV1ReplicaConfig setImageUri(java.lang.String imageUri) {

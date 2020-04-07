@@ -17,10 +17,6 @@
 package com.google.api.services.run.v1.model;
 
 /**
- * Cloud Run fully managed: not supported
- *
- * Cloud Run for Anthos: supported
- *
  * ContainerPort represents a network port in a single container.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -35,10 +31,6 @@ public final class ContainerPort extends com.google.api.client.json.GenericJson 
 
   /**
    * (Optional)
-   *
-   * Cloud Run fully managed: supported
-   *
-   * Cloud Run for Anthos: supported
    *
    * Port number the container listens on. This must be a valid port number, 0 < x < 65536.
    * The value may be {@code null}.
@@ -66,7 +58,7 @@ public final class ContainerPort extends com.google.api.client.json.GenericJson 
    *
    * Cloud Run for Anthos: supported
    *
-   * Protocol for port. Must be TCP. Defaults to "TCP".
+   * Protocol for port. Must be "TCP". Defaults to "TCP".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,10 +66,6 @@ public final class ContainerPort extends com.google.api.client.json.GenericJson 
 
   /**
    * (Optional)
-   *
-   * Cloud Run fully managed: supported
-   *
-   * Cloud Run for Anthos: supported
    *
    * Port number the container listens on. This must be a valid port number, 0 < x < 65536.
    * @return value or {@code null} for none
@@ -88,10 +76,6 @@ public final class ContainerPort extends com.google.api.client.json.GenericJson 
 
   /**
    * (Optional)
-   *
-   * Cloud Run fully managed: supported
-   *
-   * Cloud Run for Anthos: supported
    *
    * Port number the container listens on. This must be a valid port number, 0 < x < 65536.
    * @param containerPort containerPort or {@code null} for none
@@ -137,7 +121,7 @@ public final class ContainerPort extends com.google.api.client.json.GenericJson 
    *
    * Cloud Run for Anthos: supported
    *
-   * Protocol for port. Must be TCP. Defaults to "TCP".
+   * Protocol for port. Must be "TCP". Defaults to "TCP".
    * @return value or {@code null} for none
    */
   public java.lang.String getProtocol() {
@@ -151,7 +135,7 @@ public final class ContainerPort extends com.google.api.client.json.GenericJson 
    *
    * Cloud Run for Anthos: supported
    *
-   * Protocol for port. Must be TCP. Defaults to "TCP".
+   * Protocol for port. Must be "TCP". Defaults to "TCP".
    * @param protocol protocol or {@code null} for none
    */
   public ContainerPort setProtocol(java.lang.String protocol) {

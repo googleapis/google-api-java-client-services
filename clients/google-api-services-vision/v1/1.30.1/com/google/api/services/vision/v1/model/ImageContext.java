@@ -42,7 +42,8 @@ public final class ImageContext extends com.google.api.client.json.GenericJson {
    * alphabet, setting `language_hints` is not needed. In rare cases, when the language of the text
    * in the image is known, setting a hint will help get better results (although it will be a
    * significant hindrance if the hint is wrong). Text detection returns an error if one or more of
-   * the specified languages is not one of the [supported languages](/vision/docs/languages).
+   * the specified languages is not one of the [supported
+   * languages](https://cloud.google.com/vision/docs/languages).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +93,8 @@ public final class ImageContext extends com.google.api.client.json.GenericJson {
    * alphabet, setting `language_hints` is not needed. In rare cases, when the language of the text
    * in the image is known, setting a hint will help get better results (although it will be a
    * significant hindrance if the hint is wrong). Text detection returns an error if one or more of
-   * the specified languages is not one of the [supported languages](/vision/docs/languages).
+   * the specified languages is not one of the [supported
+   * languages](https://cloud.google.com/vision/docs/languages).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLanguageHints() {
@@ -105,7 +107,8 @@ public final class ImageContext extends com.google.api.client.json.GenericJson {
    * alphabet, setting `language_hints` is not needed. In rare cases, when the language of the text
    * in the image is known, setting a hint will help get better results (although it will be a
    * significant hindrance if the hint is wrong). Text detection returns an error if one or more of
-   * the specified languages is not one of the [supported languages](/vision/docs/languages).
+   * the specified languages is not one of the [supported
+   * languages](https://cloud.google.com/vision/docs/languages).
    * @param languageHints languageHints or {@code null} for none
    */
   public ImageContext setLanguageHints(java.util.List<java.lang.String> languageHints) {

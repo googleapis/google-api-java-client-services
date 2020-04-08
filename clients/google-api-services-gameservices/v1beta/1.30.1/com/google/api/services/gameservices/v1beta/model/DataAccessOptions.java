@@ -30,18 +30,12 @@ package com.google.api.services.gameservices.v1beta.model;
 public final class DataAccessOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether Gin logging should happen in a fail-closed manner at the caller. This is currently
-   * supported in the LocalIAM implementation, Stubby C++, and Stubby Java. For Apps Framework, see
-   * go/af-audit-logging#failclosed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String logMode;
 
   /**
-   * Whether Gin logging should happen in a fail-closed manner at the caller. This is currently
-   * supported in the LocalIAM implementation, Stubby C++, and Stubby Java. For Apps Framework, see
-   * go/af-audit-logging#failclosed.
    * @return value or {@code null} for none
    */
   public java.lang.String getLogMode() {
@@ -49,9 +43,6 @@ public final class DataAccessOptions extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Whether Gin logging should happen in a fail-closed manner at the caller. This is currently
-   * supported in the LocalIAM implementation, Stubby C++, and Stubby Java. For Apps Framework, see
-   * go/af-audit-logging#failclosed.
    * @param logMode logMode or {@code null} for none
    */
   public DataAccessOptions setLogMode(java.lang.String logMode) {

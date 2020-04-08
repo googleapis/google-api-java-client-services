@@ -57,9 +57,7 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   /**
    * If 'true', adds punctuation to recognition result hypotheses. This feature is only available in
    * select languages. Setting this for requests in other languages has no effect at all. The
-   * default 'false' value does not add punctuation to result hypotheses. Note: This is currently
-   * offered as an experimental service, complimentary to all users. In the future this may be
-   * exclusively available as a premium feature.
+   * default 'false' value does not add punctuation to result hypotheses.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -237,9 +235,7 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   /**
    * If 'true', adds punctuation to recognition result hypotheses. This feature is only available in
    * select languages. Setting this for requests in other languages has no effect at all. The
-   * default 'false' value does not add punctuation to result hypotheses. Note: This is currently
-   * offered as an experimental service, complimentary to all users. In the future this may be
-   * exclusively available as a premium feature.
+   * default 'false' value does not add punctuation to result hypotheses.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableAutomaticPunctuation() {
@@ -249,9 +245,7 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   /**
    * If 'true', adds punctuation to recognition result hypotheses. This feature is only available in
    * select languages. Setting this for requests in other languages has no effect at all. The
-   * default 'false' value does not add punctuation to result hypotheses. Note: This is currently
-   * offered as an experimental service, complimentary to all users. In the future this may be
-   * exclusively available as a premium feature.
+   * default 'false' value does not add punctuation to result hypotheses.
    * @param enableAutomaticPunctuation enableAutomaticPunctuation or {@code null} for none
    */
   public RecognitionConfig setEnableAutomaticPunctuation(java.lang.Boolean enableAutomaticPunctuation) {

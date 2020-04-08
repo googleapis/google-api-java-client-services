@@ -20,7 +20,7 @@ package com.google.api.services.blogger.model;
  * Model definition for PageList.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Blogger API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Blogger API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -28,6 +28,13 @@ package com.google.api.services.blogger.model;
  */
 @SuppressWarnings("javadoc")
 public final class PageList extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Etag of the response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String etag;
 
   /**
    * The list of Pages for a Blog.
@@ -43,11 +50,35 @@ public final class PageList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The kind of this entity. Always blogger#pageList
+   * The kind of this entity. Always blogger#pageList.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
+
+  /**
+   * Pagination token to fetch the next page, if one exists.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String nextPageToken;
+
+  /**
+   * Etag of the response.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEtag() {
+    return etag;
+  }
+
+  /**
+   * Etag of the response.
+   * @param etag etag or {@code null} for none
+   */
+  public PageList setEtag(java.lang.String etag) {
+    this.etag = etag;
+    return this;
+  }
 
   /**
    * The list of Pages for a Blog.
@@ -67,7 +98,7 @@ public final class PageList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The kind of this entity. Always blogger#pageList
+   * The kind of this entity. Always blogger#pageList.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -75,11 +106,28 @@ public final class PageList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The kind of this entity. Always blogger#pageList
+   * The kind of this entity. Always blogger#pageList.
    * @param kind kind or {@code null} for none
    */
   public PageList setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * Pagination token to fetch the next page, if one exists.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNextPageToken() {
+    return nextPageToken;
+  }
+
+  /**
+   * Pagination token to fetch the next page, if one exists.
+   * @param nextPageToken nextPageToken or {@code null} for none
+   */
+  public PageList setNextPageToken(java.lang.String nextPageToken) {
+    this.nextPageToken = nextPageToken;
     return this;
   }
 

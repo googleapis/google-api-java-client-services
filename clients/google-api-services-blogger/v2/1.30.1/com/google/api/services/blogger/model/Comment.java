@@ -20,7 +20,7 @@ package com.google.api.services.blogger.model;
  * Model definition for Comment.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Blogger API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Blogger API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -54,8 +54,8 @@ public final class Comment extends com.google.api.client.json.GenericJson {
    * The identifier for this resource.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long id;
+  @com.google.api.client.util.Key
+  private java.lang.String id;
 
   /**
    * Data about the comment this is in reply to.
@@ -65,7 +65,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   private InReplyTo inReplyTo;
 
   /**
-   * The kind of this entry. Always blogger#comment
+   * The kind of this entry. Always blogger#comment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +83,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime published;
+  private java.lang.String published;
 
   /**
    * The API REST URL to fetch this resource from.
@@ -93,11 +93,18 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
+   * The status of the comment (only populated for admin users).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String status;
+
+  /**
    * RFC 3339 date-time when this comment was last updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime updated;
+  private java.lang.String updated;
 
   /**
    * The author of this Comment.
@@ -154,7 +161,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
    * The identifier for this resource.
    * @return value or {@code null} for none
    */
-  public java.lang.Long getId() {
+  public java.lang.String getId() {
     return id;
   }
 
@@ -162,7 +169,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
    * The identifier for this resource.
    * @param id id or {@code null} for none
    */
-  public Comment setId(java.lang.Long id) {
+  public Comment setId(java.lang.String id) {
     this.id = id;
     return this;
   }
@@ -185,7 +192,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The kind of this entry. Always blogger#comment
+   * The kind of this entry. Always blogger#comment.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -193,7 +200,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The kind of this entry. Always blogger#comment
+   * The kind of this entry. Always blogger#comment.
    * @param kind kind or {@code null} for none
    */
   public Comment setKind(java.lang.String kind) {
@@ -222,7 +229,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
    * RFC 3339 date-time when this comment was published.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getPublished() {
+  public java.lang.String getPublished() {
     return published;
   }
 
@@ -230,7 +237,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
    * RFC 3339 date-time when this comment was published.
    * @param published published or {@code null} for none
    */
-  public Comment setPublished(com.google.api.client.util.DateTime published) {
+  public Comment setPublished(java.lang.String published) {
     this.published = published;
     return this;
   }
@@ -253,10 +260,27 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The status of the comment (only populated for admin users).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStatus() {
+    return status;
+  }
+
+  /**
+   * The status of the comment (only populated for admin users).
+   * @param status status or {@code null} for none
+   */
+  public Comment setStatus(java.lang.String status) {
+    this.status = status;
+    return this;
+  }
+
+  /**
    * RFC 3339 date-time when this comment was last updated.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getUpdated() {
+  public java.lang.String getUpdated() {
     return updated;
   }
 
@@ -264,7 +288,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
    * RFC 3339 date-time when this comment was last updated.
    * @param updated updated or {@code null} for none
    */
-  public Comment setUpdated(com.google.api.client.util.DateTime updated) {
+  public Comment setUpdated(java.lang.String updated) {
     this.updated = updated;
     return this;
   }
@@ -292,21 +316,21 @@ public final class Comment extends com.google.api.client.json.GenericJson {
     private java.lang.String displayName;
 
     /**
-     * The identifier of the Comment creator.
+     * The identifier of the creator.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String id;
 
     /**
-     * The comment creator's avatar.
+     * The creator's avatar.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private Image image;
 
     /**
-     * The URL of the Comment creator's Profile page.
+     * The URL of the creator's Profile page.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -330,7 +354,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The identifier of the Comment creator.
+     * The identifier of the creator.
      * @return value or {@code null} for none
      */
     public java.lang.String getId() {
@@ -338,7 +362,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The identifier of the Comment creator.
+     * The identifier of the creator.
      * @param id id or {@code null} for none
      */
     public Author setId(java.lang.String id) {
@@ -347,7 +371,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The comment creator's avatar.
+     * The creator's avatar.
      * @return value or {@code null} for none
      */
     public Image getImage() {
@@ -355,7 +379,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The comment creator's avatar.
+     * The creator's avatar.
      * @param image image or {@code null} for none
      */
     public Author setImage(Image image) {
@@ -364,7 +388,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The URL of the Comment creator's Profile page.
+     * The URL of the creator's Profile page.
      * @return value or {@code null} for none
      */
     public java.lang.String getUrl() {
@@ -372,7 +396,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The URL of the Comment creator's Profile page.
+     * The URL of the creator's Profile page.
      * @param url url or {@code null} for none
      */
     public Author setUrl(java.lang.String url) {
@@ -391,19 +415,19 @@ public final class Comment extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The comment creator's avatar.
+     * The creator's avatar.
      */
     public static final class Image extends com.google.api.client.json.GenericJson {
 
       /**
-       * The comment creator's avatar URL.
+       * The creator's avatar URL.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
       private java.lang.String url;
 
       /**
-       * The comment creator's avatar URL.
+       * The creator's avatar URL.
        * @return value or {@code null} for none
        */
       public java.lang.String getUrl() {
@@ -411,7 +435,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * The comment creator's avatar URL.
+       * The creator's avatar URL.
        * @param url url or {@code null} for none
        */
       public Image setUrl(java.lang.String url) {
@@ -441,14 +465,14 @@ public final class Comment extends com.google.api.client.json.GenericJson {
      * The identifier of the blog containing this comment.
      * The value may be {@code null}.
      */
-    @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-    private java.lang.Long id;
+    @com.google.api.client.util.Key
+    private java.lang.String id;
 
     /**
      * The identifier of the blog containing this comment.
      * @return value or {@code null} for none
      */
-    public java.lang.Long getId() {
+    public java.lang.String getId() {
       return id;
     }
 
@@ -456,7 +480,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
      * The identifier of the blog containing this comment.
      * @param id id or {@code null} for none
      */
-    public Blog setId(java.lang.Long id) {
+    public Blog setId(java.lang.String id) {
       this.id = id;
       return this;
     }
@@ -482,14 +506,14 @@ public final class Comment extends com.google.api.client.json.GenericJson {
      * The identified of the parent of this comment.
      * The value may be {@code null}.
      */
-    @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-    private java.lang.Long id;
+    @com.google.api.client.util.Key
+    private java.lang.String id;
 
     /**
      * The identified of the parent of this comment.
      * @return value or {@code null} for none
      */
-    public java.lang.Long getId() {
+    public java.lang.String getId() {
       return id;
     }
 
@@ -497,7 +521,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
      * The identified of the parent of this comment.
      * @param id id or {@code null} for none
      */
-    public InReplyTo setId(java.lang.Long id) {
+    public InReplyTo setId(java.lang.String id) {
       this.id = id;
       return this;
     }
@@ -523,14 +547,14 @@ public final class Comment extends com.google.api.client.json.GenericJson {
      * The identifier of the post containing this comment.
      * The value may be {@code null}.
      */
-    @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-    private java.lang.Long id;
+    @com.google.api.client.util.Key
+    private java.lang.String id;
 
     /**
      * The identifier of the post containing this comment.
      * @return value or {@code null} for none
      */
-    public java.lang.Long getId() {
+    public java.lang.String getId() {
       return id;
     }
 
@@ -538,7 +562,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
      * The identifier of the post containing this comment.
      * @param id id or {@code null} for none
      */
-    public Post setId(java.lang.Long id) {
+    public Post setId(java.lang.String id) {
       this.id = id;
       return this;
     }

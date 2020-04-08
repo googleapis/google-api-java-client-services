@@ -17,7 +17,7 @@
 package com.google.api.services.blogger.model;
 
 /**
- * Model definition for BlogList.
+ * Model definition for BlogUserInfo.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Blogger API v3. For a detailed explanation see:
@@ -27,71 +27,65 @@ package com.google.api.services.blogger.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class BlogList extends com.google.api.client.json.GenericJson {
+public final class BlogUserInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Admin level list of blog per-user information.
+   * The Blog resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<BlogUserInfo> blogUserInfos;
+  private Blog blog;
 
   /**
-   * The list of Blogs this user has Authorship or Admin rights over.
+   * Information about a User for the Blog.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key
-  private java.util.List<Blog> items;
-
-  static {
-    // hack to force ProGuard to consider Blog used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Blog.class);
-  }
+  @com.google.api.client.util.Key("blog_user_info")
+  private BlogPerUserInfo blogUserInfo;
 
   /**
-   * The kind of this entity. Always blogger#blogList.
+   * The kind of this entity. Always blogger#blogUserInfo.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * Admin level list of blog per-user information.
+   * The Blog resource.
    * @return value or {@code null} for none
    */
-  public java.util.List<BlogUserInfo> getBlogUserInfos() {
-    return blogUserInfos;
+  public Blog getBlog() {
+    return blog;
   }
 
   /**
-   * Admin level list of blog per-user information.
-   * @param blogUserInfos blogUserInfos or {@code null} for none
+   * The Blog resource.
+   * @param blog blog or {@code null} for none
    */
-  public BlogList setBlogUserInfos(java.util.List<BlogUserInfo> blogUserInfos) {
-    this.blogUserInfos = blogUserInfos;
+  public BlogUserInfo setBlog(Blog blog) {
+    this.blog = blog;
     return this;
   }
 
   /**
-   * The list of Blogs this user has Authorship or Admin rights over.
+   * Information about a User for the Blog.
    * @return value or {@code null} for none
    */
-  public java.util.List<Blog> getItems() {
-    return items;
+  public BlogPerUserInfo getBlogUserInfo() {
+    return blogUserInfo;
   }
 
   /**
-   * The list of Blogs this user has Authorship or Admin rights over.
-   * @param items items or {@code null} for none
+   * Information about a User for the Blog.
+   * @param blogUserInfo blogUserInfo or {@code null} for none
    */
-  public BlogList setItems(java.util.List<Blog> items) {
-    this.items = items;
+  public BlogUserInfo setBlogUserInfo(BlogPerUserInfo blogUserInfo) {
+    this.blogUserInfo = blogUserInfo;
     return this;
   }
 
   /**
-   * The kind of this entity. Always blogger#blogList.
+   * The kind of this entity. Always blogger#blogUserInfo.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -99,22 +93,22 @@ public final class BlogList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The kind of this entity. Always blogger#blogList.
+   * The kind of this entity. Always blogger#blogUserInfo.
    * @param kind kind or {@code null} for none
    */
-  public BlogList setKind(java.lang.String kind) {
+  public BlogUserInfo setKind(java.lang.String kind) {
     this.kind = kind;
     return this;
   }
 
   @Override
-  public BlogList set(String fieldName, Object value) {
-    return (BlogList) super.set(fieldName, value);
+  public BlogUserInfo set(String fieldName, Object value) {
+    return (BlogUserInfo) super.set(fieldName, value);
   }
 
   @Override
-  public BlogList clone() {
-    return (BlogList) super.clone();
+  public BlogUserInfo clone() {
+    return (BlogUserInfo) super.clone();
   }
 
 }

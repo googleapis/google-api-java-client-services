@@ -20,7 +20,7 @@ package com.google.api.services.blogger.model;
  * Model definition for PostList.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Blogger API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Blogger API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -28,6 +28,13 @@ package com.google.api.services.blogger.model;
  */
 @SuppressWarnings("javadoc")
 public final class PostList extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Etag of the response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String etag;
 
   /**
    * The list of Posts for this Blog.
@@ -43,7 +50,7 @@ public final class PostList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The kind of this entity. Always blogger#postList
+   * The kind of this entity. Always blogger#postList.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,6 +71,23 @@ public final class PostList extends com.google.api.client.json.GenericJson {
   private java.lang.String prevPageToken;
 
   /**
+   * Etag of the response.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEtag() {
+    return etag;
+  }
+
+  /**
+   * Etag of the response.
+   * @param etag etag or {@code null} for none
+   */
+  public PostList setEtag(java.lang.String etag) {
+    this.etag = etag;
+    return this;
+  }
+
+  /**
    * The list of Posts for this Blog.
    * @return value or {@code null} for none
    */
@@ -81,7 +105,7 @@ public final class PostList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The kind of this entity. Always blogger#postList
+   * The kind of this entity. Always blogger#postList.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -89,7 +113,7 @@ public final class PostList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The kind of this entity. Always blogger#postList
+   * The kind of this entity. Always blogger#postList.
    * @param kind kind or {@code null} for none
    */
   public PostList setKind(java.lang.String kind) {

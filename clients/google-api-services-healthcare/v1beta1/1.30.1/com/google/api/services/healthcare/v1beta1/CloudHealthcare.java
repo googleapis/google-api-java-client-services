@@ -15600,13 +15600,16 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * Specifies the parts of the Message to return in the response. When unspecified,
-               * equivalent to BASIC.
+               * equivalent to BASIC. Setting this to anything other than BASIC with a `page_size`
+               * larger than the default can generate a large response, which impacts the
+               * performance of this method.
                */
               @com.google.api.client.util.Key
               private java.lang.String view;
 
               /** Specifies the parts of the Message to return in the response. When unspecified, equivalent to
-             BASIC.
+             BASIC. Setting this to anything other than BASIC with a `page_size` larger than the default can
+             generate a large response, which impacts the performance of this method.
                */
               public java.lang.String getView() {
                 return view;
@@ -15614,7 +15617,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * Specifies the parts of the Message to return in the response. When unspecified,
-               * equivalent to BASIC.
+               * equivalent to BASIC. Setting this to anything other than BASIC with a `page_size`
+               * larger than the default can generate a large response, which impacts the
+               * performance of this method.
                */
               public List setView(java.lang.String view) {
                 this.view = view;

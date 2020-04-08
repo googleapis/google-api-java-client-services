@@ -68,7 +68,7 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
   /**
    * The plan this capacity commitment is converted to after commitment_end_time passes. Once the
    * plan is changed, committed period is extended according to commitment plan. Only applicable for
-   * MONTHLY and ANNUAL commitments.
+   * ANNUAL commitments.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,7 +163,7 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
   /**
    * The plan this capacity commitment is converted to after commitment_end_time passes. Once the
    * plan is changed, committed period is extended according to commitment plan. Only applicable for
-   * MONTHLY and ANNUAL commitments.
+   * ANNUAL commitments.
    * @return value or {@code null} for none
    */
   public java.lang.String getRenewalPlan() {
@@ -173,7 +173,7 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
   /**
    * The plan this capacity commitment is converted to after commitment_end_time passes. Once the
    * plan is changed, committed period is extended according to commitment plan. Only applicable for
-   * MONTHLY and ANNUAL commitments.
+   * ANNUAL commitments.
    * @param renewalPlan renewalPlan or {@code null} for none
    */
   public CapacityCommitment setRenewalPlan(java.lang.String renewalPlan) {

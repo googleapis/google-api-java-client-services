@@ -18,9 +18,9 @@ package com.google.api.services.datacatalog.v1beta1.model;
 
 /**
  * Entry Metadata. A Data Catalog Entry resource represents another resource in Google Cloud
- * Platform (such as a BigQuery dataset or a Cloud Pub/Sub topic), or outside of Google Cloud
- * Platform. Clients can use the `linked_resource` field in the Entry resource to refer to the
- * original resource ID of the source system.
+ * Platform (such as a BigQuery dataset or a Pub/Sub topic), or outside of Google Cloud Platform.
+ * Clients can use the `linked_resource` field in the Entry resource to refer to the original
+ * resource ID of the source system.
  *
  * An Entry resource contains resource details, such as its schema. An Entry can also be used to
  * attach flexible metadata, such as a Tag.
@@ -77,7 +77,7 @@ public final class GoogleCloudDatacatalogV1beta1Entry extends com.google.api.cli
 
   /**
    * Output only. This field indicates the entry's source system that Data Catalog integrates with,
-   * such as BigQuery or Cloud Pub/Sub.
+   * such as BigQuery or Pub/Sub.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -254,7 +254,7 @@ public final class GoogleCloudDatacatalogV1beta1Entry extends com.google.api.cli
 
   /**
    * Output only. This field indicates the entry's source system that Data Catalog integrates with,
-   * such as BigQuery or Cloud Pub/Sub.
+   * such as BigQuery or Pub/Sub.
    * @return value or {@code null} for none
    */
   public java.lang.String getIntegratedSystem() {
@@ -263,7 +263,7 @@ public final class GoogleCloudDatacatalogV1beta1Entry extends com.google.api.cli
 
   /**
    * Output only. This field indicates the entry's source system that Data Catalog integrates with,
-   * such as BigQuery or Cloud Pub/Sub.
+   * such as BigQuery or Pub/Sub.
    * @param integratedSystem integratedSystem or {@code null} for none
    */
   public GoogleCloudDatacatalogV1beta1Entry setIntegratedSystem(java.lang.String integratedSystem) {

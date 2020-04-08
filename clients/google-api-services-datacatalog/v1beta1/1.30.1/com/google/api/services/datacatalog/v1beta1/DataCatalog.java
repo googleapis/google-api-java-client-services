@@ -1067,8 +1067,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
          * on it.
          *
          * Supported resources are:   - Tag templates.   - Entries.   - Entry groups. Note, this method
-         * cannot be used to manage policies for BigQuery, Cloud Pub/Sub and any external Google Cloud
-         * Platform resources synced to Cloud Data Catalog.
+         * cannot be used to manage policies for BigQuery, Pub/Sub and any external Google Cloud Platform
+         * resources synced to Data Catalog.
          *
          * Callers must have following Google IAM permission   - `datacatalog.tagTemplates.getIamPolicy` to
          * get policies on tag     templates.   - `datacatalog.entries.getIamPolicy` to get policies on
@@ -1104,8 +1104,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
            * set on it.
            *
            * Supported resources are:   - Tag templates.   - Entries.   - Entry groups. Note, this method
-           * cannot be used to manage policies for BigQuery, Cloud Pub/Sub and any external Google Cloud
-           * Platform resources synced to Cloud Data Catalog.
+           * cannot be used to manage policies for BigQuery, Pub/Sub and any external Google Cloud Platform
+           * resources synced to Data Catalog.
            *
            * Callers must have following Google IAM permission   - `datacatalog.tagTemplates.getIamPolicy`
            * to get policies on tag     templates.   - `datacatalog.entries.getIamPolicy` to get policies on
@@ -1616,8 +1616,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
         /**
          * Sets the access control policy for a resource. Replaces any existing policy. Supported resources
          * are:   - Tag templates.   - Entries.   - Entry groups. Note, this method cannot be used to manage
-         * policies for BigQuery, Cloud Pub/Sub and any external Google Cloud Platform resources synced to
-         * Cloud Data Catalog.
+         * policies for BigQuery, Pub/Sub and any external Google Cloud Platform resources synced to Data
+         * Catalog.
          *
          * Callers must have following Google IAM permission   - `datacatalog.tagTemplates.setIamPolicy` to
          * set policies on tag     templates.   - `datacatalog.entries.setIamPolicy` to set policies on
@@ -1650,8 +1650,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
           /**
            * Sets the access control policy for a resource. Replaces any existing policy. Supported
            * resources are:   - Tag templates.   - Entries.   - Entry groups. Note, this method cannot be
-           * used to manage policies for BigQuery, Cloud Pub/Sub and any external Google Cloud Platform
-           * resources synced to Cloud Data Catalog.
+           * used to manage policies for BigQuery, Pub/Sub and any external Google Cloud Platform resources
+           * synced to Data Catalog.
            *
            * Callers must have following Google IAM permission   - `datacatalog.tagTemplates.setIamPolicy`
            * to set policies on tag     templates.   - `datacatalog.entries.setIamPolicy` to set policies on
@@ -1774,8 +1774,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
          * permissions is returned (We don't return a `NOT_FOUND` error).
          *
          * Supported resources are:   - Tag templates.   - Entries.   - Entry groups. Note, this method
-         * cannot be used to manage policies for BigQuery, Cloud Pub/Sub and any external Google Cloud
-         * Platform resources synced to Cloud Data Catalog.
+         * cannot be used to manage policies for BigQuery, Pub/Sub and any external Google Cloud Platform
+         * resources synced to Data Catalog.
          *
          * A caller is not required to have Google IAM permission to make this request.
          *
@@ -1808,8 +1808,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
            * permissions is returned (We don't return a `NOT_FOUND` error).
            *
            * Supported resources are:   - Tag templates.   - Entries.   - Entry groups. Note, this method
-           * cannot be used to manage policies for BigQuery, Cloud Pub/Sub and any external Google Cloud
-           * Platform resources synced to Cloud Data Catalog.
+           * cannot be used to manage policies for BigQuery, Pub/Sub and any external Google Cloud Platform
+           * resources synced to Data Catalog.
            *
            * A caller is not required to have Google IAM permission to make this request.
            *
@@ -2444,8 +2444,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
            * on it.
            *
            * Supported resources are:   - Tag templates.   - Entries.   - Entry groups. Note, this method
-           * cannot be used to manage policies for BigQuery, Cloud Pub/Sub and any external Google Cloud
-           * Platform resources synced to Cloud Data Catalog.
+           * cannot be used to manage policies for BigQuery, Pub/Sub and any external Google Cloud Platform
+           * resources synced to Data Catalog.
            *
            * Callers must have following Google IAM permission   - `datacatalog.tagTemplates.getIamPolicy` to
            * get policies on tag     templates.   - `datacatalog.entries.getIamPolicy` to get policies on
@@ -2481,8 +2481,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
              * set on it.
              *
              * Supported resources are:   - Tag templates.   - Entries.   - Entry groups. Note, this method
-             * cannot be used to manage policies for BigQuery, Cloud Pub/Sub and any external Google Cloud
-             * Platform resources synced to Cloud Data Catalog.
+             * cannot be used to manage policies for BigQuery, Pub/Sub and any external Google Cloud Platform
+             * resources synced to Data Catalog.
              *
              * Callers must have following Google IAM permission   - `datacatalog.tagTemplates.getIamPolicy`
              * to get policies on tag     templates.   - `datacatalog.entries.getIamPolicy` to get policies on
@@ -3039,8 +3039,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
            * permissions is returned (We don't return a `NOT_FOUND` error).
            *
            * Supported resources are:   - Tag templates.   - Entries.   - Entry groups. Note, this method
-           * cannot be used to manage policies for BigQuery, Cloud Pub/Sub and any external Google Cloud
-           * Platform resources synced to Cloud Data Catalog.
+           * cannot be used to manage policies for BigQuery, Pub/Sub and any external Google Cloud Platform
+           * resources synced to Data Catalog.
            *
            * A caller is not required to have Google IAM permission to make this request.
            *
@@ -3073,8 +3073,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
              * permissions is returned (We don't return a `NOT_FOUND` error).
              *
              * Supported resources are:   - Tag templates.   - Entries.   - Entry groups. Note, this method
-             * cannot be used to manage policies for BigQuery, Cloud Pub/Sub and any external Google Cloud
-             * Platform resources synced to Cloud Data Catalog.
+             * cannot be used to manage policies for BigQuery, Pub/Sub and any external Google Cloud Platform
+             * resources synced to Data Catalog.
              *
              * A caller is not required to have Google IAM permission to make this request.
              *
@@ -5209,8 +5209,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
          * on it.
          *
          * Supported resources are:   - Tag templates.   - Entries.   - Entry groups. Note, this method
-         * cannot be used to manage policies for BigQuery, Cloud Pub/Sub and any external Google Cloud
-         * Platform resources synced to Cloud Data Catalog.
+         * cannot be used to manage policies for BigQuery, Pub/Sub and any external Google Cloud Platform
+         * resources synced to Data Catalog.
          *
          * Callers must have following Google IAM permission   - `datacatalog.tagTemplates.getIamPolicy` to
          * get policies on tag     templates.   - `datacatalog.entries.getIamPolicy` to get policies on
@@ -5246,8 +5246,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
            * set on it.
            *
            * Supported resources are:   - Tag templates.   - Entries.   - Entry groups. Note, this method
-           * cannot be used to manage policies for BigQuery, Cloud Pub/Sub and any external Google Cloud
-           * Platform resources synced to Cloud Data Catalog.
+           * cannot be used to manage policies for BigQuery, Pub/Sub and any external Google Cloud Platform
+           * resources synced to Data Catalog.
            *
            * Callers must have following Google IAM permission   - `datacatalog.tagTemplates.getIamPolicy`
            * to get policies on tag     templates.   - `datacatalog.entries.getIamPolicy` to get policies on
@@ -5576,8 +5576,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
         /**
          * Sets the access control policy for a resource. Replaces any existing policy. Supported resources
          * are:   - Tag templates.   - Entries.   - Entry groups. Note, this method cannot be used to manage
-         * policies for BigQuery, Cloud Pub/Sub and any external Google Cloud Platform resources synced to
-         * Cloud Data Catalog.
+         * policies for BigQuery, Pub/Sub and any external Google Cloud Platform resources synced to Data
+         * Catalog.
          *
          * Callers must have following Google IAM permission   - `datacatalog.tagTemplates.setIamPolicy` to
          * set policies on tag     templates.   - `datacatalog.entries.setIamPolicy` to set policies on
@@ -5610,8 +5610,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
           /**
            * Sets the access control policy for a resource. Replaces any existing policy. Supported
            * resources are:   - Tag templates.   - Entries.   - Entry groups. Note, this method cannot be
-           * used to manage policies for BigQuery, Cloud Pub/Sub and any external Google Cloud Platform
-           * resources synced to Cloud Data Catalog.
+           * used to manage policies for BigQuery, Pub/Sub and any external Google Cloud Platform resources
+           * synced to Data Catalog.
            *
            * Callers must have following Google IAM permission   - `datacatalog.tagTemplates.setIamPolicy`
            * to set policies on tag     templates.   - `datacatalog.entries.setIamPolicy` to set policies on
@@ -5734,8 +5734,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
          * permissions is returned (We don't return a `NOT_FOUND` error).
          *
          * Supported resources are:   - Tag templates.   - Entries.   - Entry groups. Note, this method
-         * cannot be used to manage policies for BigQuery, Cloud Pub/Sub and any external Google Cloud
-         * Platform resources synced to Cloud Data Catalog.
+         * cannot be used to manage policies for BigQuery, Pub/Sub and any external Google Cloud Platform
+         * resources synced to Data Catalog.
          *
          * A caller is not required to have Google IAM permission to make this request.
          *
@@ -5768,8 +5768,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
            * permissions is returned (We don't return a `NOT_FOUND` error).
            *
            * Supported resources are:   - Tag templates.   - Entries.   - Entry groups. Note, this method
-           * cannot be used to manage policies for BigQuery, Cloud Pub/Sub and any external Google Cloud
-           * Platform resources synced to Cloud Data Catalog.
+           * cannot be used to manage policies for BigQuery, Pub/Sub and any external Google Cloud Platform
+           * resources synced to Data Catalog.
            *
            * A caller is not required to have Google IAM permission to make this request.
            *

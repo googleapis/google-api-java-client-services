@@ -45,7 +45,8 @@ packages on [Maven Central][maven-search].
 | BigQuery Data Transfer API | [v1](clients/google-api-services-bigquerydatatransfer/v1) |
 | BigQuery Reservation API | [v1](clients/google-api-services-bigqueryreservation/v1), [v1alpha2](clients/google-api-services-bigqueryreservation/v1alpha2), [v1beta1](clients/google-api-services-bigqueryreservation/v1beta1) |
 | Binary Authorization API | [v1](clients/google-api-services-binaryauthorization/v1), [v1beta1](clients/google-api-services-binaryauthorization/v1beta1) |
-| Blogger API | [v2](clients/google-api-services-blogger/v2), [v3](clients/google-api-services-blogger/v3) |
+| Blogger API | [v3](clients/google-api-services-blogger/v3) |
+| Blogger API v3 | [v2](clients/google-api-services-blogger/v2) |
 | Books API | [v1](clients/google-api-services-books/v1) |
 | Calendar API | [v3](clients/google-api-services-calendar/v3) |
 | Cloud Asset API | [v1](clients/google-api-services-cloudasset/v1), [v1beta1](clients/google-api-services-cloudasset/v1beta1), [v1p1beta1](clients/google-api-services-cloudasset/v1p1beta1) |
@@ -87,7 +88,7 @@ packages on [Maven Central][maven-search].
 | Cloud Speech-to-Text API | [v1](clients/google-api-services-speech/v1), [v1p1beta1](clients/google-api-services-speech/v1p1beta1), [v2beta1](clients/google-api-services-speech/v2beta1) |
 | Cloud Storage JSON API | [v1](clients/google-api-services-storage/v1), [v1beta2](clients/google-api-services-storage/v1beta2) |
 | Cloud TPU API | [v1](clients/google-api-services-tpu/v1), [v1alpha1](clients/google-api-services-tpu/v1alpha1) |
-| Cloud Talent Solution API | [v2](clients/google-api-services-jobs/v2), [v3](clients/google-api-services-jobs/v3), [v3p1beta1](clients/google-api-services-jobs/v3p1beta1) |
+| Cloud Talent Solution API | [v3](clients/google-api-services-jobs/v3), [v3p1beta1](clients/google-api-services-jobs/v3p1beta1) |
 | Cloud Tasks API | [v2](clients/google-api-services-cloudtasks/v2), [v2beta2](clients/google-api-services-cloudtasks/v2beta2), [v2beta3](clients/google-api-services-cloudtasks/v2beta3) |
 | Cloud Testing API | [v1](clients/google-api-services-testing/v1) |
 | Cloud Text-to-Speech API | [v1](clients/google-api-services-texttospeech/v1), [v1beta1](clients/google-api-services-texttospeech/v1beta1) |
@@ -99,7 +100,7 @@ packages on [Maven Central][maven-search].
 | Compute Engine API | [alpha](clients/google-api-services-compute/alpha), [beta](clients/google-api-services-compute/beta), [v1](clients/google-api-services-compute/v1) |
 | Container Analysis API | [v1alpha1](clients/google-api-services-containeranalysis/v1alpha1), [v1beta1](clients/google-api-services-containeranalysis/v1beta1) |
 | Content API for Shopping | [v2](clients/google-api-services-content/v2), [v2.1](clients/google-api-services-content/v2.1) |
-| CustomSearch API | [v1](clients/google-api-services-customsearch/v1) |
+| Custom Search API | [v1](clients/google-api-services-customsearch/v1) |
 | DCM/DFA Reporting And Trafficking API | [v3.3](clients/google-api-services-dfareporting/v3.3), [v3.4](clients/google-api-services-dfareporting/v3.4) |
 | Dataflow API | [v1b3](clients/google-api-services-dataflow/v1b3) |
 | Dialogflow API | [v2](clients/google-api-services-dialogflow/v2), [v2beta1](clients/google-api-services-dialogflow/v2beta1) |
@@ -120,6 +121,7 @@ packages on [Maven Central][maven-search].
 | Fitness | [v1](clients/google-api-services-fitness/v1) |
 | G Suite Alert Center API | [v1beta1](clients/google-api-services-alertcenter/v1beta1) |
 | G Suite Vault API | [v1](clients/google-api-services-vault/v1) |
+| Game Services API | [v1beta](clients/google-api-services-gameservices/v1beta) |
 | Genomics API | [v1](clients/google-api-services-genomics/v1), [v1alpha2](clients/google-api-services-genomics/v1alpha2), [v2alpha1](clients/google-api-services-genomics/v2alpha1) |
 | Gmail API | [v1](clients/google-api-services-gmail/v1) |
 | Google Analytics API | [v3](clients/google-api-services-analytics/v3) |
@@ -167,7 +169,6 @@ packages on [Maven Central][maven-search].
 | Perspective Comment Analyzer API | [v1alpha1](clients/google-api-services-commentanalyzer/v1alpha1) |
 | Policy Troubleshooter API | [v1](clients/google-api-services-policytroubleshooter/v1), [v1beta](clients/google-api-services-policytroubleshooter/v1beta) |
 | Poly API | [v1](clients/google-api-services-poly/v1) |
-| Proximity Beacon API | [v1beta1](clients/google-api-services-proximitybeacon/v1beta1) |
 | Recommender API | [v1beta1](clients/google-api-services-recommender/v1beta1) |
 | Remote Build Execution API | [v1](clients/google-api-services-remotebuildexecution/v1), [v1alpha](clients/google-api-services-remotebuildexecution/v1alpha), [v2](clients/google-api-services-remotebuildexecution/v2) |
 | SAS Portal API | [v1alpha1](clients/google-api-services-sasportal/v1alpha1) |

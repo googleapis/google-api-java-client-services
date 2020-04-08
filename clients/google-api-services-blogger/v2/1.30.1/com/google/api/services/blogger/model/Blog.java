@@ -20,7 +20,7 @@ package com.google.api.services.blogger.model;
  * Model definition for Blog.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Blogger API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Blogger API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -28,6 +28,13 @@ package com.google.api.services.blogger.model;
  */
 @SuppressWarnings("javadoc")
 public final class Blog extends com.google.api.client.json.GenericJson {
+
+  /**
+   * The JSON custom meta-data for the Blog.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customMetaData;
 
   /**
    * The description of this blog. This is displayed underneath the title.
@@ -40,11 +47,11 @@ public final class Blog extends com.google.api.client.json.GenericJson {
    * The identifier for this resource.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long id;
+  @com.google.api.client.util.Key
+  private java.lang.String id;
 
   /**
-   * The kind of this entry. Always blogger#blog
+   * The kind of this entry. Always blogger#blog.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +90,7 @@ public final class Blog extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime published;
+  private java.lang.String published;
 
   /**
    * The API REST URL to fetch this resource from.
@@ -93,11 +100,18 @@ public final class Blog extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
+   * The status of the blog.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String status;
+
+  /**
    * RFC 3339 date-time when this blog was last updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime updated;
+  private java.lang.String updated;
 
   /**
    * The URL where this blog is published.
@@ -105,6 +119,23 @@ public final class Blog extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String url;
+
+  /**
+   * The JSON custom meta-data for the Blog.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomMetaData() {
+    return customMetaData;
+  }
+
+  /**
+   * The JSON custom meta-data for the Blog.
+   * @param customMetaData customMetaData or {@code null} for none
+   */
+  public Blog setCustomMetaData(java.lang.String customMetaData) {
+    this.customMetaData = customMetaData;
+    return this;
+  }
 
   /**
    * The description of this blog. This is displayed underneath the title.
@@ -127,7 +158,7 @@ public final class Blog extends com.google.api.client.json.GenericJson {
    * The identifier for this resource.
    * @return value or {@code null} for none
    */
-  public java.lang.Long getId() {
+  public java.lang.String getId() {
     return id;
   }
 
@@ -135,13 +166,13 @@ public final class Blog extends com.google.api.client.json.GenericJson {
    * The identifier for this resource.
    * @param id id or {@code null} for none
    */
-  public Blog setId(java.lang.Long id) {
+  public Blog setId(java.lang.String id) {
     this.id = id;
     return this;
   }
 
   /**
-   * The kind of this entry. Always blogger#blog
+   * The kind of this entry. Always blogger#blog.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -149,7 +180,7 @@ public final class Blog extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The kind of this entry. Always blogger#blog
+   * The kind of this entry. Always blogger#blog.
    * @param kind kind or {@code null} for none
    */
   public Blog setKind(java.lang.String kind) {
@@ -229,7 +260,7 @@ public final class Blog extends com.google.api.client.json.GenericJson {
    * RFC 3339 date-time when this blog was published.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getPublished() {
+  public java.lang.String getPublished() {
     return published;
   }
 
@@ -237,7 +268,7 @@ public final class Blog extends com.google.api.client.json.GenericJson {
    * RFC 3339 date-time when this blog was published.
    * @param published published or {@code null} for none
    */
-  public Blog setPublished(com.google.api.client.util.DateTime published) {
+  public Blog setPublished(java.lang.String published) {
     this.published = published;
     return this;
   }
@@ -260,10 +291,27 @@ public final class Blog extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The status of the blog.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStatus() {
+    return status;
+  }
+
+  /**
+   * The status of the blog.
+   * @param status status or {@code null} for none
+   */
+  public Blog setStatus(java.lang.String status) {
+    this.status = status;
+    return this;
+  }
+
+  /**
    * RFC 3339 date-time when this blog was last updated.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getUpdated() {
+  public java.lang.String getUpdated() {
     return updated;
   }
 
@@ -271,7 +319,7 @@ public final class Blog extends com.google.api.client.json.GenericJson {
    * RFC 3339 date-time when this blog was last updated.
    * @param updated updated or {@code null} for none
    */
-  public Blog setUpdated(com.google.api.client.util.DateTime updated) {
+  public Blog setUpdated(java.lang.String updated) {
     this.updated = updated;
     return this;
   }
@@ -463,6 +511,13 @@ public final class Blog extends com.google.api.client.json.GenericJson {
   public static final class Posts extends com.google.api.client.json.GenericJson {
 
     /**
+     * The List of Posts for this Blog.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.util.List<Post> items;
+
+    /**
      * The URL of the container for posts in this blog.
      * The value may be {@code null}.
      */
@@ -475,6 +530,23 @@ public final class Blog extends com.google.api.client.json.GenericJson {
      */
     @com.google.api.client.util.Key
     private java.lang.Integer totalItems;
+
+    /**
+     * The List of Posts for this Blog.
+     * @return value or {@code null} for none
+     */
+    public java.util.List<Post> getItems() {
+      return items;
+    }
+
+    /**
+     * The List of Posts for this Blog.
+     * @param items items or {@code null} for none
+     */
+    public Posts setItems(java.util.List<Post> items) {
+      this.items = items;
+      return this;
+    }
 
     /**
      * The URL of the container for posts in this blog.

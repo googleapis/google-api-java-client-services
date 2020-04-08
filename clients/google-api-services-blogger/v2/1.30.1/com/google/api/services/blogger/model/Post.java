@@ -20,7 +20,7 @@ package com.google.api.services.blogger.model;
  * Model definition for Post.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Blogger API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Blogger API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -51,14 +51,41 @@ public final class Post extends com.google.api.client.json.GenericJson {
   private java.lang.String content;
 
   /**
+   * The JSON meta-data for the Post.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customMetaData;
+
+  /**
+   * Etag of the resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String etag;
+
+  /**
    * The identifier of this Post.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long id;
+  @com.google.api.client.util.Key
+  private java.lang.String id;
 
   /**
-   * The kind of this entity. Always blogger#post
+   * Display image for the Post.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Images> images;
+
+  static {
+    // hack to force ProGuard to consider Images used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Images.class);
+  }
+
+  /**
+   * The kind of this entity. Always blogger#post.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,11 +99,25 @@ public final class Post extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> labels;
 
   /**
+   * The location for geotagged posts.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Location location;
+
+  /**
    * RFC 3339 date-time when this Post was published.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime published;
+  private java.lang.String published;
+
+  /**
+   * Comment control and display setting for readers of this post.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String readerComments;
 
   /**
    * The container of comments on this Post.
@@ -93,6 +134,13 @@ public final class Post extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
+   * Status of the post. Only set for admin-level requests.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String status;
+
+  /**
    * The title of the Post.
    * The value may be {@code null}.
    */
@@ -100,11 +148,18 @@ public final class Post extends com.google.api.client.json.GenericJson {
   private java.lang.String title;
 
   /**
+   * The title link URL, similar to atom's related link.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String titleLink;
+
+  /**
    * RFC 3339 date-time when this Post was last updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime updated;
+  private java.lang.String updated;
 
   /**
    * The URL where this Post is displayed.
@@ -165,10 +220,44 @@ public final class Post extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The JSON meta-data for the Post.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomMetaData() {
+    return customMetaData;
+  }
+
+  /**
+   * The JSON meta-data for the Post.
+   * @param customMetaData customMetaData or {@code null} for none
+   */
+  public Post setCustomMetaData(java.lang.String customMetaData) {
+    this.customMetaData = customMetaData;
+    return this;
+  }
+
+  /**
+   * Etag of the resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEtag() {
+    return etag;
+  }
+
+  /**
+   * Etag of the resource.
+   * @param etag etag or {@code null} for none
+   */
+  public Post setEtag(java.lang.String etag) {
+    this.etag = etag;
+    return this;
+  }
+
+  /**
    * The identifier of this Post.
    * @return value or {@code null} for none
    */
-  public java.lang.Long getId() {
+  public java.lang.String getId() {
     return id;
   }
 
@@ -176,13 +265,30 @@ public final class Post extends com.google.api.client.json.GenericJson {
    * The identifier of this Post.
    * @param id id or {@code null} for none
    */
-  public Post setId(java.lang.Long id) {
+  public Post setId(java.lang.String id) {
     this.id = id;
     return this;
   }
 
   /**
-   * The kind of this entity. Always blogger#post
+   * Display image for the Post.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Images> getImages() {
+    return images;
+  }
+
+  /**
+   * Display image for the Post.
+   * @param images images or {@code null} for none
+   */
+  public Post setImages(java.util.List<Images> images) {
+    this.images = images;
+    return this;
+  }
+
+  /**
+   * The kind of this entity. Always blogger#post.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -190,7 +296,7 @@ public final class Post extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The kind of this entity. Always blogger#post
+   * The kind of this entity. Always blogger#post.
    * @param kind kind or {@code null} for none
    */
   public Post setKind(java.lang.String kind) {
@@ -216,10 +322,27 @@ public final class Post extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The location for geotagged posts.
+   * @return value or {@code null} for none
+   */
+  public Location getLocation() {
+    return location;
+  }
+
+  /**
+   * The location for geotagged posts.
+   * @param location location or {@code null} for none
+   */
+  public Post setLocation(Location location) {
+    this.location = location;
+    return this;
+  }
+
+  /**
    * RFC 3339 date-time when this Post was published.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getPublished() {
+  public java.lang.String getPublished() {
     return published;
   }
 
@@ -227,8 +350,25 @@ public final class Post extends com.google.api.client.json.GenericJson {
    * RFC 3339 date-time when this Post was published.
    * @param published published or {@code null} for none
    */
-  public Post setPublished(com.google.api.client.util.DateTime published) {
+  public Post setPublished(java.lang.String published) {
     this.published = published;
+    return this;
+  }
+
+  /**
+   * Comment control and display setting for readers of this post.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReaderComments() {
+    return readerComments;
+  }
+
+  /**
+   * Comment control and display setting for readers of this post.
+   * @param readerComments readerComments or {@code null} for none
+   */
+  public Post setReaderComments(java.lang.String readerComments) {
+    this.readerComments = readerComments;
     return this;
   }
 
@@ -267,6 +407,23 @@ public final class Post extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Status of the post. Only set for admin-level requests.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStatus() {
+    return status;
+  }
+
+  /**
+   * Status of the post. Only set for admin-level requests.
+   * @param status status or {@code null} for none
+   */
+  public Post setStatus(java.lang.String status) {
+    this.status = status;
+    return this;
+  }
+
+  /**
    * The title of the Post.
    * @return value or {@code null} for none
    */
@@ -284,10 +441,27 @@ public final class Post extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The title link URL, similar to atom's related link.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTitleLink() {
+    return titleLink;
+  }
+
+  /**
+   * The title link URL, similar to atom's related link.
+   * @param titleLink titleLink or {@code null} for none
+   */
+  public Post setTitleLink(java.lang.String titleLink) {
+    this.titleLink = titleLink;
+    return this;
+  }
+
+  /**
    * RFC 3339 date-time when this Post was last updated.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getUpdated() {
+  public java.lang.String getUpdated() {
     return updated;
   }
 
@@ -295,7 +469,7 @@ public final class Post extends com.google.api.client.json.GenericJson {
    * RFC 3339 date-time when this Post was last updated.
    * @param updated updated or {@code null} for none
    */
-  public Post setUpdated(com.google.api.client.util.DateTime updated) {
+  public Post setUpdated(java.lang.String updated) {
     this.updated = updated;
     return this;
   }
@@ -340,21 +514,21 @@ public final class Post extends com.google.api.client.json.GenericJson {
     private java.lang.String displayName;
 
     /**
-     * The identifier of the Post creator.
+     * The identifier of the creator.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String id;
 
     /**
-     * The Post author's avatar.
+     * The creator's avatar.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private Image image;
 
     /**
-     * The URL of the Post creator's Profile page.
+     * The URL of the creator's Profile page.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -378,7 +552,7 @@ public final class Post extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The identifier of the Post creator.
+     * The identifier of the creator.
      * @return value or {@code null} for none
      */
     public java.lang.String getId() {
@@ -386,7 +560,7 @@ public final class Post extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The identifier of the Post creator.
+     * The identifier of the creator.
      * @param id id or {@code null} for none
      */
     public Author setId(java.lang.String id) {
@@ -395,7 +569,7 @@ public final class Post extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The Post author's avatar.
+     * The creator's avatar.
      * @return value or {@code null} for none
      */
     public Image getImage() {
@@ -403,7 +577,7 @@ public final class Post extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The Post author's avatar.
+     * The creator's avatar.
      * @param image image or {@code null} for none
      */
     public Author setImage(Image image) {
@@ -412,7 +586,7 @@ public final class Post extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The URL of the Post creator's Profile page.
+     * The URL of the creator's Profile page.
      * @return value or {@code null} for none
      */
     public java.lang.String getUrl() {
@@ -420,7 +594,7 @@ public final class Post extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The URL of the Post creator's Profile page.
+     * The URL of the creator's Profile page.
      * @param url url or {@code null} for none
      */
     public Author setUrl(java.lang.String url) {
@@ -439,19 +613,19 @@ public final class Post extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The Post author's avatar.
+     * The creator's avatar.
      */
     public static final class Image extends com.google.api.client.json.GenericJson {
 
       /**
-       * The Post author's avatar URL.
+       * The creator's avatar URL.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
       private java.lang.String url;
 
       /**
-       * The Post author's avatar URL.
+       * The creator's avatar URL.
        * @return value or {@code null} for none
        */
       public java.lang.String getUrl() {
@@ -459,7 +633,7 @@ public final class Post extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * The Post author's avatar URL.
+       * The creator's avatar URL.
        * @param url url or {@code null} for none
        */
       public Image setUrl(java.lang.String url) {
@@ -489,14 +663,14 @@ public final class Post extends com.google.api.client.json.GenericJson {
      * The identifier of the Blog that contains this Post.
      * The value may be {@code null}.
      */
-    @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-    private java.lang.Long id;
+    @com.google.api.client.util.Key
+    private java.lang.String id;
 
     /**
      * The identifier of the Blog that contains this Post.
      * @return value or {@code null} for none
      */
-    public java.lang.Long getId() {
+    public java.lang.String getId() {
       return id;
     }
 
@@ -504,7 +678,7 @@ public final class Post extends com.google.api.client.json.GenericJson {
      * The identifier of the Blog that contains this Post.
      * @param id id or {@code null} for none
      */
-    public Blog setId(java.lang.Long id) {
+    public Blog setId(java.lang.String id) {
       this.id = id;
       return this;
     }
@@ -522,9 +696,173 @@ public final class Post extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Model definition for PostImages.
+   */
+  public static final class Images extends com.google.api.client.json.GenericJson {
+
+    /**
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String url;
+
+    /**
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getUrl() {
+      return url;
+    }
+
+    /**
+     * @param url url or {@code null} for none
+     */
+    public Images setUrl(java.lang.String url) {
+      this.url = url;
+      return this;
+    }
+
+    @Override
+    public Images set(String fieldName, Object value) {
+      return (Images) super.set(fieldName, value);
+    }
+
+    @Override
+    public Images clone() {
+      return (Images) super.clone();
+    }
+
+  }
+
+  /**
+   * The location for geotagged posts.
+   */
+  public static final class Location extends com.google.api.client.json.GenericJson {
+
+    /**
+     * Location's latitude.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Double lat;
+
+    /**
+     * Location's longitude.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Double lng;
+
+    /**
+     * Location name.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String name;
+
+    /**
+     * Location's viewport span. Can be used when rendering a map preview.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String span;
+
+    /**
+     * Location's latitude.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Double getLat() {
+      return lat;
+    }
+
+    /**
+     * Location's latitude.
+     * @param lat lat or {@code null} for none
+     */
+    public Location setLat(java.lang.Double lat) {
+      this.lat = lat;
+      return this;
+    }
+
+    /**
+     * Location's longitude.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Double getLng() {
+      return lng;
+    }
+
+    /**
+     * Location's longitude.
+     * @param lng lng or {@code null} for none
+     */
+    public Location setLng(java.lang.Double lng) {
+      this.lng = lng;
+      return this;
+    }
+
+    /**
+     * Location name.
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getName() {
+      return name;
+    }
+
+    /**
+     * Location name.
+     * @param name name or {@code null} for none
+     */
+    public Location setName(java.lang.String name) {
+      this.name = name;
+      return this;
+    }
+
+    /**
+     * Location's viewport span. Can be used when rendering a map preview.
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getSpan() {
+      return span;
+    }
+
+    /**
+     * Location's viewport span. Can be used when rendering a map preview.
+     * @param span span or {@code null} for none
+     */
+    public Location setSpan(java.lang.String span) {
+      this.span = span;
+      return this;
+    }
+
+    @Override
+    public Location set(String fieldName, Object value) {
+      return (Location) super.set(fieldName, value);
+    }
+
+    @Override
+    public Location clone() {
+      return (Location) super.clone();
+    }
+
+  }
+
+  /**
    * The container of comments on this Post.
    */
   public static final class Replies extends com.google.api.client.json.GenericJson {
+
+    /**
+     * The List of Comments for this Post.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.util.List<Comment> items;
+
+    static {
+      // hack to force ProGuard to consider Comment used, since otherwise it would be stripped out
+      // see https://github.com/google/google-api-java-client/issues/543
+      com.google.api.client.util.Data.nullOf(Comment.class);
+    }
 
     /**
      * The URL of the comments on this post.
@@ -539,6 +877,23 @@ public final class Post extends com.google.api.client.json.GenericJson {
      */
     @com.google.api.client.util.Key @com.google.api.client.json.JsonString
     private java.lang.Long totalItems;
+
+    /**
+     * The List of Comments for this Post.
+     * @return value or {@code null} for none
+     */
+    public java.util.List<Comment> getItems() {
+      return items;
+    }
+
+    /**
+     * The List of Comments for this Post.
+     * @param items items or {@code null} for none
+     */
+    public Replies setItems(java.util.List<Comment> items) {
+      this.items = items;
+      return this;
+    }
 
     /**
      * The URL of the comments on this post.

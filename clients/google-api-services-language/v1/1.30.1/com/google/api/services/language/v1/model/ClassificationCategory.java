@@ -39,8 +39,8 @@ public final class ClassificationCategory extends com.google.api.client.json.Gen
   private java.lang.Float confidence;
 
   /**
-   * The name of the category representing the document, from the [predefined taxonomy](/natural-
-   * language/docs/categories).
+   * The name of the category representing the document, from the [predefined
+   * taxonomy](https://cloud.google.com/natural-language/docs/categories).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,8 +66,8 @@ public final class ClassificationCategory extends com.google.api.client.json.Gen
   }
 
   /**
-   * The name of the category representing the document, from the [predefined taxonomy](/natural-
-   * language/docs/categories).
+   * The name of the category representing the document, from the [predefined
+   * taxonomy](https://cloud.google.com/natural-language/docs/categories).
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -75,8 +75,8 @@ public final class ClassificationCategory extends com.google.api.client.json.Gen
   }
 
   /**
-   * The name of the category representing the document, from the [predefined taxonomy](/natural-
-   * language/docs/categories).
+   * The name of the category representing the document, from the [predefined
+   * taxonomy](https://cloud.google.com/natural-language/docs/categories).
    * @param name name or {@code null} for none
    */
   public ClassificationCategory setName(java.lang.String name) {

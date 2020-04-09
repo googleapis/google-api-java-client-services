@@ -32,7 +32,7 @@ public final class Image extends com.google.api.client.json.GenericJson {
   /**
    * The aspect ratio of this image (width/height). This field allows clients to reserve the right
    * height for the image while waiting for it to load. It's not meant to override the native aspect
-   * ratio of the image. If unset, server will fill it by prefetching the image.
+   * ratio of the image. If unset, the server fills it by prefetching the image.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,7 +55,7 @@ public final class Image extends com.google.api.client.json.GenericJson {
   /**
    * The aspect ratio of this image (width/height). This field allows clients to reserve the right
    * height for the image while waiting for it to load. It's not meant to override the native aspect
-   * ratio of the image. If unset, server will fill it by prefetching the image.
+   * ratio of the image. If unset, the server fills it by prefetching the image.
    * @return value or {@code null} for none
    */
   public java.lang.Double getAspectRatio() {
@@ -65,7 +65,7 @@ public final class Image extends com.google.api.client.json.GenericJson {
   /**
    * The aspect ratio of this image (width/height). This field allows clients to reserve the right
    * height for the image while waiting for it to load. It's not meant to override the native aspect
-   * ratio of the image. If unset, server will fill it by prefetching the image.
+   * ratio of the image. If unset, the server fills it by prefetching the image.
    * @param aspectRatio aspectRatio or {@code null} for none
    */
   public Image setAspectRatio(java.lang.Double aspectRatio) {

@@ -95,7 +95,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The person's bragging rights.
+   * **DEPRECATED**: No data will be returned The person's bragging rights.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -300,14 +300,14 @@ public final class Person extends com.google.api.client.json.GenericJson {
   private java.util.List<Relation> relations;
 
   /**
-   * Output only. The person's relationship interests.
+   * Output only. **DEPRECATED**: No data will be returned The person's relationship interests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<RelationshipInterest> relationshipInterests;
 
   /**
-   * Output only. The person's relationship statuses.
+   * Output only. **DEPRECATED**: No data will be returned The person's relationship statuses.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -343,7 +343,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   private java.util.List<Skill> skills;
 
   /**
-   * Output only. The person's taglines.
+   * Output only. **DEPRECATED**: No data will be returned The person's taglines.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -453,7 +453,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The person's bragging rights.
+   * **DEPRECATED**: No data will be returned The person's bragging rights.
    * @return value or {@code null} for none
    */
   public java.util.List<BraggingRights> getBraggingRights() {
@@ -461,7 +461,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The person's bragging rights.
+   * **DEPRECATED**: No data will be returned The person's bragging rights.
    * @param braggingRights braggingRights or {@code null} for none
    */
   public Person setBraggingRights(java.util.List<BraggingRights> braggingRights) {
@@ -761,7 +761,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The person's relationship interests.
+   * Output only. **DEPRECATED**: No data will be returned The person's relationship interests.
    * @return value or {@code null} for none
    */
   public java.util.List<RelationshipInterest> getRelationshipInterests() {
@@ -769,7 +769,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The person's relationship interests.
+   * Output only. **DEPRECATED**: No data will be returned The person's relationship interests.
    * @param relationshipInterests relationshipInterests or {@code null} for none
    */
   public Person setRelationshipInterests(java.util.List<RelationshipInterest> relationshipInterests) {
@@ -778,7 +778,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The person's relationship statuses.
+   * Output only. **DEPRECATED**: No data will be returned The person's relationship statuses.
    * @return value or {@code null} for none
    */
   public java.util.List<RelationshipStatus> getRelationshipStatuses() {
@@ -786,7 +786,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The person's relationship statuses.
+   * Output only. **DEPRECATED**: No data will be returned The person's relationship statuses.
    * @param relationshipStatuses relationshipStatuses or {@code null} for none
    */
   public Person setRelationshipStatuses(java.util.List<RelationshipStatus> relationshipStatuses) {
@@ -865,7 +865,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The person's taglines.
+   * Output only. **DEPRECATED**: No data will be returned The person's taglines.
    * @return value or {@code null} for none
    */
   public java.util.List<Tagline> getTaglines() {
@@ -873,7 +873,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The person's taglines.
+   * Output only. **DEPRECATED**: No data will be returned The person's taglines.
    * @param taglines taglines or {@code null} for none
    */
   public Person setTaglines(java.util.List<Tagline> taglines) {

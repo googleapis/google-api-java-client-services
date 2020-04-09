@@ -26,6 +26,9 @@ public class YouTubeScopes {
   /** Manage your YouTube account. */
   public static final String YOUTUBE = "https://www.googleapis.com/auth/youtube";
 
+  /** See a list of your current active channel members, their current level, and when they became a member. */
+  public static final String YOUTUBE_CHANNEL_MEMBERSHIPS_CREATOR = "https://www.googleapis.com/auth/youtube.channel-memberships.creator";
+
   /** See, edit, and permanently delete your YouTube videos, ratings, comments and captions. */
   public static final String YOUTUBE_FORCE_SSL = "https://www.googleapis.com/auth/youtube.force-ssl";
 
@@ -49,6 +52,7 @@ public class YouTubeScopes {
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(YOUTUBE);
+    set.add(YOUTUBE_CHANNEL_MEMBERSHIPS_CREATOR);
     set.add(YOUTUBE_FORCE_SSL);
     set.add(YOUTUBE_READONLY);
     set.add(YOUTUBE_UPLOAD);

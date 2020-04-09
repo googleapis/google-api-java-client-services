@@ -31,6 +31,13 @@ package com.google.api.services.games.model;
 public final class ProfileSettings extends com.google.api.client.json.GenericJson {
 
   /**
+   * Whether the player's friends list is visible to the game.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String friendsListVisibility;
+
+  /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
    * games#profileSettings.
    * The value may be {@code null}.
@@ -43,6 +50,23 @@ public final class ProfileSettings extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean profileVisible;
+
+  /**
+   * Whether the player's friends list is visible to the game.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFriendsListVisibility() {
+    return friendsListVisibility;
+  }
+
+  /**
+   * Whether the player's friends list is visible to the game.
+   * @param friendsListVisibility friendsListVisibility or {@code null} for none
+   */
+  public ProfileSettings setFriendsListVisibility(java.lang.String friendsListVisibility) {
+    this.friendsListVisibility = friendsListVisibility;
+    return this;
+  }
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string

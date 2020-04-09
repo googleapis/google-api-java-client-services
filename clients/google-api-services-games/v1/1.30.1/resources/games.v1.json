@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/P8vp1s6AhOr6TOOrpFmRBo2inek\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/ipnHBev9G3y5YTIfVKTHmOpcmks\"",
  "discoveryVersion": "v1",
  "id": "games:v1",
  "name": "games",
  "canonicalName": "Games",
  "version": "v1",
- "revision": "20200306",
+ "revision": "20200330",
  "title": "Google Play Game Services API",
  "description": "The API for Google Play Game Services.",
  "ownerDomain": "google.com",
@@ -1790,6 +1790,10 @@
    "type": "object",
    "description": "This is a JSON template for profile settings",
    "properties": {
+    "friendsListVisibility": {
+     "type": "string",
+     "description": "Whether the player's friends list is visible to the game."
+    },
     "kind": {
      "type": "string",
      "description": "Uniquely identifies the type of this resource. Value is always the fixed string games#profileSettings.",

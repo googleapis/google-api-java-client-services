@@ -17,7 +17,7 @@
 package com.google.api.services.firebasehosting.v1beta1.model;
 
 /**
- * Model definition for PopulateVersionFilesRequest.
+ * The request to populate a Version's Files.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase Hosting API. For a detailed explanation see:

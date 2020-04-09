@@ -18,8 +18,8 @@ package com.google.api.services.homegraph.v1.model;
 
 /**
  * Response type for the [`Sync`](#google.home.graph.v1.HomeGraphApiService.Sync) call. This should
- * follow the same format as the Actions on Google `action.devices.SYNC`
- * [response](/actions/smarthome/create-app#actiondevicessync). # Example
+ * follow the same format as the Google smart home `action.devices.SYNC`
+ * [response](https://developers.google.com/assistant/smarthome/reference/intent/sync). # Example
  *
  * ```json {   "requestId": "ff36a3cc-ec34-11e6-b1a0-64510650abcf",   "payload": {
  * "agentUserId": "1836.15267389",     "devices": [{       "id": "123",       "type":

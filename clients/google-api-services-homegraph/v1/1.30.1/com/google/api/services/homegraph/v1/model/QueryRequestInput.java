@@ -30,14 +30,14 @@ package com.google.api.services.homegraph.v1.model;
 public final class QueryRequestInput extends com.google.api.client.json.GenericJson {
 
   /**
-   * Payload containing third-party partner's device IDs.
+   * Payload containing third-party device IDs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private QueryRequestPayload payload;
 
   /**
-   * Payload containing third-party partner's device IDs.
+   * Payload containing third-party device IDs.
    * @return value or {@code null} for none
    */
   public QueryRequestPayload getPayload() {
@@ -45,7 +45,7 @@ public final class QueryRequestInput extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Payload containing third-party partner's device IDs.
+   * Payload containing third-party device IDs.
    * @param payload payload or {@code null} for none
    */
   public QueryRequestInput setPayload(QueryRequestPayload payload) {

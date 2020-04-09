@@ -17,10 +17,7 @@
 package com.google.api.services.homegraph.v1.model;
 
 /**
- * Request type for the [`Sync`](#google.home.graph.v1.HomeGraphApiService.Sync) call. This should
- * follow the same format as the Actions on Google `action.devices.SYNC`
- * [request](/actions/smarthome/create-app#actiondevicessync) with the exception of the extra
- * `agent_user_id` and no `intent` field.
+ * Request type for the [`Sync`](#google.home.graph.v1.HomeGraphApiService.Sync) call.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the HomeGraph API. For a detailed explanation see:

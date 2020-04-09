@@ -30,7 +30,7 @@ package com.google.api.services.homegraph.v1.model;
 public final class QueryRequestPayload extends com.google.api.client.json.GenericJson {
 
   /**
-   * Third-party partner's device IDs for which to get the device states.
+   * Third-party device IDs for which to get the device states.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,7 +43,7 @@ public final class QueryRequestPayload extends com.google.api.client.json.Generi
   }
 
   /**
-   * Third-party partner's device IDs for which to get the device states.
+   * Third-party device IDs for which to get the device states.
    * @return value or {@code null} for none
    */
   public java.util.List<AgentDeviceId> getDevices() {
@@ -51,7 +51,7 @@ public final class QueryRequestPayload extends com.google.api.client.json.Generi
   }
 
   /**
-   * Third-party partner's device IDs for which to get the device states.
+   * Third-party device IDs for which to get the device states.
    * @param devices devices or {@code null} for none
    */
   public QueryRequestPayload setDevices(java.util.List<AgentDeviceId> devices) {

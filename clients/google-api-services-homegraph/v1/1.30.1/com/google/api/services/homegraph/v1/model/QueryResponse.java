@@ -18,8 +18,8 @@ package com.google.api.services.homegraph.v1.model;
 
 /**
  * Response type for the [`Query`](#google.home.graph.v1.HomeGraphApiService.Query) call. This
- * should follow the same format as the Actions on Google `action.devices.QUERY`
- * [response](/actions/smarthome/create-app#actiondevicesquery). # Example
+ * should follow the same format as the Google smart home `action.devices.QUERY`
+ * [response](https://developers.google.com/assistant/smarthome/reference/intent/query). # Example
  *
  * ```json {   "requestId": "ff36a3cc-ec34-11e6-b1a0-64510650abcf",   "payload": {     "devices": {
  * "123": {         "on": true,         "online": true       },       "456": {         "on": true,

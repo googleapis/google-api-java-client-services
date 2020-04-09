@@ -63,7 +63,7 @@ packages on [Maven Central][maven-search].
 | Cloud Filestore API | [v1](clients/google-api-services-file/v1), [v1beta1](clients/google-api-services-file/v1beta1) |
 | Cloud Firestore API | [v1](clients/google-api-services-firestore/v1), [v1beta1](clients/google-api-services-firestore/v1beta1), [v1beta2](clients/google-api-services-firestore/v1beta2) |
 | Cloud Functions API | [v1](clients/google-api-services-cloudfunctions/v1), [v1beta2](clients/google-api-services-cloudfunctions/v1beta2) |
-| Cloud Healthcare API | [v1beta1](clients/google-api-services-healthcare/v1beta1) |
+| Cloud Healthcare API | [v1](clients/google-api-services-healthcare/v1), [v1beta1](clients/google-api-services-healthcare/v1beta1) |
 | Cloud Identity API | [v1](clients/google-api-services-cloudidentity/v1), [v1beta1](clients/google-api-services-cloudidentity/v1beta1) |
 | Cloud Identity-Aware Proxy API | [v1](clients/google-api-services-iap/v1), [v1beta1](clients/google-api-services-iap/v1beta1) |
 | Cloud IoT API | [v1](clients/google-api-services-cloudiot/v1) |
@@ -137,8 +137,7 @@ packages on [Maven Central][maven-search].
 | Google Docs API | [v1](clients/google-api-services-docs/v1) |
 | Google Fonts Developer API | [v1](clients/google-api-services-webfonts/v1) |
 | Google Identity Toolkit API | [v3](clients/google-api-services-identitytoolkit/v3) |
-| Google Mirror API | [v1](clients/google-api-services-mirror/v1) |
-| Google OAuth2 API | [v1](clients/google-api-services-oauth2/v1), [v2](clients/google-api-services-oauth2/v2) |
+| Google OAuth2 API | [v2](clients/google-api-services-oauth2/v2) |
 | Google Play Custom App Publishing API | [v1](clients/google-api-services-playcustomapp/v1) |
 | Google Play Developer API | [v1](clients/google-api-services-androidpublisher/v1), [v1.1](clients/google-api-services-androidpublisher/v1.1), [v2](clients/google-api-services-androidpublisher/v2), [v3](clients/google-api-services-androidpublisher/v3) |
 | Google Play EMM API | [v1](clients/google-api-services-androidenterprise/v1) |

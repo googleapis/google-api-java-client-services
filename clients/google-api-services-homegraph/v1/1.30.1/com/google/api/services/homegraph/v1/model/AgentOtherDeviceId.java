@@ -17,7 +17,7 @@
 package com.google.api.services.homegraph.v1.model;
 
 /**
- * Identifies a device in the third party or first party system.
+ * Alternate third-party device ID.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the HomeGraph API. For a detailed explanation see:
@@ -30,21 +30,21 @@ package com.google.api.services.homegraph.v1.model;
 public final class AgentOtherDeviceId extends com.google.api.client.json.GenericJson {
 
   /**
-   * The agent's ID. Generally it is the agent's AoG project id.
+   * Project ID for your smart home Action.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String agentId;
 
   /**
-   * Device ID defined by the agent. The device_id must be unique.
+   * Unique third-party device ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String deviceId;
 
   /**
-   * The agent's ID. Generally it is the agent's AoG project id.
+   * Project ID for your smart home Action.
    * @return value or {@code null} for none
    */
   public java.lang.String getAgentId() {
@@ -52,7 +52,7 @@ public final class AgentOtherDeviceId extends com.google.api.client.json.Generic
   }
 
   /**
-   * The agent's ID. Generally it is the agent's AoG project id.
+   * Project ID for your smart home Action.
    * @param agentId agentId or {@code null} for none
    */
   public AgentOtherDeviceId setAgentId(java.lang.String agentId) {
@@ -61,7 +61,7 @@ public final class AgentOtherDeviceId extends com.google.api.client.json.Generic
   }
 
   /**
-   * Device ID defined by the agent. The device_id must be unique.
+   * Unique third-party device ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeviceId() {
@@ -69,7 +69,7 @@ public final class AgentOtherDeviceId extends com.google.api.client.json.Generic
   }
 
   /**
-   * Device ID defined by the agent. The device_id must be unique.
+   * Unique third-party device ID.
    * @param deviceId deviceId or {@code null} for none
    */
   public AgentOtherDeviceId setDeviceId(java.lang.String deviceId) {

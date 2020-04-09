@@ -31,7 +31,7 @@ package com.google.api.services.homegraph.v1.model;
 public final class RequestSyncDevicesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Third-party user ID issued by agent's third-party identity provider.
+   * Required. Third-party user ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,14 +39,15 @@ public final class RequestSyncDevicesRequest extends com.google.api.client.json.
 
   /**
    * Optional. If set, the request will be added to a queue and a response will be returned
-   * immediately. The queue allows for de-duplication of simultaneous requests.
+   * immediately. This enables concurrent requests for the given `agent_user_id`, but the caller
+   * will not receive any error responses.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean async;
 
   /**
-   * Required. Third-party user ID issued by agent's third-party identity provider.
+   * Required. Third-party user ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getAgentUserId() {
@@ -54,7 +55,7 @@ public final class RequestSyncDevicesRequest extends com.google.api.client.json.
   }
 
   /**
-   * Required. Third-party user ID issued by agent's third-party identity provider.
+   * Required. Third-party user ID.
    * @param agentUserId agentUserId or {@code null} for none
    */
   public RequestSyncDevicesRequest setAgentUserId(java.lang.String agentUserId) {
@@ -64,7 +65,8 @@ public final class RequestSyncDevicesRequest extends com.google.api.client.json.
 
   /**
    * Optional. If set, the request will be added to a queue and a response will be returned
-   * immediately. The queue allows for de-duplication of simultaneous requests.
+   * immediately. This enables concurrent requests for the given `agent_user_id`, but the caller
+   * will not receive any error responses.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAsync() {
@@ -73,7 +75,8 @@ public final class RequestSyncDevicesRequest extends com.google.api.client.json.
 
   /**
    * Optional. If set, the request will be added to a queue and a response will be returned
-   * immediately. The queue allows for de-duplication of simultaneous requests.
+   * immediately. This enables concurrent requests for the given `agent_user_id`, but the caller
+   * will not receive any error responses.
    * @param async async or {@code null} for none
    */
   public RequestSyncDevicesRequest setAsync(java.lang.Boolean async) {

@@ -17,7 +17,7 @@
 package com.google.api.services.homegraph.v1.model;
 
 /**
- * Different names for the device.
+ * Identifiers used to describe the device.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the HomeGraph API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.homegraph.v1.model;
 public final class DeviceNames extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of names provided by the partner rather than the user, often manufacturer names, SKUs,
+   * List of names provided by the manufacturer rather than the user, such as serial numbers, SKUs,
    * etc.
    * The value may be {@code null}.
    */
@@ -52,7 +52,7 @@ public final class DeviceNames extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> nicknames;
 
   /**
-   * List of names provided by the partner rather than the user, often manufacturer names, SKUs,
+   * List of names provided by the manufacturer rather than the user, such as serial numbers, SKUs,
    * etc.
    * @return value or {@code null} for none
    */
@@ -61,7 +61,7 @@ public final class DeviceNames extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of names provided by the partner rather than the user, often manufacturer names, SKUs,
+   * List of names provided by the manufacturer rather than the user, such as serial numbers, SKUs,
    * etc.
    * @param defaultNames defaultNames or {@code null} for none
    */

@@ -18,10 +18,10 @@ package com.google.api.services.homegraph.v1.model;
 
 /**
  * Request type for the [`ReportStateAndNotification`](#google.home.graph.v1.HomeGraphApiService.Rep
- * ortStateAndNotification) call. It may include States, Notifications, or both. This request uses
- * globally unique flattened state names instead of namespaces based on traits to align with the
- * existing QUERY and EXECUTE APIs implemented by 90+ Smart Home partners. States and notifications
- * are defined per `device_id` (for example, "123" and "456" in the following example). # Example
+ * ortStateAndNotification) call. It may include states, notifications, or both. States and
+ * notifications are defined per `device_id` (for example, "123" and "456" in the following
+ * example). # Example
+ *
  * ```json {   "requestId": "ff36a3cc-ec34-11e6-b1a0-64510650abcf",   "agentUserId": "1234",
  * "payload": {     "devices": {       "states": {         "123": {           "on": true         },
  * "456": {           "on": true,           "brightness": 10         }       },     }   } } ```
@@ -58,14 +58,7 @@ public final class ReportStateAndNotificationRequest extends com.google.api.clie
   private java.lang.String followUpToken;
 
   /**
-   * Required. State of devices to update and notification metadata for devices. For example, if a
-   * user turns a light on manually, a state update should be sent so that the information is always
-   * the current status of the device. Notifications are independent from the state and its piece of
-   * the payload should contain everything necessary to notify the user. Although it may be related
-   * to a state change, it does not need to be. For example, if a device can turn on/off and change
-   * temperature, the states reported would include both "on" and "70 degrees" but the 3p may choose
-   * not to send any notification for that, or to only say that the "the room is heating up",
-   * keeping state and notification independent.
+   * Required. State of devices to update and notification metadata for devices.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,14 +123,7 @@ public final class ReportStateAndNotificationRequest extends com.google.api.clie
   }
 
   /**
-   * Required. State of devices to update and notification metadata for devices. For example, if a
-   * user turns a light on manually, a state update should be sent so that the information is always
-   * the current status of the device. Notifications are independent from the state and its piece of
-   * the payload should contain everything necessary to notify the user. Although it may be related
-   * to a state change, it does not need to be. For example, if a device can turn on/off and change
-   * temperature, the states reported would include both "on" and "70 degrees" but the 3p may choose
-   * not to send any notification for that, or to only say that the "the room is heating up",
-   * keeping state and notification independent.
+   * Required. State of devices to update and notification metadata for devices.
    * @return value or {@code null} for none
    */
   public StateAndNotificationPayload getPayload() {
@@ -145,14 +131,7 @@ public final class ReportStateAndNotificationRequest extends com.google.api.clie
   }
 
   /**
-   * Required. State of devices to update and notification metadata for devices. For example, if a
-   * user turns a light on manually, a state update should be sent so that the information is always
-   * the current status of the device. Notifications are independent from the state and its piece of
-   * the payload should contain everything necessary to notify the user. Although it may be related
-   * to a state change, it does not need to be. For example, if a device can turn on/off and change
-   * temperature, the states reported would include both "on" and "70 degrees" but the 3p may choose
-   * not to send any notification for that, or to only say that the "the room is heating up",
-   * keeping state and notification independent.
+   * Required. State of devices to update and notification metadata for devices.
    * @param payload payload or {@code null} for none
    */
   public ReportStateAndNotificationRequest setPayload(StateAndNotificationPayload payload) {

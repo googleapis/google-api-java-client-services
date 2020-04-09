@@ -17,7 +17,7 @@
 package com.google.api.services.homegraph.v1.model;
 
 /**
- * Third-party partner's device ID for one device.
+ * Third-party device ID for one device.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the HomeGraph API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.homegraph.v1.model;
 public final class AgentDeviceId extends com.google.api.client.json.GenericJson {
 
   /**
-   * Third-party partner's device ID.
+   * Third-party device ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * Third-party partner's device ID.
+   * Third-party device ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -45,7 +45,7 @@ public final class AgentDeviceId extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Third-party partner's device ID.
+   * Third-party device ID.
    * @param id id or {@code null} for none
    */
   public AgentDeviceId setId(java.lang.String id) {

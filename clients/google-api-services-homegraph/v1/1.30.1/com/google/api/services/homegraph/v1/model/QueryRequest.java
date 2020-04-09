@@ -17,10 +17,7 @@
 package com.google.api.services.homegraph.v1.model;
 
 /**
- * Request type for the [`Query`](#google.home.graph.v1.HomeGraphApiService.Query) call. This should
- * be the same format as the Actions on Google `action.devices.QUERY` [request](/actions/smarthome
- * /create-app#actiondevicesquery) with the exception of the extra `agent_user_id` and no `intent`
- * and `customData` fields.
+ * Request type for the [`Query`](#google.home.graph.v1.HomeGraphApiService.Query) call.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the HomeGraph API. For a detailed explanation see:
@@ -40,8 +37,7 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   private java.lang.String agentUserId;
 
   /**
-   * Required. Inputs containing third-party partner's device IDs for which to get the device
-   * states.
+   * Required. Inputs containing third-party device IDs for which to get the device states.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,8 +68,7 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Inputs containing third-party partner's device IDs for which to get the device
-   * states.
+   * Required. Inputs containing third-party device IDs for which to get the device states.
    * @return value or {@code null} for none
    */
   public java.util.List<QueryRequestInput> getInputs() {
@@ -81,8 +76,7 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Inputs containing third-party partner's device IDs for which to get the device
-   * states.
+   * Required. Inputs containing third-party device IDs for which to get the device states.
    * @param inputs inputs or {@code null} for none
    */
   public QueryRequest setInputs(java.util.List<QueryRequestInput> inputs) {

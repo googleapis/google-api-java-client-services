@@ -17,7 +17,7 @@
 package com.google.api.services.homegraph.v1.model;
 
 /**
- * Third-party partner's device definition.
+ * Third-party device definition.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the HomeGraph API. For a detailed explanation see:
@@ -37,8 +37,9 @@ public final class Device extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.Object> attributes;
 
   /**
-   * Custom JSON data provided by the manufacturer and attached to QUERY and EXECUTE requests in
-   * AoG.
+   * Custom device attributes stored in Home Graph and provided to your smart home Action in each
+   * [QUERY](https://developers.google.com/assistant/smarthome/reference/intent/query) and
+   * [EXECUTE](https://developers.google.com/assistant/smarthome/reference/intent/execute) intent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,40 +53,34 @@ public final class Device extends com.google.api.client.json.GenericJson {
   private DeviceInfo deviceInfo;
 
   /**
-   * Third-party partner's device ID.
+   * Third-party device ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * Name of the device given by the third party. This includes names given to the device via third
-   * party device manufacturer's app, model names for the device, etc.
+   * Names given to this device by your smart home Action.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DeviceNames name;
 
   /**
-   * Indicates whether the device is capable of sending notifications. This field will be set by the
-   * agent (partner) on an incoming SYNC. If a device is not capable of generating notifications,
-   * the partner should set this flag to false. If a partner is not capable of calling
-   * ReportStateAndNotification to send notifications to Google, the partner should set this flag to
-   * false. If there is a user setting in the partner app to enable notifications and it is turned
-   * off, the partner should set this flag to false.
+   * Indicates whether your smart home Action will report notifications to Google for this device
+   * via ReportStateAndNotification.
+   *
+   * If your smart home Action enables users to control device notifications, you should update this
+   * field and call RequestSyncDevices.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean notificationSupportedByAgent;
 
   /**
-   * IDs of other devices associated with this device. This is used to represent a device group
-   * (e.g. bonded zone) or "facets" synced through different flows (e.g. Google Nest Hub Max with a
-   * Nest Camera).
-   *
-   * This may also be used to pass in alternate IDs used to identify a cloud synced device for local
-   * execution (i.e. local verification). If used for local verification, this field is synced from
-   * the cloud.
+   * Alternate IDs associated with this device. This is used to identify cloud synced devices
+   * enabled for [local
+   * execution](https://developers.google.com/assistant/smarthome/concepts/local).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,37 +93,40 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If the third-party partner's cloud configuration includes placing devices in rooms, the name of
-   * the room can be provided here.
+   * Suggested name for the room where this device is installed. Google attempts to use this value
+   * during user setup.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String roomHint;
 
   /**
-   * As in roomHint, for structures that users set up in the partner's system.
+   * Suggested name for the structure where this device is installed. Google attempts to use this
+   * value during user setup.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String structureHint;
 
   /**
-   * Traits supported by the device.
+   * Traits supported by the device. See [device
+   * traits](https://developers.google.com/assistant/smarthome/traits).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> traits;
 
   /**
-   * Hardware type of the device (e.g. light, outlet, etc).
+   * Hardware type of the device. See [device
+   * types](https://developers.google.com/assistant/smarthome/guides).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Indicates whether the state of this device is being reported to Google through
-   * ReportStateAndNotification call.
+   * Indicates whether your smart home Action will report state of this device to Google via
+   * ReportStateAndNotification.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -152,8 +150,9 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Custom JSON data provided by the manufacturer and attached to QUERY and EXECUTE requests in
-   * AoG.
+   * Custom device attributes stored in Home Graph and provided to your smart home Action in each
+   * [QUERY](https://developers.google.com/assistant/smarthome/reference/intent/query) and
+   * [EXECUTE](https://developers.google.com/assistant/smarthome/reference/intent/execute) intent.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getCustomData() {
@@ -161,8 +160,9 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Custom JSON data provided by the manufacturer and attached to QUERY and EXECUTE requests in
-   * AoG.
+   * Custom device attributes stored in Home Graph and provided to your smart home Action in each
+   * [QUERY](https://developers.google.com/assistant/smarthome/reference/intent/query) and
+   * [EXECUTE](https://developers.google.com/assistant/smarthome/reference/intent/execute) intent.
    * @param customData customData or {@code null} for none
    */
   public Device setCustomData(java.util.Map<String, java.lang.Object> customData) {
@@ -188,7 +188,7 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Third-party partner's device ID.
+   * Third-party device ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -196,7 +196,7 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Third-party partner's device ID.
+   * Third-party device ID.
    * @param id id or {@code null} for none
    */
   public Device setId(java.lang.String id) {
@@ -205,8 +205,7 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the device given by the third party. This includes names given to the device via third
-   * party device manufacturer's app, model names for the device, etc.
+   * Names given to this device by your smart home Action.
    * @return value or {@code null} for none
    */
   public DeviceNames getName() {
@@ -214,8 +213,7 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the device given by the third party. This includes names given to the device via third
-   * party device manufacturer's app, model names for the device, etc.
+   * Names given to this device by your smart home Action.
    * @param name name or {@code null} for none
    */
   public Device setName(DeviceNames name) {
@@ -224,12 +222,11 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates whether the device is capable of sending notifications. This field will be set by the
-   * agent (partner) on an incoming SYNC. If a device is not capable of generating notifications,
-   * the partner should set this flag to false. If a partner is not capable of calling
-   * ReportStateAndNotification to send notifications to Google, the partner should set this flag to
-   * false. If there is a user setting in the partner app to enable notifications and it is turned
-   * off, the partner should set this flag to false.
+   * Indicates whether your smart home Action will report notifications to Google for this device
+   * via ReportStateAndNotification.
+   *
+   * If your smart home Action enables users to control device notifications, you should update this
+   * field and call RequestSyncDevices.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getNotificationSupportedByAgent() {
@@ -237,12 +234,11 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates whether the device is capable of sending notifications. This field will be set by the
-   * agent (partner) on an incoming SYNC. If a device is not capable of generating notifications,
-   * the partner should set this flag to false. If a partner is not capable of calling
-   * ReportStateAndNotification to send notifications to Google, the partner should set this flag to
-   * false. If there is a user setting in the partner app to enable notifications and it is turned
-   * off, the partner should set this flag to false.
+   * Indicates whether your smart home Action will report notifications to Google for this device
+   * via ReportStateAndNotification.
+   *
+   * If your smart home Action enables users to control device notifications, you should update this
+   * field and call RequestSyncDevices.
    * @param notificationSupportedByAgent notificationSupportedByAgent or {@code null} for none
    */
   public Device setNotificationSupportedByAgent(java.lang.Boolean notificationSupportedByAgent) {
@@ -251,13 +247,9 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * IDs of other devices associated with this device. This is used to represent a device group
-   * (e.g. bonded zone) or "facets" synced through different flows (e.g. Google Nest Hub Max with a
-   * Nest Camera).
-   *
-   * This may also be used to pass in alternate IDs used to identify a cloud synced device for local
-   * execution (i.e. local verification). If used for local verification, this field is synced from
-   * the cloud.
+   * Alternate IDs associated with this device. This is used to identify cloud synced devices
+   * enabled for [local
+   * execution](https://developers.google.com/assistant/smarthome/concepts/local).
    * @return value or {@code null} for none
    */
   public java.util.List<AgentOtherDeviceId> getOtherDeviceIds() {
@@ -265,13 +257,9 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * IDs of other devices associated with this device. This is used to represent a device group
-   * (e.g. bonded zone) or "facets" synced through different flows (e.g. Google Nest Hub Max with a
-   * Nest Camera).
-   *
-   * This may also be used to pass in alternate IDs used to identify a cloud synced device for local
-   * execution (i.e. local verification). If used for local verification, this field is synced from
-   * the cloud.
+   * Alternate IDs associated with this device. This is used to identify cloud synced devices
+   * enabled for [local
+   * execution](https://developers.google.com/assistant/smarthome/concepts/local).
    * @param otherDeviceIds otherDeviceIds or {@code null} for none
    */
   public Device setOtherDeviceIds(java.util.List<AgentOtherDeviceId> otherDeviceIds) {
@@ -280,8 +268,8 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If the third-party partner's cloud configuration includes placing devices in rooms, the name of
-   * the room can be provided here.
+   * Suggested name for the room where this device is installed. Google attempts to use this value
+   * during user setup.
    * @return value or {@code null} for none
    */
   public java.lang.String getRoomHint() {
@@ -289,8 +277,8 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If the third-party partner's cloud configuration includes placing devices in rooms, the name of
-   * the room can be provided here.
+   * Suggested name for the room where this device is installed. Google attempts to use this value
+   * during user setup.
    * @param roomHint roomHint or {@code null} for none
    */
   public Device setRoomHint(java.lang.String roomHint) {
@@ -299,7 +287,8 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * As in roomHint, for structures that users set up in the partner's system.
+   * Suggested name for the structure where this device is installed. Google attempts to use this
+   * value during user setup.
    * @return value or {@code null} for none
    */
   public java.lang.String getStructureHint() {
@@ -307,7 +296,8 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * As in roomHint, for structures that users set up in the partner's system.
+   * Suggested name for the structure where this device is installed. Google attempts to use this
+   * value during user setup.
    * @param structureHint structureHint or {@code null} for none
    */
   public Device setStructureHint(java.lang.String structureHint) {
@@ -316,7 +306,8 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Traits supported by the device.
+   * Traits supported by the device. See [device
+   * traits](https://developers.google.com/assistant/smarthome/traits).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTraits() {
@@ -324,7 +315,8 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Traits supported by the device.
+   * Traits supported by the device. See [device
+   * traits](https://developers.google.com/assistant/smarthome/traits).
    * @param traits traits or {@code null} for none
    */
   public Device setTraits(java.util.List<java.lang.String> traits) {
@@ -333,7 +325,8 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Hardware type of the device (e.g. light, outlet, etc).
+   * Hardware type of the device. See [device
+   * types](https://developers.google.com/assistant/smarthome/guides).
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -341,7 +334,8 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Hardware type of the device (e.g. light, outlet, etc).
+   * Hardware type of the device. See [device
+   * types](https://developers.google.com/assistant/smarthome/guides).
    * @param type type or {@code null} for none
    */
   public Device setType(java.lang.String type) {
@@ -350,8 +344,8 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates whether the state of this device is being reported to Google through
-   * ReportStateAndNotification call.
+   * Indicates whether your smart home Action will report state of this device to Google via
+   * ReportStateAndNotification.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getWillReportState() {
@@ -359,8 +353,8 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates whether the state of this device is being reported to Google through
-   * ReportStateAndNotification call.
+   * Indicates whether your smart home Action will report state of this device to Google via
+   * ReportStateAndNotification.
    * @param willReportState willReportState or {@code null} for none
    */
   public Device setWillReportState(java.lang.Boolean willReportState) {

@@ -17,7 +17,7 @@
 package com.google.api.services.people.v1.model;
 
 /**
- * A person's relationship interest .
+ * **DEPRECATED**: No data will be returned A person's relationship interest .
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the People API. For a detailed explanation see:

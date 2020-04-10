@@ -111,7 +111,8 @@ public final class ItemMetadata extends com.google.api.client.json.GenericJson {
 
   /**
    * Link to the source repository serving the data.  earch results apply this link to the title.
-   * The maximum length is 2048 characters.
+   * Whitespace or special characters may cause Cloud earch result links to trigger a redirect
+   * notice; to avoid this, encode the URL. The maximum length is 2048 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -309,7 +310,8 @@ public final class ItemMetadata extends com.google.api.client.json.GenericJson {
 
   /**
    * Link to the source repository serving the data.  earch results apply this link to the title.
-   * The maximum length is 2048 characters.
+   * Whitespace or special characters may cause Cloud earch result links to trigger a redirect
+   * notice; to avoid this, encode the URL. The maximum length is 2048 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceRepositoryUrl() {
@@ -318,7 +320,8 @@ public final class ItemMetadata extends com.google.api.client.json.GenericJson {
 
   /**
    * Link to the source repository serving the data.  earch results apply this link to the title.
-   * The maximum length is 2048 characters.
+   * Whitespace or special characters may cause Cloud earch result links to trigger a redirect
+   * notice; to avoid this, encode the URL. The maximum length is 2048 characters.
    * @param sourceRepositoryUrl sourceRepositoryUrl or {@code null} for none
    */
   public ItemMetadata setSourceRepositoryUrl(java.lang.String sourceRepositoryUrl) {

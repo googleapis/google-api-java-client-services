@@ -34,13 +34,6 @@ package com.google.api.services.accesscontextmanager.v1beta.model;
 public final class AccessPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Time the `AccessPolicy` was created in UTC.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private String createTime;
-
-  /**
    * Output only. Resource name of the `AccessPolicy`. Format: `accessPolicies/{policy_id}`
    * The value may be {@code null}.
    */
@@ -61,30 +54,6 @@ public final class AccessPolicy extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
-
-  /**
-   * Output only. Time the `AccessPolicy` was updated in UTC.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private String updateTime;
-
-  /**
-   * Output only. Time the `AccessPolicy` was created in UTC.
-   * @return value or {@code null} for none
-   */
-  public String getCreateTime() {
-    return createTime;
-  }
-
-  /**
-   * Output only. Time the `AccessPolicy` was created in UTC.
-   * @param createTime createTime or {@code null} for none
-   */
-  public AccessPolicy setCreateTime(String createTime) {
-    this.createTime = createTime;
-    return this;
-  }
 
   /**
    * Output only. Resource name of the `AccessPolicy`. Format: `accessPolicies/{policy_id}`
@@ -136,23 +105,6 @@ public final class AccessPolicy extends com.google.api.client.json.GenericJson {
    */
   public AccessPolicy setTitle(java.lang.String title) {
     this.title = title;
-    return this;
-  }
-
-  /**
-   * Output only. Time the `AccessPolicy` was updated in UTC.
-   * @return value or {@code null} for none
-   */
-  public String getUpdateTime() {
-    return updateTime;
-  }
-
-  /**
-   * Output only. Time the `AccessPolicy` was updated in UTC.
-   * @param updateTime updateTime or {@code null} for none
-   */
-  public AccessPolicy setUpdateTime(String updateTime) {
-    this.updateTime = updateTime;
     return this;
   }
 

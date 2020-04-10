@@ -38,13 +38,6 @@ package com.google.api.services.accesscontextmanager.v1beta.model;
 public final class ServicePerimeter extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Time the `ServicePerimeter` was created in UTC.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private String createTime;
-
-  /**
    * Description of the `ServicePerimeter` and its use. Does not affect behavior.
    * The value may be {@code null}.
    */
@@ -84,30 +77,6 @@ public final class ServicePerimeter extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
-
-  /**
-   * Output only. Time the `ServicePerimeter` was updated in UTC.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private String updateTime;
-
-  /**
-   * Output only. Time the `ServicePerimeter` was created in UTC.
-   * @return value or {@code null} for none
-   */
-  public String getCreateTime() {
-    return createTime;
-  }
-
-  /**
-   * Output only. Time the `ServicePerimeter` was created in UTC.
-   * @param createTime createTime or {@code null} for none
-   */
-  public ServicePerimeter setCreateTime(String createTime) {
-    this.createTime = createTime;
-    return this;
-  }
 
   /**
    * Description of the `ServicePerimeter` and its use. Does not affect behavior.
@@ -203,23 +172,6 @@ public final class ServicePerimeter extends com.google.api.client.json.GenericJs
    */
   public ServicePerimeter setTitle(java.lang.String title) {
     this.title = title;
-    return this;
-  }
-
-  /**
-   * Output only. Time the `ServicePerimeter` was updated in UTC.
-   * @return value or {@code null} for none
-   */
-  public String getUpdateTime() {
-    return updateTime;
-  }
-
-  /**
-   * Output only. Time the `ServicePerimeter` was updated in UTC.
-   * @param updateTime updateTime or {@code null} for none
-   */
-  public ServicePerimeter setUpdateTime(String updateTime) {
-    this.updateTime = updateTime;
     return this;
   }
 

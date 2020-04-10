@@ -60,6 +60,13 @@ public final class StandardResourceMetadata extends com.google.api.client.json.G
   private java.lang.String displayName;
 
   /**
+   * Location can be "global", regional like "us-east1", or zonal like "us-west1-b".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String location;
+
+  /**
    * The full resource name. For example:
    * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See
    * [Resource Names](https://cloud.google.com/apis/design/resource_names#full_resource_name) for
@@ -145,6 +152,23 @@ public final class StandardResourceMetadata extends com.google.api.client.json.G
    */
   public StandardResourceMetadata setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Location can be "global", regional like "us-east1", or zonal like "us-west1-b".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocation() {
+    return location;
+  }
+
+  /**
+   * Location can be "global", regional like "us-east1", or zonal like "us-west1-b".
+   * @param location location or {@code null} for none
+   */
+  public StandardResourceMetadata setLocation(java.lang.String location) {
+    this.location = location;
     return this;
   }
 

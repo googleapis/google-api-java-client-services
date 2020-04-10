@@ -37,13 +37,6 @@ package com.google.api.services.cloudasset.v1.model;
 public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeter extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Time the `ServicePerimeter` was created in UTC.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private String createTime;
-
-  /**
    * Description of the `ServicePerimeter` and its use. Does not affect behavior.
    * The value may be {@code null}.
    */
@@ -94,13 +87,6 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeter extends 
   private java.lang.String title;
 
   /**
-   * Output only. Time the `ServicePerimeter` was updated in UTC.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private String updateTime;
-
-  /**
    * Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists  for all Service
    * Perimeters, and that spec is identical to the status for those Service Perimeters. When this
    * flag is set, it inhibits the generation of the implicit spec, thereby allowing the user to
@@ -113,23 +99,6 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeter extends 
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean useExplicitDryRunSpec;
-
-  /**
-   * Output only. Time the `ServicePerimeter` was created in UTC.
-   * @return value or {@code null} for none
-   */
-  public String getCreateTime() {
-    return createTime;
-  }
-
-  /**
-   * Output only. Time the `ServicePerimeter` was created in UTC.
-   * @param createTime createTime or {@code null} for none
-   */
-  public GoogleIdentityAccesscontextmanagerV1ServicePerimeter setCreateTime(String createTime) {
-    this.createTime = createTime;
-    return this;
-  }
 
   /**
    * Description of the `ServicePerimeter` and its use. Does not affect behavior.
@@ -246,23 +215,6 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeter extends 
    */
   public GoogleIdentityAccesscontextmanagerV1ServicePerimeter setTitle(java.lang.String title) {
     this.title = title;
-    return this;
-  }
-
-  /**
-   * Output only. Time the `ServicePerimeter` was updated in UTC.
-   * @return value or {@code null} for none
-   */
-  public String getUpdateTime() {
-    return updateTime;
-  }
-
-  /**
-   * Output only. Time the `ServicePerimeter` was updated in UTC.
-   * @param updateTime updateTime or {@code null} for none
-   */
-  public GoogleIdentityAccesscontextmanagerV1ServicePerimeter setUpdateTime(String updateTime) {
-    this.updateTime = updateTime;
     return this;
   }
 

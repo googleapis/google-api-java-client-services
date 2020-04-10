@@ -38,13 +38,6 @@ public final class GoogleIdentityAccesscontextmanagerV1AccessLevel extends com.g
   private GoogleIdentityAccesscontextmanagerV1BasicLevel basic;
 
   /**
-   * Output only. Time the `AccessLevel` was created in UTC.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private String createTime;
-
-  /**
    * A `CustomLevel` written in the Common Expression Language.
    * The value may be {@code null}.
    */
@@ -76,13 +69,6 @@ public final class GoogleIdentityAccesscontextmanagerV1AccessLevel extends com.g
   private java.lang.String title;
 
   /**
-   * Output only. Time the `AccessLevel` was updated in UTC.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private String updateTime;
-
-  /**
    * A `BasicLevel` composed of `Conditions`.
    * @return value or {@code null} for none
    */
@@ -96,23 +82,6 @@ public final class GoogleIdentityAccesscontextmanagerV1AccessLevel extends com.g
    */
   public GoogleIdentityAccesscontextmanagerV1AccessLevel setBasic(GoogleIdentityAccesscontextmanagerV1BasicLevel basic) {
     this.basic = basic;
-    return this;
-  }
-
-  /**
-   * Output only. Time the `AccessLevel` was created in UTC.
-   * @return value or {@code null} for none
-   */
-  public String getCreateTime() {
-    return createTime;
-  }
-
-  /**
-   * Output only. Time the `AccessLevel` was created in UTC.
-   * @param createTime createTime or {@code null} for none
-   */
-  public GoogleIdentityAccesscontextmanagerV1AccessLevel setCreateTime(String createTime) {
-    this.createTime = createTime;
     return this;
   }
 
@@ -187,23 +156,6 @@ public final class GoogleIdentityAccesscontextmanagerV1AccessLevel extends com.g
    */
   public GoogleIdentityAccesscontextmanagerV1AccessLevel setTitle(java.lang.String title) {
     this.title = title;
-    return this;
-  }
-
-  /**
-   * Output only. Time the `AccessLevel` was updated in UTC.
-   * @return value or {@code null} for none
-   */
-  public String getUpdateTime() {
-    return updateTime;
-  }
-
-  /**
-   * Output only. Time the `AccessLevel` was updated in UTC.
-   * @param updateTime updateTime or {@code null} for none
-   */
-  public GoogleIdentityAccesscontextmanagerV1AccessLevel setUpdateTime(String updateTime) {
-    this.updateTime = updateTime;
     return this;
   }
 

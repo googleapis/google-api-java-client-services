@@ -242,13 +242,20 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
 
   /**
    * The zone or zones from which the bucket is intended to use zonal quota. Requests for data from
-   * outside the specified affinities are still allowed but won’t be able to use zonal quota. The
+   * outside the specified affinities are still allowed but won't be able to use zonal quota. The
    * zone or zones need to be within the bucket location otherwise the requests will fail with a 400
    * Bad Request response.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("zone_affinity")
+  @com.google.api.client.util.Key
   private java.util.List<java.lang.String> zoneAffinity;
+
+  /**
+   * If set, objects placed in this bucket are required to be separated by disaster domain.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean zoneSeparation;
 
   /**
    * Access controls on the bucket.
@@ -738,7 +745,7 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
 
   /**
    * The zone or zones from which the bucket is intended to use zonal quota. Requests for data from
-   * outside the specified affinities are still allowed but won’t be able to use zonal quota. The
+   * outside the specified affinities are still allowed but won't be able to use zonal quota. The
    * zone or zones need to be within the bucket location otherwise the requests will fail with a 400
    * Bad Request response.
    * @return value or {@code null} for none
@@ -749,13 +756,30 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
 
   /**
    * The zone or zones from which the bucket is intended to use zonal quota. Requests for data from
-   * outside the specified affinities are still allowed but won’t be able to use zonal quota. The
+   * outside the specified affinities are still allowed but won't be able to use zonal quota. The
    * zone or zones need to be within the bucket location otherwise the requests will fail with a 400
    * Bad Request response.
    * @param zoneAffinity zoneAffinity or {@code null} for none
    */
   public Bucket setZoneAffinity(java.util.List<java.lang.String> zoneAffinity) {
     this.zoneAffinity = zoneAffinity;
+    return this;
+  }
+
+  /**
+   * If set, objects placed in this bucket are required to be separated by disaster domain.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getZoneSeparation() {
+    return zoneSeparation;
+  }
+
+  /**
+   * If set, objects placed in this bucket are required to be separated by disaster domain.
+   * @param zoneSeparation zoneSeparation or {@code null} for none
+   */
+  public Bucket setZoneSeparation(java.lang.Boolean zoneSeparation) {
+    this.zoneSeparation = zoneSeparation;
     return this;
   }
 

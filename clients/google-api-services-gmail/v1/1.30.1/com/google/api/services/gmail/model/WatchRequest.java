@@ -37,8 +37,8 @@ public final class WatchRequest extends com.google.api.client.json.GenericJson {
   private java.lang.String labelFilterAction;
 
   /**
-   * List of label_ids to restrict notifications about. By default, if unspecified, all changes are
-   * pushed out. If specified then dictates which labels are required for a push notification to be
+   * List of label_ids to restrict notifications about.  By default, if unspecified, all changes are
+   * pushed out.  If specified then dictates which labels are required for a push notification to be
    * generated.
    * The value may be {@code null}.
    */
@@ -76,8 +76,8 @@ public final class WatchRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of label_ids to restrict notifications about. By default, if unspecified, all changes are
-   * pushed out. If specified then dictates which labels are required for a push notification to be
+   * List of label_ids to restrict notifications about.  By default, if unspecified, all changes are
+   * pushed out.  If specified then dictates which labels are required for a push notification to be
    * generated.
    * @return value or {@code null} for none
    */
@@ -86,8 +86,8 @@ public final class WatchRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of label_ids to restrict notifications about. By default, if unspecified, all changes are
-   * pushed out. If specified then dictates which labels are required for a push notification to be
+   * List of label_ids to restrict notifications about.  By default, if unspecified, all changes are
+   * pushed out.  If specified then dictates which labels are required for a push notification to be
    * generated.
    * @param labelIds labelIds or {@code null} for none
    */

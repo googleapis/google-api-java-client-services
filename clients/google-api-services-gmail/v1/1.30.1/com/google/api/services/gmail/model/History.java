@@ -52,9 +52,9 @@ public final class History extends com.google.api.client.json.GenericJson {
   private java.util.List<HistoryLabelRemoved> labelsRemoved;
 
   /**
-   * List of messages changed in this history record. The fields for specific change types, such as
-   * messagesAdded may duplicate messages in this field. We recommend using the specific change-type
-   * fields instead of this.
+   * List of messages changed in this history record.  The fields for specific change types, such as
+   * messagesAdded may duplicate messages in this field.  We recommend using the specific change-
+   * type fields instead of this.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,9 +126,9 @@ public final class History extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of messages changed in this history record. The fields for specific change types, such as
-   * messagesAdded may duplicate messages in this field. We recommend using the specific change-type
-   * fields instead of this.
+   * List of messages changed in this history record.  The fields for specific change types, such as
+   * messagesAdded may duplicate messages in this field.  We recommend using the specific change-
+   * type fields instead of this.
    * @return value or {@code null} for none
    */
   public java.util.List<Message> getMessages() {
@@ -136,9 +136,9 @@ public final class History extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of messages changed in this history record. The fields for specific change types, such as
-   * messagesAdded may duplicate messages in this field. We recommend using the specific change-type
-   * fields instead of this.
+   * List of messages changed in this history record.  The fields for specific change types, such as
+   * messagesAdded may duplicate messages in this field.  We recommend using the specific change-
+   * type fields instead of this.
    * @param messages messages or {@code null} for none
    */
   public History setMessages(java.util.List<Message> messages) {

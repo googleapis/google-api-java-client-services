@@ -30,7 +30,12 @@ package com.google.api.services.customsearch.v1.model;
 public final class Search extends com.google.api.client.json.GenericJson {
 
   /**
-   * Metadata and refinements associated with the given search engine.
+   * Metadata and refinements associated with the given search engine, including:
+   *
+   * * The name of the search engine that was used for the query.
+   *
+   * *   A set of [facet objects](https://developers.google.com/custom-
+   * search/docs/refinements#create) (refinements) you can use for refining a search.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,8 +62,9 @@ public final class Search extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * The set of promotions. Present only if the custom search engine's configuration files define
-   * any promotions for the given query.
+   * The set of [promotions](https://developers.google.com/custom-search/docs/promotions). Present
+   * only if the custom search engine's configuration files define any promotions for the given
+   * query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,7 +105,12 @@ public final class Search extends com.google.api.client.json.GenericJson {
   private Url url;
 
   /**
-   * Metadata and refinements associated with the given search engine.
+   * Metadata and refinements associated with the given search engine, including:
+   *
+   * * The name of the search engine that was used for the query.
+   *
+   * *   A set of [facet objects](https://developers.google.com/custom-
+   * search/docs/refinements#create) (refinements) you can use for refining a search.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getContext() {
@@ -107,7 +118,12 @@ public final class Search extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Metadata and refinements associated with the given search engine.
+   * Metadata and refinements associated with the given search engine, including:
+   *
+   * * The name of the search engine that was used for the query.
+   *
+   * *   A set of [facet objects](https://developers.google.com/custom-
+   * search/docs/refinements#create) (refinements) you can use for refining a search.
    * @param context context or {@code null} for none
    */
   public Search setContext(java.util.Map<String, java.lang.Object> context) {
@@ -150,8 +166,9 @@ public final class Search extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The set of promotions. Present only if the custom search engine's configuration files define
-   * any promotions for the given query.
+   * The set of [promotions](https://developers.google.com/custom-search/docs/promotions). Present
+   * only if the custom search engine's configuration files define any promotions for the given
+   * query.
    * @return value or {@code null} for none
    */
   public java.util.List<Promotion> getPromotions() {
@@ -159,8 +176,9 @@ public final class Search extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The set of promotions. Present only if the custom search engine's configuration files define
-   * any promotions for the given query.
+   * The set of [promotions](https://developers.google.com/custom-search/docs/promotions). Present
+   * only if the custom search engine's configuration files define any promotions for the given
+   * query.
    * @param promotions promotions or {@code null} for none
    */
   public Search setPromotions(java.util.List<Promotion> promotions) {
@@ -364,34 +382,56 @@ public final class Search extends com.google.api.client.json.GenericJson {
       private java.lang.Integer count;
 
       /**
-       * Restricts search results to documents originating in a particular country. You may use Boolean
-       * operators in the cr parameter's value.
+       * Restricts search results to documents originating in a particular country. You may use [Boolean
+       * operators](https://developers.google.com/custom-search/docs/xml_results#booleanOperators) in
+       * the `cr` parameter's value.
+       *
+       * Google WebSearch determines the country of a document by analyzing the following:
+       *
+       * * The top-level domain (TLD) of the document's URL.
+       *
+       * * The geographic location of the web server's IP address.
+       *
+       * See [Country (cr) Parameter Values](https://developers.google.com/custom-
+       * search/docs/xml_results#countryCollections) for a list of valid values for this parameter.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
       private java.lang.String cr;
 
       /**
-       * The identifier of a custom search engine created using the Custom Search Control Panel, if
-       * specified in request. This is a custom property not defined in the OpenSearch spec.
+       * The identifier of a custom search engine created using the Custom Search [Control
+       * Panel](https://cse.google.com/). This is a custom property not defined in the OpenSearch spec.
+       * This parameter is **required**.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
       private java.lang.String cx;
 
       /**
-       * Restricts results to URLs based on date. Supported values include: d[number]: requests results
-       * from the specified number of past days. w[number]: requests results from the specified number
-       * of past weeks. m[number]: requests results from the specified number of past months. y[number]:
-       * requests results from the specified number of past years.
+       * Restricts results to URLs based on date. Supported values include:
+       *
+       * * `d[number]`: requests results from the specified number of past days.
+       *
+       * * `w[number]`: requests results from the specified number of past weeks.
+       *
+       * * `m[number]`: requests results from the specified number of past months.
+       *
+       * * `y[number]`: requests results from the specified number of past years.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
       private java.lang.String dateRestrict;
 
       /**
-       * Enables or disables the Simplified and Traditional Chinese Search feature. Supported values
-       * are: 0: enabled (default) 1: disabled
+       * Enables or disables the [Simplified and Traditional Chinese
+       * Search](https://developers.google.com/custom-search/docs/xml_results#chineseSearch) feature.
+       *
+       * Supported values are:
+       *
+       * * `0`: enabled (default)
+       *
+       * * `1`: disabled
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -413,29 +453,64 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Restricts results to files of a specified extension. Filetypes supported by Google include:
-       * Adobe Portable Document Format (pdf) Adobe PostScript (ps) Lotus 1-2-3 (wk1, wk2, wk3, wk4,
-       * wk5, wki, wks, wku) Lotus WordPro (lwp) Macwrite (mw) Microsoft Excel (xls) Microsoft
-       * PowerPoint (ppt) Microsoft Word (doc) Microsoft Works (wks, wps, wdb) Microsoft Write (wri)
-       * Rich Text Format (rtf) Shockwave Flash (swf) Text (ans, txt).
+       *
+       * * Adobe Portable Document Format (`pdf`)
+       *
+       * * Adobe PostScript (`ps`)
+       *
+       * * Lotus 1-2-3 (`wk1`, `wk2`, `wk3`, `wk4`, `wk5`, `wki`, `wks`, `wku`)
+       *
+       * * Lotus WordPro (`lwp`)
+       *
+       * * Macwrite (`mw`)
+       *
+       * * Microsoft Excel (`xls`)
+       *
+       * * Microsoft PowerPoint (`ppt`)
+       *
+       * * Microsoft Word (`doc`)
+       *
+       * * Microsoft Works (`wks`, `wps`, `wdb`)
+       *
+       * * Microsoft Write (`wri`)
+       *
+       * * Rich Text Format (`rtf`)
+       *
+       * * Shockwave Flash (`swf`)
+       *
+       * * Text (`ans`, `txt`).
+       *
+       * Additional filetypes may be added in the future. An up-to-date list can always be found in
+       * Google's [file type FAQ](https://support.google.com/webmasters/answer/35287).
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
       private java.lang.String fileType;
 
       /**
-       * Activates or deactivates the automatic filtering of Google search results. The default value
-       * for the filter parameter is 1, which indicates that the feature is enabled. Valid values for
-       * this parameter are: 0: Disabled 1: Enabled
+       * Activates or deactivates the automatic filtering of Google search results. See [Automatic
+       * Filtering](https://developers.google.com/custom-search/docs/xml_results#automaticFiltering) for
+       * more information about Google's search results filters. Valid values for this parameter are:
+       *
+       * * `0`: Disabled
+       *
+       * * `1`: Enabled (default)
+       *
+       * **Note**: By default, Google applies filtering to all search results to improve the quality of
+       * those results.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
       /**
-       * Boosts search results whose country of origin matches the parameter value. Specifying a gl
-       * parameter value in WebSearch requests should improve the relevance of results. This is
-       * particularly true for international customers and, even more specifically, for customers in
-       * English-speaking countries other than the United States.
+       * Boosts search results whose country of origin matches the parameter value. See [Country
+       * Codes](https://developers.google.com/custom-search/docs/xml_results#countryCodes) for a list of
+       * valid values.
+       *
+       * Specifying a `gl` parameter value in WebSearch requests should improve the relevance of
+       * results. This is particularly true for international customers and, even more specifically, for
+       * customers in English-speaking countries other than the United States.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -450,8 +525,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
       private java.lang.String googleHost;
 
       /**
-       * Specifies the ending value for a search range. Use cse:lowRange and cse:highrange to append an
-       * inclusive search range of lowRange...highRange to the query.
+       * Specifies the ending value for a search range. Use `cse:lowRange` and `cse:highrange` to append
+       * an inclusive search range of `lowRange...highRange` to the query.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -460,13 +535,20 @@ public final class Search extends com.google.api.client.json.GenericJson {
       /**
        * Specifies the interface language (host language) of your user interface. Explicitly setting
        * this parameter improves the performance and the quality of your search results.
+       *
+       * See the [Interface Languages](https://developers.google.com/custom-
+       * search/docs/xml_results#wsInterfaceLanguages) section of [Internationalizing Queries and
+       * Results Presentation](https://developers.google.com/custom-
+       * search/docs/xml_results#wsInternationalizing) for more information, and [Supported Interface
+       * Languages](https://developers.google.com/custom-
+       * search/docs/xml_results_appendices#interfaceLanguages) for a list of supported languages.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
       private java.lang.String hl;
 
       /**
-       * Appends the specified query terms to the query, as if they were combined with a logical AND
+       * Appends the specified query terms to the query, as if they were combined with a logical `AND`
        * operator.
        * The value may be {@code null}.
        */
@@ -474,32 +556,78 @@ public final class Search extends com.google.api.client.json.GenericJson {
       private java.lang.String hq;
 
       /**
-       * Restricts results to images of a specified color type. Supported values are: mono (black and
-       * white) gray (grayscale) color (color)
+       * Restricts results to images of a specified color type. Supported values   are:
+       *
+       * * `mono` (black and white)
+       *
+       * * `gray` (grayscale)
+       *
+       * * `color` (color)
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
       private java.lang.String imgColorType;
 
       /**
-       * Restricts results to images with a specific dominant color. Supported values are: red orange
-       * yellow green teal blue purple pink white gray black brown
+       * Restricts results to images with a specific dominant color. Supported values are:
+       *
+       * * `red`
+       *
+       * * `orange`
+       *
+       * * `yellow`
+       *
+       * * `green`
+       *
+       * * `teal`
+       *
+       * * `blue`
+       *
+       * * `purple`
+       *
+       * * `pink`
+       *
+       * * `white`
+       *
+       * * `gray`
+       *
+       * * `black`
+       *
+       * * `brown`
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
       private java.lang.String imgDominantColor;
 
       /**
-       * Restricts results to images of a specified size. Supported values are: icon (small)
-       * small|medium|large|xlarge (medium) xxlarge (large) huge (extra-large)
+       * Restricts results to images of a specified size. Supported values are:
+       *
+       * * `icon` (small)
+       *
+       * * `small | medium | large | xlarge` (medium)
+       *
+       * * `xxlarge` (large)
+       *
+       * * `huge` (extra-large)
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
       private java.lang.String imgSize;
 
       /**
-       * Restricts results to images of a specified type. Supported values are: clipart (Clip art) face
-       * (Face) lineart (Line drawing) photo (Photo) animated (Animated) stock (Stock)
+       * Restricts results to images of a specified type. Supported values are:
+       *
+       * * `clipart` (Clip art)
+       *
+       * * `face` (Face)
+       *
+       * * `lineart` (Line drawing)
+       *
+       * * `photo` (Photo)
+       *
+       * * `animated` (Animated)
+       *
+       * * `stock` (Stock)
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -527,8 +655,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
       private java.lang.String linkSite;
 
       /**
-       * Specifies the starting value for a search range. Use cse:lowRange and cse:highrange to append
-       * an inclusive search range of lowRange...highRange to the query.
+       * Specifies the starting value for a search range. Use `cse:lowRange` and `cse:highrange` to
+       * append an inclusive search range of `lowRange...highRange` to the query.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -536,8 +664,9 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Provides additional search terms to check for in a document, where each document in the search
-       * results must contain at least one of the additional search terms. You can also use the Boolean
-       * OR query term for this type of query.
+       * results must contain at least one of the additional search terms. You can also use the [Boolean
+       * OR](https://developers.google.com/custom-search/docs/xml_results#BooleanOrqt) query term for
+       * this type of query.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -559,17 +688,30 @@ public final class Search extends com.google.api.client.json.GenericJson {
       private java.lang.String relatedSite;
 
       /**
-       * Filters based on licensing. Supported values include: cc_publicdomain cc_attribute
-       * cc_sharealike cc_noncommercial cc_nonderived
+       * Filters based on licensing. Supported values include:
+       *
+       * * `cc_publicdomain`
+       *
+       * * `cc_attribute`
+       *
+       * * `cc_sharealike`
+       *
+       * * `cc_noncommercial`
+       *
+       * * `cc_nonderived`
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
       private java.lang.String rights;
 
       /**
-       * Specifies the  SafeSearch level used for filtering out adult results. This is a custom property
-       * not defined in the OpenSearch spec. Valid parameter values are: off: Disable SafeSearch active:
-       * Enable SafeSearch
+       * Specifies the [SafeSearch level](https://developers.google.com/custom-
+       * search/docs/xml_results#safeSearchLevels) used for filtering out adult results. This is a
+       * custom property not defined in the OpenSearch spec. Valid parameter values are:
+       *
+       * * `"off"`: Disable SafeSearch
+       *
+       * * `"active"`: Enable SafeSearch
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -583,7 +725,7 @@ public final class Search extends com.google.api.client.json.GenericJson {
       private java.lang.String searchTerms;
 
       /**
-       * Allowed values are web or image. If unspecified, results are limited to webpages.
+       * Allowed values are `web` or `image`. If unspecified, results are limited to webpages.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -597,8 +739,12 @@ public final class Search extends com.google.api.client.json.GenericJson {
       private java.lang.String siteSearch;
 
       /**
-       * Specifies whether to include or exclude results from the site named in the sitesearch
-       * parameter. Supported values are: i: include content from site e: exclude content from site
+       * Specifies whether to include or exclude results from the site named in the `sitesearch`
+       * parameter. Supported values are:
+       *
+       * * `i`: include content from site
+       *
+       * * `e`: exclude content from site
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -621,7 +767,7 @@ public final class Search extends com.google.api.client.json.GenericJson {
       private java.lang.Integer startIndex;
 
       /**
-       * The page number of this set of results, where the page length is set by the count property.
+       * The page number of this set of results, where the page length is set by the `count` property.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -659,8 +805,18 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Restricts search results to documents originating in a particular country. You may use Boolean
-       * operators in the cr parameter's value.
+       * Restricts search results to documents originating in a particular country. You may use [Boolean
+       * operators](https://developers.google.com/custom-search/docs/xml_results#booleanOperators) in
+       * the `cr` parameter's value.
+       *
+       * Google WebSearch determines the country of a document by analyzing the following:
+       *
+       * * The top-level domain (TLD) of the document's URL.
+       *
+       * * The geographic location of the web server's IP address.
+       *
+       * See [Country (cr) Parameter Values](https://developers.google.com/custom-
+       * search/docs/xml_results#countryCollections) for a list of valid values for this parameter.
        * @return value or {@code null} for none
        */
       public java.lang.String getCr() {
@@ -668,8 +824,18 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Restricts search results to documents originating in a particular country. You may use Boolean
-       * operators in the cr parameter's value.
+       * Restricts search results to documents originating in a particular country. You may use [Boolean
+       * operators](https://developers.google.com/custom-search/docs/xml_results#booleanOperators) in
+       * the `cr` parameter's value.
+       *
+       * Google WebSearch determines the country of a document by analyzing the following:
+       *
+       * * The top-level domain (TLD) of the document's URL.
+       *
+       * * The geographic location of the web server's IP address.
+       *
+       * See [Country (cr) Parameter Values](https://developers.google.com/custom-
+       * search/docs/xml_results#countryCollections) for a list of valid values for this parameter.
        * @param cr cr or {@code null} for none
        */
       public NextPage setCr(java.lang.String cr) {
@@ -678,8 +844,9 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * The identifier of a custom search engine created using the Custom Search Control Panel, if
-       * specified in request. This is a custom property not defined in the OpenSearch spec.
+       * The identifier of a custom search engine created using the Custom Search [Control
+       * Panel](https://cse.google.com/). This is a custom property not defined in the OpenSearch spec.
+       * This parameter is **required**.
        * @return value or {@code null} for none
        */
       public java.lang.String getCx() {
@@ -687,8 +854,9 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * The identifier of a custom search engine created using the Custom Search Control Panel, if
-       * specified in request. This is a custom property not defined in the OpenSearch spec.
+       * The identifier of a custom search engine created using the Custom Search [Control
+       * Panel](https://cse.google.com/). This is a custom property not defined in the OpenSearch spec.
+       * This parameter is **required**.
        * @param cx cx or {@code null} for none
        */
       public NextPage setCx(java.lang.String cx) {
@@ -697,10 +865,15 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Restricts results to URLs based on date. Supported values include: d[number]: requests results
-       * from the specified number of past days. w[number]: requests results from the specified number
-       * of past weeks. m[number]: requests results from the specified number of past months. y[number]:
-       * requests results from the specified number of past years.
+       * Restricts results to URLs based on date. Supported values include:
+       *
+       * * `d[number]`: requests results from the specified number of past days.
+       *
+       * * `w[number]`: requests results from the specified number of past weeks.
+       *
+       * * `m[number]`: requests results from the specified number of past months.
+       *
+       * * `y[number]`: requests results from the specified number of past years.
        * @return value or {@code null} for none
        */
       public java.lang.String getDateRestrict() {
@@ -708,10 +881,15 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Restricts results to URLs based on date. Supported values include: d[number]: requests results
-       * from the specified number of past days. w[number]: requests results from the specified number
-       * of past weeks. m[number]: requests results from the specified number of past months. y[number]:
-       * requests results from the specified number of past years.
+       * Restricts results to URLs based on date. Supported values include:
+       *
+       * * `d[number]`: requests results from the specified number of past days.
+       *
+       * * `w[number]`: requests results from the specified number of past weeks.
+       *
+       * * `m[number]`: requests results from the specified number of past months.
+       *
+       * * `y[number]`: requests results from the specified number of past years.
        * @param dateRestrict dateRestrict or {@code null} for none
        */
       public NextPage setDateRestrict(java.lang.String dateRestrict) {
@@ -720,8 +898,14 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Enables or disables the Simplified and Traditional Chinese Search feature. Supported values
-       * are: 0: enabled (default) 1: disabled
+       * Enables or disables the [Simplified and Traditional Chinese
+       * Search](https://developers.google.com/custom-search/docs/xml_results#chineseSearch) feature.
+       *
+       * Supported values are:
+       *
+       * * `0`: enabled (default)
+       *
+       * * `1`: disabled
        * @return value or {@code null} for none
        */
       public java.lang.String getDisableCnTwTranslation() {
@@ -729,8 +913,14 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Enables or disables the Simplified and Traditional Chinese Search feature. Supported values
-       * are: 0: enabled (default) 1: disabled
+       * Enables or disables the [Simplified and Traditional Chinese
+       * Search](https://developers.google.com/custom-search/docs/xml_results#chineseSearch) feature.
+       *
+       * Supported values are:
+       *
+       * * `0`: enabled (default)
+       *
+       * * `1`: disabled
        * @param disableCnTwTranslation disableCnTwTranslation or {@code null} for none
        */
       public NextPage setDisableCnTwTranslation(java.lang.String disableCnTwTranslation) {
@@ -774,10 +964,35 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Restricts results to files of a specified extension. Filetypes supported by Google include:
-       * Adobe Portable Document Format (pdf) Adobe PostScript (ps) Lotus 1-2-3 (wk1, wk2, wk3, wk4,
-       * wk5, wki, wks, wku) Lotus WordPro (lwp) Macwrite (mw) Microsoft Excel (xls) Microsoft
-       * PowerPoint (ppt) Microsoft Word (doc) Microsoft Works (wks, wps, wdb) Microsoft Write (wri)
-       * Rich Text Format (rtf) Shockwave Flash (swf) Text (ans, txt).
+       *
+       * * Adobe Portable Document Format (`pdf`)
+       *
+       * * Adobe PostScript (`ps`)
+       *
+       * * Lotus 1-2-3 (`wk1`, `wk2`, `wk3`, `wk4`, `wk5`, `wki`, `wks`, `wku`)
+       *
+       * * Lotus WordPro (`lwp`)
+       *
+       * * Macwrite (`mw`)
+       *
+       * * Microsoft Excel (`xls`)
+       *
+       * * Microsoft PowerPoint (`ppt`)
+       *
+       * * Microsoft Word (`doc`)
+       *
+       * * Microsoft Works (`wks`, `wps`, `wdb`)
+       *
+       * * Microsoft Write (`wri`)
+       *
+       * * Rich Text Format (`rtf`)
+       *
+       * * Shockwave Flash (`swf`)
+       *
+       * * Text (`ans`, `txt`).
+       *
+       * Additional filetypes may be added in the future. An up-to-date list can always be found in
+       * Google's [file type FAQ](https://support.google.com/webmasters/answer/35287).
        * @return value or {@code null} for none
        */
       public java.lang.String getFileType() {
@@ -786,10 +1001,35 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Restricts results to files of a specified extension. Filetypes supported by Google include:
-       * Adobe Portable Document Format (pdf) Adobe PostScript (ps) Lotus 1-2-3 (wk1, wk2, wk3, wk4,
-       * wk5, wki, wks, wku) Lotus WordPro (lwp) Macwrite (mw) Microsoft Excel (xls) Microsoft
-       * PowerPoint (ppt) Microsoft Word (doc) Microsoft Works (wks, wps, wdb) Microsoft Write (wri)
-       * Rich Text Format (rtf) Shockwave Flash (swf) Text (ans, txt).
+       *
+       * * Adobe Portable Document Format (`pdf`)
+       *
+       * * Adobe PostScript (`ps`)
+       *
+       * * Lotus 1-2-3 (`wk1`, `wk2`, `wk3`, `wk4`, `wk5`, `wki`, `wks`, `wku`)
+       *
+       * * Lotus WordPro (`lwp`)
+       *
+       * * Macwrite (`mw`)
+       *
+       * * Microsoft Excel (`xls`)
+       *
+       * * Microsoft PowerPoint (`ppt`)
+       *
+       * * Microsoft Word (`doc`)
+       *
+       * * Microsoft Works (`wks`, `wps`, `wdb`)
+       *
+       * * Microsoft Write (`wri`)
+       *
+       * * Rich Text Format (`rtf`)
+       *
+       * * Shockwave Flash (`swf`)
+       *
+       * * Text (`ans`, `txt`).
+       *
+       * Additional filetypes may be added in the future. An up-to-date list can always be found in
+       * Google's [file type FAQ](https://support.google.com/webmasters/answer/35287).
        * @param fileType fileType or {@code null} for none
        */
       public NextPage setFileType(java.lang.String fileType) {
@@ -798,9 +1038,16 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Activates or deactivates the automatic filtering of Google search results. The default value
-       * for the filter parameter is 1, which indicates that the feature is enabled. Valid values for
-       * this parameter are: 0: Disabled 1: Enabled
+       * Activates or deactivates the automatic filtering of Google search results. See [Automatic
+       * Filtering](https://developers.google.com/custom-search/docs/xml_results#automaticFiltering) for
+       * more information about Google's search results filters. Valid values for this parameter are:
+       *
+       * * `0`: Disabled
+       *
+       * * `1`: Enabled (default)
+       *
+       * **Note**: By default, Google applies filtering to all search results to improve the quality of
+       * those results.
        * @return value or {@code null} for none
        */
       public java.lang.String getFilter() {
@@ -808,9 +1055,16 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Activates or deactivates the automatic filtering of Google search results. The default value
-       * for the filter parameter is 1, which indicates that the feature is enabled. Valid values for
-       * this parameter are: 0: Disabled 1: Enabled
+       * Activates or deactivates the automatic filtering of Google search results. See [Automatic
+       * Filtering](https://developers.google.com/custom-search/docs/xml_results#automaticFiltering) for
+       * more information about Google's search results filters. Valid values for this parameter are:
+       *
+       * * `0`: Disabled
+       *
+       * * `1`: Enabled (default)
+       *
+       * **Note**: By default, Google applies filtering to all search results to improve the quality of
+       * those results.
        * @param filter filter or {@code null} for none
        */
       public NextPage setFilter(java.lang.String filter) {
@@ -819,10 +1073,13 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Boosts search results whose country of origin matches the parameter value. Specifying a gl
-       * parameter value in WebSearch requests should improve the relevance of results. This is
-       * particularly true for international customers and, even more specifically, for customers in
-       * English-speaking countries other than the United States.
+       * Boosts search results whose country of origin matches the parameter value. See [Country
+       * Codes](https://developers.google.com/custom-search/docs/xml_results#countryCodes) for a list of
+       * valid values.
+       *
+       * Specifying a `gl` parameter value in WebSearch requests should improve the relevance of
+       * results. This is particularly true for international customers and, even more specifically, for
+       * customers in English-speaking countries other than the United States.
        * @return value or {@code null} for none
        */
       public java.lang.String getGl() {
@@ -830,10 +1087,13 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Boosts search results whose country of origin matches the parameter value. Specifying a gl
-       * parameter value in WebSearch requests should improve the relevance of results. This is
-       * particularly true for international customers and, even more specifically, for customers in
-       * English-speaking countries other than the United States.
+       * Boosts search results whose country of origin matches the parameter value. See [Country
+       * Codes](https://developers.google.com/custom-search/docs/xml_results#countryCodes) for a list of
+       * valid values.
+       *
+       * Specifying a `gl` parameter value in WebSearch requests should improve the relevance of
+       * results. This is particularly true for international customers and, even more specifically, for
+       * customers in English-speaking countries other than the United States.
        * @param gl gl or {@code null} for none
        */
       public NextPage setGl(java.lang.String gl) {
@@ -861,8 +1121,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Specifies the ending value for a search range. Use cse:lowRange and cse:highrange to append an
-       * inclusive search range of lowRange...highRange to the query.
+       * Specifies the ending value for a search range. Use `cse:lowRange` and `cse:highrange` to append
+       * an inclusive search range of `lowRange...highRange` to the query.
        * @return value or {@code null} for none
        */
       public java.lang.String getHighRange() {
@@ -870,8 +1130,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Specifies the ending value for a search range. Use cse:lowRange and cse:highrange to append an
-       * inclusive search range of lowRange...highRange to the query.
+       * Specifies the ending value for a search range. Use `cse:lowRange` and `cse:highrange` to append
+       * an inclusive search range of `lowRange...highRange` to the query.
        * @param highRange highRange or {@code null} for none
        */
       public NextPage setHighRange(java.lang.String highRange) {
@@ -882,6 +1142,13 @@ public final class Search extends com.google.api.client.json.GenericJson {
       /**
        * Specifies the interface language (host language) of your user interface. Explicitly setting
        * this parameter improves the performance and the quality of your search results.
+       *
+       * See the [Interface Languages](https://developers.google.com/custom-
+       * search/docs/xml_results#wsInterfaceLanguages) section of [Internationalizing Queries and
+       * Results Presentation](https://developers.google.com/custom-
+       * search/docs/xml_results#wsInternationalizing) for more information, and [Supported Interface
+       * Languages](https://developers.google.com/custom-
+       * search/docs/xml_results_appendices#interfaceLanguages) for a list of supported languages.
        * @return value or {@code null} for none
        */
       public java.lang.String getHl() {
@@ -891,6 +1158,13 @@ public final class Search extends com.google.api.client.json.GenericJson {
       /**
        * Specifies the interface language (host language) of your user interface. Explicitly setting
        * this parameter improves the performance and the quality of your search results.
+       *
+       * See the [Interface Languages](https://developers.google.com/custom-
+       * search/docs/xml_results#wsInterfaceLanguages) section of [Internationalizing Queries and
+       * Results Presentation](https://developers.google.com/custom-
+       * search/docs/xml_results#wsInternationalizing) for more information, and [Supported Interface
+       * Languages](https://developers.google.com/custom-
+       * search/docs/xml_results_appendices#interfaceLanguages) for a list of supported languages.
        * @param hl hl or {@code null} for none
        */
       public NextPage setHl(java.lang.String hl) {
@@ -899,7 +1173,7 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Appends the specified query terms to the query, as if they were combined with a logical AND
+       * Appends the specified query terms to the query, as if they were combined with a logical `AND`
        * operator.
        * @return value or {@code null} for none
        */
@@ -908,7 +1182,7 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Appends the specified query terms to the query, as if they were combined with a logical AND
+       * Appends the specified query terms to the query, as if they were combined with a logical `AND`
        * operator.
        * @param hq hq or {@code null} for none
        */
@@ -918,8 +1192,13 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Restricts results to images of a specified color type. Supported values are: mono (black and
-       * white) gray (grayscale) color (color)
+       * Restricts results to images of a specified color type. Supported values   are:
+       *
+       * * `mono` (black and white)
+       *
+       * * `gray` (grayscale)
+       *
+       * * `color` (color)
        * @return value or {@code null} for none
        */
       public java.lang.String getImgColorType() {
@@ -927,8 +1206,13 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Restricts results to images of a specified color type. Supported values are: mono (black and
-       * white) gray (grayscale) color (color)
+       * Restricts results to images of a specified color type. Supported values   are:
+       *
+       * * `mono` (black and white)
+       *
+       * * `gray` (grayscale)
+       *
+       * * `color` (color)
        * @param imgColorType imgColorType or {@code null} for none
        */
       public NextPage setImgColorType(java.lang.String imgColorType) {
@@ -937,8 +1221,31 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Restricts results to images with a specific dominant color. Supported values are: red orange
-       * yellow green teal blue purple pink white gray black brown
+       * Restricts results to images with a specific dominant color. Supported values are:
+       *
+       * * `red`
+       *
+       * * `orange`
+       *
+       * * `yellow`
+       *
+       * * `green`
+       *
+       * * `teal`
+       *
+       * * `blue`
+       *
+       * * `purple`
+       *
+       * * `pink`
+       *
+       * * `white`
+       *
+       * * `gray`
+       *
+       * * `black`
+       *
+       * * `brown`
        * @return value or {@code null} for none
        */
       public java.lang.String getImgDominantColor() {
@@ -946,8 +1253,31 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Restricts results to images with a specific dominant color. Supported values are: red orange
-       * yellow green teal blue purple pink white gray black brown
+       * Restricts results to images with a specific dominant color. Supported values are:
+       *
+       * * `red`
+       *
+       * * `orange`
+       *
+       * * `yellow`
+       *
+       * * `green`
+       *
+       * * `teal`
+       *
+       * * `blue`
+       *
+       * * `purple`
+       *
+       * * `pink`
+       *
+       * * `white`
+       *
+       * * `gray`
+       *
+       * * `black`
+       *
+       * * `brown`
        * @param imgDominantColor imgDominantColor or {@code null} for none
        */
       public NextPage setImgDominantColor(java.lang.String imgDominantColor) {
@@ -956,8 +1286,15 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Restricts results to images of a specified size. Supported values are: icon (small)
-       * small|medium|large|xlarge (medium) xxlarge (large) huge (extra-large)
+       * Restricts results to images of a specified size. Supported values are:
+       *
+       * * `icon` (small)
+       *
+       * * `small | medium | large | xlarge` (medium)
+       *
+       * * `xxlarge` (large)
+       *
+       * * `huge` (extra-large)
        * @return value or {@code null} for none
        */
       public java.lang.String getImgSize() {
@@ -965,8 +1302,15 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Restricts results to images of a specified size. Supported values are: icon (small)
-       * small|medium|large|xlarge (medium) xxlarge (large) huge (extra-large)
+       * Restricts results to images of a specified size. Supported values are:
+       *
+       * * `icon` (small)
+       *
+       * * `small | medium | large | xlarge` (medium)
+       *
+       * * `xxlarge` (large)
+       *
+       * * `huge` (extra-large)
        * @param imgSize imgSize or {@code null} for none
        */
       public NextPage setImgSize(java.lang.String imgSize) {
@@ -975,8 +1319,19 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Restricts results to images of a specified type. Supported values are: clipart (Clip art) face
-       * (Face) lineart (Line drawing) photo (Photo) animated (Animated) stock (Stock)
+       * Restricts results to images of a specified type. Supported values are:
+       *
+       * * `clipart` (Clip art)
+       *
+       * * `face` (Face)
+       *
+       * * `lineart` (Line drawing)
+       *
+       * * `photo` (Photo)
+       *
+       * * `animated` (Animated)
+       *
+       * * `stock` (Stock)
        * @return value or {@code null} for none
        */
       public java.lang.String getImgType() {
@@ -984,8 +1339,19 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Restricts results to images of a specified type. Supported values are: clipart (Clip art) face
-       * (Face) lineart (Line drawing) photo (Photo) animated (Animated) stock (Stock)
+       * Restricts results to images of a specified type. Supported values are:
+       *
+       * * `clipart` (Clip art)
+       *
+       * * `face` (Face)
+       *
+       * * `lineart` (Line drawing)
+       *
+       * * `photo` (Photo)
+       *
+       * * `animated` (Animated)
+       *
+       * * `stock` (Stock)
        * @param imgType imgType or {@code null} for none
        */
       public NextPage setImgType(java.lang.String imgType) {
@@ -1045,8 +1411,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Specifies the starting value for a search range. Use cse:lowRange and cse:highrange to append
-       * an inclusive search range of lowRange...highRange to the query.
+       * Specifies the starting value for a search range. Use `cse:lowRange` and `cse:highrange` to
+       * append an inclusive search range of `lowRange...highRange` to the query.
        * @return value or {@code null} for none
        */
       public java.lang.String getLowRange() {
@@ -1054,8 +1420,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Specifies the starting value for a search range. Use cse:lowRange and cse:highrange to append
-       * an inclusive search range of lowRange...highRange to the query.
+       * Specifies the starting value for a search range. Use `cse:lowRange` and `cse:highrange` to
+       * append an inclusive search range of `lowRange...highRange` to the query.
        * @param lowRange lowRange or {@code null} for none
        */
       public NextPage setLowRange(java.lang.String lowRange) {
@@ -1065,8 +1431,9 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Provides additional search terms to check for in a document, where each document in the search
-       * results must contain at least one of the additional search terms. You can also use the Boolean
-       * OR query term for this type of query.
+       * results must contain at least one of the additional search terms. You can also use the [Boolean
+       * OR](https://developers.google.com/custom-search/docs/xml_results#BooleanOrqt) query term for
+       * this type of query.
        * @return value or {@code null} for none
        */
       public java.lang.String getOrTerms() {
@@ -1075,8 +1442,9 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Provides additional search terms to check for in a document, where each document in the search
-       * results must contain at least one of the additional search terms. You can also use the Boolean
-       * OR query term for this type of query.
+       * results must contain at least one of the additional search terms. You can also use the [Boolean
+       * OR](https://developers.google.com/custom-search/docs/xml_results#BooleanOrqt) query term for
+       * this type of query.
        * @param orTerms orTerms or {@code null} for none
        */
       public NextPage setOrTerms(java.lang.String orTerms) {
@@ -1121,8 +1489,17 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Filters based on licensing. Supported values include: cc_publicdomain cc_attribute
-       * cc_sharealike cc_noncommercial cc_nonderived
+       * Filters based on licensing. Supported values include:
+       *
+       * * `cc_publicdomain`
+       *
+       * * `cc_attribute`
+       *
+       * * `cc_sharealike`
+       *
+       * * `cc_noncommercial`
+       *
+       * * `cc_nonderived`
        * @return value or {@code null} for none
        */
       public java.lang.String getRights() {
@@ -1130,8 +1507,17 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Filters based on licensing. Supported values include: cc_publicdomain cc_attribute
-       * cc_sharealike cc_noncommercial cc_nonderived
+       * Filters based on licensing. Supported values include:
+       *
+       * * `cc_publicdomain`
+       *
+       * * `cc_attribute`
+       *
+       * * `cc_sharealike`
+       *
+       * * `cc_noncommercial`
+       *
+       * * `cc_nonderived`
        * @param rights rights or {@code null} for none
        */
       public NextPage setRights(java.lang.String rights) {
@@ -1140,9 +1526,13 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Specifies the  SafeSearch level used for filtering out adult results. This is a custom property
-       * not defined in the OpenSearch spec. Valid parameter values are: off: Disable SafeSearch active:
-       * Enable SafeSearch
+       * Specifies the [SafeSearch level](https://developers.google.com/custom-
+       * search/docs/xml_results#safeSearchLevels) used for filtering out adult results. This is a
+       * custom property not defined in the OpenSearch spec. Valid parameter values are:
+       *
+       * * `"off"`: Disable SafeSearch
+       *
+       * * `"active"`: Enable SafeSearch
        * @return value or {@code null} for none
        */
       public java.lang.String getSafe() {
@@ -1150,9 +1540,13 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Specifies the  SafeSearch level used for filtering out adult results. This is a custom property
-       * not defined in the OpenSearch spec. Valid parameter values are: off: Disable SafeSearch active:
-       * Enable SafeSearch
+       * Specifies the [SafeSearch level](https://developers.google.com/custom-
+       * search/docs/xml_results#safeSearchLevels) used for filtering out adult results. This is a
+       * custom property not defined in the OpenSearch spec. Valid parameter values are:
+       *
+       * * `"off"`: Disable SafeSearch
+       *
+       * * `"active"`: Enable SafeSearch
        * @param safe safe or {@code null} for none
        */
       public NextPage setSafe(java.lang.String safe) {
@@ -1178,7 +1572,7 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Allowed values are web or image. If unspecified, results are limited to webpages.
+       * Allowed values are `web` or `image`. If unspecified, results are limited to webpages.
        * @return value or {@code null} for none
        */
       public java.lang.String getSearchType() {
@@ -1186,7 +1580,7 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Allowed values are web or image. If unspecified, results are limited to webpages.
+       * Allowed values are `web` or `image`. If unspecified, results are limited to webpages.
        * @param searchType searchType or {@code null} for none
        */
       public NextPage setSearchType(java.lang.String searchType) {
@@ -1212,8 +1606,12 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Specifies whether to include or exclude results from the site named in the sitesearch
-       * parameter. Supported values are: i: include content from site e: exclude content from site
+       * Specifies whether to include or exclude results from the site named in the `sitesearch`
+       * parameter. Supported values are:
+       *
+       * * `i`: include content from site
+       *
+       * * `e`: exclude content from site
        * @return value or {@code null} for none
        */
       public java.lang.String getSiteSearchFilter() {
@@ -1221,8 +1619,12 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Specifies whether to include or exclude results from the site named in the sitesearch
-       * parameter. Supported values are: i: include content from site e: exclude content from site
+       * Specifies whether to include or exclude results from the site named in the `sitesearch`
+       * parameter. Supported values are:
+       *
+       * * `i`: include content from site
+       *
+       * * `e`: exclude content from site
        * @param siteSearchFilter siteSearchFilter or {@code null} for none
        */
       public NextPage setSiteSearchFilter(java.lang.String siteSearchFilter) {
@@ -1269,7 +1671,7 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * The page number of this set of results, where the page length is set by the count property.
+       * The page number of this set of results, where the page length is set by the `count` property.
        * @return value or {@code null} for none
        */
       public java.lang.Integer getStartPage() {
@@ -1277,7 +1679,7 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * The page number of this set of results, where the page length is set by the count property.
+       * The page number of this set of results, where the page length is set by the `count` property.
        * @param startPage startPage or {@code null} for none
        */
       public NextPage setStartPage(java.lang.Integer startPage) {
@@ -1343,34 +1745,56 @@ public final class Search extends com.google.api.client.json.GenericJson {
       private java.lang.Integer count;
 
       /**
-       * Restricts search results to documents originating in a particular country. You may use Boolean
-       * operators in the cr parameter's value.
+       * Restricts search results to documents originating in a particular country. You may use [Boolean
+       * operators](https://developers.google.com/custom-search/docs/xml_results#booleanOperators) in
+       * the `cr` parameter's value.
+       *
+       * Google WebSearch determines the country of a document by analyzing the following:
+       *
+       * * The top-level domain (TLD) of the document's URL.
+       *
+       * * The geographic location of the web server's IP address.
+       *
+       * See [Country (cr) Parameter Values](https://developers.google.com/custom-
+       * search/docs/xml_results#countryCollections) for a list of valid values for this parameter.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
       private java.lang.String cr;
 
       /**
-       * The identifier of a custom search engine created using the Custom Search Control Panel, if
-       * specified in request. This is a custom property not defined in the OpenSearch spec.
+       * The identifier of a custom search engine created using the Custom Search [Control
+       * Panel](https://cse.google.com/). This is a custom property not defined in the OpenSearch spec.
+       * This parameter is **required**.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
       private java.lang.String cx;
 
       /**
-       * Restricts results to URLs based on date. Supported values include: d[number]: requests results
-       * from the specified number of past days. w[number]: requests results from the specified number
-       * of past weeks. m[number]: requests results from the specified number of past months. y[number]:
-       * requests results from the specified number of past years.
+       * Restricts results to URLs based on date. Supported values include:
+       *
+       * * `d[number]`: requests results from the specified number of past days.
+       *
+       * * `w[number]`: requests results from the specified number of past weeks.
+       *
+       * * `m[number]`: requests results from the specified number of past months.
+       *
+       * * `y[number]`: requests results from the specified number of past years.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
       private java.lang.String dateRestrict;
 
       /**
-       * Enables or disables the Simplified and Traditional Chinese Search feature. Supported values
-       * are: 0: enabled (default) 1: disabled
+       * Enables or disables the [Simplified and Traditional Chinese
+       * Search](https://developers.google.com/custom-search/docs/xml_results#chineseSearch) feature.
+       *
+       * Supported values are:
+       *
+       * * `0`: enabled (default)
+       *
+       * * `1`: disabled
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -1392,29 +1816,64 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Restricts results to files of a specified extension. Filetypes supported by Google include:
-       * Adobe Portable Document Format (pdf) Adobe PostScript (ps) Lotus 1-2-3 (wk1, wk2, wk3, wk4,
-       * wk5, wki, wks, wku) Lotus WordPro (lwp) Macwrite (mw) Microsoft Excel (xls) Microsoft
-       * PowerPoint (ppt) Microsoft Word (doc) Microsoft Works (wks, wps, wdb) Microsoft Write (wri)
-       * Rich Text Format (rtf) Shockwave Flash (swf) Text (ans, txt).
+       *
+       * * Adobe Portable Document Format (`pdf`)
+       *
+       * * Adobe PostScript (`ps`)
+       *
+       * * Lotus 1-2-3 (`wk1`, `wk2`, `wk3`, `wk4`, `wk5`, `wki`, `wks`, `wku`)
+       *
+       * * Lotus WordPro (`lwp`)
+       *
+       * * Macwrite (`mw`)
+       *
+       * * Microsoft Excel (`xls`)
+       *
+       * * Microsoft PowerPoint (`ppt`)
+       *
+       * * Microsoft Word (`doc`)
+       *
+       * * Microsoft Works (`wks`, `wps`, `wdb`)
+       *
+       * * Microsoft Write (`wri`)
+       *
+       * * Rich Text Format (`rtf`)
+       *
+       * * Shockwave Flash (`swf`)
+       *
+       * * Text (`ans`, `txt`).
+       *
+       * Additional filetypes may be added in the future. An up-to-date list can always be found in
+       * Google's [file type FAQ](https://support.google.com/webmasters/answer/35287).
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
       private java.lang.String fileType;
 
       /**
-       * Activates or deactivates the automatic filtering of Google search results. The default value
-       * for the filter parameter is 1, which indicates that the feature is enabled. Valid values for
-       * this parameter are: 0: Disabled 1: Enabled
+       * Activates or deactivates the automatic filtering of Google search results. See [Automatic
+       * Filtering](https://developers.google.com/custom-search/docs/xml_results#automaticFiltering) for
+       * more information about Google's search results filters. Valid values for this parameter are:
+       *
+       * * `0`: Disabled
+       *
+       * * `1`: Enabled (default)
+       *
+       * **Note**: By default, Google applies filtering to all search results to improve the quality of
+       * those results.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
       /**
-       * Boosts search results whose country of origin matches the parameter value. Specifying a gl
-       * parameter value in WebSearch requests should improve the relevance of results. This is
-       * particularly true for international customers and, even more specifically, for customers in
-       * English-speaking countries other than the United States.
+       * Boosts search results whose country of origin matches the parameter value. See [Country
+       * Codes](https://developers.google.com/custom-search/docs/xml_results#countryCodes) for a list of
+       * valid values.
+       *
+       * Specifying a `gl` parameter value in WebSearch requests should improve the relevance of
+       * results. This is particularly true for international customers and, even more specifically, for
+       * customers in English-speaking countries other than the United States.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -1429,8 +1888,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
       private java.lang.String googleHost;
 
       /**
-       * Specifies the ending value for a search range. Use cse:lowRange and cse:highrange to append an
-       * inclusive search range of lowRange...highRange to the query.
+       * Specifies the ending value for a search range. Use `cse:lowRange` and `cse:highrange` to append
+       * an inclusive search range of `lowRange...highRange` to the query.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -1439,13 +1898,20 @@ public final class Search extends com.google.api.client.json.GenericJson {
       /**
        * Specifies the interface language (host language) of your user interface. Explicitly setting
        * this parameter improves the performance and the quality of your search results.
+       *
+       * See the [Interface Languages](https://developers.google.com/custom-
+       * search/docs/xml_results#wsInterfaceLanguages) section of [Internationalizing Queries and
+       * Results Presentation](https://developers.google.com/custom-
+       * search/docs/xml_results#wsInternationalizing) for more information, and [Supported Interface
+       * Languages](https://developers.google.com/custom-
+       * search/docs/xml_results_appendices#interfaceLanguages) for a list of supported languages.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
       private java.lang.String hl;
 
       /**
-       * Appends the specified query terms to the query, as if they were combined with a logical AND
+       * Appends the specified query terms to the query, as if they were combined with a logical `AND`
        * operator.
        * The value may be {@code null}.
        */
@@ -1453,32 +1919,78 @@ public final class Search extends com.google.api.client.json.GenericJson {
       private java.lang.String hq;
 
       /**
-       * Restricts results to images of a specified color type. Supported values are: mono (black and
-       * white) gray (grayscale) color (color)
+       * Restricts results to images of a specified color type. Supported values   are:
+       *
+       * * `mono` (black and white)
+       *
+       * * `gray` (grayscale)
+       *
+       * * `color` (color)
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
       private java.lang.String imgColorType;
 
       /**
-       * Restricts results to images with a specific dominant color. Supported values are: red orange
-       * yellow green teal blue purple pink white gray black brown
+       * Restricts results to images with a specific dominant color. Supported values are:
+       *
+       * * `red`
+       *
+       * * `orange`
+       *
+       * * `yellow`
+       *
+       * * `green`
+       *
+       * * `teal`
+       *
+       * * `blue`
+       *
+       * * `purple`
+       *
+       * * `pink`
+       *
+       * * `white`
+       *
+       * * `gray`
+       *
+       * * `black`
+       *
+       * * `brown`
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
       private java.lang.String imgDominantColor;
 
       /**
-       * Restricts results to images of a specified size. Supported values are: icon (small)
-       * small|medium|large|xlarge (medium) xxlarge (large) huge (extra-large)
+       * Restricts results to images of a specified size. Supported values are:
+       *
+       * * `icon` (small)
+       *
+       * * `small | medium | large | xlarge` (medium)
+       *
+       * * `xxlarge` (large)
+       *
+       * * `huge` (extra-large)
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
       private java.lang.String imgSize;
 
       /**
-       * Restricts results to images of a specified type. Supported values are: clipart (Clip art) face
-       * (Face) lineart (Line drawing) photo (Photo) animated (Animated) stock (Stock)
+       * Restricts results to images of a specified type. Supported values are:
+       *
+       * * `clipart` (Clip art)
+       *
+       * * `face` (Face)
+       *
+       * * `lineart` (Line drawing)
+       *
+       * * `photo` (Photo)
+       *
+       * * `animated` (Animated)
+       *
+       * * `stock` (Stock)
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -1506,8 +2018,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
       private java.lang.String linkSite;
 
       /**
-       * Specifies the starting value for a search range. Use cse:lowRange and cse:highrange to append
-       * an inclusive search range of lowRange...highRange to the query.
+       * Specifies the starting value for a search range. Use `cse:lowRange` and `cse:highrange` to
+       * append an inclusive search range of `lowRange...highRange` to the query.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -1515,8 +2027,9 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Provides additional search terms to check for in a document, where each document in the search
-       * results must contain at least one of the additional search terms. You can also use the Boolean
-       * OR query term for this type of query.
+       * results must contain at least one of the additional search terms. You can also use the [Boolean
+       * OR](https://developers.google.com/custom-search/docs/xml_results#BooleanOrqt) query term for
+       * this type of query.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -1538,17 +2051,30 @@ public final class Search extends com.google.api.client.json.GenericJson {
       private java.lang.String relatedSite;
 
       /**
-       * Filters based on licensing. Supported values include: cc_publicdomain cc_attribute
-       * cc_sharealike cc_noncommercial cc_nonderived
+       * Filters based on licensing. Supported values include:
+       *
+       * * `cc_publicdomain`
+       *
+       * * `cc_attribute`
+       *
+       * * `cc_sharealike`
+       *
+       * * `cc_noncommercial`
+       *
+       * * `cc_nonderived`
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
       private java.lang.String rights;
 
       /**
-       * Specifies the  SafeSearch level used for filtering out adult results. This is a custom property
-       * not defined in the OpenSearch spec. Valid parameter values are: off: Disable SafeSearch active:
-       * Enable SafeSearch
+       * Specifies the [SafeSearch level](https://developers.google.com/custom-
+       * search/docs/xml_results#safeSearchLevels) used for filtering out adult results. This is a
+       * custom property not defined in the OpenSearch spec. Valid parameter values are:
+       *
+       * * `"off"`: Disable SafeSearch
+       *
+       * * `"active"`: Enable SafeSearch
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -1562,7 +2088,7 @@ public final class Search extends com.google.api.client.json.GenericJson {
       private java.lang.String searchTerms;
 
       /**
-       * Allowed values are web or image. If unspecified, results are limited to webpages.
+       * Allowed values are `web` or `image`. If unspecified, results are limited to webpages.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -1576,8 +2102,12 @@ public final class Search extends com.google.api.client.json.GenericJson {
       private java.lang.String siteSearch;
 
       /**
-       * Specifies whether to include or exclude results from the site named in the sitesearch
-       * parameter. Supported values are: i: include content from site e: exclude content from site
+       * Specifies whether to include or exclude results from the site named in the `sitesearch`
+       * parameter. Supported values are:
+       *
+       * * `i`: include content from site
+       *
+       * * `e`: exclude content from site
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -1600,7 +2130,7 @@ public final class Search extends com.google.api.client.json.GenericJson {
       private java.lang.Integer startIndex;
 
       /**
-       * The page number of this set of results, where the page length is set by the count property.
+       * The page number of this set of results, where the page length is set by the `count` property.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -1638,8 +2168,18 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Restricts search results to documents originating in a particular country. You may use Boolean
-       * operators in the cr parameter's value.
+       * Restricts search results to documents originating in a particular country. You may use [Boolean
+       * operators](https://developers.google.com/custom-search/docs/xml_results#booleanOperators) in
+       * the `cr` parameter's value.
+       *
+       * Google WebSearch determines the country of a document by analyzing the following:
+       *
+       * * The top-level domain (TLD) of the document's URL.
+       *
+       * * The geographic location of the web server's IP address.
+       *
+       * See [Country (cr) Parameter Values](https://developers.google.com/custom-
+       * search/docs/xml_results#countryCollections) for a list of valid values for this parameter.
        * @return value or {@code null} for none
        */
       public java.lang.String getCr() {
@@ -1647,8 +2187,18 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Restricts search results to documents originating in a particular country. You may use Boolean
-       * operators in the cr parameter's value.
+       * Restricts search results to documents originating in a particular country. You may use [Boolean
+       * operators](https://developers.google.com/custom-search/docs/xml_results#booleanOperators) in
+       * the `cr` parameter's value.
+       *
+       * Google WebSearch determines the country of a document by analyzing the following:
+       *
+       * * The top-level domain (TLD) of the document's URL.
+       *
+       * * The geographic location of the web server's IP address.
+       *
+       * See [Country (cr) Parameter Values](https://developers.google.com/custom-
+       * search/docs/xml_results#countryCollections) for a list of valid values for this parameter.
        * @param cr cr or {@code null} for none
        */
       public PreviousPage setCr(java.lang.String cr) {
@@ -1657,8 +2207,9 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * The identifier of a custom search engine created using the Custom Search Control Panel, if
-       * specified in request. This is a custom property not defined in the OpenSearch spec.
+       * The identifier of a custom search engine created using the Custom Search [Control
+       * Panel](https://cse.google.com/). This is a custom property not defined in the OpenSearch spec.
+       * This parameter is **required**.
        * @return value or {@code null} for none
        */
       public java.lang.String getCx() {
@@ -1666,8 +2217,9 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * The identifier of a custom search engine created using the Custom Search Control Panel, if
-       * specified in request. This is a custom property not defined in the OpenSearch spec.
+       * The identifier of a custom search engine created using the Custom Search [Control
+       * Panel](https://cse.google.com/). This is a custom property not defined in the OpenSearch spec.
+       * This parameter is **required**.
        * @param cx cx or {@code null} for none
        */
       public PreviousPage setCx(java.lang.String cx) {
@@ -1676,10 +2228,15 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Restricts results to URLs based on date. Supported values include: d[number]: requests results
-       * from the specified number of past days. w[number]: requests results from the specified number
-       * of past weeks. m[number]: requests results from the specified number of past months. y[number]:
-       * requests results from the specified number of past years.
+       * Restricts results to URLs based on date. Supported values include:
+       *
+       * * `d[number]`: requests results from the specified number of past days.
+       *
+       * * `w[number]`: requests results from the specified number of past weeks.
+       *
+       * * `m[number]`: requests results from the specified number of past months.
+       *
+       * * `y[number]`: requests results from the specified number of past years.
        * @return value or {@code null} for none
        */
       public java.lang.String getDateRestrict() {
@@ -1687,10 +2244,15 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Restricts results to URLs based on date. Supported values include: d[number]: requests results
-       * from the specified number of past days. w[number]: requests results from the specified number
-       * of past weeks. m[number]: requests results from the specified number of past months. y[number]:
-       * requests results from the specified number of past years.
+       * Restricts results to URLs based on date. Supported values include:
+       *
+       * * `d[number]`: requests results from the specified number of past days.
+       *
+       * * `w[number]`: requests results from the specified number of past weeks.
+       *
+       * * `m[number]`: requests results from the specified number of past months.
+       *
+       * * `y[number]`: requests results from the specified number of past years.
        * @param dateRestrict dateRestrict or {@code null} for none
        */
       public PreviousPage setDateRestrict(java.lang.String dateRestrict) {
@@ -1699,8 +2261,14 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Enables or disables the Simplified and Traditional Chinese Search feature. Supported values
-       * are: 0: enabled (default) 1: disabled
+       * Enables or disables the [Simplified and Traditional Chinese
+       * Search](https://developers.google.com/custom-search/docs/xml_results#chineseSearch) feature.
+       *
+       * Supported values are:
+       *
+       * * `0`: enabled (default)
+       *
+       * * `1`: disabled
        * @return value or {@code null} for none
        */
       public java.lang.String getDisableCnTwTranslation() {
@@ -1708,8 +2276,14 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Enables or disables the Simplified and Traditional Chinese Search feature. Supported values
-       * are: 0: enabled (default) 1: disabled
+       * Enables or disables the [Simplified and Traditional Chinese
+       * Search](https://developers.google.com/custom-search/docs/xml_results#chineseSearch) feature.
+       *
+       * Supported values are:
+       *
+       * * `0`: enabled (default)
+       *
+       * * `1`: disabled
        * @param disableCnTwTranslation disableCnTwTranslation or {@code null} for none
        */
       public PreviousPage setDisableCnTwTranslation(java.lang.String disableCnTwTranslation) {
@@ -1753,10 +2327,35 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Restricts results to files of a specified extension. Filetypes supported by Google include:
-       * Adobe Portable Document Format (pdf) Adobe PostScript (ps) Lotus 1-2-3 (wk1, wk2, wk3, wk4,
-       * wk5, wki, wks, wku) Lotus WordPro (lwp) Macwrite (mw) Microsoft Excel (xls) Microsoft
-       * PowerPoint (ppt) Microsoft Word (doc) Microsoft Works (wks, wps, wdb) Microsoft Write (wri)
-       * Rich Text Format (rtf) Shockwave Flash (swf) Text (ans, txt).
+       *
+       * * Adobe Portable Document Format (`pdf`)
+       *
+       * * Adobe PostScript (`ps`)
+       *
+       * * Lotus 1-2-3 (`wk1`, `wk2`, `wk3`, `wk4`, `wk5`, `wki`, `wks`, `wku`)
+       *
+       * * Lotus WordPro (`lwp`)
+       *
+       * * Macwrite (`mw`)
+       *
+       * * Microsoft Excel (`xls`)
+       *
+       * * Microsoft PowerPoint (`ppt`)
+       *
+       * * Microsoft Word (`doc`)
+       *
+       * * Microsoft Works (`wks`, `wps`, `wdb`)
+       *
+       * * Microsoft Write (`wri`)
+       *
+       * * Rich Text Format (`rtf`)
+       *
+       * * Shockwave Flash (`swf`)
+       *
+       * * Text (`ans`, `txt`).
+       *
+       * Additional filetypes may be added in the future. An up-to-date list can always be found in
+       * Google's [file type FAQ](https://support.google.com/webmasters/answer/35287).
        * @return value or {@code null} for none
        */
       public java.lang.String getFileType() {
@@ -1765,10 +2364,35 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Restricts results to files of a specified extension. Filetypes supported by Google include:
-       * Adobe Portable Document Format (pdf) Adobe PostScript (ps) Lotus 1-2-3 (wk1, wk2, wk3, wk4,
-       * wk5, wki, wks, wku) Lotus WordPro (lwp) Macwrite (mw) Microsoft Excel (xls) Microsoft
-       * PowerPoint (ppt) Microsoft Word (doc) Microsoft Works (wks, wps, wdb) Microsoft Write (wri)
-       * Rich Text Format (rtf) Shockwave Flash (swf) Text (ans, txt).
+       *
+       * * Adobe Portable Document Format (`pdf`)
+       *
+       * * Adobe PostScript (`ps`)
+       *
+       * * Lotus 1-2-3 (`wk1`, `wk2`, `wk3`, `wk4`, `wk5`, `wki`, `wks`, `wku`)
+       *
+       * * Lotus WordPro (`lwp`)
+       *
+       * * Macwrite (`mw`)
+       *
+       * * Microsoft Excel (`xls`)
+       *
+       * * Microsoft PowerPoint (`ppt`)
+       *
+       * * Microsoft Word (`doc`)
+       *
+       * * Microsoft Works (`wks`, `wps`, `wdb`)
+       *
+       * * Microsoft Write (`wri`)
+       *
+       * * Rich Text Format (`rtf`)
+       *
+       * * Shockwave Flash (`swf`)
+       *
+       * * Text (`ans`, `txt`).
+       *
+       * Additional filetypes may be added in the future. An up-to-date list can always be found in
+       * Google's [file type FAQ](https://support.google.com/webmasters/answer/35287).
        * @param fileType fileType or {@code null} for none
        */
       public PreviousPage setFileType(java.lang.String fileType) {
@@ -1777,9 +2401,16 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Activates or deactivates the automatic filtering of Google search results. The default value
-       * for the filter parameter is 1, which indicates that the feature is enabled. Valid values for
-       * this parameter are: 0: Disabled 1: Enabled
+       * Activates or deactivates the automatic filtering of Google search results. See [Automatic
+       * Filtering](https://developers.google.com/custom-search/docs/xml_results#automaticFiltering) for
+       * more information about Google's search results filters. Valid values for this parameter are:
+       *
+       * * `0`: Disabled
+       *
+       * * `1`: Enabled (default)
+       *
+       * **Note**: By default, Google applies filtering to all search results to improve the quality of
+       * those results.
        * @return value or {@code null} for none
        */
       public java.lang.String getFilter() {
@@ -1787,9 +2418,16 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Activates or deactivates the automatic filtering of Google search results. The default value
-       * for the filter parameter is 1, which indicates that the feature is enabled. Valid values for
-       * this parameter are: 0: Disabled 1: Enabled
+       * Activates or deactivates the automatic filtering of Google search results. See [Automatic
+       * Filtering](https://developers.google.com/custom-search/docs/xml_results#automaticFiltering) for
+       * more information about Google's search results filters. Valid values for this parameter are:
+       *
+       * * `0`: Disabled
+       *
+       * * `1`: Enabled (default)
+       *
+       * **Note**: By default, Google applies filtering to all search results to improve the quality of
+       * those results.
        * @param filter filter or {@code null} for none
        */
       public PreviousPage setFilter(java.lang.String filter) {
@@ -1798,10 +2436,13 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Boosts search results whose country of origin matches the parameter value. Specifying a gl
-       * parameter value in WebSearch requests should improve the relevance of results. This is
-       * particularly true for international customers and, even more specifically, for customers in
-       * English-speaking countries other than the United States.
+       * Boosts search results whose country of origin matches the parameter value. See [Country
+       * Codes](https://developers.google.com/custom-search/docs/xml_results#countryCodes) for a list of
+       * valid values.
+       *
+       * Specifying a `gl` parameter value in WebSearch requests should improve the relevance of
+       * results. This is particularly true for international customers and, even more specifically, for
+       * customers in English-speaking countries other than the United States.
        * @return value or {@code null} for none
        */
       public java.lang.String getGl() {
@@ -1809,10 +2450,13 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Boosts search results whose country of origin matches the parameter value. Specifying a gl
-       * parameter value in WebSearch requests should improve the relevance of results. This is
-       * particularly true for international customers and, even more specifically, for customers in
-       * English-speaking countries other than the United States.
+       * Boosts search results whose country of origin matches the parameter value. See [Country
+       * Codes](https://developers.google.com/custom-search/docs/xml_results#countryCodes) for a list of
+       * valid values.
+       *
+       * Specifying a `gl` parameter value in WebSearch requests should improve the relevance of
+       * results. This is particularly true for international customers and, even more specifically, for
+       * customers in English-speaking countries other than the United States.
        * @param gl gl or {@code null} for none
        */
       public PreviousPage setGl(java.lang.String gl) {
@@ -1840,8 +2484,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Specifies the ending value for a search range. Use cse:lowRange and cse:highrange to append an
-       * inclusive search range of lowRange...highRange to the query.
+       * Specifies the ending value for a search range. Use `cse:lowRange` and `cse:highrange` to append
+       * an inclusive search range of `lowRange...highRange` to the query.
        * @return value or {@code null} for none
        */
       public java.lang.String getHighRange() {
@@ -1849,8 +2493,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Specifies the ending value for a search range. Use cse:lowRange and cse:highrange to append an
-       * inclusive search range of lowRange...highRange to the query.
+       * Specifies the ending value for a search range. Use `cse:lowRange` and `cse:highrange` to append
+       * an inclusive search range of `lowRange...highRange` to the query.
        * @param highRange highRange or {@code null} for none
        */
       public PreviousPage setHighRange(java.lang.String highRange) {
@@ -1861,6 +2505,13 @@ public final class Search extends com.google.api.client.json.GenericJson {
       /**
        * Specifies the interface language (host language) of your user interface. Explicitly setting
        * this parameter improves the performance and the quality of your search results.
+       *
+       * See the [Interface Languages](https://developers.google.com/custom-
+       * search/docs/xml_results#wsInterfaceLanguages) section of [Internationalizing Queries and
+       * Results Presentation](https://developers.google.com/custom-
+       * search/docs/xml_results#wsInternationalizing) for more information, and [Supported Interface
+       * Languages](https://developers.google.com/custom-
+       * search/docs/xml_results_appendices#interfaceLanguages) for a list of supported languages.
        * @return value or {@code null} for none
        */
       public java.lang.String getHl() {
@@ -1870,6 +2521,13 @@ public final class Search extends com.google.api.client.json.GenericJson {
       /**
        * Specifies the interface language (host language) of your user interface. Explicitly setting
        * this parameter improves the performance and the quality of your search results.
+       *
+       * See the [Interface Languages](https://developers.google.com/custom-
+       * search/docs/xml_results#wsInterfaceLanguages) section of [Internationalizing Queries and
+       * Results Presentation](https://developers.google.com/custom-
+       * search/docs/xml_results#wsInternationalizing) for more information, and [Supported Interface
+       * Languages](https://developers.google.com/custom-
+       * search/docs/xml_results_appendices#interfaceLanguages) for a list of supported languages.
        * @param hl hl or {@code null} for none
        */
       public PreviousPage setHl(java.lang.String hl) {
@@ -1878,7 +2536,7 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Appends the specified query terms to the query, as if they were combined with a logical AND
+       * Appends the specified query terms to the query, as if they were combined with a logical `AND`
        * operator.
        * @return value or {@code null} for none
        */
@@ -1887,7 +2545,7 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Appends the specified query terms to the query, as if they were combined with a logical AND
+       * Appends the specified query terms to the query, as if they were combined with a logical `AND`
        * operator.
        * @param hq hq or {@code null} for none
        */
@@ -1897,8 +2555,13 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Restricts results to images of a specified color type. Supported values are: mono (black and
-       * white) gray (grayscale) color (color)
+       * Restricts results to images of a specified color type. Supported values   are:
+       *
+       * * `mono` (black and white)
+       *
+       * * `gray` (grayscale)
+       *
+       * * `color` (color)
        * @return value or {@code null} for none
        */
       public java.lang.String getImgColorType() {
@@ -1906,8 +2569,13 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Restricts results to images of a specified color type. Supported values are: mono (black and
-       * white) gray (grayscale) color (color)
+       * Restricts results to images of a specified color type. Supported values   are:
+       *
+       * * `mono` (black and white)
+       *
+       * * `gray` (grayscale)
+       *
+       * * `color` (color)
        * @param imgColorType imgColorType or {@code null} for none
        */
       public PreviousPage setImgColorType(java.lang.String imgColorType) {
@@ -1916,8 +2584,31 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Restricts results to images with a specific dominant color. Supported values are: red orange
-       * yellow green teal blue purple pink white gray black brown
+       * Restricts results to images with a specific dominant color. Supported values are:
+       *
+       * * `red`
+       *
+       * * `orange`
+       *
+       * * `yellow`
+       *
+       * * `green`
+       *
+       * * `teal`
+       *
+       * * `blue`
+       *
+       * * `purple`
+       *
+       * * `pink`
+       *
+       * * `white`
+       *
+       * * `gray`
+       *
+       * * `black`
+       *
+       * * `brown`
        * @return value or {@code null} for none
        */
       public java.lang.String getImgDominantColor() {
@@ -1925,8 +2616,31 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Restricts results to images with a specific dominant color. Supported values are: red orange
-       * yellow green teal blue purple pink white gray black brown
+       * Restricts results to images with a specific dominant color. Supported values are:
+       *
+       * * `red`
+       *
+       * * `orange`
+       *
+       * * `yellow`
+       *
+       * * `green`
+       *
+       * * `teal`
+       *
+       * * `blue`
+       *
+       * * `purple`
+       *
+       * * `pink`
+       *
+       * * `white`
+       *
+       * * `gray`
+       *
+       * * `black`
+       *
+       * * `brown`
        * @param imgDominantColor imgDominantColor or {@code null} for none
        */
       public PreviousPage setImgDominantColor(java.lang.String imgDominantColor) {
@@ -1935,8 +2649,15 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Restricts results to images of a specified size. Supported values are: icon (small)
-       * small|medium|large|xlarge (medium) xxlarge (large) huge (extra-large)
+       * Restricts results to images of a specified size. Supported values are:
+       *
+       * * `icon` (small)
+       *
+       * * `small | medium | large | xlarge` (medium)
+       *
+       * * `xxlarge` (large)
+       *
+       * * `huge` (extra-large)
        * @return value or {@code null} for none
        */
       public java.lang.String getImgSize() {
@@ -1944,8 +2665,15 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Restricts results to images of a specified size. Supported values are: icon (small)
-       * small|medium|large|xlarge (medium) xxlarge (large) huge (extra-large)
+       * Restricts results to images of a specified size. Supported values are:
+       *
+       * * `icon` (small)
+       *
+       * * `small | medium | large | xlarge` (medium)
+       *
+       * * `xxlarge` (large)
+       *
+       * * `huge` (extra-large)
        * @param imgSize imgSize or {@code null} for none
        */
       public PreviousPage setImgSize(java.lang.String imgSize) {
@@ -1954,8 +2682,19 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Restricts results to images of a specified type. Supported values are: clipart (Clip art) face
-       * (Face) lineart (Line drawing) photo (Photo) animated (Animated) stock (Stock)
+       * Restricts results to images of a specified type. Supported values are:
+       *
+       * * `clipart` (Clip art)
+       *
+       * * `face` (Face)
+       *
+       * * `lineart` (Line drawing)
+       *
+       * * `photo` (Photo)
+       *
+       * * `animated` (Animated)
+       *
+       * * `stock` (Stock)
        * @return value or {@code null} for none
        */
       public java.lang.String getImgType() {
@@ -1963,8 +2702,19 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Restricts results to images of a specified type. Supported values are: clipart (Clip art) face
-       * (Face) lineart (Line drawing) photo (Photo) animated (Animated) stock (Stock)
+       * Restricts results to images of a specified type. Supported values are:
+       *
+       * * `clipart` (Clip art)
+       *
+       * * `face` (Face)
+       *
+       * * `lineart` (Line drawing)
+       *
+       * * `photo` (Photo)
+       *
+       * * `animated` (Animated)
+       *
+       * * `stock` (Stock)
        * @param imgType imgType or {@code null} for none
        */
       public PreviousPage setImgType(java.lang.String imgType) {
@@ -2024,8 +2774,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Specifies the starting value for a search range. Use cse:lowRange and cse:highrange to append
-       * an inclusive search range of lowRange...highRange to the query.
+       * Specifies the starting value for a search range. Use `cse:lowRange` and `cse:highrange` to
+       * append an inclusive search range of `lowRange...highRange` to the query.
        * @return value or {@code null} for none
        */
       public java.lang.String getLowRange() {
@@ -2033,8 +2783,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Specifies the starting value for a search range. Use cse:lowRange and cse:highrange to append
-       * an inclusive search range of lowRange...highRange to the query.
+       * Specifies the starting value for a search range. Use `cse:lowRange` and `cse:highrange` to
+       * append an inclusive search range of `lowRange...highRange` to the query.
        * @param lowRange lowRange or {@code null} for none
        */
       public PreviousPage setLowRange(java.lang.String lowRange) {
@@ -2044,8 +2794,9 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Provides additional search terms to check for in a document, where each document in the search
-       * results must contain at least one of the additional search terms. You can also use the Boolean
-       * OR query term for this type of query.
+       * results must contain at least one of the additional search terms. You can also use the [Boolean
+       * OR](https://developers.google.com/custom-search/docs/xml_results#BooleanOrqt) query term for
+       * this type of query.
        * @return value or {@code null} for none
        */
       public java.lang.String getOrTerms() {
@@ -2054,8 +2805,9 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Provides additional search terms to check for in a document, where each document in the search
-       * results must contain at least one of the additional search terms. You can also use the Boolean
-       * OR query term for this type of query.
+       * results must contain at least one of the additional search terms. You can also use the [Boolean
+       * OR](https://developers.google.com/custom-search/docs/xml_results#BooleanOrqt) query term for
+       * this type of query.
        * @param orTerms orTerms or {@code null} for none
        */
       public PreviousPage setOrTerms(java.lang.String orTerms) {
@@ -2100,8 +2852,17 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Filters based on licensing. Supported values include: cc_publicdomain cc_attribute
-       * cc_sharealike cc_noncommercial cc_nonderived
+       * Filters based on licensing. Supported values include:
+       *
+       * * `cc_publicdomain`
+       *
+       * * `cc_attribute`
+       *
+       * * `cc_sharealike`
+       *
+       * * `cc_noncommercial`
+       *
+       * * `cc_nonderived`
        * @return value or {@code null} for none
        */
       public java.lang.String getRights() {
@@ -2109,8 +2870,17 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Filters based on licensing. Supported values include: cc_publicdomain cc_attribute
-       * cc_sharealike cc_noncommercial cc_nonderived
+       * Filters based on licensing. Supported values include:
+       *
+       * * `cc_publicdomain`
+       *
+       * * `cc_attribute`
+       *
+       * * `cc_sharealike`
+       *
+       * * `cc_noncommercial`
+       *
+       * * `cc_nonderived`
        * @param rights rights or {@code null} for none
        */
       public PreviousPage setRights(java.lang.String rights) {
@@ -2119,9 +2889,13 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Specifies the  SafeSearch level used for filtering out adult results. This is a custom property
-       * not defined in the OpenSearch spec. Valid parameter values are: off: Disable SafeSearch active:
-       * Enable SafeSearch
+       * Specifies the [SafeSearch level](https://developers.google.com/custom-
+       * search/docs/xml_results#safeSearchLevels) used for filtering out adult results. This is a
+       * custom property not defined in the OpenSearch spec. Valid parameter values are:
+       *
+       * * `"off"`: Disable SafeSearch
+       *
+       * * `"active"`: Enable SafeSearch
        * @return value or {@code null} for none
        */
       public java.lang.String getSafe() {
@@ -2129,9 +2903,13 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Specifies the  SafeSearch level used for filtering out adult results. This is a custom property
-       * not defined in the OpenSearch spec. Valid parameter values are: off: Disable SafeSearch active:
-       * Enable SafeSearch
+       * Specifies the [SafeSearch level](https://developers.google.com/custom-
+       * search/docs/xml_results#safeSearchLevels) used for filtering out adult results. This is a
+       * custom property not defined in the OpenSearch spec. Valid parameter values are:
+       *
+       * * `"off"`: Disable SafeSearch
+       *
+       * * `"active"`: Enable SafeSearch
        * @param safe safe or {@code null} for none
        */
       public PreviousPage setSafe(java.lang.String safe) {
@@ -2157,7 +2935,7 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Allowed values are web or image. If unspecified, results are limited to webpages.
+       * Allowed values are `web` or `image`. If unspecified, results are limited to webpages.
        * @return value or {@code null} for none
        */
       public java.lang.String getSearchType() {
@@ -2165,7 +2943,7 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Allowed values are web or image. If unspecified, results are limited to webpages.
+       * Allowed values are `web` or `image`. If unspecified, results are limited to webpages.
        * @param searchType searchType or {@code null} for none
        */
       public PreviousPage setSearchType(java.lang.String searchType) {
@@ -2191,8 +2969,12 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Specifies whether to include or exclude results from the site named in the sitesearch
-       * parameter. Supported values are: i: include content from site e: exclude content from site
+       * Specifies whether to include or exclude results from the site named in the `sitesearch`
+       * parameter. Supported values are:
+       *
+       * * `i`: include content from site
+       *
+       * * `e`: exclude content from site
        * @return value or {@code null} for none
        */
       public java.lang.String getSiteSearchFilter() {
@@ -2200,8 +2982,12 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Specifies whether to include or exclude results from the site named in the sitesearch
-       * parameter. Supported values are: i: include content from site e: exclude content from site
+       * Specifies whether to include or exclude results from the site named in the `sitesearch`
+       * parameter. Supported values are:
+       *
+       * * `i`: include content from site
+       *
+       * * `e`: exclude content from site
        * @param siteSearchFilter siteSearchFilter or {@code null} for none
        */
       public PreviousPage setSiteSearchFilter(java.lang.String siteSearchFilter) {
@@ -2248,7 +3034,7 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * The page number of this set of results, where the page length is set by the count property.
+       * The page number of this set of results, where the page length is set by the `count` property.
        * @return value or {@code null} for none
        */
       public java.lang.Integer getStartPage() {
@@ -2256,7 +3042,7 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * The page number of this set of results, where the page length is set by the count property.
+       * The page number of this set of results, where the page length is set by the `count` property.
        * @param startPage startPage or {@code null} for none
        */
       public PreviousPage setStartPage(java.lang.Integer startPage) {
@@ -2322,34 +3108,56 @@ public final class Search extends com.google.api.client.json.GenericJson {
       private java.lang.Integer count;
 
       /**
-       * Restricts search results to documents originating in a particular country. You may use Boolean
-       * operators in the cr parameter's value.
+       * Restricts search results to documents originating in a particular country. You may use [Boolean
+       * operators](https://developers.google.com/custom-search/docs/xml_results#booleanOperators) in
+       * the `cr` parameter's value.
+       *
+       * Google WebSearch determines the country of a document by analyzing the following:
+       *
+       * * The top-level domain (TLD) of the document's URL.
+       *
+       * * The geographic location of the web server's IP address.
+       *
+       * See [Country (cr) Parameter Values](https://developers.google.com/custom-
+       * search/docs/xml_results#countryCollections) for a list of valid values for this parameter.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
       private java.lang.String cr;
 
       /**
-       * The identifier of a custom search engine created using the Custom Search Control Panel, if
-       * specified in request. This is a custom property not defined in the OpenSearch spec.
+       * The identifier of a custom search engine created using the Custom Search [Control
+       * Panel](https://cse.google.com/). This is a custom property not defined in the OpenSearch spec.
+       * This parameter is **required**.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
       private java.lang.String cx;
 
       /**
-       * Restricts results to URLs based on date. Supported values include: d[number]: requests results
-       * from the specified number of past days. w[number]: requests results from the specified number
-       * of past weeks. m[number]: requests results from the specified number of past months. y[number]:
-       * requests results from the specified number of past years.
+       * Restricts results to URLs based on date. Supported values include:
+       *
+       * * `d[number]`: requests results from the specified number of past days.
+       *
+       * * `w[number]`: requests results from the specified number of past weeks.
+       *
+       * * `m[number]`: requests results from the specified number of past months.
+       *
+       * * `y[number]`: requests results from the specified number of past years.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
       private java.lang.String dateRestrict;
 
       /**
-       * Enables or disables the Simplified and Traditional Chinese Search feature. Supported values
-       * are: 0: enabled (default) 1: disabled
+       * Enables or disables the [Simplified and Traditional Chinese
+       * Search](https://developers.google.com/custom-search/docs/xml_results#chineseSearch) feature.
+       *
+       * Supported values are:
+       *
+       * * `0`: enabled (default)
+       *
+       * * `1`: disabled
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -2371,29 +3179,64 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Restricts results to files of a specified extension. Filetypes supported by Google include:
-       * Adobe Portable Document Format (pdf) Adobe PostScript (ps) Lotus 1-2-3 (wk1, wk2, wk3, wk4,
-       * wk5, wki, wks, wku) Lotus WordPro (lwp) Macwrite (mw) Microsoft Excel (xls) Microsoft
-       * PowerPoint (ppt) Microsoft Word (doc) Microsoft Works (wks, wps, wdb) Microsoft Write (wri)
-       * Rich Text Format (rtf) Shockwave Flash (swf) Text (ans, txt).
+       *
+       * * Adobe Portable Document Format (`pdf`)
+       *
+       * * Adobe PostScript (`ps`)
+       *
+       * * Lotus 1-2-3 (`wk1`, `wk2`, `wk3`, `wk4`, `wk5`, `wki`, `wks`, `wku`)
+       *
+       * * Lotus WordPro (`lwp`)
+       *
+       * * Macwrite (`mw`)
+       *
+       * * Microsoft Excel (`xls`)
+       *
+       * * Microsoft PowerPoint (`ppt`)
+       *
+       * * Microsoft Word (`doc`)
+       *
+       * * Microsoft Works (`wks`, `wps`, `wdb`)
+       *
+       * * Microsoft Write (`wri`)
+       *
+       * * Rich Text Format (`rtf`)
+       *
+       * * Shockwave Flash (`swf`)
+       *
+       * * Text (`ans`, `txt`).
+       *
+       * Additional filetypes may be added in the future. An up-to-date list can always be found in
+       * Google's [file type FAQ](https://support.google.com/webmasters/answer/35287).
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
       private java.lang.String fileType;
 
       /**
-       * Activates or deactivates the automatic filtering of Google search results. The default value
-       * for the filter parameter is 1, which indicates that the feature is enabled. Valid values for
-       * this parameter are: 0: Disabled 1: Enabled
+       * Activates or deactivates the automatic filtering of Google search results. See [Automatic
+       * Filtering](https://developers.google.com/custom-search/docs/xml_results#automaticFiltering) for
+       * more information about Google's search results filters. Valid values for this parameter are:
+       *
+       * * `0`: Disabled
+       *
+       * * `1`: Enabled (default)
+       *
+       * **Note**: By default, Google applies filtering to all search results to improve the quality of
+       * those results.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
       /**
-       * Boosts search results whose country of origin matches the parameter value. Specifying a gl
-       * parameter value in WebSearch requests should improve the relevance of results. This is
-       * particularly true for international customers and, even more specifically, for customers in
-       * English-speaking countries other than the United States.
+       * Boosts search results whose country of origin matches the parameter value. See [Country
+       * Codes](https://developers.google.com/custom-search/docs/xml_results#countryCodes) for a list of
+       * valid values.
+       *
+       * Specifying a `gl` parameter value in WebSearch requests should improve the relevance of
+       * results. This is particularly true for international customers and, even more specifically, for
+       * customers in English-speaking countries other than the United States.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -2408,8 +3251,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
       private java.lang.String googleHost;
 
       /**
-       * Specifies the ending value for a search range. Use cse:lowRange and cse:highrange to append an
-       * inclusive search range of lowRange...highRange to the query.
+       * Specifies the ending value for a search range. Use `cse:lowRange` and `cse:highrange` to append
+       * an inclusive search range of `lowRange...highRange` to the query.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -2418,13 +3261,20 @@ public final class Search extends com.google.api.client.json.GenericJson {
       /**
        * Specifies the interface language (host language) of your user interface. Explicitly setting
        * this parameter improves the performance and the quality of your search results.
+       *
+       * See the [Interface Languages](https://developers.google.com/custom-
+       * search/docs/xml_results#wsInterfaceLanguages) section of [Internationalizing Queries and
+       * Results Presentation](https://developers.google.com/custom-
+       * search/docs/xml_results#wsInternationalizing) for more information, and [Supported Interface
+       * Languages](https://developers.google.com/custom-
+       * search/docs/xml_results_appendices#interfaceLanguages) for a list of supported languages.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
       private java.lang.String hl;
 
       /**
-       * Appends the specified query terms to the query, as if they were combined with a logical AND
+       * Appends the specified query terms to the query, as if they were combined with a logical `AND`
        * operator.
        * The value may be {@code null}.
        */
@@ -2432,32 +3282,78 @@ public final class Search extends com.google.api.client.json.GenericJson {
       private java.lang.String hq;
 
       /**
-       * Restricts results to images of a specified color type. Supported values are: mono (black and
-       * white) gray (grayscale) color (color)
+       * Restricts results to images of a specified color type. Supported values   are:
+       *
+       * * `mono` (black and white)
+       *
+       * * `gray` (grayscale)
+       *
+       * * `color` (color)
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
       private java.lang.String imgColorType;
 
       /**
-       * Restricts results to images with a specific dominant color. Supported values are: red orange
-       * yellow green teal blue purple pink white gray black brown
+       * Restricts results to images with a specific dominant color. Supported values are:
+       *
+       * * `red`
+       *
+       * * `orange`
+       *
+       * * `yellow`
+       *
+       * * `green`
+       *
+       * * `teal`
+       *
+       * * `blue`
+       *
+       * * `purple`
+       *
+       * * `pink`
+       *
+       * * `white`
+       *
+       * * `gray`
+       *
+       * * `black`
+       *
+       * * `brown`
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
       private java.lang.String imgDominantColor;
 
       /**
-       * Restricts results to images of a specified size. Supported values are: icon (small)
-       * small|medium|large|xlarge (medium) xxlarge (large) huge (extra-large)
+       * Restricts results to images of a specified size. Supported values are:
+       *
+       * * `icon` (small)
+       *
+       * * `small | medium | large | xlarge` (medium)
+       *
+       * * `xxlarge` (large)
+       *
+       * * `huge` (extra-large)
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
       private java.lang.String imgSize;
 
       /**
-       * Restricts results to images of a specified type. Supported values are: clipart (Clip art) face
-       * (Face) lineart (Line drawing) photo (Photo) animated (Animated) stock (Stock)
+       * Restricts results to images of a specified type. Supported values are:
+       *
+       * * `clipart` (Clip art)
+       *
+       * * `face` (Face)
+       *
+       * * `lineart` (Line drawing)
+       *
+       * * `photo` (Photo)
+       *
+       * * `animated` (Animated)
+       *
+       * * `stock` (Stock)
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -2485,8 +3381,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
       private java.lang.String linkSite;
 
       /**
-       * Specifies the starting value for a search range. Use cse:lowRange and cse:highrange to append
-       * an inclusive search range of lowRange...highRange to the query.
+       * Specifies the starting value for a search range. Use `cse:lowRange` and `cse:highrange` to
+       * append an inclusive search range of `lowRange...highRange` to the query.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -2494,8 +3390,9 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Provides additional search terms to check for in a document, where each document in the search
-       * results must contain at least one of the additional search terms. You can also use the Boolean
-       * OR query term for this type of query.
+       * results must contain at least one of the additional search terms. You can also use the [Boolean
+       * OR](https://developers.google.com/custom-search/docs/xml_results#BooleanOrqt) query term for
+       * this type of query.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -2517,17 +3414,30 @@ public final class Search extends com.google.api.client.json.GenericJson {
       private java.lang.String relatedSite;
 
       /**
-       * Filters based on licensing. Supported values include: cc_publicdomain cc_attribute
-       * cc_sharealike cc_noncommercial cc_nonderived
+       * Filters based on licensing. Supported values include:
+       *
+       * * `cc_publicdomain`
+       *
+       * * `cc_attribute`
+       *
+       * * `cc_sharealike`
+       *
+       * * `cc_noncommercial`
+       *
+       * * `cc_nonderived`
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
       private java.lang.String rights;
 
       /**
-       * Specifies the  SafeSearch level used for filtering out adult results. This is a custom property
-       * not defined in the OpenSearch spec. Valid parameter values are: off: Disable SafeSearch active:
-       * Enable SafeSearch
+       * Specifies the [SafeSearch level](https://developers.google.com/custom-
+       * search/docs/xml_results#safeSearchLevels) used for filtering out adult results. This is a
+       * custom property not defined in the OpenSearch spec. Valid parameter values are:
+       *
+       * * `"off"`: Disable SafeSearch
+       *
+       * * `"active"`: Enable SafeSearch
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -2541,7 +3451,7 @@ public final class Search extends com.google.api.client.json.GenericJson {
       private java.lang.String searchTerms;
 
       /**
-       * Allowed values are web or image. If unspecified, results are limited to webpages.
+       * Allowed values are `web` or `image`. If unspecified, results are limited to webpages.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -2555,8 +3465,12 @@ public final class Search extends com.google.api.client.json.GenericJson {
       private java.lang.String siteSearch;
 
       /**
-       * Specifies whether to include or exclude results from the site named in the sitesearch
-       * parameter. Supported values are: i: include content from site e: exclude content from site
+       * Specifies whether to include or exclude results from the site named in the `sitesearch`
+       * parameter. Supported values are:
+       *
+       * * `i`: include content from site
+       *
+       * * `e`: exclude content from site
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -2579,7 +3493,7 @@ public final class Search extends com.google.api.client.json.GenericJson {
       private java.lang.Integer startIndex;
 
       /**
-       * The page number of this set of results, where the page length is set by the count property.
+       * The page number of this set of results, where the page length is set by the `count` property.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -2617,8 +3531,18 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Restricts search results to documents originating in a particular country. You may use Boolean
-       * operators in the cr parameter's value.
+       * Restricts search results to documents originating in a particular country. You may use [Boolean
+       * operators](https://developers.google.com/custom-search/docs/xml_results#booleanOperators) in
+       * the `cr` parameter's value.
+       *
+       * Google WebSearch determines the country of a document by analyzing the following:
+       *
+       * * The top-level domain (TLD) of the document's URL.
+       *
+       * * The geographic location of the web server's IP address.
+       *
+       * See [Country (cr) Parameter Values](https://developers.google.com/custom-
+       * search/docs/xml_results#countryCollections) for a list of valid values for this parameter.
        * @return value or {@code null} for none
        */
       public java.lang.String getCr() {
@@ -2626,8 +3550,18 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Restricts search results to documents originating in a particular country. You may use Boolean
-       * operators in the cr parameter's value.
+       * Restricts search results to documents originating in a particular country. You may use [Boolean
+       * operators](https://developers.google.com/custom-search/docs/xml_results#booleanOperators) in
+       * the `cr` parameter's value.
+       *
+       * Google WebSearch determines the country of a document by analyzing the following:
+       *
+       * * The top-level domain (TLD) of the document's URL.
+       *
+       * * The geographic location of the web server's IP address.
+       *
+       * See [Country (cr) Parameter Values](https://developers.google.com/custom-
+       * search/docs/xml_results#countryCollections) for a list of valid values for this parameter.
        * @param cr cr or {@code null} for none
        */
       public Request setCr(java.lang.String cr) {
@@ -2636,8 +3570,9 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * The identifier of a custom search engine created using the Custom Search Control Panel, if
-       * specified in request. This is a custom property not defined in the OpenSearch spec.
+       * The identifier of a custom search engine created using the Custom Search [Control
+       * Panel](https://cse.google.com/). This is a custom property not defined in the OpenSearch spec.
+       * This parameter is **required**.
        * @return value or {@code null} for none
        */
       public java.lang.String getCx() {
@@ -2645,8 +3580,9 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * The identifier of a custom search engine created using the Custom Search Control Panel, if
-       * specified in request. This is a custom property not defined in the OpenSearch spec.
+       * The identifier of a custom search engine created using the Custom Search [Control
+       * Panel](https://cse.google.com/). This is a custom property not defined in the OpenSearch spec.
+       * This parameter is **required**.
        * @param cx cx or {@code null} for none
        */
       public Request setCx(java.lang.String cx) {
@@ -2655,10 +3591,15 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Restricts results to URLs based on date. Supported values include: d[number]: requests results
-       * from the specified number of past days. w[number]: requests results from the specified number
-       * of past weeks. m[number]: requests results from the specified number of past months. y[number]:
-       * requests results from the specified number of past years.
+       * Restricts results to URLs based on date. Supported values include:
+       *
+       * * `d[number]`: requests results from the specified number of past days.
+       *
+       * * `w[number]`: requests results from the specified number of past weeks.
+       *
+       * * `m[number]`: requests results from the specified number of past months.
+       *
+       * * `y[number]`: requests results from the specified number of past years.
        * @return value or {@code null} for none
        */
       public java.lang.String getDateRestrict() {
@@ -2666,10 +3607,15 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Restricts results to URLs based on date. Supported values include: d[number]: requests results
-       * from the specified number of past days. w[number]: requests results from the specified number
-       * of past weeks. m[number]: requests results from the specified number of past months. y[number]:
-       * requests results from the specified number of past years.
+       * Restricts results to URLs based on date. Supported values include:
+       *
+       * * `d[number]`: requests results from the specified number of past days.
+       *
+       * * `w[number]`: requests results from the specified number of past weeks.
+       *
+       * * `m[number]`: requests results from the specified number of past months.
+       *
+       * * `y[number]`: requests results from the specified number of past years.
        * @param dateRestrict dateRestrict or {@code null} for none
        */
       public Request setDateRestrict(java.lang.String dateRestrict) {
@@ -2678,8 +3624,14 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Enables or disables the Simplified and Traditional Chinese Search feature. Supported values
-       * are: 0: enabled (default) 1: disabled
+       * Enables or disables the [Simplified and Traditional Chinese
+       * Search](https://developers.google.com/custom-search/docs/xml_results#chineseSearch) feature.
+       *
+       * Supported values are:
+       *
+       * * `0`: enabled (default)
+       *
+       * * `1`: disabled
        * @return value or {@code null} for none
        */
       public java.lang.String getDisableCnTwTranslation() {
@@ -2687,8 +3639,14 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Enables or disables the Simplified and Traditional Chinese Search feature. Supported values
-       * are: 0: enabled (default) 1: disabled
+       * Enables or disables the [Simplified and Traditional Chinese
+       * Search](https://developers.google.com/custom-search/docs/xml_results#chineseSearch) feature.
+       *
+       * Supported values are:
+       *
+       * * `0`: enabled (default)
+       *
+       * * `1`: disabled
        * @param disableCnTwTranslation disableCnTwTranslation or {@code null} for none
        */
       public Request setDisableCnTwTranslation(java.lang.String disableCnTwTranslation) {
@@ -2732,10 +3690,35 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Restricts results to files of a specified extension. Filetypes supported by Google include:
-       * Adobe Portable Document Format (pdf) Adobe PostScript (ps) Lotus 1-2-3 (wk1, wk2, wk3, wk4,
-       * wk5, wki, wks, wku) Lotus WordPro (lwp) Macwrite (mw) Microsoft Excel (xls) Microsoft
-       * PowerPoint (ppt) Microsoft Word (doc) Microsoft Works (wks, wps, wdb) Microsoft Write (wri)
-       * Rich Text Format (rtf) Shockwave Flash (swf) Text (ans, txt).
+       *
+       * * Adobe Portable Document Format (`pdf`)
+       *
+       * * Adobe PostScript (`ps`)
+       *
+       * * Lotus 1-2-3 (`wk1`, `wk2`, `wk3`, `wk4`, `wk5`, `wki`, `wks`, `wku`)
+       *
+       * * Lotus WordPro (`lwp`)
+       *
+       * * Macwrite (`mw`)
+       *
+       * * Microsoft Excel (`xls`)
+       *
+       * * Microsoft PowerPoint (`ppt`)
+       *
+       * * Microsoft Word (`doc`)
+       *
+       * * Microsoft Works (`wks`, `wps`, `wdb`)
+       *
+       * * Microsoft Write (`wri`)
+       *
+       * * Rich Text Format (`rtf`)
+       *
+       * * Shockwave Flash (`swf`)
+       *
+       * * Text (`ans`, `txt`).
+       *
+       * Additional filetypes may be added in the future. An up-to-date list can always be found in
+       * Google's [file type FAQ](https://support.google.com/webmasters/answer/35287).
        * @return value or {@code null} for none
        */
       public java.lang.String getFileType() {
@@ -2744,10 +3727,35 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Restricts results to files of a specified extension. Filetypes supported by Google include:
-       * Adobe Portable Document Format (pdf) Adobe PostScript (ps) Lotus 1-2-3 (wk1, wk2, wk3, wk4,
-       * wk5, wki, wks, wku) Lotus WordPro (lwp) Macwrite (mw) Microsoft Excel (xls) Microsoft
-       * PowerPoint (ppt) Microsoft Word (doc) Microsoft Works (wks, wps, wdb) Microsoft Write (wri)
-       * Rich Text Format (rtf) Shockwave Flash (swf) Text (ans, txt).
+       *
+       * * Adobe Portable Document Format (`pdf`)
+       *
+       * * Adobe PostScript (`ps`)
+       *
+       * * Lotus 1-2-3 (`wk1`, `wk2`, `wk3`, `wk4`, `wk5`, `wki`, `wks`, `wku`)
+       *
+       * * Lotus WordPro (`lwp`)
+       *
+       * * Macwrite (`mw`)
+       *
+       * * Microsoft Excel (`xls`)
+       *
+       * * Microsoft PowerPoint (`ppt`)
+       *
+       * * Microsoft Word (`doc`)
+       *
+       * * Microsoft Works (`wks`, `wps`, `wdb`)
+       *
+       * * Microsoft Write (`wri`)
+       *
+       * * Rich Text Format (`rtf`)
+       *
+       * * Shockwave Flash (`swf`)
+       *
+       * * Text (`ans`, `txt`).
+       *
+       * Additional filetypes may be added in the future. An up-to-date list can always be found in
+       * Google's [file type FAQ](https://support.google.com/webmasters/answer/35287).
        * @param fileType fileType or {@code null} for none
        */
       public Request setFileType(java.lang.String fileType) {
@@ -2756,9 +3764,16 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Activates or deactivates the automatic filtering of Google search results. The default value
-       * for the filter parameter is 1, which indicates that the feature is enabled. Valid values for
-       * this parameter are: 0: Disabled 1: Enabled
+       * Activates or deactivates the automatic filtering of Google search results. See [Automatic
+       * Filtering](https://developers.google.com/custom-search/docs/xml_results#automaticFiltering) for
+       * more information about Google's search results filters. Valid values for this parameter are:
+       *
+       * * `0`: Disabled
+       *
+       * * `1`: Enabled (default)
+       *
+       * **Note**: By default, Google applies filtering to all search results to improve the quality of
+       * those results.
        * @return value or {@code null} for none
        */
       public java.lang.String getFilter() {
@@ -2766,9 +3781,16 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Activates or deactivates the automatic filtering of Google search results. The default value
-       * for the filter parameter is 1, which indicates that the feature is enabled. Valid values for
-       * this parameter are: 0: Disabled 1: Enabled
+       * Activates or deactivates the automatic filtering of Google search results. See [Automatic
+       * Filtering](https://developers.google.com/custom-search/docs/xml_results#automaticFiltering) for
+       * more information about Google's search results filters. Valid values for this parameter are:
+       *
+       * * `0`: Disabled
+       *
+       * * `1`: Enabled (default)
+       *
+       * **Note**: By default, Google applies filtering to all search results to improve the quality of
+       * those results.
        * @param filter filter or {@code null} for none
        */
       public Request setFilter(java.lang.String filter) {
@@ -2777,10 +3799,13 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Boosts search results whose country of origin matches the parameter value. Specifying a gl
-       * parameter value in WebSearch requests should improve the relevance of results. This is
-       * particularly true for international customers and, even more specifically, for customers in
-       * English-speaking countries other than the United States.
+       * Boosts search results whose country of origin matches the parameter value. See [Country
+       * Codes](https://developers.google.com/custom-search/docs/xml_results#countryCodes) for a list of
+       * valid values.
+       *
+       * Specifying a `gl` parameter value in WebSearch requests should improve the relevance of
+       * results. This is particularly true for international customers and, even more specifically, for
+       * customers in English-speaking countries other than the United States.
        * @return value or {@code null} for none
        */
       public java.lang.String getGl() {
@@ -2788,10 +3813,13 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Boosts search results whose country of origin matches the parameter value. Specifying a gl
-       * parameter value in WebSearch requests should improve the relevance of results. This is
-       * particularly true for international customers and, even more specifically, for customers in
-       * English-speaking countries other than the United States.
+       * Boosts search results whose country of origin matches the parameter value. See [Country
+       * Codes](https://developers.google.com/custom-search/docs/xml_results#countryCodes) for a list of
+       * valid values.
+       *
+       * Specifying a `gl` parameter value in WebSearch requests should improve the relevance of
+       * results. This is particularly true for international customers and, even more specifically, for
+       * customers in English-speaking countries other than the United States.
        * @param gl gl or {@code null} for none
        */
       public Request setGl(java.lang.String gl) {
@@ -2819,8 +3847,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Specifies the ending value for a search range. Use cse:lowRange and cse:highrange to append an
-       * inclusive search range of lowRange...highRange to the query.
+       * Specifies the ending value for a search range. Use `cse:lowRange` and `cse:highrange` to append
+       * an inclusive search range of `lowRange...highRange` to the query.
        * @return value or {@code null} for none
        */
       public java.lang.String getHighRange() {
@@ -2828,8 +3856,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Specifies the ending value for a search range. Use cse:lowRange and cse:highrange to append an
-       * inclusive search range of lowRange...highRange to the query.
+       * Specifies the ending value for a search range. Use `cse:lowRange` and `cse:highrange` to append
+       * an inclusive search range of `lowRange...highRange` to the query.
        * @param highRange highRange or {@code null} for none
        */
       public Request setHighRange(java.lang.String highRange) {
@@ -2840,6 +3868,13 @@ public final class Search extends com.google.api.client.json.GenericJson {
       /**
        * Specifies the interface language (host language) of your user interface. Explicitly setting
        * this parameter improves the performance and the quality of your search results.
+       *
+       * See the [Interface Languages](https://developers.google.com/custom-
+       * search/docs/xml_results#wsInterfaceLanguages) section of [Internationalizing Queries and
+       * Results Presentation](https://developers.google.com/custom-
+       * search/docs/xml_results#wsInternationalizing) for more information, and [Supported Interface
+       * Languages](https://developers.google.com/custom-
+       * search/docs/xml_results_appendices#interfaceLanguages) for a list of supported languages.
        * @return value or {@code null} for none
        */
       public java.lang.String getHl() {
@@ -2849,6 +3884,13 @@ public final class Search extends com.google.api.client.json.GenericJson {
       /**
        * Specifies the interface language (host language) of your user interface. Explicitly setting
        * this parameter improves the performance and the quality of your search results.
+       *
+       * See the [Interface Languages](https://developers.google.com/custom-
+       * search/docs/xml_results#wsInterfaceLanguages) section of [Internationalizing Queries and
+       * Results Presentation](https://developers.google.com/custom-
+       * search/docs/xml_results#wsInternationalizing) for more information, and [Supported Interface
+       * Languages](https://developers.google.com/custom-
+       * search/docs/xml_results_appendices#interfaceLanguages) for a list of supported languages.
        * @param hl hl or {@code null} for none
        */
       public Request setHl(java.lang.String hl) {
@@ -2857,7 +3899,7 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Appends the specified query terms to the query, as if they were combined with a logical AND
+       * Appends the specified query terms to the query, as if they were combined with a logical `AND`
        * operator.
        * @return value or {@code null} for none
        */
@@ -2866,7 +3908,7 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Appends the specified query terms to the query, as if they were combined with a logical AND
+       * Appends the specified query terms to the query, as if they were combined with a logical `AND`
        * operator.
        * @param hq hq or {@code null} for none
        */
@@ -2876,8 +3918,13 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Restricts results to images of a specified color type. Supported values are: mono (black and
-       * white) gray (grayscale) color (color)
+       * Restricts results to images of a specified color type. Supported values   are:
+       *
+       * * `mono` (black and white)
+       *
+       * * `gray` (grayscale)
+       *
+       * * `color` (color)
        * @return value or {@code null} for none
        */
       public java.lang.String getImgColorType() {
@@ -2885,8 +3932,13 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Restricts results to images of a specified color type. Supported values are: mono (black and
-       * white) gray (grayscale) color (color)
+       * Restricts results to images of a specified color type. Supported values   are:
+       *
+       * * `mono` (black and white)
+       *
+       * * `gray` (grayscale)
+       *
+       * * `color` (color)
        * @param imgColorType imgColorType or {@code null} for none
        */
       public Request setImgColorType(java.lang.String imgColorType) {
@@ -2895,8 +3947,31 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Restricts results to images with a specific dominant color. Supported values are: red orange
-       * yellow green teal blue purple pink white gray black brown
+       * Restricts results to images with a specific dominant color. Supported values are:
+       *
+       * * `red`
+       *
+       * * `orange`
+       *
+       * * `yellow`
+       *
+       * * `green`
+       *
+       * * `teal`
+       *
+       * * `blue`
+       *
+       * * `purple`
+       *
+       * * `pink`
+       *
+       * * `white`
+       *
+       * * `gray`
+       *
+       * * `black`
+       *
+       * * `brown`
        * @return value or {@code null} for none
        */
       public java.lang.String getImgDominantColor() {
@@ -2904,8 +3979,31 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Restricts results to images with a specific dominant color. Supported values are: red orange
-       * yellow green teal blue purple pink white gray black brown
+       * Restricts results to images with a specific dominant color. Supported values are:
+       *
+       * * `red`
+       *
+       * * `orange`
+       *
+       * * `yellow`
+       *
+       * * `green`
+       *
+       * * `teal`
+       *
+       * * `blue`
+       *
+       * * `purple`
+       *
+       * * `pink`
+       *
+       * * `white`
+       *
+       * * `gray`
+       *
+       * * `black`
+       *
+       * * `brown`
        * @param imgDominantColor imgDominantColor or {@code null} for none
        */
       public Request setImgDominantColor(java.lang.String imgDominantColor) {
@@ -2914,8 +4012,15 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Restricts results to images of a specified size. Supported values are: icon (small)
-       * small|medium|large|xlarge (medium) xxlarge (large) huge (extra-large)
+       * Restricts results to images of a specified size. Supported values are:
+       *
+       * * `icon` (small)
+       *
+       * * `small | medium | large | xlarge` (medium)
+       *
+       * * `xxlarge` (large)
+       *
+       * * `huge` (extra-large)
        * @return value or {@code null} for none
        */
       public java.lang.String getImgSize() {
@@ -2923,8 +4028,15 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Restricts results to images of a specified size. Supported values are: icon (small)
-       * small|medium|large|xlarge (medium) xxlarge (large) huge (extra-large)
+       * Restricts results to images of a specified size. Supported values are:
+       *
+       * * `icon` (small)
+       *
+       * * `small | medium | large | xlarge` (medium)
+       *
+       * * `xxlarge` (large)
+       *
+       * * `huge` (extra-large)
        * @param imgSize imgSize or {@code null} for none
        */
       public Request setImgSize(java.lang.String imgSize) {
@@ -2933,8 +4045,19 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Restricts results to images of a specified type. Supported values are: clipart (Clip art) face
-       * (Face) lineart (Line drawing) photo (Photo) animated (Animated) stock (Stock)
+       * Restricts results to images of a specified type. Supported values are:
+       *
+       * * `clipart` (Clip art)
+       *
+       * * `face` (Face)
+       *
+       * * `lineart` (Line drawing)
+       *
+       * * `photo` (Photo)
+       *
+       * * `animated` (Animated)
+       *
+       * * `stock` (Stock)
        * @return value or {@code null} for none
        */
       public java.lang.String getImgType() {
@@ -2942,8 +4065,19 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Restricts results to images of a specified type. Supported values are: clipart (Clip art) face
-       * (Face) lineart (Line drawing) photo (Photo) animated (Animated) stock (Stock)
+       * Restricts results to images of a specified type. Supported values are:
+       *
+       * * `clipart` (Clip art)
+       *
+       * * `face` (Face)
+       *
+       * * `lineart` (Line drawing)
+       *
+       * * `photo` (Photo)
+       *
+       * * `animated` (Animated)
+       *
+       * * `stock` (Stock)
        * @param imgType imgType or {@code null} for none
        */
       public Request setImgType(java.lang.String imgType) {
@@ -3003,8 +4137,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Specifies the starting value for a search range. Use cse:lowRange and cse:highrange to append
-       * an inclusive search range of lowRange...highRange to the query.
+       * Specifies the starting value for a search range. Use `cse:lowRange` and `cse:highrange` to
+       * append an inclusive search range of `lowRange...highRange` to the query.
        * @return value or {@code null} for none
        */
       public java.lang.String getLowRange() {
@@ -3012,8 +4146,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Specifies the starting value for a search range. Use cse:lowRange and cse:highrange to append
-       * an inclusive search range of lowRange...highRange to the query.
+       * Specifies the starting value for a search range. Use `cse:lowRange` and `cse:highrange` to
+       * append an inclusive search range of `lowRange...highRange` to the query.
        * @param lowRange lowRange or {@code null} for none
        */
       public Request setLowRange(java.lang.String lowRange) {
@@ -3023,8 +4157,9 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Provides additional search terms to check for in a document, where each document in the search
-       * results must contain at least one of the additional search terms. You can also use the Boolean
-       * OR query term for this type of query.
+       * results must contain at least one of the additional search terms. You can also use the [Boolean
+       * OR](https://developers.google.com/custom-search/docs/xml_results#BooleanOrqt) query term for
+       * this type of query.
        * @return value or {@code null} for none
        */
       public java.lang.String getOrTerms() {
@@ -3033,8 +4168,9 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Provides additional search terms to check for in a document, where each document in the search
-       * results must contain at least one of the additional search terms. You can also use the Boolean
-       * OR query term for this type of query.
+       * results must contain at least one of the additional search terms. You can also use the [Boolean
+       * OR](https://developers.google.com/custom-search/docs/xml_results#BooleanOrqt) query term for
+       * this type of query.
        * @param orTerms orTerms or {@code null} for none
        */
       public Request setOrTerms(java.lang.String orTerms) {
@@ -3079,8 +4215,17 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Filters based on licensing. Supported values include: cc_publicdomain cc_attribute
-       * cc_sharealike cc_noncommercial cc_nonderived
+       * Filters based on licensing. Supported values include:
+       *
+       * * `cc_publicdomain`
+       *
+       * * `cc_attribute`
+       *
+       * * `cc_sharealike`
+       *
+       * * `cc_noncommercial`
+       *
+       * * `cc_nonderived`
        * @return value or {@code null} for none
        */
       public java.lang.String getRights() {
@@ -3088,8 +4233,17 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Filters based on licensing. Supported values include: cc_publicdomain cc_attribute
-       * cc_sharealike cc_noncommercial cc_nonderived
+       * Filters based on licensing. Supported values include:
+       *
+       * * `cc_publicdomain`
+       *
+       * * `cc_attribute`
+       *
+       * * `cc_sharealike`
+       *
+       * * `cc_noncommercial`
+       *
+       * * `cc_nonderived`
        * @param rights rights or {@code null} for none
        */
       public Request setRights(java.lang.String rights) {
@@ -3098,9 +4252,13 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Specifies the  SafeSearch level used for filtering out adult results. This is a custom property
-       * not defined in the OpenSearch spec. Valid parameter values are: off: Disable SafeSearch active:
-       * Enable SafeSearch
+       * Specifies the [SafeSearch level](https://developers.google.com/custom-
+       * search/docs/xml_results#safeSearchLevels) used for filtering out adult results. This is a
+       * custom property not defined in the OpenSearch spec. Valid parameter values are:
+       *
+       * * `"off"`: Disable SafeSearch
+       *
+       * * `"active"`: Enable SafeSearch
        * @return value or {@code null} for none
        */
       public java.lang.String getSafe() {
@@ -3108,9 +4266,13 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Specifies the  SafeSearch level used for filtering out adult results. This is a custom property
-       * not defined in the OpenSearch spec. Valid parameter values are: off: Disable SafeSearch active:
-       * Enable SafeSearch
+       * Specifies the [SafeSearch level](https://developers.google.com/custom-
+       * search/docs/xml_results#safeSearchLevels) used for filtering out adult results. This is a
+       * custom property not defined in the OpenSearch spec. Valid parameter values are:
+       *
+       * * `"off"`: Disable SafeSearch
+       *
+       * * `"active"`: Enable SafeSearch
        * @param safe safe or {@code null} for none
        */
       public Request setSafe(java.lang.String safe) {
@@ -3136,7 +4298,7 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Allowed values are web or image. If unspecified, results are limited to webpages.
+       * Allowed values are `web` or `image`. If unspecified, results are limited to webpages.
        * @return value or {@code null} for none
        */
       public java.lang.String getSearchType() {
@@ -3144,7 +4306,7 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Allowed values are web or image. If unspecified, results are limited to webpages.
+       * Allowed values are `web` or `image`. If unspecified, results are limited to webpages.
        * @param searchType searchType or {@code null} for none
        */
       public Request setSearchType(java.lang.String searchType) {
@@ -3170,8 +4332,12 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Specifies whether to include or exclude results from the site named in the sitesearch
-       * parameter. Supported values are: i: include content from site e: exclude content from site
+       * Specifies whether to include or exclude results from the site named in the `sitesearch`
+       * parameter. Supported values are:
+       *
+       * * `i`: include content from site
+       *
+       * * `e`: exclude content from site
        * @return value or {@code null} for none
        */
       public java.lang.String getSiteSearchFilter() {
@@ -3179,8 +4345,12 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Specifies whether to include or exclude results from the site named in the sitesearch
-       * parameter. Supported values are: i: include content from site e: exclude content from site
+       * Specifies whether to include or exclude results from the site named in the `sitesearch`
+       * parameter. Supported values are:
+       *
+       * * `i`: include content from site
+       *
+       * * `e`: exclude content from site
        * @param siteSearchFilter siteSearchFilter or {@code null} for none
        */
       public Request setSiteSearchFilter(java.lang.String siteSearchFilter) {
@@ -3227,7 +4397,7 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * The page number of this set of results, where the page length is set by the count property.
+       * The page number of this set of results, where the page length is set by the `count` property.
        * @return value or {@code null} for none
        */
       public java.lang.Integer getStartPage() {
@@ -3235,7 +4405,7 @@ public final class Search extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * The page number of this set of results, where the page length is set by the count property.
+       * The page number of this set of results, where the page length is set by the `count` property.
        * @param startPage startPage or {@code null} for none
        */
       public Request setStartPage(java.lang.Integer startPage) {
@@ -3474,7 +4644,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
   public static final class Url extends com.google.api.client.json.GenericJson {
 
     /**
-     * The actual OpenSearch template for this API.
+     * The actual [OpenSearch template](http://www.opensearch.org/specifications/opensearch/1.1#opense
+     * arch_url_template_syntax) for this API.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -3488,7 +4659,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
     private java.lang.String type;
 
     /**
-     * The actual OpenSearch template for this API.
+     * The actual [OpenSearch template](http://www.opensearch.org/specifications/opensearch/1.1#opense
+     * arch_url_template_syntax) for this API.
      * @return value or {@code null} for none
      */
     public java.lang.String getTemplate() {
@@ -3496,7 +4668,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The actual OpenSearch template for this API.
+     * The actual [OpenSearch template](http://www.opensearch.org/specifications/opensearch/1.1#opense
+     * arch_url_template_syntax) for this API.
      * @param template template or {@code null} for none
      */
     public Url setTemplate(java.lang.String template) {

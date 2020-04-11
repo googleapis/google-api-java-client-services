@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/2iM-es-rN0zq6Fv4g5JsLKzvFto\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/VfSXoeTZJSDEPlJ9LkqjGCjn5wo\"",
  "discoveryVersion": "v1",
  "id": "youtube:v3",
  "name": "youtube",
  "canonicalName": "YouTube",
  "version": "v3",
- "revision": "20200320",
+ "revision": "20200402",
  "title": "YouTube Data API",
  "description": "Supports core YouTube features, such as uploading videos, creating and managing playlists, searching for content, and much more.",
  "ownerDomain": "google.com",
@@ -3929,6 +3929,9 @@
     "enableAutoStart": {
      "type": "boolean",
      "description": "This setting indicates whether auto start is enabled for this broadcast."
+    },
+    "enableAutoStop": {
+     "type": "boolean"
     },
     "enableClosedCaptions": {
      "type": "boolean",

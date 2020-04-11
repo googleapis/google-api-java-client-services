@@ -66,8 +66,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Contains cluster daemon metrics such as HDFS and YARN stats.Beta Feature: This report is
-   * available for testing purposes only. It may be changed before final release.
+   * Output only. Contains cluster daemon metrics such as HDFS and YARN stats.Beta Feature: This
+   * report is available for testing purposes only. It may be changed before final release.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -177,8 +177,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Contains cluster daemon metrics such as HDFS and YARN stats.Beta Feature: This report is
-   * available for testing purposes only. It may be changed before final release.
+   * Output only. Contains cluster daemon metrics such as HDFS and YARN stats.Beta Feature: This
+   * report is available for testing purposes only. It may be changed before final release.
    * @return value or {@code null} for none
    */
   public ClusterMetrics getMetrics() {
@@ -186,8 +186,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Contains cluster daemon metrics such as HDFS and YARN stats.Beta Feature: This report is
-   * available for testing purposes only. It may be changed before final release.
+   * Output only. Contains cluster daemon metrics such as HDFS and YARN stats.Beta Feature: This
+   * report is available for testing purposes only. It may be changed before final release.
    * @param metrics metrics or {@code null} for none
    */
   public Cluster setMetrics(ClusterMetrics metrics) {

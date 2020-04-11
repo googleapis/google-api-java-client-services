@@ -63,7 +63,8 @@ public final class KerberosConfig extends com.google.api.client.json.GenericJson
   private java.lang.String crossRealmTrustSharedPasswordUri;
 
   /**
-   * Optional. Flag to indicate whether to Kerberize the cluster.
+   * Optional. Flag to indicate whether to Kerberize the cluster (default: false). Set this field to
+   * true to enable Kerberos on a cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -226,7 +227,8 @@ public final class KerberosConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Flag to indicate whether to Kerberize the cluster.
+   * Optional. Flag to indicate whether to Kerberize the cluster (default: false). Set this field to
+   * true to enable Kerberos on a cluster.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableKerberos() {
@@ -234,7 +236,8 @@ public final class KerberosConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Flag to indicate whether to Kerberize the cluster.
+   * Optional. Flag to indicate whether to Kerberize the cluster (default: false). Set this field to
+   * true to enable Kerberos on a cluster.
    * @param enableKerberos enableKerberos or {@code null} for none
    */
   public KerberosConfig setEnableKerberos(java.lang.Boolean enableKerberos) {

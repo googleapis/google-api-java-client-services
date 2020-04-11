@@ -51,8 +51,15 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
   private DiskConfig diskConfig;
 
   /**
-   * Optional. The Compute Engine image resource used for cluster instances. It can be specified or
-   * may be inferred from SoftwareConfig.image_version.
+   * Optional. The Compute Engine image resource used for cluster instances.The URI can represent an
+   * image or image family.Image examples:
+   * https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/[image-id]
+   * projects/[project_id]/global/images/[image-id] image-idImage family examples. Dataproc will use
+   * the most recent image from the family:
+   * https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/family/[custom-
+   * image-family-name] projects/[project_id]/global/images/family/[custom-image-family-name]If the
+   * URI is unspecified, it will be inferred from SoftwareConfig.image_version or the system
+   * default.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -154,8 +161,15 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. The Compute Engine image resource used for cluster instances. It can be specified or
-   * may be inferred from SoftwareConfig.image_version.
+   * Optional. The Compute Engine image resource used for cluster instances.The URI can represent an
+   * image or image family.Image examples:
+   * https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/[image-id]
+   * projects/[project_id]/global/images/[image-id] image-idImage family examples. Dataproc will use
+   * the most recent image from the family:
+   * https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/family/[custom-
+   * image-family-name] projects/[project_id]/global/images/family/[custom-image-family-name]If the
+   * URI is unspecified, it will be inferred from SoftwareConfig.image_version or the system
+   * default.
    * @return value or {@code null} for none
    */
   public java.lang.String getImageUri() {
@@ -163,8 +177,15 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. The Compute Engine image resource used for cluster instances. It can be specified or
-   * may be inferred from SoftwareConfig.image_version.
+   * Optional. The Compute Engine image resource used for cluster instances.The URI can represent an
+   * image or image family.Image examples:
+   * https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/[image-id]
+   * projects/[project_id]/global/images/[image-id] image-idImage family examples. Dataproc will use
+   * the most recent image from the family:
+   * https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/family/[custom-
+   * image-family-name] projects/[project_id]/global/images/family/[custom-image-family-name]If the
+   * URI is unspecified, it will be inferred from SoftwareConfig.image_version or the system
+   * default.
    * @param imageUri imageUri or {@code null} for none
    */
   public InstanceGroupConfig setImageUri(java.lang.String imageUri) {

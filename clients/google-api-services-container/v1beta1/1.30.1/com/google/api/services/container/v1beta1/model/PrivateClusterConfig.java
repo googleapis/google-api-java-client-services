@@ -46,6 +46,13 @@ public final class PrivateClusterConfig extends com.google.api.client.json.Gener
   private java.lang.Boolean enablePrivateNodes;
 
   /**
+   * Controls master global access settings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PrivateClusterMasterGlobalAccessConfig masterGlobalAccessConfig;
+
+  /**
    * The IP range in CIDR notation to use for the hosted master network. This range will be used for
    * assigning internal IP addresses to the master or set of masters, as well as the ILB VIP. This
    * range must not overlap with any other ranges in use within the cluster's network.
@@ -108,6 +115,23 @@ public final class PrivateClusterConfig extends com.google.api.client.json.Gener
    */
   public PrivateClusterConfig setEnablePrivateNodes(java.lang.Boolean enablePrivateNodes) {
     this.enablePrivateNodes = enablePrivateNodes;
+    return this;
+  }
+
+  /**
+   * Controls master global access settings.
+   * @return value or {@code null} for none
+   */
+  public PrivateClusterMasterGlobalAccessConfig getMasterGlobalAccessConfig() {
+    return masterGlobalAccessConfig;
+  }
+
+  /**
+   * Controls master global access settings.
+   * @param masterGlobalAccessConfig masterGlobalAccessConfig or {@code null} for none
+   */
+  public PrivateClusterConfig setMasterGlobalAccessConfig(PrivateClusterMasterGlobalAccessConfig masterGlobalAccessConfig) {
+    this.masterGlobalAccessConfig = masterGlobalAccessConfig;
     return this;
   }
 

@@ -20,7 +20,7 @@ package com.google.api.services.blogger.model;
  * Model definition for User.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Blogger API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Blogger API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -48,7 +48,7 @@ public final class User extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime created;
+  private java.lang.String created;
 
   /**
    * The display name.
@@ -65,7 +65,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
-   * The kind of this entity. Always blogger#user
+   * The kind of this entity. Always blogger#user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,7 +130,7 @@ public final class User extends com.google.api.client.json.GenericJson {
    * The timestamp of when this profile was created, in seconds since epoch.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getCreated() {
+  public java.lang.String getCreated() {
     return created;
   }
 
@@ -138,7 +138,7 @@ public final class User extends com.google.api.client.json.GenericJson {
    * The timestamp of when this profile was created, in seconds since epoch.
    * @param created created or {@code null} for none
    */
-  public User setCreated(com.google.api.client.util.DateTime created) {
+  public User setCreated(java.lang.String created) {
     this.created = created;
     return this;
   }
@@ -178,7 +178,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The kind of this entity. Always blogger#user
+   * The kind of this entity. Always blogger#user.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -186,7 +186,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The kind of this entity. Always blogger#user
+   * The kind of this entity. Always blogger#user.
    * @param kind kind or {@code null} for none
    */
   public User setKind(java.lang.String kind) {
@@ -302,28 +302,28 @@ public final class User extends com.google.api.client.json.GenericJson {
   public static final class Locale extends com.google.api.client.json.GenericJson {
 
     /**
-     * The user's country setting.
+     * The country this blog's locale is set to.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String country;
 
     /**
-     * The user's language setting.
+     * The language this blog is authored in.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String language;
 
     /**
-     * The user's language variant setting.
+     * The language variant this blog is authored in.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String variant;
 
     /**
-     * The user's country setting.
+     * The country this blog's locale is set to.
      * @return value or {@code null} for none
      */
     public java.lang.String getCountry() {
@@ -331,7 +331,7 @@ public final class User extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The user's country setting.
+     * The country this blog's locale is set to.
      * @param country country or {@code null} for none
      */
     public Locale setCountry(java.lang.String country) {
@@ -340,7 +340,7 @@ public final class User extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The user's language setting.
+     * The language this blog is authored in.
      * @return value or {@code null} for none
      */
     public java.lang.String getLanguage() {
@@ -348,7 +348,7 @@ public final class User extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The user's language setting.
+     * The language this blog is authored in.
      * @param language language or {@code null} for none
      */
     public Locale setLanguage(java.lang.String language) {
@@ -357,7 +357,7 @@ public final class User extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The user's language variant setting.
+     * The language variant this blog is authored in.
      * @return value or {@code null} for none
      */
     public java.lang.String getVariant() {
@@ -365,7 +365,7 @@ public final class User extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The user's language variant setting.
+     * The language variant this blog is authored in.
      * @param variant variant or {@code null} for none
      */
     public Locale setVariant(java.lang.String variant) {

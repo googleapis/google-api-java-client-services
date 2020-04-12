@@ -20,7 +20,7 @@ package com.google.api.services.blogger.model;
  * Model definition for BlogUserInfo.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Blogger API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Blogger API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -44,7 +44,7 @@ public final class BlogUserInfo extends com.google.api.client.json.GenericJson {
   private BlogPerUserInfo blogUserInfo;
 
   /**
-   * The kind of this entity. Always blogger#blogUserInfo
+   * The kind of this entity. Always blogger#blogUserInfo.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +85,7 @@ public final class BlogUserInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The kind of this entity. Always blogger#blogUserInfo
+   * The kind of this entity. Always blogger#blogUserInfo.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -93,7 +93,7 @@ public final class BlogUserInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The kind of this entity. Always blogger#blogUserInfo
+   * The kind of this entity. Always blogger#blogUserInfo.
    * @param kind kind or {@code null} for none
    */
   public BlogUserInfo setKind(java.lang.String kind) {

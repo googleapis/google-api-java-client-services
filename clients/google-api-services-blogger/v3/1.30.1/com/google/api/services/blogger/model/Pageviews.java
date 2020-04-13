@@ -20,7 +20,7 @@ package com.google.api.services.blogger.model;
  * Model definition for Pageviews.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Blogger API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Blogger API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -30,7 +30,7 @@ package com.google.api.services.blogger.model;
 public final class Pageviews extends com.google.api.client.json.GenericJson {
 
   /**
-   * Blog Id
+   * Blog Id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,14 +50,14 @@ public final class Pageviews extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The kind of this entry. Always blogger#page_views
+   * The kind of this entry. Always blogger#page_views.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * Blog Id
+   * Blog Id.
    * @return value or {@code null} for none
    */
   public java.lang.String getBlogId() {
@@ -65,7 +65,7 @@ public final class Pageviews extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Blog Id
+   * Blog Id.
    * @param blogId blogId or {@code null} for none
    */
   public Pageviews setBlogId(java.lang.String blogId) {
@@ -91,7 +91,7 @@ public final class Pageviews extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The kind of this entry. Always blogger#page_views
+   * The kind of this entry. Always blogger#page_views.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -99,7 +99,7 @@ public final class Pageviews extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The kind of this entry. Always blogger#page_views
+   * The kind of this entry. Always blogger#page_views.
    * @param kind kind or {@code null} for none
    */
   public Pageviews setKind(java.lang.String kind) {
@@ -123,21 +123,21 @@ public final class Pageviews extends com.google.api.client.json.GenericJson {
   public static final class Counts extends com.google.api.client.json.GenericJson {
 
     /**
-     * Count of page views for the given time range
+     * Count of page views for the given time range.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key @com.google.api.client.json.JsonString
     private java.lang.Long count;
 
     /**
-     * Time range the given count applies to
+     * Time range the given count applies to.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String timeRange;
 
     /**
-     * Count of page views for the given time range
+     * Count of page views for the given time range.
      * @return value or {@code null} for none
      */
     public java.lang.Long getCount() {
@@ -145,7 +145,7 @@ public final class Pageviews extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Count of page views for the given time range
+     * Count of page views for the given time range.
      * @param count count or {@code null} for none
      */
     public Counts setCount(java.lang.Long count) {
@@ -154,7 +154,7 @@ public final class Pageviews extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Time range the given count applies to
+     * Time range the given count applies to.
      * @return value or {@code null} for none
      */
     public java.lang.String getTimeRange() {
@@ -162,7 +162,7 @@ public final class Pageviews extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Time range the given count applies to
+     * Time range the given count applies to.
      * @param timeRange timeRange or {@code null} for none
      */
     public Counts setTimeRange(java.lang.String timeRange) {

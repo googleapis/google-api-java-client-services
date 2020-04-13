@@ -20,7 +20,7 @@ package com.google.api.services.blogger.model;
  * Model definition for BlogPerUserInfo.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Blogger API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Blogger API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -30,7 +30,7 @@ package com.google.api.services.blogger.model;
 public final class BlogPerUserInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * ID of the Blog resource
+   * ID of the Blog resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,14 +44,14 @@ public final class BlogPerUserInfo extends com.google.api.client.json.GenericJso
   private java.lang.Boolean hasAdminAccess;
 
   /**
-   * The kind of this entity. Always blogger#blogPerUserInfo
+   * The kind of this entity. Always blogger#blogPerUserInfo.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * The Photo Album Key for the user when adding photos to the blog
+   * The Photo Album Key for the user when adding photos to the blog.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,14 +65,14 @@ public final class BlogPerUserInfo extends com.google.api.client.json.GenericJso
   private java.lang.String role;
 
   /**
-   * ID of the User
+   * ID of the User.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String userId;
 
   /**
-   * ID of the Blog resource
+   * ID of the Blog resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getBlogId() {
@@ -80,7 +80,7 @@ public final class BlogPerUserInfo extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * ID of the Blog resource
+   * ID of the Blog resource.
    * @param blogId blogId or {@code null} for none
    */
   public BlogPerUserInfo setBlogId(java.lang.String blogId) {
@@ -106,7 +106,7 @@ public final class BlogPerUserInfo extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The kind of this entity. Always blogger#blogPerUserInfo
+   * The kind of this entity. Always blogger#blogPerUserInfo.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -114,7 +114,7 @@ public final class BlogPerUserInfo extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The kind of this entity. Always blogger#blogPerUserInfo
+   * The kind of this entity. Always blogger#blogPerUserInfo.
    * @param kind kind or {@code null} for none
    */
   public BlogPerUserInfo setKind(java.lang.String kind) {
@@ -123,7 +123,7 @@ public final class BlogPerUserInfo extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The Photo Album Key for the user when adding photos to the blog
+   * The Photo Album Key for the user when adding photos to the blog.
    * @return value or {@code null} for none
    */
   public java.lang.String getPhotosAlbumKey() {
@@ -131,7 +131,7 @@ public final class BlogPerUserInfo extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The Photo Album Key for the user when adding photos to the blog
+   * The Photo Album Key for the user when adding photos to the blog.
    * @param photosAlbumKey photosAlbumKey or {@code null} for none
    */
   public BlogPerUserInfo setPhotosAlbumKey(java.lang.String photosAlbumKey) {
@@ -157,7 +157,7 @@ public final class BlogPerUserInfo extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * ID of the User
+   * ID of the User.
    * @return value or {@code null} for none
    */
   public java.lang.String getUserId() {
@@ -165,7 +165,7 @@ public final class BlogPerUserInfo extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * ID of the User
+   * ID of the User.
    * @param userId userId or {@code null} for none
    */
   public BlogPerUserInfo setUserId(java.lang.String userId) {

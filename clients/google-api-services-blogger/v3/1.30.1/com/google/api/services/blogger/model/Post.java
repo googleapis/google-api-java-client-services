@@ -20,7 +20,7 @@ package com.google.api.services.blogger.model;
  * Model definition for Post.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Blogger API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Blogger API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -85,7 +85,7 @@ public final class Post extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The kind of this entity. Always blogger#post
+   * The kind of this entity. Always blogger#post.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,7 +110,7 @@ public final class Post extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime published;
+  private java.lang.String published;
 
   /**
    * Comment control and display setting for readers of this post.
@@ -134,7 +134,7 @@ public final class Post extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
-   * Status of the post. Only set for admin-level requests
+   * Status of the post. Only set for admin-level requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -159,7 +159,7 @@ public final class Post extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime updated;
+  private java.lang.String updated;
 
   /**
    * The URL where this Post is displayed.
@@ -288,7 +288,7 @@ public final class Post extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The kind of this entity. Always blogger#post
+   * The kind of this entity. Always blogger#post.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -296,7 +296,7 @@ public final class Post extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The kind of this entity. Always blogger#post
+   * The kind of this entity. Always blogger#post.
    * @param kind kind or {@code null} for none
    */
   public Post setKind(java.lang.String kind) {
@@ -342,7 +342,7 @@ public final class Post extends com.google.api.client.json.GenericJson {
    * RFC 3339 date-time when this Post was published.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getPublished() {
+  public java.lang.String getPublished() {
     return published;
   }
 
@@ -350,7 +350,7 @@ public final class Post extends com.google.api.client.json.GenericJson {
    * RFC 3339 date-time when this Post was published.
    * @param published published or {@code null} for none
    */
-  public Post setPublished(com.google.api.client.util.DateTime published) {
+  public Post setPublished(java.lang.String published) {
     this.published = published;
     return this;
   }
@@ -407,7 +407,7 @@ public final class Post extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Status of the post. Only set for admin-level requests
+   * Status of the post. Only set for admin-level requests.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -415,7 +415,7 @@ public final class Post extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Status of the post. Only set for admin-level requests
+   * Status of the post. Only set for admin-level requests.
    * @param status status or {@code null} for none
    */
   public Post setStatus(java.lang.String status) {
@@ -461,7 +461,7 @@ public final class Post extends com.google.api.client.json.GenericJson {
    * RFC 3339 date-time when this Post was last updated.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getUpdated() {
+  public java.lang.String getUpdated() {
     return updated;
   }
 
@@ -469,7 +469,7 @@ public final class Post extends com.google.api.client.json.GenericJson {
    * RFC 3339 date-time when this Post was last updated.
    * @param updated updated or {@code null} for none
    */
-  public Post setUpdated(com.google.api.client.util.DateTime updated) {
+  public Post setUpdated(java.lang.String updated) {
     this.updated = updated;
     return this;
   }
@@ -514,21 +514,21 @@ public final class Post extends com.google.api.client.json.GenericJson {
     private java.lang.String displayName;
 
     /**
-     * The identifier of the Post creator.
+     * The identifier of the creator.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String id;
 
     /**
-     * The Post author's avatar.
+     * The creator's avatar.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private Image image;
 
     /**
-     * The URL of the Post creator's Profile page.
+     * The URL of the creator's Profile page.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -552,7 +552,7 @@ public final class Post extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The identifier of the Post creator.
+     * The identifier of the creator.
      * @return value or {@code null} for none
      */
     public java.lang.String getId() {
@@ -560,7 +560,7 @@ public final class Post extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The identifier of the Post creator.
+     * The identifier of the creator.
      * @param id id or {@code null} for none
      */
     public Author setId(java.lang.String id) {
@@ -569,7 +569,7 @@ public final class Post extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The Post author's avatar.
+     * The creator's avatar.
      * @return value or {@code null} for none
      */
     public Image getImage() {
@@ -577,7 +577,7 @@ public final class Post extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The Post author's avatar.
+     * The creator's avatar.
      * @param image image or {@code null} for none
      */
     public Author setImage(Image image) {
@@ -586,7 +586,7 @@ public final class Post extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The URL of the Post creator's Profile page.
+     * The URL of the creator's Profile page.
      * @return value or {@code null} for none
      */
     public java.lang.String getUrl() {
@@ -594,7 +594,7 @@ public final class Post extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The URL of the Post creator's Profile page.
+     * The URL of the creator's Profile page.
      * @param url url or {@code null} for none
      */
     public Author setUrl(java.lang.String url) {
@@ -613,19 +613,19 @@ public final class Post extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The Post author's avatar.
+     * The creator's avatar.
      */
     public static final class Image extends com.google.api.client.json.GenericJson {
 
       /**
-       * The Post author's avatar URL.
+       * The creator's avatar URL.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
       private java.lang.String url;
 
       /**
-       * The Post author's avatar URL.
+       * The creator's avatar URL.
        * @return value or {@code null} for none
        */
       public java.lang.String getUrl() {
@@ -633,7 +633,7 @@ public final class Post extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * The Post author's avatar URL.
+       * The creator's avatar URL.
        * @param url url or {@code null} for none
        */
       public Image setUrl(java.lang.String url) {

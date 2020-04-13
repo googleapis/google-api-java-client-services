@@ -57,6 +57,12 @@ public final class LiveBroadcastContentDetails extends com.google.api.client.jso
   private java.lang.Boolean enableAutoStart;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableAutoStop;
+
+  /**
    * This setting indicates whether HTTP POST closed captioning is enabled for this broadcast. The
    * ingestion URL of the closed captions is returned through the liveStreams API. This is mutually
    * exclusive with using the closed_captions_type property, and is equivalent to setting
@@ -227,6 +233,21 @@ public final class LiveBroadcastContentDetails extends com.google.api.client.jso
    */
   public LiveBroadcastContentDetails setEnableAutoStart(java.lang.Boolean enableAutoStart) {
     this.enableAutoStart = enableAutoStart;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableAutoStop() {
+    return enableAutoStop;
+  }
+
+  /**
+   * @param enableAutoStop enableAutoStop or {@code null} for none
+   */
+  public LiveBroadcastContentDetails setEnableAutoStop(java.lang.Boolean enableAutoStop) {
+    this.enableAutoStop = enableAutoStop;
     return this;
   }
 

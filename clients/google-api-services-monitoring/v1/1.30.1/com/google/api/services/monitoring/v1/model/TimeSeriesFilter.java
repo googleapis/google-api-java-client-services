@@ -55,6 +55,13 @@ public final class TimeSeriesFilter extends com.google.api.client.json.GenericJs
   private PickTimeSeriesFilter pickTimeSeriesFilter;
 
   /**
+   * Apply a second aggregation after aggregation is applied.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Aggregation secondaryAggregation;
+
+  /**
    * By default, the raw time series data is returned. Use this field to combine multiple time
    * series for different views of the data.
    * @return value or {@code null} for none
@@ -106,6 +113,23 @@ public final class TimeSeriesFilter extends com.google.api.client.json.GenericJs
    */
   public TimeSeriesFilter setPickTimeSeriesFilter(PickTimeSeriesFilter pickTimeSeriesFilter) {
     this.pickTimeSeriesFilter = pickTimeSeriesFilter;
+    return this;
+  }
+
+  /**
+   * Apply a second aggregation after aggregation is applied.
+   * @return value or {@code null} for none
+   */
+  public Aggregation getSecondaryAggregation() {
+    return secondaryAggregation;
+  }
+
+  /**
+   * Apply a second aggregation after aggregation is applied.
+   * @param secondaryAggregation secondaryAggregation or {@code null} for none
+   */
+  public TimeSeriesFilter setSecondaryAggregation(Aggregation secondaryAggregation) {
+    this.secondaryAggregation = secondaryAggregation;
     return this;
   }
 

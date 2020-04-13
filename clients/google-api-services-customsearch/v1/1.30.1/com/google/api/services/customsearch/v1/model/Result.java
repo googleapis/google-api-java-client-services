@@ -86,14 +86,15 @@ public final class Result extends com.google.api.client.json.GenericJson {
   private Image image;
 
   /**
-   * A unique identifier for the type of current object. For this API, it is customsearch#result.
+   * A unique identifier for the type of current object. For this API, it is `customsearch#result.`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * Encapsulates all information about refinement labels.
+   * Encapsulates all information about [refinement labels](https://developers.google.com/custom-
+   * search/docs/xml_results).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -120,7 +121,8 @@ public final class Result extends com.google.api.client.json.GenericJson {
   private java.lang.String mime;
 
   /**
-   * Contains PageMap information for this search result.
+   * Contains [PageMap](https://developers.google.com/custom-search/docs/structured_data#pagemaps)
+   * information for this search result.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -277,7 +279,7 @@ public final class Result extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A unique identifier for the type of current object. For this API, it is customsearch#result.
+   * A unique identifier for the type of current object. For this API, it is `customsearch#result.`
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -285,7 +287,7 @@ public final class Result extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A unique identifier for the type of current object. For this API, it is customsearch#result.
+   * A unique identifier for the type of current object. For this API, it is `customsearch#result.`
    * @param kind kind or {@code null} for none
    */
   public Result setKind(java.lang.String kind) {
@@ -294,7 +296,8 @@ public final class Result extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Encapsulates all information about refinement labels.
+   * Encapsulates all information about [refinement labels](https://developers.google.com/custom-
+   * search/docs/xml_results).
    * @return value or {@code null} for none
    */
   public java.util.List<Labels> getLabels() {
@@ -302,7 +305,8 @@ public final class Result extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Encapsulates all information about refinement labels.
+   * Encapsulates all information about [refinement labels](https://developers.google.com/custom-
+   * search/docs/xml_results).
    * @param labels labels or {@code null} for none
    */
   public Result setLabels(java.util.List<Labels> labels) {
@@ -345,7 +349,8 @@ public final class Result extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Contains PageMap information for this search result.
+   * Contains [PageMap](https://developers.google.com/custom-search/docs/structured_data#pagemaps)
+   * information for this search result.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getPagemap() {
@@ -353,7 +358,8 @@ public final class Result extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Contains PageMap information for this search result.
+   * Contains [PageMap](https://developers.google.com/custom-search/docs/structured_data#pagemaps)
+   * information for this search result.
    * @param pagemap pagemap or {@code null} for none
    */
   public Result setPagemap(java.util.Map<String, java.lang.Object> pagemap) {

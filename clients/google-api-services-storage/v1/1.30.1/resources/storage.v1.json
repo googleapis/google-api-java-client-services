@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/c_1GNzCi0WpCwlJ9MQo2s8ayQ1w\"",
+ "etag": "\"u9GIe6H63LSGq-9_t39K2Zx_EAc/Hs4LXeoJXbMtbcM0DbLgg3CHzL4\"",
  "discoveryVersion": "v1",
  "id": "storage:v1",
  "name": "storage",
  "version": "v1",
- "revision": "20200226",
+ "revision": "20200326",
  "title": "Cloud Storage JSON API",
  "description": "Stores and retrieves potentially large, immutable data objects.",
  "ownerDomain": "google.com",
@@ -413,12 +413,16 @@
       }
      }
     },
-    "zone_affinity": {
+    "zoneAffinity": {
      "type": "array",
-     "description": "The zone or zones from which the bucket is intended to use zonal quota. Requests for data from outside the specified affinities are still allowed but won’t be able to use zonal quota. The zone or zones need to be within the bucket location otherwise the requests will fail with a 400 Bad Request response.",
+     "description": "The zone or zones from which the bucket is intended to use zonal quota. Requests for data from outside the specified affinities are still allowed but won't be able to use zonal quota. The zone or zones need to be within the bucket location otherwise the requests will fail with a 400 Bad Request response.",
      "items": {
       "type": "string"
      }
+    },
+    "zoneSeparation": {
+     "type": "boolean",
+     "description": "If set, objects placed in this bucket are required to be separated by disaster domain."
     }
    }
   },
@@ -3018,6 +3022,11 @@
        "description": "Name of the bucket in which to store the new object. Overrides the provided object metadata's bucket value, if any.For information about how to URL encode object names to be path safe, see Encoding URI Path Parts.",
        "required": true,
        "location": "path"
+      },
+      "destinationKmsKeyName": {
+       "type": "string",
+       "description": "Resource name of the Cloud KMS key, of the form projects/my-project/locations/global/keyRings/my-kr/cryptoKeys/my-key, that will be used to encrypt the object. Overrides the object metadata's kms_key_name value, if any.",
+       "location": "query"
       },
       "destinationObject": {
        "type": "string",

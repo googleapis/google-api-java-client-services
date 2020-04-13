@@ -6372,6 +6372,32 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
+      /**
+       * Resource name of the Cloud KMS key, of the form projects/my-
+       * project/locations/global/keyRings/my-kr/cryptoKeys/my-key, that will be used to encrypt the
+       * object. Overrides the object metadata's kms_key_name value, if any.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String destinationKmsKeyName;
+
+      /** Resource name of the Cloud KMS key, of the form projects/my-project/locations/global/keyRings/my-
+     kr/cryptoKeys/my-key, that will be used to encrypt the object. Overrides the object metadata's
+     kms_key_name value, if any.
+       */
+      public java.lang.String getDestinationKmsKeyName() {
+        return destinationKmsKeyName;
+      }
+
+      /**
+       * Resource name of the Cloud KMS key, of the form projects/my-
+       * project/locations/global/keyRings/my-kr/cryptoKeys/my-key, that will be used to encrypt the
+       * object. Overrides the object metadata's kms_key_name value, if any.
+       */
+      public Copy setDestinationKmsKeyName(java.lang.String destinationKmsKeyName) {
+        this.destinationKmsKeyName = destinationKmsKeyName;
+        return this;
+      }
+
       /** Apply a predefined set of access controls to the destination object. */
       @com.google.api.client.util.Key
       private java.lang.String destinationPredefinedAcl;

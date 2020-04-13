@@ -31,7 +31,7 @@ public final class Label extends com.google.api.client.json.GenericJson {
 
   /**
    * The color to assign to the label. Color is only available for labels that have their type set
-   * to user.
+   * to user. @mutable gmail.users.labels.create gmail.users.labels.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,14 +45,16 @@ public final class Label extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
-   * The visibility of the label in the label list in the Gmail web interface.
+   * The visibility of the label in the label list in the Gmail web interface. @mutable
+   * gmail.users.labels.create gmail.users.labels.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String labelListVisibility;
 
   /**
-   * The visibility of the label in the message list in the Gmail web interface.
+   * The visibility of the label in the message list in the Gmail web interface. @mutable
+   * gmail.users.labels.create gmail.users.labels.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +75,7 @@ public final class Label extends com.google.api.client.json.GenericJson {
   private java.lang.Integer messagesUnread;
 
   /**
-   * The display name of the label.
+   * The display name of the label. @mutable gmail.users.labels.create gmail.users.labels.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,7 +109,7 @@ public final class Label extends com.google.api.client.json.GenericJson {
 
   /**
    * The color to assign to the label. Color is only available for labels that have their type set
-   * to user.
+   * to user. @mutable gmail.users.labels.create gmail.users.labels.update
    * @return value or {@code null} for none
    */
   public LabelColor getColor() {
@@ -116,7 +118,7 @@ public final class Label extends com.google.api.client.json.GenericJson {
 
   /**
    * The color to assign to the label. Color is only available for labels that have their type set
-   * to user.
+   * to user. @mutable gmail.users.labels.create gmail.users.labels.update
    * @param color color or {@code null} for none
    */
   public Label setColor(LabelColor color) {
@@ -142,7 +144,8 @@ public final class Label extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The visibility of the label in the label list in the Gmail web interface.
+   * The visibility of the label in the label list in the Gmail web interface. @mutable
+   * gmail.users.labels.create gmail.users.labels.update
    * @return value or {@code null} for none
    */
   public java.lang.String getLabelListVisibility() {
@@ -150,7 +153,8 @@ public final class Label extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The visibility of the label in the label list in the Gmail web interface.
+   * The visibility of the label in the label list in the Gmail web interface. @mutable
+   * gmail.users.labels.create gmail.users.labels.update
    * @param labelListVisibility labelListVisibility or {@code null} for none
    */
   public Label setLabelListVisibility(java.lang.String labelListVisibility) {
@@ -159,7 +163,8 @@ public final class Label extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The visibility of the label in the message list in the Gmail web interface.
+   * The visibility of the label in the message list in the Gmail web interface. @mutable
+   * gmail.users.labels.create gmail.users.labels.update
    * @return value or {@code null} for none
    */
   public java.lang.String getMessageListVisibility() {
@@ -167,7 +172,8 @@ public final class Label extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The visibility of the label in the message list in the Gmail web interface.
+   * The visibility of the label in the message list in the Gmail web interface. @mutable
+   * gmail.users.labels.create gmail.users.labels.update
    * @param messageListVisibility messageListVisibility or {@code null} for none
    */
   public Label setMessageListVisibility(java.lang.String messageListVisibility) {
@@ -210,7 +216,7 @@ public final class Label extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The display name of the label.
+   * The display name of the label. @mutable gmail.users.labels.create gmail.users.labels.update
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -218,7 +224,7 @@ public final class Label extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The display name of the label.
+   * The display name of the label. @mutable gmail.users.labels.create gmail.users.labels.update
    * @param name name or {@code null} for none
    */
   public Label setName(java.lang.String name) {

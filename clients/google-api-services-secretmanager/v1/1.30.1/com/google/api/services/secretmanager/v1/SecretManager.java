@@ -20,7 +20,7 @@ package com.google.api.services.secretmanager.v1;
  * Service definition for SecretManager (v1).
  *
  * <p>
- * Stores API keys, passwords, certificates, and other sensitive data. Provides convenience while improving security.
+ * Stores sensitive data such as API keys, passwords, and certificates. Provides convenience while improving security.
 
  * </p>
  *
@@ -785,17 +785,30 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
           return this;
         }
 
-        /** Required. This must be unique within the project. */
+        /**
+         * Required. This must be unique within the project.
+         *
+         * A secret ID is a string with a maximum length of 255 characters and can contain uppercase
+         * and lowercase letters, numerals, and the hyphen (`-`) and underscore (`_`) characters.
+         */
         @com.google.api.client.util.Key
         private java.lang.String secretId;
 
         /** Required. This must be unique within the project.
+
+       A secret ID is a string with a maximum length of 255 characters and can contain uppercase and
+       lowercase letters, numerals, and the hyphen (`-`) and underscore (`_`) characters.
          */
         public java.lang.String getSecretId() {
           return secretId;
         }
 
-        /** Required. This must be unique within the project. */
+        /**
+         * Required. This must be unique within the project.
+         *
+         * A secret ID is a string with a maximum length of 255 characters and can contain uppercase
+         * and lowercase letters, numerals, and the hyphen (`-`) and underscore (`_`) characters.
+         */
         public Create setSecretId(java.lang.String secretId) {
           this.secretId = secretId;
           return this;

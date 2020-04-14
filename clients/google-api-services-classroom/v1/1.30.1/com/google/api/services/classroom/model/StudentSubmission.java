@@ -44,8 +44,8 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
   private java.lang.String alternateLink;
 
   /**
-   * Optional grade. If unset, no grade was set. This value must be non-negative. Decimal (i.e. non-
-   * integer) values are allowed, but will be rounded to two decimal places.
+   * Optional grade. If unset, no grade was set. This value must be non-negative. Decimal (that is,
+   * non-integer) values are allowed, but are rounded to two decimal places.
    *
    * This may be modified only by course teachers.
    * The value may be {@code null}.
@@ -56,7 +56,7 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
   /**
    * Submission content when course_work_type is ASSIGNMENT.
    *
-   * Students can modify this content using google.classroom.Work.ModifyAttachments.
+   * Students can modify this content using ModifyAttachments.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +66,7 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
    * Whether this student submission is associated with the Developer Console project making the
    * request.
    *
-   * See google.classroom.Work.CreateCourseWork for more details.
+   * See CreateCourseWork for more details.
    *
    * Read-only.
    * The value may be {@code null}.
@@ -112,7 +112,7 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
 
   /**
    * Optional pending grade. If unset, no grade was set. This value must be non-negative. Decimal
-   * (i.e. non-integer) values are allowed, but will be rounded to two decimal places.
+   * (that is, non-integer) values are allowed, but are rounded to two decimal places.
    *
    * This is only visible to and modifiable by course teachers.
    * The value may be {@code null}.
@@ -212,8 +212,8 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional grade. If unset, no grade was set. This value must be non-negative. Decimal (i.e. non-
-   * integer) values are allowed, but will be rounded to two decimal places.
+   * Optional grade. If unset, no grade was set. This value must be non-negative. Decimal (that is,
+   * non-integer) values are allowed, but are rounded to two decimal places.
    *
    * This may be modified only by course teachers.
    * @return value or {@code null} for none
@@ -223,8 +223,8 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional grade. If unset, no grade was set. This value must be non-negative. Decimal (i.e. non-
-   * integer) values are allowed, but will be rounded to two decimal places.
+   * Optional grade. If unset, no grade was set. This value must be non-negative. Decimal (that is,
+   * non-integer) values are allowed, but are rounded to two decimal places.
    *
    * This may be modified only by course teachers.
    * @param assignedGrade assignedGrade or {@code null} for none
@@ -237,7 +237,7 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
   /**
    * Submission content when course_work_type is ASSIGNMENT.
    *
-   * Students can modify this content using google.classroom.Work.ModifyAttachments.
+   * Students can modify this content using ModifyAttachments.
    * @return value or {@code null} for none
    */
   public AssignmentSubmission getAssignmentSubmission() {
@@ -247,7 +247,7 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
   /**
    * Submission content when course_work_type is ASSIGNMENT.
    *
-   * Students can modify this content using google.classroom.Work.ModifyAttachments.
+   * Students can modify this content using ModifyAttachments.
    * @param assignmentSubmission assignmentSubmission or {@code null} for none
    */
   public StudentSubmission setAssignmentSubmission(AssignmentSubmission assignmentSubmission) {
@@ -259,7 +259,7 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
    * Whether this student submission is associated with the Developer Console project making the
    * request.
    *
-   * See google.classroom.Work.CreateCourseWork for more details.
+   * See CreateCourseWork for more details.
    *
    * Read-only.
    * @return value or {@code null} for none
@@ -272,7 +272,7 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
    * Whether this student submission is associated with the Developer Console project making the
    * request.
    *
-   * See google.classroom.Work.CreateCourseWork for more details.
+   * See CreateCourseWork for more details.
    *
    * Read-only.
    * @param associatedWithDeveloper associatedWithDeveloper or {@code null} for none
@@ -368,7 +368,7 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
 
   /**
    * Optional pending grade. If unset, no grade was set. This value must be non-negative. Decimal
-   * (i.e. non-integer) values are allowed, but will be rounded to two decimal places.
+   * (that is, non-integer) values are allowed, but are rounded to two decimal places.
    *
    * This is only visible to and modifiable by course teachers.
    * @return value or {@code null} for none
@@ -379,7 +379,7 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
 
   /**
    * Optional pending grade. If unset, no grade was set. This value must be non-negative. Decimal
-   * (i.e. non-integer) values are allowed, but will be rounded to two decimal places.
+   * (that is, non-integer) values are allowed, but are rounded to two decimal places.
    *
    * This is only visible to and modifiable by course teachers.
    * @param draftGrade draftGrade or {@code null} for none

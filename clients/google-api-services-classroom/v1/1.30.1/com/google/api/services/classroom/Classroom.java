@@ -2793,7 +2793,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * to do an update. The update fails if invalid fields are specified. If a field supports
          * empty values, it can be cleared by specifying it in the update mask and not in the
          * Announcement object. If a field that does not support empty values is included in the
-         * update mask and not set in the Announcement object, an `INVALID_ARGUMENT` error will be
+         * update mask and not set in the Announcement object, an `INVALID_ARGUMENT` error is
          * returned.
          *
          * The following fields may be specified by teachers:
@@ -2807,7 +2807,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        update. The update fails if invalid fields are specified. If a field supports empty values, it can
        be cleared by specifying it in the update mask and not in the Announcement object. If a field that
        does not support empty values is included in the update mask and not set in the Announcement
-       object, an `INVALID_ARGUMENT` error will be returned.
+       object, an `INVALID_ARGUMENT` error is returned.
 
        The following fields may be specified by teachers:
 
@@ -2822,7 +2822,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * to do an update. The update fails if invalid fields are specified. If a field supports
          * empty values, it can be cleared by specifying it in the update mask and not in the
          * Announcement object. If a field that does not support empty values is included in the
-         * update mask and not set in the Announcement object, an `INVALID_ARGUMENT` error will be
+         * update mask and not set in the Announcement object, an `INVALID_ARGUMENT` error is
          * returned.
          *
          * The following fields may be specified by teachers:
@@ -3965,7 +3965,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * do an update. The update fails if invalid fields are specified. If a field supports empty
          * values, it can be cleared by specifying it in the update mask and not in the CourseWork
          * object. If a field that does not support empty values is included in the update mask and
-         * not set in the CourseWork object, an `INVALID_ARGUMENT` error will be returned.
+         * not set in the CourseWork object, an `INVALID_ARGUMENT` error is returned.
          *
          * The following fields may be specified by teachers:
          *
@@ -3979,7 +3979,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        update. The update fails if invalid fields are specified. If a field supports empty values, it can
        be cleared by specifying it in the update mask and not in the CourseWork object. If a field that
        does not support empty values is included in the update mask and not set in the CourseWork object,
-       an `INVALID_ARGUMENT` error will be returned.
+       an `INVALID_ARGUMENT` error is returned.
 
        The following fields may be specified by teachers:
 
@@ -3995,7 +3995,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * do an update. The update fails if invalid fields are specified. If a field supports empty
          * values, it can be cleared by specifying it in the update mask and not in the CourseWork
          * object. If a field that does not support empty values is included in the update mask and
-         * not set in the CourseWork object, an `INVALID_ARGUMENT` error will be returned.
+         * not set in the CourseWork object, an `INVALID_ARGUMENT` error is returned.
          *
          * The following fields may be specified by teachers:
          *
@@ -7934,7 +7934,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * update. The update fails if invalid fields are specified. If a field supports empty
          * values, it can be cleared by specifying it in the update mask and not in the Topic
          * object. If a field that does not support empty values is included in the update mask and
-         * not set in the Topic object, an `INVALID_ARGUMENT` error will be returned.
+         * not set in the Topic object, an `INVALID_ARGUMENT` error is returned.
          *
          * The following fields may be specified:
          *
@@ -7947,7 +7947,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        The update fails if invalid fields are specified. If a field supports empty values, it can be
        cleared by specifying it in the update mask and not in the Topic object. If a field that does not
        support empty values is included in the update mask and not set in the Topic object, an
-       `INVALID_ARGUMENT` error will be returned.
+       `INVALID_ARGUMENT` error is returned.
 
        The following fields may be specified:
 
@@ -7962,7 +7962,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * update. The update fails if invalid fields are specified. If a field supports empty
          * values, it can be cleared by specifying it in the update mask and not in the Topic
          * object. If a field that does not support empty values is included in the update mask and
-         * not set in the Topic object, an `INVALID_ARGUMENT` error will be returned.
+         * not set in the Topic object, an `INVALID_ARGUMENT` error is returned.
          *
          * The following fields may be specified:
          *
@@ -9743,19 +9743,19 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * If specified, only results with the specified `invited_email_address` will be returned.
+         * If specified, only results with the specified `invited_email_address` are returned.
          */
         @com.google.api.client.util.Key
         private java.lang.String invitedEmailAddress;
 
-        /** If specified, only results with the specified `invited_email_address` will be returned.
+        /** If specified, only results with the specified `invited_email_address` are returned.
          */
         public java.lang.String getInvitedEmailAddress() {
           return invitedEmailAddress;
         }
 
         /**
-         * If specified, only results with the specified `invited_email_address` will be returned.
+         * If specified, only results with the specified `invited_email_address` are returned.
          */
         public List setInvitedEmailAddress(java.lang.String invitedEmailAddress) {
           this.invitedEmailAddress = invitedEmailAddress;
@@ -9821,22 +9821,22 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * If specified, only results with the specified `state` values will be returned. Otherwise,
-         * results with a `state` of `PENDING` will be returned.
+         * If specified, only results with the specified `state` values are returned. Otherwise,
+         * results with a `state` of `PENDING` are returned.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> states;
 
-        /** If specified, only results with the specified `state` values will be returned. Otherwise, results
-       with a `state` of `PENDING` will be returned.
+        /** If specified, only results with the specified `state` values are returned. Otherwise, results with
+       a `state` of `PENDING` are returned.
          */
         public java.util.List<java.lang.String> getStates() {
           return states;
         }
 
         /**
-         * If specified, only results with the specified `state` values will be returned. Otherwise,
-         * results with a `state` of `PENDING` will be returned.
+         * If specified, only results with the specified `state` values are returned. Otherwise,
+         * results with a `state` of `PENDING` are returned.
          */
         public List setStates(java.util.List<java.lang.String> states) {
           this.states = states;
@@ -10010,7 +10010,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * Mask that identifies which fields on the course to update. This field is required to do
-         * an update. The update will fail if invalid fields are specified. The following fields are
+         * an update. The update fails if invalid fields are specified. The following fields are
          * valid:
          *
          * * `state`
@@ -10023,7 +10023,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         private String updateMask;
 
         /** Mask that identifies which fields on the course to update. This field is required to do an update.
-       The update will fail if invalid fields are specified. The following fields are valid:
+       The update fails if invalid fields are specified. The following fields are valid:
 
        * `state`
 
@@ -10037,7 +10037,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * Mask that identifies which fields on the course to update. This field is required to do
-         * an update. The update will fail if invalid fields are specified. The following fields are
+         * an update. The update fails if invalid fields are specified. The following fields are
          * valid:
          *
          * * `state`

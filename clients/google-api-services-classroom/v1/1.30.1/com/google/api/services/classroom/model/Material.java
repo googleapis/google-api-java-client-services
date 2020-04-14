@@ -46,8 +46,8 @@ public final class Material extends com.google.api.client.json.GenericJson {
   private Form form;
 
   /**
-   * Link material. On creation, will be upgraded to a more appropriate type if possible, and this
-   * will be reflected in the response.
+   * Link material. On creation, this is upgraded to a more appropriate type if possible, and this
+   * is reflected in the response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,8 +95,8 @@ public final class Material extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Link material. On creation, will be upgraded to a more appropriate type if possible, and this
-   * will be reflected in the response.
+   * Link material. On creation, this is upgraded to a more appropriate type if possible, and this
+   * is reflected in the response.
    * @return value or {@code null} for none
    */
   public Link getLink() {
@@ -104,8 +104,8 @@ public final class Material extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Link material. On creation, will be upgraded to a more appropriate type if possible, and this
-   * will be reflected in the response.
+   * Link material. On creation, this is upgraded to a more appropriate type if possible, and this
+   * is reflected in the response.
    * @param link link or {@code null} for none
    */
   public Material setLink(Link link) {

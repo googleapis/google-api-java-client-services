@@ -24,10 +24,6 @@ package com.google.api.services.securitycenter.v1p1beta1.model;
  * and enforcement. For example, a cross-site scripting (XSS) vulnerability in an App Engine
  * application is a finding.
  *
- * When adding a new field hidden behind a visibility label, ensure it is also hidden from
- * Notifications: http://google3/java/com/google/cloud/security/riskdashboard/notification/actions/s
- * treaming/FindingTranslator.java?l=26
- *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
  * explanation see:
